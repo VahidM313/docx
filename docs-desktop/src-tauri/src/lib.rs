@@ -852,15 +852,96 @@ fn get_extra_search_entries() -> Vec<serde_json::Value> {
     all
 }
 
-/// Downloads a brand-new .docpack OR performs an HTTP 206 Partial Range Delta Update from GitHub Releases!
-#[tauri::command]
-fn install_or_update_from_github(
+#[derive(serde::Serialize, Clone)]
+#[allow(non_snake_case)]
+pub struct DownloadProgressPayload {
+    pub site_id: String,
+    pub phase: String,
+    pub downloaded_bytes: usize,
+    pub total_bytes: usize,
+    pub percent: u8,
+    pub detail: String,
+}
+
+fn curl_download_with_progress(
+    url: &str,
+    dest_path: &PathBuf,
+    expected_total: usize,
+    site_id: &str,
+    window: &tauri::Window,
+) -> Result<Vec<u8>, String> {
+    use tauri::Emitter;
+    let _ = fs::remove_file(dest_path);
+
+    let mut cmd = Command::new("curl.exe");
+    cmd.arg("-sL").arg("--fail").arg("-o").arg(dest_path).arg(url);
+    #[cfg(target_os = "windows")]
+    cmd.creation_flags(0x08000000); // CREATE_NO_WINDOW
+
+    let mut child = cmd.spawn().map_err(|e| format!("Failed to spawn curl: {}", e))?;
+
+    loop {
+        match child.try_wait() {
+            Ok(Some(status)) => {
+                if !status.success() {
+                    let _ = fs::remove_file(dest_path);
+                    return Err(format!("HTTP download failed for {}", url));
+                }
+                break;
+            }
+            Ok(None) => {
+                let cur_bytes = fs::metadata(dest_path).map(|m| m.len() as usize).unwrap_or(0);
+                let total = expected_total.max(cur_bytes).max(1);
+                let pct = ((cur_bytes as f64 / total as f64) * 92.0)
+                    .round()
+                    .clamp(8.0, 95.0) as u8;
+                let _ = window.emit(
+                    "docpack-progress",
+                    DownloadProgressPayload {
+                        site_id: site_id.to_string(),
+                        phase: "Downloading .docpack".to_string(),
+                        downloaded_bytes: cur_bytes,
+                        total_bytes: total,
+                        percent: pct,
+                        detail: format!(
+                            "{:.2} MB / {:.2} MB ({}%)",
+                            cur_bytes as f64 / (1024.0 * 1024.0),
+                            total as f64 / (1024.0 * 1024.0),
+                            pct
+                        ),
+                    },
+                );
+                thread::sleep(Duration::from_millis(65));
+            }
+            Err(e) => return Err(format!("Download wait error: {}", e)),
+        }
+    }
+
+    fs::read(dest_path).map_err(|e| format!("Failed to read downloaded pack: {}", e))
+}
+
+fn run_install_or_update_sync(
     site_id: String,
-    state: tauri::State<'_, AppState>,
+    store: Arc<AssetStore>,
+    window: tauri::Window,
 ) -> Result<DeltaUpdateResult, String> {
+    use tauri::Emitter;
+
     let manifest_url = format!("{}/{}.manifest.json", RELEASE_BASE_URL, site_id);
     let pack_url = format!("{}/{}.docpack", RELEASE_BASE_URL, site_id);
     let search_url = format!("{}/{}.search.json", RELEASE_BASE_URL, site_id);
+
+    let _ = window.emit(
+        "docpack-progress",
+        DownloadProgressPayload {
+            site_id: site_id.clone(),
+            phase: "Fetching manifest...".to_string(),
+            downloaded_bytes: 0,
+            total_bytes: 0,
+            percent: 4,
+            detail: "Connecting to GitHub Releases CDN...".to_string(),
+        },
+    );
 
     let remote_manifest_bytes = curl_get_bytes(&manifest_url, None)?;
     let remote_manifest: SiteManifest =
@@ -868,18 +949,20 @@ fn install_or_update_from_github(
 
     let packs_dir = get_packs_dir();
     let _ = fs::create_dir_all(&packs_dir);
+    let _ = fs::write(
+        packs_dir.join(format!("{}.manifest.json", site_id)),
+        &remote_manifest_bytes,
+    );
 
-    // Download .search.json if available
     if let Ok(search_bytes) = curl_get_bytes(&search_url, None) {
         let _ = fs::write(packs_dir.join(format!("{}.search.json", site_id)), search_bytes);
     }
 
-    // Check if we already have local chunks for this site
     let mut local_chunks_by_hash: HashMap<String, Vec<u8>> = HashMap::new();
     let mut old_commit = String::from("not-installed");
 
     {
-        let guard = state.store.overrides.read().unwrap();
+        let guard = store.overrides.read().unwrap();
         if let Some(pack) = guard.get(&site_id) {
             old_commit = pack.manifest.commit.clone();
             for entry in pack.manifest.routes.values() {
@@ -893,22 +976,50 @@ fn install_or_update_from_github(
         }
     }
 
-    // If not installed at all, download full .docpack in 1 fast request
     if local_chunks_by_hash.is_empty() {
-        let full_pack_bytes = curl_get_bytes(&pack_url, None)?;
-        let dl_bytes = full_pack_bytes.len();
+        let expected_total = 4 + remote_manifest_bytes.len() + remote_manifest.totalBytes;
         let docpack_path = packs_dir.join(format!("{}.docpack", site_id));
-        fs::write(&docpack_path, &full_pack_bytes).map_err(|e| e.to_string())?;
+        let full_pack_bytes = curl_download_with_progress(
+            &pack_url,
+            &docpack_path,
+            expected_total,
+            &site_id,
+            &window,
+        )?;
+        let dl_bytes = full_pack_bytes.len();
+
+        let _ = window.emit(
+            "docpack-progress",
+            DownloadProgressPayload {
+                site_id: site_id.clone(),
+                phase: "Mounting pack...".to_string(),
+                downloaded_bytes: dl_bytes,
+                total_bytes: dl_bytes,
+                percent: 98,
+                detail: "Indexing routes & starting local server...".to_string(),
+            },
+        );
 
         if let Some(parsed) = parse_docpack_bytes(full_pack_bytes, "GitHub Release .docpack") {
-            state
-                .store
+            store
                 .overrides
                 .write()
                 .unwrap()
                 .insert(site_id.clone(), parsed);
         }
-        let port = ensure_site_server(&site_id, Arc::clone(&state.store));
+        let port = ensure_site_server(&site_id, Arc::clone(&store));
+
+        let _ = window.emit(
+            "docpack-progress",
+            DownloadProgressPayload {
+                site_id: site_id.clone(),
+                phase: "Complete".to_string(),
+                downloaded_bytes: dl_bytes,
+                total_bytes: dl_bytes,
+                percent: 100,
+                detail: format!("Installed ({:.2} MB)", dl_bytes as f64 / (1024.0 * 1024.0)),
+            },
+        );
 
         return Ok(DeltaUpdateResult {
             site_id: site_id.clone(),
@@ -942,8 +1053,9 @@ fn install_or_update_from_github(
     let mut downloaded_chunks = 0usize;
     let mut reused_bytes = 0usize;
     let mut downloaded_bytes = 0usize;
+    let total_routes = remote_manifest.routes.len().max(1);
 
-    for (route, rem_entry) in &remote_manifest.routes {
+    for (idx, (route, rem_entry)) in remote_manifest.routes.iter().enumerate() {
         let (final_offset, final_length) = if let Some(&already) = placed_hashes.get(&rem_entry.hash)
         {
             already
@@ -956,6 +1068,22 @@ fn install_or_update_from_github(
             reused_bytes += len;
             (off, len)
         } else {
+            let pct = 10 + ((idx * 85) / total_routes) as u8;
+            let _ = window.emit(
+                "docpack-progress",
+                DownloadProgressPayload {
+                    site_id: site_id.clone(),
+                    phase: "HTTP 206 Delta Sync".to_string(),
+                    downloaded_bytes,
+                    total_bytes: remote_manifest.totalBytes.max(1),
+                    percent: pct,
+                    detail: format!(
+                        "Reused {} chunks • Fetching changed chunk #{} via HTTP 206...",
+                        reused_chunks,
+                        downloaded_chunks + 1
+                    ),
+                },
+            );
             let abs_start = remote_data_start + rem_entry.offset;
             let abs_end = abs_start + rem_entry.length - 1;
             let range_bytes = curl_get_bytes(&pack_url, Some((abs_start, abs_end)))?;
@@ -1001,14 +1129,13 @@ fn install_or_update_from_github(
     fs::write(&docpack_path, &full_docpack).map_err(|e| e.to_string())?;
 
     if let Some(parsed) = parse_docpack_bytes(full_docpack, "GitHub Delta .docpack") {
-        state
-            .store
+        store
             .overrides
             .write()
             .unwrap()
             .insert(site_id.clone(), parsed);
     }
-    let port = ensure_site_server(&site_id, Arc::clone(&state.store));
+    let port = ensure_site_server(&site_id, Arc::clone(&store));
 
     let total_bytes = reused_bytes + downloaded_bytes;
     let saved_percent = if total_bytes > 0 {
@@ -1016,6 +1143,18 @@ fn install_or_update_from_github(
     } else {
         100.0
     };
+
+    let _ = window.emit(
+        "docpack-progress",
+        DownloadProgressPayload {
+            site_id: site_id.clone(),
+            phase: "Complete".to_string(),
+            downloaded_bytes,
+            total_bytes,
+            percent: 100,
+            detail: format!("{}% bandwidth saved", saved_percent),
+        },
+    );
 
     Ok(DeltaUpdateResult {
         site_id: site_id.clone(),
@@ -1040,13 +1179,28 @@ fn install_or_update_from_github(
     })
 }
 
+/// Downloads a brand-new .docpack OR performs an HTTP 206 Partial Range Delta Update from GitHub Releases!
 #[tauri::command]
-fn test_partial_delta_update(
+async fn install_or_update_from_github(
     site_id: String,
+    window: tauri::Window,
     state: tauri::State<'_, AppState>,
 ) -> Result<DeltaUpdateResult, String> {
-    install_or_update_from_github(site_id, state)
+    let store = Arc::clone(&state.store);
+    tauri::async_runtime::spawn_blocking(move || run_install_or_update_sync(site_id, store, window))
+        .await
+        .map_err(|e| format!("Task join error: {}", e))?
 }
+
+#[tauri::command]
+async fn test_partial_delta_update(
+    site_id: String,
+    window: tauri::Window,
+    state: tauri::State<'_, AppState>,
+) -> Result<DeltaUpdateResult, String> {
+    install_or_update_from_github(site_id, window, state).await
+}
+
 
 #[tauri::command]
 fn bundle_into_single_exe(state: tauri::State<'_, AppState>) -> Result<String, String> {

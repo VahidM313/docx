@@ -1,4 +1,5 @@
 import { invoke } from "@tauri-apps/api/core";
+import { listen } from "@tauri-apps/api/event";
 import { SITE_BRANDS, getSiteBrand } from "./brands";
 
 interface SearchEntry {
@@ -61,6 +62,15 @@ interface DeltaUpdateResult {
   message: string;
 }
 
+interface DownloadProgressPayload {
+  site_id: string;
+  phase: string;
+  downloaded_bytes: number;
+  total_bytes: number;
+  percent: number;
+  detail: string;
+}
+
 interface UnifiedSiteEntry {
   id: string;
   name: string;
@@ -109,6 +119,8 @@ let installedPacksCache: PackStatusInfo[] = [];
 let remoteRegistryCache: RemoteRegistryItem[] = [];
 let selectedHubCategory: string = "all";
 let hubSearchQuery: string = "";
+const activeDownloads = new Map<string, DownloadProgressPayload>();
+let hudHideTimer: number | null = null;
 
 // DOM Elements
 const tabHome = document.getElementById("tabHome") as HTMLButtonElement;
@@ -137,8 +149,13 @@ const updateAlertBanner = document.getElementById("updateAlertBanner") as HTMLEl
 const updateAlertHeadline = document.getElementById("updateAlertHeadline") as HTMLElement;
 const updateAlertSub = document.getElementById("updateAlertSub") as HTMLElement;
 const btnAlertUpdateAll = document.getElementById("btnAlertUpdateAll") as HTMLButtonElement;
-const btnAlertSimulate = document.getElementById("btnAlertSimulate") as HTMLButtonElement;
 const btnAlertDismiss = document.getElementById("btnAlertDismiss") as HTMLButtonElement;
+
+const downloadProgressHud = document.getElementById("downloadProgressHud") as HTMLElement;
+const dlHudTitle = document.getElementById("dlHudTitle") as HTMLElement;
+const dlHudPhase = document.getElementById("dlHudPhase") as HTMLElement;
+const dlHudDetail = document.getElementById("dlHudDetail") as HTMLElement;
+const dlProgressBar = document.getElementById("dlProgressBar") as HTMLElement;
 
 const viewHome = document.getElementById("viewHome") as HTMLElement;
 const viewTailwind = document.getElementById("viewTailwind") as HTMLElement;
@@ -175,10 +192,82 @@ async function init() {
   setupWindowControls();
   setupSidebarAndTopbarHover();
   setupEventListeners();
+  setupDownloadProgressListener();
   await loadSearchIndex();
   await checkServerHealth();
   await syncAllPacksAndRender(true);
   setInterval(checkServerHealth, 3000);
+}
+
+function setupDownloadProgressListener() {
+  listen<DownloadProgressPayload>("docpack-progress", (event) => {
+    const p = event.payload;
+    if (!p || !p.site_id) return;
+    applyDownloadProgress(p);
+  }).catch((err) => {
+    console.warn("Failed to attach docpack-progress listener:", err);
+  });
+}
+
+function applyDownloadProgress(p: DownloadProgressPayload) {
+  const brand = getSiteBrand(p.site_id);
+  const pct = Math.max(0, Math.min(100, Math.round(p.percent || 0)));
+
+  if (hudHideTimer) {
+    window.clearTimeout(hudHideTimer);
+    hudHideTimer = null;
+  }
+
+  activeDownloads.set(p.site_id, p);
+
+  if (downloadProgressHud) {
+    downloadProgressHud.style.display = "flex";
+  }
+  if (dlHudTitle) {
+    dlHudTitle.textContent = `${brand.name} (${brand.version}) — ${p.phase}`;
+  }
+  if (dlHudPhase) {
+    dlHudPhase.textContent = `${pct}%`;
+  }
+  if (dlHudDetail) {
+    dlHudDetail.textContent = p.detail;
+  }
+  if (dlProgressBar) {
+    dlProgressBar.style.width = `${pct}%`;
+  }
+
+  // Update inline card progress bar if card is rendered in DOM
+  const cardWrap = document.querySelector(`[data-dl-card="${p.site_id}"]`) as HTMLElement | null;
+  if (cardWrap) {
+    cardWrap.style.display = "flex";
+    const phaseEl = cardWrap.querySelector("[data-dl-card-phase]") as HTMLElement | null;
+    const pctEl = cardWrap.querySelector("[data-dl-card-pct]") as HTMLElement | null;
+    const fillEl = cardWrap.querySelector("[data-dl-card-fill]") as HTMLElement | null;
+    if (phaseEl) phaseEl.textContent = p.detail || p.phase;
+    if (pctEl) pctEl.textContent = `${pct}%`;
+    if (fillEl) fillEl.style.width = `${pct}%`;
+  }
+
+  const installBtn = document.querySelector(`[data-card-install="${p.site_id}"]`) as HTMLButtonElement | null;
+  if (installBtn) {
+    installBtn.disabled = pct < 100;
+    installBtn.textContent = pct < 100 ? `⏳ Downloading... ${pct}%` : `✓ Installed (${pct}%)`;
+  }
+
+  const deltaBtn = document.querySelector(`[data-card-delta="${p.site_id}"]`) as HTMLButtonElement | null;
+  if (deltaBtn) {
+    deltaBtn.disabled = pct < 100;
+    deltaBtn.textContent = pct < 100 ? `⏳ Syncing... ${pct}%` : `✓ Updated (${pct}%)`;
+  }
+
+  if (pct >= 100 && p.phase.toLowerCase().includes("complete")) {
+    activeDownloads.delete(p.site_id);
+    hudHideTimer = window.setTimeout(() => {
+      if (activeDownloads.size === 0 && downloadProgressHud) {
+        downloadProgressHud.style.display = "none";
+      }
+    }, 2400);
+  }
 }
 
 function buildUnifiedSitesList(): UnifiedSiteEntry[] {
@@ -282,10 +371,9 @@ function renderAllUI(showStartupNotification = false) {
   updateNotificationBanner(sites, showStartupNotification);
 }
 
-// 1. Render Startup Update Alert / Notification Banner
-function updateNotificationBanner(sites: UnifiedSiteEntry[], forceShow = false) {
+// 1. Render Startup Update Alert / Notification Banner (ONLY when real updates exist)
+function updateNotificationBanner(sites: UnifiedSiteEntry[], _forceShow = false) {
   const outdated = sites.filter((s) => s.updateAvailable);
-  const installedCount = sites.filter((s) => s.installed).length;
   const btnUpdateAllPacks = document.getElementById("btnUpdateAllPacks") as HTMLButtonElement;
 
   if (titlebarUpdatePill && titlebarUpdateCount) {
@@ -321,20 +409,8 @@ function updateNotificationBanner(sites: UnifiedSiteEntry[], forceShow = false) 
     if (btnAlertUpdateAll) {
       btnAlertUpdateAll.style.display = "inline-flex";
     }
-  } else if (forceShow) {
-    updateAlertBanner.style.display = "flex";
-    updateAlertBanner.classList.add("up-to-date");
-    if (updateAlertHeadline) {
-      updateAlertHeadline.textContent = `All ${installedCount} installed docpacks are up to date with GitHub Releases!`;
-    }
-    if (updateAlertSub) {
-      updateAlertSub.textContent = `${
-        sites.length - installedCount
-      } additional documentation packs available in the 42-Site Hub below — or click "Simulate Update Alert" to test partial updates.`;
-    }
-    if (btnAlertUpdateAll) {
-      btnAlertUpdateAll.style.display = "none";
-    }
+  } else {
+    updateAlertBanner.style.display = "none";
   }
 }
 
@@ -522,6 +598,9 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
 
   gridEl.innerHTML = filtered
     .map((s) => {
+      const dl = activeDownloads.get(s.id);
+      const dlPct = dl ? Math.max(0, Math.min(100, Math.round(dl.percent || 0))) : 0;
+
       const statusBadge = s.updateAvailable
         ? `<span class="site-status-badge update">⚡ Update: ${escapeHtml(s.localCommit)} → ${escapeHtml(s.remoteCommit)}</span>`
         : s.installed
@@ -575,6 +654,16 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
       } chunks (${s.routeCount} routes) • ${s.sizeMb} MB Max-Gzip
           </div>
 
+          <div class="card-dl-wrap" data-dl-card="${escapeHtml(s.id)}" style="${dl ? "display: flex;" : ""}">
+            <div class="card-dl-row">
+              <span class="card-dl-phase" data-dl-card-phase>${escapeHtml(dl?.detail || dl?.phase || "Preparing download...")}</span>
+              <span class="card-dl-pct" data-dl-card-pct>${dlPct}%</span>
+            </div>
+            <div class="card-dl-bar-track">
+              <div class="card-dl-bar-fill" data-dl-card-fill style="width: ${dlPct}%;"></div>
+            </div>
+          </div>
+
           <div class="site-card-footer">
             ${
               s.installed
@@ -585,14 +674,21 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
                   <button
                     class="site-btn-delta ${s.updateAvailable ? "highlight-update" : ""}"
                     data-card-delta="${escapeHtml(s.id)}"
+                    ${dl ? "disabled" : ""}
                     title="Run SHA-256 Chunk Diff & HTTP 206 Partial Range Update from GitHub Releases"
                   >
-                    ${s.updateAvailable ? "⚡ Update Now (HTTP 206)" : "⚡ Delta Sync"}
+                    ${
+                      dl
+                        ? `⏳ Syncing... ${dlPct}%`
+                        : s.updateAvailable
+                        ? "⚡ Update Now (HTTP 206)"
+                        : "⚡ Delta Sync"
+                    }
                   </button>
                 `
                 : `
-                  <button class="site-btn-install" data-card-install="${escapeHtml(s.id)}">
-                    ⬇ Install & Open Pack (${s.sizeMb} MB • HTTP 206)
+                  <button class="site-btn-install" data-card-install="${escapeHtml(s.id)}" ${dl ? "disabled" : ""}>
+                    ${dl ? `⏳ Downloading... ${dlPct}%` : `⬇ Install & Open Pack (${s.sizeMb} MB • HTTP 206)`}
                   </button>
                 `
             }
@@ -633,10 +729,20 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
 }
 
 async function runGitHubPackUpdate(siteId: string, openAfter = false) {
+  const brand = getSiteBrand(siteId);
+  applyDownloadProgress({
+    site_id: siteId,
+    phase: "Starting Download",
+    downloaded_bytes: 0,
+    total_bytes: 0,
+    percent: 2,
+    detail: `Connecting to GitHub Releases for ${brand.name} (${siteId}.docpack)...`,
+  });
+
   const banner = document.getElementById("deltaStatusBanner");
   if (banner) {
     banner.style.display = "block";
-    banner.textContent = `Running Content-Hash Diff & GitHub Releases HTTP 206 Partial Range Update for '${siteId}'...`;
+    banner.textContent = `Downloading & verifying '${siteId}.docpack' from GitHub Releases...`;
   }
   try {
     const res = await invoke<DeltaUpdateResult>("install_or_update_from_github", { siteId });
@@ -646,14 +752,20 @@ async function runGitHubPackUpdate(siteId: string, openAfter = false) {
     if (banner) {
       banner.textContent = `✓ [${res.site_id.toUpperCase()} ${res.old_commit} → ${res.new_commit}] ${res.message}`;
     }
+    activeDownloads.delete(siteId);
     await syncAllPacksAndRender(false);
     if (openAfter) {
       await switchTab(siteId);
     }
   } catch (err) {
+    activeDownloads.delete(siteId);
+    if (downloadProgressHud) {
+      downloadProgressHud.style.display = "none";
+    }
     if (banner) {
       banner.textContent = `Update notice for ${siteId}: ${String(err)}`;
     }
+    renderHomeHub(buildUnifiedSitesList());
   }
 }
 
@@ -839,7 +951,10 @@ async function switchTab(tab: string, targetPathOrUrl?: string) {
       const port = await invoke<number>("ensure_site_server_cmd", { siteId: tab });
       if (port) sitePorts[tab] = port;
     } catch {}
-    const fullUrl = resolveUrl(tab, targetPathOrUrl || "/docs");
+    const defaultEntryPath =
+      targetPathOrUrl ||
+      (brand.defaultRoutes && brand.defaultRoutes.length > 0 ? brand.defaultRoutes[0].path : "/docs");
+    const fullUrl = resolveUrl(tab, defaultEntryPath);
     if (iframeDynamic && dynamicLoading) {
       loadSiteFrame(iframeDynamic, dynamicLoading, fullUrl, true);
     }
@@ -1051,15 +1166,6 @@ function setupEventListeners() {
 
   document.getElementById("btnUpdateAllPacks")?.addEventListener("click", async () => {
     await updateAllOutdatedPacks();
-  });
-
-  btnAlertSimulate?.addEventListener("click", async () => {
-    try {
-      await invoke("simulate_outdated_pack", { siteId: "tailwind" });
-      await syncAllPacksAndRender(true);
-    } catch (err) {
-      console.warn(err);
-    }
   });
 
   btnAlertDismiss?.addEventListener("click", () => {

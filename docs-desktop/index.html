@@ -76,9 +76,6 @@
         <button id="btnAlertUpdateAll" class="alert-btn alert-btn-primary" style="display: none;">
           ⚡ Update All Now (HTTP 206)
         </button>
-        <button id="btnAlertSimulate" class="alert-btn alert-btn-secondary" title="Simulate an outdated local commit to test the update alert and HTTP 206 delta updater">
-          🧪 Simulate Update Alert
-        </button>
         <button id="btnAlertDismiss" class="alert-btn alert-btn-ghost" title="Dismiss notification">
           ✕
         </button>
@@ -267,6 +264,21 @@
                   <span>Bundle Into Single Docx.exe</span>
                 </button>
               </div>
+            </div>
+          </div>
+
+          <!-- Live Download Progress HUD -->
+          <div id="downloadProgressHud" class="download-progress-hud" style="display: none;">
+            <div class="dl-hud-top">
+              <div class="dl-hud-title-row">
+                <span class="dl-spinner"></span>
+                <span id="dlHudTitle" class="dl-hud-title">Downloading Documentation Pack...</span>
+                <span id="dlHudPhase" class="dl-hud-phase">Fetching manifest...</span>
+              </div>
+              <span id="dlHudDetail" class="dl-hud-detail">0%</span>
+            </div>
+            <div class="dl-progress-track">
+              <div id="dlProgressBar" class="dl-progress-fill" style="width: 0%;"></div>
             </div>
           </div>
 

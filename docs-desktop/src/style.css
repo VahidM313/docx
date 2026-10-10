@@ -1097,6 +1097,107 @@ body.sidebar-pinned .left-edge-sensor {
   color: #000000;
 }
 
+.download-progress-hud {
+  background: #0c0c11;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+.dl-hud-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.dl-hud-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dl-spinner {
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(56, 189, 248, 0.25);
+  border-top-color: #38bdf8;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+.dl-hud-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.dl-hud-phase {
+  font-size: 0.75rem;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.dl-hud-detail {
+  font-size: 0.79rem;
+  font-weight: 700;
+  color: #e4e4e7;
+  font-family: monospace;
+}
+
+.dl-progress-track {
+  width: 100%;
+  height: 8px;
+  background: #181820;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.dl-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8 0%, #818cf8 100%);
+  border-radius: 999px;
+  transition: width 0.12s ease;
+}
+
+.card-dl-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-dl-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.73rem;
+  font-family: monospace;
+  color: #e4e4e7;
+}
+
+.card-dl-bar-track {
+  width: 100%;
+  height: 6px;
+  background: #181820;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.card-dl-bar-fill {
+  height: 100%;
+  background: var(--brand-color, #38bdf8);
+  border-radius: 999px;
+  transition: width 0.12s ease;
+}
+
 .delta-status-banner {
   background: rgba(35, 165, 90, 0.12);
   border: 1px solid rgba(35, 165, 90, 0.35);
