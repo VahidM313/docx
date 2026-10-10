@@ -706,17 +706,31 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
       const dlPct = dl ? Math.max(0, Math.min(100, Math.round(dl.percent || 0))) : 0;
 
       const statusBadge = s.updateAvailable
-        ? `<span class="site-status-badge update" title="Update available: ${escapeHtml(s.localCommit)} → ${escapeHtml(s.remoteCommit)}">⚡ Update</span>`
+        ? `<span class="site-status-badge update">⚡ Update: ${escapeHtml(s.localCommit)} → ${escapeHtml(s.remoteCommit)}</span>`
         : s.installed
-        ? `<span class="site-status-badge installed">● Ready</span>`
-        : `<span class="site-status-badge cloud">☁ Cloud</span>`;
+        ? `<span class="site-status-badge installed">● Installed</span>`
+        : `<span class="site-status-badge cloud">☁ Cloud Pack</span>`;
+
+      const quickPillsHtml =
+        s.installed && s.defaultRoutes && s.defaultRoutes.length > 0
+          ? `<div class="pills-container" style="margin-top: 2px;">
+              ${s.defaultRoutes
+                .map(
+                  (r) =>
+                    `<button class="link-pill" data-card-jump-site="${escapeHtml(s.id)}" data-card-jump-url="${escapeHtml(
+                      r.path
+                    )}">${escapeHtml(r.label)}</button>`
+                )
+                .join("")}
+            </div>`
+          : "";
 
       return `
         <article
-          class="site-card ${s.updateAvailable ? "has-update" : ""} ${s.installed ? "is-installed" : ""}"
+          class="site-card ${s.updateAvailable ? "has-update" : ""}"
           style="--brand-color: ${s.color}; --brand-tint: ${s.bgTint};"
         >
-          <div class="site-card-top" ${s.installed ? `data-card-open="${escapeHtml(s.id)}" style="cursor:pointer;"` : ""}>
+          <div class="site-card-top">
             <div class="site-brand-box">
               ${s.svg}
             </div>
@@ -729,14 +743,20 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
               <div class="site-cat-line">
                 <span>${escapeHtml(s.category)}</span>
                 <span>•</span>
-                <span>${s.routeCount} routes</span>
-                <span>•</span>
-                <span>${s.sizeMb} MB</span>
+                <span>id: ${escapeHtml(s.id)}</span>
               </div>
             </div>
           </div>
 
-          <p class="site-card-desc" title="${escapeHtml(s.description)}">${escapeHtml(s.description)}</p>
+          <p class="site-card-desc">${escapeHtml(s.description)}</p>
+
+          ${quickPillsHtml}
+
+          <div class="site-card-meta">
+            commit: ${escapeHtml(s.installed ? s.localCommit || s.remoteCommit : s.remoteCommit)} • ${
+        s.chunkCount
+      } chunks (${s.routeCount} routes) • ${s.sizeMb} MB Max-Gzip
+          </div>
 
           <div class="card-dl-wrap" data-dl-card="${escapeHtml(s.id)}" style="${dl ? "display: flex;" : "display: none;"}">
             <div class="card-dl-row">
@@ -753,7 +773,7 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
               s.installed
                 ? `
                   <button class="site-btn-open" data-card-open="${escapeHtml(s.id)}">
-                    Open
+                    Open Docs
                   </button>
                   <button
                     class="site-btn-delta ${s.updateAvailable ? "highlight-update" : ""}"
@@ -763,16 +783,16 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
                   >
                     ${
                       dl
-                        ? `⏳ ${dlPct}%`
+                        ? `⏳ Syncing... ${dlPct}%`
                         : s.updateAvailable
-                        ? "⚡ Update"
+                        ? "⚡ Update Now (HTTP 206)"
                         : "↻ Sync"
                     }
                   </button>
                 `
                 : `
                   <button class="site-btn-install" data-card-install="${escapeHtml(s.id)}" ${dl ? "disabled" : ""}>
-                    ${dl ? `⏳ Downloading ${dlPct}%` : `⬇ Install (${s.sizeMb} MB)`}
+                    ${dl ? `⏳ Downloading... ${dlPct}%` : `⬇ Install & Open Pack (${s.sizeMb} MB • HTTP 206)`}
                   </button>
                 `
             }
