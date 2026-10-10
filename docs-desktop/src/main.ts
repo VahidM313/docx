@@ -1288,11 +1288,45 @@ function setupEventListeners() {
     const banner = document.getElementById("deltaStatusBanner");
     if (banner) {
       banner.style.display = "block";
-      banner.textContent = "Checking GitHub Releases (VahidM313/docx) for docpack updates...";
+      banner.textContent = "Checking GitHub Releases (VahidM313/docx) for docpack & app core updates...";
     }
     await syncAllPacksAndRender(true);
+    try {
+      const appUpd = await invoke<{
+        localCommit: string;
+        remoteCommit: string;
+        version: string;
+        updateAvailable: boolean;
+        coreSizeMb: number;
+      }>("check_app_update");
+      if (banner) {
+        banner.textContent = appUpd.updateAvailable
+          ? `✓ Synced 57-Site Registry • New App Core available (${appUpd.localCommit} → ${appUpd.remoteCommit}, only ${appUpd.coreSizeMb} MB delta download)!`
+          : `✓ Synced live 57-Site Registry from GitHub Releases (packs-latest). App Core (${appUpd.remoteCommit}) is up to date.`;
+      }
+    } catch {
+      if (banner) {
+        banner.textContent = "✓ Synced live 57-Site Registry from GitHub Releases (packs-latest).";
+      }
+    }
+  });
+
+  document.getElementById("btnSelfUpdateApp")?.addEventListener("click", async () => {
+    const banner = document.getElementById("deltaStatusBanner");
     if (banner) {
-      banner.textContent = "✓ Synced live 42-Site Registry from GitHub Releases (packs-latest).";
+      banner.style.display = "block";
+      banner.textContent =
+        "Downloading updated Docx-core.exe (~8 MB) from GitHub Releases while preserving local documentation packs...";
+    }
+    try {
+      const msg = await invoke<string>("self_update_app");
+      if (banner) {
+        banner.textContent = `✓ ${msg} Restart Docx to run the new version.`;
+      }
+    } catch (err) {
+      if (banner) {
+        banner.textContent = `App core update error: ${String(err)}`;
+      }
     }
   });
 

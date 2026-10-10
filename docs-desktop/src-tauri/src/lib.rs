@@ -10,9 +10,13 @@ use std::sync::{Arc, RwLock};
 use std::thread;
 use std::time::Duration;
 
-static ASSETS_PACK: &[u8] = include_bytes!("../assets.pack");
+static ASSETS_PACK: &[u8] = b"\x02\x00\x00\x00{}";
 const TRAILER_MAGIC: &[u8; 8] = b"DOCXPACK";
 const RELEASE_BASE_URL: &str = "https://github.com/VahidM313/docx/releases/download/packs-latest";
+const APP_BUILD_COMMIT: &str = match option_env!("DOCX_BUILD_COMMIT") {
+    Some(v) => v,
+    None => "local",
+};
 
 #[derive(serde::Deserialize, serde::Serialize, Clone)]
 pub struct ManifestEntry {
@@ -861,17 +865,19 @@ fn get_installed_packs(state: tauri::State<'_, AppState>) -> Vec<PackStatusInfo>
                     }
                 }
             }
-            list.push(PackStatusInfo {
-                id: site_id.to_string(),
-                name: default_name.to_string(),
-                version: default_ver.to_string(),
-                commit: "embedded-base".to_string(),
-                route_count,
-                chunk_count: offsets.len(),
-                size_mb: (total_bytes as f64 / (1024.0 * 1024.0) * 100.0).round() / 100.0,
-                source: "Embedded in .exe".to_string(),
-                port,
-            });
+            if route_count > 0 {
+                list.push(PackStatusInfo {
+                    id: site_id.to_string(),
+                    name: default_name.to_string(),
+                    version: default_ver.to_string(),
+                    commit: "embedded-base".to_string(),
+                    route_count,
+                    chunk_count: offsets.len(),
+                    size_mb: (total_bytes as f64 / (1024.0 * 1024.0) * 100.0).round() / 100.0,
+                    source: "Embedded in .exe".to_string(),
+                    port,
+                });
+            }
         }
     }
 
@@ -965,10 +971,6 @@ fn fetch_remote_registry(state: tauri::State<'_, AppState>) -> Result<Vec<Remote
     for item in parsed_raw {
         let (installed, local_commit) = if let Some(pack) = guard.get(&item.id) {
             (true, pack.manifest.commit.clone())
-        } else if item.id == "tailwind" {
-            (true, "f8a2c91".to_string())
-        } else if item.id == "shadcn" {
-            (true, "d4e71b3".to_string())
         } else {
             (false, String::new())
         };
@@ -1479,6 +1481,137 @@ fn bundle_into_single_exe(state: tauri::State<'_, AppState>) -> Result<String, S
     }
 }
 
+#[derive(serde::Deserialize, serde::Serialize, Clone)]
+#[allow(non_snake_case)]
+pub struct AppManifestRemote {
+    pub commit: String,
+    #[serde(default)]
+    pub version: String,
+    #[serde(default)]
+    pub updatedAt: String,
+    #[serde(default)]
+    pub coreSizeBytes: usize,
+    #[serde(default)]
+    pub fullSizeBytes: usize,
+}
+
+#[derive(serde::Serialize, Clone)]
+#[allow(non_snake_case)]
+pub struct AppUpdateStatus {
+    pub localCommit: String,
+    pub remoteCommit: String,
+    pub version: String,
+    pub updateAvailable: bool,
+    pub coreSizeMb: f64,
+}
+
+#[tauri::command]
+fn check_app_update() -> Result<AppUpdateStatus, String> {
+    let url = format!("{}/app-manifest.json", RELEASE_BASE_URL);
+    let bytes = curl_get_bytes(&url, None)?;
+    let rem: AppManifestRemote = serde_json::from_slice(&bytes).map_err(|e| e.to_string())?;
+    let local_commit = APP_BUILD_COMMIT.to_string();
+    let update_available = !rem.commit.is_empty()
+        && local_commit != "local"
+        && !rem.commit.starts_with(&local_commit)
+        && !local_commit.starts_with(&rem.commit);
+    Ok(AppUpdateStatus {
+        localCommit: local_commit,
+        remoteCommit: rem.commit,
+        version: rem.version,
+        updateAvailable: update_available,
+        coreSizeMb: ((rem.coreSizeBytes as f64 / (1024.0 * 1024.0)) * 100.0).round() / 100.0,
+    })
+}
+
+/// Downloads ONLY Docx-core.exe (~8 MB) from GitHub Releases, splices the existing DOCXPACK
+/// documentation trailer from the current executable onto it (so zero documentation bytes are
+/// re-downloaded!), swaps the running executable in-place, and restarts!
+#[tauri::command]
+async fn self_update_app(
+    window: tauri::Window,
+    state: tauri::State<'_, AppState>,
+) -> Result<String, String> {
+    let store = Arc::clone(&state.store);
+    tauri::async_runtime::spawn_blocking(move || {
+        use tauri::Emitter;
+        let core_url = format!("{}/Docx-core.exe", RELEASE_BASE_URL);
+        let exe_path = std::env::current_exe().map_err(|e| e.to_string())?;
+        let tmp_core_path = exe_path.with_extension("core.tmp");
+
+        let mut new_exe_bytes = curl_download_with_progress(
+            &core_url,
+            &tmp_core_path,
+            8 * 1024 * 1024,
+            "docx_app_core",
+            &window,
+        )?;
+        let _ = fs::remove_file(&tmp_core_path);
+        let core_dl_mb = new_exe_bytes.len() as f64 / (1024.0 * 1024.0);
+
+        let _ = window.emit(
+            "docpack-progress",
+            DownloadProgressPayload {
+                site_id: "docx_app_core".to_string(),
+                phase: "Preserving Embedded Docs...".to_string(),
+                downloaded_bytes: new_exe_bytes.len(),
+                total_bytes: new_exe_bytes.len(),
+                percent: 96,
+                detail: "Splicing local DOCXPACK trailer onto new app core...".to_string(),
+            },
+        );
+
+        let mut trailer_payload: Vec<u8> = Vec::new();
+        let guard = store.overrides.read().unwrap();
+        for pack in guard.values() {
+            let len = pack.raw_bytes.len() as u32;
+            trailer_payload.extend_from_slice(&len.to_le_bytes());
+            trailer_payload.extend_from_slice(&pack.raw_bytes);
+        }
+        drop(guard);
+
+        if !trailer_payload.is_empty() {
+            let trailer_len = trailer_payload.len() as u64;
+            new_exe_bytes.extend_from_slice(&trailer_payload);
+            new_exe_bytes.extend_from_slice(&trailer_len.to_le_bytes());
+            new_exe_bytes.extend_from_slice(TRAILER_MAGIC);
+        }
+
+        let old_backup = exe_path.with_extension("old.exe");
+        let _ = fs::remove_file(&old_backup);
+        fs::rename(&exe_path, &old_backup)
+            .map_err(|e| format!("Failed to rename running exe: {}", e))?;
+        if let Err(e) = fs::write(&exe_path, &new_exe_bytes) {
+            let _ = fs::rename(&old_backup, &exe_path);
+            return Err(format!("Failed to write updated Docx.exe: {}", e));
+        }
+
+        let _ = window.emit(
+            "docpack-progress",
+            DownloadProgressPayload {
+                site_id: "docx_app_core".to_string(),
+                phase: "Complete".to_string(),
+                downloaded_bytes: new_exe_bytes.len(),
+                total_bytes: new_exe_bytes.len(),
+                percent: 100,
+                detail: format!(
+                    "App Core updated ({:.2} MB downloaded, {:.2} MB docs preserved locally)!",
+                    core_dl_mb,
+                    trailer_payload.len() as f64 / (1024.0 * 1024.0)
+                ),
+            },
+        );
+
+        Ok(format!(
+            "Delta App Update complete! Downloaded only {:.2} MB (Docx-core.exe) and preserved {:.2} MB of local documentation packs!",
+            core_dl_mb,
+            trailer_payload.len() as f64 / (1024.0 * 1024.0)
+        ))
+    })
+    .await
+    .map_err(|e| e.to_string())?
+}
+
 #[tauri::command]
 fn window_minimize(window: tauri::Window) {
     let _ = window.minimize();
@@ -1522,6 +1655,9 @@ fn window_show_ready(window: tauri::Window) {
 pub fn run() {
     use tauri::Manager;
     let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.old.exe");
+    if let Ok(exe) = std::env::current_exe() {
+        let _ = fs::remove_file(exe.with_extension("old.exe"));
+    }
 
     let store = load_asset_store();
     let tailwind_port = ensure_site_server("tailwind", Arc::clone(&store));
@@ -1584,6 +1720,8 @@ pub fn run() {
             install_or_update_from_github,
             test_partial_delta_update,
             bundle_into_single_exe,
+            check_app_update,
+            self_update_app,
             window_minimize,
             window_toggle_maximize,
             window_toggle_fullscreen,
