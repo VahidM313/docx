@@ -122,6 +122,9 @@
             </button>
           </div>
 
+          <!-- Dynamic Installed Packs in Discord Server Rail -->
+          <div class="dynamic-rail-list" id="dynamicRailList"></div>
+
           <div class="rail-separator"></div>
 
           <!-- Universal Search Server Action -->
@@ -457,21 +460,30 @@
           <div class="pack-manager-panel" id="packManagerPanel">
             <div class="pack-manager-header">
               <div>
-                <h2 class="pack-manager-title">Modular .docpack & Partial Delta Update Engine</h2>
+                <h2 class="pack-manager-title">Docx Cloud Registry & HTTP 206 Partial Delta Updater</h2>
                 <p class="pack-manager-subtitle">
-                  Each site is split into content-hashed Max-Gzip chunks. Updates only download changed chunks via HTTP 206 Range requests.
+                  Connected to <strong>github.com/VahidM313/docx</strong> (<code>packs-latest</code>). Install any documentation pack or run partial chunk updates.
                 </p>
               </div>
-              <button class="primary-btn bundle-exe-btn" id="btnBundleSingleExe">
-                <span>Bundle into Single Desktop .exe</span>
-              </button>
+              <div class="pack-manager-actions">
+                <button class="primary-btn bundle-exe-btn" id="btnRefreshRegistry">
+                  <span>↻ Sync GitHub Release</span>
+                </button>
+                <button class="primary-btn shadcn-action-btn" id="btnBundleSingleExe">
+                  <span>Bundle All into Single Desktop .exe</span>
+                </button>
+              </div>
             </div>
 
             <div class="delta-status-banner" id="deltaStatusBanner" style="display: none"></div>
 
-            <div class="installed-packs-list" id="installedPacksList">
-              <!-- Populated dynamically via get_installed_packs -->
-            </div>
+            <h3 class="pack-section-label">Installed Documentation Packs</h3>
+            <div class="installed-packs-list" id="installedPacksList"></div>
+
+            <h3 class="pack-section-label" style="margin-top: 22px">
+              Available on GitHub Releases (<span id="cloudPackCount">40+</span> Packs Ready)
+            </h3>
+            <div class="installed-packs-list" id="cloudPacksList"></div>
           </div>
         </section>
 
@@ -491,6 +503,15 @@
             <p id="shadcnLoadingText">Loading shadcn/ui v4 from memory...</p>
           </div>
           <iframe id="iframeShadcn" class="doc-iframe" src="about:blank"></iframe>
+        </section>
+
+        <!-- 4. Dynamic Pack Webview Frame (Any of the 40+ Installed Packs) -->
+        <section class="view-panel" id="viewDynamic">
+          <div class="frame-loading" id="dynamicLoading">
+            <div class="spinner"></div>
+            <p id="dynamicLoadingText">Loading documentation pack from memory...</p>
+          </div>
+          <iframe id="iframeDynamic" class="doc-iframe" src="about:blank"></iframe>
         </section>
       </main>
     </div>

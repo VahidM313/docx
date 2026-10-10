@@ -2,13 +2,17 @@ use std::collections::HashMap;
 use std::fs::{self, File};
 use std::io::{Read, Seek, SeekFrom, Write};
 use std::net::{TcpListener, TcpStream};
+#[cfg(target_os = "windows")]
+use std::os::windows::process::CommandExt;
 use std::path::PathBuf;
+use std::process::Command;
 use std::sync::{Arc, RwLock};
 use std::thread;
 use std::time::Duration;
 
 static ASSETS_PACK: &[u8] = include_bytes!("../assets.pack");
 const TRAILER_MAGIC: &[u8; 8] = b"DOCXPACK";
+const RELEASE_BASE_URL: &str = "https://github.com/VahidM313/docx/releases/download/packs-latest";
 
 #[derive(serde::Deserialize, serde::Serialize, Clone)]
 pub struct ManifestEntry {
@@ -21,13 +25,17 @@ pub struct ManifestEntry {
 }
 
 #[derive(serde::Deserialize, serde::Serialize, Clone)]
+#[allow(non_snake_case)]
 pub struct SiteManifest {
     pub id: String,
     pub name: String,
     pub version: String,
     pub commit: String,
+    #[serde(default)]
     pub updatedAt: String,
+    #[serde(default)]
     pub totalBytes: usize,
+    #[serde(default)]
     pub chunkCount: usize,
     pub routes: HashMap<String, ManifestEntry>,
 }
@@ -43,6 +51,7 @@ pub struct AssetStore {
     pub base_manifest: HashMap<String, ManifestEntry>,
     pub base_data_start: usize,
     pub overrides: RwLock<HashMap<String, Arc<SiteOverridePack>>>,
+    pub site_ports: RwLock<HashMap<String, u16>>,
 }
 
 pub struct AppState {
@@ -57,6 +66,7 @@ pub struct ServerStatus {
     pub shadcn: bool,
     pub tailwind_port: u16,
     pub shadcn_port: u16,
+    pub site_ports: HashMap<String, u16>,
 }
 
 #[derive(serde::Serialize, Clone)]
@@ -69,6 +79,7 @@ pub struct PackStatusInfo {
     pub chunk_count: usize,
     pub size_mb: f64,
     pub source: String,
+    pub port: u16,
 }
 
 #[derive(serde::Serialize, Clone)]
@@ -82,6 +93,7 @@ pub struct DeltaUpdateResult {
     pub reused_bytes: usize,
     pub downloaded_bytes: usize,
     pub saved_percent: f64,
+    pub port: u16,
     pub message: String,
 }
 
@@ -92,6 +104,23 @@ fn fnv1a_hash_hex(bytes: &[u8]) -> String {
         hash = hash.wrapping_mul(0x100000001b3);
     }
     format!("{:016x}", hash)
+}
+
+fn curl_get_bytes(url: &str, range: Option<(usize, usize)>) -> Result<Vec<u8>, String> {
+    let mut cmd = Command::new("curl.exe");
+    cmd.arg("-sL").arg("--fail");
+    if let Some((start, end)) = range {
+        cmd.arg("-r").arg(format!("{}-{}", start, end));
+    }
+    cmd.arg(url);
+    #[cfg(target_os = "windows")]
+    cmd.creation_flags(0x08000000); // CREATE_NO_WINDOW
+
+    let output = cmd.output().map_err(|e| format!("curl error: {}", e))?;
+    if !output.status.success() {
+        return Err(format!("HTTP fetch failed for {}", url));
+    }
+    Ok(output.stdout)
 }
 
 fn get_packs_dir() -> PathBuf {
@@ -124,7 +153,6 @@ fn parse_docpack_bytes(buf: Vec<u8>, source: &str) -> Option<Arc<SiteOverridePac
     let mut manifest: SiteManifest = serde_json::from_slice(&buf[4..4 + manifest_len]).ok()?;
     let data_start = 4 + manifest_len;
 
-    // Ensure every route has a deterministic chunk hash
     for entry in manifest.routes.values_mut() {
         if entry.hash.is_empty() && data_start + entry.offset + entry.length <= buf.len() {
             let slice = &buf[data_start + entry.offset..data_start + entry.offset + entry.length];
@@ -181,7 +209,6 @@ fn load_exe_trailer_overrides(overrides: &mut HashMap<String, Arc<SiteOverridePa
         return;
     }
 
-    // Trailer can contain multiple [u32 pack_byte_len][docpack_bytes...]
     let mut pos = 0;
     while pos + 4 <= trailer_buf.len() {
         let pack_len = u32::from_le_bytes(trailer_buf[pos..pos + 4].try_into().unwrap()) as usize;
@@ -237,6 +264,7 @@ fn load_asset_store() -> Arc<AssetStore> {
         base_manifest,
         base_data_start,
         overrides: RwLock::new(overrides),
+        site_ports: RwLock::new(HashMap::new()),
     })
 }
 
@@ -262,23 +290,20 @@ fn url_decode(input: &str) -> String {
 }
 
 fn resolve_from_store(
-    prefix: &str,
+    site_key: &str,
     decoded_path: &str,
     store: &AssetStore,
 ) -> Option<(String, bool, Vec<u8>)> {
-    let site_id = if prefix == "tw" {
-        "tailwind"
-    } else if prefix == "sh" {
-        "shadcn"
-    } else {
-        prefix
+    let (site_id, base_prefix) = match site_key {
+        "tw" | "tailwind" => ("tailwind", "tw"),
+        "sh" | "shadcn" => ("shadcn", "sh"),
+        other => (other, other),
     };
 
-    // 1. Check hot-swappable override packs first (.docpack or DOCXPACK trailer)
     if let Ok(guard) = store.overrides.read() {
         if let Some(pack) = guard.get(site_id) {
             let entry_opt = pack.manifest.routes.get(decoded_path).or_else(|| {
-                if prefix == "sh" && decoded_path.starts_with("/docs/components/") {
+                if site_id == "shadcn" && decoded_path.starts_with("/docs/components/") {
                     let slug = decoded_path.trim_start_matches("/docs/components/");
                     let radix_key = format!("/docs/components/radix/{}", slug);
                     pack.manifest.routes.get(&radix_key)
@@ -300,10 +325,9 @@ fn resolve_from_store(
         }
     }
 
-    // 2. Fallback to compiled-in ASSETS_PACK
-    let lookup_key = format!("{}:{}", prefix, decoded_path);
+    let lookup_key = format!("{}:{}", base_prefix, decoded_path);
     let entry_opt = store.base_manifest.get(&lookup_key).or_else(|| {
-        if prefix == "sh" && decoded_path.starts_with("/docs/components/") {
+        if base_prefix == "sh" && decoded_path.starts_with("/docs/components/") {
             let slug = decoded_path.trim_start_matches("/docs/components/");
             let radix_key = format!("sh:/docs/components/radix/{}", slug);
             store.base_manifest.get(&radix_key)
@@ -325,7 +349,7 @@ fn resolve_from_store(
     None
 }
 
-fn handle_client(mut stream: TcpStream, prefix: &'static str, store: Arc<AssetStore>) {
+fn handle_client(mut stream: TcpStream, site_key: String, store: Arc<AssetStore>) {
     let _ = stream.set_read_timeout(Some(Duration::from_secs(2)));
     let _ = stream.set_write_timeout(Some(Duration::from_secs(5)));
 
@@ -351,9 +375,9 @@ fn handle_client(mut stream: TcpStream, prefix: &'static str, store: Arc<AssetSt
         decoded_path.pop();
     }
 
-    let resolved = resolve_from_store(prefix, &decoded_path, &store).or_else(|| {
-        if decoded_path.starts_with("/docs") {
-            resolve_from_store(prefix, "/docs", &store)
+    let resolved = resolve_from_store(&site_key, &decoded_path, &store).or_else(|| {
+        if decoded_path.starts_with("/docs") || decoded_path == "/" {
+            resolve_from_store(&site_key, "/docs", &store)
         } else {
             None
         }
@@ -385,15 +409,26 @@ fn handle_client(mut stream: TcpStream, prefix: &'static str, store: Arc<AssetSt
     }
 }
 
-fn start_embedded_server(prefix: &'static str, store: Arc<AssetStore>) -> u16 {
+fn ensure_site_server(site_id: &str, store: Arc<AssetStore>) -> u16 {
+    if let Ok(guard) = store.site_ports.read() {
+        if let Some(&port) = guard.get(site_id) {
+            return port;
+        }
+    }
     let listener = TcpListener::bind("127.0.0.1:0").expect("Failed to bind embedded HTTP server");
     let port = listener.local_addr().unwrap().port();
+    let key_owned = site_id.to_string();
+
+    if let Ok(mut guard) = store.site_ports.write() {
+        guard.insert(key_owned.clone(), port);
+    }
 
     thread::spawn(move || {
         for stream in listener.incoming().flatten() {
             let store_ref = Arc::clone(&store);
+            let k = key_owned.clone();
             thread::spawn(move || {
-                handle_client(stream, prefix, store_ref);
+                handle_client(stream, k, store_ref);
             });
         }
     });
@@ -403,11 +438,13 @@ fn start_embedded_server(prefix: &'static str, store: Arc<AssetStore>) -> u16 {
 
 #[tauri::command]
 fn check_servers(state: tauri::State<'_, AppState>) -> ServerStatus {
+    let ports = state.store.site_ports.read().unwrap().clone();
     ServerStatus {
         tailwind: true,
         shadcn: true,
         tailwind_port: state.tailwind_port,
         shadcn_port: state.shadcn_port,
+        site_ports: ports,
     }
 }
 
@@ -431,11 +468,13 @@ fn start_shadcn_server(state: tauri::State<'_, AppState>) -> Result<String, Stri
 fn get_installed_packs(state: tauri::State<'_, AppState>) -> Vec<PackStatusInfo> {
     let mut list = Vec::new();
     let guard = state.store.overrides.read().unwrap();
+    let ports = state.store.site_ports.read().unwrap();
 
     for (site_id, prefix, default_name, default_ver) in [
         ("tailwind", "tw:", "Tailwind CSS", "v4.3.0"),
         ("shadcn", "sh:", "shadcn/ui", "v4.0.0"),
     ] {
+        let port = ports.get(site_id).copied().unwrap_or(0);
         if let Some(pack) = guard.get(site_id) {
             list.push(PackStatusInfo {
                 id: site_id.to_string(),
@@ -447,6 +486,7 @@ fn get_installed_packs(state: tauri::State<'_, AppState>) -> Vec<PackStatusInfo>
                 size_mb: (pack.manifest.totalBytes as f64 / (1024.0 * 1024.0) * 100.0).round()
                     / 100.0,
                 source: pack.source.clone(),
+                port,
             });
         } else {
             let mut offsets = std::collections::HashSet::new();
@@ -469,196 +509,146 @@ fn get_installed_packs(state: tauri::State<'_, AppState>) -> Vec<PackStatusInfo>
                 chunk_count: offsets.len(),
                 size_mb: (total_bytes as f64 / (1024.0 * 1024.0) * 100.0).round() / 100.0,
                 source: "Embedded in .exe".to_string(),
+                port,
             });
         }
     }
+
+    for (site_id, pack) in guard.iter() {
+        if site_id == "tailwind" || site_id == "shadcn" {
+            continue;
+        }
+        let port = ports.get(site_id).copied().unwrap_or(0);
+        list.push(PackStatusInfo {
+            id: site_id.clone(),
+            name: pack.manifest.name.clone(),
+            version: pack.manifest.version.clone(),
+            commit: pack.manifest.commit.clone(),
+            route_count: pack.manifest.routes.len(),
+            chunk_count: pack.manifest.chunkCount,
+            size_mb: (pack.manifest.totalBytes as f64 / (1024.0 * 1024.0) * 100.0).round() / 100.0,
+            source: pack.source.clone(),
+            port,
+        });
+    }
+
+    list.sort_by(|a, b| a.id.cmp(&b.id));
     list
 }
 
-/// Performs a real Content-Hash Partial (Delta) Update on a site pack!
-/// Reuses 100% of matching local chunks and only fetches changed chunks via HTTP Range (206 Partial Content).
 #[tauri::command]
-fn test_partial_delta_update(
+fn fetch_remote_registry() -> Result<serde_json::Value, String> {
+    let url = format!("{}/registry.json", RELEASE_BASE_URL);
+    let bytes = curl_get_bytes(&url, None)?;
+    serde_json::from_slice(&bytes).map_err(|e| e.to_string())
+}
+
+#[tauri::command]
+fn get_extra_search_entries() -> Vec<serde_json::Value> {
+    let mut all = Vec::new();
+    let packs_dir = get_packs_dir();
+    if let Ok(entries) = fs::read_dir(&packs_dir) {
+        for entry in entries.flatten() {
+            let path = entry.path();
+            if path
+                .file_name()
+                .and_then(|n| n.to_str())
+                .map(|s| s.ends_with(".search.json"))
+                .unwrap_or(false)
+            {
+                if let Ok(bytes) = fs::read(&path) {
+                    if let Ok(items) = serde_json::from_slice::<Vec<serde_json::Value>>(&bytes) {
+                        all.extend(items);
+                    }
+                }
+            }
+        }
+    }
+    all
+}
+
+/// Downloads a brand-new .docpack OR performs an HTTP 206 Partial Range Delta Update from GitHub Releases!
+#[tauri::command]
+fn install_or_update_from_github(
     site_id: String,
     state: tauri::State<'_, AppState>,
 ) -> Result<DeltaUpdateResult, String> {
-    let prefix = if site_id == "tailwind" { "tw" } else { "sh" };
+    let manifest_url = format!("{}/{}.manifest.json", RELEASE_BASE_URL, site_id);
+    let pack_url = format!("{}/{}.docpack", RELEASE_BASE_URL, site_id);
+    let search_url = format!("{}/{}.search.json", RELEASE_BASE_URL, site_id);
 
-    // 1. Collect all currently installed local chunks mapped by hash -> raw compressed bytes
+    let remote_manifest_bytes = curl_get_bytes(&manifest_url, None)?;
+    let remote_manifest: SiteManifest =
+        serde_json::from_slice(&remote_manifest_bytes).map_err(|e| e.to_string())?;
+
+    let packs_dir = get_packs_dir();
+    let _ = fs::create_dir_all(&packs_dir);
+
+    // Download .search.json if available
+    if let Ok(search_bytes) = curl_get_bytes(&search_url, None) {
+        let _ = fs::write(packs_dir.join(format!("{}.search.json", site_id)), search_bytes);
+    }
+
+    // Check if we already have local chunks for this site
     let mut local_chunks_by_hash: HashMap<String, Vec<u8>> = HashMap::new();
-    let mut current_routes: HashMap<String, ManifestEntry> = HashMap::new();
-    let mut old_commit = String::from("embedded-base");
-    let mut site_name = if site_id == "tailwind" {
-        "Tailwind CSS".to_string()
-    } else {
-        "shadcn/ui".to_string()
-    };
-    let mut site_version = if site_id == "tailwind" {
-        "v4.3.0".to_string()
-    } else {
-        "v4.0.0".to_string()
-    };
+    let mut old_commit = String::from("not-installed");
 
     {
         let guard = state.store.overrides.read().unwrap();
         if let Some(pack) = guard.get(&site_id) {
             old_commit = pack.manifest.commit.clone();
-            site_name = pack.manifest.name.clone();
-            site_version = pack.manifest.version.clone();
-            for (route, entry) in &pack.manifest.routes {
+            for entry in pack.manifest.routes.values() {
                 let start = pack.data_start + entry.offset;
                 let end = start + entry.length;
-                if end <= pack.raw_bytes.len() {
-                    let bytes = pack.raw_bytes[start..end].to_vec();
-                    let h = if entry.hash.is_empty() {
-                        fnv1a_hash_hex(&bytes)
-                    } else {
-                        entry.hash.clone()
-                    };
-                    local_chunks_by_hash.insert(h.clone(), bytes);
-                    let mut e = entry.clone();
-                    e.hash = h;
-                    current_routes.insert(route.clone(), e);
-                }
-            }
-        } else {
-            let pfx = format!("{}:", prefix);
-            for (full_key, entry) in &state.store.base_manifest {
-                if let Some(route) = full_key.strip_prefix(&pfx) {
-                    let start = state.store.base_data_start + entry.offset;
-                    let end = start + entry.length;
-                    let bytes = ASSETS_PACK[start..end].to_vec();
-                    let h = if entry.hash.is_empty() {
-                        fnv1a_hash_hex(&bytes)
-                    } else {
-                        entry.hash.clone()
-                    };
-                    local_chunks_by_hash.insert(h.clone(), bytes);
-                    let mut e = entry.clone();
-                    e.hash = h;
-                    current_routes.insert(route.to_string(), e);
+                if end <= pack.raw_bytes.len() && !entry.hash.is_empty() {
+                    local_chunks_by_hash
+                        .insert(entry.hash.clone(), pack.raw_bytes[start..end].to_vec());
                 }
             }
         }
     }
 
-    // 2. Spin up an ephemeral HTTP Range server simulating a new upstream release on GitHub Releases
-    // where 1 doc page was updated (e.g. "/docs" has a new revision timestamp/chunk) while all other
-    // 379+ chunks remain identical.
-    let new_commit = format!(
-        "delta-{:x}",
-        std::time::SystemTime::now()
-            .duration_since(std::time::UNIX_EPOCH)
-            .unwrap()
-            .as_secs()
-            & 0xfffff
-    );
+    // If not installed at all, download full .docpack in 1 fast request
+    if local_chunks_by_hash.is_empty() {
+        let full_pack_bytes = curl_get_bytes(&pack_url, None)?;
+        let dl_bytes = full_pack_bytes.len();
+        let docpack_path = packs_dir.join(format!("{}.docpack", site_id));
+        fs::write(&docpack_path, &full_pack_bytes).map_err(|e| e.to_string())?;
 
-    let target_route = if current_routes.contains_key("/docs") {
-        "/docs".to_string()
-    } else {
-        current_routes.keys().next().cloned().unwrap_or_default()
-    };
-
-    // Build the simulated remote pack with 1 modified chunk and all other chunks unchanged
-    let mut remote_routes: HashMap<String, ManifestEntry> = HashMap::new();
-    let mut remote_data: Vec<u8> = Vec::new();
-    let mut seen_hashes: HashMap<String, (usize, usize)> = HashMap::new();
-
-    for (route, entry) in &current_routes {
-        let mut chunk_bytes = local_chunks_by_hash
-            .get(&entry.hash)
-            .cloned()
-            .unwrap_or_default();
-        let mut chunk_hash = entry.hash.clone();
-
-        if route == &target_route {
-            // Append anempty/harmless gzipped or trailing comment marker to simulate an updated page chunk
-            // Since browsers ignore trailing bytes after valid gzip stream or we can re-hash with a 0-byte gzip comment:
-            // Actually, an empty valid gzip member (20 bytes) concatenated to a gzip stream is 100% valid RFC 1952 multi-member gzip!
-            let empty_gzip_member: [u8; 20] = [
-                0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x03, 0x00, 0x00, 0x00,
-                0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-            ];
-            chunk_bytes.extend_from_slice(&empty_gzip_member);
-            chunk_hash = fnv1a_hash_hex(&chunk_bytes);
+        if let Some(parsed) = parse_docpack_bytes(full_pack_bytes, "GitHub Release .docpack") {
+            state
+                .store
+                .overrides
+                .write()
+                .unwrap()
+                .insert(site_id.clone(), parsed);
         }
+        let port = ensure_site_server(&site_id, Arc::clone(&state.store));
 
-        let (offset, length) = if let Some(&pos) = seen_hashes.get(&chunk_hash) {
-            pos
-        } else {
-            let off = remote_data.len();
-            let len = chunk_bytes.len();
-            remote_data.extend_from_slice(&chunk_bytes);
-            seen_hashes.insert(chunk_hash.clone(), (off, len));
-            (off, len)
-        };
-
-        remote_routes.insert(
-            route.clone(),
-            ManifestEntry {
-                offset,
-                length,
-                mime: entry.mime.clone(),
-                gzipped: entry.gzipped,
-                hash: chunk_hash,
-            },
-        );
+        return Ok(DeltaUpdateResult {
+            site_id: site_id.clone(),
+            old_commit,
+            new_commit: remote_manifest.commit.clone(),
+            total_chunks: remote_manifest.chunkCount,
+            reused_chunks: 0,
+            downloaded_chunks: remote_manifest.chunkCount,
+            reused_bytes: 0,
+            downloaded_bytes: dl_bytes,
+            saved_percent: 0.0,
+            port,
+            message: format!(
+                "Installed {} ({}) from GitHub Releases ({:.2} MB, {} routes) on port :{}!",
+                remote_manifest.name,
+                remote_manifest.version,
+                dl_bytes as f64 / (1024.0 * 1024.0),
+                remote_manifest.routes.len(),
+                port
+            ),
+        });
     }
 
-    let remote_manifest = SiteManifest {
-        id: site_id.clone(),
-        name: site_name,
-        version: site_version,
-        commit: new_commit.clone(),
-        updatedAt: "Just now".to_string(),
-        totalBytes: remote_data.len(),
-        chunkCount: seen_hashes.len(),
-        routes: remote_routes,
-    };
-
-    // Start ephemeral HTTP 206 Range Server on 127.0.0.1:0 to serve the remote pack via Range requests
-    let range_listener = TcpListener::bind("127.0.0.1:0").map_err(|e| e.to_string())?;
-    let range_port = range_listener.local_addr().unwrap().port();
-    let remote_data_arc = Arc::new(remote_data);
-
-    thread::spawn(move || {
-        if let Ok((mut stream, _)) = range_listener.accept() {
-            let mut req_buf = [0u8; 2048];
-            if let Ok(n) = stream.read(&mut req_buf) {
-                let req_str = String::from_utf8_lossy(&req_buf[..n]);
-                let mut start_byte = 0usize;
-                let mut end_byte = remote_data_arc.len().saturating_sub(1);
-                for line in req_str.lines() {
-                    if let Some(rest) = line
-                        .strip_prefix("Range: bytes=")
-                        .or_else(|| line.strip_prefix("range: bytes="))
-                    {
-                        let mut sp = rest.trim().split('-');
-                        if let (Some(s), Some(e)) = (sp.next(), sp.next()) {
-                            start_byte = s.parse().unwrap_or(0);
-                            end_byte = e.parse().unwrap_or(end_byte);
-                        }
-                    }
-                }
-                if start_byte <= end_byte && end_byte < remote_data_arc.len() {
-                    let slice = &remote_data_arc[start_byte..=end_byte];
-                    let hdr = format!(
-                        "HTTP/1.1 206 Partial Content\r\nContent-Range: bytes {}-{}/{}\r\nContent-Length: {}\r\nConnection: close\r\n\r\n",
-                        start_byte,
-                        end_byte,
-                        remote_data_arc.len(),
-                        slice.len()
-                    );
-                    let _ = stream.write_all(hdr.as_bytes());
-                    let _ = stream.write_all(slice);
-                    let _ = stream.flush();
-                }
-            }
-        }
-    });
-
-    // 3. Perform the actual Delta Diff + HTTP Range Client Request for ONLY changed chunks!
+    // Already installed: perform HTTP 206 Partial Content Range Delta Update for ONLY changed chunks!
+    let remote_data_start = 4 + remote_manifest_bytes.len();
     let mut new_pack_data: Vec<u8> = Vec::new();
     let mut new_routes: HashMap<String, ManifestEntry> = HashMap::new();
     let mut placed_hashes: HashMap<String, (usize, usize)> = HashMap::new();
@@ -673,7 +663,6 @@ fn test_partial_delta_update(
         {
             already
         } else if let Some(local_bytes) = local_chunks_by_hash.get(&rem_entry.hash) {
-            // Chunk hash matches local! Reuse 100% locally (0 network bytes)
             let off = new_pack_data.len();
             let len = local_bytes.len();
             new_pack_data.extend_from_slice(local_bytes);
@@ -682,29 +671,12 @@ fn test_partial_delta_update(
             reused_bytes += len;
             (off, len)
         } else {
-            // Chunk hash changed! Fetch ONLY this exact byte range via HTTP Range: bytes=start-end
-            let start = rem_entry.offset;
-            let end = start + rem_entry.length - 1;
-            let mut client =
-                TcpStream::connect(("127.0.0.1", range_port)).map_err(|e| e.to_string())?;
-            let req = format!(
-                "GET /{}.docpack HTTP/1.1\r\nHost: 127.0.0.1:{}\r\nRange: bytes={}-{}\r\nConnection: close\r\n\r\n",
-                site_id, range_port, start, end
-            );
-            client.write_all(req.as_bytes()).map_err(|e| e.to_string())?;
-            let mut resp = Vec::new();
-            client.read_to_end(&mut resp).map_err(|e| e.to_string())?;
-
-            let body_pos = resp
-                .windows(4)
-                .position(|w| w == b"\r\n\r\n")
-                .map(|p| p + 4)
-                .ok_or("Invalid HTTP 206 response")?;
-            let range_bytes = &resp[body_pos..];
-
+            let abs_start = remote_data_start + rem_entry.offset;
+            let abs_end = abs_start + rem_entry.length - 1;
+            let range_bytes = curl_get_bytes(&pack_url, Some((abs_start, abs_end)))?;
             let off = new_pack_data.len();
             let len = range_bytes.len();
-            new_pack_data.extend_from_slice(range_bytes);
+            new_pack_data.extend_from_slice(&range_bytes);
             placed_hashes.insert(rem_entry.hash.clone(), (off, len));
             downloaded_chunks += 1;
             downloaded_bytes += len;
@@ -727,7 +699,7 @@ fn test_partial_delta_update(
         id: site_id.clone(),
         name: remote_manifest.name.clone(),
         version: remote_manifest.version.clone(),
-        commit: new_commit.clone(),
+        commit: remote_manifest.commit.clone(),
         updatedAt: remote_manifest.updatedAt.clone(),
         totalBytes: new_pack_data.len(),
         chunkCount: placed_hashes.len(),
@@ -740,13 +712,10 @@ fn test_partial_delta_update(
     full_docpack.extend_from_slice(&manifest_json);
     full_docpack.extend_from_slice(&new_pack_data);
 
-    // Save updated .docpack to packs/ directory and hot-swap in memory
-    let packs_dir = get_packs_dir();
-    let _ = fs::create_dir_all(&packs_dir);
     let docpack_path = packs_dir.join(format!("{}.docpack", site_id));
     fs::write(&docpack_path, &full_docpack).map_err(|e| e.to_string())?;
 
-    if let Some(parsed) = parse_docpack_bytes(full_docpack, "Delta-Updated .docpack") {
+    if let Some(parsed) = parse_docpack_bytes(full_docpack, "GitHub Delta .docpack") {
         state
             .store
             .overrides
@@ -754,6 +723,7 @@ fn test_partial_delta_update(
             .unwrap()
             .insert(site_id.clone(), parsed);
     }
+    let port = ensure_site_server(&site_id, Arc::clone(&state.store));
 
     let total_bytes = reused_bytes + downloaded_bytes;
     let saved_percent = if total_bytes > 0 {
@@ -765,15 +735,16 @@ fn test_partial_delta_update(
     Ok(DeltaUpdateResult {
         site_id: site_id.clone(),
         old_commit,
-        new_commit: new_commit.clone(),
+        new_commit: remote_manifest.commit,
         total_chunks: reused_chunks + downloaded_chunks,
         reused_chunks,
         downloaded_chunks,
         reused_bytes,
         downloaded_bytes,
         saved_percent,
+        port,
         message: format!(
-            "Partial update complete! Reused {}/{} chunks locally ({:.2} MB), downloaded only {} changed chunk ({:.1} KB via HTTP 206 Range) — {}% bandwidth saved!",
+            "GitHub Partial Update complete! Reused {}/{} chunks locally ({:.2} MB), downloaded {} changed chunks ({:.1} KB via HTTP 206 Range) — {}% bandwidth saved!",
             reused_chunks,
             reused_chunks + downloaded_chunks,
             reused_bytes as f64 / (1024.0 * 1024.0),
@@ -784,14 +755,19 @@ fn test_partial_delta_update(
     })
 }
 
-/// Bundles all active delta-updated .docpack overrides into the single standalone Desktop Docx.exe
-/// using the DOCXPACK binary trailer (zero Rust/Cargo compiler required!).
+#[tauri::command]
+fn test_partial_delta_update(
+    site_id: String,
+    state: tauri::State<'_, AppState>,
+) -> Result<DeltaUpdateResult, String> {
+    install_or_update_from_github(site_id, state)
+}
+
 #[tauri::command]
 fn bundle_into_single_exe(state: tauri::State<'_, AppState>) -> Result<String, String> {
     let exe_path = std::env::current_exe().map_err(|e| e.to_string())?;
     let mut exe_bytes = fs::read(&exe_path).map_err(|e| e.to_string())?;
 
-    // Strip existing DOCXPACK trailer if present
     if exe_bytes.len() >= 20 && &exe_bytes[exe_bytes.len() - 8..] == TRAILER_MAGIC {
         let old_trailer_len = u64::from_le_bytes(
             exe_bytes[exe_bytes.len() - 16..exe_bytes.len() - 8]
@@ -816,26 +792,25 @@ fn bundle_into_single_exe(state: tauri::State<'_, AppState>) -> Result<String, S
     exe_bytes.extend_from_slice(&trailer_len.to_le_bytes());
     exe_bytes.extend_from_slice(TRAILER_MAGIC);
 
-    // Write to Desktop\Docx-Bundled.exe or update Desktop\Docx.exe safely
     let out_path = PathBuf::from("C:/Users/vahid/OneDrive/Desktop/Docx.exe");
     let tmp_path = PathBuf::from("C:/Users/vahid/OneDrive/Desktop/Docx.new.exe");
     fs::write(&tmp_path, &exe_bytes).map_err(|e| e.to_string())?;
 
-    // If Docx.exe is not locked or can be renamed, swap it; otherwise keep Docx-Updated.exe
     let old_backup = PathBuf::from("C:/Users/vahid/OneDrive/Desktop/Docx.old.exe");
     let _ = fs::remove_file(&old_backup);
     if fs::rename(&out_path, &old_backup).is_ok() {
         let _ = fs::rename(&tmp_path, &out_path);
         let _ = fs::remove_file(&old_backup);
         Ok(format!(
-            "Successfully updated standalone Desktop\\Docx.exe in-place with {} embedded DOCXPACK trailer ({:.2} MB total)!",
+            "Updated standalone Desktop\\Docx.exe in-place with {} embedded packs ({:.2} MB total)!",
             guard.len(),
             exe_bytes.len() as f64 / (1024.0 * 1024.0)
         ))
     } else {
         Ok(format!(
-            "Exported standalone Desktop\\Docx.new.exe ({:.2} MB) with all updated packs embedded!",
-            exe_bytes.len() as f64 / (1024.0 * 1024.0)
+            "Exported standalone Desktop\\Docx.new.exe ({:.2} MB) with {} embedded packs!",
+            exe_bytes.len() as f64 / (1024.0 * 1024.0),
+            guard.len()
         ))
     }
 }
@@ -866,12 +841,24 @@ fn window_start_dragging(window: tauri::Window) {
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
-    // Clean up any leftover .old.exe from in-place self-bundling
     let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.old.exe");
 
     let store = load_asset_store();
-    let tailwind_port = start_embedded_server("tw", Arc::clone(&store));
-    let shadcn_port = start_embedded_server("sh", Arc::clone(&store));
+    let tailwind_port = ensure_site_server("tailwind", Arc::clone(&store));
+    let shadcn_port = ensure_site_server("shadcn", Arc::clone(&store));
+
+    // Also start servers for any additional installed .docpack overrides
+    let extra_ids: Vec<String> = store
+        .overrides
+        .read()
+        .unwrap()
+        .keys()
+        .filter(|k| *k != "tailwind" && *k != "shadcn")
+        .cloned()
+        .collect();
+    for id in extra_ids {
+        ensure_site_server(&id, Arc::clone(&store));
+    }
 
     tauri::Builder::default()
         .manage(AppState {
@@ -889,6 +876,9 @@ pub fn run() {
             start_tailwind_server,
             start_shadcn_server,
             get_installed_packs,
+            fetch_remote_registry,
+            get_extra_search_entries,
+            install_or_update_from_github,
             test_partial_delta_update,
             bundle_into_single_exe,
             window_minimize,

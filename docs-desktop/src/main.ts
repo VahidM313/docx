@@ -2,8 +2,8 @@ import { invoke } from "@tauri-apps/api/core";
 
 interface SearchEntry {
   id: string;
-  site: "tailwind" | "shadcn";
-  siteName: "Tailwind CSS" | "shadcn/ui";
+  site: string;
+  siteName: string;
   title: string;
   category: string;
   description: string;
@@ -17,20 +17,37 @@ interface ServerStatus {
   shadcn: boolean;
   tailwind_port: number;
   shadcn_port: number;
+  ports: Record<string, number>;
+}
+
+interface RemoteRegistryItem {
+  id: string;
+  name: string;
+  version: string;
+  commit: string;
+  updatedAt?: string;
+  sizeBytes: number;
+  routeCount: number;
+  chunkCount: number;
+  installed: boolean;
+  local_commit: string;
 }
 
 let tailwindPort = 49152;
 let shadcnPort = 49153;
+let sitePorts: Record<string, number> = {};
 
-function getOrigin(site: "tailwind" | "shadcn"): string {
-  return site === "tailwind"
-    ? `http://localhost:${tailwindPort}`
-    : `http://localhost:${shadcnPort}`;
+function getOrigin(site: string): string {
+  if (site === "tailwind") return `http://localhost:${tailwindPort}`;
+  if (site === "shadcn") return `http://localhost:${shadcnPort}`;
+  const p = sitePorts[site];
+  return p ? `http://localhost:${p}` : `http://localhost:${tailwindPort}`;
 }
 
+let baseSearchIndex: SearchEntry[] = [];
 let searchIndex: SearchEntry[] = [];
-let activeTab: "home" | "tailwind" | "shadcn" = "home";
-let currentFilter: "all" | "tailwind" | "shadcn" = "all";
+let activeTab: string = "home";
+let currentFilter: string = "all";
 let currentResults: SearchEntry[] = [];
 let selectedIndex = 0;
 let sidebarPinned = false;
@@ -38,18 +55,21 @@ let drawerHidden = localStorage.getItem("docx_drawer_hidden") === "true";
 let topbarHidden = false;
 let sidebarCloseTimer: number | null = null;
 let topbarCloseTimer: number | null = null;
+let installedPacksCache: PackStatusInfo[] = [];
 
 let serverStatus: ServerStatus = {
   tailwind: false,
   shadcn: false,
   tailwind_port: tailwindPort,
   shadcn_port: shadcnPort,
+  ports: {},
 };
 
 // DOM Elements
 const tabHome = document.getElementById("tabHome") as HTMLButtonElement;
 const tabTailwind = document.getElementById("tabTailwind") as HTMLButtonElement;
 const tabShadcn = document.getElementById("tabShadcn") as HTMLButtonElement;
+const dynamicRailList = document.getElementById("dynamicRailList") as HTMLElement;
 const brandBtn = document.getElementById("brandBtn") as HTMLElement;
 
 const discordSidebar = document.getElementById("discordSidebar") as HTMLElement;
@@ -69,11 +89,14 @@ const topbarToggleLabel = document.getElementById("topbarToggleLabel") as HTMLEl
 const viewHome = document.getElementById("viewHome") as HTMLElement;
 const viewTailwind = document.getElementById("viewTailwind") as HTMLElement;
 const viewShadcn = document.getElementById("viewShadcn") as HTMLElement;
+const viewDynamic = document.getElementById("viewDynamic") as HTMLElement;
 
 const iframeTailwind = document.getElementById("iframeTailwind") as HTMLIFrameElement;
 const iframeShadcn = document.getElementById("iframeShadcn") as HTMLIFrameElement;
+const iframeDynamic = document.getElementById("iframeDynamic") as HTMLIFrameElement;
 const twLoading = document.getElementById("twLoading") as HTMLElement;
 const shadcnLoading = document.getElementById("shadcnLoading") as HTMLElement;
+const dynamicLoading = document.getElementById("dynamicLoading") as HTMLElement;
 
 const openSearchBtn = document.getElementById("openSearchBtn") as HTMLButtonElement;
 const drawerSearchBtn = document.getElementById("drawerSearchBtn") as HTMLButtonElement;
@@ -105,6 +128,7 @@ async function init() {
   await loadSearchIndex();
   await checkServerHealth();
   await refreshInstalledPacks();
+  await loadCloudRegistry();
   setInterval(checkServerHealth, 3000);
 }
 
@@ -117,6 +141,7 @@ interface PackStatusInfo {
   chunk_count: number;
   size_mb: number;
   source: string;
+  port: number;
 }
 
 interface DeltaUpdateResult {
@@ -132,11 +157,46 @@ interface DeltaUpdateResult {
   message: string;
 }
 
+function renderDynamicRail(packs: PackStatusInfo[]) {
+  if (!dynamicRailList) return;
+  const extraPacks = packs.filter((p) => p.id !== "tailwind" && p.id !== "shadcn");
+  dynamicRailList.innerHTML = extraPacks
+    .map((p) => {
+      const shortBadge = p.id
+        .replace(/^tanstack_/, "ts-")
+        .slice(0, 4)
+        .toUpperCase();
+      const isActive = activeTab === p.id;
+      return `
+        <div class="rail-item ${isActive ? "active" : ""}" data-rail-site="${escapeHtml(p.id)}">
+          <span class="rail-pill"></span>
+          <button class="rail-btn" data-open-site="${escapeHtml(p.id)}" title="${escapeHtml(p.name)} (${escapeHtml(p.version)})">
+            <span class="rail-text-badge">${escapeHtml(shortBadge)}</span>
+          </button>
+        </div>
+      `;
+    })
+    .join("");
+
+  dynamicRailList.querySelectorAll("[data-open-site]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const siteId = btn.getAttribute("data-open-site");
+      if (siteId) switchTab(siteId);
+    });
+  });
+}
+
 async function refreshInstalledPacks() {
   const listEl = document.getElementById("installedPacksList");
   if (!listEl) return;
   try {
     const packs = await invoke<PackStatusInfo[]>("get_installed_packs");
+    installedPacksCache = packs;
+    for (const p of packs) {
+      if (p.port) sitePorts[p.id] = p.port;
+    }
+    renderDynamicRail(packs);
+
     listEl.innerHTML = packs
       .map(
         (p) => `
@@ -148,40 +208,121 @@ async function refreshInstalledPacks() {
             <span class="badge blue">${escapeHtml(p.source)}</span>
           </div>
           <div class="pack-meta-line">
-            commit: ${escapeHtml(p.commit)} • ${p.chunk_count} hashed chunks (${p.route_count} routes) • ${p.size_mb} MB Max-Gzip
+            commit: ${escapeHtml(p.commit)} • ${p.chunk_count} hashed chunks (${p.route_count} routes) • ${p.size_mb} MB Max-Gzip • :${p.port}
           </div>
         </div>
-        <button class="pack-delta-btn" data-delta-site="${escapeHtml(p.id)}">
-          ⚡ Test Partial Delta Update (HTTP 206)
-        </button>
+        <div class="pack-row-actions">
+          <button class="pack-open-btn" data-open-pack="${escapeHtml(p.id)}">
+            Open Docs
+          </button>
+          <button class="pack-delta-btn" data-delta-site="${escapeHtml(p.id)}">
+            ⚡ Delta Update (HTTP 206)
+          </button>
+        </div>
       </div>
     `
       )
       .join("");
 
+    listEl.querySelectorAll("[data-open-pack]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const siteId = btn.getAttribute("data-open-pack");
+        if (siteId) switchTab(siteId);
+      });
+    });
+
     listEl.querySelectorAll("[data-delta-site]").forEach((btn) => {
       btn.addEventListener("click", async () => {
         const siteId = btn.getAttribute("data-delta-site") || "tailwind";
-        const banner = document.getElementById("deltaStatusBanner");
-        if (banner) {
-          banner.style.display = "block";
-          banner.textContent = `Running Content-Hash Diff & HTTP 206 Partial Range Update for ${siteId}...`;
-        }
-        try {
-          const res = await invoke<DeltaUpdateResult>("test_partial_delta_update", { siteId });
-          if (banner) {
-            banner.textContent = `✓ [${res.site_id.toUpperCase()} ${res.old_commit} → ${res.new_commit}] ${res.message}`;
-          }
-          await refreshInstalledPacks();
-        } catch (err) {
-          if (banner) {
-            banner.textContent = `Delta update error: ${String(err)}`;
-          }
+        await runGitHubPackUpdate(siteId);
+      });
+    });
+
+    await refreshExtraSearchEntries();
+  } catch (err) {
+    console.warn("Failed to load installed packs:", err);
+  }
+}
+
+async function runGitHubPackUpdate(siteId: string) {
+  const banner = document.getElementById("deltaStatusBanner");
+  if (banner) {
+    banner.style.display = "block";
+    banner.textContent = `Running Content-Hash Diff & GitHub Releases HTTP 206 Partial Range Update for '${siteId}'...`;
+  }
+  try {
+    const res = await invoke<DeltaUpdateResult>("install_or_update_from_github", { siteId });
+    if (banner) {
+      banner.textContent = `✓ [${res.site_id.toUpperCase()} ${res.old_commit} → ${res.new_commit}] ${res.message}`;
+    }
+    await refreshInstalledPacks();
+    await loadCloudRegistry();
+  } catch (err) {
+    if (banner) {
+      banner.textContent = `Update notice for ${siteId}: ${String(err)}`;
+    }
+  }
+}
+
+async function loadCloudRegistry() {
+  const cloudEl = document.getElementById("cloudPacksList");
+  if (!cloudEl) return;
+  try {
+    const items = await invoke<RemoteRegistryItem[]>("fetch_remote_registry");
+    cloudEl.innerHTML = items
+      .map((item) => {
+        const sizeMb = (item.sizeBytes / (1024 * 1024)).toFixed(2);
+        const upToDate = item.installed && item.local_commit === item.commit;
+        const statusBadge = item.installed
+          ? upToDate
+            ? `<span class="badge blue">Installed (${escapeHtml(item.commit)})</span>`
+            : `<span class="badge zinc">Update Available (${escapeHtml(item.local_commit)} → ${escapeHtml(item.commit)})</span>`
+          : `<span class="badge zinc">Cloud Pack</span>`;
+
+        return `
+          <div class="pack-row">
+            <div class="pack-row-info">
+              <div class="pack-row-title">
+                <span>${escapeHtml(item.name)}</span>
+                <span class="badge zinc">${escapeHtml(item.version)}</span>
+                ${statusBadge}
+              </div>
+              <div class="pack-meta-line">
+                id: ${escapeHtml(item.id)} • commit: ${escapeHtml(item.commit)} • ${item.chunkCount} chunks (${item.routeCount} routes) • ${sizeMb} MB Max-Gzip
+              </div>
+            </div>
+            <div class="pack-row-actions">
+              ${
+                item.installed
+                  ? `<button class="pack-open-btn" data-cloud-open="${escapeHtml(item.id)}">Open Docs</button>`
+                  : ""
+              }
+              <button class="pack-delta-btn" data-cloud-install="${escapeHtml(item.id)}">
+                ${item.installed ? "⚡ Delta Update (HTTP 206)" : "⬇ Install Pack (HTTP 206)"}
+              </button>
+            </div>
+          </div>
+        `;
+      })
+      .join("");
+
+    cloudEl.querySelectorAll("[data-cloud-open]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const siteId = btn.getAttribute("data-cloud-open");
+        if (siteId) switchTab(siteId);
+      });
+    });
+
+    cloudEl.querySelectorAll("[data-cloud-install]").forEach((btn) => {
+      btn.addEventListener("click", async () => {
+        const siteId = btn.getAttribute("data-cloud-install");
+        if (siteId) {
+          await runGitHubPackUpdate(siteId);
         }
       });
     });
   } catch (err) {
-    console.warn("Failed to load installed packs:", err);
+    cloudEl.innerHTML = `<div class="pack-meta-line">Offline or unable to reach GitHub Releases registry: ${escapeHtml(String(err))}</div>`;
   }
 }
 
@@ -298,16 +439,26 @@ async function loadSearchIndex() {
   try {
     const res = await fetch("/search-index.json");
     if (res.ok) {
-      searchIndex = await res.json();
-      const twCount = searchIndex.filter((i) => i.site === "tailwind").length;
-      const shadcnCount = searchIndex.filter((i) => i.site === "shadcn").length;
-      countAll.textContent = searchIndex.length.toString();
-      countTw.textContent = twCount.toString();
-      countShadcn.textContent = shadcnCount.toString();
+      baseSearchIndex = await res.json();
+      await refreshExtraSearchEntries();
     }
   } catch (err) {
     console.error("Failed to load search index:", err);
   }
+}
+
+async function refreshExtraSearchEntries() {
+  try {
+    const extra = await invoke<SearchEntry[]>("get_extra_search_entries");
+    searchIndex = [...baseSearchIndex, ...(extra || [])];
+  } catch {
+    searchIndex = [...baseSearchIndex];
+  }
+  const twCount = searchIndex.filter((i) => i.site === "tailwind").length;
+  const shadcnCount = searchIndex.filter((i) => i.site === "shadcn").length;
+  if (countAll) countAll.textContent = searchIndex.length.toString();
+  if (countTw) countTw.textContent = twCount.toString();
+  if (countShadcn) countShadcn.textContent = shadcnCount.toString();
 }
 
 function updatePortLabels() {
@@ -318,7 +469,7 @@ function updatePortLabels() {
 }
 
 // Tab / Server Switching
-function switchTab(tab: "home" | "tailwind" | "shadcn", targetPathOrUrl?: string) {
+async function switchTab(tab: string, targetPathOrUrl?: string) {
   activeTab = tab;
 
   [tabHome, tabTailwind, tabShadcn].forEach((btn) => {
@@ -326,20 +477,35 @@ function switchTab(tab: "home" | "tailwind" | "shadcn", targetPathOrUrl?: string
     btn.parentElement?.classList.remove("active");
   });
 
-  const activeBtn = tab === "home" ? tabHome : tab === "tailwind" ? tabTailwind : tabShadcn;
-  activeBtn.classList.add("active");
-  activeBtn.parentElement?.classList.add("active");
+  if (tab === "home" || tab === "tailwind" || tab === "shadcn") {
+    const activeBtn = tab === "home" ? tabHome : tab === "tailwind" ? tabTailwind : tabShadcn;
+    activeBtn.classList.add("active");
+    activeBtn.parentElement?.classList.add("active");
+  }
+
+  document.querySelectorAll("[data-rail-site]").forEach((el) => {
+    el.classList.toggle("active", el.getAttribute("data-rail-site") === tab);
+  });
 
   document.querySelectorAll("[data-switch-tab]").forEach((el) => {
     el.classList.toggle("active", el.getAttribute("data-switch-tab") === tab);
   });
 
+  const packInfo = installedPacksCache.find((p) => p.id === tab);
   if (titlebarCurrentView) {
     titlebarCurrentView.textContent =
-      tab === "home" ? "Home Hub" : tab === "tailwind" ? "Tailwind CSS v4.3" : "shadcn/ui v4";
+      tab === "home"
+        ? "Home Hub"
+        : tab === "tailwind"
+        ? "Tailwind CSS v4.3"
+        : tab === "shadcn"
+        ? "shadcn/ui v4"
+        : packInfo
+        ? `${packInfo.name} (${packInfo.version})`
+        : tab.toUpperCase();
   }
 
-  [viewHome, viewTailwind, viewShadcn].forEach((view) => view.classList.remove("active"));
+  [viewHome, viewTailwind, viewShadcn, viewDynamic].forEach((view) => view?.classList.remove("active"));
   if (tab === "home") {
     viewHome.classList.add("active");
   } else if (tab === "tailwind") {
@@ -350,6 +516,16 @@ function switchTab(tab: "home" | "tailwind" | "shadcn", targetPathOrUrl?: string
     viewShadcn.classList.add("active");
     const fullUrl = resolveUrl("shadcn", targetPathOrUrl || "/docs");
     loadSiteFrame(iframeShadcn, shadcnLoading, fullUrl);
+  } else {
+    viewDynamic?.classList.add("active");
+    try {
+      const port = await invoke<number>("ensure_site_server", { siteId: tab });
+      sitePorts[tab] = port;
+    } catch {}
+    const fullUrl = resolveUrl(tab, targetPathOrUrl || "/docs");
+    if (iframeDynamic && dynamicLoading) {
+      loadSiteFrame(iframeDynamic, dynamicLoading, fullUrl, true);
+    }
   }
 
   if (!sidebarPinned) {
@@ -357,7 +533,7 @@ function switchTab(tab: "home" | "tailwind" | "shadcn", targetPathOrUrl?: string
   }
 }
 
-function resolveUrl(site: "tailwind" | "shadcn", pathOrUrl: string): string {
+function resolveUrl(site: string, pathOrUrl: string): string {
   const origin = getOrigin(site);
   if (pathOrUrl.startsWith("http://") || pathOrUrl.startsWith("https://")) {
     try {
@@ -370,16 +546,19 @@ function resolveUrl(site: "tailwind" | "shadcn", pathOrUrl: string): string {
   return `${origin}${pathOrUrl.startsWith("/") ? pathOrUrl : `/${pathOrUrl}`}`;
 }
 
-function loadSiteFrame(iframe: HTMLIFrameElement, loadingEl: HTMLElement, url: string) {
+function loadSiteFrame(
+  iframe: HTMLIFrameElement,
+  loadingEl: HTMLElement,
+  url: string,
+  forceReload = false
+) {
   const currentSrc = iframe.getAttribute("src") || "";
-  if (!currentSrc || currentSrc === "about:blank") {
+  if (forceReload || !currentSrc || currentSrc === "about:blank" || iframe.src !== url) {
     loadingEl.style.display = "flex";
     iframe.src = url;
     iframe.onload = () => {
       loadingEl.style.display = "none";
     };
-  } else if (url && iframe.src !== url) {
-    iframe.src = url;
   }
 }
 
@@ -389,18 +568,18 @@ function performSearch(query: string) {
   if (!q) {
     currentResults = searchIndex
       .filter((item) => currentFilter === "all" || item.site === currentFilter)
-      .slice(0, 30);
+      .slice(0, 35);
   } else {
     const tokens = q.split(/\s+/).filter(Boolean);
     const scored = searchIndex
       .filter((item) => currentFilter === "all" || item.site === currentFilter)
       .map((item) => {
         let score = 0;
-        const titleLower = item.title.toLowerCase();
-        const descLower = item.description.toLowerCase();
-        const pathLower = item.path.toLowerCase();
-        const categoryLower = item.category.toLowerCase();
-        const keywordsLower = item.keywords.map((k) => k.toLowerCase()).join(" ");
+        const titleLower = (item.title || "").toLowerCase();
+        const descLower = (item.description || "").toLowerCase();
+        const pathLower = (item.path || "").toLowerCase();
+        const categoryLower = (item.category || "").toLowerCase();
+        const keywordsLower = (item.keywords || []).map((k) => k.toLowerCase()).join(" ");
 
         if (titleLower === q) score += 100;
         else if (titleLower.startsWith(q)) score += 60;
@@ -441,16 +620,17 @@ function renderSearchResults(query: string) {
     .map((item, idx) => {
       const isSelected = idx === selectedIndex;
       const isTw = item.site === "tailwind";
-      const badgeClass = isTw ? "tw" : "shadcn";
-      const badgeText = isTw ? "Tailwind" : "shadcn";
+      const isShadcn = item.site === "shadcn";
+      const badgeClass = isTw ? "tw" : isShadcn ? "shadcn" : "extra";
+      const badgeText = isTw ? "Tailwind" : isShadcn ? "shadcn" : item.site.slice(0, 8);
 
       return `
         <div class="search-result-item ${isSelected ? "selected" : ""}" data-index="${idx}">
-          <span class="result-badge ${badgeClass}">${badgeText}</span>
+          <span class="result-badge ${badgeClass}">${escapeHtml(badgeText)}</span>
           <div class="result-info">
             <div class="result-top-line">
               <span class="result-title">${highlight(item.title, query)}</span>
-              <span class="result-category">${escapeHtml(item.category)}</span>
+              <span class="result-category">${escapeHtml(item.category || item.siteName)}</span>
             </div>
             <p class="result-snippet">${highlight(item.description || item.path, query)}</p>
           </div>
@@ -524,12 +704,22 @@ async function checkServerHealth(): Promise<ServerStatus> {
     serverStatus = status;
     tailwindPort = status.tailwind_port;
     shadcnPort = status.shadcn_port;
+    if (status.ports) {
+      sitePorts = { ...sitePorts, ...status.ports };
+    }
     updatePortLabels();
     return status;
   } catch {
     updatePortLabels();
     return serverStatus;
   }
+}
+
+function getActiveIframe(): HTMLIFrameElement | null {
+  if (activeTab === "tailwind") return iframeTailwind;
+  if (activeTab === "shadcn") return iframeShadcn;
+  if (activeTab !== "home") return iframeDynamic;
+  return null;
 }
 
 function setupEventListeners() {
@@ -540,7 +730,7 @@ function setupEventListeners() {
 
   document.querySelectorAll("[data-switch-tab]").forEach((btn) => {
     btn.addEventListener("click", () => {
-      const target = btn.getAttribute("data-switch-tab") as "home" | "tailwind" | "shadcn";
+      const target = btn.getAttribute("data-switch-tab");
       if (target) switchTab(target);
     });
   });
@@ -550,6 +740,18 @@ function setupEventListeners() {
   });
   document.getElementById("launchShadcnBtn")?.addEventListener("click", () => {
     switchTab("shadcn");
+  });
+
+  document.getElementById("btnRefreshRegistry")?.addEventListener("click", async () => {
+    const banner = document.getElementById("deltaStatusBanner");
+    if (banner) {
+      banner.style.display = "block";
+      banner.textContent = "Fetching live 40+ site registry.json from GitHub Releases (VahidM313/docx)...";
+    }
+    await loadCloudRegistry();
+    if (banner) {
+      banner.textContent = "✓ Synced live Cloud Registry from GitHub Releases (packs-latest).";
+    }
   });
 
   document.getElementById("btnBundleSingleExe")?.addEventListener("click", async () => {
@@ -573,7 +775,7 @@ function setupEventListeners() {
 
   document.querySelectorAll(".link-pill").forEach((pill) => {
     pill.addEventListener("click", () => {
-      const target = pill.getAttribute("data-target") as "tailwind" | "shadcn";
+      const target = pill.getAttribute("data-target") || "tailwind";
       const relUrl = pill.getAttribute("data-url") || "/docs";
       switchTab(target, relUrl);
     });
@@ -597,7 +799,7 @@ function setupEventListeners() {
     chip.addEventListener("click", () => {
       document.querySelectorAll(".filter-chip").forEach((c) => c.classList.remove("active"));
       chip.classList.add("active");
-      currentFilter = (chip.getAttribute("data-filter") as "all" | "tailwind" | "shadcn") || "all";
+      currentFilter = chip.getAttribute("data-filter") || "all";
       performSearch(searchInput.value);
     });
   });
@@ -660,7 +862,7 @@ function setupEventListeners() {
   });
 
   btnBack?.addEventListener("click", () => {
-    const iframe = activeTab === "tailwind" ? iframeTailwind : activeTab === "shadcn" ? iframeShadcn : null;
+    const iframe = getActiveIframe();
     if (iframe?.contentWindow) {
       try {
         iframe.contentWindow.history.back();
@@ -671,7 +873,7 @@ function setupEventListeners() {
   });
 
   btnForward?.addEventListener("click", () => {
-    const iframe = activeTab === "tailwind" ? iframeTailwind : activeTab === "shadcn" ? iframeShadcn : null;
+    const iframe = getActiveIframe();
     if (iframe?.contentWindow) {
       try {
         iframe.contentWindow.history.forward();
@@ -682,7 +884,7 @@ function setupEventListeners() {
   });
 
   btnReload?.addEventListener("click", () => {
-    const iframe = activeTab === "tailwind" ? iframeTailwind : activeTab === "shadcn" ? iframeShadcn : null;
+    const iframe = getActiveIframe();
     if (iframe) {
       const current = iframe.src;
       if (current && current !== "about:blank") {
@@ -695,14 +897,8 @@ function setupEventListeners() {
   });
 
   btnExternal?.addEventListener("click", () => {
-    const url =
-      activeTab === "tailwind"
-        ? `${getOrigin("tailwind")}/docs`
-        : activeTab === "shadcn"
-        ? `${getOrigin("shadcn")}/docs`
-        : null;
-    if (url) {
-      window.open(url, "_blank");
+    if (activeTab !== "home") {
+      window.open(`${getOrigin(activeTab)}/docs`, "_blank");
     }
   });
 }

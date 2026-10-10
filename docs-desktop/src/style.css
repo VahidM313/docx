@@ -1371,3 +1371,71 @@ body.sidebar-pinned .left-edge-sensor {
   border-color: #ffffff;
 }
 
+.pack-manager-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pack-section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  margin: 14px 0 10px;
+  text-transform: uppercase;
+}
+
+.pack-row-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pack-open-btn {
+  background: var(--tw-brand);
+  border: 1px solid var(--tw-brand);
+  color: #000000;
+  padding: 7px 13px;
+  border-radius: 7px;
+  font-size: 0.79rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pack-open-btn:hover {
+  background: #7dd3fc;
+  border-color: #7dd3fc;
+}
+
+.dynamic-rail-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-height: 280px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.dynamic-rail-list::-webkit-scrollbar {
+  width: 0px;
+}
+
+.rail-text-badge {
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.result-badge.extra {
+  background: rgba(168, 85, 247, 0.18);
+  color: #c084fc;
+}
+
