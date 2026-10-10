@@ -8,6 +8,26 @@
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body class="discord-app">
+    <!-- Animated Startup Splash Screen -->
+    <div id="appSplashScreen" class="app-splash-screen">
+      <div class="splash-ambient-glow"></div>
+      <div class="splash-center-card">
+        <div class="splash-logo-stage">
+          <div class="splash-orbit-ring ring-outer"></div>
+          <div class="splash-orbit-ring ring-inner"></div>
+          <div class="splash-logo-core">
+            <img src="/logo.png" alt="Docx Logo" class="splash-logo-img" />
+          </div>
+        </div>
+        <div class="splash-brand-title">DOCX</div>
+        <div class="splash-brand-subtitle">42-SITE OFFLINE DOCUMENTATION ENGINE</div>
+        <div class="splash-progress-track">
+          <div id="splashProgressBar" class="splash-progress-fill"></div>
+        </div>
+        <div id="splashStatusText" class="splash-status-text">Initializing Offline Engine...</div>
+      </div>
+    </div>
+
     <!-- Top Hover Sensor to reveal hidden Custom Window Bar -->
     <div id="topEdgeSensor" class="top-edge-sensor" title="Hover to reveal window bar"></div>
 

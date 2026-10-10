@@ -1479,6 +1479,13 @@ pub fn run() {
         })
         .setup(|app| {
             if let Some(win) = app.get_webview_window("main") {
+                if let Some(icon) = app.default_window_icon().cloned() {
+                    let _ = win.set_icon(icon);
+                } else if let Ok(icon) =
+                    tauri::image::Image::from_bytes(include_bytes!("../icons/icon.png"))
+                {
+                    let _ = win.set_icon(icon);
+                }
                 let _ = win.maximize();
             }
             Ok(())

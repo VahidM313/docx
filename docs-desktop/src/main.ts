@@ -201,15 +201,57 @@ const btnForward = document.getElementById("btnForward") as HTMLButtonElement;
 const btnReload = document.getElementById("btnReload") as HTMLButtonElement;
 const btnExternal = document.getElementById("btnExternal") as HTMLButtonElement;
 
+function updateSplash(percent: number, statusText: string) {
+  const bar = document.getElementById("splashProgressBar") as HTMLElement | null;
+  const text = document.getElementById("splashStatusText") as HTMLElement | null;
+  if (bar) bar.style.width = `${percent}%`;
+  if (text) text.textContent = statusText;
+}
+
+function dismissSplashScreen() {
+  const splash = document.getElementById("appSplashScreen") as HTMLElement | null;
+  if (!splash) return;
+  splash.classList.add("fade-out");
+  window.setTimeout(() => {
+    splash.remove();
+  }, 460);
+}
+
 async function init() {
+  const startTs = performance.now();
+  updateSplash(24, "Initializing 42-Site Offline Engine...");
+
   setupWindowControls();
   setupSidebarAndTopbarHover();
   setupEventListeners();
   setupDownloadProgressListener();
   syncReaderSettingsToAllIframes();
+
+  updateSplash(52, "Loading Universal Search Index...");
   await loadSearchIndex();
+
+  updateSplash(78, "Mounting Embedded & Local .docpack Archives...");
   await checkServerHealth();
-  await syncAllPacksAndRender(true);
+  try {
+    installedPacksCache = await invoke<PackStatusInfo[]>("get_installed_packs");
+    for (const p of installedPacksCache) {
+      if (p.port) sitePorts[p.id] = p.port;
+    }
+  } catch {}
+  renderAllUI(false);
+
+  const elapsed = performance.now() - startTs;
+  const minSplashMs = 1150;
+  if (elapsed < minSplashMs) {
+    await new Promise((r) => setTimeout(r, minSplashMs - elapsed));
+  }
+
+  updateSplash(100, "Ready");
+  await new Promise((r) => setTimeout(r, 180));
+  dismissSplashScreen();
+
+  // Sync remote registry from GitHub Releases asynchronously after splash opens
+  syncAllPacksAndRender(true).catch(() => {});
   setInterval(checkServerHealth, 3000);
 }
 
