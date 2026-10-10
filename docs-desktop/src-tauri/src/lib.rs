@@ -536,12 +536,119 @@ fn get_installed_packs(state: tauri::State<'_, AppState>) -> Vec<PackStatusInfo>
     list
 }
 
+#[derive(serde::Deserialize, serde::Serialize, Clone)]
+#[allow(non_snake_case)]
+pub struct RemoteRegistryEntryRaw {
+    pub id: String,
+    pub name: String,
+    pub version: String,
+    pub commit: String,
+    #[serde(default)]
+    pub updatedAt: String,
+    #[serde(default)]
+    pub sizeBytes: usize,
+    #[serde(default)]
+    pub routeCount: usize,
+    #[serde(default)]
+    pub chunkCount: usize,
+}
+
+#[derive(serde::Deserialize)]
+#[allow(non_snake_case)]
+pub struct RemoteRegistryFile {
+    pub packs: Vec<RemoteRegistryEntryRaw>,
+}
+
+#[derive(serde::Serialize, Clone)]
+#[allow(non_snake_case)]
+pub struct RemoteRegistryItem {
+    pub id: String,
+    pub name: String,
+    pub version: String,
+    pub commit: String,
+    pub updatedAt: String,
+    pub sizeBytes: usize,
+    pub routeCount: usize,
+    pub chunkCount: usize,
+    pub installed: bool,
+    pub local_commit: String,
+    pub update_available: bool,
+}
+
 #[tauri::command]
-fn fetch_remote_registry() -> Result<serde_json::Value, String> {
+fn fetch_remote_registry(state: tauri::State<'_, AppState>) -> Result<Vec<RemoteRegistryItem>, String> {
     let url = format!("{}/registry.json", RELEASE_BASE_URL);
     let bytes = curl_get_bytes(&url, None)?;
-    serde_json::from_slice(&bytes).map_err(|e| e.to_string())
+    let parsed_raw: Vec<RemoteRegistryEntryRaw> =
+        if let Ok(wrapper) = serde_json::from_slice::<RemoteRegistryFile>(&bytes) {
+            wrapper.packs
+        } else {
+            serde_json::from_slice::<Vec<RemoteRegistryEntryRaw>>(&bytes)
+                .map_err(|e| e.to_string())?
+        };
+
+    let guard = state.store.overrides.read().unwrap();
+    let mut out = Vec::with_capacity(parsed_raw.len());
+    for item in parsed_raw {
+        let (installed, local_commit) = if let Some(pack) = guard.get(&item.id) {
+            (true, pack.manifest.commit.clone())
+        } else if item.id == "tailwind" || item.id == "shadcn" {
+            (true, "embedded-base".to_string())
+        } else {
+            (false, String::new())
+        };
+        let update_available = installed && !local_commit.is_empty() && local_commit != item.commit;
+        out.push(RemoteRegistryItem {
+            id: item.id,
+            name: item.name,
+            version: item.version,
+            commit: item.commit,
+            updatedAt: item.updatedAt,
+            sizeBytes: item.sizeBytes,
+            routeCount: item.routeCount,
+            chunkCount: item.chunkCount,
+            installed,
+            local_commit,
+            update_available,
+        });
+    }
+    Ok(out)
 }
+
+#[tauri::command]
+fn ensure_site_server_cmd(site_id: String, state: tauri::State<'_, AppState>) -> u16 {
+    ensure_site_server(&site_id, Arc::clone(&state.store))
+}
+
+#[tauri::command]
+fn simulate_outdated_pack(site_id: String, state: tauri::State<'_, AppState>) -> Result<String, String> {
+    let mut guard = state.store.overrides.write().unwrap();
+    if let Some(existing) = guard.get(&site_id).cloned() {
+        let mut modified_manifest = existing.manifest.clone();
+        modified_manifest.commit = "old-7f21a09".to_string();
+        // Change 2 route hashes in local memory so HTTP 206 delta update downloads only those 2 chunks!
+        let mut count = 0;
+        for entry in modified_manifest.routes.values_mut() {
+            if entry.mime.contains("text/html") && count < 2 {
+                entry.hash = format!("outdated_hash_{}", count);
+                count += 1;
+            }
+        }
+        guard.insert(
+            site_id.clone(),
+            Arc::new(SiteOverridePack {
+                manifest: modified_manifest,
+                data_start: existing.data_start,
+                raw_bytes: existing.raw_bytes.clone(),
+                source: "Outdated Local Pack".to_string(),
+            }),
+        );
+        Ok(format!("Simulated outdated commit (old-7f21a09) on '{}'", site_id))
+    } else {
+        Err(format!("Pack '{}' is not in overrides yet", site_id))
+    }
+}
+
 
 #[tauri::command]
 fn get_extra_search_entries() -> Vec<serde_json::Value> {
@@ -830,6 +937,12 @@ fn window_toggle_maximize(window: tauri::Window) {
 }
 
 #[tauri::command]
+fn window_toggle_fullscreen(window: tauri::Window) {
+    let is_fs = window.is_fullscreen().unwrap_or(false);
+    let _ = window.set_fullscreen(!is_fs);
+}
+
+#[tauri::command]
 fn window_close(window: tauri::Window) {
     let _ = window.close();
 }
@@ -841,6 +954,7 @@ fn window_start_dragging(window: tauri::Window) {
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
+    use tauri::Manager;
     let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.old.exe");
 
     let store = load_asset_store();
@@ -866,6 +980,12 @@ pub fn run() {
             shadcn_port,
             store,
         })
+        .setup(|app| {
+            if let Some(win) = app.get_webview_window("main") {
+                let _ = win.maximize();
+            }
+            Ok(())
+        })
         .plugin(
             tauri_plugin_log::Builder::default()
                 .level(log::LevelFilter::Info)
@@ -877,15 +997,19 @@ pub fn run() {
             start_shadcn_server,
             get_installed_packs,
             fetch_remote_registry,
+            ensure_site_server_cmd,
+            simulate_outdated_pack,
             get_extra_search_entries,
             install_or_update_from_github,
             test_partial_delta_update,
             bundle_into_single_exe,
             window_minimize,
             window_toggle_maximize,
+            window_toggle_fullscreen,
             window_close,
             window_start_dragging,
         ])
         .run(tauri::generate_context!())
         .expect("error while building tauri application");
 }
+

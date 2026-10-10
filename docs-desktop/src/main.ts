@@ -1,4 +1,5 @@
 import { invoke } from "@tauri-apps/api/core";
+import { SITE_BRANDS, getSiteBrand } from "./brands";
 
 interface SearchEntry {
   id: string;
@@ -17,7 +18,19 @@ interface ServerStatus {
   shadcn: boolean;
   tailwind_port: number;
   shadcn_port: number;
-  ports: Record<string, number>;
+  site_ports?: Record<string, number>;
+}
+
+interface PackStatusInfo {
+  id: string;
+  name: string;
+  version: string;
+  commit: string;
+  route_count: number;
+  chunk_count: number;
+  size_mb: number;
+  source: string;
+  port: number;
 }
 
 interface RemoteRegistryItem {
@@ -31,6 +44,41 @@ interface RemoteRegistryItem {
   chunkCount: number;
   installed: boolean;
   local_commit: string;
+  update_available: boolean;
+}
+
+interface DeltaUpdateResult {
+  site_id: string;
+  old_commit: string;
+  new_commit: string;
+  total_chunks: number;
+  reused_chunks: number;
+  downloaded_chunks: number;
+  reused_bytes: number;
+  downloaded_bytes: number;
+  saved_percent: number;
+  port: number;
+  message: string;
+}
+
+interface UnifiedSiteEntry {
+  id: string;
+  name: string;
+  version: string;
+  category: string;
+  color: string;
+  bgTint: string;
+  description: string;
+  svg: string;
+  defaultRoutes?: { label: string; path: string }[];
+  installed: boolean;
+  localCommit: string;
+  remoteCommit: string;
+  updateAvailable: boolean;
+  routeCount: number;
+  chunkCount: number;
+  sizeMb: string;
+  port: number;
 }
 
 let tailwindPort = 49152;
@@ -50,26 +98,22 @@ let activeTab: string = "home";
 let currentFilter: string = "all";
 let currentResults: SearchEntry[] = [];
 let selectedIndex = 0;
+
 let sidebarPinned = false;
 let drawerHidden = localStorage.getItem("docx_drawer_hidden") === "true";
 let topbarHidden = false;
 let sidebarCloseTimer: number | null = null;
 let topbarCloseTimer: number | null = null;
-let installedPacksCache: PackStatusInfo[] = [];
 
-let serverStatus: ServerStatus = {
-  tailwind: false,
-  shadcn: false,
-  tailwind_port: tailwindPort,
-  shadcn_port: shadcnPort,
-  ports: {},
-};
+let installedPacksCache: PackStatusInfo[] = [];
+let remoteRegistryCache: RemoteRegistryItem[] = [];
+let selectedHubCategory: string = "all";
+let hubSearchQuery: string = "";
 
 // DOM Elements
 const tabHome = document.getElementById("tabHome") as HTMLButtonElement;
-const tabTailwind = document.getElementById("tabTailwind") as HTMLButtonElement;
-const tabShadcn = document.getElementById("tabShadcn") as HTMLButtonElement;
-const dynamicRailList = document.getElementById("dynamicRailList") as HTMLElement;
+const installedRailList = document.getElementById("installedRailList") as HTMLElement;
+const drawerChannelsScroll = document.getElementById("drawerChannelsScroll") as HTMLElement;
 const brandBtn = document.getElementById("brandBtn") as HTMLElement;
 
 const discordSidebar = document.getElementById("discordSidebar") as HTMLElement;
@@ -82,9 +126,19 @@ const customTitlebar = document.getElementById("customTitlebar") as HTMLElement;
 const topEdgeSensor = document.getElementById("topEdgeSensor") as HTMLElement;
 const titlebarDrag = document.getElementById("titlebarDrag") as HTMLElement;
 const titlebarCurrentView = document.getElementById("titlebarCurrentView") as HTMLElement;
+const titlebarUpdatePill = document.getElementById("titlebarUpdatePill") as HTMLElement;
+const titlebarUpdateCount = document.getElementById("titlebarUpdateCount") as HTMLElement;
 const btnToggleTopbar = document.getElementById("btnToggleTopbar") as HTMLButtonElement;
+const btnToggleFullscreen = document.getElementById("btnToggleFullscreen") as HTMLButtonElement;
 const btnRailToggleTopbar = document.getElementById("btnRailToggleTopbar") as HTMLButtonElement;
 const topbarToggleLabel = document.getElementById("topbarToggleLabel") as HTMLElement;
+
+const updateAlertBanner = document.getElementById("updateAlertBanner") as HTMLElement;
+const updateAlertHeadline = document.getElementById("updateAlertHeadline") as HTMLElement;
+const updateAlertSub = document.getElementById("updateAlertSub") as HTMLElement;
+const btnAlertUpdateAll = document.getElementById("btnAlertUpdateAll") as HTMLButtonElement;
+const btnAlertSimulate = document.getElementById("btnAlertSimulate") as HTMLButtonElement;
+const btnAlertDismiss = document.getElementById("btnAlertDismiss") as HTMLButtonElement;
 
 const viewHome = document.getElementById("viewHome") as HTMLElement;
 const viewTailwind = document.getElementById("viewTailwind") as HTMLElement;
@@ -97,6 +151,7 @@ const iframeDynamic = document.getElementById("iframeDynamic") as HTMLIFrameElem
 const twLoading = document.getElementById("twLoading") as HTMLElement;
 const shadcnLoading = document.getElementById("shadcnLoading") as HTMLElement;
 const dynamicLoading = document.getElementById("dynamicLoading") as HTMLElement;
+const dynamicLoadingText = document.getElementById("dynamicLoadingText") as HTMLElement;
 
 const openSearchBtn = document.getElementById("openSearchBtn") as HTMLButtonElement;
 const drawerSearchBtn = document.getElementById("drawerSearchBtn") as HTMLButtonElement;
@@ -111,11 +166,6 @@ const countAll = document.getElementById("countAll") as HTMLElement;
 const countTw = document.getElementById("countTw") as HTMLElement;
 const countShadcn = document.getElementById("countShadcn") as HTMLElement;
 
-const twPortLabel = document.getElementById("twPortLabel") as HTMLElement;
-const shadcnPortLabel = document.getElementById("shadcnPortLabel") as HTMLElement;
-const cardTwPort = document.getElementById("cardTwPort") as HTMLElement;
-const cardShadcnPort = document.getElementById("cardShadcnPort") as HTMLElement;
-
 const btnBack = document.getElementById("btnBack") as HTMLButtonElement;
 const btnForward = document.getElementById("btnForward") as HTMLButtonElement;
 const btnReload = document.getElementById("btnReload") as HTMLButtonElement;
@@ -127,58 +177,201 @@ async function init() {
   setupEventListeners();
   await loadSearchIndex();
   await checkServerHealth();
-  await refreshInstalledPacks();
-  await loadCloudRegistry();
+  await syncAllPacksAndRender(true);
   setInterval(checkServerHealth, 3000);
 }
 
-interface PackStatusInfo {
-  id: string;
-  name: string;
-  version: string;
-  commit: string;
-  route_count: number;
-  chunk_count: number;
-  size_mb: number;
-  source: string;
-  port: number;
+function buildUnifiedSitesList(): UnifiedSiteEntry[] {
+  const installedMap = new Map<string, PackStatusInfo>();
+  for (const p of installedPacksCache) {
+    installedMap.set(p.id, p);
+  }
+
+  const remoteMap = new Map<string, RemoteRegistryItem>();
+  for (const r of remoteRegistryCache) {
+    remoteMap.set(r.id, r);
+  }
+
+  const allIds = new Set<string>([
+    ...Object.keys(SITE_BRANDS),
+    ...installedMap.keys(),
+    ...remoteMap.keys(),
+  ]);
+
+  const list: UnifiedSiteEntry[] = [];
+  for (const id of allIds) {
+    const brand = getSiteBrand(id, remoteMap.get(id)?.name || installedMap.get(id)?.name);
+    const inst = installedMap.get(id);
+    const rem = remoteMap.get(id);
+
+    const installed = Boolean(inst) || Boolean(rem?.installed);
+    const localCommit = inst?.commit || rem?.local_commit || "";
+    const remoteCommit = rem?.commit || inst?.commit || "latest";
+    const updateAvailable =
+      Boolean(rem?.update_available) ||
+      (installed && Boolean(localCommit) && Boolean(rem?.commit) && localCommit !== rem!.commit);
+
+    const routeCount = inst?.route_count || rem?.routeCount || 6;
+    const chunkCount = inst?.chunk_count || rem?.chunkCount || 6;
+    const sizeMb = inst
+      ? inst.size_mb.toFixed(2)
+      : rem
+      ? (rem.sizeBytes / (1024 * 1024)).toFixed(2)
+      : "0.05";
+
+    list.push({
+      id,
+      name: brand.name,
+      version: rem?.version || inst?.version || brand.version,
+      category: brand.category,
+      color: brand.color,
+      bgTint: brand.bgTint,
+      description: brand.description,
+      svg: brand.svg,
+      defaultRoutes: brand.defaultRoutes,
+      installed,
+      localCommit,
+      remoteCommit,
+      updateAvailable,
+      routeCount,
+      chunkCount,
+      sizeMb,
+      port: inst?.port || sitePorts[id] || 0,
+    });
+  }
+
+  // Sort: Installed with updates first, then Installed, then by category & name
+  list.sort((a, b) => {
+    if (a.updateAvailable !== b.updateAvailable) return a.updateAvailable ? -1 : 1;
+    if (a.installed !== b.installed) return a.installed ? -1 : 1;
+    return a.name.localeCompare(b.name);
+  });
+
+  return list;
 }
 
-interface DeltaUpdateResult {
-  site_id: string;
-  old_commit: string;
-  new_commit: string;
-  total_chunks: number;
-  reused_chunks: number;
-  downloaded_chunks: number;
-  reused_bytes: number;
-  downloaded_bytes: number;
-  saved_percent: number;
-  message: string;
+async function syncAllPacksAndRender(showStartupNotification = false) {
+  try {
+    installedPacksCache = await invoke<PackStatusInfo[]>("get_installed_packs");
+    for (const p of installedPacksCache) {
+      if (p.port) sitePorts[p.id] = p.port;
+    }
+  } catch (err) {
+    console.warn("get_installed_packs failed:", err);
+  }
+
+  // Render immediately with local data so UI is instant
+  renderAllUI(false);
+
+  // Then fetch remote registry from GitHub Releases
+  try {
+    remoteRegistryCache = await invoke<RemoteRegistryItem[]>("fetch_remote_registry");
+  } catch (err) {
+    console.warn("fetch_remote_registry offline or unreachable:", err);
+  }
+
+  await refreshExtraSearchEntries();
+  renderAllUI(showStartupNotification);
 }
 
-function renderDynamicRail(packs: PackStatusInfo[]) {
-  if (!dynamicRailList) return;
-  const extraPacks = packs.filter((p) => p.id !== "tailwind" && p.id !== "shadcn");
-  dynamicRailList.innerHTML = extraPacks
-    .map((p) => {
-      const shortBadge = p.id
-        .replace(/^tanstack_/, "ts-")
-        .slice(0, 4)
-        .toUpperCase();
-      const isActive = activeTab === p.id;
+function renderAllUI(showStartupNotification = false) {
+  const sites = buildUnifiedSitesList();
+  renderServerRail(sites);
+  renderChannelDrawer(sites);
+  renderHomeHub(sites);
+  updateNotificationBanner(sites, showStartupNotification);
+}
+
+// 1. Render Startup Update Alert / Notification Banner
+function updateNotificationBanner(sites: UnifiedSiteEntry[], forceShow = false) {
+  const outdated = sites.filter((s) => s.updateAvailable);
+  const installedCount = sites.filter((s) => s.installed).length;
+  const btnUpdateAllPacks = document.getElementById("btnUpdateAllPacks") as HTMLButtonElement;
+
+  if (titlebarUpdatePill && titlebarUpdateCount) {
+    if (outdated.length > 0) {
+      titlebarUpdatePill.style.display = "inline-flex";
+      titlebarUpdateCount.textContent = String(outdated.length);
+    } else {
+      titlebarUpdatePill.style.display = "none";
+    }
+  }
+
+  if (btnUpdateAllPacks) {
+    btnUpdateAllPacks.style.display = outdated.length > 0 ? "inline-flex" : "none";
+    btnUpdateAllPacks.textContent = `⚡ Update All (${outdated.length})`;
+  }
+
+  if (!updateAlertBanner) return;
+
+  if (outdated.length > 0) {
+    updateAlertBanner.style.display = "flex";
+    updateAlertBanner.classList.remove("up-to-date");
+    const names = outdated
+      .map((s) => `${s.name} (${s.localCommit} → ${s.remoteCommit})`)
+      .join(" • ");
+    if (updateAlertHeadline) {
+      updateAlertHeadline.textContent = `Update Available for ${outdated.length} installed docpack${
+        outdated.length > 1 ? "s" : ""
+      }!`;
+    }
+    if (updateAlertSub) {
+      updateAlertSub.textContent = `Ready for HTTP 206 Partial Delta Update: ${names}`;
+    }
+    if (btnAlertUpdateAll) {
+      btnAlertUpdateAll.style.display = "inline-flex";
+    }
+  } else if (forceShow) {
+    updateAlertBanner.style.display = "flex";
+    updateAlertBanner.classList.add("up-to-date");
+    if (updateAlertHeadline) {
+      updateAlertHeadline.textContent = `All ${installedCount} installed docpacks are up to date with GitHub Releases!`;
+    }
+    if (updateAlertSub) {
+      updateAlertSub.textContent = `${
+        sites.length - installedCount
+      } additional documentation packs available in the 42-Site Hub below — or click "Simulate Update Alert" to test partial updates.`;
+    }
+    if (btnAlertUpdateAll) {
+      btnAlertUpdateAll.style.display = "none";
+    }
+  }
+}
+
+// 2. Render Column 1: Discord Server Rail with Original Brand Colors
+function renderServerRail(sites: UnifiedSiteEntry[]) {
+  if (!installedRailList) return;
+  const installed = sites.filter((s) => s.installed);
+
+  const railHomeWrap = document.getElementById("railHomeWrap");
+  if (railHomeWrap) {
+    railHomeWrap.classList.toggle("active", activeTab === "home");
+    tabHome?.classList.toggle("active", activeTab === "home");
+  }
+
+  installedRailList.innerHTML = installed
+    .map((s) => {
+      const isActive = activeTab === s.id;
       return `
-        <div class="rail-item ${isActive ? "active" : ""}" data-rail-site="${escapeHtml(p.id)}">
+        <div class="rail-item ${isActive ? "active" : ""}" data-rail-site="${escapeHtml(s.id)}">
           <span class="rail-pill"></span>
-          <button class="rail-btn" data-open-site="${escapeHtml(p.id)}" title="${escapeHtml(p.name)} (${escapeHtml(p.version)})">
-            <span class="rail-text-badge">${escapeHtml(shortBadge)}</span>
+          <button
+            class="rail-btn brand-rail-btn ${isActive ? "active" : ""}"
+            data-open-site="${escapeHtml(s.id)}"
+            style="--brand-color: ${s.color}; --brand-tint: ${s.bgTint};"
+            title="${escapeHtml(s.name)} (${escapeHtml(s.version)})${
+        s.updateAvailable ? " — Update Available!" : ""
+      }"
+          >
+            ${s.svg}
+            ${s.updateAvailable ? `<span class="rail-update-dot" title="Update Available"></span>` : ""}
           </button>
         </div>
       `;
     })
     .join("");
 
-  dynamicRailList.querySelectorAll("[data-open-site]").forEach((btn) => {
+  installedRailList.querySelectorAll("[data-open-site]").forEach((btn) => {
     btn.addEventListener("click", () => {
       const siteId = btn.getAttribute("data-open-site");
       if (siteId) switchTab(siteId);
@@ -186,65 +379,260 @@ function renderDynamicRail(packs: PackStatusInfo[]) {
   });
 }
 
-async function refreshInstalledPacks() {
-  const listEl = document.getElementById("installedPacksList");
-  if (!listEl) return;
-  try {
-    const packs = await invoke<PackStatusInfo[]>("get_installed_packs");
-    installedPacksCache = packs;
-    for (const p of packs) {
-      if (p.port) sitePorts[p.id] = p.port;
-    }
-    renderDynamicRail(packs);
+// 3. Render Column 2: Discord Channel Drawer with All 42 Sites & Original Brand Colored Icons
+function renderChannelDrawer(sites: UnifiedSiteEntry[]) {
+  if (!drawerChannelsScroll) return;
 
-    listEl.innerHTML = packs
-      .map(
-        (p) => `
-      <div class="pack-row">
-        <div class="pack-row-info">
-          <div class="pack-row-title">
-            <span>${escapeHtml(p.name)}</span>
-            <span class="badge zinc">${escapeHtml(p.version)}</span>
-            <span class="badge blue">${escapeHtml(p.source)}</span>
-          </div>
-          <div class="pack-meta-line">
-            commit: ${escapeHtml(p.commit)} • ${p.chunk_count} hashed chunks (${p.route_count} routes) • ${p.size_mb} MB Max-Gzip • :${p.port}
-          </div>
-        </div>
-        <div class="pack-row-actions">
-          <button class="pack-open-btn" data-open-pack="${escapeHtml(p.id)}">
-            Open Docs
-          </button>
-          <button class="pack-delta-btn" data-delta-site="${escapeHtml(p.id)}">
-            ⚡ Delta Update (HTTP 206)
-          </button>
-        </div>
-      </div>
-    `
-      )
-      .join("");
+  const categories = [
+    "Frontend & UI",
+    "TanStack Suite",
+    "Backend & JS/TS",
+    "Systems & Languages",
+    "DevOps, Build & Shells",
+  ];
 
-    listEl.querySelectorAll("[data-open-pack]").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const siteId = btn.getAttribute("data-open-pack");
-        if (siteId) switchTab(siteId);
-      });
-    });
-
-    listEl.querySelectorAll("[data-delta-site]").forEach((btn) => {
-      btn.addEventListener("click", async () => {
-        const siteId = btn.getAttribute("data-delta-site") || "tailwind";
-        await runGitHubPackUpdate(siteId);
-      });
-    });
-
-    await refreshExtraSearchEntries();
-  } catch (err) {
-    console.warn("Failed to load installed packs:", err);
+  const installedSites = sites.filter((s) => s.installed);
+  const sidebarStatus = document.getElementById("sidebarEngineStatus");
+  if (sidebarStatus) {
+    sidebarStatus.textContent = `${installedSites.length}/${sites.length} Installed • HTTP 206`;
   }
+
+  const homeChannelHtml = `
+    <div class="channel-category">
+      <span class="category-label">DOCX HUB & INSTALLED (${installedSites.length})</span>
+      <button class="channel-item ${activeTab === "home" ? "active" : ""}" data-drawer-site="home">
+        <span class="channel-brand-icon" style="color: #38bdf8;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        </span>
+        <span class="channel-name">42-Site Hub & Store</span>
+        <span class="channel-tag">${sites.length}</span>
+      </button>
+      ${installedSites
+        .map(
+          (s) => `
+        <button class="channel-item ${activeTab === s.id ? "active" : ""}" data-drawer-site="${escapeHtml(s.id)}">
+          <span class="channel-brand-icon" style="color: ${s.color};">${s.svg}</span>
+          <span class="channel-name">${escapeHtml(s.name)}</span>
+          ${
+            s.updateAvailable
+              ? `<span class="channel-tag update-tag">Update</span>`
+              : `<span class="channel-tag installed-tag">${escapeHtml(s.version)}</span>`
+          }
+        </button>
+      `
+        )
+        .join("")}
+    </div>
+  `;
+
+  const categoriesHtml = categories
+    .map((cat) => {
+      const catSites = sites.filter((s) => s.category === cat);
+      return `
+        <div class="channel-category">
+          <span class="category-label">${escapeHtml(cat.toUpperCase())} (${catSites.length})</span>
+          ${catSites
+            .map(
+              (s) => `
+            <button
+              class="channel-item ${activeTab === s.id ? "active" : ""}"
+              data-drawer-site="${escapeHtml(s.id)}"
+              title="${escapeHtml(s.name)} — ${s.installed ? "Click to Open" : "Click to Install & Open"}"
+            >
+              <span class="channel-brand-icon" style="color: ${s.color};">${s.svg}</span>
+              <span class="channel-name">${escapeHtml(s.name)}</span>
+              ${
+                s.updateAvailable
+                  ? `<span class="channel-tag update-tag">⚡ Update</span>`
+                  : s.installed
+                  ? `<span class="channel-tag installed-tag">Ready</span>`
+                  : `<span class="channel-tag">☁ Install</span>`
+              }
+            </button>
+          `
+            )
+            .join("")}
+        </div>
+      `;
+    })
+    .join("");
+
+  drawerChannelsScroll.innerHTML = homeChannelHtml + categoriesHtml;
+
+  drawerChannelsScroll.querySelectorAll("[data-drawer-site]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const target = btn.getAttribute("data-drawer-site");
+      if (!target) return;
+      if (target === "home") {
+        switchTab("home");
+        return;
+      }
+      const siteEntry = sites.find((s) => s.id === target);
+      if (siteEntry && !siteEntry.installed) {
+        await runGitHubPackUpdate(target, true);
+      } else {
+        switchTab(target);
+      }
+    });
+  });
 }
 
-async function runGitHubPackUpdate(siteId: string) {
+// 4. Render Redesigned 42-Site Home Hub
+function renderHomeHub(sites: UnifiedSiteEntry[]) {
+  const gridEl = document.getElementById("allSitesGrid");
+  if (!gridEl) return;
+
+  const installedCount = sites.filter((s) => s.installed).length;
+  const updatesCount = sites.filter((s) => s.updateAvailable).length;
+
+  const catCountAll = document.getElementById("catCountAll");
+  const catCountInstalled = document.getElementById("catCountInstalled");
+  const catCountUpdates = document.getElementById("catCountUpdates");
+  if (catCountAll) catCountAll.textContent = String(sites.length);
+  if (catCountInstalled) catCountInstalled.textContent = String(installedCount);
+  if (catCountUpdates) catCountUpdates.textContent = String(updatesCount);
+
+  const q = hubSearchQuery.trim().toLowerCase();
+  const filtered = sites.filter((s) => {
+    if (selectedHubCategory === "installed" && !s.installed) return false;
+    if (selectedHubCategory === "updates" && !s.updateAvailable) return false;
+    if (
+      selectedHubCategory !== "all" &&
+      selectedHubCategory !== "installed" &&
+      selectedHubCategory !== "updates" &&
+      s.category !== selectedHubCategory
+    ) {
+      return false;
+    }
+    if (q) {
+      const hay = `${s.name} ${s.id} ${s.category} ${s.description} ${s.version}`.toLowerCase();
+      return hay.includes(q);
+    }
+    return true;
+  });
+
+  if (filtered.length === 0) {
+    gridEl.innerHTML = `
+      <div class="search-no-results" style="grid-column: 1 / -1;">
+        <p>No documentation packs match the current filter.</p>
+      </div>
+    `;
+    return;
+  }
+
+  gridEl.innerHTML = filtered
+    .map((s) => {
+      const statusBadge = s.updateAvailable
+        ? `<span class="site-status-badge update">⚡ Update: ${escapeHtml(s.localCommit)} → ${escapeHtml(s.remoteCommit)}</span>`
+        : s.installed
+        ? `<span class="site-status-badge installed">● Installed</span>`
+        : `<span class="site-status-badge cloud">☁ Cloud Pack</span>`;
+
+      const quickPillsHtml =
+        s.installed && s.defaultRoutes && s.defaultRoutes.length > 0
+          ? `<div class="pills-container" style="margin-top: 2px;">
+              ${s.defaultRoutes
+                .map(
+                  (r) =>
+                    `<button class="link-pill" data-card-jump-site="${escapeHtml(s.id)}" data-card-jump-url="${escapeHtml(
+                      r.path
+                    )}">${escapeHtml(r.label)}</button>`
+                )
+                .join("")}
+            </div>`
+          : "";
+
+      return `
+        <article
+          class="site-card ${s.updateAvailable ? "has-update" : ""}"
+          style="--brand-color: ${s.color}; --brand-tint: ${s.bgTint};"
+        >
+          <div class="site-card-top">
+            <div class="site-brand-box">
+              ${s.svg}
+            </div>
+            <div class="site-card-headings">
+              <div class="site-card-title-row">
+                <span class="site-card-name">${escapeHtml(s.name)}</span>
+                <span class="site-ver-pill">${escapeHtml(s.version)}</span>
+                ${statusBadge}
+              </div>
+              <div class="site-cat-line">
+                <span>${escapeHtml(s.category)}</span>
+                <span>•</span>
+                <span>id: ${escapeHtml(s.id)}</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="site-card-desc">${escapeHtml(s.description)}</p>
+
+          ${quickPillsHtml}
+
+          <div class="site-card-meta">
+            commit: ${escapeHtml(s.installed ? s.localCommit || s.remoteCommit : s.remoteCommit)} • ${
+        s.chunkCount
+      } chunks (${s.routeCount} routes) • ${s.sizeMb} MB Max-Gzip
+          </div>
+
+          <div class="site-card-footer">
+            ${
+              s.installed
+                ? `
+                  <button class="site-btn-open" data-card-open="${escapeHtml(s.id)}">
+                    Open Docs
+                  </button>
+                  <button
+                    class="site-btn-delta ${s.updateAvailable ? "highlight-update" : ""}"
+                    data-card-delta="${escapeHtml(s.id)}"
+                    title="Run SHA-256 Chunk Diff & HTTP 206 Partial Range Update from GitHub Releases"
+                  >
+                    ${s.updateAvailable ? "⚡ Update Now (HTTP 206)" : "⚡ Delta Sync"}
+                  </button>
+                `
+                : `
+                  <button class="site-btn-install" data-card-install="${escapeHtml(s.id)}">
+                    ⬇ Install & Open Pack (${s.sizeMb} MB • HTTP 206)
+                  </button>
+                `
+            }
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+
+  gridEl.querySelectorAll("[data-card-open]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const siteId = btn.getAttribute("data-card-open");
+      if (siteId) switchTab(siteId);
+    });
+  });
+
+  gridEl.querySelectorAll("[data-card-jump-site]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const siteId = btn.getAttribute("data-card-jump-site");
+      const url = btn.getAttribute("data-card-jump-url") || "/docs";
+      if (siteId) switchTab(siteId, url);
+    });
+  });
+
+  gridEl.querySelectorAll("[data-card-delta]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const siteId = btn.getAttribute("data-card-delta");
+      if (siteId) await runGitHubPackUpdate(siteId, false);
+    });
+  });
+
+  gridEl.querySelectorAll("[data-card-install]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const siteId = btn.getAttribute("data-card-install");
+      if (siteId) await runGitHubPackUpdate(siteId, true);
+    });
+  });
+}
+
+async function runGitHubPackUpdate(siteId: string, openAfter = false) {
   const banner = document.getElementById("deltaStatusBanner");
   if (banner) {
     banner.style.display = "block";
@@ -252,11 +640,16 @@ async function runGitHubPackUpdate(siteId: string) {
   }
   try {
     const res = await invoke<DeltaUpdateResult>("install_or_update_from_github", { siteId });
+    if (res.port) {
+      sitePorts[siteId] = res.port;
+    }
     if (banner) {
       banner.textContent = `✓ [${res.site_id.toUpperCase()} ${res.old_commit} → ${res.new_commit}] ${res.message}`;
     }
-    await refreshInstalledPacks();
-    await loadCloudRegistry();
+    await syncAllPacksAndRender(false);
+    if (openAfter) {
+      await switchTab(siteId);
+    }
   } catch (err) {
     if (banner) {
       banner.textContent = `Update notice for ${siteId}: ${String(err)}`;
@@ -264,65 +657,11 @@ async function runGitHubPackUpdate(siteId: string) {
   }
 }
 
-async function loadCloudRegistry() {
-  const cloudEl = document.getElementById("cloudPacksList");
-  if (!cloudEl) return;
-  try {
-    const items = await invoke<RemoteRegistryItem[]>("fetch_remote_registry");
-    cloudEl.innerHTML = items
-      .map((item) => {
-        const sizeMb = (item.sizeBytes / (1024 * 1024)).toFixed(2);
-        const upToDate = item.installed && item.local_commit === item.commit;
-        const statusBadge = item.installed
-          ? upToDate
-            ? `<span class="badge blue">Installed (${escapeHtml(item.commit)})</span>`
-            : `<span class="badge zinc">Update Available (${escapeHtml(item.local_commit)} → ${escapeHtml(item.commit)})</span>`
-          : `<span class="badge zinc">Cloud Pack</span>`;
-
-        return `
-          <div class="pack-row">
-            <div class="pack-row-info">
-              <div class="pack-row-title">
-                <span>${escapeHtml(item.name)}</span>
-                <span class="badge zinc">${escapeHtml(item.version)}</span>
-                ${statusBadge}
-              </div>
-              <div class="pack-meta-line">
-                id: ${escapeHtml(item.id)} • commit: ${escapeHtml(item.commit)} • ${item.chunkCount} chunks (${item.routeCount} routes) • ${sizeMb} MB Max-Gzip
-              </div>
-            </div>
-            <div class="pack-row-actions">
-              ${
-                item.installed
-                  ? `<button class="pack-open-btn" data-cloud-open="${escapeHtml(item.id)}">Open Docs</button>`
-                  : ""
-              }
-              <button class="pack-delta-btn" data-cloud-install="${escapeHtml(item.id)}">
-                ${item.installed ? "⚡ Delta Update (HTTP 206)" : "⬇ Install Pack (HTTP 206)"}
-              </button>
-            </div>
-          </div>
-        `;
-      })
-      .join("");
-
-    cloudEl.querySelectorAll("[data-cloud-open]").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const siteId = btn.getAttribute("data-cloud-open");
-        if (siteId) switchTab(siteId);
-      });
-    });
-
-    cloudEl.querySelectorAll("[data-cloud-install]").forEach((btn) => {
-      btn.addEventListener("click", async () => {
-        const siteId = btn.getAttribute("data-cloud-install");
-        if (siteId) {
-          await runGitHubPackUpdate(siteId);
-        }
-      });
-    });
-  } catch (err) {
-    cloudEl.innerHTML = `<div class="pack-meta-line">Offline or unable to reach GitHub Releases registry: ${escapeHtml(String(err))}</div>`;
+async function updateAllOutdatedPacks() {
+  const sites = buildUnifiedSitesList().filter((s) => s.updateAvailable);
+  if (sites.length === 0) return;
+  for (const s of sites) {
+    await runGitHubPackUpdate(s.id, false);
   }
 }
 
@@ -336,6 +675,9 @@ function setupWindowControls() {
   });
   document.getElementById("winClose")?.addEventListener("click", () => {
     invoke("window_close").catch(() => {});
+  });
+  btnToggleFullscreen?.addEventListener("click", () => {
+    invoke("window_toggle_fullscreen").catch(() => {});
   });
 
   titlebarDrag?.addEventListener("mousedown", (e) => {
@@ -461,51 +803,23 @@ async function refreshExtraSearchEntries() {
   if (countShadcn) countShadcn.textContent = shadcnCount.toString();
 }
 
-function updatePortLabels() {
-  if (twPortLabel) twPortLabel.textContent = `TW :${tailwindPort}`;
-  if (shadcnPortLabel) shadcnPortLabel.textContent = `UI :${shadcnPort}`;
-  if (cardTwPort) cardTwPort.textContent = `127.0.0.1:${tailwindPort}`;
-  if (cardShadcnPort) cardShadcnPort.textContent = `127.0.0.1:${shadcnPort}`;
-}
-
 // Tab / Server Switching
 async function switchTab(tab: string, targetPathOrUrl?: string) {
   activeTab = tab;
 
-  [tabHome, tabTailwind, tabShadcn].forEach((btn) => {
-    btn.classList.remove("active");
-    btn.parentElement?.classList.remove("active");
-  });
+  const sites = buildUnifiedSitesList();
+  renderServerRail(sites);
+  renderChannelDrawer(sites);
 
-  if (tab === "home" || tab === "tailwind" || tab === "shadcn") {
-    const activeBtn = tab === "home" ? tabHome : tab === "tailwind" ? tabTailwind : tabShadcn;
-    activeBtn.classList.add("active");
-    activeBtn.parentElement?.classList.add("active");
-  }
-
-  document.querySelectorAll("[data-rail-site]").forEach((el) => {
-    el.classList.toggle("active", el.getAttribute("data-rail-site") === tab);
-  });
-
-  document.querySelectorAll("[data-switch-tab]").forEach((el) => {
-    el.classList.toggle("active", el.getAttribute("data-switch-tab") === tab);
-  });
-
-  const packInfo = installedPacksCache.find((p) => p.id === tab);
+  const brand = getSiteBrand(tab);
   if (titlebarCurrentView) {
     titlebarCurrentView.textContent =
-      tab === "home"
-        ? "Home Hub"
-        : tab === "tailwind"
-        ? "Tailwind CSS v4.3"
-        : tab === "shadcn"
-        ? "shadcn/ui v4"
-        : packInfo
-        ? `${packInfo.name} (${packInfo.version})`
-        : tab.toUpperCase();
+      tab === "home" ? "42-Site Documentation Hub" : `${brand.name} (${brand.version})`;
   }
 
-  [viewHome, viewTailwind, viewShadcn, viewDynamic].forEach((view) => view?.classList.remove("active"));
+  [viewHome, viewTailwind, viewShadcn, viewDynamic].forEach((view) =>
+    view?.classList.remove("active")
+  );
   if (tab === "home") {
     viewHome.classList.add("active");
   } else if (tab === "tailwind") {
@@ -518,9 +832,12 @@ async function switchTab(tab: string, targetPathOrUrl?: string) {
     loadSiteFrame(iframeShadcn, shadcnLoading, fullUrl);
   } else {
     viewDynamic?.classList.add("active");
+    if (dynamicLoadingText) {
+      dynamicLoadingText.textContent = `Loading ${brand.name} (${brand.version}) Documentation...`;
+    }
     try {
-      const port = await invoke<number>("ensure_site_server", { siteId: tab });
-      sitePorts[tab] = port;
+      const port = await invoke<number>("ensure_site_server_cmd", { siteId: tab });
+      if (port) sitePorts[tab] = port;
     } catch {}
     const fullUrl = resolveUrl(tab, targetPathOrUrl || "/docs");
     if (iframeDynamic && dynamicLoading) {
@@ -619,14 +936,13 @@ function renderSearchResults(query: string) {
   searchResultsList.innerHTML = currentResults
     .map((item, idx) => {
       const isSelected = idx === selectedIndex;
-      const isTw = item.site === "tailwind";
-      const isShadcn = item.site === "shadcn";
-      const badgeClass = isTw ? "tw" : isShadcn ? "shadcn" : "extra";
-      const badgeText = isTw ? "Tailwind" : isShadcn ? "shadcn" : item.site.slice(0, 8);
+      const brand = getSiteBrand(item.site);
 
       return `
         <div class="search-result-item ${isSelected ? "selected" : ""}" data-index="${idx}">
-          <span class="result-badge ${badgeClass}">${escapeHtml(badgeText)}</span>
+          <span class="result-badge" style="background: ${brand.bgTint}; color: ${brand.color};">${escapeHtml(
+        item.site.slice(0, 8)
+      )}</span>
           <div class="result-info">
             <div class="result-top-line">
               <span class="result-title">${highlight(item.title, query)}</span>
@@ -698,21 +1014,15 @@ function closeSearchModal() {
   searchModal.setAttribute("aria-hidden", "true");
 }
 
-async function checkServerHealth(): Promise<ServerStatus> {
+async function checkServerHealth(): Promise<void> {
   try {
     const status = await invoke<ServerStatus>("check_servers");
-    serverStatus = status;
     tailwindPort = status.tailwind_port;
     shadcnPort = status.shadcn_port;
-    if (status.ports) {
-      sitePorts = { ...sitePorts, ...status.ports };
+    if (status.site_ports) {
+      sitePorts = { ...sitePorts, ...status.site_ports };
     }
-    updatePortLabels();
-    return status;
-  } catch {
-    updatePortLabels();
-    return serverStatus;
-  }
+  } catch {}
 }
 
 function getActiveIframe(): HTMLIFrameElement | null {
@@ -723,34 +1033,48 @@ function getActiveIframe(): HTMLIFrameElement | null {
 }
 
 function setupEventListeners() {
-  tabHome.addEventListener("click", () => switchTab("home"));
-  tabTailwind.addEventListener("click", () => switchTab("tailwind"));
-  tabShadcn.addEventListener("click", () => switchTab("shadcn"));
+  tabHome?.addEventListener("click", () => switchTab("home"));
   brandBtn?.addEventListener("click", () => switchTab("home"));
 
-  document.querySelectorAll("[data-switch-tab]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const target = btn.getAttribute("data-switch-tab");
-      if (target) switchTab(target);
+  titlebarUpdatePill?.addEventListener("click", () => {
+    switchTab("home");
+    selectedHubCategory = "updates";
+    document.querySelectorAll(".hub-cat-tab").forEach((b) => {
+      b.classList.toggle("active", b.getAttribute("data-cat") === "updates");
     });
+    renderAllUI(false);
   });
 
-  document.getElementById("launchTailwindBtn")?.addEventListener("click", () => {
-    switchTab("tailwind");
+  btnAlertUpdateAll?.addEventListener("click", async () => {
+    await updateAllOutdatedPacks();
   });
-  document.getElementById("launchShadcnBtn")?.addEventListener("click", () => {
-    switchTab("shadcn");
+
+  document.getElementById("btnUpdateAllPacks")?.addEventListener("click", async () => {
+    await updateAllOutdatedPacks();
+  });
+
+  btnAlertSimulate?.addEventListener("click", async () => {
+    try {
+      await invoke("simulate_outdated_pack", { siteId: "tailwind" });
+      await syncAllPacksAndRender(true);
+    } catch (err) {
+      console.warn(err);
+    }
+  });
+
+  btnAlertDismiss?.addEventListener("click", () => {
+    if (updateAlertBanner) updateAlertBanner.style.display = "none";
   });
 
   document.getElementById("btnRefreshRegistry")?.addEventListener("click", async () => {
     const banner = document.getElementById("deltaStatusBanner");
     if (banner) {
       banner.style.display = "block";
-      banner.textContent = "Fetching live 40+ site registry.json from GitHub Releases (VahidM313/docx)...";
+      banner.textContent = "Checking GitHub Releases (VahidM313/docx) for docpack updates...";
     }
-    await loadCloudRegistry();
+    await syncAllPacksAndRender(true);
     if (banner) {
-      banner.textContent = "✓ Synced live Cloud Registry from GitHub Releases (packs-latest).";
+      banner.textContent = "✓ Synced live 42-Site Registry from GitHub Releases (packs-latest).";
     }
   });
 
@@ -758,14 +1082,15 @@ function setupEventListeners() {
     const banner = document.getElementById("deltaStatusBanner");
     if (banner) {
       banner.style.display = "block";
-      banner.textContent = "Bundling all active .docpack chunks into standalone Desktop\\Docx.exe via DOCXPACK trailer...";
+      banner.textContent =
+        "Bundling all installed .docpack chunks into standalone Desktop\\Docx.exe via DOCXPACK trailer...";
     }
     try {
       const msg = await invoke<string>("bundle_into_single_exe");
       if (banner) {
         banner.textContent = `✓ ${msg}`;
       }
-      await refreshInstalledPacks();
+      await syncAllPacksAndRender(false);
     } catch (err) {
       if (banner) {
         banner.textContent = `Bundle error: ${String(err)}`;
@@ -773,12 +1098,21 @@ function setupEventListeners() {
     }
   });
 
-  document.querySelectorAll(".link-pill").forEach((pill) => {
-    pill.addEventListener("click", () => {
-      const target = pill.getAttribute("data-target") || "tailwind";
-      const relUrl = pill.getAttribute("data-url") || "/docs";
-      switchTab(target, relUrl);
+  // Hub Category Filter Tabs
+  document.querySelectorAll(".hub-cat-tab").forEach((tabBtn) => {
+    tabBtn.addEventListener("click", () => {
+      document.querySelectorAll(".hub-cat-tab").forEach((b) => b.classList.remove("active"));
+      tabBtn.classList.add("active");
+      selectedHubCategory = tabBtn.getAttribute("data-cat") || "all";
+      renderHomeHub(buildUnifiedSitesList());
     });
+  });
+
+  // Hub Live Filter Input
+  const hubFilterInput = document.getElementById("hubSiteFilterInput") as HTMLInputElement;
+  hubFilterInput?.addEventListener("input", () => {
+    hubSearchQuery = hubFilterInput.value;
+    renderHomeHub(buildUnifiedSitesList());
   });
 
   openSearchBtn?.addEventListener("click", openSearchModal);
@@ -828,6 +1162,12 @@ function setupEventListeners() {
   });
 
   window.addEventListener("keydown", (e) => {
+    if (e.key === "F11") {
+      e.preventDefault();
+      invoke("window_toggle_fullscreen").catch(() => {});
+      return;
+    }
+
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
       e.preventDefault();
       if (searchModal.classList.contains("open")) {

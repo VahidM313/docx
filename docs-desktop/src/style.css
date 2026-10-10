@@ -1439,3 +1439,638 @@ body.sidebar-pinned .left-edge-sensor {
   color: #c084fc;
 }
 
+/* =========================================================
+   6. Startup Update Notification Toast / Alert Bar
+   ========================================================= */
+.titlebar-update-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(245, 158, 11, 0.18);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  color: #fbbf24;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.update-alert-banner {
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.14) 0%, rgba(15, 15, 20, 0.96) 55%, rgba(10, 10, 14, 0.98) 100%);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.35);
+  padding: 10px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  z-index: 120;
+  flex-wrap: wrap;
+}
+
+.update-alert-banner.up-to-date {
+  background: linear-gradient(90deg, rgba(35, 165, 90, 0.14) 0%, rgba(12, 12, 16, 0.96) 60%);
+  border-bottom-color: rgba(35, 165, 90, 0.32);
+}
+
+.update-alert-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.update-bell-icon {
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.update-alert-headline {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.update-alert-sub {
+  font-size: 0.76rem;
+  color: #a1a1aa;
+  margin-top: 1px;
+}
+
+.update-alert-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.alert-btn {
+  padding: 6px 12px;
+  border-radius: 7px;
+  font-size: 0.77rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+}
+
+.alert-btn-primary {
+  background: #f59e0b;
+  color: #000000;
+  border-color: #f59e0b;
+}
+
+.alert-btn-primary:hover {
+  background: #fbbf24;
+}
+
+.alert-btn-secondary {
+  background: #16161d;
+  color: #e4e4e7;
+  border-color: var(--border-color);
+}
+
+.alert-btn-secondary:hover {
+  background: #23232e;
+  color: #ffffff;
+}
+
+.alert-btn-ghost {
+  background: transparent;
+  color: #71717a;
+  padding: 5px 8px;
+}
+
+.alert-btn-ghost:hover {
+  color: #ffffff;
+  background: #18181f;
+}
+
+/* =========================================================
+   7. Original Brand-Colored Sidebar Icons (Rail + Drawer)
+   ========================================================= */
+.rail-btn.brand-rail-btn {
+  color: var(--brand-color, #ffffff) !important;
+  background: #101014;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.rail-btn.brand-rail-btn svg {
+  width: 24px;
+  height: 24px;
+  color: var(--brand-color, #ffffff) !important;
+  filter: drop-shadow(0 0 6px var(--brand-tint, transparent));
+}
+
+.rail-btn.brand-rail-btn:hover,
+.rail-item.active .rail-btn.brand-rail-btn {
+  background: var(--brand-tint, rgba(255, 255, 255, 0.14)) !important;
+  border-color: var(--brand-color, #ffffff) !important;
+  border-radius: 14px;
+  box-shadow: 0 0 14px var(--brand-tint, rgba(255, 255, 255, 0.15));
+}
+
+.rail-update-dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #f59e0b;
+  border: 2px solid #040405;
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.8);
+}
+
+.channel-brand-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.channel-brand-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.channel-tag.update-tag {
+  background: rgba(245, 158, 11, 0.18);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  font-weight: 700;
+}
+
+.channel-tag.installed-tag {
+  background: rgba(35, 165, 90, 0.16);
+  color: #4ade80;
+}
+
+/* =========================================================
+   8. Redesigned 42-Site Home Hub
+   ========================================================= */
+.hub-container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding-bottom: 48px;
+}
+
+.hub-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #0a0a0d;
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 24px 28px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.hub-hero-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.hub-logo-wrap {
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  background: #101015;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+.hub-logo-img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.hub-badge-row {
+  margin-bottom: 6px;
+}
+
+.hub-badge-row .hero-badge {
+  margin-bottom: 0;
+}
+
+.hub-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.hub-subtitle {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  max-width: 680px;
+}
+
+.hub-subtitle strong {
+  color: #ffffff;
+}
+
+.hub-subtitle code {
+  background: #16161c;
+  padding: 1px 6px;
+  border-radius: 4px;
+  color: #38bdf8;
+}
+
+.hub-hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 340px;
+}
+
+.hub-search-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 15px;
+  background: #050507;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+.hub-search-trigger:hover {
+  border-color: var(--border-active);
+  color: #ffffff;
+  background: #0e0e12;
+}
+
+.hub-search-trigger svg {
+  width: 16px;
+  height: 16px;
+  stroke: #38bdf8;
+}
+
+.hub-search-trigger span {
+  flex: 1;
+  text-align: left;
+}
+
+.hub-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hub-action-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px 13px;
+  background: #131318;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: #e4e4e7;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.hub-action-btn:hover {
+  background: #1e1e26;
+  color: #ffffff;
+  border-color: var(--border-active);
+}
+
+.hub-action-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.hub-action-accent {
+  background: rgba(245, 158, 11, 0.18);
+  border-color: rgba(245, 158, 11, 0.5);
+  color: #fbbf24;
+}
+
+.hub-action-accent:hover {
+  background: #f59e0b;
+  color: #000000;
+}
+
+/* Hub Toolbar: Category Tabs + Search Filter */
+.hub-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.hub-category-tabs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.hub-cat-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 9px;
+  background: #0b0b0e;
+  border: 1px solid var(--border-subtle);
+  color: #a1a1aa;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.14s ease;
+}
+
+.hub-cat-tab:hover {
+  background: #15151b;
+  color: #ffffff;
+  border-color: var(--border-color);
+}
+
+.hub-cat-tab.active {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+.cat-count {
+  font-size: 0.68rem;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hub-cat-tab.active .cat-count {
+  background: rgba(0, 0, 0, 0.15);
+  color: #000000;
+}
+
+.dot-installed {
+  color: #23a55a;
+  font-size: 0.65rem;
+}
+
+.dot-update {
+  color: #f59e0b;
+  font-size: 0.65rem;
+}
+
+.hub-filter-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #0a0a0d;
+  border: 1px solid var(--border-color);
+  border-radius: 9px;
+  padding: 6px 12px;
+  min-width: 280px;
+}
+
+.hub-filter-input-wrap svg {
+  width: 15px;
+  height: 15px;
+  stroke: var(--text-dim);
+}
+
+.hub-site-filter-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+/* Unified 42-Site Grid */
+.all-sites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 16px;
+}
+
+.site-card {
+  background: #0a0a0d;
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.18s ease;
+  position: relative;
+}
+
+.site-card:hover {
+  background: #101015;
+  border-color: var(--brand-color, var(--border-active));
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.65);
+}
+
+.site-card.has-update {
+  border-color: rgba(245, 158, 11, 0.45);
+}
+
+.site-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.site-brand-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--brand-tint, rgba(255, 255, 255, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--brand-color, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.site-brand-box svg {
+  width: 24px;
+  height: 24px;
+}
+
+.site-card-headings {
+  flex: 1;
+  min-width: 0;
+}
+
+.site-card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin-bottom: 3px;
+}
+
+.site-card-name {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.site-ver-pill {
+  font-size: 0.66rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 5px;
+  background: #18181f;
+  color: #a1a1aa;
+}
+
+.site-cat-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.71rem;
+  color: var(--text-dim);
+}
+
+.site-status-badge {
+  font-size: 0.66rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 999px;
+}
+
+.site-status-badge.installed {
+  background: rgba(35, 165, 90, 0.15);
+  color: #4ade80;
+}
+
+.site-status-badge.update {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.45);
+}
+
+.site-status-badge.cloud {
+  background: rgba(255, 255, 255, 0.06);
+  color: #a1a1aa;
+}
+
+.site-card-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.site-card-meta {
+  font-size: 0.71rem;
+  font-family: monospace;
+  color: #71717a;
+  background: #060608;
+  padding: 6px 9px;
+  border-radius: 7px;
+  border: 1px solid var(--border-subtle);
+}
+
+.site-card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 6px;
+}
+
+.site-btn-open {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--brand-color, #ffffff);
+  background: var(--brand-tint, rgba(255, 255, 255, 0.12));
+  color: #ffffff;
+  font-size: 0.79rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.site-btn-open:hover {
+  background: var(--brand-color, #ffffff);
+  color: #000000;
+}
+
+.site-btn-delta {
+  padding: 8px 11px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: #141419;
+  color: #d4d4d8;
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.site-btn-delta:hover {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+.site-btn-delta.highlight-update {
+  background: #f59e0b;
+  color: #000000;
+  border-color: #f59e0b;
+  font-weight: 700;
+}
+
+.site-btn-install {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: #131318;
+  color: #e4e4e7;
+  font-size: 0.79rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.site-btn-install:hover {
+  border-color: var(--brand-color, #ffffff);
+  background: var(--brand-tint, rgba(255, 255, 255, 0.14));
+  color: #ffffff;
+}
+
+
