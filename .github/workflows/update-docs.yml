@@ -1,0 +1,122 @@
+name: Build & Publish Docx Packs
+
+on:
+  workflow_dispatch:
+    inputs:
+      sites:
+        description: "Comma-separated site IDs to build, or 'all' to build every site in the catalog"
+        required: false
+        default: "all"
+  schedule:
+    - cron: "0 4 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  prepare-matrix:
+    name: Prepare Site Matrix
+    runs-on: ubuntu-latest
+    outputs:
+      sites: ${{ steps.list.outputs.sites }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Ensure packs-latest release exists & resolve matrix
+        id: list
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INPUT_SITES: ${{ github.event.inputs.sites || 'all' }}
+        run: |
+          gh release view packs-latest >/dev/null 2>&1 || gh release create packs-latest --title "Docx Pre-Built Documentation Packs (Latest)" --notes "Content-hashed Max-Gzip .docpack archives supporting HTTP 206 Partial Range delta updates."
+          if [ "$INPUT_SITES" = "all" ]; then
+            SITES_JSON=$(bun run scripts/ci-build-site.ts --list-json)
+          else
+            SITES_JSON=$(bun -e 'console.log(JSON.stringify(process.env.INPUT_SITES.split(",").map(s=>s.trim()).filter(Boolean)))')
+          fi
+          echo "sites=$SITES_JSON" >> "$GITHUB_OUTPUT"
+
+  build-pack:
+    name: Build Pack (${{ matrix.site }})
+    needs: prepare-matrix
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 10
+      matrix:
+        site: ${{ fromJson(needs.prepare-matrix.outputs.sites) }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Build .docpack, .manifest.json & .search.json
+        run: |
+          bun run scripts/ci-build-site.ts "${{ matrix.site }}" ./dist-packs
+
+      - name: Upload Pack to GitHub Release (packs-latest)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload packs-latest \
+            "./dist-packs/${{ matrix.site }}.docpack" \
+            "./dist-packs/${{ matrix.site }}.manifest.json" \
+            "./dist-packs/${{ matrix.site }}.search.json" \
+            --clobber
+
+  update-registry:
+    name: Update Master registry.json
+    needs: build-pack
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Rebuild & upload master registry.json from all release manifests
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p ./rel-manifests
+          gh release download packs-latest --pattern "*.manifest.json" --dir ./rel-manifests --clobber
+          bun -e '
+            const fs = require("fs");
+            const path = require("path");
+            const dir = "./rel-manifests";
+            const packs = {};
+            for (const f of fs.readdirSync(dir)) {
+              if (!f.endsWith(".manifest.json")) continue;
+              const m = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
+              packs[m.id] = {
+                id: m.id,
+                name: m.name,
+                version: m.version,
+                commit: m.commit,
+                updatedAt: m.updatedAt,
+                sizeMB: Number((m.totalBytes / (1024 * 1024)).toFixed(2)),
+                totalBytes: m.totalBytes,
+                chunkCount: m.chunkCount,
+                routeCount: Object.keys(m.routes || {}).length,
+                manifestFile: `${m.id}.manifest.json`,
+                packFile: `${m.id}.docpack`,
+                searchFile: `${m.id}.search.json`
+              };
+            }
+            const registry = {
+              version: 1,
+              updatedAt: new Date().toISOString(),
+              packs
+            };
+            fs.writeFileSync("./rel-manifests/registry.json", JSON.stringify(registry, null, 2));
+            console.log("Updated registry.json with", Object.keys(packs).length, "packs!");
+          '
+          gh release upload packs-latest ./rel-manifests/registry.json --clobber
