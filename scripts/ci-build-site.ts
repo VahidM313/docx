@@ -374,6 +374,142 @@ export const SITE_CATALOG: SiteConfig[] = [
     allowedPrefixes: ["/router/latest/docs/framework/react"],
     maxPages: 60,
   },
+  // 15 New Documentation Sites
+  {
+    id: "python",
+    name: "Python 3",
+    version: "v3.13",
+    origin: "https://docs.python.org",
+    entryPath: "/3/",
+    allowedPrefixes: ["/3/"],
+    maxPages: 160,
+  },
+  {
+    id: "threejs",
+    name: "Three.js",
+    version: "r175",
+    origin: "https://threejs.org",
+    entryPath: "/docs/",
+    allowedPrefixes: ["/docs/", "/manual/"],
+    maxPages: 140,
+  },
+  {
+    id: "motion",
+    name: "Motion",
+    version: "v12",
+    origin: "https://motion.dev",
+    entryPath: "/docs",
+    allowedPrefixes: ["/docs"],
+    maxPages: 140,
+  },
+  {
+    id: "vue",
+    name: "Vue.js",
+    version: "v3.5",
+    origin: "https://vuejs.org",
+    entryPath: "/guide/introduction.html",
+    allowedPrefixes: ["/guide/", "/api/", "/tutorial/", "/examples/"],
+    maxPages: 150,
+  },
+  {
+    id: "nuxt",
+    name: "Nuxt",
+    version: "v4.x",
+    origin: "https://nuxt.com",
+    entryPath: "/docs/4.x/getting-started/introduction",
+    allowedPrefixes: ["/docs"],
+    maxPages: 150,
+  },
+  {
+    id: "angular",
+    name: "Angular",
+    version: "v17",
+    origin: "https://v17.angular.io",
+    entryPath: "/docs",
+    allowedPrefixes: ["/docs", "/guide", "/tutorial", "/api", "/start"],
+    maxPages: 140,
+  },
+  {
+    id: "hono",
+    name: "Hono",
+    version: "v4.7",
+    origin: "https://hono.dev",
+    entryPath: "/docs/",
+    allowedPrefixes: ["/docs", "/examples", "/helpers", "/middleware", "/guides", "/api"],
+    maxPages: 130,
+  },
+  {
+    id: "express",
+    name: "Express.js",
+    version: "v5.1",
+    origin: "https://expressjs.com",
+    entryPath: "/",
+    allowedPrefixes: ["/en/", "/"],
+    maxPages: 120,
+  },
+  {
+    id: "nestjs",
+    name: "NestJS",
+    version: "v11",
+    origin: "https://docs.nestjs.com",
+    entryPath: "/",
+    allowedPrefixes: ["/"],
+    maxPages: 150,
+  },
+  {
+    id: "qt",
+    name: "Qt 6 Documentation",
+    version: "Qt 6.9",
+    origin: "https://doc.qt.io",
+    entryPath: "/",
+    allowedPrefixes: ["/qt-6/", "/"],
+    maxPages: 140,
+  },
+  {
+    id: "boost",
+    name: "Boost C++ Libraries",
+    version: "v1.87",
+    origin: "https://www.boost.org",
+    entryPath: "/doc/libs/latest/index.html",
+    allowedPrefixes: ["/doc/libs/latest/", "/doc/"],
+    maxPages: 140,
+  },
+  {
+    id: "django",
+    name: "Django",
+    version: "v6.1",
+    origin: "https://docs.djangoproject.com",
+    entryPath: "/en/6.1/",
+    allowedPrefixes: ["/en/6.1/", "/en/"],
+    maxPages: 150,
+  },
+  {
+    id: "fastapi",
+    name: "FastAPI",
+    version: "v0.115",
+    origin: "https://fastapi.tiangolo.com",
+    entryPath: "/",
+    allowedPrefixes: ["/tutorial", "/advanced", "/reference", "/deployment", "/how-to", "/learn", "/"],
+    maxPages: 150,
+  },
+  {
+    id: "postgresql",
+    name: "PostgreSQL",
+    version: "v17",
+    origin: "https://www.postgresql.org",
+    entryPath: "/docs/",
+    allowedPrefixes: ["/docs/"],
+    maxPages: 150,
+  },
+  {
+    id: "sqlite",
+    name: "SQLite",
+    version: "v3.49",
+    origin: "https://www.sqlite.org",
+    entryPath: "/docs.html",
+    allowedPrefixes: ["/"],
+    maxPages: 140,
+  },
 ];
 
 const USER_AGENT =
@@ -418,11 +554,15 @@ function getInjectedSnippet(origin: string): string {
     window.parent.postMessage({ type: 'IFRAME_INTERACT' }, '*');
   }, { passive: true });
 
+  if (SITE_ORIGIN.indexOf('threejs.org') !== -1 && !window.location.hash && window.location.pathname.indexOf('pages/') === -1) {
+    window.location.hash = '#Scene';
+  }
   document.addEventListener('click', function(e){
     var a = e.target && e.target.closest ? e.target.closest('a') : null;
     if(!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    if(SITE_ORIGIN.indexOf('threejs.org') !== -1 || SITE_ORIGIN.indexOf('nestjs.com') !== -1 || SITE_ORIGIN.indexOf('angular.io') !== -1) return;
     var href = a.getAttribute('href');
-    if(!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('javascript:') || a.getAttribute('target') === '_blank') return;
+    if(!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('javascript:') || a.hasAttribute('target')) return;
     try {
       var resolved = new URL(href, window.location.href);
       if (resolved.origin === window.location.origin || resolved.origin === SITE_ORIGIN) {
@@ -431,7 +571,7 @@ function getInjectedSnippet(origin: string): string {
         window.location.href = resolved.pathname + resolved.search + resolved.hash;
       }
     } catch(err) {}
-  }, true);
+  }, false);
 })();
 </script>`;
 }
@@ -573,7 +713,11 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
           const rawHref = m[1].trim();
           if (!rawHref || rawHref.startsWith("mailto:") || rawHref.startsWith("javascript:")) continue;
           try {
-            const resolved = new URL(rawHref, pageUrl.href);
+            let effectiveHref = rawHref;
+            if (site.id === "threejs" && pageUrl.pathname.startsWith("/docs") && /^[A-Za-z0-9_.-]+\.html$/i.test(rawHref)) {
+              effectiveHref = `/docs/pages/${rawHref}`;
+            }
+            const resolved = new URL(effectiveHref, pageUrl.href);
             if (isAllowedPageUrl(resolved)) {
               const normTarget = normalizeRouteKey(resolved.pathname);
               if (!visitedPages.has(normTarget) && pageQueue.length < maxPages * 2) {
@@ -616,16 +760,38 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
             }
           });
 
-        // Remove external client-side hydration/analytics <script src="..."> that would fail or overwrite SSR DOM on localhost
-        html = html.replace(/<script\b[^>]*?\bsrc=["'][^"']+["'][^>]*>\s*<\/script>/gi, "");
+        if (site.id === "angular" || site.id === "nestjs" || site.id === "threejs") {
+          // Keep same-origin JS bundles for SPA sites & Three.js page scripts, strip only external analytics
+          html = html.replace(
+            /(<script\b[^>]*?\bsrc=["'])([^"']+)(["'][^>]*>\s*<\/script>)/gi,
+            (fullScript, pre, rawSrc, suf) => {
+              try {
+                const resolved = new URL(rawSrc.replace(/&amp;/g, "&"), pageUrl.href);
+                if (resolved.origin !== site.origin) return "";
+                const localRoute = assetUrlToLocalRoute(resolved.href, site.origin);
+                pendingAssetUrls.set(resolved.href, localRoute);
+                return `${pre}${localRoute}${suf}`;
+              } catch {
+                return "";
+              }
+            }
+          );
+        } else {
+          // Remove external client-side hydration/analytics <script src="..."> that would fail or overwrite SSR DOM on localhost
+          html = html.replace(/<script\b[^>]*?\bsrc=["'][^"']+["'][^>]*>\s*<\/script>/gi, "");
+        }
 
         // Rewrite absolute origin links inside href="..." to root-relative paths
         const escapedOrigin = site.origin.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
         html = html.replace(new RegExp(`href=["']${escapedOrigin}(/[^"']*)["']`, "gi"), 'href="$1"');
 
-        // Inject <base href> so relative URLs (like cppreference href="cpp/language") resolve accurately
+        // Inject <base href> so relative URLs (like cppreference href="cpp/language" or threejs pages/) resolve accurately
         if (!/<base\b/i.test(html) && /<head[^>]*>/i.test(html)) {
-          html = html.replace(/(<head[^>]*>)/i, `$1<base href="${pageUrl.pathname}">`);
+          const baseHref =
+            site.id === "threejs" && (pageUrl.pathname === "/docs" || pageUrl.pathname === "/docs/")
+              ? "/docs/"
+              : pageUrl.pathname;
+          html = html.replace(/(<head[^>]*>)/i, `$1<base href="${baseHref}">`);
         }
 
         // Inject Docx scrollbar + dark mode + link navigation bridge before </body>
@@ -645,8 +811,42 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
     );
   }
 
+  // Extra SPA / Viewer assets for Three.js, NestJS, and Angular
+  if (site.id === "threejs") {
+    pendingAssetUrls.set("https://threejs.org/files/main.css", "/files/main.css");
+    pendingAssetUrls.set("https://threejs.org/files/page.css", "/files/page.css");
+    pendingAssetUrls.set("https://threejs.org/files/page.js", "/files/page.js");
+    pendingAssetUrls.set("https://threejs.org/docs/search.json", "/docs/search.json");
+  } else if (site.id === "nestjs") {
+    pendingAssetUrls.set("https://docs.nestjs.com/chunk-BYCV1OW9.js", "/chunk-BYCV1OW9.js");
+  } else if (site.id === "angular") {
+    pendingAssetUrls.set("https://v17.angular.io/light-theme.css", "/light-theme.css");
+    pendingAssetUrls.set("https://v17.angular.io/dark-theme.css", "/dark-theme.css");
+    pendingAssetUrls.set("https://v17.angular.io/generated/navigation.json", "/generated/navigation.json");
+    pendingAssetUrls.set("https://v17.angular.io/generated/docs/docs.json", "/generated/docs/docs.json");
+    const navRes = await fetchWithTimeout("https://v17.angular.io/generated/navigation.json", 10000);
+    if (navRes && navRes.ok) {
+      const navText = await navRes.text();
+      rawAssets.set("/generated/navigation.json", {
+        bytes: Buffer.from(navText, "utf-8"),
+        mime: "application/json; charset=utf-8",
+      });
+      const urlMatches = [...navText.matchAll(/"url"\s*:\s*"([^"]+)"/g)]
+        .map((m) => m[1])
+        .filter((u) => !u.startsWith("http") && !u.includes("#"))
+        .slice(0, 140);
+      for (const u of urlMatches) {
+        const cleanU = u.replace(/^\/+/, "");
+        pendingAssetUrls.set(
+          `https://v17.angular.io/generated/docs/${cleanU}.json`,
+          `/generated/docs/${cleanU}.json`
+        );
+      }
+    }
+  }
+
   console.log(
-    `  Crawled ${visitedPages.size} HTML pages for ${site.id}, now fetching ${pendingAssetUrls.size} CSS/image assets...`
+    `  Crawled ${visitedPages.size} HTML pages for ${site.id}, now fetching ${pendingAssetUrls.size} CSS/JS/JSON/image assets...`
   );
 
   // 2. Download all discovered CSS and image assets + fonts referenced inside CSS
@@ -684,7 +884,8 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
           rawAssets.set(localRoute, { bytes: buf, mime: "text/css; charset=utf-8" });
         } else {
           const arr = await res.arrayBuffer();
-          if (arr.byteLength > 350 * 1024) return; // skip huge marketing photos
+          const maxBytes = localRoute.endsWith(".js") || localRoute.endsWith(".json") ? 2000 * 1024 : 350 * 1024;
+          if (arr.byteLength > maxBytes) return;
           const buf = Buffer.from(arr);
           rawAssets.set(normKey, { bytes: buf, mime });
           rawAssets.set(localRoute, { bytes: buf, mime });

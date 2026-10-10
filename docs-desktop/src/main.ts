@@ -219,7 +219,7 @@ function dismissSplashScreen() {
 
 async function init() {
   const startTs = performance.now();
-  updateSplash(24, "Initializing 42-Site Offline Engine...");
+  updateSplash(24, "Initializing 57-Site Offline Engine...");
   requestAnimationFrame(() => {
     invoke("window_show_ready").catch(() => {});
   });
@@ -584,7 +584,7 @@ function renderChannelDrawer(sites: UnifiedSiteEntry[]) {
         <span class="channel-brand-icon" style="color: #38bdf8;">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
         </span>
-        <span class="channel-name">42-Site Hub & Store</span>
+        <span class="channel-name">${sites.length}-Site Hub & Store</span>
         <span class="channel-tag">${sites.length}</span>
       </button>
       ${installedSites
@@ -1030,7 +1030,7 @@ async function switchTab(tab: string, targetPathOrUrl?: string) {
   const brand = getSiteBrand(tab);
   if (titlebarCurrentView) {
     titlebarCurrentView.textContent =
-      tab === "home" ? "42-Site Documentation Hub" : `${brand.name} (${brand.version})`;
+      tab === "home" ? `${sites.length}-Site Documentation Hub` : `${brand.name} (${brand.version})`;
   }
 
   [viewHome, viewTailwind, viewShadcn, viewDynamic].forEach((view) =>

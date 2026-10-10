@@ -333,6 +333,21 @@ fn get_site_origin_and_entry(site_id: &str) -> Option<(&'static str, &'static st
         "tanstack_hotkeys" => Some(("https://tanstack.com", "/hotkeys/latest/docs/overview")),
         "tanstack_react_charts" => Some(("https://react-charts.tanstack.com", "/docs/overview")),
         "tanstack_create_tsrouter_app" => Some(("https://tanstack.com", "/router/latest/docs/framework/react/quick-start")),
+        "python" => Some(("https://docs.python.org", "/3/")),
+        "threejs" => Some(("https://threejs.org", "/docs/")),
+        "motion" => Some(("https://motion.dev", "/docs")),
+        "vue" => Some(("https://vuejs.org", "/guide/introduction.html")),
+        "nuxt" => Some(("https://nuxt.com", "/docs/4.x/getting-started/introduction")),
+        "angular" => Some(("https://v17.angular.io", "/docs")),
+        "hono" => Some(("https://hono.dev", "/docs/")),
+        "express" => Some(("https://expressjs.com", "/")),
+        "nestjs" => Some(("https://docs.nestjs.com", "/")),
+        "qt" => Some(("https://doc.qt.io", "/")),
+        "boost" => Some(("https://www.boost.org", "/doc/libs/latest/index.html")),
+        "django" => Some(("https://docs.djangoproject.com", "/en/6.1/")),
+        "fastapi" => Some(("https://fastapi.tiangolo.com", "/")),
+        "postgresql" => Some(("https://www.postgresql.org", "/docs/")),
+        "sqlite" => Some(("https://www.sqlite.org", "/docs.html")),
         _ => None,
     }
 }
@@ -439,7 +454,11 @@ html.docx-force-dark [style*="background-image"] {{
     go: true,
     htmx: true,
     ninja: true,
-    llvm: true
+    llvm: true,
+    boost: true,
+    sqlite: true,
+    postgresql: true,
+    express: true
   }};
 
   function isPageBackgroundLight() {{
@@ -540,11 +559,15 @@ html.docx-force-dark [style*="background-image"] {{
   window.addEventListener('mousedown', function(){{
     window.parent.postMessage({{ type: 'IFRAME_INTERACT' }}, '*');
   }}, {{ passive: true }});
+  if (SITE_ID === 'threejs' && !window.location.hash && window.location.pathname.indexOf('pages/') === -1) {{
+    window.location.hash = 'Scene';
+  }}
   document.addEventListener('click', function(e){{
     var a = e.target && e.target.closest ? e.target.closest('a') : null;
     if(!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    if(SITE_ID === 'threejs' || SITE_ID === 'nestjs' || SITE_ID === 'angular') return;
     var href = a.getAttribute('href');
-    if(!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('javascript:') || a.getAttribute('target') === '_blank') return;
+    if(!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('javascript:') || a.hasAttribute('target')) return;
     try {{
       var resolved = new URL(href, window.location.href);
       if (resolved.origin === window.location.origin || (SITE_ORIGIN && resolved.origin === SITE_ORIGIN)) {{
@@ -552,7 +575,7 @@ html.docx-force-dark [style*="background-image"] {{
         window.location.href = resolved.pathname + resolved.search + resolved.hash;
       }}
     }} catch(err) {{}}
-  }}, true);
+  }}, false);
 }})();
 </script>"#,
         site_id, origin
@@ -697,6 +720,9 @@ fn handle_client(mut stream: TcpStream, site_key: String, store: Arc<AssetStore>
         .or_else(|| {
             if decoded_path == "/" || decoded_path == "/docs" {
                 resolve_from_store(&site_key, "/docs", &store)
+            } else if (site_key == "nestjs" || site_key == "angular") && !decoded_path.contains('.') {
+                resolve_from_store(&site_key, "/docs", &store)
+                    .or_else(|| resolve_from_store(&site_key, "/", &store))
             } else {
                 None
             }

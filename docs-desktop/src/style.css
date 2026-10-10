@@ -1554,21 +1554,21 @@ body.sidebar-pinned .left-edge-sensor {
   width: 100%;
 }
 
-/* Unified 42-Site Grid */
+/* Unified Site Grid — Wide Horizontal Rectangle Cards */
 .all-sites-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: 14px;
 }
 
 .site-card {
   background: #0a0a0d;
   border: 1px solid var(--border-color);
-  border-radius: 14px;
-  padding: 18px 20px;
+  border-radius: 13px;
+  padding: 13px 18px;
   display: flex;
   flex-direction: column;
-  gap: 11px;
+  gap: 8px;
   transition: all 0.18s ease;
   position: relative;
 }
@@ -1586,14 +1586,14 @@ body.sidebar-pinned .left-edge-sensor {
 
 .site-card-top {
   display: flex;
-  align-items: flex-start;
-  gap: 13px;
+  align-items: center;
+  gap: 12px;
 }
 
 .site-brand-box {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   background: var(--brand-tint, rgba(255, 255, 255, 0.08));
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--brand-color, #ffffff);
@@ -1604,8 +1604,8 @@ body.sidebar-pinned .left-edge-sensor {
 }
 
 .site-brand-box svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
 }
 
 .site-card-headings {
@@ -1618,11 +1618,11 @@ body.sidebar-pinned .left-edge-sensor {
   align-items: center;
   gap: 7px;
   flex-wrap: wrap;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 .site-card-name {
-  font-size: 1rem;
+  font-size: 0.98rem;
   font-weight: 700;
   color: #ffffff;
 }
@@ -1668,11 +1668,11 @@ body.sidebar-pinned .left-edge-sensor {
 }
 
 .site-card-desc {
-  font-size: 0.79rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
-  line-height: 1.45;
+  line-height: 1.38;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1687,9 +1687,9 @@ body.sidebar-pinned .left-edge-sensor {
   background: #141419;
   border: 1px solid var(--border-subtle);
   color: #a1a1aa;
-  padding: 3px 8px;
+  padding: 2px 8px;
   border-radius: 5px;
-  font-size: 0.71rem;
+  font-size: 0.7rem;
   cursor: pointer;
   transition: all 0.14s ease;
 }
@@ -1705,9 +1705,12 @@ body.sidebar-pinned .left-edge-sensor {
   font-family: monospace;
   color: #71717a;
   background: #060608;
-  padding: 6px 9px;
+  padding: 5px 10px;
   border-radius: 7px;
   border: 1px solid var(--border-subtle);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .site-card-footer {
@@ -1715,17 +1718,17 @@ body.sidebar-pinned .left-edge-sensor {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding-top: 4px;
+  padding-top: 2px;
 }
 
 .site-btn-open {
   flex: 1;
-  padding: 8px 12px;
+  padding: 6px 12px;
   border-radius: 8px;
   border: 1px solid var(--brand-color, #ffffff);
   background: var(--brand-tint, rgba(255, 255, 255, 0.12));
   color: #ffffff;
-  font-size: 0.78rem;
+  font-size: 0.77rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.15s ease;
@@ -1737,7 +1740,7 @@ body.sidebar-pinned .left-edge-sensor {
 }
 
 .site-btn-delta {
-  padding: 8px 11px;
+  padding: 6px 11px;
   border-radius: 8px;
   border: 1px solid var(--border-color);
   background: #141419;
@@ -1763,12 +1766,12 @@ body.sidebar-pinned .left-edge-sensor {
 
 .site-btn-install {
   width: 100%;
-  padding: 8px 12px;
+  padding: 6px 12px;
   border-radius: 8px;
   border: 1px solid var(--border-color);
   background: #131318;
   color: #e4e4e7;
-  font-size: 0.78rem;
+  font-size: 0.77rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.15s ease;

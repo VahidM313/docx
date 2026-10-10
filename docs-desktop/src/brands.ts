@@ -484,6 +484,173 @@ export const SITE_BRANDS: Record<string, SiteBrand> = {
     description: "CLI scaffolding tool for TanStack Router and TanStack Start applications.",
     svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5V19M5 12H19"/></svg>`,
   },
+
+  // 15 New Documentation Packs
+  python: {
+    id: "python",
+    name: "Python 3",
+    version: "v3.13",
+    category: "Systems & Languages",
+    color: "#38bdf8",
+    bgTint: "rgba(56, 189, 248, 0.15)",
+    description:
+      "Official Python 3 documentation: Tutorial, Standard Library Reference, Language Reference, and HOWTOs.",
+    svg: `<svg viewBox="0 0 24 24" fill="none"><path d="M12 2C7.5 2 8 4.2 8 5.5V8H13V9H6C3.5 9 2 10.8 2 13.5C2 16.2 3.5 18 6 18H8V15.5C8 13.5 9.5 12 11.5 12H15.5C17 12 18 11 18 9.5V5.5C18 3.2 16 2 12 2Z" stroke="#38bdf8" stroke-width="1.8"/><path d="M12 22C16.5 22 16 19.8 16 18.5V16H11V15H18C20.5 15 22 13.2 22 10.5C22 7.8 20.5 6 18 6H16V8.5C16 10.5 14.5 12 12.5 12H8.5C7 12 6 13 6 14.5V18.5C6 20.8 8 22 12 22Z" stroke="#facc15" stroke-width="1.8"/><circle cx="10" cy="5" r="1" fill="#38bdf8"/><circle cx="14" cy="19" r="1" fill="#facc15"/></svg>`,
+  },
+  threejs: {
+    id: "threejs",
+    name: "Three.js",
+    version: "r175",
+    category: "Frontend & UI",
+    color: "#e4e4e7",
+    bgTint: "rgba(228, 228, 231, 0.14)",
+    description:
+      "JavaScript 3D WebGL & WebGPU library: Scenes, Cameras, Shaders, Geometries, Materials, and Loaders.",
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><polygon points="3 3 21 9 9 21 3 3"/><polygon points="12 6 15 15 6 12 12 6"/></svg>`,
+  },
+  motion: {
+    id: "motion",
+    name: "Motion",
+    version: "v12",
+    category: "Frontend & UI",
+    color: "#fff312",
+    bgTint: "rgba(255, 243, 18, 0.14)",
+    description:
+      "Production-grade web animation library for React, JavaScript, and Vue with springs, gestures, and layout transitions.",
+    svg: `<svg viewBox="0 0 24 24" fill="none"><path d="M4 18V6L10 13L16 6V18" stroke="#fff312" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="12" r="2.2" fill="#fff312"/></svg>`,
+  },
+  vue: {
+    id: "vue",
+    name: "Vue.js",
+    version: "v3.5",
+    category: "Frontend & UI",
+    color: "#42b883",
+    bgTint: "rgba(66, 184, 131, 0.15)",
+    description:
+      "The Progressive JavaScript Framework: Composition API, Reactivity, Single-File Components, and Directives.",
+    svg: `<svg viewBox="0 0 24 24" fill="none"><path d="M2 4H6.5L12 13.5L17.5 4H22L12 21L2 4Z" stroke="#42b883" stroke-width="1.9" stroke-linejoin="round"/><path d="M6.5 4L12 13.5L17.5 4" stroke="#35495e" stroke-width="1.9" stroke-linejoin="round"/></svg>`,
+  },
+  nuxt: {
+    id: "nuxt",
+    name: "Nuxt",
+    version: "v4.x",
+    category: "Frontend & UI",
+    color: "#00dc82",
+    bgTint: "rgba(0, 220, 130, 0.15)",
+    description:
+      "The Intuitive Vue Framework featuring Nitro server engine, file-based routing, auto-imports, and SSR/SSG.",
+    svg: `<svg viewBox="0 0 24 24" fill="none"><path d="M2 19L9.5 6L17 19H2Z" stroke="#00dc82" stroke-width="1.9" stroke-linejoin="round"/><path d="M10.5 19L15.5 10L22 19H10.5Z" stroke="#38bdf8" stroke-width="1.9" stroke-linejoin="round"/></svg>`,
+  },
+  angular: {
+    id: "angular",
+    name: "Angular",
+    version: "v17",
+    category: "Frontend & UI",
+    color: "#f43f5e",
+    bgTint: "rgba(244, 63, 94, 0.15)",
+    description:
+      "Platform for building web applications with Signals, Standalone Components, SSR Hydration, and DI.",
+    svg: `<svg viewBox="0 0 24 24" fill="none"><path d="M12 2L3 5.5L4.5 17.5L12 22L19.5 17.5L21 5.5L12 2Z" stroke="#f43f5e" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 6L7.5 16.5H9.8L10.7 14H13.3L14.2 16.5H16.5L12 6Z" fill="#f43f5e"/></svg>`,
+  },
+  hono: {
+    id: "hono",
+    name: "Hono",
+    version: "v4.7",
+    category: "Backend & JS/TS",
+    color: "#ff5c13",
+    bgTint: "rgba(255, 92, 19, 0.15)",
+    description:
+      "Ultrafast web framework built on Web Standards for Cloudflare Workers, Bun, Deno, and Node.js with RPC.",
+    svg: `<svg viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 6 8 6 14C6 17.8 8.7 21 12 21C15.3 21 18 17.8 18 14C18 11 16.2 8.5 14.5 7C14.5 9.5 13 10.5 12 10.5C11 10.5 12.8 6 12 2Z" stroke="#ff5c13" stroke-width="1.9" stroke-linejoin="round"/></svg>`,
+  },
+  express: {
+    id: "express",
+    name: "Express.js",
+    version: "v5.1",
+    category: "Backend & JS/TS",
+    color: "#94a3b8",
+    bgTint: "rgba(148, 163, 184, 0.15)",
+    description:
+      "Fast, unopinionated, minimalist web framework for Node.js: routing, middleware, request/response API.",
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8H11M4 12H9M4 16H11"/><path d="M14 9L20 16M20 9L14 16"/></svg>`,
+  },
+  nestjs: {
+    id: "nestjs",
+    name: "NestJS",
+    version: "v11",
+    category: "Backend & JS/TS",
+    color: "#ea2845",
+    bgTint: "rgba(234, 40, 69, 0.15)",
+    description:
+      "Progressive Node.js framework for building efficient, scalable enterprise server-side applications with TypeScript.",
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="#ea2845" stroke-width="1.9" stroke-linecap="round"><path d="M12 3C7 3 3 7 3 12C3 17 7 21 12 21C17 21 21 17 21 12"/><path d="M15 4C18.5 5.5 20 9 18 13C16 17 11 18 8 15C6 13 7 9 10 8C13 7 15 10 13 12"/></svg>`,
+  },
+  qt: {
+    id: "qt",
+    name: "Qt 6 Documentation",
+    version: "Qt 6.9",
+    category: "Systems & Languages",
+    color: "#41cd52",
+    bgTint: "rgba(65, 205, 82, 0.15)",
+    description:
+      "Cross-platform C++ & QML application development framework: Qt Widgets, Qt Quick, Signals & Slots, CMake API.",
+    svg: `<svg viewBox="0 0 24 24" fill="none"><path d="M5 4H19L21 6V18L17 20H5L3 18V6L5 4Z" stroke="#41cd52" stroke-width="1.9"/><path d="M9.5 9C7.8 9 6.8 10.2 6.8 12C6.8 13.8 7.8 15 9.5 15C11.2 15 12.2 13.8 12.2 12C12.2 10.2 11.2 9 9.5 9ZM10.5 13.8L12.3 15.8M15.5 8.5V14.5C15.5 15.2 16 15.5 16.8 15.5M14.2 10.5H17" stroke="#41cd52" stroke-width="1.7" stroke-linecap="round"/></svg>`,
+  },
+  boost: {
+    id: "boost",
+    name: "Boost C++ Libraries",
+    version: "v1.87",
+    category: "Systems & Languages",
+    color: "#f7901e",
+    bgTint: "rgba(247, 144, 30, 0.15)",
+    description:
+      "Peer-reviewed portable C++ source libraries: Boost.Asio, Beast, Spirit, Filesystem, Graph, MultiIndex, and Math.",
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="#f7901e" stroke-width="1.9" stroke-linejoin="round"><polygon points="12 2 19 6 19 14 12 18 5 14 5 6 12 2"/><polyline points="5 14 12 22 19 14"/><circle cx="12" cy="10" r="2.5"/></svg>`,
+  },
+  django: {
+    id: "django",
+    name: "Django",
+    version: "v6.1",
+    category: "Backend & JS/TS",
+    color: "#44b78b",
+    bgTint: "rgba(68, 183, 139, 0.15)",
+    description:
+      "The web framework for perfectionists with deadlines: ORM Models, Views, Templates, Admin, Auth, and Migrations.",
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="#44b78b" stroke-width="2" stroke-linecap="round"><path d="M12 4V16C12 17.7 10.5 19 8.5 19C6.5 19 5 17.7 5 16C5 14.3 6.5 13 8.5 13C9.8 13 11 13.5 12 14.2"/><path d="M16 9V17.5C16 19.5 15 20.8 13.2 21.3"/><circle cx="16" cy="5.5" r="1" fill="#44b78b"/></svg>`,
+  },
+  fastapi: {
+    id: "fastapi",
+    name: "FastAPI",
+    version: "v0.115",
+    category: "Backend & JS/TS",
+    color: "#05998b",
+    bgTint: "rgba(5, 153, 139, 0.15)",
+    description:
+      "High-performance Python web framework for building APIs with automatic OpenAPI docs, Pydantic v2, and async/await.",
+    svg: `<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#05998b" stroke-width="1.9"/><path d="M13 5.5L7.5 13H12L11 18.5L16.5 11H12L13 5.5Z" fill="#05998b"/></svg>`,
+  },
+  postgresql: {
+    id: "postgresql",
+    name: "PostgreSQL",
+    version: "v17",
+    category: "Backend & JS/TS",
+    color: "#38bdf8",
+    bgTint: "rgba(56, 189, 248, 0.15)",
+    description:
+      "The World's Most Advanced Open Source Relational Database: SQL syntax, JSONB, indexing, MVCC, and replication.",
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round"><ellipse cx="12" cy="6" rx="8" ry="3.2"/><path d="M4 6V12C4 13.8 7.6 15.2 12 15.2C16.4 15.2 20 13.8 20 12V6"/><path d="M4 12V18C4 19.8 7.6 21.2 12 21.2C16.4 21.2 20 19.8 20 18V12"/></svg>`,
+  },
+  sqlite: {
+    id: "sqlite",
+    name: "SQLite",
+    version: "v3.49",
+    category: "Systems & Languages",
+    color: "#0ea5e9",
+    bgTint: "rgba(14, 165, 233, 0.15)",
+    description:
+      "Self-contained, high-reliability, embedded SQL database engine: C/C++ API, SQL syntax, PRAGMAs, and WAL mode.",
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 3.8C16.5 3.8 11 7.5 8.5 13.5L6 20L10.5 16.5C15.5 14 20.2 8.5 20.2 3.8Z"/><path d="M8.5 13.5L14 11"/><path d="M4 20H18"/></svg>`,
+  },
 };
 
 export function getSiteBrand(siteId: string, fallbackName?: string, fallbackVer?: string): SiteBrand {
