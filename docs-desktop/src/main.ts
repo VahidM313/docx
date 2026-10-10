@@ -654,9 +654,9 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
       } chunks (${s.routeCount} routes) • ${s.sizeMb} MB Max-Gzip
           </div>
 
-          <div class="card-dl-wrap" data-dl-card="${escapeHtml(s.id)}" style="${dl ? "display: flex;" : ""}">
+          <div class="card-dl-wrap" data-dl-card="${escapeHtml(s.id)}" style="${dl ? "display: flex;" : "display: none;"}">
             <div class="card-dl-row">
-              <span class="card-dl-phase" data-dl-card-phase>${escapeHtml(dl?.detail || dl?.phase || "Preparing download...")}</span>
+              <span class="card-dl-phase" data-dl-card-phase>${escapeHtml(dl?.detail || dl?.phase || "")}</span>
               <span class="card-dl-pct" data-dl-card-pct>${dlPct}%</span>
             </div>
             <div class="card-dl-bar-track">

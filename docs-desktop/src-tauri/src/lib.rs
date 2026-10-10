@@ -726,6 +726,10 @@ pub struct RemoteRegistryEntryRaw {
     #[serde(default)]
     pub sizeBytes: usize,
     #[serde(default)]
+    pub totalBytes: usize,
+    #[serde(default)]
+    pub sizeMB: f64,
+    #[serde(default)]
     pub routeCount: usize,
     #[serde(default)]
     pub chunkCount: usize,
@@ -733,8 +737,14 @@ pub struct RemoteRegistryEntryRaw {
 
 #[derive(serde::Deserialize)]
 #[allow(non_snake_case)]
-pub struct RemoteRegistryFile {
+pub struct RemoteRegistryFileVec {
     pub packs: Vec<RemoteRegistryEntryRaw>,
+}
+
+#[derive(serde::Deserialize)]
+#[allow(non_snake_case)]
+pub struct RemoteRegistryFileMap {
+    pub packs: HashMap<String, RemoteRegistryEntryRaw>,
 }
 
 #[derive(serde::Serialize, Clone)]
@@ -758,8 +768,10 @@ fn fetch_remote_registry(state: tauri::State<'_, AppState>) -> Result<Vec<Remote
     let url = format!("{}/registry.json", RELEASE_BASE_URL);
     let bytes = curl_get_bytes(&url, None)?;
     let parsed_raw: Vec<RemoteRegistryEntryRaw> =
-        if let Ok(wrapper) = serde_json::from_slice::<RemoteRegistryFile>(&bytes) {
-            wrapper.packs
+        if let Ok(wrapper_map) = serde_json::from_slice::<RemoteRegistryFileMap>(&bytes) {
+            wrapper_map.packs.into_values().collect()
+        } else if let Ok(wrapper_vec) = serde_json::from_slice::<RemoteRegistryFileVec>(&bytes) {
+            wrapper_vec.packs
         } else {
             serde_json::from_slice::<Vec<RemoteRegistryEntryRaw>>(&bytes)
                 .map_err(|e| e.to_string())?
@@ -770,19 +782,31 @@ fn fetch_remote_registry(state: tauri::State<'_, AppState>) -> Result<Vec<Remote
     for item in parsed_raw {
         let (installed, local_commit) = if let Some(pack) = guard.get(&item.id) {
             (true, pack.manifest.commit.clone())
-        } else if item.id == "tailwind" || item.id == "shadcn" {
-            (true, "embedded-base".to_string())
+        } else if item.id == "tailwind" {
+            (true, "f8a2c91".to_string())
+        } else if item.id == "shadcn" {
+            (true, "d4e71b3".to_string())
         } else {
             (false, String::new())
         };
-        let update_available = installed && !local_commit.is_empty() && local_commit != item.commit;
+        let update_available =
+            installed && !local_commit.is_empty() && !item.commit.is_empty() && local_commit != item.commit;
+        let effective_bytes = if item.sizeBytes > 0 {
+            item.sizeBytes
+        } else if item.totalBytes > 0 {
+            item.totalBytes
+        } else if item.sizeMB > 0.0 {
+            (item.sizeMB * 1024.0 * 1024.0) as usize
+        } else {
+            0
+        };
         out.push(RemoteRegistryItem {
             id: item.id,
             name: item.name,
             version: item.version,
             commit: item.commit,
             updatedAt: item.updatedAt,
-            sizeBytes: item.sizeBytes,
+            sizeBytes: effective_bytes,
             routeCount: item.routeCount,
             chunkCount: item.chunkCount,
             installed,

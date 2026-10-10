@@ -1169,18 +1169,37 @@ body.sidebar-pinned .left-edge-sensor {
 
 .card-dl-wrap {
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 6px;
+  background: rgba(56, 189, 248, 0.06);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 8px;
+  padding: 8px 10px;
 }
 
+.card-dl-row,
 .card-dl-label-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.73rem;
+  gap: 8px;
+  font-size: 0.72rem;
   font-family: monospace;
   color: #e4e4e7;
+}
+
+.card-dl-phase {
+  color: #bae6fd;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-dl-pct {
+  color: #38bdf8;
+  font-weight: 700;
+  flex-shrink: 0;
 }
 
 .card-dl-bar-track {
