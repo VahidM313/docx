@@ -220,6 +220,9 @@ function dismissSplashScreen() {
 async function init() {
   const startTs = performance.now();
   updateSplash(24, "Initializing 42-Site Offline Engine...");
+  requestAnimationFrame(() => {
+    invoke("window_show_ready").catch(() => {});
+  });
 
   setupWindowControls();
   setupSidebarAndTopbarHover();

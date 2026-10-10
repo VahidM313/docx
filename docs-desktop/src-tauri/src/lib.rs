@@ -1449,6 +1449,15 @@ fn window_start_dragging(window: tauri::Window) {
     let _ = window.start_dragging();
 }
 
+#[tauri::command]
+fn window_show_ready(window: tauri::Window) {
+    if !window.is_maximized().unwrap_or(false) {
+        let _ = window.maximize();
+    }
+    let _ = window.show();
+    let _ = window.set_focus();
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     use tauri::Manager;
@@ -1479,6 +1488,7 @@ pub fn run() {
         })
         .setup(|app| {
             if let Some(win) = app.get_webview_window("main") {
+                let _ = win.set_background_color(Some(tauri::window::Color(0, 0, 0, 255)));
                 if let Some(icon) = app.default_window_icon().cloned() {
                     let _ = win.set_icon(icon);
                 } else if let Ok(icon) =
@@ -1487,6 +1497,13 @@ pub fn run() {
                     let _ = win.set_icon(icon);
                 }
                 let _ = win.maximize();
+
+                // Fallback in case frontend invoke is delayed
+                let win_clone = win.clone();
+                thread::spawn(move || {
+                    thread::sleep(Duration::from_millis(380));
+                    let _ = win_clone.show();
+                });
             }
             Ok(())
         })
@@ -1512,6 +1529,7 @@ pub fn run() {
             window_toggle_fullscreen,
             window_close,
             window_start_dragging,
+            window_show_ready,
         ])
         .run(tauri::generate_context!())
         .expect("error while building tauri application");
