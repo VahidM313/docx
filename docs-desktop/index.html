@@ -51,11 +51,29 @@
 
     <!-- Custom Frameless Discord-Style Top Window Bar -->
     <header id="customTitlebar" class="custom-titlebar">
-      <div class="titlebar-drag-region" id="titlebarDrag">
+      <div class="titlebar-brand-zone" id="titlebarBrandHome" title="Switch to Docx 57-Site Hub">
         <img src="/logo.png" alt="Docx" class="titlebar-logo" />
         <span class="titlebar-title">DOCX</span>
-        <span class="titlebar-divider">/</span>
-        <span id="titlebarCurrentView" class="titlebar-current-view">57-Site Documentation Hub</span>
+      </div>
+
+      <div class="browser-tabs-strip" id="browserTabsStrip">
+        <div class="browser-tabs-list" id="browserTabsList"></div>
+        <button id="btnNewBrowserTab" class="browser-tab-action-btn" title="New Tab — Open Hub to pick another doc (Ctrl+T)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </button>
+        <button id="btnDuplicateBrowserTab" class="browser-tab-action-btn" title="Duplicate Current Tab — Open another page of this doc (Ctrl+Shift+D)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="titlebar-drag-region" id="titlebarDrag">
+        <span id="titlebarCurrentView" class="titlebar-current-view" style="display: none;">57-Site Documentation Hub</span>
         <span id="titlebarUpdatePill" class="titlebar-update-pill" style="display: none;">
           🔔 <span id="titlebarUpdateCount">0</span> Updates Available
         </span>
