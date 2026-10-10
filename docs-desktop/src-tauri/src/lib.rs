@@ -366,6 +366,190 @@ fn guess_mime_from_path(path: &str) -> &'static str {
     }
 }
 
+fn inject_reader_bridge(site_key: &str, mut html: String) -> Vec<u8> {
+    if html.contains("id=\"docx-reader-bridge\"") {
+        return html.into_bytes();
+    }
+    let site_id = match site_key {
+        "tw" => "tailwind",
+        "sh" => "shadcn",
+        other => other,
+    };
+    let origin = get_site_origin_and_entry(site_id)
+        .map(|(o, _)| o)
+        .unwrap_or("")
+        .to_string();
+
+    if !origin.is_empty() {
+        html = html.replace(&format!("href=\"{}/", origin), "href=\"/");
+        html = html.replace(&format!("src=\"{}/", origin), "src=\"/");
+    }
+
+    let inject = format!(
+        r#"<style id="docx-styled-scroll">
+::-webkit-scrollbar {{ width: 8px !important; height: 8px !important; }}
+::-webkit-scrollbar-track {{ background: #070709 !important; }}
+::-webkit-scrollbar-thumb {{ background-color: #24242b !important; border-radius: 999px !important; border: 2px solid #070709 !important; min-height: 36px !important; }}
+::-webkit-scrollbar-thumb:hover {{ background-color: #3a3a45 !important; }}
+* {{ scrollbar-width: thin; scrollbar-color: #24242b #070709; }}
+
+html.docx-force-dark {{
+  filter: invert(0.93) hue-rotate(180deg) !important;
+  background-color: #ffffff !important;
+  min-height: 100%;
+}}
+html.docx-force-dark body {{
+  background-color: #ffffff !important;
+}}
+html.docx-force-dark img,
+html.docx-force-dark video,
+html.docx-force-dark canvas,
+html.docx-force-dark picture,
+html.docx-force-dark [style*="background-image"] {{
+  filter: invert(1) hue-rotate(180deg) !important;
+}}
+</style>
+<script id="docx-reader-bridge">
+(function(){{
+  var SITE_ID = "{}";
+  var SITE_ORIGIN = "{}";
+  var KNOWN_LIGHT_SITES = {{
+    cppreference: true,
+    learncpp: true,
+    lua: true,
+    cmake: true,
+    git: true,
+    curl: true,
+    go: true,
+    htmx: true,
+    ninja: true,
+    llvm: true
+  }};
+
+  function isPageBackgroundLight() {{
+    try {{
+      var elems = [document.body, document.documentElement];
+      for (var i = 0; i < elems.length; i++) {{
+        var el = elems[i];
+        if (!el) continue;
+        var bg = window.getComputedStyle(el).backgroundColor || "";
+        var m = bg.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([0-9.]+))?\)/);
+        if (m) {{
+          var alpha = m[4] !== undefined ? parseFloat(m[4]) : 1;
+          if (alpha < 0.1) continue;
+          var r = parseInt(m[1], 10), g = parseInt(m[2], 10), b = parseInt(m[3], 10);
+          var lum = 0.299 * r + 0.587 * g + 0.114 * b;
+          return lum > 145;
+        }}
+      }}
+    }} catch (e) {{}}
+    return false;
+  }}
+
+  function applyReaderSettings(zoomPct, darkEnabled) {{
+    try {{
+      var z = Math.max(60, Math.min(220, Number(zoomPct) || 100));
+      document.documentElement.style.zoom = (z / 100).toString();
+      localStorage.setItem('docx_zoom', String(z));
+      localStorage.setItem('docx_dark', darkEnabled ? '1' : '0');
+
+      if (darkEnabled) {{
+        localStorage.setItem('theme', 'dark');
+        document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.style.colorScheme = 'dark';
+        if (KNOWN_LIGHT_SITES[SITE_ID] || isPageBackgroundLight()) {{
+          document.documentElement.classList.add('docx-force-dark');
+        }} else {{
+          document.documentElement.classList.remove('docx-force-dark');
+        }}
+      }} else {{
+        document.documentElement.classList.remove('docx-force-dark');
+        if (!KNOWN_LIGHT_SITES[SITE_ID]) {{
+          localStorage.setItem('theme', 'light');
+          document.documentElement.classList.remove('dark');
+          document.documentElement.setAttribute('data-theme', 'light');
+          document.documentElement.style.colorScheme = 'light';
+        }}
+      }}
+    }} catch (e) {{}}
+  }}
+
+  try {{
+    var savedZoom = parseInt(localStorage.getItem('docx_zoom') || '100', 10);
+    var savedDark = localStorage.getItem('docx_dark') !== '0';
+    applyReaderSettings(savedZoom, savedDark);
+    window.addEventListener('DOMContentLoaded', function() {{
+      applyReaderSettings(
+        parseInt(localStorage.getItem('docx_zoom') || '100', 10),
+        localStorage.getItem('docx_dark') !== '0'
+      );
+      window.parent.postMessage({{ type: 'DOCX_IFRAME_READY', siteId: SITE_ID }}, '*');
+    }});
+    window.addEventListener('load', function() {{
+      applyReaderSettings(
+        parseInt(localStorage.getItem('docx_zoom') || '100', 10),
+        localStorage.getItem('docx_dark') !== '0'
+      );
+      window.parent.postMessage({{ type: 'DOCX_IFRAME_READY', siteId: SITE_ID }}, '*');
+    }});
+  }} catch (e) {{}}
+
+  window.addEventListener('message', function(e) {{
+    if (!e.data || e.data.type !== 'DOCX_READER_SETTINGS') return;
+    applyReaderSettings(e.data.zoom, e.data.darkMode);
+  }});
+
+  window.addEventListener('keydown', function(e){{
+    if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k'){{
+      e.preventDefault(); e.stopPropagation();
+      window.parent.postMessage({{ type: 'OPEN_UNIVERSAL_SEARCH' }}, '*');
+    }} else if ((e.ctrlKey || e.metaKey) && (e.key === '=' || e.key === '+')) {{
+      e.preventDefault(); e.stopPropagation();
+      window.parent.postMessage({{ type: 'DOCX_ZOOM_DELTA', delta: 10 }}, '*');
+    }} else if ((e.ctrlKey || e.metaKey) && e.key === '-') {{
+      e.preventDefault(); e.stopPropagation();
+      window.parent.postMessage({{ type: 'DOCX_ZOOM_DELTA', delta: -10 }}, '*');
+    }} else if ((e.ctrlKey || e.metaKey) && e.key === '0') {{
+      e.preventDefault(); e.stopPropagation();
+      window.parent.postMessage({{ type: 'DOCX_ZOOM_RESET' }}, '*');
+    }}
+  }}, true);
+  var lastL = 0, lastT = 0;
+  window.addEventListener('mousemove', function(e){{
+    var now = Date.now();
+    if (e.clientX <= 18 && now - lastL > 120) {{ lastL = now; window.parent.postMessage({{ type: 'HOVER_LEFT_EDGE' }}, '*'); }}
+    if (e.clientY <= 10 && now - lastT > 120) {{ lastT = now; window.parent.postMessage({{ type: 'HOVER_TOP_EDGE' }}, '*'); }}
+  }}, {{ passive: true }});
+  window.addEventListener('mousedown', function(){{
+    window.parent.postMessage({{ type: 'IFRAME_INTERACT' }}, '*');
+  }}, {{ passive: true }});
+  document.addEventListener('click', function(e){{
+    var a = e.target && e.target.closest ? e.target.closest('a') : null;
+    if(!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var href = a.getAttribute('href');
+    if(!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('javascript:') || a.getAttribute('target') === '_blank') return;
+    try {{
+      var resolved = new URL(href, window.location.href);
+      if (resolved.origin === window.location.origin || (SITE_ORIGIN && resolved.origin === SITE_ORIGIN)) {{
+        e.preventDefault(); e.stopPropagation();
+        window.location.href = resolved.pathname + resolved.search + resolved.hash;
+      }}
+    }} catch(err) {{}}
+  }}, true);
+}})();
+</script>"#,
+        site_id, origin
+    );
+
+    if let Some(pos) = html.rfind("</body>") {
+        html.insert_str(pos, &inject);
+    } else {
+        html.push_str(&inject);
+    }
+    html.into_bytes()
+}
+
 fn fetch_live_fallback(site_key: &str, raw_target: &str, decoded_path: &str) -> Option<(String, bool, Vec<u8>)> {
     let (origin, entry_path) = get_site_origin_and_entry(site_key)?;
     let target_url = if decoded_path == "/" || decoded_path == "/docs" {
@@ -390,65 +574,8 @@ fn fetch_live_fallback(site_key: &str, raw_target: &str, decoded_path: &str) -> 
     };
 
     if mime.starts_with("text/html") {
-        let mut html = String::from_utf8_lossy(&bytes).into_owned();
-        // Rewrite absolute origin href/src to root-relative so local server handles them
-        html = html.replace(&format!("href=\"{}/", origin), "href=\"/");
-        html = html.replace(&format!("src=\"{}/", origin), "src=\"/");
-        let inject = format!(
-            r#"<style id="docx-styled-scroll">
-::-webkit-scrollbar {{ width: 8px !important; height: 8px !important; }}
-::-webkit-scrollbar-track {{ background: #070709 !important; }}
-::-webkit-scrollbar-thumb {{ background-color: #24242b !important; border-radius: 999px !important; border: 2px solid #070709 !important; min-height: 36px !important; }}
-::-webkit-scrollbar-thumb:hover {{ background-color: #3a3a45 !important; }}
-* {{ scrollbar-width: thin; scrollbar-color: #24242b #070709; }}
-</style>
-<script>
-(function(){{
-  var SITE_ORIGIN = "{}";
-  try {{
-    if (!localStorage.getItem('theme')) localStorage.setItem('theme', 'dark');
-    document.documentElement.classList.add('dark');
-    document.documentElement.setAttribute('data-theme', 'dark');
-    document.documentElement.style.colorScheme = 'dark';
-  }} catch (e) {{}}
-  window.addEventListener('keydown', function(e){{
-    if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k'){{
-      e.preventDefault(); e.stopPropagation();
-      window.parent.postMessage({{ type: 'OPEN_UNIVERSAL_SEARCH' }}, '*');
-    }}
-  }}, true);
-  var lastL = 0, lastT = 0;
-  window.addEventListener('mousemove', function(e){{
-    var now = Date.now();
-    if (e.clientX <= 18 && now - lastL > 120) {{ lastL = now; window.parent.postMessage({{ type: 'HOVER_LEFT_EDGE' }}, '*'); }}
-    if (e.clientY <= 10 && now - lastT > 120) {{ lastT = now; window.parent.postMessage({{ type: 'HOVER_TOP_EDGE' }}, '*'); }}
-  }}, {{ passive: true }});
-  window.addEventListener('mousedown', function(){{
-    window.parent.postMessage({{ type: 'IFRAME_INTERACT' }}, '*');
-  }}, {{ passive: true }});
-  document.addEventListener('click', function(e){{
-    var a = e.target && e.target.closest ? e.target.closest('a') : null;
-    if(!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-    var href = a.getAttribute('href');
-    if(!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('javascript:') || a.getAttribute('target') === '_blank') return;
-    try {{
-      var resolved = new URL(href, window.location.href);
-      if (resolved.origin === window.location.origin || resolved.origin === SITE_ORIGIN) {{
-        e.preventDefault(); e.stopPropagation();
-        window.location.href = resolved.pathname + resolved.search + resolved.hash;
-      }}
-    }} catch(err) {{}}
-  }}, true);
-}})();
-</script>"#,
-            origin
-        );
-        if let Some(pos) = html.rfind("</body>") {
-            html.insert_str(pos, &inject);
-        } else {
-            html.push_str(&inject);
-        }
-        bytes = html.into_bytes();
+        let html = String::from_utf8_lossy(&bytes).into_owned();
+        bytes = inject_reader_bridge(site_key, html);
     }
 
     Some((mime, false, bytes))
@@ -560,7 +687,21 @@ fn handle_client(mut stream: TcpStream, site_key: String, store: Arc<AssetStore>
         })
         .or_else(|| fetch_live_fallback(&site_key, raw_target, &decoded_path));
 
-    if let Some((mime, gzipped, body)) = resolved {
+    if let Some((mime, mut gzipped, mut body)) = resolved {
+        if mime.starts_with("text/html") {
+            if gzipped {
+                let mut decoder = flate2::read::GzDecoder::new(&body[..]);
+                let mut decompressed = String::new();
+                if decoder.read_to_string(&mut decompressed).is_ok() {
+                    body = inject_reader_bridge(&site_key, decompressed);
+                    gzipped = false;
+                }
+            } else {
+                let html = String::from_utf8_lossy(&body).into_owned();
+                body = inject_reader_bridge(&site_key, html);
+            }
+        }
+
         let encoding_header = if gzipped {
             "Content-Encoding: gzip\r\n"
         } else {

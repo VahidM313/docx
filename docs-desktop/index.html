@@ -24,6 +24,17 @@
       </div>
 
       <div class="titlebar-actions">
+        <div class="reader-controls-group" title="Font Size / Page Zoom (Ctrl - / + / 0)">
+          <button id="btnZoomOut" class="reader-ctrl-btn" title="Decrease Font Size (Ctrl + -)">A−</button>
+          <button id="btnZoomReset" class="reader-ctrl-pct" title="Reset Font Size to 100% (Ctrl + 0)">100%</button>
+          <button id="btnZoomIn" class="reader-ctrl-btn" title="Increase Font Size (Ctrl + +)">A+</button>
+        </div>
+
+        <button id="btnToggleDarkSite" class="titlebar-chip-btn active" title="Make Light-Only Sites Dark (Toggle Dark Mode)">
+          <span id="darkSiteIcon">🌙</span>
+          <span id="darkSiteLabel">Dark</span>
+        </button>
+
         <button id="btnQuickSearchTop" class="titlebar-chip-btn" title="Universal Search (Ctrl+K)">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="11" cy="11" r="8"></circle>

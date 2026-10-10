@@ -115,6 +115,12 @@ let topbarHidden = false;
 let sidebarCloseTimer: number | null = null;
 let topbarCloseTimer: number | null = null;
 
+let readerZoom = Math.max(
+  60,
+  Math.min(220, parseInt(localStorage.getItem("docx_reader_zoom") || "100", 10) || 100)
+);
+let readerDarkMode = localStorage.getItem("docx_reader_dark") !== "0";
+
 let installedPacksCache: PackStatusInfo[] = [];
 let remoteRegistryCache: RemoteRegistryItem[] = [];
 let selectedHubCategory: string = "all";
@@ -144,6 +150,13 @@ const btnToggleTopbar = document.getElementById("btnToggleTopbar") as HTMLButton
 const btnToggleFullscreen = document.getElementById("btnToggleFullscreen") as HTMLButtonElement;
 const btnRailToggleTopbar = document.getElementById("btnRailToggleTopbar") as HTMLButtonElement;
 const topbarToggleLabel = document.getElementById("topbarToggleLabel") as HTMLElement;
+
+const btnZoomOut = document.getElementById("btnZoomOut") as HTMLButtonElement;
+const btnZoomReset = document.getElementById("btnZoomReset") as HTMLButtonElement;
+const btnZoomIn = document.getElementById("btnZoomIn") as HTMLButtonElement;
+const btnToggleDarkSite = document.getElementById("btnToggleDarkSite") as HTMLButtonElement;
+const darkSiteIcon = document.getElementById("darkSiteIcon") as HTMLElement;
+const darkSiteLabel = document.getElementById("darkSiteLabel") as HTMLElement;
 
 const updateAlertBanner = document.getElementById("updateAlertBanner") as HTMLElement;
 const updateAlertHeadline = document.getElementById("updateAlertHeadline") as HTMLElement;
@@ -193,10 +206,56 @@ async function init() {
   setupSidebarAndTopbarHover();
   setupEventListeners();
   setupDownloadProgressListener();
+  syncReaderSettingsToAllIframes();
   await loadSearchIndex();
   await checkServerHealth();
   await syncAllPacksAndRender(true);
   setInterval(checkServerHealth, 3000);
+}
+
+function setReaderZoom(nextZoom: number) {
+  readerZoom = Math.max(60, Math.min(220, Math.round(nextZoom / 5) * 5));
+  try {
+    localStorage.setItem("docx_reader_zoom", String(readerZoom));
+  } catch {}
+  syncReaderSettingsToAllIframes();
+}
+
+function toggleReaderDarkMode() {
+  readerDarkMode = !readerDarkMode;
+  try {
+    localStorage.setItem("docx_reader_dark", readerDarkMode ? "1" : "0");
+  } catch {}
+  syncReaderSettingsToAllIframes();
+}
+
+function syncReaderSettingsToAllIframes() {
+  if (btnZoomReset) {
+    btnZoomReset.textContent = `${readerZoom}%`;
+  }
+  if (btnToggleDarkSite) {
+    btnToggleDarkSite.classList.toggle("active", readerDarkMode);
+  }
+  if (darkSiteIcon) {
+    darkSiteIcon.textContent = readerDarkMode ? "🌙" : "☀️";
+  }
+  if (darkSiteLabel) {
+    darkSiteLabel.textContent = readerDarkMode ? "Dark" : "Light";
+  }
+  if (viewHome) {
+    (viewHome.style as any).zoom = `${readerZoom / 100}`;
+  }
+
+  const msg = {
+    type: "DOCX_READER_SETTINGS",
+    zoom: readerZoom,
+    darkMode: readerDarkMode,
+  };
+  [iframeTailwind, iframeShadcn, iframeDynamic].forEach((frame) => {
+    try {
+      frame?.contentWindow?.postMessage(msg, "*");
+    } catch {}
+  });
 }
 
 function setupDownloadProgressListener() {
@@ -990,7 +1049,10 @@ function loadSiteFrame(
     iframe.src = url;
     iframe.onload = () => {
       loadingEl.style.display = "none";
+      syncReaderSettingsToAllIframes();
     };
+  } else {
+    syncReaderSettingsToAllIframes();
   }
 }
 
@@ -1151,6 +1213,11 @@ function setupEventListeners() {
   tabHome?.addEventListener("click", () => switchTab("home"));
   brandBtn?.addEventListener("click", () => switchTab("home"));
 
+  btnZoomOut?.addEventListener("click", () => setReaderZoom(readerZoom - 10));
+  btnZoomReset?.addEventListener("click", () => setReaderZoom(100));
+  btnZoomIn?.addEventListener("click", () => setReaderZoom(readerZoom + 10));
+  btnToggleDarkSite?.addEventListener("click", () => toggleReaderDarkMode());
+
   titlebarUpdatePill?.addEventListener("click", () => {
     switchTab("home");
     selectedHubCategory = "updates";
@@ -1244,7 +1311,7 @@ function setupEventListeners() {
     });
   });
 
-  // Cross-iframe messages for Ctrl+K, Left-Edge Sidebar Hover, and Top-Edge Bar Reveal
+  // Cross-iframe messages for Ctrl+K, Zoom, Dark Reader, Left-Edge Sidebar Hover, and Top-Edge Bar Reveal
   window.addEventListener("message", (e) => {
     if (!e.data || !e.data.type) return;
     if (e.data.type === "OPEN_UNIVERSAL_SEARCH") {
@@ -1253,6 +1320,12 @@ function setupEventListeners() {
       } else {
         openSearchModal();
       }
+    } else if (e.data.type === "DOCX_IFRAME_READY") {
+      syncReaderSettingsToAllIframes();
+    } else if (e.data.type === "DOCX_ZOOM_DELTA") {
+      setReaderZoom(readerZoom + (Number(e.data.delta) || 0));
+    } else if (e.data.type === "DOCX_ZOOM_RESET") {
+      setReaderZoom(100);
     } else if (e.data.type === "HOVER_LEFT_EDGE") {
       openHoverSidebar();
     } else if (e.data.type === "HOVER_TOP_EDGE") {
@@ -1271,6 +1344,24 @@ function setupEventListeners() {
     if (e.key === "F11") {
       e.preventDefault();
       invoke("window_toggle_fullscreen").catch(() => {});
+      return;
+    }
+
+    if ((e.ctrlKey || e.metaKey) && (e.key === "=" || e.key === "+")) {
+      e.preventDefault();
+      setReaderZoom(readerZoom + 10);
+      return;
+    }
+
+    if ((e.ctrlKey || e.metaKey) && e.key === "-") {
+      e.preventDefault();
+      setReaderZoom(readerZoom - 10);
+      return;
+    }
+
+    if ((e.ctrlKey || e.metaKey) && e.key === "0") {
+      e.preventDefault();
+      setReaderZoom(100);
       return;
     }
 
