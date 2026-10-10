@@ -5,7 +5,6 @@
   "identifier": "com.docx.hub",
   "build": {
     "frontendDist": "../dist",
-    "devUrl": "http://localhost:48765",
     "beforeDevCommand": "bun run dev",
     "beforeBuildCommand": "bun run build"
   },
