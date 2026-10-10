@@ -86,10 +86,54 @@
           <button id="btnZoomIn" class="reader-ctrl-btn" title="Increase Font Size (Ctrl + +)">A+</button>
         </div>
 
-        <button id="btnToggleDarkSite" class="titlebar-chip-btn active" title="Make Light-Only Sites Dark (Toggle Dark Mode)">
+        <button id="btnToggleDarkSite" class="titlebar-chip-btn active" title="Toggle Dark / Light Mode for this documentation site">
           <span id="darkSiteIcon">🌙</span>
           <span id="darkSiteLabel">Dark</span>
         </button>
+
+        <div class="features-menu-wrap" id="featuresMenuWrap">
+          <button id="btnFeaturesMenu" class="titlebar-chip-btn" title="Turn Docx Features ON or OFF (Browser Tabs, Theme Engine, Default Font)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+            <span>Features</span>
+          </button>
+
+          <div id="featuresPopover" class="features-popover" style="display: none;">
+            <div class="features-popover-header">
+              <span>Feature Toggles</span>
+              <span class="features-popover-sub">Turn features ON / OFF</span>
+            </div>
+
+            <label class="feature-toggle-row" for="toggleFeatureTabs">
+              <div class="feature-toggle-info">
+                <div class="feature-toggle-title">Browser Tabs</div>
+                <div class="feature-toggle-desc">Multi-tab bar at top (turn OFF for single-view &amp; lower RAM)</div>
+              </div>
+              <input type="checkbox" id="toggleFeatureTabs" class="feature-switch-input" checked />
+              <span class="feature-switch-slider"></span>
+            </label>
+
+            <label class="feature-toggle-row" for="toggleFeatureTheme">
+              <div class="feature-toggle-info">
+                <div class="feature-toggle-title">Theme Engine (Dark / Light)</div>
+                <div class="feature-toggle-desc">Custom per-doc Dark/Light mode (turn OFF for native site theme)</div>
+              </div>
+              <input type="checkbox" id="toggleFeatureTheme" class="feature-switch-input" checked />
+              <span class="feature-switch-slider"></span>
+            </label>
+
+            <label class="feature-toggle-row" for="toggleFeatureFont">
+              <div class="feature-toggle-info">
+                <div class="feature-toggle-title">Default Clean Font</div>
+                <div class="feature-toggle-desc">Unified Inter &amp; JetBrains Mono font (turn OFF for site font)</div>
+              </div>
+              <input type="checkbox" id="toggleFeatureFont" class="feature-switch-input" checked />
+              <span class="feature-switch-slider"></span>
+            </label>
+          </div>
+        </div>
 
         <button id="btnQuickSearchTop" class="titlebar-chip-btn" title="Universal Search (Ctrl+K)">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -465,10 +509,8 @@
           <button id="clearSearchBtn" class="clear-search-btn" title="Close (Esc)">ESC</button>
         </div>
 
-        <div class="search-filters">
+        <div class="search-filters" id="searchFiltersBar">
           <button class="filter-chip active" data-filter="all">All Installed <span id="countAll" class="count-badge">0</span></button>
-          <button class="filter-chip" data-filter="tailwind">Tailwind CSS <span id="countTw" class="count-badge">0</span></button>
-          <button class="filter-chip" data-filter="shadcn">shadcn/ui <span id="countShadcn" class="count-badge">0</span></button>
         </div>
 
         <div id="searchResultsList" class="search-results-list"></div>

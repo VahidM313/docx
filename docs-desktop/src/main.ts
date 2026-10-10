@@ -3,15 +3,100 @@ import { listen } from "@tauri-apps/api/event";
 import { SITE_BRANDS, getSiteBrand } from "./brands";
 
 interface SearchEntry {
-  id: string;
+  id?: string;
   site: string;
-  siteName: string;
+  siteName?: string;
   title: string;
   category: string;
-  description: string;
+  description?: string;
+  preview?: string;
   path: string;
-  url: string;
-  keywords: string[];
+  url?: string;
+  keywords?: string[];
+  headings?: string[];
+}
+
+const SITE_ENTRY_PATHS: Record<string, string> = {
+  tailwind: "/docs/installation/using-vite",
+  shadcn: "/docs",
+  react: "/learn",
+  nextjs: "/docs",
+  svelte: "/docs/svelte/overview",
+  astro: "/en/getting-started/",
+  alpine: "/start-here",
+  solid: "/guides/getting-started",
+  lit: "/docs/",
+  qwik: "/docs/",
+  preact: "/guide/v10/getting-started",
+  htmx: "/docs/",
+  unocss: "/guide/",
+  ts_query: "/query/latest/docs/framework/react/overview",
+  ts_router: "/router/latest/docs/framework/react/overview",
+  ts_start: "/start/latest/docs/framework/react/overview",
+  ts_table: "/table/latest/docs/introduction",
+  ts_form: "/form/latest/docs/overview",
+  ts_virtual: "/virtual/latest/docs/introduction",
+  ts_pacer: "/pacer/latest/docs/overview",
+  ts_store: "/store/latest/docs/overview",
+  ts_db: "/db/latest/docs/overview",
+  ts_ai: "/ai/latest/docs/getting-started/overview",
+  ts_ranger: "/ranger/latest/docs/overview",
+  ts_config: "/config/latest/docs/overview",
+  ts_hotkeys: "/hotkeys/latest/docs/overview",
+  ts_devtools: "/devtools/latest/docs/overview",
+  ts_cli: "/cli/latest/docs/overview",
+  ts_intent: "/intent/latest/docs/overview",
+  elysia: "/at-glance.html",
+  drizzle: "/docs/overview",
+  zod: "/",
+  trpc: "/docs",
+  prisma: "/docs",
+  vitest: "/guide/",
+  vite: "/guide/",
+  typescript: "/docs/",
+  mdn: "/en-US/docs/Web",
+  nodejs: "/en/learn/getting-started/introduction-to-nodejs",
+  bun: "/docs",
+  rust_book: "/title-page.html",
+  rust_std: "/std/index.html",
+  cargo: "/index.html",
+  go: "/doc/",
+  zig: "/documentation/master/",
+  cppreference: "/w/",
+  learncpp: "/",
+  cmake: "/cmake/help/latest/index.html",
+  linux_man: "/man1/index.html",
+  arch_wiki: "/title/Main_page",
+  git: "/doc",
+  docker: "/get-started/",
+  kubernetes: "/docs/home/",
+  nginx: "/en/docs/",
+  bash: "/software/bash/manual/bash.html",
+  zsh: "/Doc/Release/zsh_toc.html",
+  fish: "/docs/current/index.html",
+  python: "/3/",
+  threejs: "/docs/",
+  motion: "/docs",
+  vue: "/guide/introduction.html",
+  nuxt: "/docs/4.x/getting-started/introduction",
+  angular: "/docs",
+  hono: "/docs/",
+  express: "/en/starter/installing.html",
+  nestjs: "/",
+  qt: "/",
+  boost: "/doc/libs/latest/index.html",
+  django: "/en/6.1/",
+  fastapi: "/",
+  postgresql: "/docs/current/index.html",
+  sqlite: "/docs.html",
+};
+
+function getDefaultEntryPath(siteId: string): string {
+  const brand = getSiteBrand(siteId);
+  if (brand.defaultRoutes && brand.defaultRoutes.length > 0 && brand.defaultRoutes[0].path) {
+    return brand.defaultRoutes[0].path;
+  }
+  return SITE_ENTRY_PATHS[siteId] || "/docs";
 }
 
 interface ServerStatus {
@@ -103,6 +188,7 @@ function getOrigin(site: string): string {
 }
 
 let baseSearchIndex: SearchEntry[] = [];
+let bundledExtraSearchIndex: SearchEntry[] = [];
 let searchIndex: SearchEntry[] = [];
 let activeTab: string = "home";
 let currentFilter: string = "all";
@@ -114,6 +200,11 @@ let drawerHidden = localStorage.getItem("docx_drawer_hidden") === "true";
 let topbarHidden = false;
 let sidebarCloseTimer: number | null = null;
 let topbarCloseTimer: number | null = null;
+
+// User-toggleable features (Browser Tabs, Theme Engine, Default Clean Font)
+let featureTabsEnabled = localStorage.getItem("docx_feature_tabs") !== "0";
+let featureThemeEnabled = localStorage.getItem("docx_feature_theme") !== "0";
+let featureFontEnabled = localStorage.getItem("docx_feature_font") !== "0";
 
 let readerZoom = Math.max(
   60,
@@ -194,6 +285,12 @@ const btnToggleDarkSite = document.getElementById("btnToggleDarkSite") as HTMLBu
 const darkSiteIcon = document.getElementById("darkSiteIcon") as HTMLElement;
 const darkSiteLabel = document.getElementById("darkSiteLabel") as HTMLElement;
 
+const btnFeaturesMenu = document.getElementById("btnFeaturesMenu") as HTMLButtonElement;
+const featuresPopover = document.getElementById("featuresPopover") as HTMLElement;
+const toggleFeatureTabs = document.getElementById("toggleFeatureTabs") as HTMLInputElement;
+const toggleFeatureTheme = document.getElementById("toggleFeatureTheme") as HTMLInputElement;
+const toggleFeatureFont = document.getElementById("toggleFeatureFont") as HTMLInputElement;
+
 const updateAlertBanner = document.getElementById("updateAlertBanner") as HTMLElement;
 const updateAlertHeadline = document.getElementById("updateAlertHeadline") as HTMLElement;
 const updateAlertSub = document.getElementById("updateAlertSub") as HTMLElement;
@@ -219,10 +316,7 @@ const searchModal = document.getElementById("searchModal") as HTMLElement;
 const searchInput = document.getElementById("searchInput") as HTMLInputElement;
 const clearSearchBtn = document.getElementById("clearSearchBtn") as HTMLButtonElement;
 const searchResultsList = document.getElementById("searchResultsList") as HTMLElement;
-
-const countAll = document.getElementById("countAll") as HTMLElement;
-const countTw = document.getElementById("countTw") as HTMLElement;
-const countShadcn = document.getElementById("countShadcn") as HTMLElement;
+const searchFiltersBar = document.getElementById("searchFiltersBar") as HTMLElement;
 
 const btnBack = document.getElementById("btnBack") as HTMLButtonElement;
 const btnForward = document.getElementById("btnForward") as HTMLButtonElement;
@@ -256,12 +350,9 @@ async function init() {
   setupSidebarAndTopbarHover();
   setupEventListeners();
   setupDownloadProgressListener();
-  syncReaderSettingsToAllIframes();
+  applyFeatureFlags();
 
-  updateSplash(52, "Loading Universal Search Index...");
-  await loadSearchIndex();
-
-  updateSplash(78, "Mounting Embedded & Local .docpack Archives...");
+  updateSplash(52, "Mounting Embedded & Local .docpack Archives...");
   await checkServerHealth();
   try {
     installedPacksCache = await invoke<PackStatusInfo[]>("get_installed_packs");
@@ -269,6 +360,9 @@ async function init() {
       if (p.port) sitePorts[p.id] = p.port;
     }
   } catch {}
+
+  updateSplash(78, "Loading Universal Search Index across all installed docs...");
+  await loadSearchIndex();
   renderAllUI(false);
 
   const elapsed = performance.now() - startTs;
@@ -316,14 +410,47 @@ function setSiteDarkMode(siteId: string, dark: boolean, broadcast = true) {
 function updateTopbarDarkButtonUI() {
   const activeDark = getSiteDarkMode(activeTab);
   if (btnToggleDarkSite) {
-    btnToggleDarkSite.classList.toggle("active", activeDark);
+    btnToggleDarkSite.classList.toggle("active", featureThemeEnabled && activeDark);
   }
   if (darkSiteIcon) {
-    darkSiteIcon.textContent = activeDark ? "🌙" : "☀️";
+    darkSiteIcon.textContent = !featureThemeEnabled ? "🎨" : activeDark ? "🌙" : "☀️";
   }
   if (darkSiteLabel) {
-    darkSiteLabel.textContent = activeDark ? "Dark" : "Light";
+    darkSiteLabel.textContent = !featureThemeEnabled ? "Native" : activeDark ? "Dark" : "Light";
   }
+}
+
+function applyFeatureFlags() {
+  if (toggleFeatureTabs) toggleFeatureTabs.checked = featureTabsEnabled;
+  if (toggleFeatureTheme) toggleFeatureTheme.checked = featureThemeEnabled;
+  if (toggleFeatureFont) toggleFeatureFont.checked = featureFontEnabled;
+
+  document.body.classList.toggle("tabs-feature-off", !featureTabsEnabled);
+  document.body.classList.toggle("theme-feature-off", !featureThemeEnabled);
+  document.body.classList.toggle("font-feature-off", !featureFontEnabled);
+
+  try {
+    localStorage.setItem("docx_feature_tabs", featureTabsEnabled ? "1" : "0");
+    localStorage.setItem("docx_feature_theme", featureThemeEnabled ? "1" : "0");
+    localStorage.setItem("docx_feature_font", featureFontEnabled ? "1" : "0");
+    localStorage.setItem("docx_theme_enabled", featureThemeEnabled ? "1" : "0");
+    localStorage.setItem("docx_font_enabled", featureFontEnabled ? "1" : "0");
+  } catch {}
+
+  // When Browser Tabs feature is turned OFF, collapse any background doc tabs to free WebView RAM
+  if (!featureTabsEnabled && browserTabs.length > 1) {
+    const active = getActiveBrowserTab();
+    const toRemove = browserTabs.filter((t) => t.id !== active.id);
+    for (const r of toRemove) {
+      if (r.loadingTimer) window.clearTimeout(r.loadingTimer);
+      if (r.panelEl) r.panelEl.remove();
+    }
+    browserTabs = [active];
+    activeBrowserTabId = active.id;
+    renderBrowserTabs();
+  }
+
+  syncReaderSettingsToAllIframes();
 }
 
 function setReaderZoom(nextZoom: number) {
@@ -335,6 +462,7 @@ function setReaderZoom(nextZoom: number) {
 }
 
 function toggleReaderDarkMode() {
+  if (!featureThemeEnabled) return;
   const targetSite = activeTab;
   const nextDark = !getSiteDarkMode(targetSite);
   setSiteDarkMode(targetSite, nextDark, true);
@@ -358,6 +486,8 @@ function syncReaderSettingsToAllIframes() {
           siteId: t.siteId,
           zoom: readerZoom,
           darkMode: getSiteDarkMode(t.siteId),
+          themeEnabled: featureThemeEnabled,
+          fontEnabled: featureFontEnabled,
         },
         "*"
       );
@@ -1170,31 +1300,109 @@ function setupSidebarAndTopbarHover() {
   customTitlebar.addEventListener("mouseleave", () => scheduleClosePeekTopbar(300));
 }
 
-// Load Search Index
+// Load Search Index (Core + Bundled 21-Pack Index + Dynamic Installed Pack Index)
 async function loadSearchIndex() {
   try {
-    const res = await fetch("/search-index.json");
-    if (res.ok) {
-      baseSearchIndex = await res.json();
-      await refreshExtraSearchEntries();
+    const [resCore, resExtra] = await Promise.all([
+      fetch("/search-index.json").catch(() => null),
+      fetch("/extra-search-index.json").catch(() => null),
+    ]);
+    if (resCore && resCore.ok) {
+      baseSearchIndex = await resCore.json();
     }
+    if (resExtra && resExtra.ok) {
+      bundledExtraSearchIndex = await resExtra.json();
+    }
+    await refreshExtraSearchEntries();
   } catch (err) {
     console.error("Failed to load search index:", err);
   }
 }
 
 async function refreshExtraSearchEntries() {
+  let dynamicExtra: SearchEntry[] = [];
   try {
-    const extra = await invoke<SearchEntry[]>("get_extra_search_entries");
-    searchIndex = [...baseSearchIndex, ...(extra || [])];
-  } catch {
-    searchIndex = [...baseSearchIndex];
+    dynamicExtra = (await invoke<SearchEntry[]>("get_extra_search_entries")) || [];
+  } catch {}
+
+  const installedIds = new Set<string>(["tailwind", "shadcn"]);
+  for (const p of installedPacksCache) {
+    installedIds.add(p.id);
   }
-  const twCount = searchIndex.filter((i) => i.site === "tailwind").length;
-  const shadcnCount = searchIndex.filter((i) => i.site === "shadcn").length;
-  if (countAll) countAll.textContent = searchIndex.length.toString();
-  if (countTw) countTw.textContent = twCount.toString();
-  if (countShadcn) countShadcn.textContent = shadcnCount.toString();
+  for (const r of remoteRegistryCache) {
+    if (r.installed) installedIds.add(r.id);
+  }
+
+  const seen = new Set<string>();
+  const merged: SearchEntry[] = [];
+
+  const pushUnique = (items: SearchEntry[], requireInstalled: boolean) => {
+    for (const item of items) {
+      if (!item || !item.site || !item.path) continue;
+      if (requireInstalled && installedPacksCache.length > 0 && !installedIds.has(item.site)) {
+        continue;
+      }
+      const key = `${item.site}:${item.path}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      merged.push(item);
+    }
+  };
+
+  pushUnique(baseSearchIndex, false);
+  pushUnique(dynamicExtra, false);
+  pushUnique(bundledExtraSearchIndex, true);
+
+  searchIndex = merged;
+  renderSearchFilterChips();
+}
+
+function renderSearchFilterChips() {
+  if (!searchFiltersBar) return;
+
+  const countsBySite = new Map<string, number>();
+  for (const item of searchIndex) {
+    countsBySite.set(item.site, (countsBySite.get(item.site) || 0) + 1);
+  }
+
+  const siteIds = Array.from(countsBySite.keys());
+  siteIds.sort((a, b) => {
+    if (a === activeTab && b !== activeTab) return -1;
+    if (b === activeTab && a !== activeTab) return 1;
+    const brandA = getSiteBrand(a);
+    const brandB = getSiteBrand(b);
+    return brandA.name.localeCompare(brandB.name);
+  });
+
+  if (currentFilter !== "all" && !countsBySite.has(currentFilter)) {
+    currentFilter = "all";
+  }
+
+  const chipsHtml = [
+    `<button class="filter-chip ${currentFilter === "all" ? "active" : ""}" data-filter="all">
+      All Installed <span class="count-badge">${searchIndex.length}</span>
+    </button>`,
+    ...siteIds.map((siteId) => {
+      const brand = getSiteBrand(siteId);
+      const cnt = countsBySite.get(siteId) || 0;
+      const isAct = currentFilter === siteId;
+      return `<button class="filter-chip ${isAct ? "active" : ""}" data-filter="${escapeHtml(siteId)}">
+        <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:${brand.color};"></span>
+        ${escapeHtml(brand.name)} <span class="count-badge">${cnt}</span>
+      </button>`;
+    }),
+  ].join("");
+
+  searchFiltersBar.innerHTML = chipsHtml;
+
+  searchFiltersBar.querySelectorAll(".filter-chip").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      searchFiltersBar.querySelectorAll(".filter-chip").forEach((c) => c.classList.remove("active"));
+      chip.classList.add("active");
+      currentFilter = chip.getAttribute("data-filter") || "all";
+      performSearch(searchInput.value);
+    });
+  });
 }
 
 // Multi-Tab Browser Management
@@ -1339,10 +1547,7 @@ async function loadTabFrame(tab: BrowserTab, forceReload = false) {
   const loadingEl = tab.loadingEl;
   if (!iframe || !loadingEl) return;
 
-  const brand = getSiteBrand(tab.siteId);
-  const defaultEntryPath =
-    tab.pathOrUrl ||
-    (brand.defaultRoutes && brand.defaultRoutes.length > 0 ? brand.defaultRoutes[0].path : "/docs");
+  const defaultEntryPath = tab.pathOrUrl || getDefaultEntryPath(tab.siteId);
   tab.pathOrUrl = defaultEntryPath;
   const url = resolveUrl(tab.siteId, defaultEntryPath);
 
@@ -1450,6 +1655,10 @@ function closeBrowserTab(tabId: string) {
 }
 
 function openBlankPickerTab() {
+  if (!featureTabsEnabled) {
+    switchTab("home");
+    return;
+  }
   const newTab: BrowserTab = {
     id: `tab-${++tabSeq}`,
     siteId: "home",
@@ -1462,6 +1671,7 @@ function openBlankPickerTab() {
 }
 
 async function duplicateActiveBrowserTab() {
+  if (!featureTabsEnabled) return;
   const current = getActiveBrowserTab();
   if (!current || current.siteId === "home") {
     openBlankPickerTab();
@@ -1485,8 +1695,42 @@ function cycleBrowserTab(delta: number) {
   activateBrowserTab(browserTabs[nextIdx].id);
 }
 
-// Tab / Server Switching (Supports Multi-Tab & Same-Doc Multiple Pages)
+// Tab / Server Switching (Supports Multi-Tab & Single-View Mode when Tabs Feature is OFF)
 async function switchTab(tab: string, targetPathOrUrl?: string, forceNewTab = false) {
+  // Single-View Mode when Browser Tabs feature is turned OFF: reuse a single tab to save RAM
+  if (!featureTabsEnabled) {
+    const single = browserTabs[0] || {
+      id: `tab-${++tabSeq}`,
+      siteId: "home",
+      title: "57-Site Hub",
+      pathOrUrl: "/",
+    };
+    if (browserTabs.length === 0) browserTabs.push(single);
+    if (tab === "home") {
+      if (single.panelEl) {
+        single.panelEl.remove();
+        single.panelEl = undefined;
+        single.iframeEl = undefined;
+        single.loadingEl = undefined;
+      }
+      single.siteId = "home";
+      single.title = "57-Site Hub";
+      single.pathOrUrl = "/";
+      activateBrowserTab(single.id);
+      if (!sidebarPinned) scheduleCloseHoverSidebar(120);
+      return;
+    }
+    const entryPath = targetPathOrUrl || getDefaultEntryPath(tab);
+    const siteChanged = single.siteId !== tab;
+    single.siteId = tab;
+    single.pathOrUrl = entryPath;
+    single.title = formatTabTitle(tab, undefined, entryPath);
+    activateBrowserTab(single.id);
+    await loadTabFrame(single, siteChanged);
+    if (!sidebarPinned) scheduleCloseHoverSidebar(120);
+    return;
+  }
+
   if (tab === "home" && !forceNewTab) {
     const existingHome = browserTabs.find((t) => t.siteId === "home");
     if (existingHome) {
@@ -1505,11 +1749,7 @@ async function switchTab(tab: string, targetPathOrUrl?: string, forceNewTab = fa
     return;
   }
 
-  const brand = getSiteBrand(tab);
-  const defaultEntryPath =
-    targetPathOrUrl ||
-    (brand.defaultRoutes && brand.defaultRoutes.length > 0 ? brand.defaultRoutes[0].path : "/docs");
-
+  const defaultEntryPath = targetPathOrUrl || getDefaultEntryPath(tab);
   const current = getActiveBrowserTab();
 
   // Case 1: Explicitly opening a new tab (+ Tab button, Ctrl+Click, Middle-Click, Duplicate)
@@ -1585,41 +1825,80 @@ function resolveUrl(site: string, pathOrUrl: string): string {
       const parsed = new URL(pathOrUrl);
       return `${origin}${parsed.pathname}${parsed.search}${parsed.hash}`;
     } catch {
-      return `${origin}/docs`;
+      return `${origin}${getDefaultEntryPath(site)}`;
     }
   }
   return `${origin}${pathOrUrl.startsWith("/") ? pathOrUrl : `/${pathOrUrl}`}`;
 }
 
-// Universal Search Logic
+// Universal Search Logic across all installed documentation packs
 function performSearch(query: string) {
   const q = query.trim().toLowerCase();
   if (!q) {
-    currentResults = searchIndex
-      .filter((item) => currentFilter === "all" || item.site === currentFilter)
-      .slice(0, 35);
+    if (currentFilter !== "all") {
+      currentResults = searchIndex.filter((item) => item.site === currentFilter).slice(0, 45);
+    } else {
+      // Showcase entries across all installed documentation packs (starting with active doc if open)
+      const bySite = new Map<string, SearchEntry[]>();
+      for (const item of searchIndex) {
+        let arr = bySite.get(item.site);
+        if (!arr) {
+          arr = [];
+          bySite.set(item.site, arr);
+        }
+        if (arr.length < 15) arr.push(item);
+      }
+
+      const mixed: SearchEntry[] = [];
+      if (activeTab !== "home" && bySite.has(activeTab)) {
+        mixed.push(...(bySite.get(activeTab) || []).slice(0, 8));
+      }
+      for (let round = 0; round < 3 && mixed.length < 48; round++) {
+        for (const [siteId, arr] of bySite.entries()) {
+          if (siteId === activeTab && round < 2) continue;
+          if (arr[round]) {
+            mixed.push(arr[round]);
+            if (mixed.length >= 48) break;
+          }
+        }
+      }
+      currentResults = mixed;
+    }
   } else {
     const tokens = q.split(/\s+/).filter(Boolean);
     const scored = searchIndex
       .filter((item) => currentFilter === "all" || item.site === currentFilter)
       .map((item) => {
         let score = 0;
+        const brand = getSiteBrand(item.site);
+        const siteLower = `${item.site} ${brand.name}`.toLowerCase();
         const titleLower = (item.title || "").toLowerCase();
-        const descLower = (item.description || "").toLowerCase();
+        const descLower = (item.description || item.preview || "").toLowerCase();
         const pathLower = (item.path || "").toLowerCase();
         const categoryLower = (item.category || "").toLowerCase();
-        const keywordsLower = (item.keywords || []).map((k) => k.toLowerCase()).join(" ");
+        const headingsLower = [...(item.keywords || []), ...(item.headings || [])]
+          .map((k) => k.toLowerCase())
+          .join(" ");
 
-        if (titleLower === q) score += 100;
-        else if (titleLower.startsWith(q)) score += 60;
-        else if (titleLower.includes(q)) score += 40;
+        if (titleLower === q) score += 120;
+        else if (titleLower.startsWith(q)) score += 70;
+        else if (titleLower.includes(q)) score += 45;
+
+        if (item.site.toLowerCase() === q || brand.name.toLowerCase() === q) score += 65;
+        else if (siteLower.includes(q)) score += 30;
 
         for (const token of tokens) {
-          if (titleLower.includes(token)) score += 25;
-          if (keywordsLower.includes(token)) score += 15;
-          if (pathLower.includes(token)) score += 10;
-          if (categoryLower.includes(token)) score += 10;
-          if (descLower.includes(token)) score += 5;
+          if (titleLower.includes(token)) score += 28;
+          if (siteLower.includes(token)) score += 22;
+          if (headingsLower.includes(token)) score += 16;
+          if (pathLower.includes(token)) score += 12;
+          if (categoryLower.includes(token)) score += 12;
+          if (descLower.includes(token)) score += 6;
+        }
+
+        // Slight boost for the currently open documentation site
+        if (score > 0 && activeTab !== "home" && item.site === activeTab) {
+          score += 8;
         }
 
         return { item, score };
@@ -1628,7 +1907,7 @@ function performSearch(query: string) {
       .sort((a, b) => b.score - a.score)
       .map((res) => res.item);
 
-    currentResults = scored.slice(0, 50);
+    currentResults = scored.slice(0, 60);
   }
 
   selectedIndex = 0;
@@ -1649,18 +1928,19 @@ function renderSearchResults(query: string) {
     .map((item, idx) => {
       const isSelected = idx === selectedIndex;
       const brand = getSiteBrand(item.site);
+      const snippet = item.description || item.preview || item.path;
 
       return `
         <div class="search-result-item ${isSelected ? "selected" : ""}" data-index="${idx}">
-          <span class="result-badge" style="background: ${brand.bgTint}; color: ${brand.color};">${escapeHtml(
-        item.site.slice(0, 8)
+          <span class="result-badge" style="background: ${brand.bgTint}; color: ${brand.color}; border: 1px solid ${brand.color}44;">${escapeHtml(
+        brand.name.length <= 10 ? brand.name : item.site.slice(0, 9)
       )}</span>
           <div class="result-info">
             <div class="result-top-line">
               <span class="result-title">${highlight(item.title, query)}</span>
-              <span class="result-category">${escapeHtml(item.category || item.siteName)}</span>
+              <span class="result-category">${escapeHtml(item.category || brand.name)}</span>
             </div>
-            <p class="result-snippet">${highlight(item.description || item.path, query)}</p>
+            <p class="result-snippet">${highlight(snippet, query)}</p>
           </div>
           <span class="result-enter-hint">↵ Open · Ctrl+↵ New Tab</span>
         </div>
@@ -1723,6 +2003,7 @@ function escapeRegex(str: string): string {
 }
 
 function openSearchModal() {
+  renderSearchFilterChips();
   searchModal.classList.add("open");
   searchModal.setAttribute("aria-hidden", "false");
   searchInput.value = "";
@@ -1764,6 +2045,39 @@ function setupEventListeners() {
   btnZoomReset?.addEventListener("click", () => setReaderZoom(100));
   btnZoomIn?.addEventListener("click", () => setReaderZoom(readerZoom + 10));
   btnToggleDarkSite?.addEventListener("click", () => toggleReaderDarkMode());
+
+  // Features Popover Menu & Toggles (Browser Tabs, Theme Engine, Default Clean Font)
+  btnFeaturesMenu?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (!featuresPopover) return;
+    const isOpen = featuresPopover.style.display !== "none";
+    featuresPopover.style.display = isOpen ? "none" : "flex";
+    btnFeaturesMenu.classList.toggle("active", !isOpen);
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!featuresPopover || featuresPopover.style.display === "none") return;
+    const target = e.target as HTMLElement | null;
+    if (target && !target.closest("#featuresMenuWrap")) {
+      featuresPopover.style.display = "none";
+      btnFeaturesMenu?.classList.remove("active");
+    }
+  });
+
+  toggleFeatureTabs?.addEventListener("change", () => {
+    featureTabsEnabled = Boolean(toggleFeatureTabs.checked);
+    applyFeatureFlags();
+  });
+
+  toggleFeatureTheme?.addEventListener("change", () => {
+    featureThemeEnabled = Boolean(toggleFeatureTheme.checked);
+    applyFeatureFlags();
+  });
+
+  toggleFeatureFont?.addEventListener("change", () => {
+    featureFontEnabled = Boolean(toggleFeatureFont.checked);
+    applyFeatureFlags();
+  });
 
   titlebarUpdatePill?.addEventListener("click", () => {
     switchTab("home");
@@ -1877,15 +2191,6 @@ function setupEventListeners() {
 
   searchInput.addEventListener("input", () => {
     performSearch(searchInput.value);
-  });
-
-  document.querySelectorAll(".filter-chip").forEach((chip) => {
-    chip.addEventListener("click", () => {
-      document.querySelectorAll(".filter-chip").forEach((c) => c.classList.remove("active"));
-      chip.classList.add("active");
-      currentFilter = chip.getAttribute("data-filter") || "all";
-      performSearch(searchInput.value);
-    });
   });
 
   // Cross-iframe messages for Ctrl+K, Zoom, Dark Reader, Multi-Tab, Fullscreen, and Edge Hover

@@ -44,11 +44,68 @@ pub struct SiteManifest {
     pub routes: HashMap<String, ManifestEntry>,
 }
 
+#[derive(Clone)]
+pub enum PackBacking {
+    InMemory(Arc<Vec<u8>>),
+    OnDisk {
+        path: PathBuf,
+        file_offset: u64,
+        pack_len: usize,
+    },
+}
+
 pub struct SiteOverridePack {
     pub manifest: SiteManifest,
     pub data_start: usize,
-    pub raw_bytes: Vec<u8>,
+    pub backing: PackBacking,
     pub source: String,
+}
+
+impl SiteOverridePack {
+    pub fn read_chunk(&self, offset: usize, length: usize) -> Option<Vec<u8>> {
+        let rel_start = self.data_start.checked_add(offset)?;
+        match &self.backing {
+            PackBacking::InMemory(buf) => {
+                let end = rel_start.checked_add(length)?;
+                if end <= buf.len() {
+                    Some(buf[rel_start..end].to_vec())
+                } else {
+                    None
+                }
+            }
+            PackBacking::OnDisk {
+                path,
+                file_offset,
+                pack_len,
+            } => {
+                if rel_start.checked_add(length)? > *pack_len {
+                    return None;
+                }
+                let mut f = File::open(path).ok()?;
+                f.seek(SeekFrom::Start(*file_offset + rel_start as u64)).ok()?;
+                let mut out = vec![0u8; length];
+                f.read_exact(&mut out).ok()?;
+                Some(out)
+            }
+        }
+    }
+
+    pub fn read_full_pack_bytes(&self) -> Option<Vec<u8>> {
+        match &self.backing {
+            PackBacking::InMemory(buf) => Some((**buf).clone()),
+            PackBacking::OnDisk {
+                path,
+                file_offset,
+                pack_len,
+            } => {
+                let mut f = File::open(path).ok()?;
+                f.seek(SeekFrom::Start(*file_offset)).ok()?;
+                let mut out = vec![0u8; *pack_len];
+                f.read_exact(&mut out).ok()?;
+                Some(out)
+            }
+        }
+    }
 }
 
 pub struct AssetStore {
@@ -56,7 +113,9 @@ pub struct AssetStore {
     pub base_data_start: usize,
     pub overrides: RwLock<HashMap<String, Arc<SiteOverridePack>>>,
     pub site_ports: RwLock<HashMap<String, u16>>,
+    pub fallback_cache: RwLock<HashMap<String, (String, Vec<u8>)>>,
 }
+
 
 pub struct AppState {
     pub tailwind_port: u16,
@@ -145,6 +204,40 @@ fn get_packs_dir() -> PathBuf {
     fallback
 }
 
+fn parse_docpack_on_disk(
+    path: PathBuf,
+    file_offset: u64,
+    pack_len: usize,
+    source: &str,
+) -> Option<Arc<SiteOverridePack>> {
+    if pack_len < 8 {
+        return None;
+    }
+    let mut file = File::open(&path).ok()?;
+    file.seek(SeekFrom::Start(file_offset)).ok()?;
+    let mut len_bytes = [0u8; 4];
+    file.read_exact(&mut len_bytes).ok()?;
+    let manifest_len = u32::from_le_bytes(len_bytes) as usize;
+    if pack_len < 4 + manifest_len {
+        return None;
+    }
+    let mut manifest_buf = vec![0u8; manifest_len];
+    file.read_exact(&mut manifest_buf).ok()?;
+    let manifest: SiteManifest = serde_json::from_slice(&manifest_buf).ok()?;
+    let data_start = 4 + manifest_len;
+
+    Some(Arc::new(SiteOverridePack {
+        manifest,
+        data_start,
+        backing: PackBacking::OnDisk {
+            path,
+            file_offset,
+            pack_len,
+        },
+        source: source.to_string(),
+    }))
+}
+
 fn parse_docpack_bytes(buf: Vec<u8>, source: &str) -> Option<Arc<SiteOverridePack>> {
     if buf.len() < 8 {
         return None;
@@ -167,7 +260,7 @@ fn parse_docpack_bytes(buf: Vec<u8>, source: &str) -> Option<Arc<SiteOverridePac
     Some(Arc::new(SiteOverridePack {
         manifest,
         data_start,
-        raw_bytes: buf,
+        backing: PackBacking::InMemory(Arc::new(buf)),
         source: source.to_string(),
     }))
 }
@@ -198,33 +291,36 @@ fn load_exe_trailer_overrides(overrides: &mut HashMap<String, Arc<SiteOverridePa
     if &footer[8..16] != TRAILER_MAGIC {
         return;
     }
-    let trailer_len = u64::from_le_bytes(footer[0..8].try_into().unwrap()) as usize;
-    if file_len < (16 + trailer_len) as u64 {
+    let trailer_len = u64::from_le_bytes(footer[0..8].try_into().unwrap());
+    if file_len < 16 + trailer_len {
         return;
     }
-    if file
-        .seek(SeekFrom::Start(file_len - 16 - trailer_len as u64))
-        .is_err()
-    {
-        return;
-    }
-    let mut trailer_buf = vec![0u8; trailer_len];
-    if file.read_exact(&mut trailer_buf).is_err() {
-        return;
-    }
+    let trailer_start = file_len - 16 - trailer_len;
+    let trailer_end = file_len - 16;
 
-    let mut pos = 0;
-    while pos + 4 <= trailer_buf.len() {
-        let pack_len = u32::from_le_bytes(trailer_buf[pos..pos + 4].try_into().unwrap()) as usize;
-        pos += 4;
-        if pos + pack_len > trailer_buf.len() {
+    let mut cur_offset = trailer_start;
+    while cur_offset + 4 <= trailer_end {
+        if file.seek(SeekFrom::Start(cur_offset)).is_err() {
             break;
         }
-        let pack_vec = trailer_buf[pos..pos + pack_len].to_vec();
-        if let Some(pack) = parse_docpack_bytes(pack_vec, "Embedded DOCXPACK Trailer") {
+        let mut len_buf = [0u8; 4];
+        if file.read_exact(&mut len_buf).is_err() {
+            break;
+        }
+        let pack_len = u32::from_le_bytes(len_buf) as u64;
+        cur_offset += 4;
+        if cur_offset + pack_len > trailer_end {
+            break;
+        }
+        if let Some(pack) = parse_docpack_on_disk(
+            exe_path.clone(),
+            cur_offset,
+            pack_len as usize,
+            "Embedded DOCXPACK Trailer",
+        ) {
             overrides.insert(pack.manifest.id.clone(), pack);
         }
-        pos += pack_len;
+        cur_offset += pack_len;
     }
 }
 
@@ -234,8 +330,11 @@ fn load_disk_overrides(overrides: &mut HashMap<String, Arc<SiteOverridePack>>) {
         for entry in entries.flatten() {
             let path = entry.path();
             if path.extension().and_then(|e| e.to_str()) == Some("docpack") {
-                if let Ok(buf) = fs::read(&path) {
-                    if let Some(pack) = parse_docpack_bytes(buf, "Modular .docpack") {
+                if let Ok(meta) = fs::metadata(&path) {
+                    let pack_len = meta.len() as usize;
+                    if let Some(pack) =
+                        parse_docpack_on_disk(path.clone(), 0, pack_len, "Modular .docpack")
+                    {
                         let should_use_disk = match overrides.get(&pack.manifest.id) {
                             Some(existing) => pack.manifest.updatedAt >= existing.manifest.updatedAt,
                             None => true,
@@ -277,6 +376,7 @@ fn load_asset_store() -> Arc<AssetStore> {
         base_data_start,
         overrides: RwLock::new(overrides),
         site_ports: RwLock::new(HashMap::new()),
+        fallback_cache: RwLock::new(HashMap::new()),
     })
 }
 
@@ -488,20 +588,28 @@ html.docx-force-dark [style*="background-image"] {
 (function(){
   var SITE_ID = "__DOCX_SITE_ID__";
   var SITE_ORIGIN = "__DOCX_SITE_ORIGIN__";
-  if (SITE_ID === "cppreference") {
+
+  function applyCustomFont(fontEnabled) {
     try {
-      var interStyle = document.createElement("style");
-      interStyle.id = "docx-cppref-inter";
-      interStyle.textContent =
-        "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');" +
-        "html, body, #cpp-head-first, #cpp-head-second, #content, #mw-content-text, " +
-        "p, div, span, a, li, td, th, h1, h2, h3, h4, h5, h6, input, select, button, " +
-        ".t-navbar, .t-nv, .t-nv-ln-table, .t-dsc, .t-par, .wikitable { " +
-        "font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; " +
-        "-webkit-font-smoothing: antialiased !important; letter-spacing: -0.011em; } " +
-        "code, pre, tt, kbd, samp, .mw-geshi, .mw-geshi *, .source-cpp, .source-cpp *, .source-c, .source-c *, .t-c, .t-c *, .t-lc, .t-lc * { " +
-        "font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', Consolas, monospace !important; letter-spacing: 0 !important; }";
-      (document.head || document.documentElement).appendChild(interStyle);
+      var existing = document.getElementById("docx-custom-font");
+      if (!fontEnabled) {
+        if (existing) existing.remove();
+        return;
+      }
+      if (!existing) {
+        existing = document.createElement("style");
+        existing.id = "docx-custom-font";
+        existing.textContent =
+          "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');" +
+          "html, body, #cpp-head-first, #cpp-head-second, #content, #mw-content-text, " +
+          "p, div, span, a, li, td, th, h1, h2, h3, h4, h5, h6, input, select, button, " +
+          ".t-navbar, .t-nv, .t-nv-ln-table, .t-dsc, .t-par, .wikitable { " +
+          "font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; " +
+          "-webkit-font-smoothing: antialiased !important; letter-spacing: -0.011em; } " +
+          "code, pre, tt, kbd, samp, .mw-geshi, .mw-geshi *, .source-cpp, .source-cpp *, .source-c, .source-c *, .t-c, .t-c *, .t-lc, .t-lc *, .highlight *, .prism * { " +
+          "font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', Consolas, monospace !important; letter-spacing: 0 !important; }";
+        (document.head || document.documentElement).appendChild(existing);
+      }
     } catch (e) {}
   }
 
@@ -534,6 +642,22 @@ html.docx-force-dark [style*="background-image"] {
       if (globalVal !== null) return globalVal !== '0';
     } catch (e) {}
     return true;
+  }
+
+  function getSavedThemeEnabled() {
+    try {
+      var v = localStorage.getItem('docx_theme_enabled');
+      if (v !== null) return v !== '0';
+    } catch (e) {}
+    return true;
+  }
+
+  function getSavedFontEnabled() {
+    try {
+      var v = localStorage.getItem('docx_font_enabled');
+      if (v !== null) return v === '1';
+    } catch (e) {}
+    return SITE_ID === 'cppreference';
   }
 
   function syncMediaDarkStylesheets(darkEnabled) {
@@ -590,17 +714,27 @@ html.docx-force-dark [style*="background-image"] {
     } catch (e) {}
   }
 
-  function applyReaderSettings(zoomPct, darkEnabled) {
+  function applyReaderSettings(zoomPct, darkEnabled, themeEnabledOpt, fontEnabledOpt) {
     isApplyingTheme = true;
     try {
       var z = Math.max(60, Math.min(220, Number(zoomPct) || 100));
       document.documentElement.style.zoom = (z / 100).toString();
       localStorage.setItem('docx_zoom', String(z));
+
+      var themeEnabled = (typeof themeEnabledOpt === 'boolean') ? themeEnabledOpt : getSavedThemeEnabled();
+      var fontEnabled = (typeof fontEnabledOpt === 'boolean') ? fontEnabledOpt : getSavedFontEnabled();
+      localStorage.setItem('docx_theme_enabled', themeEnabled ? '1' : '0');
+      localStorage.setItem('docx_font_enabled', fontEnabled ? '1' : '0');
       localStorage.setItem('docx_dark_v2', darkEnabled ? '1' : '0');
       localStorage.setItem('docx_dark_v2_' + SITE_ID, darkEnabled ? '1' : '0');
 
+      applyCustomFont(fontEnabled);
+
       var root = document.documentElement;
-      if (STRICT_LIGHT_ONLY_SITES[SITE_ID]) {
+      if (!themeEnabled) {
+        root.classList.remove('docx-force-dark');
+        syncMediaDarkStylesheets(false);
+      } else if (STRICT_LIGHT_ONLY_SITES[SITE_ID]) {
         root.classList.remove('dark');
         root.removeAttribute('data-theme');
         if (darkEnabled) {
@@ -1017,6 +1151,62 @@ html.docx-force-dark [style*="background-image"] {
     }, true);
   }
 
+  function initQtDocsUI() {
+    if (SITE_ID !== 'qt') return;
+    try {
+      var searchInput = document.getElementById('search');
+      if (searchInput && !searchInput.hasAttribute('data-docx-bound')) {
+        searchInput.setAttribute('data-docx-bound', 'true');
+        searchInput.removeAttribute('onclick');
+        searchInput.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          window.parent.postMessage({ type: 'OPEN_UNIVERSAL_SEARCH', siteId: 'qt' }, '*');
+        });
+      }
+      var tocEl = document.getElementById('sidebar-toctree');
+      if (!tocEl || tocEl.hasAttribute('data-docx-loaded')) return;
+      tocEl.setAttribute('data-docx-loaded', 'true');
+
+      fetch('/qt-6/toc-tree.json')
+        .then(function(r) { return r.ok ? r.json() : null; })
+        .then(function(data) {
+          if (!data || !data.node || !data.node.children) return;
+          var curFile = window.location.pathname.split('/').pop() || 'index.html';
+
+          function buildTreeHtml(nodes, depth) {
+            if (!nodes || !nodes.length) return '';
+            var html = '<ul style="list-style:none;margin:0;padding-left:' + (depth > 0 ? '14px' : '0') + ';">';
+            for (var i = 0; i < nodes.length; i++) {
+              var n = nodes[i];
+              var href = (n.a_attr && n.a_attr.href) ? n.a_attr.href : '#';
+              var fullHref = href.startsWith('/') || href.startsWith('http') ? href : ('/qt-6/' + href);
+              var isCurrent = (href === curFile);
+              var hasChildren = n.children && n.children.length > 0;
+              var openAttr = (depth === 0 || isCurrent) ? ' open' : '';
+              var linkStyle = 'display:block;padding:4px 8px;border-radius:4px;text-decoration:none;font-size:13px;line-height:1.35;' +
+                (isCurrent ? 'background:rgba(65,205,82,0.18);color:#41cd52;font-weight:600;' : 'color:inherit;opacity:0.88;');
+              if (hasChildren) {
+                html += '<li style="margin:2px 0;"><details' + openAttr + '>' +
+                  '<summary style="cursor:pointer;display:flex;align-items:center;gap:4px;padding:3px 4px;font-size:13px;user-select:none;">' +
+                  '<a href="' + fullHref + '" style="' + linkStyle + 'display:inline;padding:2px 4px;">' + (n.text || '') + '</a>' +
+                  '</summary>' +
+                  buildTreeHtml(n.children, depth + 1) +
+                  '</details></li>';
+              } else {
+                html += '<li style="margin:1px 0;"><a href="' + fullHref + '" style="' + linkStyle + '">' + (n.text || '') + '</a></li>';
+              }
+            }
+            html += '</ul>';
+            return html;
+          }
+
+          tocEl.innerHTML = buildTreeHtml(data.node.children, 0);
+        })
+        .catch(function() {});
+    } catch (e) {}
+  }
+
   function notifyParentReady() {
     window.parent.postMessage({
       type: 'DOCX_IFRAME_READY',
@@ -1030,8 +1220,11 @@ html.docx-force-dark [style*="background-image"] {
   function initAllInteractiveControllers() {
     initExpressDocsUI();
     initVitePressDocsUI();
+    initQtDocsUI();
     setupNativeThemeSync();
-    syncMediaDarkStylesheets(getSavedSiteDark());
+    if (getSavedThemeEnabled()) {
+      syncMediaDarkStylesheets(getSavedSiteDark());
+    }
     if (window.location.hash && window.location.hash.length > 1) {
       try {
         var targetId = decodeURIComponent(window.location.hash.slice(1));
@@ -1044,12 +1237,14 @@ html.docx-force-dark [style*="background-image"] {
   try {
     var savedZoom = parseInt(localStorage.getItem('docx_zoom') || '100', 10);
     var savedDark = getSavedSiteDark();
-    applyReaderSettings(savedZoom, savedDark);
+    applyReaderSettings(savedZoom, savedDark, getSavedThemeEnabled(), getSavedFontEnabled());
     if (document.readyState === 'loading') {
       window.addEventListener('DOMContentLoaded', function() {
         applyReaderSettings(
           parseInt(localStorage.getItem('docx_zoom') || '100', 10),
-          getSavedSiteDark()
+          getSavedSiteDark(),
+          getSavedThemeEnabled(),
+          getSavedFontEnabled()
         );
         initAllInteractiveControllers();
         notifyParentReady();
@@ -1061,7 +1256,9 @@ html.docx-force-dark [style*="background-image"] {
     window.addEventListener('load', function() {
       applyReaderSettings(
         parseInt(localStorage.getItem('docx_zoom') || '100', 10),
-        getSavedSiteDark()
+        getSavedSiteDark(),
+        getSavedThemeEnabled(),
+        getSavedFontEnabled()
       );
       initAllInteractiveControllers();
       notifyParentReady();
@@ -1074,10 +1271,20 @@ html.docx-force-dark [style*="background-image"] {
   window.addEventListener('message', function(e) {
     if (!e.data || e.data.type !== 'DOCX_READER_SETTINGS') return;
     if (e.data.siteId && e.data.siteId !== SITE_ID) {
-      applyReaderSettings(e.data.zoom, getSavedSiteDark());
+      applyReaderSettings(
+        e.data.zoom,
+        getSavedSiteDark(),
+        e.data.themeEnabled,
+        e.data.customFontEnabled
+      );
       return;
     }
-    applyReaderSettings(e.data.zoom, e.data.darkMode);
+    applyReaderSettings(
+      e.data.zoom,
+      e.data.darkMode,
+      e.data.themeEnabled,
+      e.data.customFontEnabled
+    );
   });
 
   window.addEventListener('keydown', function(e){
@@ -1205,7 +1412,19 @@ html.docx-force-dark [style*="background-image"] {
     html.into_bytes()
 }
 
-fn fetch_live_fallback(site_key: &str, raw_target: &str, decoded_path: &str) -> Option<(String, bool, Vec<u8>)> {
+fn fetch_live_fallback(
+    site_key: &str,
+    raw_target: &str,
+    decoded_path: &str,
+    store: &AssetStore,
+) -> Option<(String, bool, Vec<u8>)> {
+    let cache_key = format!("{}:{}", site_key, raw_target);
+    if let Ok(guard) = store.fallback_cache.read() {
+        if let Some((mime, bytes)) = guard.get(&cache_key) {
+            return Some((mime.clone(), false, bytes.clone()));
+        }
+    }
+
     let (origin, entry_path) = get_site_origin_and_entry(site_key)?;
     let target_url = if decoded_path == "/" || decoded_path == "/docs" {
         format!("{}{}", origin, entry_path)
@@ -1233,6 +1452,10 @@ fn fetch_live_fallback(site_key: &str, raw_target: &str, decoded_path: &str) -> 
         bytes = inject_reader_bridge(site_key, html);
     }
 
+    if let Ok(mut guard) = store.fallback_cache.write() {
+        guard.insert(cache_key, (mime.clone(), bytes.clone()));
+    }
+
     Some((mime, false, bytes))
 }
 
@@ -1254,14 +1477,23 @@ fn resolve_from_store(
         decoded_path.trim_end_matches(".html").to_string(),
     ];
 
-    if site_id == "qt" {
-        if decoded_path == "/" || decoded_path == "/docs" {
-            candidates.insert(0, "/qt-6/index.html".to_string());
-        } else if decoded_path.starts_with("/qt/") {
-            let qt6 = decoded_path.replacen("/qt/", "/qt-6/", 1);
-            candidates.insert(0, format!("{}.html", qt6));
-            candidates.insert(0, qt6);
+    if decoded_path == "/" || decoded_path == "/docs" {
+        if let Some((_, entry_path)) = get_site_origin_and_entry(site_id) {
+            let trimmed = entry_path.trim_end_matches('/');
+            if !trimmed.is_empty() {
+                candidates.push(entry_path.to_string());
+                candidates.push(trimmed.to_string());
+                candidates.push(format!("{}/index.html", trimmed));
+            }
+            candidates.push("/".to_string());
+            candidates.push("/index.html".to_string());
         }
+    }
+
+    if site_id == "qt" && decoded_path.starts_with("/qt/") {
+        let qt6 = decoded_path.replacen("/qt/", "/qt-6/", 1);
+        candidates.insert(0, format!("{}.html", qt6));
+        candidates.insert(0, qt6);
     }
 
     if let Ok(guard) = store.overrides.read() {
@@ -1278,15 +1510,18 @@ fn resolve_from_store(
                 let radix_key = format!("/docs/components/radix/{}", slug);
                 entry_opt = pack.manifest.routes.get(&radix_key);
             }
+            // Suffix fallback for relative sub-assets (e.g. /_static/classic.css -> /cmake/help/latest/_static/classic.css)
+            if entry_opt.is_none() && decoded_path.len() > 2 && decoded_path.contains('.') {
+                for (route_k, route_v) in &pack.manifest.routes {
+                    if route_k.ends_with(decoded_path) {
+                        entry_opt = Some(route_v);
+                        break;
+                    }
+                }
+            }
             if let Some(entry) = entry_opt {
-                let start = pack.data_start + entry.offset;
-                let end = start + entry.length;
-                if end <= pack.raw_bytes.len() {
-                    return Some((
-                        entry.mime.clone(),
-                        entry.gzipped,
-                        pack.raw_bytes[start..end].to_vec(),
-                    ));
+                if let Some(chunk_bytes) = pack.read_chunk(entry.offset, entry.length) {
+                    return Some((entry.mime.clone(), entry.gzipped, chunk_bytes));
                 }
             }
         }
@@ -1316,16 +1551,13 @@ fn resolve_from_store(
     None
 }
 
-fn is_non_html_subasset(path: &str) -> bool {
+fn should_skip_live_fallback(site_key: &str, path: &str) -> bool {
     let clean = path.split('?').next().unwrap_or(path).to_ascii_lowercase();
-    for ext in [
-        ".js", ".mjs", ".cjs", ".css", ".map", ".woff2", ".woff", ".ttf", ".eot", ".otf",
-        ".png", ".jpg", ".jpeg", ".gif", ".svg", ".ico", ".webp", ".avif", ".mp4", ".webm",
-        ".json", ".xml", ".txt", ".bin", ".pdf", ".zip",
-    ] {
-        if clean.ends_with(ext) {
-            return true;
-        }
+    if clean.ends_with(".map") || clean.ends_with(".eot") || clean.contains("favicon") {
+        return true;
+    }
+    if site_key == "motion" && clean.starts_with("/assets/") && clean.ends_with(".js") {
+        return true;
     }
     false
 }
@@ -1368,11 +1600,10 @@ fn handle_client(mut stream: TcpStream, site_key: String, store: Arc<AssetStore>
             }
         })
         .or_else(|| {
-            // Never block page load by spawning curl.exe for missing static sub-assets (.js, .eot, .png, etc.)
-            if is_non_html_subasset(&decoded_path) {
+            if should_skip_live_fallback(&site_key, &decoded_path) {
                 None
             } else {
-                fetch_live_fallback(&site_key, raw_target, &decoded_path)
+                fetch_live_fallback(&site_key, raw_target, &decoded_path, &store)
             }
         });
 
@@ -1419,7 +1650,7 @@ fn handle_client(mut stream: TcpStream, site_key: String, store: Arc<AssetStore>
         let _ = stream.flush();
     } else {
         let _ = stream.write_all(
-            b"HTTP/1.1 204 No Content\r\nContent-Length: 0\r\nCache-Control: public, max-age=3600\r\nConnection: close\r\n\r\n",
+            b"HTTP/1.1 404 Not Found\r\nContent-Length: 0\r\nCache-Control: no-store\r\nConnection: close\r\n\r\n",
         );
     }
 }
@@ -1687,7 +1918,7 @@ fn simulate_outdated_pack(site_id: String, state: tauri::State<'_, AppState>) ->
             Arc::new(SiteOverridePack {
                 manifest: modified_manifest,
                 data_start: existing.data_start,
-                raw_bytes: existing.raw_bytes.clone(),
+                backing: existing.backing.clone(),
                 source: "Outdated Local Pack".to_string(),
             }),
         );
@@ -1697,10 +1928,51 @@ fn simulate_outdated_pack(site_id: String, state: tauri::State<'_, AppState>) ->
     }
 }
 
+fn humanize_route_title(route: &str, site_name: &str) -> (String, String) {
+    let clean = route.trim_matches('/');
+    if clean.is_empty() || clean == "index.html" || clean == "docs" || clean == "docs.html" {
+        return (format!("{} Documentation Home", site_name), format!("{} Docs", site_name));
+    }
+    let parts: Vec<&str> = clean
+        .split('/')
+        .filter(|s| !s.is_empty() && *s != "docs" && *s != "en" && *s != "latest" && *s != "html")
+        .collect();
+    let last = parts.last().copied().unwrap_or(clean);
+    let stem = last
+        .trim_end_matches(".html")
+        .trim_end_matches(".htm")
+        .replace(['-', '_'], " ");
+    let title = stem
+        .split_whitespace()
+        .map(|w| {
+            let mut chars = w.chars();
+            match chars.next() {
+                None => String::new(),
+                Some(f) => f.to_uppercase().collect::<String>() + chars.as_str(),
+            }
+        })
+        .collect::<Vec<_>>()
+        .join(" ");
+    let category = if parts.len() >= 2 {
+        let cat_raw = parts[parts.len() - 2].replace(['-', '_'], " ");
+        format!("{} • {}", site_name, cat_raw)
+    } else {
+        format!("{} Docs", site_name)
+    };
+    (
+        if title.is_empty() {
+            format!("{} — {}", site_name, route)
+        } else {
+            title
+        },
+        category,
+    )
+}
 
 #[tauri::command]
-fn get_extra_search_entries() -> Vec<serde_json::Value> {
+fn get_extra_search_entries(state: tauri::State<'_, AppState>) -> Vec<serde_json::Value> {
     let mut all = Vec::new();
+    let mut covered_sites = std::collections::HashSet::new();
     let packs_dir = get_packs_dir();
     if let Ok(entries) = fs::read_dir(&packs_dir) {
         for entry in entries.flatten() {
@@ -1713,12 +1985,51 @@ fn get_extra_search_entries() -> Vec<serde_json::Value> {
             {
                 if let Ok(bytes) = fs::read(&path) {
                     if let Ok(items) = serde_json::from_slice::<Vec<serde_json::Value>>(&bytes) {
+                        for item in &items {
+                            if let Some(site) = item.get("site").and_then(|v| v.as_str()) {
+                                covered_sites.insert(site.to_string());
+                            }
+                        }
                         all.extend(items);
                     }
                 }
             }
         }
     }
+
+    // Fallback: synthesize search entries for any installed override pack that didn't have a .search.json file on disk
+    let guard = state.store.overrides.read().unwrap();
+    for (site_id, pack) in guard.iter() {
+        if site_id == "tailwind" || site_id == "shadcn" || covered_sites.contains(site_id) {
+            continue;
+        }
+        let mut routes: Vec<&String> = pack
+            .manifest
+            .routes
+            .iter()
+            .filter(|(r, e)| {
+                e.mime.contains("text/html")
+                    && !r.contains("_static/")
+                    && !r.contains("_ assets")
+                    && !r.ends_with(".js")
+                    && !r.ends_with(".css")
+            })
+            .map(|(r, _)| r)
+            .collect();
+        routes.sort();
+        for route in routes {
+            let (title, category) = humanize_route_title(route, &pack.manifest.name);
+            all.push(serde_json::json!({
+                "title": title,
+                "category": category,
+                "path": route,
+                "site": site_id,
+                "headings": [],
+                "preview": format!("{} — {} offline documentation ({})", title, pack.manifest.name, route),
+            }));
+        }
+    }
+
     all
 }
 
@@ -1836,11 +2147,10 @@ fn run_install_or_update_sync(
         if let Some(pack) = guard.get(&site_id) {
             old_commit = pack.manifest.commit.clone();
             for entry in pack.manifest.routes.values() {
-                let start = pack.data_start + entry.offset;
-                let end = start + entry.length;
-                if end <= pack.raw_bytes.len() && !entry.hash.is_empty() {
-                    local_chunks_by_hash
-                        .insert(entry.hash.clone(), pack.raw_bytes[start..end].to_vec());
+                if !entry.hash.is_empty() {
+                    if let Some(chunk) = pack.read_chunk(entry.offset, entry.length) {
+                        local_chunks_by_hash.insert(entry.hash.clone(), chunk);
+                    }
                 }
             }
         }
@@ -1865,6 +2175,7 @@ fn run_install_or_update_sync(
             &window,
         )?;
         let dl_bytes = full_pack_bytes.len();
+        drop(full_pack_bytes);
 
         let _ = window.emit(
             "docpack-progress",
@@ -1878,7 +2189,9 @@ fn run_install_or_update_sync(
             },
         );
 
-        if let Some(parsed) = parse_docpack_bytes(full_pack_bytes, "GitHub Release .docpack") {
+        if let Some(parsed) =
+            parse_docpack_on_disk(docpack_path, 0, dl_bytes, "GitHub Release .docpack")
+        {
             store
                 .overrides
                 .write()
@@ -2004,9 +2317,13 @@ fn run_install_or_update_sync(
     full_docpack.extend_from_slice(&new_pack_data);
 
     let docpack_path = packs_dir.join(format!("{}.docpack", site_id));
+    let full_len = full_docpack.len();
     fs::write(&docpack_path, &full_docpack).map_err(|e| e.to_string())?;
+    drop(full_docpack);
 
-    if let Some(parsed) = parse_docpack_bytes(full_docpack, "GitHub Delta .docpack") {
+    if let Some(parsed) =
+        parse_docpack_on_disk(docpack_path, 0, full_len, "GitHub Delta .docpack")
+    {
         store
             .overrides
             .write()
@@ -2099,9 +2416,11 @@ fn bundle_into_single_exe(state: tauri::State<'_, AppState>) -> Result<String, S
     let mut trailer_payload: Vec<u8> = Vec::new();
     let guard = state.store.overrides.read().unwrap();
     for pack in guard.values() {
-        let len = pack.raw_bytes.len() as u32;
-        trailer_payload.extend_from_slice(&len.to_le_bytes());
-        trailer_payload.extend_from_slice(&pack.raw_bytes);
+        if let Some(bytes) = pack.read_full_pack_bytes() {
+            let len = bytes.len() as u32;
+            trailer_payload.extend_from_slice(&len.to_le_bytes());
+            trailer_payload.extend_from_slice(&bytes);
+        }
     }
 
     let trailer_len = trailer_payload.len() as u64;
@@ -2282,9 +2601,11 @@ async fn self_update_app(
         let mut trailer_payload: Vec<u8> = Vec::new();
         let guard = store.overrides.read().unwrap();
         for pack in guard.values() {
-            let len = pack.raw_bytes.len() as u32;
-            trailer_payload.extend_from_slice(&len.to_le_bytes());
-            trailer_payload.extend_from_slice(&pack.raw_bytes);
+            if let Some(bytes) = pack.read_full_pack_bytes() {
+                let len = bytes.len() as u32;
+                trailer_payload.extend_from_slice(&len.to_le_bytes());
+                trailer_payload.extend_from_slice(&bytes);
+            }
         }
         drop(guard);
 
