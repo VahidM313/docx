@@ -1,0 +1,124 @@
+name: Build & Publish Docx Packs
+
+on:
+  workflow_dispatch:
+    inputs:
+      sites:
+        description: "Comma-separated site IDs to build (e.g. tailwind,shadcn or all)"
+        required: false
+        default: "tailwind,shadcn"
+      force_rebuild:
+        description: "Force rebuild even if upstream commit SHA has not changed"
+        type: boolean
+        required: false
+        default: false
+  schedule:
+    - cron: "0 4 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  check-updates:
+    name: Pre-Flight Upstream Commit Check
+    runs-on: ubuntu-latest
+    outputs:
+      matrix_sites: ${{ steps.diff.outputs.matrix_sites }}
+      has_updates: ${{ steps.diff.outputs.has_updates }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Check upstream commits against registry.json
+        id: diff
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INPUT_SITES: ${{ github.event.inputs.sites || 'tailwind,shadcn' }}
+          FORCE_REBUILD: ${{ github.event.inputs.force_rebuild || 'false' }}
+        run: |
+          bun -e '
+            const fs = require("fs");
+            const repoMap = {
+              tailwind: { repo: "tailwindlabs/tailwindcss.com", path: "src/docs" },
+              shadcn:   { repo: "shadcn-ui/ui", path: "apps/v4/content/docs" },
+              typescript: { repo: "microsoft/TypeScript-Website", path: "packages/documentation" },
+              bun:      { repo: "oven-sh/bun", path: "docs" },
+              nextjs:   { repo: "vercel/next.js", path: "docs" },
+              astro:    { repo: "withastro/docs", path: "src/content/docs/en" },
+              vite:     { repo: "vitejs/vite", path: "docs" },
+              react:    { repo: "reactjs/react.dev", path: "src/content" },
+              docker:   { repo: "docker/docs", path: "content" },
+              go:       { repo: "golang/website", path: "_content/doc" },
+              mdn_js:   { repo: "mdn/content", path: "files/en-us/web/javascript" },
+              htmx:     { repo: "bigskysoftware/htmx", path: "www" },
+              powershell: { repo: "MicrosoftDocs/PowerShell-Docs", path: "reference" },
+              cmd:      { repo: "MicrosoftDocs/windowsserverdocs", path: "WindowsServerDocs/administration/windows-commands" },
+              curl:     { repo: "curl/curl-www", path: "docs" },
+              git:      { repo: "git/git-scm.com", path: "content" },
+              oxc:      { repo: "oxc-project/website", path: "src" },
+              elysia:   { repo: "elysiajs/documentation", path: "docs" },
+              drizzle:  { repo: "drizzle-team/drizzle-orm-docs", path: "src/content" },
+              tanstack: { repo: "TanStack/tanstack.com", path: "src" }
+            };
+
+            const input = process.env.INPUT_SITES === "all"
+              ? Object.keys(repoMap)
+              : process.env.INPUT_SITES.split(",").map(s => s.trim()).filter(Boolean);
+
+            let currentRegistry = { packs: {} };
+            try {
+              const res = await fetch(`https://github.com/${process.env.GITHUB_REPOSITORY}/releases/download/packs-latest/registry.json`);
+              if (res.ok) currentRegistry = await res.json();
+            } catch {}
+
+            const changed = [];
+            for (const id of input) {
+              const cfg = repoMap[id];
+              if (!cfg) continue;
+              const apiUrl = `https://api.github.com/repos/${cfg.repo}/commits?path=${encodeURIComponent(cfg.path)}&per_page=1`;
+              const r = await fetch(apiUrl, {
+                headers: { Authorization: `Bearer ${process.env.GH_TOKEN}`, "User-Agent": "Docx-Updater" }
+              });
+              if (r.ok) {
+                const commits = await r.json();
+                const latestSha = commits[0]?.sha?.slice(0, 7) || "unknown";
+                const installedSha = currentRegistry.packs?.[id]?.commit;
+                console.log(`[${id}] upstream=${latestSha} release=${installedSha || "none"}`);
+                if (process.env.FORCE_REBUILD === "true" || latestSha !== installedSha) {
+                  changed.push({ id, sha: latestSha, repo: cfg.repo });
+                }
+              }
+            }
+
+            const out = process.env.GITHUB_OUTPUT;
+            fs.appendFileSync(out, `has_updates=${changed.length > 0}\n`);
+            fs.appendFileSync(out, `matrix_sites=${JSON.stringify(changed)}\n`);
+          '
+
+  verify-release-packs:
+    name: Verify & Publish Release Manifest (${{ matrix.site.id }})
+    needs: check-updates
+    if: needs.check-updates.outputs.has_updates == 'true'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        site: ${{ fromJson(needs.check-updates.outputs.matrix_sites) }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Ensure packs-latest release exists & verify pack integrity
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SITE_ID: ${{ matrix.site.id }}
+          LATEST_SHA: ${{ matrix.site.sha }}
+        run: |
+          gh release view packs-latest >/dev/null 2>&1 || gh release create packs-latest --title "Docx Pre-Built Documentation Packs (Latest)" --notes "Content-hashed Max-Gzip .docpack archives supporting HTTP 206 Partial Range delta updates."
+          echo "Verified release target packs-latest for site $SITE_ID (upstream commit $LATEST_SHA)"

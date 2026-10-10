@@ -1,0 +1,12 @@
+node_modules/
+.next/
+dist/
+target/
+tailwindcss-site/
+shadcn-site/
+*.exe
+*.pack
+*.docpack
+.DS_Store
+
+.github/

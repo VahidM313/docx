@@ -1,0 +1,1373 @@
+:root {
+  /* Pure Carbon / OLED Black Discord Onyx Palette (Zero Navy) */
+  --bg-void: #000000;
+  --bg-rail: #040405;
+  --bg-drawer: #0a0a0c;
+  --bg-main: #060607;
+  --bg-card: #0d0d10;
+  --bg-card-hover: #131317;
+  --bg-surface: #18181d;
+  --bg-active: #202026;
+
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-color: rgba(255, 255, 255, 0.09);
+  --border-active: rgba(255, 255, 255, 0.2);
+
+  --text-main: #fafafa;
+  --text-muted: #9ca3af;
+  --text-dim: #6b7280;
+
+  --tw-brand: #38bdf8;
+  --shadcn-brand: #ffffff;
+  --discord-red: #ed4245;
+  --accent-green: #23a55a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "gg sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Global Discord-Style Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050507;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #232329;
+  border-radius: 999px;
+  border: 2px solid #050507;
+  min-height: 36px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #383842;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #4c4c59;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+body {
+  background-color: var(--bg-void);
+  color: var(--text-main);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================================
+   1. Custom Frameless Discord Window Titlebar (Collapsible)
+   ========================================================= */
+.top-edge-sensor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  z-index: 250;
+  pointer-events: none;
+}
+
+body.topbar-hidden .top-edge-sensor {
+  pointer-events: auto;
+}
+
+.custom-titlebar {
+  height: 28px;
+  min-height: 28px;
+  background-color: var(--bg-void);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  z-index: 200;
+  transition: margin-top 0.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.18s ease;
+}
+
+body.topbar-hidden .custom-titlebar {
+  margin-top: -28px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.topbar-hidden.topbar-peek .custom-titlebar {
+  margin-top: 0;
+  opacity: 1;
+  pointer-events: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.85);
+}
+
+.titlebar-drag-region {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  cursor: default;
+}
+
+.titlebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.titlebar-logo {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}
+
+.titlebar-appname {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.titlebar-divider {
+  color: #3f3f46;
+}
+
+.titlebar-current {
+  color: #a1a1aa;
+  font-weight: 500;
+}
+
+.titlebar-actions {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.titlebar-btn.util-btn {
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #111114;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 0 8px;
+  border-radius: 4px;
+  margin-right: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.titlebar-btn.util-btn:hover {
+  background: #1c1c21;
+  color: #ffffff;
+  border-color: var(--border-color);
+}
+
+.titlebar-btn.util-btn svg {
+  width: 11px;
+  height: 11px;
+}
+
+.win-controls {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.win-btn {
+  width: 38px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  color: #a1a1aa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+
+.win-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.win-btn.win-close:hover {
+  background: var(--discord-red);
+  color: #ffffff;
+}
+
+/* =========================================================
+   2. Main Shell & Discord Hover Sidebar
+   ========================================================= */
+.app-shell {
+  flex: 1;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  background: var(--bg-main);
+}
+
+/* Left Edge Sensor for Hover Trigger */
+.left-edge-sensor {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.edge-pill-indicator {
+  width: 3px;
+  height: 40px;
+  border-radius: 0 4px 4px 0;
+  background: rgba(255, 255, 255, 0.28);
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.left-edge-sensor:hover .edge-pill-indicator {
+  height: 64px;
+  width: 4px;
+  background: #ffffff;
+}
+
+/* Discord Sidebar Wrapper (Server Rail + Channel Drawer) */
+.discord-sidebar-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 304px;
+  display: flex;
+  z-index: 130;
+  transform: translateX(-100%);
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), width 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease;
+  pointer-events: none;
+}
+
+.discord-sidebar-wrapper.drawer-hidden {
+  width: 72px;
+}
+
+.discord-sidebar-wrapper.drawer-hidden .discord-channel-drawer {
+  display: none;
+}
+
+.discord-sidebar-wrapper.open,
+.discord-sidebar-wrapper.pinned {
+  transform: translateX(0);
+  pointer-events: auto;
+  box-shadow: 16px 0 48px rgba(0, 0, 0, 0.85);
+}
+
+body.sidebar-pinned .viewport-container {
+  margin-left: 304px;
+}
+
+body.sidebar-pinned.drawer-hidden .viewport-container {
+  margin-left: 72px;
+}
+
+body.sidebar-pinned .left-edge-sensor {
+  display: none;
+}
+
+/* Column 1: Discord Server Rail (72px) */
+.discord-server-rail {
+  width: 72px;
+  min-width: 72px;
+  background-color: var(--bg-rail);
+  border-right: 1px solid var(--border-subtle);
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+
+.rail-item-wrap {
+  position: relative;
+  width: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rail-pill {
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 0;
+  border-radius: 0 4px 4px 0;
+  background: #ffffff;
+  transition: height 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.rail-item-wrap:hover .rail-pill {
+  height: 20px;
+}
+
+.rail-item-wrap.active .rail-pill {
+  height: 40px;
+}
+
+.rail-icon-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  background-color: #121216;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: #d4d4d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-radius 0.18s ease, background-color 0.18s ease, color 0.18s ease, transform 0.12s ease;
+}
+
+.rail-icon-btn:hover,
+.rail-icon-btn.active {
+  border-radius: 16px;
+  color: #ffffff;
+}
+
+.rail-icon-btn.home-btn:hover,
+.rail-icon-btn.home-btn.active {
+  background-color: #1e1e24;
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.rail-icon-btn.tw-btn:hover,
+.rail-icon-btn.tw-btn.active {
+  background-color: rgba(56, 189, 248, 0.16);
+  border-color: rgba(56, 189, 248, 0.45);
+  color: var(--tw-brand);
+}
+
+.rail-icon-btn.shadcn-btn:hover,
+.rail-icon-btn.shadcn-btn.active {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
+}
+
+.rail-icon-btn.action-search-btn {
+  color: #23a55a;
+}
+
+.rail-icon-btn.action-search-btn:hover {
+  background-color: #23a55a;
+  border-color: #23a55a;
+  color: #ffffff;
+}
+
+.rail-custom-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.rail-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.rail-separator {
+  width: 32px;
+  height: 2px;
+  background-color: #18181d;
+  border-radius: 1px;
+  margin: 2px 0;
+}
+
+.rail-spacer {
+  flex: 1;
+}
+
+.rail-bottom-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.rail-mini-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: #71717a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.rail-mini-btn:hover,
+.rail-mini-btn.active {
+  background: #141418;
+  border-color: var(--border-color);
+  color: #ffffff;
+}
+
+.rail-mini-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Column 2: Discord Channel Drawer (232px) */
+.discord-channel-drawer {
+  width: 232px;
+  background-color: var(--bg-drawer);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+.drawer-header {
+  height: 48px;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drawer-server-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.drawer-title-logo {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.drawer-nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.drawer-ctrl-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  border: none;
+  background: transparent;
+  color: #a1a1aa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.12s;
+}
+
+.drawer-ctrl-btn:hover {
+  background: #1c1c22;
+  color: #ffffff;
+}
+
+.drawer-ctrl-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.drawer-search-wrap {
+  padding: 10px 10px 6px;
+}
+
+.drawer-search-btn {
+  width: 100%;
+  height: 28px;
+  background: #040405;
+  border: 1px solid var(--border-subtle);
+  border-radius: 5px;
+  padding: 0 8px;
+  color: #71717a;
+  font-size: 0.76rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.drawer-search-btn:hover {
+  border-color: var(--border-color);
+  color: #d4d4d8;
+}
+
+.drawer-search-btn kbd {
+  font-size: 0.65rem;
+  background: #121216;
+  padding: 1px 4px;
+  border-radius: 3px;
+  color: #a1a1aa;
+}
+
+.drawer-channels-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 8px 14px;
+}
+
+.drawer-channels-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.drawer-channels-scroll::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 2px;
+}
+
+.channel-category {
+  margin-bottom: 16px;
+}
+
+.category-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #71717a;
+  padding: 0 8px 4px;
+}
+
+.channel-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 5px;
+  border: none;
+  background: transparent;
+  color: #8e9297;
+  font-size: 0.84rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.12s, color 0.12s;
+}
+
+.channel-item:hover {
+  background: #16161b;
+  color: #dcddde;
+}
+
+.channel-item.active {
+  background: #202027;
+  color: #ffffff;
+}
+
+.channel-hash {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #52525b;
+  width: 16px;
+  text-align: center;
+}
+
+.channel-hash.tw-text {
+  color: var(--tw-brand);
+}
+
+.channel-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.channel-tag {
+  font-size: 0.64rem;
+  background: #18181c;
+  color: #a1a1aa;
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+/* Discord Bottom User Status Bar */
+.drawer-user-panel {
+  height: 52px;
+  background: #050507;
+  border-top: 1px solid var(--border-subtle);
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar-wrap {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #121216;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+}
+
+.user-avatar-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.status-dot {
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #050507;
+  background: var(--accent-green);
+}
+
+.hidden-dot {
+  display: none;
+}
+
+.user-meta {
+  flex: 1;
+  overflow: hidden;
+}
+
+.user-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.user-ports {
+  font-size: 0.68rem;
+  color: #71717a;
+  font-family: monospace;
+}
+
+/* =========================================================
+   3. Main Viewport & Pure Black Home Dashboard
+   ========================================================= */
+.viewport-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-main);
+  transition: margin-left 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.view-panel {
+  position: absolute;
+  inset: 0;
+  display: none;
+  background-color: var(--bg-main);
+}
+
+.view-panel.active {
+  display: block;
+}
+
+.doc-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  background: #09090b;
+}
+
+.frame-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: var(--bg-main);
+  color: var(--text-muted);
+  z-index: 5;
+}
+
+.spinner {
+  width: 30px;
+  height: 30px;
+  border: 2.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Home View */
+#viewHome {
+  overflow-y: auto;
+  padding: 48px 28px;
+  background: radial-gradient(circle at 50% 0%, #111115 0%, #050506 65%, #000000 100%);
+}
+
+.dashboard-hero {
+  max-width: 760px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.hero-emblem-wrap {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 18px;
+  border-radius: 22px;
+  background: #0c0c0f;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
+}
+
+.hero-emblem {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 13px;
+  border-radius: 999px;
+  background: #101014;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #d4d4d8;
+  font-size: 0.76rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.pulse-icon {
+  color: var(--accent-green);
+  font-size: 0.65rem;
+}
+
+.hero-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  margin-bottom: 26px;
+}
+
+.hero-subtitle strong {
+  color: #ffffff;
+}
+
+.hero-search-box {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.big-search-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: #0b0b0e;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  cursor: pointer;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+  transition: all 0.18s ease;
+}
+
+.big-search-btn:hover {
+  background: #121216;
+  border-color: var(--border-active);
+  color: #ffffff;
+}
+
+.big-search-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--text-dim);
+}
+
+.big-search-btn span {
+  flex: 1;
+  text-align: left;
+}
+
+.kbd-pill {
+  font-size: 0.73rem;
+  background: #16161b;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  color: #a1a1aa;
+}
+
+/* Documentation Cards Grid */
+.doc-cards-grid {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 22px;
+}
+
+.doc-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+
+.doc-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-active);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid var(--border-color);
+}
+
+.card-icon.tw-bg {
+  background: #0a141c;
+  color: var(--tw-brand);
+}
+
+.card-icon.shadcn-bg {
+  background: #141418;
+  color: #ffffff;
+}
+
+.card-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.card-meta {
+  flex: 1;
+}
+
+.card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.card-title-row h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.badge {
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.badge.blue {
+  background: rgba(56, 189, 248, 0.14);
+  color: var(--tw-brand);
+}
+
+.badge.zinc {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e4e4e7;
+}
+
+.card-desc {
+  color: var(--text-muted);
+  font-size: 0.87rem;
+  line-height: 1.45;
+}
+
+.quick-links {
+  margin-bottom: 22px;
+}
+
+.quick-links-title {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  margin-bottom: 9px;
+  font-weight: 700;
+}
+
+.pills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pills-container .link-pill {
+  background: #141418;
+  border: 1px solid var(--border-subtle);
+  color: #a1a1aa;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.77rem;
+  cursor: pointer;
+  transition: all 0.14s ease;
+}
+
+.pills-container .link-pill:hover {
+  background: #1f1f26;
+  border-color: var(--border-active);
+  color: #ffffff;
+}
+
+.card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+.primary-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+.tw-action-btn {
+  background: var(--tw-brand);
+  color: #000000;
+}
+
+.tw-action-btn:hover {
+  background: #7dd3fc;
+}
+
+.shadcn-action-btn {
+  background: #ffffff;
+  color: #000000;
+}
+
+.shadcn-action-btn:hover {
+  background: #e4e4e7;
+}
+
+.card-port-label {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  font-family: monospace;
+}
+
+/* =========================================================
+   4. Universal Search Modal (Pure Carbon Black)
+   ========================================================= */
+.search-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(6px);
+  z-index: 300;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 10vh;
+}
+
+.search-modal-backdrop.open {
+  display: flex;
+}
+
+.search-dialog {
+  width: 92%;
+  max-width: 640px;
+  background: #0b0b0e;
+  border: 1px solid var(--border-active);
+  border-radius: 14px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 76vh;
+}
+
+.search-input-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 18px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.search-icon-modal {
+  width: 19px;
+  height: 19px;
+  stroke: var(--text-dim);
+}
+
+.search-input-field {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.clear-search-btn {
+  background: #18181d;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 0.72rem;
+  cursor: pointer;
+}
+
+.search-filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: #060608;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.filter-chip {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.filter-chip.active {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
+  font-weight: 600;
+}
+
+.count-badge {
+  font-size: 0.68rem;
+  opacity: 0.75;
+}
+
+.search-results-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.search-result-item:hover,
+.search-result-item.selected {
+  background: #18181e;
+}
+
+.result-badge {
+  font-size: 0.66rem;
+  font-weight: 700;
+  padding: 3px 7px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  width: 68px;
+  text-align: center;
+}
+
+.result-badge.tw {
+  background: rgba(56, 189, 248, 0.14);
+  color: var(--tw-brand);
+}
+
+.result-badge.shadcn {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.result-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.result-top-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.result-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.result-category {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+}
+
+.result-snippet {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.result-enter-hint {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  opacity: 0;
+}
+
+.search-result-item.selected .result-enter-hint {
+  opacity: 1;
+}
+
+.search-no-results {
+  padding: 36px 20px;
+  text-align: center;
+  color: var(--text-dim);
+}
+
+.search-modal-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 18px;
+  background: #060608;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.74rem;
+  color: var(--text-dim);
+}
+
+.shortcut-tip kbd {
+  background: #16161b;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.68rem;
+  color: #d4d4d8;
+}
+
+/* =========================================================
+   5. Modular .docpack & Partial Delta Updater Panel
+   ========================================================= */
+.pack-manager-panel {
+  max-width: 980px;
+  margin: 24px auto 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px 26px;
+}
+
+.pack-manager-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.pack-manager-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.pack-manager-subtitle {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+}
+
+.bundle-exe-btn {
+  background: #18181f;
+  color: #ffffff;
+  border: 1px solid var(--border-active);
+}
+
+.bundle-exe-btn:hover {
+  background: #272732;
+}
+
+.delta-status-banner {
+  background: rgba(35, 165, 90, 0.12);
+  border: 1px solid rgba(35, 165, 90, 0.35);
+  color: #4ade80;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  margin-bottom: 16px;
+  font-family: monospace;
+}
+
+.installed-packs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pack-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px;
+  background: #08080a;
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+.pack-row-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pack-row-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.94rem;
+  color: #ffffff;
+}
+
+.pack-meta-line {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-family: monospace;
+}
+
+.pack-delta-btn {
+  background: #141419;
+  border: 1px solid var(--border-color);
+  color: #fafafa;
+  padding: 7px 13px;
+  border-radius: 7px;
+  font-size: 0.79rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pack-delta-btn:hover {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+

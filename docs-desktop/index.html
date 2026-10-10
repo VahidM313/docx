@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docx</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- Top Edge Sensor (Reveals Custom Titlebar when hidden) -->
+    <div class="top-edge-sensor" id="topEdgeSensor"></div>
+
+    <!-- Custom Frameless Discord-Style Window Titlebar (Can be hidden/auto-hidden) -->
+    <header class="custom-titlebar" id="customTitlebar">
+      <div class="titlebar-drag-region" id="titlebarDrag">
+        <div class="titlebar-brand">
+          <img src="/logo.png" alt="Docx" class="titlebar-logo" />
+          <span class="titlebar-appname">Docx</span>
+          <span class="titlebar-divider">/</span>
+          <span class="titlebar-current" id="titlebarCurrentView">Home Hub</span>
+        </div>
+      </div>
+
+      <div class="titlebar-actions">
+        <button class="titlebar-btn util-btn" id="btnQuickSearchTop" title="Universal Search (Ctrl+K)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <span>Ctrl+K</span>
+        </button>
+
+        <button class="titlebar-btn util-btn" id="btnToggleTopbar" title="Auto-hide Top Bar (Hover top edge to reveal)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15" />
+          </svg>
+          <span id="topbarToggleLabel">Hide Bar</span>
+        </button>
+
+        <div class="win-controls">
+          <button class="win-btn" id="winMinimize" title="Minimize">
+            <svg width="10" height="10" viewBox="0 0 12 12">
+              <rect fill="currentColor" width="10" height="1" x="1" y="6" />
+            </svg>
+          </button>
+          <button class="win-btn" id="winMaximize" title="Maximize">
+            <svg width="10" height="10" viewBox="0 0 12 12">
+              <rect width="9" height="9" x="1.5" y="1.5" fill="none" stroke="currentColor" stroke-width="1.2" />
+            </svg>
+          </button>
+          <button class="win-btn win-close" id="winClose" title="Close">
+            <svg width="10" height="10" viewBox="0 0 12 12">
+              <path
+                fill="currentColor"
+                d="M11 1.7L10.3 1 6 5.3 1.7 1 1 1.7 5.3 6 1 10.3 1.7 11 6 6.7 10.3 11 11 10.3 6.7 6z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main App Shell -->
+    <div class="app-shell">
+      <!-- Left Edge Hover Sensor + Visual Discord Pill Handle -->
+      <div class="left-edge-sensor" id="leftEdgeSensor" title="Hover to open Docx sidebar">
+        <div class="edge-pill-indicator"></div>
+      </div>
+
+      <!-- Discord-Style Hover Sidebar (Server Rail + Channel Drawer) -->
+      <aside class="discord-sidebar-wrapper" id="discordSidebar">
+        <!-- 1. Left Icon Rail (Discord Server List style) -->
+        <nav class="discord-server-rail" aria-label="Documentation Switcher">
+          <!-- Docx Home Server Icon -->
+          <div class="rail-item-wrap">
+            <span class="rail-pill" id="pillHome"></span>
+            <button class="rail-icon-btn home-btn active" id="tabHome" data-tab="home" title="Docx Home Hub">
+              <img src="/logo.png" alt="Docx" class="rail-custom-logo" />
+            </button>
+          </div>
+
+          <div class="rail-separator"></div>
+
+          <!-- Tailwind CSS v4.3 Server Icon -->
+          <div class="rail-item-wrap">
+            <span class="rail-pill" id="pillTailwind"></span>
+            <button class="rail-icon-btn tw-btn" id="tabTailwind" data-tab="tailwind" title="Tailwind CSS v4.3 Docs">
+              <svg class="rail-svg tw-color" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228,1.565,0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- shadcn/ui v4 Server Icon (Official Dual-Slash Logo) -->
+          <div class="rail-item-wrap">
+            <span class="rail-pill" id="pillShadcn"></span>
+            <button class="rail-icon-btn shadcn-btn" id="tabShadcn" data-tab="shadcn" title="shadcn/ui v4 Docs">
+              <svg class="rail-svg shadcn-color" viewBox="0 0 256 256" fill="none">
+                <line
+                  x1="208"
+                  y1="128"
+                  x2="128"
+                  y2="208"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="24"
+                />
+                <line
+                  x1="192"
+                  y1="40"
+                  x2="40"
+                  y2="192"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="24"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="rail-separator"></div>
+
+          <!-- Universal Search Server Action -->
+          <div class="rail-item-wrap">
+            <button class="rail-icon-btn action-search-btn" id="openSearchBtn" title="Universal Search (Ctrl + K)">
+              <svg class="rail-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="rail-spacer"></div>
+
+          <!-- Bottom Rail Controls -->
+          <div class="rail-bottom-actions">
+            <button class="rail-mini-btn active" id="btnToggleDrawer" title="Show / Hide Second Column (Channel Drawer)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <line x1="9" y1="3" x2="9" y2="21" />
+              </svg>
+            </button>
+            <button class="rail-mini-btn" id="btnPinSidebar" title="Pin / Unpin Hover Sidebar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="17" x2="12" y2="22" />
+                <path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z" />
+              </svg>
+            </button>
+            <button class="rail-mini-btn" id="btnRailToggleTopbar" title="Show / Hide Top Window Bar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <line x1="3" y1="9" x2="21" y2="9" />
+              </svg>
+            </button>
+          </div>
+        </nav>
+
+        <!-- 2. Discord Channel Drawer -->
+        <div class="discord-channel-drawer" id="discordDrawer">
+          <!-- Server Header -->
+          <div class="drawer-header">
+            <div class="drawer-server-title" id="brandBtn">
+              <img src="/logo.png" alt="Docx" class="drawer-title-logo" />
+              <span>Docx Server</span>
+            </div>
+            <div class="drawer-nav-controls" id="browserControls">
+              <button class="drawer-ctrl-btn" id="btnBack" title="Back">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
+              </button>
+              <button class="drawer-ctrl-btn" id="btnForward" title="Forward">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </button>
+              <button class="drawer-ctrl-btn" id="btnReload" title="Reload Page">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 4 23 10 17 10" />
+                  <polyline points="1 20 1 14 7 14" />
+                  <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+                </svg>
+              </button>
+              <button class="drawer-ctrl-btn" id="btnExternal" title="Open in External Browser">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </button>
+              <button class="drawer-ctrl-btn" id="btnCollapseDrawer" title="Hide Second Column (Keep Only Icon Rail)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="11 17 6 12 11 7" />
+                  <polyline points="18 17 13 12 18 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Discord Search Bar -->
+          <div class="drawer-search-wrap">
+            <button class="drawer-search-btn" id="drawerSearchBtn">
+              <span>Find or jump to docs...</span>
+              <kbd>Ctrl K</kbd>
+            </button>
+          </div>
+
+          <!-- Discord Channel List -->
+          <div class="drawer-channels-scroll">
+            <div class="channel-category">
+              <span class="category-label">WORKSPACES</span>
+              <button class="channel-item active" data-switch-tab="home">
+                <span class="channel-hash">⌂</span>
+                <span class="channel-name">home-dashboard</span>
+              </button>
+              <button class="channel-item" data-switch-tab="tailwind">
+                <span class="channel-hash tw-text">#</span>
+                <span class="channel-name">tailwindcss-v4</span>
+                <span class="channel-tag">v4.3</span>
+              </button>
+              <button class="channel-item" data-switch-tab="shadcn">
+                <span class="channel-hash">#</span>
+                <span class="channel-name">shadcn-ui-v4</span>
+                <span class="channel-tag">v4</span>
+              </button>
+            </div>
+
+            <div class="channel-category">
+              <span class="category-label">TAILWIND QUICK JUMP</span>
+              <button class="channel-item link-pill" data-target="tailwind" data-url="/docs/installation/using-vite">
+                <span class="channel-hash">#</span>
+                <span class="channel-name">installation</span>
+              </button>
+              <button class="channel-item link-pill" data-target="tailwind" data-url="/docs/styling-with-utility-classes">
+                <span class="channel-hash">#</span>
+                <span class="channel-name">utility-classes</span>
+              </button>
+              <button class="channel-item link-pill" data-target="tailwind" data-url="/docs/theme">
+                <span class="channel-hash">#</span>
+                <span class="channel-name">theme-variables</span>
+              </button>
+              <button class="channel-item link-pill" data-target="tailwind" data-url="/docs/responsive-design">
+                <span class="channel-hash">#</span>
+                <span class="channel-name">responsive-design</span>
+              </button>
+              <button class="channel-item link-pill" data-target="tailwind" data-url="/docs/flex-direction">
+                <span class="channel-hash">#</span>
+                <span class="channel-name">flexbox-and-grid</span>
+              </button>
+            </div>
+
+            <div class="channel-category">
+              <span class="category-label">SHADCN/UI COMPONENTS</span>
+              <button class="channel-item link-pill" data-target="shadcn" data-url="/docs">
+                <span class="channel-hash">#</span>
+                <span class="channel-name">introduction</span>
+              </button>
+              <button class="channel-item link-pill" data-target="shadcn" data-url="/docs/components/button">
+                <span class="channel-hash">#</span>
+                <span class="channel-name">button</span>
+              </button>
+              <button class="channel-item link-pill" data-target="shadcn" data-url="/docs/components/dialog">
+                <span class="channel-hash">#</span>
+                <span class="channel-name">dialog</span>
+              </button>
+              <button class="channel-item link-pill" data-target="shadcn" data-url="/docs/components/dropdown-menu">
+                <span class="channel-hash">#</span>
+                <span class="channel-name">dropdown-menu</span>
+              </button>
+              <button class="channel-item link-pill" data-target="shadcn" data-url="/docs/components/select">
+                <span class="channel-hash">#</span>
+                <span class="channel-name">select</span>
+              </button>
+              <button class="channel-item link-pill" data-target="shadcn" data-url="/docs/components/tabs">
+                <span class="channel-hash">#</span>
+                <span class="channel-name">tabs</span>
+              </button>
+              <button class="channel-item link-pill" data-target="shadcn" data-url="/docs/components/data-table">
+                <span class="channel-hash">#</span>
+                <span class="channel-name">data-table</span>
+              </button>
+              <button class="channel-item link-pill" data-target="shadcn" data-url="/docs/cli">
+                <span class="channel-hash">#</span>
+                <span class="channel-name">shadcn-cli</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Discord User / Engine Status Footer -->
+          <div class="drawer-user-panel" id="serverStatusPill" title="Embedded Rust Servers Active">
+            <div class="user-avatar-wrap">
+              <img src="/logo.png" alt="Docx" class="user-avatar-img" />
+              <span class="status-dot green" id="twStatusDot"></span>
+              <span class="status-dot green hidden-dot" id="shadcnStatusDot"></span>
+            </div>
+            <div class="user-meta">
+              <div class="user-name">Docx Engine</div>
+              <div class="user-ports">
+                <span id="twPortLabel">TW :--</span> • <span id="shadcnPortLabel">UI :--</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Viewport Area -->
+      <main class="viewport-container">
+        <!-- 1. Home Dashboard View -->
+        <section class="view-panel active" id="viewHome">
+          <div class="dashboard-hero">
+            <div class="hero-emblem-wrap">
+              <img src="/logo.png" alt="Docx Emblem" class="hero-emblem" />
+            </div>
+
+            <div class="hero-badge">
+              <span class="pulse-icon">●</span> 100% Offline • Embedded Rust Engine • Hover Left Edge for Sidebar
+            </div>
+
+            <h1 class="hero-title">Docx</h1>
+            <p class="hero-subtitle">
+              Complete offline documentation for <strong>Tailwind CSS v4.3</strong> and <strong>shadcn/ui v4</strong>.
+              Move your cursor to the <strong>left edge</strong> anytime to summon the Discord switcher rail.
+            </p>
+
+            <div class="hero-search-box">
+              <button class="big-search-btn" id="heroSearchBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                <span>Search across 513 utilities, components and guides...</span>
+                <span class="kbd-pill">Ctrl + K</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Documentation Cards -->
+          <div class="doc-cards-grid">
+            <!-- Tailwind CSS Card -->
+            <div class="doc-card tailwind-card">
+              <div class="card-header">
+                <div class="card-icon tw-bg">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"
+                    />
+                  </svg>
+                </div>
+                <div class="card-meta">
+                  <div class="card-title-row">
+                    <h3>Tailwind CSS</h3>
+                    <span class="badge blue">v4.3 Stable</span>
+                  </div>
+                  <p class="card-desc">
+                    Utility-first CSS framework. Core concepts, spacing, responsive variants, theme, and modern CSS engine.
+                  </p>
+                </div>
+              </div>
+
+              <div class="quick-links">
+                <span class="quick-links-title">Popular Channels:</span>
+                <div class="pills-container">
+                  <button class="link-pill" data-target="tailwind" data-url="/docs/installation/using-vite"># installation</button>
+                  <button class="link-pill" data-target="tailwind" data-url="/docs/styling-with-utility-classes"># utility-classes</button>
+                  <button class="link-pill" data-target="tailwind" data-url="/docs/hover-focus-and-other-states"># hover-states</button>
+                  <button class="link-pill" data-target="tailwind" data-url="/docs/responsive-design"># responsive</button>
+                  <button class="link-pill" data-target="tailwind" data-url="/docs/theme"># theme</button>
+                  <button class="link-pill" data-target="tailwind" data-url="/docs/flex-direction"># flexbox</button>
+                  <button class="link-pill" data-target="tailwind" data-url="/docs/grid-template-columns"># grid</button>
+                  <button class="link-pill" data-target="tailwind" data-url="/docs/padding"># padding</button>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                <button class="primary-btn tw-action-btn" id="launchTailwindBtn">
+                  <span>Open Tailwind Docs</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </button>
+                <span class="card-port-label" id="cardTwPort">127.0.0.1:auto</span>
+              </div>
+            </div>
+
+            <!-- shadcn/ui Card (With Authentic Dual-Slash Logo) -->
+            <div class="doc-card shadcn-card">
+              <div class="card-header">
+                <div class="card-icon shadcn-bg">
+                  <svg viewBox="0 0 256 256" fill="none">
+                    <line
+                      x1="208"
+                      y1="128"
+                      x2="128"
+                      y2="208"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="24"
+                    />
+                    <line
+                      x1="192"
+                      y1="40"
+                      x2="40"
+                      y2="192"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="24"
+                    />
+                  </svg>
+                </div>
+                <div class="card-meta">
+                  <div class="card-title-row">
+                    <h3>shadcn/ui</h3>
+                    <span class="badge zinc">v4 Primitives</span>
+                  </div>
+                  <p class="card-desc">
+                    Accessible components built on Radix UI and Base UI. Interactive previews, CLI commands, and dark mode.
+                  </p>
+                </div>
+              </div>
+
+              <div class="quick-links">
+                <span class="quick-links-title">Popular Components:</span>
+                <div class="pills-container">
+                  <button class="link-pill" data-target="shadcn" data-url="/docs/components/accordion"># accordion</button>
+                  <button class="link-pill" data-target="shadcn" data-url="/docs/components/dialog"># dialog</button>
+                  <button class="link-pill" data-target="shadcn" data-url="/docs/components/button"># button</button>
+                  <button class="link-pill" data-target="shadcn" data-url="/docs/components/select"># select</button>
+                  <button class="link-pill" data-target="shadcn" data-url="/docs/components/dropdown-menu"># dropdown</button>
+                  <button class="link-pill" data-target="shadcn" data-url="/docs/components/data-table"># data-table</button>
+                  <button class="link-pill" data-target="shadcn" data-url="/docs/components/tabs"># tabs</button>
+                  <button class="link-pill" data-target="shadcn" data-url="/docs/dark-mode"># dark-mode</button>
+                  <button class="link-pill" data-target="shadcn" data-url="/docs/cli"># cli</button>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                <button class="primary-btn shadcn-action-btn" id="launchShadcnBtn">
+                  <span>Open shadcn/ui Docs</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </button>
+                <span class="card-port-label" id="cardShadcnPort">127.0.0.1:auto</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package Manager & Partial Delta Update Engine Panel -->
+          <div class="pack-manager-panel" id="packManagerPanel">
+            <div class="pack-manager-header">
+              <div>
+                <h2 class="pack-manager-title">Modular .docpack & Partial Delta Update Engine</h2>
+                <p class="pack-manager-subtitle">
+                  Each site is split into content-hashed Max-Gzip chunks. Updates only download changed chunks via HTTP 206 Range requests.
+                </p>
+              </div>
+              <button class="primary-btn bundle-exe-btn" id="btnBundleSingleExe">
+                <span>Bundle into Single Desktop .exe</span>
+              </button>
+            </div>
+
+            <div class="delta-status-banner" id="deltaStatusBanner" style="display: none"></div>
+
+            <div class="installed-packs-list" id="installedPacksList">
+              <!-- Populated dynamically via get_installed_packs -->
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. Tailwind Webview Frame -->
+        <section class="view-panel" id="viewTailwind">
+          <div class="frame-loading" id="twLoading">
+            <div class="spinner"></div>
+            <p id="twLoadingText">Loading Tailwind CSS v4.3 from memory...</p>
+          </div>
+          <iframe id="iframeTailwind" class="doc-iframe" src="about:blank"></iframe>
+        </section>
+
+        <!-- 3. shadcn/ui Webview Frame -->
+        <section class="view-panel" id="viewShadcn">
+          <div class="frame-loading" id="shadcnLoading">
+            <div class="spinner"></div>
+            <p id="shadcnLoadingText">Loading shadcn/ui v4 from memory...</p>
+          </div>
+          <iframe id="iframeShadcn" class="doc-iframe" src="about:blank"></iframe>
+        </section>
+      </main>
+    </div>
+
+    <!-- Universal Search Spotlight Modal -->
+    <div class="search-modal-backdrop" id="searchModal" aria-hidden="true">
+      <div class="search-dialog" role="dialog" aria-modal="true">
+        <div class="search-input-header">
+          <svg class="search-icon-modal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input-field"
+            placeholder="Search all documentation topics, utilities, components..."
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <button class="clear-search-btn" id="clearSearchBtn" title="Close">Esc</button>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="search-filters">
+          <button class="filter-chip active" data-filter="all">
+            All <span class="count-badge" id="countAll">513</span>
+          </button>
+          <button class="filter-chip" data-filter="tailwind">
+            Tailwind CSS <span class="count-badge" id="countTw">180</span>
+          </button>
+          <button class="filter-chip" data-filter="shadcn">
+            shadcn/ui <span class="count-badge" id="countShadcn">333</span>
+          </button>
+        </div>
+
+        <!-- Search Results List -->
+        <div class="search-results-list" id="searchResultsList"></div>
+
+        <!-- Modal Footer Shortcuts -->
+        <div class="search-modal-footer">
+          <div class="shortcut-tip"><kbd>↑</kbd><kbd>↓</kbd> <span>navigate</span></div>
+          <div class="shortcut-tip"><kbd>Enter</kbd> <span>open</span></div>
+          <div class="shortcut-tip"><kbd>Esc</kbd> <span>close</span></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
