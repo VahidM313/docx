@@ -413,6 +413,22 @@ html.docx-force-dark [style*="background-image"] {{
 (function(){{
   var SITE_ID = "{}";
   var SITE_ORIGIN = "{}";
+  if (SITE_ID === "cppreference") {{
+    try {{
+      var interStyle = document.createElement("style");
+      interStyle.id = "docx-cppref-inter";
+      interStyle.textContent =
+        "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');" +
+        "html, body, #cpp-head-first, #cpp-head-second, #content, #mw-content-text, " +
+        "p, div, span, a, li, td, th, h1, h2, h3, h4, h5, h6, input, select, button, " +
+        ".t-navbar, .t-nv, .t-nv-ln-table, .t-dsc, .t-par, .wikitable {{ " +
+        "font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; " +
+        "-webkit-font-smoothing: antialiased !important; letter-spacing: -0.011em; }} " +
+        "code, pre, tt, kbd, samp, .mw-geshi, .mw-geshi *, .source-cpp, .source-cpp *, .source-c, .source-c *, .t-c, .t-c *, .t-lc, .t-lc * {{ " +
+        "font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', Consolas, monospace !important; letter-spacing: 0 !important; }}";
+      (document.head || document.documentElement).appendChild(interStyle);
+    }} catch (e) {{}}
+  }}
   var KNOWN_LIGHT_SITES = {{
     cppreference: true,
     learncpp: true,
@@ -930,8 +946,6 @@ fn fetch_remote_registry(state: tauri::State<'_, AppState>) -> Result<Vec<Remote
         } else {
             (false, String::new())
         };
-        let update_available =
-            installed && !local_commit.is_empty() && !item.commit.is_empty() && local_commit != item.commit;
         let effective_bytes = if item.sizeBytes > 0 {
             item.sizeBytes
         } else if item.totalBytes > 0 {
@@ -941,11 +955,23 @@ fn fetch_remote_registry(state: tauri::State<'_, AppState>) -> Result<Vec<Remote
         } else {
             0
         };
+        let remote_is_valid = !item.commit.is_empty()
+            && item.commit != "e3b0c442"
+            && effective_bytes >= 1024
+            && item.routeCount > 0;
+        let update_available =
+            installed && !local_commit.is_empty() && remote_is_valid && local_commit != item.commit;
         out.push(RemoteRegistryItem {
             id: item.id,
             name: item.name,
             version: item.version,
-            commit: item.commit,
+            commit: if remote_is_valid {
+                item.commit
+            } else if !local_commit.is_empty() {
+                local_commit.clone()
+            } else {
+                item.commit
+            },
             updatedAt: item.updatedAt,
             sizeBytes: effective_bytes,
             routeCount: item.routeCount,
@@ -1141,7 +1167,15 @@ fn run_install_or_update_sync(
         }
     }
 
-    if local_chunks_by_hash.is_empty() {
+    let mut missing_unique_hashes = std::collections::HashSet::new();
+    for rem_entry in remote_manifest.routes.values() {
+        if !local_chunks_by_hash.contains_key(&rem_entry.hash) {
+            missing_unique_hashes.insert(rem_entry.hash.clone());
+        }
+    }
+
+    // Use single-stream full .docpack download if not installed OR if > 6 chunks changed
+    if local_chunks_by_hash.is_empty() || missing_unique_hashes.len() > 6 {
         let expected_total = 4 + remote_manifest_bytes.len() + remote_manifest.totalBytes;
         let docpack_path = packs_dir.join(format!("{}.docpack", site_id));
         let full_pack_bytes = curl_download_with_progress(
@@ -1198,7 +1232,7 @@ fn run_install_or_update_sync(
             saved_percent: 0.0,
             port,
             message: format!(
-                "Installed {} ({}) from GitHub Releases ({:.2} MB, {} routes) on port :{}!",
+                "Synced {} ({}) from GitHub Releases ({:.2} MB, {} routes) on port :{}!",
                 remote_manifest.name,
                 remote_manifest.version,
                 dl_bytes as f64 / (1024.0 * 1024.0),
@@ -1208,7 +1242,7 @@ fn run_install_or_update_sync(
         });
     }
 
-    // Already installed: perform HTTP 206 Partial Content Range Delta Update for ONLY changed chunks!
+    // Already installed and <= 6 chunks changed: perform HTTP 206 Partial Content Range Delta Update!
     let remote_data_start = 4 + remote_manifest_bytes.len();
     let mut new_pack_data: Vec<u8> = Vec::new();
     let mut new_routes: HashMap<String, ManifestEntry> = HashMap::new();
