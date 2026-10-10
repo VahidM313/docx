@@ -289,6 +289,171 @@ fn url_decode(input: &str) -> String {
     String::from_utf8_lossy(&out).into_owned()
 }
 
+fn get_site_origin_and_entry(site_id: &str) -> Option<(&'static str, &'static str)> {
+    match site_id {
+        "tailwind" | "tw" => Some(("https://tailwindcss.com", "/docs/installation/using-vite")),
+        "shadcn" | "sh" => Some(("https://ui.shadcn.com", "/docs")),
+        "react" => Some(("https://react.dev", "/learn")),
+        "nextjs" => Some(("https://nextjs.org", "/docs")),
+        "vite" => Some(("https://vite.dev", "/guide/")),
+        "astro" => Some(("https://docs.astro.build", "/en/getting-started/")),
+        "typescript" => Some(("https://www.typescriptlang.org", "/docs/handbook/intro.html")),
+        "mdn_js" => Some(("https://developer.mozilla.org", "/en-US/docs/Web/JavaScript")),
+        "htmx" => Some(("https://htmx.org", "/docs/")),
+        "bun" => Some(("https://bun.sh", "/docs")),
+        "elysia" => Some(("https://elysiajs.com", "/table-of-content.html")),
+        "drizzle" => Some(("https://orm.drizzle.team", "/docs/overview")),
+        "oxc" => Some(("https://oxc.rs", "/docs/guide/introduction.html")),
+        "rust" => Some(("https://doc.rust-lang.org", "/book/")),
+        "go" => Some(("https://go.dev", "/doc/")),
+        "cppreference" => Some(("https://en.cppreference.com", "/")),
+        "learncpp" => Some(("https://www.learncpp.com", "/")),
+        "llvm" => Some(("https://llvm.org", "/docs/")),
+        "lua" => Some(("https://www.lua.org", "/manual/5.4/")),
+        "docker" => Some(("https://docs.docker.com", "/get-started/")),
+        "git" => Some(("https://git-scm.com", "/docs/git")),
+        "curl" => Some(("https://curl.se", "/docs/")),
+        "cmake" => Some(("https://cmake.org", "/cmake/help/latest/index.html")),
+        "ninja" => Some(("https://ninja-build.org", "/manual.html")),
+        "powershell" => Some(("https://learn.microsoft.com", "/en-us/powershell/scripting/overview")),
+        "cmd" => Some(("https://learn.microsoft.com", "/en-us/windows-server/administration/windows-commands/windows-commands")),
+        "tanstack_start" => Some(("https://tanstack.com", "/start/latest/docs/framework/react/overview")),
+        "tanstack_router" => Some(("https://tanstack.com", "/router/latest/docs/framework/react/overview")),
+        "tanstack_query" => Some(("https://tanstack.com", "/query/latest/docs/framework/react/overview")),
+        "tanstack_table" => Some(("https://tanstack.com", "/table/latest/docs/introduction")),
+        "tanstack_form" => Some(("https://tanstack.com", "/form/latest/docs/overview")),
+        "tanstack_virtual" => Some(("https://tanstack.com", "/virtual/latest/docs/introduction")),
+        "tanstack_store" => Some(("https://tanstack.com", "/store/latest/docs/overview")),
+        "tanstack_db" => Some(("https://tanstack.com", "/db/latest/docs/overview")),
+        "tanstack_ai" => Some(("https://tanstack.com", "/ai/latest/docs/overview")),
+        "tanstack_pacer" => Some(("https://tanstack.com", "/pacer/latest/docs/overview")),
+        "tanstack_ranger" => Some(("https://tanstack.com", "/ranger/latest/docs/overview")),
+        "tanstack_config" => Some(("https://tanstack.com", "/config/latest/docs/overview")),
+        "tanstack_devtools" => Some(("https://tanstack.com", "/devtools/latest/docs/overview")),
+        "tanstack_hotkeys" => Some(("https://tanstack.com", "/hotkeys/latest/docs/overview")),
+        "tanstack_react_charts" => Some(("https://react-charts.tanstack.com", "/docs/overview")),
+        "tanstack_create_tsrouter_app" => Some(("https://tanstack.com", "/router/latest/docs/framework/react/quick-start")),
+        _ => None,
+    }
+}
+
+fn guess_mime_from_path(path: &str) -> &'static str {
+    let p = path.split('?').next().unwrap_or(path).to_lowercase();
+    if p.ends_with(".css") || path.contains("only=styles") {
+        "text/css; charset=utf-8"
+    } else if p.ends_with(".js") || p.ends_with(".mjs") {
+        "application/javascript; charset=utf-8"
+    } else if p.ends_with(".svg") {
+        "image/svg+xml"
+    } else if p.ends_with(".woff2") {
+        "font/woff2"
+    } else if p.ends_with(".woff") {
+        "font/woff"
+    } else if p.ends_with(".ttf") {
+        "font/ttf"
+    } else if p.ends_with(".png") {
+        "image/png"
+    } else if p.ends_with(".jpg") || p.ends_with(".jpeg") {
+        "image/jpeg"
+    } else if p.ends_with(".webp") {
+        "image/webp"
+    } else if p.ends_with(".ico") {
+        "image/x-icon"
+    } else if p.ends_with(".json") {
+        "application/json; charset=utf-8"
+    } else {
+        "text/html; charset=utf-8"
+    }
+}
+
+fn fetch_live_fallback(site_key: &str, raw_target: &str, decoded_path: &str) -> Option<(String, bool, Vec<u8>)> {
+    let (origin, entry_path) = get_site_origin_and_entry(site_key)?;
+    let target_url = if decoded_path == "/" || decoded_path == "/docs" {
+        format!("{}{}", origin, entry_path)
+    } else {
+        format!("{}{}", origin, raw_target)
+    };
+
+    let mut bytes = curl_get_bytes(&target_url, None).ok()?;
+    if bytes.is_empty() {
+        return None;
+    }
+
+    let mime = if bytes.starts_with(b"<!DOCTYPE")
+        || bytes.starts_with(b"<!doctype")
+        || bytes.starts_with(b"<html")
+        || bytes.windows(6).take(256).any(|w| w.eq_ignore_ascii_case(b"<head>"))
+    {
+        "text/html; charset=utf-8".to_string()
+    } else {
+        guess_mime_from_path(raw_target).to_string()
+    };
+
+    if mime.starts_with("text/html") {
+        let mut html = String::from_utf8_lossy(&bytes).into_owned();
+        // Rewrite absolute origin href/src to root-relative so local server handles them
+        html = html.replace(&format!("href=\"{}/", origin), "href=\"/");
+        html = html.replace(&format!("src=\"{}/", origin), "src=\"/");
+        let inject = format!(
+            r#"<style id="docx-styled-scroll">
+::-webkit-scrollbar {{ width: 8px !important; height: 8px !important; }}
+::-webkit-scrollbar-track {{ background: #070709 !important; }}
+::-webkit-scrollbar-thumb {{ background-color: #24242b !important; border-radius: 999px !important; border: 2px solid #070709 !important; min-height: 36px !important; }}
+::-webkit-scrollbar-thumb:hover {{ background-color: #3a3a45 !important; }}
+* {{ scrollbar-width: thin; scrollbar-color: #24242b #070709; }}
+</style>
+<script>
+(function(){{
+  var SITE_ORIGIN = "{}";
+  try {{
+    if (!localStorage.getItem('theme')) localStorage.setItem('theme', 'dark');
+    document.documentElement.classList.add('dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.documentElement.style.colorScheme = 'dark';
+  }} catch (e) {{}}
+  window.addEventListener('keydown', function(e){{
+    if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k'){{
+      e.preventDefault(); e.stopPropagation();
+      window.parent.postMessage({{ type: 'OPEN_UNIVERSAL_SEARCH' }}, '*');
+    }}
+  }}, true);
+  var lastL = 0, lastT = 0;
+  window.addEventListener('mousemove', function(e){{
+    var now = Date.now();
+    if (e.clientX <= 18 && now - lastL > 120) {{ lastL = now; window.parent.postMessage({{ type: 'HOVER_LEFT_EDGE' }}, '*'); }}
+    if (e.clientY <= 10 && now - lastT > 120) {{ lastT = now; window.parent.postMessage({{ type: 'HOVER_TOP_EDGE' }}, '*'); }}
+  }}, {{ passive: true }});
+  window.addEventListener('mousedown', function(){{
+    window.parent.postMessage({{ type: 'IFRAME_INTERACT' }}, '*');
+  }}, {{ passive: true }});
+  document.addEventListener('click', function(e){{
+    var a = e.target && e.target.closest ? e.target.closest('a') : null;
+    if(!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var href = a.getAttribute('href');
+    if(!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('javascript:') || a.getAttribute('target') === '_blank') return;
+    try {{
+      var resolved = new URL(href, window.location.href);
+      if (resolved.origin === window.location.origin || resolved.origin === SITE_ORIGIN) {{
+        e.preventDefault(); e.stopPropagation();
+        window.location.href = resolved.pathname + resolved.search + resolved.hash;
+      }}
+    }} catch(err) {{}}
+  }}, true);
+}})();
+</script>"#,
+            origin
+        );
+        if let Some(pos) = html.rfind("</body>") {
+            html.insert_str(pos, &inject);
+        } else {
+            html.push_str(&inject);
+        }
+        bytes = html.into_bytes();
+    }
+
+    Some((mime, false, bytes))
+}
+
 fn resolve_from_store(
     site_key: &str,
     decoded_path: &str,
@@ -300,17 +465,27 @@ fn resolve_from_store(
         other => (other, other),
     };
 
+    let candidates = [
+        decoded_path.to_string(),
+        format!("{}.html", decoded_path),
+        format!("{}/index.html", decoded_path),
+        decoded_path.trim_end_matches(".html").to_string(),
+    ];
+
     if let Ok(guard) = store.overrides.read() {
         if let Some(pack) = guard.get(site_id) {
-            let entry_opt = pack.manifest.routes.get(decoded_path).or_else(|| {
-                if site_id == "shadcn" && decoded_path.starts_with("/docs/components/") {
-                    let slug = decoded_path.trim_start_matches("/docs/components/");
-                    let radix_key = format!("/docs/components/radix/{}", slug);
-                    pack.manifest.routes.get(&radix_key)
-                } else {
-                    None
+            let mut entry_opt = None;
+            for c in &candidates {
+                if let Some(found) = pack.manifest.routes.get(c) {
+                    entry_opt = Some(found);
+                    break;
                 }
-            });
+            }
+            if entry_opt.is_none() && site_id == "shadcn" && decoded_path.starts_with("/docs/components/") {
+                let slug = decoded_path.trim_start_matches("/docs/components/");
+                let radix_key = format!("/docs/components/radix/{}", slug);
+                entry_opt = pack.manifest.routes.get(&radix_key);
+            }
             if let Some(entry) = entry_opt {
                 let start = pack.data_start + entry.offset;
                 let end = start + entry.length;
@@ -375,13 +550,15 @@ fn handle_client(mut stream: TcpStream, site_key: String, store: Arc<AssetStore>
         decoded_path.pop();
     }
 
-    let resolved = resolve_from_store(&site_key, &decoded_path, &store).or_else(|| {
-        if decoded_path.starts_with("/docs") || decoded_path == "/" {
-            resolve_from_store(&site_key, "/docs", &store)
-        } else {
-            None
-        }
-    });
+    let resolved = resolve_from_store(&site_key, &decoded_path, &store)
+        .or_else(|| {
+            if decoded_path == "/" || decoded_path == "/docs" {
+                resolve_from_store(&site_key, "/docs", &store)
+            } else {
+                None
+            }
+        })
+        .or_else(|| fetch_live_fallback(&site_key, raw_target, &decoded_path));
 
     if let Some((mime, gzipped, body)) = resolved {
         let encoding_header = if gzipped {
@@ -408,6 +585,7 @@ fn handle_client(mut stream: TcpStream, site_key: String, store: Arc<AssetStore>
         );
     }
 }
+
 
 fn ensure_site_server(site_id: &str, store: Arc<AssetStore>) -> u16 {
     if let Ok(guard) = store.site_ports.read() {
