@@ -236,7 +236,15 @@ fn load_disk_overrides(overrides: &mut HashMap<String, Arc<SiteOverridePack>>) {
             if path.extension().and_then(|e| e.to_str()) == Some("docpack") {
                 if let Ok(buf) = fs::read(&path) {
                     if let Some(pack) = parse_docpack_bytes(buf, "Modular .docpack") {
-                        overrides.insert(pack.manifest.id.clone(), pack);
+                        let should_use_disk = match overrides.get(&pack.manifest.id) {
+                            Some(existing) => pack.manifest.updatedAt >= existing.manifest.updatedAt,
+                            None => true,
+                        };
+                        if should_use_disk {
+                            overrides.insert(pack.manifest.id.clone(), pack);
+                        } else {
+                            let _ = fs::remove_file(&path);
+                        }
                     }
                 }
             }
@@ -404,51 +412,86 @@ fn inject_reader_bridge(site_key: &str, mut html: String) -> Vec<u8> {
         html = html.replace(&format!("src=\"{}/", origin), "src=\"/");
     }
 
-    let inject = format!(
-        r#"<style id="docx-styled-scroll">
-::-webkit-scrollbar {{ width: 8px !important; height: 8px !important; }}
-::-webkit-scrollbar-track {{ background: #070709 !important; }}
-::-webkit-scrollbar-thumb {{ background-color: #24242b !important; border-radius: 999px !important; border: 2px solid #070709 !important; min-height: 36px !important; }}
-::-webkit-scrollbar-thumb:hover {{ background-color: #3a3a45 !important; }}
-* {{ scrollbar-width: thin; scrollbar-color: #24242b #070709; }}
+    // Strip any legacy baked-in <style id="docx-styled-scroll">...</script> snippet from older docpacks
+    // so its unconditional dark-mode override never conflicts with runtime theme synchronization.
+    if let Some(old_idx) = html.find("<style id=\"docx-styled-scroll\">") {
+        if let Some(body_end) = html[old_idx..].find("</body>") {
+            html.replace_range(old_idx..(old_idx + body_end), "");
+        } else {
+            html.truncate(old_idx);
+        }
+    }
 
-html.docx-force-dark {{
+    let inject = r###"<style id="docx-styled-scroll">
+::-webkit-scrollbar { width: 8px !important; height: 8px !important; }
+::-webkit-scrollbar-track { background: #070709 !important; }
+::-webkit-scrollbar-thumb { background-color: #24242b !important; border-radius: 999px !important; border: 2px solid #070709 !important; min-height: 36px !important; }
+::-webkit-scrollbar-thumb:hover { background-color: #3a3a45 !important; }
+* { scrollbar-width: thin; scrollbar-color: #24242b #070709; }
+
+html.docx-force-dark {
   filter: invert(0.93) hue-rotate(180deg) !important;
   background-color: #ffffff !important;
   min-height: 100%;
-}}
-html.docx-force-dark body {{
+}
+html.docx-force-dark body {
   background-color: #ffffff !important;
-}}
+}
 html.docx-force-dark img,
 html.docx-force-dark video,
 html.docx-force-dark canvas,
 html.docx-force-dark picture,
-html.docx-force-dark [style*="background-image"] {{
+html.docx-force-dark [style*="background-image"] {
   filter: invert(1) hue-rotate(180deg) !important;
-}}
+}
+
+/* VitePress (Hono, Vue, Elysia, Vite, Pinia, etc.) interactive sidebar & menu rules */
+.VPSidebarItem.collapsible > .item { cursor: pointer !important; user-select: none; }
+.VPSidebarItem.collapsible.collapsed > .items { display: none !important; }
+.VPSidebarItem.collapsible:not(.collapsed) > .items { display: block !important; }
+.VPSidebarItem.collapsible > .item .caret { transition: transform 0.2s ease; }
+.VPSidebarItem.collapsible:not(.collapsed) > .item .caret { transform: rotate(90deg); }
+.vp-code-group .tabs label { cursor: pointer; }
+@media (max-width: 959px) {
+  .VPSidebar.open {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(0) !important;
+    transition: opacity 0.25s, transform 0.25s ease !important;
+    z-index: 100 !important;
+  }
+}
+
+/* Express.js sidebar triggers */
+[data-submenu-trigger], [data-back-button], [data-toggle-nested-button] {
+  cursor: pointer;
+}
 </style>
 <script id="docx-reader-bridge">
-(function(){{
-  var SITE_ID = "{}";
-  var SITE_ORIGIN = "{}";
-  if (SITE_ID === "cppreference") {{
-    try {{
+(function(){
+  var SITE_ID = "__DOCX_SITE_ID__";
+  var SITE_ORIGIN = "__DOCX_SITE_ORIGIN__";
+  if (SITE_ID === "cppreference") {
+    try {
       var interStyle = document.createElement("style");
       interStyle.id = "docx-cppref-inter";
       interStyle.textContent =
         "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');" +
         "html, body, #cpp-head-first, #cpp-head-second, #content, #mw-content-text, " +
         "p, div, span, a, li, td, th, h1, h2, h3, h4, h5, h6, input, select, button, " +
-        ".t-navbar, .t-nv, .t-nv-ln-table, .t-dsc, .t-par, .wikitable {{ " +
+        ".t-navbar, .t-nv, .t-nv-ln-table, .t-dsc, .t-par, .wikitable { " +
         "font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; " +
-        "-webkit-font-smoothing: antialiased !important; letter-spacing: -0.011em; }} " +
-        "code, pre, tt, kbd, samp, .mw-geshi, .mw-geshi *, .source-cpp, .source-cpp *, .source-c, .source-c *, .t-c, .t-c *, .t-lc, .t-lc * {{ " +
-        "font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', Consolas, monospace !important; letter-spacing: 0 !important; }}";
+        "-webkit-font-smoothing: antialiased !important; letter-spacing: -0.011em; } " +
+        "code, pre, tt, kbd, samp, .mw-geshi, .mw-geshi *, .source-cpp, .source-cpp *, .source-c, .source-c *, .t-c, .t-c *, .t-lc, .t-lc * { " +
+        "font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', Consolas, monospace !important; letter-spacing: 0 !important; }";
       (document.head || document.documentElement).appendChild(interStyle);
-    }} catch (e) {{}}
-  }}
-  var KNOWN_LIGHT_SITES = {{
+    } catch (e) {}
+  }
+
+  // Only sites that strictly have NO native dark theme use CSS filter inversion.
+  // Sites with native dark themes (Express, Hono, Vue, Tailwind, Shadcn, Django, FastAPI, Python, etc.)
+  // use their native theme system and synchronize two-way with the DOCX Dark/Light button.
+  var STRICT_LIGHT_ONLY_SITES = {
     cppreference: true,
     learncpp: true,
     lua: true,
@@ -461,129 +504,524 @@ html.docx-force-dark [style*="background-image"] {{
     llvm: true,
     boost: true,
     sqlite: true,
-    postgresql: true,
-    express: true
-  }};
+    postgresql: true
+  };
 
-  function isPageBackgroundLight() {{
-    try {{
-      var elems = [document.body, document.documentElement];
-      for (var i = 0; i < elems.length; i++) {{
-        var el = elems[i];
-        if (!el) continue;
-        var bg = window.getComputedStyle(el).backgroundColor || "";
-        var m = bg.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([0-9.]+))?\)/);
-        if (m) {{
-          var alpha = m[4] !== undefined ? parseFloat(m[4]) : 1;
-          if (alpha < 0.1) continue;
-          var r = parseInt(m[1], 10), g = parseInt(m[2], 10), b = parseInt(m[3], 10);
-          var lum = 0.299 * r + 0.587 * g + 0.114 * b;
-          return lum > 145;
-        }}
-      }}
-    }} catch (e) {{}}
-    return false;
-  }}
+  var isApplyingTheme = false;
 
-  function applyReaderSettings(zoomPct, darkEnabled) {{
-    try {{
+  function getSavedSiteDark() {
+    try {
+      var perSite = localStorage.getItem('docx_dark_' + SITE_ID);
+      if (perSite !== null) return perSite !== '0';
+      var globalVal = localStorage.getItem('docx_dark');
+      if (globalVal !== null) return globalVal !== '0';
+    } catch (e) {}
+    return true;
+  }
+
+  function applyReaderSettings(zoomPct, darkEnabled) {
+    isApplyingTheme = true;
+    try {
       var z = Math.max(60, Math.min(220, Number(zoomPct) || 100));
       document.documentElement.style.zoom = (z / 100).toString();
       localStorage.setItem('docx_zoom', String(z));
       localStorage.setItem('docx_dark', darkEnabled ? '1' : '0');
+      localStorage.setItem('docx_dark_' + SITE_ID, darkEnabled ? '1' : '0');
 
-      if (darkEnabled) {{
-        localStorage.setItem('theme', 'dark');
-        document.documentElement.classList.add('dark');
-        document.documentElement.setAttribute('data-theme', 'dark');
-        document.documentElement.style.colorScheme = 'dark';
-        if (KNOWN_LIGHT_SITES[SITE_ID] || isPageBackgroundLight()) {{
-          document.documentElement.classList.add('docx-force-dark');
-        }} else {{
-          document.documentElement.classList.remove('docx-force-dark');
-        }}
-      }} else {{
-        document.documentElement.classList.remove('docx-force-dark');
-        if (!KNOWN_LIGHT_SITES[SITE_ID]) {{
-          localStorage.setItem('theme', 'light');
-          document.documentElement.classList.remove('dark');
-          document.documentElement.setAttribute('data-theme', 'light');
-          document.documentElement.style.colorScheme = 'light';
-        }}
-      }}
-    }} catch (e) {{}}
-  }}
+      var root = document.documentElement;
+      if (STRICT_LIGHT_ONLY_SITES[SITE_ID]) {
+        root.classList.remove('dark');
+        root.removeAttribute('data-theme');
+        if (darkEnabled) {
+          root.classList.add('docx-force-dark');
+        } else {
+          root.classList.remove('docx-force-dark');
+        }
+      } else {
+        root.classList.remove('docx-force-dark');
+        var mode = darkEnabled ? 'dark' : 'light';
+        localStorage.setItem('theme', mode);
+        localStorage.setItem('vitepress-theme-appearance', mode);
+        localStorage.setItem('starlight-theme', mode);
+        localStorage.setItem('rustdoc-theme', mode);
+        root.classList.toggle('dark', !!darkEnabled);
+        root.classList.toggle('light', !darkEnabled);
+        root.setAttribute('data-theme', mode);
+        root.setAttribute('data-md-color-scheme', darkEnabled ? 'slate' : 'default');
+        root.style.colorScheme = mode;
+        var toggles = document.querySelectorAll('.theme-toggle, .VPSwitchAppearance');
+        for (var i = 0; i < toggles.length; i++) {
+          toggles[i].setAttribute('aria-checked', String(!!darkEnabled));
+        }
+      }
+    } catch (e) {}
+    setTimeout(function() { isApplyingTheme = false; }, 30);
+  }
 
-  try {{
+  // Observe native theme changes triggered by the site's own internal theme toggle button
+  function setupNativeThemeSync() {
+    if (STRICT_LIGHT_ONLY_SITES[SITE_ID]) return;
+    try {
+      var root = document.documentElement;
+      var observer = new MutationObserver(function(mutations) {
+        if (isApplyingTheme) return;
+        for (var i = 0; i < mutations.length; i++) {
+          var attr = mutations[i].attributeName;
+          if (attr === 'data-theme' || attr === 'class' || attr === 'data-md-color-scheme') {
+            var dt = root.getAttribute('data-theme');
+            var md = root.getAttribute('data-md-color-scheme');
+            var newDark = getSavedSiteDark();
+            if (attr === 'data-theme' && (dt === 'dark' || dt === 'light')) {
+              newDark = (dt === 'dark');
+            } else if (attr === 'data-md-color-scheme' && md) {
+              newDark = (md === 'slate' || md === 'dark');
+            } else if (attr === 'class') {
+              newDark = root.classList.contains('dark');
+            }
+            if (newDark !== getSavedSiteDark()) {
+              var z = parseInt(localStorage.getItem('docx_zoom') || '100', 10);
+              applyReaderSettings(z, newDark);
+              window.parent.postMessage({
+                type: 'DOCX_SITE_THEME_CHANGED',
+                siteId: SITE_ID,
+                darkMode: newDark
+              }, '*');
+            }
+            break;
+          }
+        }
+      });
+      observer.observe(root, { attributes: true, attributeFilter: ['data-theme', 'class', 'data-md-color-scheme'] });
+    } catch (e) {}
+  }
+
+  // Express.js interactive sidebar drawer & panel controller
+  function initExpressDocsUI() {
+    var sidebar = document.querySelector('[data-sidebar]');
+    if (!sidebar) return;
+    var navContainer = sidebar.querySelector('[data-nav-container]');
+    if (!navContainer || navContainer.hasAttribute('data-docx-bound')) return;
+    navContainer.setAttribute('data-docx-bound', 'true');
+
+    var panels = sidebar.querySelectorAll('.sidebar-nav-panel');
+    var triggers = sidebar.querySelectorAll('[data-submenu-trigger]');
+
+    function openExpressPanel(targetId, targetLevel) {
+      var foundPanel = null;
+      for (var i = 0; i < panels.length; i++) {
+        var p = panels[i];
+        if (p.getAttribute('data-parent-id') === targetId) {
+          foundPanel = p;
+          p.setAttribute('aria-hidden', 'false');
+          p.setAttribute('data-open', 'true');
+          p.removeAttribute('inert');
+          try { p.inert = false; } catch (e) {}
+        } else {
+          p.setAttribute('aria-hidden', 'true');
+          p.removeAttribute('data-open');
+          p.setAttribute('inert', '');
+          try { p.inert = true; } catch (e) {}
+        }
+      }
+      for (var j = 0; j < triggers.length; j++) {
+        var t = triggers[j];
+        t.setAttribute('aria-expanded', t.getAttribute('data-target-id') === targetId ? 'true' : 'false');
+      }
+      if (foundPanel) {
+        navContainer.setAttribute('data-current-nav-level', String(targetLevel || '1'));
+        sidebar.classList.add('sidebar--expanded');
+        document.documentElement.style.setProperty(
+          '--sidebar-expanded-width',
+          'calc(var(--sidebar-rail-width, 65px) + var(--sidebar-panel-width, 300px))'
+        );
+      }
+    }
+
+    function closeExpressPanels() {
+      for (var i = 0; i < panels.length; i++) {
+        var p = panels[i];
+        p.setAttribute('aria-hidden', 'true');
+        p.removeAttribute('data-open');
+        p.setAttribute('inert', '');
+        try { p.inert = true; } catch (e) {}
+      }
+      for (var j = 0; j < triggers.length; j++) {
+        triggers[j].setAttribute('aria-expanded', 'false');
+      }
+      navContainer.setAttribute('data-current-nav-level', '0');
+      sidebar.classList.remove('sidebar--expanded');
+      document.documentElement.style.setProperty('--sidebar-expanded-width', '0px');
+    }
+
+    sidebar.addEventListener('click', function(e) {
+      var trigger = e.target.closest ? e.target.closest('[data-submenu-trigger]') : null;
+      if (trigger) {
+        e.preventDefault();
+        e.stopPropagation();
+        var targetId = trigger.getAttribute('data-target-id');
+        var targetLevel = trigger.getAttribute('data-target-level') || '1';
+        var activePanel = sidebar.querySelector('.sidebar-nav-panel[data-open="true"]');
+        if (activePanel && activePanel.getAttribute('data-parent-id') === targetId && navContainer.getAttribute('data-current-nav-level') !== '0') {
+          closeExpressPanels();
+        } else if (targetId) {
+          openExpressPanel(targetId, targetLevel);
+        }
+        return;
+      }
+
+      var backBtn = e.target.closest ? e.target.closest('[data-back-button]') : null;
+      if (backBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        closeExpressPanels();
+        return;
+      }
+
+      var toggleNestedBtn = e.target.closest ? e.target.closest('[data-toggle-nested-button]') : null;
+      if (toggleNestedBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        var panel = toggleNestedBtn.closest('.sidebar-nav-panel') || sidebar.querySelector('.sidebar-nav-panel[data-open="true"]');
+        if (panel) {
+          var detailsList = panel.querySelectorAll('details.submenu-item');
+          var anyClosed = false;
+          for (var k = 0; k < detailsList.length; k++) {
+            if (!detailsList[k].open) { anyClosed = true; break; }
+          }
+          for (var m = 0; m < detailsList.length; m++) {
+            detailsList[m].open = anyClosed;
+          }
+          toggleNestedBtn.setAttribute('aria-expanded', String(anyClosed));
+        }
+        return;
+      }
+    });
+
+    // Version switcher in Express API panel
+    var versionSelects = sidebar.querySelectorAll('[data-version-switcher]');
+    for (var v = 0; v < versionSelects.length; v++) {
+      versionSelects[v].addEventListener('change', function(e) {
+        var ver = e.target.value;
+        if (ver) window.location.href = '/en/' + ver + '/api.html';
+      });
+    }
+
+    // Mobile/tablet menu toggle button
+    var menuButtons = document.querySelectorAll('[data-menu-toggle], #menu-toggle, .menu-toggle');
+    for (var mb = 0; mb < menuButtons.length; mb++) {
+      menuButtons[mb].addEventListener('click', function(e) {
+        e.preventDefault();
+        var isOpen = sidebar.getAttribute('data-mobile-open') === 'true';
+        sidebar.setAttribute('data-mobile-open', String(!isOpen));
+        sidebar.classList.toggle('sidebar--open', !isOpen);
+        document.body.classList.toggle('sidebar-open', !isOpen);
+      });
+    }
+
+    // Search trigger button in Express header/sidebar
+    var searchBtns = document.querySelectorAll('.search-trigger, [data-search-trigger]');
+    for (var sb = 0; sb < searchBtns.length; sb++) {
+      searchBtns[sb].addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        window.parent.postMessage({ type: 'OPEN_UNIVERSAL_SEARCH' }, '*');
+      });
+    }
+
+    // Highlight active link & auto-open matching panel (or open Docs drawer when user clicks Docs)
+    var curPath = window.location.pathname.replace(/\/$/, '') || '/';
+    var matchedPanelId = null;
+    var allLinks = sidebar.querySelectorAll('.sidebar-nav-panel a[href]');
+    for (var l = 0; l < allLinks.length; l++) {
+      var link = allLinks[l];
+      var rawHref = (link.getAttribute('href') || '').split('#')[0].replace(/\/$/, '');
+      if (rawHref && (rawHref === curPath || rawHref === curPath + '.html' || curPath === rawHref + '.html')) {
+        link.setAttribute('aria-current', 'page');
+        var parentDetails = link.closest('details.submenu-item');
+        while (parentDetails) {
+          parentDetails.open = true;
+          parentDetails = parentDetails.parentElement ? parentDetails.parentElement.closest('details.submenu-item') : null;
+        }
+        var parentPanel = link.closest('.sidebar-nav-panel');
+        if (parentPanel) {
+          matchedPanelId = parentPanel.getAttribute('data-parent-id');
+        }
+      }
+    }
+    if (matchedPanelId) {
+      openExpressPanel(matchedPanelId, '1');
+    }
+  }
+
+  // VitePress (Hono, Vue, Elysia, Vite, etc.) interactive sidebar, accordion, menu, code tabs & theme switch controller
+  function initVitePressDocsUI() {
+    var vpSidebar = document.querySelector('.VPSidebar');
+    var vpLayout = document.querySelector('.VPLayout, #VPContent');
+    if (!vpSidebar && !vpLayout) return;
+    if (document.documentElement.hasAttribute('data-docx-vp-bound')) return;
+    document.documentElement.setAttribute('data-docx-vp-bound', 'true');
+
+    // 1. Expand active sidebar section(s) based on current URL, and expand top sections on root /docs
+    if (vpSidebar) {
+      var normPath = function(p) {
+        return (p || '').split('#')[0].split('?')[0].replace(/\.html$/, '').replace(/\/$/, '') || '/';
+      };
+      var currentPath = normPath(window.location.pathname);
+      var links = vpSidebar.querySelectorAll('a.VPLink[href]');
+      var anyExpanded = false;
+      for (var i = 0; i < links.length; i++) {
+        var a = links[i];
+        var hrefPath = normPath(a.getAttribute('href'));
+        if (hrefPath === currentPath) {
+          var itemWrap = a.closest('.VPSidebarItem');
+          if (itemWrap) itemWrap.classList.add('is-active');
+          var parentCollapsible = a.closest('.VPSidebarItem.collapsible');
+          while (parentCollapsible) {
+            parentCollapsible.classList.remove('collapsed');
+            anyExpanded = true;
+            parentCollapsible = parentCollapsible.parentElement
+              ? parentCollapsible.parentElement.closest('.VPSidebarItem.collapsible')
+              : null;
+          }
+        }
+      }
+      if (!anyExpanded) {
+        var topCollapsibles = vpSidebar.querySelectorAll('.VPSidebarItem.level-0.collapsible');
+        for (var c = 0; c < Math.min(2, topCollapsibles.length); c++) {
+          topCollapsibles[c].classList.remove('collapsed');
+        }
+      }
+    }
+
+    // 2. Populate right-side "On this page" outline if empty
+    var outlineRoot = document.querySelector('.VPDocAsideOutline .VPDocOutlineItem.root');
+    var outlineWrap = document.querySelector('.VPDocAsideOutline');
+    if (outlineRoot && outlineWrap && outlineRoot.children.length === 0) {
+      var headings = document.querySelectorAll('.vp-doc h2[id], .vp-doc h3[id]');
+      if (headings.length > 0) {
+        outlineWrap.classList.add('has-outline');
+        var htmlItems = [];
+        for (var h = 0; h < headings.length; h++) {
+          var hd = headings[h];
+          var id = hd.getAttribute('id');
+          var text = (hd.textContent || '').replace(/#/g, '').trim();
+          if (!id || !text) continue;
+          var indent = hd.tagName === 'H3' ? ' style="padding-left:12px;"' : '';
+          htmlItems.push('<li' + indent + '><a class="outline-link" href="#' + id + '">' + text + '</a></li>');
+        }
+        outlineRoot.innerHTML = htmlItems.join('');
+      }
+    }
+
+    // 3. Delegate clicks for accordions, mobile Menu button, code group tabs, copy code button, search, and theme switch
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      if (!target || !target.closest) return;
+
+      // VitePress Sidebar collapsible accordion toggle
+      var caret = target.closest('.VPSidebarItem.collapsible > .item .caret');
+      var headerItem = target.closest('.VPSidebarItem.collapsible > .item');
+      if (caret || (headerItem && !target.closest('a[href]'))) {
+        var section = (caret || headerItem).closest('.VPSidebarItem.collapsible');
+        if (section) {
+          e.preventDefault();
+          e.stopPropagation();
+          section.classList.toggle('collapsed');
+          return;
+        }
+      }
+
+      // VitePress LocalNav "Menu" button & top Navbar Hamburger button
+      var menuBtn = target.closest('.VPLocalNav .menu, .VPNavBarHamburger');
+      if (menuBtn && vpSidebar) {
+        e.preventDefault();
+        e.stopPropagation();
+        var isOpen = vpSidebar.classList.toggle('open');
+        menuBtn.setAttribute('aria-expanded', String(isOpen));
+        return;
+      }
+
+      // Close mobile sidebar when clicking backdrop or a sidebar link on mobile
+      if (vpSidebar && vpSidebar.classList.contains('open')) {
+        if (target.closest('.VPBackdrop') || target.closest('.VPSidebar a.VPLink[href]')) {
+          vpSidebar.classList.remove('open');
+        }
+      }
+
+      // VitePress "Return to top" button in LocalNav
+      var topBtn = target.closest('.VPLocalNavOutlineDropdown button, .top-link');
+      if (topBtn && (topBtn.textContent || '').toLowerCase().indexOf('return to top') !== -1) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+
+      // VitePress code-group tabs (.vp-code-group .tabs label)
+      var tabLabel = target.closest('.vp-code-group .tabs label');
+      if (tabLabel) {
+        var group = tabLabel.closest('.vp-code-group');
+        if (group) {
+          var labels = group.querySelectorAll('.tabs label');
+          var blocks = group.querySelectorAll('.blocks > div');
+          var idx = Array.prototype.indexOf.call(labels, tabLabel);
+          if (idx !== -1) {
+            for (var b = 0; b < blocks.length; b++) {
+              blocks[b].classList.toggle('active', b === idx);
+            }
+          }
+        }
+        return;
+      }
+
+      // VitePress copy code button
+      var copyBtn = target.closest('div[class*="language-"] > button.copy');
+      if (copyBtn && copyBtn.parentElement) {
+        var codeEl = copyBtn.parentElement.querySelector('pre code');
+        if (codeEl && navigator.clipboard) {
+          navigator.clipboard.writeText(codeEl.textContent || '').catch(function(){});
+          copyBtn.classList.add('copied');
+          setTimeout(function() { copyBtn.classList.remove('copied'); }, 2000);
+        }
+        return;
+      }
+
+      // VitePress DocSearch button -> open DOCX Universal Search
+      var searchBtn = target.closest('.DocSearch-Button, # local-search button');
+      if (searchBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        window.parent.postMessage({ type: 'OPEN_UNIVERSAL_SEARCH' }, '*');
+        return;
+      }
+
+      // VitePress Appearance Switch (.VPSwitchAppearance) -> toggle native dark mode & sync with DOCX
+      var themeBtn = target.closest('.VPSwitchAppearance');
+      if (themeBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        var nextDark = !document.documentElement.classList.contains('dark');
+        var curZoom = parseInt(localStorage.getItem('docx_zoom') || '100', 10);
+        applyReaderSettings(curZoom, nextDark);
+        window.parent.postMessage({
+          type: 'DOCX_SITE_THEME_CHANGED',
+          siteId: SITE_ID,
+          darkMode: nextDark
+        }, '*');
+        return;
+      }
+    }, true);
+  }
+
+  function initAllInteractiveControllers() {
+    initExpressDocsUI();
+    initVitePressDocsUI();
+    setupNativeThemeSync();
+    if (window.location.hash && window.location.hash.length > 1) {
+      try {
+        var targetId = decodeURIComponent(window.location.hash.slice(1));
+        var el = document.getElementById(targetId) || document.getElementsByName(targetId)[0];
+        if (el) el.scrollIntoView();
+      } catch (e) {}
+    }
+  }
+
+  try {
     var savedZoom = parseInt(localStorage.getItem('docx_zoom') || '100', 10);
-    var savedDark = localStorage.getItem('docx_dark') !== '0';
+    var savedDark = getSavedSiteDark();
     applyReaderSettings(savedZoom, savedDark);
-    window.addEventListener('DOMContentLoaded', function() {{
+    if (document.readyState === 'loading') {
+      window.addEventListener('DOMContentLoaded', function() {
+        applyReaderSettings(
+          parseInt(localStorage.getItem('docx_zoom') || '100', 10),
+          getSavedSiteDark()
+        );
+        initAllInteractiveControllers();
+        window.parent.postMessage({ type: 'DOCX_IFRAME_READY', siteId: SITE_ID }, '*');
+      });
+    } else {
+      initAllInteractiveControllers();
+      window.parent.postMessage({ type: 'DOCX_IFRAME_READY', siteId: SITE_ID }, '*');
+    }
+    window.addEventListener('load', function() {
       applyReaderSettings(
         parseInt(localStorage.getItem('docx_zoom') || '100', 10),
-        localStorage.getItem('docx_dark') !== '0'
+        getSavedSiteDark()
       );
-      window.parent.postMessage({{ type: 'DOCX_IFRAME_READY', siteId: SITE_ID }}, '*');
-    }});
-    window.addEventListener('load', function() {{
-      applyReaderSettings(
-        parseInt(localStorage.getItem('docx_zoom') || '100', 10),
-        localStorage.getItem('docx_dark') !== '0'
-      );
-      window.parent.postMessage({{ type: 'DOCX_IFRAME_READY', siteId: SITE_ID }}, '*');
-    }});
-  }} catch (e) {{}}
+      initAllInteractiveControllers();
+      window.parent.postMessage({ type: 'DOCX_IFRAME_READY', siteId: SITE_ID }, '*');
+    });
+  } catch (e) {}
 
-  window.addEventListener('message', function(e) {{
+  window.addEventListener('message', function(e) {
     if (!e.data || e.data.type !== 'DOCX_READER_SETTINGS') return;
+    if (e.data.siteId && e.data.siteId !== SITE_ID) {
+      // Only apply zoom if message was targeted to another site's dark mode
+      applyReaderSettings(e.data.zoom, getSavedSiteDark());
+      return;
+    }
     applyReaderSettings(e.data.zoom, e.data.darkMode);
-  }});
+  });
 
-  window.addEventListener('keydown', function(e){{
-    if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k'){{
+  window.addEventListener('keydown', function(e){
+    if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k'){
       e.preventDefault(); e.stopPropagation();
-      window.parent.postMessage({{ type: 'OPEN_UNIVERSAL_SEARCH' }}, '*');
-    }} else if ((e.ctrlKey || e.metaKey) && (e.key === '=' || e.key === '+')) {{
+      window.parent.postMessage({ type: 'OPEN_UNIVERSAL_SEARCH' }, '*');
+    } else if ((e.ctrlKey || e.metaKey) && (e.key === '=' || e.key === '+')) {
       e.preventDefault(); e.stopPropagation();
-      window.parent.postMessage({{ type: 'DOCX_ZOOM_DELTA', delta: 10 }}, '*');
-    }} else if ((e.ctrlKey || e.metaKey) && e.key === '-') {{
+      window.parent.postMessage({ type: 'DOCX_ZOOM_DELTA', delta: 10 }, '*');
+    } else if ((e.ctrlKey || e.metaKey) && (e.key === '-') ) {
       e.preventDefault(); e.stopPropagation();
-      window.parent.postMessage({{ type: 'DOCX_ZOOM_DELTA', delta: -10 }}, '*');
-    }} else if ((e.ctrlKey || e.metaKey) && e.key === '0') {{
+      window.parent.postMessage({ type: 'DOCX_ZOOM_DELTA', delta: -10 }, '*');
+    } else if ((e.ctrlKey || e.metaKey) && e.key === '0') {
       e.preventDefault(); e.stopPropagation();
-      window.parent.postMessage({{ type: 'DOCX_ZOOM_RESET' }}, '*');
-    }}
-  }}, true);
+      window.parent.postMessage({ type: 'DOCX_ZOOM_RESET' }, '*');
+    }
+  }, true);
   var lastL = 0, lastT = 0;
-  window.addEventListener('mousemove', function(e){{
+  window.addEventListener('mousemove', function(e){
     var now = Date.now();
-    if (e.clientX <= 18 && now - lastL > 120) {{ lastL = now; window.parent.postMessage({{ type: 'HOVER_LEFT_EDGE' }}, '*'); }}
-    if (e.clientY <= 10 && now - lastT > 120) {{ lastT = now; window.parent.postMessage({{ type: 'HOVER_TOP_EDGE' }}, '*'); }}
-  }}, {{ passive: true }});
-  window.addEventListener('mousedown', function(){{
-    window.parent.postMessage({{ type: 'IFRAME_INTERACT' }}, '*');
-  }}, {{ passive: true }});
-  if (SITE_ID === 'threejs' && !window.location.hash && window.location.pathname.indexOf('pages/') === -1) {{
+    if (e.clientX <= 18 && now - lastL > 120) { lastL = now; window.parent.postMessage({ type: 'HOVER_LEFT_EDGE' }, '*'); }
+    if (e.clientY <= 10 && now - lastT > 120) { lastT = now; window.parent.postMessage({ type: 'HOVER_TOP_EDGE' }, '*'); }
+  }, { passive: true });
+  window.addEventListener('mousedown', function(){
+    window.parent.postMessage({ type: 'IFRAME_INTERACT' }, '*');
+  }, { passive: true });
+  if (SITE_ID === 'threejs' && !window.location.hash && window.location.pathname.indexOf('pages/') === -1) {
     window.location.hash = 'Scene';
-  }}
-  document.addEventListener('click', function(e){{
+  }
+  document.addEventListener('click', function(e){
     var a = e.target && e.target.closest ? e.target.closest('a') : null;
     if(!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     if(SITE_ID === 'threejs' || SITE_ID === 'nestjs' || SITE_ID === 'angular') return;
     var href = a.getAttribute('href');
-    if(!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('javascript:') || a.hasAttribute('target')) return;
-    try {{
+    if(!href || href.startsWith('mailto:') || href.startsWith('javascript:') || a.hasAttribute('target')) return;
+    if(href.startsWith('#')) {
+      if(href.length > 1) {
+        try {
+          var targetId = decodeURIComponent(href.slice(1));
+          var targetEl = document.getElementById(targetId) || document.getElementsByName(targetId)[0];
+          if (targetEl) {
+            e.preventDefault();
+            e.stopPropagation();
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            history.replaceState(null, '', href);
+          }
+        } catch(err) {}
+      }
+      return;
+    }
+    try {
       var resolved = new URL(href, window.location.href);
-      if (resolved.origin === window.location.origin || (SITE_ORIGIN && resolved.origin === SITE_ORIGIN)) {{
+      if (resolved.origin === window.location.origin || (SITE_ORIGIN && resolved.origin === SITE_ORIGIN)) {
         e.preventDefault(); e.stopPropagation();
         window.location.href = resolved.pathname + resolved.search + resolved.hash;
-      }}
-    }} catch(err) {{}}
-  }}, false);
-}})();
-</script>"#,
-        site_id, origin
-    );
+      }
+    } catch(err) {}
+  }, false);
+})();
+</script>"###
+        .replace("__DOCX_SITE_ID__", site_id)
+        .replace("__DOCX_SITE_ORIGIN__", &origin);
 
     if let Some(pos) = html.rfind("</body>") {
         html.insert_str(pos, &inject);

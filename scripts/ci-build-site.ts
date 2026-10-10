@@ -515,65 +515,10 @@ export const SITE_CATALOG: SiteConfig[] = [
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 
-function getInjectedSnippet(origin: string): string {
-  return `<style id="docx-styled-scroll">
-::-webkit-scrollbar { width: 8px !important; height: 8px !important; }
-::-webkit-scrollbar-track { background: #070709 !important; }
-::-webkit-scrollbar-thumb { background-color: #24242b !important; border-radius: 999px !important; border: 2px solid #070709 !important; min-height: 36px !important; }
-::-webkit-scrollbar-thumb:hover { background-color: #3a3a45 !important; }
-* { scrollbar-width: thin; scrollbar-color: #24242b #070709; }
-</style>
-<script>
-(function(){
-  var SITE_ORIGIN = ${JSON.stringify(origin)};
-  try {
-    if (!localStorage.getItem('theme')) localStorage.setItem('theme', 'dark');
-    if (!localStorage.getItem('vitepress-theme-appearance')) localStorage.setItem('vitepress-theme-appearance', 'dark');
-    if (!localStorage.getItem('starlight-theme')) localStorage.setItem('starlight-theme', 'dark');
-    document.documentElement.classList.add('dark');
-    document.documentElement.setAttribute('data-theme', 'dark');
-    document.documentElement.style.colorScheme = 'dark';
-  } catch (e) {}
-
-  window.addEventListener('keydown', function(e){
-    if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k'){
-      e.preventDefault();
-      e.stopPropagation();
-      window.parent.postMessage({ type: 'OPEN_UNIVERSAL_SEARCH' }, '*');
-    }
-  }, true);
-
-  var lastL = 0, lastT = 0;
-  window.addEventListener('mousemove', function(e){
-    var now = Date.now();
-    if (e.clientX <= 18 && now - lastL > 120) { lastL = now; window.parent.postMessage({ type: 'HOVER_LEFT_EDGE' }, '*'); }
-    if (e.clientY <= 10 && now - lastT > 120) { lastT = now; window.parent.postMessage({ type: 'HOVER_TOP_EDGE' }, '*'); }
-  }, { passive: true });
-
-  window.addEventListener('mousedown', function(){
-    window.parent.postMessage({ type: 'IFRAME_INTERACT' }, '*');
-  }, { passive: true });
-
-  if (SITE_ORIGIN.indexOf('threejs.org') !== -1 && !window.location.hash && window.location.pathname.indexOf('pages/') === -1) {
-    window.location.hash = '#Scene';
-  }
-  document.addEventListener('click', function(e){
-    var a = e.target && e.target.closest ? e.target.closest('a') : null;
-    if(!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-    if(SITE_ORIGIN.indexOf('threejs.org') !== -1 || SITE_ORIGIN.indexOf('nestjs.com') !== -1 || SITE_ORIGIN.indexOf('angular.io') !== -1) return;
-    var href = a.getAttribute('href');
-    if(!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('javascript:') || a.hasAttribute('target')) return;
-    try {
-      var resolved = new URL(href, window.location.href);
-      if (resolved.origin === window.location.origin || resolved.origin === SITE_ORIGIN) {
-        e.preventDefault();
-        e.stopPropagation();
-        window.location.href = resolved.pathname + resolved.search + resolved.hash;
-      }
-    } catch(err) {}
-  }, false);
-})();
-</script>`;
+function getInjectedSnippet(_origin: string): string {
+  // Runtime scrollbar, interactive UI controllers, and per-site dark/light sync
+  // are injected dynamically by inject_reader_bridge in lib.rs.
+  return "";
 }
 
 function guessMime(urlPath: string, contentTypeHeader?: string | null): string {
@@ -727,18 +672,20 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
           } catch {}
         }
 
-        // Discover and rewrite stylesheets <link rel="stylesheet" href="...">
+        // Discover and rewrite stylesheets <link rel="stylesheet"|"preload stylesheet" href="...">
         html = html.replace(
           /(<link\b[^>]*?\bhref=["'])([^"']+)(["'][^>]*>)/gi,
           (fullTag, prefix, rawHref, suffix) => {
-            if (!/rel=["']?(?:stylesheet|icon|shortcut icon)/i.test(fullTag)) {
+            if (!/\brel=["'][^"']*(?:stylesheet|icon)\b/i.test(fullTag)) {
               return fullTag;
             }
             try {
               const resolved = new URL(rawHref.replace(/&amp;/g, "&"), pageUrl.href);
               const localRoute = assetUrlToLocalRoute(resolved.href, site.origin);
               pendingAssetUrls.set(resolved.href, localRoute);
-              return `${prefix}${localRoute}${suffix}`;
+              const cleanPrefix = prefix.replace(/rel=["']preload stylesheet["']/i, 'rel="stylesheet"');
+              const cleanSuffix = suffix.replace(/rel=["']preload stylesheet["']/i, 'rel="stylesheet"');
+              return `${cleanPrefix}${localRoute}${cleanSuffix}`;
             } catch {
               return fullTag;
             }

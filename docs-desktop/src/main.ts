@@ -120,6 +120,14 @@ let readerZoom = Math.max(
   Math.min(220, parseInt(localStorage.getItem("docx_reader_zoom") || "100", 10) || 100)
 );
 let readerDarkMode = localStorage.getItem("docx_reader_dark") !== "0";
+let readerDarkBySite: Record<string, boolean> = (() => {
+  try {
+    const raw = localStorage.getItem("docx_reader_dark_by_site");
+    return raw ? JSON.parse(raw) : {};
+  } catch {
+    return {};
+  }
+})();
 
 let installedPacksCache: PackStatusInfo[] = [];
 let remoteRegistryCache: RemoteRegistryItem[] = [];
@@ -258,6 +266,46 @@ async function init() {
   setInterval(checkServerHealth, 3000);
 }
 
+function getSiteDarkMode(siteId: string): boolean {
+  if (!siteId || siteId === "home") return readerDarkMode;
+  if (typeof readerDarkBySite[siteId] === "boolean") {
+    return readerDarkBySite[siteId];
+  }
+  return readerDarkMode;
+}
+
+function setSiteDarkMode(siteId: string, dark: boolean, broadcast = true) {
+  if (!siteId || siteId === "home") {
+    readerDarkMode = dark;
+    try {
+      localStorage.setItem("docx_reader_dark", readerDarkMode ? "1" : "0");
+    } catch {}
+  } else {
+    readerDarkBySite[siteId] = dark;
+    try {
+      localStorage.setItem("docx_reader_dark_by_site", JSON.stringify(readerDarkBySite));
+    } catch {}
+  }
+  if (broadcast) {
+    syncReaderSettingsToAllIframes();
+  } else {
+    updateTopbarDarkButtonUI();
+  }
+}
+
+function updateTopbarDarkButtonUI() {
+  const activeDark = getSiteDarkMode(activeTab);
+  if (btnToggleDarkSite) {
+    btnToggleDarkSite.classList.toggle("active", activeDark);
+  }
+  if (darkSiteIcon) {
+    darkSiteIcon.textContent = activeDark ? "🌙" : "☀️";
+  }
+  if (darkSiteLabel) {
+    darkSiteLabel.textContent = activeDark ? "Dark" : "Light";
+  }
+}
+
 function setReaderZoom(nextZoom: number) {
   readerZoom = Math.max(60, Math.min(220, Math.round(nextZoom / 5) * 5));
   try {
@@ -267,40 +315,40 @@ function setReaderZoom(nextZoom: number) {
 }
 
 function toggleReaderDarkMode() {
-  readerDarkMode = !readerDarkMode;
-  try {
-    localStorage.setItem("docx_reader_dark", readerDarkMode ? "1" : "0");
-  } catch {}
-  syncReaderSettingsToAllIframes();
+  const targetSite = activeTab;
+  const nextDark = !getSiteDarkMode(targetSite);
+  setSiteDarkMode(targetSite, nextDark, true);
 }
 
 function syncReaderSettingsToAllIframes() {
   if (btnZoomReset) {
     btnZoomReset.textContent = `${readerZoom}%`;
   }
-  if (btnToggleDarkSite) {
-    btnToggleDarkSite.classList.toggle("active", readerDarkMode);
-  }
-  if (darkSiteIcon) {
-    darkSiteIcon.textContent = readerDarkMode ? "🌙" : "☀️";
-  }
-  if (darkSiteLabel) {
-    darkSiteLabel.textContent = readerDarkMode ? "Dark" : "Light";
-  }
+  updateTopbarDarkButtonUI();
   if (viewHome) {
     (viewHome.style as any).zoom = `${readerZoom / 100}`;
   }
 
-  const msg = {
-    type: "DOCX_READER_SETTINGS",
-    zoom: readerZoom,
-    darkMode: readerDarkMode,
-  };
-  [iframeTailwind, iframeShadcn, iframeDynamic].forEach((frame) => {
+  const sendToFrame = (frame: HTMLIFrameElement | null, siteId: string) => {
+    if (!frame || !siteId || siteId === "home") return;
     try {
-      frame?.contentWindow?.postMessage(msg, "*");
+      frame.contentWindow?.postMessage(
+        {
+          type: "DOCX_READER_SETTINGS",
+          siteId,
+          zoom: readerZoom,
+          darkMode: getSiteDarkMode(siteId),
+        },
+        "*"
+      );
     } catch {}
-  });
+  };
+
+  sendToFrame(iframeTailwind, "tailwind");
+  sendToFrame(iframeShadcn, "shadcn");
+  if (activeTab !== "home" && activeTab !== "tailwind" && activeTab !== "shadcn") {
+    sendToFrame(iframeDynamic, activeTab);
+  }
 }
 
 function setupDownloadProgressListener() {
@@ -1049,6 +1097,7 @@ async function refreshExtraSearchEntries() {
 // Tab / Server Switching
 async function switchTab(tab: string, targetPathOrUrl?: string) {
   activeTab = tab;
+  updateTopbarDarkButtonUI();
 
   const sites = buildUnifiedSitesList();
   renderServerRail(sites);
@@ -1424,6 +1473,10 @@ function setupEventListeners() {
       }
     } else if (e.data.type === "DOCX_IFRAME_READY") {
       syncReaderSettingsToAllIframes();
+    } else if (e.data.type === "DOCX_SITE_THEME_CHANGED") {
+      if (e.data.siteId) {
+        setSiteDarkMode(String(e.data.siteId), Boolean(e.data.darkMode), false);
+      }
     } else if (e.data.type === "DOCX_ZOOM_DELTA") {
       setReaderZoom(readerZoom + (Number(e.data.delta) || 0));
     } else if (e.data.type === "DOCX_ZOOM_RESET") {
