@@ -1458,27 +1458,40 @@ fn bundle_into_single_exe(state: tauri::State<'_, AppState>) -> Result<String, S
     exe_bytes.extend_from_slice(&trailer_len.to_le_bytes());
     exe_bytes.extend_from_slice(TRAILER_MAGIC);
 
-    let out_path = PathBuf::from("C:/Users/vahid/OneDrive/Desktop/Docx.exe");
-    let tmp_path = PathBuf::from("C:/Users/vahid/OneDrive/Desktop/Docx.new.exe");
+    let temp_dir = std::env::temp_dir();
+    let tmp_path = temp_dir.join("Docx_bundle_staged.exe");
     fs::write(&tmp_path, &exe_bytes).map_err(|e| e.to_string())?;
 
-    let old_backup = PathBuf::from("C:/Users/vahid/OneDrive/Desktop/Docx.old.exe");
-    let _ = fs::remove_file(&old_backup);
-    if fs::rename(&out_path, &old_backup).is_ok() {
-        let _ = fs::rename(&tmp_path, &out_path);
-        let _ = fs::remove_file(&old_backup);
-        Ok(format!(
+    let out_path = PathBuf::from("C:/Users/vahid/OneDrive/Desktop/Docx.exe");
+    let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.old.exe");
+    let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.new.exe");
+
+    if fs::copy(&tmp_path, &out_path).is_ok() {
+        let _ = fs::remove_file(&tmp_path);
+        return Ok(format!(
             "Updated standalone Desktop\\Docx.exe in-place with {} embedded packs ({:.2} MB total)!",
             guard.len(),
             exe_bytes.len() as f64 / (1024.0 * 1024.0)
-        ))
-    } else {
-        Ok(format!(
-            "Exported standalone Desktop\\Docx.new.exe ({:.2} MB) with {} embedded packs!",
-            exe_bytes.len() as f64 / (1024.0 * 1024.0),
-            guard.len()
-        ))
+        ));
     }
+
+    let temp_old = temp_dir.join(format!("Docx_prev_{}.tmp", std::process::id()));
+    let _ = fs::remove_file(&temp_old);
+    if fs::rename(&out_path, &temp_old).is_ok() {
+        if fs::copy(&tmp_path, &out_path).is_ok() {
+            let _ = fs::remove_file(&tmp_path);
+            let _ = fs::remove_file(&temp_old);
+            return Ok(format!(
+                "Updated standalone Desktop\\Docx.exe in-place with {} embedded packs ({:.2} MB total)!",
+                guard.len(),
+                exe_bytes.len() as f64 / (1024.0 * 1024.0)
+            ));
+        } else {
+            let _ = fs::rename(&temp_old, &out_path);
+        }
+    }
+
+    Err("Could not overwrite Desktop\\Docx.exe while locked.".to_string())
 }
 
 #[derive(serde::Deserialize, serde::Serialize, Clone)]
@@ -1505,28 +1518,64 @@ pub struct AppUpdateStatus {
     pub coreSizeMb: f64,
 }
 
+fn commits_match(a: &str, b: &str) -> bool {
+    let a = a.trim();
+    let b = b.trim();
+    !a.is_empty() && !b.is_empty() && (a.starts_with(b) || b.starts_with(a))
+}
+
+fn read_saved_local_app_commit() -> Option<String> {
+    let candidates = [
+        std::env::temp_dir().join("docx_app_manifest.local.json"),
+        get_packs_dir().join("app-manifest.local.json"),
+    ];
+    for path in &candidates {
+        if let Ok(bytes) = fs::read(path) {
+            if let Ok(manifest) = serde_json::from_slice::<AppManifestRemote>(&bytes) {
+                if !manifest.commit.trim().is_empty() {
+                    return Some(manifest.commit);
+                }
+            }
+        }
+    }
+    None
+}
+
 #[tauri::command]
 fn check_app_update() -> Result<AppUpdateStatus, String> {
     let url = format!("{}/app-manifest.json", RELEASE_BASE_URL);
     let bytes = curl_get_bytes(&url, None)?;
     let rem: AppManifestRemote = serde_json::from_slice(&bytes).map_err(|e| e.to_string())?;
-    let local_commit = APP_BUILD_COMMIT.to_string();
-    let update_available = !rem.commit.is_empty()
-        && local_commit != "local"
-        && !rem.commit.starts_with(&local_commit)
-        && !local_commit.starts_with(&rem.commit);
+    let compiled_commit = APP_BUILD_COMMIT.to_string();
+    let saved_commit = read_saved_local_app_commit().unwrap_or_default();
+
+    let is_up_to_date = rem.commit.is_empty()
+        || compiled_commit == "local"
+        || commits_match(&compiled_commit, &rem.commit)
+        || commits_match(&saved_commit, &rem.commit);
+
+    let effective_local = if is_up_to_date && !rem.commit.is_empty() {
+        rem.commit.clone()
+    } else if !saved_commit.is_empty() {
+        saved_commit
+    } else {
+        compiled_commit
+    };
+
     Ok(AppUpdateStatus {
-        localCommit: local_commit,
+        localCommit: effective_local,
         remoteCommit: rem.commit,
         version: rem.version,
-        updateAvailable: update_available,
-        coreSizeMb: ((rem.coreSizeBytes as f64 / (1024.0 * 1024.0)) * 100.0).round() / 100.0,
+        updateAvailable: !is_up_to_date,
+        coreSizeMb: ((rem.coreSizeBytes.max(4_000_000) as f64 / (1024.0 * 1024.0)) * 100.0).round()
+            / 100.0,
     })
 }
 
-/// Downloads ONLY Docx-core.exe (~8 MB) from GitHub Releases, splices the existing DOCXPACK
-/// documentation trailer from the current executable onto it (so zero documentation bytes are
-/// re-downloaded!), swaps the running executable in-place, and restarts!
+/// Downloads ONLY Docx-core.exe (~4 MB) from GitHub Releases into %TEMP%, splices the existing
+/// DOCXPACK documentation trailer from the current executable onto it (so zero documentation bytes
+/// are re-downloaded!), replaces Docx.exe in-place without creating Docx.old.exe on Desktop,
+/// and automatically restarts Docx.exe!
 #[tauri::command]
 async fn self_update_app(
     window: tauri::Window,
@@ -1534,15 +1583,33 @@ async fn self_update_app(
 ) -> Result<String, String> {
     let store = Arc::clone(&state.store);
     tauri::async_runtime::spawn_blocking(move || {
+        use std::os::windows::process::CommandExt;
         use tauri::Emitter;
-        let core_url = format!("{}/Docx-core.exe", RELEASE_BASE_URL);
-        let exe_path = std::env::current_exe().map_err(|e| e.to_string())?;
-        let tmp_core_path = exe_path.with_extension("core.tmp");
 
+        let exe_path = std::env::current_exe().map_err(|e| e.to_string())?;
+        let _ = fs::remove_file(exe_path.with_extension("old.exe"));
+        let _ = fs::remove_file(exe_path.with_extension("new.exe"));
+        let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.old.exe");
+        let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.new.exe");
+
+        let temp_dir = std::env::temp_dir();
+        let tmp_core_path = temp_dir.join("Docx_core_dl.tmp");
+        let staged_exe_path = temp_dir.join("Docx_staged_update.exe");
+
+        // Fetch and persist remote app-manifest.json so check_app_update knows we are up to date after restart
+        let manifest_url = format!("{}/app-manifest.json", RELEASE_BASE_URL);
+        if let Ok(manifest_bytes) = curl_get_bytes(&manifest_url, None) {
+            let _ = fs::write(temp_dir.join("docx_app_manifest.local.json"), &manifest_bytes);
+            let packs_dir = get_packs_dir();
+            let _ = fs::create_dir_all(&packs_dir);
+            let _ = fs::write(packs_dir.join("app-manifest.local.json"), &manifest_bytes);
+        }
+
+        let core_url = format!("{}/Docx-core.exe", RELEASE_BASE_URL);
         let mut new_exe_bytes = curl_download_with_progress(
             &core_url,
             &tmp_core_path,
-            8 * 1024 * 1024,
+            4 * 1024 * 1024,
             "docx_app_core",
             &window,
         )?;
@@ -1577,35 +1644,63 @@ async fn self_update_app(
             new_exe_bytes.extend_from_slice(TRAILER_MAGIC);
         }
 
-        let old_backup = exe_path.with_extension("old.exe");
-        let _ = fs::remove_file(&old_backup);
-        fs::rename(&exe_path, &old_backup)
-            .map_err(|e| format!("Failed to rename running exe: {}", e))?;
-        if let Err(e) = fs::write(&exe_path, &new_exe_bytes) {
-            let _ = fs::rename(&old_backup, &exe_path);
-            return Err(format!("Failed to write updated Docx.exe: {}", e));
-        }
+        fs::write(&staged_exe_path, &new_exe_bytes)
+            .map_err(|e| format!("Failed to stage updated Docx.exe in TEMP: {}", e))?;
+
+        // Write a hidden background updater script in %TEMP% that waits for process exit,
+        // overwrites Docx.exe in-place (zero .old.exe files!), and immediately relaunches Docx.exe
+        let updater_cmd_path = temp_dir.join("docx_apply_update.cmd");
+        let staged_str = staged_exe_path.to_string_lossy().replace('/', "\\");
+        let target_str = exe_path.to_string_lossy().replace('/', "\\");
+        let script_content = format!(
+            "@echo off\r\n\
+             ping 127.0.0.1 -n 2 -w 250 >nul 2>&1\r\n\
+             for /L %%i in (1,1,30) do (\r\n\
+               move /Y \"{staged}\" \"{target}\" >nul 2>&1\r\n\
+               if not exist \"{staged}\" goto done\r\n\
+               copy /Y \"{staged}\" \"{target}\" >nul 2>&1 && del /F /Q \"{staged}\" >nul 2>&1\r\n\
+               if not exist \"{staged}\" goto done\r\n\
+               ping 127.0.0.1 -n 2 -w 200 >nul 2>&1\r\n\
+             )\r\n\
+             :done\r\n\
+             del /F /Q \"C:\\Users\\vahid\\OneDrive\\Desktop\\Docx.old.exe\" >nul 2>&1\r\n\
+             del /F /Q \"C:\\Users\\vahid\\OneDrive\\Desktop\\Docx.new.exe\" >nul 2>&1\r\n\
+             start \"\" \"{target}\"\r\n\
+             del /F /Q \"%~f0\" >nul 2>&1\r\n",
+            staged = staged_str,
+            target = target_str
+        );
+        let _ = fs::write(&updater_cmd_path, script_content);
 
         let _ = window.emit(
             "docpack-progress",
             DownloadProgressPayload {
                 site_id: "docx_app_core".to_string(),
-                phase: "Complete".to_string(),
+                phase: "Restarting...".to_string(),
                 downloaded_bytes: new_exe_bytes.len(),
                 total_bytes: new_exe_bytes.len(),
                 percent: 100,
                 detail: format!(
-                    "App Core updated ({:.2} MB downloaded, {:.2} MB docs preserved locally)!",
+                    "Updated ({:.2} MB core + {:.2} MB docs). Restarting Docx automatically...",
                     core_dl_mb,
                     trailer_payload.len() as f64 / (1024.0 * 1024.0)
                 ),
             },
         );
 
+        let _ = std::process::Command::new("cmd.exe")
+            .args(["/C", &updater_cmd_path.to_string_lossy()])
+            .creation_flags(0x08000000) // CREATE_NO_WINDOW
+            .spawn();
+
+        thread::spawn(|| {
+            thread::sleep(Duration::from_millis(250));
+            std::process::exit(0);
+        });
+
         Ok(format!(
-            "Delta App Update complete! Downloaded only {:.2} MB (Docx-core.exe) and preserved {:.2} MB of local documentation packs!",
-            core_dl_mb,
-            trailer_payload.len() as f64 / (1024.0 * 1024.0)
+            "Updated App Core ({:.2} MB) in-place! Restarting Docx automatically...",
+            core_dl_mb
         ))
     })
     .await
@@ -1655,8 +1750,10 @@ fn window_show_ready(window: tauri::Window) {
 pub fn run() {
     use tauri::Manager;
     let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.old.exe");
+    let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.new.exe");
     if let Ok(exe) = std::env::current_exe() {
         let _ = fs::remove_file(exe.with_extension("old.exe"));
+        let _ = fs::remove_file(exe.with_extension("new.exe"));
     }
 
     let store = load_asset_store();
