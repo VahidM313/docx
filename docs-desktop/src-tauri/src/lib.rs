@@ -439,7 +439,7 @@ fn get_site_origin_and_entry(site_id: &str) -> Option<(&'static str, &'static st
         "tanstack_start" => Some(("https://tanstack.com", "/start/latest/docs/framework/react/overview")),
         "tanstack_router" => Some(("https://tanstack.com", "/router/latest/docs/overview")),
         "tanstack_query" => Some(("https://tanstack.com", "/query/latest/docs/framework/react/overview")),
-        "tanstack_table" => Some(("https://tanstack.com", "/table/v8/docs/introduction")),
+        "tanstack_table" => Some(("https://tanstack.com", "/table/latest/docs/overview")),
         "tanstack_form" => Some(("https://tanstack.com", "/form/latest/docs/overview")),
         "tanstack_virtual" => Some(("https://tanstack.com", "/virtual/latest/docs/introduction")),
         "tanstack_store" => Some(("https://tanstack.com", "/store/latest/docs/overview")),
@@ -462,7 +462,7 @@ fn get_site_origin_and_entry(site_id: &str) -> Option<(&'static str, &'static st
         "express" => Some(("https://expressjs.com", "/")),
         "nestjs" => Some(("https://docs.nestjs.com", "/")),
         "qt" => Some(("https://doc.qt.io", "/")),
-        "boost" => Some(("https://www.boost.org", "/doc/libs/latest/index.html")),
+        "boost" => Some(("https://www.boost.org", "/doc/libs/latest/libs/libraries.htm")),
         "django" => Some(("https://docs.djangoproject.com", "/en/6.1/")),
         "fastapi" => Some(("https://fastapi.tiangolo.com", "/")),
         "postgresql" => Some(("https://www.postgresql.org", "/docs/")),
@@ -1224,10 +1224,177 @@ html.docx-force-dark [style*="background-image"] {
     }, '*');
   }
 
+  function initTypeScriptDocsUI() {
+    if (SITE_ID !== 'typescript') return;
+    if (window.__docxTsSidebarBound) return;
+    window.__docxTsSidebarBound = true;
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      if (!target || !target.closest) return;
+      var mobileBtn = target.closest('#small-device-button-sidebar');
+      if (mobileBtn) {
+        var sb = document.getElementById('sidebar');
+        if (sb) {
+          e.preventDefault();
+          e.stopPropagation();
+          sb.style.display = (sb.style.display === 'none') ? 'block' : '';
+        }
+        return;
+      }
+      var btn = target.closest('nav#sidebar li > button');
+      if (!btn) return;
+      var li = btn.parentElement;
+      if (!li || li.tagName !== 'LI') return;
+      e.preventDefault();
+      e.stopPropagation();
+      var isOpen = li.classList.contains('open');
+      if (isOpen) {
+        li.classList.remove('open');
+        li.classList.add('closed');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        li.classList.remove('closed');
+        li.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    }, true);
+  }
+
+  function initGoDocsUI() {
+    if (SITE_ID !== 'go') return;
+    if (window.__docxGoHeaderBound) return;
+    window.__docxGoHeaderBound = true;
+    try {
+      var style = document.createElement('style');
+      style.textContent =
+        '.Header-menuItem:hover .Header-submenu, .Header-menuItem.is-open .Header-submenu { display: block !important; visibility: visible !important; opacity: 1 !important; }';
+      (document.head || document.documentElement).appendChild(style);
+    } catch (e) {}
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      if (!target || !target.closest) return;
+      var trigger = target.closest('.Header-menuItem > a.js-desktop-menu-hover');
+      if (!trigger) {
+        document.querySelectorAll('.Header-menuItem.is-open').forEach(function(el) {
+          el.classList.remove('is-open');
+        });
+        return;
+      }
+      var href = trigger.getAttribute('href') || '';
+      if (href === '#' || href === '') {
+        e.preventDefault();
+        e.stopPropagation();
+        var item = trigger.closest('.Header-menuItem');
+        if (item) {
+          var wasOpen = item.classList.contains('is-open');
+          document.querySelectorAll('.Header-menuItem.is-open').forEach(function(el) {
+            el.classList.remove('is-open');
+          });
+          if (!wasOpen) item.classList.add('is-open');
+        }
+      }
+    }, true);
+  }
+
+  function initRustDocsUI() {
+    if (SITE_ID !== 'rust') return;
+    try {
+      var sb = document.getElementById('mdbook-sidebar');
+      if (!sb) return;
+      var curPath = window.location.pathname;
+      if (curPath === '/book' || curPath === '/book/' || curPath === '/' || curPath === '/docs') {
+        curPath = '/book/title-page.html';
+      } else if (curPath === '/cargo' || curPath === '/cargo/') {
+        curPath = '/cargo/index.html';
+      }
+      var links = sb.querySelectorAll('a[href]');
+      for (var i = 0; i < links.length; i++) {
+        var a = links[i];
+        var h = a.getAttribute('href') || '';
+        if (h === curPath || curPath.endsWith('/' + h)) {
+          a.classList.add('active');
+        }
+      }
+    } catch (e) {}
+  }
+
+  function initMsLearnDocsUI() {
+    if (SITE_ID !== 'powershell' && SITE_ID !== 'cmd') return;
+    try {
+      var curPath = window.location.pathname.replace(/\/$/, '');
+      var links = document.querySelectorAll('.docx-ms-toc-item a[href]');
+      for (var i = 0; i < links.length; i++) {
+        var a = links[i];
+        var h = (a.getAttribute('href') || '').replace(/\/$/, '');
+        if (h === curPath) {
+          a.classList.add('active');
+          var p = a.parentElement;
+          while (p) {
+            if (p.tagName === 'DETAILS') p.open = true;
+            p = p.parentElement;
+          }
+        }
+      }
+    } catch (e) {}
+  }
+
+  function initShadcnDocsUI() {
+    if (SITE_ID !== 'shadcn') return;
+    try {
+      var m = window.location.pathname.match(/^\/docs\/components\/(base|aria|radix)\//);
+      if (m && m[1]) {
+        localStorage.setItem('docx_shadcn_primitive', m[1]);
+      }
+    } catch (e) {}
+    if (window.__docxShadcnBound) return;
+    window.__docxShadcnBound = true;
+    document.addEventListener('click', function(e) {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+      if (!a || a.hasAttribute('target')) return;
+      var href = a.getAttribute('href') || '';
+      if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('javascript:')) return;
+      try {
+        var resolved = new URL(href, window.location.href);
+        if (resolved.origin !== window.location.origin && resolved.origin !== SITE_ORIGIN) return;
+        var targetPath = resolved.pathname;
+        var pm = targetPath.match(/^\/docs\/components\/(base|aria|radix)\/(.+)$/);
+        var clickedSwitcher = a.hasAttribute('data-active');
+        if (pm) {
+          if (clickedSwitcher) {
+            localStorage.setItem('docx_shadcn_primitive', pm[1]);
+          } else {
+            var savedPrim = localStorage.getItem('docx_shadcn_primitive');
+            if (savedPrim === 'base' || savedPrim === 'aria' || savedPrim === 'radix') {
+              targetPath = '/docs/components/' + savedPrim + '/' + pm[2];
+            }
+          }
+        } else {
+          var gm = targetPath.match(/^\/docs\/components\/([^/]+)$/);
+          if (gm) {
+            var savedP = localStorage.getItem('docx_shadcn_primitive');
+            if (savedP === 'base' || savedP === 'aria' || savedP === 'radix') {
+              targetPath = '/docs/components/' + savedP + '/' + gm[1];
+            }
+          }
+        }
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        window.location.href = targetPath + resolved.search + resolved.hash;
+      } catch (err) {}
+    }, true);
+  }
+
   function initAllInteractiveControllers() {
     initExpressDocsUI();
     initVitePressDocsUI();
     initQtDocsUI();
+    initTypeScriptDocsUI();
+    initGoDocsUI();
+    initRustDocsUI();
+    initMsLearnDocsUI();
+    initShadcnDocsUI();
     setupNativeThemeSync();
     if (getSavedThemeEnabled()) {
       syncMediaDarkStylesheets(getSavedSiteDark());
@@ -1501,6 +1668,11 @@ fn resolve_from_store(
         let qt6 = decoded_path.replacen("/qt/", "/qt-6/", 1);
         candidates.insert(0, format!("{}.html", qt6));
         candidates.insert(0, qt6);
+    }
+
+    if site_id == "boost" && !decoded_path.starts_with("/doc/libs/latest") {
+        candidates.insert(0, format!("/doc/libs/latest{}/index.html", decoded_path));
+        candidates.insert(0, format!("/doc/libs/latest{}", decoded_path));
     }
 
     if let Ok(guard) = store.overrides.read() {

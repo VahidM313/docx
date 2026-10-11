@@ -357,12 +357,18 @@ export const SITE_BRANDS: Record<string, SiteBrand> = {
   tanstack_table: {
     id: "tanstack_table",
     name: "TanStack Table",
-    version: "v8",
+    version: "v9",
     category: "TanStack Suite",
     color: "#3b82f6",
     bgTint: "rgba(59, 130, 246, 0.15)",
     description: "Headless UI for building powerful tables & datagrids with sorting, filtering, pagination, and grouping.",
     svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>`,
+    defaultRoutes: [
+      { label: "Overview (v9)", path: "/table/latest/docs/overview" },
+      { label: "Installation", path: "/table/latest/docs/installation" },
+      { label: "Features", path: "/table/latest/docs/guide/features" },
+      { label: "API Reference", path: "/table/latest/docs/reference/index" },
+    ],
   },
   tanstack_form: {
     id: "tanstack_form",
@@ -606,6 +612,12 @@ export const SITE_BRANDS: Record<string, SiteBrand> = {
     description:
       "Peer-reviewed portable C++ source libraries: Boost.Asio, Beast, Spirit, Filesystem, Graph, MultiIndex, and Math.",
     svg: `<svg viewBox="0 0 24 24" fill="none" stroke="#f7901e" stroke-width="1.9" stroke-linejoin="round"><polygon points="12 2 19 6 19 14 12 18 5 14 5 6 12 2"/><polyline points="5 14 12 22 19 14"/><circle cx="12" cy="10" r="2.5"/></svg>`,
+    defaultRoutes: [
+      { label: "All Libraries", path: "/doc/libs/latest/libs/libraries.htm" },
+      { label: "Boost.Asio", path: "/doc/libs/latest/doc/html/boost_asio.html" },
+      { label: "Boost.Beast", path: "/doc/libs/latest/libs/beast/doc/html/index.html" },
+      { label: "Getting Started", path: "/doc/libs/latest/more/getting_started/index.html" },
+    ],
   },
   django: {
     id: "django",

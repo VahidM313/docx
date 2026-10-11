@@ -46,7 +46,7 @@ const SITE_ENTRY_PATHS: Record<string, string> = {
   tanstack_query: "/query/latest/docs/framework/react/overview",
   tanstack_router: "/router/latest/docs/overview",
   tanstack_start: "/start/latest/docs/framework/react/overview",
-  tanstack_table: "/table/v8/docs/introduction",
+  tanstack_table: "/table/latest/docs/overview",
   tanstack_form: "/form/latest/docs/overview",
   tanstack_virtual: "/virtual/latest/docs/introduction",
   tanstack_store: "/store/latest/docs/overview",
@@ -69,7 +69,7 @@ const SITE_ENTRY_PATHS: Record<string, string> = {
   express: "/",
   nestjs: "/",
   qt: "/",
-  boost: "/doc/libs/latest/index.html",
+  boost: "/doc/libs/latest/libs/libraries.htm",
   django: "/en/6.1/",
   fastapi: "/",
   postgresql: "/docs/",
@@ -2323,13 +2323,34 @@ function setupEventListeners() {
     btnFeaturesMenu.classList.toggle("active", !isOpen);
   });
 
+  const closeFeaturesPopover = () => {
+    if (!featuresPopover || featuresPopover.style.display === "none") return;
+    featuresPopover.style.display = "none";
+    btnFeaturesMenu?.classList.remove("active");
+  };
+
+  document.addEventListener(
+    "pointerdown",
+    (e) => {
+      if (!featuresPopover || featuresPopover.style.display === "none") return;
+      const target = e.target as HTMLElement | null;
+      if (!target || !target.closest("#featuresMenuWrap")) {
+        closeFeaturesPopover();
+      }
+    },
+    true
+  );
+
   document.addEventListener("click", (e) => {
     if (!featuresPopover || featuresPopover.style.display === "none") return;
     const target = e.target as HTMLElement | null;
-    if (target && !target.closest("#featuresMenuWrap")) {
-      featuresPopover.style.display = "none";
-      btnFeaturesMenu?.classList.remove("active");
+    if (!target || !target.closest("#featuresMenuWrap")) {
+      closeFeaturesPopover();
     }
+  });
+
+  window.addEventListener("blur", () => {
+    closeFeaturesPopover();
   });
 
   toggleFeatureTabs?.addEventListener("change", () => {
@@ -2532,6 +2553,7 @@ function setupEventListeners() {
     } else if (e.data.type === "HOVER_TOP_EDGE") {
       peekTopbar();
     } else if (e.data.type === "IFRAME_INTERACT") {
+      closeFeaturesPopover();
       if (!sidebarPinned) {
         discordSidebar.classList.remove("open");
       }
@@ -2542,6 +2564,10 @@ function setupEventListeners() {
   });
 
   window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeFeaturesPopover();
+    }
+
     if (e.key === "F11") {
       e.preventDefault();
       toggleAppFullscreen();
