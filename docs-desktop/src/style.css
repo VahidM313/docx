@@ -1477,6 +1477,31 @@ body.sidebar-pinned .left-edge-sensor {
   color: #000000;
 }
 
+.hub-action-download-all {
+  background: rgba(56, 189, 248, 0.14);
+  border-color: rgba(56, 189, 248, 0.48);
+  color: #38bdf8;
+  font-weight: 700;
+}
+
+.hub-action-download-all:hover {
+  background: #38bdf8;
+  border-color: #38bdf8;
+  color: #000000;
+}
+
+.hub-action-download-all.all-installed {
+  background: rgba(34, 197, 94, 0.14);
+  border-color: rgba(34, 197, 94, 0.45);
+  color: #4ade80;
+}
+
+.hub-action-download-all.all-installed:hover {
+  background: #22c55e;
+  border-color: #22c55e;
+  color: #000000;
+}
+
 .download-progress-hud {
   background: #0c0c11;
   border: 1px solid rgba(56, 189, 248, 0.4);
@@ -1943,7 +1968,7 @@ body.sidebar-pinned .left-edge-sensor {
   display: none;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 10vh;
+  padding-top: 8vh;
 }
 
 .search-modal-backdrop.open {
@@ -1951,8 +1976,8 @@ body.sidebar-pinned .left-edge-sensor {
 }
 
 .search-dialog {
-  width: 92%;
-  max-width: 640px;
+  width: 94%;
+  max-width: 720px;
   background: #0b0b0e;
   border: 1px solid var(--border-active);
   border-radius: 14px;
@@ -1960,7 +1985,7 @@ body.sidebar-pinned .left-edge-sensor {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  max-height: 76vh;
+  max-height: 80vh;
 }
 
 .search-input-header {
@@ -1997,29 +2022,47 @@ body.sidebar-pinned .left-edge-sensor {
   cursor: pointer;
 }
 
-.search-filters {
+/* Redesigned Non-Overflowing Search Scope Bar + Collapsible 57-Doc Picker Grid */
+.search-scope-bar {
   display: flex;
   align-items: center;
-  gap: 7px;
-  padding: 10px 18px;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 9px 16px;
   background: #060608;
   border-bottom: 1px solid var(--border-subtle);
-  overflow-x: auto;
-  scrollbar-width: thin;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.search-scope-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  overflow: hidden;
+  flex-wrap: nowrap;
+}
+
+.search-scope-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
 }
 
 .filter-chip {
-  background: transparent;
+  background: #111116;
   border: 1px solid var(--border-color);
   color: var(--text-muted);
   padding: 4px 10px;
-  border-radius: 999px;
+  border-radius: 7px;
   font-size: 0.74rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   white-space: nowrap;
   flex-shrink: 0;
   transition: all 0.14s ease;
@@ -2027,6 +2070,7 @@ body.sidebar-pinned .left-edge-sensor {
 
 .filter-chip:hover {
   border-color: var(--border-active);
+  background: #191922;
   color: #ffffff;
 }
 
@@ -2034,7 +2078,171 @@ body.sidebar-pinned .left-edge-sensor {
   background: #ffffff;
   border-color: #ffffff;
   color: #000000;
+  font-weight: 700;
+}
+
+.filter-chip-clear {
+  margin-left: 2px;
+  font-size: 0.8rem;
+  line-height: 1;
+  opacity: 0.75;
+}
+
+.filter-chip-clear:hover {
+  opacity: 1;
+}
+
+.search-picker-toggle-btn {
+  background: #13131a;
+  border: 1px solid rgba(56, 189, 248, 0.38);
+  color: #38bdf8;
+  padding: 4px 11px;
+  border-radius: 7px;
+  font-size: 0.74rem;
   font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: all 0.14s ease;
+}
+
+.search-picker-toggle-btn:hover,
+.search-picker-toggle-btn.open {
+  background: rgba(56, 189, 248, 0.18);
+  border-color: #38bdf8;
+  color: #ffffff;
+}
+
+.search-doc-picker-panel {
+  background: #08080c;
+  border-bottom: 1px solid var(--border-active);
+  padding: 10px 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  max-height: 290px;
+  flex-shrink: 0;
+}
+
+.search-doc-picker-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.search-doc-picker-input {
+  width: 210px;
+  height: 28px;
+  background: #111117;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0 10px;
+  color: #ffffff;
+  font-size: 0.75rem;
+  outline: none;
+}
+
+.search-doc-picker-input:focus {
+  border-color: #38bdf8;
+}
+
+.search-doc-picker-cats {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.picker-cat-btn {
+  background: #111117;
+  border: 1px solid var(--border-subtle);
+  color: #a1a1aa;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 0.69rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.picker-cat-btn:hover {
+  color: #ffffff;
+  border-color: var(--border-active);
+}
+
+.picker-cat-btn.active {
+  background: rgba(56, 189, 248, 0.18);
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+.search-doc-picker-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 215px;
+  padding-right: 4px;
+}
+
+.search-doc-option {
+  background: #111117;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 7px;
+  padding: 6px 9px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  text-align: left;
+  color: #e4e4e7;
+  font-size: 0.74rem;
+  font-weight: 500;
+  transition: all 0.12s ease;
+  min-width: 0;
+}
+
+.search-doc-option:hover {
+  background: #191923;
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+.search-doc-option.active {
+  background: rgba(56, 189, 248, 0.16);
+  border-color: #38bdf8;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.search-doc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.search-doc-name {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-doc-cnt {
+  font-size: 0.67rem;
+  font-family: monospace;
+  color: #a1a1aa;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 1px 5px;
+  border-radius: 4px;
+  flex-shrink: 0;
 }
 
 .count-badge {
@@ -2042,9 +2250,29 @@ body.sidebar-pinned .left-edge-sensor {
   opacity: 0.75;
 }
 
+/* Custom Dark Scrollbars across all scrollable containers in Docx */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
 .search-results-list {
   flex: 1;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 8px;
 }
 

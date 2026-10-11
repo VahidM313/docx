@@ -334,8 +334,8 @@
               </div>
               <div>
                 <div class="hub-badge-row">
-                  <span class="hero-badge">
-                    <span class="pulse-icon">●</span> 57 Documentation Ecosystems • Max-Gzip Level 9 • HTTP 206 Delta Updates
+                  <span class="hero-badge" id="heroEcosystemBadge">
+                    <span class="pulse-icon">●</span> 57 Documentation Ecosystems • <span id="heroInstalledStat">57/57 Installed (289.6 MB)</span> • HTTP 206 Delta Updates
                   </span>
                 </div>
                 <h1 class="hub-title">Docx Developer Hub</h1>
@@ -356,6 +356,15 @@
               </button>
 
               <div class="hub-action-buttons">
+                <button id="btnDownloadAllDocs" class="hub-action-btn hub-action-download-all" title="Download all remaining uninstalled docs or sync all 57 documentation packs from GitHub Releases">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span id="btnDownloadAllDocsLabel">⬇ Download All 57 Docs (289.6 MB)</span>
+                </button>
+
                 <button id="btnRefreshRegistry" class="hub-action-btn">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <polyline points="23 4 23 10 17 10"></polyline>
@@ -413,7 +422,7 @@
               <button class="hub-cat-tab" data-cat="installed">
                 <span class="dot-installed">●</span>
                 <span>Installed</span>
-                <span class="cat-count" id="catCountInstalled">2</span>
+                <span class="cat-count" id="catCountInstalled">57</span>
               </button>
               <button class="hub-cat-tab" data-cat="updates">
                 <span class="dot-update">▲</span>
@@ -451,13 +460,13 @@
                 type="text"
                 id="hubSiteFilterInput"
                 class="hub-site-filter-input"
-                placeholder="Filter 42 sites (e.g. Rust, Docker, React, TanStack, C++, Elysia...)"
+                placeholder="Filter all 57 sites (e.g. Rust, Qt, Python, React, TanStack, C++, Hono...)"
                 autocomplete="off"
               />
             </div>
           </div>
 
-          <!-- Unified 42-Site Grid with Original Brand Colors -->
+          <!-- Unified 57-Site Grid with Original Brand Colors -->
           <div id="allSitesGrid" class="all-sites-grid"></div>
         </div>
       </section>
@@ -480,7 +489,7 @@
         <iframe id="iframeShadcn" class="doc-iframe" title="shadcn/ui Documentation"></iframe>
       </section>
 
-      <!-- DYNAMIC CLOUD PACK VIEW (For any installed pack from the 42 sites) -->
+      <!-- DYNAMIC CLOUD PACK VIEW (For any installed pack from the 57 sites) -->
       <section id="viewDynamic" class="view-panel">
         <div class="frame-loading" id="dynamicLoading">
           <div class="spinner"></div>
@@ -509,8 +518,20 @@
           <button id="clearSearchBtn" class="clear-search-btn" title="Close (Esc)">ESC</button>
         </div>
 
-        <div class="search-filters" id="searchFiltersBar">
-          <button class="filter-chip active" data-filter="all">All Installed <span id="countAll" class="count-badge">0</span></button>
+        <div class="search-scope-bar" id="searchFiltersBar"></div>
+
+        <div class="search-doc-picker-panel" id="searchDocPickerPanel" style="display: none;">
+          <div class="search-doc-picker-top">
+            <input
+              type="text"
+              id="searchDocPickerInput"
+              class="search-doc-picker-input"
+              placeholder="Filter docs by name or category..."
+              autocomplete="off"
+            />
+            <div class="search-doc-picker-cats" id="searchDocPickerCats"></div>
+          </div>
+          <div class="search-doc-picker-grid" id="searchDocPickerGrid"></div>
         </div>
 
         <div id="searchResultsList" class="search-results-list"></div>
@@ -518,6 +539,7 @@
         <div class="search-modal-footer">
           <div class="shortcut-tip"><kbd>↑</kbd> <kbd>↓</kbd> to navigate</div>
           <div class="shortcut-tip"><kbd>Enter</kbd> to open</div>
+          <div class="shortcut-tip"><kbd>Ctrl+Enter</kbd> new tab</div>
           <div class="shortcut-tip"><kbd>Esc</kbd> to close</div>
         </div>
       </div>

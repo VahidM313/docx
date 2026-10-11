@@ -21,59 +21,44 @@ const SITE_ENTRY_PATHS: Record<string, string> = {
   shadcn: "/docs",
   react: "/learn",
   nextjs: "/docs",
-  svelte: "/docs/svelte/overview",
-  astro: "/en/getting-started/",
-  alpine: "/start-here",
-  solid: "/guides/getting-started",
-  lit: "/docs/",
-  qwik: "/docs/",
-  preact: "/guide/v10/getting-started",
-  htmx: "/docs/",
-  unocss: "/guide/",
-  ts_query: "/query/latest/docs/framework/react/overview",
-  ts_router: "/router/latest/docs/framework/react/overview",
-  ts_start: "/start/latest/docs/framework/react/overview",
-  ts_table: "/table/latest/docs/introduction",
-  ts_form: "/form/latest/docs/overview",
-  ts_virtual: "/virtual/latest/docs/introduction",
-  ts_pacer: "/pacer/latest/docs/overview",
-  ts_store: "/store/latest/docs/overview",
-  ts_db: "/db/latest/docs/overview",
-  ts_ai: "/ai/latest/docs/getting-started/overview",
-  ts_ranger: "/ranger/latest/docs/overview",
-  ts_config: "/config/latest/docs/overview",
-  ts_hotkeys: "/hotkeys/latest/docs/overview",
-  ts_devtools: "/devtools/latest/docs/overview",
-  ts_cli: "/cli/latest/docs/overview",
-  ts_intent: "/intent/latest/docs/overview",
-  elysia: "/at-glance.html",
-  drizzle: "/docs/overview",
-  zod: "/",
-  trpc: "/docs",
-  prisma: "/docs",
-  vitest: "/guide/",
   vite: "/guide/",
-  typescript: "/docs/",
-  mdn: "/en-US/docs/Web",
-  nodejs: "/en/learn/getting-started/introduction-to-nodejs",
+  astro: "/en/getting-started/",
+  mdn_js: "/en-US/docs/Web/JavaScript",
+  htmx: "/docs/",
+  typescript: "/docs/handbook/intro.html",
   bun: "/docs",
-  rust_book: "/title-page.html",
-  rust_std: "/std/index.html",
-  cargo: "/index.html",
+  elysia: "/table-of-content",
+  drizzle: "/docs/overview",
+  oxc: "/docs/guide/introduction.html",
+  rust: "/book/",
   go: "/doc/",
-  zig: "/documentation/master/",
-  cppreference: "/w/",
+  cppreference: "/",
   learncpp: "/",
-  cmake: "/cmake/help/latest/index.html",
-  linux_man: "/man1/index.html",
-  arch_wiki: "/title/Main_page",
-  git: "/doc",
+  llvm: "/docs/",
+  lua: "/manual/5.4/",
   docker: "/get-started/",
-  kubernetes: "/docs/home/",
-  nginx: "/en/docs/",
-  bash: "/software/bash/manual/bash.html",
-  zsh: "/Doc/Release/zsh_toc.html",
-  fish: "/docs/current/index.html",
+  git: "/docs/git",
+  curl: "/docs/",
+  cmake: "/cmake/help/latest/index.html",
+  ninja: "/manual.html",
+  powershell: "/en-us/powershell/scripting/overview",
+  cmd: "/en-us/windows-server/administration/windows-commands/windows-commands",
+  tanstack_query: "/query/latest/docs/framework/react/overview",
+  tanstack_router: "/router/latest/docs/overview",
+  tanstack_start: "/start/latest/docs/framework/react/overview",
+  tanstack_table: "/table/v8/docs/introduction",
+  tanstack_form: "/form/latest/docs/overview",
+  tanstack_virtual: "/virtual/latest/docs/introduction",
+  tanstack_store: "/store/latest/docs/overview",
+  tanstack_db: "/db/latest/docs/overview",
+  tanstack_ai: "/ai/latest/docs/getting-started/overview",
+  tanstack_pacer: "/pacer/latest/docs/overview",
+  tanstack_ranger: "/ranger/latest/docs/overview",
+  tanstack_config: "/config/latest/docs/overview",
+  tanstack_devtools: "/devtools/latest/docs/overview",
+  tanstack_hotkeys: "/hotkeys/latest/docs/overview",
+  tanstack_react_charts: "/docs/overview",
+  tanstack_create_tsrouter_app: "/router/latest/docs/quick-start",
   python: "/3/",
   threejs: "/docs/",
   motion: "/docs",
@@ -81,14 +66,74 @@ const SITE_ENTRY_PATHS: Record<string, string> = {
   nuxt: "/docs/4.x/getting-started/introduction",
   angular: "/docs",
   hono: "/docs/",
-  express: "/en/starter/installing.html",
+  express: "/",
   nestjs: "/",
   qt: "/",
   boost: "/doc/libs/latest/index.html",
   django: "/en/6.1/",
   fastapi: "/",
-  postgresql: "/docs/current/index.html",
+  postgresql: "/docs/",
   sqlite: "/docs.html",
+};
+
+const DEFAULT_PACK_SIZES_MB: Record<string, number> = {
+  tailwind: 13.6,
+  shadcn: 31.78,
+  react: 11.69,
+  nextjs: 24.6,
+  vite: 0.9,
+  astro: 7.17,
+  mdn_js: 5.74,
+  htmx: 0.21,
+  typescript: 12.35,
+  bun: 4.63,
+  elysia: 2.77,
+  drizzle: 9.94,
+  oxc: 1.24,
+  rust: 4.34,
+  go: 2.93,
+  cppreference: 8.13,
+  learncpp: 11.57,
+  llvm: 1.44,
+  lua: 0.44,
+  docker: 2.73,
+  git: 3.58,
+  curl: 3.26,
+  cmake: 1.68,
+  ninja: 0.27,
+  powershell: 3.66,
+  cmd: 2.65,
+  tanstack_query: 8.24,
+  tanstack_router: 5.5,
+  tanstack_start: 4.29,
+  tanstack_table: 1.75,
+  tanstack_form: 4.46,
+  tanstack_virtual: 1.59,
+  tanstack_store: 2.63,
+  tanstack_db: 4.45,
+  tanstack_ai: 1.42,
+  tanstack_pacer: 5.04,
+  tanstack_ranger: 1.28,
+  tanstack_config: 1.04,
+  tanstack_devtools: 2.15,
+  tanstack_hotkeys: 3.47,
+  tanstack_react_charts: 0.82,
+  tanstack_create_tsrouter_app: 1.97,
+  python: 4.65,
+  threejs: 0.69,
+  motion: 4.43,
+  vue: 3.49,
+  nuxt: 8.98,
+  angular: 1.37,
+  hono: 5.71,
+  express: 3.4,
+  nestjs: 1.3,
+  qt: 5.14,
+  boost: 6.61,
+  django: 3.75,
+  fastapi: 12.33,
+  postgresql: 1.6,
+  sqlite: 2.75,
 };
 
 function getDefaultEntryPath(siteId: string): string {
@@ -569,19 +614,19 @@ function applyDownloadProgress(p: DownloadProgressPayload) {
 function buildUnifiedSitesList(): UnifiedSiteEntry[] {
   const installedMap = new Map<string, PackStatusInfo>();
   for (const p of installedPacksCache) {
-    installedMap.set(p.id, p);
+    if (p.route_count > 0 && SITE_BRANDS[p.id]) {
+      installedMap.set(p.id, p);
+    }
   }
 
   const remoteMap = new Map<string, RemoteRegistryItem>();
   for (const r of remoteRegistryCache) {
-    remoteMap.set(r.id, r);
+    if (SITE_BRANDS[r.id]) {
+      remoteMap.set(r.id, r);
+    }
   }
 
-  const allIds = new Set<string>([
-    ...Object.keys(SITE_BRANDS),
-    ...installedMap.keys(),
-    ...remoteMap.keys(),
-  ]);
+  const allIds = Object.keys(SITE_BRANDS);
 
   const list: UnifiedSiteEntry[] = [];
   for (const id of allIds) {
@@ -594,15 +639,22 @@ function buildUnifiedSitesList(): UnifiedSiteEntry[] {
     const remoteCommit = rem?.commit || inst?.commit || "latest";
     const updateAvailable =
       Boolean(rem?.update_available) ||
-      (installed && Boolean(localCommit) && Boolean(rem?.commit) && localCommit !== rem!.commit);
+      (installed &&
+        Boolean(localCommit) &&
+        Boolean(rem?.commit) &&
+        rem!.commit !== "e3b0c442" &&
+        localCommit !== rem!.commit);
 
-    const routeCount = inst?.route_count || rem?.routeCount || 6;
-    const chunkCount = inst?.chunk_count || rem?.chunkCount || 6;
-    const sizeMb = inst
-      ? inst.size_mb.toFixed(2)
-      : rem
-      ? (rem.sizeBytes / (1024 * 1024)).toFixed(2)
-      : "0.05";
+    const routeCount = inst?.route_count || rem?.routeCount || 25;
+    const chunkCount = inst?.chunk_count || rem?.chunkCount || 25;
+    const fallbackMb = DEFAULT_PACK_SIZES_MB[id] || 1.5;
+    const sizeMbNum =
+      inst && inst.size_mb > 0
+        ? inst.size_mb
+        : rem && rem.sizeBytes > 0
+        ? rem.sizeBytes / (1024 * 1024)
+        : fallbackMb;
+    const sizeMb = sizeMbNum.toFixed(2);
 
     list.push({
       id,
@@ -855,7 +907,7 @@ function renderChannelDrawer(sites: UnifiedSiteEntry[]) {
                   ? `<span class="channel-tag update-tag">⚡ Update</span>`
                   : s.installed
                   ? `<span class="channel-tag installed-tag">Ready</span>`
-                  : `<span class="channel-tag">☁ Install</span>`
+                  : `<span class="channel-tag">☁ ${s.sizeMb}M</span>`
               }
             </button>
           `
@@ -909,8 +961,33 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
   const gridEl = document.getElementById("allSitesGrid");
   if (!gridEl) return;
 
-  const installedCount = sites.filter((s) => s.installed).length;
+  const installedSites = sites.filter((s) => s.installed);
+  const remainingSites = sites.filter((s) => !s.installed);
+  const installedCount = installedSites.length;
   const updatesCount = sites.filter((s) => s.updateAvailable).length;
+
+  const totalAllMb = sites.reduce((sum, s) => sum + (parseFloat(s.sizeMb) || 0), 0).toFixed(1);
+  const installedMb = installedSites.reduce((sum, s) => sum + (parseFloat(s.sizeMb) || 0), 0).toFixed(1);
+  const remainingMb = remainingSites.reduce((sum, s) => sum + (parseFloat(s.sizeMb) || 0), 0).toFixed(1);
+
+  const heroInstalledStat = document.getElementById("heroInstalledStat");
+  if (heroInstalledStat) {
+    heroInstalledStat.textContent = `${installedCount}/${sites.length} Installed (${installedMb} MB)`;
+  }
+
+  const btnDownloadAll = document.getElementById("btnDownloadAllDocs") as HTMLButtonElement | null;
+  const btnDownloadAllLabel = document.getElementById("btnDownloadAllDocsLabel");
+  if (btnDownloadAll && btnDownloadAllLabel) {
+    if (remainingSites.length > 0) {
+      btnDownloadAll.classList.remove("all-installed");
+      btnDownloadAllLabel.textContent = `⬇ Download Remaining ${remainingSites.length} Docs (${remainingMb} MB)`;
+      btnDownloadAll.title = `Download all ${remainingSites.length} uninstalled documentation packs (${remainingMb} MB total) from GitHub Releases`;
+    } else {
+      btnDownloadAll.classList.add("all-installed");
+      btnDownloadAllLabel.textContent = `⬇ Download / Sync All ${sites.length} Docs (${totalAllMb} MB)`;
+      btnDownloadAll.title = `All ${sites.length} documentation packs (${totalAllMb} MB) are installed — click to verify & sync all packs from GitHub Releases`;
+    }
+  }
 
   const catCountAll = document.getElementById("catCountAll");
   const catCountInstalled = document.getElementById("catCountInstalled");
@@ -955,8 +1032,8 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
       const statusBadge = s.updateAvailable
         ? `<span class="site-status-badge update">⚡ Update: ${escapeHtml(s.localCommit)} → ${escapeHtml(s.remoteCommit)}</span>`
         : s.installed
-        ? `<span class="site-status-badge installed">● Installed</span>`
-        : `<span class="site-status-badge cloud">☁ Cloud Pack</span>`;
+        ? `<span class="site-status-badge installed">● Installed (${s.sizeMb} MB)</span>`
+        : `<span class="site-status-badge cloud">☁ Cloud (${s.sizeMb} MB)</span>`;
 
       const quickPillsHtml =
         s.installed && s.defaultRoutes && s.defaultRoutes.length > 0
@@ -1042,7 +1119,7 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
                 `
                 : `
                   <button class="site-btn-install" data-card-install="${escapeHtml(s.id)}" ${dl ? "disabled" : ""}>
-                    ${dl ? `⏳ Downloading... ${dlPct}%` : `⬇ Install & Open Pack (${s.sizeMb} MB • HTTP 206)`}
+                    ${dl ? `⏳ Downloading... ${dlPct}%` : `⬇ Download & Install (${s.sizeMb} MB)`}
                   </button>
                 `
             }
@@ -1154,6 +1231,47 @@ async function updateAllOutdatedPacks() {
   if (sites.length === 0) return;
   for (const s of sites) {
     await runGitHubPackUpdate(s.id, false);
+  }
+}
+
+async function downloadAllOrRemainingDocs() {
+  const btn = document.getElementById("btnDownloadAllDocs") as HTMLButtonElement | null;
+  const label = document.getElementById("btnDownloadAllDocsLabel");
+  const banner = document.getElementById("deltaStatusBanner");
+  const allSites = buildUnifiedSitesList();
+  const remaining = allSites.filter((s) => !s.installed);
+  const outdated = allSites.filter((s) => s.updateAvailable);
+
+  const targets =
+    remaining.length > 0 ? remaining : outdated.length > 0 ? outdated : allSites;
+  const totalTargetMb = targets
+    .reduce((sum, s) => sum + (parseFloat(s.sizeMb) || 0), 0)
+    .toFixed(1);
+
+  if (btn) btn.disabled = true;
+  let completedMb = 0;
+
+  for (let i = 0; i < targets.length; i++) {
+    const s = targets[i];
+    const packMb = parseFloat(s.sizeMb) || 0;
+    if (label) {
+      label.textContent = `⏳ [${i + 1}/${targets.length}] ${s.name} (${completedMb.toFixed(1)} / ${totalTargetMb} MB)`;
+    }
+    if (banner) {
+      banner.style.display = "block";
+      banner.textContent = `Batch Download [${i + 1}/${targets.length}]: ${s.name} (${s.sizeMb} MB) — ${completedMb.toFixed(
+        1
+      )} MB / ${totalTargetMb} MB completed...`;
+    }
+    await runGitHubPackUpdate(s.id, false);
+    completedMb += packMb;
+  }
+
+  if (btn) btn.disabled = false;
+  await syncAllPacksAndRender(false);
+  if (banner) {
+    banner.style.display = "block";
+    banner.textContent = `✓ All ${allSites.length} documentation packs (${totalTargetMb} MB) are installed and verified locally!`;
   }
 }
 
@@ -1319,6 +1437,10 @@ async function loadSearchIndex() {
   }
 }
 
+let searchDocPickerOpen = false;
+let searchDocPickerCat = "all";
+let searchDocPickerQuery = "";
+
 async function refreshExtraSearchEntries() {
   let dynamicExtra: SearchEntry[] = [];
   try {
@@ -1327,10 +1449,14 @@ async function refreshExtraSearchEntries() {
 
   const installedIds = new Set<string>(["tailwind", "shadcn"]);
   for (const p of installedPacksCache) {
-    installedIds.add(p.id);
+    if (p.route_count > 0 && SITE_BRANDS[p.id]) {
+      installedIds.add(p.id);
+    }
   }
   for (const r of remoteRegistryCache) {
-    if (r.installed) installedIds.add(r.id);
+    if (r.installed && SITE_BRANDS[r.id]) {
+      installedIds.add(r.id);
+    }
   }
 
   const seen = new Set<string>();
@@ -1338,11 +1464,12 @@ async function refreshExtraSearchEntries() {
 
   const pushUnique = (items: SearchEntry[], requireInstalled: boolean) => {
     for (const item of items) {
-      if (!item || !item.site || !item.path) continue;
+      if (!item || !item.site || !item.path || !SITE_BRANDS[item.site]) continue;
       if (requireInstalled && installedPacksCache.length > 0 && !installedIds.has(item.site)) {
         continue;
       }
-      const key = `${item.site}:${item.path}`;
+      const normPath = item.path.replace(/\/+$/, "") || "/";
+      const key = `${item.site}:${normPath}`;
       if (seen.has(key)) continue;
       seen.add(key);
       merged.push(item);
@@ -1378,29 +1505,146 @@ function renderSearchFilterChips() {
     currentFilter = "all";
   }
 
-  const chipsHtml = [
-    `<button class="filter-chip ${currentFilter === "all" ? "active" : ""}" data-filter="all">
-      All Installed <span class="count-badge">${searchIndex.length}</span>
+  const hasCurrentDoc = activeTab !== "home" && countsBySite.has(activeTab);
+  const currentDocBrand = hasCurrentDoc ? getSiteBrand(activeTab) : null;
+  const currentDocCnt = hasCurrentDoc ? countsBySite.get(activeTab) || 0 : 0;
+
+  const selectedBrand = currentFilter !== "all" ? getSiteBrand(currentFilter) : null;
+  const selectedCnt = currentFilter !== "all" ? countsBySite.get(currentFilter) || 0 : 0;
+
+  searchFiltersBar.innerHTML = `
+    <div class="search-scope-left">
+      <button class="filter-chip ${currentFilter === "all" ? "active" : ""}" data-filter="all">
+        All Installed <span class="count-badge">${searchIndex.length}</span>
+      </button>
+      ${
+        hasCurrentDoc && currentDocBrand
+          ? `<button class="filter-chip ${currentFilter === activeTab ? "active" : ""}" data-filter="${escapeHtml(
+              activeTab
+            )}" title="Filter search to currently open documentation">
+              <span class="search-doc-dot" style="background:${currentDocBrand.color};"></span>
+              Current: ${escapeHtml(currentDocBrand.name)} <span class="count-badge">${currentDocCnt}</span>
+            </button>`
+          : ""
+      }
+      ${
+        currentFilter !== "all" && currentFilter !== activeTab && selectedBrand
+          ? `<button class="filter-chip active" data-filter="all" title="Click to clear doc filter">
+              <span class="search-doc-dot" style="background:${selectedBrand.color};"></span>
+              ${escapeHtml(selectedBrand.name)} <span class="count-badge">${selectedCnt}</span>
+              <span class="filter-chip-clear">×</span>
+            </button>`
+          : ""
+      }
+    </div>
+    <div class="search-scope-right">
+      <button id="btnToggleSearchDocPicker" class="search-picker-toggle-btn ${
+        searchDocPickerOpen ? "open" : ""
+      }" type="button">
+        <span>📚 ${
+          currentFilter === "all"
+            ? `Select Doc (${siteIds.length})`
+            : `${escapeHtml(selectedBrand?.name || currentFilter)}`
+        }</span>
+        <span>${searchDocPickerOpen ? "▴" : "▾"}</span>
+      </button>
+    </div>
+  `;
+
+  searchFiltersBar.querySelectorAll(".filter-chip").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      currentFilter = chip.getAttribute("data-filter") || "all";
+      searchDocPickerOpen = false;
+      renderSearchFilterChips();
+      performSearch(searchInput.value);
+    });
+  });
+
+  const toggleBtn = document.getElementById("btnToggleSearchDocPicker");
+  toggleBtn?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    searchDocPickerOpen = !searchDocPickerOpen;
+    renderSearchFilterChips();
+    if (searchDocPickerOpen) {
+      const pickerInput = document.getElementById("searchDocPickerInput") as HTMLInputElement | null;
+      setTimeout(() => pickerInput?.focus(), 20);
+    }
+  });
+
+  renderSearchDocPickerPanel(siteIds, countsBySite);
+}
+
+function renderSearchDocPickerPanel(siteIds: string[], countsBySite: Map<string, number>) {
+  const panel = document.getElementById("searchDocPickerPanel");
+  const catsEl = document.getElementById("searchDocPickerCats");
+  const gridEl = document.getElementById("searchDocPickerGrid");
+  if (!panel || !catsEl || !gridEl) return;
+
+  panel.style.display = searchDocPickerOpen ? "flex" : "none";
+  if (!searchDocPickerOpen) return;
+
+  const categories = [
+    { id: "all", label: `All (${siteIds.length})` },
+    { id: "Frontend & UI", label: "Frontend" },
+    { id: "TanStack Suite", label: "TanStack" },
+    { id: "Backend & JS/TS", label: "Backend" },
+    { id: "Systems & Languages", label: "Systems" },
+    { id: "DevOps, Build & Shells", label: "DevOps" },
+  ];
+
+  catsEl.innerHTML = categories
+    .map(
+      (c) =>
+        `<button type="button" class="picker-cat-btn ${
+          searchDocPickerCat === c.id ? "active" : ""
+        }" data-picker-cat="${escapeHtml(c.id)}">${escapeHtml(c.label)}</button>`
+    )
+    .join("");
+
+  catsEl.querySelectorAll("[data-picker-cat]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      searchDocPickerCat = btn.getAttribute("data-picker-cat") || "all";
+      renderSearchDocPickerPanel(siteIds, countsBySite);
+    });
+  });
+
+  const q = searchDocPickerQuery.trim().toLowerCase();
+  const filteredSiteIds = siteIds.filter((id) => {
+    const brand = getSiteBrand(id);
+    if (searchDocPickerCat !== "all" && brand.category !== searchDocPickerCat) return false;
+    if (q) {
+      const hay = `${brand.name} ${id} ${brand.category} ${brand.version}`.toLowerCase();
+      return hay.includes(q);
+    }
+    return true;
+  });
+
+  gridEl.innerHTML = [
+    `<button type="button" class="search-doc-option ${currentFilter === "all" ? "active" : ""}" data-pick-doc="all">
+      <span class="search-doc-dot" style="background:#38bdf8;"></span>
+      <span class="search-doc-name">All Installed Docs</span>
+      <span class="search-doc-cnt">${searchIndex.length}</span>
     </button>`,
-    ...siteIds.map((siteId) => {
-      const brand = getSiteBrand(siteId);
-      const cnt = countsBySite.get(siteId) || 0;
-      const isAct = currentFilter === siteId;
-      return `<button class="filter-chip ${isAct ? "active" : ""}" data-filter="${escapeHtml(siteId)}">
-        <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:${brand.color};"></span>
-        ${escapeHtml(brand.name)} <span class="count-badge">${cnt}</span>
+    ...filteredSiteIds.map((id) => {
+      const brand = getSiteBrand(id);
+      const cnt = countsBySite.get(id) || 0;
+      return `<button type="button" class="search-doc-option ${
+        currentFilter === id ? "active" : ""
+      }" data-pick-doc="${escapeHtml(id)}" title="${escapeHtml(brand.name)} (${escapeHtml(brand.version)})">
+        <span class="search-doc-dot" style="background:${brand.color};"></span>
+        <span class="search-doc-name">${escapeHtml(brand.name)}</span>
+        <span class="search-doc-cnt">${cnt}</span>
       </button>`;
     }),
   ].join("");
 
-  searchFiltersBar.innerHTML = chipsHtml;
-
-  searchFiltersBar.querySelectorAll(".filter-chip").forEach((chip) => {
-    chip.addEventListener("click", () => {
-      searchFiltersBar.querySelectorAll(".filter-chip").forEach((c) => c.classList.remove("active"));
-      chip.classList.add("active");
-      currentFilter = chip.getAttribute("data-filter") || "all";
+  gridEl.querySelectorAll("[data-pick-doc]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      currentFilter = btn.getAttribute("data-pick-doc") || "all";
+      searchDocPickerOpen = false;
+      renderSearchFilterChips();
       performSearch(searchInput.value);
+      searchInput.focus();
     });
   });
 }
@@ -2003,6 +2247,10 @@ function escapeRegex(str: string): string {
 }
 
 function openSearchModal() {
+  searchDocPickerOpen = false;
+  searchDocPickerQuery = "";
+  const pickerInput = document.getElementById("searchDocPickerInput") as HTMLInputElement | null;
+  if (pickerInput) pickerInput.value = "";
   renderSearchFilterChips();
   searchModal.classList.add("open");
   searchModal.setAttribute("aria-hidden", "false");
@@ -2012,6 +2260,7 @@ function openSearchModal() {
 }
 
 function closeSearchModal() {
+  searchDocPickerOpen = false;
   searchModal.classList.remove("open");
   searchModal.setAttribute("aria-hidden", "true");
 }
@@ -2094,6 +2343,10 @@ function setupEventListeners() {
 
   document.getElementById("btnUpdateAllPacks")?.addEventListener("click", async () => {
     await updateAllOutdatedPacks();
+  });
+
+  document.getElementById("btnDownloadAllDocs")?.addEventListener("click", async () => {
+    await downloadAllOrRemainingDocs();
   });
 
   btnAlertDismiss?.addEventListener("click", () => {
@@ -2191,6 +2444,12 @@ function setupEventListeners() {
 
   searchInput.addEventListener("input", () => {
     performSearch(searchInput.value);
+  });
+
+  const pickerInput = document.getElementById("searchDocPickerInput") as HTMLInputElement | null;
+  pickerInput?.addEventListener("input", () => {
+    searchDocPickerQuery = pickerInput.value;
+    renderSearchFilterChips();
   });
 
   // Cross-iframe messages for Ctrl+K, Zoom, Dark Reader, Multi-Tab, Fullscreen, and Edge Hover

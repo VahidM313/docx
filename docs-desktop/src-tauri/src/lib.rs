@@ -224,6 +224,9 @@ fn parse_docpack_on_disk(
     let mut manifest_buf = vec![0u8; manifest_len];
     file.read_exact(&mut manifest_buf).ok()?;
     let manifest: SiteManifest = serde_json::from_slice(&manifest_buf).ok()?;
+    if manifest.routes.is_empty() || get_site_origin_and_entry(&manifest.id).is_none() {
+        return None;
+    }
     let data_start = 4 + manifest_len;
 
     Some(Arc::new(SiteOverridePack {
@@ -248,6 +251,9 @@ fn parse_docpack_bytes(buf: Vec<u8>, source: &str) -> Option<Arc<SiteOverridePac
         return None;
     }
     let mut manifest: SiteManifest = serde_json::from_slice(&buf[4..4 + manifest_len]).ok()?;
+    if manifest.routes.is_empty() || get_site_origin_and_entry(&manifest.id).is_none() {
+        return None;
+    }
     let data_start = 4 + manifest_len;
 
     for entry in manifest.routes.values_mut() {
@@ -336,13 +342,14 @@ fn load_disk_overrides(overrides: &mut HashMap<String, Arc<SiteOverridePack>>) {
                         parse_docpack_on_disk(path.clone(), 0, pack_len, "Modular .docpack")
                     {
                         let should_use_disk = match overrides.get(&pack.manifest.id) {
-                            Some(existing) => pack.manifest.updatedAt >= existing.manifest.updatedAt,
+                            Some(existing) => {
+                                pack.manifest.updatedAt >= existing.manifest.updatedAt
+                                    || pack.manifest.routes.len() >= existing.manifest.routes.len()
+                            }
                             None => true,
                         };
                         if should_use_disk {
                             overrides.insert(pack.manifest.id.clone(), pack);
-                        } else {
-                            let _ = fs::remove_file(&path);
                         }
                     }
                 }
@@ -413,7 +420,7 @@ fn get_site_origin_and_entry(site_id: &str) -> Option<(&'static str, &'static st
         "mdn_js" => Some(("https://developer.mozilla.org", "/en-US/docs/Web/JavaScript")),
         "htmx" => Some(("https://htmx.org", "/docs/")),
         "bun" => Some(("https://bun.sh", "/docs")),
-        "elysia" => Some(("https://elysiajs.com", "/table-of-content.html")),
+        "elysia" => Some(("https://elysiajs.com", "/table-of-content")),
         "drizzle" => Some(("https://orm.drizzle.team", "/docs/overview")),
         "oxc" => Some(("https://oxc.rs", "/docs/guide/introduction.html")),
         "rust" => Some(("https://doc.rust-lang.org", "/book/")),
@@ -430,21 +437,21 @@ fn get_site_origin_and_entry(site_id: &str) -> Option<(&'static str, &'static st
         "powershell" => Some(("https://learn.microsoft.com", "/en-us/powershell/scripting/overview")),
         "cmd" => Some(("https://learn.microsoft.com", "/en-us/windows-server/administration/windows-commands/windows-commands")),
         "tanstack_start" => Some(("https://tanstack.com", "/start/latest/docs/framework/react/overview")),
-        "tanstack_router" => Some(("https://tanstack.com", "/router/latest/docs/framework/react/overview")),
+        "tanstack_router" => Some(("https://tanstack.com", "/router/latest/docs/overview")),
         "tanstack_query" => Some(("https://tanstack.com", "/query/latest/docs/framework/react/overview")),
-        "tanstack_table" => Some(("https://tanstack.com", "/table/latest/docs/introduction")),
+        "tanstack_table" => Some(("https://tanstack.com", "/table/v8/docs/introduction")),
         "tanstack_form" => Some(("https://tanstack.com", "/form/latest/docs/overview")),
         "tanstack_virtual" => Some(("https://tanstack.com", "/virtual/latest/docs/introduction")),
         "tanstack_store" => Some(("https://tanstack.com", "/store/latest/docs/overview")),
         "tanstack_db" => Some(("https://tanstack.com", "/db/latest/docs/overview")),
-        "tanstack_ai" => Some(("https://tanstack.com", "/ai/latest/docs/overview")),
+        "tanstack_ai" => Some(("https://tanstack.com", "/ai/latest/docs/getting-started/overview")),
         "tanstack_pacer" => Some(("https://tanstack.com", "/pacer/latest/docs/overview")),
         "tanstack_ranger" => Some(("https://tanstack.com", "/ranger/latest/docs/overview")),
         "tanstack_config" => Some(("https://tanstack.com", "/config/latest/docs/overview")),
         "tanstack_devtools" => Some(("https://tanstack.com", "/devtools/latest/docs/overview")),
         "tanstack_hotkeys" => Some(("https://tanstack.com", "/hotkeys/latest/docs/overview")),
         "tanstack_react_charts" => Some(("https://react-charts.tanstack.com", "/docs/overview")),
-        "tanstack_create_tsrouter_app" => Some(("https://tanstack.com", "/router/latest/docs/framework/react/quick-start")),
+        "tanstack_create_tsrouter_app" => Some(("https://tanstack.com", "/router/latest/docs/quick-start")),
         "python" => Some(("https://docs.python.org", "/3/")),
         "threejs" => Some(("https://threejs.org", "/docs/")),
         "motion" => Some(("https://motion.dev", "/docs")),
@@ -1837,7 +1844,13 @@ pub struct RemoteRegistryItem {
 #[tauri::command]
 fn fetch_remote_registry(state: tauri::State<'_, AppState>) -> Result<Vec<RemoteRegistryItem>, String> {
     let url = format!("{}/registry.json", RELEASE_BASE_URL);
-    let bytes = curl_get_bytes(&url, None)?;
+    let bytes = match curl_get_bytes(&url, None) {
+        Ok(b) => b,
+        Err(e) => {
+            let local_reg = get_packs_dir().join("registry.json");
+            fs::read(&local_reg).map_err(|_| e)?
+        }
+    };
     let parsed_raw: Vec<RemoteRegistryEntryRaw> =
         if let Ok(wrapper_map) = serde_json::from_slice::<RemoteRegistryFileMap>(&bytes) {
             wrapper_map.packs.into_values().collect()
@@ -1851,10 +1864,17 @@ fn fetch_remote_registry(state: tauri::State<'_, AppState>) -> Result<Vec<Remote
     let guard = state.store.overrides.read().unwrap();
     let mut out = Vec::with_capacity(parsed_raw.len());
     for item in parsed_raw {
-        let (installed, local_commit) = if let Some(pack) = guard.get(&item.id) {
-            (true, pack.manifest.commit.clone())
+        if get_site_origin_and_entry(&item.id).is_none() {
+            continue;
+        }
+        let (installed, local_commit, local_routes) = if let Some(pack) = guard.get(&item.id) {
+            (
+                true,
+                pack.manifest.commit.clone(),
+                pack.manifest.routes.len(),
+            )
         } else {
-            (false, String::new())
+            (false, String::new(), 0)
         };
         let effective_bytes = if item.sizeBytes > 0 {
             item.sizeBytes
@@ -1869,8 +1889,11 @@ fn fetch_remote_registry(state: tauri::State<'_, AppState>) -> Result<Vec<Remote
             && item.commit != "e3b0c442"
             && effective_bytes >= 1024
             && item.routeCount > 0;
-        let update_available =
-            installed && !local_commit.is_empty() && remote_is_valid && local_commit != item.commit;
+        let update_available = installed
+            && !local_commit.is_empty()
+            && remote_is_valid
+            && local_commit != item.commit
+            && item.routeCount >= local_routes;
         out.push(RemoteRegistryItem {
             id: item.id,
             name: item.name,
@@ -2235,7 +2258,13 @@ fn run_install_or_update_sync(
     }
 
     // Already installed and <= 6 chunks changed: perform HTTP 206 Partial Content Range Delta Update!
-    let remote_data_start = 4 + remote_manifest_bytes.len();
+    let hdr_bytes = curl_get_bytes(&pack_url, Some((0, 3)))?;
+    let embedded_manifest_len = if hdr_bytes.len() >= 4 {
+        u32::from_le_bytes([hdr_bytes[0], hdr_bytes[1], hdr_bytes[2], hdr_bytes[3]]) as usize
+    } else {
+        remote_manifest_bytes.len()
+    };
+    let remote_data_start = 4 + embedded_manifest_len;
     let mut new_pack_data: Vec<u8> = Vec::new();
     let mut new_routes: HashMap<String, ManifestEntry> = HashMap::new();
     let mut placed_hashes: HashMap<String, (usize, usize)> = HashMap::new();
