@@ -1,0 +1,610 @@
+[
+  {
+    "title": "Overview | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/overview",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Welcome to the TanStack DB documentation. TanStack DB is the reactive client store for your API. It solves the problems of building fast, modern apps, helping you: avoid endpoint sprawl and network..."
+  },
+  {
+    "title": "Offline Transactions | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/guides/offline-transactions",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "@tanstack/offline-transactions gives the leader a durable outbox for pending mutations. The executor retries stored mutations when it can reach the server. The leader restores their optimistic state..."
+  },
+  {
+    "title": "@tanstack/db | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/index",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "IR AggregateFunctionNotInSelectError BaseIndex BaseQueryBuilder BasicIndex BTreeIndex CannotCombineEmptyExpressionListError CollectionConfigurationError CollectionImpl CollectionInErrorStateError..."
+  },
+  {
+    "title": "LocalStorage Collection | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/collections/local-storage-collection",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "LocalStorage collections store small amounts of local-only state that persists across browser sessions and syncs between Collections in one tab and across browser tabs. The..."
+  },
+  {
+    "title": "LocalOnly Collection | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/collections/local-only-collection",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "LocalOnly collections are designed for in-memory client data or UI state that doesn"
+  },
+  {
+    "title": "Electric Collection | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/collections/electric-collection",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Electric collections provide seamless integration between TanStack DB and ElectricSQL, enabling real-time data synchronization with your Postgres database through Electric"
+  },
+  {
+    "title": "Query Collection | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/collections/query-collection",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Query collections provide seamless integration between TanStack DB and TanStack Query, enabling automatic synchronization between your local database and remote data sources. The..."
+  },
+  {
+    "title": "PowerSync Collection | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/collections/powersync-collection",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "PowerSync collections provide seamless integration between TanStack DB and PowerSync, enabling automatic synchronization between your in-memory TanStack DB collections and PowerSync"
+  },
+  {
+    "title": "Live Queries | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/guides/live-queries",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "TanStack DB provides a powerful, type-safe query system that allows you to fetch, filter, transform, and aggregate data from collections using a SQL-like fluent API. All queries are live by default,..."
+  },
+  {
+    "title": "Mutations | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/guides/mutations",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "TanStack DB provides a powerful mutation system that enables optimistic updates with automatic state management. This system is built around a pattern of optimistic mutation → mutation handler →..."
+  },
+  {
+    "title": "Installation | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/installation",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Each supported framework comes with its own package. Each framework package re-exports everything from the core @tanstack/db package. TanStack DB is compatible with React v18+ TanStack DB is..."
+  },
+  {
+    "title": "TrailBase Collection | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/collections/trailbase-collection",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "TrailBase collections provide seamless integration between TanStack DB and TrailBase, enabling real-time data synchronization with TrailBase"
+  },
+  {
+    "title": "SQLite Persistence | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/guides/sqlite-persistence",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "SQLite persistence stores Collection rows in a SQLite database supplied by the runtime. A new Collection can load those rows when it uses the same database. The wrapper can also save sync metadata so..."
+  },
+  {
+    "title": "Quick Start | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/quick-start",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "TanStack DB is the reactive client-first store for your API. Stop building custom endpoints for every view—query your data however your components need it. This example will show you how to: Load data..."
+  },
+  {
+    "title": "RxDB Collection | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/collections/rxdb-collection",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "RxDB collections provide seamless integration between TanStack DB and RxDB, enabling automatic synchronization between your in-memory TanStack DB collections and RxDB"
+  },
+  {
+    "title": "SSR and Hydration | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/guides/ssr",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "TanStack DB SSR transports the smallest useful snapshot for the work the server performed: Explicitly preloaded collections dehydrate as normalized collection rows. Preloaded or render-discovered live..."
+  },
+  {
+    "title": "Error Codes | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/errors",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Production builds of TanStack DB shorten error messages to a code, the inputs that the error can show, and a link to this page. For example: A console warning uses the same form with warning in place..."
+  },
+  {
+    "title": "TanStack DB React Adapter | TanStack DB React Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/framework/react/overview",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "See the React Functions Reference to see the full list of hooks available in the React Adapter. For comprehensive documentation on writing queries (filtering, joins, aggregations, etc.), see the Live..."
+  },
+  {
+    "title": "Creating a Collection Options Creator | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/guides/collection-options-creator",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "A collection options creator is a factory function that generates configuration options for TanStack DB collections. It provides a standardized way to integrate different sync engines and data sources..."
+  },
+  {
+    "title": "TanStack DB Svelte Adapter | TanStack DB Svelte Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/framework/svelte/overview",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "See the Svelte Functions Reference to see the full list of utilities available in the Svelte Adapter. For comprehensive documentation on writing queries (filtering, joins, aggregations, etc.), see the..."
+  },
+  {
+    "title": "Schemas | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/guides/schemas",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "TanStack DB uses schemas to ensure your data is valid and type-safe throughout your application. This guide covers: How schema validation works in TanStack DB Understanding TInput and TOutput types..."
+  },
+  {
+    "title": "TanStack DB Solid Adapter | TanStack DB Solid Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/framework/solid/overview",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "See the Solid Functions Reference to see the full list of primitives available in the Solid Adapter. For comprehensive documentation on writing queries (filtering, joins, aggregations, etc.), see the..."
+  },
+  {
+    "title": "Error Handling | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/guides/error-handling",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "TanStack DB provides comprehensive error handling capabilities to ensure robust data synchronization and state management. This guide covers the built-in error handling mechanisms and how to work with..."
+  },
+  {
+    "title": "TanStack DB Angular Adapter | TanStack DB Angular Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/framework/angular/overview",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "See the Angular Functions Reference to see the full list of functions available in the Angular Adapter. For comprehensive documentation on writing queries (filtering, joins, aggregations, etc.), see..."
+  },
+  {
+    "title": "liveQueryCollectionOptions | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/functions/liveQueryCollectionOptions",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/query/live-query-collection.ts:72 Creates live query collection options for use with createCollection TQuery extends QueryBuilder&lt;any&gt; TContext extends Context =..."
+  },
+  {
+    "title": "Collection | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/interfaces/Collection",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/collection/index.ts:146 Enhanced Collection interface that includes both data type T and utilities TUtils CollectionImpl&lt;T, TKey, TUtils, TSchema, TInsertInput&gt; T extends..."
+  },
+  {
+    "title": "createLiveQueryCollection | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/functions/createLiveQueryCollection",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/query/live-query-collection.ts:128 Creates a live query collection directly TQueryFn extends (q) =&gt; QueryBuilder&lt;any&gt; TQuery extends QueryBuilder&lt;any&gt; =..."
+  },
+  {
+    "title": "createOptimisticAction | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/functions/createOptimisticAction",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/optimistic-action.ts:54 Creates an optimistic action function that applies local optimistic updates immediately before executing the actual mutation on the server. This..."
+  },
+  {
+    "title": "TanStack DB Vue Adapter | TanStack DB Vue Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/framework/vue/overview",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "See the Vue Functions Reference to see the full list of composables available in the Vue Adapter. For comprehensive documentation on writing queries (filtering, joins, aggregations, etc.), see the..."
+  },
+  {
+    "title": "IndexedDB Collection | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/collections/indexed-db-collection",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Reactive local data that survives a reload. Build notes, drafts, reading lists, and offline workspaces with TanStack DB"
+  },
+  {
+    "title": "createCollection | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/functions/createCollection",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/collection/index.ts:232 Creates a new Collection instance with the given configuration T extends StandardSchemaV1&lt;unknown, unknown&gt; The schema type if a schema is provided,..."
+  },
+  {
+    "title": "AggregateFunctionNotInSelectError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/AggregateFunctionNotInSelectError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:720 GroupByError Defined in: packages/db/src/errors.ts:721 string AggregateFunctionNotInSelectError GroupByError.constructor Defined in:..."
+  },
+  {
+    "title": "powerSyncCollectionOptions | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/powersync-db-collection/functions/powerSyncCollectionOptions",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Implementation of powerSyncCollectionOptions that handles both schema and non-schema configurations. Defined in: powersync.ts:84 Creates a PowerSync collection configuration with basic default..."
+  },
+  {
+    "title": "@tanstack/react-db | TanStack DB React Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/framework/react/reference/index",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "ConditionalUseLiveQueryConfig DbProviderProps HydrationBoundaryProps LiveQueryKey UseLiveInfiniteQueryConfig UseLiveInfiniteQueryReturn UseLiveInfiniteQueryReturnWithCollection UseLiveQueryConfig..."
+  },
+  {
+    "title": "indexedDBCollectionOptions | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/functions/indexedDBCollectionOptions",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/indexed-db.ts:403 Creates IndexedDB collection options for use with a standard Collection. This provides persistent local storage with cross-tab synchronization. IMPORTANT:..."
+  },
+  {
+    "title": "queryCollectionOptions | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/query-db-collection/functions/queryCollectionOptions",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/query-db-collection/src/query.ts:561 Creates query collection options for use with a standard Collection. This integrates TanStack Query with TanStack DB for automatic..."
+  },
+  {
+    "title": "@tanstack/electric-db-collection | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/electric-db-collection/index",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "ElectricDBCollectionError ExpectedNumberInAwaitTxIdError StreamAbortedError TimeoutWaitingForMatchError TimeoutWaitingForTxIdError ElectricCollectionConfig ElectricCollectionUtils AwaitTxIdFn Txid..."
+  },
+  {
+    "title": "createTransaction | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/functions/createTransaction",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/transactions.ts:316 Creates a new transaction for grouping multiple collection operations T extends object = Record&lt;string, unknown&gt; TransactionConfig&lt;T&gt; Transaction..."
+  },
+  {
+    "title": "electricCollectionOptions | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/electric-db-collection/functions/electricCollectionOptions",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/electric-db-collection/src/electric.ts:1088 Creates Electric collection options for use with a standard Collection T extends StandardSchemaV1&lt;unknown, unknown&gt; The explicit type..."
+  },
+  {
+    "title": "rxdbCollectionOptions | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/rxdb-db-collection/functions/rxdbCollectionOptions",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: rxdb.ts:90 Creates RxDB collection options for use with a standard Collection T extends StandardSchemaV1&lt;unknown, unknown&gt; RxDBCollectionConfig&lt;InferSchemaOutput&lt;T&gt;, T&gt; Configuration..."
+  },
+  {
+    "title": "useLiveQuery | TanStack DB React Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/framework/react/reference/functions/useLiveQuery",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: useLiveQuery.ts:407 Create a live query using a query function. TContext extends Context (q) =&gt; QueryBuilder&lt;TContext&gt; Query function that defines what data to fetch unknown[] Deprecated..."
+  },
+  {
+    "title": "createIndexedDB | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/functions/createIndexedDB",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/indexed-db.ts:281 Creates or opens an IndexedDB database with the specified stores. Call this once at app startup, then pass the instance to collections. The connection..."
+  },
+  {
+    "title": "@tanstack/rxdb-db-collection | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/rxdb-db-collection/index",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "RxDBCollectionConfig OPEN_RXDB_SUBSCRIPTIONS rxdbCollectionOptions stripRxdbFields"
+  },
+  {
+    "title": "@tanstack/powersync-db-collection | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/powersync-db-collection/index",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "PowerSyncTransactor CompileSQLiteOptions SQLiteCompiledQuery BasePowerSyncCollectionConfig ConfigWithArbitraryCollectionTypes ConfigWithSQLiteInputType ConfigWithSQLiteTypes CustomSQLiteSerializer..."
+  },
+  {
+    "title": "@tanstack/query-db-collection | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/query-db-collection/index",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "DeleteOperationItemNotFoundError DuplicateKeyInBatchError GetKeyRequiredError InitialDataInOnDemandModeError InvalidItemStructureError InvalidQueryResultError InvalidSyncOperationError..."
+  },
+  {
+    "title": "CollectionInErrorStateError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/CollectionInErrorStateError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:120 CollectionStateError Defined in: packages/db/src/errors.ts:121 string string CollectionInErrorStateError CollectionStateError.constructor Defined in:..."
+  },
+  {
+    "title": "CollectionInputNotFoundError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/CollectionInputNotFoundError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:580 Error thrown when a collection input stream is not found during query compilation. In self-joins, each alias (e.g.,"
+  },
+  {
+    "title": "CollectionRequiresSyncConfigError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/CollectionRequiresSyncConfigError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:94 CollectionConfigurationError Defined in: packages/db/src/errors.ts:95 CollectionRequiresSyncConfigError CollectionConfigurationError.constructor Defined in:..."
+  },
+  {
+    "title": "CannotCombineEmptyExpressionListError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/CannotCombineEmptyExpressionListError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:823 QueryOptimizerError Defined in: packages/db/src/errors.ts:824 CannotCombineEmptyExpressionListError QueryOptimizerError.constructor Defined in:..."
+  },
+  {
+    "title": "BaseIndex | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/BaseIndex",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/indexes/base-index.ts:118 Base abstract class that all index types extend BasicIndex BTreeIndex TKey extends string | number = string | number IndexInterface&lt;TKey&gt; Defined..."
+  },
+  {
+    "title": "CollectionPreloadAbortedError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/CollectionPreloadAbortedError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:800 A collection was cleaned up before its initial preload became ready. Error Defined in: packages/db/src/errors.ts:801 CollectionPreloadAbortedError Defined in:..."
+  },
+  {
+    "title": "CollectionOperationError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/CollectionOperationError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:161 TanStackDBError UndefinedKeyError InvalidKeyError DuplicateKeyError DuplicateKeySyncError MissingUpdateArgumentError NoKeysPassedToUpdateError..."
+  },
+  {
+    "title": "CollectionStateError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/CollectionStateError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:113 TanStackDBError CollectionInErrorStateError InvalidCollectionStatusTransitionError CollectionIsInErrorStateError NegativeActiveSubscribersError..."
+  },
+  {
+    "title": "CollectionRequiresConfigError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/CollectionRequiresConfigError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:88 CollectionConfigurationError Defined in: packages/db/src/errors.ts:89 CollectionRequiresConfigError CollectionConfigurationError.constructor Defined in:..."
+  },
+  {
+    "title": "BaseQueryBuilder | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/BaseQueryBuilder",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/query/builder/index.ts:137 TContext extends Context = Context Defined in: packages/db/src/query/builder/index.ts:140 Partial&lt;QueryIR&gt; = {} CollectionResolver boolean =..."
+  },
+  {
+    "title": "BasicIndex | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/BasicIndex",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/indexes/basic-index.ts:39 Basic index using Map + sorted Array. Map for O(1) equality lookups Sorted Array for O(log n) range queries via binary search O(n) updates to..."
+  },
+  {
+    "title": "CollectionIsInErrorStateError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/CollectionIsInErrorStateError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:136 CollectionStateError Defined in: packages/db/src/errors.ts:137 CollectionIsInErrorStateError CollectionStateError.constructor Defined in:..."
+  },
+  {
+    "title": "CollectionImpl | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/CollectionImpl",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/collection/index.ts:383 Collection TOutput extends object = Record&lt;string, unknown&gt; TKey extends string | number = string | number TUtils extends UtilsRecord = { } TSchema..."
+  },
+  {
+    "title": "DatabaseRequiredError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/DatabaseRequiredError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/indexed-db.ts:32 Error Defined in: packages/db/src/indexed-db.ts:33 DatabaseRequiredError Defined in:..."
+  },
+  {
+    "title": "CollectionConfigurationError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/CollectionConfigurationError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:71 TanStackDBError InvalidSyncPersistenceCapabilityError CollectionRequiresConfigError CollectionRequiresSyncConfigError InvalidSchemaError..."
+  },
+  {
+    "title": "BTreeIndex | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/BTreeIndex",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/indexes/btree-index.ts:41 B+Tree index for sorted data with range queries This maintains items in sorted order and provides efficient range operations BaseIndex&lt;TKey&gt; TKey..."
+  },
+  {
+    "title": "DebounceCallDroppedError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/DebounceCallDroppedError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:336 TransactionError Defined in: packages/db/src/errors.ts:337 DebounceCallDroppedError TransactionError.constructor Defined in:..."
+  },
+  {
+    "title": "DistinctRequiresSelectError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/DistinctRequiresSelectError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:526 QueryCompilationError Defined in: packages/db/src/errors.ts:527 DistinctRequiresSelectError QueryCompilationError.constructor Defined in:..."
+  },
+  {
+    "title": "DuplicateKeyError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/DuplicateKeyError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:185 CollectionOperationError Defined in: packages/db/src/errors.ts:186 string | number DuplicateKeyError CollectionOperationError.constructor Defined in:..."
+  },
+  {
+    "title": "DuplicateDbInstanceError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/DuplicateDbInstanceError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:45 TanStackDBError Defined in: packages/db/src/errors.ts:46 DuplicateDbInstanceError TanStackDBError.constructor Defined in:..."
+  },
+  {
+    "title": "DeduplicatedLoadSubset | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/DeduplicatedLoadSubset",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/query/subset-dedupe.ts:8 Deduplicates exact canonical demands without inferring broader coverage. Requests follow the immutable LoadSubsetOptions contract; no copies are..."
+  },
+  {
+    "title": "DuplicateAliasInSubqueryError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/DuplicateAliasInSubqueryError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:601 Error thrown when a subquery uses the same alias as its parent query. This causes issues because parent and subquery would share the same input streams,..."
+  },
+  {
+    "title": "DbClient | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/DbClient",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/client.ts:306 Defined in: packages/db/src/client.ts:324 DbClientOptions = {} DbClient Defined in: packages/db/src/client.ts:340 | Transaction&lt;Record&lt;string, unknown&gt;&gt; |..."
+  },
+  {
+    "title": "DeleteKeyNotFoundError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/DeleteKeyNotFoundError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:267 CollectionOperationError Defined in: packages/db/src/errors.ts:268 string | number DeleteKeyNotFoundError CollectionOperationError.constructor Defined in:..."
+  },
+  {
+    "title": "DuplicateKeySyncError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/DuplicateKeySyncError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:193 CollectionOperationError Defined in: packages/db/src/errors.ts:194 string | number string boolean boolean boolean DuplicateKeySyncError..."
+  },
+  {
+    "title": "EmptyReferencePathError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/EmptyReferencePathError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:624 QueryCompilationError Defined in: packages/db/src/errors.ts:625 EmptyReferencePathError QueryCompilationError.constructor Defined in:..."
+  },
+  {
+    "title": "GetKeyRequiredError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/GetKeyRequiredError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/indexed-db.ts:76 Thrown when the getKey function is missing Error Defined in: packages/db/src/indexed-db.ts:77 GetKeyRequiredError Defined in:..."
+  },
+  {
+    "title": "FnSelectWithGroupByError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/FnSelectWithGroupByError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:532 QueryCompilationError Defined in: packages/db/src/errors.ts:533 FnSelectWithGroupByError QueryCompilationError.constructor Defined in:..."
+  },
+  {
+    "title": "HavingRequiresGroupByError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/HavingRequiresGroupByError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:562 QueryCompilationError Defined in: packages/db/src/errors.ts:563 HavingRequiresGroupByError QueryCompilationError.constructor Defined in:..."
+  },
+  {
+    "title": "GroupByError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/GroupByError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:699 TanStackDBError NonAggregateExpressionNotInGroupByError UnsupportedAggregateFunctionError AggregateFunctionNotInSelectError UnknownHavingExpressionTypeError..."
+  },
+  {
+    "title": "InvalidCollectionStatusTransitionError | TanStack DB Docs",
+    "category": "TanStack DB",
+    "path": "/db/latest/docs/reference/classes/InvalidCollectionStatusTransitionError",
+    "site": "tanstack_db",
+    "headings": [],
+    "preview": "Defined in: packages/db/src/errors.ts:128 CollectionStateError Defined in: packages/db/src/errors.ts:129 string string string InvalidCollectionStatusTransitionError CollectionStateError.constructor..."
+  }
+]

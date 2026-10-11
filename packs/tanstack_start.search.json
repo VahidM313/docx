@@ -1,0 +1,458 @@
+[
+  {
+    "title": "TanStack Start Overview | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/overview",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Build full-stack React applications with TanStack Start, including server rendering, streaming, server functions, and type-safe routing."
+  },
+  {
+    "title": "Routing | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/routing",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "TanStack Start is built on top of TanStack Router, so all of the features of TanStack Router are available to you. We highly recommend reading the TanStack Router documentation to learn more about the..."
+  },
+  {
+    "title": "Getting Started | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/getting-started",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Create a TanStack Start application with TanStack Builder, the CLI, or a working example, then run it locally and start adding routes."
+  },
+  {
+    "title": "Building a Full Stack DevJokes App with TanStack Start | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/tutorial/reading-writing-file",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "This tutorial will guide you through building a complete full-stack application using TanStack Start. You"
+  },
+  {
+    "title": "Server Components | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/server-components",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Server Components are experimental! The API may see refinements. Server Components let you render React components on the server and stream them to the client. Heavy dependencies stay out of your..."
+  },
+  {
+    "title": "Comparison | TanStack Start vs Next.js vs React Router | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/comparison",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Compare rendering, server APIs, caching, forms, and deployment in TanStack Start, Next.js App Router, and React Router Framework Mode."
+  },
+  {
+    "title": "Build a Project from Scratch | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/build-from-scratch",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "If you already created a project with the CLI or by cloning an example from the Getting Started guide, you can skip this guide and move on to the Routing guide. So you want to build a TanStack Start..."
+  },
+  {
+    "title": "React TanStack Start Start Basic Example | TanStack Start Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/examples/start-basic",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "An example showing how to implement Start Basic in React using TanStack Start."
+  },
+  {
+    "title": "Migrate from Next.js | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/migrate-from-next-js",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Move a Next.js App Router application to TanStack Start while preserving routes, metadata, authentication, mutations, and deployment behavior."
+  },
+  {
+    "title": "TanStack Start vs Next.js | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/start-vs-nextjs",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Compare TanStack Start and Next.js for routing, rendering, server functions, caching, deployment, and the work each framework handles for you."
+  },
+  {
+    "title": "Environment Functions | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/environment-functions",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Environment functions are utilities designed to define and control function execution based on the runtime environment—whether the code is running on the client or the server. These utilities help..."
+  },
+  {
+    "title": "Streaming Data from Server Functions | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/streaming-data-from-server-functions",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Streaming data from the server has become very popular thanks to the rise of AI apps. Luckily, it"
+  },
+  {
+    "title": "Static Server Functions | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/static-server-functions",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Static Server Functions are experimental! Static server functions are server functions that are executed at build time and cached as static assets when using prerendering/static-generation. They can..."
+  },
+  {
+    "title": "Server Functions | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/server-functions",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Server functions let you define server-only logic that can be called from anywhere in your application - loaders, components, hooks, or other server functions. They run on the server but can be..."
+  },
+  {
+    "title": "Execution Model | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/execution-model",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Understanding where code runs is fundamental to building TanStack Start applications. This guide explains TanStack Start"
+  },
+  {
+    "title": "Environment Variables | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/environment-variables",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Learn how to securely configure and use environment variables in your TanStack Start application across different contexts (server functions, client code, and build processes). Read env per-request,..."
+  },
+  {
+    "title": "Code Execution Patterns | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/code-execution-patterns",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "This guide covers patterns for controlling where code runs in your TanStack Start application - server-only, client-only, or isomorphic (both environments). For foundational concepts, see the..."
+  },
+  {
+    "title": "Hydration Errors | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/hydration-errors",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Mismatch: Server HTML differs from client render during hydration Common causes: Intl (locale/time zone), Date.now(), random IDs, responsive-only logic, feature flags, user prefs Pick a deterministic..."
+  },
+  {
+    "title": "Middleware | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/middleware",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Middleware allows you to customize the behavior of both server routes like GET/POST/etc (including requests to SSR your application) and server functions created with createServerFn. Middleware is..."
+  },
+  {
+    "title": "SPA mode | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/spa-mode",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "For applications that do not require SSR for either SEO, crawlers, or performance reasons, it may be desirable to ship static HTML to your users containing the &quot;shell&quot; of your application (or even..."
+  },
+  {
+    "title": "Import Protection | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/import-protection",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Experimental: Import protection is experimental and subject to change. Import protection prevents server-only code from leaking into client bundles and client-only code from leaking into server..."
+  },
+  {
+    "title": "Error Boundaries | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/error-boundaries",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "TanStack Start uses TanStack Router"
+  },
+  {
+    "title": "Selective Server-Side Rendering (SSR) | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/selective-ssr",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "In TanStack Start, routes matching the initial request are rendered on the server by default. This means beforeLoad and loader are executed on the server, followed by rendering the route components...."
+  },
+  {
+    "title": "Path Aliases | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/path-aliases",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Path aliases are a useful feature of TypeScript that allows you to define a shortcut for a path that could be distant in your project"
+  },
+  {
+    "title": "Deferred Hydration | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/deferred-hydration",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Deferred hydration is experimental On an initial page load, TanStack Start server-renders your page so the browser can show useful HTML quickly. Hydration is the client-side work that turns that..."
+  },
+  {
+    "title": "Server Routes | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/server-routes",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Server routes are a powerful feature of TanStack Start that allow you to create server-side endpoints in your application and are useful for handling raw HTTP requests, form submissions, user..."
+  },
+  {
+    "title": "Authentication Server Primitives | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/authentication-server-primitives",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "This guide covers the server-side primitives for building authentication in TanStack Start: session cookies, session lookup, OAuth, password-reset hardening, CSRF, and rate limiting. It pairs with the..."
+  },
+  {
+    "title": "Early Hints | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/early-hints",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Experimental: Early Hints are experimental and subject to change. HTTP 103 Early Hints lets your server tell the browser about important resources before the final HTML response is ready. TanStack..."
+  },
+  {
+    "title": "TanStack Query | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/tanstack-query",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Use TanStack Query with TanStack Start for request-isolated SSR, hydration, route preloading, streaming, and mutation invalidation."
+  },
+  {
+    "title": "Incremental Static Regeneration (ISR) | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/isr",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Incremental Static Regeneration (ISR) allows you to serve statically generated content from a CDN while periodically regenerating it in the background. This gives you the performance benefits of..."
+  },
+  {
+    "title": "Server Entry Point | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/server-entry-point",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "The server entry point is optional out of the box. If not provided, TanStack Start will automatically handle the server entry point for you using the below as a default. The Server Entry Point..."
+  },
+  {
+    "title": "Choose Authentication for React Apps | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/authentication-overview",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Compare hosted services, auth libraries, and custom authentication for React apps built with TanStack Start. Choose an approach before implementing sessions and authorization."
+  },
+  {
+    "title": "CSS Styling | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/css-styling",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "TanStack Start supports the CSS patterns your bundler supports, and adds SSR-aware route asset discovery on top. Use this guide to choose how to import CSS in a React Start app, and how to configure..."
+  },
+  {
+    "title": "Client Entry Point | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/client-entry-point",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "The client entry point is optional out of the box. If not provided, TanStack Start will automatically handle the client entry point for you using the below as a default. Getting our html to the client..."
+  },
+  {
+    "title": "Implement Authentication in React | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/authentication",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Implement sessions, sign-in, sign-out, protected routes, and server-side authorization in a TanStack Start React app."
+  },
+  {
+    "title": "Hosting | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/hosting",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Deploy TanStack Start with Vite or Rsbuild using hosting guides for Cloudflare, Netlify, Railway, Vercel, Node.js, and other runtimes."
+  },
+  {
+    "title": "Tailwind CSS Integration | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/tailwind-integration",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "So you want to use Tailwind CSS in your TanStack Start project? This guide will help you use Tailwind CSS in your TanStack Start project. The latest version of Tailwind CSS is 4. And it has some..."
+  },
+  {
+    "title": "Static Prerendering | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/static-prerendering",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Static prerendering is the process of generating static HTML files for your application. This can be useful for either improving the performance of your application, as it allows you to serve..."
+  },
+  {
+    "title": "Production Checklist | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/production-checklist",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Check a TanStack Start production build for secret exposure, authorization, cache isolation, HTTP status codes, SEO, assets, logging, and deployment failures."
+  },
+  {
+    "title": "Databases | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/databases",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Connect a database to TanStack Start through server functions and server routes, and compare supported database providers."
+  },
+  {
+    "title": "Observability | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/observability",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Observability is a critical aspect of modern web development, enabling you to monitor, trace, and debug your application"
+  },
+  {
+    "title": "CDN Asset URLs | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/cdn-asset-urls",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Experimental: transformAssets is experimental and subject to change. Use this guide when you need TanStack Start to rewrite manifest-managed asset URLs at runtime. The most common use case is serving..."
+  },
+  {
+    "title": "Rendering Markdown | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/rendering-markdown",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "This guide covers two methods for importing and rendering markdown content in your TanStack Start application: Static markdown with content-collections for build-time loading (e.g., blog posts)..."
+  },
+  {
+    "title": "SEO | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/seo",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Configure SEO in TanStack Start with page metadata, canonical URLs, structured data, server rendering, sitemaps, and robots.txt."
+  },
+  {
+    "title": "Generative Engine Optimization (GEO) | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/guide/geo",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "Looking for traditional search engine optimization? See the SEO guide. Generative Engine Optimization (GEO) is the practice of structuring your content and data so that AI systems—like ChatGPT,..."
+  },
+  {
+    "title": "Calling an external API using TanStack Start | TanStack Start React Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/tutorial/fetching-external-api",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "This guide demonstrates how to integrate external API calls into your TanStack Start application using route loaders. We will use TMDB API to fetch popular movies using TanStack Start and understand..."
+  },
+  {
+    "title": "React TanStack Start Start Clerk Basic Example | TanStack Start Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/examples/start-clerk-basic",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "An example showing how to implement Start Clerk Basic in React using TanStack Start."
+  },
+  {
+    "title": "React TanStack Start Start Basic Auth Example | TanStack Start Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/examples/start-basic-auth",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "An example showing how to implement Start Basic Auth in React using TanStack Start."
+  },
+  {
+    "title": "React TanStack Start Start Trellaux Example | TanStack Start Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/examples/start-trellaux",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "An example showing how to implement Start Trellaux in React using TanStack Start."
+  },
+  {
+    "title": "React TanStack Start Start Supabase Basic Example | TanStack Start Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/examples/start-supabase-basic",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "An example showing how to implement Start Supabase Basic in React using TanStack Start."
+  },
+  {
+    "title": "React TanStack Start Start Convex Trellaux Example | TanStack Start Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/examples/start-convex-trellaux",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "An example showing how to implement Start Convex Trellaux in React using TanStack Start."
+  },
+  {
+    "title": "React TanStack Start Start Basic React Query Example | TanStack Start Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/examples/start-basic-react-query",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "An example showing how to implement Start Basic React Query in React using TanStack Start."
+  },
+  {
+    "title": "React TanStack Start Start Material Ui Example | TanStack Start Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/examples/start-material-ui",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "An example showing how to implement Start Material Ui in React using TanStack Start."
+  },
+  {
+    "title": "React TanStack Start Start Workos Example | TanStack Start Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/examples/start-workos",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "An example showing how to implement Start Workos in React using TanStack Start."
+  },
+  {
+    "title": "React TanStack Start Start Basic Static Example | TanStack Start Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/examples/start-basic-static",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "An example showing how to implement Start Basic Static in React using TanStack Start."
+  },
+  {
+    "title": "React TanStack Start Start Basic Cloudflare Example | TanStack Start Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/examples/start-basic-cloudflare",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "An example showing how to implement Start Basic Cloudflare in React using TanStack Start."
+  },
+  {
+    "title": "React TanStack Start Start Basic Authjs Example | TanStack Start Docs",
+    "category": "TanStack Start",
+    "path": "/start/latest/docs/framework/react/examples/start-basic-authjs",
+    "site": "tanstack_start",
+    "headings": [],
+    "preview": "An example showing how to implement Start Basic Authjs in React using TanStack Start."
+  }
+]

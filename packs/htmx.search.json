@@ -1,0 +1,250 @@
+[
+  {
+    "title": "Examples",
+    "category": "htmx",
+    "path": "/examples/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "A list of GitHub repositories showing examples of integration with a wide variety of server-side languages and platforms, including JavaScript, Python, Java, and many others."
+  },
+  {
+    "title": "htmx 1.x &rarr; htmx 2.x Migration Guide",
+    "category": "htmx",
+    "path": "/migration-guide-htmx-1/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "The purpose of this guide is to provide instructions for migrations from htmx 1.x to htmx 2.x. We place a very high value on backwards compatibility, so in most cases this migratio"
+  },
+  {
+    "title": "</> htmx ~ Essays",
+    "category": "htmx",
+    "path": "/essays/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "javascript fatigue: longing for a hypertext already in hand"
+  },
+  {
+    "title": "htmx quirks",
+    "category": "htmx",
+    "path": "/quirks/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "This is a “quirks” page, based on SQLite’s “Quirks, Caveats, and Gotchas In SQLite” page ."
+  },
+  {
+    "title": "Reference",
+    "category": "htmx",
+    "path": "/reference/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "The most common attributes when using htmx."
+  },
+  {
+    "title": "Documentation",
+    "category": "htmx",
+    "path": "/docs/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "htmx is a library that allows you to access modern browser features directly from HTML, rather than using javascript."
+  },
+  {
+    "title": "hx",
+    "category": "htmx",
+    "path": "/attributes/hx-get/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "The hx-get attribute will cause an element to issue a GET to the specified URL and swap the HTML into the DOM using a swap strategy:"
+  },
+  {
+    "title": "hx",
+    "category": "htmx",
+    "path": "/attributes/hx-delete/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "The hx-delete attribute will cause an element to issue a DELETE to the specified URL and swap the HTML into the DOM using a swap strategy:"
+  },
+  {
+    "title": "hx",
+    "category": "htmx",
+    "path": "/attributes/hx-post/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "The hx-post attribute will cause an element to issue a POST to the specified URL and swap the HTML into the DOM using a swap strategy:"
+  },
+  {
+    "title": "hx",
+    "category": "htmx",
+    "path": "/attributes/hx-patch/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "The hx-patch attribute will cause an element to issue a PATCH to the specified URL and swap the HTML into the DOM using a swap strategy:"
+  },
+  {
+    "title": "hx",
+    "category": "htmx",
+    "path": "/attributes/hx-target/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "The hx-target attribute allows you to target a different element for swapping than the one issuing the AJAX request. The value of this attribute can be:"
+  },
+  {
+    "title": "hx",
+    "category": "htmx",
+    "path": "/attributes/hx-put/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "The hx-put attribute will cause an element to issue a PUT to the specified URL and swap the HTML into the DOM using a swap strategy:"
+  },
+  {
+    "title": "hx",
+    "category": "htmx",
+    "path": "/attributes/hx-trigger/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "The hx-trigger attribute allows you to specify what triggers an AJAX request. A trigger value can be one of the following:"
+  },
+  {
+    "title": "hx",
+    "category": "htmx",
+    "path": "/attributes/hx-vals/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "The hx-vals attribute allows you to add to the parameters that will be submitted with an AJAX request."
+  },
+  {
+    "title": "hx",
+    "category": "htmx",
+    "path": "/attributes/hx-push-url/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "The possible values of this attribute are:"
+  },
+  {
+    "title": "hx",
+    "category": "htmx",
+    "path": "/attributes/hx-select/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "The hx-select attribute allows you to select the content you want swapped from a response. The value of this attribute is a CSS query selector of the element or elements to select "
+  },
+  {
+    "title": "hx",
+    "category": "htmx",
+    "path": "/attributes/hx-swap/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "The possible values of this attribute are:"
+  },
+  {
+    "title": "hx",
+    "category": "htmx",
+    "path": "/attributes/hx-boost/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "Here is an example of some boosted links:"
+  },
+  {
+    "title": "Click to Edit",
+    "category": "htmx",
+    "path": "/examples/click-to-edit/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "The click to edit pattern provides a way to offer inline editing of all or part of a record without a page refresh."
+  },
+  {
+    "title": "hx",
+    "category": "htmx",
+    "path": "/attributes/hx-indicator/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "The hx-indicator attribute allows you to specify the element that will have the htmx-request class added to it for the duration of the request. This can be used to show spinners or"
+  },
+  {
+    "title": "Delete Row",
+    "category": "htmx",
+    "path": "/examples/delete-row/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "This example shows how to implement a delete button that removes a table row upon completion. First let’s look at the table body:"
+  },
+  {
+    "title": "hx",
+    "category": "htmx",
+    "path": "/attributes/hx-confirm/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "The hx-confirm attribute allows you to confirm an action before issuing a request. This can be useful in cases where the action is destructive and you want to ensure that the user "
+  },
+  {
+    "title": "Click to Load",
+    "category": "htmx",
+    "path": "/examples/click-to-load/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "This example shows how to implement click-to-load the next page in a table of data. The crux of the demo is the final row:"
+  },
+  {
+    "title": "Bulk Update",
+    "category": "htmx",
+    "path": "/examples/bulk-update/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "This demo shows how to implement a common pattern where rows are selected and then bulk updated. This is accomplished by putting a form around a table, with checkboxes in the table"
+  },
+  {
+    "title": "Lazy Loading",
+    "category": "htmx",
+    "path": "/examples/lazy-load/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "This example shows how to lazily load an element on a page. We start with an initial state that looks like this:"
+  },
+  {
+    "title": "Infinite Scroll",
+    "category": "htmx",
+    "path": "/examples/infinite-scroll/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "The infinite scroll pattern provides a way to load content dynamically on user scrolling action."
+  },
+  {
+    "title": "Edit Row",
+    "category": "htmx",
+    "path": "/examples/edit-row/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "This example shows how to implement editable rows. First let’s look at the table body:"
+  },
+  {
+    "title": "Progress Bar",
+    "category": "htmx",
+    "path": "/examples/progress-bar/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "This example shows how to implement a smoothly scrolling progress bar."
+  },
+  {
+    "title": "Active Search",
+    "category": "htmx",
+    "path": "/examples/active-search/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "This example actively searches a contacts database as the user enters text."
+  },
+  {
+    "title": "Inline Validation",
+    "category": "htmx",
+    "path": "/examples/inline-validation/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "This example shows how to do inline field validation, in this case of an email address. To do this we need to create a form with an input that POST s back to the server with the va"
+  },
+  {
+    "title": "Documentation",
+    "category": "htmx",
+    "path": "/",
+    "site": "htmx",
+    "headings": [],
+    "preview": "htmx is a library that allows you to access modern browser features directly from HTML, rather than using javascript."
+  }
+]

@@ -1,0 +1,690 @@
+[
+  {
+    "title": "Introduction ​",
+    "category": "GUIDE",
+    "path": "/guide/introduction.html",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Quick Start ​",
+    "category": "GUIDE",
+    "path": "/guide/quick-start",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Tutorial | Vue.js",
+    "category": "Vue.js",
+    "path": "/tutorial",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Examples | Vue.js",
+    "category": "Vue.js",
+    "path": "/examples",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "API Reference",
+    "category": "Vue.js",
+    "path": "/api",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Conditional Rendering ​",
+    "category": "GUIDE",
+    "path": "/guide/essentials/conditional",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Introduction ​",
+    "category": "GUIDE",
+    "path": "/guide/introduction",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Tooling ​",
+    "category": "GUIDE",
+    "path": "/guide/scaling-up/tooling",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Watchers ​",
+    "category": "GUIDE",
+    "path": "/guide/essentials/watchers",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Template Syntax ​",
+    "category": "GUIDE",
+    "path": "/guide/essentials/template-syntax",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Creating a Vue Application ​",
+    "category": "GUIDE",
+    "path": "/guide/essentials/application",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Computed Properties ​",
+    "category": "GUIDE",
+    "path": "/guide/essentials/computed",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "List Rendering ​",
+    "category": "GUIDE",
+    "path": "/guide/essentials/list",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Form Input Bindings ​",
+    "category": "GUIDE",
+    "path": "/guide/essentials/forms",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Class and Style Bindings ​",
+    "category": "GUIDE",
+    "path": "/guide/essentials/class-and-style",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Event Handling ​",
+    "category": "GUIDE",
+    "path": "/guide/essentials/event-handling",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Reactivity Fundamentals ​",
+    "category": "GUIDE",
+    "path": "/guide/essentials/reactivity-fundamentals",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Component Registration ​",
+    "category": "GUIDE",
+    "path": "/guide/components/registration",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Component Events ​",
+    "category": "GUIDE",
+    "path": "/guide/components/events",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Slots ​",
+    "category": "GUIDE",
+    "path": "/guide/components/slots",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Component v-model ​",
+    "category": "GUIDE",
+    "path": "/guide/components/v-model",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Transition ​",
+    "category": "GUIDE",
+    "path": "/guide/built-ins/transition",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Async Components ​",
+    "category": "GUIDE",
+    "path": "/guide/components/async",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Plugins ​",
+    "category": "GUIDE",
+    "path": "/guide/reusability/plugins",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Props ​",
+    "category": "GUIDE",
+    "path": "/guide/components/props",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Composables ​",
+    "category": "GUIDE",
+    "path": "/guide/reusability/composables",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Custom Directives ​",
+    "category": "GUIDE",
+    "path": "/guide/reusability/custom-directives",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Provide / Inject ​",
+    "category": "GUIDE",
+    "path": "/guide/components/provide-inject",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Fallthrough Attributes ​",
+    "category": "GUIDE",
+    "path": "/guide/components/attrs",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Components Basics ​",
+    "category": "GUIDE",
+    "path": "/guide/essentials/component-basics",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "TransitionGroup ​",
+    "category": "GUIDE",
+    "path": "/guide/built-ins/transition-group",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Template Refs ​",
+    "category": "GUIDE",
+    "path": "/guide/essentials/template-refs",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Lifecycle Hooks ​",
+    "category": "GUIDE",
+    "path": "/guide/essentials/lifecycle",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Production Deployment ​",
+    "category": "GUIDE",
+    "path": "/guide/best-practices/production-deployment",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Using Vue with TypeScript ​",
+    "category": "GUIDE",
+    "path": "/guide/typescript/overview",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Security ​",
+    "category": "GUIDE",
+    "path": "/guide/best-practices/security",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Server-Side Rendering (SSR) ​",
+    "category": "GUIDE",
+    "path": "/guide/scaling-up/ssr",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "TypeScript with Options API ​",
+    "category": "GUIDE",
+    "path": "/guide/typescript/options-api",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "TypeScript with Composition API ​",
+    "category": "GUIDE",
+    "path": "/guide/typescript/composition-api",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Routing ​",
+    "category": "GUIDE",
+    "path": "/guide/scaling-up/routing",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Ways of Using Vue ​",
+    "category": "GUIDE",
+    "path": "/guide/extras/ways-of-using-vue",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Performance ​",
+    "category": "GUIDE",
+    "path": "/guide/best-practices/performance",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "State Management ​",
+    "category": "GUIDE",
+    "path": "/guide/scaling-up/state-management",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Suspense ​",
+    "category": "GUIDE",
+    "path": "/guide/built-ins/suspense",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "KeepAlive ​",
+    "category": "GUIDE",
+    "path": "/guide/built-ins/keep-alive",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Teleport ​",
+    "category": "GUIDE",
+    "path": "/guide/built-ins/teleport",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Single-File Components ​",
+    "category": "GUIDE",
+    "path": "/guide/scaling-up/sfc",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Testing ​",
+    "category": "GUIDE",
+    "path": "/guide/scaling-up/testing",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Accessibility ​",
+    "category": "GUIDE",
+    "path": "/guide/best-practices/accessibility",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Composition API: setup() ​",
+    "category": "API",
+    "path": "/api/composition-api-setup",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Built-in Directives ​",
+    "category": "API",
+    "path": "/api/built-in-directives",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Compile-Time Flags ​",
+    "category": "API",
+    "path": "/api/compile-time-flags",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Rendering Mechanism ​",
+    "category": "GUIDE",
+    "path": "/guide/extras/rendering-mechanism",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Composition API FAQ ​",
+    "category": "GUIDE",
+    "path": "/guide/extras/composition-api-faq",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Reactivity in Depth ​",
+    "category": "GUIDE",
+    "path": "/guide/extras/reactivity-in-depth",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Animation Techniques ​",
+    "category": "GUIDE",
+    "path": "/guide/extras/animation",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Vue and Web Components ​",
+    "category": "GUIDE",
+    "path": "/guide/extras/web-components",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Render Functions JSX ​",
+    "category": "GUIDE",
+    "path": "/guide/extras/render-function",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "&lt;script setup&gt; ​",
+    "category": "API",
+    "path": "/api/sfc-script-setup",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Options: Rendering ​",
+    "category": "API",
+    "path": "/api/options-rendering",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Options: Lifecycle ​",
+    "category": "API",
+    "path": "/api/options-lifecycle",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Built-in Special Elements ​",
+    "category": "API",
+    "path": "/api/built-in-special-elements",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Composition API: Dependency Injection ​",
+    "category": "API",
+    "path": "/api/composition-api-dependency-injection",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Global API: General ​",
+    "category": "API",
+    "path": "/api/general",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Component Instance ​",
+    "category": "API",
+    "path": "/api/component-instance",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Built-in Components ​",
+    "category": "API",
+    "path": "/api/built-in-components",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Options: Composition ​",
+    "category": "API",
+    "path": "/api/options-composition",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Options: Misc ​",
+    "category": "API",
+    "path": "/api/options-misc",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Reactivity API: Core ​",
+    "category": "API",
+    "path": "/api/reactivity-core",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Reactivity API: Utilities ​",
+    "category": "API",
+    "path": "/api/reactivity-utilities",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Composition API: Helpers ​",
+    "category": "API",
+    "path": "/api/composition-api-helpers",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Reactivity API: Advanced ​",
+    "category": "API",
+    "path": "/api/reactivity-advanced",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Application API ​",
+    "category": "API",
+    "path": "/api/application",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Composition API: Lifecycle Hooks ​",
+    "category": "API",
+    "path": "/api/composition-api-lifecycle",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Options: State ​",
+    "category": "API",
+    "path": "/api/options-state",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Custom Renderer API ​",
+    "category": "API",
+    "path": "/api/custom-renderer",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Render Function APIs ​",
+    "category": "API",
+    "path": "/api/render-function",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "SFC CSS Features ​",
+    "category": "API",
+    "path": "/api/sfc-css-features",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Utility Types ​",
+    "category": "API",
+    "path": "/api/utility-types",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Server-Side Rendering API ​",
+    "category": "API",
+    "path": "/api/ssr",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Built-in Special Attributes ​",
+    "category": "API",
+    "path": "/api/built-in-special-attributes",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "SFC Syntax Specification ​",
+    "category": "API",
+    "path": "/api/sfc-spec",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Custom Elements API ​",
+    "category": "API",
+    "path": "/api/custom-elements",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Reactivity Transform ​",
+    "category": "GUIDE",
+    "path": "/guide/extras/reactivity-transform",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Introduction ​",
+    "category": "Vue.js",
+    "path": "/docs",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  },
+  {
+    "title": "Introduction ​",
+    "category": "Vue.js",
+    "path": "/",
+    "site": "vue",
+    "headings": [],
+    "preview": "Vue.js - The Progressive JavaScript Framework"
+  }
+]

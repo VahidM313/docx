@@ -1,0 +1,362 @@
+[
+  {
+    "title": "Overview | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/overview",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "TanStack Store is a framework-agnostic data store that ships with framework-specific adapters for major frameworks like React, Solid, Vue, Angular, Svelte, Lit, and Octane. TanStack Store is primarily..."
+  },
+  {
+    "title": "Quick Start | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/quick-start",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "TanStack Store is, first and foremost, a framework-agnostic signals implementation. It can be used with any of our framework adapters, but can also be used in vanilla JavaScript or TypeScript. It"
+  },
+  {
+    "title": "Quick Start | TanStack Store React Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/framework/react/quick-start",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "The basic react app example to get started with the TanStack react-store. useStore remains available as a deprecated alias to useSelector."
+  },
+  {
+    "title": "@tanstack/store | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/index",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "ReadonlyStore Store Atom AtomOptions BaseAtom InternalBaseAtom InternalReadonlyAtom InteropSubscribable Readable ReadonlyAtom Subscribable Subscription AnyAtom Observer Selection StoreAction..."
+  },
+  {
+    "title": "React TanStack Store Simple Example | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/framework/react/examples/simple",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "An example showing how to implement Simple in React using TanStack Store."
+  },
+  {
+    "title": "Installation | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/installation",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "You can install TanStack Store with any NPM package manager. TanStack Store is compatible with React v16.8+ and is currently only compatible with ReactDOM only. If you would like to contribute to the..."
+  },
+  {
+    "title": "AtomOptions | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/interfaces/AtomOptions",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: types.ts:47 T Defined in: types.ts:48 T T boolean"
+  },
+  {
+    "title": "Readable | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/interfaces/Readable",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: types.ts:29 Subscribable&lt;T&gt; BaseAtom InternalBaseAtom T Defined in: types.ts:30 T Defined in: types.ts:21 Subscribable.subscribe"
+  },
+  {
+    "title": "InteropSubscribable | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/interfaces/InteropSubscribable",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: types.ts:5 Subscribable T Defined in: types.ts:6 Observer&lt;T&gt; Subscription"
+  },
+  {
+    "title": "ReadonlyAtom | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/interfaces/ReadonlyAtom",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: types.ts:67 An atom that is read-only and cannot be set. BaseAtom&lt;T&gt; T Defined in: types.ts:30 T BaseAtom.get Defined in: types.ts:21 BaseAtom.subscribe"
+  },
+  {
+    "title": "@tanstack/react-store | TanStack Store React Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/framework/react/reference/index",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "UseSelectorOptions _useStore createStoreContext useAtom useCreateAtom useCreateStore useSelector useStore"
+  },
+  {
+    "title": "Subscribable | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/interfaces/Subscribable",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: types.ts:20 InteropSubscribable&lt;T&gt; Readable BaseAtom InternalBaseAtom T Defined in: types.ts:21 InteropSubscribable.subscribe"
+  },
+  {
+    "title": "ReadonlyStore | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/classes/ReadonlyStore",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: store.ts:59 T Omit&lt;Store&lt;T&gt;, &quot;setState&quot; | &quot;actions&quot;&gt; Defined in: store.ts:64 (prev?) =&gt; T ReadonlyStore&lt;T&gt; Defined in: store.ts:65 T ReadonlyStore&lt;T&gt; Defined in: store.ts:73 T Defined in:..."
+  },
+  {
+    "title": "BaseAtom | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/interfaces/BaseAtom",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: types.ts:33 Subscribable&lt;T&gt;.Readable&lt;T&gt; Atom ReadonlyAtom T Defined in: types.ts:30 T Readable.get Defined in: types.ts:21 Subscribable.subscribe"
+  },
+  {
+    "title": "Subscription | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/interfaces/Subscription",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: types.ts:16 Defined in: types.ts:17 void"
+  },
+  {
+    "title": "@tanstack/store | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "ReadonlyStore Store Atom AtomOptions BaseAtom InternalBaseAtom InternalReadonlyAtom InteropSubscribable Readable ReadonlyAtom Subscribable Subscription AnyAtom Observer Selection StoreAction..."
+  },
+  {
+    "title": "InternalReadonlyAtom | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/interfaces/InternalReadonlyAtom",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: types.ts:53 InternalBaseAtom&lt;T&gt;.ReactiveNode T Defined in: types.ts:37 Internal InternalBaseAtom._snapshot Defined in: types.ts:39 Internal T | ((snapshot) =&gt; T) boolean..."
+  },
+  {
+    "title": "Store | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/classes/Store",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: store.ts:15 T TActions extends StoreActionMap = never Defined in: store.ts:18 (prev?) =&gt; T Store&lt;T, TActions&gt; Defined in: store.ts:19 T Store&lt;T, TActions&gt; Defined in: store.ts:20..."
+  },
+  {
+    "title": "InternalBaseAtom | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/interfaces/InternalBaseAtom",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: types.ts:35 Subscribable&lt;T&gt;.Readable&lt;T&gt; InternalReadonlyAtom T Defined in: types.ts:37 Internal Defined in: types.ts:39 Internal T | ((snapshot) =&gt; T) boolean Defined in: types.ts:30 T..."
+  },
+  {
+    "title": "Atom | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/interfaces/Atom",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: types.ts:42 BaseAtom&lt;T&gt; T Defined in: types.ts:30 T BaseAtom.get Defined in: types.ts:44 Sets the value of the atom using a function. Defined in: types.ts:21 BaseAtom.subscribe"
+  },
+  {
+    "title": "StoreAction | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/type-aliases/StoreAction",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: store.ts:4 ...any[] any"
+  },
+  {
+    "title": "flush | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/functions/flush",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: atom.ts:89 void"
+  },
+  {
+    "title": "Selection | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/type-aliases/Selection",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: types.ts:3 TSelected"
+  },
+  {
+    "title": "useCreateStore | TanStack Store React Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/framework/react/reference/functions/useCreateStore",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: packages/react-store/src/useCreateStore.ts:24 Creates a stable store instance for the lifetime of the component. Pass an initial value to create a writable store, or a getter function to..."
+  },
+  {
+    "title": "createStoreContext | TanStack Store React Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/framework/react/reference/functions/createStoreContext",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: packages/react-store/src/createStoreContext.tsx:40 Creates a typed React context for sharing a bundle of atoms and stores with a subtree. The returned StoreProvider only transports the..."
+  },
+  {
+    "title": "AnyAtom | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/type-aliases/AnyAtom",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: types.ts:51"
+  },
+  {
+    "title": "useCreateAtom | TanStack Store React Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/framework/react/reference/functions/useCreateAtom",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: packages/react-store/src/useCreateAtom.ts:17 Creates a stable atom instance for the lifetime of the component. Pass an initial value to create a writable atom, or a getter function to..."
+  },
+  {
+    "title": "createAsyncAtom | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/functions/createAsyncAtom",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: atom.ts:108 T () =&gt; Promise&lt;T&gt; AtomOptions&lt;AsyncAtomState&lt;T, unknown&gt;&gt; ReadonlyAtom&lt;AsyncAtomState&lt;T, unknown&gt;&gt;"
+  },
+  {
+    "title": "createStore | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/functions/createStore",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: store.ts:86 T (prev?) =&gt; T ReadonlyStore&lt;T&gt; Defined in: store.ts:89 T T Store&lt;T&gt; Defined in: store.ts:90 T TActions extends StoreActionMap NonFunction&lt;T&gt; StoreActionsFactory&lt;T, TActions&gt;..."
+  },
+  {
+    "title": "toObserver | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/functions/toObserver",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: atom.ts:20 T Observer&lt;T&gt; | ((value) =&gt; void) (error) =&gt; void () =&gt; void Observer&lt;T&gt;"
+  },
+  {
+    "title": "shallow | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/functions/shallow",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: shallow.ts:1 T T T boolean"
+  },
+  {
+    "title": "Observer | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/type-aliases/Observer",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: types.ts:10 T Defined in: types.ts:13 void Defined in: types.ts:12 unknown void Defined in: types.ts:11 T void"
+  },
+  {
+    "title": "batch | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/functions/batch",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: atom.ts:70 () =&gt; void void"
+  },
+  {
+    "title": "StoreActionMap | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/type-aliases/StoreActionMap",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: store.ts:6"
+  },
+  {
+    "title": "StoreActionsFactory | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/type-aliases/StoreActionsFactory",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: store.ts:8 T TActions extends StoreActionMap Store&lt;T&gt;[&quot;get&quot;] Store&lt;T&gt;[&quot;setState&quot;] TActions"
+  },
+  {
+    "title": "createAtom | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/reference/functions/createAtom",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: atom.ts:146 T (prev?) =&gt; T AtomOptions&lt;T&gt; ReadonlyAtom&lt;T&gt; Defined in: atom.ts:150 T T AtomOptions&lt;T&gt; Atom&lt;T&gt;"
+  },
+  {
+    "title": "React TanStack Store Store Context Example | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/framework/react/examples/store-context",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "An example showing how to implement Store Context in React using TanStack Store."
+  },
+  {
+    "title": "React TanStack Store Stores Example | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/framework/react/examples/stores",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "An example showing how to implement Stores in React using TanStack Store."
+  },
+  {
+    "title": "React TanStack Store Store Actions Example | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/framework/react/examples/store-actions",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "An example showing how to implement Store Actions in React using TanStack Store."
+  },
+  {
+    "title": "useStore | TanStack Store React Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/framework/react/reference/functions/useStore-1",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: packages/react-store/src/useStore.ts:13 Deprecated alias for useSelector. TSource TSelected = NoInfer&lt;TSource&gt; () =&gt; TSource (listener) =&gt; object (snapshot) =&gt; TSelected (a, b) =&gt; boolean..."
+  },
+  {
+    "title": "useSelector | TanStack Store React Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/framework/react/reference/functions/useSelector",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: packages/react-store/src/useSelector.ts:43 Selects a slice of state from an atom or store and subscribes the component to that selection. This is the primary React read hook for TanStack..."
+  },
+  {
+    "title": "useAtom | TanStack Store React Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/framework/react/reference/functions/useAtom",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: packages/react-store/src/useAtom.ts:16 Returns the current atom value together with a stable setter. This is the writable-atom convenience hook for components that need to both read and..."
+  },
+  {
+    "title": "_useStore | TanStack Store React Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/framework/react/reference/functions/useStore",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: packages/react-store/src/_useStore.ts:24 Experimental combined read+write hook for stores, mirroring useAtom"
+  },
+  {
+    "title": "UseSelectorOptions | TanStack Store React Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/framework/react/reference/interfaces/UseSelectorOptions",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "Defined in: packages/react-store/src/useSelector.ts:4 TSelected Defined in: packages/react-store/src/useSelector.ts:5 TSelected TSelected boolean"
+  },
+  {
+    "title": "React TanStack Store Atoms Example | TanStack Store Docs",
+    "category": "TanStack Store",
+    "path": "/store/latest/docs/framework/react/examples/atoms",
+    "site": "tanstack_store",
+    "headings": [],
+    "preview": "An example showing how to implement Atoms in React using TanStack Store."
+  }
+]

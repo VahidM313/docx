@@ -1,0 +1,1266 @@
+[
+  {
+    "title": "Python 3.15.0 documentation",
+    "category": "Python 3",
+    "path": "/3",
+    "site": "python",
+    "headings": [],
+    "preview": "The official Python documentation."
+  },
+  {
+    "title": "Download Python 3.15 documentation",
+    "category": "3",
+    "path": "/3/download.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Download Python documentation."
+  },
+  {
+    "title": "The Python Language Reference",
+    "category": "3",
+    "path": "/3/reference/index.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This reference manual describes the syntax and core semantics of the language. It is terse, but attempts to be exact and complete. Elsewhere, the built-in objec"
+  },
+  {
+    "title": "Python Setup and Usage",
+    "category": "3",
+    "path": "/3/using/index.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This part of the documentation is devoted to general information on the setup of the Python environment on different platforms, the invocation of the interprete"
+  },
+  {
+    "title": "Python built-ins reference",
+    "category": "3",
+    "path": "/3/builtins/index.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Python comes with a number of built-in functions and classes. The built-in classes include data types that would normally be considered part of the “core” of a "
+  },
+  {
+    "title": "Index",
+    "category": "3",
+    "path": "/3/genindex.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex.html"
+  },
+  {
+    "title": "Extending and Embedding the Python Interpreter",
+    "category": "3",
+    "path": "/3/extending/index.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This document describes how to write modules in C or C++ to extend the Python interpreter with new modules. Those modules can do what Python code does – define "
+  },
+  {
+    "title": "Python Frequently Asked Questions",
+    "category": "3",
+    "path": "/3/faq/index.html",
+    "site": "python",
+    "headings": [],
+    "preview": "General Python FAQ, Programming FAQ, Design and History FAQ, Library and Extension FAQ, Extending/Embedding FAQ, Python on Windows FAQ, Graphic User Interface F"
+  },
+  {
+    "title": "Installing Python modules",
+    "category": "3",
+    "path": "/3/installing/index.html",
+    "site": "python",
+    "headings": [],
+    "preview": "As a popular open source development project, Python has an active supporting community of contributors and users that also make their software available for ot"
+  },
+  {
+    "title": "Python HOWTOs",
+    "category": "3",
+    "path": "/3/howto/index.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Python HOWTOs are documents that cover a specific topic in-depth. Modeled on the Linux Documentation Project’s HOWTO collection, this collection is an effort to"
+  },
+  {
+    "title": "The Python standard library",
+    "category": "3",
+    "path": "/3/library/index.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This library reference manual describes the standard library distributed with Python. It also describes some of the optional components that are commonly includ"
+  },
+  {
+    "title": "What’s New in Python",
+    "category": "3",
+    "path": "/3/whatsnew/index.html",
+    "site": "python",
+    "headings": [],
+    "preview": "The “What’s New in Python” series of essays takes tours through the most important changes between major Python versions. They are a “must read” for anyone wish"
+  },
+  {
+    "title": "Python Module Index",
+    "category": "3",
+    "path": "/3/py-modindex.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/py-modindex.html"
+  },
+  {
+    "title": "The Python Tutorial",
+    "category": "3",
+    "path": "/3/tutorial/index.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented pr"
+  },
+  {
+    "title": "Deprecations",
+    "category": "3",
+    "path": "/3/deprecations/index.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Pending removal in Python 3.16: The import system:- Setting__loader__ on a module while failing to set__spec__.loader is deprecated. In Python 3.16,__loader__ w"
+  },
+  {
+    "title": "What’s new in Python 3.15",
+    "category": "3",
+    "path": "/3/whatsnew/3.15.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Editor, Hugo van Kemenade,. This article explains the new features in Python 3.15, compared to 3.14. Python 3.15 was released on 9 October 2026. For full detail"
+  },
+  {
+    "title": "Python/C API reference manual",
+    "category": "3",
+    "path": "/3/c-api/index.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This manual documents the API used by C and C++ programmers who want to write extension modules or embed Python. It is a companion to Extending and Embedding th"
+  },
+  {
+    "title": "Search",
+    "category": "3",
+    "path": "/3/search.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Search the Python documentation."
+  },
+  {
+    "title": "About this documentation",
+    "category": "3",
+    "path": "/3/about.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Python’s documentation is generated from reStructuredText sources using Sphinx, a documentation generator originally created for Python and now maintained as an"
+  },
+  {
+    "title": "Copyright",
+    "category": "3",
+    "path": "/3/copyright.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Python and this documentation is: Copyright © 2001 Python Software Foundation. All rights reserved. Copyright © 2000 BeOpen.com. All rights reserved. Copyright "
+  },
+  {
+    "title": "Improve a documentation page",
+    "category": "3",
+    "path": "/3/improve-page-nojs.html",
+    "site": "python",
+    "headings": [],
+    "preview": "We are always interested to hear ideas about improvements to the documentation. You have a few ways to ask questions or suggest changes: You can start a discuss"
+  },
+  {
+    "title": "Python 3.15.0 documentation",
+    "category": "3",
+    "path": "/3/index.html",
+    "site": "python",
+    "headings": [],
+    "preview": "The official Python documentation."
+  },
+  {
+    "title": "Dealing with Bugs",
+    "category": "3",
+    "path": "/3/bugs.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Python is a mature programming language which has established a reputation for stability. In order to maintain this reputation, the developers would like to kno"
+  },
+  {
+    "title": "8. Editors and IDEs",
+    "category": "3",
+    "path": "/3/using/editors.html",
+    "site": "python",
+    "headings": [],
+    "preview": "There are a number of IDEs that support Python programming language. Many editors and IDEs provide syntax highlighting, debugging tools, and PEP 8 checks. IDLE "
+  },
+  {
+    "title": "1. Introduction",
+    "category": "3",
+    "path": "/3/reference/introduction.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This reference manual describes the Python programming language. It is not intended as a tutorial. While I am trying to be as precise as possible, I chose to us"
+  },
+  {
+    "title": "History and License",
+    "category": "3",
+    "path": "/3/license.html",
+    "site": "python",
+    "headings": [],
+    "preview": "History of the software: Python was created in the early 1990s by Guido van Rossum at Stichting Mathematisch Centrum (CWI, see https://www.cwi.nl) in the Nether"
+  },
+  {
+    "title": "Glossary",
+    "category": "3",
+    "path": "/3/glossary.html",
+    "site": "python",
+    "headings": [],
+    "preview": "&gt;&gt;&gt;, The default Python prompt of the interactive shell. Often seen for code examples which can be executed interactively in the interpreter.,,..., Can"
+  },
+  {
+    "title": "2. Lexical analysis",
+    "category": "3",
+    "path": "/3/reference/lexical_analysis.html",
+    "site": "python",
+    "headings": [],
+    "preview": "A Python program is read by a parser. Input to the parser is a stream of tokens, generated by the lexical analyzer(also known as the tokenizer). This chapter de"
+  },
+  {
+    "title": "Python Documentation contents",
+    "category": "3",
+    "path": "/3/contents.html",
+    "site": "python",
+    "headings": [],
+    "preview": "What’s New in Python- What’s new in Python 3.15- Summary – Release highlights, New features- PEP 810: Explicit lazy imports, PEP 814: Add frozendict built-in ty"
+  },
+  {
+    "title": "9. Top-level components",
+    "category": "3",
+    "path": "/3/reference/toplevel_components.html",
+    "site": "python",
+    "headings": [],
+    "preview": "The Python interpreter can get its input from a number of sources: from a script passed to it as standard input or as program argument, typed in interactively, "
+  },
+  {
+    "title": "16. Appendix",
+    "category": "3",
+    "path": "/3/tutorial/appendix.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Interactive Mode: There are two variants of the interactive REPL. The classic basic interpreter is supported on all platforms with minimal line control capabili"
+  },
+  {
+    "title": "2. Using Python on Unix platforms",
+    "category": "3",
+    "path": "/3/using/unix.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Getting and installing the latest version of Python: On Linux: Python comes preinstalled on most Linux distributions, and is available as a package on all other"
+  },
+  {
+    "title": "10. Full Grammar specification",
+    "category": "3",
+    "path": "/3/reference/grammar.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This is the full Python grammar, derived directly from the grammar used to generate the CPython parser (see Grammar/python.gram). The version here omits details"
+  },
+  {
+    "title": "4. Execution model",
+    "category": "3",
+    "path": "/3/reference/executionmodel.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Structure of a program: A Python program is constructed from code blocks. A block is a piece of Python program text that is executed as a unit. The following ar"
+  },
+  {
+    "title": "5. The import system",
+    "category": "3",
+    "path": "/3/reference/import.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Python code in one module gains access to the code in another module by the process of importing it. The import statement is the most common way of invoking the"
+  },
+  {
+    "title": "1. Command line and environment",
+    "category": "3",
+    "path": "/3/using/cmdline.html",
+    "site": "python",
+    "headings": [],
+    "preview": "The CPython interpreter scans the command line and the environment for various settings. CPython implementation detail: Other implementations’ command line sche"
+  },
+  {
+    "title": "3. Data model",
+    "category": "3",
+    "path": "/3/reference/datamodel.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Objects, values and types: Objects are Python’s abstraction for data. All data in a Python program is represented by objects or by relations between objects. Ev"
+  },
+  {
+    "title": "3. Configure Python",
+    "category": "3",
+    "path": "/3/using/configure.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Build Requirements: To build CPython, you will need: A C11 compiler. Optional C11 features are not required., On Windows, Microsoft Visual Studio 2017 or later "
+  },
+  {
+    "title": "7. Simple statements",
+    "category": "3",
+    "path": "/3/reference/simple_stmts.html",
+    "site": "python",
+    "headings": [],
+    "preview": "A simple statement is comprised within a single logical line. Several simple statements may occur on a single line separated by semicolons. The syntax for simpl"
+  },
+  {
+    "title": "8. Compound statements",
+    "category": "3",
+    "path": "/3/reference/compound_stmts.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Compound statements contain (groups of) other statements; they affect or control the execution of those other statements in some way. In general, compound state"
+  },
+  {
+    "title": "6. Expressions",
+    "category": "3",
+    "path": "/3/reference/expressions.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This chapter explains the meaning of the elements of expressions in Python. Syntax Notes: In this and the following chapters, grammar notation will be used to d"
+  },
+  {
+    "title": "6. Using Python on Android",
+    "category": "3",
+    "path": "/3/using/android.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Python on Android is unlike Python on desktop platforms. On a desktop platform, Python is generally installed as a system resource that can be used by any user "
+  },
+  {
+    "title": "7. Using Python on iOS",
+    "category": "3",
+    "path": "/3/using/ios.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Authors, Russell Keith-Magee (2024-03),. Python on iOS is unlike Python on desktop platforms. On a desktop platform, Python is generally installed as a system r"
+  },
+  {
+    "title": "5. Using Python on macOS",
+    "category": "3",
+    "path": "/3/using/mac.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This document aims to give an overview of macOS-specific behavior you should know about to get started with Python on Mac computers. Python on a Mac running mac"
+  },
+  {
+    "title": "4. Using Python on Windows",
+    "category": "3",
+    "path": "/3/using/windows.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This document aims to give an overview of Windows-specific behaviour you should know about when using Python on Microsoft Windows. Unlike most Unix systems and "
+  },
+  {
+    "title": "Index &#x2013; D",
+    "category": "3",
+    "path": "/3/genindex-D.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-D.html"
+  },
+  {
+    "title": "Built-in Constants",
+    "category": "3",
+    "path": "/3/builtins/constants.html",
+    "site": "python",
+    "headings": [],
+    "preview": "A small number of constants live in the built-in namespace. They are: Constants added by the site module: The site module (which is imported automatically durin"
+  },
+  {
+    "title": "Time complexity of operations on built-in types",
+    "category": "3",
+    "path": "/3/builtins/time-complexity.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This page documents the time complexity of various operations on built-in types in CPython. Other Python implementations may have different performance characte"
+  },
+  {
+    "title": "Index &#x2013; Symbols",
+    "category": "3",
+    "path": "/3/genindex-Symbols.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-Symbols.html"
+  },
+  {
+    "title": "Index &#x2013; B",
+    "category": "3",
+    "path": "/3/genindex-B.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-B.html"
+  },
+  {
+    "title": "Index &#x2013; E",
+    "category": "3",
+    "path": "/3/genindex-E.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-E.html"
+  },
+  {
+    "title": "Built-in Exceptions",
+    "category": "3",
+    "path": "/3/builtins/exceptions.html",
+    "site": "python",
+    "headings": [],
+    "preview": "In Python, all exceptions must be instances of a class that derives from BaseException. In a try statement with an except clause that mentions a particular clas"
+  },
+  {
+    "title": "Index &#x2013; C",
+    "category": "3",
+    "path": "/3/genindex-C.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-C.html"
+  },
+  {
+    "title": "Built-in functions",
+    "category": "3",
+    "path": "/3/builtins/functions.html",
+    "site": "python",
+    "headings": [],
+    "preview": "The Python interpreter has a number of functions and types built into it that are always available. They are listed here in alphabetical order.,,,, Built-in Fun"
+  },
+  {
+    "title": "Built-in Types",
+    "category": "3",
+    "path": "/3/builtins/stdtypes.html",
+    "site": "python",
+    "headings": [],
+    "preview": "The following sections describe the standard types that are built into the interpreter. The principal built-in types are numerics, sequences, mappings, classes,"
+  },
+  {
+    "title": "Index &#x2013; H",
+    "category": "3",
+    "path": "/3/genindex-H.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-H.html"
+  },
+  {
+    "title": "Thread Safety Guarantees",
+    "category": "3",
+    "path": "/3/builtins/threadsafety.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This page documents thread-safety guarantees for built-in types in Python’s free-threaded build. The guarantees described here apply when using Python with the "
+  },
+  {
+    "title": "Index &#x2013; _",
+    "category": "3",
+    "path": "/3/genindex-_.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-_.html"
+  },
+  {
+    "title": "Index &#x2013; G",
+    "category": "3",
+    "path": "/3/genindex-G.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-G.html"
+  },
+  {
+    "title": "Index &#x2013; A",
+    "category": "3",
+    "path": "/3/genindex-A.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-A.html"
+  },
+  {
+    "title": "Index &#x2013; F",
+    "category": "3",
+    "path": "/3/genindex-F.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-F.html"
+  },
+  {
+    "title": "Index &#x2013; J",
+    "category": "3",
+    "path": "/3/genindex-J.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-J.html"
+  },
+  {
+    "title": "Index &#x2013; N",
+    "category": "3",
+    "path": "/3/genindex-N.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-N.html"
+  },
+  {
+    "title": "Index &#x2013; K",
+    "category": "3",
+    "path": "/3/genindex-K.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-K.html"
+  },
+  {
+    "title": "Index &#x2013; V",
+    "category": "3",
+    "path": "/3/genindex-V.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-V.html"
+  },
+  {
+    "title": "Index &#x2013; X",
+    "category": "3",
+    "path": "/3/genindex-X.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-X.html"
+  },
+  {
+    "title": "Index &#x2013; Q",
+    "category": "3",
+    "path": "/3/genindex-Q.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-Q.html"
+  },
+  {
+    "title": "Index &#x2013; L",
+    "category": "3",
+    "path": "/3/genindex-L.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-L.html"
+  },
+  {
+    "title": "Index &#x2013; W",
+    "category": "3",
+    "path": "/3/genindex-W.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-W.html"
+  },
+  {
+    "title": "Index &#x2013; S",
+    "category": "3",
+    "path": "/3/genindex-S.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-S.html"
+  },
+  {
+    "title": "Index &#x2013; T",
+    "category": "3",
+    "path": "/3/genindex-T.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-T.html"
+  },
+  {
+    "title": "Index &#x2013; I",
+    "category": "3",
+    "path": "/3/genindex-I.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-I.html"
+  },
+  {
+    "title": "Index &#x2013; O",
+    "category": "3",
+    "path": "/3/genindex-O.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-O.html"
+  },
+  {
+    "title": "Index &#x2013; R",
+    "category": "3",
+    "path": "/3/genindex-R.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-R.html"
+  },
+  {
+    "title": "Index &#x2013; U",
+    "category": "3",
+    "path": "/3/genindex-U.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-U.html"
+  },
+  {
+    "title": "Index &#x2013; M",
+    "category": "3",
+    "path": "/3/genindex-M.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-M.html"
+  },
+  {
+    "title": "Index &#x2013; P",
+    "category": "3",
+    "path": "/3/genindex-P.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-P.html"
+  },
+  {
+    "title": "Index &#x2013; Z",
+    "category": "3",
+    "path": "/3/genindex-Z.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-Z.html"
+  },
+  {
+    "title": "Index &#x2013; Y",
+    "category": "3",
+    "path": "/3/genindex-Y.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-Y.html"
+  },
+  {
+    "title": "“Why is Python Installed on my Computer?” FAQ",
+    "category": "3",
+    "path": "/3/faq/installed.html",
+    "site": "python",
+    "headings": [],
+    "preview": "What is Python?: Python is a programming language. It’s used for many different applications. It’s used in some high schools and colleges as an introductory pro"
+  },
+  {
+    "title": "Graphic User Interface FAQ",
+    "category": "3",
+    "path": "/3/faq/gui.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Contents: Graphic User Interface FAQ- General GUI Questions, What GUI toolkits exist for Python?, Tkinter questions- How do I freeze Tkinter applications?, Can "
+  },
+  {
+    "title": "Library and Extension FAQ",
+    "category": "3",
+    "path": "/3/faq/library.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Contents: Library and Extension FAQ- General Library Questions- How do I find a module or application to perform task X?, Where is the math.py (socket.py, regex"
+  },
+  {
+    "title": "Python on Windows FAQ",
+    "category": "3",
+    "path": "/3/faq/windows.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Contents: Python on Windows FAQ- How do I run a Python program under Windows?, How do I make Python scripts executable?, Why does Python sometimes take so long "
+  },
+  {
+    "title": "General Python FAQ",
+    "category": "3",
+    "path": "/3/faq/general.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Contents: General Python FAQ- General Information- What is Python?, What is the Python Software Foundation?, Are there copyright restrictions on the use of Pyth"
+  },
+  {
+    "title": "Monitoring C API",
+    "category": "3",
+    "path": "/3/c-api/monitoring.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Added in version 3.13. An extension may need to interact with the event monitoring system. Subscribing to events and registering callbacks can be done via the P"
+  },
+  {
+    "title": "Security Considerations",
+    "category": "3",
+    "path": "/3/library/security_warnings.html",
+    "site": "python",
+    "headings": [],
+    "preview": "The following modules have specific security considerations: base64: base64 security considerations in RFC 4648, hashlib: all constructors take a “usedforsecuri"
+  },
+  {
+    "title": "Extending/Embedding FAQ",
+    "category": "3",
+    "path": "/3/faq/extending.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Contents: Extending/Embedding FAQ- Can I create my own functions in C?, Can I create my own functions in C++?, Writing C is hard; are there any alternatives?, H"
+  },
+  {
+    "title": "A conceptual overview of asyncio",
+    "category": "3",
+    "path": "/3/howto/a-conceptual-overview-of-asyncio.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This HOWTO article seeks to help you build a sturdy mental model of how asyncio fundamentally works, helping you understand the how and why behind the recommend"
+  },
+  {
+    "title": "Remote debugging attachment protocol",
+    "category": "3",
+    "path": "/3/howto/remote_debugging.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This protocol enables external tools to attach to a running CPython process and execute Python code remotely. Attaching to another Python process may require ad"
+  },
+  {
+    "title": "Your first C API extension module",
+    "category": "3",
+    "path": "/3/extending/first-extension-module.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This tutorial will take you through creating a simple Python extension module written in C or C++. We will use the low-level Python C API directly. For easier w"
+  },
+  {
+    "title": "Design and History FAQ",
+    "category": "3",
+    "path": "/3/faq/design.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Contents: Design and History FAQ- Why does Python use indentation for grouping of statements?, Why am I getting strange results with simple arithmetic operation"
+  },
+  {
+    "title": "Programming FAQ",
+    "category": "3",
+    "path": "/3/faq/programming.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Contents: Programming FAQ- General questions- Is there a source code-level debugger with breakpoints and single-stepping?, Are there tools to help find bugs or "
+  },
+  {
+    "title": "Index",
+    "category": "3",
+    "path": "/3/genindex-all.html",
+    "site": "python",
+    "headings": [],
+    "preview": "/3/genindex-all.html"
+  },
+  {
+    "title": "Data Types",
+    "category": "3",
+    "path": "/3/library/datatypes.html",
+    "site": "python",
+    "headings": [],
+    "preview": "The modules described in this chapter provide a variety of specialized data types such as dates and times, fixed-type arrays, heap queues, double-ended queues, "
+  },
+  {
+    "title": "Introduction",
+    "category": "3",
+    "path": "/3/library/intro.html",
+    "site": "python",
+    "headings": [],
+    "preview": "The Python standard library consists of a collection of modules. There are many ways to dissect this collection. Most modules are written in Python, but some ar"
+  },
+  {
+    "title": "Text Processing Services",
+    "category": "3",
+    "path": "/3/library/text.html",
+    "site": "python",
+    "headings": [],
+    "preview": "The modules described in this chapter provide a wide range of string manipulation operations and other text processing services. The codecs module described und"
+  },
+  {
+    "title": "rlcompleter — Completion function for GNU readline",
+    "category": "3",
+    "path": "/3/library/rlcompleter.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/rlcompleter.py The rlcompleter module defines a completion function suitable to be passed to set_completer() in the readline module. When this "
+  },
+  {
+    "title": "Binary Data Services",
+    "category": "3",
+    "path": "/3/library/binary.html",
+    "site": "python",
+    "headings": [],
+    "preview": "The modules described in this chapter provide some basic services operations for manipulation of binary data. Other operations on binary data, specifically in r"
+  },
+  {
+    "title": "unicodedata — Unicode Database",
+    "category": "3",
+    "path": "/3/library/unicodedata.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This module provides access to the Unicode Character Database (UCD) which defines character properties for all Unicode characters. The data contained in this da"
+  },
+  {
+    "title": "stringprep — Internet String Preparation",
+    "category": "3",
+    "path": "/3/library/stringprep.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/stringprep.py When identifying things (such as host names) in the internet, it is often necessary to compare such identifications for “equality"
+  },
+  {
+    "title": "string.templatelib — Support for template string literals",
+    "category": "3",
+    "path": "/3/library/string.templatelib.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/string/templatelib.py Template strings: Template strings are a mechanism for custom string processing. They have the full flexibility of Python"
+  },
+  {
+    "title": "readline — GNU readline interface",
+    "category": "3",
+    "path": "/3/library/readline.html",
+    "site": "python",
+    "headings": [],
+    "preview": "The readline module defines a number of functions to facilitate completion and reading/writing of history files from the Python interpreter. This module can be "
+  },
+  {
+    "title": "re — Regular expression operations",
+    "category": "3",
+    "path": "/3/library/re.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/re/ This module provides regular expression matching operations similar to those found in Perl. Both patterns and strings to be searched can be"
+  },
+  {
+    "title": "struct — Interpret bytes as packed binary data",
+    "category": "3",
+    "path": "/3/library/struct.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/struct.py This module converts between Python values and C structs represented as Python bytes objects. Compact format strings describe the int"
+  },
+  {
+    "title": "difflib — Helpers for computing deltas",
+    "category": "3",
+    "path": "/3/library/difflib.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/difflib.py This module provides classes and functions for comparing sequences. Most of them compare sequences of text lines (for example lists "
+  },
+  {
+    "title": "datetime — Basic date and time types",
+    "category": "3",
+    "path": "/3/library/datetime.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/datetime.py The datetime module supplies classes for manipulating dates and times. While date and time arithmetic is supported, the focus of th"
+  },
+  {
+    "title": "string — Common string operations",
+    "category": "3",
+    "path": "/3/library/string.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/string/__init__.py String constants: The constants defined in this module are: Custom string formatting: The built-in string class provides the"
+  },
+  {
+    "title": "codecs — Codec registry and base classes",
+    "category": "3",
+    "path": "/3/library/codecs.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/codecs.py This module defines base classes for standard Python codecs (encoders and decoders) and provides access to the internal Python codec "
+  },
+  {
+    "title": "textwrap — Text wrapping and filling",
+    "category": "3",
+    "path": "/3/library/textwrap.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/textwrap.py The textwrap module provides some convenience functions, as well as TextWrapper, the class that does all the work. If you’re just w"
+  },
+  {
+    "title": "pprint — Data pretty printer",
+    "category": "3",
+    "path": "/3/library/pprint.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/pprint.py The pprint module provides a capability to “pretty-print” arbitrary Python data structures in a form which can be used as input to th"
+  },
+  {
+    "title": "calendar — General calendar-related functions",
+    "category": "3",
+    "path": "/3/library/calendar.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/calendar.py This module allows you to output calendars like the Unix cal program, and provides additional useful functions related to the calen"
+  },
+  {
+    "title": "Numeric and Mathematical Modules",
+    "category": "3",
+    "path": "/3/library/numeric.html",
+    "site": "python",
+    "headings": [],
+    "preview": "The modules described in this chapter provide numeric and math-related functions and data types. The numbers module defines an abstract hierarchy of numeric typ"
+  },
+  {
+    "title": "reprlib — Alternate repr() implementation",
+    "category": "3",
+    "path": "/3/library/reprlib.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/reprlib.py The reprlib module provides a means for producing object representations with limits on the size of the resulting strings. This is u"
+  },
+  {
+    "title": "graphlib — Functionality to operate with graph-like structures",
+    "category": "3",
+    "path": "/3/library/graphlib.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/graphlib.py Exceptions: The graphlib module defines the following exception classes:"
+  },
+  {
+    "title": "zoneinfo — IANA time zone support",
+    "category": "3",
+    "path": "/3/library/zoneinfo.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/zoneinfo The zoneinfo module provides a concrete time zone implementation to support the IANA time zone database as originally specified in PEP"
+  },
+  {
+    "title": "array — Efficient arrays of numeric values",
+    "category": "3",
+    "path": "/3/library/array.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This module defines an object type which can compactly represent an array of basic values: characters, integers, floating-point numbers, complex numbers. Arrays"
+  },
+  {
+    "title": "numbers — Numeric abstract base classes",
+    "category": "3",
+    "path": "/3/library/numbers.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/numbers.py The numbers module ( PEP 3141) defines a hierarchy of numeric abstract base classes which progressively define more operations. None"
+  },
+  {
+    "title": "bisect — Array bisection algorithm",
+    "category": "3",
+    "path": "/3/library/bisect.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/bisect.py This module provides support for maintaining a list in sorted order without having to sort the list after each insertion. For long li"
+  },
+  {
+    "title": "collections — Container datatypes",
+    "category": "3",
+    "path": "/3/library/collections.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/collections/__init__.py This module implements specialized container datatypes providing alternatives to Python’s general purpose built-in cont"
+  },
+  {
+    "title": "collections.abc — Abstract Base Classes for Containers",
+    "category": "3",
+    "path": "/3/library/collections.abc.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/_collections_abc.py This module provides abstract base classes that can be used to test whether a class provides a particular interface; for ex"
+  },
+  {
+    "title": "heapq — Heap queue algorithm",
+    "category": "3",
+    "path": "/3/library/heapq.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/heapq.py This module provides an implementation of the heap queue algorithm, also known as the priority queue algorithm. Min-heaps are binary t"
+  },
+  {
+    "title": "types — Dynamic type creation and names for built-in types",
+    "category": "3",
+    "path": "/3/library/types.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/types.py This module defines utility functions to assist in dynamic creation of new types. It also defines names for some object types that are"
+  },
+  {
+    "title": "weakref — Weak references",
+    "category": "3",
+    "path": "/3/library/weakref.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/weakref.py The weakref module allows the Python programmer to create weak references to objects. In the following, the term referent means the "
+  },
+  {
+    "title": "copy — Shallow and deep copy operations",
+    "category": "3",
+    "path": "/3/library/copy.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/copy.py Assignment statements in Python do not copy objects, they create bindings between a target and an object. For collections that are muta"
+  },
+  {
+    "title": "enum — Support for enumerations",
+    "category": "3",
+    "path": "/3/library/enum.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/enum.py Important: This page contains the API reference information. For tutorial information and discussion of more advanced topics, see Basic"
+  },
+  {
+    "title": "math.integer — integer-specific mathematics functions",
+    "category": "3",
+    "path": "/3/library/math.integer.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This module provides access to the mathematical functions defined for integer arguments. These functions accept integers and objects that implement the__index__"
+  },
+  {
+    "title": "Functional Programming Modules",
+    "category": "3",
+    "path": "/3/library/functional.html",
+    "site": "python",
+    "headings": [],
+    "preview": "The modules described in this chapter provide functions and classes that support a functional programming style, and general operations on callables. The follow"
+  },
+  {
+    "title": "File and Directory Access",
+    "category": "3",
+    "path": "/3/library/filesys.html",
+    "site": "python",
+    "headings": [],
+    "preview": "The modules described in this chapter deal with disk files and directories. For example, there are modules for reading the properties of files, manipulating pat"
+  },
+  {
+    "title": "cmath — Mathematical functions for complex numbers",
+    "category": "3",
+    "path": "/3/library/cmath.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This module provides access to mathematical functions for complex numbers. The functions in this module accept integers, floating-point numbers or complex numbe"
+  },
+  {
+    "title": "functools — Higher-order functions and operations on callable objects",
+    "category": "3",
+    "path": "/3/library/functools.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/functools.py The functools module is for higher-order functions: functions that act on or return other functions. In general, any callable obje"
+  },
+  {
+    "title": "fractions — Rational numbers",
+    "category": "3",
+    "path": "/3/library/fractions.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/fractions.py The fractions module provides support for rational number arithmetic. A Fraction instance can be constructed from a pair of ration"
+  },
+  {
+    "title": "stat — Interpreting stat() results",
+    "category": "3",
+    "path": "/3/library/stat.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/stat.py The stat module defines constants and functions for interpreting the results of os.stat(), os.fstat() and os.lstat()(if they exist). Fo"
+  },
+  {
+    "title": "random — Generate pseudo-random numbers",
+    "category": "3",
+    "path": "/3/library/random.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/random.py This module implements pseudo-random number generators for various distributions. For integers, there is uniform selection from a ran"
+  },
+  {
+    "title": "decimal — Decimal fixed-point and floating-point arithmetic",
+    "category": "3",
+    "path": "/3/library/decimal.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/decimal.py The decimal module provides support for fast correctly rounded decimal floating-point arithmetic. It offers several advantages over "
+  },
+  {
+    "title": "math — Mathematical functions",
+    "category": "3",
+    "path": "/3/library/math.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This module provides access to common mathematical functions and constants, including those defined by the C standard. These functions cannot be used with compl"
+  },
+  {
+    "title": "statistics — Mathematical statistics functions",
+    "category": "3",
+    "path": "/3/library/statistics.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/statistics.py This module provides functions for calculating mathematical statistics of numeric ( Real-valued) data. The module is not intended"
+  },
+  {
+    "title": "itertools — Functions creating iterators for efficient looping",
+    "category": "3",
+    "path": "/3/library/itertools.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This module implements a number of iterator building blocks inspired by constructs from APL, Haskell, and SML. Each has been recast in a form suitable for Pytho"
+  },
+  {
+    "title": "os.path — Common pathname manipulations",
+    "category": "3",
+    "path": "/3/library/os.path.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/genericpath.py, Lib/posixpath.py(for POSIX) and Lib/ntpath.py(for Windows). This module implements some useful functions on pathnames. To read "
+  },
+  {
+    "title": "pathlib — Object-oriented filesystem paths",
+    "category": "3",
+    "path": "/3/library/pathlib.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/pathlib/ This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are "
+  },
+  {
+    "title": "filecmp — File and Directory Comparisons",
+    "category": "3",
+    "path": "/3/library/filecmp.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/filecmp.py The filecmp module defines functions to compare files and directories, with various optional time/correctness trade-offs. For compar"
+  },
+  {
+    "title": "operator — Standard operators as functions",
+    "category": "3",
+    "path": "/3/library/operator.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/operator.py The operator module exports a set of efficient functions corresponding to the intrinsic operators of Python. For example, operator."
+  },
+  {
+    "title": "fnmatch — Unix filename pattern matching",
+    "category": "3",
+    "path": "/3/library/fnmatch.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/fnmatch.py This module provides support for Unix shell-style wildcards, which are not the same as regular expressions (which are documented in "
+  },
+  {
+    "title": "copyreg — Register pickle support functions",
+    "category": "3",
+    "path": "/3/library/copyreg.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/copyreg.py The copyreg module offers a way to define functions used while pickling specific objects. The pickle and copy modules use those func"
+  },
+  {
+    "title": "linecache — Random access to text lines",
+    "category": "3",
+    "path": "/3/library/linecache.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/linecache.py The linecache module allows one to get any line from a Python source file, while attempting to optimize internally, using a cache,"
+  },
+  {
+    "title": "tempfile — Generate temporary files and directories",
+    "category": "3",
+    "path": "/3/library/tempfile.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/tempfile.py This module creates temporary files and directories. It works on all supported platforms. TemporaryFile, NamedTemporaryFile, Tempor"
+  },
+  {
+    "title": "Data Persistence",
+    "category": "3",
+    "path": "/3/library/persistence.html",
+    "site": "python",
+    "headings": [],
+    "preview": "The modules described in this chapter support storing Python data in a persistent form on disk. The pickle and marshal modules can turn many Python data types i"
+  },
+  {
+    "title": "glob — Unix style pathname pattern expansion",
+    "category": "3",
+    "path": "/3/library/glob.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/glob.py The glob module finds pathnames using pattern matching rules similar to the Unix shell. No tilde expansion is done, but*,?, and charact"
+  },
+  {
+    "title": "pickle — Python object serialization",
+    "category": "3",
+    "path": "/3/library/pickle.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/pickle.py The pickle module implements binary protocols for serializing and de-serializing a Python object structure. “Pickling” is the process"
+  },
+  {
+    "title": "shutil — High-level file operations",
+    "category": "3",
+    "path": "/3/library/shutil.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/shutil.py The shutil module offers a number of high-level operations on files and collections of files. In particular, functions are provided w"
+  },
+  {
+    "title": "marshal — Internal Python object serialization",
+    "category": "3",
+    "path": "/3/library/marshal.html",
+    "site": "python",
+    "headings": [],
+    "preview": "This module contains functions that can read and write Python values in a binary format. The format is specific to Python, but independent of machine architectu"
+  },
+  {
+    "title": "dbm — Interfaces to Unix “databases”",
+    "category": "3",
+    "path": "/3/library/dbm.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/dbm/__init__.py dbm is a generic interface to variants of the DBM database: dbm.sqlite3, dbm.gnu, dbm.ndbm. If none of these modules are instal"
+  },
+  {
+    "title": "sqlite3 — DB-API 2.0 interface for SQLite databases",
+    "category": "3",
+    "path": "/3/library/sqlite3.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/sqlite3/ SQLite is a C library that provides a lightweight disk-based database that doesn’t require a separate server process and allows access"
+  },
+  {
+    "title": "shelve — Python object persistence",
+    "category": "3",
+    "path": "/3/library/shelve.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/shelve.py A “shelf” is a persistent, dictionary-like object. The difference with “dbm” databases is that the values (not the keys!) in a shelf "
+  },
+  {
+    "title": "Data Compression and Archiving",
+    "category": "3",
+    "path": "/3/library/archiving.html",
+    "site": "python",
+    "headings": [],
+    "preview": "The modules described in this chapter support data compression with the zlib, gzip, bzip2, lzma, and zstd algorithms, and the creation of ZIP- and tar-format ar"
+  },
+  {
+    "title": "The compression package",
+    "category": "3",
+    "path": "/3/library/compression.html",
+    "site": "python",
+    "headings": [],
+    "preview": "The compression package contains the canonical compression modules containing interfaces to several different compression algorithms. Some of these modules have"
+  },
+  {
+    "title": "compression.zstd — Compression compatible with the Zstandard format",
+    "category": "3",
+    "path": "/3/library/compression.zstd.html",
+    "site": "python",
+    "headings": [],
+    "preview": "Source code: Lib/compression/zstd/__init__.py This module provides classes and functions for compressing and decompressing data using the Zstandard (or zstd) co"
+  },
+  {
+    "title": "Python 3.15.0 documentation",
+    "category": "Python 3",
+    "path": "/docs",
+    "site": "python",
+    "headings": [],
+    "preview": "The official Python documentation."
+  },
+  {
+    "title": "Python 3.15.0 documentation",
+    "category": "Python 3",
+    "path": "/",
+    "site": "python",
+    "headings": [],
+    "preview": "The official Python documentation."
+  }
+]

@@ -1,0 +1,650 @@
+[
+  {
+    "title": "Fast, unopinionated, minimalist web framework for Node.js",
+    "category": "Express.js",
+    "path": "/",
+    "site": "express",
+    "headings": [],
+    "preview": "Fast, unopinionated, minimalist web framework for Node.js"
+  },
+  {
+    "title": "Blog",
+    "category": "EN",
+    "path": "/en/blog",
+    "site": "express",
+    "headings": [],
+    "preview": "Fast, unopinionated, minimalist web framework for Node.js"
+  },
+  {
+    "title": "Hello world example",
+    "category": "EN",
+    "path": "/en/5x/starter/hello-world",
+    "site": "express",
+    "headings": [],
+    "preview": "Get started with Express.js by building a simple"
+  },
+  {
+    "title": "Using template engines with Express",
+    "category": "EN",
+    "path": "/en/5x/guide/using-template-engines",
+    "site": "express",
+    "headings": [],
+    "preview": "Discover how to integrate and use template engines like Pug, Handlebars-compatible engines, and EJS with Express.js to render dynamic HTML pages efficiently. Do"
+  },
+  {
+    "title": "Error Handling",
+    "category": "EN",
+    "path": "/en/5x/guide/error-handling",
+    "site": "express",
+    "headings": [],
+    "preview": "Understand how Express.js handles errors in synchronous and asynchronous code, and learn to implement custom error handling middleware for your applications. Do"
+  },
+  {
+    "title": "Using middleware",
+    "category": "EN",
+    "path": "/en/5x/guide/using-middleware",
+    "site": "express",
+    "headings": [],
+    "preview": "Learn how to use middleware in Express.js applications, including application-level and router-level middleware, error handling, and integrating third-party mid"
+  },
+  {
+    "title": "Serving static files in Express",
+    "category": "EN",
+    "path": "/en/5x/starter/static-files",
+    "site": "express",
+    "headings": [],
+    "preview": "Understand how to serve static files like images, CSS, and JavaScript in Express.js applications using the built-in"
+  },
+  {
+    "title": "Debugging Express",
+    "category": "EN",
+    "path": "/en/5x/guide/debugging",
+    "site": "express",
+    "headings": [],
+    "preview": "Learn how to enable and use debugging logs in Express.js applications by setting the DEBUG environment variable for enhanced troubleshooting. Documentation for "
+  },
+  {
+    "title": "Routing",
+    "category": "EN",
+    "path": "/en/5x/guide/routing",
+    "site": "express",
+    "headings": [],
+    "preview": "Learn how to define and use routes in Express.js applications, including route methods, route paths, parameters, typing requests and responses in TypeScript, an"
+  },
+  {
+    "title": "Express examples",
+    "category": "EN",
+    "path": "/en/5x/starter/examples",
+    "site": "express",
+    "headings": [],
+    "preview": "Explore a collection of Express.js application examples covering various use cases, integrations, and advanced configurations to help you learn and build your p"
+  },
+  {
+    "title": "Basic routing",
+    "category": "EN",
+    "path": "/en/5x/starter/basic-routing",
+    "site": "express",
+    "headings": [],
+    "preview": "Learn the fundamentals of routing in Express.js applications, including how to define routes, handle HTTP methods, and create route handlers for your web server"
+  },
+  {
+    "title": "FAQ",
+    "category": "EN",
+    "path": "/en/5x/starter/faq",
+    "site": "express",
+    "headings": [],
+    "preview": "Find answers to frequently asked questions about Express.js, including topics on application structure, models, authentication, template engines, error handling"
+  },
+  {
+    "title": "Installing",
+    "category": "EN",
+    "path": "/en/5x/starter/installing",
+    "site": "express",
+    "headings": [],
+    "preview": "Learn how to install Express.js in your Node.js environment, including setting up your project directory, managing dependencies with npm, and configuring TypeSc"
+  },
+  {
+    "title": "Express application generator",
+    "category": "EN",
+    "path": "/en/5x/starter/generator",
+    "site": "express",
+    "headings": [],
+    "preview": "Learn how to use the Express application generator tool to quickly create a skeleton for your Express.js applications, streamlining setup and configuration. Doc"
+  },
+  {
+    "title": "Version Support",
+    "category": "EN",
+    "path": "/en/support",
+    "site": "express",
+    "headings": [],
+    "preview": "Find information about the support schedule for different Express.js versions, including which versions are currently maintained and end-of-life policies."
+  },
+  {
+    "title": "Writing middleware for use in Express apps",
+    "category": "EN",
+    "path": "/en/5x/guide/writing-middleware",
+    "site": "express",
+    "headings": [],
+    "preview": "Learn how to write custom middleware functions for Express.js applications, including examples and best practices for enhancing request and response handling. D"
+  },
+  {
+    "title": "Express behind proxies",
+    "category": "EN",
+    "path": "/en/5x/guide/behind-proxies",
+    "site": "express",
+    "headings": [],
+    "preview": "Learn how to configure Express.js applications to work correctly behind reverse proxies, including using the trust proxy setting to handle client IP addresses. "
+  },
+  {
+    "title": "Resources",
+    "category": "EN",
+    "path": "/en/resources",
+    "site": "express",
+    "headings": [],
+    "preview": "Explore Express.js resources including community, contributing guidelines, glossary, utilities, and middleware."
+  },
+  {
+    "title": "Express Object",
+    "category": "EN",
+    "path": "/en/5x/api/express",
+    "site": "express",
+    "headings": [],
+    "preview": "Learn about the methods available on the top-level Express object. Documentation for Express.js 5.x."
+  },
+  {
+    "title": "Production best practices: performance and reliability",
+    "category": "EN",
+    "path": "/en/advanced/best-practice-performance",
+    "site": "express",
+    "headings": [],
+    "preview": "Discover performance and reliability best practices for Express apps in production, covering code optimizations and environment setups for optimal performance."
+  },
+  {
+    "title": "Security updates",
+    "category": "EN",
+    "path": "/en/advanced/security-updates",
+    "site": "express",
+    "headings": [],
+    "preview": "Review the latest security updates and patches for Express.js, including detailed vulnerability lists for different versions to help maintain a secure applicati"
+  },
+  {
+    "title": "Health Checks and Graceful Shutdown",
+    "category": "EN",
+    "path": "/en/advanced/healthcheck-graceful-shutdown",
+    "site": "express",
+    "headings": [],
+    "preview": "Learn how to implement health checks and graceful shutdown in Express apps to enhance reliability, manage deployments, and integrate with load balancers like Ku"
+  },
+  {
+    "title": "5.x API Reference",
+    "category": "EN",
+    "path": "/en/5x/api",
+    "site": "express",
+    "headings": [],
+    "preview": "API Reference for version 5.x Documentation for Express.js 5.x."
+  },
+  {
+    "title": "Developing template engines for Express",
+    "category": "EN",
+    "path": "/en/5x/advanced/developing-template-engines",
+    "site": "express",
+    "headings": [],
+    "preview": "Learn how to develop custom template engines for Express.js using app.engine(), with examples on creating and integrating your own template rendering logic. Doc"
+  },
+  {
+    "title": "Production Best Practices: Security",
+    "category": "EN",
+    "path": "/en/advanced/best-practice-security",
+    "site": "express",
+    "headings": [],
+    "preview": "Discover crucial security best practices for Express apps in production, including using TLS, input validation, secure cookies, and preventing vulnerabilities."
+  },
+  {
+    "title": "Upgrade to Express v5",
+    "category": "EN",
+    "path": "/en/guide/migrating-5",
+    "site": "express",
+    "headings": [],
+    "preview": "A comprehensive guide to migrating your Express.js applications from version 4 to 5, detailing breaking changes, deprecated methods, and new improvements."
+  },
+  {
+    "title": "Moving to Express 4",
+    "category": "EN",
+    "path": "/en/guide/migrating-4",
+    "site": "express",
+    "headings": [],
+    "preview": "A guide to migrating your Express.js applications from version 3 to 4, covering changes in middleware, routing, and how to update your codebase effectively."
+  },
+  {
+    "title": "Request Object",
+    "category": "EN",
+    "path": "/en/5x/api/request",
+    "site": "express",
+    "headings": [],
+    "preview": "The request object represents the HTTP request and has properties for the request query string, parameters, body, HTTP headers, and so on Documentation for Expr"
+  },
+  {
+    "title": "Overriding the Express API",
+    "category": "EN",
+    "path": "/en/5x/guide/overriding-express-api",
+    "site": "express",
+    "headings": [],
+    "preview": "Discover how to customize and extend the Express.js API by overriding methods and properties on the request and response objects using prototypes, including ext"
+  },
+  {
+    "title": "Database integration",
+    "category": "EN",
+    "path": "/en/guide/database-integration",
+    "site": "express",
+    "headings": [],
+    "preview": "Discover how to integrate various databases with Express.js applications, including setup examples for MongoDB, MySQL, PostgreSQL, and more."
+  },
+  {
+    "title": "Router",
+    "category": "EN",
+    "path": "/en/5x/api/router",
+    "site": "express",
+    "headings": [],
+    "preview": "A router object is an isolated instance of middleware and routes in Express 5.x. Documentation for Express.js 5.x."
+  },
+  {
+    "title": "Response",
+    "category": "EN",
+    "path": "/en/5x/api/response",
+    "site": "express",
+    "headings": [],
+    "preview": "The response object represents the HTTP response that an Express app sends when it gets an HTTP request. Documentation for Express.js 5.x."
+  },
+  {
+    "title": "Application Object",
+    "category": "EN",
+    "path": "/en/5x/api/application",
+    "site": "express",
+    "headings": [],
+    "preview": "Learn about the properties of the Express application object. Documentation for Express.js 5.x."
+  },
+  {
+    "title": "Express middleware",
+    "category": "EN",
+    "path": "/en/resources/middleware",
+    "site": "express",
+    "headings": [],
+    "preview": "Explore a list of Express.js middleware modules maintained by the Express team and the community, including built-in middleware and popular third-party modules."
+  },
+  {
+    "title": "Express utilities",
+    "category": "EN",
+    "path": "/en/resources/utils",
+    "site": "express",
+    "headings": [],
+    "preview": "Discover utility modules related to Express.js and Node.js, including tools for cookies, CSRF protection, URL parsing, routing, and more to enhance your applica"
+  },
+  {
+    "title": "Community",
+    "category": "EN",
+    "path": "/en/resources/community",
+    "site": "express",
+    "headings": [],
+    "preview": "Connect with the Express.js community, learn about the technical committee, find resources, explore community-contributed modules, and get involved in discussio"
+  },
+  {
+    "title": "cookie-parser middleware",
+    "category": "EN",
+    "path": "/en/resources/middleware/cookie-parser",
+    "site": "express",
+    "headings": [],
+    "preview": "Parse HTTP request cookies"
+  },
+  {
+    "title": "method-override middleware",
+    "category": "EN",
+    "path": "/en/resources/middleware/method-override",
+    "site": "express",
+    "headings": [],
+    "preview": "Override HTTP verbs"
+  },
+  {
+    "title": "Contributing to Express",
+    "category": "EN",
+    "path": "/en/resources/contributing",
+    "site": "express",
+    "headings": [],
+    "preview": "Find out how to contribute to Express.js, including guidelines for reporting issues, submitting pull requests, becoming a collaborator, and understanding securi"
+  },
+  {
+    "title": "cookie-session middleware",
+    "category": "EN",
+    "path": "/en/resources/middleware/cookie-session",
+    "site": "express",
+    "headings": [],
+    "preview": "Cookie session middleware"
+  },
+  {
+    "title": "compression middleware",
+    "category": "EN",
+    "path": "/en/resources/middleware/compression",
+    "site": "express",
+    "headings": [],
+    "preview": "Node.js compression middleware"
+  },
+  {
+    "title": "morgan middleware",
+    "category": "EN",
+    "path": "/en/resources/middleware/morgan",
+    "site": "express",
+    "headings": [],
+    "preview": "HTTP request logger middleware for Node.js"
+  },
+  {
+    "title": "cors middleware",
+    "category": "EN",
+    "path": "/en/resources/middleware/cors",
+    "site": "express",
+    "headings": [],
+    "preview": "Node.js CORS middleware"
+  },
+  {
+    "title": "response-time middleware",
+    "category": "EN",
+    "path": "/en/resources/middleware/response-time",
+    "site": "express",
+    "headings": [],
+    "preview": "Response time for Node.js servers"
+  },
+  {
+    "title": "multer middleware",
+    "category": "EN",
+    "path": "/en/resources/middleware/multer",
+    "site": "express",
+    "headings": [],
+    "preview": "Middleware for handling multipart/form-data"
+  },
+  {
+    "title": "errorhandler middleware",
+    "category": "EN",
+    "path": "/en/resources/middleware/errorhandler",
+    "site": "express",
+    "headings": [],
+    "preview": "Development-only error handler middleware"
+  },
+  {
+    "title": "Glossary",
+    "category": "EN",
+    "path": "/en/resources/glossary",
+    "site": "express",
+    "headings": [],
+    "preview": "A comprehensive glossary of terms related to Express.js, Node.js, middleware, routing, and other key concepts to help you understand and use Express effectively"
+  },
+  {
+    "title": "body-parser middleware",
+    "category": "EN",
+    "path": "/en/resources/middleware/body-parser",
+    "site": "express",
+    "headings": [],
+    "preview": "Node.js body parsing middleware"
+  },
+  {
+    "title": "serve-favicon middleware",
+    "category": "EN",
+    "path": "/en/resources/middleware/serve-favicon",
+    "site": "express",
+    "headings": [],
+    "preview": "Favicon serving middleware with caching"
+  },
+  {
+    "title": "serve-static middleware",
+    "category": "EN",
+    "path": "/en/resources/middleware/serve-static",
+    "site": "express",
+    "headings": [],
+    "preview": "Serve static files"
+  },
+  {
+    "title": "serve-index middleware",
+    "category": "EN",
+    "path": "/en/resources/middleware/serve-index",
+    "site": "express",
+    "headings": [],
+    "preview": "Serve directory listings"
+  },
+  {
+    "title": "May 2026 Security Releases",
+    "category": "EN",
+    "path": "/en/blog/2026-05-31-security-releases",
+    "site": "express",
+    "headings": [],
+    "preview": "Security releases for multiparty have been published. We recommend that all users upgrade as soon as possible."
+  },
+  {
+    "title": "Blog",
+    "category": "EN",
+    "path": "/en/blog/2",
+    "site": "express",
+    "headings": [],
+    "preview": "Fast, unopinionated, minimalist web framework for Node.js"
+  },
+  {
+    "title": "vhost middleware",
+    "category": "EN",
+    "path": "/en/resources/middleware/vhost",
+    "site": "express",
+    "headings": [],
+    "preview": "Virtual domain hosting"
+  },
+  {
+    "title": "September 2026 Security Releases",
+    "category": "EN",
+    "path": "/en/blog/2026-09-30-security-releases",
+    "site": "express",
+    "headings": [],
+    "preview": "Security releases for compression, cookies, hbs, morgan, multer, multiparty, and proxy-addr have been published. We recommend that all users upgrade as soon as "
+  },
+  {
+    "title": "February 2026 Security Releases",
+    "category": "EN",
+    "path": "/en/blog/2026-02-27-security-releases",
+    "site": "express",
+    "headings": [],
+    "preview": "Security release for multer has been published. We recommend that all users upgrade as soon as possible."
+  },
+  {
+    "title": "Express is joining the OpenJS CNA coordinated break",
+    "category": "EN",
+    "path": "/en/blog/2026-09-09-joining-the-openjs-cna-security-break",
+    "site": "express",
+    "headings": [],
+    "preview": "The Express security team is pausing from September 17 to October 6, 2026, alongside the OpenJS Foundation CNA."
+  },
+  {
+    "title": "session middleware",
+    "category": "EN",
+    "path": "/en/resources/middleware/session",
+    "site": "express",
+    "headings": [],
+    "preview": "Simple session middleware for Express"
+  },
+  {
+    "title": "A New Look for Express",
+    "category": "EN",
+    "path": "/en/blog/2026-05-18-a-new-look-for-express",
+    "site": "express",
+    "headings": [],
+    "preview": "Discover the redesigned Express.js website and our brand-new logo, built from the ground up with Astro."
+  },
+  {
+    "title": "March 2026 Security Releases",
+    "category": "EN",
+    "path": "/en/blog/2026-03-30-security-releases",
+    "site": "express",
+    "headings": [],
+    "preview": "Security releases for path-to-regexp have been published. We recommend that all users upgrade as soon as possible."
+  },
+  {
+    "title": "July 2026 Security Releases",
+    "category": "EN",
+    "path": "/en/blog/2026-07-31-security-releases",
+    "site": "express",
+    "headings": [],
+    "preview": "A security release for body-parser has been published. We recommend that all users upgrade as soon as possible."
+  },
+  {
+    "title": "timeout middleware",
+    "category": "EN",
+    "path": "/en/resources/middleware/timeout",
+    "site": "express",
+    "headings": [],
+    "preview": "Request timeout middleware for Connect/Express"
+  },
+  {
+    "title": "June 2026 Security Releases",
+    "category": "EN",
+    "path": "/en/blog/2026-06-30-security-releases",
+    "site": "express",
+    "headings": [],
+    "preview": "Security releases for multer and morgan have been published. We recommend that all users upgrade as soon as possible."
+  },
+  {
+    "title": "November 2025 Security Releases",
+    "category": "EN",
+    "path": "/en/blog/2025-12-01-security-releases",
+    "site": "express",
+    "headings": [],
+    "preview": "Security release for body-parser has been published. We recommend that all users upgrade as soon as possible."
+  },
+  {
+    "title": "August 2026 Security Releases",
+    "category": "EN",
+    "path": "/en/blog/2026-08-31-security-releases",
+    "site": "express",
+    "headings": [],
+    "preview": "Security releases for hbs, multer, and morgan have been published. We recommend that all users upgrade as soon as possible."
+  },
+  {
+    "title": "June 2025 Security Releases",
+    "category": "EN",
+    "path": "/en/blog/2025-07-18-security-releases",
+    "site": "express",
+    "headings": [],
+    "preview": "Security update for Multer released. All users are encouraged to upgrade."
+  },
+  {
+    "title": "September 2024 Security Releases",
+    "category": "EN",
+    "path": "/en/blog/2024-09-29-security-releases",
+    "site": "express",
+    "headings": [],
+    "preview": "Security releases for Express, body-parser, send, serve-static, and path-to-regexp have been published. We recommend that all users upgrade as soon as possible."
+  },
+  {
+    "title": "July 2025 Security Releases",
+    "category": "EN",
+    "path": "/en/blog/2025-07-31-security-releases",
+    "site": "express",
+    "headings": [],
+    "preview": "Security releases for Multer and On-headers has been published. We recommend that all users upgrade as soon as possible."
+  },
+  {
+    "title": "Welcome to The Express Blog!",
+    "category": "EN",
+    "path": "/en/blog/2024-07-16-welcome-post",
+    "site": "express",
+    "headings": [],
+    "preview": "Introducing the new Express blog — a primary platform for announcements, updates, and communication from the Express technical committee."
+  },
+  {
+    "title": "May 2025 Security Releases",
+    "category": "EN",
+    "path": "/en/blog/2025-05-19-security-releases",
+    "site": "express",
+    "headings": [],
+    "preview": "Security release for Multer has been published. We recommend that all users upgrade as soon as possible."
+  },
+  {
+    "title": "Spring Cleaning in Express.js: Deprecations and the Path Ahead",
+    "category": "EN",
+    "path": "/en/blog/2025-05-16-express-cleanup-legacy-packages",
+    "site": "express",
+    "headings": [],
+    "preview": "As part of a broader effort to modernize and streamline Express.js, we’ve deprecated several outdated packages including csurf, connect-multiparty, and path-mat"
+  },
+  {
+    "title": "How to write a blog post",
+    "category": "EN",
+    "path": "/en/blog/write-post",
+    "site": "express",
+    "headings": [],
+    "preview": "Step by step guide to write a blog post"
+  },
+  {
+    "title": "Express Never Ending Support Launched by HeroDevs and Express.js",
+    "category": "EN",
+    "path": "/en/blog/2024-10-01-herodevs-partnership-announcement",
+    "site": "express",
+    "headings": [],
+    "preview": "The Express.js team is pleased to announce a partnership with HeroDevs to launch Express Never-Ending Support (NES), providing long-term support for application"
+  },
+  {
+    "title": "[email&#160;protected] : Now the Default on npm with LTS Timeline",
+    "category": "EN",
+    "path": "/en/blog/2025-03-31-v5-1-latest-release",
+    "site": "express",
+    "headings": [],
+    "preview": "Express 5.1.0 is now the default on npm, and we"
+  },
+  {
+    "title": "Blog",
+    "category": "EN",
+    "path": "/en/blog/3",
+    "site": "express",
+    "headings": [],
+    "preview": "Fast, unopinionated, minimalist web framework for Node.js"
+  },
+  {
+    "title": "Express.js Security Audit: A Milestone Achievement",
+    "category": "EN",
+    "path": "/en/blog/2024-10-22-security-audit-milestone-achievement",
+    "site": "express",
+    "headings": [],
+    "preview": "Celebrating the successful completion of the Express.js security audit conducted by Ada Logics and facilitated by OSTIF."
+  },
+  {
+    "title": "How Express.js Rebuilt Its Vulnerability Reporting Process",
+    "category": "EN",
+    "path": "/en/blog/2025-06-05-vulnerability-reporting-process-overhaul",
+    "site": "express",
+    "headings": [],
+    "preview": "Express.js has overhauled its vulnerability reporting workflow with a unified process, consolidated documentation, and GitHub Security Advisories enabled across"
+  },
+  {
+    "title": "Introducing Express v5: A New Era for the Node.js Framework",
+    "category": "EN",
+    "path": "/en/blog/2024-10-15-v5-release",
+    "site": "express",
+    "headings": [],
+    "preview": "Announcing the release of Express version 5"
+  },
+  {
+    "title": "A New Chapter for Express.js: Triumphs of 2024 and an ambitious 2025",
+    "category": "EN",
+    "path": "/en/blog/2025-01-09-rewind-2024-triumphs-and-2025-vision",
+    "site": "express",
+    "headings": [],
+    "preview": "Explore the transformative journey of Express.js in 2024, marked by governance improvements, the long-awaited release of Express 5.0, and heightened security me"
+  },
+  {
+    "title": "Blog",
+    "category": "EN",
+    "path": "/en/blog/4",
+    "site": "express",
+    "headings": [],
+    "preview": "Fast, unopinionated, minimalist web framework for Node.js"
+  },
+  {
+    "title": "Fast, unopinionated, minimalist web framework for Node.js",
+    "category": "Express.js",
+    "path": "/docs",
+    "site": "express",
+    "headings": [],
+    "preview": "Fast, unopinionated, minimalist web framework for Node.js"
+  }
+]

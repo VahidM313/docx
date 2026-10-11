@@ -1,0 +1,906 @@
+[
+  {
+    "title": "Overview | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/overview",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "TanStack Query (formerly known as React Query) is often described as the missing data-fetching library for web applications, but in more technical terms, it makes fetching, caching, synchronizing and..."
+  },
+  {
+    "title": "GraphQL | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/graphql",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Because React Query"
+  },
+  {
+    "title": "Quick Start | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/quick-start",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "This code snippet very briefly illustrates the 3 core concepts of React Query: Queries Mutations Query Invalidation If you"
+  },
+  {
+    "title": "Important Defaults | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/important-defaults",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Out of the box, TanStack Query is configured with aggressive but sane defaults. Sometimes these defaults can catch new users off guard or make learning/debugging difficult if they are unknown by the..."
+  },
+  {
+    "title": "TypeScript | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/typescript",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "React Query is now written in TypeScript to make sure the library and your projects are type-safe! Things to keep in mind: TanStack Query follows DefinitelyTyped"
+  },
+  {
+    "title": "React TanStack Query Simple Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/simple",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Simple in React using TanStack Query."
+  },
+  {
+    "title": "Installation | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/installation",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "You can install React Query via NPM, or a good ol"
+  },
+  {
+    "title": "Devtools | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/devtools",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Wave your hands in the air and shout hooray because React Query comes with dedicated devtools! 🥳 When you begin your React Query journey, you"
+  },
+  {
+    "title": "@tanstack/react-query | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/index",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "CancelledError InfiniteQueryObserver Mutation MutationCache MutationObserver QueriesObserver Query QueryCache QueryClient QueryObserver CancelOptions DefaultOptions DehydratedState DehydrateOptions..."
+  },
+  {
+    "title": "React Native | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/react-native",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "React Query is designed to work out of the box with React Native. There are several options available for React Native DevTools integration: Rozenite Plugin: A 3rd party plugin for React Native..."
+  },
+  {
+    "title": "Comparison | React Query vs SWR vs Apollo vs RTK Query vs React Router | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/comparison",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "This comparison table strives to be as accurate and as unbiased as possible. If you use any of these libraries and feel the information could be improved, feel free to suggest changes (with notes or..."
+  },
+  {
+    "title": "Window Focus Refetching | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/window-focus-refetching",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "If a user leaves your application and returns and the query data is stale, TanStack Query automatically requests fresh data for you in the background. You can disable this globally or per-query using..."
+  },
+  {
+    "title": "Query Options | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/query-options",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "One of the best ways to share queryKey and queryFn between multiple places, yet keep them co-located to one another, is to use the queryOptions helper. At runtime, this helper just returns whatever..."
+  },
+  {
+    "title": "Network Mode | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/network-mode",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "TanStack Query provides three different network modes to distinguish how Queries and Mutations should behave if you have no network connection. This mode can be set for each Query / Mutation..."
+  },
+  {
+    "title": "Query Invalidation | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/query-invalidation",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Waiting for queries to become stale before they are fetched again doesn"
+  },
+  {
+    "title": "Query Keys | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/query-keys",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "At its core, TanStack Query manages query caching for you based on query keys. Query keys have to be an Array at the top level, and can be as simple as an Array with a single string, or as complex as..."
+  },
+  {
+    "title": "Queries | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/queries",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "A query is a declarative dependency on an asynchronous source of data that is tied to a unique key. A query can be used with any Promise based method (including GET and POST methods) to fetch data..."
+  },
+  {
+    "title": "Dependent Queries | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/dependent-queries",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Dependent (or serial) queries depend on previous ones to finish before they can execute. To achieve this, it"
+  },
+  {
+    "title": "Parallel Queries | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/parallel-queries",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "&quot;Parallel&quot; queries are queries that are executed in parallel, or at the same time so as to maximize fetching concurrency. When the number of parallel queries does not change, there is no extra effort..."
+  },
+  {
+    "title": "Query Retries | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/query-retries",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "When a useQuery query fails (the query function throws an error), TanStack Query will automatically retry the query if that query"
+  },
+  {
+    "title": "Query Functions | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/query-functions",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "A query function can be literally any function that returns a promise. The promise that is returned should either resolve the data or throw an error. On success, the resolved value may be anything..."
+  },
+  {
+    "title": "Disabling/Pausing Queries | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/disabling-queries",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "If you ever want to disable a query from automatically running, you can use the enabled = false option. The enabled option also accepts a callback that returns a boolean. When enabled is false: If the..."
+  },
+  {
+    "title": "Polling | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/polling",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "refetchInterval makes a query refetch on a timer. Set it to a number in milliseconds and the query runs every N ms while there"
+  },
+  {
+    "title": "Mutations | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/mutations",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Unlike queries, mutations are typically used to create/update/delete data or perform server side-effects. For this purpose, TanStack Query exports a useMutation hook. Here"
+  },
+  {
+    "title": "Background Fetching Indicators | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/background-fetching-indicators",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "A query"
+  },
+  {
+    "title": "Invalidations from Mutations | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/invalidations-from-mutations",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Invalidating queries is only half the battle. Knowing when to invalidate them is the other half. Usually when a mutation in your app succeeds, it"
+  },
+  {
+    "title": "Placeholder Query Data | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/placeholder-query-data",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Placeholder data allows a query to behave as if it already has data, similar to the initialData option, but the data is not persisted to the cache. This comes in handy for situations where you have..."
+  },
+  {
+    "title": "Advanced Server Rendering | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/advanced-ssr",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Welcome to the Advanced Server Rendering guide, where you will learn all about using React Query with streaming, Server Components and the Next.js app router. You might want to read the Server..."
+  },
+  {
+    "title": "Caching Examples | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/caching",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Please thoroughly read the Important Defaults before reading this guide This caching example illustrates the story and lifecycle of: Query Instances with and without cache data Background Refetching..."
+  },
+  {
+    "title": "Prefetching &amp; Router Integration | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/prefetching",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "When you know or suspect that a certain piece of data will be needed, you can use prefetching to populate the cache with that data ahead of time, leading to a faster experience. There are a few..."
+  },
+  {
+    "title": "Server Rendering &amp; Hydration | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/ssr",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "In this guide you"
+  },
+  {
+    "title": "Filters | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/filters",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Some methods within TanStack Query accept a QueryFilters or MutationFilters object. A query filter is an object with certain conditions to match a query with: A query filter object supports the..."
+  },
+  {
+    "title": "Render Optimizations | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/render-optimizations",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "React Query applies a couple of optimizations automatically to ensure that your components only re-render when they actually need to. This is done by the following means: React Query uses a technique..."
+  },
+  {
+    "title": "Query Cancellation | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/query-cancellation",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "TanStack Query provides each query function with an AbortSignal instance. When a query becomes out-of-date or inactive, this signal will become aborted. This means that all queries are cancellable,..."
+  },
+  {
+    "title": "Infinite Queries | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/infinite-queries",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Rendering lists that can additively &quot;load more&quot; data onto an existing set of data or &quot;infinite scroll&quot; is also a very common UI pattern. TanStack Query supports a useful version of useQuery called..."
+  },
+  {
+    "title": "Optimistic Updates | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/optimistic-updates",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "React Query provides two ways to optimistically update your UI before a mutation has completed. You can either use the onMutate option to update your cache directly, or leverage the returned variables..."
+  },
+  {
+    "title": "Scroll Restoration | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/scroll-restoration",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Traditionally, when you navigate to a previously visited page on a web browser, you would find that the page would be scrolled to the exact position where you were before you navigated away from that..."
+  },
+  {
+    "title": "Performance &amp; Request Waterfalls | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/request-waterfalls",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Application performance is a broad and complex area and while React Query can"
+  },
+  {
+    "title": "Paginated / Lagged Queries | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/paginated-queries",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Rendering paginated data is a very common UI pattern and in TanStack Query, it &quot;just works&quot; by including the page information in the query key: However, if you run this simple example, you might..."
+  },
+  {
+    "title": "Updates from Mutation Responses | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/updates-from-mutation-responses",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "When dealing with mutations that update objects on the server, it"
+  },
+  {
+    "title": "Initial Query Data | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/initial-query-data",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "There are many ways to supply initial data for a query to the cache before you need it: Declaratively: Provide initialData to a query to prepopulate its cache if empty Imperatively: Prefetch the data..."
+  },
+  {
+    "title": "Default Query Function | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/default-query-function",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "If you find yourself wishing for whatever reason that you could just share the same query function for your entire app and just use query keys to identify what it should fetch, you can do that by..."
+  },
+  {
+    "title": "Ensure correct order of inference-sensitive properties in useMutation() | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/eslint/mutation-property-order",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "For the following functions, the property order of the passed in object matters due to type inference: useMutation() The correct property order is as follows: onMutate onError onSettled All other..."
+  },
+  {
+    "title": "Testing | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/testing",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "React Query works by means of hooks - either the ones we offer or custom ones that wrap around them. With React 17 or earlier, writing unit tests for these custom hooks can be done by means of the..."
+  },
+  {
+    "title": "Ensure correct order of inference sensitive properties for infinite queries | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/eslint/infinite-query-property-order",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "For the following functions, the property order of the passed in object matters due to type inference: useInfiniteQuery useSuspenseInfiniteQuery infiniteQueryOptions The correct property order is as..."
+  },
+  {
+    "title": "Does TanStack Query replace Redux, MobX or other global state managers? | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/does-this-replace-client-state",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Well, let"
+  },
+  {
+    "title": "Migrating to TanStack Query v5 | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/migrating-to-v5",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "v5 is a major version, so there are some breaking changes to be aware of: useQuery and friends used to have many overloads in TypeScript: different ways how the function could be invoked. Not only was..."
+  },
+  {
+    "title": "Migrating to React Query 3 | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/migrating-to-react-query-3",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Previous versions of React Query were awesome and brought some amazing new features, more magic, and an overall better experience to the library. They also brought on massive adoption and likewise a..."
+  },
+  {
+    "title": "Stable Query Client | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/eslint/stable-query-client",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "The QueryClient contains the QueryCache, so you"
+  },
+  {
+    "title": "Disallow object rest destructuring on query results | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/eslint/no-rest-destructuring",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Use object rest destructuring on query results automatically subscribes to every field of the query result, which may cause unnecessary re-renders. This makes sure that you only subscribe to the..."
+  },
+  {
+    "title": "Migrating to React Query 4 | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/migrating-to-react-query-4",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "v4 is a major version, so there are some breaking changes to be aware of: You will need to un-/install dependencies and change the imports: To make the import migration easier, v4 comes with a..."
+  },
+  {
+    "title": "ESLint Plugin Query | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/eslint/eslint-plugin-query",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "TanStack Query comes with its own ESLint plugin. This plugin is used to enforce best practices and to help you avoid common mistakes. The plugin is a separate package that you need to install: or or..."
+  },
+  {
+    "title": "Disallow returning void from query functions | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/eslint/no-void-query-fn",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Query functions must return a value that will be cached by TanStack Query. Functions that don"
+  },
+  {
+    "title": "Prefer the use of queryOptions | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/eslint/prefer-query-options",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Separating queryKey and queryFn can cause unexpected runtime issues when the same query key is accidentally used with more than one queryFn. Wrapping them in queryOptions (or infiniteQueryOptions)..."
+  },
+  {
+    "title": "Exhaustive dependencies for query keys | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/eslint/exhaustive-deps",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Query keys should contain the serializable values that identify the data returned by your queryFn. This makes sure that queries are cached independently and that queries are refetched automatically..."
+  },
+  {
+    "title": "Disallow putting the result of query hooks directly in a React hook dependency array | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/eslint/no-unstable-deps",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "The object returned from the following query hooks is not referentially stable: useQuery useSuspenseQuery useQueries useSuspenseQueries useInfiniteQuery useSuspenseInfiniteQuery useMutation The object..."
+  },
+  {
+    "title": "Suspense | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/guides/suspense",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "React Query can also be used with React"
+  },
+  {
+    "title": "experimental_createQueryPersister | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/plugins/createPersister",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "This utility comes as a separate package and is available under the"
+  },
+  {
+    "title": "TanStack Query Community Resources",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/community-resources",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "A collection of community resources for TanStack Query."
+  },
+  {
+    "title": "createSyncStoragePersister | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/plugins/createSyncStoragePersister",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "This plugin is deprecated and will be removed in the next major version. You can simply use"
+  },
+  {
+    "title": "createAsyncStoragePersister | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/plugins/createAsyncStoragePersister",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "This utility comes as a separate package and is available under the"
+  },
+  {
+    "title": "useMutation | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/useMutation",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Defined in: packages/react-query/src/useMutation.ts:187 Unlike queries, mutations are typically used to create/update/delete data or perform server side-effects. useMutation is the hook for that...."
+  },
+  {
+    "title": "useQuery | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/useQuery",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "DefinedInitialDataOptions → DefinedUseQueryResult: This overload is selected when initialData is set, so the resulting data is never undefined (unless a select changes TData to include undefined)...."
+  },
+  {
+    "title": "persistQueryClient | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/plugins/persistQueryClient",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "This is set of utilities for interacting with &quot;persisters&quot; which save your queryClient for later use. Different persisters can be used to store your client and cache to many different storage layers...."
+  },
+  {
+    "title": "React TanStack Query Pagination Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/pagination",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Pagination in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query Auto Refetching Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/auto-refetching",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Auto Refetching in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query Load More Infinite Scroll Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/load-more-infinite-scroll",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Load More Infinite Scroll in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query Nextjs App Optimistic Updates Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/nextjs-app-optimistic-updates",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Nextjs App Optimistic Updates in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query Basic Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/basic",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Basic in React using TanStack Query."
+  },
+  {
+    "title": "broadcastQueryClient (Experimental) | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/plugins/broadcastQueryClient",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "VERY IMPORTANT: This utility is currently in an experimental stage. This means that breaking changes will happen in minor AND patch releases. Use at your own risk. If you choose to rely on this in..."
+  },
+  {
+    "title": "React TanStack Query Basic Graphql Request Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/basic-graphql-request",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Basic Graphql Request in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query Devtools Panel Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/devtools-panel",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Devtools Panel in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query Playground Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/playground",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Playground in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query Algolia Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/algolia",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Algolia in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query Shadow Dom Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/shadow-dom",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Shadow Dom in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query React Router Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/react-router",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement React Router in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query Prefetching Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/prefetching",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Prefetching in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query Suspense Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/suspense",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Suspense in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query Offline Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/offline",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Offline in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query Nextjs Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/nextjs",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Nextjs in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query Default Query Function Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/default-query-function",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Default Query Function in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query React Native Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/react-native",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement React Native in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query Rick Morty Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/rick-morty",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Rick Morty in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query Infinite Query With Max Pages Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/infinite-query-with-max-pages",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Infinite Query With Max Pages in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query Star Wars Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/star-wars",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Star Wars in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query Nextjs App Prefetching Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/nextjs-app-prefetching",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Nextjs App Prefetching in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query Nextjs Suspense Streaming Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/nextjs-suspense-streaming",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Nextjs Suspense Streaming in React using TanStack Query."
+  },
+  {
+    "title": "React TanStack Query Chat Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/chat",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Chat in React using TanStack Query."
+  },
+  {
+    "title": "dehydrate | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/dehydrate",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Defined in: packages/query-core/src/hydration.ts:245 Dehydrates a QueryClient"
+  },
+  {
+    "title": "QueryClientProvider | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/QueryClientProvider",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Defined in: packages/react-query/src/QueryClientProvider.tsx:69 Use the QueryClientProvider component to connect and provide a QueryClient to your application. Also calls..."
+  },
+  {
+    "title": "dehydrateQuery | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/dehydrateQuery",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Defined in: packages/query-core/src/hydration.ts:178 Dehydrates a single Query into a serializable DehydratedQuery snapshot. Note that most query config (e.g. queryFn, staleTime) is not dehydrated but..."
+  },
+  {
+    "title": "experimental_streamedQuery | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/experimental_streamedQuery",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Defined in: packages/query-core/src/streamedQuery.ts:70 This is a helper function to create a query function that streams data from an AsyncIterable. Data will be an Array of all the chunks received...."
+  },
+  {
+    "title": "hydrate | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/hydrate",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Defined in: packages/query-core/src/hydration.ts:306 Restores a DehydratedState (as produced by dehydrate) into a QueryClient"
+  },
+  {
+    "title": "hashKey | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/hashKey",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Defined in: packages/query-core/src/utils.ts:323 Default query &amp; mutation keys hash function. Hashes the value into a stable hash. readonly unknown[] The query or mutation key to hash. string The..."
+  },
+  {
+    "title": "HydrationBoundary | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/HydrationBoundary",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Defined in: packages/react-query/src/HydrationBoundary.tsx:85 HydrationBoundary adds a previously dehydrated state into the queryClient that would be returned by useQueryClient(). If the client..."
+  },
+  {
+    "title": "defaultShouldDehydrateQuery | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/defaultShouldDehydrateQuery",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Defined in: packages/query-core/src/hydration.ts:219 The default shouldDehydrateQuery predicate used by dehydrate. Only dehydrates queries whose status is"
+  },
+  {
+    "title": "defaultShouldDehydrateMutation | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/defaultShouldDehydrateMutation",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Defined in: packages/query-core/src/hydration.ts:209 The default shouldDehydrateMutation predicate used by dehydrate. Only dehydrates mutations that are currently paused (e.g. paused by networkMode..."
+  },
+  {
+    "title": "QueryErrorResetBoundary | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/QueryErrorResetBoundary",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Defined in: packages/react-query/src/QueryErrorResetBoundary.tsx:160 When using suspense or throwOnError in your queries, you need a way to let queries know that you want to try again when..."
+  },
+  {
+    "title": "React TanStack Query Batching Example | TanStack Query Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/examples/batching",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "An example showing how to implement Batching in React using TanStack Query."
+  },
+  {
+    "title": "noop | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/noop",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "void: A function that does nothing. undefined: A function that does nothing. See also: Returns Defined in: packages/query-core/src/utils.ts:121 A function that does nothing. void Defined in:..."
+  },
+  {
+    "title": "matchQuery | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/matchQuery",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Defined in: packages/query-core/src/utils.ts:205 Checks whether a query matches the given QueryFilters. Every filter that is specified must match; filters that are left unspecified are ignored...."
+  },
+  {
+    "title": "mutationOptions | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/mutationOptions",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "WithRequired&lt;UseMutationOptions&gt; → WithRequired&lt;UseMutationOptions&gt;: You can generally pass everything to mutationOptions that you can also pass to useMutation. A mutationKey is required on this..."
+  },
+  {
+    "title": "keepPreviousData | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/keepPreviousData",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Defined in: packages/query-core/src/utils.ts:582 Intended to be passed as a query"
+  },
+  {
+    "title": "matchMutation | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/matchMutation",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Defined in: packages/query-core/src/utils.ts:269 Checks whether a mutation matches the given MutationFilters. Every filter that is specified must match; filters that are left unspecified are ignored...."
+  },
+  {
+    "title": "isCancelledError | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/isCancelledError",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Defined in: packages/query-core/src/retryer.ts:136 Checks whether a value is a CancelledError. any The value to check. value is CancelledError true if value is a CancelledError. Use instanceof..."
+  },
+  {
+    "title": "infiniteQueryOptions | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/infiniteQueryOptions",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "DefinedInitialDataInfiniteOptions → DefinedInitialDataInfiniteOptions &amp; QueryKeyWithDataTag: You can generally pass everything to infiniteQueryOptions that you can also pass to useInfiniteQuery. These..."
+  },
+  {
+    "title": "replaceEqualDeep | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/replaceEqualDeep",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Defined in: packages/query-core/src/utils.ts:388 This function returns a if b is deeply equal. If not, it will replace any deeply equal children of b with those of a. This can be used for structural..."
+  },
+  {
+    "title": "shouldThrowError | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/shouldThrowError",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Defined in: packages/query-core/src/utils.ts:693 Resolves a throwOnError option to a boolean. If throwOnError is a function, it is called with params (e.g. the error and, depending on the caller,..."
+  },
+  {
+    "title": "queryOptions | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/queryOptions",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "DefinedInitialDataOptions → DefinedInitialDataOptions &amp; QueryKeyWithDataTag: You can generally pass everything to queryOptions that you can also pass to useQuery. These options can be shared across..."
+  },
+  {
+    "title": "partialMatchKey | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/partialMatchKey",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Defined in: packages/query-core/src/utils.ts:343 Checks if key b partially matches with key a. readonly unknown[] The key to check, e.g. a query"
+  },
+  {
+    "title": "useIsFetching | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/useIsFetching",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Defined in: packages/react-query/src/useIsFetching.ts:41 The useIsFetching hook returns the number of the queries that your application is loading or fetching in the background (useful for app-wide..."
+  },
+  {
+    "title": "useInfiniteQuery | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/useInfiniteQuery",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "DefinedInitialDataInfiniteOptions → DefinedUseInfiniteQueryResult: The options for useInfiniteQuery are identical to useQuery, with the addition of initialPageParam, getNextPageParam,..."
+  },
+  {
+    "title": "useIsMutating | TanStack Query React Docs",
+    "category": "TanStack Query",
+    "path": "/query/latest/docs/framework/react/reference/functions/useIsMutating",
+    "site": "tanstack_query",
+    "headings": [],
+    "preview": "Defined in: packages/react-query/src/useMutationState.ts:33 The useIsMutating hook returns the number of mutations that your application currently has pending (useful for app-wide loading indicators)...."
+  }
+]

@@ -1,0 +1,882 @@
+[
+  {
+    "title": "Documentation - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Documentation - The Go Programming Language"
+  },
+  {
+    "title": "The Go Programming Language Specification - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/ref/spec",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — The Go Programming Language Specification - The Go Programming Language"
+  },
+  {
+    "title": "Download and install - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/install",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Download and install - The Go Programming Language"
+  },
+  {
+    "title": "Writing Web Applications - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/articles/wiki/",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Writing Web Applications - The Go Programming Language"
+  },
+  {
+    "title": "Tutorial: Developing a RESTful API with Go and Gin - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/tutorial/web-service-gin",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Tutorial: Developing a RESTful API with Go and Gin - The Go Programming Language"
+  },
+  {
+    "title": "Effective Go - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/effective_go",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Effective Go - The Go Programming Language"
+  },
+  {
+    "title": "Editor plugins and IDEs - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/editors",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Editor plugins and IDEs - The Go Programming Language"
+  },
+  {
+    "title": "Tutorial: Getting started with generics - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/tutorial/generics",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Tutorial: Getting started with generics - The Go Programming Language"
+  },
+  {
+    "title": "Tutorial: Getting started with multi-module workspaces - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/tutorial/workspaces",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Tutorial: Getting started with multi-module workspaces - The Go Programming Language"
+  },
+  {
+    "title": "Tutorial: Create a Go module - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/tutorial/create-module",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Tutorial: Create a Go module - The Go Programming Language"
+  },
+  {
+    "title": "How to Write Go Code - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/code",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — How to Write Go Code - The Go Programming Language"
+  },
+  {
+    "title": "Diagnostics - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/diagnostics",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Diagnostics - The Go Programming Language"
+  },
+  {
+    "title": "Tutorial: Getting started with fuzzing - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/tutorial/fuzz",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Tutorial: Getting started with fuzzing - The Go Programming Language"
+  },
+  {
+    "title": "Release History - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/devel/release",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Release History - The Go Programming Language"
+  },
+  {
+    "title": "Tutorial: Get started with Go - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/tutorial/getting-started",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Tutorial: Get started with Go - The Go Programming Language"
+  },
+  {
+    "title": "Frequently Asked Questions (FAQ) - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/faq",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Frequently Asked Questions (FAQ) - The Go Programming Language"
+  },
+  {
+    "title": "Opening a database handle - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/database/open-handle",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Opening a database handle - The Go Programming Language"
+  },
+  {
+    "title": "Profile-guided optimization - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/pgo",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Profile-guided optimization - The Go Programming Language"
+  },
+  {
+    "title": "Command Documentation - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/cmd",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Command Documentation - The Go Programming Language"
+  },
+  {
+    "title": "The Go Memory Model - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/ref/mem",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — The Go Memory Model - The Go Programming Language"
+  },
+  {
+    "title": "Managing dependencies - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/modules/managing-dependencies",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Managing dependencies - The Go Programming Language"
+  },
+  {
+    "title": "encoding/json/v2 Migration Guide - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/jsonv2-migration",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — encoding/json/v2 Migration Guide - The Go Programming Language"
+  },
+  {
+    "title": "go.mod file reference - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/modules/gomod-ref",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — go.mod file reference - The Go Programming Language"
+  },
+  {
+    "title": "A Guide to the Go Garbage Collector - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/gc-guide",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — A Guide to the Go Garbage Collector - The Go Programming Language"
+  },
+  {
+    "title": "Coverage profiling support for integration tests - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/build-cover",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Coverage profiling support for integration tests - The Go Programming Language"
+  },
+  {
+    "title": "Contribution Guide - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/contribute",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Contribution Guide - The Go Programming Language"
+  },
+  {
+    "title": "Tutorial: Accessing a relational database - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/tutorial/database-access",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Tutorial: Accessing a relational database - The Go Programming Language"
+  },
+  {
+    "title": "Querying for data - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/database/querying",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Querying for data - The Go Programming Language"
+  },
+  {
+    "title": "Go Modules Reference - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/ref/mod",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go Modules Reference - The Go Programming Language"
+  },
+  {
+    "title": "Accessing relational databases - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/database/",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Accessing relational databases - The Go Programming Language"
+  },
+  {
+    "title": "Executing SQL statements that don&#39;t return data - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/database/change-data",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Executing SQL statements that don&#39;t return data - The Go Programming Language"
+  },
+  {
+    "title": "Managing connections - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/database/manage-connections",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Managing connections - The Go Programming Language"
+  },
+  {
+    "title": "Avoiding SQL injection risk - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/database/sql-injection",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Avoiding SQL injection risk - The Go Programming Language"
+  },
+  {
+    "title": "Developing and publishing modules - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/modules/developing",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Developing and publishing modules - The Go Programming Language"
+  },
+  {
+    "title": "Developing a major version update - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/modules/major-version",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Developing a major version update - The Go Programming Language"
+  },
+  {
+    "title": "Canceling in-progress operations - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/database/cancel-operations",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Canceling in-progress operations - The Go Programming Language"
+  },
+  {
+    "title": "Publishing a module - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/modules/publishing",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Publishing a module - The Go Programming Language"
+  },
+  {
+    "title": "Managing module source - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/modules/managing-source",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Managing module source - The Go Programming Language"
+  },
+  {
+    "title": "Organizing a Go module - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/modules/layout",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Organizing a Go module - The Go Programming Language"
+  },
+  {
+    "title": "Module release and versioning workflow - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/modules/release-workflow",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Module release and versioning workflow - The Go Programming Language"
+  },
+  {
+    "title": "Module version numbering - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/modules/version-numbers",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Module version numbering - The Go Programming Language"
+  },
+  {
+    "title": "Codewalk: First-Class Functions in Go - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/codewalk/functions/",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Codewalk: First-Class Functions in Go - The Go Programming Language"
+  },
+  {
+    "title": "Executing transactions - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/database/execute-transactions",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Executing transactions - The Go Programming Language"
+  },
+  {
+    "title": "Using prepared statements - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/database/prepared-statements",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Using prepared statements - The Go Programming Language"
+  },
+  {
+    "title": "Tutorial: Working with JSON - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/tutorial/json",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Tutorial: Working with JSON - The Go Programming Language"
+  },
+  {
+    "title": "Codewalk: Generating arbitrary text: a Markov chain algorithm - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/codewalk/markov/",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Codewalk: Generating arbitrary text: a Markov chain algorithm - The Go Programming Language"
+  },
+  {
+    "title": "Codewalk: Share Memory By Communicating - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/codewalk/sharemem/",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Codewalk: Share Memory By Communicating - The Go Programming Language"
+  },
+  {
+    "title": "/doc/articles/ - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/articles/",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — /doc/articles/ - The Go Programming Language"
+  },
+  {
+    "title": "- The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/articles/wiki/part1.go",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — - The Go Programming Language"
+  },
+  {
+    "title": "Debugging Go Code with GDB - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/gdb",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Debugging Go Code with GDB - The Go Programming Language"
+  },
+  {
+    "title": "- The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/articles/wiki/final.go",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — - The Go Programming Language"
+  },
+  {
+    "title": "Go Doc Comments - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/comment",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go Doc Comments - The Go Programming Language"
+  },
+  {
+    "title": "Go 1 and the Future of Go Programs - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1compat",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1 and the Future of Go Programs - The Go Programming Language"
+  },
+  {
+    "title": "- The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/articles/wiki/part2.go",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — - The Go Programming Language"
+  },
+  {
+    "title": "Installing Go from source - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/install/source",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Installing Go from source - The Go Programming Language"
+  },
+  {
+    "title": "Managing Go installations - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/manage-install",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Managing Go installations - The Go Programming Language"
+  },
+  {
+    "title": "A Quick Guide to Go&#39;s Assembler - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/asm",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — A Quick Guide to Go&#39;s Assembler - The Go Programming Language"
+  },
+  {
+    "title": "- The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/articles/wiki/part3.go",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — - The Go Programming Language"
+  },
+  {
+    "title": "Data Race Detector - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/articles/race_detector",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Data Race Detector - The Go Programming Language"
+  },
+  {
+    "title": "Tutorials - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/tutorial/",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Tutorials - The Go Programming Language"
+  },
+  {
+    "title": "About the go command - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/articles/go_command",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — About the go command - The Go Programming Language"
+  },
+  {
+    "title": "Go Slices: usage and internals - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/blog/slices-intro",
+    "site": "go",
+    "headings": [],
+    "preview": "How to use Go slices, and how they work."
+  },
+  {
+    "title": "Return and handle an error - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/tutorial/handle-errors",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Return and handle an error - The Go Programming Language"
+  },
+  {
+    "title": "Compile and install the application - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/tutorial/compile-install",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Compile and install the application - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.27 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.27",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.27 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Add a test - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/tutorial/add-a-test",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Add a test - The Go Programming Language"
+  },
+  {
+    "title": "Call your code from another module - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/tutorial/call-module-code",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Call your code from another module - The Go Programming Language"
+  },
+  {
+    "title": "Return a random greeting - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/tutorial/random-greeting",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Return a random greeting - The Go Programming Language"
+  },
+  {
+    "title": "Return greetings for multiple people - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/tutorial/greetings-multiple-people",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Return greetings for multiple people - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.17 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.17",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.17 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.21 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.21",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.21 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.23 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.23",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.23 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.18 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.18",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.18 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.22 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.22",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.22 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.19 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.19",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.19 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.15 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.15",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.15 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.16 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.16",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.16 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.20 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.20",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.20 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.13 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.13",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.13 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.25 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.25",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.25 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.12 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.12",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.12 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.14 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.14",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.14 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.11 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.11",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.11 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.24 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.24",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.24 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.26 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.26",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.26 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.9 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.9",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.9 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.1 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.1",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.1 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.3 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.3",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.3 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.6 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.6",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.6 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.10 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.10",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.10 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.8 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.8",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.8 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.2 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.2",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.2 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Defer, Panic, and Recover - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/blog/defer-panic-and-recover",
+    "site": "go",
+    "headings": [],
+    "preview": "An introduction to the Go&#39;s defer, panic, and recover control flow mechanisms."
+  },
+  {
+    "title": "Error handling and Go - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/blog/error-handling-and-go",
+    "site": "go",
+    "headings": [],
+    "preview": "An introduction to Go errors."
+  },
+  {
+    "title": "The Laws of Reflection - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/blog/laws-of-reflection",
+    "site": "go",
+    "headings": [],
+    "preview": "How reflections works in Go, how to think about it, and how to use it."
+  },
+  {
+    "title": "Pre-Go 1 Release History - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/devel/pre_go1",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Pre-Go 1 Release History - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.5 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.5",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.5 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.7 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.7",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.7 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1.4 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1.4",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1.4 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Go 1 Release Notes - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/go1",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go 1 Release Notes - The Go Programming Language"
+  },
+  {
+    "title": "Setting up and using gccgo - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/install/gccgo",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Setting up and using gccgo - The Go Programming Language"
+  },
+  {
+    "title": "Tutorial: Find and fix vulnerable dependencies with govulncheck - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/tutorial/govulncheck",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Tutorial: Find and fix vulnerable dependencies with govulncheck - The Go Programming Language"
+  },
+  {
+    "title": "Go, Backwards Compatibility, and GODEBUG - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/godebug",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go, Backwards Compatibility, and GODEBUG - The Go Programming Language"
+  },
+  {
+    "title": "Tutorial: Find and fix vulnerable dependencies with VS Code Go - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/tutorial/govulncheck-ide",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Tutorial: Find and fix vulnerable dependencies with VS Code Go - The Go Programming Language"
+  },
+  {
+    "title": "Go Toolchains - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/toolchain",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go Toolchains - The Go Programming Language"
+  },
+  {
+    "title": "Conclusion - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/tutorial/module-conclusion",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Conclusion - The Go Programming Language"
+  },
+  {
+    "title": "Contributing to the gccgo frontend - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/gccgo_contribute",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Contributing to the gccgo frontend - The Go Programming Language"
+  },
+  {
+    "title": "Go&#39;s Declaration Syntax - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/blog/declaration-syntax",
+    "site": "go",
+    "headings": [],
+    "preview": "Why Go&#39;s declaration syntax doesn&#39;t look like, and is much simpler than, C&#39;s."
+  },
+  {
+    "title": "Go Telemetry - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/telemetry",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — Go Telemetry - The Go Programming Language"
+  },
+  {
+    "title": "FIPS 140-3 Compliance - The Go Programming Language",
+    "category": "Go (Golang)",
+    "path": "/doc/security/fips140",
+    "site": "go",
+    "headings": [],
+    "preview": "Go (Golang) documentation — FIPS 140-3 Compliance - The Go Programming Language"
+  }
+]

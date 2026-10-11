@@ -1,0 +1,1218 @@
+[
+  {
+    "title": "Django documentation",
+    "category": "EN",
+    "path": "/en/6.1",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1"
+  },
+  {
+    "title": "FAQ: Getting Help",
+    "category": "EN",
+    "path": "/en/6.1/faq/help",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/faq/help"
+  },
+  {
+    "title": "Django documentation",
+    "category": "EN",
+    "path": "/en/5.2",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/5.2"
+  },
+  {
+    "title": "Django documentation",
+    "category": "EN",
+    "path": "/en/dev",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/dev"
+  },
+  {
+    "title": "Django documentation",
+    "category": "EN",
+    "path": "/en/4.1",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/4.1"
+  },
+  {
+    "title": "Django documentation",
+    "category": "EN",
+    "path": "/en/5.1",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/5.1"
+  },
+  {
+    "title": "Django documentation",
+    "category": "EN",
+    "path": "/en/4.2",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/4.2"
+  },
+  {
+    "title": "Django documentation",
+    "category": "EN",
+    "path": "/en/2.1",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/2.1"
+  },
+  {
+    "title": "Django documentation",
+    "category": "EN",
+    "path": "/en/3.1",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/3.1"
+  },
+  {
+    "title": "Django documentation",
+    "category": "EN",
+    "path": "/en/2.0",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/2.0"
+  },
+  {
+    "title": "Django documentation",
+    "category": "EN",
+    "path": "/en/4.0",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/4.0"
+  },
+  {
+    "title": "Django documentation",
+    "category": "EN",
+    "path": "/en/5.0",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/5.0"
+  },
+  {
+    "title": "Django documentation",
+    "category": "EN",
+    "path": "/en/1.11",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/1.11"
+  },
+  {
+    "title": "Django documentation",
+    "category": "EN",
+    "path": "/en/3.0",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/3.0"
+  },
+  {
+    "title": "Django documentation",
+    "category": "EN",
+    "path": "/en/3.2",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/3.2"
+  },
+  {
+    "title": "Django documentation",
+    "category": "EN",
+    "path": "/en/6.0",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.0"
+  },
+  {
+    "title": "Django documentation",
+    "category": "EN",
+    "path": "/en/2.2",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/2.2"
+  },
+  {
+    "title": "Quick install guide",
+    "category": "EN",
+    "path": "/en/6.1/intro/install",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/intro/install"
+  },
+  {
+    "title": "Django documentation",
+    "category": "EN",
+    "path": "/en/1.10",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/1.10"
+  },
+  {
+    "title": "Django at a glance",
+    "category": "EN",
+    "path": "/en/6.1/intro/overview",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/intro/overview"
+  },
+  {
+    "title": "Django documentation",
+    "category": "EN",
+    "path": "/en/1.9",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/1.9"
+  },
+  {
+    "title": "Django FAQ",
+    "category": "EN",
+    "path": "/en/6.1/faq",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/faq"
+  },
+  {
+    "title": "Writing your first Django app, part 8",
+    "category": "EN",
+    "path": "/en/6.1/intro/tutorial08",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/intro/tutorial08"
+  },
+  {
+    "title": "Django documentation",
+    "category": "EN",
+    "path": "/en/1.8",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/1.8"
+  },
+  {
+    "title": "Writing your first Django app, part 1",
+    "category": "EN",
+    "path": "/en/6.1/intro/tutorial01",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/intro/tutorial01"
+  },
+  {
+    "title": "Writing your first Django app, part 4",
+    "category": "EN",
+    "path": "/en/6.1/intro/tutorial04",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/intro/tutorial04"
+  },
+  {
+    "title": "Writing your first Django app, part 3",
+    "category": "EN",
+    "path": "/en/6.1/intro/tutorial03",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/intro/tutorial03"
+  },
+  {
+    "title": "Writing your first Django app, part 7",
+    "category": "EN",
+    "path": "/en/6.1/intro/tutorial07",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/intro/tutorial07"
+  },
+  {
+    "title": "Advanced tutorial: How to write reusable apps",
+    "category": "EN",
+    "path": "/en/6.1/intro/reusable-apps",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/intro/reusable-apps"
+  },
+  {
+    "title": "Writing your first Django app, part 2",
+    "category": "EN",
+    "path": "/en/6.1/intro/tutorial02",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/intro/tutorial02"
+  },
+  {
+    "title": "Writing your first contribution for Django",
+    "category": "EN",
+    "path": "/en/6.1/intro/contributing",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/intro/contributing"
+  },
+  {
+    "title": "Writing your first Django app, part 5",
+    "category": "EN",
+    "path": "/en/6.1/intro/tutorial05",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/intro/tutorial05"
+  },
+  {
+    "title": "Writing your first Django app, part 6",
+    "category": "EN",
+    "path": "/en/6.1/intro/tutorial06",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/intro/tutorial06"
+  },
+  {
+    "title": "How-to guides",
+    "category": "EN",
+    "path": "/en/6.1/howto",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/howto"
+  },
+  {
+    "title": "API Reference",
+    "category": "EN",
+    "path": "/en/6.1/ref",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref"
+  },
+  {
+    "title": "Model class reference",
+    "category": "EN",
+    "path": "/en/6.1/ref/models/class",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/models/class"
+  },
+  {
+    "title": "Module Index",
+    "category": "EN",
+    "path": "/en/6.1/py-modindex",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/py-modindex"
+  },
+  {
+    "title": "Lookup API reference",
+    "category": "EN",
+    "path": "/en/6.1/ref/models/lookups",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/models/lookups"
+  },
+  {
+    "title": "Getting started",
+    "category": "EN",
+    "path": "/en/6.1/intro",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/intro"
+  },
+  {
+    "title": "Using Django",
+    "category": "EN",
+    "path": "/en/6.1/topics",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics"
+  },
+  {
+    "title": "Django documentation contents",
+    "category": "EN",
+    "path": "/en/6.1/contents",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/contents"
+  },
+  {
+    "title": "Model index reference",
+    "category": "EN",
+    "path": "/en/6.1/ref/models/indexes",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/models/indexes"
+  },
+  {
+    "title": "Model Meta options",
+    "category": "EN",
+    "path": "/en/6.1/ref/models/options",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/models/options"
+  },
+  {
+    "title": "Models",
+    "category": "EN",
+    "path": "/en/6.1/topics/db/models",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/db/models"
+  },
+  {
+    "title": "Model instance reference",
+    "category": "EN",
+    "path": "/en/6.1/ref/models/instances",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/models/instances"
+  },
+  {
+    "title": "Making queries",
+    "category": "EN",
+    "path": "/en/6.1/topics/db/queries",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/db/queries"
+  },
+  {
+    "title": "Model field reference",
+    "category": "EN",
+    "path": "/en/6.1/ref/models/fields",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/models/fields"
+  },
+  {
+    "title": "QuerySet API reference",
+    "category": "EN",
+    "path": "/en/6.1/ref/models/querysets",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/models/querysets"
+  },
+  {
+    "title": "General Index",
+    "category": "EN",
+    "path": "/en/6.1/genindex",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/genindex"
+  },
+  {
+    "title": "SchemaEditor",
+    "category": "EN",
+    "path": "/en/6.1/ref/schema-editor",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/schema-editor"
+  },
+  {
+    "title": "Performing raw SQL queries",
+    "category": "EN",
+    "path": "/en/6.1/topics/db/sql",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/db/sql"
+  },
+  {
+    "title": "Search",
+    "category": "EN",
+    "path": "/en/6.1/topics/db/search",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/db/search"
+  },
+  {
+    "title": "Migrations",
+    "category": "EN",
+    "path": "/en/6.1/topics/migrations",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/migrations"
+  },
+  {
+    "title": "Conditional Expressions",
+    "category": "EN",
+    "path": "/en/6.1/ref/models/conditional-expressions",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/models/conditional-expressions"
+  },
+  {
+    "title": "Managers",
+    "category": "EN",
+    "path": "/en/6.1/topics/db/managers",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/db/managers"
+  },
+  {
+    "title": "How to write custom lookups",
+    "category": "EN",
+    "path": "/en/6.1/howto/custom-lookups",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/howto/custom-lookups"
+  },
+  {
+    "title": "How to create database migrations",
+    "category": "EN",
+    "path": "/en/6.1/howto/writing-migrations",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/howto/writing-migrations"
+  },
+  {
+    "title": "Migration Operations",
+    "category": "EN",
+    "path": "/en/6.1/ref/migration-operations",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/migration-operations"
+  },
+  {
+    "title": "Aggregation",
+    "category": "EN",
+    "path": "/en/6.1/topics/db/aggregation",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/db/aggregation"
+  },
+  {
+    "title": "Related objects reference",
+    "category": "EN",
+    "path": "/en/6.1/ref/models/relations",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/models/relations"
+  },
+  {
+    "title": "How to create custom model fields",
+    "category": "EN",
+    "path": "/en/6.1/howto/custom-model-fields",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/howto/custom-model-fields"
+  },
+  {
+    "title": "Multiple databases",
+    "category": "EN",
+    "path": "/en/6.1/topics/db/multi-db",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/db/multi-db"
+  },
+  {
+    "title": "Query Expressions",
+    "category": "EN",
+    "path": "/en/6.1/ref/models/expressions",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/models/expressions"
+  },
+  {
+    "title": "Database Functions",
+    "category": "EN",
+    "path": "/en/6.1/ref/models/database-functions",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/models/database-functions"
+  },
+  {
+    "title": "Database transactions",
+    "category": "EN",
+    "path": "/en/6.1/topics/db/transactions",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/db/transactions"
+  },
+  {
+    "title": "How to provide initial data for models",
+    "category": "EN",
+    "path": "/en/6.1/howto/initial-data",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/howto/initial-data"
+  },
+  {
+    "title": "Django shortcut functions",
+    "category": "EN",
+    "path": "/en/6.1/topics/http/shortcuts",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/http/shortcuts"
+  },
+  {
+    "title": "URL dispatcher",
+    "category": "EN",
+    "path": "/en/6.1/topics/http/urls",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/http/urls"
+  },
+  {
+    "title": "Built-in Views",
+    "category": "EN",
+    "path": "/en/6.1/ref/views",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/views"
+  },
+  {
+    "title": "How to integrate Django with a legacy database",
+    "category": "EN",
+    "path": "/en/6.1/howto/legacy-databases",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/howto/legacy-databases"
+  },
+  {
+    "title": "django.contrib.postgres",
+    "category": "EN",
+    "path": "/en/6.1/ref/contrib/postgres",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/contrib/postgres"
+  },
+  {
+    "title": "View decorators",
+    "category": "EN",
+    "path": "/en/6.1/topics/http/decorators",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/http/decorators"
+  },
+  {
+    "title": "TemplateResponse and SimpleTemplateResponse",
+    "category": "EN",
+    "path": "/en/6.1/ref/template-response",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/template-response"
+  },
+  {
+    "title": "Writing views",
+    "category": "EN",
+    "path": "/en/6.1/topics/http/views",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/http/views"
+  },
+  {
+    "title": "File Uploads",
+    "category": "EN",
+    "path": "/en/6.1/topics/http/file-uploads",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/http/file-uploads"
+  },
+  {
+    "title": "The File object",
+    "category": "EN",
+    "path": "/en/6.1/ref/files/file",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/files/file"
+  },
+  {
+    "title": "File storage API",
+    "category": "EN",
+    "path": "/en/6.1/ref/files/storage",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/files/storage"
+  },
+  {
+    "title": "Database access optimization",
+    "category": "EN",
+    "path": "/en/6.1/topics/db/optimization",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/db/optimization"
+  },
+  {
+    "title": "Asynchronous support",
+    "category": "EN",
+    "path": "/en/6.1/topics/async",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/async"
+  },
+  {
+    "title": "Databases",
+    "category": "EN",
+    "path": "/en/6.1/ref/databases",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/databases"
+  },
+  {
+    "title": "Request and response objects",
+    "category": "EN",
+    "path": "/en/6.1/ref/request-response",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/request-response"
+  },
+  {
+    "title": "Class-based views",
+    "category": "EN",
+    "path": "/en/6.1/topics/class-based-views",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/class-based-views"
+  },
+  {
+    "title": "Form handling with class-based views",
+    "category": "EN",
+    "path": "/en/6.1/topics/class-based-views/generic-editing",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/class-based-views/generic-editing"
+  },
+  {
+    "title": "Middleware",
+    "category": "EN",
+    "path": "/en/6.1/topics/http/middleware",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/http/middleware"
+  },
+  {
+    "title": "Templates",
+    "category": "EN",
+    "path": "/en/6.1/topics/templates",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/templates"
+  },
+  {
+    "title": "Built-in class-based generic views",
+    "category": "EN",
+    "path": "/en/6.1/topics/class-based-views/generic-display",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/class-based-views/generic-display"
+  },
+  {
+    "title": "django.contrib.humanize",
+    "category": "EN",
+    "path": "/en/6.1/ref/contrib/humanize",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/contrib/humanize"
+  },
+  {
+    "title": "Built-in class-based views API",
+    "category": "EN",
+    "path": "/en/6.1/ref/class-based-views",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/class-based-views"
+  },
+  {
+    "title": "How to write a custom storage class",
+    "category": "EN",
+    "path": "/en/6.1/howto/custom-file-storage",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/howto/custom-file-storage"
+  },
+  {
+    "title": "How to create CSV output",
+    "category": "EN",
+    "path": "/en/6.1/howto/outputting-csv",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/howto/outputting-csv"
+  },
+  {
+    "title": "Managing files",
+    "category": "EN",
+    "path": "/en/6.1/topics/files",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/files"
+  },
+  {
+    "title": "Class-based generic views - flattened index",
+    "category": "EN",
+    "path": "/en/6.1/ref/class-based-views/flattened-index",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/class-based-views/flattened-index"
+  },
+  {
+    "title": "Using mixins with class-based views",
+    "category": "EN",
+    "path": "/en/6.1/topics/class-based-views/mixins",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/class-based-views/mixins"
+  },
+  {
+    "title": "How to create PDF files",
+    "category": "EN",
+    "path": "/en/6.1/howto/outputting-pdf",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/howto/outputting-pdf"
+  },
+  {
+    "title": "Middleware",
+    "category": "EN",
+    "path": "/en/6.1/ref/middleware",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/middleware"
+  },
+  {
+    "title": "The Django template language",
+    "category": "EN",
+    "path": "/en/6.1/ref/templates/language",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/templates/language"
+  },
+  {
+    "title": "Built-in template tags and filters",
+    "category": "EN",
+    "path": "/en/6.1/ref/templates/builtins",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/templates/builtins"
+  },
+  {
+    "title": "Working with forms",
+    "category": "EN",
+    "path": "/en/6.1/topics/forms",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/forms"
+  },
+  {
+    "title": "How to implement a custom template backend",
+    "category": "EN",
+    "path": "/en/6.1/howto/custom-template-backend",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/howto/custom-template-backend"
+  },
+  {
+    "title": "Django settings",
+    "category": "EN",
+    "path": "/en/6.1/topics/settings",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/settings"
+  },
+  {
+    "title": "Django Exceptions",
+    "category": "EN",
+    "path": "/en/6.1/ref/exceptions",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/exceptions"
+  },
+  {
+    "title": "Form and field validation",
+    "category": "EN",
+    "path": "/en/6.1/ref/forms/validation",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/forms/validation"
+  },
+  {
+    "title": "How to create custom template tags and filters",
+    "category": "EN",
+    "path": "/en/6.1/howto/custom-template-tags",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/howto/custom-template-tags"
+  },
+  {
+    "title": "Form Assets (the Media class)",
+    "category": "EN",
+    "path": "/en/6.1/topics/forms/media",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/forms/media"
+  },
+  {
+    "title": "Widgets",
+    "category": "EN",
+    "path": "/en/6.1/ref/forms/widgets",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/forms/widgets"
+  },
+  {
+    "title": "Applications",
+    "category": "EN",
+    "path": "/en/6.1/ref/applications",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/applications"
+  },
+  {
+    "title": "The Django template language: for Python programmers",
+    "category": "EN",
+    "path": "/en/6.1/ref/templates/api",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/templates/api"
+  },
+  {
+    "title": "Formsets",
+    "category": "EN",
+    "path": "/en/6.1/topics/forms/formsets",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/forms/formsets"
+  },
+  {
+    "title": "Creating forms from models",
+    "category": "EN",
+    "path": "/en/6.1/topics/forms/modelforms",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/forms/modelforms"
+  },
+  {
+    "title": "Form fields",
+    "category": "EN",
+    "path": "/en/6.1/ref/forms/fields",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/forms/fields"
+  },
+  {
+    "title": "The Forms API",
+    "category": "EN",
+    "path": "/en/6.1/ref/forms/api",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/forms/api"
+  },
+  {
+    "title": "django-admin and manage.py",
+    "category": "EN",
+    "path": "/en/6.1/ref/django-admin",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/django-admin"
+  },
+  {
+    "title": "Settings",
+    "category": "EN",
+    "path": "/en/6.1/ref/settings",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/settings"
+  },
+  {
+    "title": "Testing in Django",
+    "category": "EN",
+    "path": "/en/6.1/topics/testing",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/testing"
+  },
+  {
+    "title": "How to create custom django-admin commands",
+    "category": "EN",
+    "path": "/en/6.1/howto/custom-management-commands",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/howto/custom-management-commands"
+  },
+  {
+    "title": "How to deploy Django",
+    "category": "EN",
+    "path": "/en/6.1/howto/deployment",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/howto/deployment"
+  },
+  {
+    "title": "How to deploy static files",
+    "category": "EN",
+    "path": "/en/6.1/howto/static-files/deployment",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/howto/static-files/deployment"
+  },
+  {
+    "title": "How to deploy with ASGI",
+    "category": "EN",
+    "path": "/en/6.1/howto/deployment/asgi",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/howto/deployment/asgi"
+  },
+  {
+    "title": "Advanced testing topics",
+    "category": "EN",
+    "path": "/en/6.1/topics/testing/advanced",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/testing/advanced"
+  },
+  {
+    "title": "Deployment checklist",
+    "category": "EN",
+    "path": "/en/6.1/howto/deployment/checklist",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/howto/deployment/checklist"
+  },
+  {
+    "title": "The Django admin documentation generator",
+    "category": "EN",
+    "path": "/en/6.1/ref/contrib/admin/admindocs",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/contrib/admin/admindocs"
+  },
+  {
+    "title": "Writing and running tests",
+    "category": "EN",
+    "path": "/en/6.1/topics/testing/overview",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/testing/overview"
+  },
+  {
+    "title": "How to deploy with WSGI",
+    "category": "EN",
+    "path": "/en/6.1/howto/deployment/wsgi",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/howto/deployment/wsgi"
+  },
+  {
+    "title": "Admin actions",
+    "category": "EN",
+    "path": "/en/6.1/ref/contrib/admin/actions",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/contrib/admin/actions"
+  },
+  {
+    "title": "Security in Django",
+    "category": "EN",
+    "path": "/en/6.1/topics/security",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/security"
+  },
+  {
+    "title": "How to manage error reporting",
+    "category": "EN",
+    "path": "/en/6.1/howto/error-reporting",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/howto/error-reporting"
+  },
+  {
+    "title": "Testing tools",
+    "category": "EN",
+    "path": "/en/6.1/topics/testing/tools",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/testing/tools"
+  },
+  {
+    "title": "Archive of security issues",
+    "category": "EN",
+    "path": "/en/6.1/releases/security",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/releases/security"
+  },
+  {
+    "title": "The Django admin site",
+    "category": "EN",
+    "path": "/en/6.1/ref/contrib/admin",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/contrib/admin"
+  },
+  {
+    "title": "Cross Site Request Forgery protection",
+    "category": "EN",
+    "path": "/en/6.1/ref/csrf",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/csrf"
+  },
+  {
+    "title": "Cryptographic signing",
+    "category": "EN",
+    "path": "/en/6.1/topics/signing",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/signing"
+  },
+  {
+    "title": "GeoDjango",
+    "category": "EN",
+    "path": "/en/6.1/ref/contrib/gis",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/contrib/gis"
+  },
+  {
+    "title": "Internationalization and localization",
+    "category": "EN",
+    "path": "/en/6.1/topics/i18n",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/i18n"
+  },
+  {
+    "title": "Content Security Policy",
+    "category": "EN",
+    "path": "/en/6.1/ref/csp",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/csp"
+  },
+  {
+    "title": "Clickjacking Protection",
+    "category": "EN",
+    "path": "/en/6.1/ref/clickjacking",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/clickjacking"
+  },
+  {
+    "title": "User authentication in Django",
+    "category": "EN",
+    "path": "/en/6.1/topics/auth",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/auth"
+  },
+  {
+    "title": "Time zones",
+    "category": "EN",
+    "path": "/en/6.1/topics/i18n/timezones",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/i18n/timezones"
+  },
+  {
+    "title": "Format localization",
+    "category": "EN",
+    "path": "/en/6.1/topics/i18n/formatting",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/i18n/formatting"
+  },
+  {
+    "title": "Performance and optimization",
+    "category": "EN",
+    "path": "/en/6.1/topics/performance",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/performance"
+  },
+  {
+    "title": "Translation",
+    "category": "EN",
+    "path": "/en/6.1/topics/i18n/translation",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/i18n/translation"
+  },
+  {
+    "title": "Using the Django authentication system",
+    "category": "EN",
+    "path": "/en/6.1/topics/auth/default",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/auth/default"
+  },
+  {
+    "title": "Django’s cache framework",
+    "category": "EN",
+    "path": "/en/6.1/topics/cache",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/cache"
+  },
+  {
+    "title": "Password management in Django",
+    "category": "EN",
+    "path": "/en/6.1/topics/auth/passwords",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/auth/passwords"
+  },
+  {
+    "title": "django.contrib.auth",
+    "category": "EN",
+    "path": "/en/6.1/ref/contrib/auth",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/contrib/auth"
+  },
+  {
+    "title": "Customizing authentication in Django",
+    "category": "EN",
+    "path": "/en/6.1/topics/auth/customizing",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/auth/customizing"
+  },
+  {
+    "title": "Logging",
+    "category": "EN",
+    "path": "/en/6.1/topics/logging",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/logging"
+  },
+  {
+    "title": "Django’s Tasks framework",
+    "category": "EN",
+    "path": "/en/6.1/topics/tasks",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/tasks"
+  },
+  {
+    "title": "Sending email",
+    "category": "EN",
+    "path": "/en/6.1/topics/email",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/email"
+  },
+  {
+    "title": "The syndication feed framework",
+    "category": "EN",
+    "path": "/en/6.1/ref/contrib/syndication",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/ref/contrib/syndication"
+  },
+  {
+    "title": "Pagination",
+    "category": "EN",
+    "path": "/en/6.1/topics/pagination",
+    "site": "django",
+    "headings": [],
+    "preview": "/en/6.1/topics/pagination"
+  },
+  {
+    "title": "Django documentation",
+    "category": "Django",
+    "path": "/docs",
+    "site": "django",
+    "headings": [],
+    "preview": "/docs"
+  },
+  {
+    "title": "Django documentation",
+    "category": "Django",
+    "path": "/",
+    "site": "django",
+    "headings": [],
+    "preview": "/"
+  }
+]

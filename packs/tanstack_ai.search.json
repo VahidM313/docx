@@ -1,0 +1,138 @@
+[
+  {
+    "title": "Overview",
+    "category": "TanStack AI",
+    "path": "/ai/latest/docs/getting-started/overview",
+    "site": "tanstack_ai",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Quick Start",
+    "category": "TanStack AI",
+    "path": "/ai/latest/docs/getting-started/quick-start",
+    "site": "tanstack_ai",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "AI",
+    "category": "TanStack AI",
+    "path": "/ai/latest",
+    "site": "tanstack_ai",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "@tanstack/ai",
+    "category": "TanStack AI",
+    "path": "/ai/latest/docs/api/ai",
+    "site": "tanstack_ai",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Basic Chat",
+    "category": "TanStack AI",
+    "path": "/ai/latest/docs/tutorials/basic-chat",
+    "site": "tanstack_ai",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Streaming",
+    "category": "TanStack AI",
+    "path": "/ai/latest/docs/chat/streaming",
+    "site": "tanstack_ai",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "React Example: Basic Chat GitHub",
+    "category": "TanStack AI",
+    "path": "/ai/latest/docs/framework/react/examples/basic-chat",
+    "site": "tanstack_ai",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Quick Start: React Native",
+    "category": "TanStack AI",
+    "path": "/ai/latest/docs/getting-started/quick-start-react-native",
+    "site": "tanstack_ai",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Devtools",
+    "category": "TanStack AI",
+    "path": "/ai/latest/docs/getting-started/devtools",
+    "site": "tanstack_ai",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Quick Start: Server Only",
+    "category": "TanStack AI",
+    "path": "/ai/latest/docs/getting-started/quick-start-server",
+    "site": "tanstack_ai",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "OpenAI",
+    "category": "TanStack AI",
+    "path": "/ai/latest/docs/adapters/openai",
+    "site": "tanstack_ai",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Agent Skills (TanStack Intent)",
+    "category": "TanStack AI",
+    "path": "/ai/latest/docs/getting-started/agent-skills",
+    "site": "tanstack_ai",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Build an MCP Server",
+    "category": "TanStack AI",
+    "path": "/ai/latest/docs/tutorials/mcp-server",
+    "site": "tanstack_ai",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "TanStack AI vs Vercel AI SDK",
+    "category": "TanStack AI",
+    "path": "/ai/latest/docs/comparison/vercel-ai-sdk",
+    "site": "tanstack_ai",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Generate Image",
+    "category": "TanStack AI",
+    "path": "/ai/latest/docs/tutorials/generate-image",
+    "site": "tanstack_ai",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Streaming Structured Table",
+    "category": "TanStack AI",
+    "path": "/ai/latest/docs/tutorials/streaming-structured-table",
+    "site": "tanstack_ai",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack AI",
+    "path": "/",
+    "site": "tanstack_ai",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  }
+]

@@ -1,0 +1,986 @@
+[
+  {
+    "title": "Overview",
+    "category": "TanStack React Charts",
+    "path": "/docs/overview",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "React Charts is first and foremost a React component for rendering many many different variations of X/Y charts including, but not limited to, line, area, bar, column and bubble ch"
+  },
+  {
+    "title": "API",
+    "category": "TanStack React Charts",
+    "path": "/docs/api",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "🚨 This documentation is for Version 3.0.0, which is currently in beta and is a work-in-progress . For now, please refer to the examples for any missing documentation."
+  },
+  {
+    "title": "Getting Started",
+    "category": "TanStack React Charts",
+    "path": "/docs/getting-started",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Out of the box, React Charts is very forgiving and requires very little to use. Let&#x27;s get started by going over the bare minimum configuration required to render a chart!"
+  },
+  {
+    "title": "Installation",
+    "category": "TanStack React Charts",
+    "path": "/docs/installation",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "You can install React Charts with NPM , Yarn , or a good ol&#x27; <script> via unpkg.com ."
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack React Charts",
+    "path": "/",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "React Charts is first and foremost a React component for rendering many many different variations of X/Y charts including, but not limited to, line, area, bar, column and bubble ch"
+  },
+  {
+    "title": "Scatterplots and Relationships",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/scatterplots-and-relationships",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Scatterplots answer how two quantitative measures vary together. Position"
+  },
+  {
+    "title": "Themes and Motion",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/themes-and-motion",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "These cases use one ownership model. Definitions describe chart behavior. CSS"
+  },
+  {
+    "title": "Maps and Spatial Charts",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/maps-and-spatial",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Spatial charts encode values in a coordinate system whose geometry already has"
+  },
+  {
+    "title": "Annotations and Overlays",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/annotations-and-overlays",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Annotations explain selected evidence. They should name a threshold, event,"
+  },
+  {
+    "title": "Networks and Hierarchies",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/networks-and-hierarchies",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Network and hierarchy charts show relationships rather than values on two"
+  },
+  {
+    "title": "Polar and Radar Charts",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/polar-and-radar",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Polar geometry is available only from @tanstack/charts/polar . The container"
+  },
+  {
+    "title": "Example Gallery",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "The gallery is organized by analytical question, not by package export. Start"
+  },
+  {
+    "title": "Interactive Charts",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/interactive-charts",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Interaction should help the reader inspect, navigate, select, or edit semantic"
+  },
+  {
+    "title": "Bars and Rankings",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/bars-and-rankings",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Bars answer categorical magnitude questions through length from a shared"
+  },
+  {
+    "title": "Distributions",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/distributions",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Distribution charts answer where observations lie, how widely they vary, and"
+  },
+  {
+    "title": "Heatmaps and Densities",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/heatmaps-and-densities",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Heatmaps and density charts answer where values concentrate across two"
+  },
+  {
+    "title": "Facets and Multiple Views",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/facets-and-multiple-views",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Facets repeat one encoding across groups. Multiple-view compositions place"
+  },
+  {
+    "title": "Lines and Areas",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/lines-and-areas",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Lines answer how a value changes across an ordered domain. Areas add a second"
+  },
+  {
+    "title": "Stacked and Composed Charts",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/stacked-and-composition",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Stacked charts answer how a total divides into contributions. They work best"
+  },
+  {
+    "title": "Intervals and Financial Charts",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/intervals-and-financial",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Interval charts answer where a span begins and ends. The endpoints may"
+  },
+  {
+    "title": "Chart Definitions",
+    "category": "TanStack React Charts",
+    "path": "/docs/concepts/chart-definitions",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "A chart definition is the typed boundary between application state and the"
+  },
+  {
+    "title": "Layout, Axes, and Coordinates",
+    "category": "TanStack React Charts",
+    "path": "/docs/concepts/layout-axes-and-coordinates",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "TanStack Charts gives as much space as possible to the plot while keeping chart-owned guides inside the surface. The normal path is container-responsive and uses automatic margins."
+  },
+  {
+    "title": "Marks and Layering",
+    "category": "TanStack React Charts",
+    "path": "/docs/concepts/marks-and-layering",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "A mark turns data and channel values into renderer-neutral scene nodes. Marks are small, composable units; a chart type is usually a useful arrangement of several marks rather than"
+  },
+  {
+    "title": "Data and Channels",
+    "category": "TanStack React Charts",
+    "path": "/docs/concepts/data-and-channels",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Marks consume ordinary iterables. Channels say which values from those rows control position, grouping, color, size, or identity."
+  },
+  {
+    "title": "Scales",
+    "category": "TanStack React Charts",
+    "path": "/docs/concepts/scales-and-d3",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "TanStack Charts accepts callable, copyable scale factories and instances. Start"
+  },
+  {
+    "title": "Grammar of Graphics",
+    "category": "TanStack React Charts",
+    "path": "/docs/concepts/grammar-of-graphics",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "TanStack Charts follows the grammar-of-graphics tradition established by"
+  },
+  {
+    "title": "Transforms and Reactivity",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/transforms-and-reactivity",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "TanStack transforms are eager, deterministic data utilities. Their results can"
+  },
+  {
+    "title": "Tooltips and Focus",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/tooltips-and-focus",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "The DOM host provides a small automatic path for the common case:"
+  },
+  {
+    "title": "Testing and Debugging",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/testing-and-debugging",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "A useful chart test answers more than “did a surface appear?” Test at the"
+  },
+  {
+    "title": "Migrating",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/migrating",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Migration is a semantic exercise, not a component-name translation. First"
+  },
+  {
+    "title": "Themes and Styling",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/themes-and-styling",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "TanStack Charts inherits the surrounding application instead of installing a"
+  },
+  {
+    "title": "Accessibility",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/accessibility",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Accessibility is part of the chart contract, not a final annotation pass."
+  },
+  {
+    "title": "Bundle Size and Performance",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/bundle-size-and-performance",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "TanStack Charts is split around capability boundaries. A chart should pay for"
+  },
+  {
+    "title": "Faceting and Composition",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/faceting-and-composition",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Composition is the main extension mechanism in TanStack Charts. Marks share a"
+  },
+  {
+    "title": "Coming from Recharts",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/coming-from-recharts",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Use one defineChart() value for marks, scales, guides, and focus. A positional"
+  },
+  {
+    "title": "Legends and Color",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/legends-and-color",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Color has one semantic path. A mark's color channel contributes values to the"
+  },
+  {
+    "title": "Custom Marks and Renderers",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/custom-marks-and-renderers",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Use a custom mark when a visualization fits the shared scene model but is not"
+  },
+  {
+    "title": "Interactions and Selections",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/interactions-and-selections",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "TanStack Charts owns datum focus, selection, crosshair presentation, optional"
+  },
+  {
+    "title": "Dynamic Data and Animation",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/dynamic-data-and-animation",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Definition identity is the application update boundary. A framework memo"
+  },
+  {
+    "title": "Large Data",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/large-data",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Large-data charting starts with representation, not renderer throughput."
+  },
+  {
+    "title": "SSR and Hydration",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/ssr-and-hydration",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "TanStack Charts builds a platform-neutral scene before the selected renderer"
+  },
+  {
+    "title": "TypeScript",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/typescript",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "TanStack Charts is designed so ordinary chart code names its application types"
+  },
+  {
+    "title": "Responsive Charts",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/responsive-charts",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "TanStack Charts treats width and height differently:"
+  },
+  {
+    "title": "Exporting",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/exporting",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "TanStack Charts' built-in export helpers have three paths:"
+  },
+  {
+    "title": "Choosing a Chart",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/choosing-a-chart",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Start with the comparison a reader must make. A chart type is the result of"
+  },
+  {
+    "title": "Framework tick labels",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/framework-tick-labels",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "onRender exposes the final scene.scales and scene.chart plot rectangle."
+  },
+  {
+    "title": "AI Authoring",
+    "category": "TanStack React Charts",
+    "path": "/docs/guides/ai-authoring",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "TanStack Charts uses a small grammar so an agent can reason from data and"
+  },
+  {
+    "title": "Alpha Stability",
+    "category": "TanStack React Charts",
+    "path": "/docs/stability",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "TanStack Charts releases before 1.0 follow this Alpha policy. Packages use regular 0.x versions on the normal"
+  },
+  {
+    "title": "View Composition",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/view-composition",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Import view composition from the exact subpath:"
+  },
+  {
+    "title": "Data Transforms",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/transforms",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Transforms are ordinary functions: source rows in, typed derived data out."
+  },
+  {
+    "title": "Chart Definition API",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/chart-definitions",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "import { defineChart } from '@tanstack/charts' import { tooltip } from '@tanstack/charts/tooltip' import { portal } from '@tanstack/charts/tooltip/portal' defineChart accepts a com"
+  },
+  {
+    "title": "Scales, Guides, and Color",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/scales-guides-and-color",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Pass a compatible scale factory when its domain should come from mark channels."
+  },
+  {
+    "title": "Motion",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/motion",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Motion is an optional renderer. Core definitions, scene compilation, static SVG,"
+  },
+  {
+    "title": "API Reference",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "TanStack Charts has a small framework-neutral core and thin framework"
+  },
+  {
+    "title": "Runtime and Scene",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/runtime-and-scene",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "TanStack Charts separates semantic chart construction from rendering:"
+  },
+  {
+    "title": "Adapter Controller",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/adapter-controller",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "The adapter controller is the low-level lifecycle used by framework bindings."
+  },
+  {
+    "title": "DOM Host",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/dom-host",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "mountChart is the framework-neutral default SVG browser host. It owns"
+  },
+  {
+    "title": "Rules, Links, Arrows, Vectors, and Ticks",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/rules-links-arrows-vectors-and-ticks",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "These marks cover reference lines, independent segments, directed"
+  },
+  {
+    "title": "Linear Regression Marks",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/regression",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "linearRegressionY fits numeric y values over a numeric or temporal x channel."
+  },
+  {
+    "title": "Contour Mark",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/contour",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "contour generates level sets from a regular scalar grid. Import it from the"
+  },
+  {
+    "title": "Voronoi Mark",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/voronoi",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "voronoi partitions the final plot into the cells nearest to each unique"
+  },
+  {
+    "title": "Bar and Rect Marks",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/bar-and-rect",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Bar marks encode a numeric interval against a categorical or positional"
+  },
+  {
+    "title": "Sunburst Mark",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/sunburst",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "sunburst partitions a flat hierarchy into nested angular sectors. It runs"
+  },
+  {
+    "title": "Sankey Diagram Mark",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/sankey",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "sankeyDiagram lays out a directed weighted graph in final plot pixels, then"
+  },
+  {
+    "title": "Dodge Layouts",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/dodge",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "dodgeY preserves each dot's scaled x position and derives a collision-free y"
+  },
+  {
+    "title": "Hexbin Mark",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/hexbin",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "hexbin aggregates raw numeric x/y observations after the chart resolves its"
+  },
+  {
+    "title": "Treemap Mark",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/treemap",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "treemap converts flat hierarchy rows into area-proportional leaf rectangles."
+  },
+  {
+    "title": "Violin Marks",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/violin",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "violinY draws vertical mirrored profiles around categorical x centers."
+  },
+  {
+    "title": "Difference Marks",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/difference",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "differenceY compares two numeric y channels along a numeric or temporal x"
+  },
+  {
+    "title": "Polar Marks",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/polar",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Polar marks are available only from the capability subpath:"
+  },
+  {
+    "title": "Waffle Marks",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/waffle",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "waffleY and waffleX divide nonnegative source values into equal visual"
+  },
+  {
+    "title": "Dot and Hexagon Marks",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/dot-and-hexagon",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "dot and hexagon place fixed-pixel symbols at scaled x/y values. Their"
+  },
+  {
+    "title": "Density Contour Mark",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/density",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "densityContour estimates a two-dimensional density field after the chart"
+  },
+  {
+    "title": "Text, Frame, and Facet Marks",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/text-frame-and-facet",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "text annotates scaled positions, frame paints the resolved inner chart"
+  },
+  {
+    "title": "Box Marks",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/box",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "boxY summarizes raw observations into vertical boxplots. boxX transposes"
+  },
+  {
+    "title": "Focus Guide Marks",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/focus-guide",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "focusGuideX and focusGuideY render ordinary scene nodes only for the active"
+  },
+  {
+    "title": "Delaunay Link Mark",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/delaunay",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "delaunayLink connects observations that are neighbors in a Delaunay"
+  },
+  {
+    "title": "Line and Area Marks",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/line-and-area",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Line and area marks consume an iterable directly. Channels may be compatible"
+  },
+  {
+    "title": "Ridgeline Marks",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/ridgeline",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "ridgelineY draws horizontal profiles above categorical y baselines."
+  },
+  {
+    "title": "Geo Shape Mark",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/marks/geo",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "geoShape renders GeoJSON through a projection created for the final"
+  },
+  {
+    "title": "Focus and Interaction",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/focus-and-interaction",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "The DOM hosts, framework adapters, and React Native Chart provide point-level"
+  },
+  {
+    "title": "Custom Extensions",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/custom-extensions",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "TanStack Charts exposes narrow inversion-of-control boundaries around its"
+  },
+  {
+    "title": "Chart Spec",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/chart-spec",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Every static definition and responsive chart builder resolves to a ChartSpec ."
+  },
+  {
+    "title": "Types",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/types",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "TanStack Charts is inference-first. A mark's source data and channel selectors"
+  },
+  {
+    "title": "Rendering and Export",
+    "category": "TanStack React Charts",
+    "path": "/docs/reference/rendering-and-export",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "TanStack Charts compiles a renderer-neutral scene. The default renderer turns"
+  },
+  {
+    "title": "Quick Start",
+    "category": "TanStack React Charts",
+    "path": "/docs/quick-start",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "This walkthrough uses the framework-agnostic DOM host. The same chart"
+  },
+  {
+    "title": "Compare Libraries",
+    "category": "TanStack React Charts",
+    "path": "/docs/comparison",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "The latest published TanStack Charts release is 1.1.0 , while this page"
+  },
+  {
+    "title": "Preact Chart",
+    "category": "TanStack React Charts",
+    "path": "/docs/framework/preact/reference/chart",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "import { Chart } from '@tanstack/charts/preact' The definition infers datum and coordinate types for every callback. Replace"
+  },
+  {
+    "title": "Preact Adapter",
+    "category": "TanStack React Charts",
+    "path": "/docs/framework/preact/adapter",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Install TanStack Charts and its Preact peer:"
+  },
+  {
+    "title": "Vue Chart",
+    "category": "TanStack React Charts",
+    "path": "/docs/framework/vue/reference/chart",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "import { Chart } from '@tanstack/charts/vue' The definition infers datum and coordinate types for every callback. Replace"
+  },
+  {
+    "title": "Vue Adapter",
+    "category": "TanStack React Charts",
+    "path": "/docs/framework/vue/adapter",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Vue prop updates call the shared host after each component update. class and"
+  },
+  {
+    "title": "Octane Chart",
+    "category": "TanStack React Charts",
+    "path": "/docs/framework/octane/reference/chart",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "import { Chart } from '@tanstack/charts/octane' The supplied definition infers the datum, semantic x/y values, and callbacks:"
+  },
+  {
+    "title": "Octane Quick Start",
+    "category": "TanStack React Charts",
+    "path": "/docs/framework/octane/quick-start",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Install TanStack Charts and its Octane peer:"
+  },
+  {
+    "title": "Octane Adapter",
+    "category": "TanStack React Charts",
+    "path": "/docs/framework/octane/adapter",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "@tanstack/charts/octane is the native TSRX lifecycle and SSR adapter around"
+  },
+  {
+    "title": "Solid Chart",
+    "category": "TanStack React Charts",
+    "path": "/docs/framework/solid/reference/chart",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "import { Chart } from '@tanstack/charts/solid' The definition infers datum and coordinate types for every callback. Replace"
+  },
+  {
+    "title": "Solid Adapter",
+    "category": "TanStack React Charts",
+    "path": "/docs/framework/solid/adapter",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Reactive props update the shared host without replacing its SVG. class and"
+  },
+  {
+    "title": "Angular Chart",
+    "category": "TanStack React Charts",
+    "path": "/docs/framework/angular/reference/chart",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "import { Chart } from '@tanstack/charts/angular' Chart is a standalone component with selector tanstack-chart . Its required"
+  },
+  {
+    "title": "Angular Adapter",
+    "category": "TanStack React Charts",
+    "path": "/docs/framework/angular/adapter",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "The single options input works with immutable values and signals. The"
+  },
+  {
+    "title": "Alpine Chart",
+    "category": "TanStack React Charts",
+    "path": "/docs/framework/alpine/reference/chart",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "import { charts } from '@tanstack/charts/alpine' Register charts with Alpine.plugin , then make x-chart evaluate to a"
+  },
+  {
+    "title": "Alpine Adapter",
+    "category": "TanStack React Charts",
+    "path": "/docs/framework/alpine/adapter",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "<div x-data=\"{ chartOptions }\" x-chart=\"chartOptions\"></div> The directive element owns its contents. Alpine effects forward option changes"
+  },
+  {
+    "title": "Svelte Chart",
+    "category": "TanStack React Charts",
+    "path": "/docs/framework/svelte/reference/chart",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "<script lang=\"ts\"> import { Chart } from '@tanstack/charts/svelte' </script> The definition infers datum and coordinate types for every callback. Replace"
+  },
+  {
+    "title": "Svelte Adapter",
+    "category": "TanStack React Charts",
+    "path": "/docs/framework/svelte/adapter",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "The component uses Svelte 5 callback props and hydration-stable IDs. class"
+  },
+  {
+    "title": "React Chart",
+    "category": "TanStack React Charts",
+    "path": "/docs/framework/react/reference/chart",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "import { Chart } from '@tanstack/charts/react' The supplied definition infers the datum, semantic x/y values, and callbacks."
+  },
+  {
+    "title": "React Quick Start",
+    "category": "TanStack React Charts",
+    "path": "/docs/framework/react/quick-start",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "Install TanStack Charts and its React peers:"
+  },
+  {
+    "title": "React Adapter",
+    "category": "TanStack React Charts",
+    "path": "/docs/framework/react/adapter",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "@tanstack/charts/react is a thin lifecycle and SSR adapter around"
+  },
+  {
+    "title": "Lit Chart",
+    "category": "TanStack React Charts",
+    "path": "/docs/framework/lit/reference/chart",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "import { Chart, defineChartElement } from '@tanstack/charts/lit' defineChartElement() registers Chart as tanstack-chart . Pass the complete"
+  },
+  {
+    "title": "Lit Adapter",
+    "category": "TanStack React Charts",
+    "path": "/docs/framework/lit/adapter",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "pnpm add @tanstack/charts lit Register the element once:"
+  },
+  {
+    "title": "Stable Compatibility",
+    "category": "TanStack React Charts",
+    "path": "/docs/compatibility",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "This contract takes effect with TanStack Charts 1.0. Published 0.x releases"
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/simple",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "React Charts is first and foremost a React component for rendering many many different variations of X/Y charts including, but not limited to, line, area, bar, column and bubble ch"
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/line",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "React Charts is first and foremost a React component for rendering many many different variations of X/Y charts including, but not limited to, line, area, bar, column and bubble ch"
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/bar",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "React Charts is first and foremost a React component for rendering many many different variations of X/Y charts including, but not limited to, line, area, bar, column and bubble ch"
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/column",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "React Charts is first and foremost a React component for rendering many many different variations of X/Y charts including, but not limited to, line, area, bar, column and bubble ch"
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/area",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "React Charts is first and foremost a React component for rendering many many different variations of X/Y charts including, but not limited to, line, area, bar, column and bubble ch"
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/bubble",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "React Charts is first and foremost a React component for rendering many many different variations of X/Y charts including, but not limited to, line, area, bar, column and bubble ch"
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/steam",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "React Charts is first and foremost a React component for rendering many many different variations of X/Y charts including, but not limited to, line, area, bar, column and bubble ch"
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/sparkline",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "React Charts is first and foremost a React component for rendering many many different variations of X/Y charts including, but not limited to, line, area, bar, column and bubble ch"
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/multiple-axes",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "React Charts is first and foremost a React component for rendering many many different variations of X/Y charts including, but not limited to, line, area, bar, column and bubble ch"
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/interaction-modes",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "React Charts is first and foremost a React component for rendering many many different variations of X/Y charts including, but not limited to, line, area, bar, column and bubble ch"
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/dark-mode",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "React Charts is first and foremost a React component for rendering many many different variations of X/Y charts including, but not limited to, line, area, bar, column and bubble ch"
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/dynamic-parent",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "React Charts is first and foremost a React component for rendering many many different variations of X/Y charts including, but not limited to, line, area, bar, column and bubble ch"
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/custom-styles",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "React Charts is first and foremost a React component for rendering many many different variations of X/Y charts including, but not limited to, line, area, bar, column and bubble ch"
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/synced-cursors",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "React Charts is first and foremost a React component for rendering many many different variations of X/Y charts including, but not limited to, line, area, bar, column and bubble ch"
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack React Charts",
+    "path": "/docs/examples/brushing",
+    "site": "tanstack_react_charts",
+    "headings": [],
+    "preview": "React Charts is first and foremost a React component for rendering many many different variations of X/Y charts including, but not limited to, line, area, bar, column and bubble ch"
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "title": "Overview",
+    "category": "TanStack Config",
+    "path": "/config/latest/docs/overview",
+    "site": "tanstack_config",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "ESLint",
+    "category": "TanStack Config",
+    "path": "/config/latest/docs/eslint",
+    "site": "tanstack_config",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Vite",
+    "category": "TanStack Config",
+    "path": "/config/latest/docs/vite",
+    "site": "tanstack_config",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Package Structure",
+    "category": "TanStack Config",
+    "path": "/config/latest/docs/package-structure",
+    "site": "tanstack_config",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Publish",
+    "category": "TanStack Config",
+    "path": "/config/latest/docs/publish",
+    "site": "tanstack_config",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Config",
+    "category": "TanStack Config",
+    "path": "/config/latest",
+    "site": "tanstack_config",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack Config",
+    "path": "/config/v0/docs/overview",
+    "site": "tanstack_config",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "CI/CD",
+    "category": "TanStack Config",
+    "path": "/config/latest/docs/ci-cd",
+    "site": "tanstack_config",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Dependencies",
+    "category": "TanStack Config",
+    "path": "/config/latest/docs/dependencies",
+    "site": "tanstack_config",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "TanStack Config Blog",
+    "category": "TanStack Config",
+    "path": "/config/latest/docs/blog",
+    "site": "tanstack_config",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Config",
+    "category": "TanStack Config",
+    "path": "/config/src;script.setAttribute(",
+    "site": "tanstack_config",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack Config",
+    "path": "/",
+    "site": "tanstack_config",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  }
+]

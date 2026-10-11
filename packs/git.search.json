@@ -1,0 +1,1282 @@
+[
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - Reference",
+    "category": "Git Reference Manual",
+    "path": "/docs",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - Reference"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/pt_BR",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git-config Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-config",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-config Documentation"
+  },
+  {
+    "title": "Git - git-add Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-add",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-add Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/sv",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git-init Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-init",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-init Documentation"
+  },
+  {
+    "title": "Git - git-diff Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-diff",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-diff Documentation"
+  },
+  {
+    "title": "Git - git-clone Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-clone",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-clone Documentation"
+  },
+  {
+    "title": "Git - git-bugreport Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-bugreport",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-bugreport Documentation"
+  },
+  {
+    "title": "Git - git-status Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-status",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-status Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/zh_HANS-CN",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/fr",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/uk",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git-help Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-help",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-help Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/es",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/ru",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git-notes Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-notes",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-notes Documentation"
+  },
+  {
+    "title": "Git - git-stash Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-stash",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-stash Documentation"
+  },
+  {
+    "title": "Git - git-mv Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-mv",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-mv Documentation"
+  },
+  {
+    "title": "Git - git-fetch Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-fetch",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-fetch Documentation"
+  },
+  {
+    "title": "Git - git-log Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-log",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-log Documentation"
+  },
+  {
+    "title": "Git - git-rm Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-rm",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-rm Documentation"
+  },
+  {
+    "title": "Git - git-worktree Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-worktree",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-worktree Documentation"
+  },
+  {
+    "title": "Git - git-reset Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-reset",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-reset Documentation"
+  },
+  {
+    "title": "Git - git-merge Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-merge",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-merge Documentation"
+  },
+  {
+    "title": "Git - git-commit Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-commit",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-commit Documentation"
+  },
+  {
+    "title": "Git - git-branch Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-branch",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-branch Documentation"
+  },
+  {
+    "title": "Git - git-tag Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-tag",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-tag Documentation"
+  },
+  {
+    "title": "Git - git-mergetool Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-mergetool",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-mergetool Documentation"
+  },
+  {
+    "title": "Git - git-checkout Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-checkout",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-checkout Documentation"
+  },
+  {
+    "title": "Git - git-switch Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-switch",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-switch Documentation"
+  },
+  {
+    "title": "Git - git-restore Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-restore",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-restore Documentation"
+  },
+  {
+    "title": "Git - git-pull Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-pull",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-pull Documentation"
+  },
+  {
+    "title": "Git - git-push Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-push",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-push Documentation"
+  },
+  {
+    "title": "Git - git-remote Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-remote",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-remote Documentation"
+  },
+  {
+    "title": "Git - git-grep Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-grep",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-grep Documentation"
+  },
+  {
+    "title": "Git - git-rebase Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-rebase",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-rebase Documentation"
+  },
+  {
+    "title": "Git - git-show Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-show",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-show Documentation"
+  },
+  {
+    "title": "Git - git-submodule Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-submodule",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-submodule Documentation"
+  },
+  {
+    "title": "Git - git-bisect Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-bisect",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-bisect Documentation"
+  },
+  {
+    "title": "Git - git-difftool Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-difftool",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-difftool Documentation"
+  },
+  {
+    "title": "Git - git-apply Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-apply",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-apply Documentation"
+  },
+  {
+    "title": "Git - git-shortlog Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-shortlog",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-shortlog Documentation"
+  },
+  {
+    "title": "Git - git-blame Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-blame",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-blame Documentation"
+  },
+  {
+    "title": "Git - git-cherry-pick Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-cherry-pick",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-cherry-pick Documentation"
+  },
+  {
+    "title": "Git - git-describe Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-describe",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-describe Documentation"
+  },
+  {
+    "title": "Git - git-revert Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-revert",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-revert Documentation"
+  },
+  {
+    "title": "Git - git-range-diff Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-range-diff",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-range-diff Documentation"
+  },
+  {
+    "title": "Git - git-am Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-am",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-am Documentation"
+  },
+  {
+    "title": "Git - gitignore Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/gitignore",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - gitignore Documentation"
+  },
+  {
+    "title": "Git - git-send-email Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-send-email",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-send-email Documentation"
+  },
+  {
+    "title": "Git - git-update-server-info Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-update-server-info",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-update-server-info Documentation"
+  },
+  {
+    "title": "Git - gitattributes Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/gitattributes",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - gitattributes Documentation"
+  },
+  {
+    "title": "Git - git-fast-import Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-fast-import",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-fast-import Documentation"
+  },
+  {
+    "title": "Git - gitcli Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/gitcli",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - gitcli Documentation"
+  },
+  {
+    "title": "Git - git-format-patch Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-format-patch",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-format-patch Documentation"
+  },
+  {
+    "title": "Git - git-imap-send Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-imap-send",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-imap-send Documentation"
+  },
+  {
+    "title": "Git - git-request-pull Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-request-pull",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-request-pull Documentation"
+  },
+  {
+    "title": "Git - gitfaq Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/gitfaq",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - gitfaq Documentation"
+  },
+  {
+    "title": "Git - gitglossary Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/gitglossary",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - gitglossary Documentation"
+  },
+  {
+    "title": "Git - githooks Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/githooks",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - githooks Documentation"
+  },
+  {
+    "title": "Git - git-daemon Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-daemon",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-daemon Documentation"
+  },
+  {
+    "title": "Git - git-svn Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-svn",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-svn Documentation"
+  },
+  {
+    "title": "Git - giteveryday Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/giteveryday",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - giteveryday Documentation"
+  },
+  {
+    "title": "Git - gitrevisions Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/gitrevisions",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - gitrevisions Documentation"
+  },
+  {
+    "title": "Git - gitmodules Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/gitmodules",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - gitmodules Documentation"
+  },
+  {
+    "title": "Git - gitworkflows Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/gitworkflows",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - gitworkflows Documentation"
+  },
+  {
+    "title": "Git - git-filter-branch Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-filter-branch",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-filter-branch Documentation"
+  },
+  {
+    "title": "Git - gittutorial Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/gittutorial",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - gittutorial Documentation"
+  },
+  {
+    "title": "Git - git-gc Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-gc",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-gc Documentation"
+  },
+  {
+    "title": "Git - git-fsck Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-fsck",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-fsck Documentation"
+  },
+  {
+    "title": "Git - git-cat-file Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-cat-file",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-cat-file Documentation"
+  },
+  {
+    "title": "Git - git-clean Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-clean",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-clean Documentation"
+  },
+  {
+    "title": "Git - git-bundle Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-bundle",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-bundle Documentation"
+  },
+  {
+    "title": "Git - git-checkout-index Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-checkout-index",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-checkout-index Documentation"
+  },
+  {
+    "title": "Git - git-reflog Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-reflog",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-reflog Documentation"
+  },
+  {
+    "title": "Git - git-archive Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-archive",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-archive Documentation"
+  },
+  {
+    "title": "Git - git-instaweb Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-instaweb",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-instaweb Documentation"
+  },
+  {
+    "title": "Git - git-check-ignore Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-check-ignore",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-check-ignore Documentation"
+  },
+  {
+    "title": "Git - gitsubmodules Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/gitsubmodules",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - gitsubmodules Documentation"
+  },
+  {
+    "title": "Git - git-show-ref Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-show-ref",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-show-ref Documentation"
+  },
+  {
+    "title": "Git - git-hash-object Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-hash-object",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-hash-object Documentation"
+  },
+  {
+    "title": "Git - git-ls-tree Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-ls-tree",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-ls-tree Documentation"
+  },
+  {
+    "title": "Git - git-update-ref Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-update-ref",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-update-ref Documentation"
+  },
+  {
+    "title": "Git - git-update-index Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-update-index",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-update-index Documentation"
+  },
+  {
+    "title": "Git - git-read-tree Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-read-tree",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-read-tree Documentation"
+  },
+  {
+    "title": "Git - git-rev-parse Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-rev-parse",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-rev-parse Documentation"
+  },
+  {
+    "title": "Git - git-rev-list Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-rev-list",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-rev-list Documentation"
+  },
+  {
+    "title": "Git - git-ls-files Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-ls-files",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-ls-files Documentation"
+  },
+  {
+    "title": "Git - git-commit-tree Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-commit-tree",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-commit-tree Documentation"
+  },
+  {
+    "title": "Git - git-merge-base Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-merge-base",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-merge-base Documentation"
+  },
+  {
+    "title": "Git - git-for-each-ref Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-for-each-ref",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-for-each-ref Documentation"
+  },
+  {
+    "title": "Git - git-diff-index Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-diff-index",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-diff-index Documentation"
+  },
+  {
+    "title": "Git - git-count-objects Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-count-objects",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-count-objects Documentation"
+  },
+  {
+    "title": "Git - git-verify-pack Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-verify-pack",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-verify-pack Documentation"
+  },
+  {
+    "title": "Git - git-symbolic-ref Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-symbolic-ref",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-symbolic-ref Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.48.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.56.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.45.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git-write-tree Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git-write-tree",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git-write-tree Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.45.1",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.55.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.51.1",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.53.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.54.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.46.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.52.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.44.1",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.50.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.49.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.47.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.44.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.38.2",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.43.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.42.2",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.42.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.42.1",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.38.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.37.2",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.39.4",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.40.2",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.39.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.43.4",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.43.1",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.41.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.37.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.36.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.41.1",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.26.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.33.1",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.29.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.23.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.22.1",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.35.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.27.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.28.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.33.2",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.34.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.32.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.25.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.30.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.22.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.31.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.25.1",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.19.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.14.6",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.18.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.20.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.16.6",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.17.0",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.19.2",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.15.4",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.9.5",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.12.5",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.11.4",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.10.5",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.7.6",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.8.6",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  },
+  {
+    "title": "Git - git Documentation",
+    "category": "Git Reference Manual",
+    "path": "/docs/git/2.6.7",
+    "site": "git",
+    "headings": [],
+    "preview": "Git Reference Manual documentation — Git - git Documentation"
+  }
+]

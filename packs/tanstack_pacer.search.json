@@ -1,0 +1,602 @@
+[
+  {
+    "title": "Overview | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/overview",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "TanStack Pacer is a library of utilities for controlling when functions run: debouncing, throttling, rate limiting, queuing, and batching. Plenty of libraries ship a debounce helper. We built Pacer..."
+  },
+  {
+    "title": "React TanStack Pacer Debounce Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/debounce",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement Debounce in React using TanStack Pacer."
+  },
+  {
+    "title": "React Quick Start | TanStack Pacer React Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/quick-start",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "TanStack Pacer controls when your functions run. The React adapter, @tanstack/react-pacer, wraps each Pacer utility in a hook. The hook keeps one utility instance across renders, cancels pending work..."
+  },
+  {
+    "title": "Installation | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/installation",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Pacer packages are ESM-only, target ES2022, and require Node.js 20 or newer when running in Node.js. The Octane adapter requires Node.js 22.22.2 or newer. Ember includes a CommonJS addon metadata shim..."
+  },
+  {
+    "title": "Which Pacer Utility Should I Choose? | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/guides/which-pacer-utility-should-i-choose",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "TanStack Pacer provides five strategies for controlling when operations run. The right choice depends on what should happen to calls that arrive faster than your application can process them. Use a..."
+  },
+  {
+    "title": "Devtools | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/devtools",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "What? My debouncer can have dedicated devtools? Yep! TanStack Pacer ships devtools for watching and debugging every registered utility in real time. They run as a plugin inside the TanStack Devtools..."
+  },
+  {
+    "title": "@tanstack/pacer | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/reference/index",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "AsyncBatcher AsyncDebouncer AsyncQueuer AsyncRateLimiter AsyncRetryer AsyncThrottler Batcher Debouncer Queuer RateLimiter Throttler AsyncBatcherOptions AsyncBatcherState AsyncDebouncerOptions..."
+  },
+  {
+    "title": "React TanStack Pacer UseDebouncedState Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useDebouncedState",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseDebouncedState in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseDebouncedCallback Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useDebouncedCallback",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseDebouncedCallback in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseAsyncDebouncer Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useAsyncDebouncer",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseAsyncDebouncer in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseDebouncedValue Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useDebouncedValue",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseDebouncedValue in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer AsyncDebounce Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/asyncDebounce",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement AsyncDebounce in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer AsyncThrottle Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/asyncThrottle",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement AsyncThrottle in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer AsyncRateLimit Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/asyncRateLimit",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement AsyncRateLimit in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseThrottledCallback Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useThrottledCallback",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseThrottledCallback in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseAsyncDebouncedCallback Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useAsyncDebouncedCallback",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseAsyncDebouncedCallback in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer Throttle Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/throttle",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement Throttle in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseDebouncer Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useDebouncer",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseDebouncer in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseAsyncThrottler Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useAsyncThrottler",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseAsyncThrottler in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseThrottledState Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useThrottledState",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseThrottledState in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseThrottler Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useThrottler",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseThrottler in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer RateLimit Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/rateLimit",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement RateLimit in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseThrottledValue Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useThrottledValue",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseThrottledValue in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseAsyncQueuer Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useAsyncQueuer",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseAsyncQueuer in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseBatcher Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useBatcher",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseBatcher in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseAsyncRateLimiter Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useAsyncRateLimiter",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseAsyncRateLimiter in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer AsyncBatch Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/asyncBatch",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement AsyncBatch in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseAsyncBatcher Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useAsyncBatcher",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseAsyncBatcher in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseRateLimitedCallback Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useRateLimitedCallback",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseRateLimitedCallback in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseRateLimiter Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useRateLimiter",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseRateLimiter in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer Batch Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/batch",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement Batch in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseBatchedCallback Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useBatchedCallback",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseBatchedCallback in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer Queue Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/queue",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement Queue in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseRateLimitedValue Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useRateLimitedValue",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseRateLimitedValue in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseQueuedValue Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useQueuedValue",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseQueuedValue in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseQueuer Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useQueuer",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseQueuer in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseAsyncQueuedState Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useAsyncQueuedState",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseAsyncQueuedState in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseQueuedState Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useQueuedState",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseQueuedState in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseRateLimitedState Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useRateLimitedState",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseRateLimitedState in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer UseAsyncBatchedCallback Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/useAsyncBatchedCallback",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseAsyncBatchedCallback in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer React Query Debounced Prefetch Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/react-query-debounced-prefetch",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement React Query Debounced Prefetch in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer React Query Throttled Prefetch Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/react-query-throttled-prefetch",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement React Query Throttled Prefetch in React using TanStack Pacer."
+  },
+  {
+    "title": "React TanStack Pacer React Query Queued Prefetch Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/examples/react-query-queued-prefetch",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement React Query Queued Prefetch in React using TanStack Pacer."
+  },
+  {
+    "title": "Angular Quick Start | TanStack Pacer Angular Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/angular/quick-start",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "TanStack Pacer controls when your functions run. The Angular adapter, @tanstack/angular-pacer, wraps each Pacer utility in an inject* function. Call it in an injection context, such as a component..."
+  },
+  {
+    "title": "React Batching Guide | TanStack Pacer React Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/guides/batching",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Batching collects items and passes them to one function as an array. A batch can run when it reaches a configured size, after no new items arrive for a configured wait, or when custom logic says it is..."
+  },
+  {
+    "title": "Preact Quick Start | TanStack Pacer Preact Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/preact/quick-start",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "TanStack Pacer controls when your functions run. The Preact adapter, @tanstack/preact-pacer, wraps each Pacer utility in a hook. The hook keeps one utility instance across renders, cancels pending..."
+  },
+  {
+    "title": "React Rate Limiting Guide | TanStack Pacer React Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/guides/rate-limiting",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Rate limiting allows a configured number of executions within a time window. Calls run immediately while capacity remains. Once the limit is reached, later calls are rejected until capacity becomes..."
+  },
+  {
+    "title": "Solid Quick Start | TanStack Pacer Solid Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/solid/quick-start",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "TanStack Pacer controls when your functions run. The Solid adapter, @tanstack/solid-pacer, wraps each Pacer utility in a create* function. The utility belongs to the current reactive owner, cancels..."
+  },
+  {
+    "title": "@tanstack/react-pacer | TanStack Pacer React Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/reference/index",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "PacerProviderOptions PacerProviderProps ReactAsyncBatcher ReactAsyncBatcherOptions ReactAsyncDebouncer ReactAsyncDebouncerOptions ReactAsyncQueuer ReactAsyncQueuerOptions ReactAsyncRateLimiter..."
+  },
+  {
+    "title": "React Throttling Guide | TanStack Pacer React Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/guides/throttling",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Throttling limits how often a function can execute while calls continue to arrive. Unlike debouncing, throttling does not wait for activity to stop. It creates a bounded execution interval that works..."
+  },
+  {
+    "title": "React Queuing Guide | TanStack Pacer React Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/guides/queuing",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Queuing stores operations in an ordered buffer and processes them individually. It is the primary Pacer strategy for work that should not be discarded when calls arrive faster than they can run...."
+  },
+  {
+    "title": "React Debouncing Guide | TanStack Pacer React Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/guides/debouncing",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Debouncing delays a function until calls have stopped for a configured amount of time. Each new call restarts the timer. With the default settings, only the most recent call executes, using its..."
+  },
+  {
+    "title": "React Async Debouncing Guide | TanStack Pacer React Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/guides/async-debouncing",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Async debouncing keeps the timing behavior described in the Debouncing Guide, while adding Promise results, retries, error callbacks, and control over in-flight work. Use async debouncing when the..."
+  },
+  {
+    "title": "Vanilla Quick Start | TanStack Pacer Vanilla Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/vanilla/quick-start",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "TanStack Pacer controls when your functions run. Without a framework, use the core @tanstack/pacer package directly. It provides each utility both as a function that wraps your callback and as a class..."
+  },
+  {
+    "title": "React Async Retrying Guide | TanStack Pacer React Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/guides/async-retrying",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Retrying runs an async operation again after it fails. It can make transient failures less visible to users, but it can also repeat side effects and increase load on an unhealthy service. AsyncRetryer..."
+  },
+  {
+    "title": "Lit Quick Start | TanStack Pacer Lit Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/lit/quick-start",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "TanStack Pacer controls when your functions run. The Lit adapter, @tanstack/lit-pacer, wraps each Pacer utility in a create* function that takes your element as its first argument. The function..."
+  },
+  {
+    "title": "React Async Queuing Guide | TanStack Pacer React Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/guides/async-queuing",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Async queuing keeps the ordering, capacity, priority, expiration, and start or stop controls described in the Queuing Guide. It adds controlled concurrency, Promise-aware processing, per-item retries,..."
+  },
+  {
+    "title": "Svelte Quick Start | TanStack Pacer Svelte Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/svelte/quick-start",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "TanStack Pacer controls when your functions run. The Svelte adapter, @tanstack/svelte-pacer, wraps each Pacer utility in a create* function for Svelte 5. Call it during component initialization. The..."
+  },
+  {
+    "title": "React Async Rate Limiting Guide | TanStack Pacer React Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/guides/async-rate-limiting",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Async rate limiting keeps the window behavior described in the Rate Limiting Guide, while adding Promise results, retries, error callbacks, and control over in-flight work. Use it when accepted..."
+  },
+  {
+    "title": "React Async Throttling Guide | TanStack Pacer React Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/guides/async-throttling",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Async throttling keeps the timing behavior described in the Throttling Guide, while adding Promise results, retries, error callbacks, and control over in-flight work. Use it when a throttled operation..."
+  },
+  {
+    "title": "Octane Quick Start | TanStack Pacer Octane Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/octane/quick-start",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "TanStack Pacer controls when your functions run. The Octane adapter, @tanstack/octane-pacer, wraps each Pacer utility in a hook. The hook keeps one utility instance across renders, cancels pending..."
+  },
+  {
+    "title": "Vue Quick Start | TanStack Pacer Vue Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/vue/quick-start",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "TanStack Pacer controls when your functions run. The Vue adapter, @tanstack/vue-pacer, wraps each Pacer utility in a composable. Call composables during component setup or inside an active effect..."
+  },
+  {
+    "title": "Ember Quick Start | TanStack Pacer Ember Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/ember/quick-start",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "TanStack Pacer controls when your functions run. The Ember adapter, @tanstack/ember-pacer, provides each Pacer utility as a template helper. Invoke the helper inside a {{#let}} block. The helper keeps..."
+  },
+  {
+    "title": "React Async Batching Guide | TanStack Pacer React Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/guides/async-batching",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Async batching keeps the collection and trigger behavior described in the Batching Guide, while adding Promise results, retries, error callbacks, failed-item tracking, and control over in-flight work...."
+  },
+  {
+    "title": "Alpine Quick Start | TanStack Pacer Alpine Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/alpine/quick-start",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "TanStack Pacer controls when your functions run. The Alpine adapter, @tanstack/alpine-pacer, creates Pacer utilities that belong to a scope. The scope tracks option changes, updates your templates..."
+  },
+  {
+    "title": "DebouncerOptions | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/reference/interfaces/DebouncerOptions",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Defined in: debouncer.ts:49 Options for configuring a debounced function TFn extends AnyFunction Defined in: debouncer.ts:55 Whether the debouncer is enabled. When disabled, maybeExecute will not..."
+  },
+  {
+    "title": "DebouncerState | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/reference/interfaces/DebouncerState",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Defined in: debouncer.ts:6 TFn extends AnyFunction Defined in: debouncer.ts:10 Whether the debouncer can execute on the leading edge of the timeout Defined in: debouncer.ts:14 Number of function..."
+  },
+  {
+    "title": "AsyncDebouncerOptions | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/reference/interfaces/AsyncDebouncerOptions",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Defined in: async-debouncer.ts:71 Options for configuring an async debounced function TFn extends AnyAsyncFunction Defined in: async-debouncer.ts:75 Options for configuring the underlying async..."
+  },
+  {
+    "title": "Octane TanStack Pacer UseDebouncer Example | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/octane/examples/useDebouncer",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "An example showing how to implement UseDebouncer in Octane using TanStack Pacer."
+  },
+  {
+    "title": "asyncDebounce | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/reference/functions/asyncDebounce",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Defined in: async-debouncer.ts:560 Creates an async debounced function that delays execution until after a specified wait time. The debounced function will only execute once the wait period has..."
+  },
+  {
+    "title": "AsyncDebouncerState | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/reference/interfaces/AsyncDebouncerState",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Defined in: async-debouncer.ts:8 TFn extends AnyAsyncFunction Defined in: async-debouncer.ts:12 Whether the debouncer can execute on the leading edge of the timeout Defined in: async-debouncer.ts:16..."
+  },
+  {
+    "title": "debounce | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/reference/functions/debounce",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Defined in: debouncer.ts:328 Creates a debounced function that delays invoking the provided function until after a specified wait time. Multiple calls during the wait period will cancel previous..."
+  },
+  {
+    "title": "Debouncer | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/reference/classes/Debouncer",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Defined in: debouncer.ts:142 A class that creates a debounced function. Debouncing ensures that a function is only executed after a certain amount of time has passed since its last invocation. This is..."
+  },
+  {
+    "title": "AsyncDebouncer | TanStack Pacer Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/reference/classes/AsyncDebouncer",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Defined in: async-debouncer.ts:218 A class that creates an async debounced function. Async vs Sync Versions: The async version provides advanced features over the sync Debouncer: Returns promises that..."
+  },
+  {
+    "title": "ReactDebouncerOptions | TanStack Pacer React Docs",
+    "category": "TanStack Pacer",
+    "path": "/pacer/latest/docs/framework/react/reference/interfaces/ReactDebouncerOptions",
+    "site": "tanstack_pacer",
+    "headings": [],
+    "preview": "Defined in: debouncer/useDebouncer.ts:13 DebouncerOptions&lt;TFn&gt; TFn extends AnyFunction TSelected = { } Defined in: debouncer/useDebouncer.ts:21 Optional callback invoked when the component unmounts...."
+  }
+]

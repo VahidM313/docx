@@ -1,0 +1,106 @@
+[
+  {
+    "title": "Angular",
+    "category": "Angular",
+    "path": "/",
+    "site": "angular",
+    "headings": [],
+    "preview": "Angular — Angular documentation"
+  },
+  {
+    "title": "What is Angular? link",
+    "category": "Angular",
+    "path": "/guide/what-is-angular",
+    "site": "angular",
+    "headings": [],
+    "preview": "Angular is a development platform, built on TypeScript ."
+  },
+  {
+    "title": "Setting up the local environment and workspace link",
+    "category": "Angular",
+    "path": "/guide/setup-local",
+    "site": "angular",
+    "headings": [],
+    "preview": "Setting up the local environment and workspace link — Angular"
+  },
+  {
+    "title": "Understanding dependency injection link",
+    "category": "Angular",
+    "path": "/guide/dependency-injection",
+    "site": "angular",
+    "headings": [],
+    "preview": "Dependency injection, or DI, is one of the fundamental concepts in Angular. DI is wired into the Angular framework and allows classes with Angular decorators, such as Components, D"
+  },
+  {
+    "title": "Angular Routing link",
+    "category": "Angular",
+    "path": "/guide/routing-overview",
+    "site": "angular",
+    "headings": [],
+    "preview": "To explore a sample app featuring the router's primary features, see the ."
+  },
+  {
+    "title": "Introduction to forms in Angular link",
+    "category": "Angular",
+    "path": "/guide/forms-overview",
+    "site": "angular",
+    "headings": [],
+    "preview": "Handling user input with forms is the cornerstone of many common applications. Applications use forms to enable users to log in, to update a profile, to enter sensitive information"
+  },
+  {
+    "title": "Angular Signals link",
+    "category": "Angular",
+    "path": "/guide/signals",
+    "site": "angular",
+    "headings": [],
+    "preview": "Angular Signals is a system that granularly tracks how and where your state is used throughout an application, allowing the framework to optimize rendering updates."
+  },
+  {
+    "title": "Server",
+    "category": "Angular",
+    "path": "/guide/ssr",
+    "site": "angular",
+    "headings": [],
+    "preview": "Server-side rendering (SSR) is a process that involves rendering pages on the server, resulting in initial HTML content which contains initial page state. Once the HTML content is "
+  },
+  {
+    "title": "Testing link",
+    "category": "Angular",
+    "path": "/guide/testing",
+    "site": "angular",
+    "headings": [],
+    "preview": "Testing link Testing your Angular application helps you check that your application is working as you expect."
+  },
+  {
+    "title": "Angular Internationalization link",
+    "category": "Angular",
+    "path": "/guide/i18n-overview",
+    "site": "angular",
+    "headings": [],
+    "preview": "A locale identifies a region in which people speak a particular language or language variant. Possible regions include countries and geographical regions. A locale determines the f"
+  },
+  {
+    "title": "Introduction to Angular animations link",
+    "category": "Angular",
+    "path": "/guide/animations",
+    "site": "angular",
+    "headings": [],
+    "preview": "Animation provides the illusion of motion: HTML elements change styling over time. Well-designed animations can make your application more fun and straightforward to use, but they "
+  },
+  {
+    "title": "CLI Overview and Command Reference link",
+    "category": "Angular",
+    "path": "/cli",
+    "site": "angular",
+    "headings": [],
+    "preview": "The Angular CLI is a command-line interface tool that you use to initialize, develop, scaffold, and maintain Angular applications directly from a command shell."
+  },
+  {
+    "title": "API List link",
+    "category": "Angular",
+    "path": "/api",
+    "site": "angular",
+    "headings": [],
+    "preview": "API List link — Angular documentation"
+  }
+]

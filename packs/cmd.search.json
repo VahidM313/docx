@@ -1,0 +1,1282 @@
+[
+  {
+    "title": "Windows commands | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/windows-commands",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference"
+  },
+  {
+    "title": "add (diskshadow) | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/add",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the add command, which adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment."
+  },
+  {
+    "title": "atmadm | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/atmadm",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the atmadm command, which monitors connections and addresses that are registered by the atM call Manager on an asynchronous transfer mode (atM) network."
+  },
+  {
+    "title": "assoc | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/assoc",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the assoc command, which displays or modifies file name extension associations."
+  },
+  {
+    "title": "assign | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/assign",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the assign command, which assigns a drive letter or mount point to the volume with focus."
+  },
+  {
+    "title": "attributes | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/attributes",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the attributes command, which displays, sets, or clears the attributes of a disk or volume."
+  },
+  {
+    "title": "cscript | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/cscript",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the cscript command, which starts a script so that it runs in a command-line environment."
+  },
+  {
+    "title": "at | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/at",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the at command, which schedules commands and programs to run on a computer at a specified time and date."
+  },
+  {
+    "title": "add alias | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/add-alias",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the add alias command, which adds aliases to the alias environment."
+  },
+  {
+    "title": "wscript | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/wscript",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the wscript command; wscript provides an environment in which users can execute scripts in various languages that use various object models to perform tasks."
+  },
+  {
+    "title": "add volume | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/add-volume",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the add volume command, which adds volumes to the shadow copy Set, which is the set of volumes to be shadow copied."
+  },
+  {
+    "title": "attach vdisk | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/attach-vdisk",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the attach vdisk command, which attaches (sometimes called mounts or surfaces) a virtual hard disk (VHD) so that it appears on the host computer as a local hard disk drive."
+  },
+  {
+    "title": "active | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/active",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the active command, which on basic disks, marks the partition with focus as active."
+  },
+  {
+    "title": "append | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/append",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the append command, which allows programs to open data files in specified directories, as if they were in the current directory."
+  },
+  {
+    "title": "Adprep | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/adprep",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Learn about adprep command line tool to prepare a forest and domain for a domain controller for Windows Server."
+  },
+  {
+    "title": "attrib | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/attrib",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the attrib command that displays, sets, or removes attributes assigned to files or directories."
+  },
+  {
+    "title": "arp | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/arp",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the arp command, which displays and modifies entries in the Address Resolution Protocol (arp) cache used to store IP addresses and their resolved physical addresses in Windows."
+  },
+  {
+    "title": "auditpol | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/auditpol",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the auditpol command, which displays information about and performs functions to manipulate audit policies."
+  },
+  {
+    "title": "auditpol get | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/auditpol-get",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the auditpol get command, which retrieves the system policy, per-user policy, auditing options, and audit security descriptor object."
+  },
+  {
+    "title": "automount | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/automount",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the automount command, which enables or disables the automount feature."
+  },
+  {
+    "title": "auditpol remove | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/auditpol-remove",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the auditpol remove command; auditpol removes the per-user audit policy for a specified account or all accounts."
+  },
+  {
+    "title": "attributes volume | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/attributes-volume",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the attributes volume command, which displays, sets, or clears the attributes of a volume."
+  },
+  {
+    "title": "auditpol set | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/auditpol-set",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the auditpol set command, which sets the per-user audit policy, system audit policy, or auditing options."
+  },
+  {
+    "title": "autofmt | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/autofmt",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the autofmt command, which formats a drive or partition when called from the Windows Recovery Console."
+  },
+  {
+    "title": "attributes disk | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/attributes-disk",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the attributes disk command, which displays, sets, or clears the attributes of a disk."
+  },
+  {
+    "title": "auditpol clear | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/auditpol-clear",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the auditpol clear command, which deletes the per-user audit policy for all users, resets (disables) the system audit policy for all subcategories, and sets all the auditing options to disabled."
+  },
+  {
+    "title": "bcdboot | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bcdboot",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bcdboot command, which quickly set up a system partition, or repair the boot environment located on the system partition."
+  },
+  {
+    "title": "autoconv | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/autoconv",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the autoconv command, which converts file allocation table (Fat) and Fat32 volumes to the NTFS file system."
+  },
+  {
+    "title": "auditpol resourceSACL | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/auditpol-resourcesacl",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the auditpol resourceSACL command, which configures global resource system access control lists (SAcls)."
+  },
+  {
+    "title": "autochk | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/autochk",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the autochk command, which runs when the computer is started and prior to Windows Server starting to verify the logical integrity of a file system."
+  },
+  {
+    "title": "auditpol restore | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/auditpol-restore",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the auditpol restore command, which restores system audit policy settings, per-user audit policy settings for all users, and all auditing options from a file that is syntactically consistent with the comma-separated value (CSV) file format used by the /backup option."
+  },
+  {
+    "title": "auditpol list | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/auditpol-list",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the auditpol list command, which lists audit policy categories and subcategories, or lists users for whom a per-user audit policy is defined."
+  },
+  {
+    "title": "auditpol backup | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/auditpol-backup",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the auditpol backup command that backs up system audit policy settings, per-user audit policy settings for all users, and all auditing options to a comma-separated value (CSV) text file."
+  },
+  {
+    "title": "bitsadmin addfileset | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-addfileset",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin addfileset command, which adds one or more files to the specified job."
+  },
+  {
+    "title": "bdehdcfg restart | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bdehdcfg-restart",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bdehdcfg restart command, which tells bdehdcfg that the computer should be restarted after the drive preparation has concluded."
+  },
+  {
+    "title": "bdehdcfg quiet | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bdehdcfg-quiet",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bdehdcfg quiet command, which tells bdehdcfg to not display all actions and errors."
+  },
+  {
+    "title": "bitsadmin addfile | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-addfile",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin addfile command, which adds a file to the specified job."
+  },
+  {
+    "title": "bdehdcfg driveinfo | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bdehdcfg-driveinfo",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bdehdcfg driveinfo command, which displays the drive letter, the total size, the maximum free space, and the partition characteristics."
+  },
+  {
+    "title": "bitsadmin cache | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-cache",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin cache command, which contains a list of the bitsadmin cache switches."
+  },
+  {
+    "title": "begin restore | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/begin-restore",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the begin restore command, which starts a restore session and issues a PreRestore event to involved writers."
+  },
+  {
+    "title": "bcdedit | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bcdedit",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bcdedit command, which creates new stores, modify existing stores, and add boot menu parameters."
+  },
+  {
+    "title": "bitsadmin addfilewithranges | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-addfilewithranges",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin addfilewithranges command, which adds a file to the specified job. BITS downloads the specified ranges from the remote file."
+  },
+  {
+    "title": "bitsadmin cache and delete | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-cache-and-delete",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin cache and delete command, which deletes a specific cache entry."
+  },
+  {
+    "title": "bdehdcfg newdriveletter | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bdehdcfg-newdriveletter",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bdehdcfg newdriveletter command, which assigns a new drive letter to the portion of a drive used as the system drive."
+  },
+  {
+    "title": "bdehdcfg size | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bdehdcfg-size",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bdehdcfg size command, which specifies the size of the system partition when a new system drive is being created."
+  },
+  {
+    "title": "bdehdcfg | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bdehdcfg",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bdehdcfg command, which prepares a hard drive with the partitions necessary for BitLocker Drive Encryption."
+  },
+  {
+    "title": "bitsadmin | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin command, which is a command-line tool used to create, download, or upload jobs and monitor their progress."
+  },
+  {
+    "title": "bdehdcfg target | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bdehdcfg-target",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bdehdcfg target command, which prepares a partition for use as a system drive by BitLocker and Windows recovery."
+  },
+  {
+    "title": "begin backup | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/begin-backup",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the begin backup command, which starts a full backup session."
+  },
+  {
+    "title": "bitsadmin create | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-create",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin create command, which creates a transfer job with the given display name."
+  },
+  {
+    "title": "bitsadmin getbytestransferred | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getbytestransferred",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getbytestransferred command, which retrieves the number of bytes transferred for the specified job."
+  },
+  {
+    "title": "bitsadmin cache and help | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-cache-and-help",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin cache and help command, which displays the command-line usage for the **cache** switches."
+  },
+  {
+    "title": "bitsadmin getaclflags | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getaclflags",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getaclflags command, which retrieves the access control list (ACL) propagations flags."
+  },
+  {
+    "title": "bitsadmin complete | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-complete",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin complete command, which completes the job."
+  },
+  {
+    "title": "bitsadmin cache and setexpirationtime | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-cache-and-setexpirationtime",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin cache and setexpirationtime command, which sets the cache expiration time."
+  },
+  {
+    "title": "bitsadmin cache and getlimit | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-cache-and-getlimit",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin cache and getlimit command that retrieves the cache limit."
+  },
+  {
+    "title": "bitsadmin examples | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-examples",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Examples showing how to use the bitsadmin tool to perform the most common tasks."
+  },
+  {
+    "title": "bitsadmin cache and setlimit | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-cache-and-setlimit",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin cache and setlimit command, which sets the cache size limit."
+  },
+  {
+    "title": "bitsadmin cache and info | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-cache-and-info",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin cache and info command, which dumps a specific cache entry."
+  },
+  {
+    "title": "bitsadmin cancel | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-cancel",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin cancel command, which removes the job from the transfer queue and deletes all temporary files associated with the job."
+  },
+  {
+    "title": "bitsadmin cache and clear | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-cache-clear",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin cache and clear command that purges the local cache."
+  },
+  {
+    "title": "bitsadmin cache and list | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-cache-and-list",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin cache and list command, which lists all cache entries."
+  },
+  {
+    "title": "bitsadmin cache and deleteURL | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-cache-and-deleteurl",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin cache and deleteURL command, which deletes all cache entries for the given URL."
+  },
+  {
+    "title": "bitsadmin getbytestotal | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getbytestotal",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getbytestotal command, which Retrieves the size of the specified job."
+  },
+  {
+    "title": "bitsadmin cache and getexpirationtime | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-cache-and-getexpirationtime",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin cache and getexpirationtime command, which retrieves the cache expiration time."
+  },
+  {
+    "title": "bitsadmin getdisplayname | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getdisplayname",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getdisplayname command, which retrieves the display name of the specified job."
+  },
+  {
+    "title": "bitsadmin getminretrydelay | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getminretrydelay",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getminretrydelay command, which retrieves the length of time, in seconds, that the service waits after encountering a transient error before trying to transfer the file."
+  },
+  {
+    "title": "bitsadmin getcreationtime | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getcreationtime",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getcreationtime command, which retrieves the creation time for the specified job."
+  },
+  {
+    "title": "bitsadmin getcompletiontime | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getcompletiontime",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getcompletiontime command, which retrieves the time that the job finished transferring data."
+  },
+  {
+    "title": "bitsadmin gethttpmethod | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-gethttpmethod",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin gethttpmethod command, which gets the HTTP verb to use with the job."
+  },
+  {
+    "title": "bitsadmin getfilestotal | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getfilestotal",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getfilestotal command, which retrieves the number of files in the specified job."
+  },
+  {
+    "title": "bitsadmin getmodificationtime | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getmodificationtime",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getmodificationtime command, which retrieves the last time the job was modified or data was successfully transferred."
+  },
+  {
+    "title": "bitsadmin getclientcertificate | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getclientcertificate",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getclientcertificate command, which retrieves the client certificate from the job."
+  },
+  {
+    "title": "bitsadmin gethelpertokensid | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-gethelpertokensid",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin gethelpertokensid command, which returns the SID of a BITS transfer job&#39;s helper token, if one is set."
+  },
+  {
+    "title": "bitsadmin geterror | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-geterror",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin geterror command, which retrieves detailed error information for the specified job."
+  },
+  {
+    "title": "bitsadmin geterrorcount | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-geterrorcount",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin geterrorcount command, which retrieves a count of the number of times the specified job generated a transient error."
+  },
+  {
+    "title": "bitsadmin getdescription | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getdescription",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getdescription command, which retrieves the description of the specified job."
+  },
+  {
+    "title": "bitsadmin getmaxdownloadtime | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getmaxdownloadtime",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getmaxdownloadtime command, which retrieves the download timeout in seconds."
+  },
+  {
+    "title": "bitsadmin getcustomheaders | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getcustomheaders",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getcustomheaders command, which retrieves the custom HTTP headers from the job."
+  },
+  {
+    "title": "bitsadmin gethelpertokenflags | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-gethelpertokenflags",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin gethelpertokenflags command, which returns the usage flags for a helper token that is associated with a BITS transfer job."
+  },
+  {
+    "title": "bitsadmin getfilestransferred | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getfilestransferred",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getfilestransferred command, which retrieves the number of files transferred for the specified job."
+  },
+  {
+    "title": "bitsadmin getnotifycmdline | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getnotifycmdline",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getnotifycmdline command, which retrieves the command-line command that is run when the job finishes transferring data."
+  },
+  {
+    "title": "bitsadmin getpeercachingflags | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getpeercachingflags",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getpeercachingflags command, which retrieves flags that determine if the files of the job can be cached and served to peers, and if BITS can download content for the job from peers."
+  },
+  {
+    "title": "bitsadmin getnotifyinterface | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getnotifyinterface",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getnotifyinterface command, which determines if another program has registered a COM callback interface for the specified job."
+  },
+  {
+    "title": "bitsadmin getowner | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getowner",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getowner command, which retrieves the owner of the specified job."
+  },
+  {
+    "title": "bitsadmin gettemporaryname | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-gettemporaryname",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin gettemporaryname command, which reports the temporary filename of the given file within the job."
+  },
+  {
+    "title": "bitsadmin getreplyprogress | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getreplyprogress",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getreplyprogress command, which retrieves the size and progress of the server upload-reply."
+  },
+  {
+    "title": "bitsadmin getnotifyflags | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getnotifyflags",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getnotifyflags command, which retrieves the notification flags for the specified job."
+  },
+  {
+    "title": "bitsadmin getproxybypasslist | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getproxybypasslist",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getproxybypasslist command that retrieves the proxy bypass list for the specified job."
+  },
+  {
+    "title": "bitsadmin getreplydata | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getreplydata",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getreplydata command, which retrieves the server&#39;s upload-reply data in hexadecimal format for the job."
+  },
+  {
+    "title": "bitsadmin getstate | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getstate",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getstate command, which retrieves the state of the specified job."
+  },
+  {
+    "title": "bitsadmin getreplyfilename | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getreplyfilename",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getreplyfilename command, which gets the path of the file that contains the server upload-reply for the job."
+  },
+  {
+    "title": "bitsadmin getpriority | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getpriority",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getpriority command, which retrieves the priority of the specified job."
+  },
+  {
+    "title": "bitsadmin getproxylist - Retrieves the proxy list for the specified job. | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getproxylist",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getproxylist command, which retrieves the proxy list for the specified job."
+  },
+  {
+    "title": "bitsadmin getnoprogresstimeout | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getnoprogresstimeout",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getnoprogresstimeout command, which retrieves the length of time, in seconds, that the service will try to transfer the file after a transient error occurs."
+  },
+  {
+    "title": "bitsadmin getproxyusage | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getproxyusage",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getproxyusage command, which retrieves the proxy usage setting for the specified job."
+  },
+  {
+    "title": "bitsadmin getsecurityflags | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getsecurityflags",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getsecurityflags command, which reports the HTTP security flags for URL redirection and checks performed on the server certificate during the transfer."
+  },
+  {
+    "title": "bitsadmin gettype | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-gettype",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin gettype command, which retrieves the job type of the specified job."
+  },
+  {
+    "title": "bitsadmin makecustomheaderswriteonly | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-makecustomheaderswriteonly",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin makecustomheaderswriteonly command, which make a job&#39;s Custom HTTP Headers write-only."
+  },
+  {
+    "title": "bitsadmin list | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-list",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin list command, which lists the transfer jobs owned by the current user."
+  },
+  {
+    "title": "bitsadmin peercaching | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-peercaching",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin peercaching command, which lists the /peercaching switches."
+  },
+  {
+    "title": "bitsadmin help | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-help",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin help command, which displays the command-line usage."
+  },
+  {
+    "title": "bitsadmin peers | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-peers",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin peers command, which lists the /peers switches."
+  },
+  {
+    "title": "bitsadmin getvalidationstate | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-getvalidationstate",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin getvalidationstate command, which reports the content validation state of the given file within the job."
+  },
+  {
+    "title": "bitsadmin peers and clear | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-peers-and-clear",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin peers and clear command that clears the peer list."
+  },
+  {
+    "title": "bitsadmin info | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-info",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin info command, which displays summary information about the specified job."
+  },
+  {
+    "title": "bitsadmin monitor | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-monitor",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin monitor command, which monitors jobs in the transfer queue that are owned by the current user."
+  },
+  {
+    "title": "bitsadmin peercaching and help | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-peercaching-and-help",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for bitsadmin peercaching and help command that displays the command-line usage for the /peercaching switches."
+  },
+  {
+    "title": "bitsadmin peercaching and setconfigurationflags | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-peercaching-and-setconfigurationflags",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin peercaching and setconfigurationflags command, which sets the configuration flags that determine if the computer can serve content to peers and if it can download content from peers."
+  },
+  {
+    "title": "bitsadmin nowrap | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-nowrap",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin nowrap command, which truncates any line of output text extending beyond the rightmost edge of the command window."
+  },
+  {
+    "title": "bitsadmin listfiles | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-listfiles",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin listfiles command, which lists the files in the specified job."
+  },
+  {
+    "title": "bitsadmin peers and discover | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-peers-and-discover",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin peers and discover command that rediscovers peers."
+  },
+  {
+    "title": "bitsadmin peercaching and getconfigurationflags | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-peercaching-and-getconfigurationflags",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin peercaching and getconfigurationflags command, which gets the configuration flags that determine if the computer serves content to peers and if it can download content from peers."
+  },
+  {
+    "title": "bitsadmin reset | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-reset",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin reset command, which cancels all jobs in the transfer queue owned by the current user."
+  },
+  {
+    "title": "bitsadmin peers and help | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-peers-and-help",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin peers and help command, which displays the command-line usage for the /peers switches."
+  },
+  {
+    "title": "bitsadmin setclientcertificatebyid | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-setclientcertificatebyid",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin setclientcertificatebyid command, which specifies the identifier of the client certificate to use for client authentication in an HTTPS (SSL) request"
+  },
+  {
+    "title": "bitsadmin resume | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-resume",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin resume command, which activates a new or suspended job in the transfer queue."
+  },
+  {
+    "title": "bitsadmin setcustomheaders | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-setcustomheaders",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin setcustomheaders command, which adds a custom HTTP header to a GET request."
+  },
+  {
+    "title": "bitsadmin setclientcertificatebyname | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-setclientcertificatebyname",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin setclientcertificatebyname command, which specifies the subject name of the client certificate to use for client authentication in an HTTPS (SSL) request."
+  },
+  {
+    "title": "bitsadmin replaceremoteprefix | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-replaceremoteprefix",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin replaceremoteprefix command, which changes the remote URL for all files in the job from *oldprefix* to *newprefix*, as necessary."
+  },
+  {
+    "title": "bitsadmin rawreturn | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-rawreturn",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin rawreturn command that returns data suitable for parsing."
+  },
+  {
+    "title": "bitsadmin removecredentials | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-removecredentials",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin removecredentials command, which removes credentials from a job."
+  },
+  {
+    "title": "bitsadmin setdescription | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-setdescription",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin setdescription command, which sets the description of the specified job."
+  },
+  {
+    "title": "bitsadmin setaclflag | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-setaclflag",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin setaclflag command, which sets the access control list (ACL) propagations flags."
+  },
+  {
+    "title": "bitsadmin setdisplayname | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-setdisplayname",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin setdisplayname command, which sets the display name of the specified job."
+  },
+  {
+    "title": "bitsadmin sethelpertoken | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-sethelpertoken",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin sethelpertoken command, which sets the current command prompt&#39;s primary token (or an arbitrary local user account&#39;s token, if specified) as a BITS transfer job&#39;s helper token."
+  },
+  {
+    "title": "bitsadmin setcredentials | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-setcredentials",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin setcredentials command, which adds credentials to a job."
+  },
+  {
+    "title": "bitsadmin peers and list | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-peers-and-list",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin peers and list command that lists all peers."
+  },
+  {
+    "title": "bitsadmin removeclientcertificate | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-removeclientcertificate",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin removeclientcertificate command, which removes the client certificate from the job."
+  },
+  {
+    "title": "bitsadmin setpeercachingflags | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-setpeercachingflags",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin setpeercachingflags command, which sets flags that determine if the files of the job can be cached and served to peers and if the job can download content from peers."
+  },
+  {
+    "title": "bitsadmin setmaxdownloadtime | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-setmaxdownloadtime",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin setmaxdownloadtime command, which sets the download timeout in seconds."
+  },
+  {
+    "title": "bitsadmin takeownership | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-takeownership",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin takeownership command, which lets a user with administrative privileges take ownership of the specified job."
+  },
+  {
+    "title": "bitsadmin setvalidationstate | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-setvalidationstate",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin setvalidationstate command, which sets the content validation state of the given file within the job."
+  },
+  {
+    "title": "bitsadmin setpriority | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-setpriority",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin setpriority command, which sets the priority of the specified job."
+  },
+  {
+    "title": "bitsadmin setsecurityflags | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-setsecurityflags",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin setsecurityflags command, which sets security flags for HTTP to determine if BITS should check the certificate revocation list, ignore certain certificate errors, and define the policy to use when a server redirects the HTTP request."
+  },
+  {
+    "title": "bitsadmin setreplyfilename | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-setreplyfilename",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin setreplyfilename command, which specifies the path of the file that contains the server upload-reply."
+  },
+  {
+    "title": "bitsadmin transfer | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-transfer",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin transfer command, which transfers one or more files."
+  },
+  {
+    "title": "bitsadmin setnotifycmdline | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-setnotifycmdline",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin setnotifycmdline command, which sets the command-line command that will run when the job finishes transferring data, or when a job enters a state."
+  },
+  {
+    "title": "bitsadmin setproxysettings | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-setproxysettings",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin setproxysettings command, which sets the proxy settings for the specified job."
+  },
+  {
+    "title": "bitsadmin setnotifyflags | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-setnotifyflags",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin setnotifyflags command, which sets the event notification flags for the specified job."
+  },
+  {
+    "title": "bitsadmin setnoprogresstimeout | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-setnoprogresstimeout",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin setnoprogresstimeout command, which sets the length of time, in seconds, that the service tries to transfer the file after a transient error occurs."
+  },
+  {
+    "title": "bitsadmin sethelpertokenflags | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-sethelpertokenflags",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin sethelpertokenflags command, which sets the usage flags for a helper token that is associated with a BITS transfer job."
+  },
+  {
+    "title": "bitsadmin suspend | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-suspend",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin suspend command, which suspends the specified job."
+  },
+  {
+    "title": "bitsadmin setminretrydelay | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-setminretrydelay",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin setminretrydelay command, which sets the minimum length of time, in seconds, that BITS waits after encountering a transient error before trying to transfer the file."
+  },
+  {
+    "title": "bitsadmin sethttpmethod | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-sethttpmethod",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin sethttpmethod command, which sets the HTTP verb to use."
+  },
+  {
+    "title": "bitsadmin util | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-util",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin util command, which lists the Util switches."
+  },
+  {
+    "title": "bitsadmin util and setieproxy | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-util-and-setieproxy",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin util and setieproxy command, which sets the proxy settings to use when transferring files using a service account."
+  },
+  {
+    "title": "bitsadmin util and enableanalyticchannel | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-util-and-enableanalyticchannel",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin util and enableanalyticchannel command, which enables or disables the BITS client analytic channel."
+  },
+  {
+    "title": "bitsadmin util and help | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-util-and-help",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin util and help command that displays the command-line usage for the /util switches."
+  },
+  {
+    "title": "bitsadmin util and version | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-util-and-version",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin util and version command, which displays the version of BITS service."
+  },
+  {
+    "title": "bitsadmin wrap | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-wrap",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin wrap command, which wraps any line of output text extending beyond the rightmost edge of the command window to the next line."
+  },
+  {
+    "title": "bitsadmin util and getieproxy | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-util-and-getieproxy",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin util and getieproxy command, which retrieves the proxy usage for the given service account."
+  },
+  {
+    "title": "bitsadmin util and repairservice | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bitsadmin-util-and-repairservice",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bitsadmin util and repairservice command, which fixes known issues in various versions of BITS service."
+  },
+  {
+    "title": "bootcfg | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bootcfg",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bootcfg command, which configures, queries, or changes Boot.ini file settings."
+  },
+  {
+    "title": "bootcfg copy | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bootcfg-copy",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bootcfg copy command, which makes a copy of an existing boot entry, to which you can add command-line options."
+  },
+  {
+    "title": "bootcfg addsw | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bootcfg-addsw",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bootcfg addsw command, which adds operating system load options for a specified operating system entry."
+  },
+  {
+    "title": "bootcfg dbg1394 | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bootcfg-dbg1394",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bootcfg dbg1394 command, which configures 1394 port debugging for a specified operating system entry"
+  },
+  {
+    "title": "bootcfg default | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bootcfg-default",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bootcfg default command, which specifies the operating system entry to designate as the default."
+  },
+  {
+    "title": "bootcfg debug | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bootcfg-debug",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bootcfg debug command, which adds or changes the debug settings for a specified operating system entry."
+  },
+  {
+    "title": "bootcfg delete | Microsoft Learn",
+    "category": "Windows CMD Commands",
+    "path": "/en-us/windows-server/administration/windows-commands/bootcfg-delete",
+    "site": "cmd",
+    "headings": [],
+    "preview": "Reference article for the bootcfg delete command, which deletes an operating system entry in the operating systems section of the Boot.ini file."
+  }
+]

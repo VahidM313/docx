@@ -1,0 +1,890 @@
+[
+  {
+    "title": "Overview | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/overview",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "TanStack Router is a router for building React and Solid applications. Some of its features include: 100% inferred TypeScript support Typesafe navigation Nested Routing and layout routes (with..."
+  },
+  {
+    "title": "Router API | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "Functions createFileRoute createLazyFileRoute createRootRoute createRootRouteWithContext createRoute createLazyRoute createRouteMask createRouter defer getRouteApi isNotFound isRedirect..."
+  },
+  {
+    "title": "Installation with Router CLI | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/installation/with-router-cli",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "You should only use the TanStack Router CLI if you are not using a supported bundler. The CLI only supports the generation of the route tree file and does not provide any other features. To use..."
+  },
+  {
+    "title": "Quick Start | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/quick-start",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The fastest way to get started with TanStack Router is to scaffold a new project. Just run: The CLI will guide you through a short series of prompts to customize your setup, including options for:..."
+  },
+  {
+    "title": "Devtools | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/devtools",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "Link, take this sword... I mean Devtools!... to help you on your way! Wave your hands in the air and shout hooray because TanStack Router comes with dedicated devtools! 🥳 When you begin your TanStack..."
+  },
+  {
+    "title": "Decisions on Developer Experience | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/decisions-on-dx",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "When people first start using TanStack Router, they often have a lot of questions that revolve around the following themes: Why do I have to do things this way? Why is it done this way? and not that..."
+  },
+  {
+    "title": "Installation with Esbuild | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/installation/with-esbuild",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "To use file-based routing with Esbuild, you"
+  },
+  {
+    "title": "Migration from React Router Checklist | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/installation/migrate-from-react-router",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "If your UI is blank, open the console, and you will probably have some errors that read something along the lines of cannot use"
+  },
+  {
+    "title": "React TanStack Router Quickstart File Based Example | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/framework/react/examples/quickstart-file-based",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "An example showing how to implement Quickstart File Based in React using TanStack Router."
+  },
+  {
+    "title": "Manual Setup | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/installation/manual",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "To set up TanStack Router manually in a React project, follow the steps below. This gives you a bare minimum setup to get going with TanStack Router using both file-based route generation and..."
+  },
+  {
+    "title": "Comparison | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/comparison",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "Choosing a routing solution? This side‑by‑side comparison highlights key features, trade‑offs, and common use cases to help you quickly evaluate how each option fits your project’s needs. While we aim..."
+  },
+  {
+    "title": "Frequently Asked Questions | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/faq",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "Welcome to the TanStack Router FAQ! Here you"
+  },
+  {
+    "title": "Installation with Vite | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/installation/with-vite",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "To use file-based routing with Vite, you"
+  },
+  {
+    "title": "Routing Concepts | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/routing/routing-concepts",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "TanStack Router supports a number of powerful routing concepts that allow you to build complex and dynamic routing systems with ease. Each of these concepts is useful and powerful, and we"
+  },
+  {
+    "title": "Installation with Rspack | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/installation/with-rspack",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "To use file-based routing with Rspack or Rsbuild, you"
+  },
+  {
+    "title": "Installation with Webpack | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/installation/with-webpack",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "To use file-based routing with Webpack, you"
+  },
+  {
+    "title": "defer function | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/deferFunction",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "You don"
+  },
+  {
+    "title": "createRouter function | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/createRouterFunction",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The createRouter function accepts a RouterOptions object and creates a new Router instance. Type: RouterOptions Required The options that will be used to configure the router instance. An instance of..."
+  },
+  {
+    "title": "createLazyFileRoute function | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/createLazyFileRouteFunction",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The createLazyFileRoute function is used for creating a partial file-based route instance that is lazily loaded when matched. This route instance can only be used to configure the non-critical..."
+  },
+  {
+    "title": "Migration from React Location | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/installation/migrate-from-react-location",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "Before you begin your journey in migrating from React Location, it"
+  },
+  {
+    "title": "isNotFound function | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/isNotFoundFunction",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The isNotFound function can be used to determine if an object is a NotFoundError object. The isNotFound function accepts a single argument, an input. Type: unknown Required An object to check if it is..."
+  },
+  {
+    "title": "createRootRouteWithContext function | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/createRootRouteWithContextFunction",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The createRootRouteWithContext function is a helper function that can be used to create a root route instance that requires a context type to be fulfilled when the router is created. The..."
+  },
+  {
+    "title": "createLazyRoute function | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/createLazyRouteFunction",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The createLazyRoute function is used for creating a partial code-based route instance that is lazily loaded when matched. This route instance can only be used to configure the non-critical properties..."
+  },
+  {
+    "title": "File-Based Routing API Reference | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/file-based-routing",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "TanStack Router"
+  },
+  {
+    "title": "createFileRoute function | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/createFileRouteFunction",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The createFileRoute function is a factory that can be used to create a file-based route instance. This route instance can then be used to automatically generate a route tree with the tsr generate and..."
+  },
+  {
+    "title": "createRouteMask function | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/createRouteMaskFunction",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The createRouteMask function is a helper function that can be used to create a route mask configuration that can be passed to the RouterOptions.routeMasks option. Type: RouteMask Required The options..."
+  },
+  {
+    "title": "isRedirect function | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/isRedirectFunction",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The isRedirect function can be used to determine if an object is a redirect object. The isRedirect function accepts a single argument, an input. Type: unknown Required An object to check if it is a..."
+  },
+  {
+    "title": "createRootRoute function | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/createRootRouteFunction",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The createRootRoute function returns a new root route instance. A root route instance can then be used to create a route-tree. The options that will be used to configure the root route instance. Type:..."
+  },
+  {
+    "title": "createRoute function | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/createRouteFunction",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The createRoute function implements returns a Route instance. A route instance can then be passed to a root route"
+  },
+  {
+    "title": "getRouteApi function | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/getRouteApiFunction",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The getRouteApi function provides type-safe version of common hooks like useParams, useSearch, useRouteContext, useNavigate, useLoaderData, and useLoaderDeps that are pre-bound to a specific route ID..."
+  },
+  {
+    "title": "CatchNotFound Component | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/catchNotFoundComponent",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The CatchNotFound component is a component that catches not-found errors thrown by its children, renders a fallback component and optionally calls the onCatch callback. It resets when the pathname..."
+  },
+  {
+    "title": "DefaultGlobalNotFound component | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/defaultGlobalNotFoundComponent",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The DefaultGlobalNotFound component is a component that renders &quot;Not Found&quot; on the root route when there is no other route that matches and a notFoundComponent is not provided."
+  },
+  {
+    "title": "ErrorComponent component | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/errorComponentComponent",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The ErrorComponent component renders an error notice and optional details about the thrown value. The ErrorComponent component accepts the following props: Type: unknown in React and Vue; Error in..."
+  },
+  {
+    "title": "ClientOnly Component | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/clientOnlyComponent",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The ClientOnly component is used to render a component only in the client, without breaking the server-side rendering due to hydration errors. It accepts a fallback prop that will be rendered if the..."
+  },
+  {
+    "title": "Search middleware to strip search params | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/stripSearchParamsFunction",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "stripSearchParams is a search middleware that allows to remove search params. stripSearchParams accepts one of the following inputs: true: if the search schema has no required params, true can be used..."
+  },
+  {
+    "title": "Search middleware to retain search params | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/retainSearchParamsFunction",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "retainSearchParams is a search middleware that allows to keep search params. The retainSearchParams either accepts true or a list of keys of those search params that shall be retained. If true is..."
+  },
+  {
+    "title": "notFound function | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/notFoundFunction",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The notFound function returns a new NotFoundError object that can be either returned or thrown from places like a Route"
+  },
+  {
+    "title": "Link component | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/linkComponent",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The Link component is a component that can be used to create a link that can be used to navigate to a new location. This includes changes to the pathname, search params, hash, and location state. The..."
+  },
+  {
+    "title": "lazyRouteComponent function | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/lazyRouteComponentFunction",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "If you are using file-based routing, it"
+  },
+  {
+    "title": "CatchBoundary component | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/catchBoundaryComponent",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The CatchBoundary component is a component that catches errors thrown by its children, renders an error component and optionally calls the onCatch callback. It also accepts a getResetKey function that..."
+  },
+  {
+    "title": "Navigate component | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/navigateComponent",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The Navigate component is a component that can be used to navigate to a new location when rendered. This includes changes to the pathname, search params, hash, and location state. The underlying..."
+  },
+  {
+    "title": "NotFoundComponent component | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/notFoundComponentComponent",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The NotFoundComponent component is a component that renders when a not-found error occurs in a route. The NotFoundComponent component accepts the following props: Type: unknown Optional Custom data..."
+  },
+  {
+    "title": "redirect function | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/redirectFunction",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The redirect function returns a new Redirect object that can be either returned or thrown from places like a Route"
+  },
+  {
+    "title": "Await component | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/awaitComponent",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The Await component is a component that suspends until the provided promise is resolved or rejected. This is only necessary for React 18. If you are using React 19, you can use the use() hook instead...."
+  },
+  {
+    "title": "MatchRoute component | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/matchRouteComponent",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "A component version of the useMatchRoute hook. It accepts the same options as the useMatchRoute with additional props to aid in conditional rendering. The MatchRoute component accepts the same options..."
+  },
+  {
+    "title": "Link options | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/linkOptions",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "linkOptions is a function which type checks an object literal with the intention of being used for Link, navigate or redirect The linkOptions accepts the following option: Type: LinkProps &amp;..."
+  },
+  {
+    "title": "useParentMatches hook | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/useParentMatchesHook",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The useParentMatches hook returns all of the parent RouteMatch objects from the root down to the immediate parent of the current match in context. It does not include the current match, which can be..."
+  },
+  {
+    "title": "Outlet component | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/outletComponent",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The Outlet component is a component that can be used to render the next child route of a parent route. The Outlet component does not accept any props. If matched, the child route match"
+  },
+  {
+    "title": "useMatches hook | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/useMatchesHook",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The useMatches hook returns the router"
+  },
+  {
+    "title": "useChildMatches hook | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/useChildMatchesHook",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The useChildMatches hook returns all of the child RouteMatch objects from the closest match down to the leaf-most match. It does not include the current match, which can be obtained using the useMatch..."
+  },
+  {
+    "title": "useLinkProps hook | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/useLinkPropsHook",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The useLinkProps hook that takes an object as its argument and returns a React.AnchorHTMLAttributes&lt;HTMLAnchorElement&gt; props object. These props can then be safely applied to an anchor element to..."
+  },
+  {
+    "title": "useLoaderData hook | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/useLoaderDataHook",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The useLoaderData hook returns the loader data from the closest RouteMatch in the component tree. The useLoaderData hook accepts an options object. Type: string The route id of the closest parent..."
+  },
+  {
+    "title": "useMatchRoute hook | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/useMatchRouteHook",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The useMatchRoute hook returns a matchRoute function that can be used to match a route against either the current or pending location. The hook subscribes the component to changes in the router state..."
+  },
+  {
+    "title": "useCanGoBack hook | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/useCanGoBack",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The useCanGoBack hook returns a boolean representing if the router history can safely go back without exiting the application. ⚠️ The following new useCanGoBack API is currently experimental. If the..."
+  },
+  {
+    "title": "useLoaderDeps hook | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/useLoaderDepsHook",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The useLoaderDeps hook is a hook that returns an object with the dependencies that are used to trigger the loader for a given route. The useLoaderDepsHook hook accepts an options object. Type: string..."
+  },
+  {
+    "title": "useBlocker hook | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/useBlockerHook",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The useBlocker method is a hook that blocks navigation when a condition is met. ⚠️ The following new useBlocker API is currently experimental. The useBlocker hook accepts a single required argument,..."
+  },
+  {
+    "title": "useRouteContext hook | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/useRouteContextHook",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The useRouteContext method is a hook that returns the current context for the current route. This hook is useful for accessing the current route context in a component. The useRouteContext hook..."
+  },
+  {
+    "title": "useLocation hook | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/useLocationHook",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The useLocation method is a hook that returns the current location object. This hook is useful for when you want to perform some side effect whenever the current location changes. The useLocation hook..."
+  },
+  {
+    "title": "useNavigate hook | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/useNavigateHook",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The useNavigate hook is a hook that returns a navigate function that can be used to navigate to a new location. This includes changes to the pathname, search params, hash, and location state. The..."
+  },
+  {
+    "title": "useParams hook | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/useParamsHook",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The useParams method returns all of the path parameters that were parsed for the closest match and all of its parent matches. The useParams hook accepts an optional options object. Type: boolean..."
+  },
+  {
+    "title": "useAwaited hook | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/useAwaitedHook",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The useAwaited method is a hook that suspends until the provided promise is resolved or rejected. The useAwaited hook accepts a single argument, an options object. Type: Promise&lt;T&gt; Required The..."
+  },
+  {
+    "title": "useMatch hook | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/useMatchHook",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The useMatch hook returns a RouteMatch in the component tree. The raw route match contains all of the information about a route match in the router and also powers many other hooks under the hood like..."
+  },
+  {
+    "title": "useRouter hook | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/useRouterHook",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The useRouter method is a hook that returns the current instance of Router from context. This hook is useful for accessing the router instance in a component. The current Router instance. ⚠️⚠️⚠️..."
+  },
+  {
+    "title": "Route type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/RouteType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The Route type is used to describe a route instance. An instance of the Route has the following properties and methods: Type: (children: Route[]) =&gt; this Adds child routes to the route instance and..."
+  },
+  {
+    "title": "NavigateOptions type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/NavigateOptionsType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The NavigateOptions type is used to describe the options that can be used when describing a navigation action in TanStack Router. The NavigateOptions object accepts the following properties: Type:..."
+  },
+  {
+    "title": "useRouterState hook | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/useRouterStateHook",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The useRouterState method is a hook that returns the current internal state of the router. This hook is useful for accessing the current state of the router in a component. If you want to access the..."
+  },
+  {
+    "title": "MatchRouteOptions type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/MatchRouteOptionsType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The MatchRouteOptions type is used to describe the options that can be used when matching a route. The MatchRouteOptions type has the following properties: Type: boolean Optional If true, will match..."
+  },
+  {
+    "title": "HistoryState interface | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/historyStateInterface",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The HistoryState interface is an interface exported by the history package that describes the shape of the state object that can be used in conjunction with the history package and the window.location..."
+  },
+  {
+    "title": "LinkOptions type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/LinkOptionsType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The LinkOptions type extends the NavigateOptions type and contains additional options that can be used by TanStack Router when handling actual anchor element attributes. The LinkOptions object..."
+  },
+  {
+    "title": "NotFoundError | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/NotFoundErrorType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The NotFoundError type is used to represent a not-found error in TanStack Router. The NotFoundError object accepts/contains the following properties: Type: boolean Optional - default: false If true,..."
+  },
+  {
+    "title": "ParsedLocation type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/ParsedLocationType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The ParsedLocation type represents a parsed location in TanStack Router. It contains a lot of useful information about the current location, including the pathname, search params, hash, location..."
+  },
+  {
+    "title": "ActiveLinkOptions type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/ActiveLinkOptionsType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The ActiveLinkOptions type extends the LinkOptions type and contains additional options that can be used to describe how a link should be styled when it is active. The ActiveLinkOptions object..."
+  },
+  {
+    "title": "Redirect type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/RedirectType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The Redirect type is used to represent a redirect action in TanStack Router. NavigateOptions The Redirect object accepts/contains the following properties: Type: number Optional The HTTP status code..."
+  },
+  {
+    "title": "AsyncRouteComponent type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/AsyncRouteComponentType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The AsyncRouteComponent type is used to describe a code-split route component that can be preloaded using a component.preload() method."
+  },
+  {
+    "title": "useSearch hook | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/useSearchHook",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The useSearch method is a hook that returns the current search query parameters as an object for the current location. This hook is useful for accessing the current search string and query parameters..."
+  },
+  {
+    "title": "Register type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/RegisterType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "This type is used to register a route tree with a router instance. Doing so unlocks the full type safety of TanStack Router, including top-level exports from the @tanstack/react-router package. To..."
+  },
+  {
+    "title": "LinkProps type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/LinkPropsType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The LinkProps type extends the ActiveLinkOptions and React.AnchorHTMLAttributes&lt;HTMLAnchorElement&gt; types and contains additional props specific to the Link component. All of the props from..."
+  },
+  {
+    "title": "ParsedHistoryState type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/ParsedHistoryStateType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The ParsedHistoryState type represents a parsed state object. Additionally to HistoryState, it contains the index and the unique key of the route."
+  },
+  {
+    "title": "FileRoute class | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/FileRouteClass",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "This class has been deprecated and will be removed in the next major version of TanStack Router. Please use the createFileRoute function instead. The FileRoute class is a factory that can be used to..."
+  },
+  {
+    "title": "ToOptions type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/ToOptionsType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The ToOptions type contains several properties that can be used to describe a router destination, including mask for route masking."
+  },
+  {
+    "title": "ViewTransitionOptions type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/ViewTransitionOptionsType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The ViewTransitionOptions type is used to define a viewTransition type. The ViewTransitionOptions type accepts an object with a single property: Type: Array&lt;string&gt; | ((locationChangeInfo: {..."
+  },
+  {
+    "title": "RouteApi Type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/RouteApiType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The RouteApi describes an instance that provides type-safe versions of common hooks like useParams, useSearch, useRouteContext, useNavigate, useLoaderData, and useLoaderDeps that are pre-bound to a..."
+  },
+  {
+    "title": "Route class | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/RouteClass",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "This class has been deprecated and will be removed in the next major version of TanStack Router. Please use the createRoute function instead. The Route class implements the RouteApi class and can be..."
+  },
+  {
+    "title": "Router type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/RouterType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The Router type is used to describe a router instance. An instance of the Router has the following properties and methods: Type: (newOptions: Omit&lt;RouterOptions,"
+  },
+  {
+    "title": "RouterState type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/RouterStateType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The RouterState type represents the observable state of the router, including the requested and resolved locations, match presentation, and foreground loading status. The RouterState type contains all..."
+  },
+  {
+    "title": "RouteMask type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/RouteMaskType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The RouteMask type extends the ToOptions type and has other the necessary properties to create a route mask. The RouteMask type accepts an object with the following properties: Type: ToOptions..."
+  },
+  {
+    "title": "Router Class | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/RouterClass",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "This class has been deprecated and will be removed in the next major version of TanStack Router. Please use the createRouter function instead. The Router class is used to instantiate a new router..."
+  },
+  {
+    "title": "UseMatchRouteOptions type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/UseMatchRouteOptionsType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The UseMatchRouteOptions type extends the ToOptions type and describes additional options available when using the useMatchRoute hook. ToOptions MatchRouteOptions"
+  },
+  {
+    "title": "ToMaskOptions type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/ToMaskOptionsType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The ToMaskOptions type includes the same destination fields as ToOptions, excluding mask, and adds options specific to route masking. ToOptions"
+  },
+  {
+    "title": "RouteOptions type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/RouteOptionsType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The RouteOptions type is used to describe the options that can be used when creating a route. The RouteOptions type accepts an object with the following properties: Type: () =&gt; TParentRoute Required A..."
+  },
+  {
+    "title": "RouterEvents type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/RouterEventsType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The RouterEvents type contains all of the events that the router can emit. Each top-level key of this type, represents the name of an event that the router can emit. The values of the keys are the..."
+  },
+  {
+    "title": "RouteApi class | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/RouteApiClass",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "This class has been deprecated and will be removed in the next major version of TanStack Router. Please use the getRouteApi function instead. The RouteApi class provides type-safe version of common..."
+  },
+  {
+    "title": "RouterOptions | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/RouterOptionsType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The RouterOptions type contains all of the options that can be used to configure a router instance. The RouterOptions type accepts an object with the following properties and methods: Type: AnyRoute..."
+  },
+  {
+    "title": "RouteMatch type | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/RouteMatchType",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "The RouteMatch type represents a route match in TanStack Router. status describes the match"
+  },
+  {
+    "title": "NotFoundRoute class | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/NotFoundRouteClass",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "This class has been deprecated and will be removed in the next major version of TanStack Router. Please use the notFoundComponent route option that is present during route configuration. See the Not..."
+  },
+  {
+    "title": "RootRoute class | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/RootRouteClass",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "This class has been deprecated and will be removed in the next major version of TanStack Router. Please use the createRootRoute function instead. The RootRoute class extends the Route class and can be..."
+  },
+  {
+    "title": "rootRouteWithContext function | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/api/router/rootRouteWithContextFunction",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "This function is deprecated and will be removed in the next major version of TanStack Router. Please use the createRootRouteWithContext function instead. The rootRouteWithContext function is a helper..."
+  },
+  {
+    "title": "Code-Based Routing | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/routing/code-based-routing",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "Code-based routing is not recommended for most applications. It is recommended to use File-Based Routing instead. If you"
+  },
+  {
+    "title": "File-Based Routing | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/routing/file-based-routing",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "Most of the TanStack Router documentation is written for file-based routing and is intended to help you understand in more detail how to configure file-based routing and the technical details behind..."
+  },
+  {
+    "title": "React TanStack Router Basic File Based Example | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/framework/react/examples/basic-file-based",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "An example showing how to implement Basic File Based in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Basic Devtools Panel Example | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/framework/react/examples/basic-devtools-panel",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "An example showing how to implement Basic Devtools Panel in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Basic Example | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/framework/react/examples/basic",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "An example showing how to implement Basic in React using TanStack Router."
+  },
+  {
+    "title": "How to Install TanStack Router | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/how-to/install",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "React 18.x.x or 19.x.x ReactDOM 18.x.x or 19.x.x with createRoot support TypeScript 5.3.x or higher (recommended) Install the package Choose your package manager: Verify installation Check that the..."
+  },
+  {
+    "title": "Code Splitting | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/guide/code-splitting",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "Code splitting and lazy loading is a powerful technique for improving the bundle size and load performance of an application. Reduces the amount of code that needs to be loaded on initial page load..."
+  },
+  {
+    "title": "React TanStack Router Quickstart Example | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/framework/react/examples/quickstart",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "An example showing how to implement Quickstart in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Basic React Query File Based Example | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/framework/react/examples/basic-react-query-file-based",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "An example showing how to implement Basic React Query File Based in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Basic Ssr File Based Example | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/framework/react/examples/basic-ssr-file-based",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "An example showing how to implement Basic Ssr File Based in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Basic React Query Example | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/framework/react/examples/basic-react-query",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "An example showing how to implement Basic React Query in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Basic Ssr Streaming File Based Example | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/framework/react/examples/basic-ssr-streaming-file-based",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "An example showing how to implement Basic Ssr Streaming File Based in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Kitchen Sink File Based Example | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/framework/react/examples/kitchen-sink-file-based",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "An example showing how to implement Kitchen Sink File Based in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Kitchen Sink Example | TanStack Router Docs",
+    "category": "TanStack Router",
+    "path": "/router/latest/docs/framework/react/examples/kitchen-sink",
+    "site": "tanstack_router",
+    "headings": [],
+    "preview": "An example showing how to implement Kitchen Sink in React using TanStack Router."
+  }
+]

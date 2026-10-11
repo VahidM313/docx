@@ -1,0 +1,602 @@
+[
+  {
+    "title": "Table of Content ​",
+    "category": "ElysiaJS",
+    "path": "/table-of-content",
+    "site": "elysia",
+    "headings": [],
+    "preview": "There"
+  },
+  {
+    "title": "Welcome to Elysia ​",
+    "category": "ElysiaJS",
+    "path": "/tutorial",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Elysia offers an interactive tutorial experience to learn Elysia with IDE, playground, and more. Get started with Elysia now!"
+  },
+  {
+    "title": "Error Handling Interactive Playground ​",
+    "category": "PATTERNS",
+    "path": "/patterns/error-handling",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Learn how to handle errors in ElysiaJS applications effectively. This guide covers best practices for error handling, including custom error classes and middlew"
+  },
+  {
+    "title": "Elysia with Bun Fullstack Dev Server ​",
+    "category": "PATTERNS",
+    "path": "/patterns/fullstack-dev-server",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Bun Fullstack Dev Server allows us to develop frontend and backend in a single project without any bundler. Learn how to use Elysia with Bun Fullstack Dev Serve"
+  },
+  {
+    "title": "Cookie Interactive Playground ​",
+    "category": "PATTERNS",
+    "path": "/patterns/cookie",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Reactive Cookie takes a more modern approach like signals to handle cookies with an ergonomic API. There"
+  },
+  {
+    "title": "Deploy to production ​",
+    "category": "PATTERNS",
+    "path": "/patterns/deploy",
+    "site": "elysia",
+    "headings": [],
+    "preview": "This page"
+  },
+  {
+    "title": "Handler Interactive Playground ​",
+    "category": "ESSENTIAL",
+    "path": "/essential/handler",
+    "site": "elysia",
+    "headings": [],
+    "preview": "A handler is a function that responds to the request for each route. Accepting request information and returning a response to the client. Handler can be regist"
+  },
+  {
+    "title": "Config ​",
+    "category": "PATTERNS",
+    "path": "/patterns/configuration",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Elysia can be configured by passing an object to the constructor. We can configure Elysia behavior by passing an object to the constructor."
+  },
+  {
+    "title": "Macro Interactive Playground ​",
+    "category": "PATTERNS",
+    "path": "/patterns/macro",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Macro is similar to a function that has control over the lifecycle event, schema, context with full type safety."
+  },
+  {
+    "title": "Routing Interactive Playground ​",
+    "category": "ESSENTIAL",
+    "path": "/essential/route",
+    "site": "elysia",
+    "headings": [],
+    "preview": "To determine the correct response to a client, the web server uses path and HTTP method to look up for the correct resource. This process is known as"
+  },
+  {
+    "title": "Quick Start ​",
+    "category": "ElysiaJS",
+    "path": "/quick-start",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Elysia is a library built for Bun and the only prerequisite. To start, bootstrap a new project with"
+  },
+  {
+    "title": "Extend context Interactive Playground ​",
+    "category": "PATTERNS",
+    "path": "/patterns/extends-context",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Elysia provides a minimal Context by default, allowing us to extend Context for our specific need using state, decorate, derive, and resolve."
+  },
+  {
+    "title": "At a glance ​",
+    "category": "ElysiaJS",
+    "path": "/at-glance",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Designed with ergonomic design, extensive support for TypeScript, modern JavaScript API, optimized for Bun. Offers a unique experience with unified types, and e"
+  },
+  {
+    "title": "Best Practice ​",
+    "category": "ESSENTIAL",
+    "path": "/essential/best-practice",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Elysia is a pattern agnostic framework, we leave the decision up to you and your team for coding patterns to use. However, we found that there are several who a"
+  },
+  {
+    "title": "Lifecycle Interactive Playground ​",
+    "category": "ESSENTIAL",
+    "path": "/essential/life-cycle",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Lifecycle event is a concept for each stage of Elysia processing,"
+  },
+  {
+    "title": "Plugin Interactive Playground ​",
+    "category": "ESSENTIAL",
+    "path": "/essential/plugin",
+    "site": "elysia",
+    "headings": [],
+    "preview": "A plugin is a way to decouple logic into smaller parts, defining reusable components across the server. Plugin can register by using `use`, registering a plugin"
+  },
+  {
+    "title": "Validation Interactive Playground ​",
+    "category": "ESSENTIAL",
+    "path": "/essential/validation",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Schemas are strictly typed definitions, used to infer TypeScript"
+  },
+  {
+    "title": "OpenAPI ​",
+    "category": "PATTERNS",
+    "path": "/patterns/openapi",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Elysia has first-class support and follows OpenAPI schema by default. Allowing any Elysia server to generate an API documentation page and serve as documentatio"
+  },
+  {
+    "title": "Parameters ​",
+    "category": "EDEN",
+    "path": "/eden/treaty/parameters",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Ergonomic Framework for Humans. TypeScript framework supercharged by Bun with End - to - End Type Safety, unified type system and outstanding developer experien"
+  },
+  {
+    "title": "Unit Test ​",
+    "category": "EDEN",
+    "path": "/eden/treaty/unit-test",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Ergonomic Framework for Humans. TypeScript framework supercharged by Bun with End - to - End Type Safety, unified type system and outstanding developer experien"
+  },
+  {
+    "title": "Mount Interactive Playground ​",
+    "category": "PATTERNS",
+    "path": "/patterns/mount",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Applying WinterTC interoperable code to run with Elysia or vice-versa."
+  },
+  {
+    "title": "Config ​",
+    "category": "EDEN",
+    "path": "/eden/treaty/config",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Ergonomic Framework for Humans. TypeScript framework supercharged by Bun with End - to - End Type Safety, unified type system and outstanding developer experien"
+  },
+  {
+    "title": "WebSocket ​",
+    "category": "EDEN",
+    "path": "/eden/treaty/websocket",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Ergonomic Framework for Humans. TypeScript framework supercharged by Bun with End - to - End Type Safety, unified type system and outstanding developer experien"
+  },
+  {
+    "title": "TypeScript ​",
+    "category": "PATTERNS",
+    "path": "/patterns/typescript",
+    "site": "elysia",
+    "headings": [],
+    "preview": "TypeScript has first-class support in Elysia. Learn how to leverage TypeScript"
+  },
+  {
+    "title": "Unit Test Interactive Playground ​",
+    "category": "PATTERNS",
+    "path": "/patterns/unit-test",
+    "site": "elysia",
+    "headings": [],
+    "preview": "You can use `bun:test` to create a unit test with Elysia. Elysia instance has a `handle` method that accepts `Request` and will return a `Response`, the same as"
+  },
+  {
+    "title": "Trace ​",
+    "category": "PATTERNS",
+    "path": "/patterns/trace",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Trace is an API to measure the performance of your server. It allows you to interact with the duration span of each life-cycle event and measure the performance"
+  },
+  {
+    "title": "TypeBox (Elysia.t) ​",
+    "category": "PATTERNS",
+    "path": "/patterns/typebox",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Schemas are strictly typed definitions, used to infer TypeScript"
+  },
+  {
+    "title": "End-to-End Type Safety Interactive Playground ​",
+    "category": "EDEN",
+    "path": "/eden/overview",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Elysia supports end-to-end type safety with Elysia Eden from the start. End-to-end type-safety refers to a system in which every component of the system is chec"
+  },
+  {
+    "title": "Eden Treaty ​",
+    "category": "EDEN",
+    "path": "/eden/treaty/overview",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Ergonomic Framework for Humans. TypeScript framework supercharged by Bun with End - to - End Type Safety, unified type system and outstanding developer experien"
+  },
+  {
+    "title": "Eden Installation ​",
+    "category": "EDEN",
+    "path": "/eden/installation",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Start by installing Eden on your frontend with"
+  },
+  {
+    "title": "WebSocket ​",
+    "category": "PATTERNS",
+    "path": "/patterns/websocket",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Elysia"
+  },
+  {
+    "title": "OpenTelemetry ​",
+    "category": "PATTERNS",
+    "path": "/patterns/opentelemetry",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Plugin for Elysia that adds support for OpenTelemetry. Start by installing the plugin with"
+  },
+  {
+    "title": "Response ​",
+    "category": "EDEN",
+    "path": "/eden/treaty/response",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Ergonomic Framework for Humans. TypeScript framework supercharged by Bun with End - to - End Type Safety, unified type system and outstanding developer experien"
+  },
+  {
+    "title": "Bearer Plugin ​",
+    "category": "PLUGINS",
+    "path": "/plugins/bearer",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Plugin for Elysia for retrieving Bearer token as specified in RFC6750. Start by installing the plugin with"
+  },
+  {
+    "title": "GraphQL Apollo Plugin ​",
+    "category": "PLUGINS",
+    "path": "/plugins/graphql-apollo",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Plugin for Elysia that adds support for using GraphQL Apollo on the Elysia server. Start by installing the plugin with"
+  },
+  {
+    "title": "Static Plugin ​",
+    "category": "PLUGINS",
+    "path": "/plugins/static",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Plugin for Elysia that adds support for serving static files/folders for Elysia Server. Start by installing the plugin with"
+  },
+  {
+    "title": "GraphQL Yoga Plugin ​",
+    "category": "PLUGINS",
+    "path": "/plugins/graphql-yoga",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Plugin for Elysia that adds support for using GraphQL Yoga on the Elysia server. Start by installing the plugin with"
+  },
+  {
+    "title": "OpenTelemetry ​",
+    "category": "PLUGINS",
+    "path": "/plugins/opentelemetry",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Plugin for Elysia that adds support for OpenTelemetry. Start by installing the plugin with"
+  },
+  {
+    "title": "Server Timing Plugin ​",
+    "category": "PLUGINS",
+    "path": "/plugins/server-timing",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Plugin for Elysia for performance audit via Server Timing API. Start by installing the plugin with"
+  },
+  {
+    "title": "Overview ​",
+    "category": "PLUGINS",
+    "path": "/plugins/overview",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Elysia is designed to be modular and lightweight, which is why Elysia includes pre-built plugins involving common patterns for convenient developer usage. Elysi"
+  },
+  {
+    "title": "Eden Treaty Legacy ​",
+    "category": "EDEN",
+    "path": "/eden/treaty/legacy",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Ergonomic Framework for Humans. TypeScript framework supercharged by Bun with End - to - End Type Safety, unified type system and outstanding developer experien"
+  },
+  {
+    "title": "Cron Plugin ​",
+    "category": "PLUGINS",
+    "path": "/plugins/cron",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Plugin for Elysia that adds support for running cronjob in Elysia server. Start by installing the plugin with"
+  },
+  {
+    "title": "CORS Plugin ​",
+    "category": "PLUGINS",
+    "path": "/plugins/cors",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Plugin for Elysia that adds support for customizing Cross-Origin Resource Sharing behavior. Start by installing the plugin with"
+  },
+  {
+    "title": "Integration with AI SDK ​",
+    "category": "INTEGRATIONS",
+    "path": "/integrations/ai-sdk",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Elysia provides support for response streaming with ease, allowing you to integrate with Vercel AI SDKs seamlessly."
+  },
+  {
+    "title": "OpenAPI Plugin Interactive Playground ​",
+    "category": "PLUGINS",
+    "path": "/plugins/openapi",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Plugin for Elysia that adds support for generating Swagger API documentation for Elysia Server. Start by installing the plugin with"
+  },
+  {
+    "title": "HTML Plugin ​",
+    "category": "PLUGINS",
+    "path": "/plugins/html",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Plugin for Elysia that adds shortcut support for returning HTML in the Elysia server. Start by installing the plugin with"
+  },
+  {
+    "title": "Integration with Astro ​",
+    "category": "INTEGRATIONS",
+    "path": "/integrations/astro",
+    "site": "elysia",
+    "headings": [],
+    "preview": "You can run Elysia on Astro. Elysia will work normally as expected because of WinterTC compliance."
+  },
+  {
+    "title": "JWT Plugin ​",
+    "category": "PLUGINS",
+    "path": "/plugins/jwt",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Plugin for Elysia that adds support for using JWT (JSON Web Token) in Elysia server. Start by installing the plugin with"
+  },
+  {
+    "title": "Eden Fetch ​",
+    "category": "EDEN",
+    "path": "/eden/fetch",
+    "site": "elysia",
+    "headings": [],
+    "preview": "A fetch-like alternative to Eden Treaty with faster type inference. With Eden Fetch, you can make requests to an Elysia server with end-to-end type-safety witho"
+  },
+  {
+    "title": "Integration with Nuxt ​",
+    "category": "INTEGRATIONS",
+    "path": "/integrations/nuxt",
+    "site": "elysia",
+    "headings": [],
+    "preview": "With community plugin"
+  },
+  {
+    "title": "Prisma ​",
+    "category": "INTEGRATIONS",
+    "path": "/integrations/prisma",
+    "site": "elysia",
+    "headings": [],
+    "preview": "We may use Prisma to create end-to-end type safety from database to validation to frontend with prismabox"
+  },
+  {
+    "title": "Integration with Deno ​",
+    "category": "INTEGRATIONS",
+    "path": "/integrations/deno",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Elysia is built on top of Web Standard Request/Response, allowing us to run Elysia with Deno.serve directly"
+  },
+  {
+    "title": "Integration with Node.js ​",
+    "category": "INTEGRATIONS",
+    "path": "/integrations/node",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Elysia provides a runtime adapter to run Elysia on multiple runtimes, including Node.js, Cloudflare Workers, and more"
+  },
+  {
+    "title": "Integration with Netlify Edge Function ​",
+    "category": "INTEGRATIONS",
+    "path": "/integrations/netlify",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Elysia is built on top of Web Standard Request/Response, allowing us to run Elysia on Netlify Edge Function"
+  },
+  {
+    "title": "Integration with Expo ​",
+    "category": "INTEGRATIONS",
+    "path": "/integrations/expo",
+    "site": "elysia",
+    "headings": [],
+    "preview": "With Expo App Router, you can run Elysia on Expo route. Elysia will work normally as expected thanks to WinterTC compliance."
+  },
+  {
+    "title": "Integration with TanStack Start ​",
+    "category": "INTEGRATIONS",
+    "path": "/integrations/tanstack-start",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Elysia can run inside Tanstack Start API server routes, and both works in Data Loader or with Tanstack React Query with type safety using Eden."
+  },
+  {
+    "title": "Better Auth ​",
+    "category": "INTEGRATIONS",
+    "path": "/integrations/better-auth",
+    "site": "elysia",
+    "headings": [],
+    "preview": "We may use @better-auth/cli to generate auth schema and migrate our database as well."
+  },
+  {
+    "title": "Integration with Next.js ​",
+    "category": "INTEGRATIONS",
+    "path": "/integrations/nextjs",
+    "site": "elysia",
+    "headings": [],
+    "preview": "With Next.js App Router, you can run Elysia on Next.js routes. Elysia will work normally as expected because of WinterTC compliance."
+  },
+  {
+    "title": "Integration with SvelteKit ​",
+    "category": "INTEGRATIONS",
+    "path": "/integrations/sveltekit",
+    "site": "elysia",
+    "headings": [],
+    "preview": "With SvelteKit, you can run Elysia on server routes."
+  },
+  {
+    "title": "Cloudflare Worker Experimental ​",
+    "category": "INTEGRATIONS",
+    "path": "/integrations/cloudflare-worker",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Elysia can run on Cloudflare Worker with support for Ahead of Time Compilation using Cloudflare Worker adapter."
+  },
+  {
+    "title": "Drizzle ​",
+    "category": "INTEGRATIONS",
+    "path": "/integrations/drizzle",
+    "site": "elysia",
+    "headings": [],
+    "preview": "We may use Drizzle to create end-to-end type safety from database to validation to frontend with drizzle-typebox"
+  },
+  {
+    "title": "React Email ​",
+    "category": "INTEGRATIONS",
+    "path": "/integrations/react-email",
+    "site": "elysia",
+    "headings": [],
+    "preview": "As Elysia is using Bun as runtime environment, we may directly use React Email and import JSX directly to our base to send emails."
+  },
+  {
+    "title": "Deploy Elysia on Vercel ​",
+    "category": "INTEGRATIONS",
+    "path": "/integrations/vercel",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Vercel Function support Web Standard Framework by default, so you can run Elysia on Vercel Function without any additional configuration."
+  },
+  {
+    "title": "Your First Route ​",
+    "category": "TUTORIAL",
+    "path": "/tutorial/getting-started/your-first-route",
+    "site": "elysia",
+    "headings": [],
+    "preview": "There are 3 types of paths in Elysia. static paths, dynamic paths, and wildcards. Learn how to use them to create your first route."
+  },
+  {
+    "title": "Validation Error ​",
+    "category": "TUTORIAL",
+    "path": "/tutorial/patterns/validation-error",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Learn how to customize validation error messages in Elysia, including providing detailed feedback for invalid inputs."
+  },
+  {
+    "title": "Error Handling ​",
+    "category": "TUTORIAL",
+    "path": "/tutorial/patterns/error-handling",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Learn how to handle errors in Elysia, including custom error handling, error codes, and best practices for managing exceptions in your web applications."
+  },
+  {
+    "title": "Cookie ​",
+    "category": "TUTORIAL",
+    "path": "/tutorial/patterns/cookie",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Learn how to manage cookies in Elysia, including setting, retrieving, and securing cookies for your web applications."
+  },
+  {
+    "title": "End-to-End Type Safety ​",
+    "category": "TUTORIAL",
+    "path": "/tutorial/features/end-to-end-type-safety",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Elysia provides an end-to-end type safety between backend and frontend without code generation similar to tRPC, using Eden."
+  },
+  {
+    "title": "Handler and Context ​",
+    "category": "TUTORIAL",
+    "path": "/tutorial/getting-started/handler-and-context",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Handler is a resource or a route function to send data back to client. Context contains information about each request."
+  },
+  {
+    "title": "Status ​",
+    "category": "TUTORIAL",
+    "path": "/tutorial/getting-started/status-and-headers",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Learn how to manage status codes and headers in Elysia to control HTTP responses effectively."
+  },
+  {
+    "title": "Plugin ​",
+    "category": "TUTORIAL",
+    "path": "/tutorial/getting-started/plugin",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Learn how to use plugins in Elysia to enhance your web applications with reusable components and features."
+  },
+  {
+    "title": "Extends Context ​",
+    "category": "TUTORIAL",
+    "path": "/tutorial/patterns/extends-context",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Learn how to extend the context in Elysia using Decorate, State, Resolve, and Derive to enhance your web applications."
+  },
+  {
+    "title": "Encapsulation ​",
+    "category": "TUTORIAL",
+    "path": "/tutorial/getting-started/encapsulation",
+    "site": "elysia",
+    "headings": [],
+    "preview": "Elysia hooks are encapsulated to its own instance only. If you create a new instance, it will not share hooks with other instances."
+  },
+  {
+    "title": "Table of Content ​",
+    "category": "ElysiaJS",
+    "path": "/docs",
+    "site": "elysia",
+    "headings": [],
+    "preview": "There"
+  },
+  {
+    "title": "Table of Content ​",
+    "category": "ElysiaJS",
+    "path": "/",
+    "site": "elysia",
+    "headings": [],
+    "preview": "There"
+  }
+]

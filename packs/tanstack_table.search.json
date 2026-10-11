@@ -1,0 +1,226 @@
+[
+  {
+    "title": "Introduction",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/introduction",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack Table",
+    "path": "/table/latest/docs/overview",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Table Instance Guide",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/guide/tables",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Columns Guide",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/guide/column-defs",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Installation",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/installation",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Row Models Guide",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/guide/row-models",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Headers Guide",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/guide/headers",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Column Filtering Guide",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/guide/column-filtering",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Data Guide",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/guide/data",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Cells Guide",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/guide/cells",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Global Filtering Guide",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/guide/global-filtering",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Sorting Guide",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/guide/sorting",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Column Pinning Guide",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/guide/column-pinning",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Column Visibility Guide",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/guide/column-visibility",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Row Selection Guide",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/guide/row-selection",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Pagination Guide",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/guide/pagination",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Expanding Guide",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/guide/expanding",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Column Ordering Guide",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/guide/column-ordering",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Column APIs",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/api/core/column",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Cell APIs",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/api/core/cell",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Row APIs",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/api/core/row",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "ColumnDef APIs",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/api/core/column-def",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Table APIs",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/api/core/table",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Column Sizing Guide",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/guide/column-sizing",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Table",
+    "category": "TanStack Table",
+    "path": "/table/v8",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Table",
+    "category": "TanStack Table",
+    "path": "/table/latest",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "React Example: Basic GitHub StackBlitz CodeSandbox",
+    "category": "TanStack Table",
+    "path": "/table/v8/docs/framework/react/examples/basic",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  },
+  {
+    "title": "Overview",
+    "category": "TanStack Table",
+    "path": "/",
+    "site": "tanstack_table",
+    "headings": [],
+    "preview": "Sponsorships, placements, and partner pages."
+  }
+]

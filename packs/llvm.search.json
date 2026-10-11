@@ -1,0 +1,274 @@
+[
+  {
+    "title": "About #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/",
+    "site": "llvm",
+    "headings": [],
+    "preview": "Warning If you are using a released version of LLVM, see the download page to find your documentation."
+  },
+  {
+    "title": "Getting Started/Tutorials #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/GettingStartedTutorials.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "For those new to the LLVM system."
+  },
+  {
+    "title": "Getting Started with the LLVM System #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/GettingStarted.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "C-like languages use the Clang front end. This component compiles C, C++, Objective-C, and Objective-C++ code into LLVM bitcode – and from there into object files, using LLVM."
+  },
+  {
+    "title": "LLVM Coding Standards #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/CodingStandards.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "This document describes coding standards that are used in the LLVM project. Although no coding standards should be regarded as absolute requirements to be followed in all instances"
+  },
+  {
+    "title": "LLVM Programmer’s Manual #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/ProgrammersManual.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "Warning This is always a work in progress."
+  },
+  {
+    "title": "LLVM Language Reference Manual #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/LangRef.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "It is important to note that this document describes ‘well formed’ LLVM assembly language. There is a difference between what the parser accepts and what is considered ‘well formed"
+  },
+  {
+    "title": "LLVM Command Guide #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/CommandGuide/index.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "dsymutil - manipulate archived DWARF debug symbol files"
+  },
+  {
+    "title": "Reference #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/Reference.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "LLVM and API reference documentation."
+  },
+  {
+    "title": "User Guides #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/UserGuides.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "NOTE: If you are a user who is only interested in using an LLVM-based compiler, you should look into Clang instead. The documentation here is intended for users who have a need to "
+  },
+  {
+    "title": "The LLVM Lexicon #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/Lexicon.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "Note This document is a work in progress!"
+  },
+  {
+    "title": "Frequently Asked Questions (FAQ) #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/FAQ.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "Yes. The modified source distribution must retain the copyright notice and follow the conditions listed in the Apache License v2.0 with LLVM Exceptions ."
+  },
+  {
+    "title": "Writing an LLVM Pass (legacy PM version) #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/WritingAnLLVMPass.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "One of the first things that you should do when designing a new pass is to decide what class you should subclass for your pass. Here we talk about the classes available, from the m"
+  },
+  {
+    "title": "Search",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/search.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "Error Please activate JavaScript to enable the search functionality."
+  },
+  {
+    "title": "How to submit an LLVM bug report #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/HowToSubmitABug.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "If you’re working with LLVM and encounter a bug, we definitely want to know about it. This document describes what you can do to increase the odds of getting it fixed quickly."
+  },
+  {
+    "title": "LLVM Tutorial: Table of Contents #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/tutorial/index.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "This is the “Kaleidoscope” Language tutorial, showing how to implement a simple language using LLVM components in C++."
+  },
+  {
+    "title": "TableGen Overview #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/TableGen/index.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "TableGen runs just like any other LLVM tool. The first (optional) argument specifies the file to read. If a filename is not specified, llvm-tblgen reads from standard input."
+  },
+  {
+    "title": "Building LLVM with CMake #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/CMake.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "CMake is a cross-platform build-generator tool. CMake does not build the project; it generates the files needed by your build tool (GNU make, Visual Studio, etc.) for building LLVM"
+  },
+  {
+    "title": "Index",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/genindex.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "Index — LLVM Compiler Infrastructure documentation"
+  },
+  {
+    "title": "Debugging LLVM #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/DebuggingLLVM.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "This document is a collection of tips and tricks for debugging LLVM using a source-level debugger. The assumption is that you are trying to figure out the root cause of a miscompil"
+  },
+  {
+    "title": "Architecture & Platform Information for Compiler Writers #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/CompilerWriterInfo.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "Note This document is a work-in-progress. Additions and clarifications are welcome."
+  },
+  {
+    "title": "Getting Started with the LLVM System using Microsoft Visual Studio #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/GettingStartedVS.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "Welcome to LLVM on Windows! This document only covers LLVM on Windows using Visual Studio, not WSL, mingw or cygwin. In order to get started, you first need to know some basic info"
+  },
+  {
+    "title": "Performance Tips for Frontend Authors #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/Frontend/PerformanceTips.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "The intended audience of this document is developers of language frontends targeting LLVM IR. This document is home to a collection of tips on how to generate IR that optimizes wel"
+  },
+  {
+    "title": "My First Language Frontend with LLVM Tutorial #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/tutorial/MyFirstLanguageFrontend/index.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "Requirements: This tutorial assumes you know C++, but no previous compiler experience is necessary."
+  },
+  {
+    "title": "1. Kaleidoscope: Kaleidoscope Introduction and the Lexer #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/tutorial/MyFirstLanguageFrontend/LangImpl01.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "We also allow Kaleidoscope to call into standard library functions - the LLVM JIT makes this really easy. This means that you can use the ‘extern’ keyword to define a function befo"
+  },
+  {
+    "title": "3. Kaleidoscope: Code generation to LLVM IR #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/tutorial/MyFirstLanguageFrontend/LangImpl03.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "In order to generate LLVM IR, we want some simple setup to get started. First we define virtual code generation (codegen) methods in each AST class:"
+  },
+  {
+    "title": "2. Kaleidoscope: Implementing a Parser and AST #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/tutorial/MyFirstLanguageFrontend/LangImpl02.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "Right now we only create the AST, so there are no useful accessor methods on them. It would be very easy to add a virtual method to pretty print the code, for example. Here are the"
+  },
+  {
+    "title": "4. Kaleidoscope: Adding JIT and Optimizer Support #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/tutorial/MyFirstLanguageFrontend/LangImpl04.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "Our demonstration for Chapter 3 is elegant and easy to extend. Unfortunately, it does not produce wonderful code. The IRBuilder, however, does give us obvious optimizations when co"
+  },
+  {
+    "title": "10. Kaleidoscope: Conclusion and other useful LLVM tidbits #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/tutorial/MyFirstLanguageFrontend/LangImpl10.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "It is interesting to see how far we’ve come, and how little code it has taken. We built the entire lexer, parser, AST, code generator, an interactive run-loop (with a JIT!), and em"
+  },
+  {
+    "title": "6. Kaleidoscope: Extending the Language: User",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/tutorial/MyFirstLanguageFrontend/LangImpl06.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "At the end of this tutorial, we’ll run through an example Kaleidoscope application that renders the Mandelbrot set . This gives an example of what you can build with Kaleidoscope a"
+  },
+  {
+    "title": "8. Kaleidoscope: Compiling to Object Code #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/tutorial/MyFirstLanguageFrontend/LangImpl08.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "Welcome to Chapter 8 of the “ Implementing a language with LLVM ” tutorial. This chapter describes how to compile our language down to object files."
+  },
+  {
+    "title": "5. Kaleidoscope: Extending the Language: Control Flow #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/tutorial/MyFirstLanguageFrontend/LangImpl05.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "Before we get going on “how” we add this extension, let’s talk about “what” we want. The basic idea is that we want to be able to write this sort of thing:"
+  },
+  {
+    "title": "9. Kaleidoscope: Adding Debug Information #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/tutorial/MyFirstLanguageFrontend/LangImpl09.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "The short summary of this chapter is that we’ll go through the various things you have to add to a programming language to support debug info, and how you translate that into DWARF"
+  },
+  {
+    "title": "7. Kaleidoscope: Extending the Language: Mutable Variables #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/docs/tutorial/MyFirstLanguageFrontend/LangImpl07.html",
+    "site": "llvm",
+    "headings": [],
+    "preview": "The short (and happy) summary of this chapter is that there is no need for your front-end to build SSA form: LLVM provides highly tuned and well tested support for this, though the"
+  },
+  {
+    "title": "About #",
+    "category": "LLVM Compiler Infrastructure",
+    "path": "/",
+    "site": "llvm",
+    "headings": [],
+    "preview": "Warning If you are using a released version of LLVM, see the download page to find your documentation."
+  }
+]

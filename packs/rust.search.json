@@ -1,0 +1,1442 @@
+[
+  {
+    "title": "The Rust Programming Language - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — The Rust Programming Language - The Rust Programming Language"
+  },
+  {
+    "title": "Foreword - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/foreword.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Foreword - The Rust Programming Language"
+  },
+  {
+    "title": "Installation - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch01-01-installation.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Installation - The Rust Programming Language"
+  },
+  {
+    "title": "The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/print.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — The Rust Programming Language"
+  },
+  {
+    "title": "E - Editions - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/appendix-05-editions.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — E - Editions - The Rust Programming Language"
+  },
+  {
+    "title": "F - Translations of the Book - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/appendix-06-translation.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — F - Translations of the Book - The Rust Programming Language"
+  },
+  {
+    "title": "Getting Started - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch01-00-getting-started.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Getting Started - The Rust Programming Language"
+  },
+  {
+    "title": "Introduction - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Introduction - The Cargo Book"
+  },
+  {
+    "title": "Hello, World! - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch01-02-hello-world.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Hello, World! - The Rust Programming Language"
+  },
+  {
+    "title": "Introduction - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch00-00-introduction.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Introduction - The Rust Programming Language"
+  },
+  {
+    "title": "The Rust Programming Language - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/title-page.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — The Rust Programming Language - The Rust Programming Language"
+  },
+  {
+    "title": "G - How Rust is Made and “Nightly Rust” - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/appendix-07-nightly-rust.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — G - How Rust is Made and “Nightly Rust” - The Rust Programming Language"
+  },
+  {
+    "title": "Publishing on crates.io - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/publishing.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Publishing on crates.io - The Cargo Book"
+  },
+  {
+    "title": "D - Useful Development Tools - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/appendix-04-useful-development-tools.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — D - Useful Development Tools - The Rust Programming Language"
+  },
+  {
+    "title": "Profiles - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/profiles.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Profiles - The Cargo Book"
+  },
+  {
+    "title": "Appendix: Glossary - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/appendix/glossary.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Appendix: Glossary - The Cargo Book"
+  },
+  {
+    "title": "Cargo Commands - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/index.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Cargo Commands - The Cargo Book"
+  },
+  {
+    "title": "FAQ - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/faq.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — FAQ - The Cargo Book"
+  },
+  {
+    "title": "Cargo Guide - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/guide/index.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Cargo Guide - The Cargo Book"
+  },
+  {
+    "title": "Cargo Reference - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/index.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Cargo Reference - The Cargo Book"
+  },
+  {
+    "title": "The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/print.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — The Cargo Book"
+  },
+  {
+    "title": "Changelog - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/CHANGELOG.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Changelog - The Cargo Book"
+  },
+  {
+    "title": "Appendix: Git Authentication - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/appendix/git-authentication.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Appendix: Git Authentication - The Cargo Book"
+  },
+  {
+    "title": "Getting Started - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/getting-started/index.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Getting Started - The Cargo Book"
+  },
+  {
+    "title": "cargo login - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-login.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo login - The Cargo Book"
+  },
+  {
+    "title": "The Manifest Format - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/manifest.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — The Manifest Format - The Cargo Book"
+  },
+  {
+    "title": "cargo publish - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-publish.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo publish - The Cargo Book"
+  },
+  {
+    "title": "cargo package - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-package.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo package - The Cargo Book"
+  },
+  {
+    "title": "Hello, Cargo! - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch01-03-hello-cargo.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Hello, Cargo! - The Rust Programming Language"
+  },
+  {
+    "title": "cargo logout - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-logout.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo logout - The Cargo Book"
+  },
+  {
+    "title": "Macros - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch20-05-macros.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Macros - The Rust Programming Language"
+  },
+  {
+    "title": "cargo test - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-test.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo test - The Cargo Book"
+  },
+  {
+    "title": "cargo run - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-run.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo run - The Cargo Book"
+  },
+  {
+    "title": "Cargo Home - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/guide/cargo-home.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Cargo Home - The Cargo Book"
+  },
+  {
+    "title": "Build Cache - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/build-cache.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Build Cache - The Cargo Book"
+  },
+  {
+    "title": "cargo bench - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-bench.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo bench - The Cargo Book"
+  },
+  {
+    "title": "Environment Variables - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/environment-variables.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Environment Variables - The Cargo Book"
+  },
+  {
+    "title": "SemVer Compatibility - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/semver.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — SemVer Compatibility - The Cargo Book"
+  },
+  {
+    "title": "cargo build - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-build.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo build - The Cargo Book"
+  },
+  {
+    "title": "Continuous Integration - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/guide/continuous-integration.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Continuous Integration - The Cargo Book"
+  },
+  {
+    "title": "cargo check - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-check.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo check - The Cargo Book"
+  },
+  {
+    "title": "Features Examples - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/features-examples.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Features Examples - The Cargo Book"
+  },
+  {
+    "title": "cargo install - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-install.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo install - The Cargo Book"
+  },
+  {
+    "title": "C - Derivable Traits - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/appendix-03-derivable-traits.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — C - Derivable Traits - The Rust Programming Language"
+  },
+  {
+    "title": "Configuration - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/config.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Configuration - The Cargo Book"
+  },
+  {
+    "title": "cargo rustc - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-rustc.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo rustc - The Cargo Book"
+  },
+  {
+    "title": "Package ID Specifications - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/pkgid-spec.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Package ID Specifications - The Cargo Book"
+  },
+  {
+    "title": "Cargo.toml vs Cargo.lock - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/guide/cargo-toml-vs-cargo-lock.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Cargo.toml vs Cargo.lock - The Cargo Book"
+  },
+  {
+    "title": "Publishing Commands - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/publishing-commands.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Publishing Commands - The Cargo Book"
+  },
+  {
+    "title": "Package Layout - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/guide/project-layout.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Package Layout - The Cargo Book"
+  },
+  {
+    "title": "Features - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/features.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Features - The Cargo Book"
+  },
+  {
+    "title": "Source Replacement - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/source-replacement.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Source Replacement - The Cargo Book"
+  },
+  {
+    "title": "Workspaces - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/workspaces.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Workspaces - The Cargo Book"
+  },
+  {
+    "title": "Package Commands - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/package-commands.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Package Commands - The Cargo Book"
+  },
+  {
+    "title": "cargo new - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-new.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo new - The Cargo Book"
+  },
+  {
+    "title": "Unstable Features - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/unstable.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Unstable Features - The Cargo Book"
+  },
+  {
+    "title": "cargo add - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-add.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo add - The Cargo Book"
+  },
+  {
+    "title": "Build Scripts - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/build-scripts.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Build Scripts - The Cargo Book"
+  },
+  {
+    "title": "Deprecated and Removed - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/deprecated-and-removed.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Deprecated and Removed - The Cargo Book"
+  },
+  {
+    "title": "Build Commands - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/build-commands.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Build Commands - The Cargo Book"
+  },
+  {
+    "title": "Manifest Commands - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/manifest-commands.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Manifest Commands - The Cargo Book"
+  },
+  {
+    "title": "General Commands - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/general-commands.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — General Commands - The Cargo Book"
+  },
+  {
+    "title": "Report Commands - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/report-commands.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Report Commands - The Cargo Book"
+  },
+  {
+    "title": "Cargo Targets - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/cargo-targets.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Cargo Targets - The Cargo Book"
+  },
+  {
+    "title": "cargo fetch - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-fetch.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo fetch - The Cargo Book"
+  },
+  {
+    "title": "Creating a New Package - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/guide/creating-a-new-project.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Creating a New Package - The Cargo Book"
+  },
+  {
+    "title": "Working on an Existing Package - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/guide/working-on-an-existing-project.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Working on an Existing Package - The Cargo Book"
+  },
+  {
+    "title": "Build Script Examples - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/build-script-examples.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Build Script Examples - The Cargo Book"
+  },
+  {
+    "title": "Optimizing Build Performance - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/guide/build-performance.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Optimizing Build Performance - The Cargo Book"
+  },
+  {
+    "title": "External Tools - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/external-tools.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — External Tools - The Cargo Book"
+  },
+  {
+    "title": "First Steps with Cargo - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/getting-started/first-steps.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — First Steps with Cargo - The Cargo Book"
+  },
+  {
+    "title": "Registries - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/registries.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Registries - The Cargo Book"
+  },
+  {
+    "title": "Rust version - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/rust-version.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Rust version - The Cargo Book"
+  },
+  {
+    "title": "Overriding Dependencies - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/overriding-dependencies.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Overriding Dependencies - The Cargo Book"
+  },
+  {
+    "title": "Specifying Dependencies - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/specifying-dependencies.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Specifying Dependencies - The Cargo Book"
+  },
+  {
+    "title": "Dependency Resolution - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/resolver.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Dependency Resolution - The Cargo Book"
+  },
+  {
+    "title": "Dependencies - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/guide/dependencies.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Dependencies - The Cargo Book"
+  },
+  {
+    "title": "Tests - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/guide/tests.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Tests - The Cargo Book"
+  },
+  {
+    "title": "Why Cargo Exists - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/guide/why-cargo-exists.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Why Cargo Exists - The Cargo Book"
+  },
+  {
+    "title": "Reporting build timings - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/timings.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Reporting build timings - The Cargo Book"
+  },
+  {
+    "title": "cargo - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo - The Cargo Book"
+  },
+  {
+    "title": "Writing Automated Tests - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch11-00-testing.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Writing Automated Tests - The Rust Programming Language"
+  },
+  {
+    "title": "Packages, Crates, and Modules - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Packages, Crates, and Modules - The Rust Programming Language"
+  },
+  {
+    "title": "Installation - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/getting-started/installation.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Installation - The Cargo Book"
+  },
+  {
+    "title": "Registry Authentication - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/registry-authentication.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Registry Authentication - The Cargo Book"
+  },
+  {
+    "title": "Registry Index - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/registry-index.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Registry Index - The Cargo Book"
+  },
+  {
+    "title": "Registry Web API - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/registry-web-api.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Registry Web API - The Cargo Book"
+  },
+  {
+    "title": "Running a Registry - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/running-a-registry.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Running a Registry - The Cargo Book"
+  },
+  {
+    "title": "Introduction - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/index.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Introduction - The Cargo Book"
+  },
+  {
+    "title": "Future incompat report - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/future-incompat-report.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Future incompat report - The Cargo Book"
+  },
+  {
+    "title": "Credential Provider Protocol - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/credential-provider-protocol.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Credential Provider Protocol - The Cargo Book"
+  },
+  {
+    "title": "cargo pkgid - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-pkgid.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo pkgid - The Cargo Book"
+  },
+  {
+    "title": "Redirecting...",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch19-06-macros.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Redirecting..."
+  },
+  {
+    "title": "cargo init - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-init.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo init - The Cargo Book"
+  },
+  {
+    "title": "Lints - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/reference/lints.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Lints - The Cargo Book"
+  },
+  {
+    "title": "cargo clean - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-clean.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo clean - The Cargo Book"
+  },
+  {
+    "title": "cargo metadata - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-metadata.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo metadata - The Cargo Book"
+  },
+  {
+    "title": "cargo report - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-report.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo report - The Cargo Book"
+  },
+  {
+    "title": "B - Operators and Symbols - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/appendix-02-operators.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — B - Operators and Symbols - The Rust Programming Language"
+  },
+  {
+    "title": "cargo doc - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-doc.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo doc - The Cargo Book"
+  },
+  {
+    "title": "cargo yank - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-yank.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo yank - The Cargo Book"
+  },
+  {
+    "title": "cargo vendor - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-vendor.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo vendor - The Cargo Book"
+  },
+  {
+    "title": "Advanced Functions and Closures - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch20-04-advanced-functions-and-closures.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Advanced Functions and Closures - The Rust Programming Language"
+  },
+  {
+    "title": "Programming a Guessing Game - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch02-00-guessing-game-tutorial.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Programming a Guessing Game - The Rust Programming Language"
+  },
+  {
+    "title": "cargo search - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-search.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo search - The Cargo Book"
+  },
+  {
+    "title": "cargo rustdoc - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-rustdoc.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo rustdoc - The Cargo Book"
+  },
+  {
+    "title": "cargo miri - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-miri.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo miri - The Cargo Book"
+  },
+  {
+    "title": "Final Project: Building a Multithreaded Web Server - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch21-00-final-project-a-web-server.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Final Project: Building a Multithreaded Web Server - The Rust Programming Language"
+  },
+  {
+    "title": "cargo uninstall - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-uninstall.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo uninstall - The Cargo Book"
+  },
+  {
+    "title": "cargo owner - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-owner.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo owner - The Cargo Book"
+  },
+  {
+    "title": "cargo tree - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-tree.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo tree - The Cargo Book"
+  },
+  {
+    "title": "cargo fix - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-fix.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo fix - The Cargo Book"
+  },
+  {
+    "title": "Validating References with Lifetimes - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch10-03-lifetime-syntax.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Validating References with Lifetimes - The Rust Programming Language"
+  },
+  {
+    "title": "cargo generate-lockfile - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-generate-lockfile.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo generate-lockfile - The Cargo Book"
+  },
+  {
+    "title": "How to Write Tests - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch11-01-writing-tests.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — How to Write Tests - The Rust Programming Language"
+  },
+  {
+    "title": "cargo locate-project - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-locate-project.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo locate-project - The Cargo Book"
+  },
+  {
+    "title": "cargo update - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-update.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo update - The Cargo Book"
+  },
+  {
+    "title": "Concise Control Flow with if let and let...else - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch06-03-if-let.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Concise Control Flow with if let and let...else - The Rust Programming Language"
+  },
+  {
+    "title": "cargo remove - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-remove.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo remove - The Cargo Book"
+  },
+  {
+    "title": "Cargo Workspaces - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch14-03-cargo-workspaces.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Cargo Workspaces - The Rust Programming Language"
+  },
+  {
+    "title": "cargo fmt - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-fmt.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo fmt - The Cargo Book"
+  },
+  {
+    "title": "cargo version - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-version.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo version - The Cargo Book"
+  },
+  {
+    "title": "cargo info - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-info.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo info - The Cargo Book"
+  },
+  {
+    "title": "Packages and Crates - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch07-01-packages-and-crates.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Packages and Crates - The Rust Programming Language"
+  },
+  {
+    "title": "cargo report future-incompatibilities - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-report-future-incompatibilities.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo report future-incompatibilities - The Cargo Book"
+  },
+  {
+    "title": "cargo clippy - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-clippy.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo clippy - The Cargo Book"
+  },
+  {
+    "title": "cargo help - The Cargo Book",
+    "category": "Rust Stable Suite",
+    "path": "/cargo/commands/cargo-help.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — cargo help - The Cargo Book"
+  },
+  {
+    "title": "Common Programming Concepts - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch03-00-common-programming-concepts.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Common Programming Concepts - The Rust Programming Language"
+  },
+  {
+    "title": "A - Keywords - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/appendix-01-keywords.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — A - Keywords - The Rust Programming Language"
+  },
+  {
+    "title": "Installing Binaries with cargo install - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch14-04-installing-binaries.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Installing Binaries with cargo install - The Rust Programming Language"
+  },
+  {
+    "title": "Working With Any Number of Futures - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch17-03-more-futures.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Working With Any Number of Futures - The Rust Programming Language"
+  },
+  {
+    "title": "The match Control Flow Construct - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch06-02-match.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — The match Control Flow Construct - The Rust Programming Language"
+  },
+  {
+    "title": "Publishing a Crate to Crates.io - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch14-02-publishing-to-crates-io.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Publishing a Crate to Crates.io - The Rust Programming Language"
+  },
+  {
+    "title": "Control Scope and Privacy with Modules - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch07-02-defining-modules-to-control-scope-and-privacy.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Control Scope and Privacy with Modules - The Rust Programming Language"
+  },
+  {
+    "title": "Using Trait Objects to Abstract over Shared Behavior - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch18-02-trait-objects.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Using Trait Objects to Abstract over Shared Behavior - The Rust Programming Language"
+  },
+  {
+    "title": "Defining Shared Behavior with Traits - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch10-02-traits.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Defining Shared Behavior with Traits - The Rust Programming Language"
+  },
+  {
+    "title": "Building a Single-Threaded Web Server - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch21-01-single-threaded.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Building a Single-Threaded Web Server - The Rust Programming Language"
+  },
+  {
+    "title": "Enums and Pattern Matching - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch06-00-enums.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Enums and Pattern Matching - The Rust Programming Language"
+  },
+  {
+    "title": "Recoverable Errors with Result - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch09-02-recoverable-errors-with-result.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Recoverable Errors with Result - The Rust Programming Language"
+  },
+  {
+    "title": "Comments - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch03-04-comments.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Comments - The Rust Programming Language"
+  },
+  {
+    "title": "Advanced Types - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch20-03-advanced-types.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Advanced Types - The Rust Programming Language"
+  },
+  {
+    "title": "Controlling How Tests Are Run - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch11-02-running-tests.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Controlling How Tests Are Run - The Rust Programming Language"
+  },
+  {
+    "title": "Paths for Referring to an Item in the Module Tree - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Paths for Referring to an Item in the Module Tree - The Rust Programming Language"
+  },
+  {
+    "title": "Unrecoverable Errors with panic! - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch09-01-unrecoverable-errors-with-panic.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Unrecoverable Errors with panic! - The Rust Programming Language"
+  },
+  {
+    "title": "Variables and Mutability - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch03-01-variables-and-mutability.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Variables and Mutability - The Rust Programming Language"
+  },
+  {
+    "title": "Characteristics of Object-Oriented Languages - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch18-01-what-is-oo.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Characteristics of Object-Oriented Languages - The Rust Programming Language"
+  },
+  {
+    "title": "Defining an Enum - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch06-01-defining-an-enum.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Defining an Enum - The Rust Programming Language"
+  },
+  {
+    "title": "Methods - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch05-03-method-syntax.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Methods - The Rust Programming Language"
+  },
+  {
+    "title": "To panic! or Not to panic! - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch09-03-to-panic-or-not-to-panic.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — To panic! or Not to panic! - The Rust Programming Language"
+  },
+  {
+    "title": "Customizing Builds with Release Profiles - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch14-01-release-profiles.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Customizing Builds with Release Profiles - The Rust Programming Language"
+  },
+  {
+    "title": "Appendix - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/appendix-00.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Appendix - The Rust Programming Language"
+  },
+  {
+    "title": "Implementing an Object-Oriented Design Pattern - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch18-03-oo-design-patterns.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Implementing an Object-Oriented Design Pattern - The Rust Programming Language"
+  },
+  {
+    "title": "From Single-Threaded to Multithreaded Server - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch21-02-multithreaded.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — From Single-Threaded to Multithreaded Server - The Rust Programming Language"
+  },
+  {
+    "title": "Generic Data Types - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch10-01-syntax.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Generic Data Types - The Rust Programming Language"
+  },
+  {
+    "title": "Functions - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch03-03-how-functions-work.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Functions - The Rust Programming Language"
+  },
+  {
+    "title": "Patterns and Matching - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch19-00-patterns.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Patterns and Matching - The Rust Programming Language"
+  },
+  {
+    "title": "Extending Cargo with Custom Commands - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch14-05-extending-cargo.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Extending Cargo with Custom Commands - The Rust Programming Language"
+  },
+  {
+    "title": "Streams: Futures in Sequence - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch17-04-streams.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Streams: Futures in Sequence - The Rust Programming Language"
+  },
+  {
+    "title": "Applying Concurrency with Async - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch17-02-concurrency-with-async.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Applying Concurrency with Async - The Rust Programming Language"
+  },
+  {
+    "title": "Data Types - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch03-02-data-types.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Data Types - The Rust Programming Language"
+  },
+  {
+    "title": "Advanced Traits - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch20-02-advanced-traits.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Advanced Traits - The Rust Programming Language"
+  },
+  {
+    "title": "Control Flow - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch03-05-control-flow.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Control Flow - The Rust Programming Language"
+  },
+  {
+    "title": "An I/O Project: Building a Command Line Program - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch12-00-an-io-project.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — An I/O Project: Building a Command Line Program - The Rust Programming Language"
+  },
+  {
+    "title": "An Example Program Using Structs - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch05-02-example-structs.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — An Example Program Using Structs - The Rust Programming Language"
+  },
+  {
+    "title": "Error Handling - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch09-00-error-handling.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Error Handling - The Rust Programming Language"
+  },
+  {
+    "title": "More about Cargo and Crates.io - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch14-00-more-about-cargo.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — More about Cargo and Crates.io - The Rust Programming Language"
+  },
+  {
+    "title": "Bringing Paths Into Scope with the use Keyword - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch07-04-bringing-paths-into-scope-with-the-use-keyword.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Bringing Paths Into Scope with the use Keyword - The Rust Programming Language"
+  },
+  {
+    "title": "Generic Types, Traits, and Lifetimes - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch10-00-generics.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Generic Types, Traits, and Lifetimes - The Rust Programming Language"
+  },
+  {
+    "title": "Test Organization - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch11-03-test-organization.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Test Organization - The Rust Programming Language"
+  },
+  {
+    "title": "Object Oriented Programming Features - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch18-00-oop.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Object Oriented Programming Features - The Rust Programming Language"
+  },
+  {
+    "title": "Transfer Data Between Threads with Message Passing - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch16-02-message-passing.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Transfer Data Between Threads with Message Passing - The Rust Programming Language"
+  },
+  {
+    "title": "A Closer Look at the Traits for Async - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch17-05-traits-for-async.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — A Closer Look at the Traits for Async - The Rust Programming Language"
+  },
+  {
+    "title": "Graceful Shutdown and Cleanup - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch21-03-graceful-shutdown-and-cleanup.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Graceful Shutdown and Cleanup - The Rust Programming Language"
+  },
+  {
+    "title": "All the Places Patterns Can Be Used - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch19-01-all-the-places-for-patterns.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — All the Places Patterns Can Be Used - The Rust Programming Language"
+  },
+  {
+    "title": "Smart Pointers - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch15-00-smart-pointers.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Smart Pointers - The Rust Programming Language"
+  },
+  {
+    "title": "Storing Lists of Values with Vectors - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch08-01-vectors.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Storing Lists of Values with Vectors - The Rust Programming Language"
+  },
+  {
+    "title": "Unsafe Rust - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch20-01-unsafe-rust.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Unsafe Rust - The Rust Programming Language"
+  },
+  {
+    "title": "Futures and the Async Syntax - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch17-01-futures-and-syntax.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Futures and the Async Syntax - The Rust Programming Language"
+  },
+  {
+    "title": "Understanding Ownership - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch04-00-understanding-ownership.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Understanding Ownership - The Rust Programming Language"
+  },
+  {
+    "title": "Common Collections - The Rust Programming Language",
+    "category": "Rust Stable Suite",
+    "path": "/book/ch08-00-common-collections.html",
+    "site": "rust",
+    "headings": [],
+    "preview": "Rust Stable Suite documentation — Common Collections - The Rust Programming Language"
+  }
+]

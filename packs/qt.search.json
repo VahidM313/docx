@@ -1,0 +1,1162 @@
+[
+  {
+    "title": "The Future of Digital Experiences",
+    "category": "Qt 6 Documentation",
+    "path": "/",
+    "site": "qt",
+    "headings": [],
+    "preview": "/"
+  },
+  {
+    "title": "Qt Creator Documentation",
+    "category": "Qt 6 Documentation",
+    "path": "/qtcreator",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtcreator"
+  },
+  {
+    "title": "Qt Extension for VS Code",
+    "category": "Qt 6 Documentation",
+    "path": "/vscodeext",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext"
+  },
+  {
+    "title": "Figma to Qt",
+    "category": "Qt 6 Documentation",
+    "path": "/figmatoqt",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt"
+  },
+  {
+    "title": "Qt 6.12",
+    "category": "QT 6",
+    "path": "/qt-6/index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/index.html"
+  },
+  {
+    "title": "Qt Agentic Tools &para;",
+    "category": "Qt 6 Documentation",
+    "path": "/agentictools",
+    "site": "qt",
+    "headings": [],
+    "preview": "Official agentic skills and MCP servers for Qt software development."
+  },
+  {
+    "title": "Qt Design Studio documentation",
+    "category": "Qt 6 Documentation",
+    "path": "/qtdesignstudio",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtdesignstudio"
+  },
+  {
+    "title": "archives",
+    "category": "Qt 6 Documentation",
+    "path": "/archives",
+    "site": "qt",
+    "headings": [],
+    "preview": "/archives"
+  },
+  {
+    "title": "Get and Install Qt",
+    "category": "QT 6",
+    "path": "/qt-6/get-and-install-qt.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/get-and-install-qt.html"
+  },
+  {
+    "title": "Qt for Linux - Alternative ways of installing Qt",
+    "category": "QT 6",
+    "path": "/qt-6/linux-alternative-installers.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/linux-alternative-installers.html"
+  },
+  {
+    "title": "Qt for macOS - Alternative ways of installing Qt",
+    "category": "QT 6",
+    "path": "/qt-6/macos-installation.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/macos-installation.html"
+  },
+  {
+    "title": "Create Your First Applications",
+    "category": "QT 6",
+    "path": "/qt-6/create-your-first-applications.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/create-your-first-applications.html"
+  },
+  {
+    "title": "Porting to Qt 6",
+    "category": "QT 6",
+    "path": "/qt-6/portingguide.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/portingguide.html"
+  },
+  {
+    "title": "Getting Started with Qt",
+    "category": "QT 6",
+    "path": "/qt-6/gettingstarted.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/gettingstarted.html"
+  },
+  {
+    "title": "The QML Reference",
+    "category": "QT 6",
+    "path": "/qt-6/qmlreference.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qmlreference.html"
+  },
+  {
+    "title": "Supported Platforms",
+    "category": "QT 6",
+    "path": "/qt-6/supported-platforms.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/supported-platforms.html"
+  },
+  {
+    "title": "Qt Reference Pages",
+    "category": "QT 6",
+    "path": "/qt-6/reference-overview.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/reference-overview.html"
+  },
+  {
+    "title": "Boot2Qt",
+    "category": "Qt 6 Documentation",
+    "path": "/Boot2Qt",
+    "site": "qt",
+    "headings": [],
+    "preview": "/Boot2Qt"
+  },
+  {
+    "title": "QtOnboard",
+    "category": "Qt 6 Documentation",
+    "path": "/QtOnboard",
+    "site": "qt",
+    "headings": [],
+    "preview": "/QtOnboard"
+  },
+  {
+    "title": "Embedded",
+    "category": "Qt 6 Documentation",
+    "path": "/embedded.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/embedded.html"
+  },
+  {
+    "title": "Getting started",
+    "category": "QTCREATOR",
+    "path": "/qtcreator/creator-getting-started.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtcreator/creator-getting-started.html"
+  },
+  {
+    "title": "Desktop platforms",
+    "category": "QTCREATOR",
+    "path": "/qtcreator/creator-desktop-platforms.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtcreator/creator-desktop-platforms.html"
+  },
+  {
+    "title": "Tutorials",
+    "category": "QTCREATOR",
+    "path": "/qtcreator/creator-tutorials.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtcreator/creator-tutorials.html"
+  },
+  {
+    "title": "Building applications for the web",
+    "category": "QTCREATOR",
+    "path": "/qtcreator/creator-webassembly.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtcreator/creator-webassembly.html"
+  },
+  {
+    "title": "Coco Manual",
+    "category": "COCO",
+    "path": "/coco/index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/coco/index.html"
+  },
+  {
+    "title": "Test Center Manual",
+    "category": "TESTCENTER",
+    "path": "/testcenter/index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/testcenter/index.html"
+  },
+  {
+    "title": "Tools",
+    "category": "Qt 6 Documentation",
+    "path": "/tools.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/tools.html"
+  },
+  {
+    "title": "Installation",
+    "category": "QTCREATOR",
+    "path": "/qtcreator/creator-how-to-install.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtcreator/creator-how-to-install.html"
+  },
+  {
+    "title": "All Qt Documentation",
+    "category": "Qt 6 Documentation",
+    "path": "/all-topics.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/all-topics.html"
+  },
+  {
+    "title": "Axivion Suite 7.12.6-public",
+    "category": "AXIVION",
+    "path": "/axivion/index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/axivion/index.html"
+  },
+  {
+    "title": "Squish 9.2",
+    "category": "SQUISH",
+    "path": "/squish/index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/squish/index.html"
+  },
+  {
+    "title": "Editing code",
+    "category": "QTCREATOR",
+    "path": "/qtcreator/creator-coding-navigating.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtcreator/creator-coding-navigating.html"
+  },
+  {
+    "title": "QtForMCUs",
+    "category": "Qt 6 Documentation",
+    "path": "/QtForMCUs",
+    "site": "qt",
+    "headings": [],
+    "preview": "/QtForMCUs"
+  },
+  {
+    "title": "Creating projects",
+    "category": "QTCREATOR",
+    "path": "/qtcreator/creator-project-creating.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtcreator/creator-project-creating.html"
+  },
+  {
+    "title": "Developing for devices",
+    "category": "QTCREATOR",
+    "path": "/qtcreator/creator-reference-devices.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtcreator/creator-reference-devices.html"
+  },
+  {
+    "title": "Designing UIs",
+    "category": "QTCREATOR",
+    "path": "/qtcreator/creator-reference-ui-design.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtcreator/creator-reference-ui-design.html"
+  },
+  {
+    "title": "Using AI",
+    "category": "QTCREATOR",
+    "path": "/qtcreator/creator-using-ai.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtcreator/creator-using-ai.html"
+  },
+  {
+    "title": "Using Git",
+    "category": "QTCREATOR",
+    "path": "/qtcreator/creator-vcs-git.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtcreator/creator-vcs-git.html"
+  },
+  {
+    "title": "Building and running projects",
+    "category": "QTCREATOR",
+    "path": "/qtcreator/creator-configuring-projects.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtcreator/creator-configuring-projects.html"
+  },
+  {
+    "title": "Adapting the UI",
+    "category": "QTCREATOR",
+    "path": "/qtcreator/creator-quick-tour.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtcreator/creator-quick-tour.html"
+  },
+  {
+    "title": "Managing kits",
+    "category": "QTCREATOR",
+    "path": "/qtcreator/creator-preferences-kits.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtcreator/creator-preferences-kits.html"
+  },
+  {
+    "title": "Getting help",
+    "category": "QTCREATOR",
+    "path": "/qtcreator/creator-how-to-get-help.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtcreator/creator-how-to-get-help.html"
+  },
+  {
+    "title": "Debugging",
+    "category": "QTCREATOR",
+    "path": "/qtcreator/creator-debugging.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtcreator/creator-debugging.html"
+  },
+  {
+    "title": "Configuring Qt Creator",
+    "category": "QTCREATOR",
+    "path": "/qtcreator/creator-configuring.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtcreator/creator-configuring.html"
+  },
+  {
+    "title": "Testing",
+    "category": "QTCREATOR",
+    "path": "/qtcreator/creator-preferences-testing.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtcreator/creator-preferences-testing.html"
+  },
+  {
+    "title": "All topics",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-toc.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-toc.html"
+  },
+  {
+    "title": "Analyzing code",
+    "category": "QTCREATOR",
+    "path": "/qtcreator/creator-analyze-mode.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qtcreator/creator-analyze-mode.html"
+  },
+  {
+    "title": "Overview",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-overview.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-overview.html"
+  },
+  {
+    "title": "Getting started",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-getting-started.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-getting-started.html"
+  },
+  {
+    "title": "Kits",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-reference-kits.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-reference-kits.html"
+  },
+  {
+    "title": "Reference",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-reference.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-reference.html"
+  },
+  {
+    "title": "Tutorials",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-tutorials.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-tutorials.html"
+  },
+  {
+    "title": "How to",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-how-tos.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-how-tos.html"
+  },
+  {
+    "title": "Add files to projects",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-how-create-files.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-how-create-files.html"
+  },
+  {
+    "title": "Create Qt projects",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-how-create-projects.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-how-create-projects.html"
+  },
+  {
+    "title": "Installation",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-how-to-install.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-how-to-install.html"
+  },
+  {
+    "title": "Design widgets-based UIs",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-how-design-widget-based-uis.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-how-design-widget-based-uis.html"
+  },
+  {
+    "title": "Create Qt resource collection files",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-how-create-qrc-files.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-how-create-qrc-files.html"
+  },
+  {
+    "title": "Open TS files in Qt Linguist",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-how-open-files-in-linguist.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-how-open-files-in-linguist.html"
+  },
+  {
+    "title": "Build with CMake presets",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-how-build-with-cmake-presets.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-how-build-with-cmake-presets.html"
+  },
+  {
+    "title": "Debug Qt for Python applications",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-how-debug-apps-python.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-how-debug-apps-python.html"
+  },
+  {
+    "title": "Debug Qt applications",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-how-debug-apps.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-how-debug-apps.html"
+  },
+  {
+    "title": "Qt settings",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-reference-qt-settings.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-reference-qt-settings.html"
+  },
+  {
+    "title": "Tutorial: Qt Widgets application",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-tutorials-qt-widgets.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-tutorials-qt-widgets.html"
+  },
+  {
+    "title": "Tutorial: Qt Quick application",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-tutorials-qt-quick.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-tutorials-qt-quick.html"
+  },
+  {
+    "title": "Read Qt documentation",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-how-read-qt-documentation.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-how-read-qt-documentation.html"
+  },
+  {
+    "title": "Report issues",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-how-report-issues.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-how-report-issues.html"
+  },
+  {
+    "title": "Use Qt with other extensions",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-how-use-qt-with-other-extension.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-how-use-qt-with-other-extension.html"
+  },
+  {
+    "title": "Register Qt installations",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-how-register-qt-installations.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-how-register-qt-installations.html"
+  },
+  {
+    "title": "Tutorials",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-tutorials.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-tutorials.html"
+  },
+  {
+    "title": "Getting started",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-getting-started.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-getting-started.html"
+  },
+  {
+    "title": "Installation",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-installation.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-installation.html"
+  },
+  {
+    "title": "Turn on QML Language Server",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-how-to-turn-on-qmlls.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-how-to-turn-on-qmlls.html"
+  },
+  {
+    "title": "Profile QML code",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-how-profile-qml.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-how-profile-qml.html"
+  },
+  {
+    "title": "Debug Qt WebAssembly applications",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-how-debug-apps-wasm.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-how-debug-apps-wasm.html"
+  },
+  {
+    "title": "Apply auto layout",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-auto-layout.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-auto-layout.html"
+  },
+  {
+    "title": "Preview Qt Quick applications",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-how-preview-qml.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-how-preview-qml.html"
+  },
+  {
+    "title": "Convert constraints into anchors",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-convert-constraints.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-convert-constraints.html"
+  },
+  {
+    "title": "Convert designs",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-convert-designs.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-convert-designs.html"
+  },
+  {
+    "title": "Debug Qt Quick applications",
+    "category": "VSCODEEXT",
+    "path": "/vscodeext/vscodeext-how-debug-qml-apps.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/vscodeext/vscodeext-how-debug-qml-apps.html"
+  },
+  {
+    "title": "Overview",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-overview.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-overview.html"
+  },
+  {
+    "title": "Fix conversion issues",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-resolve-issues.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-resolve-issues.html"
+  },
+  {
+    "title": "Inspect converted designs",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-lp-inspect.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-lp-inspect.html"
+  },
+  {
+    "title": "Convert masked layers",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-apply-masks.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-apply-masks.html"
+  },
+  {
+    "title": "Select Qt version",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-select-qt-version.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-select-qt-version.html"
+  },
+  {
+    "title": "Preview converted designs",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-live-preview.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-live-preview.html"
+  },
+  {
+    "title": "Browse files",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-browse-files.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-browse-files.html"
+  },
+  {
+    "title": "Convert variables into design tokens",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-variables.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-variables.html"
+  },
+  {
+    "title": "Test code changes",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-lp-change-code.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-lp-change-code.html"
+  },
+  {
+    "title": "Render layers as images",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-render-as-image.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-render-as-image.html"
+  },
+  {
+    "title": "Pan and zoom",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-pan-and-zoom.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-pan-and-zoom.html"
+  },
+  {
+    "title": "Convert into Qt Quick Controls",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-insert-components.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-insert-components.html"
+  },
+  {
+    "title": "Upload fonts",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-upload-fonts.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-upload-fonts.html"
+  },
+  {
+    "title": "Solve connection issues",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-solve-connection-issues.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-solve-connection-issues.html"
+  },
+  {
+    "title": "Download converted designs",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-download-converted-designs.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-download-converted-designs.html"
+  },
+  {
+    "title": "Generate CMake configuration files",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-create-cmake-config.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-create-cmake-config.html"
+  },
+  {
+    "title": "Add comments to converted code",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-comment-code.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-comment-code.html"
+  },
+  {
+    "title": "Set application start screen",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-set-start-screen.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-set-start-screen.html"
+  },
+  {
+    "title": "Qt Qml Core",
+    "category": "QT 6",
+    "path": "/qt-6/qtqmlcore-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtqmlcore-index.html"
+  },
+  {
+    "title": "Mark strings for translation",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-mark-strings-for-translation.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-mark-strings-for-translation.html"
+  },
+  {
+    "title": "Qt Qml WorkerScript",
+    "category": "QT 6",
+    "path": "/qt-6/qmlworkerscript-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qmlworkerscript-index.html"
+  },
+  {
+    "title": "Skip pages and layers",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-skip-layers.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-skip-layers.html"
+  },
+  {
+    "title": "Qt Network",
+    "category": "QT 6",
+    "path": "/qt-6/qtnetwork-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtnetwork-index.html"
+  },
+  {
+    "title": "Qt Qml",
+    "category": "QT 6",
+    "path": "/qt-6/qtqml-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtqml-index.html"
+  },
+  {
+    "title": "Qt D-Bus",
+    "category": "QT 6",
+    "path": "/qt-6/qtdbus-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtdbus-index.html"
+  },
+  {
+    "title": "Save assets",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-save-assets.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-save-assets.html"
+  },
+  {
+    "title": "Qt Qml Models",
+    "category": "QT 6",
+    "path": "/qt-6/qtqmlmodels-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtqmlmodels-index.html"
+  },
+  {
+    "title": "Qt Core",
+    "category": "QT 6",
+    "path": "/qt-6/qtcore-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtcore-index.html"
+  },
+  {
+    "title": "Qt GUI",
+    "category": "QT 6",
+    "path": "/qt-6/qtgui-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtgui-index.html"
+  },
+  {
+    "title": "Qt Quick Controls",
+    "category": "QT 6",
+    "path": "/qt-6/qtquickcontrols-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtquickcontrols-index.html"
+  },
+  {
+    "title": "Specify advanced layer settings",
+    "category": "FIGMATOQT",
+    "path": "/figmatoqt/figmatoqt-how-to-advanced-layer-settings.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/figmatoqt/figmatoqt-how-to-advanced-layer-settings.html"
+  },
+  {
+    "title": "Qt Quick",
+    "category": "QT 6",
+    "path": "/qt-6/qtquick-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtquick-index.html"
+  },
+  {
+    "title": "What's New in Qt 6.12",
+    "category": "QT 6",
+    "path": "/qt-6/whatsnew612.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/whatsnew612.html"
+  },
+  {
+    "title": "Qt Quick Dialogs",
+    "category": "QT 6",
+    "path": "/qt-6/qtquickdialogs-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtquickdialogs-index.html"
+  },
+  {
+    "title": "Qt CoAP",
+    "category": "QT 6",
+    "path": "/qt-6/qtcoap-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtcoap-index.html"
+  },
+  {
+    "title": "Qt Quick Layouts",
+    "category": "QT 6",
+    "path": "/qt-6/qtquicklayouts-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtquicklayouts-index.html"
+  },
+  {
+    "title": "Qt Test",
+    "category": "QT 6",
+    "path": "/qt-6/qttest-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qttest-index.html"
+  },
+  {
+    "title": "Qt Widgets",
+    "category": "QT 6",
+    "path": "/qt-6/qtwidgets-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtwidgets-index.html"
+  },
+  {
+    "title": "Qt Help",
+    "category": "QT 6",
+    "path": "/qt-6/qthelp-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qthelp-index.html"
+  },
+  {
+    "title": "Active Qt",
+    "category": "QT 6",
+    "path": "/qt-6/activeqt-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/activeqt-index.html"
+  },
+  {
+    "title": "Qt Canvas Painter",
+    "category": "QT 6",
+    "path": "/qt-6/qtcanvaspainter-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtcanvaspainter-index.html"
+  },
+  {
+    "title": "Qt Concurrent",
+    "category": "QT 6",
+    "path": "/qt-6/qtconcurrent-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtconcurrent-index.html"
+  },
+  {
+    "title": "Qt Graphs",
+    "category": "QT 6",
+    "path": "/qt-6/qtgraphs-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtgraphs-index.html"
+  },
+  {
+    "title": "Qt Bluetooth",
+    "category": "QT 6",
+    "path": "/qt-6/qtbluetooth-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtbluetooth-index.html"
+  },
+  {
+    "title": "Qt GRPC",
+    "category": "QT 6",
+    "path": "/qt-6/qtgrpc-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtgrpc-index.html"
+  },
+  {
+    "title": "Qt HTTP Server",
+    "category": "QT 6",
+    "path": "/qt-6/qthttpserver-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qthttpserver-index.html"
+  },
+  {
+    "title": "Qt Quick Test",
+    "category": "QT 6",
+    "path": "/qt-6/qtquicktest-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtquicktest-index.html"
+  },
+  {
+    "title": "Qt Image Formats",
+    "category": "QT 6",
+    "path": "/qt-6/qtimageformats-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtimageformats-index.html"
+  },
+  {
+    "title": "Qt Lottie Animation",
+    "category": "QT 6",
+    "path": "/qt-6/qtlottieanimation-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtlottieanimation-index.html"
+  },
+  {
+    "title": "Qt MQTT",
+    "category": "QT 6",
+    "path": "/qt-6/qtmqtt-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtmqtt-index.html"
+  },
+  {
+    "title": "Qt Network Authorization",
+    "category": "QT 6",
+    "path": "/qt-6/qtnetworkauth-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtnetworkauth-index.html"
+  },
+  {
+    "title": "Qt OPC UA",
+    "category": "QT 6",
+    "path": "/qt-6/qtopcua-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtopcua-index.html"
+  },
+  {
+    "title": "Qt NFC",
+    "category": "QT 6",
+    "path": "/qt-6/qtnfc-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtnfc-index.html"
+  },
+  {
+    "title": "Qt Multimedia",
+    "category": "QT 6",
+    "path": "/qt-6/qtmultimedia-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtmultimedia-index.html"
+  },
+  {
+    "title": "Qt Positioning",
+    "category": "QT 6",
+    "path": "/qt-6/qtpositioning-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtpositioning-index.html"
+  },
+  {
+    "title": "Qt OpenGL",
+    "category": "QT 6",
+    "path": "/qt-6/qtopengl-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtopengl-index.html"
+  },
+  {
+    "title": "Qt Print Support",
+    "category": "QT 6",
+    "path": "/qt-6/qtprintsupport-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtprintsupport-index.html"
+  },
+  {
+    "title": "Qt Qml Compiler",
+    "category": "QT 6",
+    "path": "/qt-6/qtqmlcompiler-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtqmlcompiler-index.html"
+  },
+  {
+    "title": "Qt Protobuf",
+    "category": "QT 6",
+    "path": "/qt-6/qtprotobuf-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtprotobuf-index.html"
+  },
+  {
+    "title": "Qt Qml Design Support",
+    "category": "QT 6",
+    "path": "/qt-6/qtqmldesignsupport-index.html",
+    "site": "qt",
+    "headings": [],
+    "preview": "/qt-6/qtqmldesignsupport-index.html"
+  },
+  {
+    "title": "aa12c55711048d.bin",
+    "category": "  DOCX ASSETS",
+    "path": "/__docx_assets/aa12c55711048d.bin",
+    "site": "qt",
+    "headings": [],
+    "preview": "/__docx_assets/aa12c55711048d.bin"
+  },
+  {
+    "title": "9a83d350061e6b.bin",
+    "category": "  DOCX ASSETS",
+    "path": "/__docx_assets/9a83d350061e6b.bin",
+    "site": "qt",
+    "headings": [],
+    "preview": "/__docx_assets/9a83d350061e6b.bin"
+  },
+  {
+    "title": "4b2781a97ad245.bin",
+    "category": "  DOCX ASSETS",
+    "path": "/__docx_assets/4b2781a97ad245.bin",
+    "site": "qt",
+    "headings": [],
+    "preview": "/__docx_assets/4b2781a97ad245.bin"
+  },
+  {
+    "title": "a4bb436b9164e7.bin",
+    "category": "  DOCX ASSETS",
+    "path": "/__docx_assets/a4bb436b9164e7.bin",
+    "site": "qt",
+    "headings": [],
+    "preview": "/__docx_assets/a4bb436b9164e7.bin"
+  },
+  {
+    "title": "The Future of Digital Experiences",
+    "category": "Qt 6 Documentation",
+    "path": "/docs",
+    "site": "qt",
+    "headings": [],
+    "preview": "/docs"
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "title": "Overview | TanStack Ranger Docs",
+    "category": "TanStack Ranger",
+    "path": "/ranger/latest/docs/overview",
+    "site": "tanstack_ranger",
+    "headings": [],
+    "preview": "Feature Rich and Lightweight Headless utility, which means out of the box, it doesn"
+  },
+  {
+    "title": "React TanStack Ranger Basic Example | TanStack Ranger Docs",
+    "category": "TanStack Ranger",
+    "path": "/ranger/latest/docs/framework/react/examples/basic",
+    "site": "tanstack_ranger",
+    "headings": [],
+    "preview": "An example showing how to implement Basic in React using TanStack Ranger."
+  },
+  {
+    "title": "Content temporarily unavailable | TanStack Ranger React Docs",
+    "category": "TanStack Ranger",
+    "path": "/ranger/latest/docs/framework/react/api/basic",
+    "site": "tanstack_ranger",
+    "headings": [],
+    "preview": "Want to skip to the implementation? Check out these examples: basic The API below described how to use the basic features. Required The current value (or values) for the range. Required The minimum..."
+  },
+  {
+    "title": "Quick Start | TanStack Ranger Docs",
+    "category": "TanStack Ranger",
+    "path": "/ranger/latest/docs/quick-start",
+    "site": "tanstack_ranger",
+    "headings": [],
+    "preview": "If you"
+  },
+  {
+    "title": "React Ranger | TanStack Ranger React Docs",
+    "category": "TanStack Ranger",
+    "path": "/ranger/latest/docs/framework/react/react-ranger",
+    "site": "tanstack_ranger",
+    "headings": [],
+    "preview": "You can install TanStack Ranger with any NPM package manager."
+  },
+  {
+    "title": "Installation | TanStack Ranger Docs",
+    "category": "TanStack Ranger",
+    "path": "/ranger/latest/docs/installation",
+    "site": "tanstack_ranger",
+    "headings": [],
+    "preview": "You can install TanStack Ranger with any NPM package manager. Depending on your framework of choice, install one of the following packages: React Solid (coming soon!) Vue (coming soon!) Svelte (coming..."
+  },
+  {
+    "title": "React TanStack Ranger Custom Styles Example | TanStack Ranger Docs",
+    "category": "TanStack Ranger",
+    "path": "/ranger/latest/docs/framework/react/examples/custom-styles",
+    "site": "tanstack_ranger",
+    "headings": [],
+    "preview": "An example showing how to implement Custom Styles in React using TanStack Ranger."
+  },
+  {
+    "title": "React TanStack Ranger Update On Drag Example | TanStack Ranger Docs",
+    "category": "TanStack Ranger",
+    "path": "/ranger/latest/docs/framework/react/examples/update-on-drag",
+    "site": "tanstack_ranger",
+    "headings": [],
+    "preview": "An example showing how to implement Update On Drag in React using TanStack Ranger."
+  },
+  {
+    "title": "React TanStack Ranger Custom Steps Example | TanStack Ranger Docs",
+    "category": "TanStack Ranger",
+    "path": "/ranger/latest/docs/framework/react/examples/custom-steps",
+    "site": "tanstack_ranger",
+    "headings": [],
+    "preview": "An example showing how to implement Custom Steps in React using TanStack Ranger."
+  },
+  {
+    "title": "React TanStack Ranger Logarithmic Interpolator Example | TanStack Ranger Docs",
+    "category": "TanStack Ranger",
+    "path": "/ranger/latest/docs/framework/react/examples/logarithmic-interpolator",
+    "site": "tanstack_ranger",
+    "headings": [],
+    "preview": "An example showing how to implement Logarithmic Interpolator in React using TanStack Ranger."
+  },
+  {
+    "title": "Content temporarily unavailable | TanStack Ranger React Docs",
+    "category": "TanStack Ranger",
+    "path": "/ranger/latest/docs/framework/react/api/custom-styles",
+    "site": "tanstack_ranger",
+    "headings": [],
+    "preview": "Want to skip to the implementation? Check out these examples: custom-styles The API below described how to use the custom-steps features. Segments to be rendered. Each segment has the following props:..."
+  },
+  {
+    "title": "Content temporarily unavailable | TanStack Ranger React Docs",
+    "category": "TanStack Ranger",
+    "path": "/ranger/latest/docs/framework/react/api/update-on-drag",
+    "site": "tanstack_ranger",
+    "headings": [],
+    "preview": "Want to skip to the implementation? Check out these examples: update-on-drag The API below described how to use the update-on-drag features. A function that is called when a handled is dragged"
+  },
+  {
+    "title": "Content temporarily unavailable | TanStack Ranger React Docs",
+    "category": "TanStack Ranger",
+    "path": "/ranger/latest/docs/framework/react/api/custom-steps",
+    "site": "tanstack_ranger",
+    "headings": [],
+    "preview": "Want to skip to the implementation? Check out these examples: custom-steps The API below described how to use the custom-steps features. An array of custom steps to use. This will override stepSize An..."
+  },
+  {
+    "title": "Content temporarily unavailable | TanStack Ranger React Docs",
+    "category": "TanStack Ranger",
+    "path": "/ranger/latest/docs/framework/react/api/logarithmic-interpolator",
+    "site": "tanstack_ranger",
+    "headings": [],
+    "preview": "Want to skip to the implementation? Check out these examples: logarithmic-interpolator The API below described how to use the logarithmic-interpolator features. By default, react-ranger uses linear..."
+  }
+]

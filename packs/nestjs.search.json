@@ -1,0 +1,226 @@
+[
+  {
+    "title": "Controllers",
+    "category": "NestJS Documentation",
+    "path": "/controllers",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "Controllers are responsible for handling incoming requests and sending responses back to the client."
+  },
+  {
+    "title": "First steps",
+    "category": "NestJS Documentation",
+    "path": "/first-steps",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "This set of articles covers the core fundamentals of Nest. To introduce the essential building blocks of a Nest application, we'll build a basic CRUD application whose features cov"
+  },
+  {
+    "title": "Documentation",
+    "category": "NestJS Documentation",
+    "path": "/",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "Under the hood, Nest uses robust HTTP server frameworks such as Express (the default), and can optionally be configured to use Fastify instead."
+  },
+  {
+    "title": "Middleware",
+    "category": "NestJS Documentation",
+    "path": "/middleware",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "By default, Nest middleware is equivalent to Express middleware. The official Express documentation describes the capabilities of middleware as follows:"
+  },
+  {
+    "title": "Providers",
+    "category": "NestJS Documentation",
+    "path": "/providers",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "Let's start by creating a CatsService . This service handles data storage and retrieval for the CatsController . Because it encapsulates application logic, it's a natural candidate"
+  },
+  {
+    "title": "Modules",
+    "category": "NestJS Documentation",
+    "path": "/modules",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "A module is a class annotated with the @Module() decorator. The decorator provides metadata that Nest uses to organize and manage the application structure."
+  },
+  {
+    "title": "Custom decorators",
+    "category": "NestJS Documentation",
+    "path": "/custom-decorators",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "Nest provides a set of param decorators that you can use in HTTP route handlers. The following table lists them along with the plain Express (or Fastify) objects they represent:"
+  },
+  {
+    "title": "Exception filters",
+    "category": "NestJS Documentation",
+    "path": "/exception-filters",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "Nest comes with a built-in exceptions layer that processes all unhandled exceptions across an application. When your application code does not handle an exception, this layer catch"
+  },
+  {
+    "title": "Pipes",
+    "category": "NestJS Documentation",
+    "path": "/pipes",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "A pipe is a class annotated with the @Injectable() decorator that implements the PipeTransform interface."
+  },
+  {
+    "title": "Interceptors",
+    "category": "NestJS Documentation",
+    "path": "/interceptors",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "An interceptor is a class annotated with the @Injectable() decorator that implements the NestInterceptor interface."
+  },
+  {
+    "title": "Custom providers",
+    "category": "NestJS Documentation",
+    "path": "/fundamentals/custom-providers",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "First, we define a provider. The @Injectable() decorator marks the CatsService class as a provider."
+  },
+  {
+    "title": "Guards",
+    "category": "NestJS Documentation",
+    "path": "/guards",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "A guard is a class annotated with the @Injectable() decorator that implements the CanActivate interface."
+  },
+  {
+    "title": "Lifecycle events",
+    "category": "NestJS Documentation",
+    "path": "/fundamentals/lifecycle-events",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "A Nest application, as well as every application element, has a lifecycle managed by Nest. Nest provides lifecycle hooks that give you visibility into key lifecycle events and let "
+  },
+  {
+    "title": "Databases",
+    "category": "NestJS Documentation",
+    "path": "/techniques/database",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "Most applications work at a higher level of abstraction, with an ORM or a query builder. The chapters in this category cover the following integrations:"
+  },
+  {
+    "title": "Async providers",
+    "category": "NestJS Documentation",
+    "path": "/fundamentals/async-providers",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "Sometimes the application start should be delayed until one or more asynchronous tasks complete. For example, you may not want to start accepting requests until the connection to t"
+  },
+  {
+    "title": "Dynamic modules",
+    "category": "NestJS Documentation",
+    "path": "/fundamentals/dynamic-modules",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "The Modules chapter covers the basics of Nest modules and includes a brief introduction to dynamic modules . This chapter expands on the subject: what dynamic modules are, how to b"
+  },
+  {
+    "title": "Testing",
+    "category": "NestJS Documentation",
+    "path": "/fundamentals/testing",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "You can use any testing framework you like, because Nest doesn't force any specific tooling. Replace the elements you need (such as the test runner), and you still benefit from Nes"
+  },
+  {
+    "title": "Injection scopes",
+    "category": "NestJS Documentation",
+    "path": "/fundamentals/injection-scopes",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "However, there are edge cases where a request-based lifetime is the desired behavior, e.g., per-request caching in GraphQL applications, request tracking, and multi-tenancy. Inject"
+  },
+  {
+    "title": "Caching",
+    "category": "NestJS Documentation",
+    "path": "/techniques/caching",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "To get started with caching in Nest, install the @nestjs/cache-manager package along with the cache-manager package:"
+  },
+  {
+    "title": "Validation",
+    "category": "NestJS Documentation",
+    "path": "/techniques/validation",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "Validate every piece of data a web application receives before acting on it. Nest provides several pipes that validate incoming requests automatically:"
+  },
+  {
+    "title": "Configuration",
+    "category": "NestJS Documentation",
+    "path": "/techniques/configuration",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "In Node.js applications, it's common to represent each environment with a .env file that holds key-value pairs. Running an app in a different environment is then a matter of swappi"
+  },
+  {
+    "title": "Authorization",
+    "category": "NestJS Documentation",
+    "path": "/security/authorization",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "In this tutorial, you'll add permissions to the API of an online store for cat food and supplies:"
+  },
+  {
+    "title": "Authentication",
+    "category": "NestJS Documentation",
+    "path": "/security/authentication",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "In this tutorial, you'll add sign-in to the API of an online store for cat food and supplies. By the end, it will:"
+  },
+  {
+    "title": "GraphQL + TypeScript",
+    "category": "NestJS Documentation",
+    "path": "/graphql/quick-start",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "You can also build your own driver (see Creating a custom driver )."
+  },
+  {
+    "title": "Overview",
+    "category": "NestJS Documentation",
+    "path": "/cli/overview",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "Install the CLI globally using the npm install -g command (see the Note above for details about global installs)."
+  },
+  {
+    "title": "Gateways",
+    "category": "NestJS Documentation",
+    "path": "/websockets/gateways",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "To start building WebSockets-based applications, first install the required package:"
+  },
+  {
+    "title": "OpenAPI (Swagger)",
+    "category": "NestJS Documentation",
+    "path": "/openapi/introduction",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "To begin, install the required dependency:"
+  },
+  {
+    "title": "Microservices",
+    "category": "NestJS Documentation",
+    "path": "/microservices/basics",
+    "site": "nestjs",
+    "headings": [],
+    "preview": "In Nest, a microservice is fundamentally an application that uses a different transport layer than HTTP."
+  }
+]

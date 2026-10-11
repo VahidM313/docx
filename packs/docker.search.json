@@ -1,0 +1,234 @@
+[
+  {
+    "title": "Get started with Docker",
+    "category": "Docker Documentation",
+    "path": "/get-started/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Get Docker",
+    "category": "Docker Documentation",
+    "path": "/get-started/get-docker/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Guides",
+    "category": "Docker Documentation",
+    "path": "/guides/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "What is Docker?",
+    "category": "Docker Documentation",
+    "path": "/get-started/docker-overview/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Build and share a containerized application",
+    "category": "Docker Documentation",
+    "path": "/get-started/workshop/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Build and share a containerized application",
+    "category": "Docker Documentation",
+    "path": "/get-started/introduction/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Compose file reference",
+    "category": "Docker Documentation",
+    "path": "/reference/compose-file/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Reference documentation",
+    "category": "Docker Documentation",
+    "path": "/reference/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Docker Engine",
+    "category": "Docker Documentation",
+    "path": "/engine/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "docker",
+    "category": "Docker Documentation",
+    "path": "/reference/cli/docker/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Manuals",
+    "category": "Docker Documentation",
+    "path": "/manuals/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Dockerfile reference",
+    "category": "Docker Documentation",
+    "path": "/reference/dockerfile/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Docker Compose",
+    "category": "Docker Documentation",
+    "path": "/compose/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Docker Build",
+    "category": "Docker Documentation",
+    "path": "/build/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Install Docker Engine",
+    "category": "Docker Documentation",
+    "path": "/engine/install/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Docker Desktop",
+    "category": "Docker Documentation",
+    "path": "/desktop/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "What is a container?",
+    "category": "Docker Documentation",
+    "path": "/get-started/docker-concepts/the-basics/what-is-a-container/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Run your coding agent in a sandbox",
+    "category": "Docker Documentation",
+    "path": "/get-started/tutorials/run-an-agent/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Roll out Docker to a pilot group",
+    "category": "Docker Documentation",
+    "path": "/get-started/tutorials/admin-set-up/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "What is an image?",
+    "category": "Docker Documentation",
+    "path": "/get-started/docker-concepts/the-basics/what-is-an-image/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Build and share a containerized application",
+    "category": "Docker Documentation",
+    "path": "/get-started/tutorials/run-an-app/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "What is a registry?",
+    "category": "Docker Documentation",
+    "path": "/get-started/docker-concepts/the-basics/what-is-a-registry/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Writing a Dockerfile",
+    "category": "Docker Documentation",
+    "path": "/get-started/docker-concepts/building-images/writing-a-dockerfile/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "What is Docker Compose?",
+    "category": "Docker Documentation",
+    "path": "/get-started/docker-concepts/the-basics/what-is-docker-compose/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Understanding the image layers",
+    "category": "Docker Documentation",
+    "path": "/get-started/docker-concepts/building-images/understanding-image-layers/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Build, tag, and publish an image",
+    "category": "Docker Documentation",
+    "path": "/get-started/docker-concepts/building-images/build-tag-and-publish-an-image/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Building images",
+    "category": "Docker Documentation",
+    "path": "/get-started/docker-concepts/building-images/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Using the build cache",
+    "category": "Docker Documentation",
+    "path": "/get-started/docker-concepts/building-images/using-the-build-cache/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  },
+  {
+    "title": "Get started with Docker",
+    "category": "Docker Documentation",
+    "path": "/",
+    "site": "docker",
+    "headings": [],
+    "preview": "Start typing to search the documentation"
+  }
+]

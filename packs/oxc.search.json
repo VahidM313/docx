@@ -1,0 +1,962 @@
+[
+  {
+    "title": "Getting Started | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/introduction.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Setup CI and other integrations | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/ci.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "Run Oxlint in CI or as a git hook."
+  },
+  {
+    "title": "Oxfmt | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/formatter.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "TypeScript Runner | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/oxc-node.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "Run TypeScript and JSX directly in Node.js with Oxc."
+  },
+  {
+    "title": "Nested configuration files | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/nested-config.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "Use multiple configuration files to apply different Oxlint settings to different parts of a repository."
+  },
+  {
+    "title": "Minifier | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/minifier.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Setup editors | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/editors.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "Configure Oxlint in VS Code, Zed, JetBrains, and other editors."
+  },
+  {
+    "title": "Parser | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/parser.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Resolver | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/resolver.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Transformer | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/transformer.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "What is Oxc? | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/what-is-oxc.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "The fastest toolchain for JavaScript and TypeScript."
+  },
+  {
+    "title": "Coding agents | Oxlint and Oxfmt | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/coding-agents.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "Configure coding agents to use Oxlint and Oxfmt."
+  },
+  {
+    "title": "Introduction | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/learn/parser_in_rust/intro.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Quickstart | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/quickstart.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "Install Oxlint and learn the common workflows."
+  },
+  {
+    "title": "Introduction | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/contribute/introduction.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Configuration | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/config.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "Configure Oxlint using .oxlintrc.json or oxlint.config.ts."
+  },
+  {
+    "title": "JS Plugins | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/js-plugins.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Output formats | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/output-formats.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "Output linting results in various formats for CI or human consumption"
+  },
+  {
+    "title": "Ignore files | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/ignore-files.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "Control which files Oxlint lints."
+  },
+  {
+    "title": "Inline ignore comments | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/ignore-comments.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "Disable specific rules inline using Oxlint ignore comments"
+  },
+  {
+    "title": "LSP Options | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/lsp-config-reference.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Automatic fixes | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/automatic-fixes.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "Apply safe, suggested, and dangerous fixes with Oxlint."
+  },
+  {
+    "title": "Multi-file analysis | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/multi-file-analysis.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "Project-wide linting for import cycles and cross-file issues"
+  },
+  {
+    "title": "Built-in Plugins | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/plugins.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "Enable built in plugin rule sets and extend Oxlint with ESLint compatible JavaScript plugins."
+  },
+  {
+    "title": "Type-Aware Linting | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/type-aware.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "Linting with type information."
+  },
+  {
+    "title": "Config file reference | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/config-file-reference.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Writing JS Plugins | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/writing-js-plugins.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Command-line Interface | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/cli.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Rules | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Migrate from ESLint | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/migrate-from-eslint.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Versioning policy | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/versioning.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Quickstart | Oxfmt | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/formatter/quickstart.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "Install Oxfmt and learn the common workflows."
+  },
+  {
+    "title": "Syntax Lowering | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/transformer/lowering.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Ignore files | Oxfmt | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/formatter/ignore-files.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Language support | Oxfmt | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/formatter/language-support.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Setup CI and other integrations | Oxfmt | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/formatter/ci.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "Run Oxfmt in CI or as a git hook."
+  },
+  {
+    "title": "Command-line Interface | Oxfmt | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/formatter/cli.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Configuration file reference | Oxfmt | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/formatter/config-file-reference.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Configuration | Oxfmt | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/formatter/config.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "Configure Oxfmt using a .oxfmtrc.json file."
+  },
+  {
+    "title": "Setup editors | Oxfmt | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/formatter/editors.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "Configure Oxfmt in VS Code, Zed, JetBrains, and other editors."
+  },
+  {
+    "title": "Unsupported features | Oxfmt | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/formatter/unsupported-features.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Inline ignore comments | Oxfmt | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/formatter/ignore-comments.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Sorting | Oxfmt | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/formatter/sorting.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Migrate from Prettier | Oxfmt | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/formatter/migrate-from-prettier.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Embedded Formatting | Oxfmt | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/formatter/embedded-formatting.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "TypeScript | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/transformer/typescript.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "JSX | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/transformer/jsx.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "React Compiler | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/transformer/react-compiler.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Global Variable Replacement | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/transformer/global-variable-replacement.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Projects using Oxc | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/projects.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Dead Code Elimination | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/minifier/dead-code-elimination.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "FAQ | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/minifier/faq.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Syntax Normalization | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/minifier/syntax-normalization.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Isolated Declarations Emit | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/transformer/isolated-declarations.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "On Media | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/media.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Mangling | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/minifier/mangling.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Code Generation | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/minifier/codegen.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "import/no-cycle | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/import/no-cycle.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "All Benchmarks | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/benchmarks.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Built-in Plugins | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/transformer/plugins.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Troubleshooting | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/troubleshooting.html",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "Rules | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "eslint/accessor-pairs | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/eslint/accessor-pairs",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "jsx-a11y/anchor-ambiguous-text | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/jsx_a11y/anchor-ambiguous-text",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "jsx-a11y/aria-proptypes | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/jsx_a11y/aria-proptypes",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "jsx-a11y/aria-role | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/jsx_a11y/aria-role",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "jsx-a11y/anchor-is-valid | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/jsx_a11y/anchor-is-valid",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "oxc/approx-constant | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/oxc/approx-constant",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "jsx-a11y/alt-text | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/jsx_a11y/alt-text",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "typescript/adjacent-overload-signatures | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/typescript/adjacent-overload-signatures",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "jsx-a11y/aria-unsupported-elements | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/jsx_a11y/aria-unsupported-elements",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "jsx-a11y/aria-activedescendant-has-tabindex | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/jsx_a11y/aria-activedescendant-has-tabindex",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "eslint/array-callback-return | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/eslint/array-callback-return",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "eslint/arrow-body-style | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/eslint/arrow-body-style",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "typescript/array-type | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/typescript/array-type",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "promise/always-return | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/promise/always-return",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "jsx-a11y/anchor-has-content | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/jsx_a11y/anchor-has-content",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "jsx-a11y/aria-props | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/jsx_a11y/aria-props",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "promise/avoid-new | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/promise/avoid-new",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "oxc/bad-bitwise-operator | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/oxc/bad-bitwise-operator",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "oxc/bad-comparison-sequence | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/oxc/bad-comparison-sequence",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "oxc/bad-char-at-comparison | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/oxc/bad-char-at-comparison",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "oxc/bad-array-method-on-arguments | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/oxc/bad-array-method-on-arguments",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "oxc/bad-object-literal-comparison | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/oxc/bad-object-literal-comparison",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "eslint/block-scoped-var | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/eslint/block-scoped-var",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "typescript/ban-tslint-comment | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/typescript/ban-tslint-comment",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "typescript/await-thenable | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/typescript/await-thenable",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "typescript/ban-types | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/typescript/ban-types",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "oxc/branches-sharing-code | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/oxc/branches-sharing-code",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "oxc/bad-replace-all-arg | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/oxc/bad-replace-all-arg",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "typescript/ban-ts-comment | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/typescript/ban-ts-comment",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "oxc/bad-min-max-func | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/oxc/bad-min-max-func",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "jsx-a11y/autocomplete-valid | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/jsx_a11y/autocomplete-valid",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "oxc/bad-match-all-arg | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/oxc/bad-match-all-arg",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "typescript/class-literal-property-style | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/typescript/class-literal-property-style",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "unicorn/catch-error-name | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/unicorn/catch-error-name",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "eslint/capitalized-comments | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/eslint/capitalized-comments",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "react/button-has-type | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/react/button-has-type",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "jsdoc/check-tag-names | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/jsdoc/check-tag-names",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "react/checked-requires-onchange-or-readonly | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/react/checked-requires-onchange-or-readonly",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "node/callback-return | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/node/callback-return",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "promise/catch-or-return | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/promise/catch-or-return",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "jsdoc/check-property-names | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/jsdoc/check-property-names",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "react/capitalized-calls | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/react/capitalized-calls",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "jsx-a11y/click-events-have-key-events | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/jsx_a11y/click-events-have-key-events",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "jsdoc/check-access | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/jsdoc/check-access",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "eslint/class-methods-use-this | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/eslint/class-methods-use-this",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "unicorn/consistent-empty-array-spread | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/unicorn/consistent-empty-array-spread",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "vitest/consistent-each-for | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/vitest/consistent-each-for",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "eslint/complexity | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/eslint/complexity",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "unicorn/consistent-assert | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/unicorn/consistent-assert",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "unicorn/consistent-date-clone | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/unicorn/consistent-date-clone",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "vue/component-definition-name-casing | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/vue/component-definition-name-casing",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "unicorn/consistent-function-scoping | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/unicorn/consistent-function-scoping",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "unicorn/consistent-existence-index-check | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/unicorn/consistent-existence-index-check",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "typescript/consistent-generic-constructors | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/typescript/consistent-generic-constructors",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "typescript/consistent-return | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/typescript/consistent-return",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "typescript/consistent-indexed-object-style | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/typescript/consistent-indexed-object-style",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  },
+  {
+    "title": "unicorn/consistent-template-literal-escape | Oxlint | The JavaScript Oxidation Compiler",
+    "category": "Oxc (Oxidation Compiler)",
+    "path": "/docs/guide/usage/linter/rules/unicorn/consistent-template-literal-escape",
+    "site": "oxc",
+    "headings": [],
+    "preview": "A collection of high-performance JavaScript tools written in Rust"
+  }
+]

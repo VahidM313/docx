@@ -1,0 +1,1114 @@
+[
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/more/getting_started/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/more/getting_started/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/more/index.htm",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/more/index.htm"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/libraries.htm",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/libraries.htm"
+  },
+  {
+    "title": "Boost",
+    "category": "DOC",
+    "path": "/doc/libs/latest/tools/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/tools/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/more/writingdoc/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/more/writingdoc/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/more/getting_started/unix-variants.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/more/getting_started/unix-variants.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/more/getting_started/windows.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/more/getting_started/windows.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/boost_asio.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/boost_asio.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/any.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/any.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/accumulators.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/accumulators.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/beast/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/beast/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/atomic/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/atomic/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/algorithm/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/algorithm/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/align.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/align.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/bimap/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/bimap/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/assert/doc/html/assert.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/assert/doc/html/assert.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/array/doc/html/array.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/array/doc/html/array.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/assign/doc/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/assign/doc/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/config/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/config/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/circular_buffer.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/circular_buffer.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/compute/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/compute/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/context/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/context/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/utility/doc/html/utility/utilities/compressed_pair.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/utility/doc/html/utility/utilities/compressed_pair.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/container.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/container.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/callable_traits/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/callable_traits/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/utility/doc/html/utility/utilities/call_traits.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/utility/doc/html/utility/utilities/call_traits.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/concept_check/concept_check.htm",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/concept_check/concept_check.htm"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/chrono.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/chrono.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/bind/doc/html/bind.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/bind/doc/html/bind.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/container_hash/doc/html/hash.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/container_hash/doc/html/hash.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/compat/doc/html/compat.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/compat/doc/html/compat.html"
+  },
+  {
+    "title": "Boost",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/charconv/doc/html/charconv.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/charconv/doc/html/charconv.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/bloom/doc/html/bloom.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/bloom/doc/html/bloom.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/cobalt/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/cobalt/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/core/doc/html/core/enable_if.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/core/doc/html/core/enable_if.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/coroutine2/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/coroutine2/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/core/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/core/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/boost_dll.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/boost_dll.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/conversion.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/conversion.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/crc.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/crc.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/coroutine/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/coroutine/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/convert/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/convert/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/date_time.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/date_time.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/contract/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/contract/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/fiber/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/fiber/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/dynamic_bitset/doc/html/dynamic_bitset/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/dynamic_bitset/doc/html/dynamic_bitset/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/decimal/doc/html/overview.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/decimal/doc/html/overview.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/endian/doc/html/endian.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/endian/doc/html/endian.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/exception/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/exception/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/describe/doc/html/describe.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/describe/doc/html/describe.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/fusion/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/fusion/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/format/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/format/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/functional/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/functional/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/geometry/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/geometry/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/flyweight/doc/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/flyweight/doc/index.html"
+  },
+  {
+    "title": "Filesystem Home",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/filesystem/doc/index.htm",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/filesystem/doc/index.htm"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/foreach.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/foreach.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/function_types/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/function_types/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/function.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/function.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/functional/overloaded_function/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/functional/overloaded_function/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/functional/factory/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/functional/factory/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/functional/forward/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/functional/forward/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/graph/doc/html/graph/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/graph/doc/html/graph/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/graph_parallel/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/graph_parallel/doc/html/index.html"
+  },
+  {
+    "title": "index.html",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/gil/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/gil/doc/html/index.html"
+  },
+  {
+    "title": "Description",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/hana/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/hana/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/io/doc/html/io.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/io/doc/html/io.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/numeric/interval/doc/interval.htm",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/numeric/interval/doc/interval.htm"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/intrusive.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/intrusive.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/interprocess.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/interprocess.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/icl/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/icl/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/integer/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/integer/doc/html/index.html"
+  },
+  {
+    "title": "Boost.Iostreams",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/iostreams/doc/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/iostreams/doc/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/heap.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/heap.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/hof/doc/html/doc/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/hof/doc/html/doc/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/histogram/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/histogram/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/iterator/doc/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/iterator/doc/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/utility/doc/html/utility/utilities/in_place_factory.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/utility/doc/html/utility/utilities/in_place_factory.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/utility/identity_type/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/utility/identity_type/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/lambda.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/lambda.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/hash2/doc/html/hash2.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/hash2/doc/html/hash2.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/json/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/json/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/algorithm/minmax/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/algorithm/minmax/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/math/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/math/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/lockfree.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/lockfree.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/leaf/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/leaf/doc/html/index.html"
+  },
+  {
+    "title": "What is Boost.Locale?",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/locale/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/locale/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/mpi.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/mpi.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/antora/msm/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/antora/msm/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/lambda2/doc/html/lambda2.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/lambda2/doc/html/lambda2.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/metaparse.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/metaparse.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/boost_lexical_cast.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/boost_lexical_cast.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/bind/doc/html/mem_fn.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/bind/doc/html/mem_fn.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/move.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/move.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/local_function/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/local_function/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/log/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/log/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/mp11/doc/html/mp11.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/mp11/doc/html/mp11.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/mpl/doc/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/mpl/doc/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/mysql/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/mysql/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/multi_index/doc/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/multi_index/doc/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/numeric/conversion/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/numeric/conversion/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/mqtt5/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/mqtt5/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/optional/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/optional/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/boost_pfr.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/boost_pfr.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/numeric/odeint/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/numeric/odeint/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/multi_array/doc/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/multi_array/doc/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/nowide/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/nowide/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/outcome/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/outcome/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/parser.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/parser.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/multiprecision/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/multiprecision/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/parameter/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/parameter/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/utility/doc/html/utility/utilities/operators.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/utility/doc/html/utility/utilities/operators.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/parameter_python/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/parameter_python/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/openmethod/doc/html/openmethod/motivation.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/openmethod/doc/html/openmethod/motivation.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/property_map_parallel/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/property_map_parallel/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/program_options.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/program_options.html"
+  },
+  {
+    "title": "Boost.Preprocessor",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/preprocessor/doc/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/preprocessor/doc/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/ptr_container/doc/ptr_container.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/ptr_container/doc/ptr_container.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/property_map/doc/property_map.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/property_map/doc/property_map.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/pool/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/pool/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/polygon/doc/index.htm",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/polygon/doc/index.htm"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/poly_collection.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/poly_collection.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/phoenix/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/phoenix/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/predef/doc/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/predef/doc/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/process/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/process/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/property_tree.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/property_tree.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/boost_random.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/boost_random.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/range/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/range/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/proto.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/proto.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/qvm/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/qvm/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/python/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/python/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/rational/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/rational/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/doc/html/ratio.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/doc/html/ratio.html"
+  },
+  {
+    "title": "Boost",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/redis/doc/html/redis/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/redis/doc/html/redis/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/core/doc/html/core/ref.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/core/doc/html/core/ref.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "DOC",
+    "path": "/doc/libs/latest/libs/regex/doc/html/index.html",
+    "site": "boost",
+    "headings": [],
+    "preview": "/doc/libs/latest/libs/regex/doc/html/index.html"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "Boost C++ Libraries",
+    "path": "/docs",
+    "site": "boost",
+    "headings": [],
+    "preview": "/docs"
+  },
+  {
+    "title": "Boost C++ Libraries",
+    "category": "Boost C++ Libraries",
+    "path": "/",
+    "site": "boost",
+    "headings": [],
+    "preview": "/"
+  }
+]

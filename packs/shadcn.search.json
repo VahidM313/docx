@@ -1,0 +1,3042 @@
+[
+  {
+    "title": "The Foundation for your Design System",
+    "category": "shadcn/ui",
+    "path": "/",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Composable, accessible components with thoughtful defaults. Build your own component library with code you can customize, extend, and make your own."
+  },
+  {
+    "title": "Introduction",
+    "category": "shadcn/ui",
+    "path": "/docs",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "shadcn/ui is a set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks and AI models. Open Source. Open Code."
+  },
+  {
+    "title": "Building Blocks for the Web",
+    "category": "shadcn/ui",
+    "path": "/blocks",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Clean, modern building blocks. Copy and paste into your apps. Works with all React frameworks. Open Source. Free forever."
+  },
+  {
+    "title": "Tailwind Colors in Every Format",
+    "category": "shadcn/ui",
+    "path": "/colors",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "The complete Tailwind color palette in HEX, RGB, HSL, CSS variables, and classes. Ready to copy and paste into your project."
+  },
+  {
+    "title": "shadcn",
+    "category": "shadcn/ui",
+    "path": "/docs/cli",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Use the shadcn CLI to add components to your project."
+  },
+  {
+    "title": "components.json",
+    "category": "shadcn/ui",
+    "path": "/docs/components-json",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Configuration for your project."
+  },
+  {
+    "title": "Registry Directory",
+    "category": "shadcn/ui",
+    "path": "/docs/directory",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Discover community registries for shadcn/ui components and blocks."
+  },
+  {
+    "title": "Figma",
+    "category": "shadcn/ui",
+    "path": "/docs/figma",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Every component recreated in Figma. With customizable props, typography and icons."
+  },
+  {
+    "title": "JavaScript",
+    "category": "shadcn/ui",
+    "path": "/docs/javascript",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "How to use shadcn/ui with JavaScript"
+  },
+  {
+    "title": "Legacy Docs",
+    "category": "shadcn/ui",
+    "path": "/docs/legacy",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "View the legacy docs for shadcn/ui and Tailwind v3."
+  },
+  {
+    "title": "MCP Server",
+    "category": "shadcn/ui",
+    "path": "/docs/mcp",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Use the shadcn MCP server to browse, search, and install components from registries."
+  },
+  {
+    "title": "Monorepo",
+    "category": "shadcn/ui",
+    "path": "/docs/monorepo",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Using shadcn/ui components and CLI in a monorepo."
+  },
+  {
+    "title": "Your project is ready!",
+    "category": "shadcn/ui",
+    "path": "/docs/new",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "You&#x27;ve created a new project with shadcn/ui."
+  },
+  {
+    "title": "Official shadcn/ui Website",
+    "category": "shadcn/ui",
+    "path": "/docs/official",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "The official website for shadcn/ui is ui.shadcn.com. Verify the documentation, source code, CLI, packages, and social accounts maintained by the project."
+  },
+  {
+    "title": "Package Imports",
+    "category": "shadcn/ui",
+    "path": "/docs/package-imports",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Configure shadcn/ui with package.json imports."
+  },
+  {
+    "title": "Next.js 15 + React 19",
+    "category": "shadcn/ui",
+    "path": "/docs/react-19",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Using shadcn/ui with Next.js 15 and React 19."
+  },
+  {
+    "title": "Skills",
+    "category": "shadcn/ui",
+    "path": "/docs/skills",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Give your AI assistant deep knowledge of shadcn/ui components, patterns, and best practices."
+  },
+  {
+    "title": "Tailwind v4",
+    "category": "shadcn/ui",
+    "path": "/docs/tailwind-v4",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "How to use shadcn/ui with Tailwind v4 and React 19."
+  },
+  {
+    "title": "Theming",
+    "category": "shadcn/ui",
+    "path": "/docs/theming",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Using CSS variables and theme tokens."
+  },
+  {
+    "title": "Typeset",
+    "category": "shadcn/ui",
+    "path": "/docs/typeset",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A styling system for HTML and rendered markdown, from blog posts to streaming chat. One CSS file you own."
+  },
+  {
+    "title": "Blocks",
+    "category": "shadcn/ui",
+    "path": "/docs/_blocks",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Contribute components to the blocks library."
+  },
+  {
+    "title": "Open in v0",
+    "category": "shadcn/ui",
+    "path": "/docs/_v0",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Open components in v0 for customization."
+  },
+  {
+    "title": "June 2023",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2023-06-new-cli",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Complete CLI rewrite with new styles, theming options, and more."
+  },
+  {
+    "title": "July 2023",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2023-07-javascript",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "JavaScript version of components available via the CLI."
+  },
+  {
+    "title": "December 2023",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2023-12-new-components",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Carousel, Drawer, Pagination, Resizable, Sonner, and CLI updates."
+  },
+  {
+    "title": "March 2024",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2024-03-blocks",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Ready-made components for dashboards and authentication pages."
+  },
+  {
+    "title": "March 2024",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2024-03-breadcrumb-otp",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "New Breadcrumb and Input OTP components."
+  },
+  {
+    "title": "April 2024",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2024-04-lift-mode",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A new mode for Blocks to lift smaller components for copy and paste."
+  },
+  {
+    "title": "August 2024",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2024-08-npx-shadcn-init",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Complete CLI rewrite with support for all major React frameworks."
+  },
+  {
+    "title": "October 2024",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2024-10-react-19",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "shadcn/ui is now compatible with React 19 and Next.js 15."
+  },
+  {
+    "title": "October 2024",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2024-10-sidebar",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "25 components to help you build all kinds of sidebars."
+  },
+  {
+    "title": "November 2024",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2024-11-icons",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "The new-york style now uses Lucide as the default icon set."
+  },
+  {
+    "title": "December 2024",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2024-12-monorepo",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "New monorepo support in the CLI."
+  },
+  {
+    "title": "January 2025",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2025-01-blocks",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Inviting the community to contribute to the blocks library."
+  },
+  {
+    "title": "February 2025",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2025-02-registry-schema",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Updated registry schema to support more features."
+  },
+  {
+    "title": "February 2025",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2025-02-tailwind-v4",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "First preview of Tailwind v4 and React 19 support."
+  },
+  {
+    "title": "April 2025",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2025-04-cross-framework",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "The shadcn CLI can now auto-detect your framework and adapt routes for you."
+  },
+  {
+    "title": "April 2025",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2025-04-mcp",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Zero-config MCP support for shadcn/ui registry."
+  },
+  {
+    "title": "April 2025",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2025-04-shadcn-2-5",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Resolve anywhere - registries can now place files anywhere in an app."
+  },
+  {
+    "title": "May 2025",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2025-05-new-site",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Upgraded ui.shadcn.com to Next.js 15.3 and Tailwind v4."
+  },
+  {
+    "title": "June 2025",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2025-06-calendar",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Upgraded Calendar component with React DayPicker and 30+ calendar blocks."
+  },
+  {
+    "title": "June 2025",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2025-06-radix-ui",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A new command to migrate to the new radix-ui package."
+  },
+  {
+    "title": "July 2025",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2025-07-local-file-support",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Initialize projects and add components from local JSON files."
+  },
+  {
+    "title": "July 2025",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2025-07-universal-registry",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Create registry items that can be distributed to any project."
+  },
+  {
+    "title": "August 2025",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2025-08-cli-3-mcp",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Namespaced registries, advanced authentication, new commands and a completely rewritten registry engine."
+  },
+  {
+    "title": "September 2025",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2025-09-registry-index",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An index of open source registries that you can install items from."
+  },
+  {
+    "title": "October 2025",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2025-10-new-components",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Spinner, Kbd, Button Group, Input Group, Field, Item, and Empty components."
+  },
+  {
+    "title": "October 2025",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2025-10-registry-directory",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A list of code registries you can browse and pull code and components from."
+  },
+  {
+    "title": "December 2025",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2025-12-shadcn-create",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Customize everything. Pick your component library, icons, base color, theme, fonts and create your own version of shadcn/ui."
+  },
+  {
+    "title": "January 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-01-base-ui",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Full documentation for Base UI components."
+  },
+  {
+    "title": "January 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-01-inline-side-styles",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "We&#x27;ve updated the styles for Base UI components to support inline-start and inline-end side values."
+  },
+  {
+    "title": "January 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-01-rtl",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "The shadcn CLI now supports RTL (right-to-left) layouts by automatically converting physical CSS classes to logical equivalents."
+  },
+  {
+    "title": "February 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-02-blocks",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "All blocks are now available for both Radix and Base UI."
+  },
+  {
+    "title": "February 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-02-radix-ui",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "The new-york style now uses the unified radix-ui package."
+  },
+  {
+    "title": "March 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-03-cli-v4",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "More capable, easier to use. Built for you and your coding agents. Skills, presets, dry run, new templates, monorepo and more."
+  },
+  {
+    "title": "March 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-03-luma",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Rounded geometry. Soft elevation. Breathable layouts. Inspired by macOS Tahoe, minus the glass."
+  },
+  {
+    "title": "April 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-04-component-composition",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Composition sections across component pages—structured trees that help you and your agents build correct UI."
+  },
+  {
+    "title": "April 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-04-partial-preset-apply",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Apply only the theme or fonts from a preset while keeping your existing components."
+  },
+  {
+    "title": "April 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-04-pointer-cursor",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Add cursor pointer behavior for buttons during project setup."
+  },
+  {
+    "title": "April 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-04-preset-commands",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Decode, share, open, and resolve preset codes from the shadcn CLI."
+  },
+  {
+    "title": "April 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-04-sera",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Minimal. Editorial. Typographic. Underline Controls and Uppercase Headings. Shaped by Print Design Principles."
+  },
+  {
+    "title": "April 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-04-shadcn-apply",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Switch presets in existing projects without starting over."
+  },
+  {
+    "title": "May 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-05-package-imports-target-aliases",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Configure shadcn/ui with package.json imports and portable registry target aliases."
+  },
+  {
+    "title": "May 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-05-registry-include",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Organize and validate source registries."
+  },
+  {
+    "title": "May 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-05-rhea",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A more compact Luma. Smaller spacing. Denser surfaces. Built for focused product interfaces."
+  },
+  {
+    "title": "May 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-05-shadcn-eject",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Inline shadcn/tailwind.css and remove the shadcn dependency."
+  },
+  {
+    "title": "June 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-06-chat-components",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "MessageScroller, Message, Bubble, Attachment, and Marker. Components for building chat interfaces."
+  },
+  {
+    "title": "June 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-06-github-registries",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Turn any public GitHub repository into a shadcn registry."
+  },
+  {
+    "title": "July 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-07-base-ui-default",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "New projects now use Base UI by default. Radix is still fully supported."
+  },
+  {
+    "title": "July 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-07-dynamic-search",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Registries can now handle search server-side."
+  },
+  {
+    "title": "July 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-07-helpers",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Small, focused helpers for developing apps, starting with AI SDK and TanStack AI."
+  },
+  {
+    "title": "July 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-07-react-aria",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "React Aria is now available as a component base in shadcn/ui."
+  },
+  {
+    "title": "July 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-07-toast",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A new Toast component built on Base UI primitives."
+  },
+  {
+    "title": "July 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-07-typeset",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A complete typography system for HTML, from blog posts to streaming chat. One CSS file you own."
+  },
+  {
+    "title": "August 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-08-helpers-human-in-the-loop",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Mock paused tool calls, approvals, and continuations for the AI SDK with @shadcn/helpers."
+  },
+  {
+    "title": "August 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-08-private-github-registries",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Install registry items from private GitHub repositories using the GitHub CLI or a token."
+  },
+  {
+    "title": "August 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-08-questionnaire",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A new component for building multi-step question flows with fixed, freeform, multiple, and skippable answers."
+  },
+  {
+    "title": "September 2026",
+    "category": "shadcn/ui",
+    "path": "/docs/changelog/2026-09-cn",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Components now import cn from the cn package. One dependency instead of two, and no local helper to maintain."
+  },
+  {
+    "title": "Accordion",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/accordion",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A vertically stacked set of interactive headings that each reveal a section of content."
+  },
+  {
+    "title": "Accordion",
+    "category": "shadcn/ui",
+    "path": "/docs/components/accordion",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A vertically stacked set of interactive headings that each reveal a section of content."
+  },
+  {
+    "title": "Accordion",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/accordion",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A vertically stacked set of interactive headings that each reveal a section of content."
+  },
+  {
+    "title": "Accordion",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/accordion",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A vertically stacked set of interactive headings that each reveal a section of content."
+  },
+  {
+    "title": "Alert Dialog",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/alert-dialog",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A modal dialog that interrupts the user with important content and expects a response."
+  },
+  {
+    "title": "Alert Dialog",
+    "category": "shadcn/ui",
+    "path": "/docs/components/alert-dialog",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A modal dialog that interrupts the user with important content and expects a response."
+  },
+  {
+    "title": "Alert Dialog",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/alert-dialog",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A modal dialog that interrupts the user with important content and expects a response."
+  },
+  {
+    "title": "Alert Dialog",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/alert-dialog",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A modal dialog that interrupts the user with important content and expects a response."
+  },
+  {
+    "title": "Alert",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/alert",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a callout for user attention."
+  },
+  {
+    "title": "Alert",
+    "category": "shadcn/ui",
+    "path": "/docs/components/alert",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a callout for user attention."
+  },
+  {
+    "title": "Alert",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/alert",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a callout for user attention."
+  },
+  {
+    "title": "Alert",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/alert",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a callout for user attention."
+  },
+  {
+    "title": "Aspect Ratio",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/aspect-ratio",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays content within a desired ratio."
+  },
+  {
+    "title": "Aspect Ratio",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aspect-ratio",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays content within a desired ratio."
+  },
+  {
+    "title": "Aspect Ratio",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/aspect-ratio",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays content within a desired ratio."
+  },
+  {
+    "title": "Aspect Ratio",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/aspect-ratio",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays content within a desired ratio."
+  },
+  {
+    "title": "Attachment",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/attachment",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a file or image attachment with media, metadata, upload state, and actions."
+  },
+  {
+    "title": "Attachment",
+    "category": "shadcn/ui",
+    "path": "/docs/components/attachment",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a file or image attachment with media, metadata, upload state, and actions."
+  },
+  {
+    "title": "Attachment",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/attachment",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a file or image attachment with media, metadata, upload state, and actions."
+  },
+  {
+    "title": "Attachment",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/attachment",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a file or image attachment with media, metadata, upload state, and actions."
+  },
+  {
+    "title": "Avatar",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/avatar",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An image element with a fallback for representing the user."
+  },
+  {
+    "title": "Avatar",
+    "category": "shadcn/ui",
+    "path": "/docs/components/avatar",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An image element with a fallback for representing the user."
+  },
+  {
+    "title": "Avatar",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/avatar",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An image element with a fallback for representing the user."
+  },
+  {
+    "title": "Avatar",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/avatar",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An image element with a fallback for representing the user."
+  },
+  {
+    "title": "Badge",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/badge",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a badge or a component that looks like a badge."
+  },
+  {
+    "title": "Badge",
+    "category": "shadcn/ui",
+    "path": "/docs/components/badge",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a badge or a component that looks like a badge."
+  },
+  {
+    "title": "Badge",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/badge",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a badge or a component that looks like a badge."
+  },
+  {
+    "title": "Badge",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/badge",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a badge or a component that looks like a badge."
+  },
+  {
+    "title": "Breadcrumb",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/breadcrumb",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays the path to the current resource using a hierarchy of links."
+  },
+  {
+    "title": "Breadcrumb",
+    "category": "shadcn/ui",
+    "path": "/docs/components/breadcrumb",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays the path to the current resource using a hierarchy of links."
+  },
+  {
+    "title": "Breadcrumb",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/breadcrumb",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays the path to the current resource using a hierarchy of links."
+  },
+  {
+    "title": "Breadcrumb",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/breadcrumb",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays the path to the current resource using a hierarchy of links."
+  },
+  {
+    "title": "Bubble",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/bubble",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays conversational content in a message bubble. Supports variants, alignment, grouping, reactions, and collapsible content."
+  },
+  {
+    "title": "Bubble",
+    "category": "shadcn/ui",
+    "path": "/docs/components/bubble",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays conversational content in a message bubble. Supports variants, alignment, grouping, reactions, and collapsible content."
+  },
+  {
+    "title": "Bubble",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/bubble",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays conversational content in a message bubble. Supports variants, alignment, grouping, reactions, and collapsible content."
+  },
+  {
+    "title": "Bubble",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/bubble",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays conversational content in a message bubble. Supports variants, alignment, grouping, reactions, and collapsible content."
+  },
+  {
+    "title": "Button Group",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/button-group",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A container that groups related buttons together with consistent styling."
+  },
+  {
+    "title": "Button Group",
+    "category": "shadcn/ui",
+    "path": "/docs/components/button-group",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A container that groups related buttons together with consistent styling."
+  },
+  {
+    "title": "Button Group",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/button-group",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A container that groups related buttons together with consistent styling."
+  },
+  {
+    "title": "Button Group",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/button-group",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A container that groups related buttons together with consistent styling."
+  },
+  {
+    "title": "Button",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/button",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a button or a component that looks like a button."
+  },
+  {
+    "title": "Button",
+    "category": "shadcn/ui",
+    "path": "/docs/components/button",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a button or a component that looks like a button."
+  },
+  {
+    "title": "Button",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/button",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a button or a component that looks like a button."
+  },
+  {
+    "title": "Button",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/button",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a button or a component that looks like a button."
+  },
+  {
+    "title": "Calendar",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/calendar",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A calendar component that allows users to select a date or a range of dates."
+  },
+  {
+    "title": "Calendar",
+    "category": "shadcn/ui",
+    "path": "/docs/components/calendar",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A calendar component that allows users to select a date or a range of dates."
+  },
+  {
+    "title": "Calendar",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/calendar",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A calendar component that allows users to select a date or a range of dates."
+  },
+  {
+    "title": "Calendar",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/calendar",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A calendar component that allows users to select a date or a range of dates."
+  },
+  {
+    "title": "Card",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/card",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a card with header, content, and footer."
+  },
+  {
+    "title": "Card",
+    "category": "shadcn/ui",
+    "path": "/docs/components/card",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a card with header, content, and footer."
+  },
+  {
+    "title": "Card",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/card",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a card with header, content, and footer."
+  },
+  {
+    "title": "Card",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/card",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a card with header, content, and footer."
+  },
+  {
+    "title": "Carousel",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/carousel",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A carousel with motion and swipe built using Embla."
+  },
+  {
+    "title": "Carousel",
+    "category": "shadcn/ui",
+    "path": "/docs/components/carousel",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A carousel with motion and swipe built using Embla."
+  },
+  {
+    "title": "Carousel",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/carousel",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A carousel with motion and swipe built using Embla."
+  },
+  {
+    "title": "Carousel",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/carousel",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A carousel with motion and swipe built using Embla."
+  },
+  {
+    "title": "Chart",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/chart",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Beautiful charts. Built using Recharts. Copy and paste into your apps."
+  },
+  {
+    "title": "Chart",
+    "category": "shadcn/ui",
+    "path": "/docs/components/chart",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Beautiful charts. Built using Recharts. Copy and paste into your apps."
+  },
+  {
+    "title": "Chart",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/chart",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Beautiful charts. Built using Recharts. Copy and paste into your apps."
+  },
+  {
+    "title": "Chart",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/chart",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Beautiful charts. Built using Recharts. Copy and paste into your apps."
+  },
+  {
+    "title": "Checkbox",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/checkbox",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A control that allows the user to toggle between checked and not checked."
+  },
+  {
+    "title": "Checkbox",
+    "category": "shadcn/ui",
+    "path": "/docs/components/checkbox",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A control that allows the user to toggle between checked and not checked."
+  },
+  {
+    "title": "Checkbox",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/checkbox",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A control that allows the user to toggle between checked and not checked."
+  },
+  {
+    "title": "Checkbox",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/checkbox",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A control that allows the user to toggle between checked and not checked."
+  },
+  {
+    "title": "Collapsible",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/collapsible",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An interactive component which expands/collapses a panel."
+  },
+  {
+    "title": "Collapsible",
+    "category": "shadcn/ui",
+    "path": "/docs/components/collapsible",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An interactive component which expands/collapses a panel."
+  },
+  {
+    "title": "Collapsible",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/collapsible",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An interactive component which expands/collapses a panel."
+  },
+  {
+    "title": "Collapsible",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/collapsible",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An interactive component which expands/collapses a panel."
+  },
+  {
+    "title": "Combobox",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/combobox",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Autocomplete input with a list of suggestions."
+  },
+  {
+    "title": "Combobox",
+    "category": "shadcn/ui",
+    "path": "/docs/components/combobox",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Autocomplete input with a list of suggestions."
+  },
+  {
+    "title": "Combobox",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/combobox",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Autocomplete input with a list of suggestions."
+  },
+  {
+    "title": "Combobox",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/combobox",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Autocomplete input with a list of suggestions."
+  },
+  {
+    "title": "Command",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/command",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Command menu for search and quick actions."
+  },
+  {
+    "title": "Command",
+    "category": "shadcn/ui",
+    "path": "/docs/components/command",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Command menu for search and quick actions."
+  },
+  {
+    "title": "Command",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/command",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Command menu for search and quick actions."
+  },
+  {
+    "title": "Command",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/command",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Command menu for search and quick actions."
+  },
+  {
+    "title": "Context Menu",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/context-menu",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a menu of actions triggered by a right click."
+  },
+  {
+    "title": "Context Menu",
+    "category": "shadcn/ui",
+    "path": "/docs/components/context-menu",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a menu of actions triggered by a right click."
+  },
+  {
+    "title": "Context Menu",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/context-menu",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a menu of actions triggered by a right click."
+  },
+  {
+    "title": "Context Menu",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/context-menu",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a menu of actions triggered by a right click."
+  },
+  {
+    "title": "Data Table",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/data-table",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Powerful table and datagrids built using TanStack Table."
+  },
+  {
+    "title": "Data Table",
+    "category": "shadcn/ui",
+    "path": "/docs/components/data-table",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Powerful table and datagrids built using TanStack Table."
+  },
+  {
+    "title": "Data Table",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/data-table",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Powerful table and datagrids built using TanStack Table."
+  },
+  {
+    "title": "Data Table",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/data-table",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Powerful table and datagrids built using TanStack Table."
+  },
+  {
+    "title": "Date Picker",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/date-picker",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A date picker component with range and presets."
+  },
+  {
+    "title": "Date Picker",
+    "category": "shadcn/ui",
+    "path": "/docs/components/date-picker",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A date picker component with range and presets."
+  },
+  {
+    "title": "Date Picker",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/date-picker",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A date picker component with range and presets."
+  },
+  {
+    "title": "Date Picker",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/date-picker",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A date picker component with range and presets."
+  },
+  {
+    "title": "Dialog",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/dialog",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A window overlaid on either the primary window or another dialog window, rendering the content underneath inert."
+  },
+  {
+    "title": "Dialog",
+    "category": "shadcn/ui",
+    "path": "/docs/components/dialog",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A window overlaid on either the primary window or another dialog window, rendering the content underneath inert."
+  },
+  {
+    "title": "Dialog",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/dialog",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A window overlaid on either the primary window or another dialog window, rendering the content underneath inert."
+  },
+  {
+    "title": "Dialog",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/dialog",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A window overlaid on either the primary window or another dialog window, rendering the content underneath inert."
+  },
+  {
+    "title": "Direction",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/direction",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A provider component that sets the text direction for your application."
+  },
+  {
+    "title": "Direction",
+    "category": "shadcn/ui",
+    "path": "/docs/components/direction",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A provider component that sets the text direction for your application."
+  },
+  {
+    "title": "Direction",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/direction",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A provider component that sets the text direction for your application."
+  },
+  {
+    "title": "Direction",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/direction",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A provider component that sets the text direction for your application."
+  },
+  {
+    "title": "Drawer",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/drawer",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A drawer component for React."
+  },
+  {
+    "title": "Drawer",
+    "category": "shadcn/ui",
+    "path": "/docs/components/drawer",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A drawer component for React."
+  },
+  {
+    "title": "Drawer",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/drawer",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A drawer component for React."
+  },
+  {
+    "title": "Drawer",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/drawer",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A drawer component for React."
+  },
+  {
+    "title": "Dropdown Menu",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/dropdown-menu",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a menu to the user — such as a set of actions or functions — triggered by a button."
+  },
+  {
+    "title": "Dropdown Menu",
+    "category": "shadcn/ui",
+    "path": "/docs/components/dropdown-menu",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a menu to the user — such as a set of actions or functions — triggered by a button."
+  },
+  {
+    "title": "Dropdown Menu",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/dropdown-menu",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a menu to the user — such as a set of actions or functions — triggered by a button."
+  },
+  {
+    "title": "Dropdown Menu",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/dropdown-menu",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a menu to the user — such as a set of actions or functions — triggered by a button."
+  },
+  {
+    "title": "Empty",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/empty",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Use the Empty component to display an empty state."
+  },
+  {
+    "title": "Empty",
+    "category": "shadcn/ui",
+    "path": "/docs/components/empty",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Use the Empty component to display an empty state."
+  },
+  {
+    "title": "Empty",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/empty",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Use the Empty component to display an empty state."
+  },
+  {
+    "title": "Empty",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/empty",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Use the Empty component to display an empty state."
+  },
+  {
+    "title": "Field",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/field",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Combine labels, controls, and help text to compose accessible form fields and grouped inputs."
+  },
+  {
+    "title": "Field",
+    "category": "shadcn/ui",
+    "path": "/docs/components/field",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Combine labels, controls, and help text to compose accessible form fields and grouped inputs."
+  },
+  {
+    "title": "Field",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/field",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Combine labels, controls, and help text to compose accessible form fields and grouped inputs."
+  },
+  {
+    "title": "Field",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/field",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Combine labels, controls, and help text to compose accessible form fields and grouped inputs."
+  },
+  {
+    "title": "Hover Card",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/hover-card",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "For sighted users to preview content available behind a link."
+  },
+  {
+    "title": "Hover Card",
+    "category": "shadcn/ui",
+    "path": "/docs/components/hover-card",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "For sighted users to preview content available behind a link."
+  },
+  {
+    "title": "Hover Card",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/hover-card",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "For sighted users to preview content available behind a link."
+  },
+  {
+    "title": "Hover Card",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/hover-card",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "For sighted users to preview content available behind a link."
+  },
+  {
+    "title": "Input Group",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/input-group",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Add addons, buttons, and helper content to inputs."
+  },
+  {
+    "title": "Input Group",
+    "category": "shadcn/ui",
+    "path": "/docs/components/input-group",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Add addons, buttons, and helper content to inputs."
+  },
+  {
+    "title": "Input Group",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/input-group",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Add addons, buttons, and helper content to inputs."
+  },
+  {
+    "title": "Input Group",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/input-group",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Add addons, buttons, and helper content to inputs."
+  },
+  {
+    "title": "Input OTP",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/input-otp",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Accessible one-time password component with copy-paste functionality."
+  },
+  {
+    "title": "Input OTP",
+    "category": "shadcn/ui",
+    "path": "/docs/components/input-otp",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Accessible one-time password component with copy-paste functionality."
+  },
+  {
+    "title": "Input OTP",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/input-otp",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Accessible one-time password component with copy-paste functionality."
+  },
+  {
+    "title": "Input OTP",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/input-otp",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Accessible one-time password component with copy-paste functionality."
+  },
+  {
+    "title": "Input",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/input",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A text input component for forms and user data entry with built-in styling and accessibility features."
+  },
+  {
+    "title": "Input",
+    "category": "shadcn/ui",
+    "path": "/docs/components/input",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A text input component for forms and user data entry with built-in styling and accessibility features."
+  },
+  {
+    "title": "Input",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/input",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A text input component for forms and user data entry with built-in styling and accessibility features."
+  },
+  {
+    "title": "Input",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/input",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A text input component for forms and user data entry with built-in styling and accessibility features."
+  },
+  {
+    "title": "Item",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/item",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A versatile component for displaying content with media, title, description, and actions."
+  },
+  {
+    "title": "Item",
+    "category": "shadcn/ui",
+    "path": "/docs/components/item",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A versatile component for displaying content with media, title, description, and actions."
+  },
+  {
+    "title": "Item",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/item",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A versatile component for displaying content with media, title, description, and actions."
+  },
+  {
+    "title": "Item",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/item",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A versatile component for displaying content with media, title, description, and actions."
+  },
+  {
+    "title": "Kbd",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/kbd",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Used to display textual user input from keyboard."
+  },
+  {
+    "title": "Kbd",
+    "category": "shadcn/ui",
+    "path": "/docs/components/kbd",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Used to display textual user input from keyboard."
+  },
+  {
+    "title": "Kbd",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/kbd",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Used to display textual user input from keyboard."
+  },
+  {
+    "title": "Kbd",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/kbd",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Used to display textual user input from keyboard."
+  },
+  {
+    "title": "Label",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/label",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Renders an accessible label associated with controls."
+  },
+  {
+    "title": "Label",
+    "category": "shadcn/ui",
+    "path": "/docs/components/label",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Renders an accessible label associated with controls."
+  },
+  {
+    "title": "Label",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/label",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Renders an accessible label associated with controls."
+  },
+  {
+    "title": "Label",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/label",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Renders an accessible label associated with controls."
+  },
+  {
+    "title": "Marker",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/marker",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays an inline status, system note, bordered row, or labeled separator in a conversation."
+  },
+  {
+    "title": "Marker",
+    "category": "shadcn/ui",
+    "path": "/docs/components/marker",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays an inline status, system note, bordered row, or labeled separator in a conversation."
+  },
+  {
+    "title": "Marker",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/marker",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays an inline status, system note, bordered row, or labeled separator in a conversation."
+  },
+  {
+    "title": "Marker",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/marker",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays an inline status, system note, bordered row, or labeled separator in a conversation."
+  },
+  {
+    "title": "Menubar",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/menubar",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands."
+  },
+  {
+    "title": "Menubar",
+    "category": "shadcn/ui",
+    "path": "/docs/components/menubar",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands."
+  },
+  {
+    "title": "Menubar",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/menubar",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands."
+  },
+  {
+    "title": "Menubar",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/menubar",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands."
+  },
+  {
+    "title": "Message Scroller",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/message-scroller",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A chat scroll container that anchors turns, opens saved transcripts, follows streamed responses, loads history without jumping, and jumps to any message."
+  },
+  {
+    "title": "Message Scroller",
+    "category": "shadcn/ui",
+    "path": "/docs/components/message-scroller",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A chat scroll container that anchors turns, opens saved transcripts, follows streamed responses, loads history without jumping, and jumps to any message."
+  },
+  {
+    "title": "Message Scroller",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/message-scroller",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A chat scroll container that anchors turns, opens saved transcripts, follows streamed responses, loads history without jumping, and jumps to any message."
+  },
+  {
+    "title": "Message Scroller",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/message-scroller",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A chat scroll container that anchors turns, opens saved transcripts, follows streamed responses, loads history without jumping, and jumps to any message."
+  },
+  {
+    "title": "Message",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/message",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a message in a conversation, with optional avatar, header, footer, and alignment."
+  },
+  {
+    "title": "Message",
+    "category": "shadcn/ui",
+    "path": "/docs/components/message",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a message in a conversation, with optional avatar, header, footer, and alignment."
+  },
+  {
+    "title": "Message",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/message",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a message in a conversation, with optional avatar, header, footer, and alignment."
+  },
+  {
+    "title": "Message",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/message",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a message in a conversation, with optional avatar, header, footer, and alignment."
+  },
+  {
+    "title": "Native Select",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/native-select",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A styled native HTML select element with consistent design system integration."
+  },
+  {
+    "title": "Native Select",
+    "category": "shadcn/ui",
+    "path": "/docs/components/native-select",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A styled native HTML select element with consistent design system integration."
+  },
+  {
+    "title": "Native Select",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/native-select",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A styled native HTML select element with consistent design system integration."
+  },
+  {
+    "title": "Native Select",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/native-select",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A styled native HTML select element with consistent design system integration."
+  },
+  {
+    "title": "Navigation Menu",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/navigation-menu",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A collection of links for navigating websites."
+  },
+  {
+    "title": "Navigation Menu",
+    "category": "shadcn/ui",
+    "path": "/docs/components/navigation-menu",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A collection of links for navigating websites."
+  },
+  {
+    "title": "Navigation Menu",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/navigation-menu",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A collection of links for navigating websites."
+  },
+  {
+    "title": "Navigation Menu",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/navigation-menu",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A collection of links for navigating websites."
+  },
+  {
+    "title": "Pagination",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/pagination",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Pagination with page navigation, next and previous links."
+  },
+  {
+    "title": "Pagination",
+    "category": "shadcn/ui",
+    "path": "/docs/components/pagination",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Pagination with page navigation, next and previous links."
+  },
+  {
+    "title": "Pagination",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/pagination",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Pagination with page navigation, next and previous links."
+  },
+  {
+    "title": "Pagination",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/pagination",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Pagination with page navigation, next and previous links."
+  },
+  {
+    "title": "Popover",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/popover",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays rich content in a portal, triggered by a button."
+  },
+  {
+    "title": "Popover",
+    "category": "shadcn/ui",
+    "path": "/docs/components/popover",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays rich content in a portal, triggered by a button."
+  },
+  {
+    "title": "Popover",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/popover",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays rich content in a portal, triggered by a button."
+  },
+  {
+    "title": "Popover",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/popover",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays rich content in a portal, triggered by a button."
+  },
+  {
+    "title": "Progress",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/progress",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar."
+  },
+  {
+    "title": "Progress",
+    "category": "shadcn/ui",
+    "path": "/docs/components/progress",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar."
+  },
+  {
+    "title": "Progress",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/progress",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar."
+  },
+  {
+    "title": "Progress",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/progress",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar."
+  },
+  {
+    "title": "Questionnaire",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/questionnaire",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A multi-step questionnaire with single-choice, multiple-choice, freeform, and skippable questions."
+  },
+  {
+    "title": "Questionnaire",
+    "category": "shadcn/ui",
+    "path": "/docs/components/questionnaire",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A multi-step questionnaire with single-choice, multiple-choice, freeform, and skippable questions."
+  },
+  {
+    "title": "Questionnaire",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/questionnaire",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A multi-step questionnaire with single-choice, multiple-choice, freeform, and skippable questions."
+  },
+  {
+    "title": "Questionnaire",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/questionnaire",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A multi-step questionnaire with single-choice, multiple-choice, freeform, and skippable questions."
+  },
+  {
+    "title": "Radio Group",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/radio-group",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time."
+  },
+  {
+    "title": "Radio Group",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radio-group",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time."
+  },
+  {
+    "title": "Radio Group",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/radio-group",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time."
+  },
+  {
+    "title": "Radio Group",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/radio-group",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time."
+  },
+  {
+    "title": "Resizable",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/resizable",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Accessible resizable panel groups and layouts with keyboard support."
+  },
+  {
+    "title": "Resizable",
+    "category": "shadcn/ui",
+    "path": "/docs/components/resizable",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Accessible resizable panel groups and layouts with keyboard support."
+  },
+  {
+    "title": "Resizable",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/resizable",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Accessible resizable panel groups and layouts with keyboard support."
+  },
+  {
+    "title": "Resizable",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/resizable",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Accessible resizable panel groups and layouts with keyboard support."
+  },
+  {
+    "title": "Scroll Area",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/scroll-area",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Augments native scroll functionality for custom, cross-browser styling."
+  },
+  {
+    "title": "Scroll Area",
+    "category": "shadcn/ui",
+    "path": "/docs/components/scroll-area",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Augments native scroll functionality for custom, cross-browser styling."
+  },
+  {
+    "title": "Scroll Area",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/scroll-area",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Augments native scroll functionality for custom, cross-browser styling."
+  },
+  {
+    "title": "Scroll Area",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/scroll-area",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Augments native scroll functionality for custom, cross-browser styling."
+  },
+  {
+    "title": "Select",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/select",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a list of options for the user to pick from—triggered by a button."
+  },
+  {
+    "title": "Select",
+    "category": "shadcn/ui",
+    "path": "/docs/components/select",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a list of options for the user to pick from—triggered by a button."
+  },
+  {
+    "title": "Select",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/select",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a list of options for the user to pick from—triggered by a button."
+  },
+  {
+    "title": "Select",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/select",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a list of options for the user to pick from—triggered by a button."
+  },
+  {
+    "title": "Separator",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/separator",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Visually or semantically separates content."
+  },
+  {
+    "title": "Separator",
+    "category": "shadcn/ui",
+    "path": "/docs/components/separator",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Visually or semantically separates content."
+  },
+  {
+    "title": "Separator",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/separator",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Visually or semantically separates content."
+  },
+  {
+    "title": "Separator",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/separator",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Visually or semantically separates content."
+  },
+  {
+    "title": "Sheet",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/sheet",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Extends the Dialog component to display content that complements the main content of the screen."
+  },
+  {
+    "title": "Sheet",
+    "category": "shadcn/ui",
+    "path": "/docs/components/sheet",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Extends the Dialog component to display content that complements the main content of the screen."
+  },
+  {
+    "title": "Sheet",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/sheet",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Extends the Dialog component to display content that complements the main content of the screen."
+  },
+  {
+    "title": "Sheet",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/sheet",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Extends the Dialog component to display content that complements the main content of the screen."
+  },
+  {
+    "title": "Sidebar",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/sidebar",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A composable, themeable and customizable sidebar component."
+  },
+  {
+    "title": "Sidebar",
+    "category": "shadcn/ui",
+    "path": "/docs/components/sidebar",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A composable, themeable and customizable sidebar component."
+  },
+  {
+    "title": "Sidebar",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/sidebar",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A composable, themeable and customizable sidebar component."
+  },
+  {
+    "title": "Sidebar",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/sidebar",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A composable, themeable and customizable sidebar component."
+  },
+  {
+    "title": "Skeleton",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/skeleton",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Use to show a placeholder while content is loading."
+  },
+  {
+    "title": "Skeleton",
+    "category": "shadcn/ui",
+    "path": "/docs/components/skeleton",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Use to show a placeholder while content is loading."
+  },
+  {
+    "title": "Skeleton",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/skeleton",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Use to show a placeholder while content is loading."
+  },
+  {
+    "title": "Skeleton",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/skeleton",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Use to show a placeholder while content is loading."
+  },
+  {
+    "title": "Slider",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/slider",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An input where the user selects a value from within a given range."
+  },
+  {
+    "title": "Slider",
+    "category": "shadcn/ui",
+    "path": "/docs/components/slider",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An input where the user selects a value from within a given range."
+  },
+  {
+    "title": "Slider",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/slider",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An input where the user selects a value from within a given range."
+  },
+  {
+    "title": "Slider",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/slider",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An input where the user selects a value from within a given range."
+  },
+  {
+    "title": "Sonner",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/sonner",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An opinionated toast component for React."
+  },
+  {
+    "title": "Sonner",
+    "category": "shadcn/ui",
+    "path": "/docs/components/sonner",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An opinionated toast component for React."
+  },
+  {
+    "title": "Sonner",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/sonner",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An opinionated toast component for React."
+  },
+  {
+    "title": "Sonner",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/sonner",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An opinionated toast component for React."
+  },
+  {
+    "title": "Spinner",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/spinner",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An indicator that can be used to show a loading state."
+  },
+  {
+    "title": "Spinner",
+    "category": "shadcn/ui",
+    "path": "/docs/components/spinner",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An indicator that can be used to show a loading state."
+  },
+  {
+    "title": "Spinner",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/spinner",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An indicator that can be used to show a loading state."
+  },
+  {
+    "title": "Spinner",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/spinner",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "An indicator that can be used to show a loading state."
+  },
+  {
+    "title": "Switch",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/switch",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A control that allows the user to toggle between checked and not checked."
+  },
+  {
+    "title": "Switch",
+    "category": "shadcn/ui",
+    "path": "/docs/components/switch",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A control that allows the user to toggle between checked and not checked."
+  },
+  {
+    "title": "Switch",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/switch",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A control that allows the user to toggle between checked and not checked."
+  },
+  {
+    "title": "Switch",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/switch",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A control that allows the user to toggle between checked and not checked."
+  },
+  {
+    "title": "Table",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/table",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A responsive table component."
+  },
+  {
+    "title": "Table",
+    "category": "shadcn/ui",
+    "path": "/docs/components/table",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A responsive table component."
+  },
+  {
+    "title": "Table",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/table",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A responsive table component."
+  },
+  {
+    "title": "Table",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/table",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A responsive table component."
+  },
+  {
+    "title": "Tabs",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/tabs",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A set of layered sections of content—known as tab panels—that are displayed one at a time."
+  },
+  {
+    "title": "Tabs",
+    "category": "shadcn/ui",
+    "path": "/docs/components/tabs",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A set of layered sections of content—known as tab panels—that are displayed one at a time."
+  },
+  {
+    "title": "Tabs",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/tabs",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A set of layered sections of content—known as tab panels—that are displayed one at a time."
+  },
+  {
+    "title": "Tabs",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/tabs",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A set of layered sections of content—known as tab panels—that are displayed one at a time."
+  },
+  {
+    "title": "Textarea",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/textarea",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a form textarea or a component that looks like a textarea."
+  },
+  {
+    "title": "Textarea",
+    "category": "shadcn/ui",
+    "path": "/docs/components/textarea",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a form textarea or a component that looks like a textarea."
+  },
+  {
+    "title": "Textarea",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/textarea",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a form textarea or a component that looks like a textarea."
+  },
+  {
+    "title": "Textarea",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/textarea",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Displays a form textarea or a component that looks like a textarea."
+  },
+  {
+    "title": "Toast",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/toast",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A succinct message that is displayed temporarily."
+  },
+  {
+    "title": "Toast",
+    "category": "shadcn/ui",
+    "path": "/docs/components/toast",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A succinct message that is displayed temporarily."
+  },
+  {
+    "title": "Toast",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/toast",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A succinct message that is displayed temporarily."
+  },
+  {
+    "title": "Toast",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/toast",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A succinct message that is displayed temporarily."
+  },
+  {
+    "title": "Toggle Group",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/toggle-group",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A set of two-state buttons that can be toggled on or off."
+  },
+  {
+    "title": "Toggle Group",
+    "category": "shadcn/ui",
+    "path": "/docs/components/toggle-group",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A set of two-state buttons that can be toggled on or off."
+  },
+  {
+    "title": "Toggle Group",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/toggle-group",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A set of two-state buttons that can be toggled on or off."
+  },
+  {
+    "title": "Toggle Group",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/toggle-group",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A set of two-state buttons that can be toggled on or off."
+  },
+  {
+    "title": "Toggle",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/toggle",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A two-state button that can be either on or off."
+  },
+  {
+    "title": "Toggle",
+    "category": "shadcn/ui",
+    "path": "/docs/components/toggle",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A two-state button that can be either on or off."
+  },
+  {
+    "title": "Toggle",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/toggle",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A two-state button that can be either on or off."
+  },
+  {
+    "title": "Toggle",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/toggle",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A two-state button that can be either on or off."
+  },
+  {
+    "title": "Tooltip",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/tooltip",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it."
+  },
+  {
+    "title": "Tooltip",
+    "category": "shadcn/ui",
+    "path": "/docs/components/tooltip",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it."
+  },
+  {
+    "title": "Tooltip",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/tooltip",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it."
+  },
+  {
+    "title": "Tooltip",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/tooltip",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it."
+  },
+  {
+    "title": "Typography",
+    "category": "shadcn/ui",
+    "path": "/docs/components/radix/typography",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Styles for headings, paragraphs, lists, etc."
+  },
+  {
+    "title": "Typography",
+    "category": "shadcn/ui",
+    "path": "/docs/components/typography",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Styles for headings, paragraphs, lists, etc."
+  },
+  {
+    "title": "Typography",
+    "category": "shadcn/ui",
+    "path": "/docs/components/base/typography",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Styles for headings, paragraphs, lists, etc."
+  },
+  {
+    "title": "Typography",
+    "category": "shadcn/ui",
+    "path": "/docs/components/aria/typography",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Styles for headings, paragraphs, lists, etc."
+  },
+  {
+    "title": "Astro",
+    "category": "shadcn/ui",
+    "path": "/docs/dark-mode/astro",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Adding dark mode to your astro app."
+  },
+  {
+    "title": "Next.js",
+    "category": "shadcn/ui",
+    "path": "/docs/dark-mode/next",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Adding dark mode to your Next.js app."
+  },
+  {
+    "title": "Remix",
+    "category": "shadcn/ui",
+    "path": "/docs/dark-mode/remix",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Adding dark mode to your Remix app."
+  },
+  {
+    "title": "TanStack Start",
+    "category": "shadcn/ui",
+    "path": "/docs/dark-mode/tanstack-start",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Adding dark mode to your TanStack Start app."
+  },
+  {
+    "title": "Vite",
+    "category": "shadcn/ui",
+    "path": "/docs/dark-mode/vite",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Adding dark mode to your Vite app."
+  },
+  {
+    "title": "Formisch",
+    "category": "shadcn/ui",
+    "path": "/docs/forms/formisch",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Build forms in React using Formisch and Valibot."
+  },
+  {
+    "title": "Next.js",
+    "category": "shadcn/ui",
+    "path": "/docs/forms/next",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Build forms in React using useActionState and Server Actions."
+  },
+  {
+    "title": "React Hook Form",
+    "category": "shadcn/ui",
+    "path": "/docs/forms/react-hook-form",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Build forms in React using React Hook Form and Zod."
+  },
+  {
+    "title": "TanStack Form",
+    "category": "shadcn/ui",
+    "path": "/docs/forms/tanstack-form",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Build forms in React using TanStack Form and Zod."
+  },
+  {
+    "title": "AI SDK",
+    "category": "shadcn/ui",
+    "path": "/docs/helpers/ai-sdk",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Create AI SDK messages and stream predefined conversations through useChat without a model, API route, network request, or API key."
+  },
+  {
+    "title": "TanStack AI",
+    "category": "shadcn/ui",
+    "path": "/docs/helpers/tanstack-ai",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Create TanStack AI messages and stream predefined conversations through useChat without a model, API route, network request, or API key."
+  },
+  {
+    "title": "Astro",
+    "category": "shadcn/ui",
+    "path": "/docs/installation/astro",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Install and configure shadcn/ui for Astro."
+  },
+  {
+    "title": "Gatsby",
+    "category": "shadcn/ui",
+    "path": "/docs/installation/gatsby",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Install and configure shadcn/ui for Gatsby."
+  },
+  {
+    "title": "Laravel",
+    "category": "shadcn/ui",
+    "path": "/docs/installation/laravel",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Install and configure shadcn/ui for Laravel."
+  },
+  {
+    "title": "Manual Installation",
+    "category": "shadcn/ui",
+    "path": "/docs/installation/manual",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Add dependencies to your project manually."
+  },
+  {
+    "title": "Next.js",
+    "category": "shadcn/ui",
+    "path": "/docs/installation/next",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Install and configure shadcn/ui for Next.js."
+  },
+  {
+    "title": "React Router",
+    "category": "shadcn/ui",
+    "path": "/docs/installation/react-router",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Install and configure shadcn/ui for React Router."
+  },
+  {
+    "title": "Remix",
+    "category": "shadcn/ui",
+    "path": "/docs/installation/remix",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Install and configure shadcn/ui for Remix."
+  },
+  {
+    "title": "TanStack Router",
+    "category": "shadcn/ui",
+    "path": "/docs/installation/tanstack-router",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Install and configure shadcn/ui for TanStack Router."
+  },
+  {
+    "title": "TanStack Start",
+    "category": "shadcn/ui",
+    "path": "/docs/installation/tanstack",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Install and configure shadcn/ui for TanStack Start."
+  },
+  {
+    "title": "Vite",
+    "category": "shadcn/ui",
+    "path": "/docs/installation/vite",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Install and configure shadcn/ui for Vite."
+  },
+  {
+    "title": "Message Scroller",
+    "category": "shadcn/ui",
+    "path": "/docs/react/message-scroller",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Use the MessageScroller behavior directly from the @shadcn/react package with your own markup and styles."
+  },
+  {
+    "title": "Questionnaire",
+    "category": "shadcn/ui",
+    "path": "/docs/react/questionnaire",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Build accessible, multi-step questionnaires with single, multiple, freeform, and intentionally skipped answers."
+  },
+  {
+    "title": "API Reference",
+    "category": "shadcn/ui",
+    "path": "/docs/registry/api-reference",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Programmatic API for working with registries, schemas and presets."
+  },
+  {
+    "title": "Authentication",
+    "category": "shadcn/ui",
+    "path": "/docs/registry/authentication",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Secure your registry with authentication for private and personalized components."
+  },
+  {
+    "title": "Dynamic Search",
+    "category": "shadcn/ui",
+    "path": "/docs/registry/dynamic-search",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Implement server-side search for large registries."
+  },
+  {
+    "title": "Examples",
+    "category": "shadcn/ui",
+    "path": "/docs/registry/examples",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Examples of registry items: styles, components, css vars, etc."
+  },
+  {
+    "title": "FAQ",
+    "category": "shadcn/ui",
+    "path": "/docs/registry/faq",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Previous Frequently asked questions about running a registry."
+  },
+  {
+    "title": "Getting Started",
+    "category": "shadcn/ui",
+    "path": "/docs/registry/getting-started",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Learn how to get setup and run your own component registry."
+  },
+  {
+    "title": "GitHub Registries",
+    "category": "shadcn/ui",
+    "path": "/docs/registry/github",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Use a GitHub repository as a registry."
+  },
+  {
+    "title": "Registry Health",
+    "category": "shadcn/ui",
+    "path": "/docs/registry/health",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "How public registries are monitored and scored."
+  },
+  {
+    "title": "MCP Server",
+    "category": "shadcn/ui",
+    "path": "/docs/registry/mcp",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "MCP support for registry developers"
+  },
+  {
+    "title": "Namespaces",
+    "category": "shadcn/ui",
+    "path": "/docs/registry/namespace",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Configure and use multiple resource registries with namespace support."
+  },
+  {
+    "title": "Open in v0",
+    "category": "shadcn/ui",
+    "path": "/docs/registry/open-in-v0",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Integrate your registry with Open in v0."
+  },
+  {
+    "title": "Registry Directory",
+    "category": "shadcn/ui",
+    "path": "/docs/registry/registry-index",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Open Source Registry Index"
+  },
+  {
+    "title": "registry",
+    "category": "shadcn/ui",
+    "path": "/docs/registry/registry-item-json",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Previous Specification for registry items."
+  },
+  {
+    "title": "registry.json",
+    "category": "shadcn/ui",
+    "path": "/docs/registry/registry-json",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Schema for running your own component registry."
+  },
+  {
+    "title": "Next.js",
+    "category": "shadcn/ui",
+    "path": "/docs/rtl/next",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Create a new Next.js project with RTL support."
+  },
+  {
+    "title": "TanStack Start",
+    "category": "shadcn/ui",
+    "path": "/docs/rtl/start",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Create a new TanStack Start project with RTL support."
+  },
+  {
+    "title": "Vite",
+    "category": "shadcn/ui",
+    "path": "/docs/rtl/vite",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Create a new Vite project with RTL support."
+  },
+  {
+    "title": "scroll",
+    "category": "shadcn/ui",
+    "path": "/docs/utils/scroll-fade",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Utilities for adding a fade effect to the edges of a scroll container."
+  },
+  {
+    "title": "shimmer",
+    "category": "shadcn/ui",
+    "path": "/docs/utils/shimmer",
+    "site": "shadcn",
+    "headings": [],
+    "preview": "Utilities for adding a shimmer effect to text elements."
+  }
+]

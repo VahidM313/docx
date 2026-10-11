@@ -1,0 +1,202 @@
+[
+  {
+    "title": "Quick Start | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/quick-start",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "The fastest way to get started with TanStack Router is to scaffold a new project. Just run: The CLI will guide you through a short series of prompts to customize your setup, including options for:..."
+  },
+  {
+    "title": "React TanStack Router Quickstart File Based Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/quickstart-file-based",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement Quickstart File Based in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Basic Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/basic",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement Basic in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Basic File Based Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/basic-file-based",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement Basic File Based in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Basic Ssr File Based Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/basic-ssr-file-based",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement Basic Ssr File Based in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Kitchen Sink React Query File Based Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/kitchen-sink-react-query-file-based",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement Kitchen Sink React Query File Based in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router View Transitions Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/view-transitions",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement View Transitions in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Authenticated Routes Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/authenticated-routes",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement Authenticated Routes in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Deferred Data Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/deferred-data",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement Deferred Data in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Scroll Restoration Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/scroll-restoration",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement Scroll Restoration in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Quickstart Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/quickstart",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement Quickstart in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Basic React Query Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/basic-react-query",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement Basic React Query in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Location Masking Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/location-masking",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement Location Masking in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router With Framer Motion Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/with-framer-motion",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement With Framer Motion in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Kitchen Sink File Based Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/kitchen-sink-file-based",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement Kitchen Sink File Based in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Basic React Query File Based Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/basic-react-query-file-based",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement Basic React Query File Based in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Navigation Blocking Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/navigation-blocking",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement Navigation Blocking in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Kitchen Sink Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/kitchen-sink",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement Kitchen Sink in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Kitchen Sink React Query Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/kitchen-sink-react-query",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement Kitchen Sink React Query in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Basic Ssr Streaming File Based Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/basic-ssr-streaming-file-based",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement Basic Ssr Streaming File Based in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Router Monorepo Simple Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/router-monorepo-simple",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement Router Monorepo Simple in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router With Trpc React Query Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/with-trpc-react-query",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement With Trpc React Query in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Router Monorepo React Query Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/router-monorepo-react-query",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement Router Monorepo React Query in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router Router Monorepo Simple Lazy Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/router-monorepo-simple-lazy",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement Router Monorepo Simple Lazy in React using TanStack Router."
+  },
+  {
+    "title": "React TanStack Router With Trpc Example | TanStack Router Docs",
+    "category": "Create TS Router App",
+    "path": "/router/latest/docs/framework/react/examples/with-trpc",
+    "site": "tanstack_create_tsrouter_app",
+    "headings": [],
+    "preview": "An example showing how to implement With Trpc in React using TanStack Router."
+  }
+]

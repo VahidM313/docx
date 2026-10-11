@@ -1,0 +1,1458 @@
+[
+  {
+    "title": "Drizzle ORM",
+    "category": "DOCS",
+    "path": "/docs/overview",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get started with Drizzle",
+    "category": "DOCS",
+    "path": "/docs/get-started",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle &lt;&gt; PostgreSQL",
+    "category": "DOCS",
+    "path": "/docs/get-started-postgresql",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle Queries + CRUD",
+    "category": "DOCS",
+    "path": "/docs/data-querying",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle &lt;&gt; PlanetScale Postgres",
+    "category": "DOCS",
+    "path": "/docs/connect-planetscale-postgres",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle ORM - Guides",
+    "category": "DOCS",
+    "path": "/docs/guides",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Upgrading to Drizzle v1",
+    "category": "DOCS",
+    "path": "/docs/upgrade-v1",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle ORM - Tutorials",
+    "category": "DOCS",
+    "path": "/docs/tutorials",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle gotchas",
+    "category": "DOCS",
+    "path": "/docs/gotchas",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle Sustainability",
+    "category": "DOCS",
+    "path": "/docs/sustainability",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Database connection with Drizzle",
+    "category": "DOCS",
+    "path": "/docs/connect-overview",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle ORM - Latest releases",
+    "category": "DOCS",
+    "path": "/docs/latest-releases",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Changes in v1",
+    "category": "DOCS",
+    "path": "/docs/v0-v1-changes",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle schema",
+    "category": "DOCS",
+    "path": "/docs/sql-schema-declaration",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle migrations fundamentals",
+    "category": "DOCS",
+    "path": "/docs/migrations",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Migrating to Relational Queries version 2",
+    "category": "DOCS",
+    "path": "/docs/relations-v1-v2",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle Relations Fundamentals",
+    "category": "DOCS",
+    "path": "/docs/relations-schema-declaration",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle &lt;&gt; Neon Postgres",
+    "category": "DOCS",
+    "path": "/docs/connect-neon",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle &lt;&gt; Vercel Postgres",
+    "category": "DOCS",
+    "path": "/docs/connect-vercel-postgres",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle &lt;&gt; Prisma Postgres",
+    "category": "DOCS",
+    "path": "/docs/connect-prisma-postgres",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle &lt;&gt; Supabase",
+    "category": "DOCS",
+    "path": "/docs/connect-supabase",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle &lt;&gt; AWS Data API Postgres",
+    "category": "DOCS",
+    "path": "/docs/connect-aws-data-api-pg",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle &lt;&gt; Bun SQL",
+    "category": "DOCS",
+    "path": "/docs/connect-bun-sql",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Indexes Constraints",
+    "category": "DOCS",
+    "path": "/docs/indexes-constraints",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle &lt;&gt; Netlify Database",
+    "category": "DOCS",
+    "path": "/docs/connect-netlify-db",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle HTTP proxy",
+    "category": "DOCS",
+    "path": "/docs/connect-drizzle-proxy",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle &lt;&gt; Nile",
+    "category": "DOCS",
+    "path": "/docs/connect-nile",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle &lt;&gt; Appwrite Postgres",
+    "category": "DOCS",
+    "path": "/docs/connect-appwrite-postgres",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle &lt;&gt; Xata",
+    "category": "DOCS",
+    "path": "/docs/connect-xata",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "PostgreSQL column types",
+    "category": "DOCS",
+    "path": "/docs/column-types",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Sequences",
+    "category": "DOCS",
+    "path": "/docs/sequences",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle &lt;&gt; PGlite",
+    "category": "DOCS",
+    "path": "/docs/connect-pglite",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle &lt;&gt; Effect Postgres",
+    "category": "DOCS",
+    "path": "/docs/connect-effect-postgres",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Views",
+    "category": "DOCS",
+    "path": "/docs/views",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Table schemas",
+    "category": "DOCS",
+    "path": "/docs/schemas",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "drizzle-kit up",
+    "category": "DOCS",
+    "path": "/docs/drizzle-kit-up",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle migrations for teams",
+    "category": "DOCS",
+    "path": "/docs/kit-migrations-for-teams",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle relations",
+    "category": "DOCS",
+    "path": "/docs/relations",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Row-Level Security (RLS)",
+    "category": "DOCS",
+    "path": "/docs/rls",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "drizzle-kit studio",
+    "category": "DOCS",
+    "path": "/docs/drizzle-kit-studio",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "drizzle-kit migrate",
+    "category": "DOCS",
+    "path": "/docs/drizzle-kit-migrate",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Migrations with Drizzle Kit",
+    "category": "DOCS",
+    "path": "/docs/kit-overview",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "drizzle-kit export",
+    "category": "DOCS",
+    "path": "/docs/drizzle-kit-export",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "drizzle-kit pull",
+    "category": "DOCS",
+    "path": "/docs/drizzle-kit-pull",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "drizzle-kit check",
+    "category": "DOCS",
+    "path": "/docs/drizzle-kit-check",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "drizzle-kit generate",
+    "category": "DOCS",
+    "path": "/docs/drizzle-kit-generate",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "drizzle-kit push",
+    "category": "DOCS",
+    "path": "/docs/drizzle-kit-push",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "PostgreSQL extensions",
+    "category": "DOCS",
+    "path": "/docs/extensions",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Migrations with Drizzle Kit",
+    "category": "DOCS",
+    "path": "/docs/kit-custom-migrations",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle migrations in web and mobile environments",
+    "category": "DOCS",
+    "path": "/docs/kit-web-mobile",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "SQL Delete",
+    "category": "DOCS",
+    "path": "/docs/delete",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Aliases",
+    "category": "DOCS",
+    "path": "/docs/aliases",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "SQL Comments",
+    "category": "DOCS",
+    "path": "/docs/sql-comments",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle query utils",
+    "category": "DOCS",
+    "path": "/docs/query-utils",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Filter and conditional operators",
+    "category": "DOCS",
+    "path": "/docs/operators",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Versioning",
+    "category": "DOCS",
+    "path": "/docs/seed-versioning",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "SQL Update",
+    "category": "DOCS",
+    "path": "/docs/update",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Joins [SQL]",
+    "category": "DOCS",
+    "path": "/docs/joins",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle Seed",
+    "category": "DOCS",
+    "path": "/docs/seed-overview",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle Kit configuration file",
+    "category": "DOCS",
+    "path": "/docs/drizzle-config-file",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "SQL Insert",
+    "category": "DOCS",
+    "path": "/docs/insert",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle Queries",
+    "category": "DOCS",
+    "path": "/docs/rqb",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Magical sql operator 🪄",
+    "category": "DOCS",
+    "path": "/docs/sql",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Generators",
+    "category": "DOCS",
+    "path": "/docs/seed-functions",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "SQL Select",
+    "category": "DOCS",
+    "path": "/docs/select",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Query performance",
+    "category": "DOCS",
+    "path": "/docs/perf-queries",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "typebox",
+    "category": "DOCS",
+    "path": "/docs/typebox",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "zod",
+    "category": "DOCS",
+    "path": "/docs/zod",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle Serverless performance",
+    "category": "DOCS",
+    "path": "/docs/perf-serverless",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Read Replicas",
+    "category": "DOCS",
+    "path": "/docs/read-replicas",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Batch API",
+    "category": "DOCS",
+    "path": "/docs/batch-api",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle ORM - Goodies",
+    "category": "DOCS",
+    "path": "/docs/goodies",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "valibot",
+    "category": "DOCS",
+    "path": "/docs/valibot",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Codecs",
+    "category": "DOCS",
+    "path": "/docs/codecs",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Cache",
+    "category": "DOCS",
+    "path": "/docs/cache",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Dynamic query building",
+    "category": "DOCS",
+    "path": "/docs/dynamic-query-building",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Generated Columns",
+    "category": "DOCS",
+    "path": "/docs/generated-columns",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Set Operations",
+    "category": "DOCS",
+    "path": "/docs/set-operations",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "JIT Mappers",
+    "category": "DOCS",
+    "path": "/docs/jit-mappers",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Transactions",
+    "category": "DOCS",
+    "path": "/docs/transactions",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Custom types",
+    "category": "DOCS",
+    "path": "/docs/custom-types",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "arktype",
+    "category": "DOCS",
+    "path": "/docs/arktype",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and PGlite",
+    "category": "DOCS",
+    "path": "/docs/get-started/pglite-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and Supabase",
+    "category": "DOCS",
+    "path": "/docs/get-started/supabase-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and Xata",
+    "category": "DOCS",
+    "path": "/docs/get-started/xata-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle &lt;&gt; SingleStore",
+    "category": "DOCS",
+    "path": "/docs/singlestore/get-started-singlestore",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle &lt;&gt; SQLite",
+    "category": "DOCS",
+    "path": "/docs/sqlite/get-started-sqlite",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and PostgreSQL",
+    "category": "DOCS",
+    "path": "/docs/get-started/postgresql-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "effect-schema",
+    "category": "DOCS",
+    "path": "/docs/effect-schema",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and Neon",
+    "category": "DOCS",
+    "path": "/docs/get-started/neon-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle &lt;&gt; MSSQL",
+    "category": "DOCS",
+    "path": "/docs/mssql/get-started-mssql",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle &lt;&gt; MySQL",
+    "category": "DOCS",
+    "path": "/docs/mysql/get-started-mysql",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "drizzle-graphql",
+    "category": "DOCS",
+    "path": "/docs/graphql",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and Vercel Postgres",
+    "category": "DOCS",
+    "path": "/docs/get-started/vercel-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "ESLint Drizzle Plugin",
+    "category": "DOCS",
+    "path": "/docs/eslint-plugin",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle &lt;&gt; CockroachDB",
+    "category": "DOCS",
+    "path": "/docs/cockroach/get-started-cockroach",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "typebox-legacy",
+    "category": "DOCS",
+    "path": "/docs/typebox-legacy",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and Nile",
+    "category": "DOCS",
+    "path": "/docs/get-started/nile-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and D1",
+    "category": "DOCS",
+    "path": "/docs/get-started/d1-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and PlanetScale",
+    "category": "DOCS",
+    "path": "/docs/get-started/planetscale-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and Bun:SQLite",
+    "category": "DOCS",
+    "path": "/docs/get-started/bun-sql-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and PlanetScale Postgres",
+    "category": "DOCS",
+    "path": "/docs/get-started/planetscale-postgres-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and TiDB",
+    "category": "DOCS",
+    "path": "/docs/get-started/tidb-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and Appwrite Postgres",
+    "category": "DOCS",
+    "path": "/docs/get-started/appwrite-postgres-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and Gel",
+    "category": "DOCS",
+    "path": "/docs/get-started/gel-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and SingleStore",
+    "category": "DOCS",
+    "path": "/docs/get-started/singlestore-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and Effect PostgreSQL",
+    "category": "DOCS",
+    "path": "/docs/get-started/effect-postgresql-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and Turso Cloud",
+    "category": "DOCS",
+    "path": "/docs/get-started/turso-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and SQLite Cloud",
+    "category": "DOCS",
+    "path": "/docs/get-started/sqlite-cloud-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and Turso Database",
+    "category": "DOCS",
+    "path": "/docs/get-started/turso-database-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and MySQL",
+    "category": "DOCS",
+    "path": "/docs/get-started/mysql-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and SQLite",
+    "category": "DOCS",
+    "path": "/docs/get-started/sqlite-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and Appwrite MySQL",
+    "category": "DOCS",
+    "path": "/docs/get-started/appwrite-mysql-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and Bun:SQLite",
+    "category": "DOCS",
+    "path": "/docs/get-started/bun-sqlite-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and Node:SQLite",
+    "category": "DOCS",
+    "path": "/docs/get-started/node-sqlite-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and MSSQL",
+    "category": "DOCS",
+    "path": "/docs/get-started/mssql-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and SQLite Durable Objects",
+    "category": "DOCS",
+    "path": "/docs/get-started/do-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and CockroachDB",
+    "category": "DOCS",
+    "path": "/docs/get-started/cockroach-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and OP-SQLite",
+    "category": "DOCS",
+    "path": "/docs/get-started/op-sqlite-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle ORM - Tutorials",
+    "category": "DOCS",
+    "path": "/docs/singlestore/tutorials",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle ORM - Guides",
+    "category": "DOCS",
+    "path": "/docs/singlestore/guides",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get Started with Drizzle and Expo",
+    "category": "DOCS",
+    "path": "/docs/get-started/expo-new",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle Sustainability",
+    "category": "DOCS",
+    "path": "/docs/singlestore/sustainability",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle ORM",
+    "category": "DOCS",
+    "path": "/docs/singlestore/overview",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle ORM - Latest releases",
+    "category": "DOCS",
+    "path": "/docs/singlestore/latest-releases",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Get started with Drizzle",
+    "category": "DOCS",
+    "path": "/docs/singlestore/get-started",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle gotchas",
+    "category": "DOCS",
+    "path": "/docs/singlestore/gotchas",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Upgrading to Drizzle v1",
+    "category": "DOCS",
+    "path": "/docs/singlestore/upgrade-v1",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Migrating to Relational Queries version 2",
+    "category": "DOCS",
+    "path": "/docs/singlestore/relations-v1-v2",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle schema",
+    "category": "DOCS",
+    "path": "/docs/singlestore/sql-schema-declaration",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Database connection with Drizzle",
+    "category": "DOCS",
+    "path": "/docs/singlestore/connect-overview",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle Queries + CRUD",
+    "category": "DOCS",
+    "path": "/docs/singlestore/data-querying",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle migrations fundamentals",
+    "category": "DOCS",
+    "path": "/docs/singlestore/migrations",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle Relations Fundamentals",
+    "category": "DOCS",
+    "path": "/docs/singlestore/relations-schema-declaration",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "SingleStore extensions",
+    "category": "DOCS",
+    "path": "/docs/singlestore/extensions",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Indexes Constraints",
+    "category": "DOCS",
+    "path": "/docs/singlestore/indexes-constraints",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "SingleStore column types",
+    "category": "DOCS",
+    "path": "/docs/singlestore/column-types",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Table schemas",
+    "category": "DOCS",
+    "path": "/docs/singlestore/schemas",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle soft relations",
+    "category": "DOCS",
+    "path": "/docs/singlestore/relations",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "drizzle-kit generate",
+    "category": "DOCS",
+    "path": "/docs/singlestore/drizzle-kit-generate",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle relations",
+    "category": "DOCS",
+    "path": "/docs/singlestore/relations-v2",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Migrations with Drizzle Kit",
+    "category": "DOCS",
+    "path": "/docs/singlestore/kit-overview",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "drizzle-kit migrate",
+    "category": "DOCS",
+    "path": "/docs/singlestore/drizzle-kit-migrate",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "drizzle-kit pull",
+    "category": "DOCS",
+    "path": "/docs/singlestore/drizzle-kit-pull",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "drizzle-kit push",
+    "category": "DOCS",
+    "path": "/docs/singlestore/drizzle-kit-push",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "drizzle-kit export",
+    "category": "DOCS",
+    "path": "/docs/singlestore/drizzle-kit-export",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "drizzle-kit check",
+    "category": "DOCS",
+    "path": "/docs/singlestore/drizzle-kit-check",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "drizzle-kit studio",
+    "category": "DOCS",
+    "path": "/docs/singlestore/drizzle-kit-studio",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Migrations with Drizzle Kit",
+    "category": "DOCS",
+    "path": "/docs/singlestore/kit-custom-migrations",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "drizzle-kit up",
+    "category": "DOCS",
+    "path": "/docs/singlestore/drizzle-kit-up",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle migrations in web and mobile environments",
+    "category": "DOCS",
+    "path": "/docs/singlestore/kit-web-mobile",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Versioning",
+    "category": "DOCS",
+    "path": "/docs/singlestore/seed-versioning",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle Kit configuration file",
+    "category": "DOCS",
+    "path": "/docs/singlestore/drizzle-config-file",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle migrations for teams",
+    "category": "DOCS",
+    "path": "/docs/singlestore/kit-migrations-for-teams",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle Seed",
+    "category": "DOCS",
+    "path": "/docs/singlestore/seed-overview",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Generators",
+    "category": "DOCS",
+    "path": "/docs/singlestore/seed-functions",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "SQL Insert",
+    "category": "DOCS",
+    "path": "/docs/singlestore/insert",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle Queries",
+    "category": "DOCS",
+    "path": "/docs/singlestore/rqb-v2",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "SQL Select",
+    "category": "DOCS",
+    "path": "/docs/singlestore/select",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "SQL Update",
+    "category": "DOCS",
+    "path": "/docs/singlestore/update",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "SQL Delete",
+    "category": "DOCS",
+    "path": "/docs/singlestore/delete",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Filter and conditional operators",
+    "category": "DOCS",
+    "path": "/docs/singlestore/operators",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle query utils",
+    "category": "DOCS",
+    "path": "/docs/singlestore/query-utils",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Magical sql operator 🪄",
+    "category": "DOCS",
+    "path": "/docs/singlestore/sql",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Joins [SQL]",
+    "category": "DOCS",
+    "path": "/docs/singlestore/joins",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle Queries",
+    "category": "DOCS",
+    "path": "/docs/singlestore/rqb",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Set Operations",
+    "category": "DOCS",
+    "path": "/docs/singlestore/set-operations",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Transactions",
+    "category": "DOCS",
+    "path": "/docs/singlestore/transactions",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle Serverless performance",
+    "category": "DOCS",
+    "path": "/docs/singlestore/perf-serverless",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Query performance",
+    "category": "DOCS",
+    "path": "/docs/singlestore/perf-queries",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Cache",
+    "category": "DOCS",
+    "path": "/docs/singlestore/cache",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "zod",
+    "category": "DOCS",
+    "path": "/docs/singlestore/zod",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Read Replicas",
+    "category": "DOCS",
+    "path": "/docs/singlestore/read-replicas",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Custom types",
+    "category": "DOCS",
+    "path": "/docs/singlestore/custom-types",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle ORM - Goodies",
+    "category": "DOCS",
+    "path": "/docs/singlestore/goodies",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Dynamic query building",
+    "category": "DOCS",
+    "path": "/docs/singlestore/dynamic-query-building",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "valibot",
+    "category": "DOCS",
+    "path": "/docs/singlestore/valibot",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "typebox",
+    "category": "DOCS",
+    "path": "/docs/singlestore/typebox",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "arktype",
+    "category": "DOCS",
+    "path": "/docs/singlestore/arktype",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "typebox-legacy",
+    "category": "DOCS",
+    "path": "/docs/singlestore/typebox-legacy",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle ORM",
+    "category": "Drizzle ORM",
+    "path": "/docs",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  },
+  {
+    "title": "Drizzle ORM",
+    "category": "Drizzle ORM",
+    "path": "/",
+    "site": "drizzle",
+    "headings": [],
+    "preview": "Drizzle ORM is a lightweight and performant TypeScript ORM with developer experience in mind."
+  }
+]

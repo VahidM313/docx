@@ -1,0 +1,1410 @@
+[
+  {
+    "title": "Introduction",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/index.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/index.html"
+  },
+  {
+    "title": "cpack(1)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cpack.1.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cpack.1.html"
+  },
+  {
+    "title": "cmake-commands(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-commands.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-commands.7.html"
+  },
+  {
+    "title": "cmake-gui(1)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-gui.1.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-gui.1.html"
+  },
+  {
+    "title": "ccmake(1)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/ccmake.1.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/ccmake.1.html"
+  },
+  {
+    "title": "cmake-configure-log(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-configure-log.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-configure-log.7.html"
+  },
+  {
+    "title": "cmake-diagnostics(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-diagnostics.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-diagnostics.7.html"
+  },
+  {
+    "title": "cmake-compile-features(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-compile-features.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-compile-features.7.html"
+  },
+  {
+    "title": "cmake-env-variables(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-env-variables.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-env-variables.7.html"
+  },
+  {
+    "title": "cmake-developer(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-developer.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-developer.7.html"
+  },
+  {
+    "title": "cmake(1)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake.1.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake.1.html"
+  },
+  {
+    "title": "cmake-cxxmodules(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-cxxmodules.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-cxxmodules.7.html"
+  },
+  {
+    "title": "cmake-buildsystem(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-buildsystem.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-buildsystem.7.html"
+  },
+  {
+    "title": "ctest(1)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/ctest.1.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/ctest.1.html"
+  },
+  {
+    "title": "cmake-file-api(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-file-api.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-file-api.7.html"
+  },
+  {
+    "title": "cmake-generator-expressions(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-generator-expressions.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-generator-expressions.7.html"
+  },
+  {
+    "title": "Index",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/genindex.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/genindex.html"
+  },
+  {
+    "title": "cmake-server(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-server.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-server.7.html"
+  },
+  {
+    "title": "cmake-language(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-language.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-language.7.html"
+  },
+  {
+    "title": "cmake-modules(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-modules.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-modules.7.html"
+  },
+  {
+    "title": "cmake-qt(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-qt.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-qt.7.html"
+  },
+  {
+    "title": "cmake-variables(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-variables.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-variables.7.html"
+  },
+  {
+    "title": "cpack-generators(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cpack-generators.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cpack-generators.7.html"
+  },
+  {
+    "title": "cmake-properties(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-properties.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-properties.7.html"
+  },
+  {
+    "title": "cmake-policies(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-policies.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-policies.7.html"
+  },
+  {
+    "title": "cmake-generators(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-generators.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-generators.7.html"
+  },
+  {
+    "title": "cmake-toolchains(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-toolchains.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-toolchains.7.html"
+  },
+  {
+    "title": "CMake Tutorial",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/guide/tutorial/index.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/guide/tutorial/index.html"
+  },
+  {
+    "title": "User Interaction Guide",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/guide/user-interaction/index.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/guide/user-interaction/index.html"
+  },
+  {
+    "title": "Using Dependencies Guide",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/guide/using-dependencies/index.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/guide/using-dependencies/index.html"
+  },
+  {
+    "title": "cmake-instrumentation(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-instrumentation.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-instrumentation.7.html"
+  },
+  {
+    "title": "cmake-presets(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-presets.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-presets.7.html"
+  },
+  {
+    "title": "cmake-packages(7)",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/manual/cmake-packages.7.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/manual/cmake-packages.7.html"
+  },
+  {
+    "title": "CMake Release Notes",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/release/index.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/release/index.html"
+  },
+  {
+    "title": "cmake_diagnostic",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/cmake_diagnostic.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/cmake_diagnostic.html"
+  },
+  {
+    "title": "cmake_parse_arguments",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/cmake_parse_arguments.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/cmake_parse_arguments.html"
+  },
+  {
+    "title": "break",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/break.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/break.html"
+  },
+  {
+    "title": "cmake_pkg_config",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/cmake_pkg_config.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/cmake_pkg_config.html"
+  },
+  {
+    "title": "IDE Integration Guide",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/guide/ide-integration/index.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/guide/ide-integration/index.html"
+  },
+  {
+    "title": "Search",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/search.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/search.html"
+  },
+  {
+    "title": "Importing and Exporting Guide",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/guide/importing-exporting/index.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/guide/importing-exporting/index.html"
+  },
+  {
+    "title": "cmake_minimum_required",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/cmake_minimum_required.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/cmake_minimum_required.html"
+  },
+  {
+    "title": "cmake_path",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/cmake_path.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/cmake_path.html"
+  },
+  {
+    "title": "cmake_host_system_information",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/cmake_host_system_information.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/cmake_host_system_information.html"
+  },
+  {
+    "title": "cmake_language",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/cmake_language.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/cmake_language.html"
+  },
+  {
+    "title": "block",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/block.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/block.html"
+  },
+  {
+    "title": "cmake_policy",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/cmake_policy.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/cmake_policy.html"
+  },
+  {
+    "title": "endmacro",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/endmacro.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/endmacro.html"
+  },
+  {
+    "title": "endfunction",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/endfunction.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/endfunction.html"
+  },
+  {
+    "title": "else",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/else.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/else.html"
+  },
+  {
+    "title": "continue",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/continue.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/continue.html"
+  },
+  {
+    "title": "elseif",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/elseif.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/elseif.html"
+  },
+  {
+    "title": "endblock",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/endblock.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/endblock.html"
+  },
+  {
+    "title": "endforeach",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/endforeach.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/endforeach.html"
+  },
+  {
+    "title": "find_file",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/find_file.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/find_file.html"
+  },
+  {
+    "title": "endwhile",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/endwhile.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/endwhile.html"
+  },
+  {
+    "title": "execute_process",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/execute_process.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/execute_process.html"
+  },
+  {
+    "title": "configure_file",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/configure_file.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/configure_file.html"
+  },
+  {
+    "title": "endif",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/endif.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/endif.html"
+  },
+  {
+    "title": "find_package",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/find_package.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/find_package.html"
+  },
+  {
+    "title": "find_library",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/find_library.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/find_library.html"
+  },
+  {
+    "title": "file",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/file.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/file.html"
+  },
+  {
+    "title": "find_path",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/find_path.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/find_path.html"
+  },
+  {
+    "title": "foreach",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/foreach.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/foreach.html"
+  },
+  {
+    "title": "load_cache",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/load_cache.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/load_cache.html"
+  },
+  {
+    "title": "get_property",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/get_property.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/get_property.html"
+  },
+  {
+    "title": "get_directory_property",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/get_directory_property.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/get_directory_property.html"
+  },
+  {
+    "title": "find_program",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/find_program.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/find_program.html"
+  },
+  {
+    "title": "function",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/function.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/function.html"
+  },
+  {
+    "title": "list",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/list.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/list.html"
+  },
+  {
+    "title": "if",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/if.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/if.html"
+  },
+  {
+    "title": "message",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/message.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/message.html"
+  },
+  {
+    "title": "include_guard",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/include_guard.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/include_guard.html"
+  },
+  {
+    "title": "get_filename_component",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/get_filename_component.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/get_filename_component.html"
+  },
+  {
+    "title": "macro",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/macro.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/macro.html"
+  },
+  {
+    "title": "mark_as_advanced",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/mark_as_advanced.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/mark_as_advanced.html"
+  },
+  {
+    "title": "math",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/math.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/math.html"
+  },
+  {
+    "title": "include",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/include.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/include.html"
+  },
+  {
+    "title": "get_cmake_property",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/get_cmake_property.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/get_cmake_property.html"
+  },
+  {
+    "title": "while",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/while.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/while.html"
+  },
+  {
+    "title": "set_directory_properties",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/set_directory_properties.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/set_directory_properties.html"
+  },
+  {
+    "title": "separate_arguments",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/separate_arguments.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/separate_arguments.html"
+  },
+  {
+    "title": "option",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/option.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/option.html"
+  },
+  {
+    "title": "set_property",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/set_property.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/set_property.html"
+  },
+  {
+    "title": "string",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/string.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/string.html"
+  },
+  {
+    "title": "unset",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/unset.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/unset.html"
+  },
+  {
+    "title": "set",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/set.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/set.html"
+  },
+  {
+    "title": "variable_watch",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/variable_watch.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/variable_watch.html"
+  },
+  {
+    "title": "site_name",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/site_name.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/site_name.html"
+  },
+  {
+    "title": "add_compile_definitions",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/add_compile_definitions.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/add_compile_definitions.html"
+  },
+  {
+    "title": "return",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/return.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/return.html"
+  },
+  {
+    "title": "add_compile_options",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/add_compile_options.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/add_compile_options.html"
+  },
+  {
+    "title": "add_custom_target",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/add_custom_target.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/add_custom_target.html"
+  },
+  {
+    "title": "add_definitions",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/add_definitions.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/add_definitions.html"
+  },
+  {
+    "title": "add_custom_command",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/add_custom_command.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/add_custom_command.html"
+  },
+  {
+    "title": "enable_language",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/enable_language.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/enable_language.html"
+  },
+  {
+    "title": "add_dependencies",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/add_dependencies.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/add_dependencies.html"
+  },
+  {
+    "title": "add_subdirectory",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/add_subdirectory.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/add_subdirectory.html"
+  },
+  {
+    "title": "aux_source_directory",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/aux_source_directory.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/aux_source_directory.html"
+  },
+  {
+    "title": "discover_tests",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/discover_tests.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/discover_tests.html"
+  },
+  {
+    "title": "add_executable",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/add_executable.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/add_executable.html"
+  },
+  {
+    "title": "cmake_file_api",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/cmake_file_api.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/cmake_file_api.html"
+  },
+  {
+    "title": "create_test_sourcelist",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/create_test_sourcelist.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/create_test_sourcelist.html"
+  },
+  {
+    "title": "define_property",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/define_property.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/define_property.html"
+  },
+  {
+    "title": "build_command",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/build_command.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/build_command.html"
+  },
+  {
+    "title": "add_link_options",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/add_link_options.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/add_link_options.html"
+  },
+  {
+    "title": "enable_testing",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/enable_testing.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/enable_testing.html"
+  },
+  {
+    "title": "add_library",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/add_library.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/add_library.html"
+  },
+  {
+    "title": "cmake_instrumentation",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/cmake_instrumentation.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/cmake_instrumentation.html"
+  },
+  {
+    "title": "add_test",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/add_test.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/add_test.html"
+  },
+  {
+    "title": "export",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/export.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/export.html"
+  },
+  {
+    "title": "include_directories",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/include_directories.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/include_directories.html"
+  },
+  {
+    "title": "get_target_property",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/get_target_property.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/get_target_property.html"
+  },
+  {
+    "title": "source_group",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/source_group.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/source_group.html"
+  },
+  {
+    "title": "fltk_wrap_ui",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/fltk_wrap_ui.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/fltk_wrap_ui.html"
+  },
+  {
+    "title": "set_tests_properties",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/set_tests_properties.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/set_tests_properties.html"
+  },
+  {
+    "title": "link_libraries",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/link_libraries.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/link_libraries.html"
+  },
+  {
+    "title": "include_regular_expression",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/include_regular_expression.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/include_regular_expression.html"
+  },
+  {
+    "title": "include_external_msproject",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/include_external_msproject.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/include_external_msproject.html"
+  },
+  {
+    "title": "project",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/project.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/project.html"
+  },
+  {
+    "title": "get_source_file_property",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/get_source_file_property.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/get_source_file_property.html"
+  },
+  {
+    "title": "install",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/install.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/install.html"
+  },
+  {
+    "title": "set_target_properties",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/set_target_properties.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/set_target_properties.html"
+  },
+  {
+    "title": "set_source_files_properties",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/set_source_files_properties.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/set_source_files_properties.html"
+  },
+  {
+    "title": "get_test_property",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/get_test_property.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/get_test_property.html"
+  },
+  {
+    "title": "remove_definitions",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/remove_definitions.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/remove_definitions.html"
+  },
+  {
+    "title": "link_directories",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/link_directories.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/link_directories.html"
+  },
+  {
+    "title": "target_link_directories",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/target_link_directories.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/target_link_directories.html"
+  },
+  {
+    "title": "target_compile_definitions",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/target_compile_definitions.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/target_compile_definitions.html"
+  },
+  {
+    "title": "target_link_options",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/target_link_options.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/target_link_options.html"
+  },
+  {
+    "title": "target_include_directories",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/target_include_directories.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/target_include_directories.html"
+  },
+  {
+    "title": "try_run",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/try_run.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/try_run.html"
+  },
+  {
+    "title": "ctest_configure",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/ctest_configure.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/ctest_configure.html"
+  },
+  {
+    "title": "target_sources",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/target_sources.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/target_sources.html"
+  },
+  {
+    "title": "target_compile_features",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/target_compile_features.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/target_compile_features.html"
+  },
+  {
+    "title": "target_link_libraries",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/target_link_libraries.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/target_link_libraries.html"
+  },
+  {
+    "title": "try_compile",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/try_compile.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/try_compile.html"
+  },
+  {
+    "title": "ctest_build",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/ctest_build.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/ctest_build.html"
+  },
+  {
+    "title": "target_compile_options",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/target_compile_options.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/target_compile_options.html"
+  },
+  {
+    "title": "target_precompile_headers",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/target_precompile_headers.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/target_precompile_headers.html"
+  },
+  {
+    "title": "ctest_memcheck",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/ctest_memcheck.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/ctest_memcheck.html"
+  },
+  {
+    "title": "ctest_empty_binary_directory",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/ctest_empty_binary_directory.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/ctest_empty_binary_directory.html"
+  },
+  {
+    "title": "ctest_coverage",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/ctest_coverage.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/ctest_coverage.html"
+  },
+  {
+    "title": "ctest_start",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/ctest_start.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/ctest_start.html"
+  },
+  {
+    "title": "ctest_upload",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/ctest_upload.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/ctest_upload.html"
+  },
+  {
+    "title": "install_programs",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/install_programs.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/install_programs.html"
+  },
+  {
+    "title": "ctest_submit",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/ctest_submit.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/ctest_submit.html"
+  },
+  {
+    "title": "ctest_update",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/ctest_update.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/ctest_update.html"
+  },
+  {
+    "title": "ctest_run_script",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/ctest_run_script.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/ctest_run_script.html"
+  },
+  {
+    "title": "install_files",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/install_files.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/install_files.html"
+  },
+  {
+    "title": "exec_program",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/exec_program.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/exec_program.html"
+  },
+  {
+    "title": "make_directory",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/make_directory.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/make_directory.html"
+  },
+  {
+    "title": "load_command",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/load_command.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/load_command.html"
+  },
+  {
+    "title": "ctest_read_custom_files",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/ctest_read_custom_files.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/ctest_read_custom_files.html"
+  },
+  {
+    "title": "ctest_test",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/ctest_test.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/ctest_test.html"
+  },
+  {
+    "title": "ctest_sleep",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/ctest_sleep.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/ctest_sleep.html"
+  },
+  {
+    "title": "build_name",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/build_name.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/build_name.html"
+  },
+  {
+    "title": "export_library_dependencies",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/export_library_dependencies.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/export_library_dependencies.html"
+  },
+  {
+    "title": "install_targets",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/install_targets.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/install_targets.html"
+  },
+  {
+    "title": "utility_source",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/utility_source.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/utility_source.html"
+  },
+  {
+    "title": "subdir_depends",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/subdir_depends.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/subdir_depends.html"
+  },
+  {
+    "title": "qt_wrap_ui",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/qt_wrap_ui.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/qt_wrap_ui.html"
+  },
+  {
+    "title": "variable_requires",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/variable_requires.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/variable_requires.html"
+  },
+  {
+    "title": "write_file",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/write_file.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/write_file.html"
+  },
+  {
+    "title": "remove",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/remove.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/remove.html"
+  },
+  {
+    "title": "use_mangled_mesa",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/use_mangled_mesa.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/use_mangled_mesa.html"
+  },
+  {
+    "title": "subdirs",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/subdirs.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/subdirs.html"
+  },
+  {
+    "title": "output_required_files",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/output_required_files.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/output_required_files.html"
+  },
+  {
+    "title": "qt_wrap_cpp",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/command/qt_wrap_cpp.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/command/qt_wrap_cpp.html"
+  },
+  {
+    "title": "CMD_AUTHOR",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/diagnostic/CMD_AUTHOR.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/diagnostic/CMD_AUTHOR.html"
+  },
+  {
+    "title": "CMD_EXPERIMENTAL",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/diagnostic/CMD_EXPERIMENTAL.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/diagnostic/CMD_EXPERIMENTAL.html"
+  },
+  {
+    "title": "CMD_DEPRECATED",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/diagnostic/CMD_DEPRECATED.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/diagnostic/CMD_DEPRECATED.html"
+  },
+  {
+    "title": "CMD_INSTALL_ABSOLUTE_DESTINATION",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/diagnostic/CMD_INSTALL_ABSOLUTE_DESTINATION.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/diagnostic/CMD_INSTALL_ABSOLUTE_DESTINATION.html"
+  },
+  {
+    "title": "CMD_POLICY",
+    "category": "CMAKE",
+    "path": "/cmake/help/latest/diagnostic/CMD_POLICY.html",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/cmake/help/latest/diagnostic/CMD_POLICY.html"
+  },
+  {
+    "title": "Introduction",
+    "category": "CMake Reference",
+    "path": "/docs",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/docs"
+  },
+  {
+    "title": "Introduction",
+    "category": "CMake Reference",
+    "path": "/",
+    "site": "cmake",
+    "headings": [],
+    "preview": "/"
+  }
+]

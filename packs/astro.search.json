@@ -1,0 +1,1298 @@
+[
+  {
+    "title": "Astro Docs",
+    "category": "EN",
+    "path": "/en/getting-started",
+    "site": "astro",
+    "headings": [],
+    "preview": "Guides, resources, and API references to help you build with Astro — the web framework for content-driven websites."
+  },
+  {
+    "title": "Build your first Astro Blog",
+    "category": "EN",
+    "path": "/en/tutorial/0-introduction",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn the basics of Astro with a project-based tutorial. All the background knowledge you need to get started!"
+  },
+  {
+    "title": "Check in: Unit 2 - Pages",
+    "category": "EN",
+    "path": "/en/tutorial/2-pages",
+    "site": "astro",
+    "headings": [],
+    "preview": "Tutorial: Build your first Astro blog — Create, style, and link to pages posts on your site"
+  },
+  {
+    "title": "Check in: Unit 6 - Astro Islands",
+    "category": "EN",
+    "path": "/en/tutorial/6-islands",
+    "site": "astro",
+    "headings": [],
+    "preview": "Tutorial: Build your first Astro blog — Use Astro islands to bring frontend framework components into your Astro site"
+  },
+  {
+    "title": "TypeScript",
+    "category": "EN",
+    "path": "/en/guides/typescript",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use Astro"
+  },
+  {
+    "title": "Why Astro?",
+    "category": "EN",
+    "path": "/en/concepts/why-astro",
+    "site": "astro",
+    "headings": [],
+    "preview": "Astro is the web framework for building content-driven websites like blogs, marketing, and e-commerce. Learn why Astro might be a good choice for your next webs"
+  },
+  {
+    "title": "Islands architecture",
+    "category": "EN",
+    "path": "/en/concepts/islands",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn about how Astro"
+  },
+  {
+    "title": "Astro Courses",
+    "category": "EN",
+    "path": "/en/astro-courses",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn Astro with out-of-this-world courses and tutorials."
+  },
+  {
+    "title": "Check in: Unit 4 - Layouts",
+    "category": "EN",
+    "path": "/en/tutorial/4-layouts",
+    "site": "astro",
+    "headings": [],
+    "preview": "Tutorial: Build your first Astro blog — Use Astro layouts to share common elements and styles across your pages and posts"
+  },
+  {
+    "title": "Develop and build",
+    "category": "EN",
+    "path": "/en/develop-and-build",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to start working on a new project."
+  },
+  {
+    "title": "Install Astro",
+    "category": "EN",
+    "path": "/en/install-and-setup",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to install Astro and start a new project."
+  },
+  {
+    "title": "Project structure",
+    "category": "EN",
+    "path": "/en/basics/project-structure",
+    "site": "astro",
+    "headings": [],
+    "preview": "An introduction to the basic file structure of an Astro project."
+  },
+  {
+    "title": "Check in: Unit 5 - Astro API",
+    "category": "EN",
+    "path": "/en/tutorial/5-astro-api",
+    "site": "astro",
+    "headings": [],
+    "preview": "Tutorial: Build your first Astro blog — Fetching and using data from project files to dynamically generate pages content and routes"
+  },
+  {
+    "title": "Editor setup",
+    "category": "EN",
+    "path": "/en/editor-setup",
+    "site": "astro",
+    "headings": [],
+    "preview": "Set up your code editor to build with Astro."
+  },
+  {
+    "title": "Check in: Unit 3 - Components",
+    "category": "EN",
+    "path": "/en/tutorial/3-components",
+    "site": "astro",
+    "headings": [],
+    "preview": "Tutorial: Build your first Astro blog — Build Astro components to reuse code for common elements across your website"
+  },
+  {
+    "title": "Configuration overview",
+    "category": "EN",
+    "path": "/en/guides/configuring-astro",
+    "site": "astro",
+    "headings": [],
+    "preview": "Get to know the ways you can configure and customize your new project and your development experience."
+  },
+  {
+    "title": "Check in: Unit 1 - Setup",
+    "category": "EN",
+    "path": "/en/tutorial/1-setup",
+    "site": "astro",
+    "headings": [],
+    "preview": "Tutorial: Build your first Astro blog — Prepare your development environment, and create and deploy your first Astro site"
+  },
+  {
+    "title": "Using environment variables",
+    "category": "EN",
+    "path": "/en/guides/environment-variables",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use environment variables in an Astro project."
+  },
+  {
+    "title": "Dev toolbar",
+    "category": "EN",
+    "path": "/en/guides/dev-toolbar",
+    "site": "astro",
+    "headings": [],
+    "preview": "A guide to using the dev toolbar in Astro"
+  },
+  {
+    "title": "Pages",
+    "category": "EN",
+    "path": "/en/basics/astro-pages",
+    "site": "astro",
+    "headings": [],
+    "preview": "An introduction to Astro pages."
+  },
+  {
+    "title": "Working with integrations",
+    "category": "EN",
+    "path": "/en/guides/integrations",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to add, configure, and build integrations for your Astro project."
+  },
+  {
+    "title": "Building Astro sites with AI tools",
+    "category": "EN",
+    "path": "/en/guides/build-with-ai",
+    "site": "astro",
+    "headings": [],
+    "preview": "Resources and tips for building Astro sites with AI assistance"
+  },
+  {
+    "title": "Layouts",
+    "category": "EN",
+    "path": "/en/basics/layouts",
+    "site": "astro",
+    "headings": [],
+    "preview": "An introduction to layouts in Astro."
+  },
+  {
+    "title": "Prefetch",
+    "category": "EN",
+    "path": "/en/guides/prefetch",
+    "site": "astro",
+    "headings": [],
+    "preview": "Prefetch links for snappier navigation between pages."
+  },
+  {
+    "title": "Components",
+    "category": "EN",
+    "path": "/en/basics/astro-components",
+    "site": "astro",
+    "headings": [],
+    "preview": "An introduction to Astro components."
+  },
+  {
+    "title": "Middleware",
+    "category": "EN",
+    "path": "/en/guides/middleware",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use middleware in Astro."
+  },
+  {
+    "title": "Internationalization (i18n) Routing",
+    "category": "EN",
+    "path": "/en/guides/internationalization",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use Astro’s i18n routing features to localize your site’s pages."
+  },
+  {
+    "title": "Endpoints",
+    "category": "EN",
+    "path": "/en/guides/endpoints",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to create endpoints that serve any kind of data"
+  },
+  {
+    "title": "Using custom fonts",
+    "category": "EN",
+    "path": "/en/guides/fonts",
+    "site": "astro",
+    "headings": [],
+    "preview": "Looking to add some custom typefaces to an Astro website? Use Google Fonts with Fontsource or add a font of your choice."
+  },
+  {
+    "title": "Syntax Highlighting",
+    "category": "EN",
+    "path": "/en/guides/syntax-highlighting",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to highlight your code blocks in Astro."
+  },
+  {
+    "title": "Routing",
+    "category": "EN",
+    "path": "/en/guides/routing",
+    "site": "astro",
+    "headings": [],
+    "preview": "An intro to routing with Astro."
+  },
+  {
+    "title": "View transitions",
+    "category": "EN",
+    "path": "/en/guides/view-transitions",
+    "site": "astro",
+    "headings": [],
+    "preview": "Enable seamless navigation between pages in Astro with view transitions."
+  },
+  {
+    "title": "Styles and CSS",
+    "category": "EN",
+    "path": "/en/guides/styling",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to style components in Astro with scoped styles, external CSS, and tooling like Sass and PostCSS."
+  },
+  {
+    "title": "Server islands",
+    "category": "EN",
+    "path": "/en/guides/server-islands",
+    "site": "astro",
+    "headings": [],
+    "preview": "Combine high performance static HTML with dynamic server-rendered content."
+  },
+  {
+    "title": "Scripts and event handling",
+    "category": "EN",
+    "path": "/en/guides/client-side-scripts",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to add client-side interactivity to Astro components using native browser JavaScript APIs."
+  },
+  {
+    "title": "On-demand rendering",
+    "category": "EN",
+    "path": "/en/guides/on-demand-rendering",
+    "site": "astro",
+    "headings": [],
+    "preview": "Generate server-rendered pages and routes on demand with an adapter."
+  },
+  {
+    "title": "Front-end frameworks",
+    "category": "EN",
+    "path": "/en/guides/framework-components",
+    "site": "astro",
+    "headings": [],
+    "preview": "Build your Astro website with React, Svelte, and more."
+  },
+  {
+    "title": "Sessions",
+    "category": "EN",
+    "path": "/en/guides/sessions",
+    "site": "astro",
+    "headings": [],
+    "preview": "Share data between requests for on-demand rendered pages."
+  },
+  {
+    "title": "Data fetching",
+    "category": "EN",
+    "path": "/en/guides/data-fetching",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to fetch remote data with Astro using the fetch API."
+  },
+  {
+    "title": "Content collections",
+    "category": "EN",
+    "path": "/en/guides/content-collections",
+    "site": "astro",
+    "headings": [],
+    "preview": "Manage your content with type safety."
+  },
+  {
+    "title": "Actions",
+    "category": "EN",
+    "path": "/en/guides/actions",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to create type-safe server functions you can call from anywhere."
+  },
+  {
+    "title": "Images",
+    "category": "EN",
+    "path": "/en/guides/images",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use images in Astro."
+  },
+  {
+    "title": "Markdown in Astro",
+    "category": "EN",
+    "path": "/en/guides/markdown-content",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn about Astro"
+  },
+  {
+    "title": "Upgrade to Astro v4",
+    "category": "EN",
+    "path": "/en/guides/upgrade-to/v4",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to upgrade your project to the latest version of Astro (v4.0)."
+  },
+  {
+    "title": "Upgrade to Astro v6",
+    "category": "EN",
+    "path": "/en/guides/upgrade-to/v6",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to upgrade your project to Astro v6.0."
+  },
+  {
+    "title": "Upgrade to Astro v7",
+    "category": "EN",
+    "path": "/en/guides/upgrade-to/v7",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to upgrade your project to Astro v7.0."
+  },
+  {
+    "title": "Upgrade Astro",
+    "category": "EN",
+    "path": "/en/upgrade-astro",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to upgrade Astro"
+  },
+  {
+    "title": "Upgrade to Astro v5",
+    "category": "EN",
+    "path": "/en/guides/upgrade-to/v5",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to upgrade your project to Astro v5.0."
+  },
+  {
+    "title": "Route caching",
+    "category": "EN",
+    "path": "/en/guides/caching",
+    "site": "astro",
+    "headings": [],
+    "preview": "An intro to caching with Astro."
+  },
+  {
+    "title": "Build HTML forms in Astro pages",
+    "category": "EN",
+    "path": "/en/recipes/build-forms",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to build HTML forms and handle submissions in your frontmatter."
+  },
+  {
+    "title": "Build forms with API routes",
+    "category": "EN",
+    "path": "/en/recipes/build-forms-api",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use JavaScript to send form submissions to an API Route."
+  },
+  {
+    "title": "Installing a Vite or Rollup plugin",
+    "category": "EN",
+    "path": "/en/recipes/add-yaml-support",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how you can import YAML data by adding a Rollup plugin to your project."
+  },
+  {
+    "title": "Analyze bundle size",
+    "category": "EN",
+    "path": "/en/recipes/analyze-bundle-size",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to analyze the bundle generated by Astro using `rollup-plugin-visualizer`."
+  },
+  {
+    "title": "Upgrade to Astro v2",
+    "category": "EN",
+    "path": "/en/guides/upgrade-to/v2",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to upgrade your project to the latest version of Astro."
+  },
+  {
+    "title": "Customize file names in the build output",
+    "category": "EN",
+    "path": "/en/recipes/customizing-output-filenames",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to change the default naming pattern for your built assets like JavaScript, CSS, and images in Astro using Vite"
+  },
+  {
+    "title": "Build a custom image component",
+    "category": "EN",
+    "path": "/en/recipes/build-custom-img-component",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to build a custom image component that supports media queries using the getImage function."
+  },
+  {
+    "title": "Astro recipes",
+    "category": "EN",
+    "path": "/en/recipes",
+    "site": "astro",
+    "headings": [],
+    "preview": "Short, focused how-to guides."
+  },
+  {
+    "title": "Verify a Captcha",
+    "category": "EN",
+    "path": "/en/recipes/captcha",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to create an API route and fetch it from the client."
+  },
+  {
+    "title": "Troubleshooting",
+    "category": "EN",
+    "path": "/en/guides/troubleshooting",
+    "site": "astro",
+    "headings": [],
+    "preview": "Need help? Stuck on something? We"
+  },
+  {
+    "title": "Dynamically import images",
+    "category": "EN",
+    "path": "/en/recipes/dynamically-importing-images",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to dynamically import images using Vite"
+  },
+  {
+    "title": "Legacy v0.x Upgrade Guide",
+    "category": "EN",
+    "path": "/en/guides/upgrade-to/v1",
+    "site": "astro",
+    "headings": [],
+    "preview": "Archived guide documenting changes between pre-v1 versions of Astro"
+  },
+  {
+    "title": "Call endpoints from the server",
+    "category": "EN",
+    "path": "/en/recipes/call-endpoints",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to call endpoints from the server in Astro."
+  },
+  {
+    "title": "Upgrade to Astro v3",
+    "category": "EN",
+    "path": "/en/guides/upgrade-to/v3",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to upgrade your project to the latest version of Astro (v3.0)."
+  },
+  {
+    "title": "Build your Astro site with Docker",
+    "category": "EN",
+    "path": "/en/recipes/docker",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to build your Astro site using Docker."
+  },
+  {
+    "title": "Use Bun with Astro",
+    "category": "EN",
+    "path": "/en/recipes/bun",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use Bun with your Astro site."
+  },
+  {
+    "title": "Add an RSS feed",
+    "category": "EN",
+    "path": "/en/recipes/rss",
+    "site": "astro",
+    "headings": [],
+    "preview": "Add an RSS feed to your Astro site to let users subscribe to your content."
+  },
+  {
+    "title": "Add last modified time",
+    "category": "EN",
+    "path": "/en/recipes/modified-time",
+    "site": "astro",
+    "headings": [],
+    "preview": "Build a Markdown processor plugin to add the last modified time to your Markdown and MDX."
+  },
+  {
+    "title": "Add icons to external links",
+    "category": "EN",
+    "path": "/en/recipes/external-links",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use a Markdown processor plugin to add icons to external links in your Markdown files."
+  },
+  {
+    "title": "Using streaming to improve page performance",
+    "category": "EN",
+    "path": "/en/recipes/streaming-improve-page-performance",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use streaming to improve page performance."
+  },
+  {
+    "title": "Migrating from Eleventy",
+    "category": "EN",
+    "path": "/en/guides/migrate-to-astro/from-eleventy",
+    "site": "astro",
+    "headings": [],
+    "preview": "Tips for migrating an existing Eleventy project to Astro"
+  },
+  {
+    "title": "Create a dev toolbar app",
+    "category": "EN",
+    "path": "/en/recipes/making-toolbar-apps",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to create a dev toolbar app for your site."
+  },
+  {
+    "title": "Add i18n features",
+    "category": "EN",
+    "path": "/en/recipes/i18n",
+    "site": "astro",
+    "headings": [],
+    "preview": "Use dynamic routing and content collections to add internationalization support to your Astro site."
+  },
+  {
+    "title": "Share state between islands",
+    "category": "EN",
+    "path": "/en/recipes/sharing-state-islands",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to share state across framework components with Nano Stores."
+  },
+  {
+    "title": "Share state between Astro components",
+    "category": "EN",
+    "path": "/en/recipes/sharing-state",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to share state across Astro components with Nano Stores."
+  },
+  {
+    "title": "Add reading time",
+    "category": "EN",
+    "path": "/en/recipes/reading-time",
+    "site": "astro",
+    "headings": [],
+    "preview": "Build a Markdown processor plugin to add reading time to your Markdown or MDX files."
+  },
+  {
+    "title": "Style rendered Markdown with Tailwind Typography",
+    "category": "EN",
+    "path": "/en/recipes/tailwind-rendered-markdown",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use @tailwind/typography to style your rendered Markdown."
+  },
+  {
+    "title": "Migrate an existing project to Astro",
+    "category": "EN",
+    "path": "/en/guides/migrate-to-astro",
+    "site": "astro",
+    "headings": [],
+    "preview": "Some tips and tricks for converting your site to Astro."
+  },
+  {
+    "title": "Migrating from Docusaurus",
+    "category": "EN",
+    "path": "/en/guides/migrate-to-astro/from-docusaurus",
+    "site": "astro",
+    "headings": [],
+    "preview": "Tips for migrating an existing Docusaurus project to Astro"
+  },
+  {
+    "title": "Migrating from Create React App (CRA)",
+    "category": "EN",
+    "path": "/en/guides/migrate-to-astro/from-create-react-app",
+    "site": "astro",
+    "headings": [],
+    "preview": "Tips for migrating an existing Create React App project to Astro"
+  },
+  {
+    "title": "Migrating from Gatsby",
+    "category": "EN",
+    "path": "/en/guides/migrate-to-astro/from-gatsby",
+    "site": "astro",
+    "headings": [],
+    "preview": "Tips for migrating an existing Gatsby project to Astro"
+  },
+  {
+    "title": "Migrating from GitBook",
+    "category": "EN",
+    "path": "/en/guides/migrate-to-astro/from-gitbook",
+    "site": "astro",
+    "headings": [],
+    "preview": "Tips for migrating an existing GitBook project to Astro"
+  },
+  {
+    "title": "Migrating from Jekyll",
+    "category": "EN",
+    "path": "/en/guides/migrate-to-astro/from-jekyll",
+    "site": "astro",
+    "headings": [],
+    "preview": "Tips for migrating an existing Jekyll project to Astro"
+  },
+  {
+    "title": "Migrating from Pelican",
+    "category": "EN",
+    "path": "/en/guides/migrate-to-astro/from-pelican",
+    "site": "astro",
+    "headings": [],
+    "preview": "Tips for migrating an existing Pelican project to Astro"
+  },
+  {
+    "title": "Migrating from Gridsome",
+    "category": "EN",
+    "path": "/en/guides/migrate-to-astro/from-gridsome",
+    "site": "astro",
+    "headings": [],
+    "preview": "Tips for migrating an existing Gridsome project to Astro"
+  },
+  {
+    "title": "Migrating from SvelteKit",
+    "category": "EN",
+    "path": "/en/guides/migrate-to-astro/from-sveltekit",
+    "site": "astro",
+    "headings": [],
+    "preview": "Tips for migrating an existing SvelteKit project to Astro"
+  },
+  {
+    "title": "Template directives reference",
+    "category": "EN",
+    "path": "/en/reference/directives-reference",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/directives-reference"
+  },
+  {
+    "title": "Migrating from Hugo",
+    "category": "EN",
+    "path": "/en/guides/migrate-to-astro/from-hugo",
+    "site": "astro",
+    "headings": [],
+    "preview": "Tips for migrating an existing Hugo project to Astro"
+  },
+  {
+    "title": "Contribute to Astro",
+    "category": "EN",
+    "path": "/en/contribute",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to get involved and contribute to Astro."
+  },
+  {
+    "title": "Migrating from WordPress",
+    "category": "EN",
+    "path": "/en/guides/migrate-to-astro/from-wordpress",
+    "site": "astro",
+    "headings": [],
+    "preview": "Tips for migrating an existing WordPress project to Astro"
+  },
+  {
+    "title": "Template expressions reference",
+    "category": "EN",
+    "path": "/en/reference/astro-syntax",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/astro-syntax"
+  },
+  {
+    "title": "Migrating from VuePress",
+    "category": "EN",
+    "path": "/en/guides/migrate-to-astro/from-vuepress",
+    "site": "astro",
+    "headings": [],
+    "preview": "Tips for migrating an existing VuePress project to Astro"
+  },
+  {
+    "title": "Migrating from Next.js",
+    "category": "EN",
+    "path": "/en/guides/migrate-to-astro/from-nextjs",
+    "site": "astro",
+    "headings": [],
+    "preview": "Tips for migrating an existing Next.js project to Astro"
+  },
+  {
+    "title": "Imports reference",
+    "category": "EN",
+    "path": "/en/guides/imports",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to import different file types into your Astro project."
+  },
+  {
+    "title": "Configuration Reference",
+    "category": "EN",
+    "path": "/en/reference/configuration-reference",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/configuration-reference"
+  },
+  {
+    "title": "Routing Reference",
+    "category": "EN",
+    "path": "/en/reference/routing-reference",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/routing-reference"
+  },
+  {
+    "title": "CLI Commands",
+    "category": "EN",
+    "path": "/en/reference/cli-reference",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/cli-reference"
+  },
+  {
+    "title": "Migrating from NuxtJS",
+    "category": "EN",
+    "path": "/en/guides/migrate-to-astro/from-nuxtjs",
+    "site": "astro",
+    "headings": [],
+    "preview": "Tips for migrating an existing NuxtJS project to Astro"
+  },
+  {
+    "title": "Hono routing API reference",
+    "category": "EN",
+    "path": "/en/reference/modules/astro-hono",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/modules/astro-hono"
+  },
+  {
+    "title": "Unified API Reference",
+    "category": "EN",
+    "path": "/en/reference/markdown-processors/unified",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/markdown-processors/unified"
+  },
+  {
+    "title": "Middleware API Reference",
+    "category": "EN",
+    "path": "/en/reference/modules/astro-middleware",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/modules/astro-middleware"
+  },
+  {
+    "title": "Adapter Server Entrypoint API Reference",
+    "category": "EN",
+    "path": "/en/reference/modules/astro-app",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/modules/astro-app"
+  },
+  {
+    "title": "Environment Variables API Reference",
+    "category": "EN",
+    "path": "/en/reference/modules/astro-env",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/modules/astro-env"
+  },
+  {
+    "title": "Content Collections API Reference",
+    "category": "EN",
+    "path": "/en/reference/modules/astro-content",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/modules/astro-content"
+  },
+  {
+    "title": "Actions API Reference",
+    "category": "EN",
+    "path": "/en/reference/modules/astro-actions",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/modules/astro-actions"
+  },
+  {
+    "title": "Sätteri API Reference",
+    "category": "EN",
+    "path": "/en/reference/markdown-processors/satteri",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/markdown-processors/satteri"
+  },
+  {
+    "title": "Image and Assets API Reference",
+    "category": "EN",
+    "path": "/en/reference/modules/astro-assets",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/modules/astro-assets"
+  },
+  {
+    "title": "Astro render context",
+    "category": "EN",
+    "path": "/en/reference/api-reference",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/api-reference"
+  },
+  {
+    "title": "Config imports API Reference",
+    "category": "EN",
+    "path": "/en/reference/modules/astro-config",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/modules/astro-config"
+  },
+  {
+    "title": "Fetch routing API reference",
+    "category": "EN",
+    "path": "/en/reference/modules/astro-fetch",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/modules/astro-fetch"
+  },
+  {
+    "title": "View Transitions Router API Reference",
+    "category": "EN",
+    "path": "/en/reference/modules/astro-transitions",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/modules/astro-transitions"
+  },
+  {
+    "title": "Zod API Reference",
+    "category": "EN",
+    "path": "/en/reference/modules/astro-zod",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/modules/astro-zod"
+  },
+  {
+    "title": "Internationalization API Reference",
+    "category": "EN",
+    "path": "/en/reference/modules/astro-i18n",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/modules/astro-i18n"
+  },
+  {
+    "title": "Static Paths API Reference",
+    "category": "EN",
+    "path": "/en/reference/modules/astro-static-paths",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/modules/astro-static-paths"
+  },
+  {
+    "title": "Astro Renderer API",
+    "category": "EN",
+    "path": "/en/reference/renderer-reference",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/renderer-reference"
+  },
+  {
+    "title": "Programmatic Astro API (experimental)",
+    "category": "EN",
+    "path": "/en/reference/programmatic-reference",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/programmatic-reference"
+  },
+  {
+    "title": "Dev Toolbar App API",
+    "category": "EN",
+    "path": "/en/reference/dev-toolbar-app-reference",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/dev-toolbar-app-reference"
+  },
+  {
+    "title": "Image Service API",
+    "category": "EN",
+    "path": "/en/reference/image-service-reference",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/image-service-reference"
+  },
+  {
+    "title": "Experimental Intellisense for content collections",
+    "category": "EN",
+    "path": "/en/reference/experimental-flags/content-intellisense",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/experimental-flags/content-intellisense"
+  },
+  {
+    "title": "Astro Logger API",
+    "category": "EN",
+    "path": "/en/reference/logger-reference",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/logger-reference"
+  },
+  {
+    "title": "Astro Session Driver API",
+    "category": "EN",
+    "path": "/en/reference/session-driver-reference",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/session-driver-reference"
+  },
+  {
+    "title": "Astro Cache Provider API",
+    "category": "EN",
+    "path": "/en/reference/cache-provider-reference",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/cache-provider-reference"
+  },
+  {
+    "title": "Configuring experimental flags",
+    "category": "EN",
+    "path": "/en/reference/experimental-flags",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/experimental-flags"
+  },
+  {
+    "title": "Astro Container API (experimental)",
+    "category": "EN",
+    "path": "/en/reference/container-reference",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/container-reference"
+  },
+  {
+    "title": "Experimental Chrome DevTools workspace",
+    "category": "EN",
+    "path": "/en/reference/experimental-flags/chrome-devtools-workspace",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/experimental-flags/chrome-devtools-workspace"
+  },
+  {
+    "title": "Astro Font Provider API",
+    "category": "EN",
+    "path": "/en/reference/font-provider-reference",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/font-provider-reference"
+  },
+  {
+    "title": "Astro Adapter API",
+    "category": "EN",
+    "path": "/en/reference/adapter-reference",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/adapter-reference"
+  },
+  {
+    "title": "Experimental client prerendering",
+    "category": "EN",
+    "path": "/en/reference/experimental-flags/client-prerender",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/experimental-flags/client-prerender"
+  },
+  {
+    "title": "Astro Content Loader API",
+    "category": "EN",
+    "path": "/en/reference/content-loader-reference",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/content-loader-reference"
+  },
+  {
+    "title": "Astro Integration API",
+    "category": "EN",
+    "path": "/en/reference/integrations-reference",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/integrations-reference"
+  },
+  {
+    "title": "Experimental incremental static builds",
+    "category": "EN",
+    "path": "/en/reference/experimental-flags/incremental-build",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/experimental-flags/incremental-build"
+  },
+  {
+    "title": "@astrojs/ netlify",
+    "category": "EN",
+    "path": "/en/guides/integrations-guide/netlify",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use the @astrojs/netlify adapter to deploy your Astro project."
+  },
+  {
+    "title": "Experimental SVG optimization",
+    "category": "EN",
+    "path": "/en/reference/experimental-flags/svg-optimization",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/experimental-flags/svg-optimization"
+  },
+  {
+    "title": "@astrojs/ svelte",
+    "category": "EN",
+    "path": "/en/guides/integrations-guide/svelte",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use the @astrojs/svelte framework integration to extend component support in your Astro project."
+  },
+  {
+    "title": "@astrojs/ solid-js",
+    "category": "EN",
+    "path": "/en/guides/integrations-guide/solid-js",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use the @astrojs/solid-js framework integration to extend component support in your Astro project."
+  },
+  {
+    "title": "Error reference",
+    "category": "EN",
+    "path": "/en/reference/error-reference",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/error-reference"
+  },
+  {
+    "title": "Legacy flags",
+    "category": "EN",
+    "path": "/en/reference/legacy-flags",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/legacy-flags"
+  },
+  {
+    "title": "@astrojs/ preact",
+    "category": "EN",
+    "path": "/en/guides/integrations-guide/preact",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use the @astrojs/preact framework integration to extend component support in your Astro project."
+  },
+  {
+    "title": "@astrojs/ alpinejs",
+    "category": "EN",
+    "path": "/en/guides/integrations-guide/alpinejs",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use the @astrojs/alpinejs framework integration to extend component support in your Astro project."
+  },
+  {
+    "title": "Experimental collection storage",
+    "category": "EN",
+    "path": "/en/reference/experimental-flags/collection-storage",
+    "site": "astro",
+    "headings": [],
+    "preview": "/en/reference/experimental-flags/collection-storage"
+  },
+  {
+    "title": "@astrojs/ vercel",
+    "category": "EN",
+    "path": "/en/guides/integrations-guide/vercel",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use the @astrojs/vercel adapter to deploy your Astro project."
+  },
+  {
+    "title": "@astrojs/ markdoc",
+    "category": "EN",
+    "path": "/en/guides/integrations-guide/markdoc",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use the @astrojs/markdoc integration in your Astro project."
+  },
+  {
+    "title": "@astrojs/ vue",
+    "category": "EN",
+    "path": "/en/guides/integrations-guide/vue",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use the @astrojs/vue framework integration to extend component support in your Astro project."
+  },
+  {
+    "title": "@astrojs/ node",
+    "category": "EN",
+    "path": "/en/guides/integrations-guide/node",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use the @astrojs/node adapter to deploy your Astro project."
+  },
+  {
+    "title": "@astrojs/ react",
+    "category": "EN",
+    "path": "/en/guides/integrations-guide/react",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use the @astrojs/react framework integration to extend component support in your Astro project."
+  },
+  {
+    "title": "@astrojs/ cloudflare",
+    "category": "EN",
+    "path": "/en/guides/integrations-guide/cloudflare",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use the @astrojs/cloudflare adapter to deploy your Astro project."
+  },
+  {
+    "title": "Deploy your Astro Site to Azion",
+    "category": "EN",
+    "path": "/en/guides/deploy/azion",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to deploy your Astro site to the web using Azion."
+  },
+  {
+    "title": "Deploy your Astro Site",
+    "category": "EN",
+    "path": "/en/guides/deploy",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to deploy your Astro site to the web."
+  },
+  {
+    "title": "Deploy your Astro Site to AWS with Flightcontrol",
+    "category": "EN",
+    "path": "/en/guides/deploy/aws-via-flightcontrol",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to deploy your Astro site to AWS with Flightcontrol"
+  },
+  {
+    "title": "@astrojs/ partytown",
+    "category": "EN",
+    "path": "/en/guides/integrations-guide/partytown",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use the @astrojs/partytown integration in your Astro project."
+  },
+  {
+    "title": "Deploy your Astro Site to AWS with SST",
+    "category": "EN",
+    "path": "/en/guides/deploy/aws-via-sst",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to deploy your Astro site to AWS with SST"
+  },
+  {
+    "title": "@astrojs/ mdx",
+    "category": "EN",
+    "path": "/en/guides/integrations-guide/mdx",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use the @astrojs/mdx integration in your Astro project."
+  },
+  {
+    "title": "@astrojs/ sitemap",
+    "category": "EN",
+    "path": "/en/guides/integrations-guide/sitemap",
+    "site": "astro",
+    "headings": [],
+    "preview": "Learn how to use the @astrojs/sitemap integration in your Astro project."
+  },
+  {
+    "title": "Deploy your Astro Site to AWS",
+    "category": "EN",
+    "path": "/en/guides/deploy/aws",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to deploy your Astro site to the web using AWS."
+  },
+  {
+    "title": "Deploy your Astro Site with Cleavr",
+    "category": "EN",
+    "path": "/en/guides/deploy/cleavr",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to deploy your Astro site to your VPS server using Cleavr."
+  },
+  {
+    "title": "Deploy your Astro Site with Buddy",
+    "category": "EN",
+    "path": "/en/guides/deploy/buddy",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to deploy your Astro site to the web using Buddy."
+  },
+  {
+    "title": "Deploy your Astro Site to Clever Cloud",
+    "category": "EN",
+    "path": "/en/guides/deploy/clever-cloud",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to deploy your Astro site to the web on Clever Cloud."
+  },
+  {
+    "title": "Deploy your Astro Site to Cloudflare",
+    "category": "EN",
+    "path": "/en/guides/deploy/cloudflare",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to deploy your Astro site to the web using Cloudflare"
+  },
+  {
+    "title": "Deploy your Astro Site with CloudRay",
+    "category": "EN",
+    "path": "/en/guides/deploy/cloudray",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to deploy your Astro site to your Ubuntu Server using CloudRay"
+  },
+  {
+    "title": "Deploy your Astro Site with Deno",
+    "category": "EN",
+    "path": "/en/guides/deploy/deno",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to deploy your Astro site to the web using Deno."
+  },
+  {
+    "title": "Deploy your Astro Site with DeployHQ",
+    "category": "EN",
+    "path": "/en/guides/deploy/deployhq",
+    "site": "astro",
+    "headings": [],
+    "preview": "How to deploy your Astro site to the web using DeployHQ."
+  },
+  {
+    "title": "Astro Docs",
+    "category": "Astro",
+    "path": "/docs",
+    "site": "astro",
+    "headings": [],
+    "preview": "Guides, resources, and API references to help you build with Astro — the web framework for content-driven websites."
+  },
+  {
+    "title": "Astro Docs",
+    "category": "Astro",
+    "path": "/",
+    "site": "astro",
+    "headings": [],
+    "preview": "Guides, resources, and API references to help you build with Astro — the web framework for content-driven websites."
+  }
+]

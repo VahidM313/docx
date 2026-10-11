@@ -1,0 +1,1210 @@
+[
+  {
+    "title": "Documentation",
+    "category": "PostgreSQL",
+    "path": "/docs",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs"
+  },
+  {
+    "title": "Manual Archive",
+    "category": "DOCS",
+    "path": "/docs/manuals/archive",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/manuals/archive"
+  },
+  {
+    "title": "PostgreSQL 16.15 Documentation",
+    "category": "DOCS",
+    "path": "/docs/16/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/index.html"
+  },
+  {
+    "title": "PostgreSQL 17.11 Documentation",
+    "category": "DOCS",
+    "path": "/docs/17/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/17/index.html"
+  },
+  {
+    "title": "PostgreSQL 20devel Documentation",
+    "category": "DOCS",
+    "path": "/docs/devel/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/devel/index.html"
+  },
+  {
+    "title": "PostgreSQL 15.19 Documentation",
+    "category": "DOCS",
+    "path": "/docs/15/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/15/index.html"
+  },
+  {
+    "title": "PostgreSQL 19beta4 Documentation",
+    "category": "DOCS",
+    "path": "/docs/19/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/19/index.html"
+  },
+  {
+    "title": "Tutorials Other Resources",
+    "category": "DOCS",
+    "path": "/docs/online-resources",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/online-resources"
+  },
+  {
+    "title": "PostgreSQL 18.6 Documentation",
+    "category": "DOCS",
+    "path": "/docs/current/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/current/index.html"
+  },
+  {
+    "title": "Frequently Asked Questions",
+    "category": "DOCS",
+    "path": "/docs/faq",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/faq"
+  },
+  {
+    "title": "PostgreSQL 14.24 Documentation",
+    "category": "DOCS",
+    "path": "/docs/14/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/14/index.html"
+  },
+  {
+    "title": "PostgreSQL 18.6 Documentation",
+    "category": "DOCS",
+    "path": "/docs/18/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/18/index.html"
+  },
+  {
+    "title": "Release Notes",
+    "category": "DOCS",
+    "path": "/docs/release",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/release"
+  },
+  {
+    "title": "Books",
+    "category": "DOCS",
+    "path": "/docs/books",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/books"
+  },
+  {
+    "title": "PostgreSQL 18.6 Documentation",
+    "category": "DOCS",
+    "path": "/docs/current",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/current"
+  },
+  {
+    "title": "PostgreSQL 10.23 Documentation",
+    "category": "DOCS",
+    "path": "/docs/10/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/10/index.html"
+  },
+  {
+    "title": "PostgreSQL 9.4.26 Documentation",
+    "category": "DOCS",
+    "path": "/docs/9.4/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/9.4/index.html"
+  },
+  {
+    "title": "PostgreSQL 9.2.24 Documentation",
+    "category": "DOCS",
+    "path": "/docs/9.2/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/9.2/index.html"
+  },
+  {
+    "title": "PostgreSQL 12.22 Documentation",
+    "category": "DOCS",
+    "path": "/docs/12/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/12/index.html"
+  },
+  {
+    "title": "PostgreSQL 11.22 Documentation",
+    "category": "DOCS",
+    "path": "/docs/11/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/11/index.html"
+  },
+  {
+    "title": "PostgreSQL 8.3.23 Documentation",
+    "category": "DOCS",
+    "path": "/docs/8.3/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/8.3/index.html"
+  },
+  {
+    "title": "PostgreSQL 8.2.23 Documentation",
+    "category": "DOCS",
+    "path": "/docs/8.2/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/8.2/index.html"
+  },
+  {
+    "title": "PostgreSQL 9.3.25 Documentation",
+    "category": "DOCS",
+    "path": "/docs/9.3/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/9.3/index.html"
+  },
+  {
+    "title": "PostgreSQL 8.4.22 Documentation",
+    "category": "DOCS",
+    "path": "/docs/8.4/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/8.4/index.html"
+  },
+  {
+    "title": "PostgreSQL 9.6.24 Documentation",
+    "category": "DOCS",
+    "path": "/docs/9.6/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/9.6/index.html"
+  },
+  {
+    "title": "PostgreSQL 9.5.25 Documentation",
+    "category": "DOCS",
+    "path": "/docs/9.5/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/9.5/index.html"
+  },
+  {
+    "title": "PostgreSQL 9.1.24 Documentation",
+    "category": "DOCS",
+    "path": "/docs/9.1/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/9.1/index.html"
+  },
+  {
+    "title": "PostgreSQL 8.1.23 Documentation",
+    "category": "DOCS",
+    "path": "/docs/8.1/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/8.1/index.html"
+  },
+  {
+    "title": "PostgreSQL 8.0.26 Documentation",
+    "category": "DOCS",
+    "path": "/docs/8.0/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/8.0/index.html"
+  },
+  {
+    "title": "PostgreSQL 9.0.23 Documentation",
+    "category": "DOCS",
+    "path": "/docs/9.0/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/9.0/index.html"
+  },
+  {
+    "title": "PostgreSQL 13.23 Documentation",
+    "category": "DOCS",
+    "path": "/docs/13/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/13/index.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: 4. Further Information",
+    "category": "DOCS",
+    "path": "/docs/16/resources.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/resources.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Legal Notice",
+    "category": "DOCS",
+    "path": "/docs/16/legalnotice.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/legalnotice.html"
+  },
+  {
+    "title": "PostgreSQL 7.1.3 Documentation",
+    "category": "DOCS",
+    "path": "/docs/7.1/postgres.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/7.1/postgres.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: 1. What Is PostgreSQL?",
+    "category": "DOCS",
+    "path": "/docs/16/intro-whatis.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/intro-whatis.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: 3. Conventions",
+    "category": "DOCS",
+    "path": "/docs/16/notation.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/notation.html"
+  },
+  {
+    "title": "PostgreSQL 7.2.8 Documentation",
+    "category": "DOCS",
+    "path": "/docs/7.2/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/7.2/index.html"
+  },
+  {
+    "title": "Preface",
+    "category": "DOCS",
+    "path": "/docs/16/preface.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/preface.html"
+  },
+  {
+    "title": "Part&nbsp;I.&nbsp;Tutorial",
+    "category": "DOCS",
+    "path": "/docs/16/tutorial.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/tutorial.html"
+  },
+  {
+    "title": "PostgreSQL 7.3.21 Documentation",
+    "category": "DOCS",
+    "path": "/docs/7.3/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/7.3/index.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: 2. A Brief History of PostgreSQL",
+    "category": "DOCS",
+    "path": "/docs/16/history.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/history.html"
+  },
+  {
+    "title": "PostgreSQL",
+    "category": "DOCS",
+    "path": "/docs/6.3/book01.htm",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/6.3/book01.htm"
+  },
+  {
+    "title": "PostgreSQL",
+    "category": "DOCS",
+    "path": "/docs/7.0/postgres.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/7.0/postgres.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: 5. Bug Reporting Guidelines",
+    "category": "DOCS",
+    "path": "/docs/16/bug-reporting.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/bug-reporting.html"
+  },
+  {
+    "title": "PostgreSQL",
+    "category": "DOCS",
+    "path": "/docs/6.4/postgres.htm",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/6.4/postgres.htm"
+  },
+  {
+    "title": "PostgreSQL",
+    "category": "DOCS",
+    "path": "/docs/6.5/postgres.htm",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/6.5/postgres.htm"
+  },
+  {
+    "title": "PostgreSQL 7.4.30 Documentation",
+    "category": "DOCS",
+    "path": "/docs/7.4/index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/7.4/index.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 3. Advanced Features",
+    "category": "DOCS",
+    "path": "/docs/16/tutorial-advanced.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/tutorial-advanced.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 2. The SQL Language",
+    "category": "DOCS",
+    "path": "/docs/16/tutorial-sql.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/tutorial-sql.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 1. Getting Started",
+    "category": "DOCS",
+    "path": "/docs/16/tutorial-start.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/tutorial-start.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 4. SQL Syntax",
+    "category": "DOCS",
+    "path": "/docs/16/sql-syntax.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/sql-syntax.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 6. Data Manipulation",
+    "category": "DOCS",
+    "path": "/docs/16/dml.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/dml.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 11. Indexes",
+    "category": "DOCS",
+    "path": "/docs/16/indexes.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/indexes.html"
+  },
+  {
+    "title": "Part&nbsp;II.&nbsp;The SQL Language",
+    "category": "DOCS",
+    "path": "/docs/16/sql.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/sql.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 10. Type Conversion",
+    "category": "DOCS",
+    "path": "/docs/16/typeconv.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/typeconv.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 15. Parallel Query",
+    "category": "DOCS",
+    "path": "/docs/16/parallel-query.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/parallel-query.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 5. Data Definition",
+    "category": "DOCS",
+    "path": "/docs/16/ddl.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/ddl.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 14. Performance Tips",
+    "category": "DOCS",
+    "path": "/docs/16/performance-tips.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/performance-tips.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 12. Full Text Search",
+    "category": "DOCS",
+    "path": "/docs/16/textsearch.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/textsearch.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 7. Queries",
+    "category": "DOCS",
+    "path": "/docs/16/queries.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/queries.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 9. Functions and Operators",
+    "category": "DOCS",
+    "path": "/docs/16/functions.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/functions.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 13. Concurrency Control",
+    "category": "DOCS",
+    "path": "/docs/16/mvcc.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/mvcc.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 8. Data Types",
+    "category": "DOCS",
+    "path": "/docs/16/datatype.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/datatype.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 16. Installation from Binaries",
+    "category": "DOCS",
+    "path": "/docs/16/install-binaries.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/install-binaries.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 22. Database Roles",
+    "category": "DOCS",
+    "path": "/docs/16/user-manag.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/user-manag.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 30. Reliability and the Write-Ahead Log",
+    "category": "DOCS",
+    "path": "/docs/16/wal.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/wal.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 23. Managing Databases",
+    "category": "DOCS",
+    "path": "/docs/16/managing-databases.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/managing-databases.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 18. Installation from Source Code on Windows",
+    "category": "DOCS",
+    "path": "/docs/16/install-windows.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/install-windows.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 17. Installation from Source Code",
+    "category": "DOCS",
+    "path": "/docs/16/installation.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/installation.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 20. Server Configuration",
+    "category": "DOCS",
+    "path": "/docs/16/runtime-config.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/runtime-config.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 21. Client Authentication",
+    "category": "DOCS",
+    "path": "/docs/16/client-authentication.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/client-authentication.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 29. Monitoring Disk Usage",
+    "category": "DOCS",
+    "path": "/docs/16/diskusage.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/diskusage.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 19. Server Setup and Operation",
+    "category": "DOCS",
+    "path": "/docs/16/runtime.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/runtime.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 25. Routine Database Maintenance Tasks",
+    "category": "DOCS",
+    "path": "/docs/16/maintenance.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/maintenance.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 24. Localization",
+    "category": "DOCS",
+    "path": "/docs/16/charset.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/charset.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 26. Backup and Restore",
+    "category": "DOCS",
+    "path": "/docs/16/backup.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/backup.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 28. Monitoring Database Activity",
+    "category": "DOCS",
+    "path": "/docs/16/monitoring.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/monitoring.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 27. High Availability, Load Balancing, and Replication",
+    "category": "DOCS",
+    "path": "/docs/16/high-availability.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/high-availability.html"
+  },
+  {
+    "title": "Part&nbsp;III.&nbsp;Server Administration",
+    "category": "DOCS",
+    "path": "/docs/16/admin.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/admin.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 35. Large Objects",
+    "category": "DOCS",
+    "path": "/docs/16/largeobjects.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/largeobjects.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 37. The Information Schema",
+    "category": "DOCS",
+    "path": "/docs/16/information-schema.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/information-schema.html"
+  },
+  {
+    "title": "Part&nbsp;IV.&nbsp;Client Interfaces",
+    "category": "DOCS",
+    "path": "/docs/16/client-interfaces.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/client-interfaces.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 38. Extending SQL",
+    "category": "DOCS",
+    "path": "/docs/16/extend.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/extend.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 36. ECPG — Embedded SQL in C",
+    "category": "DOCS",
+    "path": "/docs/16/ecpg.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/ecpg.html"
+  },
+  {
+    "title": "Part&nbsp;V.&nbsp;Server Programming",
+    "category": "DOCS",
+    "path": "/docs/16/server-programming.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/server-programming.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 40. Event Triggers",
+    "category": "DOCS",
+    "path": "/docs/16/event-triggers.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/event-triggers.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 44. PL/Tcl — Tcl Procedural Language",
+    "category": "DOCS",
+    "path": "/docs/16/pltcl.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/pltcl.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 33. Regression Tests",
+    "category": "DOCS",
+    "path": "/docs/16/regress.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/regress.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 41. The Rule System",
+    "category": "DOCS",
+    "path": "/docs/16/rules.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/rules.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 43. PL/pgSQL — SQL Procedural Language",
+    "category": "DOCS",
+    "path": "/docs/16/plpgsql.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/plpgsql.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 42. Procedural Languages",
+    "category": "DOCS",
+    "path": "/docs/16/xplang.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/xplang.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 31. Logical Replication",
+    "category": "DOCS",
+    "path": "/docs/16/logical-replication.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/logical-replication.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 34. libpq — C Library",
+    "category": "DOCS",
+    "path": "/docs/16/libpq.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/libpq.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 39. Triggers",
+    "category": "DOCS",
+    "path": "/docs/16/triggers.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/triggers.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 32. Just-in-Time Compilation (JIT)",
+    "category": "DOCS",
+    "path": "/docs/16/jit.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/jit.html"
+  },
+  {
+    "title": "PostgreSQL Server Applications",
+    "category": "DOCS",
+    "path": "/docs/16/reference-server.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/reference-server.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 51. Archive Modules",
+    "category": "DOCS",
+    "path": "/docs/16/archive-modules.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/archive-modules.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 49. Logical Decoding",
+    "category": "DOCS",
+    "path": "/docs/16/logicaldecoding.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/logicaldecoding.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 45. PL/Perl — Perl Procedural Language",
+    "category": "DOCS",
+    "path": "/docs/16/plperl.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/plperl.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 46. PL/Python — Python Procedural Language",
+    "category": "DOCS",
+    "path": "/docs/16/plpython.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/plpython.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 50. Replication Progress Tracking",
+    "category": "DOCS",
+    "path": "/docs/16/replication-origins.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/replication-origins.html"
+  },
+  {
+    "title": "PostgreSQL Client Applications",
+    "category": "DOCS",
+    "path": "/docs/16/reference-client.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/reference-client.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 55. Frontend/Backend Protocol",
+    "category": "DOCS",
+    "path": "/docs/16/protocol.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/protocol.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 54. System Views",
+    "category": "DOCS",
+    "path": "/docs/16/views.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/views.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 52. Overview of PostgreSQL Internals",
+    "category": "DOCS",
+    "path": "/docs/16/overview.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/overview.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 47. Server Programming Interface",
+    "category": "DOCS",
+    "path": "/docs/16/spi.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/spi.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 53. System Catalogs",
+    "category": "DOCS",
+    "path": "/docs/16/catalogs.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/catalogs.html"
+  },
+  {
+    "title": "Part&nbsp;VII.&nbsp;Internals",
+    "category": "DOCS",
+    "path": "/docs/16/internals.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/internals.html"
+  },
+  {
+    "title": "SQL Commands",
+    "category": "DOCS",
+    "path": "/docs/16/sql-commands.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/sql-commands.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 48. Background Worker Processes",
+    "category": "DOCS",
+    "path": "/docs/16/bgworker.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/bgworker.html"
+  },
+  {
+    "title": "Part&nbsp;VI.&nbsp;Reference",
+    "category": "DOCS",
+    "path": "/docs/16/reference.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/reference.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 56. PostgreSQL Coding Conventions",
+    "category": "DOCS",
+    "path": "/docs/16/source.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/source.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 57. Native Language Support",
+    "category": "DOCS",
+    "path": "/docs/16/nls.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/nls.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 58. Writing a Procedural Language Handler",
+    "category": "DOCS",
+    "path": "/docs/16/plhandler.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/plhandler.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 62. Genetic Query Optimizer",
+    "category": "DOCS",
+    "path": "/docs/16/geqo.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/geqo.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 68. GiST Indexes",
+    "category": "DOCS",
+    "path": "/docs/16/gist.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/gist.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 71. BRIN Indexes",
+    "category": "DOCS",
+    "path": "/docs/16/brin.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/brin.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 69. SP-GiST Indexes",
+    "category": "DOCS",
+    "path": "/docs/16/spgist.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/spgist.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 70. GIN Indexes",
+    "category": "DOCS",
+    "path": "/docs/16/gin.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/gin.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 61. Writing a Custom Scan Provider",
+    "category": "DOCS",
+    "path": "/docs/16/custom-scan.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/custom-scan.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 66. Custom WAL Resource Managers",
+    "category": "DOCS",
+    "path": "/docs/16/custom-rmgr.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/custom-rmgr.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 60. Writing a Table Sampling Method",
+    "category": "DOCS",
+    "path": "/docs/16/tablesample-method.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/tablesample-method.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 67. B-Tree Indexes",
+    "category": "DOCS",
+    "path": "/docs/16/btree.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/btree.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 63. Table Access Method Interface Definition",
+    "category": "DOCS",
+    "path": "/docs/16/tableam.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/tableam.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 59. Writing a Foreign Data Wrapper",
+    "category": "DOCS",
+    "path": "/docs/16/fdwhandler.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/fdwhandler.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 65. Generic WAL Records",
+    "category": "DOCS",
+    "path": "/docs/16/generic-wal.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/generic-wal.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 64. Index Access Method Interface Definition",
+    "category": "DOCS",
+    "path": "/docs/16/indexam.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/indexam.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 77. Backup Manifest Format",
+    "category": "DOCS",
+    "path": "/docs/16/backup-manifest-format.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/backup-manifest-format.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 72. Hash Indexes",
+    "category": "DOCS",
+    "path": "/docs/16/hash-index.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/hash-index.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 76. How the Planner Uses Statistics",
+    "category": "DOCS",
+    "path": "/docs/16/planner-stats-details.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/planner-stats-details.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 74. Transaction Processing",
+    "category": "DOCS",
+    "path": "/docs/16/transactions.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/transactions.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Appendix B. Date/Time Support",
+    "category": "DOCS",
+    "path": "/docs/16/datetime-appendix.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/datetime-appendix.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 73. Database Physical Storage",
+    "category": "DOCS",
+    "path": "/docs/16/storage.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/storage.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Chapter 75. System Catalog Declarations and Initial Contents",
+    "category": "DOCS",
+    "path": "/docs/16/bki.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/bki.html"
+  },
+  {
+    "title": "Part&nbsp;VIII.&nbsp;Appendixes",
+    "category": "DOCS",
+    "path": "/docs/16/appendixes.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/appendixes.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Appendix D. SQL Conformance",
+    "category": "DOCS",
+    "path": "/docs/16/features.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/features.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Appendix E. Release Notes",
+    "category": "DOCS",
+    "path": "/docs/16/release.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/release.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Appendix A. PostgreSQL Error Codes",
+    "category": "DOCS",
+    "path": "/docs/16/errcodes-appendix.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/errcodes-appendix.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Appendix C. SQL Key Words",
+    "category": "DOCS",
+    "path": "/docs/16/sql-keywords-appendix.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/sql-keywords-appendix.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Appendix H. External Projects",
+    "category": "DOCS",
+    "path": "/docs/16/external-projects.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/external-projects.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Appendix I. The Source Code Repository",
+    "category": "DOCS",
+    "path": "/docs/16/sourcerepo.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/sourcerepo.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Appendix G. Additional Supplied Programs",
+    "category": "DOCS",
+    "path": "/docs/16/contrib-prog.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/contrib-prog.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Appendix J. Documentation",
+    "category": "DOCS",
+    "path": "/docs/16/docguide.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/docguide.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Appendix K. PostgreSQL Limits",
+    "category": "DOCS",
+    "path": "/docs/16/limits.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/limits.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Appendix F. Additional Supplied Modules and Extensions",
+    "category": "DOCS",
+    "path": "/docs/16/contrib.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/contrib.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Appendix N. Color Support",
+    "category": "DOCS",
+    "path": "/docs/16/color.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/color.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Appendix L. Acronyms",
+    "category": "DOCS",
+    "path": "/docs/16/acronyms.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/acronyms.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Appendix M. Glossary",
+    "category": "DOCS",
+    "path": "/docs/16/glossary.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/glossary.html"
+  },
+  {
+    "title": "PostgreSQL: Documentation: 16: Appendix O. Obsolete or Renamed Features",
+    "category": "DOCS",
+    "path": "/docs/16/appendix-obsolete.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/appendix-obsolete.html"
+  },
+  {
+    "title": "Bibliography",
+    "category": "DOCS",
+    "path": "/docs/16/biblio.html",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/docs/16/biblio.html"
+  },
+  {
+    "title": "Documentation",
+    "category": "PostgreSQL",
+    "path": "/",
+    "site": "postgresql",
+    "headings": [],
+    "preview": "/"
+  }
+]

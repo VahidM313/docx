@@ -1,0 +1,154 @@
+[
+  {
+    "title": "Introduction | TanStack Virtual Docs",
+    "category": "TanStack Virtual",
+    "path": "/virtual/latest/docs/introduction",
+    "site": "tanstack_virtual",
+    "headings": [],
+    "preview": "TanStack Virtual is a headless UI utility for virtualizing long lists of elements in JS/TS, React, Vue, Svelte, Solid, Lit, and Angular. It is not a component therefore does not ship with or render..."
+  },
+  {
+    "title": "React TanStack Virtual Fixed Example | TanStack Virtual Docs",
+    "category": "TanStack Virtual",
+    "path": "/virtual/latest/docs/framework/react/examples/fixed",
+    "site": "tanstack_virtual",
+    "headings": [],
+    "preview": "An example showing how to implement Fixed in React using TanStack Virtual."
+  },
+  {
+    "title": "Chat | TanStack Virtual Docs",
+    "category": "TanStack Virtual",
+    "path": "/virtual/latest/docs/chat",
+    "site": "tanstack_virtual",
+    "headings": [],
+    "preview": "Chat, AI streams, logs, and other reverse feeds have a different scrolling contract than a standard top-anchored list. New output usually appears at the end, older history is prepended at the start,..."
+  },
+  {
+    "title": "Virtualizer | TanStack Virtual Docs",
+    "category": "TanStack Virtual",
+    "path": "/virtual/latest/docs/api/virtualizer",
+    "site": "tanstack_virtual",
+    "headings": [],
+    "preview": "The Virtualizer class is the core of TanStack Virtual. Virtualizer instances are usually created for you by your framework adapter, but you do receive the virtualizer directly. The total number of..."
+  },
+  {
+    "title": "Text Measurement with Pretext | TanStack Virtual Docs",
+    "category": "TanStack Virtual",
+    "path": "/virtual/latest/docs/pretext",
+    "site": "tanstack_virtual",
+    "headings": [],
+    "preview": "Pretext is a text measurement and layout library from Cheng Lou. TanStack Virtual still owns scrolling, range calculation, item positioning, and scroll-to behavior; Pretext can own the text-height..."
+  },
+  {
+    "title": "Installation | TanStack Virtual Docs",
+    "category": "TanStack Virtual",
+    "path": "/virtual/latest/docs/installation",
+    "site": "tanstack_virtual",
+    "headings": [],
+    "preview": "Before we dig in to the API, let"
+  },
+  {
+    "title": "React Virtual | TanStack Virtual React Docs",
+    "category": "TanStack Virtual",
+    "path": "/virtual/latest/docs/framework/react/react-virtual",
+    "site": "tanstack_virtual",
+    "headings": [],
+    "preview": "The @tanstack/react-virtual adapter is a wrapper around the core virtual logic. This function returns a standard Virtualizer instance configured to work with an HTML element as the scrollElement. This..."
+  },
+  {
+    "title": "React TanStack Virtual Window Example | TanStack Virtual Docs",
+    "category": "TanStack Virtual",
+    "path": "/virtual/latest/docs/framework/react/examples/window",
+    "site": "tanstack_virtual",
+    "headings": [],
+    "preview": "An example showing how to implement Window in React using TanStack Virtual."
+  },
+  {
+    "title": "React TanStack Virtual Pretext Example | TanStack Virtual Docs",
+    "category": "TanStack Virtual",
+    "path": "/virtual/latest/docs/framework/react/examples/pretext",
+    "site": "tanstack_virtual",
+    "headings": [],
+    "preview": "An example showing how to implement Pretext in React using TanStack Virtual."
+  },
+  {
+    "title": "React TanStack Virtual Chat Example | TanStack Virtual Docs",
+    "category": "TanStack Virtual",
+    "path": "/virtual/latest/docs/framework/react/examples/chat",
+    "site": "tanstack_virtual",
+    "headings": [],
+    "preview": "An example showing how to implement Chat in React using TanStack Virtual."
+  },
+  {
+    "title": "React TanStack Virtual Sticky Example | TanStack Virtual Docs",
+    "category": "TanStack Virtual",
+    "path": "/virtual/latest/docs/framework/react/examples/sticky",
+    "site": "tanstack_virtual",
+    "headings": [],
+    "preview": "An example showing how to implement Sticky in React using TanStack Virtual."
+  },
+  {
+    "title": "React TanStack Virtual Padding Example | TanStack Virtual Docs",
+    "category": "TanStack Virtual",
+    "path": "/virtual/latest/docs/framework/react/examples/padding",
+    "site": "tanstack_virtual",
+    "headings": [],
+    "preview": "An example showing how to implement Padding in React using TanStack Virtual."
+  },
+  {
+    "title": "React TanStack Virtual Infinite Scroll Example | TanStack Virtual Docs",
+    "category": "TanStack Virtual",
+    "path": "/virtual/latest/docs/framework/react/examples/infinite-scroll",
+    "site": "tanstack_virtual",
+    "headings": [],
+    "preview": "An example showing how to implement Infinite Scroll in React using TanStack Virtual."
+  },
+  {
+    "title": "React TanStack Virtual Smooth Scroll Example | TanStack Virtual Docs",
+    "category": "TanStack Virtual",
+    "path": "/virtual/latest/docs/framework/react/examples/smooth-scroll",
+    "site": "tanstack_virtual",
+    "headings": [],
+    "preview": "An example showing how to implement Smooth Scroll in React using TanStack Virtual."
+  },
+  {
+    "title": "React TanStack Virtual Dynamic Example | TanStack Virtual Docs",
+    "category": "TanStack Virtual",
+    "path": "/virtual/latest/docs/framework/react/examples/dynamic",
+    "site": "tanstack_virtual",
+    "headings": [],
+    "preview": "An example showing how to implement Dynamic in React using TanStack Virtual."
+  },
+  {
+    "title": "React TanStack Virtual Variable Example | TanStack Virtual Docs",
+    "category": "TanStack Virtual",
+    "path": "/virtual/latest/docs/framework/react/examples/variable",
+    "site": "tanstack_virtual",
+    "headings": [],
+    "preview": "An example showing how to implement Variable in React using TanStack Virtual."
+  },
+  {
+    "title": "React TanStack Virtual Table Example | TanStack Virtual Docs",
+    "category": "TanStack Virtual",
+    "path": "/virtual/latest/docs/framework/react/examples/table",
+    "site": "tanstack_virtual",
+    "headings": [],
+    "preview": "An example showing how to implement Table in React using TanStack Virtual."
+  },
+  {
+    "title": "React TanStack Virtual Scroll Padding Example | TanStack Virtual Docs",
+    "category": "TanStack Virtual",
+    "path": "/virtual/latest/docs/framework/react/examples/scroll-padding",
+    "site": "tanstack_virtual",
+    "headings": [],
+    "preview": "An example showing how to implement Scroll Padding in React using TanStack Virtual."
+  },
+  {
+    "title": "VirtualItem | TanStack Virtual Docs",
+    "category": "TanStack Virtual",
+    "path": "/virtual/latest/docs/api/virtual-item",
+    "site": "tanstack_virtual",
+    "headings": [],
+    "preview": "The VirtualItem object represents a single item returned by the virtualizer. It contains information you need to render the item in the coordinate space within your virtualizer"
+  }
+]

@@ -1,0 +1,850 @@
+[
+  {
+    "title": "Docs",
+    "category": "Motion",
+    "path": "/docs",
+    "site": "motion",
+    "headings": [],
+    "preview": "Reference for Motion&#x27;s animation library across React, JavaScript, Vue, and the AI Kit."
+  },
+  {
+    "title": "Get started with Motion for React",
+    "category": "DOCS",
+    "path": "/docs/react",
+    "site": "motion",
+    "headings": [],
+    "preview": "Install Motion for React, animate elements with spring animations. Complete guide with examples."
+  },
+  {
+    "title": "Motion component",
+    "category": "DOCS",
+    "path": "/docs/react-motion-component",
+    "site": "motion",
+    "headings": [],
+    "preview": "Animate elements with a declarative API. Supports variants, gestures, and layout animations."
+  },
+  {
+    "title": "Layout animation",
+    "category": "DOCS",
+    "path": "/docs/react-layout-animations",
+    "site": "motion",
+    "headings": [],
+    "preview": "Smoothly animate layout changes and create shared element animations."
+  },
+  {
+    "title": "animate",
+    "category": "DOCS",
+    "path": "/docs/animate",
+    "site": "motion",
+    "headings": [],
+    "preview": "Explore Motion&#x27;s powerful animate() function for creating and controlling animations. Animate HTML, SVG, CSS variables, and SVG paths with mini (2.3kb) or "
+  },
+  {
+    "title": "React animation",
+    "category": "DOCS",
+    "path": "/docs/react-animation",
+    "site": "motion",
+    "headings": [],
+    "preview": "Create React animation with Motion components. Learn variants, gestures, and keyframes."
+  },
+  {
+    "title": "AnimatePresence",
+    "category": "DOCS",
+    "path": "/docs/react-animate-presence",
+    "site": "motion",
+    "headings": [],
+    "preview": "Add exit animations to React components when they&#x27;re removed from the page."
+  },
+  {
+    "title": "Transitions",
+    "category": "DOCS",
+    "path": "/docs/react-transitions",
+    "site": "motion",
+    "headings": [],
+    "preview": "Control timing with duration/easing, springs, delay and stagger."
+  },
+  {
+    "title": "Text animation",
+    "category": "DOCS",
+    "path": "/docs/text-animation",
+    "site": "motion",
+    "headings": [],
+    "preview": "How to animate text on the web with Motion. Split text into characters, words and lines, then build rolling hover labels, typewriters, scrambles, counters and s"
+  },
+  {
+    "title": "Three.js",
+    "category": "DOCS",
+    "path": "/docs/three",
+    "site": "motion",
+    "headings": [],
+    "preview": "Use Motion&#x27;s animate() with Three.js. Animate meshes, cameras, materials, colours, ShaderMaterial uniforms and TSL uniform nodes with springs and easing, i"
+  },
+  {
+    "title": "Motion AI Kit: the Motion skill and MCP for your agent",
+    "category": "DOCS",
+    "path": "/docs/ai-kit",
+    "site": "motion",
+    "headings": [],
+    "preview": "Give your coding agent current Motion knowledge, MotionScore for Agents, premium examples, CSS spring generation and a transition editor."
+  },
+  {
+    "title": "Get started with Motion for Vue",
+    "category": "DOCS",
+    "path": "/docs/vue",
+    "site": "motion",
+    "headings": [],
+    "preview": "Learn Motion for Vue animation library: Install, animate HTML and SVG elements with spring animations, staggering effects. Complete guide with examples."
+  },
+  {
+    "title": "Get started with Motion",
+    "category": "DOCS",
+    "path": "/docs/quick-start",
+    "site": "motion",
+    "headings": [],
+    "preview": "Learn Motion animation library: Install, animate HTML/SVG/WebGL elements with spring animations, staggering effects. Complete guide with examples."
+  },
+  {
+    "title": "Svelte",
+    "category": "DOCS",
+    "path": "/docs/svelte",
+    "site": "motion",
+    "headings": [],
+    "preview": "Animate Svelte 5 components with Motion. Use hover, press and scroll as attachments, animate state changes with $effect, and run view and layout animations with"
+  },
+  {
+    "title": "React scroll animation",
+    "category": "DOCS",
+    "path": "/docs/react-scroll-animations",
+    "site": "motion",
+    "headings": [],
+    "preview": "Create scroll-triggered and scroll-linked effects — parallax, progress and more."
+  },
+  {
+    "title": "Motion Studio",
+    "category": "DOCS",
+    "path": "/docs/studio",
+    "site": "motion",
+    "headings": [],
+    "preview": "Install Motion Studio in Vite, Next.js, Nuxt, Astro or Webpack. Edit JavaScript, React and Vue animations with Cursor, Codex or Claude."
+  },
+  {
+    "title": "vgpu",
+    "category": "DOCS",
+    "path": "/docs/vgpu",
+    "site": "motion",
+    "headings": [],
+    "preview": "Use Motion&#x27;s animate() with vgpu, the WebGPU library from Vercel Labs. Animate shared uniforms, effect and draw bindings, scene node transforms, cameras, l"
+  },
+  {
+    "title": "Hover animation",
+    "category": "DOCS",
+    "path": "/docs/react-hover-animation",
+    "site": "motion",
+    "headings": [],
+    "preview": "Create hover animations and interactions using Motion for React."
+  },
+  {
+    "title": "spring",
+    "category": "DOCS",
+    "path": "/docs/spring",
+    "site": "motion",
+    "headings": [],
+    "preview": "Explore Motion&#x27;s spring() function for creating realistic spring animations. Learn how to use it with animate() or directly for advanced scenarios like vis"
+  },
+  {
+    "title": "SVG animation",
+    "category": "DOCS",
+    "path": "/docs/react-svg-animation",
+    "site": "motion",
+    "headings": [],
+    "preview": "Animate SVGs in React - Line drawing and morphing effects, and more."
+  },
+  {
+    "title": "AnimateActivity",
+    "category": "DOCS",
+    "path": "/docs/react-animate-activity",
+    "site": "motion",
+    "headings": [],
+    "preview": "Add powerful enter, exit, and layout animations to components managed by React&#x27;s &lt;Activity&gt;"
+  },
+  {
+    "title": "scroll",
+    "category": "DOCS",
+    "path": "/docs/scroll",
+    "site": "motion",
+    "headings": [],
+    "preview": "Animate on scroll with Motion&#x27;s 5.1kb scroll() function. Bind any value directly to scroll progress, hardware-accelerated by the browser&#x27;s ScrollTimel"
+  },
+  {
+    "title": "Tween animations",
+    "category": "DOCS",
+    "path": "/docs/tween",
+    "site": "motion",
+    "headings": [],
+    "preview": "What a tween is in web animation: a start value, an end value, a duration and an easing curve. How tween animation compares to springs, and how to create tweens"
+  },
+  {
+    "title": "Easing functions",
+    "category": "DOCS",
+    "path": "/docs/easing-functions",
+    "site": "motion",
+    "headings": [],
+    "preview": "Every easing function built into Motion: easeInOut, backOut, circIn, anticipate, steps and cubicBezier, plus modifiers to reverse or mirror a curve."
+  },
+  {
+    "title": "AnimateView",
+    "category": "DOCS",
+    "path": "/docs/react-animate-view",
+    "site": "motion",
+    "headings": [],
+    "preview": "Animate between views and create page transitions with the AnimateView component."
+  },
+  {
+    "title": "GSAP vs Motion: Which should you use?",
+    "category": "DOCS",
+    "path": "/docs/gsap-vs-motion",
+    "site": "motion",
+    "headings": [],
+    "preview": "Compare Motion (prev Framer Motion) and GSAP, two leading JavaScript animation libraries. Discover Motion&#x27;s advantages in bundle size, hardware acceleratio"
+  },
+  {
+    "title": "Gesture animation",
+    "category": "DOCS",
+    "path": "/docs/react-gestures",
+    "site": "motion",
+    "headings": [],
+    "preview": "An overview of all the gestures available in Motion for React."
+  },
+  {
+    "title": "3D transforms and perspective",
+    "category": "DOCS",
+    "path": "/docs/3d-transforms",
+    "site": "motion",
+    "headings": [],
+    "preview": "A practical guide to CSS 3D transforms: the z axis, the perspective property vs the perspective() function, rotateX and rotateY, backface-visibility, transform-"
+  },
+  {
+    "title": "SVG animation: every technique compared",
+    "category": "DOCS",
+    "path": "/docs/svg-animation",
+    "site": "motion",
+    "headings": [],
+    "preview": "Learn every way to animate SVG: SMIL&#x27;s animate tag, CSS animations, the Web Animations API and JavaScript libraries, with the strengths, limits and perform"
+  },
+  {
+    "title": "LazyMotion",
+    "category": "DOCS",
+    "path": "/docs/react-lazy-motion",
+    "site": "motion",
+    "headings": [],
+    "preview": "Reduce your initial bundle size with LazyMotion in Motion for React. Load animation features synchronously or asynchronously, shrinking bundles to as low as 4.6"
+  },
+  {
+    "title": "Drag animation",
+    "category": "DOCS",
+    "path": "/docs/react-drag",
+    "site": "motion",
+    "headings": [],
+    "preview": "Learn to build powerful, physics-based drag interactions in your React apps."
+  },
+  {
+    "title": "MotionConfig",
+    "category": "DOCS",
+    "path": "/docs/react-motion-config",
+    "site": "motion",
+    "headings": [],
+    "preview": "Configure default transition options and manage reduced motion preferences."
+  },
+  {
+    "title": "LayoutGroup",
+    "category": "DOCS",
+    "path": "/docs/react-layout-group",
+    "site": "motion",
+    "headings": [],
+    "preview": "Coordinate React layout animations between Motion components."
+  },
+  {
+    "title": "AnimateNumber",
+    "category": "DOCS",
+    "path": "/docs/react-animate-number",
+    "site": "motion",
+    "headings": [],
+    "preview": "Animate numbers in React with a 2.5kb component: counters, countdowns, live pricing and stats, with locale-aware number formatting."
+  },
+  {
+    "title": "Carousel",
+    "category": "DOCS",
+    "path": "/docs/react-carousel",
+    "site": "motion",
+    "headings": [],
+    "preview": "An infinite, accessible React carousel with pointer, wheel and keyboard navigation. Build sliders, galleries and coverflow effects."
+  },
+  {
+    "title": "Typewriter",
+    "category": "DOCS",
+    "path": "/docs/react-typewriter",
+    "site": "motion",
+    "headings": [],
+    "preview": "A 1.3kb React component for typewriter and typing effects, with human-like speed variance, intelligent backspacing, stylable cursors and screen reader support."
+  },
+  {
+    "title": "ScrambleText",
+    "category": "DOCS",
+    "path": "/docs/react-scramble-text",
+    "site": "motion",
+    "headings": [],
+    "preview": "A customizable scramble text animation component for React with configurable timings, characters and renderless animation."
+  },
+  {
+    "title": "Ticker",
+    "category": "DOCS",
+    "path": "/docs/react-ticker",
+    "site": "motion",
+    "headings": [],
+    "preview": "Build infinite ticker and marquee animations in React. A 2.1kb component that scrolls by time, drag or scroll position, cloning only the items it needs."
+  },
+  {
+    "title": "Cursor",
+    "category": "DOCS",
+    "path": "/docs/cursor",
+    "site": "motion",
+    "headings": [],
+    "preview": "Replace the browser cursor, build follow-cursor effects, and snap magnetically to links and buttons. A React component built on Motion&#x27;s layout animations."
+  },
+  {
+    "title": "Install Motion UI",
+    "category": "DOCS",
+    "path": "/docs/react-motion-ui-installation",
+    "site": "motion",
+    "headings": [],
+    "preview": "Install Motion UI for React from the private npm registry using an environment variable, with setup for npm, pnpm, Bun, Yarn, and CI."
+  },
+  {
+    "title": "Motion values overview",
+    "category": "DOCS",
+    "path": "/docs/react-motion-value",
+    "site": "motion",
+    "headings": [],
+    "preview": "Composable animatable values that can updated styles without re-renders."
+  },
+  {
+    "title": "useMotionTemplate",
+    "category": "DOCS",
+    "path": "/docs/react-use-motion-template",
+    "site": "motion",
+    "headings": [],
+    "preview": "Combine motion values into dynamic strings with Motion for React&#x27;s useMotionTemplate. Create auto-updating, interpolated values for responsive animations."
+  },
+  {
+    "title": "useMotionValueEvent",
+    "category": "DOCS",
+    "path": "/docs/react-use-motion-value-event",
+    "site": "motion",
+    "headings": [],
+    "preview": "Fire events when the value of a motion value changes."
+  },
+  {
+    "title": "Reorder",
+    "category": "DOCS",
+    "path": "/docs/react-reorder",
+    "site": "motion",
+    "headings": [],
+    "preview": "Create drag-to-reorder lists and grids with Motion for React&#x27;s Reorder components. Reorder.Group automatically detects the drag axis and manages each Reord"
+  },
+  {
+    "title": "useVelocity",
+    "category": "DOCS",
+    "path": "/docs/react-use-velocity",
+    "site": "motion",
+    "headings": [],
+    "preview": "Creates a new motion value that outputs the velocity of another motion value."
+  },
+  {
+    "title": "useTransform",
+    "category": "DOCS",
+    "path": "/docs/react-use-transform",
+    "site": "motion",
+    "headings": [],
+    "preview": "Transform the output of one motion value into a new motion value."
+  },
+  {
+    "title": "useSpring",
+    "category": "DOCS",
+    "path": "/docs/react-use-spring",
+    "site": "motion",
+    "headings": [],
+    "preview": "A spring-powered motion value. Standalone or attach to another motion value."
+  },
+  {
+    "title": "useTime",
+    "category": "DOCS",
+    "path": "/docs/react-use-time",
+    "site": "motion",
+    "headings": [],
+    "preview": "Explore Motion for React&#x27;s useTime hook. It returns elapsed time in ms every frame. Learn how it creates perpetual animations composes with other motion va"
+  },
+  {
+    "title": "useScroll",
+    "category": "DOCS",
+    "path": "/docs/react-use-scroll",
+    "site": "motion",
+    "headings": [],
+    "preview": "Create scroll-linked animations like progress bars parallax with the useScroll React hook."
+  },
+  {
+    "title": "usePageInView",
+    "category": "DOCS",
+    "path": "/docs/react-use-page-in-view",
+    "site": "motion",
+    "headings": [],
+    "preview": "Track page visibility with Motion for React&#x27;s usePageInView hook. Improve performance and UX by pausing animations when the document isn&#x27;t visible. SS"
+  },
+  {
+    "title": "useDragControls",
+    "category": "DOCS",
+    "path": "/docs/react-use-drag-controls",
+    "site": "motion",
+    "headings": [],
+    "preview": "Manually start/stop drag gestures. Supports snap to cursor and more."
+  },
+  {
+    "title": "Accessibility",
+    "category": "DOCS",
+    "path": "/docs/react-accessibility",
+    "site": "motion",
+    "headings": [],
+    "preview": "Learn how to create accessible animations with Motion for React by respecting users&#x27; &#x27;Reduced Motion&#x27; preferences. Discover the reducedMotion opt"
+  },
+  {
+    "title": "Installation guide for Motion for React",
+    "category": "DOCS",
+    "path": "/docs/react-installation",
+    "site": "motion",
+    "headings": [],
+    "preview": "Learn to install and set up Motion in your React project."
+  },
+  {
+    "title": "useReducedMotion",
+    "category": "DOCS",
+    "path": "/docs/react-use-reduced-motion",
+    "site": "motion",
+    "headings": [],
+    "preview": "Adapt or disable animations based on the device &quot;Reduced Motion&quot; setting."
+  },
+  {
+    "title": "Figma Motion: animate with Figma and export to Motion",
+    "category": "DOCS",
+    "path": "/docs/figma",
+    "site": "motion",
+    "headings": [],
+    "preview": "Animate in Figma Motion and export to real Motion code for React. Or use Motion inside Figma Sites."
+  },
+  {
+    "title": "useAnimate",
+    "category": "DOCS",
+    "path": "/docs/react-use-animate",
+    "site": "motion",
+    "headings": [],
+    "preview": "Manually start and control animations, scoped to the current React component."
+  },
+  {
+    "title": "Motion x Framer integration guide",
+    "category": "DOCS",
+    "path": "/docs/framer",
+    "site": "motion",
+    "headings": [],
+    "preview": "Add animations to your Framer project in Code Components and Overrides."
+  },
+  {
+    "title": "Animating with Tailwind CSS",
+    "category": "DOCS",
+    "path": "/docs/react-tailwind",
+    "site": "motion",
+    "headings": [],
+    "preview": "Animate Tailwind CSS with Motion: hover and tap effects, responsive animations driven by CSS variables, and spring easings generated for your utility classes."
+  },
+  {
+    "title": "useInView",
+    "category": "DOCS",
+    "path": "/docs/react-use-in-view",
+    "site": "motion",
+    "headings": [],
+    "preview": "Switch React state when an element enters/leaves the viewport."
+  },
+  {
+    "title": "Base UI Motion",
+    "category": "DOCS",
+    "path": "/docs/base-ui",
+    "site": "motion",
+    "headings": [],
+    "preview": "How to animate Base UI components with Motion."
+  },
+  {
+    "title": "Radix UI Motion",
+    "category": "DOCS",
+    "path": "/docs/radix",
+    "site": "motion",
+    "headings": [],
+    "preview": "How to animate Radix UI components with Motion."
+  },
+  {
+    "title": "Upgrade guide",
+    "category": "DOCS",
+    "path": "/docs/react-upgrade-guide",
+    "site": "motion",
+    "headings": [],
+    "preview": "Stay up-to-date with Motion and Motion for React using our comprehensive Upgrade Guide. Find step-by-step instructions and details on breaking API changes for e"
+  },
+  {
+    "title": "useAnimationFrame",
+    "category": "DOCS",
+    "path": "/docs/react-use-animation-frame",
+    "site": "motion",
+    "headings": [],
+    "preview": "Use Motion for React&#x27;s useAnimationFrame hook to run callbacks on every frame. Leverage time delta args for precise animation control custom frame logic."
+  },
+  {
+    "title": "useCurtains",
+    "category": "DOCS",
+    "path": "/docs/react-use-curtains",
+    "site": "motion",
+    "headings": [],
+    "preview": "Motion&#x27;s useCurtains hook runs stage-curtain page transitions in React. Cover the view with a wipe, iris, blinds or pixel effect, run a state change or rou"
+  },
+  {
+    "title": "Reduce bundle size",
+    "category": "DOCS",
+    "path": "/docs/react-reduce-bundle-size",
+    "site": "motion",
+    "headings": [],
+    "preview": "Reduce your Motion for React bundle size for faster loading and improved SEO."
+  },
+  {
+    "title": "Install the Motion AI Kit",
+    "category": "DOCS",
+    "path": "/docs/ai-kit-install",
+    "site": "motion",
+    "headings": [],
+    "preview": "Install the AI Kit MCP for Motion docs and example context, plus the visual transition editor extension for your IDE."
+  },
+  {
+    "title": "Docs examples for your agent",
+    "category": "DOCS",
+    "path": "/docs/ai-kit-context",
+    "site": "motion",
+    "headings": [],
+    "preview": "Give your AI editor always-current Motion docs to search, plus source code for every premium example on Motion+."
+  },
+  {
+    "title": "resize",
+    "category": "DOCS",
+    "path": "/docs/resize",
+    "site": "motion",
+    "headings": [],
+    "preview": "Efficiently monitor and react to size changes of the viewport, or HTML and SVG elements, with resize. This function uses the ResizeObserver API to provide perfo"
+  },
+  {
+    "title": "attrEffect",
+    "category": "DOCS",
+    "path": "/docs/attr-effect",
+    "site": "motion",
+    "headings": [],
+    "preview": "Discover Motion&#x27;s attrEffect for applying motion values to HTML element attributes. Learn how it handles aria and data attribute casing, utilizes JavaScrip"
+  },
+  {
+    "title": "press",
+    "category": "DOCS",
+    "path": "/docs/press",
+    "site": "motion",
+    "headings": [],
+    "preview": "Discover Motion&#x27;s press function for robust press gesture detection. Learn how it filters secondary pointers, enhances accessibility with keyboard support,"
+  },
+  {
+    "title": "inView",
+    "category": "DOCS",
+    "path": "/docs/inview",
+    "site": "motion",
+    "headings": [],
+    "preview": "Learn to use Motion&#x27;s inView function to detect when elements enter and leave the viewport. Built on Intersection Observer for optimal performance (0.5kb),"
+  },
+  {
+    "title": "Layout animations",
+    "category": "DOCS",
+    "path": "/docs/layout-animations",
+    "site": "motion",
+    "headings": [],
+    "preview": "Animate complex layout changes and shared element transitions"
+  },
+  {
+    "title": "propEffect",
+    "category": "DOCS",
+    "path": "/docs/prop-effect",
+    "site": "motion",
+    "headings": [],
+    "preview": "Learn to use Motion&#x27;s propEffect to dynamically apply motion values to JavaScript object properties. Understand how it facilitates re-rendering on updates,"
+  },
+  {
+    "title": "hover",
+    "category": "DOCS",
+    "path": "/docs/hover",
+    "site": "motion",
+    "headings": [],
+    "preview": "The hover() function can trigger functions as hover gestures start and end."
+  },
+  {
+    "title": "styleEffect",
+    "category": "DOCS",
+    "path": "/docs/style-effect",
+    "site": "motion",
+    "headings": [],
+    "preview": "Discover Motion&#x27;s styleEffect for applying motion values to HTML elements. Learn how it supports independent transforms, default unit types, CSS properties"
+  },
+  {
+    "title": "frame",
+    "category": "DOCS",
+    "path": "/docs/frame",
+    "site": "motion",
+    "headings": [],
+    "preview": "Learn to use Motion&#x27;s frame function to schedule tasks on its optimized animation loop. Discover how it prevents layout thrashing, offers a keep-alive API "
+  },
+  {
+    "title": "arc",
+    "category": "DOCS",
+    "path": "/docs/arc",
+    "site": "motion",
+    "headings": [],
+    "preview": "Use Motion&#x27;s arc() factory to animate elements along a curved path. Configure strength, peak, direction, and tangent rotation. Works with motion components"
+  },
+  {
+    "title": "Curtains",
+    "category": "DOCS",
+    "path": "/docs/curtains",
+    "site": "motion",
+    "headings": [],
+    "preview": "Motion&#x27;s curtains() function runs stage-curtain page transitions: cover the viewport with a wipe, iris, blinds or pixel effect, swap your content while it&"
+  },
+  {
+    "title": "View animations",
+    "category": "DOCS",
+    "path": "/docs/animate-view",
+    "site": "motion",
+    "headings": [],
+    "preview": "Discover Motion&#x27;s animateView() for seamless animations between different views or layouts. Learn how it simplifies layout changes, shared element transiti"
+  },
+  {
+    "title": "delay",
+    "category": "DOCS",
+    "path": "/docs/delay",
+    "site": "motion",
+    "headings": [],
+    "preview": "Discover Motion&#x27;s delay function, a setTimeout alternative locked to the animation frame loop. Learn how it helps synchronize callbacks with animations, an"
+  },
+  {
+    "title": "svgEffect",
+    "category": "DOCS",
+    "path": "/docs/svg-effect",
+    "site": "motion",
+    "headings": [],
+    "preview": "Learn how to use Motion&#x27;s svgEffect to apply motion values to SVG element styles and attributes. Discover how to create &#x27;draw&#x27; animations with pa"
+  },
+  {
+    "title": "Add animations to your WordPress site",
+    "category": "DOCS",
+    "path": "/docs/wordpress",
+    "site": "motion",
+    "headings": [],
+    "preview": "Enhance your WordPress site with Motion: a free, open-source animation library for creating stunning, high-performance animations. Its tiny footprint and flexib"
+  },
+  {
+    "title": "Integrate Motion with Webflow",
+    "category": "DOCS",
+    "path": "/docs/webflow",
+    "site": "motion",
+    "headings": [],
+    "preview": "Supercharge your Webflow animations with Motion. Go beyond native capabilities to animate gradients, create hardware-accelerated scroll effects, and build compl"
+  },
+  {
+    "title": "splitText",
+    "category": "DOCS",
+    "path": "/docs/split-text",
+    "site": "motion",
+    "headings": [],
+    "preview": "Learn how to use the splitText() function to break down text content into individual characters, words, and lines, enabling granular text animations. Understand"
+  },
+  {
+    "title": "mapValue",
+    "category": "DOCS",
+    "path": "/docs/map-value",
+    "site": "motion",
+    "headings": [],
+    "preview": "Learn to use Motion&#x27;s mapValue to create a new read-only motion value by mapping a numerical motion value&#x27;s output to a range of numbers, colors, or c"
+  },
+  {
+    "title": "mix",
+    "category": "DOCS",
+    "path": "/docs/mix",
+    "site": "motion",
+    "headings": [],
+    "preview": "Discover Motion&#x27;s mix() function to smoothly interpolate between two values based on a 0-1 progress. Learn to mix numbers, colors (with linear RGB for bett"
+  },
+  {
+    "title": "wrap",
+    "category": "DOCS",
+    "path": "/docs/wrap",
+    "site": "motion",
+    "headings": [],
+    "preview": "Learn how to use Motion&#x27;s wrap() function to constrain a value within a specific range. Ideal for implementing features like next/prev pagination by wrappi"
+  },
+  {
+    "title": "transformValue",
+    "category": "DOCS",
+    "path": "/docs/transform-value",
+    "site": "motion",
+    "headings": [],
+    "preview": "Discover Motion&#x27;s transformValue to create new read-only motion values by computing output from one or more existing motion values. Learn how it facilitate"
+  },
+  {
+    "title": "stagger",
+    "category": "DOCS",
+    "path": "/docs/stagger",
+    "site": "motion",
+    "headings": [],
+    "preview": "Learn to create staggered animations across multiple elements with Motion&#x27;s stagger() function. Discover options to customize the starting delay, the stagg"
+  },
+  {
+    "title": "FAQs",
+    "category": "DOCS",
+    "path": "/docs/faqs",
+    "site": "motion",
+    "headings": [],
+    "preview": "Find answers to common questions about Motion, including browser support, and troubleshooting for animations."
+  },
+  {
+    "title": "CSS",
+    "category": "DOCS",
+    "path": "/docs/css",
+    "site": "motion",
+    "headings": [],
+    "preview": "Generate spring animations as plain CSS with Motion, on the server or in the browser. Works with React Server Components, Astro, Vue and CSS-in-JS."
+  },
+  {
+    "title": "motionValue",
+    "category": "DOCS",
+    "path": "/docs/motion-value",
+    "site": "motion",
+    "headings": [],
+    "preview": "Understand Motion Values, the core of Motion&#x27;s animation system, used for tracking the state and velocity of animated properties. Learn how to manually cre"
+  },
+  {
+    "title": "scrambleText",
+    "category": "DOCS",
+    "path": "/docs/scramble-text",
+    "site": "motion",
+    "headings": [],
+    "preview": "A customizable scramble text animation component with configurable timings, stagger effects, and characters."
+  },
+  {
+    "title": "springValue",
+    "category": "DOCS",
+    "path": "/docs/spring-value",
+    "site": "motion",
+    "headings": [],
+    "preview": "Learn to use Motion&#x27;s springValue to create motion values that animate with physics-based spring motion. Discover how to apply springs to numbers or existi"
+  },
+  {
+    "title": "transform",
+    "category": "DOCS",
+    "path": "/docs/transform",
+    "site": "motion",
+    "headings": [],
+    "preview": "Discover Motion&#x27;s transform function to map an input value from one range to another. Learn how to use it with linear input ranges and various output types"
+  },
+  {
+    "title": "Add animations to your Squarespace site",
+    "category": "DOCS",
+    "path": "/docs/squarespace",
+    "site": "motion",
+    "headings": [],
+    "preview": "Elevate your Squarespace site with Motion: a free, high-performance animation library. Break free from template limits, create stunning animations, and boost yo"
+  },
+  {
+    "title": "Lenis",
+    "category": "DOCS",
+    "path": "/docs/lenis",
+    "site": "motion",
+    "headings": [],
+    "preview": "Use Lenis smooth scroll with Motion. Drive Lenis from Motion&#x27;s frame loop, keep scroll() and useScroll animations in step with the smoothed scroll position"
+  },
+  {
+    "title": "Migrate from GSAP to Motion",
+    "category": "DOCS",
+    "path": "/docs/migrate-from-gsap-to-motion",
+    "site": "motion",
+    "headings": [],
+    "preview": "Migrate from GSAP to Motion for hardware-accelerated animations, smaller bundle sizes, and an open MIT license. Learn to convert basic animations, timelines, sc"
+  },
+  {
+    "title": "Upgrade guide",
+    "category": "DOCS",
+    "path": "/docs/upgrade-guide",
+    "site": "motion",
+    "headings": [],
+    "preview": "Upgrade to the latest version of Motion by following our incremental, version-by-version guide. Major version changes are typically small, making for a quick pr"
+  },
+  {
+    "title": "Improvements to Web Animations API",
+    "category": "DOCS",
+    "path": "/docs/improvements-to-the-web-animations-api-dx",
+    "site": "motion",
+    "headings": [],
+    "preview": "Discover how Motion enhances the Web Animations API (WAAPI) with features like spring animations, custom easings, default value types, improved animation state "
+  },
+  {
+    "title": "Transition editor",
+    "category": "DOCS",
+    "path": "/docs/ai-kit-transition-editor",
+    "site": "motion",
+    "headings": [],
+    "preview": "Edit your CSS and Motion animations visually with the Motion AI Kit for VS Code and MCP App-supporting agents."
+  },
+  {
+    "title": "Install Motion UI",
+    "category": "DOCS",
+    "path": "/docs/motion-ui-installation",
+    "site": "motion",
+    "headings": [],
+    "preview": "Install Motion UI from the private npm registry using an environment variable, with setup for npm, pnpm, Bun, Yarn, and CI."
+  },
+  {
+    "title": "MotionScore for Agents",
+    "category": "DOCS",
+    "path": "/docs/motionscore-code-audit",
+    "site": "motion",
+    "headings": [],
+    "preview": "MotionScore for Agents grades animations S-F, audits source code and running local sites, and gives your coding agent specific fixes."
+  },
+  {
+    "title": "Animation performance",
+    "category": "DOCS",
+    "path": "/docs/performance",
+    "site": "motion",
+    "headings": [],
+    "preview": "Boost web animation performance by understanding rendering and hardware acceleration. Learn which CSS properties to animate for smooth 120fps+ experiences, how "
+  },
+  {
+    "title": "Generate CSS",
+    "category": "DOCS",
+    "path": "/docs/ai-kit-generate-css",
+    "site": "motion",
+    "headings": [],
+    "preview": "Generate CSS spring and bounce easing curves directly from your LLM via the Motion AI Kit MCP."
+  },
+  {
+    "title": "Docs",
+    "category": "Motion",
+    "path": "/",
+    "site": "motion",
+    "headings": [],
+    "preview": "Reference for Motion&#x27;s animation library across React, JavaScript, Vue, and the AI Kit."
+  }
+]

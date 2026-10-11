@@ -1,0 +1,1210 @@
+[
+  {
+    "title": "FastAPI &para;",
+    "category": "FastAPI",
+    "path": "/",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "FastAPI and friends newsletter &para;",
+    "category": "FastAPI",
+    "path": "/newsletter",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Learn &para;",
+    "category": "FastAPI",
+    "path": "/learn",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Reference &para;",
+    "category": "FastAPI",
+    "path": "/reference",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "FastAPI &para;",
+    "category": "FastAPI",
+    "path": "/ru",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "FastAPI &para;",
+    "category": "FastAPI",
+    "path": "/pt",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "FastAPI &para;",
+    "category": "FastAPI",
+    "path": "/tr",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "FastAPI &para;",
+    "category": "FastAPI",
+    "path": "/es",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "FastAPI &para;",
+    "category": "FastAPI",
+    "path": "/ko",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "FastAPI &para;",
+    "category": "FastAPI",
+    "path": "/ja",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "FastAPI &para;",
+    "category": "FastAPI",
+    "path": "/fr",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Features &para;",
+    "category": "FastAPI",
+    "path": "/features",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "FastAPI &para;",
+    "category": "FastAPI",
+    "path": "/hi",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "FastAPI &para;",
+    "category": "FastAPI",
+    "path": "/zh-hant",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "FastAPI &para;",
+    "category": "FastAPI",
+    "path": "/zh",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "FastAPI &para;",
+    "category": "FastAPI",
+    "path": "/de",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "FastAPI &para;",
+    "category": "FastAPI",
+    "path": "/uk",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Resources &para;",
+    "category": "FastAPI",
+    "path": "/resources",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "About &para;",
+    "category": "FastAPI",
+    "path": "/about",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Tutorial - User Guide &para;",
+    "category": "FastAPI",
+    "path": "/tutorial",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Body - Multiple Parameters &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/body-multiple-params",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Query Parameters &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/query-params",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Query Parameter Models &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/query-param-models",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Python Types Intro &para;",
+    "category": "FastAPI",
+    "path": "/python-types",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Request Body &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/body",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "First Steps &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/first-steps",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Path Parameters and Numeric Validations &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/path-params-numeric-validations",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Body - Nested Models &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/body-nested-models",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Body - Fields &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/body-fields",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Concurrency and async / await &para;",
+    "category": "FastAPI",
+    "path": "/async",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Query Parameters and String Validations &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/query-params-str-validations",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Path Parameters &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/path-params",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Release Notes &para;",
+    "category": "FastAPI",
+    "path": "/release-notes",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Extra Data Types &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/extra-data-types",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Cookie Parameters &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/cookie-params",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Header Parameter Models &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/header-param-models",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Form Data &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/request-forms",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "JSON Compatible Encoder &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/encoder",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Cookie Parameter Models &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/cookie-param-models",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Form Models &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/request-form-models",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Header Parameters &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/header-params",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Request Forms and Files &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/request-forms-and-files",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Path Operation Configuration &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/path-operation-configuration",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Response Status Code &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/response-status-code",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Request Files &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/request-files",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Extra Models &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/extra-models",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Response Model - Return Type &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/response-model",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Declare Request Example Data &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/schema-extra-example",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Handling Errors &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/handling-errors",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Body - Updates &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/body-updates",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Sub-dependencies &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/dependencies/sub-dependencies",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Global Dependencies &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/dependencies/global-dependencies",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Classes as Dependencies &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/dependencies/classes-as-dependencies",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Dependencies &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/dependencies",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Dependencies in path operation decorators &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/dependencies/dependencies-in-path-operation-decorators",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Get Current User &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/security/get-current-user",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "CORS (Cross-Origin Resource Sharing) &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/cors",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Security &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/security",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Middleware &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/middleware",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Security - First Steps &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/security/first-steps",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Dependencies with yield &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/dependencies/dependencies-with-yield",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Simple OAuth2 with Password and Bearer &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/security/simple-oauth2",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Bigger Applications - Multiple Files &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/bigger-applications",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "OAuth2 with Password (and hashing), Bearer with JWT tokens &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/security/oauth2-jwt",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "SQL (Relational) Databases &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/sql-databases",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Stream JSON Lines &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/stream-json-lines",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Advanced User Guide &para;",
+    "category": "FastAPI",
+    "path": "/advanced",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Metadata and Docs URLs &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/metadata",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Server-Sent Events (SSE) &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/server-sent-events",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Background Tasks &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/background-tasks",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Frontend &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/frontend",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Static Files &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/static-files",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Additional Status Codes &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/additional-status-codes",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Response Cookies &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/response-cookies",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Testing &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/testing",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Custom Response - HTML, Stream, File, others &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/custom-response",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Return a Response Directly &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/response-directly",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Additional Responses in OpenAPI &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/additional-responses",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Path Operation Advanced Configuration &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/path-operation-advanced-configuration",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Debugging &para;",
+    "category": "TUTORIAL",
+    "path": "/tutorial/debugging",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Stream Data &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/stream-data",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Response Headers &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/response-headers",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Response - Change Status Code &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/response-change-status-code",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Advanced Security &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/security",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Advanced Middleware &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/middleware",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Sub Applications - Mounts &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/sub-applications",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Using the Request Directly &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/using-request-directly",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Using Dataclasses &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/dataclasses",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Testing WebSockets &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/testing-websockets",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Advanced Dependencies &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/advanced-dependencies",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Lifespan Events &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/events",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Templates &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/templates",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "OpenTelemetry &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/opentelemetry",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "HTTP Basic Auth &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/security/http-basic-auth",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "WebSockets &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/websockets",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Behind a Proxy &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/behind-a-proxy",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "OAuth2 scopes &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/security/oauth2-scopes",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Testing Events: lifespan and startup - shutdown &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/testing-events",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Advanced Python Types &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/advanced-python-types",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "JSON with Bytes as Base64 &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/json-base64-bytes",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "OpenAPI Webhooks &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/openapi-webhooks",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "FastAPI CLI &para;",
+    "category": "FastAPI",
+    "path": "/fastapi-cli",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Testing Dependencies with Overrides &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/testing-dependencies",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Editor Support &para;",
+    "category": "FastAPI",
+    "path": "/editor-support",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Async Tests &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/async-tests",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Including WSGI - Flask, Django, others &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/wsgi",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "About FastAPI versions &para;",
+    "category": "DEPLOYMENT",
+    "path": "/deployment/versions",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Deployment &para;",
+    "category": "FastAPI",
+    "path": "/deployment",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Strict Content-Type Checking &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/strict-content-type",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "OpenAPI Callbacks &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/openapi-callbacks",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Settings and Environment Variables &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/settings",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "FastAPI Cloud &para;",
+    "category": "DEPLOYMENT",
+    "path": "/deployment/fastapicloud",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Generating SDKs &para;",
+    "category": "ADVANCED",
+    "path": "/advanced/generate-clients",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Configure Swagger UI &para;",
+    "category": "HOW TO",
+    "path": "/how-to/configure-swagger-ui",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "How To - Recipes &para;",
+    "category": "FastAPI",
+    "path": "/how-to",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Deploy FastAPI on Cloud Providers &para;",
+    "category": "DEPLOYMENT",
+    "path": "/deployment/cloud",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Server Workers - Uvicorn with Workers &para;",
+    "category": "DEPLOYMENT",
+    "path": "/deployment/server-workers",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "General - How To - Recipes &para;",
+    "category": "HOW TO",
+    "path": "/how-to/general",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Run a Server Manually &para;",
+    "category": "DEPLOYMENT",
+    "path": "/deployment/manually",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Migrate from Pydantic v1 to Pydantic v2 &para;",
+    "category": "HOW TO",
+    "path": "/how-to/migrate-from-pydantic-v1-to-pydantic-v2",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "GraphQL &para;",
+    "category": "HOW TO",
+    "path": "/how-to/graphql",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "About HTTPS &para;",
+    "category": "DEPLOYMENT",
+    "path": "/deployment/https",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Conditional OpenAPI &para;",
+    "category": "HOW TO",
+    "path": "/how-to/conditional-openapi",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Separate OpenAPI Schemas for Input and Output or Not &para;",
+    "category": "HOW TO",
+    "path": "/how-to/separate-openapi-schemas",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Custom Docs UI Static Assets (Self-Hosting) &para;",
+    "category": "HOW TO",
+    "path": "/how-to/custom-docs-ui-assets",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Extending OpenAPI &para;",
+    "category": "HOW TO",
+    "path": "/how-to/extending-openapi",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Custom Request and APIRoute class &para;",
+    "category": "HOW TO",
+    "path": "/how-to/custom-request-and-route",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Deployments Concepts &para;",
+    "category": "DEPLOYMENT",
+    "path": "/deployment/concepts",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "FastAPI in Containers - Docker &para;",
+    "category": "DEPLOYMENT",
+    "path": "/deployment/docker",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Testing a Database &para;",
+    "category": "HOW TO",
+    "path": "/how-to/testing-database",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Request class &para;",
+    "category": "REFERENCE",
+    "path": "/reference/request",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Request Parameters &para;",
+    "category": "REFERENCE",
+    "path": "/reference/parameters",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Dependencies - Depends() and Security() &para;",
+    "category": "REFERENCE",
+    "path": "/reference/dependencies",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "UploadFile class &para;",
+    "category": "REFERENCE",
+    "path": "/reference/uploadfile",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "APIRouter class &para;",
+    "category": "REFERENCE",
+    "path": "/reference/apirouter",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Exceptions - HTTPException and WebSocketException &para;",
+    "category": "REFERENCE",
+    "path": "/reference/exceptions",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Background Tasks - BackgroundTasks &para;",
+    "category": "REFERENCE",
+    "path": "/reference/background",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Status Codes &para;",
+    "category": "REFERENCE",
+    "path": "/reference/status",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "FastAPI class &para;",
+    "category": "REFERENCE",
+    "path": "/reference/fastapi",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Use Old 403 Authentication Error Status Codes &para;",
+    "category": "HOW TO",
+    "path": "/how-to/authentication-error-status-code",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "WebSockets &para;",
+    "category": "REFERENCE",
+    "path": "/reference/websockets",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Custom Response Classes - File, HTML, Redirect, Streaming, etc. &para;",
+    "category": "REFERENCE",
+    "path": "/reference/responses",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "HTTPConnection class &para;",
+    "category": "REFERENCE",
+    "path": "/reference/httpconnection",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Server-Sent Events - EventSourceResponse and ServerSentEvent &para;",
+    "category": "REFERENCE",
+    "path": "/reference/sse",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Response class &para;",
+    "category": "REFERENCE",
+    "path": "/reference/response",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Middleware &para;",
+    "category": "REFERENCE",
+    "path": "/reference/middleware",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "OpenAPI &para;",
+    "category": "REFERENCE",
+    "path": "/reference/openapi",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "OpenAPI docs &para;",
+    "category": "REFERENCE",
+    "path": "/reference/openapi/docs",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "OpenAPI models &para;",
+    "category": "REFERENCE",
+    "path": "/reference/openapi/models",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "Security Tools &para;",
+    "category": "REFERENCE",
+    "path": "/reference/security",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  },
+  {
+    "title": "FastAPI &para;",
+    "category": "FastAPI",
+    "path": "/docs",
+    "site": "fastapi",
+    "headings": [],
+    "preview": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+  }
+]

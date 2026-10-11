@@ -1,0 +1,1434 @@
+[
+  {
+    "title": "JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, garbage-collected, dynamic language, supporting multiple paradigms such as imperative, functional, and object-oriented."
+  },
+  {
+    "title": "Standard built-in objects - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "This chapter documents all of JavaScript&#39;s standard, built-in objects, including their methods and properties."
+  },
+  {
+    "title": "JavaScript data types and data structures - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Data_structures",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures."
+  },
+  {
+    "title": "Control flow and error handling - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "JavaScript supports a compact set of statements, specifically\ncontrol flow statements, that you can use to incorporate a great deal of interactivity\nin your application. This chapter provides an overview of these statements."
+  },
+  {
+    "title": "JavaScript language overview - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Language_overview",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well. JavaScript supports object-oriented programming with object prototypes and classes. It also supports functional programming since functions are first-class objects that can be easily created via expressions and passed around like any other object."
+  },
+  {
+    "title": "Expressions and operators - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "This chapter documents all the JavaScript language operators, expressions and keywords."
+  },
+  {
+    "title": "JavaScript Guide - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The JavaScript Guide shows you how to use JavaScript and gives an overview of the language. If you need exhaustive information about a language feature, have a look at the JavaScript reference."
+  },
+  {
+    "title": "Using classes - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Using_classes",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "JavaScript is a prototype-based language — an object&#39;s behaviors are specified by its own properties and its prototype&#39;s properties. However, with the addition of classes, the creation of hierarchies of objects and the inheritance of properties and their values are much more in line with other object-oriented languages such as Java. In this section, we will demonstrate how objects can be created from classes."
+  },
+  {
+    "title": "Loops and iteration - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "Loops offer a quick and easy way to do something repeatedly. This\nchapter of the JavaScript Guide\nintroduces the different iteration statements available to JavaScript."
+  },
+  {
+    "title": "Working with objects - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Working_with_objects",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "JavaScript is designed on an object-based paradigm. An object is a collection of properties, and a property is an association between a name (or key) and a value. A property&#39;s value can be a function, in which case the property is known as a method."
+  },
+  {
+    "title": "Functions - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Functions",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "Generally speaking, a function is a &quot;subprogram&quot; that can be called by code external (or internal, in the case of recursion) to the function. Like the program itself, a function is composed of a sequence of statements called the function body. Values can be passed to a function as parameters, and the function will return a value."
+  },
+  {
+    "title": "JavaScript reference - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The JavaScript reference serves as a repository of facts about the JavaScript language. The entire language is described here in detail. As you write JavaScript code, you&#39;ll refer to these pages often (thus the title &quot;JavaScript reference&quot;)."
+  },
+  {
+    "title": "Statements and declarations - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Statements",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "JavaScript code is built from statements and declarations, which can contain expressions. This reference groups the constructs used to control execution and declare bindings. A statement can span multiple lines, and a line can contain multiple statements."
+  },
+  {
+    "title": "eval() - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The eval() function evaluates JavaScript code represented as a string and returns its completion value. The source is parsed as a script."
+  },
+  {
+    "title": "for...in - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Statements/for...in",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The for...in statement iterates over all enumerable string properties of an object (ignoring properties keyed by symbols), including inherited enumerable properties."
+  },
+  {
+    "title": "JavaScript technologies overview - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/JavaScript_technologies_overview",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "Whereas HTML defines a webpage&#39;s structure and content and CSS sets the formatting and appearance, JavaScript adds interactivity to a webpage and creates rich web applications."
+  },
+  {
+    "title": "Function.prototype.toString() - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The toString() method of Function instances returns a string representing the source code of this function."
+  },
+  {
+    "title": "Object - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Object type represents one of JavaScript&#39;s data types. It is used to store various keyed collections and more complex entities. Objects can be created using the Object() constructor or the object initializer / literal syntax."
+  },
+  {
+    "title": "Enumerability and ownership of properties - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "Every property in JavaScript objects can be classified by three factors:"
+  },
+  {
+    "title": "RegExp - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The RegExp object is used for matching text with a pattern."
+  },
+  {
+    "title": "Equality comparisons and sameness - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "JavaScript provides three different value-comparison operations:"
+  },
+  {
+    "title": "Closures - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Closures",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives a function access to its outer scope. In JavaScript, closures are created every time a function is created, at function creation time."
+  },
+  {
+    "title": "Math - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Math namespace object contains static properties and methods for mathematical constants and functions."
+  },
+  {
+    "title": "Number - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "Number values represent floating-point numbers like 37 or -9.25."
+  },
+  {
+    "title": "Boolean - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "Boolean values can be one of two values: true or false, representing the truth value of a logical proposition."
+  },
+  {
+    "title": "Array - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Array object, as with arrays in other programming languages, enables storing a collection of multiple items under a single variable name, and has members for performing common array operations."
+  },
+  {
+    "title": "Error - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "Error objects are thrown when runtime errors occur. The Error object can also be used as a base object for user-defined exceptions. See below for standard built-in error types."
+  },
+  {
+    "title": "Inheritance and the prototype chain - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "In programming, inheritance refers to passing down characteristics from a parent to a child so that a new piece of code can reuse and build upon the features of an existing one. JavaScript implements inheritance by using objects. Each object has an internal link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype. By definition, null has no prototype and acts as the final link in this prototype chain. It is possible to mutate any member of the prototype chain or even swap out the prototype at runtime, so concepts like static dispatching do not exist in JavaScript."
+  },
+  {
+    "title": "String - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The String object is used to represent and manipulate a\nsequence of characters."
+  },
+  {
+    "title": "Memory management - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Memory_management",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "Low-level languages like C, have manual memory management primitives such as malloc() and free(). In contrast, JavaScript automatically allocates memory when objects are created and frees it when they are not used anymore (garbage collection). This automaticity is a potential source of confusion: it can give developers the false impression that they don&#39;t need to worry about memory management."
+  },
+  {
+    "title": "JSON - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The JSON namespace object contains static methods for parsing values from and converting values to JavaScript Object Notation (JSON)."
+  },
+  {
+    "title": "Function - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Function object provides methods for functions. In JavaScript, every function is actually a Function object."
+  },
+  {
+    "title": "Object.is() - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Object.is() static method determines whether two values are the same value."
+  },
+  {
+    "title": "for...of - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Statements/for...of",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The for...of statement executes a loop that operates on a sequence of values sourced from an iterable object. Iterable objects include instances of built-ins such as Array, String, TypedArray, Map, Set, NodeList (and other DOM collections), as well as the arguments object, generators produced by generator functions, and user-defined iterables."
+  },
+  {
+    "title": "try...catch - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Statements/try...catch",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The try...catch statement is comprised of a try block and either a catch block, a finally block, or both. The code in the try block is executed first, and if it throws an exception, the code in the catch block will be executed. The code in the finally block will always be executed before control flow exits the entire construct."
+  },
+  {
+    "title": "Set - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Set object lets you store unique values of any type, whether primitive values or object references."
+  },
+  {
+    "title": "WeakMap - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "A WeakMap is a collection of key/value pairs whose keys must be objects or non-registered symbols, with values of any arbitrary JavaScript type, and which does not create strong references to its keys. That is, an object&#39;s presence as a key in a WeakMap does not prevent the object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any WeakMap become candidates for garbage collection as well — as long as they aren&#39;t strongly referred to elsewhere. The only primitive type that can be used as a WeakMap key is symbol — more specifically, non-registered symbols — because non-registered symbols are guaranteed to be unique and cannot be re-created."
+  },
+  {
+    "title": "do...while - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Statements/do...while",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The do...while statement creates a loop that executes a specified statement as long as the test condition evaluates to true. The condition is evaluated after executing the statement, resulting in the specified statement executing at least once."
+  },
+  {
+    "title": "WeakSet - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "A WeakSet is a collection of garbage-collectable values, including objects and non-registered symbols. A value in the WeakSet may only occur once. It is unique in the WeakSet&#39;s collection."
+  },
+  {
+    "title": "typeof - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/typeof",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The typeof operator returns a string indicating the type of the operand&#39;s value."
+  },
+  {
+    "title": "this - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/this",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The this keyword refers to the context where a piece of code, such as a function&#39;s body, is supposed to run. Most typically, it is used in object methods, where this refers to the object that the method is attached to, thus allowing the same method to be reused on different objects."
+  },
+  {
+    "title": "const - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Statements/const",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The const declaration declares block-scoped local variables. The value of a constant can&#39;t be changed through reassignment using the assignment operator, but if a constant is an object, its properties can be added, updated, or removed."
+  },
+  {
+    "title": "if...else - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Statements/if...else",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The if...else statement executes a statement if a specified condition is truthy. If the condition is falsy, another statement in the optional else clause will be executed."
+  },
+  {
+    "title": "let - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Statements/let",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The let declaration declares re-assignable, block-scoped local variables, optionally initializing each to a value."
+  },
+  {
+    "title": "Map - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Map object holds key-value pairs and remembers the original insertion order of the keys.\nAny value (both objects and primitive values) may be used as either a key or a value."
+  },
+  {
+    "title": "new - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/new",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The new operator lets developers create an instance of a user-defined object type or of one of the built-in object types that has a constructor function."
+  },
+  {
+    "title": "var - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Statements/var",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The var statement declares function-scoped or globally-scoped variables, optionally initializing each to a value."
+  },
+  {
+    "title": "instanceof - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/instanceof",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The instanceof operator tests to see if the prototype property of a constructor appears anywhere in the prototype chain of an object. The return value is a boolean value. Its behavior can be customized with Symbol.hasInstance."
+  },
+  {
+    "title": "Operator precedence - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "Operator precedence determines how operators are parsed concerning each other. Operators with higher precedence become the operands of operators with lower precedence."
+  },
+  {
+    "title": "Regular expressions - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Regular_expressions",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "Regular expressions are patterns used to match character combinations in strings.\nIn JavaScript, regular expressions are also objects. These patterns are used with the exec() and test() methods of RegExp, and with the match(), matchAll(), replace(), replaceAll(), search(), and split() methods of String.\nThis chapter describes JavaScript regular expressions. It provides a brief overview of each syntax element. For a detailed explanation of each one&#39;s semantics, read the regular expressions reference."
+  },
+  {
+    "title": "switch - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Statements/switch",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The switch statement evaluates an expression, matching the expression&#39;s value against a series of case clauses, and executes statements after the first case clause with a matching value, until a break statement is encountered. The default clause of a switch statement will be jumped to if no case matches the expression&#39;s value."
+  },
+  {
+    "title": "Classes - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Classes",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are unique to classes."
+  },
+  {
+    "title": "Functions - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Functions",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, you must define it somewhere in the scope from which you wish to call it."
+  },
+  {
+    "title": "Using promises - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Using_promises",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "A Promise is an object representing the eventual completion or failure of an asynchronous operation. Since most people are consumers of already-created promises, this guide will explain consumption of returned promises before explaining how to create them."
+  },
+  {
+    "title": "Iterators and generators - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "Iterators and Generators bring the concept of iteration directly into the core language and provide a mechanism for customizing the behavior of for...of loops."
+  },
+  {
+    "title": "Introduction - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Introduction",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "This chapter introduces JavaScript and discusses some of its fundamental concepts."
+  },
+  {
+    "title": "Grammar and types - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Grammar_and_types",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "This chapter discusses JavaScript&#39;s basic grammar, variable declarations, data types and literals."
+  },
+  {
+    "title": "JavaScript resource management - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Resource_management",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "This guide talks about how to do resource management in JavaScript. Resource management is not exactly the same as memory management, which is a more advanced topic and usually handled automatically by JavaScript. Resource management is about managing resources that are not automatically cleaned up by JavaScript. Sometimes, it&#39;s okay to have some unused objects in memory, because they don&#39;t interfere with application logic, but resource leaks often lead to things not working, or a lot of excess memory usage. Therefore, this is not an optional feature about optimization, but a core feature to write correct programs!"
+  },
+  {
+    "title": "Numbers and strings - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "This chapter introduces the two most fundamental data types in JavaScript: numbers and strings. We will introduce their underlying representations, and functions used to work with and perform calculations on them."
+  },
+  {
+    "title": "Indexed collections - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Indexed_collections",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "This chapter introduces collections of data which are ordered by an index value. This includes arrays and array-like constructs such as Array objects and TypedArray objects."
+  },
+  {
+    "title": "Representing dates &amp; times - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Representing_dates_times",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "JavaScript does not have a date data type. However, you can use the Date object and its methods to work with dates and times in your applications. The Date object has a large number of methods for setting, getting, and manipulating dates. It does not have any properties."
+  },
+  {
+    "title": "Expressions and operators - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "This chapter describes JavaScript&#39;s expressions and operators, including assignment, comparison, arithmetic, bitwise, logical, string, ternary and more."
+  },
+  {
+    "title": "JavaScript typed arrays - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Typed_arrays",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "JavaScript typed arrays are array-like objects that provide a mechanism for reading and writing raw binary data in memory buffers."
+  },
+  {
+    "title": "Keyed collections - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Keyed_collections",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "This chapter introduces collections of data which are indexed by a key; Map and Set objects contain elements which are iterable in the order of insertion."
+  },
+  {
+    "title": "JavaScript modules - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Modules",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "This guide gives you all you need to get started with JavaScript module syntax."
+  },
+  {
+    "title": "AsyncGeneratorFunction - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The AsyncGeneratorFunction object provides methods for async generator functions. In JavaScript, every async generator function is actually an AsyncGeneratorFunction object."
+  },
+  {
+    "title": "BigInt - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "BigInt values represent integer values which are too high or too low to be represented by the number primitive."
+  },
+  {
+    "title": "ArrayBuffer - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The ArrayBuffer object is used to represent a generic raw binary data buffer."
+  },
+  {
+    "title": "AggregateError - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The AggregateError object represents an error when several errors need to be wrapped in a single error. It is thrown when multiple errors need to be reported by an operation, for example by Promise.any(), when all promises passed to it reject."
+  },
+  {
+    "title": "Atomics - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Atomics namespace object contains static methods for carrying out atomic operations. They are used with SharedArrayBuffer and ArrayBuffer objects."
+  },
+  {
+    "title": "DataView - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The DataView view provides a low-level interface for reading and writing multiple number types in a binary ArrayBuffer, without having to care about the platform&#39;s endianness."
+  },
+  {
+    "title": "AbstractModuleSource - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/AbstractModuleSource",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "An AbstractModuleSource object represents the compiled source of a module obtained with import source or import.source(). There is no directly visible AbstractModuleSource constructor."
+  },
+  {
+    "title": "Internationalization - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Internationalization",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Intl object is the namespace for the ECMAScript Internationalization API, which provides a wide range of locale- and culture-sensitive data and operations."
+  },
+  {
+    "title": "AsyncDisposableStack - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The AsyncDisposableStack object represents a stack of async disposers to run when the stack itself is disposed. Disposer functions are executed in reverse order of registration, with strong error handling guarantees. Calling its move() method will transfer responsibility for calling the current registered disposers to a new AsyncDisposableStack and prevent registering any additional disposers."
+  },
+  {
+    "title": "BigUint64Array - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The BigUint64Array typed array represents an array of 64-bit unsigned integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0n unless initialization data is explicitly provided. Once established, you can reference elements in the array using the object&#39;s methods, or using standard array index syntax (that is, using bracket notation)."
+  },
+  {
+    "title": "AsyncIterator - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "An AsyncIterator object is an object that conforms to the async iterator protocol by providing a next() method that returns a promise fulfilling to an iterator result object. The AsyncIterator.prototype object is a hidden global object that all built-in async iterators inherit from. It provides a [Symbol.asyncIterator]() method that returns the async iterator object itself, making the async iterator also async iterable."
+  },
+  {
+    "title": "Meta programming - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Guide/Meta_programming",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Proxy and Reflect objects allow you to intercept and define custom behavior for fundamental language operations (e.g., property lookup, assignment, enumeration, function invocation, etc.). With the help of these two objects you are able to program at the meta level of JavaScript."
+  },
+  {
+    "title": "AsyncGenerator - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The AsyncGenerator object is returned by an async generator function and it conforms to both the async iterable protocol and the async iterator protocol."
+  },
+  {
+    "title": "AsyncFunction - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The AsyncFunction object provides methods for async functions. In JavaScript, every async function is actually an AsyncFunction object."
+  },
+  {
+    "title": "BigInt64Array - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The BigInt64Array typed array represents an array of 64-bit signed integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0n unless initialization data is explicitly provided. Once established, you can reference elements in the array using the object&#39;s methods, or using standard array index syntax (that is, using bracket notation)."
+  },
+  {
+    "title": "decodeURIComponent() - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The decodeURIComponent() function decodes a Uniform Resource Identifier (URI) component previously created by encodeURIComponent() or by a similar routine."
+  },
+  {
+    "title": "Date - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "JavaScript Date objects represent a single moment in time in a platform-independent format. Date objects encapsulate an integral number that represents milliseconds since the midnight at the beginning of January 1, 1970, UTC (the epoch)."
+  },
+  {
+    "title": "Float64Array - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Float64Array typed array represents an array of 64-bit floating point numbers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0 unless initialization data is explicitly provided. Once established, you can reference elements in the array using the object&#39;s methods, or using standard array index syntax (that is, using bracket notation)."
+  },
+  {
+    "title": "Generator - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Generator object is returned by a generator function and it conforms to both the iterable protocol and the iterator protocol."
+  },
+  {
+    "title": "Infinity - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Infinity global property is a numeric value representing infinity."
+  },
+  {
+    "title": "escape() - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The escape() function computes a new string in which certain characters have been replaced by hexadecimal escape sequences."
+  },
+  {
+    "title": "encodeURI() - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The encodeURI() function encodes a URI by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two surrogate characters). Compared to encodeURIComponent(), this function encodes fewer characters, preserving those that are part of the URI syntax."
+  },
+  {
+    "title": "encodeURIComponent() - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The encodeURIComponent() function encodes a URI by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two surrogate characters). Compared to encodeURI(), this function encodes more characters, including those that are part of the URI syntax."
+  },
+  {
+    "title": "FinalizationRegistry - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "A FinalizationRegistry object lets you request a callback when a value is garbage-collected."
+  },
+  {
+    "title": "DisposableStack - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/DisposableStack",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The DisposableStack object represents a stack of disposers to run when the stack itself is disposed. Disposer functions are executed in reverse order of registration, with strong error handling guarantees. Calling its move() method will transfer responsibility for calling the current registered disposers to a new DisposableStack and prevent registering any additional disposers."
+  },
+  {
+    "title": "Float32Array - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Float32Array typed array represents an array of 32-bit floating point numbers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0 unless initialization data is explicitly provided. Once established, you can reference elements in the array using the object&#39;s methods, or using standard array index syntax (that is, using bracket notation)."
+  },
+  {
+    "title": "globalThis - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The globalThis global property contains the global this value, which is usually akin to the global object."
+  },
+  {
+    "title": "decodeURI() - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURI",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The decodeURI() function decodes a Uniform Resource Identifier (URI) previously created by encodeURI() or a similar routine."
+  },
+  {
+    "title": "GeneratorFunction - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The GeneratorFunction object provides methods for generator functions. In JavaScript, every generator function is actually a GeneratorFunction object."
+  },
+  {
+    "title": "EvalError - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The EvalError object indicates an error regarding the global eval() function. This exception is not thrown by JavaScript anymore, however the EvalError object remains for compatibility."
+  },
+  {
+    "title": "Float16Array - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float16Array",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Float16Array typed array represents an array of 16-bit floating point numbers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0 unless initialization data is explicitly provided. Once established, you can reference elements in the array using the object&#39;s methods, or using standard array index syntax (that is, using bracket notation)."
+  },
+  {
+    "title": "NaN - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The NaN global property is a value representing Not-A-Number."
+  },
+  {
+    "title": "Promise - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value."
+  },
+  {
+    "title": "Proxy - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Proxy object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object."
+  },
+  {
+    "title": "parseInt() - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The parseInt() function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems)."
+  },
+  {
+    "title": "Intl - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Intl namespace object contains several constructors as well as functionality common to the internationalization constructors and other language sensitive functions. Collectively, they comprise the ECMAScript Internationalization API, which provides language sensitive string comparison, number formatting, date and time formatting, and more."
+  },
+  {
+    "title": "isNaN() - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The isNaN() function determines whether a value is NaN, first converting the value to a number if necessary. Because coercion inside the isNaN() function can be surprising, you may prefer to use Number.isNaN()."
+  },
+  {
+    "title": "parseFloat() - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The parseFloat() function parses a string argument and returns a floating point number."
+  },
+  {
+    "title": "InternalError - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The InternalError object indicates an error that occurred internally in the JavaScript engine."
+  },
+  {
+    "title": "Int16Array - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Int16Array typed array represents an array of 16-bit signed integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0 unless initialization data is explicitly provided. Once established, you can reference elements in the array using the object&#39;s methods, or using standard array index syntax (that is, using bracket notation)."
+  },
+  {
+    "title": "Reflect - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Reflect namespace object contains static methods for invoking interceptable JavaScript object internal methods. The methods are the same as those of proxy handlers."
+  },
+  {
+    "title": "Int32Array - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Int32Array typed array represents an array of 32-bit signed integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0 unless initialization data is explicitly provided. Once established, you can reference elements in the array using the object&#39;s methods, or using standard array index syntax (that is, using bracket notation)."
+  },
+  {
+    "title": "Iterator - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "An Iterator object is an object that conforms to the iterator protocol by providing a next() method that returns an iterator result object. All built-in iterators inherit from the Iterator class. The Iterator class provides a [Symbol.iterator]() method that returns the iterator object itself, making the iterator also iterable. It also provides some helper methods for working with iterators."
+  },
+  {
+    "title": "RangeError - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The RangeError object indicates an error when a value is not in the set or range of allowed values."
+  },
+  {
+    "title": "isFinite() - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/isFinite",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The isFinite() function determines whether a value is finite, first converting the value to a number if necessary. A finite number is one that&#39;s not NaN or ±Infinity. Because coercion inside the isFinite() function can be surprising, you may prefer to use Number.isFinite()."
+  },
+  {
+    "title": "ReferenceError - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The ReferenceError object represents an error when a variable that doesn&#39;t exist (or hasn&#39;t yet been initialized) in the current scope is referenced."
+  },
+  {
+    "title": "Int8Array - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Int8Array typed array represents an array of 8-bit signed integers. The contents are initialized to 0 unless initialization data is explicitly provided. Once established, you can reference elements in the array using the object&#39;s methods, or using standard array index syntax (that is, using bracket notation)."
+  },
+  {
+    "title": "undefined - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The undefined global property represents the primitive value undefined. It is one of JavaScript&#39;s primitive types."
+  },
+  {
+    "title": "Symbol - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "Symbol is a built-in object whose constructor returns a symbol primitive — also called a Symbol value or just a Symbol — that&#39;s guaranteed to be unique. Symbols are often used to add unique property keys to an object that won&#39;t collide with keys any other code might add to the object, and which are hidden from any mechanisms other code will typically use to access the object. That enables a form of weak encapsulation, or a weak form of information hiding."
+  },
+  {
+    "title": "SyntaxError - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The SyntaxError object represents an error when trying to interpret syntactically invalid code. It is thrown when the JavaScript engine encounters tokens or token order that does not conform to the syntax of the language when parsing code."
+  },
+  {
+    "title": "Addition (+) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Addition",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The addition (+) operator produces the sum of numeric operands or string concatenation."
+  },
+  {
+    "title": "TypedArray - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "A TypedArray object describes an array-like view of an\nunderlying binary data buffer.\nThere is no global property named TypedArray, nor is there a\ndirectly visible TypedArray constructor. Instead, there are a number of\ndifferent global properties, whose values are typed array constructors for specific\nelement types, listed below. On the following pages you will find common properties and\nmethods that can be used with any typed array containing elements of any type."
+  },
+  {
+    "title": "URIError - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The URIError object represents an error when a global URI handling function was used in a wrong way."
+  },
+  {
+    "title": "TypeError - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The TypeError object represents an error when an operation could not be performed, typically (but not exclusively) when a value is not of the expected type."
+  },
+  {
+    "title": "WeakRef - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "A WeakRef object lets you hold a weak reference to another object, without preventing that object from getting garbage-collected."
+  },
+  {
+    "title": "Uint8ClampedArray - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Uint8ClampedArray typed array represents an array of 8-bit unsigned integers clamped to 0–255. The contents are initialized to 0 unless initialization data is explicitly provided. Once established, you can reference elements in the array using the object&#39;s methods, or using standard array index syntax (that is, using bracket notation)."
+  },
+  {
+    "title": "Temporal - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Temporal object enables date and time management in various scenarios, including built-in time zone and calendar representation, wall-clock time conversions, arithmetics, formatting, and more. It is designed as a full replacement for the Date object."
+  },
+  {
+    "title": "SharedArrayBuffer - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The SharedArrayBuffer object is used to represent a generic raw binary data buffer, similar to the ArrayBuffer object, but in a way that they can be used to create views on shared memory. A SharedArrayBuffer is not a Transferable Object, unlike an ArrayBuffer which is transferable."
+  },
+  {
+    "title": "Uint32Array - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Uint32Array typed array represents an array of 32-bit unsigned integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0 unless initialization data is explicitly provided. Once established, you can reference elements in the array using the object&#39;s methods, or using standard array index syntax (that is, using bracket notation)."
+  },
+  {
+    "title": "SuppressedError - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/SuppressedError",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The SuppressedError object represents an error generated while handing another error. It is generated during resource disposal using using or await using."
+  },
+  {
+    "title": "Uint8Array - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Uint8Array typed array represents an array of 8-bit unsigned integers. The contents are initialized to 0 unless initialization data is explicitly provided. Once established, you can reference elements in the array using the object&#39;s methods, or using standard array index syntax (that is, using bracket notation)."
+  },
+  {
+    "title": "Uint16Array - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The Uint16Array typed array represents an array of 16-bit unsigned integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0 unless initialization data is explicitly provided. Once established, you can reference elements in the array using the object&#39;s methods, or using standard array index syntax (that is, using bracket notation)."
+  },
+  {
+    "title": "unescape() - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The unescape() function computes a new string in which hexadecimal escape sequences are replaced with the characters that they represent. The escape sequences might be introduced by a function like escape()."
+  },
+  {
+    "title": "Bitwise XOR (^) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The bitwise XOR (^) operator returns a number or BigInt whose binary representation has a 1 in each bit position for which the corresponding bits of either but not both operands are 1."
+  },
+  {
+    "title": "Conditional (ternary) operator - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The conditional (ternary) operator is the only JavaScript operator that takes three operands:\na condition followed by a question mark (?), then an expression to execute if the condition is truthy followed by a colon (:), and finally the expression to execute if the condition is falsy.\nThis operator is frequently used as an alternative to an if...else statement."
+  },
+  {
+    "title": "Bitwise NOT (~) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The bitwise NOT (~) operator returns a number or BigInt whose binary representation has a 1 in each bit position for which the corresponding bit of the operand is 0, and a 0 otherwise."
+  },
+  {
+    "title": "async function expression - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/async_function",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The async function keywords can be used to define an async function inside an expression."
+  },
+  {
+    "title": "Bitwise AND assignment (&amp;=) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The bitwise AND assignment (&amp;=) operator performs bitwise AND on the two operands and assigns the result to the left operand."
+  },
+  {
+    "title": "Decrement (--) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Decrement",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The decrement (--) operator decrements (subtracts one from) its operand and returns the value before or after the decrement, depending on where the operator is placed."
+  },
+  {
+    "title": "Bitwise OR (|) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The bitwise OR (|) operator returns a number or BigInt whose binary representation has a 1 in each bit position for which the corresponding bits of either or both operands are 1."
+  },
+  {
+    "title": "Bitwise AND (&amp;) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The bitwise AND (&amp;) operator returns a number or BigInt whose binary representation has a 1 in each bit position for which the corresponding bits of both operands are 1."
+  },
+  {
+    "title": "Bitwise OR assignment (|=) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The bitwise OR assignment (|=) operator performs bitwise OR on the two operands and assigns the result to the left operand."
+  },
+  {
+    "title": "Comma operator (,) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The comma (,) operator evaluates each of its operands (from left to right) and returns the value of the last operand. This is commonly used to provide multiple updaters to a for loop&#39;s afterthought."
+  },
+  {
+    "title": "await - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/await",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The await operator is used to wait for a Promise and get its fulfillment value. It can only be used inside an async function or at the top level of a module."
+  },
+  {
+    "title": "Assignment (=) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Assignment",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The assignment (=) operator is used to assign a value to a variable or property. The assignment expression itself has a value, which is the assigned value. This allows multiple assignments to be chained in order to assign a single value to multiple variables."
+  },
+  {
+    "title": "class expression - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/class",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The class keyword can be used to define a class inside an expression."
+  },
+  {
+    "title": "async function* expression - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/async_function*",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The async function* keywords can be used to define an async generator function inside an expression."
+  },
+  {
+    "title": "Bitwise XOR assignment (^=) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The bitwise XOR assignment (^=) operator performs bitwise XOR on the two operands and assigns the result to the left operand."
+  },
+  {
+    "title": "Addition assignment (+=) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The addition assignment (+=) operator performs addition (which is either numeric addition or string concatenation) on the two operands and assigns the result to the left operand."
+  },
+  {
+    "title": "delete - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/delete",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The delete operator removes a property from an object. If the property&#39;s value is an object and there are no more references to the object, the object held by that property is eventually released automatically."
+  },
+  {
+    "title": "import() - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/import",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The import() syntax, commonly called dynamic import, is a function-like expression that allows loading an ECMAScript module asynchronously and dynamically into a potentially non-module environment."
+  },
+  {
+    "title": "import.meta - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/import.meta",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The import.meta meta-property exposes context-specific metadata to a JavaScript module. It contains information about the module, such as the module&#39;s URL."
+  },
+  {
+    "title": "Equality (==) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Equality",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The equality (==) operator checks whether its two operands are equal,\nreturning a Boolean result.\nUnlike the strict equality operator,\nit attempts to convert and compare operands that are of different types."
+  },
+  {
+    "title": "Destructuring - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The destructuring syntax is a JavaScript syntax that makes it possible to unpack values from arrays, or properties from objects, into distinct variables. It can be used in locations that receive data (such as the left-hand side of an assignment or anywhere that creates new identifier bindings)."
+  },
+  {
+    "title": "Grouping operator ( ) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Grouping",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The grouping ( ) operator controls the precedence of evaluation in expressions. It also acts as a container for arbitrary expressions in certain syntactic constructs, where ambiguity or syntax errors would otherwise occur."
+  },
+  {
+    "title": "import.meta.resolve() - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/import.meta/resolve",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "import.meta.resolve() is a built-in function defined on the import.meta object of a JavaScript module that resolves a module specifier to a URL using the current module&#39;s URL as base."
+  },
+  {
+    "title": "Division (/) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Division",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The division (/) operator produces the quotient of its operands where the left operand is the dividend and the right operand is the divisor."
+  },
+  {
+    "title": "Greater than or equal (&gt;=) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The greater than or equal (&gt;=) operator returns true if\nthe left operand is greater than or equal to the right operand, and false\notherwise."
+  },
+  {
+    "title": "Greater than (&gt;) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The greater than (&gt;) operator returns true if the left\noperand is greater than the right operand, and false otherwise."
+  },
+  {
+    "title": "function* expression - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/function*",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The function* keyword can be used to define a generator function inside an expression."
+  },
+  {
+    "title": "function expression - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/function",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The function keyword can be used to define a function inside an expression."
+  },
+  {
+    "title": "Exponentiation assignment (**=) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The exponentiation assignment (**=) operator performs exponentiation on the two operands and assigns the result to the left operand."
+  },
+  {
+    "title": "Exponentiation (**) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The exponentiation (**) operator returns the result of raising the first operand to the power of the second operand. It is equivalent to Math.pow(), except it also accepts BigInts as operands."
+  },
+  {
+    "title": "Division assignment (/=) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Division_assignment",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The division assignment (/=) operator performs division on the two operands and assigns the result to the left operand."
+  },
+  {
+    "title": "import.defer() - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/import/defer",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The import.defer() syntax behaves like regular import() syntax, except that it results in a deferred module namespace object. The module and its dependencies are fetched and linked up front, but their synchronous evaluation is deferred until the namespace&#39;s properties are accessed."
+  },
+  {
+    "title": "Increment (++) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Increment",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The increment (++) operator increments (adds one to) its operand and returns the value before or after the increment, depending on where the operator is placed."
+  },
+  {
+    "title": "Less than or equal (&lt;=) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The less than or equal (&lt;=) operator returns true if the left operand is less than or equal to the right operand, and false otherwise."
+  },
+  {
+    "title": "Logical AND assignment (&amp;&amp;=) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The logical AND assignment (&amp;&amp;=) operator only evaluates the right operand and assigns to the left if the left operand is truthy."
+  },
+  {
+    "title": "import.source() - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/import/source",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The import.source() syntax behaves like regular import() syntax, except that it results in an object that represents the module&#39;s compiled source code. The module is fetched and compiled, but its dependencies are not loaded and it is not linked or evaluated. It can be imperatively evaluated later, such as by using dynamic import or WebAssembly.instantiate()."
+  },
+  {
+    "title": "Less than (&lt;) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Less_than",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The less than (&lt;) operator returns true if the left operand is less than the right operand, and false otherwise."
+  },
+  {
+    "title": "Inequality (!=) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Inequality",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The inequality (!=) operator checks whether its two operands are not\nequal, returning a Boolean result.\nUnlike the strict inequality operator,\nit attempts to convert and compare operands that are of different types."
+  },
+  {
+    "title": "Left shift assignment (&lt;&lt;=) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The left shift assignment (&lt;&lt;=) operator performs left shift on the two operands and assigns the result to the left operand."
+  },
+  {
+    "title": "Logical AND (&amp;&amp;) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The logical AND (&amp;&amp;) (logical conjunction) operator for a set of boolean operands will be true if and only if all the operands are true. Otherwise it will be false."
+  },
+  {
+    "title": "in - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/in",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The in operator returns true if the specified property is in the specified object or its prototype chain."
+  },
+  {
+    "title": "Left shift (&lt;&lt;) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The left shift (&lt;&lt;) operator returns a number or BigInt whose binary representation is the first operand shifted by the specified number of bits to the left. Excess bits shifted off to the left are discarded, and zero bits are shifted in from the right."
+  },
+  {
+    "title": "Logical OR (||) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The logical OR (||) (logical disjunction) operator for a set of operands\nis true if and only if one or more of its operands is true. It is typically used with\nboolean (logical) values. When it is, it returns a Boolean value. However,\nthe || operator actually returns the value of one of the specified\noperands, so if this operator is used with non-Boolean values, it will return a\nnon-Boolean value."
+  },
+  {
+    "title": "Logical NOT (!) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The logical NOT (!) (logical complement, negation) operator takes truth to\nfalsity and vice versa. It is typically used with boolean (logical)\nvalues. When used with non-Boolean values, it returns false if its single\noperand can be converted to true; otherwise, returns true."
+  },
+  {
+    "title": "Logical OR assignment (||=) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The logical OR assignment (||=) operator only evaluates the right operand and assigns to the left if the left operand is falsy."
+  },
+  {
+    "title": "Multiplication (*) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The multiplication (*) operator produces the product of the operands."
+  },
+  {
+    "title": "Multiplication assignment (*=) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The multiplication assignment (*=) operator performs multiplication on the two operands and assigns the result to the left operand."
+  },
+  {
+    "title": "null - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/null",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The null keyword refers to the null primitive value, which represents the intentional absence of any object value."
+  },
+  {
+    "title": "new.target - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/new.target",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The new.target meta-property lets you detect whether a function or constructor was called using the new operator. In constructors and functions invoked using the new operator, new.target returns a reference to the constructor or function that new was called upon. In normal function calls, new.target is undefined."
+  },
+  {
+    "title": "Nullish coalescing assignment (??=) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The nullish coalescing assignment (??=) operator, also known as the logical nullish assignment operator, only evaluates the right operand and assigns to the left if the left operand is nullish (null or undefined)."
+  },
+  {
+    "title": "Nullish coalescing operator (??) - JavaScript | MDN",
+    "category": "MDN JavaScript",
+    "path": "/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing",
+    "site": "mdn_js",
+    "headings": [],
+    "preview": "The nullish coalescing (??) operator is a logical\noperator that returns its right-hand side operand when its left-hand side operand is\nnull or undefined, and otherwise returns its left-hand side\noperand."
+  }
+]

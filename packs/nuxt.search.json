@@ -1,0 +1,1170 @@
+[
+  {
+    "title": "Introduction",
+    "category": "DOCS",
+    "path": "/docs/4.x/getting-started/introduction",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt"
+  },
+  {
+    "title": "Installation",
+    "category": "DOCS",
+    "path": "/docs/4.x/getting-started/installation",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Get started with Nuxt quickly with our online starters or start locally with your terminal."
+  },
+  {
+    "title": "Routing",
+    "category": "DOCS",
+    "path": "/docs/4.x/getting-started/routing",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt file-system routing creates a route for every file in the pages/ directory."
+  },
+  {
+    "title": "Nuxt Directory Structure",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Learn about the directory structure of a Nuxt application and how to use it."
+  },
+  {
+    "title": "Configuration",
+    "category": "DOCS",
+    "path": "/docs/4.x/getting-started/configuration",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt is configured with sensible defaults to make you productive."
+  },
+  {
+    "title": "Styling",
+    "category": "DOCS",
+    "path": "/docs/4.x/getting-started/styling",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Learn how to style your Nuxt application."
+  },
+  {
+    "title": "State Management",
+    "category": "DOCS",
+    "path": "/docs/4.x/getting-started/state-management",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt provides powerful state management libraries and the useState composable to create a reactive and SSR-friendly shared state."
+  },
+  {
+    "title": "SEO and Meta",
+    "category": "DOCS",
+    "path": "/docs/4.x/getting-started/seo-meta",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Improve your Nuxt app"
+  },
+  {
+    "title": "Transitions",
+    "category": "DOCS",
+    "path": "/docs/4.x/getting-started/transitions",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Apply transitions between pages and layouts with Vue or native browser View Transitions."
+  },
+  {
+    "title": "Assets",
+    "category": "DOCS",
+    "path": "/docs/4.x/getting-started/assets",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt offers two options for your assets."
+  },
+  {
+    "title": "Data Fetching",
+    "category": "DOCS",
+    "path": "/docs/4.x/getting-started/data-fetching",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt provides composables to handle data fetching within your application."
+  },
+  {
+    "title": "Views",
+    "category": "DOCS",
+    "path": "/docs/4.x/getting-started/views",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt provides several component layers to implement the user interface of your application."
+  },
+  {
+    "title": "Getting Help",
+    "category": "DOCS",
+    "path": "/docs/4.x/community/getting-help",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "We"
+  },
+  {
+    "title": "Hello World",
+    "category": "DOCS",
+    "path": "/docs/examples/hello-world",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "A minimal Nuxt application only requires the `app.vue` and `nuxt.config.js` files."
+  },
+  {
+    "title": "Nuxt API Reference",
+    "category": "DOCS",
+    "path": "/docs/4.x/api",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Explore all Nuxt Internals: Components, Composables, Utils, Commands and more."
+  },
+  {
+    "title": "Nuxt Guide",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Learn how Nuxt works with in-depth guides."
+  },
+  {
+    "title": "Server",
+    "category": "DOCS",
+    "path": "/docs/4.x/getting-started/server",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Build full-stack applications with Nuxt"
+  },
+  {
+    "title": "Dev Containers",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/best-practices/devcontainers",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Set up or open a Nuxt project in a dev container for a consistent development environment."
+  },
+  {
+    "title": "Error Handling",
+    "category": "DOCS",
+    "path": "/docs/4.x/getting-started/error-handling",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Learn how to catch and handle errors in Nuxt."
+  },
+  {
+    "title": "useRoute",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/composables/use-route",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "The useRoute composable returns the current route."
+  },
+  {
+    "title": "Deployment",
+    "category": "DOCS",
+    "path": "/docs/4.x/getting-started/deployment",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Learn how to deploy your Nuxt application to any hosting provider."
+  },
+  {
+    "title": "Server Engine",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/concepts/server-engine",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt is powered by a new server engine: Nitro."
+  },
+  {
+    "title": "Rendering Modes",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/concepts/rendering",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Learn about the different rendering modes available in Nuxt."
+  },
+  {
+    "title": "Prerendering",
+    "category": "DOCS",
+    "path": "/docs/4.x/getting-started/prerendering",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt allows pages to be statically rendered at build time to improve certain performance or SEO metrics"
+  },
+  {
+    "title": "pages",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/app/pages",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt provides file-based routing to create routes within your web application."
+  },
+  {
+    "title": "&lt;NuxtLink&gt;",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/components/nuxt-link",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt provides component to handle any kind of links within your application."
+  },
+  {
+    "title": "Upgrade Guide",
+    "category": "DOCS",
+    "path": "/docs/4.x/getting-started/upgrade",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Learn how to upgrade to the latest Nuxt version."
+  },
+  {
+    "title": "Create Your First Module",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/modules/getting-started",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Learn how to create your first Nuxt module using the official starter template."
+  },
+  {
+    "title": "Layers",
+    "category": "DOCS",
+    "path": "/docs/4.x/getting-started/layers",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt provides a powerful system that allows you to extend the default files, configs, and much more."
+  },
+  {
+    "title": "Auto-imports",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/concepts/auto-imports",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt auto-imports components, composables, helper functions and Vue APIs."
+  },
+  {
+    "title": "Nuxt Configuration",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/nuxt-config",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Discover all the options you can use in your nuxt.config.ts file."
+  },
+  {
+    "title": "Testing",
+    "category": "DOCS",
+    "path": "/docs/4.x/getting-started/testing",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "How to test your Nuxt application."
+  },
+  {
+    "title": "assets",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/app/assets",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "The assets/ directory is used to add all the website"
+  },
+  {
+    "title": "utils",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/app/utils",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Use the utils/ directory to auto-import your utility functions throughout your application."
+  },
+  {
+    "title": ".nuxt",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/nuxt",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt uses the .nuxt/ directory in development to generate your Vue application."
+  },
+  {
+    "title": "plugins",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/app/plugins",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt has a plugins system to use Vue plugins and more at the creation of your Vue application."
+  },
+  {
+    "title": "composables",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/app/composables",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Use the composables/ directory to auto-import your Vue composables into your application."
+  },
+  {
+    "title": "app.vue",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/app/app",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "The app.vue file is the main component of your Nuxt application."
+  },
+  {
+    "title": "layouts",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/app/layouts",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt provides a layouts framework to extract common UI patterns into reusable layouts."
+  },
+  {
+    "title": "components",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/app/components",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "The components/ directory is where you put all your Vue components."
+  },
+  {
+    "title": ".output",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/output",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt creates the .output/ directory when building your application for production."
+  },
+  {
+    "title": "definePageMeta",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/utils/define-page-meta",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Define metadata for your page components."
+  },
+  {
+    "title": "app.config.ts",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/app/app-config",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Expose reactive configuration within your application with the App Config file."
+  },
+  {
+    "title": "middleware",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/app/middleware",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt provides middleware to run code before navigating to a particular route."
+  },
+  {
+    "title": "error.vue",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/app/error",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "The error.vue file is the error page in your Nuxt application."
+  },
+  {
+    "title": "layers",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/layers",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Use the layers/ directory to organize and auto-register local layers within your application."
+  },
+  {
+    "title": "spa-loading-template.html",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/app/spa-loading-template",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "The spa-loading-template.html file defines the loading screen shown while a client-side rendered page initializes."
+  },
+  {
+    "title": "content",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/content",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Use the content/ directory to create a file-based CMS for your application."
+  },
+  {
+    "title": "public",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/public",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "The public/ directory is used to serve your website"
+  },
+  {
+    "title": "package.json",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/package",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "The package.json file contains all the dependencies and scripts for your application."
+  },
+  {
+    "title": ".nuxtrc",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/nuxtrc",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "The .nuxtrc file allows you to define nuxt configurations in a flat syntax."
+  },
+  {
+    "title": ".env",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/env",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "A .env file specifies your build/dev-time environment variables."
+  },
+  {
+    "title": "node_modules",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/node_modules",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "The package manager stores the dependencies of your project in the node_modules/ directory."
+  },
+  {
+    "title": ".gitignore",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/gitignore",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "A .gitignore file specifies intentionally untracked files that git should ignore."
+  },
+  {
+    "title": "test",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/test",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Use the test/ directory to organize unit, Nuxt, and end-to-end tests for your application."
+  },
+  {
+    "title": "shared",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/shared",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Use the shared/ directory to share functionality between the Vue app and the Nitro server."
+  },
+  {
+    "title": "useRuntimeConfig",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/composables/use-runtime-config",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Access runtime config variables with the useRuntimeConfig composable."
+  },
+  {
+    "title": "tsconfig.json",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/tsconfig",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Learn how Nuxt manages TypeScript configuration across different parts of your project."
+  },
+  {
+    "title": ".nuxtignore",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/nuxtignore",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "The .nuxtignore file lets Nuxt ignore files in your project’s root directory during the build phase."
+  },
+  {
+    "title": "nuxt.config.ts",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/nuxt-config",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt can be easily configured with a single nuxt.config file."
+  },
+  {
+    "title": "Runtime Config",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/going-further/runtime-config",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt provides a runtime config API to expose configuration and secrets within your application."
+  },
+  {
+    "title": "server",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/server",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "The server/ directory is used to register API and server handlers to your application."
+  },
+  {
+    "title": "modules",
+    "category": "DOCS",
+    "path": "/docs/4.x/directory-structure/modules",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Use the modules/ directory to automatically register local modules within your application."
+  },
+  {
+    "title": "useAppConfig",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/composables/use-app-config",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Access the reactive app config defined in the project."
+  },
+  {
+    "title": "useHead",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/composables/use-head",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "useHead customizes the head properties of individual pages of your Nuxt app."
+  },
+  {
+    "title": "useSeoMeta",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/composables/use-seo-meta",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "The useSeoMeta composable lets you define your site"
+  },
+  {
+    "title": "Locale",
+    "category": "DOCS",
+    "path": "/docs/examples/advanced/locale",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "This example shows how to define a locale composable to handle the application"
+  },
+  {
+    "title": "useState",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/composables/use-state",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "The useState composable creates a reactive and SSR-friendly shared state."
+  },
+  {
+    "title": "useHeadSafe",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/composables/use-head-safe",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "The recommended way to provide head data with user input."
+  },
+  {
+    "title": "Meta Tags",
+    "category": "DOCS",
+    "path": "/docs/examples/features/meta-tags",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "This example shows how to use the Nuxt helpers and composables for SEO and meta management."
+  },
+  {
+    "title": "clearNuxtState v3.6",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/utils/clear-nuxt-state",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Delete the cached state of useState."
+  },
+  {
+    "title": "useFetch",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/composables/use-fetch",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Fetch data from an API endpoint with an SSR-friendly composable."
+  },
+  {
+    "title": "useLazyFetch",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/composables/use-lazy-fetch",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "This wrapper around useFetch triggers navigation immediately."
+  },
+  {
+    "title": "&lt;NuxtLoadingIndicator&gt; v3.9",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/components/nuxt-loading-indicator",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Display a progress bar between page navigations."
+  },
+  {
+    "title": "useAsyncData",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/composables/use-async-data",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "useAsyncData provides access to data that resolves asynchronously in an SSR-friendly composable."
+  },
+  {
+    "title": "$fetch",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/utils/dollarfetch",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt uses ofetch to expose globally the $fetch helper for making HTTP requests."
+  },
+  {
+    "title": "callOnce v3.9",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/utils/call-once",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Run a given function or block of code once during SSR or CSR."
+  },
+  {
+    "title": "Module Author Guide",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/modules",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Learn how to create a Nuxt module to integrate, enhance or extend any Nuxt applications."
+  },
+  {
+    "title": "State Management",
+    "category": "DOCS",
+    "path": "/docs/examples/features/state-management",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "This example shows how to use the `useState` composable to create a reactive and SSR-friendly shared state across components."
+  },
+  {
+    "title": "useLazyAsyncData",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/composables/use-lazy-async-data",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "This wrapper around useAsyncData triggers navigation immediately."
+  },
+  {
+    "title": "useNuxtData v3.1",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/composables/use-nuxt-data",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Access the current cached value of data fetching composables."
+  },
+  {
+    "title": "Data Fetching",
+    "category": "DOCS",
+    "path": "/docs/examples/features/data-fetching",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "This example demonstrates data fetching with Nuxt using built-in composables and API routes."
+  },
+  {
+    "title": "useRequestHeaders",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/composables/use-request-headers",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Use useRequestHeaders to access the incoming request headers."
+  },
+  {
+    "title": "defineNuxtComponent",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/utils/define-nuxt-component",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "defineNuxtComponent() is a helper function for defining type safe components with Options API."
+  },
+  {
+    "title": "clearNuxtData",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/utils/clear-nuxt-data",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Delete cached data, error status and pending promises of useAsyncData and useFetch."
+  },
+  {
+    "title": "refreshNuxtData",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/utils/refresh-nuxt-data",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Refresh all or specific asyncData instances in Nuxt"
+  },
+  {
+    "title": "useRequestFetch v3.2",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/composables/use-request-fetch",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Forward the request context and headers for server-side fetch requests with the useRequestFetch composable."
+  },
+  {
+    "title": "Lifecycle Hooks",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/going-further/hooks",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt provides a powerful hooking system to expand almost every aspect using hooks."
+  },
+  {
+    "title": "Reporting Bugs",
+    "category": "DOCS",
+    "path": "/docs/4.x/community/reporting-bugs",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "One of the most valuable roles in open source is taking the time to report bugs helpfully."
+  },
+  {
+    "title": "Releases",
+    "category": "DOCS",
+    "path": "/docs/4.x/community/changelog",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Discover the latest releases of Nuxt & Nuxt official modules."
+  },
+  {
+    "title": "Framework",
+    "category": "DOCS",
+    "path": "/docs/4.x/community/framework-contribution",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Some specific points about contributions to the framework repository."
+  },
+  {
+    "title": "Contribution",
+    "category": "DOCS",
+    "path": "/docs/4.x/community/contribution",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt is a community project - and so we love contributions of all kinds! ❤️"
+  },
+  {
+    "title": "&lt;NuxtPage&gt;",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/components/nuxt-page",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "The component is required to display pages located in the pages/ directory."
+  },
+  {
+    "title": "Roadmap",
+    "category": "DOCS",
+    "path": "/docs/4.x/community/roadmap",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt is constantly evolving, with new features and modules being added all the time."
+  },
+  {
+    "title": "useCookie",
+    "category": "DOCS",
+    "path": "/docs/examples/advanced/use-cookie",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "This example shows how to use the useCookie API to persist small amounts of data that both client and server can use."
+  },
+  {
+    "title": "JSX / TSX",
+    "category": "DOCS",
+    "path": "/docs/examples/advanced/jsx",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "This example shows how to use JSX syntax with typescript in Nuxt pages and components."
+  },
+  {
+    "title": "Error Handling",
+    "category": "DOCS",
+    "path": "/docs/examples/advanced/error-handling",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "This example shows how to handle errors in different contexts: pages, plugins, components and middleware."
+  },
+  {
+    "title": "Middleware",
+    "category": "DOCS",
+    "path": "/docs/examples/routing/middleware",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "This example shows how to add route middleware with the middleware/ directory or with a plugin, and how to use them globally or per page."
+  },
+  {
+    "title": "Auto Imports",
+    "category": "DOCS",
+    "path": "/docs/examples/features/auto-imports",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "This example demonstrates the auto-imports feature in Nuxt."
+  },
+  {
+    "title": "Layers",
+    "category": "DOCS",
+    "path": "/docs/examples/advanced/config-extends",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "This example shows how to use the extends key in `nuxt.config.ts`."
+  },
+  {
+    "title": "Layouts",
+    "category": "DOCS",
+    "path": "/docs/examples/features/layouts",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "This example shows how to define default and custom layouts."
+  },
+  {
+    "title": "Use Custom Fetch Composable",
+    "category": "DOCS",
+    "path": "/docs/examples/advanced/use-custom-fetch-composable",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "This example shows a convenient wrapper for the useFetch composable from nuxt. It allows you to customize the fetch request with default values and user authent"
+  },
+  {
+    "title": "Module Extend Pages",
+    "category": "DOCS",
+    "path": "/docs/examples/advanced/module-extend-pages",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "This example defines a new `test` page using `extendPages` within a module."
+  },
+  {
+    "title": "Nuxt Lifecycle",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/concepts/nuxt-lifecycle",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Understanding the lifecycle of Nuxt applications can help you gain deeper insights into how the framework operates, especially for both server-side and client-s"
+  },
+  {
+    "title": "Testing",
+    "category": "DOCS",
+    "path": "/docs/examples/advanced/testing",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "This example shows how to test your Nuxt application."
+  },
+  {
+    "title": "Teleport",
+    "category": "DOCS",
+    "path": "/docs/examples/advanced/teleport",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "This example shows how to use the with client-side and server-side rendering."
+  },
+  {
+    "title": "WASM",
+    "category": "DOCS",
+    "path": "/docs/examples/experimental/wasm",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "This example demonstrates the server-side support of WebAssembly in Nuxt."
+  },
+  {
+    "title": "Pages",
+    "category": "DOCS",
+    "path": "/docs/examples/routing/pages",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "This example shows how to use the pages/ directory to create application routes."
+  },
+  {
+    "title": "Universal Router",
+    "category": "DOCS",
+    "path": "/docs/examples/routing/universal-router",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "This example demonstrates Nuxt universal routing utilities without depending on `pages/` and `vue-router`."
+  },
+  {
+    "title": "Understand Module Structure",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/modules/module-anatomy",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Learn how Nuxt modules are structured and how to define them."
+  },
+  {
+    "title": "Nuxt and Hydration",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/best-practices/hydration",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Why fixing hydration issues is important"
+  },
+  {
+    "title": "Nuxt MCP Server",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/ai/mcp",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Use Nuxt documentation in your AI assistants with Model Context Protocol support."
+  },
+  {
+    "title": "Nuxt performance",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/best-practices/performance",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Best practices for improving performance of Nuxt apps."
+  },
+  {
+    "title": "Code Style",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/concepts/code-style",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt supports ESLint out of the box"
+  },
+  {
+    "title": "Nuxt LLMs.txt",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/ai/llms-txt",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "How to get AI tools like Cursor, Windsurf, GitHub Copilot, ChatGPT, and Claude to understand Nuxt concepts, APIs, and best practices."
+  },
+  {
+    "title": "TypeScript",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/concepts/typescript",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt is fully typed and provides helpful shortcuts to ensure you have access to accurate type information when you are coding."
+  },
+  {
+    "title": "Use Hooks Extend Types",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/modules/recipes-advanced",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Master lifecycle hooks, virtual files and TypeScript declarations in your modules."
+  },
+  {
+    "title": "Add Plugins, Components More",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/modules/recipes-basics",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Learn how to inject plugins, components, composables and server routes from your module."
+  },
+  {
+    "title": "Nuxt accessibility",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/best-practices/accessibility",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Best practices for accessibility in Nuxt apps."
+  },
+  {
+    "title": "Nuxt Plugins",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/best-practices/plugins",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Best practices when using Nuxt plugins."
+  },
+  {
+    "title": "Server Components",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/concepts/server-components",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Render individual components on the server only, keeping their JavaScript out of your client bundle."
+  },
+  {
+    "title": "Module Dependencies",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/modules/module-dependencies",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Declare dependencies on other modules with version constraints and configuration merging."
+  },
+  {
+    "title": "Test Your Module",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/modules/testing",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Learn how to test your Nuxt module with unit, integration and E2E tests."
+  },
+  {
+    "title": "Using Vite Plugins in Nuxt",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/recipes/vite-plugin",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Learn how to integrate Vite plugins into your Nuxt project."
+  },
+  {
+    "title": "Creating Custom Events",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/going-further/events",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt provides a powerful event system powered by hookable."
+  },
+  {
+    "title": "Mostly-Static Sites",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/recipes/mostly-static-sites",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Ship near-zero JavaScript for content and marketing sites while keeping islands of interactivity."
+  },
+  {
+    "title": "Custom useFetch in Nuxt",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/recipes/custom-usefetch",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "How to create a custom fetcher for calling your external API in Nuxt."
+  },
+  {
+    "title": "Features",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/going-further/features",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Enable or disable optional Nuxt features to unlock new possibilities."
+  },
+  {
+    "title": "Publish Share Your Module",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/modules/ecosystem",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Join the Nuxt module ecosystem and publish your module to npm."
+  },
+  {
+    "title": "Sessions and Authentication",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/recipes/sessions-and-authentication",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Authentication is an extremely common requirement in web apps. This recipe will show you how to implement basic user registration and authentication in your Nux"
+  },
+  {
+    "title": "Follow Best Practices",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/modules/best-practices",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Build performant and maintainable Nuxt modules with these guidelines."
+  },
+  {
+    "title": "Custom Routing",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/recipes/custom-routing",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "In Nuxt, your routing is defined by the structure of your files inside the pages directory. However, since it uses vue-router under the hood, Nuxt offers you se"
+  },
+  {
+    "title": "Experimental Features",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/going-further/experimental-features",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Enable Nuxt experimental features to unlock new possibilities."
+  },
+  {
+    "title": "Server Compatibility",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/modules/server-compatibility",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Ship one module that serves Nuxt 4 and Nuxt 5, whichever server runtime is underneath."
+  },
+  {
+    "title": "NuxtApp",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/going-further/nuxt-app",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "In Nuxt, you can access runtime app context within composables, components and plugins."
+  },
+  {
+    "title": "Nuxt Kit",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/going-further/kit",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "@nuxt/kit provides features for module authors."
+  },
+  {
+    "title": "Server Imports",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/going-further/server-imports",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "`nuxt/server` is the import surface for server code that isn"
+  },
+  {
+    "title": "Authoring Nuxt Layers",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/going-further/layers",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt provides a powerful system that allows you to extend the default files, configs, and much more."
+  },
+  {
+    "title": "Creating a Builder",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/going-further/builders",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Learn how Nuxt builders work and how to author your own."
+  },
+  {
+    "title": "nuxt build",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/commands/build",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Build your Nuxt application."
+  },
+  {
+    "title": "Debugging",
+    "category": "DOCS",
+    "path": "/docs/4.x/guide/going-further/debugging",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "In Nuxt, you can get started with debugging your application directly in the browser as well as in your IDE."
+  },
+  {
+    "title": "nuxt generate",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/commands/generate",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Pre-renders every route of the application and stores the result in plain HTML files."
+  },
+  {
+    "title": "nuxt preview",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/commands/preview",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "The preview command starts a server to preview your application after the build command."
+  },
+  {
+    "title": "&lt;ClientOnly&gt;",
+    "category": "DOCS",
+    "path": "/docs/4.x/api/components/client-only",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Render components only in client-side with the component."
+  },
+  {
+    "title": "Introduction",
+    "category": "Nuxt",
+    "path": "/docs",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt"
+  },
+  {
+    "title": "Introduction",
+    "category": "Nuxt",
+    "path": "/",
+    "site": "nuxt",
+    "headings": [],
+    "preview": "Nuxt"
+  }
+]

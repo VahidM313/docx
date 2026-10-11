@@ -1,0 +1,1130 @@
+[
+  {
+    "title": "three.js",
+    "category": "Three.js",
+    "path": "/docs",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs"
+  },
+  {
+    "title": "three.js",
+    "category": "Three.js",
+    "path": "/manual",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/manual"
+  },
+  {
+    "title": "AnimationObjectGroup",
+    "category": "DOCS",
+    "path": "/docs/pages/AnimationObjectGroup.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/AnimationObjectGroup.html"
+  },
+  {
+    "title": "AnimationAction",
+    "category": "DOCS",
+    "path": "/docs/pages/AnimationAction.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/AnimationAction.html"
+  },
+  {
+    "title": "AnimationClip",
+    "category": "DOCS",
+    "path": "/docs/pages/AnimationClip.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/AnimationClip.html"
+  },
+  {
+    "title": "AnimationUtils",
+    "category": "DOCS",
+    "path": "/docs/pages/AnimationUtils.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/AnimationUtils.html"
+  },
+  {
+    "title": "VectorKeyframeTrack",
+    "category": "DOCS",
+    "path": "/docs/pages/VectorKeyframeTrack.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/VectorKeyframeTrack.html"
+  },
+  {
+    "title": "QuaternionKeyframeTrack",
+    "category": "DOCS",
+    "path": "/docs/pages/QuaternionKeyframeTrack.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/QuaternionKeyframeTrack.html"
+  },
+  {
+    "title": "StringKeyframeTrack",
+    "category": "DOCS",
+    "path": "/docs/pages/StringKeyframeTrack.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/StringKeyframeTrack.html"
+  },
+  {
+    "title": "KeyframeTrack",
+    "category": "DOCS",
+    "path": "/docs/pages/KeyframeTrack.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/KeyframeTrack.html"
+  },
+  {
+    "title": "Audio",
+    "category": "DOCS",
+    "path": "/docs/pages/Audio.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Audio.html"
+  },
+  {
+    "title": "PropertyBinding",
+    "category": "DOCS",
+    "path": "/docs/pages/PropertyBinding.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/PropertyBinding.html"
+  },
+  {
+    "title": "PropertyMixer",
+    "category": "DOCS",
+    "path": "/docs/pages/PropertyMixer.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/PropertyMixer.html"
+  },
+  {
+    "title": "BooleanKeyframeTrack",
+    "category": "DOCS",
+    "path": "/docs/pages/BooleanKeyframeTrack.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/BooleanKeyframeTrack.html"
+  },
+  {
+    "title": "AnimationMixer",
+    "category": "DOCS",
+    "path": "/docs/pages/AnimationMixer.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/AnimationMixer.html"
+  },
+  {
+    "title": "NumberKeyframeTrack",
+    "category": "DOCS",
+    "path": "/docs/pages/NumberKeyframeTrack.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/NumberKeyframeTrack.html"
+  },
+  {
+    "title": "ColorKeyframeTrack",
+    "category": "DOCS",
+    "path": "/docs/pages/ColorKeyframeTrack.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/ColorKeyframeTrack.html"
+  },
+  {
+    "title": "AudioAnalyser",
+    "category": "DOCS",
+    "path": "/docs/pages/AudioAnalyser.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/AudioAnalyser.html"
+  },
+  {
+    "title": "PositionalAudio",
+    "category": "DOCS",
+    "path": "/docs/pages/PositionalAudio.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/PositionalAudio.html"
+  },
+  {
+    "title": "Float16BufferAttribute",
+    "category": "DOCS",
+    "path": "/docs/pages/Float16BufferAttribute.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Float16BufferAttribute.html"
+  },
+  {
+    "title": "ArrayCamera",
+    "category": "DOCS",
+    "path": "/docs/pages/ArrayCamera.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/ArrayCamera.html"
+  },
+  {
+    "title": "CubeCamera",
+    "category": "DOCS",
+    "path": "/docs/pages/CubeCamera.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/CubeCamera.html"
+  },
+  {
+    "title": "BufferAttribute",
+    "category": "DOCS",
+    "path": "/docs/pages/BufferAttribute.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/BufferAttribute.html"
+  },
+  {
+    "title": "AudioListener",
+    "category": "DOCS",
+    "path": "/docs/pages/AudioListener.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/AudioListener.html"
+  },
+  {
+    "title": "EventDispatcher",
+    "category": "DOCS",
+    "path": "/docs/pages/EventDispatcher.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/EventDispatcher.html"
+  },
+  {
+    "title": "OrthographicCamera",
+    "category": "DOCS",
+    "path": "/docs/pages/OrthographicCamera.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/OrthographicCamera.html"
+  },
+  {
+    "title": "Camera",
+    "category": "DOCS",
+    "path": "/docs/pages/Camera.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Camera.html"
+  },
+  {
+    "title": "Clock",
+    "category": "DOCS",
+    "path": "/docs/pages/Clock.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Clock.html"
+  },
+  {
+    "title": "StereoCamera",
+    "category": "DOCS",
+    "path": "/docs/pages/StereoCamera.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/StereoCamera.html"
+  },
+  {
+    "title": "PerspectiveCamera",
+    "category": "DOCS",
+    "path": "/docs/pages/PerspectiveCamera.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/PerspectiveCamera.html"
+  },
+  {
+    "title": "BufferGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/BufferGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/BufferGeometry.html"
+  },
+  {
+    "title": "Float32BufferAttribute",
+    "category": "DOCS",
+    "path": "/docs/pages/Float32BufferAttribute.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Float32BufferAttribute.html"
+  },
+  {
+    "title": "AudioContext",
+    "category": "DOCS",
+    "path": "/docs/pages/AudioContext.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/AudioContext.html"
+  },
+  {
+    "title": "InstancedBufferGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/InstancedBufferGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/InstancedBufferGeometry.html"
+  },
+  {
+    "title": "InstancedBufferAttribute",
+    "category": "DOCS",
+    "path": "/docs/pages/InstancedBufferAttribute.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/InstancedBufferAttribute.html"
+  },
+  {
+    "title": "RenderTarget3D",
+    "category": "DOCS",
+    "path": "/docs/pages/RenderTarget3D.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/RenderTarget3D.html"
+  },
+  {
+    "title": "Int16BufferAttribute",
+    "category": "DOCS",
+    "path": "/docs/pages/Int16BufferAttribute.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Int16BufferAttribute.html"
+  },
+  {
+    "title": "Uint16BufferAttribute",
+    "category": "DOCS",
+    "path": "/docs/pages/Uint16BufferAttribute.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Uint16BufferAttribute.html"
+  },
+  {
+    "title": "GLBufferAttribute",
+    "category": "DOCS",
+    "path": "/docs/pages/GLBufferAttribute.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/GLBufferAttribute.html"
+  },
+  {
+    "title": "Timer",
+    "category": "DOCS",
+    "path": "/docs/pages/Timer.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Timer.html"
+  },
+  {
+    "title": "InterleavedBuffer",
+    "category": "DOCS",
+    "path": "/docs/pages/InterleavedBuffer.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/InterleavedBuffer.html"
+  },
+  {
+    "title": "Int32BufferAttribute",
+    "category": "DOCS",
+    "path": "/docs/pages/Int32BufferAttribute.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Int32BufferAttribute.html"
+  },
+  {
+    "title": "InterleavedBufferAttribute",
+    "category": "DOCS",
+    "path": "/docs/pages/InterleavedBufferAttribute.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/InterleavedBufferAttribute.html"
+  },
+  {
+    "title": "Object3D",
+    "category": "DOCS",
+    "path": "/docs/pages/Object3D.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Object3D.html"
+  },
+  {
+    "title": "Int8BufferAttribute",
+    "category": "DOCS",
+    "path": "/docs/pages/Int8BufferAttribute.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Int8BufferAttribute.html"
+  },
+  {
+    "title": "Raycaster",
+    "category": "DOCS",
+    "path": "/docs/pages/Raycaster.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Raycaster.html"
+  },
+  {
+    "title": "RenderTarget",
+    "category": "DOCS",
+    "path": "/docs/pages/RenderTarget.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/RenderTarget.html"
+  },
+  {
+    "title": "InstancedInterleavedBuffer",
+    "category": "DOCS",
+    "path": "/docs/pages/InstancedInterleavedBuffer.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/InstancedInterleavedBuffer.html"
+  },
+  {
+    "title": "Layers",
+    "category": "DOCS",
+    "path": "/docs/pages/Layers.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Layers.html"
+  },
+  {
+    "title": "Uint32BufferAttribute",
+    "category": "DOCS",
+    "path": "/docs/pages/Uint32BufferAttribute.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Uint32BufferAttribute.html"
+  },
+  {
+    "title": "CubicBezierCurve3",
+    "category": "DOCS",
+    "path": "/docs/pages/CubicBezierCurve3.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/CubicBezierCurve3.html"
+  },
+  {
+    "title": "ImageUtils",
+    "category": "DOCS",
+    "path": "/docs/pages/ImageUtils.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/ImageUtils.html"
+  },
+  {
+    "title": "CurvePath",
+    "category": "DOCS",
+    "path": "/docs/pages/CurvePath.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/CurvePath.html"
+  },
+  {
+    "title": "EllipseCurve",
+    "category": "DOCS",
+    "path": "/docs/pages/EllipseCurve.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/EllipseCurve.html"
+  },
+  {
+    "title": "DataUtils",
+    "category": "DOCS",
+    "path": "/docs/pages/DataUtils.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/DataUtils.html"
+  },
+  {
+    "title": "Controls",
+    "category": "DOCS",
+    "path": "/docs/pages/Controls.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Controls.html"
+  },
+  {
+    "title": "ArcCurve",
+    "category": "DOCS",
+    "path": "/docs/pages/ArcCurve.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/ArcCurve.html"
+  },
+  {
+    "title": "Uint8ClampedBufferAttribute",
+    "category": "DOCS",
+    "path": "/docs/pages/Uint8ClampedBufferAttribute.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Uint8ClampedBufferAttribute.html"
+  },
+  {
+    "title": "Uint8BufferAttribute",
+    "category": "DOCS",
+    "path": "/docs/pages/Uint8BufferAttribute.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Uint8BufferAttribute.html"
+  },
+  {
+    "title": "CatmullRomCurve3",
+    "category": "DOCS",
+    "path": "/docs/pages/CatmullRomCurve3.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/CatmullRomCurve3.html"
+  },
+  {
+    "title": "Earcut",
+    "category": "DOCS",
+    "path": "/docs/pages/Earcut.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Earcut.html"
+  },
+  {
+    "title": "Uniform",
+    "category": "DOCS",
+    "path": "/docs/pages/Uniform.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Uniform.html"
+  },
+  {
+    "title": "UniformsGroup",
+    "category": "DOCS",
+    "path": "/docs/pages/UniformsGroup.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/UniformsGroup.html"
+  },
+  {
+    "title": "Curve",
+    "category": "DOCS",
+    "path": "/docs/pages/Curve.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Curve.html"
+  },
+  {
+    "title": "CubicBezierCurve",
+    "category": "DOCS",
+    "path": "/docs/pages/CubicBezierCurve.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/CubicBezierCurve.html"
+  },
+  {
+    "title": "Shape",
+    "category": "DOCS",
+    "path": "/docs/pages/Shape.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Shape.html"
+  },
+  {
+    "title": "PMREMGenerator",
+    "category": "DOCS",
+    "path": "/docs/pages/PMREMGenerator.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/PMREMGenerator.html"
+  },
+  {
+    "title": "Path",
+    "category": "DOCS",
+    "path": "/docs/pages/Path.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Path.html"
+  },
+  {
+    "title": "QuadraticBezierCurve",
+    "category": "DOCS",
+    "path": "/docs/pages/QuadraticBezierCurve.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/QuadraticBezierCurve.html"
+  },
+  {
+    "title": "CapsuleGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/CapsuleGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/CapsuleGeometry.html"
+  },
+  {
+    "title": "ShapePath",
+    "category": "DOCS",
+    "path": "/docs/pages/ShapePath.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/ShapePath.html"
+  },
+  {
+    "title": "QuadraticBezierCurve3",
+    "category": "DOCS",
+    "path": "/docs/pages/QuadraticBezierCurve3.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/QuadraticBezierCurve3.html"
+  },
+  {
+    "title": "LineCurve",
+    "category": "DOCS",
+    "path": "/docs/pages/LineCurve.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/LineCurve.html"
+  },
+  {
+    "title": "ShapeUtils",
+    "category": "DOCS",
+    "path": "/docs/pages/ShapeUtils.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/ShapeUtils.html"
+  },
+  {
+    "title": "Interpolations",
+    "category": "DOCS",
+    "path": "/docs/pages/module-Interpolations.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/module-Interpolations.html"
+  },
+  {
+    "title": "BoxGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/BoxGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/BoxGeometry.html"
+  },
+  {
+    "title": "ConeGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/ConeGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/ConeGeometry.html"
+  },
+  {
+    "title": "TextureUtils",
+    "category": "DOCS",
+    "path": "/docs/pages/TextureUtils.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/TextureUtils.html"
+  },
+  {
+    "title": "LineCurve3",
+    "category": "DOCS",
+    "path": "/docs/pages/LineCurve3.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/LineCurve3.html"
+  },
+  {
+    "title": "CircleGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/CircleGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/CircleGeometry.html"
+  },
+  {
+    "title": "SplineCurve",
+    "category": "DOCS",
+    "path": "/docs/pages/SplineCurve.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/SplineCurve.html"
+  },
+  {
+    "title": "CylinderGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/CylinderGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/CylinderGeometry.html"
+  },
+  {
+    "title": "TetrahedronGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/TetrahedronGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/TetrahedronGeometry.html"
+  },
+  {
+    "title": "TorusKnotGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/TorusKnotGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/TorusKnotGeometry.html"
+  },
+  {
+    "title": "ShapeGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/ShapeGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/ShapeGeometry.html"
+  },
+  {
+    "title": "ExtrudeGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/ExtrudeGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/ExtrudeGeometry.html"
+  },
+  {
+    "title": "LatheGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/LatheGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/LatheGeometry.html"
+  },
+  {
+    "title": "PlaneGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/PlaneGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/PlaneGeometry.html"
+  },
+  {
+    "title": "OctahedronGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/OctahedronGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/OctahedronGeometry.html"
+  },
+  {
+    "title": "DodecahedronGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/DodecahedronGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/DodecahedronGeometry.html"
+  },
+  {
+    "title": "EdgesGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/EdgesGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/EdgesGeometry.html"
+  },
+  {
+    "title": "RingGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/RingGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/RingGeometry.html"
+  },
+  {
+    "title": "TorusGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/TorusGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/TorusGeometry.html"
+  },
+  {
+    "title": "PolyhedronGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/PolyhedronGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/PolyhedronGeometry.html"
+  },
+  {
+    "title": "IcosahedronGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/IcosahedronGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/IcosahedronGeometry.html"
+  },
+  {
+    "title": "SphereGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/SphereGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/SphereGeometry.html"
+  },
+  {
+    "title": "TubeGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/TubeGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/TubeGeometry.html"
+  },
+  {
+    "title": "AmbientLight",
+    "category": "DOCS",
+    "path": "/docs/pages/AmbientLight.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/AmbientLight.html"
+  },
+  {
+    "title": "ArrowHelper",
+    "category": "DOCS",
+    "path": "/docs/pages/ArrowHelper.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/ArrowHelper.html"
+  },
+  {
+    "title": "PolarGridHelper",
+    "category": "DOCS",
+    "path": "/docs/pages/PolarGridHelper.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/PolarGridHelper.html"
+  },
+  {
+    "title": "DirectionalLightHelper",
+    "category": "DOCS",
+    "path": "/docs/pages/DirectionalLightHelper.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/DirectionalLightHelper.html"
+  },
+  {
+    "title": "WireframeGeometry",
+    "category": "DOCS",
+    "path": "/docs/pages/WireframeGeometry.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/WireframeGeometry.html"
+  },
+  {
+    "title": "PointLightHelper",
+    "category": "DOCS",
+    "path": "/docs/pages/PointLightHelper.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/PointLightHelper.html"
+  },
+  {
+    "title": "CameraHelper",
+    "category": "DOCS",
+    "path": "/docs/pages/CameraHelper.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/CameraHelper.html"
+  },
+  {
+    "title": "PlaneHelper",
+    "category": "DOCS",
+    "path": "/docs/pages/PlaneHelper.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/PlaneHelper.html"
+  },
+  {
+    "title": "HemisphereLightHelper",
+    "category": "DOCS",
+    "path": "/docs/pages/HemisphereLightHelper.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/HemisphereLightHelper.html"
+  },
+  {
+    "title": "AxesHelper",
+    "category": "DOCS",
+    "path": "/docs/pages/AxesHelper.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/AxesHelper.html"
+  },
+  {
+    "title": "SkeletonHelper",
+    "category": "DOCS",
+    "path": "/docs/pages/SkeletonHelper.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/SkeletonHelper.html"
+  },
+  {
+    "title": "DirectionalLight",
+    "category": "DOCS",
+    "path": "/docs/pages/DirectionalLight.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/DirectionalLight.html"
+  },
+  {
+    "title": "BoxHelper",
+    "category": "DOCS",
+    "path": "/docs/pages/BoxHelper.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/BoxHelper.html"
+  },
+  {
+    "title": "SpotLightHelper",
+    "category": "DOCS",
+    "path": "/docs/pages/SpotLightHelper.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/SpotLightHelper.html"
+  },
+  {
+    "title": "Box3Helper",
+    "category": "DOCS",
+    "path": "/docs/pages/Box3Helper.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Box3Helper.html"
+  },
+  {
+    "title": "GridHelper",
+    "category": "DOCS",
+    "path": "/docs/pages/GridHelper.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/GridHelper.html"
+  },
+  {
+    "title": "DirectionalLightShadow",
+    "category": "DOCS",
+    "path": "/docs/pages/DirectionalLightShadow.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/DirectionalLightShadow.html"
+  },
+  {
+    "title": "IESSpotLight",
+    "category": "DOCS",
+    "path": "/docs/pages/IESSpotLight.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/IESSpotLight.html"
+  },
+  {
+    "title": "PointLight",
+    "category": "DOCS",
+    "path": "/docs/pages/PointLight.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/PointLight.html"
+  },
+  {
+    "title": "RectAreaLight",
+    "category": "DOCS",
+    "path": "/docs/pages/RectAreaLight.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/RectAreaLight.html"
+  },
+  {
+    "title": "ProjectorLight",
+    "category": "DOCS",
+    "path": "/docs/pages/ProjectorLight.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/ProjectorLight.html"
+  },
+  {
+    "title": "LightProbe",
+    "category": "DOCS",
+    "path": "/docs/pages/LightProbe.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/LightProbe.html"
+  },
+  {
+    "title": "HemisphereLight",
+    "category": "DOCS",
+    "path": "/docs/pages/HemisphereLight.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/HemisphereLight.html"
+  },
+  {
+    "title": "Light",
+    "category": "DOCS",
+    "path": "/docs/pages/Light.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Light.html"
+  },
+  {
+    "title": "SpotLightShadow",
+    "category": "DOCS",
+    "path": "/docs/pages/SpotLightShadow.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/SpotLightShadow.html"
+  },
+  {
+    "title": "PointLightShadow",
+    "category": "DOCS",
+    "path": "/docs/pages/PointLightShadow.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/PointLightShadow.html"
+  },
+  {
+    "title": "LightShadow",
+    "category": "DOCS",
+    "path": "/docs/pages/LightShadow.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/LightShadow.html"
+  },
+  {
+    "title": "SpotLight",
+    "category": "DOCS",
+    "path": "/docs/pages/SpotLight.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/SpotLight.html"
+  },
+  {
+    "title": "AnimationLoader",
+    "category": "DOCS",
+    "path": "/docs/pages/AnimationLoader.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/AnimationLoader.html"
+  },
+  {
+    "title": "AudioLoader",
+    "category": "DOCS",
+    "path": "/docs/pages/AudioLoader.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/AudioLoader.html"
+  },
+  {
+    "title": "DataTextureLoader",
+    "category": "DOCS",
+    "path": "/docs/pages/DataTextureLoader.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/DataTextureLoader.html"
+  },
+  {
+    "title": "CubeTextureLoader",
+    "category": "DOCS",
+    "path": "/docs/pages/CubeTextureLoader.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/CubeTextureLoader.html"
+  },
+  {
+    "title": "BufferGeometryLoader",
+    "category": "DOCS",
+    "path": "/docs/pages/BufferGeometryLoader.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/BufferGeometryLoader.html"
+  },
+  {
+    "title": "Cache",
+    "category": "DOCS",
+    "path": "/docs/pages/Cache.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Cache.html"
+  },
+  {
+    "title": "ImageBitmapLoader",
+    "category": "DOCS",
+    "path": "/docs/pages/ImageBitmapLoader.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/ImageBitmapLoader.html"
+  },
+  {
+    "title": "CompressedTextureLoader",
+    "category": "DOCS",
+    "path": "/docs/pages/CompressedTextureLoader.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/CompressedTextureLoader.html"
+  },
+  {
+    "title": "FileLoader",
+    "category": "DOCS",
+    "path": "/docs/pages/FileLoader.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/FileLoader.html"
+  },
+  {
+    "title": "ImageLoader",
+    "category": "DOCS",
+    "path": "/docs/pages/ImageLoader.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/ImageLoader.html"
+  },
+  {
+    "title": "LoaderUtils",
+    "category": "DOCS",
+    "path": "/docs/pages/LoaderUtils.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/LoaderUtils.html"
+  },
+  {
+    "title": "Loader",
+    "category": "DOCS",
+    "path": "/docs/pages/Loader.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/Loader.html"
+  },
+  {
+    "title": "LoadingManager",
+    "category": "DOCS",
+    "path": "/docs/pages/LoadingManager.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/LoadingManager.html"
+  },
+  {
+    "title": "MaterialLoader",
+    "category": "DOCS",
+    "path": "/docs/pages/MaterialLoader.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/MaterialLoader.html"
+  },
+  {
+    "title": "NodeLoader",
+    "category": "DOCS",
+    "path": "/docs/pages/NodeLoader.html",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/docs/pages/NodeLoader.html"
+  },
+  {
+    "title": "three.js",
+    "category": "Three.js",
+    "path": "/",
+    "site": "threejs",
+    "headings": [],
+    "preview": "/"
+  }
+]

@@ -1,0 +1,1138 @@
+[
+  {
+    "title": "SQLite Documentation",
+    "category": "SQLite",
+    "path": "/docs.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/docs.html"
+  },
+  {
+    "title": "SQLite Home Page",
+    "category": "SQLite",
+    "path": "/index.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/index.html"
+  },
+  {
+    "title": "About SQLite",
+    "category": "SQLite",
+    "path": "/about.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/about.html"
+  },
+  {
+    "title": "SQLite Support Options",
+    "category": "SQLite",
+    "path": "/support.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/support.html"
+  },
+  {
+    "title": "SQLite Copyright",
+    "category": "SQLite",
+    "path": "/copyright.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/copyright.html"
+  },
+  {
+    "title": "SQLite In 5 Minutes Or Less",
+    "category": "SQLite",
+    "path": "/quickstart.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/quickstart.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/lang_mathfunc.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/lang_mathfunc.html"
+  },
+  {
+    "title": "C-language Interface Specification for SQLite",
+    "category": "C3REF",
+    "path": "/c3ref/intro.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/c3ref/intro.html"
+  },
+  {
+    "title": "Features Of SQLite",
+    "category": "SQLite",
+    "path": "/features.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/features.html"
+  },
+  {
+    "title": "SQLite Download Page",
+    "category": "SQLite",
+    "path": "/download.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/download.html"
+  },
+  {
+    "title": "Professional Support Extension Products",
+    "category": "SQLite",
+    "path": "/prosupport.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/prosupport.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/lang_datefunc.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/lang_datefunc.html"
+  },
+  {
+    "title": "1. Situations Where SQLite Works Well",
+    "category": "SQLite",
+    "path": "/whentouse.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/whentouse.html"
+  },
+  {
+    "title": "1. Summary",
+    "category": "SQLite",
+    "path": "/cintro.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/cintro.html"
+  },
+  {
+    "title": "SQL As Understood By SQLite",
+    "category": "SQLite",
+    "path": "/lang.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/lang.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/lang_corefunc.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/lang_corefunc.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/json1.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/json1.html"
+  },
+  {
+    "title": "Alphabetical List Of SQLite Documents",
+    "category": "SQLite",
+    "path": "/doclist.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/doclist.html"
+  },
+  {
+    "title": "Distinctive Features Of SQLite",
+    "category": "SQLite",
+    "path": "/different.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/different.html"
+  },
+  {
+    "title": "Books About SQLite",
+    "category": "SQLite",
+    "path": "/books.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/books.html"
+  },
+  {
+    "title": "SQLite",
+    "category": "SRC",
+    "path": "/src/timeline",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/src/timeline"
+  },
+  {
+    "title": "List Of SQLite Functions",
+    "category": "C3REF",
+    "path": "/c3ref/funclist.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/c3ref/funclist.html"
+  },
+  {
+    "title": "SQLite Frequently Asked Questions",
+    "category": "SQLite",
+    "path": "/faq.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/faq.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/quirks.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/quirks.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/howtocompile.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/howtocompile.html"
+  },
+  {
+    "title": "Recent SQLite News",
+    "category": "SQLite",
+    "path": "/news.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/news.html"
+  },
+  {
+    "title": "SQLite Site Map",
+    "category": "SQLite",
+    "path": "/sitemap.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/sitemap.html"
+  },
+  {
+    "title": "1. Introduction",
+    "category": "SQLite",
+    "path": "/tclsqlite.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/tclsqlite.html"
+  },
+  {
+    "title": "1. Introduction",
+    "category": "SQLite",
+    "path": "/testing.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/testing.html"
+  },
+  {
+    "title": "1. Getting Started",
+    "category": "SQLite",
+    "path": "/cli.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/cli.html"
+  },
+  {
+    "title": "History Of SQLite Releases",
+    "category": "SQLite",
+    "path": "/chronology.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/chronology.html"
+  },
+  {
+    "title": "Website Keyword Index",
+    "category": "SQLite",
+    "path": "/keyword_index.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/keyword_index.html"
+  },
+  {
+    "title": "SQLite",
+    "category": "SRC",
+    "path": "/src/login",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/src/login"
+  },
+  {
+    "title": "1. Introduction",
+    "category": "SQLite",
+    "path": "/gencol.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/gencol.html"
+  },
+  {
+    "title": "1. How To Use Indexes On Expressions",
+    "category": "SQLite",
+    "path": "/expridx.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/expridx.html"
+  },
+  {
+    "title": "1. Executive Summary",
+    "category": "SQLite",
+    "path": "/appfunc.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/appfunc.html"
+  },
+  {
+    "title": "1. Datatypes In SQLite",
+    "category": "SQLite",
+    "path": "/datatype3.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/datatype3.html"
+  },
+  {
+    "title": "PRAGMA Statements",
+    "category": "SQLite",
+    "path": "/pragma.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/pragma.html"
+  },
+  {
+    "title": "1. Syntax",
+    "category": "SQLite",
+    "path": "/lang_aggfunc.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/lang_aggfunc.html"
+  },
+  {
+    "title": "1. Result Codes versus Error Codes",
+    "category": "SQLite",
+    "path": "/rescode.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/rescode.html"
+  },
+  {
+    "title": "1. Definitions",
+    "category": "SQLite",
+    "path": "/rowvalue.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/rowvalue.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/dbstat.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/dbstat.html"
+  },
+  {
+    "title": "1. Introduction",
+    "category": "SQLite",
+    "path": "/stricttables.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/stricttables.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/loadext.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/loadext.html"
+  },
+  {
+    "title": "1. Introduction",
+    "category": "SQLite",
+    "path": "/sessionintro.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/sessionintro.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/rtree.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/rtree.html"
+  },
+  {
+    "title": "1. Introduction to Window Functions",
+    "category": "SQLite",
+    "path": "/windowfunctions.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/windowfunctions.html"
+  },
+  {
+    "title": "1. Introduction to FTS3 and FTS4",
+    "category": "SQLite",
+    "path": "/fts3.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/fts3.html"
+  },
+  {
+    "title": "1. Overview of FTS5",
+    "category": "SQLite",
+    "path": "/fts5.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/fts5.html"
+  },
+  {
+    "title": "1. Summary",
+    "category": "SQLite",
+    "path": "/autoinc.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/autoinc.html"
+  },
+  {
+    "title": "Internal Versus External BLOBs in SQLite",
+    "category": "SQLite",
+    "path": "/intern-v-extern-blob.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/intern-v-extern-blob.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/percentile.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/percentile.html"
+  },
+  {
+    "title": "1. Setting Up The Error Logging Callback",
+    "category": "SQLite",
+    "path": "/errlog.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/errlog.html"
+  },
+  {
+    "title": "Online Backup API.",
+    "category": "C3REF",
+    "path": "/c3ref/backup_finish.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/c3ref/backup_finish.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/csv.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/csv.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/uintcseq.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/uintcseq.html"
+  },
+  {
+    "title": "SQLite And 8+3 Filenames",
+    "category": "SQLite",
+    "path": "/shortnames.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/shortnames.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/series.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/series.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/carray.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/carray.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/zipfile.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/zipfile.html"
+  },
+  {
+    "title": "1. Using the SQLite Online Backup API",
+    "category": "SQLite",
+    "path": "/backup.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/backup.html"
+  },
+  {
+    "title": "Implementation Limits For SQLite",
+    "category": "SQLite",
+    "path": "/limits.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/limits.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/spellfix1.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/spellfix1.html"
+  },
+  {
+    "title": "1. Introduction to Foreign Key Constraints",
+    "category": "SQLite",
+    "path": "/foreignkeys.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/foreignkeys.html"
+  },
+  {
+    "title": "1. The sqlite3_analyzer.exe Utility Program",
+    "category": "SQLite",
+    "path": "/sqlanalyze.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/sqlanalyze.html"
+  },
+  {
+    "title": "1. URI Filenames In SQLite",
+    "category": "SQLite",
+    "path": "/uri.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/uri.html"
+  },
+  {
+    "title": "1. Executive Summary",
+    "category": "SQLite",
+    "path": "/appfileformat.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/appfileformat.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/wal.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/wal.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/rsync.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/rsync.html"
+  },
+  {
+    "title": "1. The RBU Extension",
+    "category": "SQLite",
+    "path": "/rbu.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/rbu.html"
+  },
+  {
+    "title": "1. Summary",
+    "category": "SQLite",
+    "path": "/fasterthanfs.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/fasterthanfs.html"
+  },
+  {
+    "title": "1. Introduction",
+    "category": "SQLite",
+    "path": "/partialindex.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/partialindex.html"
+  },
+  {
+    "title": "1. Usage",
+    "category": "SQLite",
+    "path": "/sqldiff.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/sqldiff.html"
+  },
+  {
+    "title": "1. SQLite Shared-Cache Mode",
+    "category": "SQLite",
+    "path": "/sharedcache.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/sharedcache.html"
+  },
+  {
+    "title": "Memory-Mapped I/O",
+    "category": "SQLite",
+    "path": "/mmap.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/mmap.html"
+  },
+  {
+    "title": "NULL Handling in SQLite",
+    "category": "SQLite",
+    "path": "/nulls.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/nulls.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/threadsafe.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/threadsafe.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/dbhash.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/dbhash.html"
+  },
+  {
+    "title": "1. Introduction",
+    "category": "SQLite",
+    "path": "/withoutrowid.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/withoutrowid.html"
+  },
+  {
+    "title": "1. Introduction",
+    "category": "SQLite",
+    "path": "/flextypegood.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/flextypegood.html"
+  },
+  {
+    "title": "Using the sqlite3_unlock_notify() API",
+    "category": "SQLite",
+    "path": "/unlock_notify.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/unlock_notify.html"
+  },
+  {
+    "title": "In-Memory Databases",
+    "category": "SQLite",
+    "path": "/inmemorydb.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/inmemorydb.html"
+  },
+  {
+    "title": "1. SQLite Always Validates Its Inputs",
+    "category": "SQLite",
+    "path": "/security.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/security.html"
+  },
+  {
+    "title": "1. C Is Best",
+    "category": "SQLite",
+    "path": "/whyc.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/whyc.html"
+  },
+  {
+    "title": "Custom Builds Of SQLite or Porting SQLite To New Operating Systems",
+    "category": "SQLite",
+    "path": "/custombuild.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/custombuild.html"
+  },
+  {
+    "title": "Isolation In SQLite",
+    "category": "SQLite",
+    "path": "/isolation.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/isolation.html"
+  },
+  {
+    "title": "File Locking And Concurrency In SQLite Version 3",
+    "category": "SQLite",
+    "path": "/lockingv3.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/lockingv3.html"
+  },
+  {
+    "title": "Well-Known Users Of SQLite",
+    "category": "SQLite",
+    "path": "/famous.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/famous.html"
+  },
+  {
+    "title": "1. Introduction",
+    "category": "SQLite",
+    "path": "/whynotgit.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/whynotgit.html"
+  },
+  {
+    "title": "Overview",
+    "category": "SQLite",
+    "path": "/malloc.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/malloc.html"
+  },
+  {
+    "title": "1. Introduction",
+    "category": "SQLite",
+    "path": "/tempfiles.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/tempfiles.html"
+  },
+  {
+    "title": "1. Introduction",
+    "category": "SQLite",
+    "path": "/queryplanner-ng.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/queryplanner-ng.html"
+  },
+  {
+    "title": "1. Introduction",
+    "category": "SQLite",
+    "path": "/optoverview.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/optoverview.html"
+  },
+  {
+    "title": "1. File overwrite by a rogue thread or process",
+    "category": "SQLite",
+    "path": "/howtocorrupt.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/howtocorrupt.html"
+  },
+  {
+    "title": "1. Introduction",
+    "category": "SQLite",
+    "path": "/atomiccommit.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/atomiccommit.html"
+  },
+  {
+    "title": "Introduction",
+    "category": "SQLite",
+    "path": "/arch.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/arch.html"
+  },
+  {
+    "title": "1. Executive Summary",
+    "category": "SQLite",
+    "path": "/opcode.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/opcode.html"
+  },
+  {
+    "title": "Debugging Hints",
+    "category": "SQLite",
+    "path": "/debugging.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/debugging.html"
+  },
+  {
+    "title": "1. Introduction",
+    "category": "SQLite",
+    "path": "/vfs.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/vfs.html"
+  },
+  {
+    "title": "File Format Changes in SQLite",
+    "category": "SQLite",
+    "path": "/formatchng.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/formatchng.html"
+  },
+  {
+    "title": "Moving From SQLite 3.5.9 to 3.6.0",
+    "category": "SQLite",
+    "path": "/35to36.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/35to36.html"
+  },
+  {
+    "title": "An Asynchronous I/O Module For SQLite",
+    "category": "SQLite",
+    "path": "/asyncvfs.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/asyncvfs.html"
+  },
+  {
+    "title": "Datatypes In SQLite version 2",
+    "category": "SQLite",
+    "path": "/datatypes.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/datatypes.html"
+  },
+  {
+    "title": "C/C++ Interface For SQLite Version 3 (old)",
+    "category": "SQLite",
+    "path": "/capi3.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/capi3.html"
+  },
+  {
+    "title": "SQLite Version 3 Overview",
+    "category": "SQLite",
+    "path": "/version3.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/version3.html"
+  },
+  {
+    "title": "1. Introduction",
+    "category": "SQLite",
+    "path": "/privatebranch.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/privatebranch.html"
+  },
+  {
+    "title": "Moving From SQLite 3.4.2 to 3.5.0",
+    "category": "SQLite",
+    "path": "/34to35.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/34to35.html"
+  },
+  {
+    "title": "The Virtual Database Engine of SQLite",
+    "category": "SQLite",
+    "path": "/vdbe.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/vdbe.html"
+  },
+  {
+    "title": "1. The Database File",
+    "category": "SQLite",
+    "path": "/fileformat2.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/fileformat2.html"
+  },
+  {
+    "title": "1. Introduction",
+    "category": "SQLite",
+    "path": "/vtab.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/vtab.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/compile.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/compile.html"
+  },
+  {
+    "title": "Release History",
+    "category": "SQLite",
+    "path": "/changes.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/changes.html"
+  },
+  {
+    "title": "The C language interface to SQLite Version 2",
+    "category": "SQLite",
+    "path": "/c_interface.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/c_interface.html"
+  },
+  {
+    "title": "Size Of The SQLite Library",
+    "category": "SQLite",
+    "path": "/footprint.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/footprint.html"
+  },
+  {
+    "title": "Most Widely Deployed SQL Database Engine",
+    "category": "SQLite",
+    "path": "/mostdeployed.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/mostdeployed.html"
+  },
+  {
+    "title": "1. Executive Summary",
+    "category": "SQLite",
+    "path": "/amalgamation.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/amalgamation.html"
+  },
+  {
+    "title": "Full-Featured SQL",
+    "category": "SQLite",
+    "path": "/fullsql.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/fullsql.html"
+  },
+  {
+    "title": "SQLite Release 3.54.0 On 2026-10-09",
+    "category": "RELEASELOG",
+    "path": "/releaselog/3_54_0.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/releaselog/3_54_0.html"
+  },
+  {
+    "title": "SQLite: Single File Database",
+    "category": "SQLite",
+    "path": "/onefile.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/onefile.html"
+  },
+  {
+    "title": "SQLite Is Transactional",
+    "category": "SQLite",
+    "path": "/transactional.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/transactional.html"
+  },
+  {
+    "title": "1. The Database File",
+    "category": "SQLite",
+    "path": "/fileformat.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/fileformat.html"
+  },
+  {
+    "title": "The SQLite Consortium",
+    "category": "SQLite",
+    "path": "/consortium.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/consortium.html"
+  },
+  {
+    "title": "SQLite is a Self Contained System",
+    "category": "SQLite",
+    "path": "/selfcontained.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/selfcontained.html"
+  },
+  {
+    "title": "SQLite Database Speed Comparison",
+    "category": "SQLite",
+    "path": "/speed.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/speed.html"
+  },
+  {
+    "title": "High Reliability",
+    "category": "SQLite",
+    "path": "/hirely.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/hirely.html"
+  },
+  {
+    "title": "Zero-Configuration",
+    "category": "SQLite",
+    "path": "/zeroconf.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/zeroconf.html"
+  },
+  {
+    "title": "Long Term Support",
+    "category": "SQLite",
+    "path": "/lts.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/lts.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/locrsf.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/locrsf.html"
+  },
+  {
+    "title": "One-Step Query Execution Interface",
+    "category": "C3REF",
+    "path": "/c3ref/exec.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/c3ref/exec.html"
+  },
+  {
+    "title": "SQLite Developers",
+    "category": "SQLite",
+    "path": "/crew.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/crew.html"
+  },
+  {
+    "title": "Closing A Database Connection",
+    "category": "C3REF",
+    "path": "/c3ref/close.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/c3ref/close.html"
+  },
+  {
+    "title": "1. SQLite Is Serverless",
+    "category": "SQLite",
+    "path": "/serverless.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/serverless.html"
+  },
+  {
+    "title": "1. Overview",
+    "category": "SQLite",
+    "path": "/th3.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/th3.html"
+  },
+  {
+    "title": "Opening A New Database Connection",
+    "category": "C3REF",
+    "path": "/c3ref/open.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/c3ref/open.html"
+  },
+  {
+    "title": "Database Connection Handle",
+    "category": "C3REF",
+    "path": "/c3ref/sqlite3.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/c3ref/sqlite3.html"
+  },
+  {
+    "title": "List Of SQLite Objects",
+    "category": "C3REF",
+    "path": "/c3ref/objlist.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/c3ref/objlist.html"
+  },
+  {
+    "title": "C-language Interface Specification for SQLite",
+    "category": "SQLite",
+    "path": "/capi3ref.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/capi3ref.html"
+  },
+  {
+    "title": "Prepared Statement Object",
+    "category": "C3REF",
+    "path": "/c3ref/stmt.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/c3ref/stmt.html"
+  },
+  {
+    "title": "List Of SQLite Constants",
+    "category": "C3REF",
+    "path": "/c3ref/constlist.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/c3ref/constlist.html"
+  },
+  {
+    "title": "Flags For File Open Operations",
+    "category": "C3REF",
+    "path": "/c3ref/c_open_autoproxy.html",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/c3ref/c_open_autoproxy.html"
+  },
+  {
+    "title": "SQLite Documentation",
+    "category": "SQLite",
+    "path": "/docs",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/docs"
+  },
+  {
+    "title": "SQLite Documentation",
+    "category": "SQLite",
+    "path": "/",
+    "site": "sqlite",
+    "headings": [],
+    "preview": "/"
+  }
+]

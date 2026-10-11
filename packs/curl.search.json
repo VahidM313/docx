@@ -1,0 +1,922 @@
+[
+  {
+    "title": "curl - Documentation Overview",
+    "category": "curl & libcurl",
+    "path": "/docs/",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Documentation Overview"
+  },
+  {
+    "title": "curl - Extract CA Certs from Mozilla",
+    "category": "curl & libcurl",
+    "path": "/docs/caextract.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Extract CA Certs from Mozilla"
+  },
+  {
+    "title": "curl - Project Documentation",
+    "category": "curl & libcurl",
+    "path": "/docs/projdocs.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Project Documentation"
+  },
+  {
+    "title": "HTTP/3 with curl",
+    "category": "curl & libcurl",
+    "path": "/docs/http3.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — HTTP/3 with curl"
+  },
+  {
+    "title": "curl - Report Bugs",
+    "category": "curl & libcurl",
+    "path": "/docs/bugs.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Report Bugs"
+  },
+  {
+    "title": "curl - Frequently Asked Questions",
+    "category": "curl & libcurl",
+    "path": "/docs/faq.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Frequently Asked Questions"
+  },
+  {
+    "title": "curl - History",
+    "category": "curl & libcurl",
+    "path": "/docs/history.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - History"
+  },
+  {
+    "title": "curl - HTTP Cookies",
+    "category": "curl & libcurl",
+    "path": "/docs/http-cookies.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - HTTP Cookies"
+  },
+  {
+    "title": "curl - Governance",
+    "category": "curl & libcurl",
+    "path": "/docs/governance.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Governance"
+  },
+  {
+    "title": "curl - External Dependencies",
+    "category": "curl & libcurl",
+    "path": "/docs/libs.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - External Dependencies"
+  },
+  {
+    "title": "curl - List of Features",
+    "category": "curl & libcurl",
+    "path": "/docs/features.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - List of Features"
+  },
+  {
+    "title": "curl - Code of conduct",
+    "category": "curl & libcurl",
+    "path": "/docs/code-of-conduct.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Code of conduct"
+  },
+  {
+    "title": "curl - Known risks",
+    "category": "curl & libcurl",
+    "path": "/docs/knownrisks.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Known risks"
+  },
+  {
+    "title": "build and install curl from source",
+    "category": "curl & libcurl",
+    "path": "/docs/install.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — build and install curl from source"
+  },
+  {
+    "title": "curl - TODO",
+    "category": "curl & libcurl",
+    "path": "/docs/todo.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - TODO"
+  },
+  {
+    "title": "curl - Protocol Documentation",
+    "category": "curl & libcurl",
+    "path": "/docs/protdocs.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Protocol Documentation"
+  },
+  {
+    "title": "curl - Known Bugs",
+    "category": "curl & libcurl",
+    "path": "/docs/knownbugs.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Known Bugs"
+  },
+  {
+    "title": "curl - Tool Documentation",
+    "category": "curl & libcurl",
+    "path": "/docs/tooldocs.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Tool Documentation"
+  },
+  {
+    "title": "curl - Versions",
+    "category": "curl & libcurl",
+    "path": "/docs/versions.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Versions"
+  },
+  {
+    "title": "curl - URL syntax",
+    "category": "curl & libcurl",
+    "path": "/docs/url-syntax.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - URL syntax"
+  },
+  {
+    "title": "curl - SSL CA Certificates",
+    "category": "curl & libcurl",
+    "path": "/docs/sslcerts.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - SSL CA Certificates"
+  },
+  {
+    "title": "curl - Comparison Table",
+    "category": "curl & libcurl",
+    "path": "/docs/comparison-table.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Comparison Table"
+  },
+  {
+    "title": "curl - Release Documentation",
+    "category": "curl & libcurl",
+    "path": "/docs/reldocs.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Release Documentation"
+  },
+  {
+    "title": "WebSocket with curl",
+    "category": "curl & libcurl",
+    "path": "/docs/websocket.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — WebSocket with curl"
+  },
+  {
+    "title": "curl - Verify",
+    "category": "curl & libcurl",
+    "path": "/docs/verify.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Verify"
+  },
+  {
+    "title": "curl - Release Table",
+    "category": "curl & libcurl",
+    "path": "/docs/releases.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Release Table"
+  },
+  {
+    "title": "curl - SSL libraries compared",
+    "category": "curl & libcurl",
+    "path": "/docs/ssl-compared.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - SSL libraries compared"
+  },
+  {
+    "title": "MQTT with curl",
+    "category": "curl & libcurl",
+    "path": "/docs/mqtt.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — MQTT with curl"
+  },
+  {
+    "title": "curl - Security Documentation",
+    "category": "curl & libcurl",
+    "path": "/docs/secdocs.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Security Documentation"
+  },
+  {
+    "title": "curl - Vulnerability Table",
+    "category": "curl & libcurl",
+    "path": "/docs/vulnerabilities.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Vulnerability Table"
+  },
+  {
+    "title": "curl - CVEs",
+    "category": "curl & libcurl",
+    "path": "/docs/security.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - CVEs"
+  },
+  {
+    "title": "curl - security audits",
+    "category": "curl & libcurl",
+    "path": "/docs/audits.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - security audits"
+  },
+  {
+    "title": "curl - How To Use",
+    "category": "curl & libcurl",
+    "path": "/docs/manpage.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - How To Use"
+  },
+  {
+    "title": "libcurl - your network transfer library",
+    "category": "curl & libcurl",
+    "path": "/libcurl/",
+    "site": "curl",
+    "headings": [],
+    "preview": "libcurl is a free and easy-to-use\n client-side URL transfer library, supporting DICT, FILE, FTP, FTPS, GOPHER,\n GOPHERS, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, MQTT, MQTTS, POP3, POP3S,\n RTSP, SCP, SFTP, SMB, SMBS, SMTP, SMTPS, TELNET, TFTP, WS and\n WSS. libcurl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading,\n kerberos, HTTP form based upload, proxies, cookies, user+password\n authentication, file transfer resume, http proxy tunneling and more"
+  },
+  {
+    "title": "Thread-safe",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/threadsafe.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — Thread-safe"
+  },
+  {
+    "title": "curl - When command line options were introduced",
+    "category": "curl & libcurl",
+    "path": "/docs/optionswhen.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - When command line options were introduced"
+  },
+  {
+    "title": "curl - The Art Of Scripting HTTP Requests Using curl",
+    "category": "curl & libcurl",
+    "path": "/docs/httpscripting.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - The Art Of Scripting HTTP Requests Using curl"
+  },
+  {
+    "title": "curl - copyright",
+    "category": "curl & libcurl",
+    "path": "/docs/copyright.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - copyright"
+  },
+  {
+    "title": "curl - the name",
+    "category": "curl & libcurl",
+    "path": "/docs/thename.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - the name"
+  },
+  {
+    "title": "libcurl - Bindings",
+    "category": "curl & libcurl",
+    "path": "/libcurl/bindings.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - Bindings"
+  },
+  {
+    "title": "mk-ca-bundle",
+    "category": "curl & libcurl",
+    "path": "/docs/mk-ca-bundle.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — mk-ca-bundle"
+  },
+  {
+    "title": "curl - Tutorial",
+    "category": "curl & libcurl",
+    "path": "/docs/tutorial.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Tutorial"
+  },
+  {
+    "title": "curl - video presentations",
+    "category": "curl & libcurl",
+    "path": "/docs/videos/",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - video presentations"
+  },
+  {
+    "title": "curl - Help us!",
+    "category": "curl & libcurl",
+    "path": "/docs/help-us.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Help us!"
+  },
+  {
+    "title": "curl user surveys",
+    "category": "curl & libcurl",
+    "path": "/docs/survey/",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl user surveys"
+  },
+  {
+    "title": "curl - Companies Using curl",
+    "category": "curl & libcurl",
+    "path": "/docs/companies.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Companies Using curl"
+  },
+  {
+    "title": "curl - Who and Why",
+    "category": "curl & libcurl",
+    "path": "/docs/whodocs.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - Who and Why"
+  },
+  {
+    "title": "curl - THANKS",
+    "category": "curl & libcurl",
+    "path": "/docs/thanks.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - THANKS"
+  },
+  {
+    "title": "libcurl example - getinmemory.c",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/getinmemory.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl example - getinmemory.c"
+  },
+  {
+    "title": "libcurl - programming tutorial",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/libcurl-tutorial.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - programming tutorial"
+  },
+  {
+    "title": "libcurl - What Makes It Special",
+    "category": "curl & libcurl",
+    "path": "/libcurl/features.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - What Makes It Special"
+  },
+  {
+    "title": "libcurl - All Functions List",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/allfuncs.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - All Functions List"
+  },
+  {
+    "title": "libcurl - source code examples",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/example.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - source code examples"
+  },
+  {
+    "title": "libcurl - symbols in versions",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/symbols-in-versions.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - symbols in versions"
+  },
+  {
+    "title": "libcurl - API overview",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/libcurl.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - API overview"
+  },
+  {
+    "title": "libcurl - multi interface overview",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/libcurl-multi.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - multi interface overview"
+  },
+  {
+    "title": "libcurl - Related Libraries",
+    "category": "curl & libcurl",
+    "path": "/libcurl/relatedlibs.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - Related Libraries"
+  },
+  {
+    "title": "libcurl - What Developers Say About It",
+    "category": "curl & libcurl",
+    "path": "/libcurl/theysay.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - What Developers Say About It"
+  },
+  {
+    "title": "libcurl - available alternatives",
+    "category": "curl & libcurl",
+    "path": "/libcurl/competitors.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - available alternatives"
+  },
+  {
+    "title": "libcurl - easy interface overview",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/libcurl-easy.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - easy interface overview"
+  },
+  {
+    "title": "libcurl - API",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - API"
+  },
+  {
+    "title": "libcurl - ABI",
+    "category": "curl & libcurl",
+    "path": "/libcurl/abi.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - ABI"
+  },
+  {
+    "title": "libcurl - Security Considerations",
+    "category": "curl & libcurl",
+    "path": "/libcurl/security.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - Security Considerations"
+  },
+  {
+    "title": "libcurl - share interface overview",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/libcurl-share.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - share interface overview"
+  },
+  {
+    "title": "using libcurl",
+    "category": "curl & libcurl",
+    "path": "/libcurl/using/",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — using libcurl"
+  },
+  {
+    "title": "all options for curl_easy_setopt(3)",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/easy_setopt_options.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — all options for curl_easy_setopt(3)"
+  },
+  {
+    "title": "all options for curl_easy_getinfo(3)",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/easy_getinfo_options.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — all options for curl_easy_getinfo(3)"
+  },
+  {
+    "title": "libcurl - URL parsing interface overview",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/libcurl-url.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - URL parsing interface overview"
+  },
+  {
+    "title": "curl_multi_init",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/curl_multi_init.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl_multi_init"
+  },
+  {
+    "title": "libcurl - curl_easy_perform()",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/curl_easy_perform.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - curl_easy_perform()"
+  },
+  {
+    "title": "curl_multi_perform",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/curl_multi_perform.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl_multi_perform"
+  },
+  {
+    "title": "libcurl - Error Codes",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/libcurl-errors.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - Error Codes"
+  },
+  {
+    "title": "libcurl - curl_easy_getinfo()",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/curl_easy_getinfo.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - curl_easy_getinfo()"
+  },
+  {
+    "title": "libcurl - environment variables",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/libcurl-env.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - environment variables"
+  },
+  {
+    "title": "all options for curl_multi_setopt(3)",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/multi_setopt_options.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — all options for curl_multi_setopt(3)"
+  },
+  {
+    "title": "curl_multi_add_handle",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/curl_multi_add_handle.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl_multi_add_handle"
+  },
+  {
+    "title": "libcurl - curl_easy_setopt()",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/curl_easy_setopt.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - curl_easy_setopt()"
+  },
+  {
+    "title": "libcurl - curl_easy_reset()",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/curl_easy_reset.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - curl_easy_reset()"
+  },
+  {
+    "title": "libcurl - curl_easy_init()",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/curl_easy_init.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - curl_easy_init()"
+  },
+  {
+    "title": "TLS backend support of libcurl options",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/tls-options.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — TLS backend support of libcurl options"
+  },
+  {
+    "title": "libcurl - WebSocket interface overview",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/libcurl-ws.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - WebSocket interface overview"
+  },
+  {
+    "title": "CURLOPT_NOSIGNAL",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/CURLOPT_NOSIGNAL.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — CURLOPT_NOSIGNAL"
+  },
+  {
+    "title": "CURLSHOPT_LOCKFUNC",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/CURLSHOPT_LOCKFUNC.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — CURLSHOPT_LOCKFUNC"
+  },
+  {
+    "title": "libcurl - curl_version_info()",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/curl_version_info.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - curl_version_info()"
+  },
+  {
+    "title": "curl_multi_setopt",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/curl_multi_setopt.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl_multi_setopt"
+  },
+  {
+    "title": "libcurl - curl_global_init()",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/curl_global_init.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - curl_global_init()"
+  },
+  {
+    "title": "curl - When command line options were introduced",
+    "category": "curl & libcurl",
+    "path": "/docs/optionsall.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - When command line options were introduced"
+  },
+  {
+    "title": "libcurl - curl_share_setopt()",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/curl_share_setopt.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - curl_share_setopt()"
+  },
+  {
+    "title": "CURLOPT_DNS_USE_GLOBAL_CACHE",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/CURLOPT_DNS_USE_GLOBAL_CACHE.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — CURLOPT_DNS_USE_GLOBAL_CACHE"
+  },
+  {
+    "title": "curl - chat with curl people",
+    "category": "curl & libcurl",
+    "path": "/docs/irc.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl - chat with curl people"
+  },
+  {
+    "title": "curl user survey 2025 analysis",
+    "category": "curl & libcurl",
+    "path": "/docs/survey/2025-1.1/",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl user survey 2025 analysis"
+  },
+  {
+    "title": "libcurl - curl_global_init_mem()",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/curl_global_init_mem.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - curl_global_init_mem()"
+  },
+  {
+    "title": "CURLSHOPT_UNLOCKFUNC",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/CURLSHOPT_UNLOCKFUNC.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — CURLSHOPT_UNLOCKFUNC"
+  },
+  {
+    "title": "curl_multi_remove_handle",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/curl_multi_remove_handle.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl_multi_remove_handle"
+  },
+  {
+    "title": "CURLOPT_WRITEDATA",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/CURLOPT_WRITEDATA.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — CURLOPT_WRITEDATA"
+  },
+  {
+    "title": "CURLOPT_URL",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/CURLOPT_URL.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — CURLOPT_URL"
+  },
+  {
+    "title": "CURLOPT_ERRORBUFFER",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/CURLOPT_ERRORBUFFER.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — CURLOPT_ERRORBUFFER"
+  },
+  {
+    "title": "libcurl - curl_easy_duphandle()",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/curl_easy_duphandle.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - curl_easy_duphandle()"
+  },
+  {
+    "title": "CURLOPT_WRITEFUNCTION",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/CURLOPT_WRITEFUNCTION.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — CURLOPT_WRITEFUNCTION"
+  },
+  {
+    "title": "CURLOPT_USERAGENT",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/CURLOPT_USERAGENT.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — CURLOPT_USERAGENT"
+  },
+  {
+    "title": "libcurl - curl_global_cleanup()",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/curl_global_cleanup.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - curl_global_cleanup()"
+  },
+  {
+    "title": "curl and libcurl survey 2014 - analysis",
+    "category": "curl & libcurl",
+    "path": "/docs/survey/2014.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — curl and libcurl survey 2014 - analysis"
+  },
+  {
+    "title": "libcurl - curl_easy_strerror()",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/curl_easy_strerror.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - curl_easy_strerror()"
+  },
+  {
+    "title": "libcurl - curl_easy_cleanup()",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/curl_easy_cleanup.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — libcurl - curl_easy_cleanup()"
+  },
+  {
+    "title": "CURLOPT_UPLOAD",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/CURLOPT_UPLOAD.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — CURLOPT_UPLOAD"
+  },
+  {
+    "title": "CURLOPT_VERBOSE",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/CURLOPT_VERBOSE.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — CURLOPT_VERBOSE"
+  },
+  {
+    "title": "CURLOPT_READFUNCTION",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/CURLOPT_READFUNCTION.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — CURLOPT_READFUNCTION"
+  },
+  {
+    "title": "CURLOPT_HEADER",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/CURLOPT_HEADER.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — CURLOPT_HEADER"
+  },
+  {
+    "title": "CURLOPT_READDATA",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/CURLOPT_READDATA.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — CURLOPT_READDATA"
+  },
+  {
+    "title": "CURLOPT_DEBUGFUNCTION",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/CURLOPT_DEBUGFUNCTION.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — CURLOPT_DEBUGFUNCTION"
+  },
+  {
+    "title": "CURLOPT_INFILESIZE_LARGE",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/CURLOPT_INFILESIZE_LARGE.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — CURLOPT_INFILESIZE_LARGE"
+  },
+  {
+    "title": "CURLOPT_USERPWD",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/CURLOPT_USERPWD.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — CURLOPT_USERPWD"
+  },
+  {
+    "title": "CURLOPT_PROXYUSERPWD",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/CURLOPT_PROXYUSERPWD.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — CURLOPT_PROXYUSERPWD"
+  },
+  {
+    "title": "CURLOPT_NETRC",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/CURLOPT_NETRC.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — CURLOPT_NETRC"
+  },
+  {
+    "title": "CURLOPT_KEYPASSWD",
+    "category": "curl & libcurl",
+    "path": "/libcurl/c/CURLOPT_KEYPASSWD.html",
+    "site": "curl",
+    "headings": [],
+    "preview": "curl & libcurl documentation — CURLOPT_KEYPASSWD"
+  }
+]

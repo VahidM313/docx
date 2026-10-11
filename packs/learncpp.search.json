@@ -1,0 +1,1290 @@
+[
+  {
+    "title": "Learn C++",
+    "category": "LearnCpp.com",
+    "path": "/",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/"
+  },
+  {
+    "title": "0.6 — Installing an Integrated Development Environment (IDE)",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/installing-an-integrated-development-environment-ide",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/installing-an-integrated-development-environment-ide"
+  },
+  {
+    "title": "Learn C++ Site Index",
+    "category": "LearnCpp.com",
+    "path": "/learn-cpp-site-index",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/learn-cpp-site-index"
+  },
+  {
+    "title": "About / Contact / Support LearnCpp.Com",
+    "category": "LearnCpp.com",
+    "path": "/about",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/about"
+  },
+  {
+    "title": "0.4 — Introduction to C++ development",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-cpp-development",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-cpp-development"
+  },
+  {
+    "title": "0.12 — Configuring your compiler: Choosing a language standard",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/configuring-your-compiler-choosing-a-language-standard",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/configuring-your-compiler-choosing-a-language-standard"
+  },
+  {
+    "title": "Latest Changes",
+    "category": "LearnCpp.com",
+    "path": "/latest-changes",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/latest-changes"
+  },
+  {
+    "title": "0.11 — Configuring your compiler: Warning and error levels",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/configuring-your-compiler-warning-and-error-levels",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/configuring-your-compiler-warning-and-error-levels"
+  },
+  {
+    "title": "0.5 — Introduction to the compiler, linker, and libraries",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries"
+  },
+  {
+    "title": "0.9 — Configuring your compiler: Build configurations",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/configuring-your-compiler-build-configurations",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/configuring-your-compiler-build-configurations"
+  },
+  {
+    "title": "0.8 — A few common C++ problems",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/a-few-common-cpp-problems",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/a-few-common-cpp-problems"
+  },
+  {
+    "title": "0.3 — Introduction to C/C++",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-cplusplus",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-cplusplus"
+  },
+  {
+    "title": "0.2 — Introduction to programs and programming languages",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-programming-languages",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-programming-languages"
+  },
+  {
+    "title": "0.7 — Compiling your first program",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/compiling-your-first-program",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/compiling-your-first-program"
+  },
+  {
+    "title": "0.10 — Configuring your compiler: Compiler extensions",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/configuring-your-compiler-compiler-extensions",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/configuring-your-compiler-compiler-extensions"
+  },
+  {
+    "title": "0.1 — Introduction to these tutorials",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-these-tutorials",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-these-tutorials"
+  },
+  {
+    "title": "Leave feedback or report an issue",
+    "category": "LearnCpp.com",
+    "path": "/leave-feedback-report-issue",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/leave-feedback-report-issue"
+  },
+  {
+    "title": "0.13 — What language standard is my compiler using?",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/what-language-standard-is-my-compiler-using",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/what-language-standard-is-my-compiler-using"
+  },
+  {
+    "title": "1.6 — Uninitialized variables and undefined behavior",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/uninitialized-variables-and-undefined-behavior",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/uninitialized-variables-and-undefined-behavior"
+  },
+  {
+    "title": "1.8 — Whitespace and basic formatting",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/whitespace-and-basic-formatting",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/whitespace-and-basic-formatting"
+  },
+  {
+    "title": "2.3 — Void functions (non-value returning functions)",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/void-functions-non-value-returning-functions",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/void-functions-non-value-returning-functions"
+  },
+  {
+    "title": "1.7 — Keywords and naming identifiers",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/keywords-and-naming-identifiers",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/keywords-and-naming-identifiers"
+  },
+  {
+    "title": "1.x — Chapter 1 summary and quiz",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/chapter-1-summary-and-quiz",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/chapter-1-summary-and-quiz"
+  },
+  {
+    "title": "1.4 — Variable assignment and initialization",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/variable-assignment-and-initialization",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/variable-assignment-and-initialization"
+  },
+  {
+    "title": "1.10 — Introduction to expressions",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-expressions",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-expressions"
+  },
+  {
+    "title": "1.9 — Introduction to literals and operators",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-literals-and-operators",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-literals-and-operators"
+  },
+  {
+    "title": "1.3 — Introduction to objects and variables",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-objects-and-variables",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-objects-and-variables"
+  },
+  {
+    "title": "1.1 — Statements and the structure of a program",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/statements-and-the-structure-of-a-program",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/statements-and-the-structure-of-a-program"
+  },
+  {
+    "title": "1.11 — Developing your first program",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/developing-your-first-program",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/developing-your-first-program"
+  },
+  {
+    "title": "1.2 — Comments",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/comments",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/comments"
+  },
+  {
+    "title": "2.2 — Function return values (value-returning functions)",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/function-return-values-value-returning-functions",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/function-return-values-value-returning-functions"
+  },
+  {
+    "title": "2.1 — Introduction to functions",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-functions",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-functions"
+  },
+  {
+    "title": "1.5 — Introduction to iostream: cout, cin, and endl",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-iostream-cout-cin-and-endl",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-iostream-cout-cin-and-endl"
+  },
+  {
+    "title": "2.5 — Introduction to local scope",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-local-scope",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-local-scope"
+  },
+  {
+    "title": "2.10 — Introduction to the preprocessor",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-the-preprocessor",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-the-preprocessor"
+  },
+  {
+    "title": "2.12 — Header guards",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/header-guards",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/header-guards"
+  },
+  {
+    "title": "2.13 — How to design your first programs",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/how-to-design-your-first-programs",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/how-to-design-your-first-programs"
+  },
+  {
+    "title": "2.4 — Introduction to function parameters and arguments",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-function-parameters-and-arguments",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-function-parameters-and-arguments"
+  },
+  {
+    "title": "2.8 — Programs with multiple code files",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/programs-with-multiple-code-files",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/programs-with-multiple-code-files"
+  },
+  {
+    "title": "2.6 — Why functions are useful, and how to use them effectively",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/why-functions-are-useful-and-how-to-use-them-effectively",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/why-functions-are-useful-and-how-to-use-them-effectively"
+  },
+  {
+    "title": "2.7 — Forward declarations and definitions",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/forward-declarations",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/forward-declarations"
+  },
+  {
+    "title": "2.x — Chapter 2 summary and quiz",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/chapter-2-summary-and-quiz",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/chapter-2-summary-and-quiz"
+  },
+  {
+    "title": "2.11 — Header files",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/header-files",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/header-files"
+  },
+  {
+    "title": "2.9 — Naming collisions and an introduction to namespaces",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/naming-collisions-and-an-introduction-to-namespaces",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/naming-collisions-and-an-introduction-to-namespaces"
+  },
+  {
+    "title": "3.4 — Basic debugging tactics",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/basic-debugging-tactics",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/basic-debugging-tactics"
+  },
+  {
+    "title": "3.1 — Syntax and semantic errors",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/syntax-and-semantic-errors",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/syntax-and-semantic-errors"
+  },
+  {
+    "title": "3.3 — A strategy for debugging",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/a-strategy-for-debugging",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/a-strategy-for-debugging"
+  },
+  {
+    "title": "3.5 — More debugging tactics",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/more-debugging-tactics",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/more-debugging-tactics"
+  },
+  {
+    "title": "3.2 — The debugging process",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/the-debugging-process",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/the-debugging-process"
+  },
+  {
+    "title": "4.2 — Void",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/void",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/void"
+  },
+  {
+    "title": "3.8 — Using an integrated debugger: Watching variables",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/using-an-integrated-debugger-watching-variables",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/using-an-integrated-debugger-watching-variables"
+  },
+  {
+    "title": "3.10 — Finding issues before they become problems",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/finding-issues-before-they-become-problems",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/finding-issues-before-they-become-problems"
+  },
+  {
+    "title": "4.9 — Boolean values",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/boolean-values",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/boolean-values"
+  },
+  {
+    "title": "4.1 — Introduction to fundamental data types",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-fundamental-data-types",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-fundamental-data-types"
+  },
+  {
+    "title": "4.7 — Introduction to scientific notation",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-scientific-notation",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-scientific-notation"
+  },
+  {
+    "title": "3.7 — Using an integrated debugger: Running and breakpoints",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/using-an-integrated-debugger-running-and-breakpoints",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/using-an-integrated-debugger-running-and-breakpoints"
+  },
+  {
+    "title": "3.9 — Using an integrated debugger: The call stack",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/using-an-integrated-debugger-the-call-stack",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/using-an-integrated-debugger-the-call-stack"
+  },
+  {
+    "title": "3.x — Chapter 3 summary and quiz",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/chapter-3-summary-and-quiz",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/chapter-3-summary-and-quiz"
+  },
+  {
+    "title": "4.6 — Fixed-width integers and size_t",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/fixed-width-integers-and-size-t",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/fixed-width-integers-and-size-t"
+  },
+  {
+    "title": "4.5 — Unsigned integers, and why to avoid them",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/unsigned-integers-and-why-to-avoid-them",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/unsigned-integers-and-why-to-avoid-them"
+  },
+  {
+    "title": "4.3 — Object sizes and the sizeof operator",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/object-sizes-and-the-sizeof-operator",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/object-sizes-and-the-sizeof-operator"
+  },
+  {
+    "title": "4.10 — Introduction to if statements",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-if-statements",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-if-statements"
+  },
+  {
+    "title": "4.8 — Floating point numbers",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/floating-point-numbers",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/floating-point-numbers"
+  },
+  {
+    "title": "4.4 — Signed integers",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/signed-integers",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/signed-integers"
+  },
+  {
+    "title": "3.6 — Using an integrated debugger: Stepping",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/using-an-integrated-debugger-stepping",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/using-an-integrated-debugger-stepping"
+  },
+  {
+    "title": "6.3 — Remainder and Exponentiation",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/remainder-and-exponentiation",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/remainder-and-exponentiation"
+  },
+  {
+    "title": "5.1 — Constant variables (named constants)",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/constant-variables-named-constants",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/constant-variables-named-constants"
+  },
+  {
+    "title": "5.8 — Introduction to std::string_view",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-stdstring_view",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-stdstring_view"
+  },
+  {
+    "title": "5.4 — The as-if rule and compile-time optimization",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/the-as-if-rule-and-compile-time-optimization",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/the-as-if-rule-and-compile-time-optimization"
+  },
+  {
+    "title": "4.11 — Chars",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/chars",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/chars"
+  },
+  {
+    "title": "4.x — Chapter 4 summary and quiz",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/chapter-4-summary-and-quiz",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/chapter-4-summary-and-quiz"
+  },
+  {
+    "title": "5.2 — Literals",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/literals",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/literals"
+  },
+  {
+    "title": "4.12 — Introduction to type conversion and static_cast",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-type-conversion-and-static_cast",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-type-conversion-and-static_cast"
+  },
+  {
+    "title": "5.9 — std::string_view (part 2)",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/stdstring_view-part-2",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/stdstring_view-part-2"
+  },
+  {
+    "title": "5.6 — Constexpr variables",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/constexpr-variables",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/constexpr-variables"
+  },
+  {
+    "title": "5.5 — Constant expressions",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/constant-expressions",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/constant-expressions"
+  },
+  {
+    "title": "5.x — Chapter 5 summary and quiz",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/chapter-5-summary-and-quiz",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/chapter-5-summary-and-quiz"
+  },
+  {
+    "title": "5.7 — Introduction to std::string",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-stdstring",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-stdstring"
+  },
+  {
+    "title": "6.2 — Arithmetic operators",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/arithmetic-operators",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/arithmetic-operators"
+  },
+  {
+    "title": "6.1 — Operator precedence and associativity",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/operator-precedence-and-associativity",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/operator-precedence-and-associativity"
+  },
+  {
+    "title": "5.3 — Numeral systems (decimal, binary, hexadecimal, and octal)",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/numeral-systems-decimal-binary-hexadecimal-and-octal",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/numeral-systems-decimal-binary-hexadecimal-and-octal"
+  },
+  {
+    "title": "6.4 — Increment/decrement operators, and side effects",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/increment-decrement-operators-and-side-effects",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/increment-decrement-operators-and-side-effects"
+  },
+  {
+    "title": "6.8 — Logical operators",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/logical-operators",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/logical-operators"
+  },
+  {
+    "title": "O.4 — Converting integers between binary and decimal representation",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/converting-integers-between-binary-and-decimal-representation",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/converting-integers-between-binary-and-decimal-representation"
+  },
+  {
+    "title": "7.1 — Compound statements (blocks)",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/compound-statements-blocks",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/compound-statements-blocks"
+  },
+  {
+    "title": "6.5 — The comma operator",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/the-comma-operator",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/the-comma-operator"
+  },
+  {
+    "title": "7.5 — Variable shadowing (name hiding)",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/variable-shadowing-name-hiding",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/variable-shadowing-name-hiding"
+  },
+  {
+    "title": "7.3 — Local variables",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/local-variables",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/local-variables"
+  },
+  {
+    "title": "O.3 — Bit manipulation with bitwise operators and bit masks",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/bit-manipulation-with-bitwise-operators-and-bit-masks",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/bit-manipulation-with-bitwise-operators-and-bit-masks"
+  },
+  {
+    "title": "7.6 — Internal linkage",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/internal-linkage",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/internal-linkage"
+  },
+  {
+    "title": "6.x — Chapter 6 summary and quiz",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/chapter-6-summary-and-quiz",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/chapter-6-summary-and-quiz"
+  },
+  {
+    "title": "7.4 — Introduction to global variables",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-global-variables",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-global-variables"
+  },
+  {
+    "title": "6.6 — The conditional operator",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/the-conditional-operator",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/the-conditional-operator"
+  },
+  {
+    "title": "O.1 — Bit flags and bit manipulation via std::bitset",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/bit-flags-and-bit-manipulation-via-stdbitset",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/bit-flags-and-bit-manipulation-via-stdbitset"
+  },
+  {
+    "title": "7.2 — User-defined namespaces and the scope resolution operator",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/user-defined-namespaces-and-the-scope-resolution-operator",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/user-defined-namespaces-and-the-scope-resolution-operator"
+  },
+  {
+    "title": "O.2 — Bitwise operators",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/bitwise-operators",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/bitwise-operators"
+  },
+  {
+    "title": "6.7 — Relational operators and floating point comparisons",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/relational-operators-and-floating-point-comparisons",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/relational-operators-and-floating-point-comparisons"
+  },
+  {
+    "title": "7.7 — External linkage and variable forward declarations",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/external-linkage-and-variable-forward-declarations",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/external-linkage-and-variable-forward-declarations"
+  },
+  {
+    "title": "7.9 — Inline functions and variables",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/inline-functions-and-variables",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/inline-functions-and-variables"
+  },
+  {
+    "title": "7.8 — Why (non-const) global variables are evil",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/why-non-const-global-variables-are-evil",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/why-non-const-global-variables-are-evil"
+  },
+  {
+    "title": "7.10 — Sharing global constants across multiple files (using inline variables)",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/sharing-global-constants-across-multiple-files-using-inline-variables",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/sharing-global-constants-across-multiple-files-using-inline-variables"
+  },
+  {
+    "title": "7.14 — Unnamed and inline namespaces",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/unnamed-and-inline-namespaces",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/unnamed-and-inline-namespaces"
+  },
+  {
+    "title": "7.11 — Static local variables",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/static-local-variables",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/static-local-variables"
+  },
+  {
+    "title": "7.13 — Using declarations and using directives",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/using-declarations-and-using-directives",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/using-declarations-and-using-directives"
+  },
+  {
+    "title": "8.7 — Goto statements",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/goto-statements",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/goto-statements"
+  },
+  {
+    "title": "7.x — Chapter 7 summary and quiz",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/chapter-7-summary-and-quiz",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/chapter-7-summary-and-quiz"
+  },
+  {
+    "title": "7.12 — Scope, duration, and linkage summary",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/scope-duration-and-linkage-summary",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/scope-duration-and-linkage-summary"
+  },
+  {
+    "title": "8.4 — Constexpr if statements",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/constexpr-if-statements",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/constexpr-if-statements"
+  },
+  {
+    "title": "8.5 — Switch statement basics",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/switch-statement-basics",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/switch-statement-basics"
+  },
+  {
+    "title": "8.1 — Control flow introduction",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/control-flow-introduction",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/control-flow-introduction"
+  },
+  {
+    "title": "8.6 — Switch fallthrough and scoping",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/switch-fallthrough-and-scoping",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/switch-fallthrough-and-scoping"
+  },
+  {
+    "title": "8.3 — Common if statement problems",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/common-if-statement-problems",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/common-if-statement-problems"
+  },
+  {
+    "title": "8.2 — If statements and blocks",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/if-statements-and-blocks",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/if-statements-and-blocks"
+  },
+  {
+    "title": "9.4 — Detecting and handling errors",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/detecting-and-handling-errors",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/detecting-and-handling-errors"
+  },
+  {
+    "title": "9.6 — Assert and static_assert",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/assert-and-static_assert",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/assert-and-static_assert"
+  },
+  {
+    "title": "9.5 — std::cin and handling invalid input",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/stdcin-and-handling-invalid-input",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/stdcin-and-handling-invalid-input"
+  },
+  {
+    "title": "8.10 — For statements",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/for-statements",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/for-statements"
+  },
+  {
+    "title": "8.9 — Do while statements",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/do-while-statements",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/do-while-statements"
+  },
+  {
+    "title": "8.15 — Global random numbers (Random.h)",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/global-random-numbers-random-h",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/global-random-numbers-random-h"
+  },
+  {
+    "title": "8.8 — Introduction to loops and while statements",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-loops-and-while-statements",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-loops-and-while-statements"
+  },
+  {
+    "title": "8.14 — Generating random numbers using Mersenne Twister",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/generating-random-numbers-using-mersenne-twister",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/generating-random-numbers-using-mersenne-twister"
+  },
+  {
+    "title": "8.12 — Halts (exiting your program early)",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/halts-exiting-your-program-early",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/halts-exiting-your-program-early"
+  },
+  {
+    "title": "9.x — Chapter 9 summary and quiz",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/chapter-9-summary-and-quiz",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/chapter-9-summary-and-quiz"
+  },
+  {
+    "title": "8.13 — Introduction to random number generation",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-random-number-generation",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-random-number-generation"
+  },
+  {
+    "title": "8.x — Chapter 8 summary and quiz",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/chapter-8-summary-and-quiz",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/chapter-8-summary-and-quiz"
+  },
+  {
+    "title": "9.1 — Introduction to testing your code",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-testing-your-code",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-testing-your-code"
+  },
+  {
+    "title": "8.11 — Break and continue",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/break-and-continue",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/break-and-continue"
+  },
+  {
+    "title": "9.3 — Common semantic errors in C++",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/common-semantic-errors-in-c",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/common-semantic-errors-in-c"
+  },
+  {
+    "title": "9.2 — Code coverage",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/code-coverage",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/code-coverage"
+  },
+  {
+    "title": "11.5 — Default arguments",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/default-arguments",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/default-arguments"
+  },
+  {
+    "title": "11.3 — Function overload resolution and ambiguous matches",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/function-overload-resolution-and-ambiguous-matches",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/function-overload-resolution-and-ambiguous-matches"
+  },
+  {
+    "title": "10.4 — Narrowing conversions, list initialization, and constexpr initializers",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/narrowing-conversions-list-initialization-and-constexpr-initializers",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/narrowing-conversions-list-initialization-and-constexpr-initializers"
+  },
+  {
+    "title": "10.1 — Implicit type conversion",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/implicit-type-conversion",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/implicit-type-conversion"
+  },
+  {
+    "title": "10.2 — Floating-point and integral promotion",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/floating-point-and-integral-promotion",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/floating-point-and-integral-promotion"
+  },
+  {
+    "title": "10.3 — Numeric conversions",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/numeric-conversions",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/numeric-conversions"
+  },
+  {
+    "title": "10.x — Chapter 10 summary and quiz",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/chapter-10-summary-and-quiz",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/chapter-10-summary-and-quiz"
+  },
+  {
+    "title": "10.7 — Typedefs and type aliases",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/typedefs-and-type-aliases",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/typedefs-and-type-aliases"
+  },
+  {
+    "title": "10.5 — Arithmetic conversions",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/arithmetic-conversions",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/arithmetic-conversions"
+  },
+  {
+    "title": "11.2 — Function overload differentiation",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/function-overload-differentiation",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/function-overload-differentiation"
+  },
+  {
+    "title": "10.9 — Type deduction for functions",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/type-deduction-for-functions",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/type-deduction-for-functions"
+  },
+  {
+    "title": "11.6 — Function templates",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/function-templates",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/function-templates"
+  },
+  {
+    "title": "10.8 — Type deduction for objects using the auto keyword",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/type-deduction-for-objects-using-the-auto-keyword",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/type-deduction-for-objects-using-the-auto-keyword"
+  },
+  {
+    "title": "11.4 — Deleting functions",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/deleting-functions",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/deleting-functions"
+  },
+  {
+    "title": "11.1 — Introduction to function overloading",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-function-overloading",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-function-overloading"
+  },
+  {
+    "title": "10.6 — Explicit type conversion (casting) and static_cast",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/explicit-type-conversion-casting-and-static-cast",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/explicit-type-conversion-casting-and-static-cast"
+  },
+  {
+    "title": "F.3 — Constexpr functions (part 3) and consteval",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/constexpr-functions-part-3-and-consteval",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/constexpr-functions-part-3-and-consteval"
+  },
+  {
+    "title": "11.9 — Non-type template parameters",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/non-type-template-parameters",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/non-type-template-parameters"
+  },
+  {
+    "title": "11.8 — Function templates with multiple template types",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/function-templates-with-multiple-template-types",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/function-templates-with-multiple-template-types"
+  },
+  {
+    "title": "F.1 — Constexpr functions",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/constexpr-functions",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/constexpr-functions"
+  },
+  {
+    "title": "11.x — Chapter 11 summary and quiz",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/chapter-11-summary-and-quiz",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/chapter-11-summary-and-quiz"
+  },
+  {
+    "title": "F.2 — Constexpr functions (part 2)",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/constexpr-functions-part-2",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/constexpr-functions-part-2"
+  },
+  {
+    "title": "11.7 — Function template instantiation",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/function-template-instantiation",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/function-template-instantiation"
+  },
+  {
+    "title": "11.10 — Using function templates in multiple files",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/using-function-templates-in-multiple-files",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/using-function-templates-in-multiple-files"
+  },
+  {
+    "title": "12.2 — Value categories (lvalues and rvalues)",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/value-categories-lvalues-and-rvalues",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/value-categories-lvalues-and-rvalues"
+  },
+  {
+    "title": "F.4 — Constexpr functions (part 4)",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/constexpr-functions-part-4",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/constexpr-functions-part-4"
+  },
+  {
+    "title": "12.1 — Introduction to compound data types",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/introduction-to-compound-data-types",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/introduction-to-compound-data-types"
+  },
+  {
+    "title": "F.X — Chapter F summary and quiz",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/chapter-f-summary-and-quiz",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/chapter-f-summary-and-quiz"
+  },
+  {
+    "title": "12.3 — Lvalue references",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/lvalue-references",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/lvalue-references"
+  },
+  {
+    "title": "12.4 — Lvalue references to const",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/lvalue-references-to-const",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/lvalue-references-to-const"
+  },
+  {
+    "title": "12.5 — Pass by lvalue reference",
+    "category": "CPP TUTORIAL",
+    "path": "/cpp-tutorial/pass-by-lvalue-reference",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/cpp-tutorial/pass-by-lvalue-reference"
+  },
+  {
+    "title": "Learn C++",
+    "category": "LearnCpp.com",
+    "path": "/docs",
+    "site": "learncpp",
+    "headings": [],
+    "preview": "/docs"
+  }
+]

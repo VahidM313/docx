@@ -1,0 +1,306 @@
+[
+  {
+    "title": "Getting Started | Vite",
+    "category": "Vite",
+    "path": "/guide/",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Performance | Vite",
+    "category": "Vite",
+    "path": "/guide/performance",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Using Plugins | Vite",
+    "category": "Vite",
+    "path": "/guide/using-plugins",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Why Vite | Vite",
+    "category": "Vite",
+    "path": "/guide/why",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Command Line Interface | Vite",
+    "category": "Vite",
+    "path": "/guide/cli",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Building for Production | Vite",
+    "category": "Vite",
+    "path": "/guide/build",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Features | Vite",
+    "category": "Vite",
+    "path": "/guide/features",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Env Variables and Modes | Vite",
+    "category": "Vite",
+    "path": "/guide/env-and-mode",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Backend Integration | Vite",
+    "category": "Vite",
+    "path": "/guide/backend-integration",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Troubleshooting | Vite",
+    "category": "Vite",
+    "path": "/guide/troubleshooting",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Migration from v7 | Vite",
+    "category": "Vite",
+    "path": "/guide/migration",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Configuring Vite | Vite",
+    "category": "Vite",
+    "path": "/config/",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Static Asset Handling | Vite",
+    "category": "Vite",
+    "path": "/guide/assets",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Server-Side Rendering (SSR) | Vite",
+    "category": "Vite",
+    "path": "/guide/ssr",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Project Philosophy | Vite",
+    "category": "Vite",
+    "path": "/guide/philosophy",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Dependency Pre-Bundling | Vite",
+    "category": "Vite",
+    "path": "/guide/dep-pre-bundling",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Deploying a Static Site | Vite",
+    "category": "Vite",
+    "path": "/guide/static-deploy",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Dep Optimization Options | Vite",
+    "category": "Vite",
+    "path": "/config/dep-optimization-options",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "SSR Options | Vite",
+    "category": "Vite",
+    "path": "/config/ssr-options",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Plugin API | Vite",
+    "category": "Vite",
+    "path": "/guide/api-plugin",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Environment API for Frameworks | Vite",
+    "category": "Vite",
+    "path": "/guide/api-environment-frameworks",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Breaking Changes | Vite",
+    "category": "Vite",
+    "path": "/changes/",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Preview Options | Vite",
+    "category": "Vite",
+    "path": "/config/preview-options",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Build Options | Vite",
+    "category": "Vite",
+    "path": "/config/build-options",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "JavaScript API | Vite",
+    "category": "Vite",
+    "path": "/guide/api-javascript",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Worker Options | Vite",
+    "category": "Vite",
+    "path": "/config/worker-options",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Environment API | Vite",
+    "category": "Vite",
+    "path": "/guide/api-environment",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Using Environment Instances | Vite",
+    "category": "Vite",
+    "path": "/guide/api-environment-instances",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Server Options | Vite",
+    "category": "Vite",
+    "path": "/config/server-options",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "HMR API | Vite",
+    "category": "Vite",
+    "path": "/guide/api-hmr",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Environment API for Plugins | Vite",
+    "category": "Vite",
+    "path": "/guide/api-environment-plugins",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Environment API for Runtimes | Vite",
+    "category": "Vite",
+    "path": "/guide/api-environment-runtimes",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Shared Options | Vite",
+    "category": "Vite",
+    "path": "/config/shared-options",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "SSR Using ModuleRunner API | Vite",
+    "category": "Vite",
+    "path": "/changes/ssr-using-modulerunner",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "HMR hotUpdate Plugin Hook | Vite",
+    "category": "Vite",
+    "path": "/changes/hotupdate-hook",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Move to Per-environment APIs | Vite",
+    "category": "Vite",
+    "path": "/changes/per-environment-apis",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "Shared Plugins during Build | Vite",
+    "category": "Vite",
+    "path": "/changes/shared-plugins-during-build",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  },
+  {
+    "title": "this.environment in Hooks | Vite",
+    "category": "Vite",
+    "path": "/changes/this-environment-in-hooks",
+    "site": "vite",
+    "headings": [],
+    "preview": "Next Generation Frontend Tooling"
+  }
+]

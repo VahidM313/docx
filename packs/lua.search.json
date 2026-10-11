@@ -1,0 +1,642 @@
+[
+  {
+    "title": "Lua 5.4 Reference Manual - contents",
+    "category": "Lua 5.4 Reference",
+    "path": "/manual/5.4/",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Lua 5.4 Reference Manual - contents"
+  },
+  {
+    "title": "Programming in Lua",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua"
+  },
+  {
+    "title": "Lua 5.4 Reference Manual",
+    "category": "Lua 5.4 Reference",
+    "path": "/manual/5.4/manual.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Lua 5.4 Reference Manual"
+  },
+  {
+    "title": "Programming in Lua (first edition)",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/contents.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua (first edition)"
+  },
+  {
+    "title": "Programming in Lua - errata",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/errata.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua - errata"
+  },
+  {
+    "title": "Programming in Lua : cover",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/cover.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : cover"
+  },
+  {
+    "title": "Programming in Lua : p1",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/p1.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : p1"
+  },
+  {
+    "title": "Programming in Lua : 2.2",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/2.2.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 2.2"
+  },
+  {
+    "title": "Programming in Lua : p1.5",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/p1.5.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : p1.5"
+  },
+  {
+    "title": "Programming in Lua : 2.1",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/2.1.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 2.1"
+  },
+  {
+    "title": "Programming in Lua : 1.2",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/1.2.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 1.2"
+  },
+  {
+    "title": "Programming in Lua : 1.4",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/1.4.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 1.4"
+  },
+  {
+    "title": "Programming in Lua : 2",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/2.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 2"
+  },
+  {
+    "title": "Programming in Lua : p1.3",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/p1.3.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : p1.3"
+  },
+  {
+    "title": "Programming in Lua : p1.4",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/p1.4.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : p1.4"
+  },
+  {
+    "title": "Programming in Lua : p1.1",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/p1.1.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : p1.1"
+  },
+  {
+    "title": "Programming in Lua : 1",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/1.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 1"
+  },
+  {
+    "title": "Programming in Lua : p1.2",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/p1.2.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : p1.2"
+  },
+  {
+    "title": "Programming in Lua : 1.1",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/1.1.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 1.1"
+  },
+  {
+    "title": "Programming in Lua : 1.3",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/1.3.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 1.3"
+  },
+  {
+    "title": "Programming in Lua : 2.3",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/2.3.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 2.3"
+  },
+  {
+    "title": "Programming in Lua : 2.6",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/2.6.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 2.6"
+  },
+  {
+    "title": "Programming in Lua : 2.7",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/2.7.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 2.7"
+  },
+  {
+    "title": "Programming in Lua : 3",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/3.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 3"
+  },
+  {
+    "title": "Programming in Lua : 3.1",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/3.1.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 3.1"
+  },
+  {
+    "title": "Programming in Lua : 3.3",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/3.3.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 3.3"
+  },
+  {
+    "title": "Programming in Lua : 3.2",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/3.2.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 3.2"
+  },
+  {
+    "title": "Programming in Lua : 3.4",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/3.4.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 3.4"
+  },
+  {
+    "title": "Programming in Lua : 2.4",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/2.4.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 2.4"
+  },
+  {
+    "title": "Programming in Lua : 3.5",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/3.5.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 3.5"
+  },
+  {
+    "title": "Programming in Lua : 3.6",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/3.6.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 3.6"
+  },
+  {
+    "title": "Programming in Lua : 4",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/4.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 4"
+  },
+  {
+    "title": "Programming in Lua : 4.2",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/4.2.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 4.2"
+  },
+  {
+    "title": "Programming in Lua : 2.5",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/2.5.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 2.5"
+  },
+  {
+    "title": "Programming in Lua : 4.1",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/4.1.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 4.1"
+  },
+  {
+    "title": "Programming in Lua : 4.3",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/4.3.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 4.3"
+  },
+  {
+    "title": "Programming in Lua : 4.3.1",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/4.3.1.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 4.3.1"
+  },
+  {
+    "title": "Programming in Lua : 4.3.2",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/4.3.2.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 4.3.2"
+  },
+  {
+    "title": "Programming in Lua : 4.3.3",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/4.3.3.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 4.3.3"
+  },
+  {
+    "title": "Programming in Lua : 4.3.4",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/4.3.4.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 4.3.4"
+  },
+  {
+    "title": "Programming in Lua : 4.3.5",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/4.3.5.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 4.3.5"
+  },
+  {
+    "title": "Programming in Lua : 4.4",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/4.4.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 4.4"
+  },
+  {
+    "title": "Programming in Lua : 5",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/5.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 5"
+  },
+  {
+    "title": "Programming in Lua : 5.1",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/5.1.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 5.1"
+  },
+  {
+    "title": "Programming in Lua : 6",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/6.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 6"
+  },
+  {
+    "title": "Programming in Lua : 5.3",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/5.3.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 5.3"
+  },
+  {
+    "title": "Programming in Lua : 5.2",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/5.2.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 5.2"
+  },
+  {
+    "title": "Programming in Lua : 6.2",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/6.2.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 6.2"
+  },
+  {
+    "title": "Programming in Lua : 6.1",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/6.1.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 6.1"
+  },
+  {
+    "title": "Programming in Lua : 6.3",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/6.3.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 6.3"
+  },
+  {
+    "title": "Programming in Lua : 7",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/7.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 7"
+  },
+  {
+    "title": "Programming in Lua : 7.1",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/7.1.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 7.1"
+  },
+  {
+    "title": "Programming in Lua : 7.2",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/7.2.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 7.2"
+  },
+  {
+    "title": "Programming in Lua : 7.3",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/7.3.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 7.3"
+  },
+  {
+    "title": "Programming in Lua : 7.4",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/7.4.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 7.4"
+  },
+  {
+    "title": "Programming in Lua : 7.5",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/7.5.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 7.5"
+  },
+  {
+    "title": "Programming in Lua : 8",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/8.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 8"
+  },
+  {
+    "title": "Programming in Lua : 8.1",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/8.1.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 8.1"
+  },
+  {
+    "title": "Programming in Lua : 8.2",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/8.2.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 8.2"
+  },
+  {
+    "title": "Programming in Lua : 8.5",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/8.5.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 8.5"
+  },
+  {
+    "title": "Programming in Lua : 8.4",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/8.4.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 8.4"
+  },
+  {
+    "title": "Programming in Lua : 8.3",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/8.3.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 8.3"
+  },
+  {
+    "title": "Programming in Lua : 9",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/9.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 9"
+  },
+  {
+    "title": "Programming in Lua : 9.2",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/9.2.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 9.2"
+  },
+  {
+    "title": "Programming in Lua : 9.1",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/9.1.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 9.1"
+  },
+  {
+    "title": "Programming in Lua : 9.4",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/9.4.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 9.4"
+  },
+  {
+    "title": "Programming in Lua : 9.3",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/9.3.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 9.3"
+  },
+  {
+    "title": "Programming in Lua : 10",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/10.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 10"
+  },
+  {
+    "title": "Programming in Lua : 10.1",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/10.1.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 10.1"
+  },
+  {
+    "title": "Programming in Lua : 10.2",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/10.2.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 10.2"
+  },
+  {
+    "title": "Programming in Lua : 11",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/11.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 11"
+  },
+  {
+    "title": "Programming in Lua : 11.2",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/11.2.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 11.2"
+  },
+  {
+    "title": "Programming in Lua : 11.1",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/11.1.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 11.1"
+  },
+  {
+    "title": "Programming in Lua : 11.3",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/11.3.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 11.3"
+  },
+  {
+    "title": "Programming in Lua : 11.5",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/11.5.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 11.5"
+  },
+  {
+    "title": "Programming in Lua : 11.4",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/11.4.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 11.4"
+  },
+  {
+    "title": "Programming in Lua : 11.6",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/11.6.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 11.6"
+  },
+  {
+    "title": "Programming in Lua : 12.1",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/12.1.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 12.1"
+  },
+  {
+    "title": "Programming in Lua : 12",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/12.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 12"
+  },
+  {
+    "title": "Programming in Lua : 12.1.1",
+    "category": "Lua 5.4 Reference",
+    "path": "/pil/12.1.1.html",
+    "site": "lua",
+    "headings": [],
+    "preview": "Lua 5.4 Reference documentation — Programming in Lua : 12.1.1"
+  }
+]

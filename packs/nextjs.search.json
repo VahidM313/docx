@@ -1,0 +1,1442 @@
+[
+  {
+    "title": "Next.js Docs | Next.js",
+    "category": "Next.js",
+    "path": "/docs",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Welcome to the Next.js Documentation."
+  },
+  {
+    "title": "Getting Started: Installation | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/getting-started/installation",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to create a new Next.js application with the `create-next-app` CLI, and set up TypeScript, ESLint, and Module Path Aliases."
+  },
+  {
+    "title": "Getting Started: Project Structure | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/getting-started/project-structure",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn the folder and file conventions in Next.js, and how to organize your project."
+  },
+  {
+    "title": "Getting Started: Image Optimization | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/getting-started/images",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to optimize images in Next.js"
+  },
+  {
+    "title": "App Router: Getting Started | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/getting-started",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to create full-stack web applications with the Next.js App Router."
+  },
+  {
+    "title": "Getting Started: Server and Client Components | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/getting-started/server-and-client-components",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how you can use React Server and Client Components to render parts of your application on the server or the client."
+  },
+  {
+    "title": "Getting Started: Mutating Data | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/getting-started/mutating-data",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to mutate data using Server Functions and Server Actions in Next.js."
+  },
+  {
+    "title": "Getting Started: Caching | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/getting-started/caching",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to cache data and UI in Next.js"
+  },
+  {
+    "title": "Getting Started: Fetching Data | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/getting-started/fetching-data",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to fetch data and stream content that depends on data."
+  },
+  {
+    "title": "Getting Started: Font Optimization | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/getting-started/fonts",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to optimize fonts in Next.js"
+  },
+  {
+    "title": "Getting Started: Linking and Navigating | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/getting-started/linking-and-navigating",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how the built-in navigation optimizations work, including prefetching, prerendering, and client-side navigation, and how to optimize navigation for dynamic routes and slow networks."
+  },
+  {
+    "title": "Getting Started: Route Handlers | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/getting-started/route-handlers",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Create custom request handlers with Next.js Route Handlers using the Web Request and Response APIs."
+  },
+  {
+    "title": "Getting Started: CSS | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/getting-started/css",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn about the different ways to add CSS to your application, including Tailwind CSS, CSS Modules, Global CSS, and more."
+  },
+  {
+    "title": "Getting Started: Layouts and Pages | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/getting-started/layouts-and-pages",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to create your first pages and layouts, and link between them with the Link component."
+  },
+  {
+    "title": "Getting Started: Metadata and OG images | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/getting-started/metadata-and-og-images",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to add metadata to your pages and create dynamic OG images."
+  },
+  {
+    "title": "Getting Started: Error Handling | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/getting-started/error-handling",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to display expected errors and handle uncaught exceptions."
+  },
+  {
+    "title": "Getting Started: Revalidating | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/getting-started/revalidating",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to revalidate cached data using time-based and on-demand strategies."
+  },
+  {
+    "title": "Guides: CDN Caching | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/cdn-caching",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how CDN caching works with Next.js, including what works today, cache variability, and the direction toward pathname-based cache keying."
+  },
+  {
+    "title": "Getting Started: Deploying | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/getting-started/deploying",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to deploy your Next.js application."
+  },
+  {
+    "title": "Guides: AI Coding Agents | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/ai-agents",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how Next.js helps AI coding agents use current framework guidance, inspect applications, verify changes, and report issues."
+  },
+  {
+    "title": "Guides: Backend for Frontend | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/backend-for-frontend",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to use Next.js as a backend framework"
+  },
+  {
+    "title": "Getting Started: Upgrading | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/getting-started/upgrading",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to upgrade your Next.js application to the latest version or canary."
+  },
+  {
+    "title": "Getting Started: Proxy | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/getting-started/proxy",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Use Next.js Proxy to rewrite, redirect, modify headers, or respond directly before a request completes."
+  },
+  {
+    "title": "App Router: Guides | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to implement common patterns and real-world use cases using Next.js"
+  },
+  {
+    "title": "Guides: Analytics | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/analytics",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Measure and track page performance using Next.js Speed Insights"
+  },
+  {
+    "title": "Guides: Client-side data fetching | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/client-side-data-fetching",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Fetch data in Client Components with a data-fetching library, optionally provide initial data from a Server Component, and coordinate server and client caches."
+  },
+  {
+    "title": "Guides: Authentication | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/authentication",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to implement authentication in your Next.js application."
+  },
+  {
+    "title": "Guides: Caching (Previous Model) | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/caching-without-cache-components",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to cache and revalidate data using fetch options, unstable_cache, and route segment configs for projects not using Cache Components."
+  },
+  {
+    "title": "Guides: Building | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/building",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn what happens when you run next build and how to read the build output."
+  },
+  {
+    "title": "Client-side data fetching: SWR | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/client-side-data-fetching/swr",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Fetch client-side data with SWR, optionally provide initial data from a Server Component, and coordinate server and client caches."
+  },
+  {
+    "title": "Guides: Adopting Partial Prefetching | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/adopting-partial-prefetching",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to enable Partial Prefetching and what changes for `&lt;Link&gt;`."
+  },
+  {
+    "title": "Guides: CI Build Caching | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/ci-build-caching",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to configure CI to cache Next.js builds"
+  },
+  {
+    "title": "Guides: Authentication with Cache Components | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/authentication-with-cache-components",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to read the user session, show authenticated UI without slowing down the page, and cache data derived from the session when Cache Components is enabled."
+  },
+  {
+    "title": "Guides: Draft Mode | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/draft-mode",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Bypass Next.js caching for a request so editors can preview unpublished content from a headless CMS."
+  },
+  {
+    "title": "Guides: ISR | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/incremental-static-regeneration",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to create or update static pages at runtime with Incremental Static Regeneration."
+  },
+  {
+    "title": "Guides: Data Security | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/data-security",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn the built-in data security features in Next.js and learn best practices for protecting your application&#x27;s data."
+  },
+  {
+    "title": "Guides: Forms | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/forms",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to create forms in Next.js with React Server Actions."
+  },
+  {
+    "title": "Guides: Custom Server | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/custom-server",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Start a Next.js app programmatically using a custom server."
+  },
+  {
+    "title": "Guides: Content Security Policy | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/content-security-policy",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to set a Content Security Policy (CSP) for your Next.js application."
+  },
+  {
+    "title": "Guides: Debugging | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/debugging",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to debug your Next.js application with VS Code, Chrome DevTools, or Firefox DevTools."
+  },
+  {
+    "title": "Guides: Environment Variables | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/environment-variables",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn to add and access environment variables in your Next.js application."
+  },
+  {
+    "title": "Guides: Deploying to Platforms | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/deploying-to-platforms",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Understand which Next.js features require specific platform capabilities and how to choose the right deployment target."
+  },
+  {
+    "title": "Client-side data fetching: TanStack Query | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/client-side-data-fetching/tanstack-query",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Fetch client-side data with TanStack Query, optionally provide initial data from a Server Component, and coordinate server and client caches."
+  },
+  {
+    "title": "Guides: CSS-in-JS | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/css-in-js",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Use CSS-in-JS libraries with Next.js"
+  },
+  {
+    "title": "Guides: How Revalidation Works | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/how-revalidation-works",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "A deep dive into how Next.js revalidates cached content, including the tag system, cache consistency, and multi-instance coordination."
+  },
+  {
+    "title": "Guides: Instant navigation | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/instant-navigation",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to structure your app to prefetch and prerender more content, providing instant page loads and client navigations."
+  },
+  {
+    "title": "Guides: Instrumentation | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/instrumentation",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to use instrumentation to run code at server startup in your Next.js app"
+  },
+  {
+    "title": "Guides: ISR with Cache Components | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/incremental-static-regeneration-cache-components",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to prerender a subset of dynamic routes, serve App Shells for the rest, and upgrade them after the first visit."
+  },
+  {
+    "title": "Guides: Interactive apps | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/interactive-apps",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to build responsive interactions with Server Functions, transitions, optimistic UI, and pending feedback."
+  },
+  {
+    "title": "Guides: Lazy Loading | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/lazy-loading",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Lazy load imported libraries and React Components to improve your application&#x27;s loading performance."
+  },
+  {
+    "title": "Guides: Migrating to Cache Components | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/migrating-to-cache-components",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to migrate from route segment configs to Cache Components in Next.js."
+  },
+  {
+    "title": "Guides: Memory Usage | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/memory-usage",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Optimize memory used by your application in development and production."
+  },
+  {
+    "title": "Guides: Next.js MCP Server | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/mcp",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to give coding agents access to your running Next.js app through the built-in MCP endpoint."
+  },
+  {
+    "title": "Guides: Internationalization | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/internationalization",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Add support for multiple languages with internationalized routing and localized content."
+  },
+  {
+    "title": "Guides: JSON-LD | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/json-ld",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to add JSON-LD to your Next.js application to describe your content to search engines and AI."
+  },
+  {
+    "title": "Migrating: Create React App | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/migrating/from-create-react-app",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to migrate your existing React application from Create React App to Next.js."
+  },
+  {
+    "title": "Migrating: Vite | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/migrating/from-vite",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to migrate your existing React application from Vite to Next.js."
+  },
+  {
+    "title": "Guides: Development Environment | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/local-development",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to optimize your local development environment with Next.js."
+  },
+  {
+    "title": "Guides: Multi-tenant | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/multi-tenant",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to build multi-tenant apps with the App Router."
+  },
+  {
+    "title": "Guides: Keeping pages static | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/keeping-pages-static",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Keep selected route output static as your app changes."
+  },
+  {
+    "title": "Guides: MDX | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/mdx",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to configure MDX and use it in your Next.js apps."
+  },
+  {
+    "title": "Guides: Multi-zones | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/multi-zones",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to build micro-frontends using Next.js Multi-Zones to deploy multiple Next.js apps under a single domain."
+  },
+  {
+    "title": "Migrating: App Router | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/migrating/app-router-migration",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to upgrade your existing Next.js application from the Pages Router to the App Router."
+  },
+  {
+    "title": "Guides: Migrating | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/migrating",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to migrate from popular frameworks to Next.js"
+  },
+  {
+    "title": "Guides: Offline support | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/offline-support",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "How a Next.js app can recover when the network drops mid-fetch or mid-Server Action, and how to communicate that state to the user."
+  },
+  {
+    "title": "Guides: OpenTelemetry | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/open-telemetry",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to instrument your Next.js app with OpenTelemetry."
+  },
+  {
+    "title": "Guides: Sass | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/sass",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Style your Next.js application using Sass."
+  },
+  {
+    "title": "Guides: Production | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/production-checklist",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Recommendations to ensure the best performance and user experience before taking your Next.js application to production."
+  },
+  {
+    "title": "Guides: Optimizing prefetching | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/optimizing-prefetching",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Resolve per-link URL data, include session data in the App Shell, or defer expensive work to a later navigation stage."
+  },
+  {
+    "title": "Guides: Preventing Flash | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/preventing-flash-before-hydration",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to correct server-rendered content before the browser paints, avoiding visible flash when the page hydrates."
+  },
+  {
+    "title": "Guides: Redirecting | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/redirecting",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn the different ways to handle redirects in Next.js."
+  },
+  {
+    "title": "Guides: Rendering Philosophy | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/rendering-philosophy",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how Next.js treats static and dynamic rendering as a spectrum at the component level, and what this means for deployment."
+  },
+  {
+    "title": "Guides: Preserving UI state | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/preserving-ui-state",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how React&#x27;s Activity component preserves UI state across navigations in Next.js and how to control what resets."
+  },
+  {
+    "title": "Guides: Public pages | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/public-static-pages",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to build public, &quot;static&quot; pages that share data across users, such as landing pages, list pages (products, blogs, etc.), marketing and news sites."
+  },
+  {
+    "title": "Guides: Scripts | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/scripts",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Optimize 3rd party scripts with the built-in Script component."
+  },
+  {
+    "title": "Guides: Prefetching | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/prefetching",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to configure prefetching in Next.js"
+  },
+  {
+    "title": "Guides: PPR Platform Guide | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/ppr-platform-guide",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "A guide for platform engineers on implementing PPR support, from basic origin rendering to optimized CDN integration."
+  },
+  {
+    "title": "Guides: Self-Hosting | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/self-hosting",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to self-host your Next.js application on a Node.js server, Docker image, or static HTML files (static exports)."
+  },
+  {
+    "title": "Guides: Package Bundling | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/package-bundling",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to analyze and optimize your application&#x27;s server and client bundles with the Next.js Bundle Analyzer for Turbopack, and the `@next/bundle-analyzer` plugin for Webpack."
+  },
+  {
+    "title": "Guides: PWAs | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/progressive-web-apps",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to build a Progressive Web Application (PWA) with Next.js."
+  },
+  {
+    "title": "Guides: Optimizing the static shell | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/optimizing-the-static-shell",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to use Cache Components to keep layouts, navigation, and useful loading states available while request-time content streams."
+  },
+  {
+    "title": "Guides: Static Exports | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/static-exports",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Next.js enables starting as a static site or Single-Page Application (SPA), then later optionally upgrading to use features that require a server."
+  },
+  {
+    "title": "Upgrading: Codemods | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/upgrading/codemods",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Use codemods to upgrade your Next.js codebase when new features are released."
+  },
+  {
+    "title": "Testing: Jest | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/testing/jest",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to set up Jest with Next.js for Unit Testing and Snapshot Testing."
+  },
+  {
+    "title": "Upgrading: Version 14 | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/upgrading/version-14",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Upgrade your Next.js Application from Version 13 to 14."
+  },
+  {
+    "title": "Guides: Testing | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/testing",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to set up Next.js with four commonly used testing tools — Cypress, Playwright, Vitest, and Jest."
+  },
+  {
+    "title": "Testing: Playwright | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/testing/playwright",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to set up Playwright with Next.js for End-to-End (E2E) Testing."
+  },
+  {
+    "title": "Guides: Server Actions | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/server-actions",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "How Server Actions work in Next.js, including the single-roundtrip response model, sequential dispatch, security, and caching integration."
+  },
+  {
+    "title": "Testing: Vitest | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/testing/vitest",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to set up Vitest with Next.js for Unit Testing."
+  },
+  {
+    "title": "Guides: Server and Client Boundary | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/server-and-client-boundary",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn where Server and Client Components run in the App Router and how the boundary between them works."
+  },
+  {
+    "title": "Guides: Upgrading | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/upgrading",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to upgrade to the latest versions of Next.js."
+  },
+  {
+    "title": "Guides: Streaming | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/streaming",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how streaming works in Next.js and how to use it to progressively render UI as data becomes available."
+  },
+  {
+    "title": "Upgrading: Upgrade with a coding agent | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/upgrading/agent-upgrade",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Use a coding agent to upgrade and verify a Next.js app."
+  },
+  {
+    "title": "Guides: Tailwind CSS v3 | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/tailwind-v3-css",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Style your Next.js Application using Tailwind CSS v3 for broader browser support."
+  },
+  {
+    "title": "Guides: Third Party Libraries | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/third-party-libraries",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Optimize the performance of third-party libraries in your application with the `@next/third-parties` package."
+  },
+  {
+    "title": "Guides: SPAs | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/single-page-applications",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Next.js fully supports building Single-Page Applications (SPAs)."
+  },
+  {
+    "title": "Testing: Cypress | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/testing/cypress",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to set up Cypress with Next.js for End-to-End (E2E) and Component Testing."
+  },
+  {
+    "title": "Upgrading: Version 15 | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/upgrading/version-15",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Upgrade your Next.js Application from Version 14 to 15."
+  },
+  {
+    "title": "Guides: View transitions | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/view-transitions",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to use view transitions to communicate meaning during navigation, loading, and content changes in a Next.js app."
+  },
+  {
+    "title": "Components: Link Component | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/components/link",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Enable fast client-side navigation with the built-in `next/link` component."
+  },
+  {
+    "title": "App Router: API Reference | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Next.js API Reference for the App Router."
+  },
+  {
+    "title": "Directives: use cache: remote | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/directives/use-cache-remote",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to use the &quot;use cache: remote&quot; directive for persistent, shared caching using remote cache handlers."
+  },
+  {
+    "title": "Components: Image Component | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/components/image",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Optimize Images in your Next.js Application using the built-in `next/image` Component."
+  },
+  {
+    "title": "Directives: use cache | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/directives/use-cache",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to use the &quot;use cache&quot; directive to cache data in your Next.js application."
+  },
+  {
+    "title": "Upgrading: Version 16 | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/upgrading/version-16",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Upgrade your Next.js Application from Version 15 to 16."
+  },
+  {
+    "title": "Components: Font | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/components/font",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Optimizing loading web fonts with the built-in `next/font` loaders."
+  },
+  {
+    "title": "API Reference: Directives | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/directives",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how React and Next.js directives define client entry points, Server Functions, and cached output."
+  },
+  {
+    "title": "Directives: use server | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/directives/use-server",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to use the use server directive to execute code on the server."
+  },
+  {
+    "title": "API Reference: Components | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/components",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for Next.js built-in components."
+  },
+  {
+    "title": "Directives: use client | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/directives/use-client",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to use the use client directive to render a component on the client."
+  },
+  {
+    "title": "Components: Form Component | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/components/form",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to use the `&lt;Form&gt;` component to handle form submissions and search params updates with client-side navigation."
+  },
+  {
+    "title": "Directives: use cache: private | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/directives/use-cache-private",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to use the &quot;use cache: private&quot; directive to cache functions that access runtime request APIs."
+  },
+  {
+    "title": "Guides: Videos | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/guides/videos",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Recommendations and best practices for optimizing videos in your Next.js application."
+  },
+  {
+    "title": "File-system conventions: loading.js | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/loading",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API reference for the loading.js file."
+  },
+  {
+    "title": "File-system conventions: not-found.js | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/not-found",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API reference for the not-found.js file."
+  },
+  {
+    "title": "Components: Script Component | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/components/script",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Optimize third-party scripts in your Next.js application using the built-in `next/script` Component."
+  },
+  {
+    "title": "File-system conventions: Parallel Routes | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/parallel-routes",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Simultaneously render one or more pages in the same view that can be navigated independently. A pattern for highly dynamic applications."
+  },
+  {
+    "title": "File-system conventions: instrumentation-client.js | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/instrumentation-client",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to add client-side instrumentation to track and monitor your Next.js application&#x27;s frontend performance."
+  },
+  {
+    "title": "File-system conventions: instrumentation.js | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/instrumentation",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API reference for the instrumentation.js file."
+  },
+  {
+    "title": "File-system conventions: Dynamic Segments | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/dynamic-routes",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Use Dynamic Segments to read URL path params and generate routes from dynamic data."
+  },
+  {
+    "title": "File-system conventions: proxy.js | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/proxy",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API reference for the proxy.js file."
+  },
+  {
+    "title": "File-system conventions: default.js | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/default",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the default.js file."
+  },
+  {
+    "title": "File-system conventions: layout.js | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/layout",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API reference for the layout.js file."
+  },
+  {
+    "title": "File-system conventions: forbidden.js | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/forbidden",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API reference for the forbidden.js special file."
+  },
+  {
+    "title": "API Reference: File-system conventions | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for Next.js file-system conventions."
+  },
+  {
+    "title": "File-system conventions: page.js | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/page",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API reference for the page.js file."
+  },
+  {
+    "title": "File-system conventions: mdx-components.js | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/mdx-components",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API reference for the mdx-components.js file."
+  },
+  {
+    "title": "File-system conventions: error.js | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/error",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API reference for the error.js special file."
+  },
+  {
+    "title": "File-system conventions: Intercepting Routes | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/intercepting-routes",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Use intercepting routes to load a new route within the current layout while masking the browser URL, useful for advanced routing patterns such as modals."
+  },
+  {
+    "title": "Metadata Files: manifest.json | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/metadata/manifest",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for manifest.json file."
+  },
+  {
+    "title": "Metadata Files: opengraph-image and twitter-image | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/metadata/opengraph-image",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the Open Graph Image and Twitter Image file conventions."
+  },
+  {
+    "title": "File-system conventions: Route Groups | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/route-groups",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Route Groups can be used to partition your Next.js application into different sections."
+  },
+  {
+    "title": "Metadata Files: robots.txt | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/metadata/robots",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for robots.txt file."
+  },
+  {
+    "title": "File-system conventions: route.js | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/route",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API reference for the route.js special file."
+  },
+  {
+    "title": "File-system conventions: unauthorized.js | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/unauthorized",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API reference for the unauthorized.js special file."
+  },
+  {
+    "title": "File-system conventions: Route Segment Config | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/route-segment-config",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn about how to configure options for Next.js route segments."
+  },
+  {
+    "title": "Metadata Files: sitemap.xml | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/metadata/sitemap",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the sitemap.xml file."
+  },
+  {
+    "title": "Route Segment Config: instant | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/route-segment-config/instant",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Configure instant navigation validation for a route segment."
+  },
+  {
+    "title": "File-system conventions: src | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/src-folder",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Save pages under the `src` folder as an alternative to the root `pages` directory."
+  },
+  {
+    "title": "Route Segment Config: dynamicParams | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/route-segment-config/dynamicParams",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API reference for the dynamicParams route segment config option."
+  },
+  {
+    "title": "File-system conventions: template.js | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/template",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the template.js file."
+  },
+  {
+    "title": "Metadata Files: favicon, icon, and apple-icon | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/metadata/app-icons",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the Favicon, Icon and Apple Icon file conventions."
+  },
+  {
+    "title": "File-system conventions: Metadata Files | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/metadata",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API documentation for the metadata file conventions."
+  },
+  {
+    "title": "Route Segment Config: ensureStatic | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/route-segment-config/ensureStatic",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Require selected route output to remain static instead of rendering per request with the ensureStatic route segment config."
+  },
+  {
+    "title": "File-system conventions: public | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/public-folder",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Next.js allows you to serve static files, like images, in the public directory. You can learn how it works here."
+  },
+  {
+    "title": "Functions: draftMode | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/draft-mode",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the draftMode function."
+  },
+  {
+    "title": "Functions: cookies | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/cookies",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the cookies function."
+  },
+  {
+    "title": "Functions: fetch | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/fetch",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API reference for the extended fetch function."
+  },
+  {
+    "title": "Functions: after | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/after",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the after function."
+  },
+  {
+    "title": "Functions: forbidden | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/forbidden",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the forbidden function."
+  },
+  {
+    "title": "Functions: generateMetadata | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/generate-metadata",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to add Metadata to your Next.js application for improved search engine optimization (SEO) and web shareability."
+  },
+  {
+    "title": "Functions: cacheLife | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/cacheLife",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to use the cacheLife function to set the cache expiration time for a cached function or component."
+  },
+  {
+    "title": "Functions: cacheTag | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/cacheTag",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to use the cacheTag function to manage cache invalidation in your Next.js application."
+  },
+  {
+    "title": "Functions: catchError | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/catchError",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the catchError function."
+  },
+  {
+    "title": "Functions: connection | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/connection",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the connection function."
+  },
+  {
+    "title": "Route Segment Config: prefetch config | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/route-segment-config/prefetch",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Configure how a route segment is prefetched during client navigation."
+  },
+  {
+    "title": "Route Segment Config: maxDuration | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/route-segment-config/maxDuration",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API reference for the maxDuration route segment config option."
+  },
+  {
+    "title": "Functions: generateImageMetadata | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/generate-image-metadata",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to generate multiple images in a single Metadata API special file."
+  },
+  {
+    "title": "Route Segment Config: runtime | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/route-segment-config/runtime",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API reference for the runtime route segment config option."
+  },
+  {
+    "title": "API Reference: Functions | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for Next.js Functions and Hooks."
+  },
+  {
+    "title": "Route Segment Config: preferredRegion (deprecated) | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/file-conventions/route-segment-config/preferredRegion",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API reference for the preferredRegion route segment config option."
+  },
+  {
+    "title": "Functions: generateViewport | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/generate-viewport",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the generateViewport function."
+  },
+  {
+    "title": "Functions: headers | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/headers",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API reference for the headers function."
+  },
+  {
+    "title": "Functions: NextRequest | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/next-request",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for NextRequest."
+  },
+  {
+    "title": "Functions: generateSitemaps | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/generate-sitemaps",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Learn how to use the generateSitemaps function to create multiple sitemaps for your application."
+  },
+  {
+    "title": "Functions: generateStaticParams | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/generate-static-params",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API reference for the generateStaticParams function."
+  },
+  {
+    "title": "Functions: NextResponse | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/next-response",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for NextResponse."
+  },
+  {
+    "title": "Functions: io | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/io",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the io function."
+  },
+  {
+    "title": "Functions: root-params | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/next-root-params",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the next/root-params module that provides access to root-level route parameters."
+  },
+  {
+    "title": "Functions: ImageResponse | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/image-response",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the ImageResponse constructor."
+  },
+  {
+    "title": "Functions: navigation() | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/navigation",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Defer runtime work until the user navigates with the navigation function."
+  },
+  {
+    "title": "Functions: redirect | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/redirect",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the redirect function."
+  },
+  {
+    "title": "Functions: notFound | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/not-found",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the notFound function."
+  },
+  {
+    "title": "Functions: refresh | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/refresh",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the refresh function."
+  },
+  {
+    "title": "Functions: permanentRedirect | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/permanentRedirect",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the permanentRedirect function."
+  },
+  {
+    "title": "Functions: prefetch() | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/prefetch",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "Defer runtime work until a per-link prefetch or navigation with the prefetch function."
+  },
+  {
+    "title": "Functions: revalidatePath | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/revalidatePath",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the revalidatePath function."
+  },
+  {
+    "title": "Functions: revalidateTag | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/revalidateTag",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the revalidateTag function."
+  },
+  {
+    "title": "Functions: unauthorized | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/unauthorized",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the unauthorized function."
+  },
+  {
+    "title": "Functions: unstable_cache | Next.js",
+    "category": "Next.js",
+    "path": "/docs/app/api-reference/functions/unstable_cache",
+    "site": "nextjs",
+    "headings": [],
+    "preview": "API Reference for the unstable_cache function."
+  }
+]

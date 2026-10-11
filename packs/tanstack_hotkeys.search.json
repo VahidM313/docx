@@ -1,0 +1,426 @@
+[
+  {
+    "title": "Overview | TanStack Hotkeys Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/overview",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "TanStack Hotkeys is a type-safe, headless library for keyboard shortcuts, sequences, recording, and key state tracking. Use its framework adapters for registration and cleanup, and build shortcut..."
+  },
+  {
+    "title": "Quick Start | TanStack Hotkeys Alpine Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/alpine/quick-start",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Install @tanstack/alpine-hotkeys with the installation instructions. This guide builds a save shortcut and shows the component lifecycle used by the other APIs. The Alpine adapter runs in the browser...."
+  },
+  {
+    "title": "Quick Start | TanStack Hotkeys Svelte Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/svelte/quick-start",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Don"
+  },
+  {
+    "title": "Quick Start | TanStack Hotkeys Lit Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/lit/quick-start",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Don"
+  },
+  {
+    "title": "Hotkeys Guide | TanStack Hotkeys React Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/react/guides/hotkeys",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "The useHotkey hook is the primary way to register keyboard shortcuts in React applications. It wraps the singleton HotkeyManager with automatic lifecycle management, stale-closure prevention, and..."
+  },
+  {
+    "title": "Quick Start | TanStack Hotkeys Ember Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/ember/quick-start",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Install @tanstack/ember-hotkeys with the installation instructions. This guide builds a save shortcut and shows the component lifecycle used by the other APIs. Use a strict-mode .gts component. Import..."
+  },
+  {
+    "title": "Quick Start | TanStack Hotkeys React Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/react/quick-start",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Don"
+  },
+  {
+    "title": "Hotkeys Guide | TanStack Hotkeys Preact Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/preact/guides/hotkeys",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "The useHotkey hook is the primary way to register keyboard shortcuts in Preact applications. It wraps the singleton HotkeyManager with automatic lifecycle management, stale-closure prevention, and..."
+  },
+  {
+    "title": "Installation | TanStack Hotkeys Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/installation",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Install the adapter for your framework with your preferred package manager: Each framework package re-exports everything from the core @tanstack/hotkeys package, so you don"
+  },
+  {
+    "title": "Quick Start | TanStack Hotkeys Octane Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/octane/quick-start",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Install @tanstack/octane-hotkeys with the installation instructions. This guide builds a save shortcut and shows the component lifecycle used by the other APIs. Put this code in a .tsrx file compiled..."
+  },
+  {
+    "title": "Quick Start | TanStack Hotkeys Angular Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/angular/quick-start",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Don"
+  },
+  {
+    "title": "Hotkeys Guide | TanStack Hotkeys Solid Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/solid/guides/hotkeys",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "The createHotkey primitive is the primary way to register keyboard shortcuts in SolidJS applications. It wraps the singleton HotkeyManager with automatic lifecycle management and reactive option..."
+  },
+  {
+    "title": "@tanstack/hotkeys | TanStack Hotkeys Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/reference/index",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "HotkeyManager HotkeyRecorder HotkeySequenceRecorder KeyStateTracker SequenceManager CreateHotkeyHandlerOptions FormatDisplayOptions HeldModifierOptions HotkeyCallbackContext HotkeyConflictOptions..."
+  },
+  {
+    "title": "Quick Start | TanStack Hotkeys Vue Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/vue/quick-start",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Don"
+  },
+  {
+    "title": "Devtools | TanStack Hotkeys Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/devtools",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "TanStack Hotkeys ships devtools for debugging and monitoring your registered hotkeys in real time, as a panel inside the TanStack Devtools multi-panel UI. The Hotkeys devtools exports are no-ops..."
+  },
+  {
+    "title": "React TanStack Hotkeys Kitchen Sink Example | TanStack Hotkeys Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/react/examples/kitchen-sink",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "An example showing how to implement Kitchen Sink in React using TanStack Hotkeys."
+  },
+  {
+    "title": "Key State Tracking Guide | TanStack Hotkeys Alpine Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/alpine/guides/key-state-tracking",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Use createHeldKeys, createHeldKeyCodes, and createKeyHold to render the current keyboard state. Use createHotkeyHint to reveal shortcut labels while their modifiers are held. Returns a reactive .value..."
+  },
+  {
+    "title": "@tanstack/alpine-hotkeys | TanStack Hotkeys Alpine Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/alpine/reference/index",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "AlpineHotkeyRecorder AlpineHotkeys AlpineHotkeySequenceRecorder AlpineHotkeyState DefaultHotkeysOptions HotkeyRegistrationsResult MaybeGetter createHotkeysScope hotkeysPlugin"
+  },
+  {
+    "title": "Sequence Recording Guide | TanStack Hotkeys Alpine Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/alpine/guides/sequence-recording",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Use createHotkeySequenceRecorder to record an ordered sequence of chords. Recording defaults to physical codes, such as ["
+  },
+  {
+    "title": "Sequences Guide | TanStack Hotkeys Alpine Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/alpine/guides/sequences",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "A sequence is an ordered list of chords. Use createHotkeySequence for one sequence and createHotkeySequences for a changing list. A chord can be a logical binding such as G, a physical position such..."
+  },
+  {
+    "title": "Hotkeys Guide | TanStack Hotkeys Alpine Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/alpine/guides/hotkeys",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "createHotkey registers a shortcut with the shared HotkeyManager. Create one scope for each Alpine component. Register shortcuts in init() so getters and callbacks read the reactive component instance...."
+  },
+  {
+    "title": "Formatting &amp; Display Guide | TanStack Hotkeys Alpine Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/alpine/guides/formatting-display",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Use formatForDisplay whenever a binding appears in a menu, button, hint, or shortcut settings panel. It accepts logical strings, bracketed physical strings, raw objects, and parsed bindings. Store the..."
+  },
+  {
+    "title": "Hotkeys Guide | TanStack Hotkeys Svelte Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/svelte/guides/hotkeys",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Use createHotkey for global shortcuts and createHotkeyAttachment for element-scoped shortcuts. The common global case stays simple, and scoped behavior feels native to Svelte 5. Use a logical binding..."
+  },
+  {
+    "title": "Sequences Guide | TanStack Hotkeys Svelte Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/svelte/guides/sequences",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "TanStack Hotkeys supports multi-key sequences in Svelte, where keys are pressed one after another rather than simultaneously. Sequence steps use the same string syntax as single hotkeys. For example,..."
+  },
+  {
+    "title": "Ember TanStack Hotkeys Kitchen Sink Example | TanStack Hotkeys Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/ember/examples/kitchen-sink",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "An example showing how to implement Kitchen Sink in Ember using TanStack Hotkeys."
+  },
+  {
+    "title": "Svelte TanStack Hotkeys Kitchen Sink Example | TanStack Hotkeys Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/svelte/examples/kitchen-sink",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "An example showing how to implement Kitchen Sink in Svelte using TanStack Hotkeys."
+  },
+  {
+    "title": "Octane TanStack Hotkeys Kitchen Sink Example | TanStack Hotkeys Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/octane/examples/kitchen-sink",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "An example showing how to implement Kitchen Sink in Octane using TanStack Hotkeys."
+  },
+  {
+    "title": "Hotkey Recording Guide | TanStack Hotkeys Alpine Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/alpine/guides/hotkey-recording",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Use createHotkeyRecorder to build a shortcut customization UI. Recording defaults to physical codes, producing values such as Mod+[KeyS]. Store that value directly and pass it to createHotkey. Use..."
+  },
+  {
+    "title": "Vanilla TanStack Hotkeys FormatForDisplay Example | TanStack Hotkeys Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/vanilla/examples/formatForDisplay",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "An example showing how to implement FormatForDisplay in Vanilla using TanStack Hotkeys."
+  },
+  {
+    "title": "Alpine TanStack Hotkeys Kitchen Sink Example | TanStack Hotkeys Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/alpine/examples/kitchen-sink",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "An example showing how to implement Kitchen Sink in Alpine using TanStack Hotkeys."
+  },
+  {
+    "title": "Formatting &amp; Display Guide | TanStack Hotkeys Lit Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/lit/guides/formatting-display",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Use formatForDisplay whenever a binding appears in a menu, button, hint, or shortcut settings panel. It accepts logical strings, bracketed physical strings, raw objects, and parsed bindings. Store the..."
+  },
+  {
+    "title": "Key State Tracking Guide | TanStack Hotkeys Lit Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/lit/guides/key-state-tracking",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "TanStack Hotkeys provides three Lit reactive controllers for tracking the real-time state of keyboard keys. Use them to show modifier state in the UI or to build hold-to-activate features. Tracks all..."
+  },
+  {
+    "title": "Hotkey Recording Guide | TanStack Hotkeys Lit Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/lit/guides/hotkey-recording",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "TanStack Hotkeys provides the HotkeyRecorderController for building keyboard shortcut customization UIs. This lets users record their own shortcuts by pressing the desired key combination, similar to..."
+  },
+  {
+    "title": "Sequence Recording Guide | TanStack Hotkeys Lit Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/lit/guides/sequence-recording",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "TanStack Hotkeys provides the HotkeySequenceRecorderController for building UIs where users record multi-chord sequences (Vim-style shortcuts). Each step is captured like a single hotkey chord; users..."
+  },
+  {
+    "title": "Key State Tracking Guide | TanStack Hotkeys Svelte Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/svelte/guides/key-state-tracking",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "TanStack Hotkeys provides three Svelte functions for tracking live keyboard state: getHeldKeys, getHeldKeyCodesMap, and getIsKeyHeld. All three functions subscribe to the singleton KeyStateTracker:..."
+  },
+  {
+    "title": "Sequences Guide | TanStack Hotkeys Lit Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/lit/guides/sequences",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "TanStack Hotkeys supports multi-key sequences: shortcuts where you press keys one after another rather than simultaneously. Sequences are common in Vim-style navigation, cheat codes, and multi-step..."
+  },
+  {
+    "title": "Hotkey Recording Guide | TanStack Hotkeys Svelte Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/svelte/guides/hotkey-recording",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "TanStack Hotkeys provides the createHotkeyRecorder function for building shortcut customization UIs in Svelte. Recorders default to physical codes: recording a shortcut stores a string such as..."
+  },
+  {
+    "title": "Formatting &amp; Display Guide | TanStack Hotkeys Svelte Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/svelte/guides/formatting-display",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Use formatForDisplay whenever a binding appears in a menu, button, hint, or shortcut settings panel. It accepts logical strings, bracketed physical strings, raw objects, and parsed bindings. Store the..."
+  },
+  {
+    "title": "Sequence Recording Guide | TanStack Hotkeys Svelte Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/svelte/guides/sequence-recording",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Use createHotkeySequenceRecorder to capture a series of shortcut chords. By default, each step records its physical code: pressing G twice produces ["
+  },
+  {
+    "title": "Hotkey Recording Guide | TanStack Hotkeys React Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/react/guides/hotkey-recording",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "The useHotkeyRecorder hook is for building keyboard shortcut customization UIs. Users record their own shortcuts by pressing the key combination they want, the same way system preferences or IDE..."
+  },
+  {
+    "title": "Hotkeys Guide | TanStack Hotkeys Lit Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/lit/guides/hotkeys",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "The @hotkey decorator is the primary way to register keyboard shortcuts in Lit applications. It binds a hotkey to a class method, automatically registering when the element connects to the DOM and..."
+  },
+  {
+    "title": "Lit TanStack Hotkeys Kitchen Sink Example | TanStack Hotkeys Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/lit/examples/kitchen-sink",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "An example showing how to implement Kitchen Sink in Lit using TanStack Hotkeys."
+  },
+  {
+    "title": "Sequences Guide | TanStack Hotkeys React Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/react/guides/sequences",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "TanStack Hotkeys supports multi-key sequences, shortcuts where you press keys one after another rather than together. Think Vim-style navigation, cheat codes, or multi-step commands. Sequence steps..."
+  },
+  {
+    "title": "Formatting &amp; Display Guide | TanStack Hotkeys React Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/react/guides/formatting-display",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Use formatForDisplay whenever a binding appears in a menu, button, hint, or shortcut settings panel. It accepts logical strings, bracketed physical strings, raw objects, and parsed bindings. Store the..."
+  },
+  {
+    "title": "Key State Tracking Guide | TanStack Hotkeys React Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/react/guides/key-state-tracking",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "TanStack Hotkeys provides three hooks for tracking which keys are held down right now. Use them to show modifier state in the UI or to build hold-to-activate features. Returns a reactive array of all..."
+  },
+  {
+    "title": "Sequence Recording Guide | TanStack Hotkeys React Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/react/guides/sequence-recording",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "The useHotkeySequenceRecorder hook is for building UIs where users record multi-chord sequences (Vim-style shortcuts). Each step is captured like a single hotkey chord. Users finish with Enter by..."
+  },
+  {
+    "title": "Hotkeys Guide | TanStack Hotkeys Ember Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/ember/guides/hotkeys",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "useHotkey registers a shortcut with the shared HotkeyManager. useHotkey, useHotkeys, useHotkeySequence, and useHotkeySequences are template helpers. Invoke them with {{...}}, not as JavaScript hooks...."
+  },
+  {
+    "title": "Sequences Guide | TanStack Hotkeys Ember Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/ember/guides/sequences",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "A sequence is an ordered list of chords. Use useHotkeySequence for one sequence and useHotkeySequences for a changing list. A chord can be a logical binding such as G, a physical position such as..."
+  },
+  {
+    "title": "Hotkey Recording Guide | TanStack Hotkeys Ember Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/ember/guides/hotkey-recording",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Use useHotkeyRecorder to build a shortcut customization UI. Recording defaults to physical codes, producing values such as Mod+[KeyS]. Store that value directly and pass it to useHotkey. Use..."
+  },
+  {
+    "title": "Key State Tracking Guide | TanStack Hotkeys Ember Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/ember/guides/key-state-tracking",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Use useHeldKeys, useHeldKeyCodes, and useKeyHold to render the current keyboard state. Use useHotkeyHint to reveal shortcut labels while their modifiers are held. Returns a reactive .value containing..."
+  },
+  {
+    "title": "Sequence Recording Guide | TanStack Hotkeys Ember Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/ember/guides/sequence-recording",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Use useHotkeySequenceRecorder to record an ordered sequence of chords. Recording defaults to physical codes, such as ["
+  },
+  {
+    "title": "@tanstack/ember-hotkeys | TanStack Hotkeys Ember Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/ember/reference/index",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "onHotkey onHotkeys useHotkey useHotkeys useHotkeySequence useHotkeySequences DefaultHotkeysOptions EmberHotkeyRecorder EmberHotkeySequenceRecorder EmberHotkeysScope EmberHotkeyState..."
+  },
+  {
+    "title": "Formatting &amp; Display Guide | TanStack Hotkeys Ember Docs",
+    "category": "TanStack Hotkeys",
+    "path": "/hotkeys/latest/docs/framework/ember/guides/formatting-display",
+    "site": "tanstack_hotkeys",
+    "headings": [],
+    "preview": "Use formatForDisplay whenever a binding appears in a menu, button, hint, or shortcut settings panel. It accepts logical strings, bracketed physical strings, raw objects, and parsed bindings. Store the..."
+  }
+]

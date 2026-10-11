@@ -1,0 +1,1610 @@
+[
+  {
+    "title": "C++26",
+    "category": "CPP",
+    "path": "/cpp/26",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/26"
+  },
+  {
+    "title": "std:: vector",
+    "category": "CPP",
+    "path": "/cpp/container/vector",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/container/vector"
+  },
+  {
+    "title": "Feature testing (since C++20)",
+    "category": "CPP",
+    "path": "/cpp/feature_test",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/feature_test"
+  },
+  {
+    "title": "C99",
+    "category": "C",
+    "path": "/c/99",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/99"
+  },
+  {
+    "title": "Constant expressions",
+    "category": "CPP",
+    "path": "/cpp/language/constant_expression",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/constant_expression"
+  },
+  {
+    "title": "std:: memory_order",
+    "category": "CPP",
+    "path": "/cpp/atomic/memory_order",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/atomic/memory_order"
+  },
+  {
+    "title": "std:: multimap",
+    "category": "CPP",
+    "path": "/cpp/container/multimap",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/container/multimap"
+  },
+  {
+    "title": "std::experimental:: scope_exit",
+    "category": "CPP",
+    "path": "/cpp/experimental/scope_exit",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/experimental/scope_exit"
+  },
+  {
+    "title": "A list of open-source C++ libraries",
+    "category": "CPP",
+    "path": "/cpp/links/libs",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/links/libs"
+  },
+  {
+    "title": "std:: basic_regex",
+    "category": "CPP",
+    "path": "/cpp/regex/basic_regex",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/regex/basic_regex"
+  },
+  {
+    "title": "Initialization",
+    "category": "C",
+    "path": "/c/language/initialization",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/language/initialization"
+  },
+  {
+    "title": "std::experimental:: ostream_joiner",
+    "category": "CPP",
+    "path": "/cpp/experimental/ostream_joiner",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/experimental/ostream_joiner"
+  },
+  {
+    "title": "C11",
+    "category": "C",
+    "path": "/c/11",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/11"
+  },
+  {
+    "title": "Iterator library",
+    "category": "CPP",
+    "path": "/cpp/iterator",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/iterator"
+  },
+  {
+    "title": "Type support (basic types, RTTI)",
+    "category": "CPP",
+    "path": "/cpp/types",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/types"
+  },
+  {
+    "title": "Preprocessor",
+    "category": "CPP",
+    "path": "/cpp/preprocessor",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/preprocessor"
+  },
+  {
+    "title": "Overload resolution",
+    "category": "CPP",
+    "path": "/cpp/language/overload_resolution",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/overload_resolution"
+  },
+  {
+    "title": "Variadic functions",
+    "category": "CPP",
+    "path": "/cpp/utility/variadic",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/utility/variadic"
+  },
+  {
+    "title": "Comments",
+    "category": "CPP",
+    "path": "/cpp/comment",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/comment"
+  },
+  {
+    "title": "C++20",
+    "category": "CPP",
+    "path": "/cpp/20",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/20"
+  },
+  {
+    "title": "C++23",
+    "category": "CPP",
+    "path": "/cpp/23",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/23"
+  },
+  {
+    "title": "Contract assertions (since C++26)",
+    "category": "CPP",
+    "path": "/cpp/language/contracts",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/contracts"
+  },
+  {
+    "title": "std:: text_encoding",
+    "category": "CPP",
+    "path": "/cpp/text/text_encoding",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/text/text_encoding"
+  },
+  {
+    "title": "Reflection library (since C++26)",
+    "category": "CPP",
+    "path": "/cpp/meta/reflection",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/meta/reflection"
+  },
+  {
+    "title": "C++14",
+    "category": "CPP",
+    "path": "/cpp/14",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/14"
+  },
+  {
+    "title": "std:: atomic_ref",
+    "category": "CPP",
+    "path": "/cpp/atomic/atomic_ref",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/atomic/atomic_ref"
+  },
+  {
+    "title": "Order of evaluation",
+    "category": "CPP",
+    "path": "/cpp/language/eval_order",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/eval_order"
+  },
+  {
+    "title": "Declarations",
+    "category": "CPP",
+    "path": "/cpp/language/declarations",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/declarations"
+  },
+  {
+    "title": "std:: atomic",
+    "category": "CPP",
+    "path": "/cpp/atomic/atomic",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/atomic/atomic"
+  },
+  {
+    "title": "Strings library",
+    "category": "C",
+    "path": "/c/string",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/string"
+  },
+  {
+    "title": "Metaprogramming library (since C++11)",
+    "category": "CPP",
+    "path": "/cpp/meta",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/meta"
+  },
+  {
+    "title": "std:: bitset",
+    "category": "CPP",
+    "path": "/cpp/utility/bitset",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/utility/bitset"
+  },
+  {
+    "title": "while loop",
+    "category": "CPP",
+    "path": "/cpp/language/while",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/while"
+  },
+  {
+    "title": "Compiler support for C++29",
+    "category": "CPP",
+    "path": "/cpp/compiler_support/29",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/compiler_support/29"
+  },
+  {
+    "title": "std:: set",
+    "category": "CPP",
+    "path": "/cpp/container/set",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/container/set"
+  },
+  {
+    "title": "Library feature-test macros (since C++20)",
+    "category": "CPP",
+    "path": "/cpp/utility/feature_test",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/utility/feature_test"
+  },
+  {
+    "title": "std:: initializer_list",
+    "category": "CPP",
+    "path": "/cpp/utility/initializer_list",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/utility/initializer_list"
+  },
+  {
+    "title": "do - while loop",
+    "category": "CPP",
+    "path": "/cpp/language/do",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/do"
+  },
+  {
+    "title": "Compile-time rational arithmetic (since C++11)",
+    "category": "CPP",
+    "path": "/cpp/numeric/ratio",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/numeric/ratio"
+  },
+  {
+    "title": "Input/output library",
+    "category": "CPP",
+    "path": "/cpp/io",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/io"
+  },
+  {
+    "title": "Numerics library",
+    "category": "CPP",
+    "path": "/cpp/numeric",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/numeric"
+  },
+  {
+    "title": "Statements",
+    "category": "C",
+    "path": "/c/language/statements",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/language/statements"
+  },
+  {
+    "title": "std:: basic_ostream",
+    "category": "CPP",
+    "path": "/cpp/io/basic_ostream",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/io/basic_ostream"
+  },
+  {
+    "title": "Concurrency support library (since C++11)",
+    "category": "CPP",
+    "path": "/cpp/thread",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/thread"
+  },
+  {
+    "title": "Compiler support for C++23",
+    "category": "CPP",
+    "path": "/cpp/compiler_support/23",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/compiler_support/23"
+  },
+  {
+    "title": "std:: hive",
+    "category": "CPP",
+    "path": "/cpp/container/hive",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/container/hive"
+  },
+  {
+    "title": "Functions",
+    "category": "CPP",
+    "path": "/cpp/language/functions",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/functions"
+  },
+  {
+    "title": "Extensions for concurrency",
+    "category": "CPP",
+    "path": "/cpp/experimental/concurrency",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/experimental/concurrency"
+  },
+  {
+    "title": "Dynamic memory management",
+    "category": "C",
+    "path": "/c/memory",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/memory"
+  },
+  {
+    "title": "Coroutines (C++20)",
+    "category": "CPP",
+    "path": "/cpp/language/coroutines",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/coroutines"
+  },
+  {
+    "title": "std:: deque",
+    "category": "CPP",
+    "path": "/cpp/container/deque",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/container/deque"
+  },
+  {
+    "title": "std:: numeric_limits",
+    "category": "CPP",
+    "path": "/cpp/types/numeric_limits",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/types/numeric_limits"
+  },
+  {
+    "title": "switch statement",
+    "category": "CPP",
+    "path": "/cpp/language/switch",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/switch"
+  },
+  {
+    "title": "Named Requirements",
+    "category": "CPP",
+    "path": "/cpp/named_req",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/named_req"
+  },
+  {
+    "title": "Program support utilities",
+    "category": "C",
+    "path": "/c/program",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/program"
+  },
+  {
+    "title": "SIMD library",
+    "category": "CPP",
+    "path": "/cpp/experimental/simd",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/experimental/simd"
+  },
+  {
+    "title": "Bit manipulation (since C++20)",
+    "category": "CPP",
+    "path": "/cpp/utility/bit",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/utility/bit"
+  },
+  {
+    "title": "Common mathematical functions",
+    "category": "CPP",
+    "path": "/cpp/numeric/math",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/numeric/math"
+  },
+  {
+    "title": "std:: integer_sequence",
+    "category": "CPP",
+    "path": "/cpp/utility/integer_sequence",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/utility/integer_sequence"
+  },
+  {
+    "title": "Text processing library",
+    "category": "CPP",
+    "path": "/cpp/text",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/text"
+  },
+  {
+    "title": "if statement",
+    "category": "CPP",
+    "path": "/cpp/language/if",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/if"
+  },
+  {
+    "title": "C keywords",
+    "category": "C",
+    "path": "/c/keyword",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/keyword"
+  },
+  {
+    "title": "Name lookup",
+    "category": "CPP",
+    "path": "/cpp/language/lookup",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/lookup"
+  },
+  {
+    "title": "Compiler support for C++26",
+    "category": "CPP",
+    "path": "/cpp/compiler_support/26",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/compiler_support/26"
+  },
+  {
+    "title": "Type traits (since C++11)",
+    "category": "CPP",
+    "path": "/cpp/meta/type_traits",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/meta/type_traits"
+  },
+  {
+    "title": "Diagnostics library",
+    "category": "CPP",
+    "path": "/cpp/error",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/error"
+  },
+  {
+    "title": "Compiler support for C++11",
+    "category": "CPP",
+    "path": "/cpp/compiler_support/11",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/compiler_support/11"
+  },
+  {
+    "title": "std::experimental:: randint",
+    "category": "CPP",
+    "path": "/cpp/experimental/randint",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/experimental/randint"
+  },
+  {
+    "title": "std:: source_location",
+    "category": "CPP",
+    "path": "/cpp/utility/source_location",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/utility/source_location"
+  },
+  {
+    "title": "C Standard Library headers",
+    "category": "C",
+    "path": "/c/header",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/header"
+  },
+  {
+    "title": "C++29",
+    "category": "CPP",
+    "path": "/cpp/29",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/29"
+  },
+  {
+    "title": "Declarations",
+    "category": "C",
+    "path": "/c/language/declarations",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/language/declarations"
+  },
+  {
+    "title": "Constrained algorithms (since C++20)",
+    "category": "CPP",
+    "path": "/cpp/algorithm/ranges",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/algorithm/ranges"
+  },
+  {
+    "title": "std:: mdspan",
+    "category": "CPP",
+    "path": "/cpp/container/mdspan",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/container/mdspan"
+  },
+  {
+    "title": "Useful resources",
+    "category": "CPP",
+    "path": "/cpp/links",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/links"
+  },
+  {
+    "title": "std:: basic_stacktrace",
+    "category": "CPP",
+    "path": "/cpp/utility/basic_stacktrace",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/utility/basic_stacktrace"
+  },
+  {
+    "title": "Algorithms library",
+    "category": "CPP",
+    "path": "/cpp/algorithm",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/algorithm"
+  },
+  {
+    "title": "C++ standard libraries extensions, version 2",
+    "category": "CPP",
+    "path": "/cpp/experimental/lib_extensions_2",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/experimental/lib_extensions_2"
+  },
+  {
+    "title": "std:: list",
+    "category": "CPP",
+    "path": "/cpp/container/list",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/container/list"
+  },
+  {
+    "title": "C++ Operator Precedence",
+    "category": "CPP",
+    "path": "/cpp/language/operator_precedence",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/operator_precedence"
+  },
+  {
+    "title": "Compiler support for C++17",
+    "category": "CPP",
+    "path": "/cpp/compiler_support/17",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/compiler_support/17"
+  },
+  {
+    "title": "std:: span",
+    "category": "CPP",
+    "path": "/cpp/container/span",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/container/span"
+  },
+  {
+    "title": "std:: jthread",
+    "category": "CPP",
+    "path": "/cpp/thread/jthread",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/thread/jthread"
+  },
+  {
+    "title": "std:: multiset",
+    "category": "CPP",
+    "path": "/cpp/container/multiset",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/container/multiset"
+  },
+  {
+    "title": "std:: basic_string",
+    "category": "CPP",
+    "path": "/cpp/string/basic_string",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/string/basic_string"
+  },
+  {
+    "title": "std::experimental::pmr:: resource_adaptor, std::pmr::experimental:: resource_adaptor",
+    "category": "CPP",
+    "path": "/cpp/experimental/resource_adaptor",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/experimental/resource_adaptor"
+  },
+  {
+    "title": "Localization library",
+    "category": "CPP",
+    "path": "/cpp/locale",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/locale"
+  },
+  {
+    "title": "Basic linear algebra algorithms (since C++26)",
+    "category": "CPP",
+    "path": "/cpp/numeric/linalg",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/numeric/linalg"
+  },
+  {
+    "title": "std:: expected",
+    "category": "CPP",
+    "path": "/cpp/utility/expected",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/utility/expected"
+  },
+  {
+    "title": "Value categories",
+    "category": "CPP",
+    "path": "/cpp/language/value_category",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/value_category"
+  },
+  {
+    "title": "std::experimental:: invocation_type, std::experimental:: raw_invocation_type",
+    "category": "CPP",
+    "path": "/cpp/experimental/invocation_type",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/experimental/invocation_type"
+  },
+  {
+    "title": "Functions",
+    "category": "C",
+    "path": "/c/language/functions",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/language/functions"
+  },
+  {
+    "title": "Extensions for parallelism, version 2",
+    "category": "CPP",
+    "path": "/cpp/experimental/parallelism_2",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/experimental/parallelism_2"
+  },
+  {
+    "title": "Ranges library (since C++20)",
+    "category": "CPP",
+    "path": "/cpp/ranges",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/ranges"
+  },
+  {
+    "title": "std:: complex",
+    "category": "CPP",
+    "path": "/cpp/numeric/complex",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/numeric/complex"
+  },
+  {
+    "title": "std:: hash",
+    "category": "CPP",
+    "path": "/cpp/utility/hash",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/utility/hash"
+  },
+  {
+    "title": "C++ standard libraries extensions",
+    "category": "CPP",
+    "path": "/cpp/experimental/lib_extensions",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/experimental/lib_extensions"
+  },
+  {
+    "title": "Date and time library",
+    "category": "CPP",
+    "path": "/cpp/chrono",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/chrono"
+  },
+  {
+    "title": "Data-parallel types (SIMD) (since C++26)",
+    "category": "CPP",
+    "path": "/cpp/numeric/simd",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/numeric/simd"
+  },
+  {
+    "title": "Basic concepts",
+    "category": "C",
+    "path": "/c/language/basic_concepts",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/language/basic_concepts"
+  },
+  {
+    "title": "C++ Standard Library",
+    "category": "CPP",
+    "path": "/cpp/standard_library",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/standard_library"
+  },
+  {
+    "title": "C23",
+    "category": "C",
+    "path": "/c/23",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/23"
+  },
+  {
+    "title": "Mathematical constants",
+    "category": "CPP",
+    "path": "/cpp/numeric/constants",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/numeric/constants"
+  },
+  {
+    "title": "Null-terminated byte strings",
+    "category": "C",
+    "path": "/c/string/byte",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/string/byte"
+  },
+  {
+    "title": "std:: pair",
+    "category": "CPP",
+    "path": "/cpp/utility/pair",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/utility/pair"
+  },
+  {
+    "title": "Regular expressions library (since C++11)",
+    "category": "CPP",
+    "path": "/cpp/regex",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/regex"
+  },
+  {
+    "title": "Exceptions",
+    "category": "CPP",
+    "path": "/cpp/language/exceptions",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/exceptions"
+  },
+  {
+    "title": "Containers library",
+    "category": "CPP",
+    "path": "/cpp/container",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/container"
+  },
+  {
+    "title": "Classes",
+    "category": "CPP",
+    "path": "/cpp/language/classes",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/classes"
+  },
+  {
+    "title": "Execution control library (since C++26)",
+    "category": "CPP",
+    "path": "/cpp/execution",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/execution"
+  },
+  {
+    "title": "std:: char_traits",
+    "category": "CPP",
+    "path": "/cpp/string/char_traits",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/string/char_traits"
+  },
+  {
+    "title": "for loop",
+    "category": "CPP",
+    "path": "/cpp/language/for",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/for"
+  },
+  {
+    "title": "std:: valarray",
+    "category": "CPP",
+    "path": "/cpp/numeric/valarray",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/numeric/valarray"
+  },
+  {
+    "title": "std:: tuple",
+    "category": "CPP",
+    "path": "/cpp/utility/tuple",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/utility/tuple"
+  },
+  {
+    "title": "std Symbol Index",
+    "category": "CPP",
+    "path": "/cpp/symbol_index",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/symbol_index"
+  },
+  {
+    "title": "std:: forward_list",
+    "category": "CPP",
+    "path": "/cpp/container/forward_list",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/container/forward_list"
+  },
+  {
+    "title": "std:: unordered_map",
+    "category": "CPP",
+    "path": "/cpp/container/unordered_map",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/container/unordered_map"
+  },
+  {
+    "title": "C++17",
+    "category": "CPP",
+    "path": "/cpp/17",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/17"
+  },
+  {
+    "title": "Pseudo-random number generation",
+    "category": "CPP",
+    "path": "/cpp/numeric/random",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/numeric/random"
+  },
+  {
+    "title": "std:: unordered_multimap",
+    "category": "CPP",
+    "path": "/cpp/container/unordered_multimap",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/container/unordered_multimap"
+  },
+  {
+    "title": "Error handling",
+    "category": "C",
+    "path": "/c/error",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/error"
+  },
+  {
+    "title": "std:: atomic_flag",
+    "category": "CPP",
+    "path": "/cpp/atomic/atomic_flag",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/atomic/atomic_flag"
+  },
+  {
+    "title": "Expressions",
+    "category": "C",
+    "path": "/c/language/expressions",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/language/expressions"
+  },
+  {
+    "title": "Initialization",
+    "category": "CPP",
+    "path": "/cpp/language/initialization",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/initialization"
+  },
+  {
+    "title": "std::experimental:: is_detected, std::experimental:: detected_t, std::experimental:: detected_or",
+    "category": "CPP",
+    "path": "/cpp/experimental/is_detected",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/experimental/is_detected"
+  },
+  {
+    "title": "C++ keywords",
+    "category": "CPP",
+    "path": "/cpp/keyword",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/keyword"
+  },
+  {
+    "title": "C++ compiler support",
+    "category": "CPP",
+    "path": "/cpp/compiler_support",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/compiler_support"
+  },
+  {
+    "title": "std:: inplace_vector",
+    "category": "CPP",
+    "path": "/cpp/container/inplace_vector",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/container/inplace_vector"
+  },
+  {
+    "title": "std:: unordered_set",
+    "category": "CPP",
+    "path": "/cpp/container/unordered_set",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/container/unordered_set"
+  },
+  {
+    "title": "Compiler support for C++20",
+    "category": "CPP",
+    "path": "/cpp/compiler_support/20",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/compiler_support/20"
+  },
+  {
+    "title": "std:: array",
+    "category": "CPP",
+    "path": "/cpp/container/array",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/container/array"
+  },
+  {
+    "title": "std:: barrier",
+    "category": "CPP",
+    "path": "/cpp/thread/barrier",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/thread/barrier"
+  },
+  {
+    "title": "Union declaration",
+    "category": "CPP",
+    "path": "/cpp/language/union",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/union"
+  },
+  {
+    "title": "C compiler support",
+    "category": "C",
+    "path": "/c/compiler_support",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/compiler_support"
+  },
+  {
+    "title": "Fundamental types",
+    "category": "CPP",
+    "path": "/cpp/language/types",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/types"
+  },
+  {
+    "title": "std:: thread",
+    "category": "CPP",
+    "path": "/cpp/thread/thread",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/thread/thread"
+  },
+  {
+    "title": "C++ language",
+    "category": "CPP",
+    "path": "/cpp/language",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language"
+  },
+  {
+    "title": "Mathematical special functions (since C++17)",
+    "category": "CPP",
+    "path": "/cpp/numeric/special_functions",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/numeric/special_functions"
+  },
+  {
+    "title": "Contract support (C++26)",
+    "category": "CPP",
+    "path": "/cpp/contract",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/contract"
+  },
+  {
+    "title": "std:: basic_string_view",
+    "category": "CPP",
+    "path": "/cpp/string/basic_string_view",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/string/basic_string_view"
+  },
+  {
+    "title": "C95",
+    "category": "C",
+    "path": "/c/95",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/95"
+  },
+  {
+    "title": "Null-terminated multibyte strings",
+    "category": "CPP",
+    "path": "/cpp/string/multibyte",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/string/multibyte"
+  },
+  {
+    "title": "std::experimental:: observer_ptr",
+    "category": "CPP",
+    "path": "/cpp/experimental/observer_ptr",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/experimental/observer_ptr"
+  },
+  {
+    "title": "std::experimental:: propagate_const",
+    "category": "CPP",
+    "path": "/cpp/experimental/propagate_const",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/experimental/propagate_const"
+  },
+  {
+    "title": "Transactional memory (TM TS)",
+    "category": "CPP",
+    "path": "/cpp/language/transactional_memory",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/transactional_memory"
+  },
+  {
+    "title": "Program support utilities",
+    "category": "CPP",
+    "path": "/cpp/utility/program",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/utility/program"
+  },
+  {
+    "title": "Formatting library (since C++20)",
+    "category": "CPP",
+    "path": "/cpp/utility/format",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/utility/format"
+  },
+  {
+    "title": "std:: generator",
+    "category": "CPP",
+    "path": "/cpp/coroutine/generator",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/coroutine/generator"
+  },
+  {
+    "title": "ASCII Chart",
+    "category": "CPP",
+    "path": "/cpp/language/ascii",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/ascii"
+  },
+  {
+    "title": "Compiler support for C23",
+    "category": "C",
+    "path": "/c/compiler_support/23",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/compiler_support/23"
+  },
+  {
+    "title": "Coroutine support (C++20)",
+    "category": "CPP",
+    "path": "/cpp/coroutine",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/coroutine"
+  },
+  {
+    "title": "std::experimental:: scope_success",
+    "category": "CPP",
+    "path": "/cpp/experimental/scope_success",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/experimental/scope_success"
+  },
+  {
+    "title": "C17",
+    "category": "C",
+    "path": "/c/17",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/17"
+  },
+  {
+    "title": "Identifiers",
+    "category": "CPP",
+    "path": "/cpp/language/identifiers",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/identifiers"
+  },
+  {
+    "title": "C++11",
+    "category": "CPP",
+    "path": "/cpp/11",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/11"
+  },
+  {
+    "title": "Main function",
+    "category": "CPP",
+    "path": "/cpp/language/main_function",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/main_function"
+  },
+  {
+    "title": "std::experimental:: unique_resource",
+    "category": "CPP",
+    "path": "/cpp/experimental/unique_resource",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/experimental/unique_resource"
+  },
+  {
+    "title": "C and C++ reference",
+    "category": "C++ Reference (cppreference)",
+    "path": "/docs",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/docs"
+  },
+  {
+    "title": "Basic concepts",
+    "category": "CPP",
+    "path": "/cpp/language/basic_concepts",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/basic_concepts"
+  },
+  {
+    "title": "Type support",
+    "category": "C",
+    "path": "/c/types",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/types"
+  },
+  {
+    "title": "C language",
+    "category": "C",
+    "path": "/c/language",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/language"
+  },
+  {
+    "title": "Null-terminated wide strings",
+    "category": "CPP",
+    "path": "/cpp/string/wide",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/string/wide"
+  },
+  {
+    "title": "std:: variant",
+    "category": "CPP",
+    "path": "/cpp/utility/variant",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/utility/variant"
+  },
+  {
+    "title": "Memory management library",
+    "category": "CPP",
+    "path": "/cpp/memory",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/memory"
+  },
+  {
+    "title": "std::experimental:: scope_fail",
+    "category": "CPP",
+    "path": "/cpp/experimental/scope_fail",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/experimental/scope_fail"
+  },
+  {
+    "title": "Experimental C++ Features",
+    "category": "CPP",
+    "path": "/cpp/experimental",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/experimental"
+  },
+  {
+    "title": "Range-based for loop (since C++11)",
+    "category": "CPP",
+    "path": "/cpp/language/range-for",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/range-for"
+  },
+  {
+    "title": "std:: unordered_multiset",
+    "category": "CPP",
+    "path": "/cpp/container/unordered_multiset",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/container/unordered_multiset"
+  },
+  {
+    "title": "std:: optional",
+    "category": "CPP",
+    "path": "/cpp/utility/optional",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/utility/optional"
+  },
+  {
+    "title": "Null-terminated byte strings",
+    "category": "CPP",
+    "path": "/cpp/string/byte",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/string/byte"
+  },
+  {
+    "title": "Low level memory management",
+    "category": "CPP",
+    "path": "/cpp/memory/new",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/memory/new"
+  },
+  {
+    "title": "std:: latch",
+    "category": "CPP",
+    "path": "/cpp/thread/latch",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/thread/latch"
+  },
+  {
+    "title": "Index",
+    "category": "CPP",
+    "path": "/cpp/index",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/index"
+  },
+  {
+    "title": "Concepts library (since C++20)",
+    "category": "CPP",
+    "path": "/cpp/concepts",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/concepts"
+  },
+  {
+    "title": "C and C++ reference",
+    "category": "C++ Reference (cppreference)",
+    "path": "/",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/"
+  },
+  {
+    "title": "Variadic functions",
+    "category": "C",
+    "path": "/c/variadic",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/variadic"
+  },
+  {
+    "title": "std:: map",
+    "category": "CPP",
+    "path": "/cpp/container/map",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/container/map"
+  },
+  {
+    "title": "Expressions",
+    "category": "CPP",
+    "path": "/cpp/language/expressions",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/expressions"
+  },
+  {
+    "title": "Filesystem library (since C++17)",
+    "category": "CPP",
+    "path": "/cpp/filesystem",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/filesystem"
+  },
+  {
+    "title": "Compiler support for C++14",
+    "category": "CPP",
+    "path": "/cpp/compiler_support/14",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/compiler_support/14"
+  },
+  {
+    "title": "Compiler support for C99",
+    "category": "C",
+    "path": "/c/compiler_support/99",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/compiler_support/99"
+  },
+  {
+    "title": "Modules (since C++20)",
+    "category": "CPP",
+    "path": "/cpp/language/modules",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/modules"
+  },
+  {
+    "title": "Modified ECMAScript regular expression grammar",
+    "category": "CPP",
+    "path": "/cpp/regex/ecmascript",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/regex/ecmascript"
+  },
+  {
+    "title": "C reference",
+    "category": "C++ Reference (cppreference)",
+    "path": "/c",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c"
+  },
+  {
+    "title": "Type",
+    "category": "CPP",
+    "path": "/cpp/language/type",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/type"
+  },
+  {
+    "title": "Input/output manipulators",
+    "category": "CPP",
+    "path": "/cpp/io/manip",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/io/manip"
+  },
+  {
+    "title": "Statements",
+    "category": "CPP",
+    "path": "/cpp/language/statements",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/statements"
+  },
+  {
+    "title": "Floating-point environment (since C++11)",
+    "category": "CPP",
+    "path": "/cpp/numeric/fenv",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/numeric/fenv"
+  },
+  {
+    "title": "C++ Standard Library headers",
+    "category": "CPP",
+    "path": "/cpp/header",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/header"
+  },
+  {
+    "title": "C and C++ reference",
+    "category": "C++ Reference (cppreference)",
+    "path": "/Main_Page",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/Main_Page"
+  },
+  {
+    "title": "Function objects",
+    "category": "CPP",
+    "path": "/cpp/utility/functional",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/utility/functional"
+  },
+  {
+    "title": "std:: exception",
+    "category": "CPP",
+    "path": "/cpp/error/exception",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/error/exception"
+  },
+  {
+    "title": "std:: basic_istream",
+    "category": "CPP",
+    "path": "/cpp/io/basic_istream",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/io/basic_istream"
+  },
+  {
+    "title": "Preprocessor",
+    "category": "C",
+    "path": "/c/preprocessor",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/c/preprocessor"
+  },
+  {
+    "title": "C++ reference",
+    "category": "C++ Reference (cppreference)",
+    "path": "/cpp",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp"
+  },
+  {
+    "title": "std:: any",
+    "category": "CPP",
+    "path": "/cpp/utility/any",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/utility/any"
+  },
+  {
+    "title": "C++ standard libraries extensions, version 3",
+    "category": "CPP",
+    "path": "/cpp/experimental/lib_extensions_3",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/experimental/lib_extensions_3"
+  },
+  {
+    "title": "std:: type_info",
+    "category": "CPP",
+    "path": "/cpp/types/type_info",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/types/type_info"
+  },
+  {
+    "title": "Strings library",
+    "category": "CPP",
+    "path": "/cpp/string",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/string"
+  },
+  {
+    "title": "Freestanding and hosted implementations",
+    "category": "CPP",
+    "path": "/cpp/freestanding",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/freestanding"
+  },
+  {
+    "title": "Templates",
+    "category": "CPP",
+    "path": "/cpp/language/templates",
+    "site": "cppreference",
+    "headings": [],
+    "preview": "/cpp/language/templates"
+  }
+]

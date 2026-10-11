@@ -1,0 +1,930 @@
+[
+  {
+    "title": "Hono ​",
+    "category": "Hono",
+    "path": "/docs",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Examples ​",
+    "category": "Hono",
+    "path": "/examples",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Next.js ​",
+    "category": "DOCS",
+    "path": "/docs/getting-started/nextjs",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Fastly Compute ​",
+    "category": "DOCS",
+    "path": "/docs/getting-started/fastly",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Bun ​",
+    "category": "DOCS",
+    "path": "/docs/getting-started/bun",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Developer Experience ​",
+    "category": "DOCS",
+    "path": "/docs/concepts/developer-experience",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Vercel ​",
+    "category": "DOCS",
+    "path": "/docs/getting-started/vercel",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Web Standards ​",
+    "category": "DOCS",
+    "path": "/docs/concepts/web-standard",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/concepts/middleware",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Getting Started ​",
+    "category": "DOCS",
+    "path": "/docs/getting-started/basic",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Cloudflare Workers ​",
+    "category": "DOCS",
+    "path": "/docs/getting-started/cloudflare-workers",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Cloudflare Workers + Vite ​",
+    "category": "DOCS",
+    "path": "/docs/getting-started/cloudflare-workers-vite",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Deno ​",
+    "category": "DOCS",
+    "path": "/docs/getting-started/deno",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Benchmarks ​",
+    "category": "DOCS",
+    "path": "/docs/concepts/benchmarks",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Routers ​",
+    "category": "DOCS",
+    "path": "/docs/concepts/routers",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Philosophy ​",
+    "category": "DOCS",
+    "path": "/docs/concepts/motivation",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Hono Stacks ​",
+    "category": "DOCS",
+    "path": "/docs/concepts/stacks",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Google Cloud Run ​",
+    "category": "DOCS",
+    "path": "/docs/getting-started/google-cloud-run",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Supabase Edge Functions ​",
+    "category": "DOCS",
+    "path": "/docs/getting-started/supabase-functions",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "AWS Lambda ​",
+    "category": "DOCS",
+    "path": "/docs/getting-started/aws-lambda",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Lambda@Edge ​",
+    "category": "DOCS",
+    "path": "/docs/getting-started/lambda-edge",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Azure Functions ​",
+    "category": "DOCS",
+    "path": "/docs/getting-started/azure-functions",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Alibaba Cloud Function Compute ​",
+    "category": "DOCS",
+    "path": "/docs/getting-started/ali-function-compute",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Netlify ​",
+    "category": "DOCS",
+    "path": "/docs/getting-started/netlify",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Tencent CloudBase ​",
+    "category": "DOCS",
+    "path": "/docs/getting-started/cloudbase",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "HTTPException ​",
+    "category": "DOCS",
+    "path": "/docs/api/exception",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "App - Hono ​",
+    "category": "DOCS",
+    "path": "/docs/api/hono",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Service Worker ​",
+    "category": "DOCS",
+    "path": "/docs/getting-started/service-worker",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Node.js ​",
+    "category": "DOCS",
+    "path": "/docs/getting-started/nodejs",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "HonoRequest ​",
+    "category": "DOCS",
+    "path": "/docs/api/request",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Routing ​",
+    "category": "DOCS",
+    "path": "/docs/api/routing",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "WebAssembly (w/ WASI) ​",
+    "category": "DOCS",
+    "path": "/docs/getting-started/webassembly-wasi",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Context ​",
+    "category": "DOCS",
+    "path": "/docs/api/context",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Frequently Asked Questions ​",
+    "category": "DOCS",
+    "path": "/docs/guides/faq",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Helpers ​",
+    "category": "DOCS",
+    "path": "/docs/guides/helpers",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Miscellaneous ​",
+    "category": "DOCS",
+    "path": "/docs/guides/others",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Create-hono ​",
+    "category": "DOCS",
+    "path": "/docs/guides/create-hono",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Accepts Helper ​",
+    "category": "DOCS",
+    "path": "/docs/helpers/accepts",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "ConnInfo Helper ​",
+    "category": "DOCS",
+    "path": "/docs/helpers/conninfo",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Presets ​",
+    "category": "DOCS",
+    "path": "/docs/api/presets",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Adapter Helper ​",
+    "category": "DOCS",
+    "path": "/docs/helpers/adapter",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Testing ​",
+    "category": "DOCS",
+    "path": "/docs/guides/testing",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Client Components ​",
+    "category": "DOCS",
+    "path": "/docs/guides/jsx-dom",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Migrating to v5 ​",
+    "category": "DOCS",
+    "path": "/docs/guides/migrating-to-v5",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Best Practices ​",
+    "category": "DOCS",
+    "path": "/docs/guides/best-practices",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Validation ​",
+    "category": "DOCS",
+    "path": "/docs/guides/validation",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "JSX ​",
+    "category": "DOCS",
+    "path": "/docs/guides/jsx",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/guides/middleware",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "RPC ​",
+    "category": "DOCS",
+    "path": "/docs/guides/rpc",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Cache Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/cache",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Dev Helper ​",
+    "category": "DOCS",
+    "path": "/docs/helpers/dev",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "html Helper ​",
+    "category": "DOCS",
+    "path": "/docs/helpers/html",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Factory Helper ​",
+    "category": "DOCS",
+    "path": "/docs/helpers/factory",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Basic Auth Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/basic-auth",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Testing Helper ​",
+    "category": "DOCS",
+    "path": "/docs/helpers/testing",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Body Limit Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/body-limit",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Proxy Helper ​",
+    "category": "DOCS",
+    "path": "/docs/helpers/proxy",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "JWT Authentication Helper ​",
+    "category": "DOCS",
+    "path": "/docs/helpers/jwt",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "css Helper ​",
+    "category": "DOCS",
+    "path": "/docs/helpers/css",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Bearer Auth Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/bearer-auth",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Route Helper ​",
+    "category": "DOCS",
+    "path": "/docs/helpers/route",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Streaming Helper ​",
+    "category": "DOCS",
+    "path": "/docs/helpers/streaming",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Cookie Helper ​",
+    "category": "DOCS",
+    "path": "/docs/helpers/cookie",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "WebSocket Helper ​",
+    "category": "DOCS",
+    "path": "/docs/helpers/websocket",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "SSG Helper ​",
+    "category": "DOCS",
+    "path": "/docs/helpers/ssg",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Combine Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/combine",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "ETag Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/etag",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "IP Restriction Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/ip-restriction",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "CORS Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/cors",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Compress Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/compress",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Context Storage Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/context-storage",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "JWK Auth Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/jwk",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "JSX Renderer Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/jsx-renderer",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Method Not Allowed Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/method-not-allowed",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "CSRF Protection ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/csrf",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Pretty JSON Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/pretty-json",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Method Override Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/method-override",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "JWT Auth Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/jwt",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Logger Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/logger",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Language Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/language",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Mount Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/mount",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Request ID Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/request-id",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Server-Timing Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/timing",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Secure Headers Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/secure-headers",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Error handling in Validator ​",
+    "category": "EXAMPLES",
+    "path": "/examples/validator-error-handling",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Timeout Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/timeout",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Proxy ​",
+    "category": "EXAMPLES",
+    "path": "/examples/proxy",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Web API ​",
+    "category": "EXAMPLES",
+    "path": "/examples/web-api",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Bind a reverse proxy ​",
+    "category": "EXAMPLES",
+    "path": "/examples/behind-reverse-proxy",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Grouping routes for RPC ​",
+    "category": "EXAMPLES",
+    "path": "/examples/grouping-routes-rpc",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Zod OpenAPI ​",
+    "category": "EXAMPLES",
+    "path": "/examples/zod-openapi",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Third-party Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/third-party",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Trailing Slash Middleware ​",
+    "category": "DOCS",
+    "path": "/docs/middleware/builtin/trailing-slash",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "File Upload ​",
+    "category": "EXAMPLES",
+    "path": "/examples/file-upload",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "CBOR ​",
+    "category": "EXAMPLES",
+    "path": "/examples/cbor",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Hono CLI ​",
+    "category": "DOCS",
+    "path": "/docs/agents/cli",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Hono for Coding Agents ​",
+    "category": "DOCS",
+    "path": "/docs/agents",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Swagger UI ​",
+    "category": "EXAMPLES",
+    "path": "/examples/swagger-ui",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Hono OpenAPI ​",
+    "category": "EXAMPLES",
+    "path": "/examples/hono-openapi",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Cloudflare Queues ​",
+    "category": "EXAMPLES",
+    "path": "/examples/cloudflare-queue",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "htmx ​",
+    "category": "EXAMPLES",
+    "path": "/examples/htmx",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Remix ​",
+    "category": "EXAMPLES",
+    "path": "/examples/with-remix",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Stripe Webhook ​",
+    "category": "EXAMPLES",
+    "path": "/examples/stripe-webhook",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Scalar ​",
+    "category": "EXAMPLES",
+    "path": "/examples/scalar",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Stytch Auth with Hono ​",
+    "category": "EXAMPLES",
+    "path": "/examples/stytch-auth",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Cloudflare Durable Objects ​",
+    "category": "EXAMPLES",
+    "path": "/examples/cloudflare-durable-objects",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Hono Docs ​",
+    "category": "EXAMPLES",
+    "path": "/examples/hono-docs",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Better Auth ​",
+    "category": "EXAMPLES",
+    "path": "/examples/better-auth",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Cloudflare Testing ​",
+    "category": "EXAMPLES",
+    "path": "/examples/cloudflare-vitest",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "InferDI ​",
+    "category": "EXAMPLES",
+    "path": "/examples/inferdi",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Using Prisma on Cloudflare Workers ​",
+    "category": "EXAMPLES",
+    "path": "/examples/prisma",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Pylon ​",
+    "category": "EXAMPLES",
+    "path": "/examples/pylon",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Better Auth on Cloudflare ​",
+    "category": "EXAMPLES",
+    "path": "/examples/better-auth-on-cloudflare",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Monitoring Hono APIs with Apitally ​",
+    "category": "EXAMPLES",
+    "path": "/examples/apitally",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Hono Auth.js Integration ​",
+    "category": "EXAMPLES",
+    "path": "/examples/hono-authjs",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  },
+  {
+    "title": "Hono ​",
+    "category": "Hono",
+    "path": "/",
+    "site": "hono",
+    "headings": [],
+    "preview": "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
+  }
+]

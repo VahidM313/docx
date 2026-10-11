@@ -1,0 +1,266 @@
+[
+  {
+    "title": "Overview | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/overview",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "TanStack Devtools is a framework-agnostic devtool for managing and debugging your devtools. We offer you all the tools you need to build and maintain your own devtools with ease. We will continue to..."
+  },
+  {
+    "title": "Vite Plugin | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/vite-plugin",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "The Vite Plugin for TanStack Devtools provides a seamless integration for using the devtools in your Vite-powered applications. With this plugin, you get complementary features on top of the existing..."
+  },
+  {
+    "title": "Plugin Configuration | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/plugin-configuration",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "You can configure TanStack Devtools plugins by passing them as an array to the plugins prop of the TanStackDevtools component. Each plugin can have the following configuration options: name (required)..."
+  },
+  {
+    "title": "Plugin workspace | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/plugin-workspace",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "The Plugins destination arranges open plugins in a workspace you can rearrange: panes side by side, stacked on top of each other, or grouped as tabs. Up to eighteen plugins can be open at once. The..."
+  },
+  {
+    "title": "Basic setup | TanStack Devtools React Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/framework/react/basic-setup",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "TanStack devtools provides you with an easy to use and modular client that allows you to compose multiple devtools into one easy to use panel. Install the TanStack Devtools library, this will install..."
+  },
+  {
+    "title": "Architecture Overview | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/architecture",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "TanStack Devtools is a modular system of packages organized into three layers: Framework Adapters, Core Shell, and Event Transport. This architecture lets you use pre-built devtools panels or build..."
+  },
+  {
+    "title": "Building Custom Plugins | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/building-custom-plugins",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "You can build custom devtools plugins for any state management library, API client, or internal tool. A plugin consists of two parts: An EventClient — sends and receives data between your application..."
+  },
+  {
+    "title": "TanStack Devtools React Adapter | TanStack Devtools React Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/framework/react/adapter",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "If you are using TanStack Devtools in a React application, we recommend using the React Adapter. The React Adapter provides a set of easy-to-use hooks on top of the core Devtools utilities. If you..."
+  },
+  {
+    "title": "@tanstack/devtools | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/reference/index",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "TanStackDevtoolsCore ClientEventBusConfig TanStackDevtoolsInit TanStackDevtoolsPlugin TanStackDevtoolsConfig PLUGIN_CONTAINER_ID PLUGIN_TITLE_CONTAINER_ID"
+  },
+  {
+    "title": "Installation | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/installation",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "You can install TanStack Devtools with any NPM package manager. Only install one of the following packages depending on your use case: TanStack Devtools is compatible with React v16.8+ TanStack..."
+  },
+  {
+    "title": "Quick Start | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/quick-start",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "TanStack Devtools is a framework-agnostic devtool for managing and debugging devtools plugins across React, Preact, Solid, Vue, Svelte, and Angular. Pick your framework below to get started. Install..."
+  },
+  {
+    "title": "Configuration | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/configuration",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "Both TanStack DevTools and EventClient can be configured. All configuration is optional unless marked (required) The Devtools component has two configuration props, regardless of Frameworks these are..."
+  },
+  {
+    "title": "React TanStack Devtools Basic Example | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/framework/react/examples/basic",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "An example showing how to implement Basic in React using TanStack Devtools."
+  },
+  {
+    "title": "Production | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/production",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "The whole point of devtools is to help you during development, so it"
+  },
+  {
+    "title": "Source Inspector | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/source-inspector",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "The source inspector lets you click any element in your app to open its source file in your editor. When activated, the devtools overlay highlights elements as you hover over them and shows their..."
+  },
+  {
+    "title": "Event System | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/event-system",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "The event system is how plugins communicate with the devtools UI and with the application. It is built on EventClient, a type-safe event emitter/listener from @tanstack/devtools-event-client. It is..."
+  },
+  {
+    "title": "Plugin Lifecycle | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/plugin-lifecycle",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "Every TanStack Devtools plugin follows a well-defined lifecycle: it is registered, mounted into a DOM container, rendered when activated, and cleaned up when the devtools unmount. This page walks..."
+  },
+  {
+    "title": "Third-party Plugins | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/third-party-plugins",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "While TanStack offers a suite of first-party plugins, we also want to open the doors to third-party developers. Hence, we created the marketplace. To be included in the marketplace registry, submit a..."
+  },
+  {
+    "title": "Using devtools-utils | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/devtools-utils",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "@tanstack/devtools-utils provides factory functions that simplify creating devtools plugins for each framework. Instead of manually wiring up render functions and no-op variants, these helpers produce..."
+  },
+  {
+    "title": "WebMCP Tools | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/webmcp-tools",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "An agent in the browser cannot see the internals of your library. WebMCP tools give that agent a way to read those internals during development. Call registerDevtoolsTools from..."
+  },
+  {
+    "title": "Bidirectional Communication | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/bidirectional-communication",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "Most devtools plugins observe state in one direction: app to devtools. But EventClient supports two-way communication. Your devtools panel can also send commands back to the app. This enables features..."
+  },
+  {
+    "title": "@tanstack/devtools | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/reference",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "TanStackDevtoolsCore ClientEventBusConfig TanStackDevtoolsInit TanStackDevtoolsPlugin TanStackDevtoolsConfig PLUGIN_CONTAINER_ID PLUGIN_TITLE_CONTAINER_ID"
+  },
+  {
+    "title": "Custom plugins | TanStack Devtools React Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/framework/react/guides/custom-plugins",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "TanStack devtools allows you to create your own custom plugins by emitting and listening to our event bus. This guide will walk you through a simple example where our library is a counter with a count..."
+  },
+  {
+    "title": "TanStackDevtoolsCore | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/reference/classes/tanstackdevtoolscore",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "Defined in: devtools/src/core.tsx:43 Defined in: devtools/src/core.tsx:55 TanStackDevtoolsInit TanStackDevtoolsCore Defined in: devtools/src/core.tsx:64 • T extends HTMLElement T void Defined in:..."
+  },
+  {
+    "title": "PLUGIN_CONTAINER_ID | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/reference/variables/plugin_container_id",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "Defined in: devtools/src/constants.ts:1"
+  },
+  {
+    "title": "ClientEventBusConfig | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/reference/interfaces/clienteventbusconfig",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "Defined in: event-bus/dist/esm/client/client.d.ts:1 Defined in: event-bus/dist/esm/client/client.d.ts:6 Optional flag to indicate if the devtools server event bus is available to connect to. This is..."
+  },
+  {
+    "title": "TanStackDevtoolsConfig | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/reference/type-aliases/tanstackdevtoolsconfig",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "Defined in: devtools/src/context/devtools-context.tsx:182"
+  },
+  {
+    "title": "TanStackDevtoolsPlugin | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/reference/interfaces/tanstackdevtoolsplugin",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "Defined in: devtools/src/context/devtools-context.tsx:15 Defined in: devtools/src/context/devtools-context.tsx:58 Whether the plugin should be open by default when there are no active plugins. If..."
+  },
+  {
+    "title": "React TanStack Devtools Custom Devtools Example | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/framework/react/examples/custom-devtools",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "An example showing how to implement Custom Devtools in React using TanStack Devtools."
+  },
+  {
+    "title": "React TanStack Devtools Start Example | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/framework/react/examples/start",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "An example showing how to implement Start in React using TanStack Devtools."
+  },
+  {
+    "title": "PLUGIN_TITLE_CONTAINER_ID | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/reference/variables/plugin_title_container_id",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "Defined in: devtools/src/constants.ts:2"
+  },
+  {
+    "title": "TanStackDevtoolsInit | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/reference/interfaces/tanstackdevtoolsinit",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "Defined in: devtools/src/core.tsx:13 Defined in: devtools/src/core.tsx:19 Configuration for the devtools shell. These configuration options are used to set the initial state of the devtools when it is..."
+  },
+  {
+    "title": "React TanStack Devtools A11y Devtools Example | TanStack Devtools Docs",
+    "category": "TanStack Devtools",
+    "path": "/devtools/latest/docs/framework/react/examples/a11y-devtools",
+    "site": "tanstack_devtools",
+    "headings": [],
+    "preview": "An example showing how to implement A11y Devtools in React using TanStack Devtools."
+  }
+]

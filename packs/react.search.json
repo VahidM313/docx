@@ -1,0 +1,1434 @@
+[
+  {
+    "title": "Quick Start – React",
+    "category": "React",
+    "path": "/learn",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Quick Start – React"
+  },
+  {
+    "title": "React Reference Overview – React",
+    "category": "React",
+    "path": "/reference/react",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — React Reference Overview – React"
+  },
+  {
+    "title": "React Compiler – React",
+    "category": "React",
+    "path": "/learn/react-compiler",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — React Compiler – React"
+  },
+  {
+    "title": "Editor Setup – React",
+    "category": "React",
+    "path": "/learn/editor-setup",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Editor Setup – React"
+  },
+  {
+    "title": "Add React to an Existing Project – React",
+    "category": "React",
+    "path": "/learn/add-react-to-an-existing-project",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Add React to an Existing Project – React"
+  },
+  {
+    "title": "Introduction – React",
+    "category": "React",
+    "path": "/learn/react-compiler/introduction",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Introduction – React"
+  },
+  {
+    "title": "Installation – React",
+    "category": "React",
+    "path": "/learn/installation",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Installation – React"
+  },
+  {
+    "title": "Build a React app from Scratch – React",
+    "category": "React",
+    "path": "/learn/build-a-react-app-from-scratch",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Build a React app from Scratch – React"
+  },
+  {
+    "title": "Setup – React",
+    "category": "React",
+    "path": "/learn/setup",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Setup – React"
+  },
+  {
+    "title": "React Developer Tools – React",
+    "category": "React",
+    "path": "/learn/react-developer-tools",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — React Developer Tools – React"
+  },
+  {
+    "title": "Installation – React",
+    "category": "React",
+    "path": "/learn/react-compiler/installation",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Installation – React"
+  },
+  {
+    "title": "Tutorial: Tic-Tac-Toe – React",
+    "category": "React",
+    "path": "/learn/tutorial-tic-tac-toe",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Tutorial: Tic-Tac-Toe – React"
+  },
+  {
+    "title": "Incremental Adoption – React",
+    "category": "React",
+    "path": "/learn/react-compiler/incremental-adoption",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Incremental Adoption – React"
+  },
+  {
+    "title": "Using TypeScript – React",
+    "category": "React",
+    "path": "/learn/typescript",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Using TypeScript – React"
+  },
+  {
+    "title": "Creating a React App – React",
+    "category": "React",
+    "path": "/learn/creating-a-react-app",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Creating a React App – React"
+  },
+  {
+    "title": "Debugging and Troubleshooting – React",
+    "category": "React",
+    "path": "/learn/react-compiler/debugging",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Debugging and Troubleshooting – React"
+  },
+  {
+    "title": "Thinking in React – React",
+    "category": "React",
+    "path": "/learn/thinking-in-react",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Thinking in React – React"
+  },
+  {
+    "title": "State as a Snapshot – React",
+    "category": "React",
+    "path": "/learn/state-as-a-snapshot",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — State as a Snapshot – React"
+  },
+  {
+    "title": "Render and Commit – React",
+    "category": "React",
+    "path": "/learn/render-and-commit",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Render and Commit – React"
+  },
+  {
+    "title": "JavaScript in JSX with Curly Braces – React",
+    "category": "React",
+    "path": "/learn/javascript-in-jsx-with-curly-braces",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — JavaScript in JSX with Curly Braces – React"
+  },
+  {
+    "title": "Describing the UI – React",
+    "category": "React",
+    "path": "/learn/describing-the-ui",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Describing the UI – React"
+  },
+  {
+    "title": "Understanding Your UI as a Tree – React",
+    "category": "React",
+    "path": "/learn/understanding-your-ui-as-a-tree",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Understanding Your UI as a Tree – React"
+  },
+  {
+    "title": "Your First Component – React",
+    "category": "React",
+    "path": "/learn/your-first-component",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Your First Component – React"
+  },
+  {
+    "title": "Rendering Lists – React",
+    "category": "React",
+    "path": "/learn/rendering-lists",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Rendering Lists – React"
+  },
+  {
+    "title": "Writing Markup with JSX – React",
+    "category": "React",
+    "path": "/learn/writing-markup-with-jsx",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Writing Markup with JSX – React"
+  },
+  {
+    "title": "Keeping Components Pure – React",
+    "category": "React",
+    "path": "/learn/keeping-components-pure",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Keeping Components Pure – React"
+  },
+  {
+    "title": "Queueing a Series of State Updates – React",
+    "category": "React",
+    "path": "/learn/queueing-a-series-of-state-updates",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Queueing a Series of State Updates – React"
+  },
+  {
+    "title": "Adding Interactivity – React",
+    "category": "React",
+    "path": "/learn/adding-interactivity",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Adding Interactivity – React"
+  },
+  {
+    "title": "State: A Component&#x27;s Memory – React",
+    "category": "React",
+    "path": "/learn/state-a-components-memory",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — State: A Component&#x27;s Memory – React"
+  },
+  {
+    "title": "Conditional Rendering – React",
+    "category": "React",
+    "path": "/learn/conditional-rendering",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Conditional Rendering – React"
+  },
+  {
+    "title": "Responding to Events – React",
+    "category": "React",
+    "path": "/learn/responding-to-events",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Responding to Events – React"
+  },
+  {
+    "title": "Passing Props to a Component – React",
+    "category": "React",
+    "path": "/learn/passing-props-to-a-component",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Passing Props to a Component – React"
+  },
+  {
+    "title": "Importing and Exporting Components – React",
+    "category": "React",
+    "path": "/learn/importing-and-exporting-components",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Importing and Exporting Components – React"
+  },
+  {
+    "title": "Synchronizing with Effects – React",
+    "category": "React",
+    "path": "/learn/synchronizing-with-effects",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Synchronizing with Effects – React"
+  },
+  {
+    "title": "Extracting State Logic into a Reducer – React",
+    "category": "React",
+    "path": "/learn/extracting-state-logic-into-a-reducer",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Extracting State Logic into a Reducer – React"
+  },
+  {
+    "title": "Sharing State Between Components – React",
+    "category": "React",
+    "path": "/learn/sharing-state-between-components",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Sharing State Between Components – React"
+  },
+  {
+    "title": "Managing State – React",
+    "category": "React",
+    "path": "/learn/managing-state",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Managing State – React"
+  },
+  {
+    "title": "Updating Objects in State – React",
+    "category": "React",
+    "path": "/learn/updating-objects-in-state",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Updating Objects in State – React"
+  },
+  {
+    "title": "Preserving and Resetting State – React",
+    "category": "React",
+    "path": "/learn/preserving-and-resetting-state",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Preserving and Resetting State – React"
+  },
+  {
+    "title": "Reacting to Input with State – React",
+    "category": "React",
+    "path": "/learn/reacting-to-input-with-state",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Reacting to Input with State – React"
+  },
+  {
+    "title": "Choosing the State Structure – React",
+    "category": "React",
+    "path": "/learn/choosing-the-state-structure",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Choosing the State Structure – React"
+  },
+  {
+    "title": "You Might Not Need an Effect – React",
+    "category": "React",
+    "path": "/learn/you-might-not-need-an-effect",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — You Might Not Need an Effect – React"
+  },
+  {
+    "title": "Updating Arrays in State – React",
+    "category": "React",
+    "path": "/learn/updating-arrays-in-state",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Updating Arrays in State – React"
+  },
+  {
+    "title": "Manipulating the DOM with Refs – React",
+    "category": "React",
+    "path": "/learn/manipulating-the-dom-with-refs",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Manipulating the DOM with Refs – React"
+  },
+  {
+    "title": "Scaling Up with Reducer and Context – React",
+    "category": "React",
+    "path": "/learn/scaling-up-with-reducer-and-context",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Scaling Up with Reducer and Context – React"
+  },
+  {
+    "title": "Passing Data Deeply with Context – React",
+    "category": "React",
+    "path": "/learn/passing-data-deeply-with-context",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Passing Data Deeply with Context – React"
+  },
+  {
+    "title": "Escape Hatches – React",
+    "category": "React",
+    "path": "/learn/escape-hatches",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Escape Hatches – React"
+  },
+  {
+    "title": "Lifecycle of Reactive Effects – React",
+    "category": "React",
+    "path": "/learn/lifecycle-of-reactive-effects",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Lifecycle of Reactive Effects – React"
+  },
+  {
+    "title": "Referencing Values with Refs – React",
+    "category": "React",
+    "path": "/learn/referencing-values-with-refs",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Referencing Values with Refs – React"
+  },
+  {
+    "title": "React DOM APIs – React",
+    "category": "React",
+    "path": "/reference/react-dom",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — React DOM APIs – React"
+  },
+  {
+    "title": "useState – React",
+    "category": "React",
+    "path": "/reference/react/useState",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — useState – React"
+  },
+  {
+    "title": "useEffect – React",
+    "category": "React",
+    "path": "/reference/react/useEffect",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — useEffect – React"
+  },
+  {
+    "title": "Built-in React Hooks – React",
+    "category": "React",
+    "path": "/reference/react/hooks",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Built-in React Hooks – React"
+  },
+  {
+    "title": "useDeferredValue – React",
+    "category": "React",
+    "path": "/reference/react/useDeferredValue",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — useDeferredValue – React"
+  },
+  {
+    "title": "Removing Effect Dependencies – React",
+    "category": "React",
+    "path": "/learn/removing-effect-dependencies",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Removing Effect Dependencies – React"
+  },
+  {
+    "title": "useEffectEvent – React",
+    "category": "React",
+    "path": "/reference/react/useEffectEvent",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — useEffectEvent – React"
+  },
+  {
+    "title": "useContext – React",
+    "category": "React",
+    "path": "/reference/react/useContext",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — useContext – React"
+  },
+  {
+    "title": "useDebugValue – React",
+    "category": "React",
+    "path": "/reference/react/useDebugValue",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — useDebugValue – React"
+  },
+  {
+    "title": "useInsertionEffect – React",
+    "category": "React",
+    "path": "/reference/react/useInsertionEffect",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — useInsertionEffect – React"
+  },
+  {
+    "title": "useImperativeHandle – React",
+    "category": "React",
+    "path": "/reference/react/useImperativeHandle",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — useImperativeHandle – React"
+  },
+  {
+    "title": "useCallback – React",
+    "category": "React",
+    "path": "/reference/react/useCallback",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — useCallback – React"
+  },
+  {
+    "title": "useActionState – React",
+    "category": "React",
+    "path": "/reference/react/useActionState",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — useActionState – React"
+  },
+  {
+    "title": "useId – React",
+    "category": "React",
+    "path": "/reference/react/useId",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — useId – React"
+  },
+  {
+    "title": "Separating Events from Effects – React",
+    "category": "React",
+    "path": "/learn/separating-events-from-effects",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Separating Events from Effects – React"
+  },
+  {
+    "title": "Reusing Logic with Custom Hooks – React",
+    "category": "React",
+    "path": "/learn/reusing-logic-with-custom-hooks",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Reusing Logic with Custom Hooks – React"
+  },
+  {
+    "title": "&lt;Profiler&gt; – React",
+    "category": "React",
+    "path": "/reference/react/Profiler",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &lt;Profiler&gt; – React"
+  },
+  {
+    "title": "&lt;StrictMode&gt; – React",
+    "category": "React",
+    "path": "/reference/react/StrictMode",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &lt;StrictMode&gt; – React"
+  },
+  {
+    "title": "useRef – React",
+    "category": "React",
+    "path": "/reference/react/useRef",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — useRef – React"
+  },
+  {
+    "title": "useTransition – React",
+    "category": "React",
+    "path": "/reference/react/useTransition",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — useTransition – React"
+  },
+  {
+    "title": "useLayoutEffect – React",
+    "category": "React",
+    "path": "/reference/react/useLayoutEffect",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — useLayoutEffect – React"
+  },
+  {
+    "title": "Built-in React APIs – React",
+    "category": "React",
+    "path": "/reference/react/apis",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Built-in React APIs – React"
+  },
+  {
+    "title": "useReducer – React",
+    "category": "React",
+    "path": "/reference/react/useReducer",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — useReducer – React"
+  },
+  {
+    "title": "useSyncExternalStore – React",
+    "category": "React",
+    "path": "/reference/react/useSyncExternalStore",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — useSyncExternalStore – React"
+  },
+  {
+    "title": "useMemo – React",
+    "category": "React",
+    "path": "/reference/react/useMemo",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — useMemo – React"
+  },
+  {
+    "title": "&lt;Suspense&gt; – React",
+    "category": "React",
+    "path": "/reference/react/Suspense",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &lt;Suspense&gt; – React"
+  },
+  {
+    "title": "act – React",
+    "category": "React",
+    "path": "/reference/react/act",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — act – React"
+  },
+  {
+    "title": "Built-in React Components – React",
+    "category": "React",
+    "path": "/reference/react/components",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Built-in React Components – React"
+  },
+  {
+    "title": "useOptimistic – React",
+    "category": "React",
+    "path": "/reference/react/useOptimistic",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — useOptimistic – React"
+  },
+  {
+    "title": "&lt;ViewTransition&gt; – React",
+    "category": "React",
+    "path": "/reference/react/ViewTransition",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &lt;ViewTransition&gt; – React"
+  },
+  {
+    "title": "&lt;Activity&gt; – React",
+    "category": "React",
+    "path": "/reference/react/Activity",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &lt;Activity&gt; – React"
+  },
+  {
+    "title": "&lt;Fragment&gt; (&lt;&gt;...&lt;/&gt;) – React",
+    "category": "React",
+    "path": "/reference/react/Fragment",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &lt;Fragment&gt; (&lt;&gt;...&lt;/&gt;) – React"
+  },
+  {
+    "title": "Built-in React DOM Hooks – React",
+    "category": "React",
+    "path": "/reference/react-dom/hooks",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Built-in React DOM Hooks – React"
+  },
+  {
+    "title": "startTransition – React",
+    "category": "React",
+    "path": "/reference/react/startTransition",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — startTransition – React"
+  },
+  {
+    "title": "experimental_taintUniqueValue – React",
+    "category": "React",
+    "path": "/reference/react/experimental_taintUniqueValue",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — experimental_taintUniqueValue – React"
+  },
+  {
+    "title": "React DOM Components – React",
+    "category": "React",
+    "path": "/reference/react-dom/components",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — React DOM Components – React"
+  },
+  {
+    "title": "cache – React",
+    "category": "React",
+    "path": "/reference/react/cache",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — cache – React"
+  },
+  {
+    "title": "useFormStatus – React",
+    "category": "React",
+    "path": "/reference/react-dom/hooks/useFormStatus",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — useFormStatus – React"
+  },
+  {
+    "title": "captureOwnerStack – React",
+    "category": "React",
+    "path": "/reference/react/captureOwnerStack",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — captureOwnerStack – React"
+  },
+  {
+    "title": "addTransitionType – React",
+    "category": "React",
+    "path": "/reference/react/addTransitionType",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — addTransitionType – React"
+  },
+  {
+    "title": "createContext – React",
+    "category": "React",
+    "path": "/reference/react/createContext",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — createContext – React"
+  },
+  {
+    "title": "lazy – React",
+    "category": "React",
+    "path": "/reference/react/lazy",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — lazy – React"
+  },
+  {
+    "title": "experimental_taintObjectReference – React",
+    "category": "React",
+    "path": "/reference/react/experimental_taintObjectReference",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — experimental_taintObjectReference – React"
+  },
+  {
+    "title": "Common components (e.g. &lt;div&gt;) – React",
+    "category": "React",
+    "path": "/reference/react-dom/components/common",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Common components (e.g. &lt;div&gt;) – React"
+  },
+  {
+    "title": "memo – React",
+    "category": "React",
+    "path": "/reference/react/memo",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — memo – React"
+  },
+  {
+    "title": "&lt;form&gt; – React",
+    "category": "React",
+    "path": "/reference/react-dom/components/form",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &lt;form&gt; – React"
+  },
+  {
+    "title": "cacheSignal – React",
+    "category": "React",
+    "path": "/reference/react/cacheSignal",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — cacheSignal – React"
+  },
+  {
+    "title": "use – React",
+    "category": "React",
+    "path": "/reference/react/use",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — use – React"
+  },
+  {
+    "title": "&lt;progress&gt; – React",
+    "category": "React",
+    "path": "/reference/react-dom/components/progress",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &lt;progress&gt; – React"
+  },
+  {
+    "title": "prefetchDNS – React",
+    "category": "React",
+    "path": "/reference/react-dom/prefetchDNS",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — prefetchDNS – React"
+  },
+  {
+    "title": "&lt;option&gt; – React",
+    "category": "React",
+    "path": "/reference/react-dom/components/option",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &lt;option&gt; – React"
+  },
+  {
+    "title": "&lt;title&gt; – React",
+    "category": "React",
+    "path": "/reference/react-dom/components/title",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &lt;title&gt; – React"
+  },
+  {
+    "title": "preconnect – React",
+    "category": "React",
+    "path": "/reference/react-dom/preconnect",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — preconnect – React"
+  },
+  {
+    "title": "&lt;select&gt; – React",
+    "category": "React",
+    "path": "/reference/react-dom/components/select",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &lt;select&gt; – React"
+  },
+  {
+    "title": "&lt;link&gt; – React",
+    "category": "React",
+    "path": "/reference/react-dom/components/link",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &lt;link&gt; – React"
+  },
+  {
+    "title": "&lt;script&gt; – React",
+    "category": "React",
+    "path": "/reference/react-dom/components/script",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &lt;script&gt; – React"
+  },
+  {
+    "title": "&lt;style&gt; – React",
+    "category": "React",
+    "path": "/reference/react-dom/components/style",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &lt;style&gt; – React"
+  },
+  {
+    "title": "&lt;textarea&gt; – React",
+    "category": "React",
+    "path": "/reference/react-dom/components/textarea",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &lt;textarea&gt; – React"
+  },
+  {
+    "title": "browser – React",
+    "category": "React",
+    "path": "/reference/react-dom/browser",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — browser – React"
+  },
+  {
+    "title": "&lt;input&gt; – React",
+    "category": "React",
+    "path": "/reference/react-dom/components/input",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &lt;input&gt; – React"
+  },
+  {
+    "title": "createPortal – React",
+    "category": "React",
+    "path": "/reference/react-dom/createPortal",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — createPortal – React"
+  },
+  {
+    "title": "&lt;meta&gt; – React",
+    "category": "React",
+    "path": "/reference/react-dom/components/meta",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &lt;meta&gt; – React"
+  },
+  {
+    "title": "&lt;img&gt; – React",
+    "category": "React",
+    "path": "/reference/react-dom/components/img",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &lt;img&gt; – React"
+  },
+  {
+    "title": "flushSync – React",
+    "category": "React",
+    "path": "/reference/react-dom/flushSync",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — flushSync – React"
+  },
+  {
+    "title": "prerender – React",
+    "category": "React",
+    "path": "/reference/react-dom/static/prerender",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — prerender – React"
+  },
+  {
+    "title": "hydrateRoot – React",
+    "category": "React",
+    "path": "/reference/react-dom/client/hydrateRoot",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — hydrateRoot – React"
+  },
+  {
+    "title": "renderToStaticMarkup – React",
+    "category": "React",
+    "path": "/reference/react-dom/server/renderToStaticMarkup",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — renderToStaticMarkup – React"
+  },
+  {
+    "title": "Static React DOM APIs – React",
+    "category": "React",
+    "path": "/reference/react-dom/static",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Static React DOM APIs – React"
+  },
+  {
+    "title": "preinit – React",
+    "category": "React",
+    "path": "/reference/react-dom/preinit",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — preinit – React"
+  },
+  {
+    "title": "createRoot – React",
+    "category": "React",
+    "path": "/reference/react-dom/client/createRoot",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — createRoot – React"
+  },
+  {
+    "title": "renderToPipeableStream – React",
+    "category": "React",
+    "path": "/reference/react-dom/server/renderToPipeableStream",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — renderToPipeableStream – React"
+  },
+  {
+    "title": "preloadModule – React",
+    "category": "React",
+    "path": "/reference/react-dom/preloadModule",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — preloadModule – React"
+  },
+  {
+    "title": "Client React DOM APIs – React",
+    "category": "React",
+    "path": "/reference/react-dom/client",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Client React DOM APIs – React"
+  },
+  {
+    "title": "resumeToPipeableStream – React",
+    "category": "React",
+    "path": "/reference/react-dom/server/resumeToPipeableStream",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — resumeToPipeableStream – React"
+  },
+  {
+    "title": "renderToString – React",
+    "category": "React",
+    "path": "/reference/react-dom/server/renderToString",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — renderToString – React"
+  },
+  {
+    "title": "Server React DOM APIs – React",
+    "category": "React",
+    "path": "/reference/react-dom/server",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Server React DOM APIs – React"
+  },
+  {
+    "title": "preload – React",
+    "category": "React",
+    "path": "/reference/react-dom/preload",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — preload – React"
+  },
+  {
+    "title": "resume – React",
+    "category": "React",
+    "path": "/reference/react-dom/server/resume",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — resume – React"
+  },
+  {
+    "title": "preinitModule – React",
+    "category": "React",
+    "path": "/reference/react-dom/preinitModule",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — preinitModule – React"
+  },
+  {
+    "title": "renderToReadableStream – React",
+    "category": "React",
+    "path": "/reference/react-dom/server/renderToReadableStream",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — renderToReadableStream – React"
+  },
+  {
+    "title": "Compiling Libraries – React",
+    "category": "React",
+    "path": "/reference/react-compiler/compiling-libraries",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Compiling Libraries – React"
+  },
+  {
+    "title": "eslint-plugin-react-hooks – React",
+    "category": "React",
+    "path": "/reference/eslint-plugin-react-hooks",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — eslint-plugin-react-hooks – React"
+  },
+  {
+    "title": "gating – React",
+    "category": "React",
+    "path": "/reference/react-compiler/gating",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — gating – React"
+  },
+  {
+    "title": "logger – React",
+    "category": "React",
+    "path": "/reference/react-compiler/logger",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — logger – React"
+  },
+  {
+    "title": "resumeAndPrerenderToNodeStream – React",
+    "category": "React",
+    "path": "/reference/react-dom/static/resumeAndPrerenderToNodeStream",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — resumeAndPrerenderToNodeStream – React"
+  },
+  {
+    "title": "compilationMode – React",
+    "category": "React",
+    "path": "/reference/react-compiler/compilationMode",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — compilationMode – React"
+  },
+  {
+    "title": "panicThreshold – React",
+    "category": "React",
+    "path": "/reference/react-compiler/panicThreshold",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — panicThreshold – React"
+  },
+  {
+    "title": "resumeAndPrerender – React",
+    "category": "React",
+    "path": "/reference/react-dom/static/resumeAndPrerender",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — resumeAndPrerender – React"
+  },
+  {
+    "title": "target – React",
+    "category": "React",
+    "path": "/reference/react-compiler/target",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — target – React"
+  },
+  {
+    "title": "prerenderToNodeStream – React",
+    "category": "React",
+    "path": "/reference/react-dom/static/prerenderToNodeStream",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — prerenderToNodeStream – React"
+  },
+  {
+    "title": "&#x27;use memo&#x27; directive – React",
+    "category": "React",
+    "path": "/reference/react-compiler/directives/use-memo",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &#x27;use memo&#x27; directive – React"
+  },
+  {
+    "title": "React Performance tracks – React",
+    "category": "React",
+    "path": "/reference/dev-tools/react-performance-tracks",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — React Performance tracks – React"
+  },
+  {
+    "title": "Configuration – React",
+    "category": "React",
+    "path": "/reference/react-compiler/configuration",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Configuration – React"
+  },
+  {
+    "title": "exhaustive-deps – React",
+    "category": "React",
+    "path": "/reference/eslint-plugin-react-hooks/lints/exhaustive-deps",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — exhaustive-deps – React"
+  },
+  {
+    "title": "&#x27;use no memo&#x27; directive – React",
+    "category": "React",
+    "path": "/reference/react-compiler/directives/use-no-memo",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &#x27;use no memo&#x27; directive – React"
+  },
+  {
+    "title": "Directives – React",
+    "category": "React",
+    "path": "/reference/react-compiler/directives",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Directives – React"
+  },
+  {
+    "title": "purity – React",
+    "category": "React",
+    "path": "/reference/eslint-plugin-react-hooks/lints/purity",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — purity – React"
+  },
+  {
+    "title": "set-state-in-render – React",
+    "category": "React",
+    "path": "/reference/eslint-plugin-react-hooks/lints/set-state-in-render",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — set-state-in-render – React"
+  },
+  {
+    "title": "error-boundaries – React",
+    "category": "React",
+    "path": "/reference/eslint-plugin-react-hooks/lints/error-boundaries",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — error-boundaries – React"
+  },
+  {
+    "title": "immutability – React",
+    "category": "React",
+    "path": "/reference/eslint-plugin-react-hooks/lints/immutability",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — immutability – React"
+  },
+  {
+    "title": "gating – React",
+    "category": "React",
+    "path": "/reference/eslint-plugin-react-hooks/lints/gating",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — gating – React"
+  },
+  {
+    "title": "incompatible-library – React",
+    "category": "React",
+    "path": "/reference/eslint-plugin-react-hooks/lints/incompatible-library",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — incompatible-library – React"
+  },
+  {
+    "title": "rules-of-hooks – React",
+    "category": "React",
+    "path": "/reference/eslint-plugin-react-hooks/lints/rules-of-hooks",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — rules-of-hooks – React"
+  },
+  {
+    "title": "use-memo – React",
+    "category": "React",
+    "path": "/reference/eslint-plugin-react-hooks/lints/use-memo",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — use-memo – React"
+  },
+  {
+    "title": "refs – React",
+    "category": "React",
+    "path": "/reference/eslint-plugin-react-hooks/lints/refs",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — refs – React"
+  },
+  {
+    "title": "config – React",
+    "category": "React",
+    "path": "/reference/eslint-plugin-react-hooks/lints/config",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — config – React"
+  },
+  {
+    "title": "component-hook-factories – React",
+    "category": "React",
+    "path": "/reference/eslint-plugin-react-hooks/lints/component-hook-factories",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — component-hook-factories – React"
+  },
+  {
+    "title": "set-state-in-effect – React",
+    "category": "React",
+    "path": "/reference/eslint-plugin-react-hooks/lints/set-state-in-effect",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — set-state-in-effect – React"
+  },
+  {
+    "title": "unsupported-syntax – React",
+    "category": "React",
+    "path": "/reference/eslint-plugin-react-hooks/lints/unsupported-syntax",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — unsupported-syntax – React"
+  },
+  {
+    "title": "globals – React",
+    "category": "React",
+    "path": "/reference/eslint-plugin-react-hooks/lints/globals",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — globals – React"
+  },
+  {
+    "title": "static-components – React",
+    "category": "React",
+    "path": "/reference/eslint-plugin-react-hooks/lints/static-components",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — static-components – React"
+  },
+  {
+    "title": "preserve-manual-memoization – React",
+    "category": "React",
+    "path": "/reference/eslint-plugin-react-hooks/lints/preserve-manual-memoization",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — preserve-manual-memoization – React"
+  },
+  {
+    "title": "React calls Components and Hooks – React",
+    "category": "React",
+    "path": "/reference/rules/react-calls-components-and-hooks",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — React calls Components and Hooks – React"
+  },
+  {
+    "title": "Server Functions – React",
+    "category": "React",
+    "path": "/reference/rsc/server-functions",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Server Functions – React"
+  },
+  {
+    "title": "Directives – React",
+    "category": "React",
+    "path": "/reference/rsc/directives",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Directives – React"
+  },
+  {
+    "title": "Rules of React – React",
+    "category": "React",
+    "path": "/reference/rules",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Rules of React – React"
+  },
+  {
+    "title": "Rules of Hooks – React",
+    "category": "React",
+    "path": "/reference/rules/rules-of-hooks",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Rules of Hooks – React"
+  },
+  {
+    "title": "Server Components – React",
+    "category": "React",
+    "path": "/reference/rsc/server-components",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Server Components – React"
+  },
+  {
+    "title": "Components and Hooks must be pure – React",
+    "category": "React",
+    "path": "/reference/rules/components-and-hooks-must-be-pure",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Components and Hooks must be pure – React"
+  },
+  {
+    "title": "&#x27;use client&#x27; directive – React",
+    "category": "React",
+    "path": "/reference/rsc/use-client",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &#x27;use client&#x27; directive – React"
+  },
+  {
+    "title": "&#x27;use server&#x27; directive – React",
+    "category": "React",
+    "path": "/reference/rsc/use-server",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — &#x27;use server&#x27; directive – React"
+  },
+  {
+    "title": "Legacy React APIs – React",
+    "category": "React",
+    "path": "/reference/react/legacy",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Legacy React APIs – React"
+  },
+  {
+    "title": "Component – React",
+    "category": "React",
+    "path": "/reference/react/Component",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Component – React"
+  },
+  {
+    "title": "createElement – React",
+    "category": "React",
+    "path": "/reference/react/createElement",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — createElement – React"
+  },
+  {
+    "title": "cloneElement – React",
+    "category": "React",
+    "path": "/reference/react/cloneElement",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — cloneElement – React"
+  },
+  {
+    "title": "createRef – React",
+    "category": "React",
+    "path": "/reference/react/createRef",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — createRef – React"
+  },
+  {
+    "title": "Children – React",
+    "category": "React",
+    "path": "/reference/react/Children",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — Children – React"
+  },
+  {
+    "title": "isValidElement – React",
+    "category": "React",
+    "path": "/reference/react/isValidElement",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — isValidElement – React"
+  },
+  {
+    "title": "forwardRef – React",
+    "category": "React",
+    "path": "/reference/react/forwardRef",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — forwardRef – React"
+  },
+  {
+    "title": "PureComponent – React",
+    "category": "React",
+    "path": "/reference/react/PureComponent",
+    "site": "react",
+    "headings": [],
+    "preview": "React documentation — PureComponent – React"
+  }
+]

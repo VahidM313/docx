@@ -1,0 +1,1682 @@
+[
+  {
+    "title": "Rapidly build modern websites without ever leaving your HTML.",
+    "category": "Tailwind CSS",
+    "path": "/",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Tailwind is supported by incredible partners and sponsors who make it possible for a team of talented designers and engineers to maintain the framework full-time."
+  },
+  {
+    "title": "Get started with Tailwind CSS",
+    "category": "Tailwind CSS",
+    "path": "/docs/installation/using-vite",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to "
+  },
+  {
+    "title": "Get started with Tailwind CSS",
+    "category": "Tailwind CSS",
+    "path": "/docs/installation/using-postcss",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to "
+  },
+  {
+    "title": "Get started with Tailwind CSS",
+    "category": "Tailwind CSS",
+    "path": "/docs/installation/tailwind-cli",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to "
+  },
+  {
+    "title": "Get started with Tailwind CSS",
+    "category": "Tailwind CSS",
+    "path": "/docs/installation/play-cdn",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to "
+  },
+  {
+    "title": "Get started with Tailwind CSS",
+    "category": "Tailwind CSS",
+    "path": "/docs/installation/framework-guides",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to "
+  },
+  {
+    "title": "Install Tailwind CSS with Next.js",
+    "category": "Tailwind CSS",
+    "path": "/docs/installation/framework-guides/nextjs",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Installation Install Tailwind CSS with Next.js Setting up Tailwind CSS in a Next.js project."
+  },
+  {
+    "title": "Install Tailwind CSS with Astro",
+    "category": "Tailwind CSS",
+    "path": "/docs/installation/framework-guides/astro",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Installation Install Tailwind CSS with Astro Setting up Tailwind CSS in an Astro project."
+  },
+  {
+    "title": "Install Tailwind CSS with Nuxt",
+    "category": "Tailwind CSS",
+    "path": "/docs/installation/framework-guides/nuxt",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Installation Install Tailwind CSS with Nuxt Setting up Tailwind CSS in a Nuxt project."
+  },
+  {
+    "title": "Install Tailwind CSS with SvelteKit",
+    "category": "Tailwind CSS",
+    "path": "/docs/installation/framework-guides/sveltekit",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Installation Install Tailwind CSS with SvelteKit Setting up Tailwind CSS in a SvelteKit project."
+  },
+  {
+    "title": "Install Tailwind CSS with Laravel",
+    "category": "Tailwind CSS",
+    "path": "/docs/installation/framework-guides/laravel/vite",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Installation Install Tailwind CSS with Laravel Setting up Tailwind CSS in a Laravel project."
+  },
+  {
+    "title": "accent",
+    "category": "Tailwind CSS",
+    "path": "/docs/accent-color",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Interactivity accent-color Utilities for controlling the accented color of a form control."
+  },
+  {
+    "title": "Adding custom styles",
+    "category": "Tailwind CSS",
+    "path": "/docs/adding-custom-styles",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Core concepts Adding custom styles Best practices for adding your own custom styles in Tailwind projects."
+  },
+  {
+    "title": "align",
+    "category": "Tailwind CSS",
+    "path": "/docs/align-content",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling how rows are positioned in multi-row flex and grid containers."
+  },
+  {
+    "title": "align",
+    "category": "Tailwind CSS",
+    "path": "/docs/align-items",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling how flex and grid items are positioned along a container&#x27;s cross axis."
+  },
+  {
+    "title": "align",
+    "category": "Tailwind CSS",
+    "path": "/docs/align-self",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling how an individual flex or grid item is positioned along its container&#x27;s cross axis."
+  },
+  {
+    "title": "animation",
+    "category": "Tailwind CSS",
+    "path": "/docs/animation",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Transitions & Animation animation Utilities for animating elements with CSS animations."
+  },
+  {
+    "title": "appearance",
+    "category": "Tailwind CSS",
+    "path": "/docs/appearance",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Interactivity appearance Utilities for suppressing native form control styling."
+  },
+  {
+    "title": "aspect",
+    "category": "Tailwind CSS",
+    "path": "/docs/aspect-ratio",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Layout aspect-ratio Utilities for controlling the aspect ratio of an element."
+  },
+  {
+    "title": "backdrop",
+    "category": "Tailwind CSS",
+    "path": "/docs/backdrop-filter-blur",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Filters backdrop-filter: blur() Utilities for applying backdrop blur filters to an element."
+  },
+  {
+    "title": "backdrop",
+    "category": "Tailwind CSS",
+    "path": "/docs/backdrop-filter-brightness",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Filters backdrop-filter: brightness() Utilities for applying backdrop brightness filters to an element."
+  },
+  {
+    "title": "backdrop",
+    "category": "Tailwind CSS",
+    "path": "/docs/backdrop-filter-contrast",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Filters backdrop-filter: contrast() Utilities for applying backdrop contrast filters to an element."
+  },
+  {
+    "title": "backdrop",
+    "category": "Tailwind CSS",
+    "path": "/docs/backdrop-filter-grayscale",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Filters backdrop-filter: grayscale() Utilities for applying backdrop grayscale filters to an element."
+  },
+  {
+    "title": "backdrop",
+    "category": "Tailwind CSS",
+    "path": "/docs/backdrop-filter-hue-rotate",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Filters backdrop-filter: hue-rotate() Utilities for applying backdrop hue-rotate filters to an element."
+  },
+  {
+    "title": "backdrop",
+    "category": "Tailwind CSS",
+    "path": "/docs/backdrop-filter-invert",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Filters backdrop-filter: invert() Utilities for applying backdrop invert filters to an element."
+  },
+  {
+    "title": "backdrop",
+    "category": "Tailwind CSS",
+    "path": "/docs/backdrop-filter-opacity",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Filters backdrop-filter: opacity() Utilities for applying backdrop opacity filters to an element."
+  },
+  {
+    "title": "backdrop",
+    "category": "Tailwind CSS",
+    "path": "/docs/backdrop-filter-saturate",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Filters backdrop-filter: saturate() Utilities for applying backdrop saturation filters to an element."
+  },
+  {
+    "title": "backdrop",
+    "category": "Tailwind CSS",
+    "path": "/docs/backdrop-filter-sepia",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Filters backdrop-filter: sepia() Utilities for applying backdrop sepia filters to an element."
+  },
+  {
+    "title": "backdrop",
+    "category": "Tailwind CSS",
+    "path": "/docs/backdrop-filter",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Filters backdrop-filter Utilities for applying backdrop filters to an element."
+  },
+  {
+    "title": "backface",
+    "category": "Tailwind CSS",
+    "path": "/docs/backface-visibility",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Transforms backface-visibility Utilities for controlling if an element&#x27;s backface is visible."
+  },
+  {
+    "title": "background",
+    "category": "Tailwind CSS",
+    "path": "/docs/background-attachment",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Backgrounds background-attachment Utilities for controlling how a background image behaves when scrolling."
+  },
+  {
+    "title": "background",
+    "category": "Tailwind CSS",
+    "path": "/docs/background-blend-mode",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling how an element&#x27;s background image should blend with its background color."
+  },
+  {
+    "title": "background",
+    "category": "Tailwind CSS",
+    "path": "/docs/background-clip",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Backgrounds background-clip Utilities for controlling the bounding box of an element&#x27;s background."
+  },
+  {
+    "title": "background",
+    "category": "Tailwind CSS",
+    "path": "/docs/background-color",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Backgrounds background-color Utilities for controlling an element&#x27;s background color."
+  },
+  {
+    "title": "background",
+    "category": "Tailwind CSS",
+    "path": "/docs/background-image",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Backgrounds background-image Utilities for controlling an element&#x27;s background image."
+  },
+  {
+    "title": "background",
+    "category": "Tailwind CSS",
+    "path": "/docs/background-origin",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling how an element&#x27;s background is positioned relative to borders, padding, and content."
+  },
+  {
+    "title": "background",
+    "category": "Tailwind CSS",
+    "path": "/docs/background-position",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling the position of an element&#x27;s background image."
+  },
+  {
+    "title": "background",
+    "category": "Tailwind CSS",
+    "path": "/docs/background-repeat",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling the repetition of an element&#x27;s background image."
+  },
+  {
+    "title": "background",
+    "category": "Tailwind CSS",
+    "path": "/docs/background-size",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling the background size of an element&#x27;s background image."
+  },
+  {
+    "title": "block",
+    "category": "Tailwind CSS",
+    "path": "/docs/block-size",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Sizing block-size Utilities for setting the block size of an element."
+  },
+  {
+    "title": "border",
+    "category": "Tailwind CSS",
+    "path": "/docs/border-collapse",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Tables border-collapse Utilities for controlling whether table borders should collapse or be separated."
+  },
+  {
+    "title": "border",
+    "category": "Tailwind CSS",
+    "path": "/docs/border-color",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Borders border-color Utilities for controlling the color of an element&#x27;s borders."
+  },
+  {
+    "title": "border",
+    "category": "Tailwind CSS",
+    "path": "/docs/border-radius",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Borders border-radius Utilities for controlling the border radius of an element."
+  },
+  {
+    "title": "border",
+    "category": "Tailwind CSS",
+    "path": "/docs/border-spacing",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Tables border-spacing Utilities for controlling the spacing between table borders."
+  },
+  {
+    "title": "border",
+    "category": "Tailwind CSS",
+    "path": "/docs/border-style",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Borders border-style Utilities for controlling the style of an element&#x27;s borders."
+  },
+  {
+    "title": "border",
+    "category": "Tailwind CSS",
+    "path": "/docs/border-width",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Borders border-width Utilities for controlling the width of an element&#x27;s borders."
+  },
+  {
+    "title": "box",
+    "category": "Tailwind CSS",
+    "path": "/docs/box-decoration-break",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling how element fragments should be rendered across multiple lines, columns, or pages."
+  },
+  {
+    "title": "box",
+    "category": "Tailwind CSS",
+    "path": "/docs/box-shadow",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Effects box-shadow Utilities for controlling the box shadow of an element."
+  },
+  {
+    "title": "box",
+    "category": "Tailwind CSS",
+    "path": "/docs/box-sizing",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Layout box-sizing Utilities for controlling how the browser should calculate an element&#x27;s total size."
+  },
+  {
+    "title": "break",
+    "category": "Tailwind CSS",
+    "path": "/docs/break-after",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Layout break-after Utilities for controlling how a column or page should break after an element."
+  },
+  {
+    "title": "break",
+    "category": "Tailwind CSS",
+    "path": "/docs/break-before",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Layout break-before Utilities for controlling how a column or page should break before an element."
+  },
+  {
+    "title": "break",
+    "category": "Tailwind CSS",
+    "path": "/docs/break-inside",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Layout break-inside Utilities for controlling how a column or page should break within an element."
+  },
+  {
+    "title": "caption",
+    "category": "Tailwind CSS",
+    "path": "/docs/caption-side",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Tables caption-side Utilities for controlling the alignment of a caption element inside of a table."
+  },
+  {
+    "title": "caret",
+    "category": "Tailwind CSS",
+    "path": "/docs/caret-color",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Interactivity caret-color Utilities for controlling the color of the text input cursor."
+  },
+  {
+    "title": "clear",
+    "category": "Tailwind CSS",
+    "path": "/docs/clear",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Layout clear Utilities for controlling the wrapping of content around an element."
+  },
+  {
+    "title": "color",
+    "category": "Tailwind CSS",
+    "path": "/docs/color-scheme",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Interactivity color-scheme Utilities for controlling the color scheme of an element."
+  },
+  {
+    "title": "color",
+    "category": "Tailwind CSS",
+    "path": "/docs/color",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography color Utilities for controlling the text color of an element."
+  },
+  {
+    "title": "Colors",
+    "category": "Tailwind CSS",
+    "path": "/docs/colors",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Core concepts Colors Using and customizing the color palette in Tailwind CSS projects."
+  },
+  {
+    "title": "columns",
+    "category": "Tailwind CSS",
+    "path": "/docs/columns",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Layout columns Utilities for controlling the number of columns within an element."
+  },
+  {
+    "title": "Compatibility",
+    "category": "Tailwind CSS",
+    "path": "/docs/compatibility",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Getting started Compatibility Learn about browser support and compatibility with other tooling."
+  },
+  {
+    "title": "content",
+    "category": "Tailwind CSS",
+    "path": "/docs/content",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography content Utilities for controlling the content of the before and after pseudo-elements."
+  },
+  {
+    "title": "cursor",
+    "category": "Tailwind CSS",
+    "path": "/docs/cursor",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Interactivity cursor Utilities for controlling the cursor style when hovering over an element."
+  },
+  {
+    "title": "Dark mode",
+    "category": "Tailwind CSS",
+    "path": "/docs/dark-mode",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Core concepts Dark mode Using variants to style your site in dark mode."
+  },
+  {
+    "title": "Detecting classes in source files",
+    "category": "Tailwind CSS",
+    "path": "/docs/detecting-classes-in-source-files",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Understanding and customizing how Tailwind scans your source files."
+  },
+  {
+    "title": "display",
+    "category": "Tailwind CSS",
+    "path": "/docs/display",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Layout display Utilities for controlling the display box type of an element."
+  },
+  {
+    "title": "Editor setup",
+    "category": "Tailwind CSS",
+    "path": "/docs/editor-setup",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Getting started Editor setup Tooling to improve the developer experience when working with Tailwind CSS."
+  },
+  {
+    "title": "field",
+    "category": "Tailwind CSS",
+    "path": "/docs/field-sizing",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Interactivity field-sizing Utilities for controlling the sizing of form controls."
+  },
+  {
+    "title": "fill",
+    "category": "Tailwind CSS",
+    "path": "/docs/fill",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "SVG fill Utilities for styling the fill of SVG elements."
+  },
+  {
+    "title": "filter: blur()",
+    "category": "Tailwind CSS",
+    "path": "/docs/filter-blur",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Filters filter: blur() Utilities for applying blur filters to an element."
+  },
+  {
+    "title": "filter: brightness()",
+    "category": "Tailwind CSS",
+    "path": "/docs/filter-brightness",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Filters filter: brightness() Utilities for applying brightness filters to an element."
+  },
+  {
+    "title": "filter: contrast()",
+    "category": "Tailwind CSS",
+    "path": "/docs/filter-contrast",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Filters filter: contrast() Utilities for applying contrast filters to an element."
+  },
+  {
+    "title": "filter: drop",
+    "category": "Tailwind CSS",
+    "path": "/docs/filter-drop-shadow",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Filters filter: drop-shadow() Utilities for applying drop-shadow filters to an element."
+  },
+  {
+    "title": "filter: grayscale()",
+    "category": "Tailwind CSS",
+    "path": "/docs/filter-grayscale",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Filters filter: grayscale() Utilities for applying grayscale filters to an element."
+  },
+  {
+    "title": "filter: hue",
+    "category": "Tailwind CSS",
+    "path": "/docs/filter-hue-rotate",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Filters filter: hue-rotate() Utilities for applying hue-rotate filters to an element."
+  },
+  {
+    "title": "filter: invert()",
+    "category": "Tailwind CSS",
+    "path": "/docs/filter-invert",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Filters filter: invert() Utilities for applying invert filters to an element."
+  },
+  {
+    "title": "filter: saturate()",
+    "category": "Tailwind CSS",
+    "path": "/docs/filter-saturate",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Filters filter: saturate() Utilities for applying saturation filters to an element."
+  },
+  {
+    "title": "filter: sepia()",
+    "category": "Tailwind CSS",
+    "path": "/docs/filter-sepia",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Filters filter: sepia() Utilities for applying sepia filters to an element."
+  },
+  {
+    "title": "filter",
+    "category": "Tailwind CSS",
+    "path": "/docs/filter",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Filters filter Utilities for applying filters to an element."
+  },
+  {
+    "title": "flex",
+    "category": "Tailwind CSS",
+    "path": "/docs/flex-basis",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Flexbox & Grid flex-basis Utilities for controlling the initial size of flex items."
+  },
+  {
+    "title": "flex",
+    "category": "Tailwind CSS",
+    "path": "/docs/flex-direction",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Flexbox & Grid flex-direction Utilities for controlling the direction of flex items."
+  },
+  {
+    "title": "flex",
+    "category": "Tailwind CSS",
+    "path": "/docs/flex-grow",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Flexbox & Grid flex-grow Utilities for controlling how flex items grow."
+  },
+  {
+    "title": "flex",
+    "category": "Tailwind CSS",
+    "path": "/docs/flex-shrink",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Flexbox & Grid flex-shrink Utilities for controlling how flex items shrink."
+  },
+  {
+    "title": "flex",
+    "category": "Tailwind CSS",
+    "path": "/docs/flex-wrap",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Flexbox & Grid flex-wrap Utilities for controlling how flex items wrap."
+  },
+  {
+    "title": "flex",
+    "category": "Tailwind CSS",
+    "path": "/docs/flex",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Flexbox & Grid flex Utilities for controlling how flex items both grow and shrink."
+  },
+  {
+    "title": "float",
+    "category": "Tailwind CSS",
+    "path": "/docs/float",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Layout float Utilities for controlling the wrapping of content around an element."
+  },
+  {
+    "title": "font",
+    "category": "Tailwind CSS",
+    "path": "/docs/font-family",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography font-family Utilities for controlling the font family of an element."
+  },
+  {
+    "title": "font",
+    "category": "Tailwind CSS",
+    "path": "/docs/font-feature-settings",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography font-feature-settings Utilities for controlling advanced typographic features."
+  },
+  {
+    "title": "font",
+    "category": "Tailwind CSS",
+    "path": "/docs/font-size",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography font-size Utilities for controlling the font size of an element."
+  },
+  {
+    "title": "font",
+    "category": "Tailwind CSS",
+    "path": "/docs/font-smoothing",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography font-smoothing Utilities for controlling the font smoothing of an element."
+  },
+  {
+    "title": "font",
+    "category": "Tailwind CSS",
+    "path": "/docs/font-stretch",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography font-stretch Utilities for selecting the width of a font face."
+  },
+  {
+    "title": "font",
+    "category": "Tailwind CSS",
+    "path": "/docs/font-style",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography font-style Utilities for controlling the style of text."
+  },
+  {
+    "title": "font",
+    "category": "Tailwind CSS",
+    "path": "/docs/font-variant-numeric",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography font-variant-numeric Utilities for controlling the variant of numbers."
+  },
+  {
+    "title": "font",
+    "category": "Tailwind CSS",
+    "path": "/docs/font-weight",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography font-weight Utilities for controlling the font weight of an element."
+  },
+  {
+    "title": "forced",
+    "category": "Tailwind CSS",
+    "path": "/docs/forced-color-adjust",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Accessibility forced-color-adjust Utilities for opting in and out of forced colors."
+  },
+  {
+    "title": "Functions and directives",
+    "category": "Tailwind CSS",
+    "path": "/docs/functions-and-directives",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "A reference for the custom functions and directives Tailwind exposes to your CSS."
+  },
+  {
+    "title": "gap",
+    "category": "Tailwind CSS",
+    "path": "/docs/gap",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Flexbox & Grid gap Utilities for controlling gutters between grid and flexbox items."
+  },
+  {
+    "title": "grid",
+    "category": "Tailwind CSS",
+    "path": "/docs/grid-auto-columns",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Flexbox & Grid grid-auto-columns Utilities for controlling the size of implicitly-created grid columns."
+  },
+  {
+    "title": "grid",
+    "category": "Tailwind CSS",
+    "path": "/docs/grid-auto-flow",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Flexbox & Grid grid-auto-flow Utilities for controlling how elements in a grid are auto-placed."
+  },
+  {
+    "title": "grid",
+    "category": "Tailwind CSS",
+    "path": "/docs/grid-auto-rows",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Flexbox & Grid grid-auto-rows Utilities for controlling the size of implicitly-created grid rows."
+  },
+  {
+    "title": "grid",
+    "category": "Tailwind CSS",
+    "path": "/docs/grid-column",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling how elements are sized and placed across grid columns."
+  },
+  {
+    "title": "grid",
+    "category": "Tailwind CSS",
+    "path": "/docs/grid-row",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Flexbox & Grid grid-row Utilities for controlling how elements are sized and placed across grid rows."
+  },
+  {
+    "title": "grid",
+    "category": "Tailwind CSS",
+    "path": "/docs/grid-template-columns",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Flexbox & Grid grid-template-columns Utilities for specifying the columns in a grid layout."
+  },
+  {
+    "title": "grid",
+    "category": "Tailwind CSS",
+    "path": "/docs/grid-template-rows",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Flexbox & Grid grid-template-rows Utilities for specifying the rows in a grid layout."
+  },
+  {
+    "title": "height",
+    "category": "Tailwind CSS",
+    "path": "/docs/height",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Sizing height Utilities for setting the height of an element."
+  },
+  {
+    "title": "Hover, focus, and other states",
+    "category": "Tailwind CSS",
+    "path": "/docs/hover-focus-and-other-states",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Core concepts Hover, focus, and other states Using utilities to style elements on hover, focus, and more."
+  },
+  {
+    "title": "hyphens",
+    "category": "Tailwind CSS",
+    "path": "/docs/hyphens",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography hyphens Utilities for controlling how words should be hyphenated."
+  },
+  {
+    "title": "inline",
+    "category": "Tailwind CSS",
+    "path": "/docs/inline-size",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Sizing inline-size Utilities for setting the inline size of an element."
+  },
+  {
+    "title": "isolation",
+    "category": "Tailwind CSS",
+    "path": "/docs/isolation",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling whether an element should explicitly create a new stacking context."
+  },
+  {
+    "title": "justify",
+    "category": "Tailwind CSS",
+    "path": "/docs/justify-content",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling how flex and grid items are positioned along a container&#x27;s main axis."
+  },
+  {
+    "title": "justify",
+    "category": "Tailwind CSS",
+    "path": "/docs/justify-items",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling how grid items are aligned along their inline axis."
+  },
+  {
+    "title": "justify",
+    "category": "Tailwind CSS",
+    "path": "/docs/justify-self",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling how an individual grid item is aligned along its inline axis."
+  },
+  {
+    "title": "letter",
+    "category": "Tailwind CSS",
+    "path": "/docs/letter-spacing",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography letter-spacing Utilities for controlling the tracking, or letter spacing, of an element."
+  },
+  {
+    "title": "line",
+    "category": "Tailwind CSS",
+    "path": "/docs/line-clamp",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography line-clamp Utilities for clamping text to a specific number of lines."
+  },
+  {
+    "title": "line",
+    "category": "Tailwind CSS",
+    "path": "/docs/line-height",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography line-height Utilities for controlling the leading, or line height, of an element."
+  },
+  {
+    "title": "list",
+    "category": "Tailwind CSS",
+    "path": "/docs/list-style-image",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography list-style-image Utilities for controlling the marker images for list items."
+  },
+  {
+    "title": "list",
+    "category": "Tailwind CSS",
+    "path": "/docs/list-style-position",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography list-style-position Utilities for controlling the position of bullets and numbers in lists."
+  },
+  {
+    "title": "list",
+    "category": "Tailwind CSS",
+    "path": "/docs/list-style-type",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography list-style-type Utilities for controlling the marker style of a list."
+  },
+  {
+    "title": "margin",
+    "category": "Tailwind CSS",
+    "path": "/docs/margin",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Spacing margin Utilities for controlling an element&#x27;s margin."
+  },
+  {
+    "title": "mask",
+    "category": "Tailwind CSS",
+    "path": "/docs/mask-clip",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Effects mask-clip Utilities for controlling the bounding box of an element&#x27;s mask."
+  },
+  {
+    "title": "mask",
+    "category": "Tailwind CSS",
+    "path": "/docs/mask-composite",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Effects mask-composite Utilities for controlling how multiple masks are combined together."
+  },
+  {
+    "title": "mask",
+    "category": "Tailwind CSS",
+    "path": "/docs/mask-image",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Effects mask-image Utilities for controlling an element&#x27;s mask image."
+  },
+  {
+    "title": "mask",
+    "category": "Tailwind CSS",
+    "path": "/docs/mask-mode",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Effects mask-mode Utilities for controlling an element&#x27;s mask mode."
+  },
+  {
+    "title": "mask",
+    "category": "Tailwind CSS",
+    "path": "/docs/mask-origin",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling how an element&#x27;s mask image is positioned relative to borders, padding, and content."
+  },
+  {
+    "title": "mask",
+    "category": "Tailwind CSS",
+    "path": "/docs/mask-position",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Effects mask-position Utilities for controlling the position of an element&#x27;s mask image."
+  },
+  {
+    "title": "mask",
+    "category": "Tailwind CSS",
+    "path": "/docs/mask-repeat",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Effects mask-repeat Utilities for controlling the repetition of an element&#x27;s mask image."
+  },
+  {
+    "title": "mask",
+    "category": "Tailwind CSS",
+    "path": "/docs/mask-size",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Effects mask-size Utilities for controlling the size of an element&#x27;s mask image."
+  },
+  {
+    "title": "mask",
+    "category": "Tailwind CSS",
+    "path": "/docs/mask-type",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Effects mask-type Utilities for controlling how an SVG mask is interpreted."
+  },
+  {
+    "title": "max",
+    "category": "Tailwind CSS",
+    "path": "/docs/max-block-size",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Sizing max-block-size Utilities for setting the maximum block size of an element."
+  },
+  {
+    "title": "max",
+    "category": "Tailwind CSS",
+    "path": "/docs/max-height",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Sizing max-height Utilities for setting the maximum height of an element."
+  },
+  {
+    "title": "max",
+    "category": "Tailwind CSS",
+    "path": "/docs/max-inline-size",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Sizing max-inline-size Utilities for setting the maximum inline size of an element."
+  },
+  {
+    "title": "max",
+    "category": "Tailwind CSS",
+    "path": "/docs/max-width",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Sizing max-width Utilities for setting the maximum width of an element."
+  },
+  {
+    "title": "min",
+    "category": "Tailwind CSS",
+    "path": "/docs/min-block-size",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Sizing min-block-size Utilities for setting the minimum block size of an element."
+  },
+  {
+    "title": "min",
+    "category": "Tailwind CSS",
+    "path": "/docs/min-height",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Sizing min-height Utilities for setting the minimum height of an element."
+  },
+  {
+    "title": "min",
+    "category": "Tailwind CSS",
+    "path": "/docs/min-inline-size",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Sizing min-inline-size Utilities for setting the minimum inline size of an element."
+  },
+  {
+    "title": "min",
+    "category": "Tailwind CSS",
+    "path": "/docs/min-width",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Sizing min-width Utilities for setting the minimum width of an element."
+  },
+  {
+    "title": "mix",
+    "category": "Tailwind CSS",
+    "path": "/docs/mix-blend-mode",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Effects mix-blend-mode Utilities for controlling how an element should blend with the background."
+  },
+  {
+    "title": "object",
+    "category": "Tailwind CSS",
+    "path": "/docs/object-fit",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Layout object-fit Utilities for controlling how a replaced element&#x27;s content should be resized."
+  },
+  {
+    "title": "object",
+    "category": "Tailwind CSS",
+    "path": "/docs/object-position",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling how a replaced element&#x27;s content should be positioned within its container."
+  },
+  {
+    "title": "opacity",
+    "category": "Tailwind CSS",
+    "path": "/docs/opacity",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Effects opacity Utilities for controlling the opacity of an element."
+  },
+  {
+    "title": "order",
+    "category": "Tailwind CSS",
+    "path": "/docs/order",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Flexbox & Grid order Utilities for controlling the order of flex and grid items."
+  },
+  {
+    "title": "outline",
+    "category": "Tailwind CSS",
+    "path": "/docs/outline-color",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Borders outline-color Utilities for controlling the color of an element&#x27;s outline."
+  },
+  {
+    "title": "outline",
+    "category": "Tailwind CSS",
+    "path": "/docs/outline-offset",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Borders outline-offset Utilities for controlling the offset of an element&#x27;s outline."
+  },
+  {
+    "title": "outline",
+    "category": "Tailwind CSS",
+    "path": "/docs/outline-style",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Borders outline-style Utilities for controlling the style of an element&#x27;s outline."
+  },
+  {
+    "title": "outline",
+    "category": "Tailwind CSS",
+    "path": "/docs/outline-width",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Borders outline-width Utilities for controlling the width of an element&#x27;s outline."
+  },
+  {
+    "title": "overflow",
+    "category": "Tailwind CSS",
+    "path": "/docs/overflow-wrap",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography overflow-wrap Utilities for controlling line breaks within words in an overflowing element."
+  },
+  {
+    "title": "overflow",
+    "category": "Tailwind CSS",
+    "path": "/docs/overflow",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling how an element handles content that is too large for the container."
+  },
+  {
+    "title": "overscroll",
+    "category": "Tailwind CSS",
+    "path": "/docs/overscroll-behavior",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling how the browser behaves when reaching the boundary of a scrolling area."
+  },
+  {
+    "title": "padding",
+    "category": "Tailwind CSS",
+    "path": "/docs/padding",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Spacing padding Utilities for controlling an element&#x27;s padding."
+  },
+  {
+    "title": "perspective",
+    "category": "Tailwind CSS",
+    "path": "/docs/perspective-origin",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling an element&#x27;s perspective origin when placed in 3D space."
+  },
+  {
+    "title": "perspective",
+    "category": "Tailwind CSS",
+    "path": "/docs/perspective",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Transforms perspective Utilities for controlling an element&#x27;s perspective when placed in 3D space."
+  },
+  {
+    "title": "place",
+    "category": "Tailwind CSS",
+    "path": "/docs/place-content",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling how content is justified and aligned at the same time."
+  },
+  {
+    "title": "place",
+    "category": "Tailwind CSS",
+    "path": "/docs/place-items",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling how items are justified and aligned at the same time."
+  },
+  {
+    "title": "place",
+    "category": "Tailwind CSS",
+    "path": "/docs/place-self",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling how an individual item is justified and aligned at the same time."
+  },
+  {
+    "title": "pointer",
+    "category": "Tailwind CSS",
+    "path": "/docs/pointer-events",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Interactivity pointer-events Utilities for controlling whether an element responds to pointer events."
+  },
+  {
+    "title": "position",
+    "category": "Tailwind CSS",
+    "path": "/docs/position",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Layout position Utilities for controlling how an element is positioned in the document."
+  },
+  {
+    "title": "Preflight",
+    "category": "Tailwind CSS",
+    "path": "/docs/preflight",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Base styles Preflight An opinionated set of base styles for Tailwind projects."
+  },
+  {
+    "title": "resize",
+    "category": "Tailwind CSS",
+    "path": "/docs/resize",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Interactivity resize Utilities for controlling how an element can be resized."
+  },
+  {
+    "title": "Responsive design",
+    "category": "Tailwind CSS",
+    "path": "/docs/responsive-design",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Core concepts Responsive design Using responsive utility variants to build adaptive user interfaces."
+  },
+  {
+    "title": "rotate",
+    "category": "Tailwind CSS",
+    "path": "/docs/rotate",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Transforms rotate Utilities for rotating elements."
+  },
+  {
+    "title": "scale",
+    "category": "Tailwind CSS",
+    "path": "/docs/scale",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Transforms scale Utilities for scaling elements."
+  },
+  {
+    "title": "scroll",
+    "category": "Tailwind CSS",
+    "path": "/docs/scroll-behavior",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Interactivity scroll-behavior Utilities for controlling the scroll behavior of an element."
+  },
+  {
+    "title": "scroll",
+    "category": "Tailwind CSS",
+    "path": "/docs/scroll-margin",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Interactivity scroll-margin Utilities for controlling the scroll offset around items in a snap container."
+  },
+  {
+    "title": "scroll",
+    "category": "Tailwind CSS",
+    "path": "/docs/scroll-padding",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling an element&#x27;s scroll offset within a snap container."
+  },
+  {
+    "title": "scroll",
+    "category": "Tailwind CSS",
+    "path": "/docs/scroll-snap-align",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Interactivity scroll-snap-align Utilities for controlling the scroll snap alignment of an element."
+  },
+  {
+    "title": "scroll",
+    "category": "Tailwind CSS",
+    "path": "/docs/scroll-snap-stop",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Interactivity scroll-snap-stop Utilities for controlling whether you can skip past possible snap positions."
+  },
+  {
+    "title": "scroll",
+    "category": "Tailwind CSS",
+    "path": "/docs/scroll-snap-type",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling how strictly snap points are enforced in a snap container."
+  },
+  {
+    "title": "scrollbar",
+    "category": "Tailwind CSS",
+    "path": "/docs/scrollbar-color",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Interactivity scrollbar-color Utilities for controlling the color of an element&#x27;s scrollbar."
+  },
+  {
+    "title": "scrollbar",
+    "category": "Tailwind CSS",
+    "path": "/docs/scrollbar-gutter",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling the gutter space reserved for an element&#x27;s scrollbar."
+  },
+  {
+    "title": "scrollbar",
+    "category": "Tailwind CSS",
+    "path": "/docs/scrollbar-width",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Interactivity scrollbar-width Utilities for controlling the width of an element&#x27;s scrollbar."
+  },
+  {
+    "title": "skew",
+    "category": "Tailwind CSS",
+    "path": "/docs/skew",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Transforms skew Utilities for skewing elements with transform."
+  },
+  {
+    "title": "stroke",
+    "category": "Tailwind CSS",
+    "path": "/docs/stroke-width",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "SVG stroke-width Utilities for styling the stroke width of SVG elements."
+  },
+  {
+    "title": "stroke",
+    "category": "Tailwind CSS",
+    "path": "/docs/stroke",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "SVG stroke Utilities for styling the stroke of SVG elements."
+  },
+  {
+    "title": "Styling with utility classes",
+    "category": "Tailwind CSS",
+    "path": "/docs/styling-with-utility-classes",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Building complex components from a constrained set of primitive utilities."
+  },
+  {
+    "title": "tab",
+    "category": "Tailwind CSS",
+    "path": "/docs/tab-size",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography tab-size Utilities for controlling the size of tab characters."
+  },
+  {
+    "title": "table",
+    "category": "Tailwind CSS",
+    "path": "/docs/table-layout",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Tables table-layout Utilities for controlling the table layout algorithm."
+  },
+  {
+    "title": "text",
+    "category": "Tailwind CSS",
+    "path": "/docs/text-align",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography text-align Utilities for controlling the alignment of text."
+  },
+  {
+    "title": "text",
+    "category": "Tailwind CSS",
+    "path": "/docs/text-decoration-color",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography text-decoration-color Utilities for controlling the color of text decorations."
+  },
+  {
+    "title": "text",
+    "category": "Tailwind CSS",
+    "path": "/docs/text-decoration-line",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography text-decoration-line Utilities for controlling the decoration of text."
+  },
+  {
+    "title": "text",
+    "category": "Tailwind CSS",
+    "path": "/docs/text-decoration-style",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography text-decoration-style Utilities for controlling the style of text decorations."
+  },
+  {
+    "title": "text",
+    "category": "Tailwind CSS",
+    "path": "/docs/text-decoration-thickness",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography text-decoration-thickness Utilities for controlling the thickness of text decorations."
+  },
+  {
+    "title": "text",
+    "category": "Tailwind CSS",
+    "path": "/docs/text-indent",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography text-indent Utilities for controlling the amount of empty space shown before text in a block."
+  },
+  {
+    "title": "text",
+    "category": "Tailwind CSS",
+    "path": "/docs/text-overflow",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography text-overflow Utilities for controlling how the text of an element overflows."
+  },
+  {
+    "title": "text",
+    "category": "Tailwind CSS",
+    "path": "/docs/text-shadow",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Effects text-shadow Utilities for controlling the shadow of a text element."
+  },
+  {
+    "title": "text",
+    "category": "Tailwind CSS",
+    "path": "/docs/text-transform",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography text-transform Utilities for controlling the capitalization of text."
+  },
+  {
+    "title": "text",
+    "category": "Tailwind CSS",
+    "path": "/docs/text-underline-offset",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography text-underline-offset Utilities for controlling the offset of a text underline."
+  },
+  {
+    "title": "text",
+    "category": "Tailwind CSS",
+    "path": "/docs/text-wrap",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography text-wrap Utilities for controlling how text wraps within an element."
+  },
+  {
+    "title": "Theme variables",
+    "category": "Tailwind CSS",
+    "path": "/docs/theme",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Core concepts Theme variables Using utility classes as an API for your design tokens."
+  },
+  {
+    "title": "top / right / bottom / left",
+    "category": "Tailwind CSS",
+    "path": "/docs/top-right-bottom-left",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Layout top / right / bottom / left Utilities for controlling the placement of positioned elements."
+  },
+  {
+    "title": "touch",
+    "category": "Tailwind CSS",
+    "path": "/docs/touch-action",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling how an element can be scrolled and zoomed on touchscreens."
+  },
+  {
+    "title": "transform",
+    "category": "Tailwind CSS",
+    "path": "/docs/transform-origin",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Transforms transform-origin Utilities for specifying the origin for an element&#x27;s transformations."
+  },
+  {
+    "title": "transform",
+    "category": "Tailwind CSS",
+    "path": "/docs/transform-style",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Transforms transform-style Utilities for controlling if an elements children are placed in 3D space."
+  },
+  {
+    "title": "transform",
+    "category": "Tailwind CSS",
+    "path": "/docs/transform",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Transforms transform Utilities for transforming elements."
+  },
+  {
+    "title": "transition",
+    "category": "Tailwind CSS",
+    "path": "/docs/transition-behavior",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Transitions & Animation transition-behavior Utilities to control the behavior of CSS transitions."
+  },
+  {
+    "title": "transition",
+    "category": "Tailwind CSS",
+    "path": "/docs/transition-delay",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Transitions & Animation transition-delay Utilities for controlling the delay of CSS transitions."
+  },
+  {
+    "title": "transition",
+    "category": "Tailwind CSS",
+    "path": "/docs/transition-duration",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Transitions & Animation transition-duration Utilities for controlling the duration of CSS transitions."
+  },
+  {
+    "title": "transition",
+    "category": "Tailwind CSS",
+    "path": "/docs/transition-property",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Transitions & Animation transition-property Utilities for controlling which CSS properties transition."
+  },
+  {
+    "title": "transition",
+    "category": "Tailwind CSS",
+    "path": "/docs/transition-timing-function",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for controlling the easing of CSS transitions."
+  },
+  {
+    "title": "translate",
+    "category": "Tailwind CSS",
+    "path": "/docs/translate",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Transforms translate Utilities for translating elements."
+  },
+  {
+    "title": "Upgrade guide",
+    "category": "Tailwind CSS",
+    "path": "/docs/upgrade-guide",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Getting started Upgrade guide Upgrading your Tailwind CSS projects from v3 to v4."
+  },
+  {
+    "title": "user",
+    "category": "Tailwind CSS",
+    "path": "/docs/user-select",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Interactivity user-select Utilities for controlling whether the user can select text in an element."
+  },
+  {
+    "title": "vertical",
+    "category": "Tailwind CSS",
+    "path": "/docs/vertical-align",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography vertical-align Utilities for controlling the vertical alignment of an inline or table-cell box."
+  },
+  {
+    "title": "visibility",
+    "category": "Tailwind CSS",
+    "path": "/docs/visibility",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Layout visibility Utilities for controlling the visibility of an element."
+  },
+  {
+    "title": "white",
+    "category": "Tailwind CSS",
+    "path": "/docs/white-space",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography white-space Utilities for controlling an element&#x27;s white-space property."
+  },
+  {
+    "title": "width",
+    "category": "Tailwind CSS",
+    "path": "/docs/width",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Sizing width Utilities for setting the width of an element."
+  },
+  {
+    "title": "will",
+    "category": "Tailwind CSS",
+    "path": "/docs/will-change",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Utilities for optimizing upcoming animations of elements that are expected to change."
+  },
+  {
+    "title": "word",
+    "category": "Tailwind CSS",
+    "path": "/docs/word-break",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Typography word-break Utilities for controlling word breaks in an element."
+  },
+  {
+    "title": "z",
+    "category": "Tailwind CSS",
+    "path": "/docs/z-index",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Layout z-index Utilities for controlling the stack order of an element."
+  },
+  {
+    "title": "zoom",
+    "category": "Tailwind CSS",
+    "path": "/docs/zoom",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Transforms zoom Utilities for scaling elements using zoom."
+  },
+  {
+    "title": "Get started with Tailwind CSS",
+    "category": "Tailwind CSS",
+    "path": "/docs",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to "
+  },
+  {
+    "title": "Get started with Tailwind CSS",
+    "category": "Tailwind CSS",
+    "path": "/docs/installation",
+    "site": "tailwind",
+    "headings": [],
+    "preview": "Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to "
+  }
+]
