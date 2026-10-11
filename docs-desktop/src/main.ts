@@ -963,12 +963,13 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
 
   const installedSites = sites.filter((s) => s.installed);
   const remainingSites = sites.filter((s) => !s.installed);
+  const outdatedSites = sites.filter((s) => s.updateAvailable);
   const installedCount = installedSites.length;
-  const updatesCount = sites.filter((s) => s.updateAvailable).length;
+  const updatesCount = outdatedSites.length;
 
-  const totalAllMb = sites.reduce((sum, s) => sum + (parseFloat(s.sizeMb) || 0), 0).toFixed(1);
   const installedMb = installedSites.reduce((sum, s) => sum + (parseFloat(s.sizeMb) || 0), 0).toFixed(1);
   const remainingMb = remainingSites.reduce((sum, s) => sum + (parseFloat(s.sizeMb) || 0), 0).toFixed(1);
+  const outdatedMb = outdatedSites.reduce((sum, s) => sum + (parseFloat(s.sizeMb) || 0), 0).toFixed(1);
 
   const heroInstalledStat = document.getElementById("heroInstalledStat");
   if (heroInstalledStat) {
@@ -982,10 +983,14 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
       btnDownloadAll.classList.remove("all-installed");
       btnDownloadAllLabel.textContent = `⬇ Download Remaining ${remainingSites.length} Docs (${remainingMb} MB)`;
       btnDownloadAll.title = `Download all ${remainingSites.length} uninstalled documentation packs (${remainingMb} MB total) from GitHub Releases`;
+    } else if (outdatedSites.length > 0) {
+      btnDownloadAll.classList.remove("all-installed");
+      btnDownloadAllLabel.textContent = `⚡ Update ${outdatedSites.length} Docs (${outdatedMb} MB)`;
+      btnDownloadAll.title = `Delta-update ${outdatedSites.length} outdated documentation packs (up to ${outdatedMb} MB) from GitHub Releases`;
     } else {
       btnDownloadAll.classList.add("all-installed");
-      btnDownloadAllLabel.textContent = `⬇ Download / Sync All ${sites.length} Docs (${totalAllMb} MB)`;
-      btnDownloadAll.title = `All ${sites.length} documentation packs (${totalAllMb} MB) are installed — click to verify & sync all packs from GitHub Releases`;
+      btnDownloadAllLabel.textContent = `✓ All ${sites.length} Docs Installed (0 MB to download)`;
+      btnDownloadAll.title = `All ${sites.length} documentation packs (${installedMb} MB local) are already installed and up to date — click to check for delta updates`;
     }
   }
 
@@ -1238,17 +1243,31 @@ async function downloadAllOrRemainingDocs() {
   const btn = document.getElementById("btnDownloadAllDocs") as HTMLButtonElement | null;
   const label = document.getElementById("btnDownloadAllDocsLabel");
   const banner = document.getElementById("deltaStatusBanner");
+
+  if (btn) btn.disabled = true;
+  if (label) label.textContent = "⏳ Checking registry for missing/updated docs...";
+  await syncAllPacksAndRender(true);
+
   const allSites = buildUnifiedSitesList();
   const remaining = allSites.filter((s) => !s.installed);
   const outdated = allSites.filter((s) => s.updateAvailable);
 
-  const targets =
-    remaining.length > 0 ? remaining : outdated.length > 0 ? outdated : allSites;
+  const targets = remaining.length > 0 ? remaining : outdated;
+
+  if (targets.length === 0) {
+    if (btn) btn.disabled = false;
+    renderHomeHub(allSites);
+    if (banner) {
+      banner.style.display = "block";
+      banner.textContent = `✓ All ${allSites.length} documentation packs are already installed and up to date (0.0 MB downloaded)!`;
+    }
+    return;
+  }
+
   const totalTargetMb = targets
     .reduce((sum, s) => sum + (parseFloat(s.sizeMb) || 0), 0)
     .toFixed(1);
 
-  if (btn) btn.disabled = true;
   let completedMb = 0;
 
   for (let i = 0; i < targets.length; i++) {
@@ -1271,7 +1290,7 @@ async function downloadAllOrRemainingDocs() {
   await syncAllPacksAndRender(false);
   if (banner) {
     banner.style.display = "block";
-    banner.textContent = `✓ All ${allSites.length} documentation packs (${totalTargetMb} MB) are installed and verified locally!`;
+    banner.textContent = `✓ Downloaded/updated ${targets.length} documentation packs (${totalTargetMb} MB)! All ${allSites.length} packs are now up to date.`;
   }
 }
 

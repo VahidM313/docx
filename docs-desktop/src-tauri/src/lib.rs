@@ -2153,6 +2153,62 @@ fn run_install_or_update_sync(
 
     let packs_dir = get_packs_dir();
     let _ = fs::create_dir_all(&packs_dir);
+
+    let mut local_chunks_by_hash: HashMap<String, Vec<u8>> = HashMap::new();
+    let mut old_commit = String::from("not-installed");
+    let mut local_updated_at = String::new();
+    let mut local_route_count = 0usize;
+    let mut local_total_bytes = 0usize;
+    let mut local_chunk_count = 0usize;
+
+    {
+        let guard = store.overrides.read().unwrap();
+        if let Some(pack) = guard.get(&site_id) {
+            old_commit = pack.manifest.commit.clone();
+            local_updated_at = pack.manifest.updatedAt.clone();
+            local_route_count = pack.manifest.routes.len();
+            local_total_bytes = pack.manifest.totalBytes;
+            local_chunk_count = pack.manifest.chunkCount;
+        }
+    }
+
+    // Fast path: if local pack already matches remote commit (or is newer than remote manifest), download 0 bytes!
+    if local_route_count > 0
+        && (old_commit == remote_manifest.commit
+            || (!local_updated_at.is_empty()
+                && local_updated_at > remote_manifest.updatedAt
+                && local_route_count >= remote_manifest.routes.len()))
+    {
+        let port = ensure_site_server(&site_id, Arc::clone(&store));
+        let _ = window.emit(
+            "docpack-progress",
+            DownloadProgressPayload {
+                site_id: site_id.clone(),
+                phase: "Up to Date".to_string(),
+                downloaded_bytes: 0,
+                total_bytes: local_total_bytes,
+                percent: 100,
+                detail: "Already up to date (0.00 MB downloaded)".to_string(),
+            },
+        );
+        return Ok(DeltaUpdateResult {
+            site_id: site_id.clone(),
+            old_commit: old_commit.clone(),
+            new_commit: old_commit,
+            total_chunks: local_chunk_count,
+            reused_chunks: local_chunk_count,
+            downloaded_chunks: 0,
+            reused_bytes: local_total_bytes,
+            downloaded_bytes: 0,
+            saved_percent: 100.0,
+            port,
+            message: format!(
+                "{} ({}) is already up to date (0.00 MB downloaded, 100% local chunks verified) on port :{}!",
+                remote_manifest.name, remote_manifest.version, port
+            ),
+        });
+    }
+
     let _ = fs::write(
         packs_dir.join(format!("{}.manifest.json", site_id)),
         &remote_manifest_bytes,
@@ -2162,13 +2218,9 @@ fn run_install_or_update_sync(
         let _ = fs::write(packs_dir.join(format!("{}.search.json", site_id)), search_bytes);
     }
 
-    let mut local_chunks_by_hash: HashMap<String, Vec<u8>> = HashMap::new();
-    let mut old_commit = String::from("not-installed");
-
     {
         let guard = store.overrides.read().unwrap();
         if let Some(pack) = guard.get(&site_id) {
-            old_commit = pack.manifest.commit.clone();
             for entry in pack.manifest.routes.values() {
                 if !entry.hash.is_empty() {
                     if let Some(chunk) = pack.read_chunk(entry.offset, entry.length) {
@@ -2184,6 +2236,37 @@ fn run_install_or_update_sync(
         if !local_chunks_by_hash.contains_key(&rem_entry.hash) {
             missing_unique_hashes.insert(rem_entry.hash.clone());
         }
+    }
+
+    if !local_chunks_by_hash.is_empty() && missing_unique_hashes.is_empty() {
+        let port = ensure_site_server(&site_id, Arc::clone(&store));
+        let _ = window.emit(
+            "docpack-progress",
+            DownloadProgressPayload {
+                site_id: site_id.clone(),
+                phase: "Up to Date".to_string(),
+                downloaded_bytes: 0,
+                total_bytes: remote_manifest.totalBytes,
+                percent: 100,
+                detail: "100% chunks verified locally (0.00 MB downloaded)".to_string(),
+            },
+        );
+        return Ok(DeltaUpdateResult {
+            site_id: site_id.clone(),
+            old_commit,
+            new_commit: remote_manifest.commit.clone(),
+            total_chunks: remote_manifest.chunkCount,
+            reused_chunks: remote_manifest.chunkCount,
+            downloaded_chunks: 0,
+            reused_bytes: remote_manifest.totalBytes,
+            downloaded_bytes: 0,
+            saved_percent: 100.0,
+            port,
+            message: format!(
+                "{} ({}) is already up to date (0.00 MB downloaded, 100% chunks reused) on port :{}!",
+                remote_manifest.name, remote_manifest.version, port
+            ),
+        });
     }
 
     // Use single-stream full .docpack download if not installed OR if > 6 chunks changed
