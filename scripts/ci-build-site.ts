@@ -562,24 +562,74 @@ function assetUrlToLocalRoute(fullUrl: string, siteOrigin: string): string {
   }
 }
 
-async function fetchWithTimeout(url: string, timeoutMs = 10000): Promise<Response | null> {
-  const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+function isChallengeOrBlockHtml(html: string): boolean {
+  if (!html || html.length < 120) return true;
+  const sample = html.slice(0, 4096).toLowerCase();
+  return (
+    sample.includes("<title>just a moment...</title>") ||
+    sample.includes("attention required! | cloudflare") ||
+    sample.includes("cf-browser-verification") ||
+    sample.includes("cf-chl-bypass") ||
+    sample.includes("<title>access denied</title>") ||
+    sample.includes("<title>403 forbidden</title>") ||
+    sample.includes("<title>429 too many requests</title>")
+  );
+}
+
+async function fetchWithTimeout(
+  url: string,
+  timeoutMs = 12000,
+  maxRetries = 4,
+  onRateLimited?: () => void
+): Promise<Response | null> {
+  let originReferer = "";
   try {
-    const res = await fetch(url, {
-      headers: {
-        "User-Agent": USER_AGENT,
-        Accept: "text/html,application/xhtml+xml,text/css,application/javascript,*/*;q=0.8",
-      },
-      redirect: "follow",
-      signal: ctrl.signal,
-    });
-    return res;
-  } catch {
-    return null;
-  } finally {
-    clearTimeout(timer);
+    originReferer = new URL(url).origin + "/";
+  } catch {}
+
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+    try {
+      const res = await fetch(url, {
+        headers: {
+          "User-Agent": USER_AGENT,
+          Accept: "text/html,application/xhtml+xml,text/css,application/javascript,*/*;q=0.8",
+          "Accept-Language": "en-US,en;q=0.9",
+          "Cache-Control": "no-cache",
+          "Sec-Fetch-Dest": "document",
+          "Sec-Fetch-Mode": "navigate",
+          "Sec-Fetch-Site": "same-origin",
+          "Upgrade-Insecure-Requests": "1",
+          ...(originReferer ? { Referer: originReferer } : {}),
+        },
+        redirect: "follow",
+        signal: ctrl.signal,
+      });
+      clearTimeout(timer);
+      if (res.status === 429 || res.status === 503 || res.status === 502 || res.status === 403) {
+        onRateLimited?.();
+        if (attempt + 1 < maxRetries) {
+          const retryHeader = res.headers.get("retry-after");
+          const retrySec = retryHeader ? parseInt(retryHeader, 10) : NaN;
+          const waitMs =
+            !isNaN(retrySec) && retrySec > 0 && retrySec <= 30
+              ? retrySec * 1000
+              : 800 * Math.pow(2, attempt) + Math.floor(Math.random() * 350);
+          await new Promise((r) => setTimeout(r, waitMs));
+          continue;
+        }
+      }
+      return res;
+    } catch {
+      clearTimeout(timer);
+      if (attempt + 1 < maxRetries) {
+        const waitMs = 600 * Math.pow(2, attempt) + Math.floor(Math.random() * 250);
+        await new Promise((r) => setTimeout(r, waitMs));
+      }
+    }
   }
+  return null;
 }
 
 export async function buildDocpackForSite(siteId: string, outDir: string) {
@@ -588,6 +638,16 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
 
   fs.mkdirSync(outDir, { recursive: true });
   console.log(`\n=== Crawling Real Website for [${site.id}] (${site.origin}${site.entryPath}) ===`);
+
+  // Check if a previous manifest exists so we never overwrite a healthy pack with a partial/rate-limited crawl
+  let previousRouteCount = 0;
+  const existingManifestPath = path.join(outDir, `${site.id}.manifest.json`);
+  if (fs.existsSync(existingManifestPath)) {
+    try {
+      const prev = JSON.parse(fs.readFileSync(existingManifestPath, "utf-8"));
+      previousRouteCount = Object.keys(prev.routes || {}).length;
+    } catch {}
+  }
 
   const maxPages = site.maxPages || 150;
   const visitedPages = new Set<string>();
@@ -606,10 +666,18 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
     return site.allowedPrefixes.some((pref) => u.pathname.startsWith(pref));
   }
 
-  // 1. Crawl HTML pages concurrently in batches
+  // Adaptive polite concurrency across ALL 57 sites (steps down automatically if any rate-limit signal occurs)
+  let batchConcurrency = 6;
+  let batchDelayMs = 100;
+  const handleRateLimitSignal = () => {
+    batchConcurrency = 2;
+    batchDelayMs = 450;
+  };
+
+  // 1. Crawl HTML pages concurrently in polite batches
   while (pageQueue.length > 0 && visitedPages.size < maxPages) {
     const batch: string[] = [];
-    while (pageQueue.length > 0 && batch.length < 16 && visitedPages.size + batch.length < maxPages) {
+    while (pageQueue.length > 0 && batch.length < batchConcurrency && visitedPages.size + batch.length < maxPages) {
       const nextPath = pageQueue.shift()!;
       const norm = normalizeRouteKey(nextPath.split("?")[0].split("#")[0]);
       if (!visitedPages.has(norm)) {
@@ -619,15 +687,21 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
     }
     if (batch.length === 0) break;
 
+    if (visitedPages.size > batch.length) {
+      const jitter = Math.floor(Math.random() * 70);
+      await new Promise((r) => setTimeout(r, batchDelayMs + jitter));
+    }
+
     await Promise.all(
       batch.map(async (relPath) => {
         const fullUrl = new URL(relPath, site.origin).href;
-        const res = await fetchWithTimeout(fullUrl, 12000);
+        const res = await fetchWithTimeout(fullUrl, 12000, 4, handleRateLimitSignal);
         if (!res || !res.ok) return;
         const ct = res.headers.get("content-type") || "";
         if (!ct.includes("html")) return;
 
         let html = await res.text();
+        if (isChallengeOrBlockHtml(html)) return;
         const pageUrl = new URL(res.url || fullUrl);
         const routeKey = normalizeRouteKey(pageUrl.pathname);
 
@@ -707,8 +781,8 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
             }
           });
 
-        if (site.id === "angular" || site.id === "nestjs" || site.id === "threejs") {
-          // Keep same-origin JS bundles for SPA sites & Three.js page scripts, strip only external analytics
+        if (site.id === "angular" || site.id === "nestjs" || site.id === "threejs" || site.id === "rust") {
+          // Keep same-origin JS bundles for SPA sites, Three.js page scripts & Rust mdBook highlight/book scripts, strip only external analytics
           html = html.replace(
             /(<script\b[^>]*?\bsrc=["'])([^"']+)(["'][^>]*>\s*<\/script>)/gi,
             (fullScript, pre, rawSrc, suf) => {
@@ -771,7 +845,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
     pendingAssetUrls.set("https://v17.angular.io/dark-theme.css", "/dark-theme.css");
     pendingAssetUrls.set("https://v17.angular.io/generated/navigation.json", "/generated/navigation.json");
     pendingAssetUrls.set("https://v17.angular.io/generated/docs/docs.json", "/generated/docs/docs.json");
-    const navRes = await fetchWithTimeout("https://v17.angular.io/generated/navigation.json", 10000);
+    const navRes = await fetchWithTimeout("https://v17.angular.io/generated/navigation.json", 10000, 4, handleRateLimitSignal);
     if (navRes && navRes.ok) {
       const navText = await navRes.text();
       rawAssets.set("/generated/navigation.json", {
@@ -796,17 +870,18 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
     `  Crawled ${visitedPages.size} HTML pages for ${site.id}, now fetching ${pendingAssetUrls.size} CSS/JS/JSON/image assets...`
   );
 
-  // 2. Download all discovered CSS and image assets + fonts referenced inside CSS
+  // 2. Download all discovered CSS and image assets + fonts referenced inside CSS (polite batches of 8)
   const fontAndSubAssets = new Map<string, string>();
   const assetEntries = Array.from(pendingAssetUrls.entries());
 
-  for (let i = 0; i < assetEntries.length; i += 20) {
-    const slice = assetEntries.slice(i, i + 20);
+  for (let i = 0; i < assetEntries.length; i += 8) {
+    if (i > 0) await new Promise((r) => setTimeout(r, 60));
+    const slice = assetEntries.slice(i, i + 8);
     await Promise.all(
       slice.map(async ([fullUrl, localRoute]) => {
         const normKey = normalizeRouteKey(localRoute);
         if (rawAssets.has(normKey)) return;
-        const res = await fetchWithTimeout(fullUrl, 10000);
+        const res = await fetchWithTimeout(fullUrl, 10000, 3, handleRateLimitSignal);
         if (!res || !res.ok) return;
         const ct = res.headers.get("content-type") || "";
         const mime = guessMime(localRoute, ct);
@@ -841,15 +916,16 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
     );
   }
 
-  // 3. Download fonts & SVGs discovered inside CSS files
+  // 3. Download fonts & SVGs discovered inside CSS files (polite batches of 8)
   const subEntries = Array.from(fontAndSubAssets.entries()).slice(0, 80);
-  for (let i = 0; i < subEntries.length; i += 20) {
-    const slice = subEntries.slice(i, i + 20);
+  for (let i = 0; i < subEntries.length; i += 8) {
+    if (i > 0) await new Promise((r) => setTimeout(r, 60));
+    const slice = subEntries.slice(i, i + 8);
     await Promise.all(
       slice.map(async ([fullUrl, localRoute]) => {
         const normKey = normalizeRouteKey(localRoute);
         if (rawAssets.has(normKey)) return;
-        const res = await fetchWithTimeout(fullUrl, 8000);
+        const res = await fetchWithTimeout(fullUrl, 8000, 3, handleRateLimitSignal);
         if (!res || !res.ok) return;
         const arr = await res.arrayBuffer();
         if (arr.byteLength > 300 * 1024) return;
@@ -897,6 +973,16 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
     if (!routes["/"]) routes["/"] = firstHtmlRoute;
   }
 
+  const newRouteCount = Object.keys(routes).length;
+  if (newRouteCount === 0 || chunks.length === 0 || searchEntries.length === 0) {
+    throw new Error(`Crawl for ${site.id} produced 0 valid HTML pages — refusing to overwrite existing .docpack!`);
+  }
+  if (previousRouteCount > 10 && newRouteCount < Math.floor(previousRouteCount * 0.5)) {
+    throw new Error(
+      `Crawl for ${site.id} only captured ${newRouteCount} routes vs ${previousRouteCount} previously — refusing to overwrite healthy .docpack!`
+    );
+  }
+
   const commitHash = crypto
     .createHash("sha256")
     .update(Array.from(hashToChunk.keys()).sort().join(","))
@@ -938,7 +1024,10 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
 // CLI Entrypoint
 if (import.meta.main) {
   const argSite = process.argv[2];
-  const outDir = process.argv[3] || path.resolve("packs");
+  const defaultPacksDir = process.env.LOCALAPPDATA
+    ? path.join(process.env.LOCALAPPDATA, "docx")
+    : path.resolve("packs");
+  const outDir = process.argv[3] || defaultPacksDir;
   if (argSite === "--list-json") {
     console.log(JSON.stringify(SITE_CATALOG.map((s) => s.id)));
   } else if (argSite) {

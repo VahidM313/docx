@@ -1,1 +1,2456 @@
-{"id":"react","name":"React","version":"v19.1","commit":"e71735a4","origin":"https://react.dev","entryPath":"/learn","updatedAt":"2026-10-10T16:44:06.726Z","totalBytes":12204025,"chunkCount":343,"routes":{"/learn":{"offset":0,"length":43073,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c13dc91eda877f7a"},"/reference/react":{"offset":43073,"length":27978,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5013b8c5d952777a"},"/learn/react-compiler":{"offset":71051,"length":24547,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a78bceb3b57ee73e"},"/learn/editor-setup":{"offset":95598,"length":27226,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9172f42c0d557b94"},"/learn/add-react-to-an-existing-project":{"offset":122824,"length":34597,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"20b9cade3bdae28b"},"/learn/react-compiler/introduction":{"offset":157421,"length":35780,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"49d7c892e9255387"},"/learn/installation":{"offset":193201,"length":28500,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6d881b63ec8c7d54"},"/learn/build-a-react-app-from-scratch":{"offset":221701,"length":35011,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4e39cd38c8a98191"},"/learn/setup":{"offset":256712,"length":23862,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1f2c7d3495b2456e"},"/learn/react-developer-tools":{"offset":280574,"length":25810,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9eb0a0e6024c395a"},"/learn/react-compiler/installation":{"offset":306384,"length":32737,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9c4fb39d2c621411"},"/learn/tutorial-tic-tac-toe":{"offset":339121,"length":132798,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4466a021a19d9f8e"},"/learn/react-compiler/incremental-adoption":{"offset":471919,"length":30235,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9b69f8e39a19315e"},"/learn/typescript":{"offset":502154,"length":49714,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"07545eeb75e33609"},"/learn/creating-a-react-app":{"offset":551868,"length":32007,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"829ea756ff23d1f9"},"/learn/react-compiler/debugging":{"offset":583875,"length":27732,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"56d7bc2fa92ba132"},"/learn/thinking-in-react":{"offset":611607,"length":53068,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"df2dfd68bb5621f8"},"/learn/state-as-a-snapshot":{"offset":664675,"length":38589,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"67efb891f6dc7a6a"},"/learn/render-and-commit":{"offset":703264,"length":36489,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"05d5aaefec1e90a4"},"/learn/javascript-in-jsx-with-curly-braces":{"offset":739753,"length":36862,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2b3e76f868d1ab4e"},"/learn/describing-the-ui":{"offset":776615,"length":38566,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1c485f435aed6033"},"/learn/understanding-your-ui-as-a-tree":{"offset":815181,"length":36256,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9794c622362168b1"},"/learn/your-first-component":{"offset":851437,"length":41611,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"788114e0fe729660"},"/learn/rendering-lists":{"offset":893048,"length":48906,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9a81708081b30bce"},"/learn/writing-markup-with-jsx":{"offset":941954,"length":40865,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"42e1e585a714fb5e"},"/learn/keeping-components-pure":{"offset":982819,"length":43921,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"644929caeb0d4826"},"/learn/queueing-a-series-of-state-updates":{"offset":1026740,"length":38761,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8de1dc1da6d2eca6"},"/learn/adding-interactivity":{"offset":1065501,"length":44407,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a5681322496f83b9"},"/learn/state-a-components-memory":{"offset":1109908,"length":55902,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"245c5b7a5cda3110"},"/learn/conditional-rendering":{"offset":1165810,"length":40731,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3acd54647f226a72"},"/learn/responding-to-events":{"offset":1206541,"length":47867,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6363d8743fff4716"},"/learn/passing-props-to-a-component":{"offset":1254408,"length":46559,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"19674dc755cec493"},"/learn/importing-and-exporting-components":{"offset":1300967,"length":36613,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"111e7e20b16fe402"},"/learn/synchronizing-with-effects":{"offset":1337580,"length":82770,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c454fb991fd9de73"},"/learn/extracting-state-logic-into-a-reducer":{"offset":1420350,"length":54694,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d1db0ec40673eca0"},"/learn/sharing-state-between-components":{"offset":1475044,"length":44106,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"33fa46a9ed851373"},"/learn/managing-state":{"offset":1519150,"length":42731,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d2e50049c5cdc22c"},"/learn/updating-objects-in-state":{"offset":1561881,"length":53193,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"68823f38dc734ddb"},"/learn/preserving-and-resetting-state":{"offset":1615074,"length":56185,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"09126aa54fd62656"},"/learn/reacting-to-input-with-state":{"offset":1671259,"length":53244,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a476573010a2dbf0"},"/learn/choosing-the-state-structure":{"offset":1724503,"length":65366,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"de9111e38eabb071"},"/learn/you-might-not-need-an-effect":{"offset":1789869,"length":65437,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"522811d0217651e1"},"/learn/updating-arrays-in-state":{"offset":1855306,"length":49824,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"34da8c43401aeda5"},"/learn/manipulating-the-dom-with-refs":{"offset":1905130,"length":53557,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"75c624b7bd5555a3"},"/learn/scaling-up-with-reducer-and-context":{"offset":1958687,"length":45332,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"63dda93f725003da"},"/learn/passing-data-deeply-with-context":{"offset":2004019,"length":49730,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b294579161dae34a"},"/learn/escape-hatches":{"offset":2053749,"length":43073,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"44fdad79d2e8de16"},"/learn/lifecycle-of-reactive-effects":{"offset":2096822,"length":69474,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f27bd046d0932cd7"},"/learn/referencing-values-with-refs":{"offset":2166296,"length":46299,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e90052808dc67df3"},"/reference/react-dom":{"offset":2212595,"length":28003,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"caa01325e11e9629"},"/reference/react/useState":{"offset":2240598,"length":60857,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"18c011f407a1b0ae"},"/reference/react/useEffect":{"offset":2301455,"length":78449,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f848974e3f76e33d"},"/reference/react/hooks":{"offset":2379904,"length":31004,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5478e1725315503b"},"/reference/react/useDeferredValue":{"offset":2410908,"length":49007,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9cf379fd1c1b8740"},"/learn/removing-effect-dependencies":{"offset":2459915,"length":72765,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0e5661f687b3cf7a"},"/reference/react/useEffectEvent":{"offset":2532680,"length":44031,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a66e654f88ce6c44"},"/reference/react/useContext":{"offset":2576711,"length":47665,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f67a29b3b7f143b4"},"/reference/react/useDebugValue":{"offset":2624376,"length":32484,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"111b336467d97dff"},"/reference/react/useInsertionEffect":{"offset":2656860,"length":33653,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6dd4e9d207e078ac"},"/reference/react/useImperativeHandle":{"offset":2690513,"length":36237,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"afad44a7f22ecef0"},"/reference/react/useCallback":{"offset":2726750,"length":53269,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0b3e0353e3cf2a7e"},"/reference/react/useActionState":{"offset":2780019,"length":55237,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"96777992fd9c4490"},"/reference/react/useId":{"offset":2835256,"length":38519,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2a1e58ba1ed7b142"},"/learn/separating-events-from-effects":{"offset":2873775,"length":67351,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f0e5ef4fd0cddbe2"},"/learn/reusing-logic-with-custom-hooks":{"offset":2941126,"length":79194,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4720e9375546cbfc"},"/reference/react/Profiler":{"offset":3020320,"length":31581,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"85b7ac0869884a82"},"/reference/react/StrictMode":{"offset":3051901,"length":50180,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"89fd973b33aa7ca8"},"/reference/react/useRef":{"offset":3102081,"length":46847,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b93a5fc87b1e5af6"},"/reference/react/useTransition":{"offset":3148928,"length":61127,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f50d1477ee9034a8"},"/reference/react/useLayoutEffect":{"offset":3210055,"length":42185,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ff339207d9df0f77"},"/reference/react/apis":{"offset":3252240,"length":27821,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"de420d395a1ff8b1"},"/reference/react/useReducer":{"offset":3280061,"length":52656,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fb25af15a6126d3b"},"/reference/react/useSyncExternalStore":{"offset":3332717,"length":42528,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"06b2aa19b81a056c"},"/reference/react/useMemo":{"offset":3375245,"length":64307,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"85c9245ae152422a"},"/reference/react/Suspense":{"offset":3439552,"length":70397,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"239a50e94489efd3"},"/reference/react/act":{"offset":3509949,"length":33611,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9a3147539b5f6819"},"/reference/react/components":{"offset":3543560,"length":26374,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5506ce8c305477f9"},"/reference/react/useOptimistic":{"offset":3569934,"length":61849,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d9c8a14e591af183"},"/reference/react/ViewTransition":{"offset":3631783,"length":67702,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"27429d086e161efb"},"/reference/react/Activity":{"offset":3699485,"length":51642,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0c536c2962487dff"},"/reference/react/Fragment":{"offset":3751127,"length":54260,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9ceaf5b2f6f170eb"},"/reference/react-dom/hooks":{"offset":3805387,"length":26935,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"63386a88737c1ba2"},"/reference/react/startTransition":{"offset":3832322,"length":30511,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7a4d5aabe475e99e"},"/reference/react/experimental_taintUniqueValue":{"offset":3862833,"length":36403,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f9d9714f6ab05782"},"/reference/react-dom/components":{"offset":3899236,"length":40188,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5a2e8bffffdd921e"},"/reference/react/cache":{"offset":3939424,"length":44140,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0e0921f0b641856b"},"/reference/react-dom/hooks/useFormStatus":{"offset":3983564,"length":35748,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"461527bce5e4f2d9"},"/reference/react/captureOwnerStack":{"offset":4019312,"length":37447,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4ca4d90c23b718d0"},"/reference/react/addTransitionType":{"offset":4056759,"length":30077,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"410a4b9f2ec1c259"},"/reference/react/createContext":{"offset":4086836,"length":32669,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"97666cc774a371fd"},"/reference/react/lazy":{"offset":4119505,"length":34532,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5a54d9401ef207ae"},"/reference/react/experimental_taintObjectReference":{"offset":4154037,"length":33985,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6d3355faaec89c83"},"/reference/react-dom/components/common":{"offset":4188022,"length":69374,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"354fef409556a849"},"/reference/react/memo":{"offset":4257396,"length":48373,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"870b4041ef6caf8f"},"/reference/react-dom/components/form":{"offset":4305769,"length":42790,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b3f852a388639442"},"/reference/react/cacheSignal":{"offset":4348559,"length":30318,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"606a2d071f52d914"},"/reference/react/use":{"offset":4378877,"length":70394,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"695909f2069b737b"},"/reference/react-dom/components/progress":{"offset":4449271,"length":30353,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3308bcbf32dac13f"},"/reference/react-dom/prefetchDNS":{"offset":4479624,"length":28571,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"831d2facb122dac6"},"/reference/react-dom/components/option":{"offset":4508195,"length":31028,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6907e8be87c997e2"},"/reference/react-dom/components/title":{"offset":4539223,"length":32698,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3e6621c54d7c16b8"},"/reference/react-dom/preconnect":{"offset":4571921,"length":28334,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a65bf56e1db728be"},"/reference/react-dom/components/select":{"offset":4600255,"length":44930,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"118e91a3f8c6e39b"},"/reference/react-dom/components/link":{"offset":4645185,"length":38485,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"61715ec35dd8e56f"},"/reference/react-dom/components/script":{"offset":4683670,"length":34794,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3791329f75521696"},"/reference/react-dom/components/style":{"offset":4718464,"length":33064,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8f456765c85c05c8"},"/reference/react-dom/components/textarea":{"offset":4751528,"length":44368,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f8a4e6347bdb336a"},"/reference/react-dom/browser":{"offset":4795896,"length":38509,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"75db3606b739e911"},"/reference/react-dom/components/input":{"offset":4834405,"length":54224,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eef06c20b73c831f"},"/reference/react-dom/createPortal":{"offset":4888629,"length":39286,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dc17af96fe24f1c4"},"/reference/react-dom/components/meta":{"offset":4927915,"length":31972,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ec4f5fc2572f7f76"},"/reference/react-dom/components/img":{"offset":4959887,"length":36390,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6fb61d0c9a23988f"},"/reference/react-dom/flushSync":{"offset":4996277,"length":36514,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"250efa809704f5e3"},"/reference/react-dom/static/prerender":{"offset":5032791,"length":42052,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e1bd55ac03c73c28"},"/reference/react-dom/client/hydrateRoot":{"offset":5074843,"length":46526,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6c4d589aa4d6b132"},"/reference/react-dom/server/renderToStaticMarkup":{"offset":5121369,"length":29066,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"146e5ac61c792081"},"/reference/react-dom/static":{"offset":5150435,"length":26736,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7221cc185bad89d1"},"/reference/react-dom/preinit":{"offset":5177171,"length":31419,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1ce8e8dd007d590b"},"/reference/react-dom/client/createRoot":{"offset":5208590,"length":46828,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bedd7804a45879fd"},"/reference/react-dom/server/renderToPipeableStream":{"offset":5255418,"length":50942,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6feeb75850beb652"},"/reference/react-dom/preloadModule":{"offset":5306360,"length":29879,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c978d0c7bac0419f"},"/reference/react-dom/client":{"offset":5336239,"length":26333,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"318a6a77c6a8a440"},"/reference/react-dom/server/resumeToPipeableStream":{"offset":5362572,"length":31653,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"af705eb2f09393d1"},"/reference/react-dom/server/renderToString":{"offset":5394225,"length":32196,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"62748e88cbe05716"},"/reference/react-dom/server":{"offset":5426421,"length":27560,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6768b0e6e968f624"},"/reference/react-dom/preload":{"offset":5453981,"length":32124,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6467a7a158ab3f51"},"/reference/react-dom/server/resume":{"offset":5486105,"length":37337,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f6e2b4225b83a522"},"/reference/react-dom/preinitModule":{"offset":5523442,"length":30009,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6b922e3c0bf0c648"},"/reference/react-dom/server/renderToReadableStream":{"offset":5553451,"length":50842,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"08e21f18407eabda"},"/reference/react-compiler/compiling-libraries":{"offset":5604293,"length":30150,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6c78923921bf41eb"},"/reference/eslint-plugin-react-hooks":{"offset":5634443,"length":29660,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1d0b886df942d137"},"/reference/react-compiler/gating":{"offset":5664103,"length":28898,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ceea66e62a4727fb"},"/reference/react-compiler/logger":{"offset":5693001,"length":28386,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3dc0e7c72ce9a179"},"/reference/react-dom/static/resumeAndPrerenderToNodeStream":{"offset":5721387,"length":31225,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1ceb29db90d93026"},"/reference/react-compiler/compilationMode":{"offset":5752612,"length":30790,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0110e60e475d519d"},"/reference/react-compiler/panicThreshold":{"offset":5783402,"length":27821,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8ea35b866db5800a"},"/reference/react-dom/static/resumeAndPrerender":{"offset":5811223,"length":31346,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c101152b7ffb5a36"},"/reference/react-compiler/target":{"offset":5842569,"length":29154,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2561ed7ef4b72ecb"},"/reference/react-dom/static/prerenderToNodeStream":{"offset":5871723,"length":42345,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"547f1ce40452f973"},"/reference/react-compiler/directives/use-memo":{"offset":5914068,"length":31062,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"88a8f21e4b7eae59"},"/reference/dev-tools/react-performance-tracks":{"offset":5945130,"length":33388,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a9dff1c93d9ef353"},"/reference/react-compiler/configuration":{"offset":5978518,"length":29391,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"574e06253cbe9bbc"},"/reference/eslint-plugin-react-hooks/lints/exhaustive-deps":{"offset":6007909,"length":30109,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6411c69ecffc5158"},"/reference/react-compiler/directives/use-no-memo":{"offset":6038018,"length":29955,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"82331173476991d3"},"/reference/react-compiler/directives":{"offset":6067973,"length":30974,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9cd4116d5893f843"},"/reference/eslint-plugin-react-hooks/lints/purity":{"offset":6098947,"length":27984,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"34e7186f83317c38"},"/reference/eslint-plugin-react-hooks/lints/set-state-in-render":{"offset":6126931,"length":29052,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fd906e646378ef91"},"/reference/eslint-plugin-react-hooks/lints/error-boundaries":{"offset":6155983,"length":27875,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e7aa967130dff2b9"},"/reference/eslint-plugin-react-hooks/lints/immutability":{"offset":6183858,"length":28846,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"560e5131a7044fe6"},"/reference/eslint-plugin-react-hooks/lints/gating":{"offset":6212704,"length":26803,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6be0e370c834f074"},"/reference/eslint-plugin-react-hooks/lints/incompatible-library":{"offset":6239507,"length":32561,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7da3d9eb8f2f8d9d"},"/reference/eslint-plugin-react-hooks/lints/rules-of-hooks":{"offset":6272068,"length":31163,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e3ec6f60a3dbe0cd"},"/reference/eslint-plugin-react-hooks/lints/use-memo":{"offset":6303231,"length":28244,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fc3d2dddfd099baf"},"/reference/eslint-plugin-react-hooks/lints/refs":{"offset":6331475,"length":29478,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"471905e758282085"},"/reference/eslint-plugin-react-hooks/lints/config":{"offset":6360953,"length":27173,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a79442b002c36ce4"},"/reference/eslint-plugin-react-hooks/lints/component-hook-factories":{"offset":6388126,"length":27657,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"179655f9e63f62a0"},"/reference/eslint-plugin-react-hooks/lints/set-state-in-effect":{"offset":6415783,"length":28801,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b26f3e3be8204f31"},"/reference/eslint-plugin-react-hooks/lints/unsupported-syntax":{"offset":6444584,"length":28946,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2c9d0152dca4455a"},"/reference/eslint-plugin-react-hooks/lints/globals":{"offset":6473530,"length":27750,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0685075135f9a778"},"/reference/eslint-plugin-react-hooks/lints/static-components":{"offset":6501280,"length":28306,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f3c74044ff1be533"},"/reference/eslint-plugin-react-hooks/lints/preserve-manual-memoization":{"offset":6529586,"length":28180,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"066aed3fa0e8bd14"},"/reference/rules/react-calls-components-and-hooks":{"offset":6557766,"length":30084,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"be53dbe175129a13"},"/reference/rsc/server-functions":{"offset":6587850,"length":32047,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ce17c9c16c67b785"},"/reference/rsc/directives":{"offset":6619897,"length":25842,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c0727e74de7eb34c"},"/reference/rules":{"offset":6645739,"length":29214,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"74e7d04eec4ff027"},"/reference/rules/rules-of-hooks":{"offset":6674953,"length":29597,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c71febbe9ec7b2d0"},"/reference/rsc/server-components":{"offset":6704550,"length":35567,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a488c8fc2c4a2305"},"/reference/rules/components-and-hooks-must-be-pure":{"offset":6740117,"length":45399,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ecec09451771b32d"},"/reference/rsc/use-client":{"offset":6785516,"length":47952,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"33436300f02c11db"},"/reference/rsc/use-server":{"offset":6833468,"length":34602,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"081a01c8d6bdbac4"},"/reference/react/legacy":{"offset":6868070,"length":27045,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d907a543e5a28256"},"/reference/react/Component":{"offset":6895115,"length":85074,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"aeb6dd2c9604e01d"},"/reference/react/createElement":{"offset":6980189,"length":36744,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e75817e7ef93ee72"},"/reference/react/cloneElement":{"offset":7016933,"length":40818,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"90f8dfc7266da581"},"/reference/react/createRef":{"offset":7057751,"length":33917,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6fb88dfa02ea7352"},"/reference/react/Children":{"offset":7091668,"length":48954,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8e0f0d8db1fcabac"},"/reference/react/isValidElement":{"offset":7140622,"length":30511,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c88a85b426b69242"},"/reference/react/forwardRef":{"offset":7171133,"length":40587,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fb08ba594bb9285f"},"/reference/react/PureComponent":{"offset":7211720,"length":35052,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"50542e666ee8aa48"},"/favicon-32x32.png":{"offset":7246772,"length":1238,"mime":"image/png","gzipped":true,"hash":"00527da555080dfb"},"/favicon-16x16.png":{"offset":7248010,"length":652,"mime":"image/png","gzipped":true,"hash":"bf663c03d9aac2db"},"/__docx_assets/01b638435a6637.bin":{"offset":7248662,"length":8016,"mime":"image/png","gzipped":true,"hash":"7b0ad6a7dc6049ae"},"/__docx_assets/512b8f6cd4c33a.bin":{"offset":7256678,"length":7545,"mime":"image/png","gzipped":true,"hash":"7f5ae20c61214571"},"/_next/static/css/f647474d5749a6d8.css":{"offset":7264223,"length":19494,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"49e12f5724182833"},"/images/docs/react-devtools-extension.png":{"offset":7283717,"length":64228,"mime":"image/png","gzipped":true,"hash":"c4e79013855dafa9"},"/__docx_assets/707f31ec896c3f.bin":{"offset":7347945,"length":10261,"mime":"image/png","gzipped":true,"hash":"588b6555beb6e739"},"/images/docs/react-devtools-standalone.png":{"offset":7358206,"length":61573,"mime":"image/png","gzipped":true,"hash":"cdfafac52eb8384d"},"/images/tutorial/react-starter-code-codesandbox.png":{"offset":7419779,"length":76447,"mime":"image/png","gzipped":true,"hash":"bfa2b27a5e39fc06"},"/__docx_assets/97f4bbb74d7afc.bin":{"offset":7496226,"length":5644,"mime":"image/png","gzipped":true,"hash":"597f6f43189aa4f4"},"/__docx_assets/c8bee4f4d77726.bin":{"offset":7501870,"length":7651,"mime":"image/png","gzipped":true,"hash":"9b34f73b45108bdc"},"/__docx_assets/78ae8ba14297fd.bin":{"offset":7509521,"length":3525,"mime":"image/png","gzipped":true,"hash":"b4aa8c6a95669c59"},"/__docx_assets/1ba900ba597f12.bin":{"offset":7513046,"length":10686,"mime":"image/png","gzipped":true,"hash":"30f26408ed78d099"},"/images/tutorial/two-x-filled-squares.png":{"offset":7523732,"length":602,"mime":"image/png","gzipped":true,"hash":"6f9992930b2276a5"},"/images/tutorial/nine-x-filled-squares.png":{"offset":7524334,"length":720,"mime":"image/png","gzipped":true,"hash":"4753ba1d1b996b8d"},"/images/tutorial/number-filled-board.png":{"offset":7525054,"length":2638,"mime":"image/png","gzipped":true,"hash":"e374019ffdf4f577"},"/__docx_assets/f4cddd9d479382.bin":{"offset":7527692,"length":5630,"mime":"image/png","gzipped":true,"hash":"20d2238c34aa297b"},"/__docx_assets/4239bf9e3d5c9b.bin":{"offset":7533322,"length":9084,"mime":"image/png","gzipped":true,"hash":"3f18967f25f8ad1c"},"/images/tutorial/x-filled-square.png":{"offset":7542406,"length":500,"mime":"image/png","gzipped":true,"hash":"2da144b0b19f5bf3"},"/images/tutorial/board-filled-with-ones.png":{"offset":7542906,"length":392,"mime":"image/png","gzipped":true,"hash":"97918ac86c5e8a27"},"/images/docs/illustrations/i_rerender1.png":{"offset":7543298,"length":29481,"mime":"image/png","gzipped":true,"hash":"54aa9aebbf135794"},"/images/tutorial/o-replaces-x.gif":{"offset":7572779,"length":13504,"mime":"image/gif","gzipped":true,"hash":"a839ece6c6f00eb6"},"/images/docs/illustrations/i_render-and-commit2.png":{"offset":7586283,"length":21456,"mime":"image/png","gzipped":true,"hash":"143ce6f754970a21"},"/images/docs/illustrations/i_render1.png":{"offset":7607739,"length":19089,"mime":"image/png","gzipped":true,"hash":"c7c89b21c6bb29e6"},"/images/docs/s_thinking-in-react_ui.png":{"offset":7626828,"length":24398,"mime":"image/png","gzipped":true,"hash":"b3faf5d09620631a"},"/images/docs/illustrations/i_render3.png":{"offset":7651226,"length":31388,"mime":"image/png","gzipped":true,"hash":"68ba8537ab22496b"},"/images/docs/s_thinking-in-react_ui_outline.png":{"offset":7682614,"length":80624,"mime":"image/png","gzipped":true,"hash":"8e92cd939a4ab79a"},"/images/docs/illustrations/i_render-and-commit3.png":{"offset":7763238,"length":21926,"mime":"image/png","gzipped":true,"hash":"6c27b39cbf927fb3"},"/images/docs/illustrations/i_render-and-commit1.png":{"offset":7785164,"length":26613,"mime":"image/png","gzipped":true,"hash":"1c69071230f7d1f2"},"/images/docs/illustrations/i_state-snapshot1.png":{"offset":7811777,"length":56779,"mime":"image/png","gzipped":true,"hash":"80beed029a772329"},"/images/docs/illustrations/i_state-snapshot3.png":{"offset":7868556,"length":52354,"mime":"image/png","gzipped":true,"hash":"dac8a4cf1bee0588"},"/images/docs/illustrations/i_state-snapshot2.png":{"offset":7920910,"length":48976,"mime":"image/png","gzipped":true,"hash":"9e5a8ae9a6791a1c"},"/images/tutorial/empty-board.png":{"offset":7969886,"length":161,"mime":"image/png","gzipped":true,"hash":"78f8c215cc992ce0"},"/images/tutorial/board-filled-with-value.png":{"offset":7970047,"length":21117,"mime":"image/png","gzipped":true,"hash":"0102faedbbc29193"},"/images/tutorial/sandbox-new-tab.png":{"offset":7991164,"length":9814,"mime":"image/png","gzipped":true,"hash":"4ba009808f112e36"},"/images/tutorial/components-tab.png":{"offset":8000978,"length":72416,"mime":"image/png","gzipped":true,"hash":"8306f2865db6d2fa"},"/images/docs/illustrations/i_rerender2.png":{"offset":8073394,"length":25073,"mime":"image/png","gzipped":true,"hash":"929bf86cfe246227"},"/images/docs/illustrations/i_render2.png":{"offset":8098467,"length":9411,"mime":"image/png","gzipped":true,"hash":"837bfdaec61f4327"},"/images/tutorial/tictac-adding-x-s.gif":{"offset":8107878,"length":128913,"mime":"image/gif","gzipped":true,"hash":"302deec92ed81fc2"},"/__docx_assets/7b8a6f00c61ef8.bin":{"offset":8236791,"length":14570,"mime":"image/png","gzipped":true,"hash":"20b8885d65f14d58"},"/__docx_assets/855a0d4c0a8a8d.bin":{"offset":8251361,"length":11114,"mime":"image/png","gzipped":true,"hash":"111b5b862bba923a"},"/images/docs/illustrations/i_browser-paint.png":{"offset":8262475,"length":63826,"mime":"image/png","gzipped":true,"hash":"8946f216023f1956"},"/__docx_assets/5fa2981f00dc06.bin":{"offset":8326301,"length":11537,"mime":"image/png","gzipped":true,"hash":"67b6bb58e81a2aba"},"/__docx_assets/3576af5566e6a2.bin":{"offset":8337838,"length":11501,"mime":"image/png","gzipped":true,"hash":"efea4849fd7a5a0b"},"/images/docs/illustrations/i_rerender3.png":{"offset":8349339,"length":21854,"mime":"image/png","gzipped":true,"hash":"233356a51fb9aaf3"},"/__docx_assets/63474e1a2f7c58.bin":{"offset":8371193,"length":12788,"mime":"image/png","gzipped":true,"hash":"fbc274a99a6c2832"},"/__docx_assets/97b4e96ef43b05.bin":{"offset":8383981,"length":14067,"mime":"image/png","gzipped":true,"hash":"3b983db352887d28"},"/__docx_assets/5424203fb7dc82.bin":{"offset":8398048,"length":13073,"mime":"image/png","gzipped":true,"hash":"4be7acf885432724"},"/__docx_assets/5bf1a51e34b4a3.bin":{"offset":8411121,"length":5754,"mime":"image/png","gzipped":true,"hash":"ad4f7272c29092ac"},"/__docx_assets/00e6b1df7931b2.bin":{"offset":8416875,"length":11948,"mime":"image/png","gzipped":true,"hash":"1a25e7a81679f993"},"/__docx_assets/d1b04491fd1cac.bin":{"offset":8428823,"length":5826,"mime":"image/png","gzipped":true,"hash":"c32bf4f49f93940b"},"/__docx_assets/8799f58bed3ce9.bin":{"offset":8434649,"length":10598,"mime":"image/png","gzipped":true,"hash":"3714ebf8fb97dfb2"},"/__docx_assets/bf96b90d12caaa.bin":{"offset":8445247,"length":7171,"mime":"image/png","gzipped":true,"hash":"4088d7f30f95c9e9"},"/__docx_assets/68b3496063aece.bin":{"offset":8452418,"length":11243,"mime":"image/png","gzipped":true,"hash":"8e977fde8c180610"},"/__docx_assets/d5eb814ae803c4.bin":{"offset":8463661,"length":14211,"mime":"image/png","gzipped":true,"hash":"16f80e68f39da67a"},"/__docx_assets/f3a28590678d76.bin":{"offset":8477872,"length":14442,"mime":"image/png","gzipped":true,"hash":"b53a59a3a9682d2c"},"/__docx_assets/07c0ba14664c33.bin":{"offset":8492314,"length":14857,"mime":"image/png","gzipped":true,"hash":"714a6d5be5a1374c"},"/__docx_assets/9391287ea48dcf.bin":{"offset":8507171,"length":13458,"mime":"image/png","gzipped":true,"hash":"808a02ea1db718e1"},"/__docx_assets/0b643cf2c3c50b.bin":{"offset":8520629,"length":7090,"mime":"image/png","gzipped":true,"hash":"90d70510c8238fd2"},"/__docx_assets/b147e848020a1d.bin":{"offset":8527719,"length":13301,"mime":"image/png","gzipped":true,"hash":"efa2a9b83f55e393"},"/images/docs/illustrations/i_children-prop.png":{"offset":8541020,"length":51851,"mime":"image/png","gzipped":true,"hash":"ea268e1ed060e571"},"/images/docs/illustrations/i_import-export.svg":{"offset":8592871,"length":983,"mime":"image/svg+xml","gzipped":true,"hash":"d130bc4b3bf23436"},"/__docx_assets/0911e967b8519b.bin":{"offset":8593854,"length":9992,"mime":"image/png","gzipped":true,"hash":"166462303fbef435"},"/__docx_assets/817f69853f75cc.bin":{"offset":8603846,"length":12560,"mime":"image/png","gzipped":true,"hash":"deac7c58db04d552"},"/__docx_assets/adfb290d621971.bin":{"offset":8616406,"length":9117,"mime":"image/png","gzipped":true,"hash":"199f9af582d60396"},"/__docx_assets/0bcf0456e51f58.bin":{"offset":8625523,"length":7076,"mime":"image/png","gzipped":true,"hash":"72b0a5a281ff4271"},"/__docx_assets/0617c9227bc89c.bin":{"offset":8632599,"length":6803,"mime":"image/png","gzipped":true,"hash":"419658de77ea6021"},"/__docx_assets/68382d4f71b990.bin":{"offset":8639402,"length":5757,"mime":"image/png","gzipped":true,"hash":"9e2e314410dfdd0d"},"/__docx_assets/3e7c9995ae85d5.bin":{"offset":8645159,"length":7393,"mime":"image/png","gzipped":true,"hash":"0cf95a88626fb332"},"/__docx_assets/3bd019f7d376d4.bin":{"offset":8652552,"length":5386,"mime":"image/png","gzipped":true,"hash":"30ebc153cf25d2e3"},"/__docx_assets/92334c84f0d009.bin":{"offset":8657938,"length":8738,"mime":"image/png","gzipped":true,"hash":"3afdf6a2ee50a68f"},"/__docx_assets/7a03adfa20b96a.bin":{"offset":8666676,"length":9525,"mime":"image/png","gzipped":true,"hash":"c3d6468954ac0dd0"},"/__docx_assets/7d4fcccd4807ad.bin":{"offset":8676201,"length":14586,"mime":"image/png","gzipped":true,"hash":"54854d53c35a6dd6"},"/__docx_assets/f2f4c737edf599.bin":{"offset":8690787,"length":6373,"mime":"image/png","gzipped":true,"hash":"a8ece4725db37eb6"},"/__docx_assets/182ba8ccc0a1cc.bin":{"offset":8697160,"length":6186,"mime":"image/png","gzipped":true,"hash":"dd908c1a6fc3052c"},"/__docx_assets/3d0a3ea3099533.bin":{"offset":8703346,"length":6803,"mime":"image/png","gzipped":true,"hash":"77d25e3322c3ebac"},"/images/docs/illustrations/i_puritea-recipe.png":{"offset":8710149,"length":47038,"mime":"image/png","gzipped":true,"hash":"7c84146c71f29a08"},"/images/docs/illustrations/i_react-batching.png":{"offset":8757187,"length":93793,"mime":"image/png","gzipped":true,"hash":"c49cd649e4e4c658"},"/__docx_assets/76c18e26a41414.bin":{"offset":8850980,"length":13267,"mime":"image/png","gzipped":true,"hash":"74a0707a674dcdfc"},"/images/docs/illustrations/i_imperative-ui-programming.png":{"offset":8864247,"length":55863,"mime":"image/png","gzipped":true,"hash":"b44320e6ce6d0a9b"},"/__docx_assets/a12baaa063a621.bin":{"offset":8920110,"length":17624,"mime":"image/png","gzipped":true,"hash":"23eadb5f1625e4e6"},"/images/docs/illustrations/i_declarative-ui-programming.png":{"offset":8937734,"length":72924,"mime":"image/png","gzipped":true,"hash":"4625bf073a09055c"},"/__docx_assets/580830133f352b.bin":{"offset":9010658,"length":17753,"mime":"image/png","gzipped":true,"hash":"6ec5577fd0eab187"},"/__docx_assets/090d261b2836ed.bin":{"offset":9028411,"length":13819,"mime":"image/png","gzipped":true,"hash":"3cb028549a6b7300"},"/__docx_assets/afa5d3711e5a97.bin":{"offset":9042230,"length":9662,"mime":"image/png","gzipped":true,"hash":"1400666683c4c31c"},"/__docx_assets/499d277b931d15.bin":{"offset":9051892,"length":18166,"mime":"image/png","gzipped":true,"hash":"da36e9fd7baf2dbb"},"/__docx_assets/c01cc4c851e0df.bin":{"offset":9070058,"length":11227,"mime":"image/png","gzipped":true,"hash":"789fdd626c129ff2"},"/__docx_assets/3598c997070edf.bin":{"offset":9081285,"length":9037,"mime":"image/png","gzipped":true,"hash":"89d1350aa5126fe1"},"/__docx_assets/2db3c5365f67cc.bin":{"offset":9090322,"length":9394,"mime":"image/png","gzipped":true,"hash":"2072fed9c8db0f9b"},"/__docx_assets/92ba51e9424a6e.bin":{"offset":9099716,"length":11340,"mime":"image/png","gzipped":true,"hash":"e2babc9c78cca718"},"/__docx_assets/4a1e7192cb50af.bin":{"offset":9111056,"length":11821,"mime":"image/png","gzipped":true,"hash":"eae125292077c3ef"},"/__docx_assets/7fbf98377b727e.bin":{"offset":9122877,"length":19219,"mime":"image/png","gzipped":true,"hash":"cac80fb5c05afb48"},"/__docx_assets/e39382cb701bf6.bin":{"offset":9142096,"length":11601,"mime":"image/png","gzipped":true,"hash":"38ae8c4e09393c38"},"/__docx_assets/7ddaadfaa95b9c.bin":{"offset":9153697,"length":20917,"mime":"image/png","gzipped":true,"hash":"d8c26e6d126d4cb3"},"/__docx_assets/0fd9f54d67e629.bin":{"offset":9174614,"length":9151,"mime":"image/png","gzipped":true,"hash":"bd4515b745b82f58"},"/__docx_assets/c883142b5f19e3.bin":{"offset":9183765,"length":13538,"mime":"image/png","gzipped":true,"hash":"4d012447e8d2d81c"},"/__docx_assets/49476a7e70d011.bin":{"offset":9197303,"length":14339,"mime":"image/png","gzipped":true,"hash":"aa7676158a20847a"},"/__docx_assets/94076452ad72b0.bin":{"offset":9211642,"length":12789,"mime":"image/png","gzipped":true,"hash":"f376d94c00b33a6a"},"/__docx_assets/515f10865baa5a.bin":{"offset":9224431,"length":17525,"mime":"image/png","gzipped":true,"hash":"d8ddeaedd851e578"},"/images/docs/performance-tracks/scheduler-update.png":{"offset":9241956,"length":37982,"mime":"image/png","gzipped":true,"hash":"41ca1da060456070"},"/images/docs/illustrations/i_inputs1.png":{"offset":9279938,"length":12512,"mime":"image/png","gzipped":true,"hash":"e2f84f12ddcb8bc8"},"/images/docs/performance-tracks/scheduler-update.dark.png":{"offset":9292450,"length":43367,"mime":"image/png","gzipped":true,"hash":"a2dac2bb362c08e3"},"/images/docs/react-devtools-usedebugvalue.png":{"offset":9335817,"length":78349,"mime":"image/png","gzipped":true,"hash":"ab987e9a83b2304f"},"/images/docs/performance-tracks/scheduler.dark.png":{"offset":9414166,"length":295806,"mime":"image/png","gzipped":true,"hash":"2a59dfa693f1e89a"},"/images/docs/illustrations/i_inputs2.png":{"offset":9709972,"length":29638,"mime":"image/png","gzipped":true,"hash":"3e9bce3141965742"},"/__docx_assets/690292b6ddc592.bin":{"offset":9739610,"length":20064,"mime":"image/png","gzipped":true,"hash":"a40d023caffe9889"},"/__docx_assets/c677e74e601ff4.bin":{"offset":9759674,"length":4419,"mime":"image/png","gzipped":true,"hash":"24f03eeed590c09f"},"/__docx_assets/5391cbd5d2803d.bin":{"offset":9764093,"length":20627,"mime":"image/png","gzipped":true,"hash":"ecec65bced752c04"},"/__docx_assets/72db3db127ea46.bin":{"offset":9784720,"length":2068,"mime":"image/png","gzipped":true,"hash":"2119ccd47d9eb5bb"},"/images/docs/illustrations/i_ref.png":{"offset":9786788,"length":23290,"mime":"image/png","gzipped":true,"hash":"5e34d6e8a996b5d9"},"/__docx_assets/e79754e2f7677a.bin":{"offset":9810078,"length":5466,"mime":"image/png","gzipped":true,"hash":"bdfcff4208affc45"},"/__docx_assets/73d6e37dbbacfc.bin":{"offset":9815544,"length":17551,"mime":"image/png","gzipped":true,"hash":"7a4458816f865692"},"/__docx_assets/0a3463a4674317.bin":{"offset":9833095,"length":5451,"mime":"image/png","gzipped":true,"hash":"4c1ad238ed632538"},"/__docx_assets/637130f0eb20b8.bin":{"offset":9838546,"length":16308,"mime":"image/png","gzipped":true,"hash":"013c5ab45124b12e"},"/__docx_assets/4722b0e9d0d775.bin":{"offset":9854854,"length":4345,"mime":"image/png","gzipped":true,"hash":"0e41cc14dd60553f"},"/images/docs/performance-tracks/scheduler.png":{"offset":9859199,"length":291466,"mime":"image/png","gzipped":true,"hash":"91cf913ebd82a52a"},"/__docx_assets/5468dee1ea1bac.bin":{"offset":10150665,"length":1871,"mime":"image/png","gzipped":true,"hash":"40044dc920bd7ea3"},"/images/docs/performance-tracks/components-effects.dark.png":{"offset":10152536,"length":298106,"mime":"image/png","gzipped":true,"hash":"a8dd1afceadc38a1"},"/images/docs/performance-tracks/components-effects.png":{"offset":10450642,"length":224748,"mime":"image/png","gzipped":true,"hash":"665be1eb92f01a57"},"/__docx_assets/5af125b37408b6.bin":{"offset":10675390,"length":17325,"mime":"image/png","gzipped":true,"hash":"b1bfb6e7e6d26911"},"/__docx_assets/4c3607a46277e2.bin":{"offset":10692715,"length":12865,"mime":"image/png","gzipped":true,"hash":"c17a1b608a7db57a"},"/__docx_assets/be976aaf685887.bin":{"offset":10675390,"length":17325,"mime":"image/png","gzipped":true,"hash":"b1bfb6e7e6d26911"},"/__docx_assets/4631cf117cbdd1.bin":{"offset":10705580,"length":17254,"mime":"image/png","gzipped":true,"hash":"c8524d61b1520987"},"/__docx_assets/6dadb38abe9154.bin":{"offset":10705580,"length":17254,"mime":"image/png","gzipped":true,"hash":"c8524d61b1520987"},"/__docx_assets/0b6e7e91bfc391.bin":{"offset":10722834,"length":12376,"mime":"image/png","gzipped":true,"hash":"374d708a4417ad8e"},"/fonts/Source-Code-Pro-Bold.woff2":{"offset":10735210,"length":77373,"mime":"font/woff2","gzipped":true,"hash":"f55fc5ee3afffdbe"},"/fonts/Optimistic_Text_W_It.woff2":{"offset":10812583,"length":25632,"mime":"font/woff2","gzipped":true,"hash":"9e1e0a9f35812865"},"/fonts/Source-Code-Pro-Regular.woff2":{"offset":10838215,"length":76343,"mime":"font/woff2","gzipped":true,"hash":"8674280da390fb7a"},"/fonts/Optimistic_Text_W_Md.woff2":{"offset":10914558,"length":23496,"mime":"font/woff2","gzipped":true,"hash":"7fdbd2b91664712b"},"/fonts/Optimistic_Text_W_Rg.woff2":{"offset":10938054,"length":22680,"mime":"font/woff2","gzipped":true,"hash":"acd44c8db58f369b"},"/fonts/Optimistic_Text_W_Bd.woff2":{"offset":10960734,"length":23556,"mime":"font/woff2","gzipped":true,"hash":"7301b5a0b2776cc3"},"/fonts/Optimistic_Text_Arbc_W_Bd.woff2":{"offset":10984290,"length":29808,"mime":"font/woff2","gzipped":true,"hash":"0c8469f295ac0181"},"/fonts/Optimistic_Display_W_MdIt.woff2":{"offset":11014098,"length":23684,"mime":"font/woff2","gzipped":true,"hash":"cde37d9a8dc670bd"},"/fonts/Optimistic_Text_Arbc_W_Md.woff2":{"offset":11037782,"length":29880,"mime":"font/woff2","gzipped":true,"hash":"fc031097873e5b12"},"/fonts/Optimistic_Display_W_Bd.woff2":{"offset":11067662,"length":23656,"mime":"font/woff2","gzipped":true,"hash":"0c2529b8e9241a1a"},"/fonts/Optimistic_Display_W_Md.woff2":{"offset":11091318,"length":23404,"mime":"font/woff2","gzipped":true,"hash":"7d8a85520a0ee40c"},"/fonts/Optimistic_Text_Arbc_W_Rg.woff2":{"offset":11114722,"length":29140,"mime":"font/woff2","gzipped":true,"hash":"7c431d29b9e2b2c7"},"/fonts/Optimistic_Display_Arbc_W_SBd.woff2":{"offset":11143862,"length":29904,"mime":"font/woff2","gzipped":true,"hash":"11ab78311b13a3d7"},"/fonts/Optimistic_Display_Arbc_W_Bd.woff2":{"offset":11173766,"length":30044,"mime":"font/woff2","gzipped":true,"hash":"531f0390ce92c02f"},"/fonts/Optimistic_Display_W_SBd.woff2":{"offset":11203810,"length":23624,"mime":"font/woff2","gzipped":true,"hash":"3df77a80a97aa9d2"},"/fonts/Optimistic_Display_W_SBdIt.woff2":{"offset":11227434,"length":24848,"mime":"font/woff2","gzipped":true,"hash":"b49c4969f209114e"},"/fonts/Optimistic_Display_Arbc_W_Md.woff2":{"offset":11252282,"length":29320,"mime":"font/woff2","gzipped":true,"hash":"5b7bc422363466e0"},"/fonts/Optimistic_Text_W_MdIt.woff2":{"offset":11281602,"length":26176,"mime":"font/woff2","gzipped":true,"hash":"37405a281b2f15f1"},"/fonts/Optimistic_Display_W_BdIt.woff2":{"offset":11307778,"length":25016,"mime":"font/woff2","gzipped":true,"hash":"8d5327bb706b6bf7"},"/fonts/Optimistic_Text_W_BdIt.woff2":{"offset":11332794,"length":26244,"mime":"font/woff2","gzipped":true,"hash":"0b6ff6497259ab66"},"/fonts/Optimistic_Display_Cyrl_W_Md.woff2":{"offset":11359038,"length":25236,"mime":"font/woff2","gzipped":true,"hash":"f092c27b386c168c"},"/fonts/Optimistic_Display_Cyrl_W_SBd.woff2":{"offset":11384274,"length":25608,"mime":"font/woff2","gzipped":true,"hash":"8ae1704b348b97b1"},"/fonts/Optimistic_Text_Viet_W_Bd.woff2":{"offset":11409882,"length":20952,"mime":"font/woff2","gzipped":true,"hash":"489756757b2f1c81"},"/fonts/Optimistic_Display_Deva_W_SBd.woff2":{"offset":11430834,"length":92668,"mime":"font/woff2","gzipped":true,"hash":"5fc05923242643da"},"/fonts/Optimistic_Text_Deva_W_Rg.woff2":{"offset":11523502,"length":93124,"mime":"font/woff2","gzipped":true,"hash":"8d04b1ed12d5ceaa"},"/images/meta-gradient.png":{"offset":11616626,"length":2553,"mime":"image/png","gzipped":true,"hash":"08360072d125d62c"},"/fonts/Optimistic_Display_Cyrl_W_Bd.woff2":{"offset":11619179,"length":25940,"mime":"font/woff2","gzipped":true,"hash":"dc7e0841e75f75ca"},"/fonts/Optimistic_Display_Viet_W_Md.woff2":{"offset":11645119,"length":20328,"mime":"font/woff2","gzipped":true,"hash":"6a6d5565c50642c5"},"/fonts/Optimistic_Text_Cyrl_W_Rg.woff2":{"offset":11665447,"length":24028,"mime":"font/woff2","gzipped":true,"hash":"ebca87875e8c6348"},"/fonts/Optimistic_Text_Cyrl_W_Bd.woff2":{"offset":11689475,"length":25212,"mime":"font/woff2","gzipped":true,"hash":"434cb81c87a2c754"},"/fonts/Optimistic_Text_Viet_W_Md.woff2":{"offset":11714687,"length":21048,"mime":"font/woff2","gzipped":true,"hash":"e926170abcfd3152"},"/fonts/Optimistic_Display_Viet_W_SBd.woff2":{"offset":11735735,"length":20548,"mime":"font/woff2","gzipped":true,"hash":"6a6168dd87aab2d1"},"/fonts/Optimistic_Display_Deva_W_Md.woff2":{"offset":11756283,"length":89624,"mime":"font/woff2","gzipped":true,"hash":"44d621e964a2f438"},"/fonts/Optimistic_Display_Deva_W_Bd.woff2":{"offset":11845907,"length":92980,"mime":"font/woff2","gzipped":true,"hash":"de0d100529b36aac"},"/fonts/Optimistic_Text_Deva_W_Md.woff2":{"offset":11938887,"length":95287,"mime":"font/woff2","gzipped":true,"hash":"14d07b532bb4c569"},"/fonts/Optimistic_Display_Viet_W_Bd.woff2":{"offset":12034174,"length":20560,"mime":"font/woff2","gzipped":true,"hash":"462dfad51f5faa05"},"/fonts/Optimistic_Text_Cyrl_W_Md.woff2":{"offset":12054734,"length":25112,"mime":"font/woff2","gzipped":true,"hash":"d4b54abba2b347f3"},"/fonts/Optimistic_Text_Viet_W_Rg.woff2":{"offset":12079846,"length":20000,"mime":"font/woff2","gzipped":true,"hash":"aa2aeff63eb986d7"},"/images/g_arrow.png":{"offset":12099846,"length":5107,"mime":"image/png","gzipped":true,"hash":"73bef862ed8845f4"},"/fonts/Optimistic_Text_Deva_W_Bd.woff2":{"offset":12104953,"length":96572,"mime":"font/woff2","gzipped":true,"hash":"a7c6fdc664a67a60"},"/images/meta-gradient-dark.png":{"offset":12201525,"length":2500,"mime":"image/png","gzipped":true,"hash":"31e1a382c27579ae"},"/docs":{"offset":0,"length":43073,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c13dc91eda877f7a"},"/":{"offset":0,"length":43073,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c13dc91eda877f7a"}}}
+{
+  "id": "react",
+  "name": "React",
+  "version": "v19.1",
+  "commit": "4d676320",
+  "origin": "https://react.dev",
+  "entryPath": "/learn",
+  "updatedAt": "2026-10-11T10:37:22.924Z",
+  "totalBytes": 12046618,
+  "chunkCount": 345,
+  "routes": {
+    "/learn": {
+      "offset": 0,
+      "length": 42156,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ef9e705c735e58e3"
+    },
+    "/reference/react": {
+      "offset": 42156,
+      "length": 27057,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4685d6d520bf2fff"
+    },
+    "/learn/editor-setup": {
+      "offset": 69213,
+      "length": 26288,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c40300b0f5055411"
+    },
+    "/learn/build-a-react-app-from-scratch": {
+      "offset": 95501,
+      "length": 34084,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9ab1a44a035774b5"
+    },
+    "/learn/add-react-to-an-existing-project": {
+      "offset": 129585,
+      "length": 33693,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "842fcb53a5777472"
+    },
+    "/learn/react-compiler/introduction": {
+      "offset": 163278,
+      "length": 34863,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b120a825c2eae10e"
+    },
+    "/learn/react-compiler/installation": {
+      "offset": 198141,
+      "length": 31819,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1f7bd8eb8a3d65f9"
+    },
+    "/learn/react-compiler/incremental-adoption": {
+      "offset": 229960,
+      "length": 29309,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e1befe1d942c59af"
+    },
+    "/learn/react-developer-tools": {
+      "offset": 259269,
+      "length": 24867,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d2816024ea661649"
+    },
+    "/learn/setup": {
+      "offset": 284136,
+      "length": 22909,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7005f05ffce10492"
+    },
+    "/learn/react-compiler/debugging": {
+      "offset": 307045,
+      "length": 26812,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bb827dca17a5aef8"
+    },
+    "/learn/installation": {
+      "offset": 333857,
+      "length": 27600,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "101d21c6188553fd"
+    },
+    "/learn/react-compiler": {
+      "offset": 361457,
+      "length": 23599,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e0b1a41970f58722"
+    },
+    "/learn/thinking-in-react": {
+      "offset": 385056,
+      "length": 52141,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9ffe8554f19635ca"
+    },
+    "/learn/typescript": {
+      "offset": 437197,
+      "length": 48786,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "59c3dc5a0813d055"
+    },
+    "/learn/creating-a-react-app": {
+      "offset": 485983,
+      "length": 31088,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9d5f4f300e699c80"
+    },
+    "/learn/tutorial-tic-tac-toe": {
+      "offset": 517071,
+      "length": 131866,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "18c5236c33130502"
+    },
+    "/learn/your-first-component": {
+      "offset": 648937,
+      "length": 40675,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c0d18419148e53fd"
+    },
+    "/learn/javascript-in-jsx-with-curly-braces": {
+      "offset": 689612,
+      "length": 35960,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ff18beec1f427ac5"
+    },
+    "/learn/writing-markup-with-jsx": {
+      "offset": 725572,
+      "length": 39941,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "484e3118568cb0b8"
+    },
+    "/learn/adding-interactivity": {
+      "offset": 765513,
+      "length": 43494,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "75adaf36e6d8b361"
+    },
+    "/learn/responding-to-events": {
+      "offset": 809007,
+      "length": 46943,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d34c134f99509ed0"
+    },
+    "/learn/queueing-a-series-of-state-updates": {
+      "offset": 855950,
+      "length": 37816,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c944accbe9ee490a"
+    },
+    "/learn/render-and-commit": {
+      "offset": 893766,
+      "length": 35576,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "51b3004f77f488bf"
+    },
+    "/learn/keeping-components-pure": {
+      "offset": 929342,
+      "length": 43017,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "160a91f70034e3e2"
+    },
+    "/learn/state-as-a-snapshot": {
+      "offset": 972359,
+      "length": 37677,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fd24f90fc3dfa69d"
+    },
+    "/learn/understanding-your-ui-as-a-tree": {
+      "offset": 1010036,
+      "length": 35352,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b07addfb53fc87de"
+    },
+    "/learn/describing-the-ui": {
+      "offset": 1045388,
+      "length": 37674,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5fc9ee8f211e0cbb"
+    },
+    "/learn/passing-props-to-a-component": {
+      "offset": 1083062,
+      "length": 45644,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "81c15c91c5263f6f"
+    },
+    "/learn/rendering-lists": {
+      "offset": 1128706,
+      "length": 47964,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "28066479f3789e48"
+    },
+    "/learn/conditional-rendering": {
+      "offset": 1176670,
+      "length": 39790,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0dce7bd59ea4a184"
+    },
+    "/learn/importing-and-exporting-components": {
+      "offset": 1216460,
+      "length": 35676,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e5ffce47a6f6fe85"
+    },
+    "/learn/state-a-components-memory": {
+      "offset": 1252136,
+      "length": 54990,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d6a4be29670ff490"
+    },
+    "/learn/reacting-to-input-with-state": {
+      "offset": 1307126,
+      "length": 52366,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9dfa4eb4858bfeaa"
+    },
+    "/learn/sharing-state-between-components": {
+      "offset": 1359492,
+      "length": 43184,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "46e5869862e7f077"
+    },
+    "/learn/managing-state": {
+      "offset": 1402676,
+      "length": 41813,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1f59b2fdf9dbbcb0"
+    },
+    "/learn/extracting-state-logic-into-a-reducer": {
+      "offset": 1444489,
+      "length": 53741,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "83e7c96ed22b79cd"
+    },
+    "/learn/scaling-up-with-reducer-and-context": {
+      "offset": 1498230,
+      "length": 44358,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f911417c4a85514f"
+    },
+    "/learn/escape-hatches": {
+      "offset": 1542588,
+      "length": 42170,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5e2eed00a2b3eeb6"
+    },
+    "/learn/updating-objects-in-state": {
+      "offset": 1584758,
+      "length": 52254,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2c1ad304e200d2d0"
+    },
+    "/learn/referencing-values-with-refs": {
+      "offset": 1637012,
+      "length": 45355,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d20388f22a13a35c"
+    },
+    "/learn/synchronizing-with-effects": {
+      "offset": 1682367,
+      "length": 81835,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f4800a4c9bdea1d4"
+    },
+    "/learn/preserving-and-resetting-state": {
+      "offset": 1764202,
+      "length": 55242,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bb76293c01d9f27e"
+    },
+    "/learn/passing-data-deeply-with-context": {
+      "offset": 1819444,
+      "length": 48812,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "669a26b65ebe4ebb"
+    },
+    "/learn/lifecycle-of-reactive-effects": {
+      "offset": 1868256,
+      "length": 68539,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "97ea0da42f47d46a"
+    },
+    "/learn/manipulating-the-dom-with-refs": {
+      "offset": 1936795,
+      "length": 52617,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9afce51d8a11c27e"
+    },
+    "/learn/you-might-not-need-an-effect": {
+      "offset": 1989412,
+      "length": 64485,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "05d217a2031a83df"
+    },
+    "/learn/updating-arrays-in-state": {
+      "offset": 2053897,
+      "length": 48842,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f471d529a8def10d"
+    },
+    "/learn/choosing-the-state-structure": {
+      "offset": 2102739,
+      "length": 64449,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "74f043f724d6f4c9"
+    },
+    "/reference/react/useId": {
+      "offset": 2167188,
+      "length": 37598,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "efb238e29ea35446"
+    },
+    "/reference/react-dom": {
+      "offset": 2204786,
+      "length": 27084,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5be716cc5154cb30"
+    },
+    "/reference/react/useImperativeHandle": {
+      "offset": 2231870,
+      "length": 35314,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1a182f51a96bb430"
+    },
+    "/reference/react/useEffectEvent": {
+      "offset": 2267184,
+      "length": 43114,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "76da489c55fc8c12"
+    },
+    "/reference/react/useCallback": {
+      "offset": 2310298,
+      "length": 52340,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9556bb9961eb8f45"
+    },
+    "/reference/react/hooks": {
+      "offset": 2362638,
+      "length": 30075,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d265d5d4a0fdd385"
+    },
+    "/reference/react/useDeferredValue": {
+      "offset": 2392713,
+      "length": 48097,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b5f5a1a73132e9da"
+    },
+    "/reference/react/useDebugValue": {
+      "offset": 2440810,
+      "length": 31591,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "36efdd50da086aa0"
+    },
+    "/reference/react/useContext": {
+      "offset": 2472401,
+      "length": 46729,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "75eddfd7fb3dd300"
+    },
+    "/learn/removing-effect-dependencies": {
+      "offset": 2519130,
+      "length": 71817,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eeed846d2ba87114"
+    },
+    "/reference/react/useInsertionEffect": {
+      "offset": 2590947,
+      "length": 32743,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a74d8bf6a917877e"
+    },
+    "/learn/separating-events-from-effects": {
+      "offset": 2623690,
+      "length": 66403,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cc465a936c6bbfea"
+    },
+    "/reference/react/useState": {
+      "offset": 2690093,
+      "length": 59932,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "db845b26a1f8c2da"
+    },
+    "/learn/reusing-logic-with-custom-hooks": {
+      "offset": 2750025,
+      "length": 78289,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a4f8aec8757a6d60"
+    },
+    "/reference/react/useActionState": {
+      "offset": 2828314,
+      "length": 54312,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c3dd9bdc1f9d1456"
+    },
+    "/reference/react/useEffect": {
+      "offset": 2882626,
+      "length": 77518,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0f6fa2cdca712414"
+    },
+    "/reference/react/StrictMode": {
+      "offset": 2960144,
+      "length": 49265,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "705d6877ec0d9fa6"
+    },
+    "/reference/react/apis": {
+      "offset": 3009409,
+      "length": 26922,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2a654af20d36da80"
+    },
+    "/reference/react/components": {
+      "offset": 3036331,
+      "length": 25394,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "161a55ba542b6275"
+    },
+    "/reference/react/Suspense": {
+      "offset": 3061725,
+      "length": 69495,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5a7aa6febd7e3764"
+    },
+    "/reference/react/useRef": {
+      "offset": 3131220,
+      "length": 45909,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9db6d7d08dafe60e"
+    },
+    "/reference/react/useLayoutEffect": {
+      "offset": 3177129,
+      "length": 41255,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fa23ed29859333c9"
+    },
+    "/reference/react/useSyncExternalStore": {
+      "offset": 3218384,
+      "length": 41584,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "42cb0225c143888b"
+    },
+    "/reference/react/useOptimistic": {
+      "offset": 3259968,
+      "length": 60923,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9c9fecc7cf9c3942"
+    },
+    "/reference/react/Activity": {
+      "offset": 3320891,
+      "length": 50716,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "65c0ae0087e92d52"
+    },
+    "/reference/react/ViewTransition": {
+      "offset": 3371607,
+      "length": 66795,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d0c7008c821290ef"
+    },
+    "/reference/react/Fragment": {
+      "offset": 3438402,
+      "length": 53359,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a0a37a8398252698"
+    },
+    "/reference/react/useMemo": {
+      "offset": 3491761,
+      "length": 63368,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "88977e3f77aa1931"
+    },
+    "/reference/react/useTransition": {
+      "offset": 3555129,
+      "length": 60239,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bb5bc902437e02d6"
+    },
+    "/reference/react/act": {
+      "offset": 3615368,
+      "length": 32696,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "33278e7f0a926dec"
+    },
+    "/reference/react/useReducer": {
+      "offset": 3648064,
+      "length": 51707,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a29ef383184ebe74"
+    },
+    "/reference/react/Profiler": {
+      "offset": 3699771,
+      "length": 30653,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d06780ab884137f0"
+    },
+    "/reference/react/cache": {
+      "offset": 3730424,
+      "length": 43165,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8173f4fc9613ec2d"
+    },
+    "/reference/react-dom/hooks": {
+      "offset": 3773589,
+      "length": 25996,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0dee3ac47642bb52"
+    },
+    "/reference/react/lazy": {
+      "offset": 3799585,
+      "length": 33610,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b3f21adb8a6778fe"
+    },
+    "/reference/react/experimental_taintObjectReference": {
+      "offset": 3833195,
+      "length": 33057,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4c9af8bcbf960dd"
+    },
+    "/reference/react/createContext": {
+      "offset": 3866252,
+      "length": 31752,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e0b2c4c4b7fcae99"
+    },
+    "/reference/react-dom/hooks/useFormStatus": {
+      "offset": 3898004,
+      "length": 34819,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "69690a97eb2651bb"
+    },
+    "/reference/react/experimental_taintUniqueValue": {
+      "offset": 3932823,
+      "length": 35473,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1cd317acf219e5f4"
+    },
+    "/reference/react/use": {
+      "offset": 3968296,
+      "length": 69498,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c824efaf7ec08a4d"
+    },
+    "/reference/react/addTransitionType": {
+      "offset": 4037794,
+      "length": 29171,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "33987694fe255b57"
+    },
+    "/reference/react-dom/components/form": {
+      "offset": 4066965,
+      "length": 41866,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4928705ec1435915"
+    },
+    "/reference/react/memo": {
+      "offset": 4108831,
+      "length": 47449,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "46999893f0466cf0"
+    },
+    "/reference/react/cacheSignal": {
+      "offset": 4156280,
+      "length": 29417,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "631fc5e167302ab5"
+    },
+    "/reference/react/captureOwnerStack": {
+      "offset": 4185697,
+      "length": 36560,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "37710dffdbaef973"
+    },
+    "/reference/react-dom/components": {
+      "offset": 4222257,
+      "length": 39238,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "206745396e207f9b"
+    },
+    "/reference/react/startTransition": {
+      "offset": 4261495,
+      "length": 29605,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3103d7dce1b16e65"
+    },
+    "/reference/react-dom/components/common": {
+      "offset": 4291100,
+      "length": 68466,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b3e1a9bf9866448a"
+    },
+    "/reference/react-dom/components/style": {
+      "offset": 4359566,
+      "length": 32157,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "46d81ddad258fb00"
+    },
+    "/reference/react-dom/components/meta": {
+      "offset": 4391723,
+      "length": 31054,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c6d7d9349c998761"
+    },
+    "/reference/react-dom/components/select": {
+      "offset": 4422777,
+      "length": 43993,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "69b9129a39e488ff"
+    },
+    "/reference/react-dom/components/progress": {
+      "offset": 4466770,
+      "length": 29439,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "78b1456c5e919598"
+    },
+    "/reference/react-dom/preconnect": {
+      "offset": 4496209,
+      "length": 27430,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "40cf2f91dbbfd7ff"
+    },
+    "/reference/react-dom/createPortal": {
+      "offset": 4523639,
+      "length": 38395,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8ddfe78588a76871"
+    },
+    "/reference/react-dom/components/img": {
+      "offset": 4562034,
+      "length": 35510,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "98765d9884113a31"
+    },
+    "/reference/react-dom/prefetchDNS": {
+      "offset": 4597544,
+      "length": 27674,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cc6a921d4c6936cb"
+    },
+    "/reference/react-dom/components/option": {
+      "offset": 4625218,
+      "length": 30115,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e7f948a333f77ac3"
+    },
+    "/reference/react-dom/components/textarea": {
+      "offset": 4655333,
+      "length": 43437,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d41139acd186b470"
+    },
+    "/reference/react-dom/components/script": {
+      "offset": 4698770,
+      "length": 33882,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "79faf9d6ba3e4947"
+    },
+    "/reference/react-dom/flushSync": {
+      "offset": 4732652,
+      "length": 35588,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8239bc5241a7bd4c"
+    },
+    "/reference/react-dom/components/input": {
+      "offset": 4768240,
+      "length": 53289,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "13816cf8cca5379f"
+    },
+    "/reference/react-dom/components/link": {
+      "offset": 4821529,
+      "length": 37547,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "96d906bf958ddd6f"
+    },
+    "/reference/react-dom/components/title": {
+      "offset": 4859076,
+      "length": 31787,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "80244a38fb39b2cc"
+    },
+    "/reference/react-dom/browser": {
+      "offset": 4890863,
+      "length": 37610,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "24161e128a9ac4a1"
+    },
+    "/reference/react-dom/static/prerender": {
+      "offset": 4928473,
+      "length": 41116,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d343a2fc711b3c3e"
+    },
+    "/reference/react-dom/server/resume": {
+      "offset": 4969589,
+      "length": 36419,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c582432a824e7158"
+    },
+    "/reference/react-dom/preinit": {
+      "offset": 5006008,
+      "length": 30520,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb68639f23ce22ad"
+    },
+    "/reference/react-dom/server/renderToPipeableStream": {
+      "offset": 5036528,
+      "length": 49999,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0fb11f97d08b1bdf"
+    },
+    "/reference/react-dom/preloadModule": {
+      "offset": 5086527,
+      "length": 28978,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "34cffba72779b9cf"
+    },
+    "/reference/react-dom/server/renderToString": {
+      "offset": 5115505,
+      "length": 31279,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dd38346fe3f3434d"
+    },
+    "/reference/react-dom/static": {
+      "offset": 5146784,
+      "length": 25775,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9112e8819cb8cc43"
+    },
+    "/reference/react-dom/preinitModule": {
+      "offset": 5172559,
+      "length": 29109,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c4c942ad2435a5b9"
+    },
+    "/reference/react-dom/server/resumeToPipeableStream": {
+      "offset": 5201668,
+      "length": 30730,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "20a68b9ca1f29f56"
+    },
+    "/reference/react-dom/client/hydrateRoot": {
+      "offset": 5232398,
+      "length": 45586,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "777d52059b2a4025"
+    },
+    "/reference/react-dom/server/renderToReadableStream": {
+      "offset": 5277984,
+      "length": 49908,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4bfe5a636750fd78"
+    },
+    "/reference/react-dom/server": {
+      "offset": 5327892,
+      "length": 26646,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "52ae7d9fc1f5bd50"
+    },
+    "/reference/react-dom/client": {
+      "offset": 5354538,
+      "length": 25355,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "22807460aace22e9"
+    },
+    "/reference/react-dom/client/createRoot": {
+      "offset": 5379893,
+      "length": 45895,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "518c6ba409cd97f5"
+    },
+    "/reference/react-dom/preload": {
+      "offset": 5425788,
+      "length": 31222,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e1035d99b19b91df"
+    },
+    "/reference/react-dom/server/renderToStaticMarkup": {
+      "offset": 5457010,
+      "length": 28150,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "92f6c02290a2229b"
+    },
+    "/reference/react-dom/static/resumeAndPrerenderToNodeStream": {
+      "offset": 5485160,
+      "length": 30307,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4e6b8d262d159471"
+    },
+    "/reference/react-compiler/directives/use-no-memo": {
+      "offset": 5515467,
+      "length": 29029,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8e691bea6f708305"
+    },
+    "/reference/react-compiler/directives/use-memo": {
+      "offset": 5544496,
+      "length": 30138,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "385bf87ab564a7b3"
+    },
+    "/reference/react-dom/static/prerenderToNodeStream": {
+      "offset": 5574634,
+      "length": 41406,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a008a05cfbbee901"
+    },
+    "/reference/react-compiler/logger": {
+      "offset": 5616040,
+      "length": 27485,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8196902d05cb2e99"
+    },
+    "/reference/react-compiler/target": {
+      "offset": 5643525,
+      "length": 28224,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b8bf17381cc357f3"
+    },
+    "/reference/react-compiler/panicThreshold": {
+      "offset": 5671749,
+      "length": 26917,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8ed1001bacf8c063"
+    },
+    "/reference/eslint-plugin-react-hooks/lints/exhaustive-deps": {
+      "offset": 5698666,
+      "length": 29189,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6e3beafd15e98299"
+    },
+    "/reference/react-compiler/directives": {
+      "offset": 5727855,
+      "length": 30051,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cbdcfc738ff16111"
+    },
+    "/reference/react-compiler/compilationMode": {
+      "offset": 5757906,
+      "length": 29898,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1e030b62bfedd951"
+    },
+    "/reference/react-compiler/gating": {
+      "offset": 5787804,
+      "length": 27991,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "af2fa17917d10c39"
+    },
+    "/reference/react-dom/static/resumeAndPrerender": {
+      "offset": 5815795,
+      "length": 30432,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ab2ad770dbf031ec"
+    },
+    "/reference/dev-tools/react-performance-tracks": {
+      "offset": 5846227,
+      "length": 32470,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f9ef91f6e4dd1527"
+    },
+    "/reference/react-compiler/compiling-libraries": {
+      "offset": 5878697,
+      "length": 29220,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4057eef3c60b8f0a"
+    },
+    "/reference/eslint-plugin-react-hooks": {
+      "offset": 5907917,
+      "length": 28737,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c64cf6d22232711a"
+    },
+    "/reference/react-compiler/configuration": {
+      "offset": 5936654,
+      "length": 28471,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "196d4bbb422723ea"
+    },
+    "/reference/eslint-plugin-react-hooks/lints/use-memo": {
+      "offset": 5965125,
+      "length": 27356,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "54771ed231735b03"
+    },
+    "/reference/eslint-plugin-react-hooks/lints/rules-of-hooks": {
+      "offset": 5992481,
+      "length": 30255,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "98b0668cdc5fbb7b"
+    },
+    "/reference/eslint-plugin-react-hooks/lints/preserve-manual-memoization": {
+      "offset": 6022736,
+      "length": 27275,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d67f21a755f76c57"
+    },
+    "/reference/eslint-plugin-react-hooks/lints/purity": {
+      "offset": 6050011,
+      "length": 27086,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7bb8483a9a10ffd4"
+    },
+    "/reference/eslint-plugin-react-hooks/lints/static-components": {
+      "offset": 6077097,
+      "length": 27404,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1a8cf72cb7a2bc1a"
+    },
+    "/reference/eslint-plugin-react-hooks/lints/set-state-in-render": {
+      "offset": 6104501,
+      "length": 28148,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "358a605b9d3faed0"
+    },
+    "/reference/eslint-plugin-react-hooks/lints/set-state-in-effect": {
+      "offset": 6132649,
+      "length": 27899,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0171dd5b62b90675"
+    },
+    "/reference/eslint-plugin-react-hooks/lints/config": {
+      "offset": 6160548,
+      "length": 26235,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0d02f7df21a1b4df"
+    },
+    "/reference/eslint-plugin-react-hooks/lints/error-boundaries": {
+      "offset": 6186783,
+      "length": 26973,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9ba31926451d907a"
+    },
+    "/reference/eslint-plugin-react-hooks/lints/incompatible-library": {
+      "offset": 6213756,
+      "length": 31654,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fe9000c58a76c39c"
+    },
+    "/reference/eslint-plugin-react-hooks/lints/unsupported-syntax": {
+      "offset": 6245410,
+      "length": 28045,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "94b2a87efd06f358"
+    },
+    "/reference/eslint-plugin-react-hooks/lints/gating": {
+      "offset": 6273455,
+      "length": 25853,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "68dd4e84626b4704"
+    },
+    "/reference/eslint-plugin-react-hooks/lints/globals": {
+      "offset": 6299308,
+      "length": 26860,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a969b0c913ba3aaa"
+    },
+    "/reference/eslint-plugin-react-hooks/lints/immutability": {
+      "offset": 6326168,
+      "length": 27948,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6a83b1cee986e725"
+    },
+    "/reference/eslint-plugin-react-hooks/lints/refs": {
+      "offset": 6354116,
+      "length": 28557,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ed3d6d3f76926807"
+    },
+    "/reference/eslint-plugin-react-hooks/lints/component-hook-factories": {
+      "offset": 6382673,
+      "length": 26754,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a9bfd9d908c8aecc"
+    },
+    "/reference/rsc/directives": {
+      "offset": 6409427,
+      "length": 24887,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2faec234ef2317ba"
+    },
+    "/reference/rsc/server-functions": {
+      "offset": 6434314,
+      "length": 31141,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ef61a06eba7014f5"
+    },
+    "/reference/rules": {
+      "offset": 6465455,
+      "length": 28290,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "32c770b849f9f811"
+    },
+    "/reference/react/legacy": {
+      "offset": 6493745,
+      "length": 26090,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "315d45687c3a8054"
+    },
+    "/reference/rsc/server-components": {
+      "offset": 6519835,
+      "length": 34648,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "83d576f8fbaaeab5"
+    },
+    "/reference/rules/components-and-hooks-must-be-pure": {
+      "offset": 6554483,
+      "length": 44456,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a70982f61ca75ba5"
+    },
+    "/reference/rules/rules-of-hooks": {
+      "offset": 6598939,
+      "length": 28696,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3add2c81f6aca412"
+    },
+    "/reference/rsc/use-server": {
+      "offset": 6627635,
+      "length": 33695,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bab67a67f2a2fe94"
+    },
+    "/reference/rsc/use-client": {
+      "offset": 6661330,
+      "length": 47010,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "26f1560c46c2df2b"
+    },
+    "/reference/rules/react-calls-components-and-hooks": {
+      "offset": 6708340,
+      "length": 29163,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "412eed987ae4d718"
+    },
+    "/reference/react/createRef": {
+      "offset": 6737503,
+      "length": 32984,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e5f9c8efa77509e4"
+    },
+    "/reference/react/createElement": {
+      "offset": 6770487,
+      "length": 35807,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "347776233e5fae54"
+    },
+    "/reference/react/cloneElement": {
+      "offset": 6806294,
+      "length": 39858,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d7be4b237d0ff178"
+    },
+    "/reference/react/Children": {
+      "offset": 6846152,
+      "length": 47996,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2ecb71268c1492a6"
+    },
+    "/reference/react/Component": {
+      "offset": 6894148,
+      "length": 84150,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bbe382cd961b3d3a"
+    },
+    "/reference/react/forwardRef": {
+      "offset": 6978298,
+      "length": 39630,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d8a328d4ce87502a"
+    },
+    "/reference/react/isValidElement": {
+      "offset": 7017928,
+      "length": 29590,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d77e673970f895c8"
+    },
+    "/reference/react/PureComponent": {
+      "offset": 7047518,
+      "length": 34125,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b3f85104e993a8be"
+    },
+    "/apple-touch-icon.png": {
+      "offset": 7081643,
+      "length": 5674,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a01d83d27f12cdb1"
+    },
+    "/__docx_assets/707f31ec896c3f.bin": {
+      "offset": 7087317,
+      "length": 10261,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "588b6555beb6e739"
+    },
+    "/_next/static/css/f647474d5749a6d8.css": {
+      "offset": 7097578,
+      "length": 19494,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "49e12f5724182833"
+    },
+    "/images/docs/react-devtools-extension.png": {
+      "offset": 7117072,
+      "length": 64228,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c4e79013855dafa9"
+    },
+    "/favicon-16x16.png": {
+      "offset": 7181300,
+      "length": 652,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "bf663c03d9aac2db"
+    },
+    "/__docx_assets/512b8f6cd4c33a.bin": {
+      "offset": 7181952,
+      "length": 7545,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7f5ae20c61214571"
+    },
+    "/safari-pinned-tab.svg": {
+      "offset": 7189497,
+      "length": 2048,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "bfe6dd97a16e67ba"
+    },
+    "/__docx_assets/78ae8ba14297fd.bin": {
+      "offset": 7191545,
+      "length": 3525,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b4aa8c6a95669c59"
+    },
+    "/__docx_assets/97f4bbb74d7afc.bin": {
+      "offset": 7195070,
+      "length": 5644,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "597f6f43189aa4f4"
+    },
+    "/__docx_assets/f4cddd9d479382.bin": {
+      "offset": 7200714,
+      "length": 5630,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "20d2238c34aa297b"
+    },
+    "/favicon-32x32.png": {
+      "offset": 7206344,
+      "length": 1238,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "00527da555080dfb"
+    },
+    "/images/docs/react-devtools-standalone.png": {
+      "offset": 7207582,
+      "length": 61573,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "cdfafac52eb8384d"
+    },
+    "/__docx_assets/01b638435a6637.bin": {
+      "offset": 7269155,
+      "length": 8016,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7b0ad6a7dc6049ae"
+    },
+    "/__docx_assets/1ba900ba597f12.bin": {
+      "offset": 7277171,
+      "length": 10686,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "30f26408ed78d099"
+    },
+    "/__docx_assets/4239bf9e3d5c9b.bin": {
+      "offset": 7287857,
+      "length": 9084,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3f18967f25f8ad1c"
+    },
+    "/__docx_assets/c8bee4f4d77726.bin": {
+      "offset": 7296941,
+      "length": 7651,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "9b34f73b45108bdc"
+    },
+    "/images/tutorial/x-filled-square.png": {
+      "offset": 7304592,
+      "length": 500,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2da144b0b19f5bf3"
+    },
+    "/images/docs/s_thinking-in-react_ui_outline.png": {
+      "offset": 7305092,
+      "length": 80624,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "8e92cd939a4ab79a"
+    },
+    "/images/docs/s_thinking-in-react_ui.png": {
+      "offset": 7385716,
+      "length": 24398,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b3faf5d09620631a"
+    },
+    "/images/tutorial/react-starter-code-codesandbox.png": {
+      "offset": 7410114,
+      "length": 76447,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "bfa2b27a5e39fc06"
+    },
+    "/images/tutorial/empty-board.png": {
+      "offset": 7486561,
+      "length": 161,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "78f8c215cc992ce0"
+    },
+    "/images/tutorial/sandbox-new-tab.png": {
+      "offset": 7486722,
+      "length": 9814,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4ba009808f112e36"
+    },
+    "/images/tutorial/board-filled-with-ones.png": {
+      "offset": 7496536,
+      "length": 392,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "97918ac86c5e8a27"
+    },
+    "/images/tutorial/board-filled-with-value.png": {
+      "offset": 7496928,
+      "length": 21117,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0102faedbbc29193"
+    },
+    "/images/tutorial/o-replaces-x.gif": {
+      "offset": 7518045,
+      "length": 13504,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "a839ece6c6f00eb6"
+    },
+    "/images/tutorial/two-x-filled-squares.png": {
+      "offset": 7531549,
+      "length": 602,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6f9992930b2276a5"
+    },
+    "/images/tutorial/number-filled-board.png": {
+      "offset": 7532151,
+      "length": 2638,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e374019ffdf4f577"
+    },
+    "/images/docs/illustrations/i_render-and-commit1.png": {
+      "offset": 7534789,
+      "length": 26613,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1c69071230f7d1f2"
+    },
+    "/images/tutorial/nine-x-filled-squares.png": {
+      "offset": 7561402,
+      "length": 720,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4753ba1d1b996b8d"
+    },
+    "/images/tutorial/tictac-adding-x-s.gif": {
+      "offset": 7562122,
+      "length": 128913,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "302deec92ed81fc2"
+    },
+    "/images/tutorial/components-tab.png": {
+      "offset": 7691035,
+      "length": 72416,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "8306f2865db6d2fa"
+    },
+    "/__docx_assets/3576af5566e6a2.bin": {
+      "offset": 7763451,
+      "length": 11501,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "efea4849fd7a5a0b"
+    },
+    "/__docx_assets/d1b04491fd1cac.bin": {
+      "offset": 7774952,
+      "length": 5826,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c32bf4f49f93940b"
+    },
+    "/__docx_assets/5bf1a51e34b4a3.bin": {
+      "offset": 7780778,
+      "length": 5754,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ad4f7272c29092ac"
+    },
+    "/__docx_assets/b147e848020a1d.bin": {
+      "offset": 7786532,
+      "length": 13301,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "efa2a9b83f55e393"
+    },
+    "/__docx_assets/817f69853f75cc.bin": {
+      "offset": 7799833,
+      "length": 12560,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "deac7c58db04d552"
+    },
+    "/__docx_assets/bf96b90d12caaa.bin": {
+      "offset": 7812393,
+      "length": 7171,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4088d7f30f95c9e9"
+    },
+    "/__docx_assets/5fa2981f00dc06.bin": {
+      "offset": 7819564,
+      "length": 11537,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "67b6bb58e81a2aba"
+    },
+    "/__docx_assets/0b643cf2c3c50b.bin": {
+      "offset": 7831101,
+      "length": 7090,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "90d70510c8238fd2"
+    },
+    "/images/docs/illustrations/i_render-and-commit3.png": {
+      "offset": 7838191,
+      "length": 21926,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6c27b39cbf927fb3"
+    },
+    "/images/docs/illustrations/i_render2.png": {
+      "offset": 7860117,
+      "length": 9411,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "837bfdaec61f4327"
+    },
+    "/images/docs/illustrations/i_render-and-commit2.png": {
+      "offset": 7869528,
+      "length": 21456,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "143ce6f754970a21"
+    },
+    "/images/docs/illustrations/i_state-snapshot3.png": {
+      "offset": 7890984,
+      "length": 52354,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "dac8a4cf1bee0588"
+    },
+    "/images/docs/illustrations/i_render1.png": {
+      "offset": 7943338,
+      "length": 19089,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c7c89b21c6bb29e6"
+    },
+    "/images/docs/illustrations/i_rerender1.png": {
+      "offset": 7962427,
+      "length": 29481,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "54aa9aebbf135794"
+    },
+    "/images/docs/illustrations/i_rerender2.png": {
+      "offset": 7991908,
+      "length": 25073,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "929bf86cfe246227"
+    },
+    "/images/docs/illustrations/i_puritea-recipe.png": {
+      "offset": 8016981,
+      "length": 47038,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7c84146c71f29a08"
+    },
+    "/images/docs/illustrations/i_browser-paint.png": {
+      "offset": 8064019,
+      "length": 63826,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "8946f216023f1956"
+    },
+    "/__docx_assets/68b3496063aece.bin": {
+      "offset": 8127845,
+      "length": 11243,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "8e977fde8c180610"
+    },
+    "/images/docs/illustrations/i_render3.png": {
+      "offset": 8139088,
+      "length": 31388,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "68ba8537ab22496b"
+    },
+    "/images/docs/illustrations/i_rerender3.png": {
+      "offset": 8170476,
+      "length": 21854,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "233356a51fb9aaf3"
+    },
+    "/images/docs/illustrations/i_react-batching.png": {
+      "offset": 8192330,
+      "length": 93793,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c49cd649e4e4c658"
+    },
+    "/images/docs/illustrations/i_state-snapshot2.png": {
+      "offset": 8286123,
+      "length": 48976,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "9e5a8ae9a6791a1c"
+    },
+    "/images/docs/illustrations/i_state-snapshot1.png": {
+      "offset": 8335099,
+      "length": 56779,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "80beed029a772329"
+    },
+    "/__docx_assets/00e6b1df7931b2.bin": {
+      "offset": 8391878,
+      "length": 11948,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1a25e7a81679f993"
+    },
+    "/__docx_assets/63474e1a2f7c58.bin": {
+      "offset": 8403826,
+      "length": 12788,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "fbc274a99a6c2832"
+    },
+    "/__docx_assets/07c0ba14664c33.bin": {
+      "offset": 8416614,
+      "length": 14857,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "714a6d5be5a1374c"
+    },
+    "/__docx_assets/f3a28590678d76.bin": {
+      "offset": 8431471,
+      "length": 14442,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b53a59a3a9682d2c"
+    },
+    "/__docx_assets/9391287ea48dcf.bin": {
+      "offset": 8445913,
+      "length": 13458,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "808a02ea1db718e1"
+    },
+    "/images/docs/illustrations/i_imperative-ui-programming.png": {
+      "offset": 8459371,
+      "length": 55863,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b44320e6ce6d0a9b"
+    },
+    "/__docx_assets/855a0d4c0a8a8d.bin": {
+      "offset": 8515234,
+      "length": 11114,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "111b5b862bba923a"
+    },
+    "/images/docs/illustrations/i_children-prop.png": {
+      "offset": 8526348,
+      "length": 51851,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ea268e1ed060e571"
+    },
+    "/images/docs/illustrations/i_inputs2.png": {
+      "offset": 8578199,
+      "length": 29638,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3e9bce3141965742"
+    },
+    "/images/docs/illustrations/i_inputs1.png": {
+      "offset": 8607837,
+      "length": 12512,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e2f84f12ddcb8bc8"
+    },
+    "/__docx_assets/8799f58bed3ce9.bin": {
+      "offset": 8620349,
+      "length": 10598,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3714ebf8fb97dfb2"
+    },
+    "/images/docs/illustrations/i_import-export.svg": {
+      "offset": 8630947,
+      "length": 983,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "d130bc4b3bf23436"
+    },
+    "/__docx_assets/7b8a6f00c61ef8.bin": {
+      "offset": 8631930,
+      "length": 14570,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "20b8885d65f14d58"
+    },
+    "/__docx_assets/97b4e96ef43b05.bin": {
+      "offset": 8646500,
+      "length": 14067,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3b983db352887d28"
+    },
+    "/images/docs/illustrations/i_declarative-ui-programming.png": {
+      "offset": 8660567,
+      "length": 72924,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4625bf073a09055c"
+    },
+    "/__docx_assets/182ba8ccc0a1cc.bin": {
+      "offset": 8733491,
+      "length": 6186,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "dd908c1a6fc3052c"
+    },
+    "/__docx_assets/92334c84f0d009.bin": {
+      "offset": 8739677,
+      "length": 8738,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3afdf6a2ee50a68f"
+    },
+    "/__docx_assets/adfb290d621971.bin": {
+      "offset": 8748415,
+      "length": 9117,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "199f9af582d60396"
+    },
+    "/__docx_assets/7a03adfa20b96a.bin": {
+      "offset": 8757532,
+      "length": 9525,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c3d6468954ac0dd0"
+    },
+    "/__docx_assets/690292b6ddc592.bin": {
+      "offset": 8767057,
+      "length": 20064,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a40d023caffe9889"
+    },
+    "/__docx_assets/0911e967b8519b.bin": {
+      "offset": 8787121,
+      "length": 9992,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "166462303fbef435"
+    },
+    "/__docx_assets/5391cbd5d2803d.bin": {
+      "offset": 8797113,
+      "length": 20627,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ecec65bced752c04"
+    },
+    "/__docx_assets/f2f4c737edf599.bin": {
+      "offset": 8817740,
+      "length": 6373,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a8ece4725db37eb6"
+    },
+    "/__docx_assets/5424203fb7dc82.bin": {
+      "offset": 8824113,
+      "length": 13073,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4be7acf885432724"
+    },
+    "/__docx_assets/d5eb814ae803c4.bin": {
+      "offset": 8837186,
+      "length": 14211,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "16f80e68f39da67a"
+    },
+    "/images/docs/illustrations/i_ref.png": {
+      "offset": 8851397,
+      "length": 23290,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "5e34d6e8a996b5d9"
+    },
+    "/__docx_assets/3bd019f7d376d4.bin": {
+      "offset": 8874687,
+      "length": 5386,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "30ebc153cf25d2e3"
+    },
+    "/__docx_assets/a12baaa063a621.bin": {
+      "offset": 8880073,
+      "length": 17624,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "23eadb5f1625e4e6"
+    },
+    "/__docx_assets/0617c9227bc89c.bin": {
+      "offset": 8897697,
+      "length": 6803,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "419658de77ea6021"
+    },
+    "/__docx_assets/68382d4f71b990.bin": {
+      "offset": 8904500,
+      "length": 5757,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "9e2e314410dfdd0d"
+    },
+    "/__docx_assets/afa5d3711e5a97.bin": {
+      "offset": 8910257,
+      "length": 9662,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1400666683c4c31c"
+    },
+    "/__docx_assets/3e7c9995ae85d5.bin": {
+      "offset": 8919919,
+      "length": 7393,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0cf95a88626fb332"
+    },
+    "/__docx_assets/3d0a3ea3099533.bin": {
+      "offset": 8927312,
+      "length": 6803,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "77d25e3322c3ebac"
+    },
+    "/__docx_assets/92ba51e9424a6e.bin": {
+      "offset": 8934115,
+      "length": 11340,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e2babc9c78cca718"
+    },
+    "/__docx_assets/4a1e7192cb50af.bin": {
+      "offset": 8945455,
+      "length": 11821,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "eae125292077c3ef"
+    },
+    "/__docx_assets/7ddaadfaa95b9c.bin": {
+      "offset": 8957276,
+      "length": 20917,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d8c26e6d126d4cb3"
+    },
+    "/__docx_assets/e39382cb701bf6.bin": {
+      "offset": 8978193,
+      "length": 11601,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "38ae8c4e09393c38"
+    },
+    "/__docx_assets/2db3c5365f67cc.bin": {
+      "offset": 8989794,
+      "length": 9394,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2072fed9c8db0f9b"
+    },
+    "/__docx_assets/0bcf0456e51f58.bin": {
+      "offset": 8999188,
+      "length": 7076,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "72b0a5a281ff4271"
+    },
+    "/__docx_assets/580830133f352b.bin": {
+      "offset": 9006264,
+      "length": 17753,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6ec5577fd0eab187"
+    },
+    "/__docx_assets/c01cc4c851e0df.bin": {
+      "offset": 9024017,
+      "length": 11227,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "789fdd626c129ff2"
+    },
+    "/__docx_assets/7d4fcccd4807ad.bin": {
+      "offset": 9035244,
+      "length": 14586,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "54854d53c35a6dd6"
+    },
+    "/__docx_assets/515f10865baa5a.bin": {
+      "offset": 9049830,
+      "length": 17525,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d8ddeaedd851e578"
+    },
+    "/__docx_assets/76c18e26a41414.bin": {
+      "offset": 9067355,
+      "length": 13267,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "74a0707a674dcdfc"
+    },
+    "/__docx_assets/7fbf98377b727e.bin": {
+      "offset": 9080622,
+      "length": 19219,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "cac80fb5c05afb48"
+    },
+    "/__docx_assets/090d261b2836ed.bin": {
+      "offset": 9099841,
+      "length": 13819,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3cb028549a6b7300"
+    },
+    "/__docx_assets/3598c997070edf.bin": {
+      "offset": 9113660,
+      "length": 9037,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "89d1350aa5126fe1"
+    },
+    "/__docx_assets/499d277b931d15.bin": {
+      "offset": 9122697,
+      "length": 18166,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "da36e9fd7baf2dbb"
+    },
+    "/__docx_assets/0a3463a4674317.bin": {
+      "offset": 9140863,
+      "length": 5451,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4c1ad238ed632538"
+    },
+    "/__docx_assets/94076452ad72b0.bin": {
+      "offset": 9146314,
+      "length": 12789,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f376d94c00b33a6a"
+    },
+    "/__docx_assets/0fd9f54d67e629.bin": {
+      "offset": 9159103,
+      "length": 9151,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "bd4515b745b82f58"
+    },
+    "/images/docs/react-devtools-usedebugvalue.png": {
+      "offset": 9168254,
+      "length": 78349,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ab987e9a83b2304f"
+    },
+    "/__docx_assets/49476a7e70d011.bin": {
+      "offset": 9246603,
+      "length": 14339,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "aa7676158a20847a"
+    },
+    "/__docx_assets/e79754e2f7677a.bin": {
+      "offset": 9260942,
+      "length": 5466,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "bdfcff4208affc45"
+    },
+    "/images/docs/performance-tracks/scheduler.png": {
+      "offset": 9266408,
+      "length": 291466,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "91cf913ebd82a52a"
+    },
+    "/__docx_assets/5468dee1ea1bac.bin": {
+      "offset": 9557874,
+      "length": 1871,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "40044dc920bd7ea3"
+    },
+    "/__docx_assets/72db3db127ea46.bin": {
+      "offset": 9559745,
+      "length": 2068,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2119ccd47d9eb5bb"
+    },
+    "/__docx_assets/637130f0eb20b8.bin": {
+      "offset": 9561813,
+      "length": 16308,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "013c5ab45124b12e"
+    },
+    "/images/docs/performance-tracks/scheduler.dark.png": {
+      "offset": 9578121,
+      "length": 295806,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2a59dfa693f1e89a"
+    },
+    "/__docx_assets/c883142b5f19e3.bin": {
+      "offset": 9873927,
+      "length": 13538,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4d012447e8d2d81c"
+    },
+    "/__docx_assets/73d6e37dbbacfc.bin": {
+      "offset": 9887465,
+      "length": 17551,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7a4458816f865692"
+    },
+    "/__docx_assets/c677e74e601ff4.bin": {
+      "offset": 9905016,
+      "length": 4419,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "24f03eeed590c09f"
+    },
+    "/__docx_assets/4722b0e9d0d775.bin": {
+      "offset": 9909435,
+      "length": 4345,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0e41cc14dd60553f"
+    },
+    "/images/docs/performance-tracks/scheduler-update.dark.png": {
+      "offset": 9913780,
+      "length": 43367,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a2dac2bb362c08e3"
+    },
+    "/images/docs/performance-tracks/scheduler-update.png": {
+      "offset": 9957147,
+      "length": 37982,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "41ca1da060456070"
+    },
+    "/images/docs/performance-tracks/components-effects.png": {
+      "offset": 9995129,
+      "length": 224748,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "665be1eb92f01a57"
+    },
+    "/__docx_assets/6dadb38abe9154.bin": {
+      "offset": 10219877,
+      "length": 17254,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c8524d61b1520987"
+    },
+    "/__docx_assets/5af125b37408b6.bin": {
+      "offset": 10237131,
+      "length": 17325,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b1bfb6e7e6d26911"
+    },
+    "/__docx_assets/4631cf117cbdd1.bin": {
+      "offset": 10219877,
+      "length": 17254,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c8524d61b1520987"
+    },
+    "/__docx_assets/4c3607a46277e2.bin": {
+      "offset": 10254456,
+      "length": 12865,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c17a1b608a7db57a"
+    },
+    "/images/docs/performance-tracks/components-effects.dark.png": {
+      "offset": 10267321,
+      "length": 298106,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a8dd1afceadc38a1"
+    },
+    "/__docx_assets/be976aaf685887.bin": {
+      "offset": 10237131,
+      "length": 17325,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b1bfb6e7e6d26911"
+    },
+    "/__docx_assets/0b6e7e91bfc391.bin": {
+      "offset": 10565427,
+      "length": 12376,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "374d708a4417ad8e"
+    },
+    "/fonts/Optimistic_Display_W_Bd.woff2": {
+      "offset": 10577803,
+      "length": 23656,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "0c2529b8e9241a1a"
+    },
+    "/fonts/Source-Code-Pro-Bold.woff2": {
+      "offset": 10601459,
+      "length": 77373,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "f55fc5ee3afffdbe"
+    },
+    "/fonts/Optimistic_Display_W_Md.woff2": {
+      "offset": 10678832,
+      "length": 23404,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "7d8a85520a0ee40c"
+    },
+    "/fonts/Optimistic_Text_W_Md.woff2": {
+      "offset": 10702236,
+      "length": 23496,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "7fdbd2b91664712b"
+    },
+    "/fonts/Optimistic_Display_Arbc_W_Bd.woff2": {
+      "offset": 10725732,
+      "length": 30044,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "531f0390ce92c02f"
+    },
+    "/fonts/Source-Code-Pro-Regular.woff2": {
+      "offset": 10755776,
+      "length": 76343,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "8674280da390fb7a"
+    },
+    "/fonts/Optimistic_Text_W_Bd.woff2": {
+      "offset": 10832119,
+      "length": 23556,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "7301b5a0b2776cc3"
+    },
+    "/fonts/Optimistic_Text_W_Rg.woff2": {
+      "offset": 10855675,
+      "length": 22680,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "acd44c8db58f369b"
+    },
+    "/fonts/Optimistic_Display_W_SBdIt.woff2": {
+      "offset": 10878355,
+      "length": 24848,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b49c4969f209114e"
+    },
+    "/fonts/Optimistic_Display_Arbc_W_SBd.woff2": {
+      "offset": 10903203,
+      "length": 29904,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "11ab78311b13a3d7"
+    },
+    "/fonts/Optimistic_Text_Arbc_W_Rg.woff2": {
+      "offset": 10933107,
+      "length": 29140,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "7c431d29b9e2b2c7"
+    },
+    "/fonts/Optimistic_Text_W_BdIt.woff2": {
+      "offset": 10962247,
+      "length": 26244,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "0b6ff6497259ab66"
+    },
+    "/fonts/Optimistic_Text_W_MdIt.woff2": {
+      "offset": 10988491,
+      "length": 26176,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "37405a281b2f15f1"
+    },
+    "/fonts/Optimistic_Text_W_It.woff2": {
+      "offset": 11014667,
+      "length": 25632,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "9e1e0a9f35812865"
+    },
+    "/fonts/Optimistic_Text_Arbc_W_Bd.woff2": {
+      "offset": 11040299,
+      "length": 29808,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "0c8469f295ac0181"
+    },
+    "/fonts/Optimistic_Display_W_SBd.woff2": {
+      "offset": 11070107,
+      "length": 23624,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "3df77a80a97aa9d2"
+    },
+    "/fonts/Optimistic_Text_Arbc_W_Md.woff2": {
+      "offset": 11093731,
+      "length": 29880,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "fc031097873e5b12"
+    },
+    "/fonts/Optimistic_Display_Arbc_W_Md.woff2": {
+      "offset": 11123611,
+      "length": 29320,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "5b7bc422363466e0"
+    },
+    "/fonts/Optimistic_Display_W_MdIt.woff2": {
+      "offset": 11152931,
+      "length": 23684,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "cde37d9a8dc670bd"
+    },
+    "/fonts/Optimistic_Display_W_BdIt.woff2": {
+      "offset": 11176615,
+      "length": 25016,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "8d5327bb706b6bf7"
+    },
+    "/images/meta-gradient.png": {
+      "offset": 11201631,
+      "length": 2553,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "08360072d125d62c"
+    },
+    "/fonts/Optimistic_Text_Cyrl_W_Rg.woff2": {
+      "offset": 11204184,
+      "length": 24028,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "ebca87875e8c6348"
+    },
+    "/fonts/Optimistic_Display_Cyrl_W_Md.woff2": {
+      "offset": 11228212,
+      "length": 25236,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "f092c27b386c168c"
+    },
+    "/fonts/Optimistic_Display_Cyrl_W_SBd.woff2": {
+      "offset": 11253448,
+      "length": 25608,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "8ae1704b348b97b1"
+    },
+    "/fonts/Optimistic_Text_Viet_W_Md.woff2": {
+      "offset": 11279056,
+      "length": 21048,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e926170abcfd3152"
+    },
+    "/fonts/Optimistic_Text_Deva_W_Md.woff2": {
+      "offset": 11300104,
+      "length": 95287,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "14d07b532bb4c569"
+    },
+    "/fonts/Optimistic_Text_Deva_W_Bd.woff2": {
+      "offset": 11395391,
+      "length": 96572,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "a7c6fdc664a67a60"
+    },
+    "/fonts/Optimistic_Text_Cyrl_W_Md.woff2": {
+      "offset": 11491963,
+      "length": 25112,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "d4b54abba2b347f3"
+    },
+    "/fonts/Optimistic_Text_Viet_W_Bd.woff2": {
+      "offset": 11517075,
+      "length": 20952,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "489756757b2f1c81"
+    },
+    "/fonts/Optimistic_Display_Deva_W_Md.woff2": {
+      "offset": 11538027,
+      "length": 89624,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "44d621e964a2f438"
+    },
+    "/fonts/Optimistic_Display_Viet_W_Bd.woff2": {
+      "offset": 11627651,
+      "length": 20560,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "462dfad51f5faa05"
+    },
+    "/fonts/Optimistic_Text_Cyrl_W_Bd.woff2": {
+      "offset": 11648211,
+      "length": 25212,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "434cb81c87a2c754"
+    },
+    "/fonts/Optimistic_Display_Deva_W_SBd.woff2": {
+      "offset": 11673423,
+      "length": 92668,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "5fc05923242643da"
+    },
+    "/fonts/Optimistic_Display_Viet_W_Md.woff2": {
+      "offset": 11766091,
+      "length": 20328,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "6a6d5565c50642c5"
+    },
+    "/images/g_arrow.png": {
+      "offset": 11786419,
+      "length": 5107,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "73bef862ed8845f4"
+    },
+    "/fonts/Optimistic_Display_Viet_W_SBd.woff2": {
+      "offset": 11791526,
+      "length": 20548,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "6a6168dd87aab2d1"
+    },
+    "/fonts/Optimistic_Text_Viet_W_Rg.woff2": {
+      "offset": 11812074,
+      "length": 20000,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "aa2aeff63eb986d7"
+    },
+    "/fonts/Optimistic_Display_Deva_W_Bd.woff2": {
+      "offset": 11832074,
+      "length": 92980,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "de0d100529b36aac"
+    },
+    "/fonts/Optimistic_Text_Deva_W_Rg.woff2": {
+      "offset": 11925054,
+      "length": 93124,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "8d04b1ed12d5ceaa"
+    },
+    "/fonts/Optimistic_Display_Cyrl_W_Bd.woff2": {
+      "offset": 12018178,
+      "length": 25940,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "dc7e0841e75f75ca"
+    },
+    "/images/meta-gradient-dark.png": {
+      "offset": 12044118,
+      "length": 2500,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "31e1a382c27579ae"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 42156,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ef9e705c735e58e3"
+    },
+    "/": {
+      "offset": 0,
+      "length": 42156,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ef9e705c735e58e3"
+    }
+  }
+}

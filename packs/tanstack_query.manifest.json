@@ -1,1 +1,1322 @@
-{"id":"tanstack_query","name":"TanStack Query","version":"v5","commit":"724ed32e","origin":"https://tanstack.com","entryPath":"/query/latest/docs/framework/react/overview","updatedAt":"2026-10-10T16:45:05.555Z","totalBytes":8605953,"chunkCount":185,"routes":{"/query/latest/docs/framework/react/overview":{"offset":0,"length":66220,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"79f02c547b6e0901"},"/query/latest/docs/framework/react/graphql":{"offset":66220,"length":62033,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"203280ee5fbfbb95"},"/query/latest/docs/framework/react/quick-start":{"offset":128253,"length":61764,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"32eee19a72480caf"},"/query/latest/docs/framework/react/guides/important-defaults":{"offset":190017,"length":68098,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5e531921f1290313"},"/query/latest/docs/framework/react/typescript":{"offset":258115,"length":70189,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3ea74112d0813e30"},"/query/latest/docs/framework/react/examples/simple":{"offset":328304,"length":68973,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b0804b7ffbc08bae"},"/query/latest/docs/framework/react/installation":{"offset":397277,"length":63647,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"51e1e30d7d36acdc"},"/query/latest/docs/framework/react/devtools":{"offset":460924,"length":67224,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9f4e13436f1e30d6"},"/query/latest/docs/framework/react/reference/index":{"offset":528148,"length":73195,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"372d2fb4945cba9c"},"/query/latest/docs/framework/react/react-native":{"offset":601343,"length":65657,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7ffdb8a3cce02ed5"},"/query/latest/docs/framework/react/comparison":{"offset":667000,"length":68333,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"01813c587bc6ee59"},"/query/latest/docs/framework/react/guides/window-focus-refetching":{"offset":735333,"length":67803,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5759d2a3c53dc56f"},"/query/latest/docs/framework/react/guides/query-options":{"offset":803136,"length":65813,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0a3b63c66c9aaa6b"},"/query/latest/docs/framework/react/guides/network-mode":{"offset":868949,"length":67997,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7d2d668cf3a774b5"},"/query/latest/docs/framework/react/guides/query-invalidation":{"offset":936946,"length":67313,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ddd553f44931f233"},"/query/latest/docs/framework/react/guides/query-keys":{"offset":1004259,"length":67607,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ffb9f2965afb78b3"},"/query/latest/docs/framework/react/guides/queries":{"offset":1071866,"length":68748,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cfa2db9d04c3b6a3"},"/query/latest/docs/framework/react/guides/dependent-queries":{"offset":1140614,"length":67056,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"98b0d647873ed856"},"/query/latest/docs/framework/react/guides/parallel-queries":{"offset":1207670,"length":66946,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e406d2ddafe96642"},"/query/latest/docs/framework/react/guides/query-retries":{"offset":1274616,"length":67936,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"479f58ec10333835"},"/query/latest/docs/framework/react/guides/query-functions":{"offset":1342552,"length":68150,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fefcc56c1e61ceb8"},"/query/latest/docs/framework/react/guides/disabling-queries":{"offset":1410702,"length":69747,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"722ee98037cf1a56"},"/query/latest/docs/framework/react/guides/polling":{"offset":1480449,"length":68780,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1f597503d918fc40"},"/query/latest/docs/framework/react/guides/mutations":{"offset":1549229,"length":75072,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7c75bfbfaf28d28f"},"/query/latest/docs/framework/react/guides/background-fetching-indicators":{"offset":1624301,"length":66797,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a431f20c5fa699a2"},"/query/latest/docs/framework/react/guides/invalidations-from-mutations":{"offset":1691098,"length":66145,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1d0f20c3cb28a20e"},"/query/latest/docs/framework/react/guides/placeholder-query-data":{"offset":1757243,"length":68168,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"81cd9c0b0568c55c"},"/query/latest/docs/framework/react/guides/advanced-ssr":{"offset":1825411,"length":84116,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"15ad95658b719800"},"/query/latest/docs/framework/react/guides/caching":{"offset":1909527,"length":66119,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3ae8f81bdb778b8e"},"/query/latest/docs/framework/react/guides/prefetching":{"offset":1975646,"length":76818,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d31a011efbaed4fc"},"/query/latest/docs/framework/react/guides/ssr":{"offset":2052464,"length":83189,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bc21d50faa4ec0fb"},"/query/latest/docs/framework/react/guides/filters":{"offset":2135653,"length":66866,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5a3f9d06b6424282"},"/query/latest/docs/framework/react/guides/render-optimizations":{"offset":2202519,"length":68397,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"23c8619dc419885d"},"/query/latest/docs/framework/react/guides/query-cancellation":{"offset":2270916,"length":69627,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"356063d094bbe83e"},"/query/latest/docs/framework/react/guides/infinite-queries":{"offset":2340543,"length":71741,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"15dc4bc7af18f61e"},"/query/latest/docs/framework/react/guides/optimistic-updates":{"offset":2412284,"length":70173,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"06a9919acdf57f8a"},"/query/latest/docs/framework/react/guides/scroll-restoration":{"offset":2482457,"length":65497,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5fde2c1e44d96486"},"/query/latest/docs/framework/react/guides/request-waterfalls":{"offset":2547954,"length":74707,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f27263494e5539c1"},"/query/latest/docs/framework/react/guides/paginated-queries":{"offset":2622661,"length":67852,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eec69b94fe1d4dd8"},"/query/latest/docs/framework/react/guides/updates-from-mutation-responses":{"offset":2690513,"length":66346,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e9d2e487db51c80"},"/query/latest/docs/framework/react/guides/initial-query-data":{"offset":2756859,"length":70993,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c0cb249ac4f67200"},"/query/latest/docs/framework/react/guides/default-query-function":{"offset":2827852,"length":65576,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"87163d0dd50544f7"},"/query/latest/docs/eslint/mutation-property-order":{"offset":2893428,"length":65885,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1fb1ea0f283320f7"},"/query/latest/docs/framework/react/guides/testing":{"offset":2959313,"length":69996,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"596b7e8bb4d5c7cc"},"/query/latest/docs/eslint/infinite-query-property-order":{"offset":3029309,"length":65895,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e0c2b6caaa1fc5ef"},"/query/latest/docs/framework/react/guides/does-this-replace-client-state":{"offset":3095204,"length":66784,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c0fa3b00311149a2"},"/query/latest/docs/framework/react/guides/migrating-to-v5":{"offset":3161988,"length":88174,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"831f22b7bbefefdb"},"/query/latest/docs/framework/react/guides/migrating-to-react-query-3":{"offset":3250162,"length":81109,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"42359075ca473b73"},"/query/latest/docs/eslint/stable-query-client":{"offset":3331271,"length":65566,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c7d783afdc21d4a4"},"/query/latest/docs/eslint/no-rest-destructuring":{"offset":3396837,"length":65926,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b27d6037cf77b167"},"/query/latest/docs/framework/react/guides/migrating-to-react-query-4":{"offset":3462763,"length":84679,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8447bbf97c1f552f"},"/query/latest/docs/eslint/eslint-plugin-query":{"offset":3547442,"length":66480,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"45e162451e1a023c"},"/query/latest/docs/eslint/no-void-query-fn":{"offset":3613922,"length":65446,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ce4388cf328100b2"},"/query/latest/docs/eslint/prefer-query-options":{"offset":3679368,"length":66411,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cae25f1a6e068672"},"/query/latest/docs/eslint/exhaustive-deps":{"offset":3745779,"length":66566,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3fa31bf39f7ca7ba"},"/query/latest/docs/eslint/no-unstable-deps":{"offset":3812345,"length":65809,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a9b7b01678fd4d37"},"/query/latest/docs/framework/react/guides/suspense":{"offset":3878154,"length":71500,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5ee87c15421c8585"},"/query/latest/docs/framework/react/plugins/createPersister":{"offset":3949654,"length":71518,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c38c1c75e054aeef"},"/query/latest/docs/community-resources":{"offset":4021172,"length":65027,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ba7cdea47902bfec"},"/query/latest/docs/framework/react/plugins/createSyncStoragePersister":{"offset":4086199,"length":68328,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0fbf9e25b4f2edea"},"/query/latest/docs/framework/react/plugins/createAsyncStoragePersister":{"offset":4154527,"length":67537,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7f3756715a91bde8"},"/query/latest/docs/framework/react/reference/functions/useMutation":{"offset":4222064,"length":76778,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e5d4dd36faa0917"},"/query/latest/docs/framework/react/reference/functions/useQuery":{"offset":4298842,"length":85865,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"da4b24ea371a79fd"},"/query/latest/docs/framework/react/plugins/persistQueryClient":{"offset":4384707,"length":73301,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"15300e3e7dac2837"},"/query/latest/docs/framework/react/examples/pagination":{"offset":4458008,"length":67455,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"25f822321950ea0e"},"/query/latest/docs/framework/react/examples/auto-refetching":{"offset":4525463,"length":67370,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"892d60be8fae7367"},"/query/latest/docs/framework/react/examples/load-more-infinite-scroll":{"offset":4592833,"length":67209,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4d16db4ae407bc34"},"/query/latest/docs/framework/react/examples/nextjs-app-optimistic-updates":{"offset":4660042,"length":66055,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d65481521f8fba8b"},"/query/latest/docs/framework/react/examples/basic":{"offset":4726097,"length":68393,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ed11754ea18674bb"},"/query/latest/docs/framework/react/plugins/broadcastQueryClient":{"offset":4794490,"length":68752,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a25a0469eca131d8"},"/query/latest/docs/framework/react/examples/basic-graphql-request":{"offset":4863242,"length":69204,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e4e8b7b6b72da047"},"/query/latest/docs/framework/react/examples/devtools-panel":{"offset":4932446,"length":68532,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7988481554ee5e74"},"/query/latest/docs/framework/react/examples/playground":{"offset":5000978,"length":74114,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"600d3821e802fb47"},"/query/latest/docs/framework/react/examples/algolia":{"offset":5075092,"length":63958,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7e8402cfebbc08d2"},"/query/latest/docs/framework/react/examples/shadow-dom":{"offset":5139050,"length":63646,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4ffcd46e9397c33a"},"/query/latest/docs/framework/react/examples/react-router":{"offset":5202696,"length":65328,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"61b8749c0514496f"},"/query/latest/docs/framework/react/examples/prefetching":{"offset":5268024,"length":66985,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2ac9f392b9c936c1"},"/query/latest/docs/framework/react/examples/suspense":{"offset":5335009,"length":66432,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"09b2e82b551b2c14"},"/query/latest/docs/framework/react/examples/offline":{"offset":5401441,"length":64848,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7821d37047b1aaea"},"/query/latest/docs/framework/react/examples/nextjs":{"offset":5466289,"length":65804,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d5eda6e7dc76971e"},"/query/latest/docs/framework/react/examples/default-query-function":{"offset":5532093,"length":67596,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"74832a135a819847"},"/query/latest/docs/framework/react/examples/react-native":{"offset":5599689,"length":66221,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"43a43fa818ab5191"},"/query/latest/docs/framework/react/examples/rick-morty":{"offset":5665910,"length":65221,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"226f502c10fa01e4"},"/query/latest/docs/framework/react/examples/infinite-query-with-max-pages":{"offset":5731131,"length":66783,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"841b5f2eb441d549"},"/query/latest/docs/framework/react/examples/star-wars":{"offset":5797914,"length":65253,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bf9a48f8521b059c"},"/query/latest/docs/framework/react/examples/nextjs-app-prefetching":{"offset":5863167,"length":65582,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e459e29180e0f0f5"},"/query/latest/docs/framework/react/examples/nextjs-suspense-streaming":{"offset":5928749,"length":66386,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5fcd357eca3682c9"},"/query/latest/docs/framework/react/examples/chat":{"offset":5995135,"length":67306,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ff9a50ec8f1df6de"},"/query/latest/docs/framework/react/reference/functions/dehydrate":{"offset":6062441,"length":71092,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1e9aeb59ff48cef7"},"/query/latest/docs/framework/react/reference/functions/QueryClientProvider":{"offset":6133533,"length":70233,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e0cf5f7383227e9b"},"/query/latest/docs/framework/react/reference/functions/dehydrateQuery":{"offset":6203766,"length":70052,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4c7ee75c39756969"},"/query/latest/docs/framework/react/reference/functions/experimental_streamedQuery":{"offset":6273818,"length":70156,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8495a3156ac35e68"},"/query/latest/docs/framework/react/reference/functions/hydrate":{"offset":6343974,"length":71197,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"89dbb3181dbf5aff"},"/query/latest/docs/framework/react/reference/functions/hashKey":{"offset":6415171,"length":69559,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0661b3a994b54287"},"/query/latest/docs/framework/react/reference/functions/HydrationBoundary":{"offset":6484730,"length":71265,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"326fd2ced5b79d7f"},"/query/latest/docs/framework/react/reference/functions/defaultShouldDehydrateQuery":{"offset":6555995,"length":69208,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d719f5ae72c89302"},"/query/latest/docs/framework/react/reference/functions/defaultShouldDehydrateMutation":{"offset":6625203,"length":69210,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1fe124c1e7445058"},"/query/latest/docs/framework/react/reference/functions/QueryErrorResetBoundary":{"offset":6694413,"length":70335,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c55d0984936fd25d"},"/query/latest/docs/framework/react/examples/batching":{"offset":6764748,"length":67832,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eb6436ebf79b22e7"},"/query/latest/docs/framework/react/reference/functions/noop":{"offset":6832580,"length":69263,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d25e20c2a98313d2"},"/query/latest/docs/framework/react/reference/functions/matchQuery":{"offset":6901843,"length":70429,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"855788881f368e46"},"/query/latest/docs/framework/react/reference/functions/mutationOptions":{"offset":6972272,"length":72165,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"008b9ccc6a9c384f"},"/query/latest/docs/framework/react/reference/functions/keepPreviousData":{"offset":7044437,"length":69661,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5d2e55c1b57cd442"},"/query/latest/docs/framework/react/reference/functions/matchMutation":{"offset":7114098,"length":70375,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"17d30fb9df67fbbd"},"/query/latest/docs/framework/react/reference/functions/isCancelledError":{"offset":7184473,"length":69174,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bef713f3d382ecbd"},"/query/latest/docs/framework/react/reference/functions/infiniteQueryOptions":{"offset":7253647,"length":73592,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5b38f7d213bf97a3"},"/query/latest/docs/framework/react/reference/functions/replaceEqualDeep":{"offset":7327239,"length":69667,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ec39774abc56cbf8"},"/query/latest/docs/framework/react/reference/functions/shouldThrowError":{"offset":7396906,"length":70017,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e7eaf5b202ac0a6a"},"/query/latest/docs/framework/react/reference/functions/queryOptions":{"offset":7466923,"length":73481,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"22b204a7d563a863"},"/query/latest/docs/framework/react/reference/functions/partialMatchKey":{"offset":7540404,"length":69369,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"060decd732f0383e"},"/query/latest/docs/framework/react/reference/functions/useIsFetching":{"offset":7609773,"length":70870,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"36920e545df63ba2"},"/query/latest/docs/framework/react/reference/functions/useInfiniteQuery":{"offset":7680643,"length":87052,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"537c2c53700539a4"},"/query/latest/docs/framework/react/reference/functions/useIsMutating":{"offset":7767695,"length":70540,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ce26c03133ee55c3"},"/favicon-32x32.png":{"offset":7838235,"length":1187,"mime":"image/png","gzipped":true,"hash":"34241b997c796120"},"/assets/railway-black-DeBDfNao.svg":{"offset":7839422,"length":2008,"mime":"image/svg+xml","gzipped":true,"hash":"f17e0e028a8904e8"},"/assets/render-white-D4l33ygB.svg":{"offset":7841430,"length":2037,"mime":"image/svg+xml","gzipped":true,"hash":"a50b023056a6449c"},"/assets/lovable-black-1mVxR6Bj.svg":{"offset":7843467,"length":3574,"mime":"image/svg+xml","gzipped":true,"hash":"2991135aabc14b05"},"/favicon-light.svg":{"offset":7847041,"length":1377,"mime":"image/svg+xml","gzipped":true,"hash":"87ddd3cc53780ea9"},"/images/brand/tanstack-landscape-white.svg":{"offset":7848418,"length":1770,"mime":"image/svg+xml","gzipped":true,"hash":"47b05e85ac4c4ffb"},"/assets/cloudflare-black-6Ojsn8yh.svg":{"offset":7850188,"length":5273,"mime":"image/svg+xml","gzipped":true,"hash":"e8c1a2879b3e87a1"},"/favicon-dark.svg":{"offset":7847041,"length":1377,"mime":"image/svg+xml","gzipped":true,"hash":"87ddd3cc53780ea9"},"/favicon-16x16.png":{"offset":7855461,"length":590,"mime":"image/png","gzipped":true,"hash":"a53b782bb5f5aff7"},"/favicon.ico":{"offset":7856051,"length":1085,"mime":"image/vnd.microsoft.icon","gzipped":true,"hash":"168a372851d14b1b"},"/assets/index-CaKFzcjh.css":{"offset":7857136,"length":73993,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0b6ed57e3b279ea7"},"/assets/cloudflare-white-Co-Tyjbl.svg":{"offset":7931129,"length":5586,"mime":"image/svg+xml","gzipped":true,"hash":"e38e46382d5e07c7"},"/images/brand/tanstack-landscape-black.svg":{"offset":7936715,"length":1770,"mime":"image/svg+xml","gzipped":true,"hash":"7f88cc8634ee3f47"},"/assets/railway-white-CFKFsfw2.svg":{"offset":7938485,"length":2006,"mime":"image/svg+xml","gzipped":true,"hash":"cdfae42b06c7f002"},"/assets/lovable-white-DLB1BxKZ.svg":{"offset":7940491,"length":3575,"mime":"image/svg+xml","gzipped":true,"hash":"289e15e1680f1bc7"},"/assets/render-black-Cz1XqOfh.svg":{"offset":7944066,"length":2039,"mime":"image/svg+xml","gzipped":true,"hash":"aa8e27c775b8a80d"},"/assets/coderabbit-dark-C3hjOiHQ.svg":{"offset":7946105,"length":3855,"mime":"image/svg+xml","gzipped":true,"hash":"a0f236b34d931931"},"/assets/workos-black-DnPI5Ve5.svg":{"offset":7949960,"length":1716,"mime":"image/svg+xml","gzipped":true,"hash":"ee02fe0a62ec07b3"},"/__docx_assets/c652463bc02b14.bin":{"offset":7951676,"length":1032,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"b7ef659b9918b562"},"/assets/coderabbit-light-ggTFqYhV.svg":{"offset":7952708,"length":3869,"mime":"image/svg+xml","gzipped":true,"hash":"183adaaa8dc30b05"},"/assets/clerk-logo-dark-CRE22T_2.svg":{"offset":7956577,"length":2082,"mime":"image/svg+xml","gzipped":true,"hash":"6ac152fa38cf1202"},"/assets/prisma-dark-DwgDxLwn.svg":{"offset":7958659,"length":2276,"mime":"image/svg+xml","gzipped":true,"hash":"4226546f639ea248"},"/assets/serpapi-white-CPxTEZSp.svg":{"offset":7960935,"length":5507,"mime":"image/svg+xml","gzipped":true,"hash":"268f7b21f443c087"},"/assets/scarf-BJX_-tJ9.svg":{"offset":7966442,"length":3869,"mime":"image/svg+xml","gzipped":true,"hash":"76163b7ea851b6af"},"/assets/clerk-logo-light-BYN-U_0H.svg":{"offset":7970311,"length":2101,"mime":"image/svg+xml","gzipped":true,"hash":"85770f891d615c15"},"/assets/openrouter-black-CJtk3mjZ.svg":{"offset":7972412,"length":1739,"mime":"image/svg+xml","gzipped":true,"hash":"5dd9bf63f2f8dea1"},"/assets/openrouter-white-BLyN_5Ca.svg":{"offset":7974151,"length":1740,"mime":"image/svg+xml","gzipped":true,"hash":"13637f69d0de5fd2"},"/assets/prisma-light-Cloa3Onm.svg":{"offset":7975891,"length":2278,"mime":"image/svg+xml","gzipped":true,"hash":"275386c848fe7de0"},"/assets/serpapi-black-DnXRiQQ3.svg":{"offset":7978169,"length":5506,"mime":"image/svg+xml","gzipped":true,"hash":"eae3ca3f49eb10bb"},"/__docx_assets/9e118ee5eb3fb9.svg":{"offset":7983675,"length":595,"mime":"image/svg+xml","gzipped":true,"hash":"d07341e1b7502618"},"/__docx_assets/f446a4accb6a79.svg":{"offset":7984270,"length":2800,"mime":"image/svg+xml","gzipped":true,"hash":"fad530dc9c6d149b"},"/__docx_assets/51d4b307ca52b2.svg":{"offset":7987070,"length":1036,"mime":"image/svg+xml","gzipped":true,"hash":"4a065ecb7283a581"},"/__docx_assets/c9376a3b705dc5.bin":{"offset":7988106,"length":487,"mime":"image/svg+xml","gzipped":true,"hash":"4e7870b6c4c794fa"},"/__docx_assets/4639304c20ea84.bin":{"offset":7988593,"length":482,"mime":"image/svg+xml","gzipped":true,"hash":"ae468e11dba6cef2"},"/__docx_assets/5d29395afc4c9b.bin":{"offset":7989075,"length":484,"mime":"image/svg+xml","gzipped":true,"hash":"d355bf115538deca"},"/__docx_assets/e641c4513d6010.bin":{"offset":7989559,"length":1364,"mime":"image/svg+xml","gzipped":true,"hash":"d1b92be0b4233b63"},"/__docx_assets/bf1890443dd6f9.bin":{"offset":7990923,"length":1367,"mime":"image/svg+xml","gzipped":true,"hash":"df2ba419c3a4aaf2"},"/__docx_assets/f41dc7c759e935.bin":{"offset":7992290,"length":1362,"mime":"image/svg+xml","gzipped":true,"hash":"9969c2646692dfd4"},"/__docx_assets/32a8958a579a38.bin":{"offset":7993652,"length":1368,"mime":"image/svg+xml","gzipped":true,"hash":"71c05a654e5e5db9"},"/__docx_assets/374445b62d0194.bin":{"offset":7995020,"length":1358,"mime":"image/svg+xml","gzipped":true,"hash":"66b9070eab94b080"},"/__docx_assets/af4d136d9ad8af.bin":{"offset":7996378,"length":487,"mime":"image/svg+xml","gzipped":true,"hash":"7e48eae7433aefba"},"/fonts/Inter-latin.woff2":{"offset":7996865,"length":72932,"mime":"font/woff2","gzipped":true,"hash":"950aff451f2f608d"},"/images/hero-palm-gradient-960.webp":{"offset":8069797,"length":28730,"mime":"image/webp","gzipped":true,"hash":"93fbf92042d02785"},"/images/brand/tanstack-emblem-black.svg":{"offset":8098527,"length":640,"mime":"image/svg+xml","gzipped":true,"hash":"5a2195e2edbc36d7"},"/__docx_assets/c097aa95d7ec1b.woff2":{"offset":8099167,"length":6803,"mime":"font/woff2","gzipped":true,"hash":"cfae540b88c18592"},"/fonts/Inter-latin-ext.woff2":{"offset":8105970,"length":133386,"mime":"font/woff2","gzipped":true,"hash":"d2c129ef78916c74"},"/__docx_assets/c70f6b078a0944.woff2":{"offset":8239356,"length":8483,"mime":"font/woff2","gzipped":true,"hash":"e4ddc5e461f06274"},"/__docx_assets/f9c74283b1693b.woff2":{"offset":8247839,"length":8379,"mime":"font/woff2","gzipped":true,"hash":"827ff291ec7ad3e2"},"/__docx_assets/7e3d7e3c7de8e8.woff2":{"offset":8256218,"length":14731,"mime":"font/woff2","gzipped":true,"hash":"f030ce23a9c2db55"},"/__docx_assets/b06594e3dfbc9f.woff2":{"offset":8270949,"length":6063,"mime":"font/woff2","gzipped":true,"hash":"e5a0d1b353cec923"},"/__docx_assets/ae5fc1eadb0588.woff2":{"offset":8277012,"length":13371,"mime":"font/woff2","gzipped":true,"hash":"5a329f24e9a408d8"},"/__docx_assets/5f754c3adb80da.woff2":{"offset":8290383,"length":76898,"mime":"font/woff2","gzipped":true,"hash":"2a689569fa1d472f"},"/__docx_assets/ecb1449c9f014f.woff2":{"offset":8367281,"length":14771,"mime":"font/woff2","gzipped":true,"hash":"75de27a62b652578"},"/__docx_assets/2a73cdecea5ce9.woff2":{"offset":8382052,"length":5891,"mime":"font/woff2","gzipped":true,"hash":"9b1b2d0dc61dc5b4"},"/__docx_assets/d1b233760bed30.woff2":{"offset":8387943,"length":6935,"mime":"font/woff2","gzipped":true,"hash":"023e5b00d47f4ca4"},"/__docx_assets/4c442bc4abb065.woff2":{"offset":8394878,"length":13427,"mime":"font/woff2","gzipped":true,"hash":"055c5a5c51c1b6e9"},"/__docx_assets/e577600d58460a.woff2":{"offset":8408305,"length":30764,"mime":"font/woff2","gzipped":true,"hash":"b0dbbc6df819eb88"},"/__docx_assets/b2bd399c7ef212.woff2":{"offset":8439069,"length":5855,"mime":"font/woff2","gzipped":true,"hash":"bff78395d07e458e"},"/__docx_assets/ed3206e8ede4a9.woff2":{"offset":8444924,"length":6995,"mime":"font/woff2","gzipped":true,"hash":"c96c57c26b8d4271"},"/__docx_assets/32a447b3624072.woff2":{"offset":8451919,"length":13007,"mime":"font/woff2","gzipped":true,"hash":"33b3c6001f8dd113"},"/__docx_assets/6cb3d68941f20a.woff2":{"offset":8464926,"length":8291,"mime":"font/woff2","gzipped":true,"hash":"b8c026c80d547069"},"/__docx_assets/fd3dd31c82271e.woff2":{"offset":8473217,"length":7715,"mime":"font/woff2","gzipped":true,"hash":"972b8ee5f8ff5391"},"/__docx_assets/86628368fe0c7c.woff2":{"offset":8480932,"length":15643,"mime":"font/woff2","gzipped":true,"hash":"fd07f16153dd55ac"},"/__docx_assets/eb889034c0832c.woff2":{"offset":8496575,"length":14911,"mime":"font/woff2","gzipped":true,"hash":"b05d0cae7c617430"},"/__docx_assets/6988d8097c69a5.woff2":{"offset":8511486,"length":7207,"mime":"font/woff2","gzipped":true,"hash":"381bc33d377ec181"},"/__docx_assets/707854e807bf3a.woff2":{"offset":8518693,"length":6091,"mime":"font/woff2","gzipped":true,"hash":"b40808097daa64a6"},"/__docx_assets/245a9a663e9393.woff2":{"offset":8524784,"length":6955,"mime":"font/woff2","gzipped":true,"hash":"8605f3d9c723b79b"},"/__docx_assets/796754f6fa2c0f.woff2":{"offset":8531739,"length":14351,"mime":"font/woff2","gzipped":true,"hash":"690c7a9520f8d9aa"},"/__docx_assets/677d93cfc15177.woff2":{"offset":8546090,"length":14931,"mime":"font/woff2","gzipped":true,"hash":"c1b3ea3548111f8f"},"/__docx_assets/2504ad92936998.woff2":{"offset":8561021,"length":8699,"mime":"font/woff2","gzipped":true,"hash":"977d9cf9aec9b099"},"/__docx_assets/132ba860efc49c.woff2":{"offset":8569720,"length":9375,"mime":"font/woff2","gzipped":true,"hash":"5c080ddf94a1be02"},"/__docx_assets/be7e618c1b6f15.woff2":{"offset":8579095,"length":13403,"mime":"font/woff2","gzipped":true,"hash":"d8074533a74c4065"},"/__docx_assets/203ce92810c0a1.woff2":{"offset":8592498,"length":13455,"mime":"font/woff2","gzipped":true,"hash":"a2052c2e7171917f"},"/docs":{"offset":0,"length":66220,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"79f02c547b6e0901"},"/":{"offset":0,"length":66220,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"79f02c547b6e0901"}}}
+{
+  "id": "tanstack_query",
+  "name": "TanStack Query",
+  "version": "v5",
+  "commit": "bd1ff89a",
+  "origin": "https://tanstack.com",
+  "entryPath": "/query/latest/docs/framework/react/overview",
+  "updatedAt": "2026-10-11T10:38:31.668Z",
+  "totalBytes": 8526307,
+  "chunkCount": 184,
+  "routes": {
+    "/query/latest/docs/framework/react/overview": {
+      "offset": 0,
+      "length": 65433,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "90e3ed3c85cb95ed"
+    },
+    "/query/latest/docs/framework/react/installation": {
+      "offset": 65433,
+      "length": 61739,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0704b7689a8eb653"
+    },
+    "/query/latest/docs/framework/react/guides/important-defaults": {
+      "offset": 127172,
+      "length": 67157,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "adad7a1c9c330705"
+    },
+    "/query/latest/docs/framework/react/examples/simple": {
+      "offset": 194329,
+      "length": 68172,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fdcc24e334284657"
+    },
+    "/query/latest/docs/framework/react/comparison": {
+      "offset": 262501,
+      "length": 67430,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "faaab556d0aec405"
+    },
+    "/query/latest/docs/framework/react/graphql": {
+      "offset": 329931,
+      "length": 62069,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4e5d5acd64f3b7e7"
+    },
+    "/query/latest/docs/framework/react/devtools": {
+      "offset": 392000,
+      "length": 67296,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "08bd37666324a9b9"
+    },
+    "/query/latest/docs/framework/react/quick-start": {
+      "offset": 459296,
+      "length": 61820,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bf2b2c40f130d54d"
+    },
+    "/query/latest/docs/framework/react/reference/index": {
+      "offset": 521116,
+      "length": 72227,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a7aa7cf35d6a1be2"
+    },
+    "/query/latest/docs/framework/react/typescript": {
+      "offset": 593343,
+      "length": 70214,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "967a6e30be1ddfca"
+    },
+    "/query/latest/docs/framework/react/react-native": {
+      "offset": 663557,
+      "length": 64757,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bce63bd1542f51e9"
+    },
+    "/query/latest/docs/framework/react/guides/background-fetching-indicators": {
+      "offset": 728314,
+      "length": 64845,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2e6215cc208ffbd8"
+    },
+    "/query/latest/docs/eslint/eslint-plugin-query": {
+      "offset": 793159,
+      "length": 65507,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "31e9becf45433257"
+    },
+    "/query/latest/docs/framework/react/guides/disabling-queries": {
+      "offset": 858666,
+      "length": 67766,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "980d20682b19308b"
+    },
+    "/query/latest/docs/framework/react/guides/network-mode": {
+      "offset": 926432,
+      "length": 67093,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f509c4c333599bc8"
+    },
+    "/query/latest/docs/framework/react/guides/polling": {
+      "offset": 993525,
+      "length": 66747,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "10c01ef9b5972b78"
+    },
+    "/query/latest/docs/framework/react/guides/parallel-queries": {
+      "offset": 1060272,
+      "length": 66038,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8445409de3b6f3f7"
+    },
+    "/query/latest/docs/framework/react/guides/query-options": {
+      "offset": 1126310,
+      "length": 65878,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c90ee0704ee3543f"
+    },
+    "/query/latest/docs/framework/react/guides/window-focus-refetching": {
+      "offset": 1192188,
+      "length": 66899,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9d06a99e10d89073"
+    },
+    "/query/latest/docs/framework/react/guides/dependent-queries": {
+      "offset": 1259087,
+      "length": 67133,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0ea362d1a0410de7"
+    },
+    "/query/latest/docs/framework/react/guides/query-functions": {
+      "offset": 1326220,
+      "length": 68253,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "99d5fc311fb6cc7e"
+    },
+    "/query/latest/docs/framework/react/guides/paginated-queries": {
+      "offset": 1394473,
+      "length": 67919,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "237202532abc8e4c"
+    },
+    "/query/latest/docs/framework/react/examples/basic": {
+      "offset": 1462392,
+      "length": 68391,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "704fd7193e588b9e"
+    },
+    "/query/latest/docs/framework/react/guides/query-retries": {
+      "offset": 1530783,
+      "length": 68039,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9784cf1c8a057662"
+    },
+    "/query/latest/docs/framework/react/guides/queries": {
+      "offset": 1598822,
+      "length": 68833,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7f7c335ae4acb43f"
+    },
+    "/query/latest/docs/framework/react/guides/query-keys": {
+      "offset": 1667655,
+      "length": 67756,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2c14773815c7c748"
+    },
+    "/query/latest/docs/framework/react/guides/caching": {
+      "offset": 1735411,
+      "length": 66176,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a8eae618cd6fe716"
+    },
+    "/query/latest/docs/framework/react/guides/query-cancellation": {
+      "offset": 1801587,
+      "length": 68719,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ed5a939b565ee381"
+    },
+    "/query/latest/docs/framework/react/guides/prefetching": {
+      "offset": 1870306,
+      "length": 75903,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f9ddf05dbd12b8d7"
+    },
+    "/query/latest/docs/framework/react/guides/query-invalidation": {
+      "offset": 1946209,
+      "length": 66381,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fc8b099f3acc4dfa"
+    },
+    "/query/latest/docs/framework/react/guides/request-waterfalls": {
+      "offset": 2012590,
+      "length": 73795,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ab3533b14d7abdcd"
+    },
+    "/query/latest/docs/framework/react/guides/scroll-restoration": {
+      "offset": 2086385,
+      "length": 65563,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1409120ade9820ae"
+    },
+    "/query/latest/docs/framework/react/guides/invalidations-from-mutations": {
+      "offset": 2151948,
+      "length": 66135,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dd9a905ac80cfb99"
+    },
+    "/query/latest/docs/framework/react/guides/filters": {
+      "offset": 2218083,
+      "length": 66965,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "83b2cae9b89759bf"
+    },
+    "/query/latest/docs/framework/react/guides/initial-query-data": {
+      "offset": 2285048,
+      "length": 70105,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "57c82f9c95fbc907"
+    },
+    "/query/latest/docs/framework/react/guides/mutations": {
+      "offset": 2355153,
+      "length": 74234,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dcd04bbffa829912"
+    },
+    "/query/latest/docs/framework/react/guides/advanced-ssr": {
+      "offset": 2429387,
+      "length": 84232,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "81017cb678c7ae6b"
+    },
+    "/query/latest/docs/framework/react/guides/infinite-queries": {
+      "offset": 2513619,
+      "length": 71772,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9baed32b24d39a8a"
+    },
+    "/query/latest/docs/framework/react/guides/ssr": {
+      "offset": 2585391,
+      "length": 83312,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "09bfa79d5d4f6441"
+    },
+    "/query/latest/docs/framework/react/guides/updates-from-mutation-responses": {
+      "offset": 2668703,
+      "length": 66435,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c3cbf7642e3e09a2"
+    },
+    "/query/latest/docs/framework/react/guides/optimistic-updates": {
+      "offset": 2735138,
+      "length": 70297,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8cb9143197954d64"
+    },
+    "/query/latest/docs/framework/react/guides/placeholder-query-data": {
+      "offset": 2805435,
+      "length": 68206,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e40eb49d0bfce3c3"
+    },
+    "/query/latest/docs/framework/react/guides/migrating-to-react-query-3": {
+      "offset": 2873641,
+      "length": 80185,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ccb97c8579c329d6"
+    },
+    "/query/latest/docs/eslint/no-rest-destructuring": {
+      "offset": 2953826,
+      "length": 65020,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "30a1a758c25abad0"
+    },
+    "/query/latest/docs/eslint/prefer-query-options": {
+      "offset": 3018846,
+      "length": 65440,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3fa42a5dba547053"
+    },
+    "/query/latest/docs/eslint/no-unstable-deps": {
+      "offset": 3084286,
+      "length": 64821,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "447d0a1c51eb1c58"
+    },
+    "/query/latest/docs/eslint/mutation-property-order": {
+      "offset": 3149107,
+      "length": 64912,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2371a21732f090dc"
+    },
+    "/query/latest/docs/eslint/infinite-query-property-order": {
+      "offset": 3214019,
+      "length": 64926,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e06da420e5e9c7d1"
+    },
+    "/query/latest/docs/framework/react/guides/suspense": {
+      "offset": 3278945,
+      "length": 69635,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9166cc22a3957dab"
+    },
+    "/query/latest/docs/framework/react/guides/default-query-function": {
+      "offset": 3348580,
+      "length": 65687,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3254c6b4ed2fe0fa"
+    },
+    "/query/latest/docs/framework/react/guides/migrating-to-react-query-4": {
+      "offset": 3414267,
+      "length": 84804,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0032d309c628c84a"
+    },
+    "/query/latest/docs/eslint/exhaustive-deps": {
+      "offset": 3499071,
+      "length": 66688,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "15cc6b729d4979d1"
+    },
+    "/query/latest/docs/framework/react/guides/does-this-replace-client-state": {
+      "offset": 3565759,
+      "length": 66830,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c1239fd687cc6309"
+    },
+    "/query/latest/docs/eslint/stable-query-client": {
+      "offset": 3632589,
+      "length": 65597,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4e6ed2b75a2fd0e1"
+    },
+    "/query/latest/docs/eslint/no-void-query-fn": {
+      "offset": 3698186,
+      "length": 65506,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a3d7788c57ca0e32"
+    },
+    "/query/latest/docs/framework/react/guides/render-optimizations": {
+      "offset": 3763692,
+      "length": 68496,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f000a5e388dbc3f2"
+    },
+    "/query/latest/docs/framework/react/guides/migrating-to-v5": {
+      "offset": 3832188,
+      "length": 88215,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0240607570f9c808"
+    },
+    "/query/latest/docs/framework/react/guides/testing": {
+      "offset": 3920403,
+      "length": 70112,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "23b3f19fbbbbf8de"
+    },
+    "/query/latest/docs/framework/react/examples/auto-refetching": {
+      "offset": 3990515,
+      "length": 66447,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "26aecd5eba96a7c3"
+    },
+    "/query/latest/docs/framework/react/examples/load-more-infinite-scroll": {
+      "offset": 4056962,
+      "length": 66304,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9ba5882bdce944af"
+    },
+    "/query/latest/docs/framework/react/plugins/persistQueryClient": {
+      "offset": 4123266,
+      "length": 72360,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3456319244685379"
+    },
+    "/query/latest/docs/community-resources": {
+      "offset": 4195626,
+      "length": 64088,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "13ee03d2fde0c1ab"
+    },
+    "/query/latest/docs/framework/react/plugins/createAsyncStoragePersister": {
+      "offset": 4259714,
+      "length": 66527,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3d09b64937c3b9af"
+    },
+    "/query/latest/docs/framework/react/examples/playground": {
+      "offset": 4326241,
+      "length": 74214,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5b3fe91b40aa9a88"
+    },
+    "/query/latest/docs/framework/react/plugins/broadcastQueryClient": {
+      "offset": 4400455,
+      "length": 66761,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d02d748c22294339"
+    },
+    "/query/latest/docs/framework/react/plugins/createSyncStoragePersister": {
+      "offset": 4467216,
+      "length": 67328,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e63b63ae22bd240d"
+    },
+    "/query/latest/docs/framework/react/plugins/createPersister": {
+      "offset": 4534544,
+      "length": 70565,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e80eb97a39cc1194"
+    },
+    "/query/latest/docs/framework/react/examples/basic-graphql-request": {
+      "offset": 4605109,
+      "length": 68274,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dd5ec5f289f2b6d5"
+    },
+    "/query/latest/docs/framework/react/examples/suspense": {
+      "offset": 4673383,
+      "length": 65524,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e2c90054bb29508f"
+    },
+    "/query/latest/docs/framework/react/examples/nextjs-app-optimistic-updates": {
+      "offset": 4738907,
+      "length": 65127,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ee94676e54829f6c"
+    },
+    "/query/latest/docs/framework/react/examples/infinite-query-with-max-pages": {
+      "offset": 4804034,
+      "length": 65825,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "112839f92bebf547"
+    },
+    "/query/latest/docs/framework/react/examples/pagination": {
+      "offset": 4869859,
+      "length": 67535,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1801c45d99db10d1"
+    },
+    "/query/latest/docs/framework/react/examples/default-query-function": {
+      "offset": 4937394,
+      "length": 67651,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1e378203ed003388"
+    },
+    "/query/latest/docs/framework/react/examples/devtools-panel": {
+      "offset": 5005045,
+      "length": 67603,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e74e899c31c890fa"
+    },
+    "/query/latest/docs/framework/react/examples/shadow-dom": {
+      "offset": 5072648,
+      "length": 62830,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "193652c953858669"
+    },
+    "/query/latest/docs/framework/react/examples/algolia": {
+      "offset": 5135478,
+      "length": 63050,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a758704a215f0b2b"
+    },
+    "/query/latest/docs/framework/react/examples/prefetching": {
+      "offset": 5198528,
+      "length": 66063,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7497e668b1472051"
+    },
+    "/query/latest/docs/framework/react/examples/nextjs-suspense-streaming": {
+      "offset": 5264591,
+      "length": 65476,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4b3b89ee1f0b6db2"
+    },
+    "/query/latest/docs/framework/react/examples/offline": {
+      "offset": 5330067,
+      "length": 63892,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "15a6b9ce3a865497"
+    },
+    "/query/latest/docs/framework/react/examples/nextjs-app-prefetching": {
+      "offset": 5393959,
+      "length": 64628,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e9216d5d060f1b66"
+    },
+    "/query/latest/docs/framework/react/examples/react-native": {
+      "offset": 5458587,
+      "length": 65240,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d9de06fe30b233f5"
+    },
+    "/query/latest/docs/framework/react/examples/rick-morty": {
+      "offset": 5523827,
+      "length": 64252,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2b4abf72d148f116"
+    },
+    "/query/latest/docs/framework/react/examples/star-wars": {
+      "offset": 5588079,
+      "length": 64256,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d4bb27f378597bfd"
+    },
+    "/query/latest/docs/framework/react/examples/nextjs": {
+      "offset": 5652335,
+      "length": 65915,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d6172e9f3a9ff8ef"
+    },
+    "/query/latest/docs/framework/react/examples/batching": {
+      "offset": 5718250,
+      "length": 67995,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "78c4c1d29aa907ed"
+    },
+    "/query/latest/docs/framework/react/examples/react-router": {
+      "offset": 5786245,
+      "length": 65363,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "90084abf81d06ba8"
+    },
+    "/query/latest/docs/framework/react/examples/chat": {
+      "offset": 5851608,
+      "length": 67354,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f914d4109a3adde4"
+    },
+    "/query/latest/docs/framework/react/reference/functions/QueryClientProvider": {
+      "offset": 5918962,
+      "length": 69199,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bd6eaa91a0822131"
+    },
+    "/query/latest/docs/framework/react/reference/functions/defaultShouldDehydrateQuery": {
+      "offset": 5988161,
+      "length": 68181,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "391920f5cdb57a2d"
+    },
+    "/query/latest/docs/framework/react/reference/functions/hydrate": {
+      "offset": 6056342,
+      "length": 70160,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "28e66a1c0b5940aa"
+    },
+    "/query/latest/docs/framework/react/reference/functions/isCancelledError": {
+      "offset": 6126502,
+      "length": 68127,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "07bca99e4e909213"
+    },
+    "/query/latest/docs/framework/react/reference/functions/infiniteQueryOptions": {
+      "offset": 6194629,
+      "length": 72595,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5a3ee70baa9050a7"
+    },
+    "/query/latest/docs/framework/react/reference/functions/HydrationBoundary": {
+      "offset": 6267224,
+      "length": 70244,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb3f63f4debfb783"
+    },
+    "/query/latest/docs/framework/react/reference/functions/dehydrateQuery": {
+      "offset": 6337468,
+      "length": 69058,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7576ec47cbb87f38"
+    },
+    "/query/latest/docs/framework/react/reference/functions/hashKey": {
+      "offset": 6406526,
+      "length": 68541,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3d74211ea1d59806"
+    },
+    "/query/latest/docs/framework/react/reference/functions/QueryErrorResetBoundary": {
+      "offset": 6475067,
+      "length": 70466,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "36e13e122f7421a1"
+    },
+    "/query/latest/docs/framework/react/reference/functions/dehydrate": {
+      "offset": 6545533,
+      "length": 71200,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3a5ef7c06d77f3dd"
+    },
+    "/query/latest/docs/framework/react/reference/functions/defaultShouldDehydrateMutation": {
+      "offset": 6616733,
+      "length": 69341,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "00ba4bb35fe2e804"
+    },
+    "/query/latest/docs/framework/react/reference/functions/experimental_streamedQuery": {
+      "offset": 6686074,
+      "length": 70184,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "733ba7516f2c54b1"
+    },
+    "/query/latest/docs/framework/react/reference/functions/noop": {
+      "offset": 6756258,
+      "length": 68235,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2bcbed17f4ae540c"
+    },
+    "/query/latest/docs/framework/react/reference/functions/matchMutation": {
+      "offset": 6824493,
+      "length": 69384,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6e81cf1894df3807"
+    },
+    "/query/latest/docs/framework/react/reference/functions/mutationOptions": {
+      "offset": 6893877,
+      "length": 71154,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e005cbb3ebf47760"
+    },
+    "/query/latest/docs/framework/react/reference/functions/queryOptions": {
+      "offset": 6965031,
+      "length": 72471,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2dc73c1ff99a56e1"
+    },
+    "/query/latest/docs/framework/react/reference/functions/keepPreviousData": {
+      "offset": 7037502,
+      "length": 68644,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "49ed036bce214082"
+    },
+    "/query/latest/docs/framework/react/reference/functions/partialMatchKey": {
+      "offset": 7106146,
+      "length": 68342,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4c337c6409ce5391"
+    },
+    "/query/latest/docs/framework/react/reference/functions/matchQuery": {
+      "offset": 7174488,
+      "length": 70463,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e81c7f1798454e01"
+    },
+    "/query/latest/docs/framework/react/reference/functions/shouldThrowError": {
+      "offset": 7244951,
+      "length": 69006,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "90f03cbb7e05c8cb"
+    },
+    "/query/latest/docs/framework/react/reference/functions/replaceEqualDeep": {
+      "offset": 7313957,
+      "length": 68667,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "aac645e34448e7c8"
+    },
+    "/query/latest/docs/framework/react/reference/functions/useInfiniteQuery": {
+      "offset": 7382624,
+      "length": 86051,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a690e589b7d99336"
+    },
+    "/query/latest/docs/framework/react/reference/functions/useIsFetching": {
+      "offset": 7468675,
+      "length": 69959,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4086def20cc65025"
+    },
+    "/query/latest/docs/framework/react/reference/functions/useIsRestoring": {
+      "offset": 7538634,
+      "length": 67966,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "89247d781ead25c8"
+    },
+    "/query/latest/docs/framework/react/reference/functions/useIsMutating": {
+      "offset": 7606600,
+      "length": 69619,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a62a5d7e25eb8ea0"
+    },
+    "/query/latest/docs/framework/react/reference/functions/useMutation": {
+      "offset": 7676219,
+      "length": 75870,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dd4e50b084766b87"
+    },
+    "/assets/render-white-D4l33ygB.svg": {
+      "offset": 7752089,
+      "length": 2037,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a50b023056a6449c"
+    },
+    "/favicon-light.svg": {
+      "offset": 7754126,
+      "length": 1377,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "87ddd3cc53780ea9"
+    },
+    "/favicon.ico": {
+      "offset": 7755503,
+      "length": 1085,
+      "mime": "image/vnd.microsoft.icon",
+      "gzipped": true,
+      "hash": "168a372851d14b1b"
+    },
+    "/assets/lovable-black-1mVxR6Bj.svg": {
+      "offset": 7756588,
+      "length": 3574,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "2991135aabc14b05"
+    },
+    "/favicon-dark.svg": {
+      "offset": 7754126,
+      "length": 1377,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "87ddd3cc53780ea9"
+    },
+    "/assets/coderabbit-dark-C3hjOiHQ.svg": {
+      "offset": 7760162,
+      "length": 3855,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a0f236b34d931931"
+    },
+    "/assets/railway-white-CFKFsfw2.svg": {
+      "offset": 7764017,
+      "length": 2006,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "cdfae42b06c7f002"
+    },
+    "/images/brand/tanstack-landscape-black.svg": {
+      "offset": 7766023,
+      "length": 1770,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "7f88cc8634ee3f47"
+    },
+    "/apple-touch-icon.png": {
+      "offset": 7767793,
+      "length": 7469,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2abc16a5f4b05ca9"
+    },
+    "/favicon-32x32.png": {
+      "offset": 7775262,
+      "length": 1187,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "34241b997c796120"
+    },
+    "/favicon-16x16.png": {
+      "offset": 7776449,
+      "length": 590,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a53b782bb5f5aff7"
+    },
+    "/images/brand/tanstack-landscape-white.svg": {
+      "offset": 7777039,
+      "length": 1770,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "47b05e85ac4c4ffb"
+    },
+    "/assets/cloudflare-white-Co-Tyjbl.svg": {
+      "offset": 7778809,
+      "length": 5586,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "e38e46382d5e07c7"
+    },
+    "/assets/index-CaKFzcjh.css": {
+      "offset": 7784395,
+      "length": 73993,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b6ed57e3b279ea7"
+    },
+    "/assets/lovable-white-DLB1BxKZ.svg": {
+      "offset": 7858388,
+      "length": 3575,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "289e15e1680f1bc7"
+    },
+    "/assets/render-black-Cz1XqOfh.svg": {
+      "offset": 7861963,
+      "length": 2039,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "aa8e27c775b8a80d"
+    },
+    "/assets/railway-black-DeBDfNao.svg": {
+      "offset": 7864002,
+      "length": 2008,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "f17e0e028a8904e8"
+    },
+    "/assets/coderabbit-light-ggTFqYhV.svg": {
+      "offset": 7866010,
+      "length": 3869,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "183adaaa8dc30b05"
+    },
+    "/assets/cloudflare-black-6Ojsn8yh.svg": {
+      "offset": 7869879,
+      "length": 5273,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "e8c1a2879b3e87a1"
+    },
+    "/__docx_assets/c652463bc02b14.bin": {
+      "offset": 7875152,
+      "length": 1032,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b7ef659b9918b562"
+    },
+    "/assets/serpapi-black-DnXRiQQ3.svg": {
+      "offset": 7876184,
+      "length": 5506,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "eae3ca3f49eb10bb"
+    },
+    "/assets/openrouter-white-BLyN_5Ca.svg": {
+      "offset": 7881690,
+      "length": 1740,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "13637f69d0de5fd2"
+    },
+    "/assets/clerk-logo-dark-CRE22T_2.svg": {
+      "offset": 7883430,
+      "length": 2082,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "6ac152fa38cf1202"
+    },
+    "/assets/scarf-BJX_-tJ9.svg": {
+      "offset": 7885512,
+      "length": 3869,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "76163b7ea851b6af"
+    },
+    "/assets/prisma-dark-DwgDxLwn.svg": {
+      "offset": 7889381,
+      "length": 2276,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "4226546f639ea248"
+    },
+    "/assets/openrouter-black-CJtk3mjZ.svg": {
+      "offset": 7891657,
+      "length": 1739,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "5dd9bf63f2f8dea1"
+    },
+    "/assets/prisma-light-Cloa3Onm.svg": {
+      "offset": 7893396,
+      "length": 2278,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "275386c848fe7de0"
+    },
+    "/assets/clerk-logo-light-BYN-U_0H.svg": {
+      "offset": 7895674,
+      "length": 2101,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "85770f891d615c15"
+    },
+    "/assets/serpapi-white-CPxTEZSp.svg": {
+      "offset": 7897775,
+      "length": 5507,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "268f7b21f443c087"
+    },
+    "/assets/workos-black-DnPI5Ve5.svg": {
+      "offset": 7903282,
+      "length": 1716,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "ee02fe0a62ec07b3"
+    },
+    "/__docx_assets/af4d136d9ad8af.bin": {
+      "offset": 7904998,
+      "length": 486,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "d8f8c1034bed919a"
+    },
+    "/__docx_assets/4639304c20ea84.bin": {
+      "offset": 7905484,
+      "length": 485,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "9a7069263699f5de"
+    },
+    "/__docx_assets/bf1890443dd6f9.bin": {
+      "offset": 7905969,
+      "length": 1367,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "df2ba419c3a4aaf2"
+    },
+    "/__docx_assets/f41dc7c759e935.bin": {
+      "offset": 7907336,
+      "length": 1362,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "9969c2646692dfd4"
+    },
+    "/__docx_assets/32a8958a579a38.bin": {
+      "offset": 7908698,
+      "length": 1368,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "71c05a654e5e5db9"
+    },
+    "/__docx_assets/e641c4513d6010.bin": {
+      "offset": 7910066,
+      "length": 1364,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "d1b92be0b4233b63"
+    },
+    "/__docx_assets/374445b62d0194.bin": {
+      "offset": 7911430,
+      "length": 1358,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "66b9070eab94b080"
+    },
+    "/__docx_assets/51d4b307ca52b2.svg": {
+      "offset": 7912788,
+      "length": 1036,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "4a065ecb7283a581"
+    },
+    "/__docx_assets/f446a4accb6a79.svg": {
+      "offset": 7913824,
+      "length": 2800,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "fad530dc9c6d149b"
+    },
+    "/__docx_assets/9e118ee5eb3fb9.svg": {
+      "offset": 7916624,
+      "length": 595,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "d07341e1b7502618"
+    },
+    "/fonts/Inter-latin.woff2": {
+      "offset": 7917219,
+      "length": 72932,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "950aff451f2f608d"
+    },
+    "/images/brand/tanstack-emblem-black.svg": {
+      "offset": 7990151,
+      "length": 640,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "5a2195e2edbc36d7"
+    },
+    "/images/hero-palm-gradient-960.webp": {
+      "offset": 7990791,
+      "length": 28730,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "93fbf92042d02785"
+    },
+    "/__docx_assets/c097aa95d7ec1b.woff2": {
+      "offset": 8019521,
+      "length": 6803,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "cfae540b88c18592"
+    },
+    "/__docx_assets/32a447b3624072.woff2": {
+      "offset": 8026324,
+      "length": 13007,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "33b3c6001f8dd113"
+    },
+    "/__docx_assets/2a73cdecea5ce9.woff2": {
+      "offset": 8039331,
+      "length": 5891,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "9b1b2d0dc61dc5b4"
+    },
+    "/__docx_assets/b2bd399c7ef212.woff2": {
+      "offset": 8045222,
+      "length": 5855,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "bff78395d07e458e"
+    },
+    "/__docx_assets/b06594e3dfbc9f.woff2": {
+      "offset": 8051077,
+      "length": 6063,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e5a0d1b353cec923"
+    },
+    "/__docx_assets/7e3d7e3c7de8e8.woff2": {
+      "offset": 8057140,
+      "length": 14731,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "f030ce23a9c2db55"
+    },
+    "/__docx_assets/c70f6b078a0944.woff2": {
+      "offset": 8071871,
+      "length": 8483,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e4ddc5e461f06274"
+    },
+    "/fonts/Inter-latin-ext.woff2": {
+      "offset": 8080354,
+      "length": 133386,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "d2c129ef78916c74"
+    },
+    "/__docx_assets/6cb3d68941f20a.woff2": {
+      "offset": 8213740,
+      "length": 8291,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b8c026c80d547069"
+    },
+    "/__docx_assets/d1b233760bed30.woff2": {
+      "offset": 8222031,
+      "length": 6935,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "023e5b00d47f4ca4"
+    },
+    "/__docx_assets/ecb1449c9f014f.woff2": {
+      "offset": 8228966,
+      "length": 14771,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "75de27a62b652578"
+    },
+    "/__docx_assets/4c442bc4abb065.woff2": {
+      "offset": 8243737,
+      "length": 13427,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "055c5a5c51c1b6e9"
+    },
+    "/__docx_assets/ed3206e8ede4a9.woff2": {
+      "offset": 8257164,
+      "length": 6995,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "c96c57c26b8d4271"
+    },
+    "/__docx_assets/f9c74283b1693b.woff2": {
+      "offset": 8264159,
+      "length": 8379,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "827ff291ec7ad3e2"
+    },
+    "/__docx_assets/ae5fc1eadb0588.woff2": {
+      "offset": 8272538,
+      "length": 13371,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "5a329f24e9a408d8"
+    },
+    "/__docx_assets/e577600d58460a.woff2": {
+      "offset": 8285909,
+      "length": 30764,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b0dbbc6df819eb88"
+    },
+    "/__docx_assets/5f754c3adb80da.woff2": {
+      "offset": 8316673,
+      "length": 76898,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "2a689569fa1d472f"
+    },
+    "/__docx_assets/245a9a663e9393.woff2": {
+      "offset": 8393571,
+      "length": 6955,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "8605f3d9c723b79b"
+    },
+    "/__docx_assets/fd3dd31c82271e.woff2": {
+      "offset": 8400526,
+      "length": 7715,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "972b8ee5f8ff5391"
+    },
+    "/__docx_assets/eb889034c0832c.woff2": {
+      "offset": 8408241,
+      "length": 14911,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b05d0cae7c617430"
+    },
+    "/__docx_assets/6988d8097c69a5.woff2": {
+      "offset": 8423152,
+      "length": 7207,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "381bc33d377ec181"
+    },
+    "/__docx_assets/203ce92810c0a1.woff2": {
+      "offset": 8430359,
+      "length": 13455,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "a2052c2e7171917f"
+    },
+    "/__docx_assets/132ba860efc49c.woff2": {
+      "offset": 8443814,
+      "length": 9375,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "5c080ddf94a1be02"
+    },
+    "/__docx_assets/707854e807bf3a.woff2": {
+      "offset": 8453189,
+      "length": 6091,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b40808097daa64a6"
+    },
+    "/__docx_assets/796754f6fa2c0f.woff2": {
+      "offset": 8459280,
+      "length": 14351,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "690c7a9520f8d9aa"
+    },
+    "/__docx_assets/2504ad92936998.woff2": {
+      "offset": 8473631,
+      "length": 8699,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "977d9cf9aec9b099"
+    },
+    "/__docx_assets/86628368fe0c7c.woff2": {
+      "offset": 8482330,
+      "length": 15643,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "fd07f16153dd55ac"
+    },
+    "/__docx_assets/be7e618c1b6f15.woff2": {
+      "offset": 8497973,
+      "length": 13403,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "d8074533a74c4065"
+    },
+    "/__docx_assets/677d93cfc15177.woff2": {
+      "offset": 8511376,
+      "length": 14931,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "c1b3ea3548111f8f"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 65433,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "90e3ed3c85cb95ed"
+    },
+    "/": {
+      "offset": 0,
+      "length": 65433,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "90e3ed3c85cb95ed"
+    }
+  }
+}

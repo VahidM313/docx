@@ -1,1 +1,1894 @@
-{"id":"rust","name":"Rust Stable Suite","version":"1.86","commit":"10ed7820","updatedAt":"2026-10-11T15:40:53.295Z","totalBytes":5293638,"chunkCount":247,"routes":{"/book":{"offset":0,"length":10711,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1a0d9418281fa4c0"},"/book/":{"offset":0,"length":10711,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1a0d9418281fa4c0"},"/book/foreword.html":{"offset":10711,"length":11606,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c8a2bf30ba5e5a1b"},"/book/ch01-01-installation.html":{"offset":22317,"length":13162,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3f439ffc81b63415"},"/book/print.html":{"offset":35479,"length":446054,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ce8b3a8f776a3644"},"/book/appendix-05-editions.html":{"offset":481533,"length":11651,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ef1b51e27c8d4b16"},"/book/appendix-06-translation.html":{"offset":493184,"length":11139,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"af3ece450483a13f"},"/book/ch01-00-getting-started.html":{"offset":504323,"length":10393,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"50f88880eb7a60a8"},"/cargo":{"offset":514716,"length":9515,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c2f2268454baba46"},"/cargo/":{"offset":514716,"length":9515,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c2f2268454baba46"},"/book/ch01-02-hello-world.html":{"offset":524231,"length":13594,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"63045aabdd85b45f"},"/book/ch00-00-introduction.html":{"offset":537825,"length":14783,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4149ba5108f11d2f"},"/book/title-page.html":{"offset":552608,"length":10710,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bcb286e2b8225c3c"},"/book/appendix-07-nightly-rust.html":{"offset":563318,"length":13941,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"16f22a11789ecc9c"},"/cargo/reference/publishing.html":{"offset":577259,"length":14195,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e3094ed58ea9772b"},"/book/appendix-04-useful-development-tools.html":{"offset":591454,"length":12474,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0dea4dd3e9ae59e3"},"/cargo/reference/profiles.html":{"offset":603928,"length":15492,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3631d7cbb2ae9bce"},"/cargo/appendix/glossary.html":{"offset":619420,"length":13296,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fabfe464eb80bd46"},"/cargo/commands/index.html":{"offset":632716,"length":8999,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7597a7a82f1d73f3"},"/cargo/faq.html":{"offset":641715,"length":15358,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b0ac4b62d07272ec"},"/cargo/guide/index.html":{"offset":657073,"length":9103,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2a62ad9375cbbee2"},"/cargo/reference/index.html":{"offset":666176,"length":9237,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cf8c369dc9d58583"},"/cargo/print.html":{"offset":675413,"length":398936,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5feb042a01360207"},"/cargo/CHANGELOG.html":{"offset":1074349,"length":125294,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ba0b07a769370b9a"},"/cargo/appendix/git-authentication.html":{"offset":1199643,"length":11045,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"50f66b6f38109003"},"/cargo/getting-started/index.html":{"offset":1210688,"length":9036,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"68da1664f0f7898e"},"/cargo/commands/cargo-login.html":{"offset":1219724,"length":11025,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"26d5c3c14c7bcea6"},"/cargo/reference/manifest.html":{"offset":1230749,"length":18924,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"43b2763a8001d67c"},"/cargo/commands/cargo-publish.html":{"offset":1249673,"length":13735,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"21210e611c55fc75"},"/cargo/commands/cargo-package.html":{"offset":1263408,"length":14987,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0d3f5a3a5fe5fbbe"},"/book/ch01-03-hello-cargo.html":{"offset":1278395,"length":14706,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"05aff98177da6e0f"},"/cargo/commands/cargo-logout.html":{"offset":1293101,"length":11001,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e8a858f9667ef61c"},"/book/ch20-05-macros.html":{"offset":1304102,"length":19824,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"97f880188e854fe1"},"/cargo/commands/cargo-test.html":{"offset":1323926,"length":16896,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b251dcd16b2f02a7"},"/cargo/commands/cargo-run.html":{"offset":1340822,"length":13703,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fbf14be141a20afb"},"/cargo/guide/cargo-home.html":{"offset":1354525,"length":10796,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b9884512e8b6168c"},"/cargo/reference/build-cache.html":{"offset":1365321,"length":11113,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fbc3b5f74b7ba8b0"},"/cargo/commands/cargo-bench.html":{"offset":1376434,"length":16025,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1e31882d6e19e0d8"},"/cargo/reference/environment-variables.html":{"offset":1392459,"length":18026,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"204bb4c9ebb20331"},"/cargo/reference/semver.html":{"offset":1410485,"length":26702,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"312bd94a29d4bfad"},"/cargo/commands/cargo-build.html":{"offset":1437187,"length":14855,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4ceba344e233d3ba"},"/cargo/guide/continuous-integration.html":{"offset":1452042,"length":12178,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a9c88a79f1121b89"},"/cargo/commands/cargo-check.html":{"offset":1464220,"length":14818,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c6759068c735e480"},"/cargo/reference/features-examples.html":{"offset":1479038,"length":12225,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"80f20710bc1df8e9"},"/cargo/commands/cargo-install.html":{"offset":1491263,"length":15704,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b37ff1173f7727b2"},"/book/appendix-03-derivable-traits.html":{"offset":1506967,"length":13876,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"208169f790bb4a92"},"/cargo/reference/config.html":{"offset":1520843,"length":28076,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1a3a415436febe48"},"/cargo/commands/cargo-rustc.html":{"offset":1548919,"length":15215,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8e7446bc49108668"},"/cargo/reference/pkgid-spec.html":{"offset":1564134,"length":10308,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"94b2a06d16650745"},"/cargo/guide/cargo-toml-vs-cargo-lock.html":{"offset":1574442,"length":10578,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e5558447143998b2"},"/cargo/commands/publishing-commands.html":{"offset":1585020,"length":8995,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d30fba903cdd2c9e"},"/cargo/guide/project-layout.html":{"offset":1594015,"length":9989,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"231f21debe1b53df"},"/cargo/reference/features.html":{"offset":1604004,"length":16931,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6ba464896a3e6315"},"/cargo/reference/source-replacement.html":{"offset":1620935,"length":11529,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0b3791962016fe45"},"/cargo/reference/workspaces.html":{"offset":1632464,"length":12767,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4bff369a0320a6c7"},"/cargo/commands/package-commands.html":{"offset":1645231,"length":8981,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f41950282b28aea2"},"/cargo/commands/cargo-new.html":{"offset":1654212,"length":11164,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9327058efb38c939"},"/cargo/reference/unstable.html":{"offset":1665376,"length":43835,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5c5a8c879fa6cec9"},"/cargo/commands/cargo-add.html":{"offset":1709211,"length":12791,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f0469d320b6fe2fa"},"/cargo/reference/build-scripts.html":{"offset":1722002,"length":18287,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5f056e06bf9dd766"},"/cargo/commands/deprecated-and-removed.html":{"offset":1740289,"length":9126,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f33fe4beaa2d78a0"},"/cargo/commands/build-commands.html":{"offset":1749415,"length":9059,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6ca21318e34738ce"},"/cargo/commands/manifest-commands.html":{"offset":1758474,"length":9032,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"736ce1db31ba22d0"},"/cargo/commands/general-commands.html":{"offset":1767506,"length":8961,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"de3131901f3688e2"},"/cargo/commands/report-commands.html":{"offset":1776467,"length":8956,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fecedb8c6e9b83b9"},"/cargo/reference/cargo-targets.html":{"offset":1785423,"length":14383,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ceb7164e5ec59cec"},"/cargo/commands/cargo-fetch.html":{"offset":1799806,"length":11711,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eafa6bd7c4cce71e"},"/cargo/guide/creating-a-new-project.html":{"offset":1811517,"length":10076,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"83681d07184a4e59"},"/cargo/guide/working-on-an-existing-project.html":{"offset":1821593,"length":9256,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a7e18a9fb91f23db"},"/cargo/reference/build-script-examples.html":{"offset":1830849,"length":16035,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3b31934fc9f072ca"},"/cargo/guide/build-performance.html":{"offset":1846884,"length":12673,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"286e109765581c83"},"/cargo/reference/external-tools.html":{"offset":1859557,"length":12904,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e986d4f674a95d4"},"/cargo/getting-started/first-steps.html":{"offset":1872461,"length":9782,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"844bddfa67fb94bf"},"/cargo/reference/registries.html":{"offset":1882243,"length":11064,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1682bbaa1e4b81bf"},"/cargo/reference/rust-version.html":{"offset":1893307,"length":12556,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c07947ad0d0c506b"},"/cargo/reference/overriding-dependencies.html":{"offset":1905863,"length":14084,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a2997c4862cc67c5"},"/cargo/reference/specifying-dependencies.html":{"offset":1919947,"length":18335,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"05efae9c2ea47f28"},"/cargo/reference/resolver.html":{"offset":1938282,"length":19861,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0c1d337af07aeb96"},"/cargo/guide/dependencies.html":{"offset":1958143,"length":10040,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b7f798e62faeae39"},"/cargo/guide/tests.html":{"offset":1968183,"length":9698,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4dbf7d144c6521fc"},"/cargo/guide/why-cargo-exists.html":{"offset":1977881,"length":10333,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3aca700003d990a2"},"/cargo/reference/timings.html":{"offset":1988214,"length":10372,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1b49db2cd52dfd76"},"/cargo/commands/cargo.html":{"offset":1998586,"length":12952,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7b3b82342ec8333c"},"/book/ch11-00-testing.html":{"offset":2011538,"length":11218,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a8183311a15e4d82"},"/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html":{"offset":2022756,"length":11564,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"676d12467957401e"},"/cargo/getting-started/installation.html":{"offset":2034320,"length":9489,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6a1bcf579909c88f"},"/cargo/reference/registry-authentication.html":{"offset":2043809,"length":10923,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a657a9cd4c02be09"},"/cargo/reference/registry-index.html":{"offset":2054732,"length":15437,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d409037c0886849d"},"/cargo/reference/registry-web-api.html":{"offset":2070169,"length":12821,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c6301a4d58816c77"},"/cargo/reference/running-a-registry.html":{"offset":2082990,"length":9304,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bb95efb933572bee"},"/cargo/index.html":{"offset":2092294,"length":9514,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b975a97e851f92ff"},"/cargo/reference/future-incompat-report.html":{"offset":2101808,"length":9622,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fb0d533460306300"},"/cargo/reference/credential-provider-protocol.html":{"offset":2111430,"length":11384,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6c280e29692372de"},"/cargo/commands/cargo-pkgid.html":{"offset":2122814,"length":11827,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1529b756925fc65e"},"/book/ch19-06-macros.html":{"offset":2134641,"length":1389,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"be433adb313b6b9f"},"/cargo/commands/cargo-init.html":{"offset":2136030,"length":11217,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"215d924cb2d35833"},"/cargo/reference/lints.html":{"offset":2147247,"length":13075,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fa59092dd017eeba"},"/cargo/commands/cargo-clean.html":{"offset":2160322,"length":12131,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9c05c4da913a0a0c"},"/cargo/commands/cargo-metadata.html":{"offset":2172453,"length":15498,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5a63797c9545cc2c"},"/cargo/commands/cargo-report.html":{"offset":2187951,"length":11078,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c94c8eed268726c7"},"/book/appendix-02-operators.html":{"offset":2199029,"length":13767,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3d4a7e4afe63c00b"},"/cargo/commands/cargo-doc.html":{"offset":2212796,"length":14609,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"62457d21ce193018"},"/cargo/commands/cargo-yank.html":{"offset":2227405,"length":12450,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"665453246c270021"},"/cargo/commands/cargo-vendor.html":{"offset":2239855,"length":11986,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"da465eafc825ce04"},"/book/ch20-04-advanced-functions-and-closures.html":{"offset":2251841,"length":13845,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fb0946699bcae3d8"},"/book/ch02-00-guessing-game-tutorial.html":{"offset":2265686,"length":25598,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c2cfb26735017a37"},"/cargo/commands/cargo-search.html":{"offset":2291284,"length":10824,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"faa969d4e815cd74"},"/cargo/commands/cargo-rustdoc.html":{"offset":2302108,"length":14749,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e67225749064d073"},"/cargo/commands/cargo-miri.html":{"offset":2316857,"length":9260,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"de65cb8bdd969ec3"},"/book/ch21-00-final-project-a-web-server.html":{"offset":2326117,"length":11269,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"edef071d17d40bb1"},"/cargo/commands/cargo-uninstall.html":{"offset":2337386,"length":10876,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ef038041f20183a6"},"/cargo/commands/cargo-owner.html":{"offset":2348262,"length":11269,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a46b3ea157eb8b66"},"/cargo/commands/cargo-tree.html":{"offset":2359531,"length":15008,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d099c21b13bd63aa"},"/cargo/commands/cargo-fix.html":{"offset":2374539,"length":15912,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f47486162d01c098"},"/book/ch10-03-lifetime-syntax.html":{"offset":2390451,"length":21737,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"73ef3015fa5d38a2"},"/cargo/commands/cargo-generate-lockfile.html":{"offset":2412188,"length":11447,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cb3a453a8572b7a9"},"/book/ch11-01-writing-tests.html":{"offset":2423635,"length":20776,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2ebf00d9a29531f6"},"/cargo/commands/cargo-locate-project.html":{"offset":2444411,"length":10949,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"65b46854515ae029"},"/cargo/commands/cargo-update.html":{"offset":2455360,"length":12197,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4157aabe0ccde8dc"},"/book/ch06-03-if-let.html":{"offset":2467557,"length":13656,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c15f605149ea2741"},"/cargo/commands/cargo-remove.html":{"offset":2481213,"length":11524,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"24e4e5127bd9805e"},"/book/ch14-03-cargo-workspaces.html":{"offset":2492737,"length":14660,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"496543338c78f62b"},"/cargo/commands/cargo-fmt.html":{"offset":2507397,"length":9225,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4040c59df0cd99f4"},"/cargo/commands/cargo-version.html":{"offset":2516622,"length":9304,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"282e9f97baaa452d"},"/cargo/commands/cargo-info.html":{"offset":2525926,"length":11478,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5920e47c3ebd2b79"},"/book/ch07-01-packages-and-crates.html":{"offset":2537404,"length":11771,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6eca227502f6832a"},"/cargo/commands/cargo-report-future-incompatibilities.html":{"offset":2549175,"length":11449,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ac6dab3a129c3da4"},"/cargo/commands/cargo-clippy.html":{"offset":2560624,"length":9237,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4687388258748529"},"/cargo/commands/cargo-help.html":{"offset":2569861,"length":11291,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"be78f077f08d3469"},"/book/ch03-00-common-programming-concepts.html":{"offset":2581152,"length":10792,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"61105fcc71518d31"},"/book/appendix-01-keywords.html":{"offset":2591944,"length":12501,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"05d28059164f59d8"},"/book/ch14-04-installing-binaries.html":{"offset":2604445,"length":11275,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e940cab45f1fb7e2"},"/book/ch17-03-more-futures.html":{"offset":2615720,"length":15111,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1f03ea8d45a95b0f"},"/book/ch06-02-match.html":{"offset":2630831,"length":15924,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d530649c1f0ef9f5"},"/book/ch14-02-publishing-to-crates-io.html":{"offset":2646755,"length":18761,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"09fab4b30d2efab3"},"/book/ch07-02-defining-modules-to-control-scope-and-privacy.html":{"offset":2665516,"length":13506,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a806fba3cf0fadb8"},"/book/ch18-02-trait-objects.html":{"offset":2679022,"length":15766,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"448b73ce0cf5b7e3"},"/book/ch10-02-traits.html":{"offset":2694788,"length":17603,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e75516cdb2b5981e"},"/book/ch21-01-single-threaded.html":{"offset":2712391,"length":19712,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bad78e0e273fdbe3"},"/book/ch06-00-enums.html":{"offset":2732103,"length":10555,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7ab99a2b9c242107"},"/book/ch09-02-recoverable-errors-with-result.html":{"offset":2742658,"length":20078,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"67817abc6d8bb7b6"},"/book/ch03-04-comments.html":{"offset":2762736,"length":10964,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0e8c3ce9124655b3"},"/book/ch20-03-advanced-types.html":{"offset":2773700,"length":16583,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"503613c29d6efa7e"},"/book/ch11-02-running-tests.html":{"offset":2790283,"length":14194,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8ba1d1cf1f3850d6"},"/book/ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html":{"offset":2804477,"length":16484,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5ebfbc7252e889fa"},"/book/ch09-01-unrecoverable-errors-with-panic.html":{"offset":2820961,"length":13901,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"840118f0afbca5f7"},"/book/ch03-01-variables-and-mutability.html":{"offset":2834862,"length":14259,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6101effc17974a9e"},"/book/ch18-01-what-is-oo.html":{"offset":2849121,"length":13892,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2a09dea33700998f"},"/book/ch06-01-defining-an-enum.html":{"offset":2863013,"length":17145,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5141eada2abdea24"},"/book/ch05-03-method-syntax.html":{"offset":2880158,"length":15331,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cf68f11588c11ae0"},"/book/ch09-03-to-panic-or-not-to-panic.html":{"offset":2895489,"length":16352,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7eda969b09f3c16e"},"/book/ch14-01-release-profiles.html":{"offset":2911841,"length":11432,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ccea9a1d6c1c819e"},"/book/appendix-00.html":{"offset":2923273,"length":10255,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5f17642922010fe3"},"/book/ch18-03-oo-design-patterns.html":{"offset":2933528,"length":21253,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c9e9a882ce43fb5e"},"/book/ch21-02-multithreaded.html":{"offset":2954781,"length":24903,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ffbbb4480048b0a8"},"/book/ch10-01-syntax.html":{"offset":2979684,"length":16392,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fb035451193b44d0"},"/book/ch03-03-how-functions-work.html":{"offset":2996076,"length":14632,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0f6d2d0f7c98e266"},"/book/ch19-00-patterns.html":{"offset":3010708,"length":10908,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a4f70e3ba1377481"},"/book/ch14-05-extending-cargo.html":{"offset":3021616,"length":10709,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8f2ed49cbc944c4f"},"/book/ch17-04-streams.html":{"offset":3032325,"length":12742,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"169f28a7a9b5a245"},"/book/ch17-02-concurrency-with-async.html":{"offset":3045067,"length":17970,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"914c3fb567989d2f"},"/book/ch03-02-data-types.html":{"offset":3063037,"length":17660,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"62f63c57ecaef7e1"},"/book/ch20-02-advanced-traits.html":{"offset":3080697,"length":19322,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"14a65e7eba4ee64e"},"/book/ch03-05-control-flow.html":{"offset":3100019,"length":17149,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8dac4a37aacf7d34"},"/book/ch12-00-an-io-project.html":{"offset":3117168,"length":11273,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cb505ef754a581a2"},"/book/ch05-02-example-structs.html":{"offset":3128441,"length":14948,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e1bad1dd421b759e"},"/book/ch09-00-error-handling.html":{"offset":3143389,"length":10920,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"71de3a8b03641a7e"},"/book/ch14-00-more-about-cargo.html":{"offset":3154309,"length":10545,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"648388fd66e7e05b"},"/book/ch07-04-bringing-paths-into-scope-with-the-use-keyword.html":{"offset":3164854,"length":16034,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bbd8a8142d62b7c4"},"/book/ch10-00-generics.html":{"offset":3180888,"length":12750,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"888bc588e9ce038d"},"/book/ch11-03-test-organization.html":{"offset":3193638,"length":15203,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"767325b872309331"},"/book/ch18-00-oop.html":{"offset":3208841,"length":10671,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8ab2f3dcd1075c6a"},"/book/ch16-02-message-passing.html":{"offset":3219512,"length":15183,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e2154397bccba7b8"},"/book/ch17-05-traits-for-async.html":{"offset":3234695,"length":21677,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"95bfa6f3d098218e"},"/book/ch21-03-graceful-shutdown-and-cleanup.html":{"offset":3256372,"length":16938,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c6a94a65f3a02e51"},"/book/ch19-01-all-the-places-for-patterns.html":{"offset":3273310,"length":15196,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"465ae1bb142f0ccc"},"/book/ch15-00-smart-pointers.html":{"offset":3288506,"length":11413,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"657f9e7539f2048f"},"/book/ch08-01-vectors.html":{"offset":3299919,"length":15258,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0f3cdc8ffae958d5"},"/book/ch20-01-unsafe-rust.html":{"offset":3315177,"length":22418,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"03d3442acfea7a88"},"/book/ch17-01-futures-and-syntax.html":{"offset":3337595,"length":18791,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a177907464a0f234"},"/book/ch04-00-understanding-ownership.html":{"offset":3356386,"length":10406,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b757cd5d661aa5d6"},"/book/ch08-00-common-collections.html":{"offset":3366792,"length":10879,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d8476c2bb61a99b8"},"/book/theme/listing-cab26221.css":{"offset":3377671,"length":98,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"a58532a6f4da60a9"},"/book/css/chrome-d279d366.css":{"offset":3377769,"length":4756,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0053a19749a344e8"},"/book/theme/semantic-notes-9b5766c0.css":{"offset":3382525,"length":247,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"8aac3b78970da270"},"/book/css/variables-8adf115d.css":{"offset":3382772,"length":1929,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"4964886347bfee5d"},"/book/css/general-e96d0476.css":{"offset":3384701,"length":3635,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"89bcfb7214f4bb63"},"/book/ferris-d33b75bf.css":{"offset":3388336,"length":486,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"16580cd6b4d1e943"},"/book/img/ferris/panics.svg":{"offset":3388822,"length":2893,"mime":"image/svg+xml","gzipped":true,"hash":"5d403c34705f0e97"},"/book/favicon-8114d1fc.png":{"offset":3391715,"length":5679,"mime":"image/png","gzipped":false,"hash":"198bbb75e0db5bc5"},"/book/favicon-de23e50b.svg":{"offset":3397394,"length":976,"mime":"image/svg+xml","gzipped":true,"hash":"5f358cd507562972"},"/book/img/ferris/does_not_compile.svg":{"offset":3398370,"length":3229,"mime":"image/svg+xml","gzipped":true,"hash":"c7e8b14864c80dbb"},"/book/ayu-highlight-3fdfc3ac.css":{"offset":3401599,"length":421,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"9be5c9c8d6e49395"},"/book/css/print-9e4910d8.css":{"offset":3402020,"length":351,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"d89728736f675fd4"},"/book/highlight-493f70e1.css":{"offset":3402371,"length":560,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"040d2ac04fc6e25e"},"/book/theme/2018-edition-4e126c62.css":{"offset":3402931,"length":88,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"62e993b29b498ad4"},"/book/fonts/fonts-9644e21d.css":{"offset":3403019,"length":659,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"1d25fdad1c9f7941"},"/book/tomorrow-night-4c0ae647.css":{"offset":3403678,"length":644,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"c1d57571806e5c37"},"/book/img/ferris/not_desired_behavior.svg":{"offset":3404322,"length":3022,"mime":"image/svg+xml","gzipped":true,"hash":"71375d203e3cafb6"},"/book/img/trpl04-02.svg":{"offset":3407344,"length":1291,"mime":"image/svg+xml","gzipped":true,"hash":"6a8c0fe42343d42b"},"/book/img/trpl04-01.svg":{"offset":3408635,"length":1057,"mime":"image/svg+xml","gzipped":true,"hash":"e8559d4492ee0991"},"/book/img/trpl04-03.svg":{"offset":3409692,"length":1502,"mime":"image/svg+xml","gzipped":true,"hash":"4095591393a7b432"},"/book/img/trpl04-06.svg":{"offset":3411194,"length":1210,"mime":"image/svg+xml","gzipped":true,"hash":"694f355b87934d54"},"/book/img/trpl04-07.svg":{"offset":3412404,"length":1523,"mime":"image/svg+xml","gzipped":true,"hash":"5f70855a57c4d549"},"/book/img/trpl15-03.svg":{"offset":3413927,"length":1264,"mime":"image/svg+xml","gzipped":true,"hash":"623a204589aebb92"},"/book/img/trpl17-02.svg":{"offset":3415191,"length":1164,"mime":"image/svg+xml","gzipped":true,"hash":"93f8ab5d15b82435"},"/book/img/trpl14-03.png":{"offset":3416355,"length":206064,"mime":"image/png","gzipped":false,"hash":"b7b15b2e38237d01"},"/book/img/trpl15-01.svg":{"offset":3622419,"length":807,"mime":"image/svg+xml","gzipped":true,"hash":"7f5854a69125ba8d"},"/book/img/trpl15-02.svg":{"offset":3623226,"length":630,"mime":"image/svg+xml","gzipped":true,"hash":"d85a2c456f51d218"},"/book/img/trpl17-07.svg":{"offset":3623856,"length":1219,"mime":"image/svg+xml","gzipped":true,"hash":"d9e418ff218e4736"},"/book/img/trpl15-04.svg":{"offset":3625075,"length":1148,"mime":"image/svg+xml","gzipped":true,"hash":"45b5bfa0e8bf2bc9"},"/book/img/trpl14-02.png":{"offset":3626223,"length":259295,"mime":"image/png","gzipped":false,"hash":"6577d458f2aef098"},"/book/img/trpl17-01.svg":{"offset":3885518,"length":1360,"mime":"image/svg+xml","gzipped":true,"hash":"81adcb0d6d48aeb6"},"/book/img/trpl17-03.svg":{"offset":3886878,"length":1333,"mime":"image/svg+xml","gzipped":true,"hash":"8da17ca7be88cd6e"},"/book/img/trpl14-04.png":{"offset":3888211,"length":275579,"mime":"image/png","gzipped":false,"hash":"4e7d4ca42afaafa8"},"/book/img/trpl14-01.png":{"offset":4163790,"length":275661,"mime":"image/png","gzipped":false,"hash":"f7831d0542aa4d1b"},"/book/img/trpl17-05.svg":{"offset":4439451,"length":826,"mime":"image/svg+xml","gzipped":true,"hash":"3ac173bc2e5e709c"},"/book/img/trpl17-08.svg":{"offset":4440277,"length":969,"mime":"image/svg+xml","gzipped":true,"hash":"67bf12e2b2f5faff"},"/book/img/trpl17-04.svg":{"offset":4441246,"length":718,"mime":"image/svg+xml","gzipped":true,"hash":"2496bdaa4ec42e46"},"/book/img/trpl17-06.svg":{"offset":4441964,"length":1109,"mime":"image/svg+xml","gzipped":true,"hash":"0cb16f2486965028"},"/book/img/trpl04-04.svg":{"offset":4443073,"length":1321,"mime":"image/svg+xml","gzipped":true,"hash":"77f657df5c1e31b7"},"/book/img/trpl04-05.svg":{"offset":4444394,"length":1277,"mime":"image/svg+xml","gzipped":true,"hash":"b56673a167428ad2"},"/cargo/css/print-9e4910d8.css":{"offset":3402020,"length":351,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"d89728736f675fd4"},"/cargo/tomorrow-night-4c0ae647.css":{"offset":3403678,"length":644,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"c1d57571806e5c37"},"/cargo/fonts/fonts-9644e21d.css":{"offset":4445671,"length":660,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"6e32bfef6e65075e"},"/cargo/css/general-e96d0476.css":{"offset":3384701,"length":3635,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"89bcfb7214f4bb63"},"/cargo/images/winapi-features.svg":{"offset":4446331,"length":1405,"mime":"image/svg+xml","gzipped":true,"hash":"21bd7d7928bcd63d"},"/book/img/trpl21-01.png":{"offset":4447736,"length":8491,"mime":"image/png","gzipped":false,"hash":"87a93e6cc4d4ef84"},"/cargo/images/Cargo-Logo-Small.png":{"offset":4456227,"length":58168,"mime":"image/png","gzipped":false,"hash":"95e75eed851b4713"},"/cargo/css/chrome-d279d366.css":{"offset":3377769,"length":4756,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0053a19749a344e8"},"/cargo/images/org-level-acl.png":{"offset":4514395,"length":76572,"mime":"image/png","gzipped":false,"hash":"900eda9c1ce31ffa"},"/cargo/favicon-ba9a2803.png":{"offset":4590967,"length":15086,"mime":"image/png","gzipped":false,"hash":"4a57d43cc57cba0e"},"/cargo/highlight-493f70e1.css":{"offset":3402371,"length":560,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"040d2ac04fc6e25e"},"/cargo/css/variables-8adf115d.css":{"offset":3382772,"length":1929,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"4964886347bfee5d"},"/cargo/theme/cargo-d13f5220.css":{"offset":4606053,"length":226,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"67390773abf460e7"},"/cargo/ayu-highlight-3fdfc3ac.css":{"offset":3401599,"length":421,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"9be5c9c8d6e49395"},"/book/img/trpl17-09.svg":{"offset":4606279,"length":1226,"mime":"image/svg+xml","gzipped":true,"hash":"c3506e4b9dba4dc3"},"/cargo/images/auth-level-acl.png":{"offset":4607505,"length":90300,"mime":"image/png","gzipped":false,"hash":"ded4c6c744d97b19"},"/cargo/images/cargo-concurrency-over-time.png":{"offset":4697805,"length":31220,"mime":"image/png","gzipped":false,"hash":"29c036b3a59accbf"},"/cargo/images/build-unit-time.png":{"offset":4729025,"length":27728,"mime":"image/png","gzipped":false,"hash":"8b146a41bfa80bae"},"/cargo/images/build-info.png":{"offset":4756753,"length":28150,"mime":"image/png","gzipped":false,"hash":"e285ad1be7392a81"},"/book/fonts/open-sans-v17-all-charsets-italic-6c9463f7.woff2":{"offset":4784903,"length":41076,"mime":"font/woff2","gzipped":false,"hash":"3a97d1d16e0444f7"},"/book/fonts/open-sans-v17-all-charsets-300italic-2c7b95c0.woff2":{"offset":4825979,"length":40656,"mime":"font/woff2","gzipped":false,"hash":"6f7171e251a5e1aa"},"/book/fonts/open-sans-v17-all-charsets-700-c22fe8c7.woff2":{"offset":4866635,"length":44988,"mime":"font/woff2","gzipped":false,"hash":"574d4ca9b654e784"},"/book/fonts/open-sans-v17-all-charsets-600-486c6759.woff2":{"offset":4911623,"length":44936,"mime":"font/woff2","gzipped":false,"hash":"b9087cb108364558"},"/book/fonts/open-sans-v17-all-charsets-600italic-1a3e8659.woff2":{"offset":4956559,"length":42120,"mime":"font/woff2","gzipped":false,"hash":"ddedfa07599681ca"},"/cargo/fonts/open-sans-v17-all-charsets-italic-6c9463f7.woff2":{"offset":4784903,"length":41076,"mime":"font/woff2","gzipped":false,"hash":"3a97d1d16e0444f7"},"/book/fonts/open-sans-v17-all-charsets-regular-2e3b1d34.woff2":{"offset":4998679,"length":43236,"mime":"font/woff2","gzipped":false,"hash":"9a37e36f9520871d"},"/book/fonts/open-sans-v17-all-charsets-300-7736aa35.woff2":{"offset":5041915,"length":44352,"mime":"font/woff2","gzipped":false,"hash":"5fce5de42597b7fa"},"/book/fonts/open-sans-v17-all-charsets-700italic-238ae959.woff2":{"offset":5086267,"length":40800,"mime":"font/woff2","gzipped":false,"hash":"aa3b4e20c8da3c39"},"/cargo/fonts/open-sans-v17-all-charsets-700-c22fe8c7.woff2":{"offset":4866635,"length":44988,"mime":"font/woff2","gzipped":false,"hash":"574d4ca9b654e784"},"/book/fonts/source-code-pro-v11-all-charsets-500-2bdd9410.woff2":{"offset":5127067,"length":59140,"mime":"font/woff2","gzipped":false,"hash":"d4596dd263a8c42e"},"/cargo/fonts/open-sans-v17-all-charsets-300-7736aa35.woff2":{"offset":5041915,"length":44352,"mime":"font/woff2","gzipped":false,"hash":"5fce5de42597b7fa"},"/book/fonts/open-sans-v17-all-charsets-800italic-ba1521ec.woff2":{"offset":5186207,"length":40812,"mime":"font/woff2","gzipped":false,"hash":"c6f6abbed5ff3db8"},"/cargo/fonts/open-sans-v17-all-charsets-700italic-238ae959.woff2":{"offset":5086267,"length":40800,"mime":"font/woff2","gzipped":false,"hash":"aa3b4e20c8da3c39"},"/cargo/fonts/open-sans-v17-all-charsets-regular-2e3b1d34.woff2":{"offset":4998679,"length":43236,"mime":"font/woff2","gzipped":false,"hash":"9a37e36f9520871d"},"/book/fonts/open-sans-v17-all-charsets-800-3d2c812a.woff2":{"offset":5227019,"length":44536,"mime":"font/woff2","gzipped":false,"hash":"a27e6c2fd70befd0"},"/cargo/fonts/open-sans-v17-all-charsets-600-486c6759.woff2":{"offset":4911623,"length":44936,"mime":"font/woff2","gzipped":false,"hash":"b9087cb108364558"},"/cargo/fonts/open-sans-v17-all-charsets-800-3d2c812a.woff2":{"offset":5227019,"length":44536,"mime":"font/woff2","gzipped":false,"hash":"a27e6c2fd70befd0"},"/cargo/fonts/open-sans-v17-all-charsets-600italic-1a3e8659.woff2":{"offset":4956559,"length":42120,"mime":"font/woff2","gzipped":false,"hash":"ddedfa07599681ca"},"/cargo/fonts/open-sans-v17-all-charsets-300italic-2c7b95c0.woff2":{"offset":4825979,"length":40656,"mime":"font/woff2","gzipped":false,"hash":"6f7171e251a5e1aa"},"/cargo/fonts/source-code-pro-v11-all-charsets-500-2bdd9410.woff2":{"offset":5127067,"length":59140,"mime":"font/woff2","gzipped":false,"hash":"d4596dd263a8c42e"},"/cargo/fonts/open-sans-v17-all-charsets-800italic-ba1521ec.woff2":{"offset":5186207,"length":40812,"mime":"font/woff2","gzipped":false,"hash":"c6f6abbed5ff3db8"},"/docs":{"offset":0,"length":10711,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1a0d9418281fa4c0"},"/":{"offset":0,"length":10711,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1a0d9418281fa4c0"},"/book/toc-0e4ce700.js":{"offset":5271555,"length":8495,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"cc27ccd506345949"},"/cargo/toc-0e7001e7.js":{"offset":5280050,"length":6906,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"aa1c3f6ff8ab5ca0"},"/book/toc.html":{"offset":5286956,"length":4136,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f52cc1f10ce1b2df"},"/cargo/toc.html":{"offset":5291092,"length":2546,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1fe0a5e7b3368a97"}}}
+{
+  "id": "rust",
+  "name": "Rust Stable Suite",
+  "version": "1.86",
+  "commit": "10ed7820",
+  "updatedAt": "2026-10-11T15:40:53.295Z",
+  "totalBytes": 5293638,
+  "chunkCount": 247,
+  "routes": {
+    "/book": {
+      "offset": 0,
+      "length": 10711,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1a0d9418281fa4c0"
+    },
+    "/book/": {
+      "offset": 0,
+      "length": 10711,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1a0d9418281fa4c0"
+    },
+    "/book/foreword.html": {
+      "offset": 10711,
+      "length": 11606,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c8a2bf30ba5e5a1b"
+    },
+    "/book/ch01-01-installation.html": {
+      "offset": 22317,
+      "length": 13162,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3f439ffc81b63415"
+    },
+    "/book/print.html": {
+      "offset": 35479,
+      "length": 446054,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ce8b3a8f776a3644"
+    },
+    "/book/appendix-05-editions.html": {
+      "offset": 481533,
+      "length": 11651,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ef1b51e27c8d4b16"
+    },
+    "/book/appendix-06-translation.html": {
+      "offset": 493184,
+      "length": 11139,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "af3ece450483a13f"
+    },
+    "/book/ch01-00-getting-started.html": {
+      "offset": 504323,
+      "length": 10393,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "50f88880eb7a60a8"
+    },
+    "/cargo": {
+      "offset": 514716,
+      "length": 9515,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c2f2268454baba46"
+    },
+    "/cargo/": {
+      "offset": 514716,
+      "length": 9515,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c2f2268454baba46"
+    },
+    "/book/ch01-02-hello-world.html": {
+      "offset": 524231,
+      "length": 13594,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "63045aabdd85b45f"
+    },
+    "/book/ch00-00-introduction.html": {
+      "offset": 537825,
+      "length": 14783,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4149ba5108f11d2f"
+    },
+    "/book/title-page.html": {
+      "offset": 552608,
+      "length": 10710,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcb286e2b8225c3c"
+    },
+    "/book/appendix-07-nightly-rust.html": {
+      "offset": 563318,
+      "length": 13941,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "16f22a11789ecc9c"
+    },
+    "/cargo/reference/publishing.html": {
+      "offset": 577259,
+      "length": 14195,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e3094ed58ea9772b"
+    },
+    "/book/appendix-04-useful-development-tools.html": {
+      "offset": 591454,
+      "length": 12474,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0dea4dd3e9ae59e3"
+    },
+    "/cargo/reference/profiles.html": {
+      "offset": 603928,
+      "length": 15492,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3631d7cbb2ae9bce"
+    },
+    "/cargo/appendix/glossary.html": {
+      "offset": 619420,
+      "length": 13296,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fabfe464eb80bd46"
+    },
+    "/cargo/commands/index.html": {
+      "offset": 632716,
+      "length": 8999,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7597a7a82f1d73f3"
+    },
+    "/cargo/faq.html": {
+      "offset": 641715,
+      "length": 15358,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b0ac4b62d07272ec"
+    },
+    "/cargo/guide/index.html": {
+      "offset": 657073,
+      "length": 9103,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2a62ad9375cbbee2"
+    },
+    "/cargo/reference/index.html": {
+      "offset": 666176,
+      "length": 9237,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cf8c369dc9d58583"
+    },
+    "/cargo/print.html": {
+      "offset": 675413,
+      "length": 398936,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5feb042a01360207"
+    },
+    "/cargo/CHANGELOG.html": {
+      "offset": 1074349,
+      "length": 125294,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ba0b07a769370b9a"
+    },
+    "/cargo/appendix/git-authentication.html": {
+      "offset": 1199643,
+      "length": 11045,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "50f66b6f38109003"
+    },
+    "/cargo/getting-started/index.html": {
+      "offset": 1210688,
+      "length": 9036,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "68da1664f0f7898e"
+    },
+    "/cargo/commands/cargo-login.html": {
+      "offset": 1219724,
+      "length": 11025,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "26d5c3c14c7bcea6"
+    },
+    "/cargo/reference/manifest.html": {
+      "offset": 1230749,
+      "length": 18924,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "43b2763a8001d67c"
+    },
+    "/cargo/commands/cargo-publish.html": {
+      "offset": 1249673,
+      "length": 13735,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "21210e611c55fc75"
+    },
+    "/cargo/commands/cargo-package.html": {
+      "offset": 1263408,
+      "length": 14987,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0d3f5a3a5fe5fbbe"
+    },
+    "/book/ch01-03-hello-cargo.html": {
+      "offset": 1278395,
+      "length": 14706,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "05aff98177da6e0f"
+    },
+    "/cargo/commands/cargo-logout.html": {
+      "offset": 1293101,
+      "length": 11001,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e8a858f9667ef61c"
+    },
+    "/book/ch20-05-macros.html": {
+      "offset": 1304102,
+      "length": 19824,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "97f880188e854fe1"
+    },
+    "/cargo/commands/cargo-test.html": {
+      "offset": 1323926,
+      "length": 16896,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b251dcd16b2f02a7"
+    },
+    "/cargo/commands/cargo-run.html": {
+      "offset": 1340822,
+      "length": 13703,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fbf14be141a20afb"
+    },
+    "/cargo/guide/cargo-home.html": {
+      "offset": 1354525,
+      "length": 10796,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b9884512e8b6168c"
+    },
+    "/cargo/reference/build-cache.html": {
+      "offset": 1365321,
+      "length": 11113,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fbc3b5f74b7ba8b0"
+    },
+    "/cargo/commands/cargo-bench.html": {
+      "offset": 1376434,
+      "length": 16025,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1e31882d6e19e0d8"
+    },
+    "/cargo/reference/environment-variables.html": {
+      "offset": 1392459,
+      "length": 18026,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "204bb4c9ebb20331"
+    },
+    "/cargo/reference/semver.html": {
+      "offset": 1410485,
+      "length": 26702,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "312bd94a29d4bfad"
+    },
+    "/cargo/commands/cargo-build.html": {
+      "offset": 1437187,
+      "length": 14855,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4ceba344e233d3ba"
+    },
+    "/cargo/guide/continuous-integration.html": {
+      "offset": 1452042,
+      "length": 12178,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a9c88a79f1121b89"
+    },
+    "/cargo/commands/cargo-check.html": {
+      "offset": 1464220,
+      "length": 14818,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c6759068c735e480"
+    },
+    "/cargo/reference/features-examples.html": {
+      "offset": 1479038,
+      "length": 12225,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "80f20710bc1df8e9"
+    },
+    "/cargo/commands/cargo-install.html": {
+      "offset": 1491263,
+      "length": 15704,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b37ff1173f7727b2"
+    },
+    "/book/appendix-03-derivable-traits.html": {
+      "offset": 1506967,
+      "length": 13876,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "208169f790bb4a92"
+    },
+    "/cargo/reference/config.html": {
+      "offset": 1520843,
+      "length": 28076,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1a3a415436febe48"
+    },
+    "/cargo/commands/cargo-rustc.html": {
+      "offset": 1548919,
+      "length": 15215,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8e7446bc49108668"
+    },
+    "/cargo/reference/pkgid-spec.html": {
+      "offset": 1564134,
+      "length": 10308,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "94b2a06d16650745"
+    },
+    "/cargo/guide/cargo-toml-vs-cargo-lock.html": {
+      "offset": 1574442,
+      "length": 10578,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e5558447143998b2"
+    },
+    "/cargo/commands/publishing-commands.html": {
+      "offset": 1585020,
+      "length": 8995,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d30fba903cdd2c9e"
+    },
+    "/cargo/guide/project-layout.html": {
+      "offset": 1594015,
+      "length": 9989,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "231f21debe1b53df"
+    },
+    "/cargo/reference/features.html": {
+      "offset": 1604004,
+      "length": 16931,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6ba464896a3e6315"
+    },
+    "/cargo/reference/source-replacement.html": {
+      "offset": 1620935,
+      "length": 11529,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b3791962016fe45"
+    },
+    "/cargo/reference/workspaces.html": {
+      "offset": 1632464,
+      "length": 12767,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4bff369a0320a6c7"
+    },
+    "/cargo/commands/package-commands.html": {
+      "offset": 1645231,
+      "length": 8981,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f41950282b28aea2"
+    },
+    "/cargo/commands/cargo-new.html": {
+      "offset": 1654212,
+      "length": 11164,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9327058efb38c939"
+    },
+    "/cargo/reference/unstable.html": {
+      "offset": 1665376,
+      "length": 43835,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5c5a8c879fa6cec9"
+    },
+    "/cargo/commands/cargo-add.html": {
+      "offset": 1709211,
+      "length": 12791,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f0469d320b6fe2fa"
+    },
+    "/cargo/reference/build-scripts.html": {
+      "offset": 1722002,
+      "length": 18287,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5f056e06bf9dd766"
+    },
+    "/cargo/commands/deprecated-and-removed.html": {
+      "offset": 1740289,
+      "length": 9126,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f33fe4beaa2d78a0"
+    },
+    "/cargo/commands/build-commands.html": {
+      "offset": 1749415,
+      "length": 9059,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6ca21318e34738ce"
+    },
+    "/cargo/commands/manifest-commands.html": {
+      "offset": 1758474,
+      "length": 9032,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "736ce1db31ba22d0"
+    },
+    "/cargo/commands/general-commands.html": {
+      "offset": 1767506,
+      "length": 8961,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "de3131901f3688e2"
+    },
+    "/cargo/commands/report-commands.html": {
+      "offset": 1776467,
+      "length": 8956,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fecedb8c6e9b83b9"
+    },
+    "/cargo/reference/cargo-targets.html": {
+      "offset": 1785423,
+      "length": 14383,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ceb7164e5ec59cec"
+    },
+    "/cargo/commands/cargo-fetch.html": {
+      "offset": 1799806,
+      "length": 11711,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eafa6bd7c4cce71e"
+    },
+    "/cargo/guide/creating-a-new-project.html": {
+      "offset": 1811517,
+      "length": 10076,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "83681d07184a4e59"
+    },
+    "/cargo/guide/working-on-an-existing-project.html": {
+      "offset": 1821593,
+      "length": 9256,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a7e18a9fb91f23db"
+    },
+    "/cargo/reference/build-script-examples.html": {
+      "offset": 1830849,
+      "length": 16035,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3b31934fc9f072ca"
+    },
+    "/cargo/guide/build-performance.html": {
+      "offset": 1846884,
+      "length": 12673,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "286e109765581c83"
+    },
+    "/cargo/reference/external-tools.html": {
+      "offset": 1859557,
+      "length": 12904,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2e986d4f674a95d4"
+    },
+    "/cargo/getting-started/first-steps.html": {
+      "offset": 1872461,
+      "length": 9782,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "844bddfa67fb94bf"
+    },
+    "/cargo/reference/registries.html": {
+      "offset": 1882243,
+      "length": 11064,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1682bbaa1e4b81bf"
+    },
+    "/cargo/reference/rust-version.html": {
+      "offset": 1893307,
+      "length": 12556,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c07947ad0d0c506b"
+    },
+    "/cargo/reference/overriding-dependencies.html": {
+      "offset": 1905863,
+      "length": 14084,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a2997c4862cc67c5"
+    },
+    "/cargo/reference/specifying-dependencies.html": {
+      "offset": 1919947,
+      "length": 18335,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "05efae9c2ea47f28"
+    },
+    "/cargo/reference/resolver.html": {
+      "offset": 1938282,
+      "length": 19861,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0c1d337af07aeb96"
+    },
+    "/cargo/guide/dependencies.html": {
+      "offset": 1958143,
+      "length": 10040,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b7f798e62faeae39"
+    },
+    "/cargo/guide/tests.html": {
+      "offset": 1968183,
+      "length": 9698,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4dbf7d144c6521fc"
+    },
+    "/cargo/guide/why-cargo-exists.html": {
+      "offset": 1977881,
+      "length": 10333,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3aca700003d990a2"
+    },
+    "/cargo/reference/timings.html": {
+      "offset": 1988214,
+      "length": 10372,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1b49db2cd52dfd76"
+    },
+    "/cargo/commands/cargo.html": {
+      "offset": 1998586,
+      "length": 12952,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7b3b82342ec8333c"
+    },
+    "/book/ch11-00-testing.html": {
+      "offset": 2011538,
+      "length": 11218,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a8183311a15e4d82"
+    },
+    "/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html": {
+      "offset": 2022756,
+      "length": 11564,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "676d12467957401e"
+    },
+    "/cargo/getting-started/installation.html": {
+      "offset": 2034320,
+      "length": 9489,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6a1bcf579909c88f"
+    },
+    "/cargo/reference/registry-authentication.html": {
+      "offset": 2043809,
+      "length": 10923,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a657a9cd4c02be09"
+    },
+    "/cargo/reference/registry-index.html": {
+      "offset": 2054732,
+      "length": 15437,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d409037c0886849d"
+    },
+    "/cargo/reference/registry-web-api.html": {
+      "offset": 2070169,
+      "length": 12821,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c6301a4d58816c77"
+    },
+    "/cargo/reference/running-a-registry.html": {
+      "offset": 2082990,
+      "length": 9304,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bb95efb933572bee"
+    },
+    "/cargo/index.html": {
+      "offset": 2092294,
+      "length": 9514,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b975a97e851f92ff"
+    },
+    "/cargo/reference/future-incompat-report.html": {
+      "offset": 2101808,
+      "length": 9622,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fb0d533460306300"
+    },
+    "/cargo/reference/credential-provider-protocol.html": {
+      "offset": 2111430,
+      "length": 11384,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6c280e29692372de"
+    },
+    "/cargo/commands/cargo-pkgid.html": {
+      "offset": 2122814,
+      "length": 11827,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1529b756925fc65e"
+    },
+    "/book/ch19-06-macros.html": {
+      "offset": 2134641,
+      "length": 1389,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "be433adb313b6b9f"
+    },
+    "/cargo/commands/cargo-init.html": {
+      "offset": 2136030,
+      "length": 11217,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "215d924cb2d35833"
+    },
+    "/cargo/reference/lints.html": {
+      "offset": 2147247,
+      "length": 13075,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fa59092dd017eeba"
+    },
+    "/cargo/commands/cargo-clean.html": {
+      "offset": 2160322,
+      "length": 12131,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9c05c4da913a0a0c"
+    },
+    "/cargo/commands/cargo-metadata.html": {
+      "offset": 2172453,
+      "length": 15498,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5a63797c9545cc2c"
+    },
+    "/cargo/commands/cargo-report.html": {
+      "offset": 2187951,
+      "length": 11078,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c94c8eed268726c7"
+    },
+    "/book/appendix-02-operators.html": {
+      "offset": 2199029,
+      "length": 13767,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3d4a7e4afe63c00b"
+    },
+    "/cargo/commands/cargo-doc.html": {
+      "offset": 2212796,
+      "length": 14609,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "62457d21ce193018"
+    },
+    "/cargo/commands/cargo-yank.html": {
+      "offset": 2227405,
+      "length": 12450,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "665453246c270021"
+    },
+    "/cargo/commands/cargo-vendor.html": {
+      "offset": 2239855,
+      "length": 11986,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "da465eafc825ce04"
+    },
+    "/book/ch20-04-advanced-functions-and-closures.html": {
+      "offset": 2251841,
+      "length": 13845,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fb0946699bcae3d8"
+    },
+    "/book/ch02-00-guessing-game-tutorial.html": {
+      "offset": 2265686,
+      "length": 25598,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c2cfb26735017a37"
+    },
+    "/cargo/commands/cargo-search.html": {
+      "offset": 2291284,
+      "length": 10824,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "faa969d4e815cd74"
+    },
+    "/cargo/commands/cargo-rustdoc.html": {
+      "offset": 2302108,
+      "length": 14749,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e67225749064d073"
+    },
+    "/cargo/commands/cargo-miri.html": {
+      "offset": 2316857,
+      "length": 9260,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "de65cb8bdd969ec3"
+    },
+    "/book/ch21-00-final-project-a-web-server.html": {
+      "offset": 2326117,
+      "length": 11269,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "edef071d17d40bb1"
+    },
+    "/cargo/commands/cargo-uninstall.html": {
+      "offset": 2337386,
+      "length": 10876,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ef038041f20183a6"
+    },
+    "/cargo/commands/cargo-owner.html": {
+      "offset": 2348262,
+      "length": 11269,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a46b3ea157eb8b66"
+    },
+    "/cargo/commands/cargo-tree.html": {
+      "offset": 2359531,
+      "length": 15008,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d099c21b13bd63aa"
+    },
+    "/cargo/commands/cargo-fix.html": {
+      "offset": 2374539,
+      "length": 15912,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f47486162d01c098"
+    },
+    "/book/ch10-03-lifetime-syntax.html": {
+      "offset": 2390451,
+      "length": 21737,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "73ef3015fa5d38a2"
+    },
+    "/cargo/commands/cargo-generate-lockfile.html": {
+      "offset": 2412188,
+      "length": 11447,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb3a453a8572b7a9"
+    },
+    "/book/ch11-01-writing-tests.html": {
+      "offset": 2423635,
+      "length": 20776,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2ebf00d9a29531f6"
+    },
+    "/cargo/commands/cargo-locate-project.html": {
+      "offset": 2444411,
+      "length": 10949,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "65b46854515ae029"
+    },
+    "/cargo/commands/cargo-update.html": {
+      "offset": 2455360,
+      "length": 12197,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4157aabe0ccde8dc"
+    },
+    "/book/ch06-03-if-let.html": {
+      "offset": 2467557,
+      "length": 13656,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c15f605149ea2741"
+    },
+    "/cargo/commands/cargo-remove.html": {
+      "offset": 2481213,
+      "length": 11524,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "24e4e5127bd9805e"
+    },
+    "/book/ch14-03-cargo-workspaces.html": {
+      "offset": 2492737,
+      "length": 14660,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "496543338c78f62b"
+    },
+    "/cargo/commands/cargo-fmt.html": {
+      "offset": 2507397,
+      "length": 9225,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4040c59df0cd99f4"
+    },
+    "/cargo/commands/cargo-version.html": {
+      "offset": 2516622,
+      "length": 9304,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "282e9f97baaa452d"
+    },
+    "/cargo/commands/cargo-info.html": {
+      "offset": 2525926,
+      "length": 11478,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5920e47c3ebd2b79"
+    },
+    "/book/ch07-01-packages-and-crates.html": {
+      "offset": 2537404,
+      "length": 11771,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6eca227502f6832a"
+    },
+    "/cargo/commands/cargo-report-future-incompatibilities.html": {
+      "offset": 2549175,
+      "length": 11449,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ac6dab3a129c3da4"
+    },
+    "/cargo/commands/cargo-clippy.html": {
+      "offset": 2560624,
+      "length": 9237,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4687388258748529"
+    },
+    "/cargo/commands/cargo-help.html": {
+      "offset": 2569861,
+      "length": 11291,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "be78f077f08d3469"
+    },
+    "/book/ch03-00-common-programming-concepts.html": {
+      "offset": 2581152,
+      "length": 10792,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "61105fcc71518d31"
+    },
+    "/book/appendix-01-keywords.html": {
+      "offset": 2591944,
+      "length": 12501,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "05d28059164f59d8"
+    },
+    "/book/ch14-04-installing-binaries.html": {
+      "offset": 2604445,
+      "length": 11275,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e940cab45f1fb7e2"
+    },
+    "/book/ch17-03-more-futures.html": {
+      "offset": 2615720,
+      "length": 15111,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1f03ea8d45a95b0f"
+    },
+    "/book/ch06-02-match.html": {
+      "offset": 2630831,
+      "length": 15924,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d530649c1f0ef9f5"
+    },
+    "/book/ch14-02-publishing-to-crates-io.html": {
+      "offset": 2646755,
+      "length": 18761,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "09fab4b30d2efab3"
+    },
+    "/book/ch07-02-defining-modules-to-control-scope-and-privacy.html": {
+      "offset": 2665516,
+      "length": 13506,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a806fba3cf0fadb8"
+    },
+    "/book/ch18-02-trait-objects.html": {
+      "offset": 2679022,
+      "length": 15766,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "448b73ce0cf5b7e3"
+    },
+    "/book/ch10-02-traits.html": {
+      "offset": 2694788,
+      "length": 17603,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e75516cdb2b5981e"
+    },
+    "/book/ch21-01-single-threaded.html": {
+      "offset": 2712391,
+      "length": 19712,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bad78e0e273fdbe3"
+    },
+    "/book/ch06-00-enums.html": {
+      "offset": 2732103,
+      "length": 10555,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7ab99a2b9c242107"
+    },
+    "/book/ch09-02-recoverable-errors-with-result.html": {
+      "offset": 2742658,
+      "length": 20078,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "67817abc6d8bb7b6"
+    },
+    "/book/ch03-04-comments.html": {
+      "offset": 2762736,
+      "length": 10964,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0e8c3ce9124655b3"
+    },
+    "/book/ch20-03-advanced-types.html": {
+      "offset": 2773700,
+      "length": 16583,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "503613c29d6efa7e"
+    },
+    "/book/ch11-02-running-tests.html": {
+      "offset": 2790283,
+      "length": 14194,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8ba1d1cf1f3850d6"
+    },
+    "/book/ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html": {
+      "offset": 2804477,
+      "length": 16484,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5ebfbc7252e889fa"
+    },
+    "/book/ch09-01-unrecoverable-errors-with-panic.html": {
+      "offset": 2820961,
+      "length": 13901,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "840118f0afbca5f7"
+    },
+    "/book/ch03-01-variables-and-mutability.html": {
+      "offset": 2834862,
+      "length": 14259,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6101effc17974a9e"
+    },
+    "/book/ch18-01-what-is-oo.html": {
+      "offset": 2849121,
+      "length": 13892,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2a09dea33700998f"
+    },
+    "/book/ch06-01-defining-an-enum.html": {
+      "offset": 2863013,
+      "length": 17145,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5141eada2abdea24"
+    },
+    "/book/ch05-03-method-syntax.html": {
+      "offset": 2880158,
+      "length": 15331,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cf68f11588c11ae0"
+    },
+    "/book/ch09-03-to-panic-or-not-to-panic.html": {
+      "offset": 2895489,
+      "length": 16352,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7eda969b09f3c16e"
+    },
+    "/book/ch14-01-release-profiles.html": {
+      "offset": 2911841,
+      "length": 11432,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ccea9a1d6c1c819e"
+    },
+    "/book/appendix-00.html": {
+      "offset": 2923273,
+      "length": 10255,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5f17642922010fe3"
+    },
+    "/book/ch18-03-oo-design-patterns.html": {
+      "offset": 2933528,
+      "length": 21253,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c9e9a882ce43fb5e"
+    },
+    "/book/ch21-02-multithreaded.html": {
+      "offset": 2954781,
+      "length": 24903,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ffbbb4480048b0a8"
+    },
+    "/book/ch10-01-syntax.html": {
+      "offset": 2979684,
+      "length": 16392,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fb035451193b44d0"
+    },
+    "/book/ch03-03-how-functions-work.html": {
+      "offset": 2996076,
+      "length": 14632,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0f6d2d0f7c98e266"
+    },
+    "/book/ch19-00-patterns.html": {
+      "offset": 3010708,
+      "length": 10908,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a4f70e3ba1377481"
+    },
+    "/book/ch14-05-extending-cargo.html": {
+      "offset": 3021616,
+      "length": 10709,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8f2ed49cbc944c4f"
+    },
+    "/book/ch17-04-streams.html": {
+      "offset": 3032325,
+      "length": 12742,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "169f28a7a9b5a245"
+    },
+    "/book/ch17-02-concurrency-with-async.html": {
+      "offset": 3045067,
+      "length": 17970,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "914c3fb567989d2f"
+    },
+    "/book/ch03-02-data-types.html": {
+      "offset": 3063037,
+      "length": 17660,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "62f63c57ecaef7e1"
+    },
+    "/book/ch20-02-advanced-traits.html": {
+      "offset": 3080697,
+      "length": 19322,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "14a65e7eba4ee64e"
+    },
+    "/book/ch03-05-control-flow.html": {
+      "offset": 3100019,
+      "length": 17149,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8dac4a37aacf7d34"
+    },
+    "/book/ch12-00-an-io-project.html": {
+      "offset": 3117168,
+      "length": 11273,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb505ef754a581a2"
+    },
+    "/book/ch05-02-example-structs.html": {
+      "offset": 3128441,
+      "length": 14948,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e1bad1dd421b759e"
+    },
+    "/book/ch09-00-error-handling.html": {
+      "offset": 3143389,
+      "length": 10920,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "71de3a8b03641a7e"
+    },
+    "/book/ch14-00-more-about-cargo.html": {
+      "offset": 3154309,
+      "length": 10545,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "648388fd66e7e05b"
+    },
+    "/book/ch07-04-bringing-paths-into-scope-with-the-use-keyword.html": {
+      "offset": 3164854,
+      "length": 16034,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bbd8a8142d62b7c4"
+    },
+    "/book/ch10-00-generics.html": {
+      "offset": 3180888,
+      "length": 12750,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "888bc588e9ce038d"
+    },
+    "/book/ch11-03-test-organization.html": {
+      "offset": 3193638,
+      "length": 15203,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "767325b872309331"
+    },
+    "/book/ch18-00-oop.html": {
+      "offset": 3208841,
+      "length": 10671,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8ab2f3dcd1075c6a"
+    },
+    "/book/ch16-02-message-passing.html": {
+      "offset": 3219512,
+      "length": 15183,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e2154397bccba7b8"
+    },
+    "/book/ch17-05-traits-for-async.html": {
+      "offset": 3234695,
+      "length": 21677,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "95bfa6f3d098218e"
+    },
+    "/book/ch21-03-graceful-shutdown-and-cleanup.html": {
+      "offset": 3256372,
+      "length": 16938,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c6a94a65f3a02e51"
+    },
+    "/book/ch19-01-all-the-places-for-patterns.html": {
+      "offset": 3273310,
+      "length": 15196,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "465ae1bb142f0ccc"
+    },
+    "/book/ch15-00-smart-pointers.html": {
+      "offset": 3288506,
+      "length": 11413,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "657f9e7539f2048f"
+    },
+    "/book/ch08-01-vectors.html": {
+      "offset": 3299919,
+      "length": 15258,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0f3cdc8ffae958d5"
+    },
+    "/book/ch20-01-unsafe-rust.html": {
+      "offset": 3315177,
+      "length": 22418,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "03d3442acfea7a88"
+    },
+    "/book/ch17-01-futures-and-syntax.html": {
+      "offset": 3337595,
+      "length": 18791,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a177907464a0f234"
+    },
+    "/book/ch04-00-understanding-ownership.html": {
+      "offset": 3356386,
+      "length": 10406,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b757cd5d661aa5d6"
+    },
+    "/book/ch08-00-common-collections.html": {
+      "offset": 3366792,
+      "length": 10879,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d8476c2bb61a99b8"
+    },
+    "/book/theme/listing-cab26221.css": {
+      "offset": 3377671,
+      "length": 98,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "a58532a6f4da60a9"
+    },
+    "/book/css/chrome-d279d366.css": {
+      "offset": 3377769,
+      "length": 4756,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0053a19749a344e8"
+    },
+    "/book/theme/semantic-notes-9b5766c0.css": {
+      "offset": 3382525,
+      "length": 247,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "8aac3b78970da270"
+    },
+    "/book/css/variables-8adf115d.css": {
+      "offset": 3382772,
+      "length": 1929,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "4964886347bfee5d"
+    },
+    "/book/css/general-e96d0476.css": {
+      "offset": 3384701,
+      "length": 3635,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "89bcfb7214f4bb63"
+    },
+    "/book/ferris-d33b75bf.css": {
+      "offset": 3388336,
+      "length": 486,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "16580cd6b4d1e943"
+    },
+    "/book/img/ferris/panics.svg": {
+      "offset": 3388822,
+      "length": 2893,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "5d403c34705f0e97"
+    },
+    "/book/favicon-8114d1fc.png": {
+      "offset": 3391715,
+      "length": 5679,
+      "mime": "image/png",
+      "gzipped": false,
+      "hash": "198bbb75e0db5bc5"
+    },
+    "/book/favicon-de23e50b.svg": {
+      "offset": 3397394,
+      "length": 976,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "5f358cd507562972"
+    },
+    "/book/img/ferris/does_not_compile.svg": {
+      "offset": 3398370,
+      "length": 3229,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "c7e8b14864c80dbb"
+    },
+    "/book/ayu-highlight-3fdfc3ac.css": {
+      "offset": 3401599,
+      "length": 421,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "9be5c9c8d6e49395"
+    },
+    "/book/css/print-9e4910d8.css": {
+      "offset": 3402020,
+      "length": 351,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "d89728736f675fd4"
+    },
+    "/book/highlight-493f70e1.css": {
+      "offset": 3402371,
+      "length": 560,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "040d2ac04fc6e25e"
+    },
+    "/book/theme/2018-edition-4e126c62.css": {
+      "offset": 3402931,
+      "length": 88,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "62e993b29b498ad4"
+    },
+    "/book/fonts/fonts-9644e21d.css": {
+      "offset": 3403019,
+      "length": 659,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "1d25fdad1c9f7941"
+    },
+    "/book/tomorrow-night-4c0ae647.css": {
+      "offset": 3403678,
+      "length": 644,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "c1d57571806e5c37"
+    },
+    "/book/img/ferris/not_desired_behavior.svg": {
+      "offset": 3404322,
+      "length": 3022,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "71375d203e3cafb6"
+    },
+    "/book/img/trpl04-02.svg": {
+      "offset": 3407344,
+      "length": 1291,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "6a8c0fe42343d42b"
+    },
+    "/book/img/trpl04-01.svg": {
+      "offset": 3408635,
+      "length": 1057,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "e8559d4492ee0991"
+    },
+    "/book/img/trpl04-03.svg": {
+      "offset": 3409692,
+      "length": 1502,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "4095591393a7b432"
+    },
+    "/book/img/trpl04-06.svg": {
+      "offset": 3411194,
+      "length": 1210,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "694f355b87934d54"
+    },
+    "/book/img/trpl04-07.svg": {
+      "offset": 3412404,
+      "length": 1523,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "5f70855a57c4d549"
+    },
+    "/book/img/trpl15-03.svg": {
+      "offset": 3413927,
+      "length": 1264,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "623a204589aebb92"
+    },
+    "/book/img/trpl17-02.svg": {
+      "offset": 3415191,
+      "length": 1164,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "93f8ab5d15b82435"
+    },
+    "/book/img/trpl14-03.png": {
+      "offset": 3416355,
+      "length": 206064,
+      "mime": "image/png",
+      "gzipped": false,
+      "hash": "b7b15b2e38237d01"
+    },
+    "/book/img/trpl15-01.svg": {
+      "offset": 3622419,
+      "length": 807,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "7f5854a69125ba8d"
+    },
+    "/book/img/trpl15-02.svg": {
+      "offset": 3623226,
+      "length": 630,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "d85a2c456f51d218"
+    },
+    "/book/img/trpl17-07.svg": {
+      "offset": 3623856,
+      "length": 1219,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "d9e418ff218e4736"
+    },
+    "/book/img/trpl15-04.svg": {
+      "offset": 3625075,
+      "length": 1148,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "45b5bfa0e8bf2bc9"
+    },
+    "/book/img/trpl14-02.png": {
+      "offset": 3626223,
+      "length": 259295,
+      "mime": "image/png",
+      "gzipped": false,
+      "hash": "6577d458f2aef098"
+    },
+    "/book/img/trpl17-01.svg": {
+      "offset": 3885518,
+      "length": 1360,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "81adcb0d6d48aeb6"
+    },
+    "/book/img/trpl17-03.svg": {
+      "offset": 3886878,
+      "length": 1333,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "8da17ca7be88cd6e"
+    },
+    "/book/img/trpl14-04.png": {
+      "offset": 3888211,
+      "length": 275579,
+      "mime": "image/png",
+      "gzipped": false,
+      "hash": "4e7d4ca42afaafa8"
+    },
+    "/book/img/trpl14-01.png": {
+      "offset": 4163790,
+      "length": 275661,
+      "mime": "image/png",
+      "gzipped": false,
+      "hash": "f7831d0542aa4d1b"
+    },
+    "/book/img/trpl17-05.svg": {
+      "offset": 4439451,
+      "length": 826,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "3ac173bc2e5e709c"
+    },
+    "/book/img/trpl17-08.svg": {
+      "offset": 4440277,
+      "length": 969,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "67bf12e2b2f5faff"
+    },
+    "/book/img/trpl17-04.svg": {
+      "offset": 4441246,
+      "length": 718,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "2496bdaa4ec42e46"
+    },
+    "/book/img/trpl17-06.svg": {
+      "offset": 4441964,
+      "length": 1109,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "0cb16f2486965028"
+    },
+    "/book/img/trpl04-04.svg": {
+      "offset": 4443073,
+      "length": 1321,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "77f657df5c1e31b7"
+    },
+    "/book/img/trpl04-05.svg": {
+      "offset": 4444394,
+      "length": 1277,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "b56673a167428ad2"
+    },
+    "/cargo/css/print-9e4910d8.css": {
+      "offset": 3402020,
+      "length": 351,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "d89728736f675fd4"
+    },
+    "/cargo/tomorrow-night-4c0ae647.css": {
+      "offset": 3403678,
+      "length": 644,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "c1d57571806e5c37"
+    },
+    "/cargo/fonts/fonts-9644e21d.css": {
+      "offset": 4445671,
+      "length": 660,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "6e32bfef6e65075e"
+    },
+    "/cargo/css/general-e96d0476.css": {
+      "offset": 3384701,
+      "length": 3635,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "89bcfb7214f4bb63"
+    },
+    "/cargo/images/winapi-features.svg": {
+      "offset": 4446331,
+      "length": 1405,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "21bd7d7928bcd63d"
+    },
+    "/book/img/trpl21-01.png": {
+      "offset": 4447736,
+      "length": 8491,
+      "mime": "image/png",
+      "gzipped": false,
+      "hash": "87a93e6cc4d4ef84"
+    },
+    "/cargo/images/Cargo-Logo-Small.png": {
+      "offset": 4456227,
+      "length": 58168,
+      "mime": "image/png",
+      "gzipped": false,
+      "hash": "95e75eed851b4713"
+    },
+    "/cargo/css/chrome-d279d366.css": {
+      "offset": 3377769,
+      "length": 4756,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0053a19749a344e8"
+    },
+    "/cargo/images/org-level-acl.png": {
+      "offset": 4514395,
+      "length": 76572,
+      "mime": "image/png",
+      "gzipped": false,
+      "hash": "900eda9c1ce31ffa"
+    },
+    "/cargo/favicon-ba9a2803.png": {
+      "offset": 4590967,
+      "length": 15086,
+      "mime": "image/png",
+      "gzipped": false,
+      "hash": "4a57d43cc57cba0e"
+    },
+    "/cargo/highlight-493f70e1.css": {
+      "offset": 3402371,
+      "length": 560,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "040d2ac04fc6e25e"
+    },
+    "/cargo/css/variables-8adf115d.css": {
+      "offset": 3382772,
+      "length": 1929,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "4964886347bfee5d"
+    },
+    "/cargo/theme/cargo-d13f5220.css": {
+      "offset": 4606053,
+      "length": 226,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "67390773abf460e7"
+    },
+    "/cargo/ayu-highlight-3fdfc3ac.css": {
+      "offset": 3401599,
+      "length": 421,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "9be5c9c8d6e49395"
+    },
+    "/book/img/trpl17-09.svg": {
+      "offset": 4606279,
+      "length": 1226,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "c3506e4b9dba4dc3"
+    },
+    "/cargo/images/auth-level-acl.png": {
+      "offset": 4607505,
+      "length": 90300,
+      "mime": "image/png",
+      "gzipped": false,
+      "hash": "ded4c6c744d97b19"
+    },
+    "/cargo/images/cargo-concurrency-over-time.png": {
+      "offset": 4697805,
+      "length": 31220,
+      "mime": "image/png",
+      "gzipped": false,
+      "hash": "29c036b3a59accbf"
+    },
+    "/cargo/images/build-unit-time.png": {
+      "offset": 4729025,
+      "length": 27728,
+      "mime": "image/png",
+      "gzipped": false,
+      "hash": "8b146a41bfa80bae"
+    },
+    "/cargo/images/build-info.png": {
+      "offset": 4756753,
+      "length": 28150,
+      "mime": "image/png",
+      "gzipped": false,
+      "hash": "e285ad1be7392a81"
+    },
+    "/book/fonts/open-sans-v17-all-charsets-italic-6c9463f7.woff2": {
+      "offset": 4784903,
+      "length": 41076,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "3a97d1d16e0444f7"
+    },
+    "/book/fonts/open-sans-v17-all-charsets-300italic-2c7b95c0.woff2": {
+      "offset": 4825979,
+      "length": 40656,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "6f7171e251a5e1aa"
+    },
+    "/book/fonts/open-sans-v17-all-charsets-700-c22fe8c7.woff2": {
+      "offset": 4866635,
+      "length": 44988,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "574d4ca9b654e784"
+    },
+    "/book/fonts/open-sans-v17-all-charsets-600-486c6759.woff2": {
+      "offset": 4911623,
+      "length": 44936,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "b9087cb108364558"
+    },
+    "/book/fonts/open-sans-v17-all-charsets-600italic-1a3e8659.woff2": {
+      "offset": 4956559,
+      "length": 42120,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "ddedfa07599681ca"
+    },
+    "/cargo/fonts/open-sans-v17-all-charsets-italic-6c9463f7.woff2": {
+      "offset": 4784903,
+      "length": 41076,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "3a97d1d16e0444f7"
+    },
+    "/book/fonts/open-sans-v17-all-charsets-regular-2e3b1d34.woff2": {
+      "offset": 4998679,
+      "length": 43236,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "9a37e36f9520871d"
+    },
+    "/book/fonts/open-sans-v17-all-charsets-300-7736aa35.woff2": {
+      "offset": 5041915,
+      "length": 44352,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "5fce5de42597b7fa"
+    },
+    "/book/fonts/open-sans-v17-all-charsets-700italic-238ae959.woff2": {
+      "offset": 5086267,
+      "length": 40800,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "aa3b4e20c8da3c39"
+    },
+    "/cargo/fonts/open-sans-v17-all-charsets-700-c22fe8c7.woff2": {
+      "offset": 4866635,
+      "length": 44988,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "574d4ca9b654e784"
+    },
+    "/book/fonts/source-code-pro-v11-all-charsets-500-2bdd9410.woff2": {
+      "offset": 5127067,
+      "length": 59140,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "d4596dd263a8c42e"
+    },
+    "/cargo/fonts/open-sans-v17-all-charsets-300-7736aa35.woff2": {
+      "offset": 5041915,
+      "length": 44352,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "5fce5de42597b7fa"
+    },
+    "/book/fonts/open-sans-v17-all-charsets-800italic-ba1521ec.woff2": {
+      "offset": 5186207,
+      "length": 40812,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "c6f6abbed5ff3db8"
+    },
+    "/cargo/fonts/open-sans-v17-all-charsets-700italic-238ae959.woff2": {
+      "offset": 5086267,
+      "length": 40800,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "aa3b4e20c8da3c39"
+    },
+    "/cargo/fonts/open-sans-v17-all-charsets-regular-2e3b1d34.woff2": {
+      "offset": 4998679,
+      "length": 43236,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "9a37e36f9520871d"
+    },
+    "/book/fonts/open-sans-v17-all-charsets-800-3d2c812a.woff2": {
+      "offset": 5227019,
+      "length": 44536,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "a27e6c2fd70befd0"
+    },
+    "/cargo/fonts/open-sans-v17-all-charsets-600-486c6759.woff2": {
+      "offset": 4911623,
+      "length": 44936,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "b9087cb108364558"
+    },
+    "/cargo/fonts/open-sans-v17-all-charsets-800-3d2c812a.woff2": {
+      "offset": 5227019,
+      "length": 44536,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "a27e6c2fd70befd0"
+    },
+    "/cargo/fonts/open-sans-v17-all-charsets-600italic-1a3e8659.woff2": {
+      "offset": 4956559,
+      "length": 42120,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "ddedfa07599681ca"
+    },
+    "/cargo/fonts/open-sans-v17-all-charsets-300italic-2c7b95c0.woff2": {
+      "offset": 4825979,
+      "length": 40656,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "6f7171e251a5e1aa"
+    },
+    "/cargo/fonts/source-code-pro-v11-all-charsets-500-2bdd9410.woff2": {
+      "offset": 5127067,
+      "length": 59140,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "d4596dd263a8c42e"
+    },
+    "/cargo/fonts/open-sans-v17-all-charsets-800italic-ba1521ec.woff2": {
+      "offset": 5186207,
+      "length": 40812,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "c6f6abbed5ff3db8"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 10711,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1a0d9418281fa4c0"
+    },
+    "/": {
+      "offset": 0,
+      "length": 10711,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1a0d9418281fa4c0"
+    },
+    "/book/toc-0e4ce700.js": {
+      "offset": 5271555,
+      "length": 8495,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "cc27ccd506345949"
+    },
+    "/cargo/toc-0e7001e7.js": {
+      "offset": 5280050,
+      "length": 6906,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "aa1c3f6ff8ab5ca0"
+    },
+    "/book/toc.html": {
+      "offset": 5286956,
+      "length": 4136,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f52cc1f10ce1b2df"
+    },
+    "/cargo/toc.html": {
+      "offset": 5291092,
+      "length": 2546,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1fe0a5e7b3368a97"
+    }
+  }
+}

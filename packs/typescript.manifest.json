@@ -1,1 +1,2736 @@
-{"id":"typescript","name":"TypeScript","version":"v5.8","commit":"e1cf87ab","origin":"https://www.typescriptlang.org","entryPath":"/docs/handbook/intro.html","updatedAt":"2026-10-10T16:44:08.344Z","totalBytes":12899830,"chunkCount":254,"routes":{"/docs/handbook/intro.html":{"offset":0,"length":55445,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"16a31f0f751fba4b"},"/docs/handbook/2/narrowing.html":{"offset":55445,"length":74089,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"65df4a6391cd049e"},"/docs":{"offset":129534,"length":49819,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e72f41fde0d47fe1"},"/docs/":{"offset":129534,"length":49819,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e72f41fde0d47fe1"},"/docs/handbook/typescript-in-5-minutes.html":{"offset":179353,"length":62164,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"34b2535e69ed817d"},"/docs/handbook/2/objects.html":{"offset":241517,"length":81150,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bb01de2837e5a93b"},"/docs/handbook/2/indexed-access-types.html":{"offset":322667,"length":56597,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f133f515dfc6b55f"},"/docs/handbook/typescript-in-5-minutes-oop.html":{"offset":379264,"length":60166,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6ba614dacdefdfaf"},"/docs/handbook/typescript-in-5-minutes-func.html":{"offset":439430,"length":67312,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c44169c849a0a11f"},"/docs/handbook/2/keyof-types.html":{"offset":506742,"length":54307,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"01f0db2f30f92f8e"},"/docs/handbook/2/basic-types.html":{"offset":561049,"length":67058,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6daec7c8dac38bdc"},"/docs/handbook/typescript-tooling-in-5-minutes.html":{"offset":628107,"length":59279,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e782e5fd4bfa3e37"},"/docs/handbook/2/types-from-types.html":{"offset":687386,"length":53423,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"42b76ea10db75330"},"/docs/handbook/2/functions.html":{"offset":740809,"length":80005,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"47f095b2d464dfff"},"/docs/handbook/2/typeof-types.html":{"offset":820814,"length":55336,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"efb989c17007c345"},"/docs/handbook/typescript-from-scratch.html":{"offset":876150,"length":60203,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"32380548e3c860f5"},"/docs/handbook/2/everyday-types.html":{"offset":936353,"length":77418,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5b059763a7a658f8"},"/docs/handbook/2/generics.html":{"offset":1013771,"length":69330,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f5d07681e29c8191"},"/docs/handbook/2/mapped-types.html":{"offset":1083101,"length":60194,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"01f41a1de52734fb"},"/docs/handbook/declaration-merging.html":{"offset":1143295,"length":59565,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8bc44bc757350c59"},"/docs/handbook/namespaces-and-modules.html":{"offset":1202860,"length":57418,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b92716c3c2d230f2"},"/docs/handbook/enums.html":{"offset":1260278,"length":65709,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9b9d9de4388e015d"},"/docs/handbook/iterators-and-generators.html":{"offset":1325987,"length":56412,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"23550b134a504a88"},"/docs/handbook/jsx.html":{"offset":1382399,"length":63505,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"53a0ff6378c12cb4"},"/docs/handbook/namespaces.html":{"offset":1445904,"length":59577,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c6b5c0b1319ba6df"},"/docs/handbook/symbols.html":{"offset":1505481,"length":57721,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d2bdd27be66f5a21"},"/docs/handbook/2/conditional-types.html":{"offset":1563202,"length":62483,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"38585f3007154733"},"/docs/handbook/2/classes.html":{"offset":1625685,"length":87962,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"551b5d2e35c6feac"},"/docs/handbook/decorators.html":{"offset":1713647,"length":67610,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"45c03f9dff1257b9"},"/docs/handbook/2/template-literal-types.html":{"offset":1781257,"length":63191,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"07834693ef6200fb"},"/docs/handbook/utility-types.html":{"offset":1844448,"length":67253,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"29cc454d4db26efa"},"/docs/handbook/triple-slash-directives.html":{"offset":1911701,"length":57942,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"97cb36dc0b043f27"},"/docs/handbook/2/modules.html":{"offset":1969643,"length":65194,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e262473929a6e95c"},"/docs/handbook/mixins.html":{"offset":2034837,"length":63045,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e2de795037ee0ce"},"/docs/handbook/release-notes/typescript-6-0.html":{"offset":2097882,"length":71777,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9eed940993104e3e"},"/docs/handbook/type-inference.html":{"offset":2169659,"length":58454,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bcab5622cc088736"},"/docs/handbook/type-compatibility.html":{"offset":2228113,"length":61152,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"29e4984447b08b79"},"/docs/handbook/modules/appendices/esm-cjs-interop.html":{"offset":2289265,"length":66457,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bb23869eb4f6cddd"},"/docs/handbook/babel-with-typescript.html":{"offset":2355722,"length":54515,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"66ebf1926b6b1e2c"},"/docs/handbook/modules/theory.html":{"offset":2410237,"length":71068,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1677f1e6e4f15360"},"/docs/handbook/migrating-from-javascript.html":{"offset":2481305,"length":63037,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"071e44d9a247e7a4"},"/docs/handbook/variable-declarations.html":{"offset":2544342,"length":68404,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d73a5b175db2a7b4"},"/docs/handbook/dom-manipulation.html":{"offset":2612746,"length":60187,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7f5d5b41d07348dd"},"/docs/handbook/modules/introduction.html":{"offset":2672933,"length":53136,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a804146a730e94bd"},"/docs/handbook/asp-net-core.html":{"offset":2726069,"length":58735,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"def597147f94d10f"},"/docs/handbook/release-notes/typescript-5-8.html":{"offset":2784804,"length":60793,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f0cee6af605843ef"},"/docs/handbook/modules/guides/choosing-compiler-options.html":{"offset":2845597,"length":61299,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b7d52ac34b39f714"},"/docs/handbook/release-notes/typescript-5-9.html":{"offset":2906896,"length":60938,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"05341fcd09b7aa35"},"/docs/handbook/gulp.html":{"offset":2967834,"length":61338,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6c5c3b6d5f96bfcb"},"/docs/handbook/modules/reference.html":{"offset":3029172,"length":77394,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"174b3764263596f4"},"/docs/handbook/release-notes/typescript-5-1.html":{"offset":3106566,"length":63002,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d20ae9c453f8ec0d"},"/docs/handbook/release-notes/typescript-4-9.html":{"offset":3169568,"length":64952,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9b53336f6ea3a7c7"},"/docs/handbook/release-notes/typescript-5-3.html":{"offset":3234520,"length":62687,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d495cf7123e59f8d"},"/docs/handbook/release-notes/typescript-5-5.html":{"offset":3297207,"length":76020,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"55dacee6243fd8cc"},"/docs/handbook/release-notes/typescript-5-6.html":{"offset":3373227,"length":68385,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a88616a68fa5c450"},"/docs/handbook/release-notes/typescript-4-8.html":{"offset":3441612,"length":65052,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d5d373144b306064"},"/docs/handbook/release-notes/typescript-4-4.html":{"offset":3506664,"length":71907,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"38c36c0388a58214"},"/docs/handbook/release-notes/typescript-5-4.html":{"offset":3578571,"length":65344,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fd1ff4182b65e3d1"},"/docs/handbook/release-notes/typescript-5-7.html":{"offset":3643915,"length":63215,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f84528d5d8736acc"},"/docs/handbook/release-notes/typescript-4-2.html":{"offset":3707130,"length":73846,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"425759d5f6c94a3c"},"/docs/handbook/release-notes/typescript-4-6.html":{"offset":3780976,"length":62798,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"83547df41e8f5813"},"/docs/handbook/release-notes/typescript-5-2.html":{"offset":3843774,"length":69426,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8ac2b46cdcb2b977"},"/docs/handbook/release-notes/typescript-4-3.html":{"offset":3913200,"length":70141,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cc128e06664ba716"},"/docs/handbook/release-notes/typescript-5-0.html":{"offset":3983341,"length":77863,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"481e70b0895254ba"},"/docs/handbook/release-notes/typescript-4-7.html":{"offset":4061204,"length":71498,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"53dfc8031c3ef1db"},"/docs/handbook/release-notes/typescript-4-5.html":{"offset":4132702,"length":65341,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"93a0cd94ccc3a2b1"},"/docs/handbook/release-notes/typescript-3-0.html":{"offset":4198043,"length":61738,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6750f024853fa370"},"/docs/handbook/release-notes/typescript-2-9.html":{"offset":4259781,"length":60479,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7a2466ba877a56ad"},"/docs/handbook/release-notes/typescript-4-0.html":{"offset":4320260,"length":75054,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a168ad624f0117a8"},"/docs/handbook/release-notes/typescript-3-2.html":{"offset":4395314,"length":60629,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5ca263dd435fc2e1"},"/docs/handbook/release-notes/typescript-2-6.html":{"offset":4455943,"length":60952,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dbe61848d37c1805"},"/docs/handbook/release-notes/typescript-2-7.html":{"offset":4516895,"length":61923,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"133a12455d14db7b"},"/docs/handbook/release-notes/typescript-3-5.html":{"offset":4578818,"length":58800,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"775b5c8b2cdefca5"},"/docs/handbook/release-notes/typescript-3-3.html":{"offset":4637618,"length":57099,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"07590ff841e62f95"},"/docs/handbook/release-notes/typescript-3-4.html":{"offset":4694717,"length":61928,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c8645f6fdebf37c6"},"/docs/handbook/release-notes/typescript-2-8.html":{"offset":4756645,"length":63066,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5c458206a83fe1a8"},"/docs/handbook/release-notes/typescript-3-8.html":{"offset":4819711,"length":63639,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"93f0105befed96d4"},"/docs/handbook/release-notes/typescript-4-1.html":{"offset":4883350,"length":72525,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e9b550e4588be821"},"/docs/handbook/release-notes/typescript-3-7.html":{"offset":4955875,"length":69239,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"12b12775078eca08"},"/docs/handbook/release-notes/typescript-3-1.html":{"offset":5025114,"length":54918,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c9bb70ff3fae1c91"},"/docs/handbook/release-notes/typescript-3-6.html":{"offset":5080032,"length":61723,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"81ff0d5664c4b754"},"/docs/handbook/release-notes/typescript-3-9.html":{"offset":5141755,"length":66162,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5dec432ddc9c172e"},"/docs/handbook/release-notes/typescript-2-5.html":{"offset":5207917,"length":54599,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9403b1592b2a8b2a"},"/docs/handbook/release-notes/typescript-1-3.html":{"offset":5262516,"length":53898,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eb66ae7bf5871fab"},"/docs/handbook/release-notes/typescript-2-0.html":{"offset":5316414,"length":71723,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1734e211f046ee00"},"/docs/handbook/release-notes/typescript-1-7.html":{"offset":5388137,"length":58497,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"96215681280a9347"},"/docs/handbook/release-notes/typescript-1-5.html":{"offset":5446634,"length":61893,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e5a33d206b839914"},"/docs/handbook/release-notes/typescript-1-6.html":{"offset":5508527,"length":62765,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cbf459e58f5ce956"},"/docs/handbook/declaration-files/library-structures.html":{"offset":5571292,"length":60529,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"771ed77043bd43ab"},"/docs/handbook/release-notes/typescript-2-4.html":{"offset":5631821,"length":57882,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4a5d824dfa45b56f"},"/docs/handbook/release-notes/typescript-2-3.html":{"offset":5689703,"length":59466,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e13b33c57a434e5d"},"/docs/handbook/release-notes/typescript-1-4.html":{"offset":5749169,"length":59385,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"aef694d085c9690a"},"/docs/handbook/release-notes/typescript-1-1.html":{"offset":5808554,"length":53726,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"53800bd554bf3362"},"/docs/handbook/release-notes/typescript-2-2.html":{"offset":5862280,"length":59057,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1b8a0ff9757acc35"},"/docs/handbook/declaration-files/introduction.html":{"offset":5921337,"length":54464,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"88d5906169f3bafd"},"/docs/handbook/declaration-files/by-example.html":{"offset":5975801,"length":57459,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b879439c59513e14"},"/docs/handbook/release-notes/typescript-1-8.html":{"offset":6033260,"length":66396,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2c7a14155089080c"},"/docs/handbook/release-notes/typescript-2-1.html":{"offset":6099656,"length":64325,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b819d99df8c42a4d"},"/docs/handbook/declaration-files/templates/module-plugin-d-ts.html":{"offset":6163981,"length":54190,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4ae62d1ffa8b1239"},"/docs/handbook/tsconfig-json.html":{"offset":6218171,"length":56874,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b44d31704766ee8f"},"/docs/handbook/declaration-files/templates/global-d-ts.html":{"offset":6275045,"length":57011,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bdcab02818f5d383"},"/docs/handbook/declaration-files/templates/module-class-d-ts.html":{"offset":6332056,"length":54262,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9798e5b51c34f002"},"/docs/handbook/type-checking-javascript-files.html":{"offset":6386318,"length":62630,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f18085067495df49"},"/docs/handbook/declaration-files/templates/module-function-d-ts.html":{"offset":6448948,"length":54231,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7399a4fc8009d72d"},"/docs/handbook/declaration-files/deep-dive.html":{"offset":6503179,"length":58265,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cea888a80bcea3f0"},"/docs/handbook/declaration-files/do-s-and-don-ts.html":{"offset":6561444,"length":58609,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fb36f35eada910d1"},"/docs/handbook/declaration-files/dts-from-js.html":{"offset":6620053,"length":55340,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6e62b75b0bc2ba20"},"/docs/handbook/jsdoc-supported-types.html":{"offset":6675393,"length":76360,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a46316ed1328f8a2"},"/docs/handbook/declaration-files/templates/module-d-ts.html":{"offset":6751753,"length":59075,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b946b8777c2adc15"},"/docs/handbook/compiler-options-in-msbuild.html":{"offset":6810828,"length":60363,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fc00cbbdf589f146"},"/docs/handbook/declaration-files/publishing.html":{"offset":6871191,"length":58402,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"954ca227067b9db5"},"/docs/handbook/declaration-files/templates/global-modifying-module-d-ts.html":{"offset":6929593,"length":54305,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eee74743b75cd318"},"/docs/handbook/declaration-files/consumption.html":{"offset":6983898,"length":54209,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"31c94721241c7e92"},"/docs/handbook/intro-to-js-ts.html":{"offset":7038107,"length":54709,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bdfa09fd88b4c966"},"/docs/handbook/project-references.html":{"offset":7092816,"length":59692,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4f77c610c43aba7a"},"/docs/handbook/integrating-with-build-tools.html":{"offset":7152508,"length":59048,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"86645b9ba33bf1a1"},"/tsconfig":{"offset":7211556,"length":135883,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"85aa909b5581dee8"},"/tsconfig/":{"offset":7211556,"length":135883,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"85aa909b5581dee8"},"/docs/handbook/compiler-options.html":{"offset":7347439,"length":61898,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"596fb5149bc03f05"},"/docs/handbook/nightly-builds.html":{"offset":7409337,"length":54700,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1bede678db57ac5a"},"/docs/handbook/configuring-watch.html":{"offset":7464037,"length":57521,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ea5508855fd7bae2"},"/docs/handbook/esm-node.html":{"offset":7521558,"length":1061,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6f031cdf0d48b951"},"/__docx_assets/f5749d3dbf0e0b.bin":{"offset":7522619,"length":2991,"mime":"image/jpeg","gzipped":true,"hash":"887bb7b6c48eac9b"},"/__docx_assets/8be9a9abd4bbf5.png":{"offset":7525610,"length":1076,"mime":"image/png","gzipped":true,"hash":"5cdc64346c661d03"},"/__docx_assets/7759800cd50e81.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/4a506c4b742c2e.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/26cd967747bc91.bin":{"offset":7526809,"length":1079,"mime":"image/jpeg","gzipped":true,"hash":"fe09ee7ffde15cdc"},"/__docx_assets/b4859382502ca5.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/9aade84715142a.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/79a6275476a616.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/557929551860d1.bin":{"offset":7527888,"length":1021,"mime":"image/jpeg","gzipped":true,"hash":"2d2e327767e057a8"},"/__docx_assets/0e88633690d779.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/029b71603fa5f5.bin":{"offset":7528909,"length":2532,"mime":"image/png","gzipped":true,"hash":"9019b0129c6674a2"},"/__docx_assets/bdf1812bd8cf3c.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/4bc6e558bddd09.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/f2594d2ed77432.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/029dd6d55a86d7.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/6df83bb95292ae.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/7edfc1448bc0a9.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/fd273d33c86ee7.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/045936c999ef39.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/0c55f1e2fd17db.bin":{"offset":7531441,"length":887,"mime":"image/png","gzipped":true,"hash":"1309a5f65460917a"},"/__docx_assets/a5adcd784c1a2d.bin":{"offset":7532328,"length":1322,"mime":"image/png","gzipped":true,"hash":"dcddf512c0ca65e9"},"/__docx_assets/121b8b9cdeb5ac.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/641b73b495c372.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/547db329ee4c92.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/514a091f3b6741.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/7edbd39fa759b1.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/16393f62a1f020.bin":{"offset":7533650,"length":1068,"mime":"image/png","gzipped":true,"hash":"d609b355f4656c1b"},"/__docx_assets/105c79fc045bb0.bin":{"offset":7534718,"length":1823,"mime":"image/png","gzipped":true,"hash":"998865cd4d5eb59e"},"/__docx_assets/228c7f94b9005c.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/8d53892e410a06.bin":{"offset":7536541,"length":1080,"mime":"image/jpeg","gzipped":true,"hash":"bfd98c876abbfe74"},"/__docx_assets/1e4d2cd2af71df.bin":{"offset":7537621,"length":1169,"mime":"image/jpeg","gzipped":true,"hash":"6a618ed2939cf6e7"},"/__docx_assets/019d1f0081cf97.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/7c09f846d9bff9.bin":{"offset":7538790,"length":2914,"mime":"image/png","gzipped":true,"hash":"c0f4368f3a7856f7"},"/__docx_assets/2ee1236e287acd.bin":{"offset":7541704,"length":1003,"mime":"image/jpeg","gzipped":true,"hash":"5247dbf1add07681"},"/__docx_assets/5073006f0ed959.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/a3c1a943eb73e7.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/adfa6232bf39e8.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/bc2da7bef145f0.bin":{"offset":7542707,"length":287,"mime":"image/png","gzipped":true,"hash":"c6169b430019b120"},"/images/docs/greet_person.png":{"offset":7542994,"length":14461,"mime":"image/png","gzipped":true,"hash":"ebb90adc4fde0af4"},"/__docx_assets/44818e7bd2aca2.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/4d8b6759e04c45.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/a891e1554b7d08.bin":{"offset":7557455,"length":1040,"mime":"image/jpeg","gzipped":true,"hash":"c5ea98f7a8c49e8a"},"/__docx_assets/e1cc3989516c77.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/d6c565a54c14cb.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/a4bf6f2fd0ba5b.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/13d795c6d9676a.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/3a8492f87bab7d.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/23e7bcb7e52793.bin":{"offset":7558495,"length":361,"mime":"image/png","gzipped":true,"hash":"006a0ea6632ea1dc"},"/__docx_assets/423fd9e39aabe3.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/97bc92a1452453.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/ba17c7adda77d0.bin":{"offset":7558856,"length":2048,"mime":"image/png","gzipped":true,"hash":"ac1461ad93aba2c6"},"/__docx_assets/83ea52ee98e5f8.bin":{"offset":7560904,"length":1183,"mime":"image/jpeg","gzipped":true,"hash":"65a034d60dc0f8fc"},"/__docx_assets/5fab9513b3df66.bin":{"offset":7562087,"length":1118,"mime":"image/jpeg","gzipped":true,"hash":"ff549f152682bddc"},"/__docx_assets/44e9868a1c48ad.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/d59c0949731897.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/9f4b5d59a37231.bin":{"offset":7563205,"length":1081,"mime":"image/jpeg","gzipped":true,"hash":"1d4e1ea4ce627485"},"/__docx_assets/0552868748289a.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/4cf136bc650ee6.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/f86dbf5dca890f.bin":{"offset":7564286,"length":1103,"mime":"image/jpeg","gzipped":true,"hash":"fa36e8cb03de0cd8"},"/__docx_assets/d2da7766be12c9.bin":{"offset":7541704,"length":1003,"mime":"image/jpeg","gzipped":true,"hash":"5247dbf1add07681"},"/__docx_assets/8cab42bc8e9d88.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/f5e33ca85fd994.bin":{"offset":7565389,"length":1216,"mime":"image/jpeg","gzipped":true,"hash":"164c677e38ad1a50"},"/__docx_assets/fcbe0f7ac19093.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/061ea918a9a046.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/ab8d603169c92b.bin":{"offset":7566605,"length":1126,"mime":"image/jpeg","gzipped":true,"hash":"0e7c543e736db83d"},"/__docx_assets/ad4213c185445a.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/fd1e3da74a2fb4.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/62c5c9666609e9.bin":{"offset":7567731,"length":753,"mime":"image/jpeg","gzipped":true,"hash":"7791a98ca6f9d2f6"},"/__docx_assets/96b5a623ac32e9.bin":{"offset":7568484,"length":996,"mime":"image/jpeg","gzipped":true,"hash":"129ecf94dd3e1341"},"/__docx_assets/e521b556acf24b.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/4ebb973e4207af.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/8b654420cea1ff.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/b5aa84966082f9.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/c46790c690bf51.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/9998233d09f932.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/59882020c7aba2.bin":{"offset":7569480,"length":1093,"mime":"image/jpeg","gzipped":true,"hash":"025068be8a5e4fe7"},"/__docx_assets/ade5cb7baaf720.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/576dd9ec2a3d5c.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/f32f4ed7f35308.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/c4f7ec1f9cb562.bin":{"offset":7570573,"length":2796,"mime":"image/png","gzipped":true,"hash":"f1c0464970964e2c"},"/__docx_assets/7a6f253cfcc3cb.bin":{"offset":7573369,"length":2342,"mime":"image/png","gzipped":true,"hash":"598504622f645f9a"},"/__docx_assets/78fe01db9e68c9.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/c339e47217888e.bin":{"offset":7575711,"length":1054,"mime":"image/jpeg","gzipped":true,"hash":"fea94f939c409f97"},"/__docx_assets/21383e3d112d27.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/4d8edcc47977b9.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/98c47ac0c159fc.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/92d117e59087ef.bin":{"offset":7576765,"length":2680,"mime":"image/png","gzipped":true,"hash":"f320951b824e0a37"},"/__docx_assets/e0542e03db55a4.bin":{"offset":7579445,"length":2847,"mime":"image/png","gzipped":true,"hash":"f67e47acd7a3fa29"},"/__docx_assets/bae283f6b5d0e4.bin":{"offset":7582292,"length":1143,"mime":"image/jpeg","gzipped":true,"hash":"87f044b5c8b85e66"},"/__docx_assets/f73cba5ac46765.bin":{"offset":7583435,"length":1044,"mime":"image/jpeg","gzipped":true,"hash":"bdd40ac7cc1a65ae"},"/__docx_assets/e2e793b1f911e1.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/cf4d6b4e5ed1ba.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/64bf0674d42611.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/de9a0b7a23d429.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/4382808b8600f3.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/f935787a9210481bf751b445c081f07b/esm-cjs-interop.md-2.svg":{"offset":7584479,"length":2567,"mime":"image/svg+xml","gzipped":true,"hash":"9fece4593e874cb9"},"/d789cdf9a8f7f88a40e9e703e0698245/esm-cjs-interop.md-1.svg":{"offset":7587046,"length":1826,"mime":"image/svg+xml","gzipped":true,"hash":"a34d16c4fd5b934f"},"/__docx_assets/bf2ad42fca30eb.bin":{"offset":7588872,"length":631,"mime":"image/png","gzipped":true,"hash":"e7029884761d8553"},"/__docx_assets/29679932f57cc1.bin":{"offset":7589503,"length":1232,"mime":"image/jpeg","gzipped":true,"hash":"f79e5d6c31e071f1"},"/__docx_assets/58291f50ab1742.bin":{"offset":7590735,"length":2560,"mime":"image/png","gzipped":true,"hash":"cec5469ab2a6fd05"},"/__docx_assets/2ad72540acfd6e.bin":{"offset":7593295,"length":1217,"mime":"image/jpeg","gzipped":true,"hash":"ecb67cdb6dbaf94a"},"/__docx_assets/7582e76aaf50f1.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/98ae9ca24cea72.bin":{"offset":7594512,"length":1042,"mime":"image/jpeg","gzipped":true,"hash":"177fffdd4680ceea"},"/__docx_assets/f15e3c0c9052ea.bin":{"offset":7595554,"length":1257,"mime":"image/jpeg","gzipped":true,"hash":"4996a3323b9d807b"},"/__docx_assets/084aad8dae2e34.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/144f39181ccf7e.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/17617b38d9c9af.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/b36e913a72f801.bin":{"offset":7596811,"length":1195,"mime":"image/jpeg","gzipped":true,"hash":"0e90ef6e47771091"},"/__docx_assets/ee3fd881116784.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/adc2cbd58289ad.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/729e81e79e38af5bf41ddf97aba453d1/theory.md-3.svg":{"offset":7598006,"length":2210,"mime":"image/svg+xml","gzipped":true,"hash":"7cbe6604be41b3bf"},"/c858b89407a2057ead56516c9a77c783/theory.md-1.svg":{"offset":7600216,"length":1567,"mime":"image/svg+xml","gzipped":true,"hash":"ccd33da7e129b0b8"},"/fef70ad85e4ea4ef928cc62ddb67407b/declaration-files.svg":{"offset":7601783,"length":15837,"mime":"image/svg+xml","gzipped":true,"hash":"07df7cf855306927"},"/b1f11e84a45a07707dbe1bb284b2fbff/theory.md-2.svg":{"offset":7617620,"length":2174,"mime":"image/svg+xml","gzipped":true,"hash":"21d3bb32d9de93c4"},"/images/tutorials/aspnet/downloaddependency.png":{"offset":7619794,"length":352561,"mime":"image/png","gzipped":true,"hash":"07115820325884be"},"/images/tutorials/aspnet/createwebapp.png":{"offset":7972355,"length":25336,"mime":"image/png","gzipped":true,"hash":"995e7152eb0507df"},"/images/tutorials/aspnet/namewebapp.png":{"offset":7997691,"length":19641,"mime":"image/png","gzipped":true,"hash":"e224adf498d46ef0"},"/images/tutorials/aspnet/workingsite.png":{"offset":8017332,"length":44039,"mime":"image/png","gzipped":true,"hash":"05243cd636251b8e"},"/images/tutorials/aspnet/emptytemplate.png":{"offset":8061371,"length":34753,"mime":"image/png","gzipped":true,"hash":"6c1ca1fff4779d70"},"/images/tutorials/aspnet/newfolder.png":{"offset":8096124,"length":337703,"mime":"image/png","gzipped":true,"hash":"90e1baf8e83b504b"},"/__docx_assets/5900d6887c014e.png":{"offset":8433827,"length":64720,"mime":"image/png","gzipped":true,"hash":"644f40250d4051d8"},"/__docx_assets/46066f99f7b212.bin":{"offset":8498547,"length":2692,"mime":"image/png","gzipped":true,"hash":"84d9c66839309010"},"/__docx_assets/866e12b06cef26.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/e97990ae5bb5bf.bin":{"offset":8501239,"length":1397,"mime":"image/png","gzipped":true,"hash":"01bbfa5479dfe682"},"/__docx_assets/eb8af5421b58e5.bin":{"offset":8502636,"length":620,"mime":"image/png","gzipped":true,"hash":"399ee8dc008119ba"},"/__docx_assets/258e1ca8ecaa61.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/0d1b3e0d73a348.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/abab806aabbb36.png":{"offset":8503256,"length":18220,"mime":"image/png","gzipped":true,"hash":"d8e78267a85f7007"},"/images/tutorials/aspnet/taskrunner.png":{"offset":8521476,"length":85398,"mime":"image/png","gzipped":true,"hash":"182d769012a60edb"},"/images/tutorials/aspnet/debugger.png":{"offset":8606874,"length":202644,"mime":"image/png","gzipped":true,"hash":"f2e8798df9ce90fe"},"/images/tutorials/aspnet/scripts.png":{"offset":8809518,"length":71362,"mime":"image/png","gzipped":true,"hash":"f1b99cc55fcc5607"},"/images/tutorials/aspnet/taskrunnerrefresh.png":{"offset":8880880,"length":82691,"mime":"image/png","gzipped":true,"hash":"2a2af45a6426e777"},"/images/tutorials/aspnet/tsfile.png":{"offset":8963571,"length":247055,"mime":"image/png","gzipped":true,"hash":"ecf6815a6c962c1f"},"/images/tutorials/aspnet/tsconfig.png":{"offset":9210626,"length":279040,"mime":"image/png","gzipped":true,"hash":"7723e93013c792da"},"/images/tutorials/aspnet/packagejson.png":{"offset":9489666,"length":284768,"mime":"image/png","gzipped":true,"hash":"557949614b387103"},"/images/tutorials/aspnet/npm.png":{"offset":9774434,"length":122358,"mime":"image/png","gzipped":true,"hash":"99f91ddae9276808"},"/__docx_assets/97177800890799.bin":{"offset":9896792,"length":1012,"mime":"image/jpeg","gzipped":true,"hash":"71e6331169093b59"},"/__docx_assets/6da83e3a129658.png":{"offset":9897804,"length":56237,"mime":"image/png","gzipped":true,"hash":"3c917bc99ca80871"},"/__docx_assets/3adf5da9ef6797.png":{"offset":9954041,"length":70914,"mime":"image/png","gzipped":true,"hash":"54ba3b48dc0e0341"},"/__docx_assets/ae1d9b8d8b198a.gif":{"offset":10024955,"length":129877,"mime":"image/gif","gzipped":true,"hash":"985a94e439e70a28"},"/__docx_assets/fc046e5de20035.png":{"offset":10154832,"length":43299,"mime":"image/png","gzipped":true,"hash":"0b8154a5ef21ea83"},"/__docx_assets/1765fce0ed4c2e.png":{"offset":10198131,"length":61086,"mime":"image/png","gzipped":true,"hash":"49f00b1ac9884b8b"},"/__docx_assets/1083bd1177325f.png":{"offset":10259217,"length":93960,"mime":"image/png","gzipped":true,"hash":"25448234a38230ed"},"/__docx_assets/95bdf340ef9fd1.png":{"offset":10353177,"length":68933,"mime":"image/png","gzipped":true,"hash":"97d1a0f8e484c910"},"/__docx_assets/7e768bb4655400.png":{"offset":10422110,"length":125290,"mime":"image/png","gzipped":true,"hash":"4eb5417eaeddc781"},"/__docx_assets/2ae5527cd80f4e.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/5c9b89ecbac434.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/0fb02fce4d294e.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/70495acfd0a357.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/715b1f1357b130.bin":{"offset":10547400,"length":2221,"mime":"image/png","gzipped":true,"hash":"607e96fe2cb858b3"},"/__docx_assets/01f46d608b2758.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/ff6e3a9f191f05.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/a1995d17107ee6.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/74116420f39b50.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/729491d6b6a320.gif":{"offset":10549621,"length":77619,"mime":"image/gif","gzipped":true,"hash":"99cb6769c7aeae5a"},"/__docx_assets/1fb7687e11f8d8.bin":{"offset":10627240,"length":1013,"mime":"image/jpeg","gzipped":true,"hash":"0a07bde011d920e4"},"/__docx_assets/7b9f70b224cebd.gif":{"offset":10628253,"length":287416,"mime":"image/gif","gzipped":true,"hash":"627324ec0445400f"},"/__docx_assets/a5c2d3823d8413.png":{"offset":10915669,"length":125544,"mime":"image/png","gzipped":true,"hash":"b81b2886b81dc234"},"/__docx_assets/c697284caad89a.gif":{"offset":11041213,"length":95183,"mime":"image/gif","gzipped":true,"hash":"6f228bcce46b794f"},"/__docx_assets/15cfc3f8a9fdb6.gif":{"offset":11136396,"length":158365,"mime":"image/gif","gzipped":true,"hash":"8aa9ee4a6d4543d6"},"/__docx_assets/38b8e579a32441.gif":{"offset":11294761,"length":90177,"mime":"image/gif","gzipped":true,"hash":"fd92d13299c9e547"},"/__docx_assets/f6340ac4c3ced0.png":{"offset":11384938,"length":76493,"mime":"image/png","gzipped":true,"hash":"4b80b0ee6979cc0d"},"/__docx_assets/d0001117e5ca28.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/8b801ac80faa88.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/fec89956869b74.bin":{"offset":11461431,"length":2453,"mime":"image/png","gzipped":true,"hash":"4db99a5e8d99d0b2"},"/__docx_assets/5bc61f4d29fb4e.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/b71e53057c7ebe.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/32ab3864de8890.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/163f440b8db2f7.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/1041dc435e8e2f.gif":{"offset":11463884,"length":313357,"mime":"image/gif","gzipped":true,"hash":"c8415875bc703f82"},"/__docx_assets/5a0a515694a81b.bin":{"offset":11777241,"length":1043,"mime":"image/jpeg","gzipped":true,"hash":"540bc55c20a3ed77"},"/__docx_assets/f43416bff3869e.bin":{"offset":11778284,"length":1251,"mime":"image/jpeg","gzipped":true,"hash":"b9d3d7143e49ba09"},"/__docx_assets/55db06fb2d2a43.bin":{"offset":11779535,"length":1218,"mime":"image/jpeg","gzipped":true,"hash":"639f2e065c59f7f4"},"/__docx_assets/56d7e3b9374e43.bin":{"offset":11780753,"length":1234,"mime":"image/png","gzipped":true,"hash":"dd46bf29c37ef1f9"},"/__docx_assets/ebcecc6a86806a.png":{"offset":11781987,"length":50172,"mime":"image/png","gzipped":true,"hash":"6eaa2b285707316d"},"/__docx_assets/f52aeac5164600.png":{"offset":11832159,"length":24446,"mime":"image/png","gzipped":true,"hash":"c2cabbaa4b55986d"},"/__docx_assets/599f9f77511c14.png":{"offset":11856605,"length":55180,"mime":"image/png","gzipped":true,"hash":"30bbf5a464edbd99"},"/__docx_assets/f6410766b8ad47.gif":{"offset":11911785,"length":27274,"mime":"image/gif","gzipped":true,"hash":"fa9d08506469803d"},"/__docx_assets/8948625999f588.png":{"offset":11939059,"length":25698,"mime":"image/png","gzipped":true,"hash":"1b7836da5c01658e"},"/__docx_assets/2878fe923b1342.gif":{"offset":11964757,"length":59584,"mime":"image/gif","gzipped":true,"hash":"d4f950f063feea1e"},"/__docx_assets/0f4d1f7e56a326.png":{"offset":12024341,"length":25954,"mime":"image/png","gzipped":true,"hash":"b33b3fe3ee49360a"},"/__docx_assets/8361b2a8378421.png":{"offset":12050295,"length":348285,"mime":"image/png","gzipped":true,"hash":"3baad9c683c51e33"},"/__docx_assets/5e7200e1ecb2ed.png":{"offset":12398580,"length":38784,"mime":"image/png","gzipped":true,"hash":"af7ea03102c82278"},"/__docx_assets/4b366374ed0b54.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/da15420448d57d.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/d94d0e0cbf6797.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/8a0544c6a97636.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/7c573409ffd7fe.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/113ae320986300.bin":{"offset":12437364,"length":1248,"mime":"image/jpeg","gzipped":true,"hash":"0bcf034370d58c71"},"/__docx_assets/fc3796317cece9.bin":{"offset":12438612,"length":2591,"mime":"image/png","gzipped":true,"hash":"0fdbabedf5e950be"},"/__docx_assets/d18c7c21e34170.bin":{"offset":12441203,"length":1182,"mime":"image/jpeg","gzipped":true,"hash":"48a0aeddd097c799"},"/__docx_assets/4bdb9de5178f51.bin":{"offset":12442385,"length":974,"mime":"image/png","gzipped":true,"hash":"5bc36273dd12710e"},"/__docx_assets/e1318b47726318.bin":{"offset":12443359,"length":1146,"mime":"image/jpeg","gzipped":true,"hash":"fa6a0fcac4c32398"},"/__docx_assets/d9062d2900ca0e.gif":{"offset":12444505,"length":129680,"mime":"image/gif","gzipped":true,"hash":"6e3eea573908d59c"},"/__docx_assets/03246155e8909b.gif":{"offset":12574185,"length":140242,"mime":"image/gif","gzipped":true,"hash":"cca8159e602ddafc"},"/__docx_assets/3625af4140f34e.gif":{"offset":12714427,"length":120797,"mime":"image/gif","gzipped":true,"hash":"4d5a124c9257131a"},"/__docx_assets/54c07999390a1c.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/82fcff2d33b57c.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/37132f55170696.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/6a9604af69fc38.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/3b4a4ffe0ec7d0.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/c579187f24ddf5.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/59bb03dd2ba73f.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/578ecbaca7e1ac.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/098bc213cd1086.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/ee43b6eb8f319c.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/05d5f6364bb3b0.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/92e7e0a7c9f6ec.bin":{"offset":12835224,"length":3022,"mime":"image/png","gzipped":true,"hash":"69fa459658b56fee"},"/__docx_assets/0cd2530fd32e2f.bin":{"offset":12838246,"length":1115,"mime":"image/jpeg","gzipped":true,"hash":"d01e67a533711277"},"/__docx_assets/dbb18890cb97a1.bin":{"offset":12839361,"length":1079,"mime":"image/jpeg","gzipped":true,"hash":"e7ceb9c06a4d5ed5"},"/__docx_assets/0b4768e71191d0.bin":{"offset":12840440,"length":1115,"mime":"image/jpeg","gzipped":true,"hash":"adbebeaf16689a66"},"/__docx_assets/b28b5ea4a57ad5.bin":{"offset":12841555,"length":2809,"mime":"image/png","gzipped":true,"hash":"bb81b64f338f8c12"},"/__docx_assets/637e62c0c1e8d8.bin":{"offset":12844364,"length":1161,"mime":"image/jpeg","gzipped":true,"hash":"d112ded411f20cfb"},"/__docx_assets/d2ffd71cdeba01.bin":{"offset":12845525,"length":2846,"mime":"image/png","gzipped":true,"hash":"899402f4867c610d"},"/__docx_assets/757922e0bdcb18.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/d7acdebc424121.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/81056fb6bc83b5.bin":{"offset":12848371,"length":1291,"mime":"image/png","gzipped":true,"hash":"80bab5bfee0f8ac7"},"/__docx_assets/a6118bdabb2982.bin":{"offset":12849662,"length":2062,"mime":"image/png","gzipped":true,"hash":"f641945941168ffc"},"/__docx_assets/376017b364f20b.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/98c27df6b332c7.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/d66d93e40e8482.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/bf276fb75054a0.bin":{"offset":12851724,"length":2100,"mime":"image/png","gzipped":true,"hash":"f2131daa365dcf61"},"/__docx_assets/f640c9f63efdb0.png":{"offset":12853824,"length":14740,"mime":"image/png","gzipped":true,"hash":"3e0ea4d4c2fb0d7a"},"/__docx_assets/e1c2cd97f7e674.bin":{"offset":12868564,"length":1116,"mime":"image/jpeg","gzipped":true,"hash":"9658db66f3f52a54"},"/__docx_assets/144d2bb8080350.bin":{"offset":12869680,"length":2924,"mime":"image/png","gzipped":true,"hash":"ac1d2e81b0af5217"},"/__docx_assets/aeb38ca38ca519.png":{"offset":12872604,"length":7598,"mime":"image/png","gzipped":true,"hash":"8fcbd1f7f2a5dc22"},"/__docx_assets/166dd81df68784.bin":{"offset":12880202,"length":1106,"mime":"image/jpeg","gzipped":true,"hash":"3dd62af5b7d55859"},"/__docx_assets/4e5934d3d0eb3f.bin":{"offset":12881308,"length":1052,"mime":"image/jpeg","gzipped":true,"hash":"50010e5f6b273eba"},"/__docx_assets/ec26d544b9ddc7.bin":{"offset":12882360,"length":1201,"mime":"image/jpeg","gzipped":true,"hash":"c01c98469767ee25"},"/__docx_assets/2da14ba57bfbe9.bin":{"offset":12883561,"length":1252,"mime":"image/jpeg","gzipped":true,"hash":"fd020307d0f9042f"},"/__docx_assets/98d8029a5a938d.png":{"offset":12884813,"length":6638,"mime":"image/png","gzipped":true,"hash":"8f5a84dfc2b35a52"},"/__docx_assets/4a487afe0e2dcb.bin":{"offset":12891451,"length":1903,"mime":"image/png","gzipped":true,"hash":"d30e1ebadfbc8ef7"},"/__docx_assets/cb3fa3a30ce65b.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/d3882ceec35ac3.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/9b64245c68552c.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/bf118fd187b3aa.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/df82e3f5170bd2.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/3704b86cc03687.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/a090b20c377b1f.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/9a39c0afa5e924.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/05f88223d5c032.bin":{"offset":12893354,"length":1101,"mime":"image/jpeg","gzipped":true,"hash":"f08bbb0e0f778d1b"},"/__docx_assets/4b390c7a025031.bin":{"offset":12894455,"length":1164,"mime":"image/jpeg","gzipped":true,"hash":"d8456cca96b8502e"},"/__docx_assets/32f06b53448a48.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/ce7c5dbfeddc97.bin":{"offset":12895619,"length":1108,"mime":"image/jpeg","gzipped":true,"hash":"a806f4d31af6a6a3"},"/__docx_assets/33c940c678e38c.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/c2b4a63659c9ec.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/be6eb0324f7826.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/d99084c161e700.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/28ac68f2094893.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/9b3cbb8543d60b.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/3775c67f855f27.bin":{"offset":12896727,"length":935,"mime":"image/jpeg","gzipped":true,"hash":"e8d99bcd86317ced"},"/__docx_assets/032656e97cd98a.bin":{"offset":12897662,"length":1051,"mime":"image/jpeg","gzipped":true,"hash":"274cc286d316455a"},"/__docx_assets/cea6ae6d6f001c.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/22949d47e53912.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/023a07572e7dd4.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/d3ed156f2d4a68.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/d78b93a16c2fa5.bin":{"offset":7526686,"length":123,"mime":"image/png","gzipped":true,"hash":"d5fcfa030e7eb82b"},"/__docx_assets/7d65ac6d4f1cb1.bin":{"offset":12898713,"length":1117,"mime":"image/jpeg","gzipped":true,"hash":"b7880ec9d35b6b93"},"/":{"offset":0,"length":55445,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"16a31f0f751fba4b"}}}
+{
+  "id": "typescript",
+  "name": "TypeScript",
+  "version": "v5.8",
+  "commit": "4b99afd2",
+  "origin": "https://www.typescriptlang.org",
+  "entryPath": "/docs/handbook/intro.html",
+  "updatedAt": "2026-10-11T10:37:28.001Z",
+  "totalBytes": 12830587,
+  "chunkCount": 262,
+  "routes": {
+    "/docs/handbook/intro.html": {
+      "offset": 0,
+      "length": 54463,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6299ae0a15179c77"
+    },
+    "/docs/handbook/typescript-in-5-minutes-oop.html": {
+      "offset": 54463,
+      "length": 59199,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fa6418a3700ec98a"
+    },
+    "/docs/handbook/typescript-in-5-minutes.html": {
+      "offset": 113662,
+      "length": 61191,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c539eaa21ca3ad9c"
+    },
+    "/docs/handbook/2/typeof-types.html": {
+      "offset": 174853,
+      "length": 54366,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "09963b289b7f236e"
+    },
+    "/docs/handbook/2/basic-types.html": {
+      "offset": 229219,
+      "length": 66098,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c0496bda996cdfb4"
+    },
+    "/docs/handbook/2/everyday-types.html": {
+      "offset": 295317,
+      "length": 76452,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ed7efc1fd4aca029"
+    },
+    "/docs": {
+      "offset": 371769,
+      "length": 48873,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "af1f95c299590f84"
+    },
+    "/docs/": {
+      "offset": 371769,
+      "length": 48873,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "af1f95c299590f84"
+    },
+    "/docs/handbook/typescript-tooling-in-5-minutes.html": {
+      "offset": 420642,
+      "length": 58307,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "438bd05583ce534a"
+    },
+    "/docs/handbook/2/types-from-types.html": {
+      "offset": 478949,
+      "length": 52453,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb4fecc151a94897"
+    },
+    "/docs/handbook/typescript-in-5-minutes-func.html": {
+      "offset": 531402,
+      "length": 66355,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1858768f15028856"
+    },
+    "/docs/handbook/2/indexed-access-types.html": {
+      "offset": 597757,
+      "length": 55617,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2d79f3f2bbce3273"
+    },
+    "/docs/handbook/2/objects.html": {
+      "offset": 653374,
+      "length": 80157,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9de11551678f32c9"
+    },
+    "/docs/handbook/2/generics.html": {
+      "offset": 733531,
+      "length": 68368,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "88948ac4472be2bb"
+    },
+    "/docs/handbook/2/functions.html": {
+      "offset": 801899,
+      "length": 79028,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2253ccc877cf2a63"
+    },
+    "/docs/handbook/2/keyof-types.html": {
+      "offset": 880927,
+      "length": 53336,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1dcf43529a9e8920"
+    },
+    "/docs/handbook/2/narrowing.html": {
+      "offset": 934263,
+      "length": 73119,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c274492254450395"
+    },
+    "/docs/handbook/typescript-from-scratch.html": {
+      "offset": 1007382,
+      "length": 59230,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d417b2b7b0cec710"
+    },
+    "/docs/handbook/utility-types.html": {
+      "offset": 1066612,
+      "length": 66293,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "27420d37ef4af287"
+    },
+    "/docs/handbook/symbols.html": {
+      "offset": 1132905,
+      "length": 56744,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e41343064602e2bd"
+    },
+    "/docs/handbook/2/conditional-types.html": {
+      "offset": 1189649,
+      "length": 61514,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a66a2648d7dc7949"
+    },
+    "/docs/handbook/enums.html": {
+      "offset": 1251163,
+      "length": 64747,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ae51b7bb513fd517"
+    },
+    "/docs/handbook/jsx.html": {
+      "offset": 1315910,
+      "length": 62545,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1a075cbc76b27ebe"
+    },
+    "/docs/handbook/declaration-merging.html": {
+      "offset": 1378455,
+      "length": 58598,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "831d5a14f2f68128"
+    },
+    "/docs/handbook/triple-slash-directives.html": {
+      "offset": 1437053,
+      "length": 56971,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5b45ebadcad6f081"
+    },
+    "/docs/handbook/iterators-and-generators.html": {
+      "offset": 1494024,
+      "length": 55442,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a7c99b6568b7981f"
+    },
+    "/docs/handbook/namespaces.html": {
+      "offset": 1549466,
+      "length": 58611,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8526881af983e0d5"
+    },
+    "/docs/handbook/decorators.html": {
+      "offset": 1608077,
+      "length": 66659,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8d4e9ac78aa55a2f"
+    },
+    "/docs/handbook/2/modules.html": {
+      "offset": 1674736,
+      "length": 64234,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "364ac883cbdc064d"
+    },
+    "/docs/handbook/mixins.html": {
+      "offset": 1738970,
+      "length": 62077,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3638cc1ef651025c"
+    },
+    "/docs/handbook/2/mapped-types.html": {
+      "offset": 1801047,
+      "length": 59226,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fd49fb57a07a698c"
+    },
+    "/docs/handbook/2/classes.html": {
+      "offset": 1860273,
+      "length": 86999,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0d6b3301d9fe0ae3"
+    },
+    "/docs/handbook/2/template-literal-types.html": {
+      "offset": 1947272,
+      "length": 62228,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6dabe721e1cb5a17"
+    },
+    "/docs/handbook/namespaces-and-modules.html": {
+      "offset": 2009500,
+      "length": 56437,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4677e6987f861a7f"
+    },
+    "/docs/handbook/modules/theory.html": {
+      "offset": 2065937,
+      "length": 70120,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cfa7670aa51f0480"
+    },
+    "/docs/handbook/type-inference.html": {
+      "offset": 2136057,
+      "length": 57487,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2b8edef2b6a0b4b5"
+    },
+    "/docs/handbook/type-compatibility.html": {
+      "offset": 2193544,
+      "length": 60190,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0df218cc34abfac5"
+    },
+    "/docs/handbook/modules/introduction.html": {
+      "offset": 2253734,
+      "length": 52170,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "772d235ff9b00ddf"
+    },
+    "/docs/handbook/gulp.html": {
+      "offset": 2305904,
+      "length": 60374,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "22cafbb724a6c41e"
+    },
+    "/docs/handbook/modules/guides/choosing-compiler-options.html": {
+      "offset": 2366278,
+      "length": 60337,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a53e0f51fc93e94b"
+    },
+    "/docs/handbook/release-notes/typescript-6-0.html": {
+      "offset": 2426615,
+      "length": 70829,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1c08a9f31fcfca67"
+    },
+    "/docs/handbook/migrating-from-javascript.html": {
+      "offset": 2497444,
+      "length": 62069,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ea2afd7726b9b158"
+    },
+    "/docs/handbook/variable-declarations.html": {
+      "offset": 2559513,
+      "length": 67446,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "38ff16d66f3980ed"
+    },
+    "/docs/handbook/release-notes/typescript-5-8.html": {
+      "offset": 2626959,
+      "length": 59840,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7e22e886784a3ada"
+    },
+    "/docs/handbook/asp-net-core.html": {
+      "offset": 2686799,
+      "length": 57765,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d8a1753a665117ca"
+    },
+    "/docs/handbook/modules/appendices/esm-cjs-interop.html": {
+      "offset": 2744564,
+      "length": 65509,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7f0106c6584f56ec"
+    },
+    "/docs/handbook/dom-manipulation.html": {
+      "offset": 2810073,
+      "length": 59217,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "14df57890c239303"
+    },
+    "/docs/handbook/babel-with-typescript.html": {
+      "offset": 2869290,
+      "length": 53549,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "df6671b2f9a16aca"
+    },
+    "/docs/handbook/release-notes/typescript-5-9.html": {
+      "offset": 2922839,
+      "length": 59975,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "aa9862601593d524"
+    },
+    "/docs/handbook/modules/reference.html": {
+      "offset": 2982814,
+      "length": 76475,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bffe66b35491a3f6"
+    },
+    "/docs/handbook/release-notes/typescript-4-3.html": {
+      "offset": 3059289,
+      "length": 69191,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5291f5b99164a6df"
+    },
+    "/docs/handbook/release-notes/typescript-4-6.html": {
+      "offset": 3128480,
+      "length": 61832,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "caa894883832338c"
+    },
+    "/docs/handbook/release-notes/typescript-5-5.html": {
+      "offset": 3190312,
+      "length": 75100,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bf1609b9d34ec59c"
+    },
+    "/docs/handbook/release-notes/typescript-4-2.html": {
+      "offset": 3265412,
+      "length": 72892,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5d80e69e369ad905"
+    },
+    "/docs/handbook/release-notes/typescript-4-4.html": {
+      "offset": 3338304,
+      "length": 70951,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "20b5280d32499b67"
+    },
+    "/docs/handbook/release-notes/typescript-5-4.html": {
+      "offset": 3409255,
+      "length": 64396,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1a6270a83b1a395c"
+    },
+    "/docs/handbook/release-notes/typescript-5-1.html": {
+      "offset": 3473651,
+      "length": 62041,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "febce192e3801dd7"
+    },
+    "/docs/handbook/release-notes/typescript-4-7.html": {
+      "offset": 3535692,
+      "length": 70544,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0557fdb803eb4702"
+    },
+    "/docs/handbook/release-notes/typescript-5-0.html": {
+      "offset": 3606236,
+      "length": 76933,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b0cffdce7ae8bf14"
+    },
+    "/docs/handbook/release-notes/typescript-4-8.html": {
+      "offset": 3683169,
+      "length": 64111,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2d0c170e782f79cd"
+    },
+    "/docs/handbook/release-notes/typescript-5-7.html": {
+      "offset": 3747280,
+      "length": 62262,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "24ce526581efd4e0"
+    },
+    "/docs/handbook/release-notes/typescript-5-2.html": {
+      "offset": 3809542,
+      "length": 68486,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ebb98201f7298d71"
+    },
+    "/docs/handbook/release-notes/typescript-5-6.html": {
+      "offset": 3878028,
+      "length": 67438,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1fd607a68f6894f0"
+    },
+    "/docs/handbook/release-notes/typescript-4-5.html": {
+      "offset": 3945466,
+      "length": 64389,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5865b4b5c33599d0"
+    },
+    "/docs/handbook/release-notes/typescript-5-3.html": {
+      "offset": 4009855,
+      "length": 61719,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "05b31fbaae634e6f"
+    },
+    "/docs/handbook/release-notes/typescript-4-9.html": {
+      "offset": 4071574,
+      "length": 63992,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a5044992acebe1af"
+    },
+    "/docs/handbook/release-notes/typescript-3-4.html": {
+      "offset": 4135566,
+      "length": 60960,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0bd66a855d4de17f"
+    },
+    "/docs/handbook/release-notes/typescript-3-6.html": {
+      "offset": 4196526,
+      "length": 60756,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "28b12087a1170aac"
+    },
+    "/docs/handbook/release-notes/typescript-3-5.html": {
+      "offset": 4257282,
+      "length": 57827,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "83e55f68dad8fb55"
+    },
+    "/docs/handbook/release-notes/typescript-3-8.html": {
+      "offset": 4315109,
+      "length": 62676,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "20a4f1c72e784f93"
+    },
+    "/docs/handbook/release-notes/typescript-2-6.html": {
+      "offset": 4377785,
+      "length": 59996,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a7eb3adb0f39d9ad"
+    },
+    "/docs/handbook/release-notes/typescript-3-7.html": {
+      "offset": 4437781,
+      "length": 68287,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f4c076b93c820eb9"
+    },
+    "/docs/handbook/release-notes/typescript-2-7.html": {
+      "offset": 4506068,
+      "length": 60960,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ed118208b4b8ef4a"
+    },
+    "/docs/handbook/release-notes/typescript-2-8.html": {
+      "offset": 4567028,
+      "length": 62099,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4113f7b85f42a29c"
+    },
+    "/docs/handbook/release-notes/typescript-3-0.html": {
+      "offset": 4629127,
+      "length": 60773,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e01d950a450a9dc0"
+    },
+    "/docs/handbook/release-notes/typescript-3-9.html": {
+      "offset": 4689900,
+      "length": 65205,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a3dde37877d0061a"
+    },
+    "/docs/handbook/release-notes/typescript-4-0.html": {
+      "offset": 4755105,
+      "length": 74087,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4c0047887b3245a6"
+    },
+    "/docs/handbook/release-notes/typescript-4-1.html": {
+      "offset": 4829192,
+      "length": 71606,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a6b7725f78d9a385"
+    },
+    "/docs/handbook/release-notes/typescript-3-3.html": {
+      "offset": 4900798,
+      "length": 56115,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "abf3078803d63e18"
+    },
+    "/docs/handbook/release-notes/typescript-2-9.html": {
+      "offset": 4956913,
+      "length": 59520,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1a13a82a185a3d0e"
+    },
+    "/docs/handbook/release-notes/typescript-3-2.html": {
+      "offset": 5016433,
+      "length": 59663,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0ea49523d123cd1a"
+    },
+    "/docs/handbook/release-notes/typescript-3-1.html": {
+      "offset": 5076096,
+      "length": 53947,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8bf67104f1538cc1"
+    },
+    "/docs/handbook/release-notes/typescript-2-4.html": {
+      "offset": 5130043,
+      "length": 56911,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c1ec460bc952601f"
+    },
+    "/docs/handbook/release-notes/typescript-1-3.html": {
+      "offset": 5186954,
+      "length": 52932,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "81b1a909d98120a7"
+    },
+    "/docs/handbook/release-notes/typescript-2-3.html": {
+      "offset": 5239886,
+      "length": 58496,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c7550fd949032082"
+    },
+    "/docs/handbook/release-notes/typescript-2-2.html": {
+      "offset": 5298382,
+      "length": 58087,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "58ce846040806b40"
+    },
+    "/docs/handbook/release-notes/typescript-1-8.html": {
+      "offset": 5356469,
+      "length": 65434,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9d75faaeb124a813"
+    },
+    "/docs/handbook/release-notes/typescript-1-7.html": {
+      "offset": 5421903,
+      "length": 57521,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d5f316c594d60397"
+    },
+    "/docs/handbook/release-notes/typescript-2-5.html": {
+      "offset": 5479424,
+      "length": 53637,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "81b4e475ada41ba2"
+    },
+    "/docs/handbook/release-notes/typescript-2-1.html": {
+      "offset": 5533061,
+      "length": 63362,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "96c6a97dbe776275"
+    },
+    "/docs/handbook/release-notes/typescript-2-0.html": {
+      "offset": 5596423,
+      "length": 70774,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4b215a74e7dbf8ef"
+    },
+    "/docs/handbook/declaration-files/by-example.html": {
+      "offset": 5667197,
+      "length": 56478,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "781b4d662957539e"
+    },
+    "/docs/handbook/declaration-files/library-structures.html": {
+      "offset": 5723675,
+      "length": 59558,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "72d8ef0e9f7b5148"
+    },
+    "/docs/handbook/release-notes/typescript-1-1.html": {
+      "offset": 5783233,
+      "length": 52762,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b19c6fa2f3ee42a7"
+    },
+    "/docs/handbook/release-notes/typescript-1-5.html": {
+      "offset": 5835995,
+      "length": 60926,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "14b35f850b990fb4"
+    },
+    "/docs/handbook/declaration-files/introduction.html": {
+      "offset": 5896921,
+      "length": 53498,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6e8cede792508b75"
+    },
+    "/docs/handbook/release-notes/typescript-1-6.html": {
+      "offset": 5950419,
+      "length": 61798,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8b3ccfe9f78742d2"
+    },
+    "/docs/handbook/release-notes/typescript-1-4.html": {
+      "offset": 6012217,
+      "length": 58419,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "65c0c2990881f78c"
+    },
+    "/docs/handbook/declaration-files/templates/global-modifying-module-d-ts.html": {
+      "offset": 6070636,
+      "length": 53339,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7e6f57c5d1bb90c7"
+    },
+    "/docs/handbook/intro-to-js-ts.html": {
+      "offset": 6123975,
+      "length": 53746,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d80a4ce5b03b67e3"
+    },
+    "/docs/handbook/declaration-files/publishing.html": {
+      "offset": 6177721,
+      "length": 57415,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "790019c61f281990"
+    },
+    "/docs/handbook/declaration-files/deep-dive.html": {
+      "offset": 6235136,
+      "length": 57283,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f45f29f4867fc4ca"
+    },
+    "/docs/handbook/tsconfig-json.html": {
+      "offset": 6292419,
+      "length": 55891,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0382fbf352c578c7"
+    },
+    "/docs/handbook/declaration-files/consumption.html": {
+      "offset": 6348310,
+      "length": 53244,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9f2cdf85bc340b6b"
+    },
+    "/docs/handbook/declaration-files/templates/module-function-d-ts.html": {
+      "offset": 6401554,
+      "length": 53269,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a5f8c0e2f2ec234d"
+    },
+    "/docs/handbook/compiler-options-in-msbuild.html": {
+      "offset": 6454823,
+      "length": 59392,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ec820b55585d537e"
+    },
+    "/docs/handbook/declaration-files/templates/module-class-d-ts.html": {
+      "offset": 6514215,
+      "length": 53298,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d44a689de77acbfc"
+    },
+    "/docs/handbook/declaration-files/templates/global-d-ts.html": {
+      "offset": 6567513,
+      "length": 56034,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ee0e0603da556529"
+    },
+    "/docs/handbook/jsdoc-supported-types.html": {
+      "offset": 6623547,
+      "length": 75388,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "382016a86c025e6e"
+    },
+    "/docs/handbook/declaration-files/dts-from-js.html": {
+      "offset": 6698935,
+      "length": 54367,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ab1165c0104f23eb"
+    },
+    "/docs/handbook/declaration-files/templates/module-plugin-d-ts.html": {
+      "offset": 6753302,
+      "length": 53222,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ca5ec324736fc54c"
+    },
+    "/docs/handbook/declaration-files/templates/module-d-ts.html": {
+      "offset": 6806524,
+      "length": 58103,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b917a71008fab0cb"
+    },
+    "/docs/handbook/declaration-files/do-s-and-don-ts.html": {
+      "offset": 6864627,
+      "length": 57633,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5f17c18c8bd4c8f0"
+    },
+    "/docs/handbook/type-checking-javascript-files.html": {
+      "offset": 6922260,
+      "length": 61658,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "84bc000653b9afde"
+    },
+    "/docs/handbook/compiler-options.html": {
+      "offset": 6983918,
+      "length": 60948,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d34deba6d42e6417"
+    },
+    "/docs/handbook/configuring-watch.html": {
+      "offset": 7044866,
+      "length": 56544,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e4f256361c63ce0a"
+    },
+    "/tsconfig": {
+      "offset": 7101410,
+      "length": 134931,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1024c545deb4968c"
+    },
+    "/tsconfig/": {
+      "offset": 7101410,
+      "length": 134931,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1024c545deb4968c"
+    },
+    "/docs/handbook/nightly-builds.html": {
+      "offset": 7236341,
+      "length": 53732,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "da2998155089fa47"
+    },
+    "/docs/handbook/integrating-with-build-tools.html": {
+      "offset": 7290073,
+      "length": 58075,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "89931a897e494de2"
+    },
+    "/docs/handbook/project-references.html": {
+      "offset": 7348148,
+      "length": 58726,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4129e0aa20831876"
+    },
+    "/docs/handbook/esm-node.html": {
+      "offset": 7406874,
+      "length": 106,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1f9eedc069b4b2c1"
+    },
+    "/__docx_assets/f5749d3dbf0e0b.bin": {
+      "offset": 7406980,
+      "length": 2991,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "887bb7b6c48eac9b"
+    },
+    "/__docx_assets/57b0324f9dfb39.png": {
+      "offset": 7409971,
+      "length": 6156,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7981c719dc43a643"
+    },
+    "/__docx_assets/7997928d67b150.png": {
+      "offset": 7416127,
+      "length": 13090,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "98ededb709fedc07"
+    },
+    "/__docx_assets/860b9fc46b3e19.png": {
+      "offset": 7429217,
+      "length": 4352,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "30129a1967d64382"
+    },
+    "/__docx_assets/8be9a9abd4bbf5.png": {
+      "offset": 7433569,
+      "length": 1076,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "5cdc64346c661d03"
+    },
+    "/__docx_assets/b7402394a88287.png": {
+      "offset": 7434645,
+      "length": 7434,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7c67ffb45b4e8c49"
+    },
+    "/__docx_assets/f5667adad4c8c9.png": {
+      "offset": 7442079,
+      "length": 3037,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7e426a8af15e61b2"
+    },
+    "/__docx_assets/4698ecbcbf127d.png": {
+      "offset": 7445116,
+      "length": 8194,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "181dd625f789b0c0"
+    },
+    "/__docx_assets/7cb23c21534494.png": {
+      "offset": 7453310,
+      "length": 2425,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "cec5064f493a34b2"
+    },
+    "/__docx_assets/029dd6d55a86d7.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/f2594d2ed77432.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/4bc6e558bddd09.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/4a506c4b742c2e.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/a5adcd784c1a2d.bin": {
+      "offset": 7455858,
+      "length": 1322,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "dcddf512c0ca65e9"
+    },
+    "/__docx_assets/029b71603fa5f5.bin": {
+      "offset": 7457180,
+      "length": 2532,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "9019b0129c6674a2"
+    },
+    "/__docx_assets/641b73b495c372.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/045936c999ef39.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/0e88633690d779.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/7edfc1448bc0a9.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/48b74d0687f236.png": {
+      "offset": 7459712,
+      "length": 1708,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2e7b12d9361ba9a8"
+    },
+    "/__docx_assets/0c55f1e2fd17db.bin": {
+      "offset": 7461420,
+      "length": 887,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1309a5f65460917a"
+    },
+    "/__docx_assets/b4859382502ca5.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/9aade84715142a.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/fd273d33c86ee7.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/1e4d2cd2af71df.bin": {
+      "offset": 7462307,
+      "length": 1169,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "6a618ed2939cf6e7"
+    },
+    "/__docx_assets/4d8b6759e04c45.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/23e7bcb7e52793.bin": {
+      "offset": 7463476,
+      "length": 361,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "006a0ea6632ea1dc"
+    },
+    "/__docx_assets/6df83bb95292ae.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/2ee1236e287acd.bin": {
+      "offset": 7463837,
+      "length": 1003,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "5247dbf1add07681"
+    },
+    "/__docx_assets/557929551860d1.bin": {
+      "offset": 7464840,
+      "length": 1021,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "2d2e327767e057a8"
+    },
+    "/images/docs/greet_person.png": {
+      "offset": 7465861,
+      "length": 14461,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ebb90adc4fde0af4"
+    },
+    "/__docx_assets/547db329ee4c92.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/adfa6232bf39e8.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/514a091f3b6741.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/5073006f0ed959.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/7c09f846d9bff9.bin": {
+      "offset": 7480322,
+      "length": 2914,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c0f4368f3a7856f7"
+    },
+    "/__docx_assets/8d53892e410a06.bin": {
+      "offset": 7483236,
+      "length": 1080,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "bfd98c876abbfe74"
+    },
+    "/__docx_assets/bc2da7bef145f0.bin": {
+      "offset": 7484316,
+      "length": 287,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c6169b430019b120"
+    },
+    "/__docx_assets/7edbd39fa759b1.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/a3c1a943eb73e7.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/105c79fc045bb0.bin": {
+      "offset": 7484603,
+      "length": 1823,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "998865cd4d5eb59e"
+    },
+    "/__docx_assets/bdf1812bd8cf3c.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/16393f62a1f020.bin": {
+      "offset": 7486426,
+      "length": 1068,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d609b355f4656c1b"
+    },
+    "/__docx_assets/121b8b9cdeb5ac.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/228c7f94b9005c.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/26cd967747bc91.bin": {
+      "offset": 7487494,
+      "length": 1079,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "fe09ee7ffde15cdc"
+    },
+    "/__docx_assets/79a6275476a616.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/a4bf6f2fd0ba5b.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/e1cc3989516c77.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/d2da7766be12c9.bin": {
+      "offset": 7463837,
+      "length": 1003,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "5247dbf1add07681"
+    },
+    "/__docx_assets/7759800cd50e81.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/13d795c6d9676a.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/ba17c7adda77d0.bin": {
+      "offset": 7488573,
+      "length": 2048,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ac1461ad93aba2c6"
+    },
+    "/__docx_assets/97bc92a1452453.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/44818e7bd2aca2.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/3a8492f87bab7d.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/a891e1554b7d08.bin": {
+      "offset": 7490621,
+      "length": 1040,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "c5ea98f7a8c49e8a"
+    },
+    "/__docx_assets/019d1f0081cf97.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/c339e47217888e.bin": {
+      "offset": 7491661,
+      "length": 1054,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "fea94f939c409f97"
+    },
+    "/__docx_assets/7a6f253cfcc3cb.bin": {
+      "offset": 7492715,
+      "length": 2342,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "598504622f645f9a"
+    },
+    "/__docx_assets/62c5c9666609e9.bin": {
+      "offset": 7495057,
+      "length": 753,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "7791a98ca6f9d2f6"
+    },
+    "/__docx_assets/ad4213c185445a.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/d59c0949731897.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/78fe01db9e68c9.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/ab8d603169c92b.bin": {
+      "offset": 7495810,
+      "length": 1126,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "0e7c543e736db83d"
+    },
+    "/__docx_assets/576dd9ec2a3d5c.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/fd1e3da74a2fb4.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/8b654420cea1ff.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/d6c565a54c14cb.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/b5aa84966082f9.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/5fab9513b3df66.bin": {
+      "offset": 7496936,
+      "length": 1118,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "ff549f152682bddc"
+    },
+    "/__docx_assets/f86dbf5dca890f.bin": {
+      "offset": 7498054,
+      "length": 1103,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "fa36e8cb03de0cd8"
+    },
+    "/__docx_assets/8cab42bc8e9d88.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/061ea918a9a046.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/9f4b5d59a37231.bin": {
+      "offset": 7499157,
+      "length": 1081,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "1d4e1ea4ce627485"
+    },
+    "/__docx_assets/ade5cb7baaf720.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/c4f7ec1f9cb562.bin": {
+      "offset": 7500238,
+      "length": 2796,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f1c0464970964e2c"
+    },
+    "/__docx_assets/fcbe0f7ac19093.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/bf2ad42fca30eb.bin": {
+      "offset": 7503034,
+      "length": 631,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e7029884761d8553"
+    },
+    "/__docx_assets/96b5a623ac32e9.bin": {
+      "offset": 7503665,
+      "length": 996,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "129ecf94dd3e1341"
+    },
+    "/__docx_assets/59882020c7aba2.bin": {
+      "offset": 7504661,
+      "length": 1093,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "025068be8a5e4fe7"
+    },
+    "/__docx_assets/4d8edcc47977b9.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/21383e3d112d27.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/98c47ac0c159fc.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/4ebb973e4207af.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/de9a0b7a23d429.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/bae283f6b5d0e4.bin": {
+      "offset": 7505754,
+      "length": 1143,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "87f044b5c8b85e66"
+    },
+    "/__docx_assets/423fd9e39aabe3.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/83ea52ee98e5f8.bin": {
+      "offset": 7506897,
+      "length": 1183,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "65a034d60dc0f8fc"
+    },
+    "/__docx_assets/e521b556acf24b.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/44e9868a1c48ad.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/9998233d09f932.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/0552868748289a.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/f32f4ed7f35308.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/c46790c690bf51.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/f5e33ca85fd994.bin": {
+      "offset": 7508080,
+      "length": 1216,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "164c677e38ad1a50"
+    },
+    "/__docx_assets/4cf136bc650ee6.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/729e81e79e38af5bf41ddf97aba453d1/theory.md-3.svg": {
+      "offset": 7509296,
+      "length": 2210,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "7cbe6604be41b3bf"
+    },
+    "/b1f11e84a45a07707dbe1bb284b2fbff/theory.md-2.svg": {
+      "offset": 7511506,
+      "length": 2174,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "21d3bb32d9de93c4"
+    },
+    "/c858b89407a2057ead56516c9a77c783/theory.md-1.svg": {
+      "offset": 7513680,
+      "length": 1567,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "ccd33da7e129b0b8"
+    },
+    "/__docx_assets/7582e76aaf50f1.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/084aad8dae2e34.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/29679932f57cc1.bin": {
+      "offset": 7515247,
+      "length": 1232,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "f79e5d6c31e071f1"
+    },
+    "/__docx_assets/92d117e59087ef.bin": {
+      "offset": 7516479,
+      "length": 2680,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f320951b824e0a37"
+    },
+    "/__docx_assets/64bf0674d42611.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/0d1b3e0d73a348.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/98ae9ca24cea72.bin": {
+      "offset": 7519159,
+      "length": 1042,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "177fffdd4680ceea"
+    },
+    "/__docx_assets/144f39181ccf7e.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/e97990ae5bb5bf.bin": {
+      "offset": 7520201,
+      "length": 1397,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "01bbfa5479dfe682"
+    },
+    "/__docx_assets/adc2cbd58289ad.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/images/tutorials/aspnet/emptytemplate.png": {
+      "offset": 7521598,
+      "length": 34753,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6c1ca1fff4779d70"
+    },
+    "/__docx_assets/2ad72540acfd6e.bin": {
+      "offset": 7556351,
+      "length": 1217,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "ecb67cdb6dbaf94a"
+    },
+    "/images/tutorials/aspnet/createwebapp.png": {
+      "offset": 7557568,
+      "length": 25336,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "995e7152eb0507df"
+    },
+    "/images/tutorials/aspnet/namewebapp.png": {
+      "offset": 7582904,
+      "length": 19641,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e224adf498d46ef0"
+    },
+    "/fef70ad85e4ea4ef928cc62ddb67407b/declaration-files.svg": {
+      "offset": 7602545,
+      "length": 15837,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "07df7cf855306927"
+    },
+    "/__docx_assets/f15e3c0c9052ea.bin": {
+      "offset": 7618382,
+      "length": 1257,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "4996a3323b9d807b"
+    },
+    "/images/tutorials/aspnet/scripts.png": {
+      "offset": 7619639,
+      "length": 71362,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f1b99cc55fcc5607"
+    },
+    "/images/tutorials/aspnet/downloaddependency.png": {
+      "offset": 7691001,
+      "length": 352561,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "07115820325884be"
+    },
+    "/images/tutorials/aspnet/newfolder.png": {
+      "offset": 8043562,
+      "length": 337703,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "90e1baf8e83b504b"
+    },
+    "/images/tutorials/aspnet/workingsite.png": {
+      "offset": 8381265,
+      "length": 44039,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "05243cd636251b8e"
+    },
+    "/__docx_assets/46066f99f7b212.bin": {
+      "offset": 8425304,
+      "length": 2692,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "84d9c66839309010"
+    },
+    "/__docx_assets/58291f50ab1742.bin": {
+      "offset": 8427996,
+      "length": 2560,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "cec5469ab2a6fd05"
+    },
+    "/__docx_assets/e0542e03db55a4.bin": {
+      "offset": 8430556,
+      "length": 2847,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f67e47acd7a3fa29"
+    },
+    "/__docx_assets/866e12b06cef26.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/f73cba5ac46765.bin": {
+      "offset": 8433403,
+      "length": 1044,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "bdd40ac7cc1a65ae"
+    },
+    "/__docx_assets/17617b38d9c9af.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/b36e913a72f801.bin": {
+      "offset": 8434447,
+      "length": 1195,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "0e90ef6e47771091"
+    },
+    "/__docx_assets/cf4d6b4e5ed1ba.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/ee3fd881116784.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/e2e793b1f911e1.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/f935787a9210481bf751b445c081f07b/esm-cjs-interop.md-2.svg": {
+      "offset": 8435642,
+      "length": 2567,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "9fece4593e874cb9"
+    },
+    "/images/tutorials/aspnet/npm.png": {
+      "offset": 8438209,
+      "length": 122358,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "99f91ddae9276808"
+    },
+    "/d789cdf9a8f7f88a40e9e703e0698245/esm-cjs-interop.md-1.svg": {
+      "offset": 8560567,
+      "length": 1826,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a34d16c4fd5b934f"
+    },
+    "/images/tutorials/aspnet/taskrunnerrefresh.png": {
+      "offset": 8562393,
+      "length": 82691,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2a2af45a6426e777"
+    },
+    "/images/tutorials/aspnet/tsfile.png": {
+      "offset": 8645084,
+      "length": 247055,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ecf6815a6c962c1f"
+    },
+    "/images/tutorials/aspnet/taskrunner.png": {
+      "offset": 8892139,
+      "length": 85398,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "182d769012a60edb"
+    },
+    "/images/tutorials/aspnet/tsconfig.png": {
+      "offset": 8977537,
+      "length": 279040,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7723e93013c792da"
+    },
+    "/images/tutorials/aspnet/debugger.png": {
+      "offset": 9256577,
+      "length": 202644,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f2e8798df9ce90fe"
+    },
+    "/images/tutorials/aspnet/packagejson.png": {
+      "offset": 9459221,
+      "length": 284768,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "557949614b387103"
+    },
+    "/__docx_assets/97177800890799.bin": {
+      "offset": 9743989,
+      "length": 1012,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "71e6331169093b59"
+    },
+    "/__docx_assets/258e1ca8ecaa61.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/eb8af5421b58e5.bin": {
+      "offset": 9745001,
+      "length": 620,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "399ee8dc008119ba"
+    },
+    "/__docx_assets/d0001117e5ca28.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/5bc61f4d29fb4e.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/55db06fb2d2a43.bin": {
+      "offset": 9745621,
+      "length": 1218,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "639f2e065c59f7f4"
+    },
+    "/__docx_assets/70495acfd0a357.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/b71e53057c7ebe.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/4382808b8600f3.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/74116420f39b50.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/8b801ac80faa88.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/ae1d9b8d8b198a.gif": {
+      "offset": 9746839,
+      "length": 129877,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "985a94e439e70a28"
+    },
+    "/__docx_assets/abab806aabbb36.png": {
+      "offset": 9876716,
+      "length": 18220,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d8e78267a85f7007"
+    },
+    "/__docx_assets/715b1f1357b130.bin": {
+      "offset": 9894936,
+      "length": 2221,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "607e96fe2cb858b3"
+    },
+    "/__docx_assets/1083bd1177325f.png": {
+      "offset": 9897157,
+      "length": 93960,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "25448234a38230ed"
+    },
+    "/__docx_assets/6da83e3a129658.png": {
+      "offset": 9991117,
+      "length": 56237,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3c917bc99ca80871"
+    },
+    "/__docx_assets/7e768bb4655400.png": {
+      "offset": 10047354,
+      "length": 125290,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4eb5417eaeddc781"
+    },
+    "/__docx_assets/a5c2d3823d8413.png": {
+      "offset": 10172644,
+      "length": 125544,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b81b2886b81dc234"
+    },
+    "/__docx_assets/1041dc435e8e2f.gif": {
+      "offset": 10298188,
+      "length": 313357,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "c8415875bc703f82"
+    },
+    "/__docx_assets/f6340ac4c3ced0.png": {
+      "offset": 10611545,
+      "length": 76493,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4b80b0ee6979cc0d"
+    },
+    "/__docx_assets/1fb7687e11f8d8.bin": {
+      "offset": 10688038,
+      "length": 1013,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "0a07bde011d920e4"
+    },
+    "/__docx_assets/01f46d608b2758.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/fec89956869b74.bin": {
+      "offset": 10689051,
+      "length": 2453,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4db99a5e8d99d0b2"
+    },
+    "/__docx_assets/56d7e3b9374e43.bin": {
+      "offset": 10691504,
+      "length": 1234,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "dd46bf29c37ef1f9"
+    },
+    "/__docx_assets/ff6e3a9f191f05.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/163f440b8db2f7.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/32ab3864de8890.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/15cfc3f8a9fdb6.gif": {
+      "offset": 10692738,
+      "length": 158365,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "8aa9ee4a6d4543d6"
+    },
+    "/__docx_assets/5900d6887c014e.png": {
+      "offset": 10851103,
+      "length": 64720,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "644f40250d4051d8"
+    },
+    "/__docx_assets/3adf5da9ef6797.png": {
+      "offset": 10915823,
+      "length": 70914,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "54ba3b48dc0e0341"
+    },
+    "/__docx_assets/95bdf340ef9fd1.png": {
+      "offset": 10986737,
+      "length": 68933,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "97d1a0f8e484c910"
+    },
+    "/__docx_assets/f43416bff3869e.bin": {
+      "offset": 11055670,
+      "length": 1251,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "b9d3d7143e49ba09"
+    },
+    "/__docx_assets/7b9f70b224cebd.gif": {
+      "offset": 11056921,
+      "length": 287416,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "627324ec0445400f"
+    },
+    "/__docx_assets/fc046e5de20035.png": {
+      "offset": 11344337,
+      "length": 43299,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0b8154a5ef21ea83"
+    },
+    "/__docx_assets/1765fce0ed4c2e.png": {
+      "offset": 11387636,
+      "length": 61086,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "49f00b1ac9884b8b"
+    },
+    "/__docx_assets/38b8e579a32441.gif": {
+      "offset": 11448722,
+      "length": 90177,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "fd92d13299c9e547"
+    },
+    "/__docx_assets/c697284caad89a.gif": {
+      "offset": 11538899,
+      "length": 95183,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "6f228bcce46b794f"
+    },
+    "/__docx_assets/8948625999f588.png": {
+      "offset": 11634082,
+      "length": 25698,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1b7836da5c01658e"
+    },
+    "/__docx_assets/729491d6b6a320.gif": {
+      "offset": 11659780,
+      "length": 77619,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "99cb6769c7aeae5a"
+    },
+    "/__docx_assets/113ae320986300.bin": {
+      "offset": 11737399,
+      "length": 1248,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "0bcf034370d58c71"
+    },
+    "/__docx_assets/d94d0e0cbf6797.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/8a0544c6a97636.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/b28b5ea4a57ad5.bin": {
+      "offset": 11738647,
+      "length": 2809,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "bb81b64f338f8c12"
+    },
+    "/__docx_assets/4b366374ed0b54.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/a1995d17107ee6.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/0fb02fce4d294e.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/2ae5527cd80f4e.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/6a9604af69fc38.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/0f4d1f7e56a326.png": {
+      "offset": 11741456,
+      "length": 25954,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b33b3fe3ee49360a"
+    },
+    "/__docx_assets/5c9b89ecbac434.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/59bb03dd2ba73f.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/5e7200e1ecb2ed.png": {
+      "offset": 11767410,
+      "length": 38784,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "af7ea03102c82278"
+    },
+    "/__docx_assets/f52aeac5164600.png": {
+      "offset": 11806194,
+      "length": 24446,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c2cabbaa4b55986d"
+    },
+    "/__docx_assets/5a0a515694a81b.bin": {
+      "offset": 11830640,
+      "length": 1043,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "540bc55c20a3ed77"
+    },
+    "/__docx_assets/d9062d2900ca0e.gif": {
+      "offset": 11831683,
+      "length": 129680,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "6e3eea573908d59c"
+    },
+    "/__docx_assets/ebcecc6a86806a.png": {
+      "offset": 11961363,
+      "length": 50172,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6eaa2b285707316d"
+    },
+    "/__docx_assets/03246155e8909b.gif": {
+      "offset": 12011535,
+      "length": 140242,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "cca8159e602ddafc"
+    },
+    "/__docx_assets/f6410766b8ad47.gif": {
+      "offset": 12151777,
+      "length": 27274,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "fa9d08506469803d"
+    },
+    "/__docx_assets/2878fe923b1342.gif": {
+      "offset": 12179051,
+      "length": 59584,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "d4f950f063feea1e"
+    },
+    "/__docx_assets/05d5f6364bb3b0.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/82fcff2d33b57c.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/ee43b6eb8f319c.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/c579187f24ddf5.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/098bc213cd1086.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/7c573409ffd7fe.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/37132f55170696.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/599f9f77511c14.png": {
+      "offset": 12238635,
+      "length": 55180,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "30bbf5a464edbd99"
+    },
+    "/__docx_assets/8361b2a8378421.png": {
+      "offset": 12293815,
+      "length": 348285,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3baad9c683c51e33"
+    },
+    "/__docx_assets/3625af4140f34e.gif": {
+      "offset": 12642100,
+      "length": 120797,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "4d5a124c9257131a"
+    },
+    "/__docx_assets/fc3796317cece9.bin": {
+      "offset": 12762897,
+      "length": 2591,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0fdbabedf5e950be"
+    },
+    "/__docx_assets/0b4768e71191d0.bin": {
+      "offset": 12765488,
+      "length": 1115,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "adbebeaf16689a66"
+    },
+    "/__docx_assets/e1318b47726318.bin": {
+      "offset": 12766603,
+      "length": 1146,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "fa6a0fcac4c32398"
+    },
+    "/__docx_assets/4bdb9de5178f51.bin": {
+      "offset": 12767749,
+      "length": 974,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "5bc36273dd12710e"
+    },
+    "/__docx_assets/2da14ba57bfbe9.bin": {
+      "offset": 12768723,
+      "length": 1252,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "fd020307d0f9042f"
+    },
+    "/__docx_assets/166dd81df68784.bin": {
+      "offset": 12769975,
+      "length": 1106,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "3dd62af5b7d55859"
+    },
+    "/__docx_assets/a6118bdabb2982.bin": {
+      "offset": 12771081,
+      "length": 2062,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f641945941168ffc"
+    },
+    "/__docx_assets/757922e0bdcb18.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/144d2bb8080350.bin": {
+      "offset": 12773143,
+      "length": 2924,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ac1d2e81b0af5217"
+    },
+    "/__docx_assets/3b4a4ffe0ec7d0.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/bf276fb75054a0.bin": {
+      "offset": 12776067,
+      "length": 2100,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f2131daa365dcf61"
+    },
+    "/__docx_assets/d66d93e40e8482.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/578ecbaca7e1ac.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/54c07999390a1c.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/da15420448d57d.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/92e7e0a7c9f6ec.bin": {
+      "offset": 12778167,
+      "length": 3022,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "69fa459658b56fee"
+    },
+    "/__docx_assets/d18c7c21e34170.bin": {
+      "offset": 12781189,
+      "length": 1182,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "48a0aeddd097c799"
+    },
+    "/__docx_assets/aeb38ca38ca519.png": {
+      "offset": 12782371,
+      "length": 7598,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "8fcbd1f7f2a5dc22"
+    },
+    "/__docx_assets/0cd2530fd32e2f.bin": {
+      "offset": 12789969,
+      "length": 1115,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "d01e67a533711277"
+    },
+    "/__docx_assets/f640c9f63efdb0.png": {
+      "offset": 12791084,
+      "length": 14740,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3e0ea4d4c2fb0d7a"
+    },
+    "/__docx_assets/dbb18890cb97a1.bin": {
+      "offset": 12805824,
+      "length": 1079,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "e7ceb9c06a4d5ed5"
+    },
+    "/__docx_assets/d2ffd71cdeba01.bin": {
+      "offset": 12806903,
+      "length": 2846,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "899402f4867c610d"
+    },
+    "/__docx_assets/98d8029a5a938d.png": {
+      "offset": 12809749,
+      "length": 6638,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "8f5a84dfc2b35a52"
+    },
+    "/__docx_assets/81056fb6bc83b5.bin": {
+      "offset": 12816387,
+      "length": 1291,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "80bab5bfee0f8ac7"
+    },
+    "/__docx_assets/98c27df6b332c7.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/32f06b53448a48.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/05f88223d5c032.bin": {
+      "offset": 12817678,
+      "length": 1101,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "f08bbb0e0f778d1b"
+    },
+    "/__docx_assets/df82e3f5170bd2.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/4e5934d3d0eb3f.bin": {
+      "offset": 12818779,
+      "length": 1052,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "50010e5f6b273eba"
+    },
+    "/__docx_assets/cb3fa3a30ce65b.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/637e62c0c1e8d8.bin": {
+      "offset": 12819831,
+      "length": 1161,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "d112ded411f20cfb"
+    },
+    "/__docx_assets/9a39c0afa5e924.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/d7acdebc424121.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/be6eb0324f7826.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/bf118fd187b3aa.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/33c940c678e38c.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/9b64245c68552c.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/d99084c161e700.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/28ac68f2094893.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/e1c2cd97f7e674.bin": {
+      "offset": 12820992,
+      "length": 1116,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "9658db66f3f52a54"
+    },
+    "/__docx_assets/3775c67f855f27.bin": {
+      "offset": 12822108,
+      "length": 935,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "e8d99bcd86317ced"
+    },
+    "/__docx_assets/ce7c5dbfeddc97.bin": {
+      "offset": 12823043,
+      "length": 1108,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "a806f4d31af6a6a3"
+    },
+    "/__docx_assets/ec26d544b9ddc7.bin": {
+      "offset": 12824151,
+      "length": 1201,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "c01c98469767ee25"
+    },
+    "/__docx_assets/a090b20c377b1f.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/3704b86cc03687.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/4a487afe0e2dcb.bin": {
+      "offset": 12825352,
+      "length": 1903,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d30e1ebadfbc8ef7"
+    },
+    "/__docx_assets/9b3cbb8543d60b.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/c2b4a63659c9ec.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/d3882ceec35ac3.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/032656e97cd98a.bin": {
+      "offset": 12827255,
+      "length": 1051,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "274cc286d316455a"
+    },
+    "/__docx_assets/4b390c7a025031.bin": {
+      "offset": 12828306,
+      "length": 1164,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "d8456cca96b8502e"
+    },
+    "/__docx_assets/376017b364f20b.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/22949d47e53912.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/d3ed156f2d4a68.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/cea6ae6d6f001c.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/023a07572e7dd4.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/d78b93a16c2fa5.bin": {
+      "offset": 7455735,
+      "length": 123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d5fcfa030e7eb82b"
+    },
+    "/__docx_assets/7d65ac6d4f1cb1.bin": {
+      "offset": 12829470,
+      "length": 1117,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "b7880ec9d35b6b93"
+    },
+    "/": {
+      "offset": 0,
+      "length": 54463,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6299ae0a15179c77"
+    }
+  }
+}

@@ -1,1 +1,3583 @@
-{"id":"fastapi","name":"FastAPI","version":"v0.115","commit":"0aa7cad4","origin":"https://fastapi.tiangolo.com","entryPath":"/","updatedAt":"2026-10-10T18:58:01.602Z","totalBytes":12864027,"chunkCount":336,"routes":{"/":{"offset":0,"length":24444,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"121316e5e05d5a53"},"/newsletter":{"offset":24444,"length":13797,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9c665e27c4b6498a"},"/newsletter/":{"offset":24444,"length":13797,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9c665e27c4b6498a"},"/learn":{"offset":38241,"length":13779,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7ba5c6131e7e539e"},"/learn/":{"offset":38241,"length":13779,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7ba5c6131e7e539e"},"/reference":{"offset":52020,"length":13808,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fe28f473d0c547f2"},"/reference/":{"offset":52020,"length":13808,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fe28f473d0c547f2"},"/ru":{"offset":65828,"length":28287,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9767f0bf14e8d164"},"/ru/":{"offset":65828,"length":28287,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9767f0bf14e8d164"},"/pt":{"offset":94115,"length":25904,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7581e67189076417"},"/pt/":{"offset":94115,"length":25904,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7581e67189076417"},"/tr":{"offset":120019,"length":26354,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c21af481c6e55977"},"/tr/":{"offset":120019,"length":26354,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c21af481c6e55977"},"/es":{"offset":146373,"length":25700,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3b28c191cfd1e923"},"/es/":{"offset":146373,"length":25700,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3b28c191cfd1e923"},"/ko":{"offset":172073,"length":26805,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9b8b47bfd26ba865"},"/ko/":{"offset":172073,"length":26805,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9b8b47bfd26ba865"},"/ja":{"offset":198878,"length":27278,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3e5cd03ffe2d557a"},"/ja/":{"offset":198878,"length":27278,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3e5cd03ffe2d557a"},"/fr":{"offset":226156,"length":26111,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a7591b83c723fb4f"},"/fr/":{"offset":226156,"length":26111,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a7591b83c723fb4f"},"/features":{"offset":252267,"length":18534,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1673cf152410ec96"},"/features/":{"offset":252267,"length":18534,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1673cf152410ec96"},"/hi":{"offset":270801,"length":27315,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1cef328331d522bd"},"/hi/":{"offset":270801,"length":27315,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1cef328331d522bd"},"/zh-hant":{"offset":298116,"length":26455,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5c5dd36ca0428ede"},"/zh-hant/":{"offset":298116,"length":26455,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5c5dd36ca0428ede"},"/zh":{"offset":324571,"length":26171,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"06459d81445027ce"},"/zh/":{"offset":324571,"length":26171,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"06459d81445027ce"},"/de":{"offset":350742,"length":26251,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"862b5dd209ba6766"},"/de/":{"offset":350742,"length":26251,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"862b5dd209ba6766"},"/uk":{"offset":376993,"length":28186,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ca95e7f2327d87c9"},"/uk/":{"offset":376993,"length":28186,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ca95e7f2327d87c9"},"/resources":{"offset":405179,"length":13700,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"03366212d8abf688"},"/resources/":{"offset":405179,"length":13700,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"03366212d8abf688"},"/about":{"offset":418879,"length":13669,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6152cbf0e126f3ee"},"/about/":{"offset":418879,"length":13669,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6152cbf0e126f3ee"},"/tutorial":{"offset":432548,"length":16906,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3538a52ec7c7cac6"},"/tutorial/":{"offset":432548,"length":16906,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3538a52ec7c7cac6"},"/tutorial/body-multiple-params":{"offset":449454,"length":18514,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bf09dae57b526a1a"},"/tutorial/body-multiple-params/":{"offset":449454,"length":18514,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bf09dae57b526a1a"},"/tutorial/query-params":{"offset":467968,"length":17176,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"45020f07ba9a244d"},"/tutorial/query-params/":{"offset":467968,"length":17176,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"45020f07ba9a244d"},"/tutorial/query-param-models":{"offset":485144,"length":16350,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"60b7f882ff00907a"},"/tutorial/query-param-models/":{"offset":485144,"length":16350,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"60b7f882ff00907a"},"/python-types":{"offset":501494,"length":20987,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a5a1805e7539044a"},"/python-types/":{"offset":501494,"length":20987,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a5a1805e7539044a"},"/tutorial/body":{"offset":522481,"length":18382,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4f1664568f213df9"},"/tutorial/body/":{"offset":522481,"length":18382,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4f1664568f213df9"},"/tutorial/first-steps":{"offset":540863,"length":21575,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f0e242ee567cda41"},"/tutorial/first-steps/":{"offset":540863,"length":21575,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f0e242ee567cda41"},"/tutorial/path-params-numeric-validations":{"offset":562438,"length":19235,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"02b3be5a7ef4fc51"},"/tutorial/path-params-numeric-validations/":{"offset":562438,"length":19235,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"02b3be5a7ef4fc51"},"/tutorial/body-nested-models":{"offset":581673,"length":19463,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"83256501705e83fc"},"/tutorial/body-nested-models/":{"offset":581673,"length":19463,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"83256501705e83fc"},"/tutorial/body-fields":{"offset":601136,"length":16363,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f66df0963d172751"},"/tutorial/body-fields/":{"offset":601136,"length":16363,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f66df0963d172751"},"/async":{"offset":617499,"length":23595,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"afbd015d3696baff"},"/async/":{"offset":617499,"length":23595,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"afbd015d3696baff"},"/tutorial/query-params-str-validations":{"offset":641094,"length":27240,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"67e4e9f0909da335"},"/tutorial/query-params-str-validations/":{"offset":641094,"length":27240,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"67e4e9f0909da335"},"/tutorial/path-params":{"offset":668334,"length":20210,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"23ffcad0440c8c80"},"/tutorial/path-params/":{"offset":668334,"length":20210,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"23ffcad0440c8c80"},"/release-notes":{"offset":688544,"length":180398,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f74a95526283c215"},"/release-notes/":{"offset":688544,"length":180398,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f74a95526283c215"},"/tutorial/extra-data-types":{"offset":868942,"length":16365,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"083d370fd4bce4eb"},"/tutorial/extra-data-types/":{"offset":868942,"length":16365,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"083d370fd4bce4eb"},"/tutorial/cookie-params":{"offset":885307,"length":15569,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5bf0ecada01beafe"},"/tutorial/cookie-params/":{"offset":885307,"length":15569,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5bf0ecada01beafe"},"/tutorial/header-param-models":{"offset":900876,"length":16790,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b4f29c8aad9d8808"},"/tutorial/header-param-models/":{"offset":900876,"length":16790,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b4f29c8aad9d8808"},"/tutorial/request-forms":{"offset":917666,"length":16042,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"260c0d6b90b2c3a9"},"/tutorial/request-forms/":{"offset":917666,"length":16042,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"260c0d6b90b2c3a9"},"/tutorial/encoder":{"offset":933708,"length":15305,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"39b50b8ce8e9ad31"},"/tutorial/encoder/":{"offset":933708,"length":15305,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"39b50b8ce8e9ad31"},"/tutorial/cookie-param-models":{"offset":949013,"length":16631,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7bfc6ee044e67beb"},"/tutorial/cookie-param-models/":{"offset":949013,"length":16631,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7bfc6ee044e67beb"},"/tutorial/request-form-models":{"offset":965644,"length":16023,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fd41494c7894d484"},"/tutorial/request-form-models/":{"offset":965644,"length":16023,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fd41494c7894d484"},"/tutorial/header-params":{"offset":981667,"length":16642,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"15d24814964fda44"},"/tutorial/header-params/":{"offset":981667,"length":16642,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"15d24814964fda44"},"/tutorial/request-forms-and-files":{"offset":998309,"length":15667,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b8ff5fdd3a9190e8"},"/tutorial/request-forms-and-files/":{"offset":998309,"length":15667,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b8ff5fdd3a9190e8"},"/tutorial/path-operation-configuration":{"offset":1013976,"length":17728,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"016770278dd57550"},"/tutorial/path-operation-configuration/":{"offset":1013976,"length":17728,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"016770278dd57550"},"/tutorial/response-status-code":{"offset":1031704,"length":16332,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d45eec9ea68cf14a"},"/tutorial/response-status-code/":{"offset":1031704,"length":16332,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d45eec9ea68cf14a"},"/tutorial/request-files":{"offset":1048036,"length":20177,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7441aa82b690f820"},"/tutorial/request-files/":{"offset":1048036,"length":20177,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7441aa82b690f820"},"/tutorial/extra-models":{"offset":1068213,"length":19375,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"19fcdd5724c13bef"},"/tutorial/extra-models/":{"offset":1068213,"length":19375,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"19fcdd5724c13bef"},"/tutorial/response-model":{"offset":1087588,"length":24559,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7c5f11ec0fda00ed"},"/tutorial/response-model/":{"offset":1087588,"length":24559,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7c5f11ec0fda00ed"},"/tutorial/schema-extra-example":{"offset":1112147,"length":21090,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"58334fecb4d85632"},"/tutorial/schema-extra-example/":{"offset":1112147,"length":21090,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"58334fecb4d85632"},"/tutorial/handling-errors":{"offset":1133237,"length":20572,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eb9c068b24bb69fd"},"/tutorial/handling-errors/":{"offset":1133237,"length":20572,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eb9c068b24bb69fd"},"/tutorial/body-updates":{"offset":1153809,"length":17662,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5c853aefab4e322f"},"/tutorial/body-updates/":{"offset":1153809,"length":17662,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5c853aefab4e322f"},"/tutorial/dependencies/sub-dependencies":{"offset":1171471,"length":17207,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8019b9c462c40783"},"/tutorial/dependencies/sub-dependencies/":{"offset":1171471,"length":17207,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8019b9c462c40783"},"/tutorial/dependencies/global-dependencies":{"offset":1188678,"length":15436,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dbf102d56406cae9"},"/tutorial/dependencies/global-dependencies/":{"offset":1188678,"length":15436,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dbf102d56406cae9"},"/tutorial/dependencies/classes-as-dependencies":{"offset":1204114,"length":19732,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e8dbe046a4b7d531"},"/tutorial/dependencies/classes-as-dependencies/":{"offset":1204114,"length":19732,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e8dbe046a4b7d531"},"/tutorial/dependencies":{"offset":1223846,"length":19539,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9e16600176108775"},"/tutorial/dependencies/":{"offset":1223846,"length":19539,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9e16600176108775"},"/tutorial/dependencies/dependencies-in-path-operation-decorators":{"offset":1243385,"length":17283,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"64dfbb238cbe61a7"},"/tutorial/dependencies/dependencies-in-path-operation-decorators/":{"offset":1243385,"length":17283,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"64dfbb238cbe61a7"},"/tutorial/security/get-current-user":{"offset":1260668,"length":18695,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"93bf702766850acc"},"/tutorial/security/get-current-user/":{"offset":1260668,"length":18695,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"93bf702766850acc"},"/tutorial/cors":{"offset":1279363,"length":16931,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"30485a85e9e02801"},"/tutorial/cors/":{"offset":1279363,"length":16931,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"30485a85e9e02801"},"/tutorial/security":{"offset":1296294,"length":15942,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1efe68ca2920f29c"},"/tutorial/security/":{"offset":1296294,"length":15942,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1efe68ca2920f29c"},"/tutorial/middleware":{"offset":1312236,"length":16489,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e66eda8d21f65fcf"},"/tutorial/middleware/":{"offset":1312236,"length":16489,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e66eda8d21f65fcf"},"/tutorial/security/first-steps":{"offset":1328725,"length":18871,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1aa286528b10283c"},"/tutorial/security/first-steps/":{"offset":1328725,"length":18871,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1aa286528b10283c"},"/tutorial/dependencies/dependencies-with-yield":{"offset":1347596,"length":22680,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c7fc08d39132172b"},"/tutorial/dependencies/dependencies-with-yield/":{"offset":1347596,"length":22680,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c7fc08d39132172b"},"/tutorial/security/simple-oauth2":{"offset":1370276,"length":25192,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c91b67c9dc1a87ab"},"/tutorial/security/simple-oauth2/":{"offset":1370276,"length":25192,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c91b67c9dc1a87ab"},"/tutorial/bigger-applications":{"offset":1395468,"length":25685,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d2c07044aadb8632"},"/tutorial/bigger-applications/":{"offset":1395468,"length":25685,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d2c07044aadb8632"},"/tutorial/security/oauth2-jwt":{"offset":1421153,"length":30021,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bc8c551b6713d329"},"/tutorial/security/oauth2-jwt/":{"offset":1421153,"length":30021,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bc8c551b6713d329"},"/tutorial/sql-databases":{"offset":1451174,"length":47943,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1abd2772364c6450"},"/tutorial/sql-databases/":{"offset":1451174,"length":47943,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1abd2772364c6450"},"/tutorial/stream-json-lines":{"offset":1499117,"length":18235,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7972176b4b6d9e40"},"/tutorial/stream-json-lines/":{"offset":1499117,"length":18235,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7972176b4b6d9e40"},"/advanced":{"offset":1517352,"length":14201,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2dc7f6d8564de8fb"},"/advanced/":{"offset":1517352,"length":14201,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2dc7f6d8564de8fb"},"/tutorial/metadata":{"offset":1531553,"length":18228,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5f3206001730aa82"},"/tutorial/metadata/":{"offset":1531553,"length":18228,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5f3206001730aa82"},"/tutorial/server-sent-events":{"offset":1549781,"length":19884,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f2000490ee27d7e1"},"/tutorial/server-sent-events/":{"offset":1549781,"length":19884,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f2000490ee27d7e1"},"/tutorial/background-tasks":{"offset":1569665,"length":17604,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"50e40166c2c760b0"},"/tutorial/background-tasks/":{"offset":1569665,"length":17604,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"50e40166c2c760b0"},"/tutorial/frontend":{"offset":1587269,"length":17469,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"24d315fa6e424ad0"},"/tutorial/frontend/":{"offset":1587269,"length":17469,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"24d315fa6e424ad0"},"/tutorial/static-files":{"offset":1604738,"length":15333,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3028b75622e54a42"},"/tutorial/static-files/":{"offset":1604738,"length":15333,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3028b75622e54a42"},"/advanced/additional-status-codes":{"offset":1620071,"length":15999,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fe7496af6032417f"},"/advanced/additional-status-codes/":{"offset":1620071,"length":15999,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fe7496af6032417f"},"/advanced/response-cookies":{"offset":1636070,"length":15634,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9dfca6976f7ffd8b"},"/advanced/response-cookies/":{"offset":1636070,"length":15634,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9dfca6976f7ffd8b"},"/tutorial/testing":{"offset":1651704,"length":19739,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f70ce9512331dce0"},"/tutorial/testing/":{"offset":1651704,"length":19739,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f70ce9512331dce0"},"/advanced/custom-response":{"offset":1671443,"length":21514,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e22a0407f1ba446f"},"/advanced/custom-response/":{"offset":1671443,"length":21514,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e22a0407f1ba446f"},"/advanced/response-directly":{"offset":1692957,"length":16937,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d80b3b0e1e6c6d04"},"/advanced/response-directly/":{"offset":1692957,"length":16937,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d80b3b0e1e6c6d04"},"/advanced/additional-responses":{"offset":1709894,"length":19002,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5abfe0626a4d8822"},"/advanced/additional-responses/":{"offset":1709894,"length":19002,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5abfe0626a4d8822"},"/advanced/path-operation-advanced-configuration":{"offset":1728896,"length":19437,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0cc169b9481aca05"},"/advanced/path-operation-advanced-configuration/":{"offset":1728896,"length":19437,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0cc169b9481aca05"},"/tutorial/debugging":{"offset":1748333,"length":15800,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a6cf58259779b4a4"},"/tutorial/debugging/":{"offset":1748333,"length":15800,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a6cf58259779b4a4"},"/advanced/stream-data":{"offset":1764133,"length":23097,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b13b923ed6687bc4"},"/advanced/stream-data/":{"offset":1764133,"length":23097,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b13b923ed6687bc4"},"/advanced/response-headers":{"offset":1787230,"length":15590,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a59177f69847dbc3"},"/advanced/response-headers/":{"offset":1787230,"length":15590,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a59177f69847dbc3"},"/advanced/response-change-status-code":{"offset":1802820,"length":15235,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"16d8a9a9184dcbd7"},"/advanced/response-change-status-code/":{"offset":1802820,"length":15235,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"16d8a9a9184dcbd7"},"/advanced/security":{"offset":1818055,"length":14151,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c6129d71b664cdfb"},"/advanced/security/":{"offset":1818055,"length":14151,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c6129d71b664cdfb"},"/advanced/middleware":{"offset":1832206,"length":16418,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"24ef88c18696dfa6"},"/advanced/middleware/":{"offset":1832206,"length":16418,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"24ef88c18696dfa6"},"/advanced/sub-applications":{"offset":1848624,"length":15864,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dac9afceaf66880a"},"/advanced/sub-applications/":{"offset":1848624,"length":15864,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dac9afceaf66880a"},"/advanced/using-request-directly":{"offset":1864488,"length":15354,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"109180c518768cbe"},"/advanced/using-request-directly/":{"offset":1864488,"length":15354,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"109180c518768cbe"},"/advanced/dataclasses":{"offset":1879842,"length":17043,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2d4a266c1b4810be"},"/advanced/dataclasses/":{"offset":1879842,"length":17043,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2d4a266c1b4810be"},"/advanced/testing-websockets":{"offset":1896885,"length":14643,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"50c5d9eee91994a2"},"/advanced/testing-websockets/":{"offset":1896885,"length":14643,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"50c5d9eee91994a2"},"/advanced/advanced-dependencies":{"offset":1911528,"length":21594,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c369a9e297561783"},"/advanced/advanced-dependencies/":{"offset":1911528,"length":21594,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c369a9e297561783"},"/advanced/events":{"offset":1933122,"length":18769,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bffca86c673209a0"},"/advanced/events/":{"offset":1933122,"length":18769,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bffca86c673209a0"},"/advanced/templates":{"offset":1951891,"length":16397,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"065e594eb2553f00"},"/advanced/templates/":{"offset":1951891,"length":16397,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"065e594eb2553f00"},"/advanced/opentelemetry":{"offset":1968288,"length":18212,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1caeb0ce30145dcd"},"/advanced/opentelemetry/":{"offset":1968288,"length":18212,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1caeb0ce30145dcd"},"/advanced/security/http-basic-auth":{"offset":1986500,"length":18534,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6dee00a98c2cdac9"},"/advanced/security/http-basic-auth/":{"offset":1986500,"length":18534,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6dee00a98c2cdac9"},"/advanced/websockets":{"offset":2005034,"length":20959,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0f5397ebb15fac43"},"/advanced/websockets/":{"offset":2005034,"length":20959,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0f5397ebb15fac43"},"/advanced/behind-a-proxy":{"offset":2025993,"length":21634,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"58cef8cefe67f96b"},"/advanced/behind-a-proxy/":{"offset":2025993,"length":21634,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"58cef8cefe67f96b"},"/advanced/security/oauth2-scopes":{"offset":2047627,"length":48027,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"16a89bf607a66fb6"},"/advanced/security/oauth2-scopes/":{"offset":2047627,"length":48027,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"16a89bf607a66fb6"},"/advanced/testing-events":{"offset":2095654,"length":15170,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0c1a38d85596e4f7"},"/advanced/testing-events/":{"offset":2095654,"length":15170,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0c1a38d85596e4f7"},"/advanced/advanced-python-types":{"offset":2110824,"length":15172,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b86750aae820ea57"},"/advanced/advanced-python-types/":{"offset":2110824,"length":15172,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b86750aae820ea57"},"/advanced/json-base64-bytes":{"offset":2125996,"length":16803,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1c4eb9e5796947d9"},"/advanced/json-base64-bytes/":{"offset":2125996,"length":16803,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1c4eb9e5796947d9"},"/advanced/openapi-webhooks":{"offset":2142799,"length":15963,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ef0bb429e19791c7"},"/advanced/openapi-webhooks/":{"offset":2142799,"length":15963,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ef0bb429e19791c7"},"/fastapi-cli":{"offset":2158762,"length":16690,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b4b7821513ea1078"},"/fastapi-cli/":{"offset":2158762,"length":16690,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b4b7821513ea1078"},"/advanced/testing-dependencies":{"offset":2175452,"length":16447,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"343097f49e2a7cc2"},"/advanced/testing-dependencies/":{"offset":2175452,"length":16447,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"343097f49e2a7cc2"},"/editor-support":{"offset":2191899,"length":15037,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8a88f265d980b2ca"},"/editor-support/":{"offset":2191899,"length":15037,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8a88f265d980b2ca"},"/advanced/async-tests":{"offset":2206936,"length":16566,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"43d0b018c3387339"},"/advanced/async-tests/":{"offset":2206936,"length":16566,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"43d0b018c3387339"},"/advanced/wsgi":{"offset":2223502,"length":15208,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2de54ddfc2fb0626"},"/advanced/wsgi/":{"offset":2223502,"length":15208,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2de54ddfc2fb0626"},"/deployment/versions":{"offset":2238710,"length":15496,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5a621d3d5b843437"},"/deployment/versions/":{"offset":2238710,"length":15496,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5a621d3d5b843437"},"/deployment":{"offset":2254206,"length":14554,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e220dd1ad52e67ca"},"/deployment/":{"offset":2254206,"length":14554,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e220dd1ad52e67ca"},"/advanced/strict-content-type":{"offset":2268760,"length":15858,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"aa6255c3962f7e5b"},"/advanced/strict-content-type/":{"offset":2268760,"length":15858,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"aa6255c3962f7e5b"},"/advanced/openapi-callbacks":{"offset":2284618,"length":19103,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"500ec7ece132c8ef"},"/advanced/openapi-callbacks/":{"offset":2284618,"length":19103,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"500ec7ece132c8ef"},"/advanced/settings":{"offset":2303721,"length":21666,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"051c89cacb3ddab9"},"/advanced/settings/":{"offset":2303721,"length":21666,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"051c89cacb3ddab9"},"/deployment/fastapicloud":{"offset":2325387,"length":14790,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"95de0869c3834e3e"},"/deployment/fastapicloud/":{"offset":2325387,"length":14790,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"95de0869c3834e3e"},"/advanced/generate-clients":{"offset":2340177,"length":20210,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e16212544dcf6868"},"/advanced/generate-clients/":{"offset":2340177,"length":20210,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e16212544dcf6868"},"/how-to/configure-swagger-ui":{"offset":2360387,"length":21219,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"db50f890ea25a12e"},"/how-to/configure-swagger-ui/":{"offset":2360387,"length":21219,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"db50f890ea25a12e"},"/how-to":{"offset":2381606,"length":14081,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8f5211a17d3267c7"},"/how-to/":{"offset":2381606,"length":14081,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8f5211a17d3267c7"},"/deployment/cloud":{"offset":2395687,"length":14422,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fbf2ea3e365fb497"},"/deployment/cloud/":{"offset":2395687,"length":14422,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fbf2ea3e365fb497"},"/deployment/server-workers":{"offset":2410109,"length":16541,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a9630703fd141568"},"/deployment/server-workers/":{"offset":2410109,"length":16541,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a9630703fd141568"},"/how-to/general":{"offset":2426650,"length":14887,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2dfe2dfa05351d3f"},"/how-to/general/":{"offset":2426650,"length":14887,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2dfe2dfa05351d3f"},"/deployment/manually":{"offset":2441537,"length":16856,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"79df1d849b3b5a7a"},"/deployment/manually/":{"offset":2441537,"length":16856,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"79df1d849b3b5a7a"},"/how-to/migrate-from-pydantic-v1-to-pydantic-v2":{"offset":2458393,"length":17113,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d17a2be3336447cc"},"/how-to/migrate-from-pydantic-v1-to-pydantic-v2/":{"offset":2458393,"length":17113,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d17a2be3336447cc"},"/how-to/graphql":{"offset":2475506,"length":15664,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f9064d1657f2d21a"},"/how-to/graphql/":{"offset":2475506,"length":15664,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f9064d1657f2d21a"},"/deployment/https":{"offset":2491170,"length":19390,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"810c0321c6d34ac0"},"/deployment/https/":{"offset":2491170,"length":19390,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"810c0321c6d34ac0"},"/how-to/conditional-openapi":{"offset":2510560,"length":15585,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ca5b6fb285981de6"},"/how-to/conditional-openapi/":{"offset":2510560,"length":15585,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ca5b6fb285981de6"},"/how-to/separate-openapi-schemas":{"offset":2526145,"length":17104,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f6253e7afe4e6d44"},"/how-to/separate-openapi-schemas/":{"offset":2526145,"length":17104,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f6253e7afe4e6d44"},"/how-to/custom-docs-ui-assets":{"offset":2543249,"length":19814,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7a6380fe8047ef2c"},"/how-to/custom-docs-ui-assets/":{"offset":2543249,"length":19814,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7a6380fe8047ef2c"},"/how-to/extending-openapi":{"offset":2563063,"length":16977,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ca01986d1b9343cf"},"/how-to/extending-openapi/":{"offset":2563063,"length":16977,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ca01986d1b9343cf"},"/how-to/custom-request-and-route":{"offset":2580040,"length":19362,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"41b4664a9c81a40c"},"/how-to/custom-request-and-route/":{"offset":2580040,"length":19362,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"41b4664a9c81a40c"},"/deployment/concepts":{"offset":2599402,"length":21654,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ef5aba07baf5442b"},"/deployment/concepts/":{"offset":2599402,"length":21654,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ef5aba07baf5442b"},"/deployment/docker":{"offset":2621056,"length":25858,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"db6773ca11b00316"},"/deployment/docker/":{"offset":2621056,"length":25858,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"db6773ca11b00316"},"/how-to/testing-database":{"offset":2646914,"length":13916,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2c9522e5e5a20ff8"},"/how-to/testing-database/":{"offset":2646914,"length":13916,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2c9522e5e5a20ff8"},"/reference/request":{"offset":2660830,"length":18153,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7d3160247cbd9f8a"},"/reference/request/":{"offset":2660830,"length":18153,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7d3160247cbd9f8a"},"/reference/parameters":{"offset":2678983,"length":62409,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"678b1aa0803234d5"},"/reference/parameters/":{"offset":2678983,"length":62409,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"678b1aa0803234d5"},"/reference/dependencies":{"offset":2741392,"length":18956,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f1e7af09216953fc"},"/reference/dependencies/":{"offset":2741392,"length":18956,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f1e7af09216953fc"},"/reference/uploadfile":{"offset":2760348,"length":17189,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8087bf00e06fc65b"},"/reference/uploadfile/":{"offset":2760348,"length":17189,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8087bf00e06fc65b"},"/reference/apirouter":{"offset":2777537,"length":102627,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"61b1ebc544ce75ba"},"/reference/apirouter/":{"offset":2777537,"length":102627,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"61b1ebc544ce75ba"},"/reference/exceptions":{"offset":2880164,"length":17406,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d2e7c83626bf65a7"},"/reference/exceptions/":{"offset":2880164,"length":17406,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d2e7c83626bf65a7"},"/reference/background":{"offset":2897570,"length":16294,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fdf44a4d5e6ccf9e"},"/reference/background/":{"offset":2897570,"length":16294,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fdf44a4d5e6ccf9e"},"/reference/status":{"offset":2913864,"length":20825,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"592830fe5ec6f749"},"/reference/status/":{"offset":2913864,"length":20825,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"592830fe5ec6f749"},"/reference/fastapi":{"offset":2934689,"length":120341,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1bc1d41bca86ce4c"},"/reference/fastapi/":{"offset":2934689,"length":120341,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1bc1d41bca86ce4c"},"/how-to/authentication-error-status-code":{"offset":3055030,"length":14937,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"49c51dd8e4386e0a"},"/how-to/authentication-error-status-code/":{"offset":3055030,"length":14937,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"49c51dd8e4386e0a"},"/reference/websockets":{"offset":3069967,"length":20309,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c99296ea72ab3dcf"},"/reference/websockets/":{"offset":3069967,"length":20309,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c99296ea72ab3dcf"},"/reference/responses":{"offset":3090276,"length":44484,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1c4f362d76742cc0"},"/reference/responses/":{"offset":3090276,"length":44484,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1c4f362d76742cc0"},"/reference/httpconnection":{"offset":3134760,"length":15753,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0ca1cb5c684d2561"},"/reference/httpconnection/":{"offset":3134760,"length":15753,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0ca1cb5c684d2561"},"/reference/sse":{"offset":3150513,"length":20404,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"83b264257f704b8c"},"/reference/sse/":{"offset":3150513,"length":20404,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"83b264257f704b8c"},"/reference/response":{"offset":3170917,"length":17887,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"343654de8b5c06b2"},"/reference/response/":{"offset":3170917,"length":17887,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"343654de8b5c06b2"},"/reference/middleware":{"offset":3188804,"length":20584,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fbf4a95b08727edd"},"/reference/middleware/":{"offset":3188804,"length":20584,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fbf4a95b08727edd"},"/reference/openapi":{"offset":3209388,"length":13777,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ef636d7e40037456"},"/reference/openapi/":{"offset":3209388,"length":13777,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ef636d7e40037456"},"/reference/openapi/docs":{"offset":3223165,"length":21676,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a2a56f6fe8fc682e"},"/reference/openapi/docs/":{"offset":3223165,"length":21676,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a2a56f6fe8fc682e"},"/reference/openapi/models":{"offset":3244841,"length":29750,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5a20603b6c5b90e5"},"/reference/openapi/models/":{"offset":3244841,"length":29750,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5a20603b6c5b90e5"},"/reference/security":{"offset":3274591,"length":38772,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ac2ac84a107141df"},"/reference/security/":{"offset":3274591,"length":38772,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ac2ac84a107141df"},"/css/termynal.css":{"offset":3313363,"length":894,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"bfd3c2008d5f8858"},"/assets/stylesheets/classic/palette.c7ab7c71.min.css":{"offset":3314257,"length":2026,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0f12c796723ff8bd"},"/img/sponsors/propelauth-banner.png":{"offset":3316283,"length":12821,"mime":"image/png","gzipped":true,"hash":"0cdd8c297a9aeef6"},"/css/custom.css":{"offset":3329104,"length":3524,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"4cb840391491ee62"},"/img/sponsors/serpapi-banner.png":{"offset":3332628,"length":6481,"mime":"image/png","gzipped":true,"hash":"d2a96e5f5e936c14"},"/img/sponsors/coderabbit-banner.png":{"offset":3339109,"length":9447,"mime":"image/png","gzipped":true,"hash":"6c5ce56936842040"},"/img/sponsors/subtotal-banner.svg":{"offset":3348556,"length":5820,"mime":"image/svg+xml","gzipped":true,"hash":"09d1ed65005fb1ab"},"/img/favicon.png":{"offset":3354376,"length":5066,"mime":"image/png","gzipped":true,"hash":"c9d915d7dd4229e3"},"/img/sponsors/railway-banner.png":{"offset":3359442,"length":11619,"mime":"image/png","gzipped":true,"hash":"ead7a07163582a9b"},"/assets/stylesheets/classic/main.1470d0a1.min.css":{"offset":3371061,"length":24347,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0c4daab95e80a613"},"/img/sponsors/blockbee-banner.png":{"offset":3395408,"length":11346,"mime":"image/png","gzipped":true,"hash":"a99e22b72035e732"},"/__docx_assets/0dcd10983eba79.bin":{"offset":3406754,"length":2378,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"a3281ae6690790d1"},"/img/icon-white.svg":{"offset":3409132,"length":640,"mime":"image/svg+xml","gzipped":true,"hash":"90fa5bbf3884e09a"},"/img/sponsors/greptile-banner.png":{"offset":3409772,"length":7195,"mime":"image/png","gzipped":true,"hash":"192d16e1d53be748"},"/__docx_assets/edba15843e35fd.svg":{"offset":3416967,"length":553,"mime":"image/svg+xml","gzipped":true,"hash":"c882c9f7fed9fae0"},"/__docx_assets/30ba564c563cda.bin":{"offset":3417520,"length":546,"mime":"image/svg+xml","gzipped":true,"hash":"014bd688551acbbe"},"/img/sponsors/fastapicloud.png":{"offset":3418066,"length":15506,"mime":"image/png","gzipped":true,"hash":"65a6f09c891fe495"},"/img/logo-margin/logo-teal.png":{"offset":3433572,"length":17893,"mime":"image/png","gzipped":true,"hash":"33d6c571584da464"},"/__docx_assets/899b4d5a356f2c.svg":{"offset":3451465,"length":893,"mime":"image/svg+xml","gzipped":true,"hash":"977d1a9e49242d43"},"/__docx_assets/57c675532b1c21.svg":{"offset":3452358,"length":963,"mime":"image/svg+xml","gzipped":true,"hash":"28290fec044c7fb1"},"/img/sponsors/bairesdev.svg":{"offset":3453321,"length":1488,"mime":"image/svg+xml","gzipped":true,"hash":"c245c8057c8088f2"},"/img/logos/uber.svg":{"offset":3454809,"length":1784,"mime":"image/svg+xml","gzipped":true,"hash":"b6ba97f01dbabb7f"},"/img/sponsors/subtotal.svg":{"offset":3456593,"length":2013,"mime":"image/svg+xml","gzipped":true,"hash":"6bf1bcd2b93df232"},"/img/logos/microsoft.svg":{"offset":3458606,"length":1335,"mime":"image/svg+xml","gzipped":true,"hash":"cfe01a80e12163a5"},"/img/logos/netflix.svg":{"offset":3459941,"length":625,"mime":"image/svg+xml","gzipped":true,"hash":"08c47980cda65132"},"/img/sponsors/greptile.png":{"offset":3460566,"length":7174,"mime":"image/png","gzipped":true,"hash":"8031eaf352b5b027"},"/img/sponsors/svix.svg":{"offset":3467740,"length":5937,"mime":"image/svg+xml","gzipped":true,"hash":"f90b3a5612b19cad"},"/img/sponsors/tutorcruncher.png":{"offset":3473677,"length":5802,"mime":"image/png","gzipped":true,"hash":"c0a9da81ca1644cf"},"/img/sponsors/serpapi.png":{"offset":3479479,"length":10703,"mime":"image/png","gzipped":true,"hash":"9ee4aeeed5c0eace"},"/img/sponsors/databento.svg":{"offset":3490182,"length":67397,"mime":"image/svg+xml","gzipped":true,"hash":"e5b5a3c026084948"},"/img/sponsors/dribia.png":{"offset":3557579,"length":19181,"mime":"image/png","gzipped":true,"hash":"9dc9f85422faefc1"},"/img/sponsors/coderabbit.png":{"offset":3576760,"length":21059,"mime":"image/png","gzipped":true,"hash":"331db46520baf2ce"},"/img/sponsors/blockbee.png":{"offset":3597819,"length":12964,"mime":"image/png","gzipped":true,"hash":"e5bf69df0a0a7a59"},"/img/sponsors/railway.png":{"offset":3610783,"length":26225,"mime":"image/png","gzipped":true,"hash":"69fae9b0bfcbbdda"},"/img/sponsors/propelauth.png":{"offset":3637008,"length":28165,"mime":"image/png","gzipped":true,"hash":"bc2620e70193b48c"},"/img/logos/cisco.svg":{"offset":3665173,"length":1062,"mime":"image/svg+xml","gzipped":true,"hash":"f9f299456764c326"},"/__docx_assets/d723b6b3366b69.svg":{"offset":3666235,"length":2449,"mime":"image/svg+xml","gzipped":true,"hash":"24132df483fb699f"},"/img/index/index-01-swagger-ui-simple.png":{"offset":3668684,"length":69198,"mime":"image/png","gzipped":true,"hash":"fb6c71ef23070d99"},"/img/index/index-02-redoc-simple.png":{"offset":3737882,"length":61626,"mime":"image/png","gzipped":true,"hash":"944ee78d4a3bb093"},"/img/fastapi-documentary.jpg":{"offset":3799508,"length":99407,"mime":"image/jpeg","gzipped":true,"hash":"feb7297ee3c76a59"},"/ru/assets/stylesheets/classic/palette.c7ab7c71.min.css":{"offset":3314257,"length":2026,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0f12c796723ff8bd"},"/es/assets/stylesheets/classic/palette.c7ab7c71.min.css":{"offset":3314257,"length":2026,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0f12c796723ff8bd"},"/ja/assets/stylesheets/classic/palette.c7ab7c71.min.css":{"offset":3314257,"length":2026,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0f12c796723ff8bd"},"/ko/assets/stylesheets/classic/palette.c7ab7c71.min.css":{"offset":3314257,"length":2026,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0f12c796723ff8bd"},"/tr/assets/stylesheets/classic/palette.c7ab7c71.min.css":{"offset":3314257,"length":2026,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0f12c796723ff8bd"},"/fr/assets/stylesheets/classic/palette.c7ab7c71.min.css":{"offset":3314257,"length":2026,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0f12c796723ff8bd"},"/pt/assets/stylesheets/classic/palette.c7ab7c71.min.css":{"offset":3314257,"length":2026,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0f12c796723ff8bd"},"/img/index/index-04-swagger-03.png":{"offset":3898915,"length":62892,"mime":"image/png","gzipped":true,"hash":"d563e21bf1fb18d4"},"/es/assets/stylesheets/classic/main.1470d0a1.min.css":{"offset":3371061,"length":24347,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0c4daab95e80a613"},"/ru/assets/stylesheets/classic/main.1470d0a1.min.css":{"offset":3371061,"length":24347,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0c4daab95e80a613"},"/fr/assets/stylesheets/classic/main.1470d0a1.min.css":{"offset":3371061,"length":24347,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0c4daab95e80a613"},"/img/index/index-06-redoc-02.png":{"offset":3961807,"length":72263,"mime":"image/png","gzipped":true,"hash":"bc1ce79d2fa4cf3a"},"/tr/assets/stylesheets/classic/main.1470d0a1.min.css":{"offset":3371061,"length":24347,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0c4daab95e80a613"},"/pt/assets/stylesheets/classic/main.1470d0a1.min.css":{"offset":3371061,"length":24347,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0c4daab95e80a613"},"/ko/assets/stylesheets/classic/main.1470d0a1.min.css":{"offset":3371061,"length":24347,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0c4daab95e80a613"},"/img/index/index-05-swagger-04.png":{"offset":4034070,"length":66639,"mime":"image/png","gzipped":true,"hash":"ff2e423e5d340347"},"/img/vscode-completion.png":{"offset":4100709,"length":59108,"mime":"image/png","gzipped":true,"hash":"004ea0a299af3406"},"/img/index/index-03-swagger-02.png":{"offset":4159817,"length":70139,"mime":"image/png","gzipped":true,"hash":"c9557c16cb906809"},"/img/pycharm-completion.png":{"offset":4229956,"length":48128,"mime":"image/png","gzipped":true,"hash":"a8156a61b6648553"},"/ja/assets/stylesheets/classic/main.1470d0a1.min.css":{"offset":3371061,"length":24347,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0c4daab95e80a613"},"/zh-hant/assets/stylesheets/classic/palette.c7ab7c71.min.css":{"offset":3314257,"length":2026,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0f12c796723ff8bd"},"/uk/assets/stylesheets/classic/palette.c7ab7c71.min.css":{"offset":3314257,"length":2026,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0f12c796723ff8bd"},"/de/assets/stylesheets/classic/palette.c7ab7c71.min.css":{"offset":3314257,"length":2026,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0f12c796723ff8bd"},"/zh/assets/stylesheets/classic/palette.c7ab7c71.min.css":{"offset":3314257,"length":2026,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0f12c796723ff8bd"},"/hi/assets/stylesheets/classic/palette.c7ab7c71.min.css":{"offset":3314257,"length":2026,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0f12c796723ff8bd"},"/img/python-types/image02.png":{"offset":4278084,"length":44181,"mime":"image/png","gzipped":true,"hash":"d523bdb8bd00f4fd"},"/img/python-types/image01.png":{"offset":4322265,"length":15970,"mime":"image/png","gzipped":true,"hash":"c146162b60f314fe"},"/img/python-types/image06.png":{"offset":4338235,"length":27649,"mime":"image/png","gzipped":true,"hash":"e6e87758cdbc33b2"},"/img/tutorial/query-param-models/image01.png":{"offset":4365884,"length":42171,"mime":"image/png","gzipped":true,"hash":"b11ae001e1b7ebe6"},"/img/tutorial/body/image03.png":{"offset":4408055,"length":60999,"mime":"image/png","gzipped":true,"hash":"d1bfb73741519055"},"/img/python-types/image04.png":{"offset":4469054,"length":16806,"mime":"image/png","gzipped":true,"hash":"8a878a152e63d88f"},"/zh/assets/stylesheets/classic/main.1470d0a1.min.css":{"offset":3371061,"length":24347,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0c4daab95e80a613"},"/uk/assets/stylesheets/classic/main.1470d0a1.min.css":{"offset":3371061,"length":24347,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0c4daab95e80a613"},"/img/python-types/image03.png":{"offset":4485860,"length":39184,"mime":"image/png","gzipped":true,"hash":"da5a576355cc518c"},"/img/python-types/image05.png":{"offset":4525044,"length":39540,"mime":"image/png","gzipped":true,"hash":"bec15018555b1a5a"},"/zh-hant/assets/stylesheets/classic/main.1470d0a1.min.css":{"offset":3371061,"length":24347,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0c4daab95e80a613"},"/hi/assets/stylesheets/classic/main.1470d0a1.min.css":{"offset":3371061,"length":24347,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0c4daab95e80a613"},"/de/assets/stylesheets/classic/main.1470d0a1.min.css":{"offset":3371061,"length":24347,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0c4daab95e80a613"},"/img/tutorial/body/image01.png":{"offset":4564584,"length":49646,"mime":"image/png","gzipped":true,"hash":"32dd9db371ee79d2"},"/img/tutorial/body/image02.png":{"offset":4614230,"length":74341,"mime":"image/png","gzipped":true,"hash":"b95ff47ae8f104c2"},"/img/tutorial/body-nested-models/image01.png":{"offset":4688571,"length":41131,"mime":"image/png","gzipped":true,"hash":"f9ff4f115a2d3611"},"/img/tutorial/path-params/image01.png":{"offset":4729702,"length":72534,"mime":"image/png","gzipped":true,"hash":"505a864a5ac9869a"},"/img/tutorial/body/image04.png":{"offset":4802236,"length":37655,"mime":"image/png","gzipped":true,"hash":"ba2147a5dbd55079"},"/img/tutorial/path-params/image02.png":{"offset":4839891,"length":58536,"mime":"image/png","gzipped":true,"hash":"3fa1059667e09445"},"/img/async/concurrent-burgers/concurrent-burgers-04.png":{"offset":4898427,"length":161357,"mime":"image/png","gzipped":true,"hash":"7a04755093d93108"},"/img/tutorial/body/image05.png":{"offset":5059784,"length":47796,"mime":"image/png","gzipped":true,"hash":"82a98cac770b0377"},"/img/tutorial/query-params-str-validations/image01.png":{"offset":5107580,"length":79707,"mime":"image/png","gzipped":true,"hash":"7dcb160774f988dc"},"/img/async/concurrent-burgers/concurrent-burgers-06.png":{"offset":5187287,"length":163016,"mime":"image/png","gzipped":true,"hash":"330de986c3117020"},"/img/tutorial/query-params-str-validations/image02.png":{"offset":5350303,"length":67373,"mime":"image/png","gzipped":true,"hash":"86d1cf202b872137"},"/img/async/parallel-burgers/parallel-burgers-02.png":{"offset":5417676,"length":201155,"mime":"image/png","gzipped":true,"hash":"fb3873e6878d2d8f"},"/img/async/concurrent-burgers/concurrent-burgers-05.png":{"offset":5618831,"length":157917,"mime":"image/png","gzipped":true,"hash":"9d567d2ecd6e8562"},"/img/async/parallel-burgers/parallel-burgers-03.png":{"offset":5776748,"length":166436,"mime":"image/png","gzipped":true,"hash":"bf491c0067660261"},"/img/async/concurrent-burgers/concurrent-burgers-01.png":{"offset":5943184,"length":201841,"mime":"image/png","gzipped":true,"hash":"17a6c8a17f967655"},"/img/async/parallel-burgers/parallel-burgers-05.png":{"offset":6145025,"length":182908,"mime":"image/png","gzipped":true,"hash":"cbf71cd03ba4aaad"},"/img/async/parallel-burgers/parallel-burgers-06.png":{"offset":6327933,"length":154633,"mime":"image/png","gzipped":true,"hash":"f57b990caedc9afb"},"/img/async/concurrent-burgers/concurrent-burgers-03.png":{"offset":6482566,"length":168518,"mime":"image/png","gzipped":true,"hash":"7d3b65d4ea9c1bbb"},"/img/async/parallel-burgers/parallel-burgers-01.png":{"offset":6651084,"length":222041,"mime":"image/png","gzipped":true,"hash":"2c06dee24f470956"},"/img/async/concurrent-burgers/concurrent-burgers-02.png":{"offset":6873125,"length":164843,"mime":"image/png","gzipped":true,"hash":"7c90da1744094763"},"/img/async/concurrent-burgers/concurrent-burgers-07.png":{"offset":7037968,"length":168031,"mime":"image/png","gzipped":true,"hash":"df97c5acb209ed89"},"/img/async/parallel-burgers/parallel-burgers-04.png":{"offset":7205999,"length":216657,"mime":"image/png","gzipped":true,"hash":"a242a97e691fa552"},"/img/tutorial/response-status-code/image01.png":{"offset":7422656,"length":69346,"mime":"image/png","gzipped":true,"hash":"9138b0ddf0bfaf40"},"/img/tutorial/header-param-models/image01.png":{"offset":7492002,"length":56221,"mime":"image/png","gzipped":true,"hash":"9806bee98f2aea39"},"/img/tutorial/path-operation-configuration/image04.png":{"offset":7548223,"length":34886,"mime":"image/png","gzipped":true,"hash":"53e9ddfda3ab30c6"},"/img/tutorial/request-form-models/image01.png":{"offset":7583109,"length":40821,"mime":"image/png","gzipped":true,"hash":"3ae222de9a5cf604"},"/img/tutorial/security/image01.png":{"offset":7623930,"length":49353,"mime":"image/png","gzipped":true,"hash":"40601c16b443085b"},"/img/tutorial/path-operation-configuration/image03.png":{"offset":7673283,"length":64614,"mime":"image/png","gzipped":true,"hash":"f7faf39ce367d5d9"},"/img/tutorial/path-operation-configuration/image05.png":{"offset":7737897,"length":67125,"mime":"image/png","gzipped":true,"hash":"4728ebbd294c9d27"},"/img/tutorial/dependencies/image01.png":{"offset":7805022,"length":71148,"mime":"image/png","gzipped":true,"hash":"b9e2676e5f3d9fcb"},"/img/tutorial/cookie-param-models/image01.png":{"offset":7876170,"length":41368,"mime":"image/png","gzipped":true,"hash":"08b09031d5529177"},"/img/tutorial/response-model/image01.png":{"offset":7917538,"length":68228,"mime":"image/png","gzipped":true,"hash":"63d32f28e2951a78"},"/img/tutorial/response-status-code/image02.png":{"offset":7985766,"length":28712,"mime":"image/png","gzipped":true,"hash":"9398fd622df33986"},"/img/tutorial/path-operation-configuration/image01.png":{"offset":8014478,"length":37715,"mime":"image/png","gzipped":true,"hash":"376f969f5474daaf"},"/img/tutorial/path-params/image03.png":{"offset":8052193,"length":107680,"mime":"image/png","gzipped":true,"hash":"90e0af439283b01b"},"/img/tutorial/response-model/image02.png":{"offset":8159873,"length":82057,"mime":"image/png","gzipped":true,"hash":"8477614833455014"},"/img/tutorial/body-fields/image01.png":{"offset":8241930,"length":73717,"mime":"image/png","gzipped":true,"hash":"6287bc70dd740560"},"/img/tutorial/dependencies/image02.png":{"offset":8315647,"length":63821,"mime":"image/png","gzipped":true,"hash":"48e1a54e30222585"},"/img/tutorial/security/image02.png":{"offset":8379468,"length":85329,"mime":"image/png","gzipped":true,"hash":"4236854971c7efc2"},"/img/tutorial/body-fields/image02.png":{"offset":8464797,"length":88749,"mime":"image/png","gzipped":true,"hash":"e5f13e6090087301"},"/img/tutorial/security/image03.png":{"offset":8553546,"length":86943,"mime":"image/png","gzipped":true,"hash":"9aa86eb4ff307774"},"/img/tutorial/path-operation-configuration/image02.png":{"offset":8640489,"length":81097,"mime":"image/png","gzipped":true,"hash":"fcc0acb35e5bd1c9"},"/img/tutorial/metadata/image02.png":{"offset":8721586,"length":44670,"mime":"image/png","gzipped":true,"hash":"806cc7c7dcac51ff"},"/img/tutorial/security/image07.png":{"offset":8766256,"length":55507,"mime":"image/png","gzipped":true,"hash":"20ad1eb05c4ef71a"},"/img/tutorial/security/image05.png":{"offset":8821763,"length":77294,"mime":"image/png","gzipped":true,"hash":"7920ed7b14751506"},"/img/tutorial/security/image08.png":{"offset":8899057,"length":83227,"mime":"image/png","gzipped":true,"hash":"96da48f38c8809bc"},"/img/tutorial/security/image06.png":{"offset":8982284,"length":85407,"mime":"image/png","gzipped":true,"hash":"bddc0be73dd48bd7"},"/img/tutorial/debugging/image01.png":{"offset":9067691,"length":162480,"mime":"image/png","gzipped":true,"hash":"4c5c4b82684f93eb"},"/img/tutorial/custom-response/image01.png":{"offset":9230171,"length":49144,"mime":"image/png","gzipped":true,"hash":"ba856aeda1184e45"},"/img/tutorial/bigger-applications/image01.png":{"offset":9279315,"length":69141,"mime":"image/png","gzipped":true,"hash":"6fe7abb2ccdd1f3a"},"/img/tutorial/sub-applications/image01.png":{"offset":9348456,"length":45558,"mime":"image/png","gzipped":true,"hash":"b1b6b0908dad10a9"},"/img/tutorial/security/image10.png":{"offset":9394014,"length":153925,"mime":"image/png","gzipped":true,"hash":"e6481fbb847a0625"},"/img/tutorial/sql-databases/image02.png":{"offset":9547939,"length":63549,"mime":"image/png","gzipped":true,"hash":"36b7c309a41de9ce"},"/img/tutorial/debugging/image02.png":{"offset":9611488,"length":95254,"mime":"image/png","gzipped":true,"hash":"2ff3d2330cd5099e"},"/img/tutorial/sql-databases/image01.png":{"offset":9706742,"length":65421,"mime":"image/png","gzipped":true,"hash":"746de70bb7fccea2"},"/img/tutorial/metadata/image01.png":{"offset":9772163,"length":80738,"mime":"image/png","gzipped":true,"hash":"4a2074a3210c03a2"},"/img/tutorial/path-operation-advanced-configuration/image01.png":{"offset":9852901,"length":63084,"mime":"image/png","gzipped":true,"hash":"ff920bd720796586"},"/img/tutorial/security/image09.png":{"offset":9915985,"length":104881,"mime":"image/png","gzipped":true,"hash":"7b0d20b2a92836e7"},"/img/tutorial/sub-applications/image02.png":{"offset":10020866,"length":48398,"mime":"image/png","gzipped":true,"hash":"44de265fb2346fa7"},"/img/tutorial/security/image04.png":{"offset":10069264,"length":79592,"mime":"image/png","gzipped":true,"hash":"afcddaa59300ba7d"},"/img/tutorial/additional-responses/image01.png":{"offset":10148856,"length":67282,"mime":"image/png","gzipped":true,"hash":"d0d9d008c1f42b4c"},"/img/tutorial/generate-clients/image05.png":{"offset":10216138,"length":30033,"mime":"image/png","gzipped":true,"hash":"022a6714f860cf4e"},"/img/tutorial/security/image11.png":{"offset":10246171,"length":72371,"mime":"image/png","gzipped":true,"hash":"b1358b3a6c2f6dfc"},"/img/tutorial/websockets/image05.png":{"offset":10318542,"length":51059,"mime":"image/png","gzipped":true,"hash":"ac36545ee80e5e62"},"/img/tutorial/websockets/image04.png":{"offset":10369601,"length":27478,"mime":"image/png","gzipped":true,"hash":"7e084e12ee4a469c"},"/img/tutorial/security/image12.png":{"offset":10397079,"length":64962,"mime":"image/png","gzipped":true,"hash":"073a23faa3218dfc"},"/img/tutorial/websockets/image03.png":{"offset":10462041,"length":18815,"mime":"image/png","gzipped":true,"hash":"e8b479d9d4e5a8e7"},"/img/tutorial/behind-a-proxy/image02.png":{"offset":10480856,"length":57195,"mime":"image/png","gzipped":true,"hash":"93c20b3e3e411ad8"},"/img/tutorial/generate-clients/image02.png":{"offset":10538051,"length":57259,"mime":"image/png","gzipped":true,"hash":"3875a45003d30d22"},"/img/tutorial/behind-a-proxy/image01.png":{"offset":10595310,"length":26217,"mime":"image/png","gzipped":true,"hash":"78d4fcd7d3603abe"},"/img/tutorial/generate-clients/image04.png":{"offset":10621527,"length":51888,"mime":"image/png","gzipped":true,"hash":"6548613cedff79a0"},"/img/tutorial/json-base64-bytes/image01.png":{"offset":10673415,"length":67067,"mime":"image/png","gzipped":true,"hash":"e9d4938a081f5af7"},"/img/tutorial/dataclasses/image01.png":{"offset":10740482,"length":67558,"mime":"image/png","gzipped":true,"hash":"d93716f166137835"},"/img/tutorial/websockets/image01.png":{"offset":10808040,"length":14732,"mime":"image/png","gzipped":true,"hash":"567858bed487e5ba"},"/img/tutorial/behind-a-proxy/image03.png":{"offset":10822772,"length":69179,"mime":"image/png","gzipped":true,"hash":"80bf6b98769f7a81"},"/img/tutorial/generate-clients/image01.png":{"offset":10891951,"length":72947,"mime":"image/png","gzipped":true,"hash":"24ca8a3ee70d71ed"},"/img/tutorial/generate-clients/image03.png":{"offset":10964898,"length":58750,"mime":"image/png","gzipped":true,"hash":"a10013dffb9cb3c7"},"/img/tutorial/opentelemetry/image01.png":{"offset":11023648,"length":205056,"mime":"image/png","gzipped":true,"hash":"47931aa19555390b"},"/img/tutorial/openapi-webhooks/image01.png":{"offset":11228704,"length":82042,"mime":"image/png","gzipped":true,"hash":"c9f43f92fe8f8861"},"/img/tutorial/websockets/image02.png":{"offset":11310746,"length":15978,"mime":"image/png","gzipped":true,"hash":"f9fcf9b30049071a"},"/img/tutorial/openapi-callbacks/image01.png":{"offset":11326724,"length":93626,"mime":"image/png","gzipped":true,"hash":"096c7b44a2ff8806"},"/img/deployment/https/https02.drawio.svg":{"offset":11420350,"length":4120,"mime":"image/svg+xml","gzipped":true,"hash":"fd7005edea1941b5"},"/img/tutorial/extending-openapi/image04.png":{"offset":11424470,"length":10544,"mime":"image/png","gzipped":true,"hash":"f77a950fd723e09b"},"/img/tutorial/extending-openapi/image03.png":{"offset":11435014,"length":10457,"mime":"image/png","gzipped":true,"hash":"de348234bbe2c6a7"},"/img/tutorial/generate-clients/image08.png":{"offset":11445471,"length":28074,"mime":"image/png","gzipped":true,"hash":"2b90f1fec6f10ff8"},"/img/deployment/https/https01.drawio.svg":{"offset":11473545,"length":3287,"mime":"image/svg+xml","gzipped":true,"hash":"4ab196f0e2003abc"},"/img/tutorial/extending-openapi/image02.png":{"offset":11476832,"length":10639,"mime":"image/png","gzipped":true,"hash":"3b032266503e41f3"},"/img/deployment/https/https04.drawio.svg":{"offset":11487471,"length":5246,"mime":"image/svg+xml","gzipped":true,"hash":"9412b0614fc4b532"},"/img/deployment/https/https08.drawio.svg":{"offset":11492717,"length":6469,"mime":"image/svg+xml","gzipped":true,"hash":"14a5c79ad451df24"},"/img/tutorial/generate-clients/image07.png":{"offset":11499186,"length":45966,"mime":"image/png","gzipped":true,"hash":"7a27d35941d84a22"},"/img/tutorial/separate-openapi-schemas/image04.png":{"offset":11545152,"length":52219,"mime":"image/png","gzipped":true,"hash":"a82a1cd3f6d6cd07"},"/img/deployment/https/https07.drawio.svg":{"offset":11597371,"length":6123,"mime":"image/svg+xml","gzipped":true,"hash":"9d4054855783a254"},"/img/tutorial/separate-openapi-schemas/image05.png":{"offset":11603494,"length":40758,"mime":"image/png","gzipped":true,"hash":"e0f8eb5cb2ebf79f"},"/img/tutorial/generate-clients/image06.png":{"offset":11644252,"length":40550,"mime":"image/png","gzipped":true,"hash":"d344db1c1a28f2df"},"/img/tutorial/separate-openapi-schemas/image01.png":{"offset":11684802,"length":74738,"mime":"image/png","gzipped":true,"hash":"48f5c53510f36e2b"},"/img/tutorial/separate-openapi-schemas/image02.png":{"offset":11759540,"length":82449,"mime":"image/png","gzipped":true,"hash":"c043b4030030afdd"},"/img/tutorial/separate-openapi-schemas/image03.png":{"offset":11841989,"length":78173,"mime":"image/png","gzipped":true,"hash":"fdfafd05395b5604"},"/img/deployment/concepts/process-ram.drawio.svg":{"offset":11920162,"length":3685,"mime":"image/svg+xml","gzipped":true,"hash":"fe21cb8b76ca489d"},"/img/tutorial/extending-openapi/image01.png":{"offset":11923847,"length":58471,"mime":"image/png","gzipped":true,"hash":"05c81e068d017e37"},"/img/deployment/concepts/image01.png":{"offset":11982318,"length":116881,"mime":"image/png","gzipped":true,"hash":"2eedbfd452e1ddc1"},"/__docx_assets/c1122a3d48655c.bin":{"offset":12099199,"length":2119,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"17d12ef0e18d40cc"},"/__docx_assets/c533d38667ad6c.woff2":{"offset":12101318,"length":4475,"mime":"font/woff2","gzipped":true,"hash":"33b6b0825b60f6aa"},"/__docx_assets/b1014ee1bc15a5.woff2":{"offset":12105793,"length":4371,"mime":"font/woff2","gzipped":true,"hash":"97d23aacba8538f8"},"/__docx_assets/571f59902ed298.css":{"offset":12110164,"length":344,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"6eb91995616e762b"},"/__docx_assets/0437a9930e5e5b.woff2":{"offset":12110508,"length":15367,"mime":"font/woff2","gzipped":true,"hash":"8330c8323ae59263"},"/__docx_assets/ce075ab86dc1c6.woff2":{"offset":12125875,"length":14363,"mime":"font/woff2","gzipped":true,"hash":"34267daad9ca4308"},"/__docx_assets/dc677a748c1249.woff2":{"offset":12140238,"length":18808,"mime":"font/woff2","gzipped":true,"hash":"e52d533987af6a58"},"/__docx_assets/f8cea1c91bebd1.woff2":{"offset":12159046,"length":25492,"mime":"font/woff2","gzipped":true,"hash":"adf54e89c97863c8"},"/__docx_assets/b30e90ae6d7538.woff2":{"offset":12184538,"length":22468,"mime":"font/woff2","gzipped":true,"hash":"1fec27310e62d73f"},"/__docx_assets/cfdf6f20d497ac.woff2":{"offset":12207006,"length":17652,"mime":"font/woff2","gzipped":true,"hash":"43aa4275b4f69bcd"},"/__docx_assets/f24f53f8e279cd.woff2":{"offset":12224658,"length":20584,"mime":"font/woff2","gzipped":true,"hash":"8ca1da7e2c06f899"},"/__docx_assets/000fec62282349.woff2":{"offset":12245242,"length":23692,"mime":"font/woff2","gzipped":true,"hash":"7b6837d8de6e9b91"},"/__docx_assets/63a1866c47027d.woff2":{"offset":12268934,"length":31848,"mime":"font/woff2","gzipped":true,"hash":"70354e765fcc1440"},"/__docx_assets/dfd8b7aab6b3ac.woff2":{"offset":12300782,"length":40513,"mime":"font/woff2","gzipped":true,"hash":"b9ff160aaf2bcbb7"},"/__docx_assets/45ca9602a5c241.woff2":{"offset":12341295,"length":45217,"mime":"font/woff2","gzipped":true,"hash":"2c55a2e33438bcde"},"/__docx_assets/4e54fc361061b4.woff2":{"offset":12386512,"length":29420,"mime":"font/woff2","gzipped":true,"hash":"8808b82eab76c190"},"/__docx_assets/78e4260aaa9498.woff2":{"offset":12415932,"length":36685,"mime":"font/woff2","gzipped":true,"hash":"f910e2ba6c13e5a5"},"/__docx_assets/890de452eac592.woff2":{"offset":12452617,"length":43169,"mime":"font/woff2","gzipped":true,"hash":"3167f5e02ffa5b3e"},"/__docx_assets/cf69d4bd86681a.woff2":{"offset":12495786,"length":41381,"mime":"font/woff2","gzipped":true,"hash":"8533109c497ddebb"},"/__docx_assets/c97752dd1e6482.woff2":{"offset":12537167,"length":47241,"mime":"font/woff2","gzipped":true,"hash":"4e7b9b99d18fa25b"},"/__docx_assets/a7526db2115543.woff2":{"offset":12584408,"length":10331,"mime":"font/woff2","gzipped":true,"hash":"82dae4795d411b00"},"/__docx_assets/c8000fdd0154f8.woff2":{"offset":12594739,"length":10855,"mime":"font/woff2","gzipped":true,"hash":"411ff52b042916d7"},"/__docx_assets/b88dc42e694acf.woff2":{"offset":12605594,"length":14067,"mime":"font/woff2","gzipped":true,"hash":"f395d61767f41948"},"/__docx_assets/eb3fc6cd348814.woff2":{"offset":12619661,"length":14975,"mime":"font/woff2","gzipped":true,"hash":"1203155b04f9283b"},"/__docx_assets/2f6c59dcc4ca70.woff2":{"offset":12634636,"length":38729,"mime":"font/woff2","gzipped":true,"hash":"3f278cb9d7aa047f"},"/__docx_assets/7dee29c4a83042.woff2":{"offset":12673365,"length":35361,"mime":"font/woff2","gzipped":true,"hash":"9c6d3a2904cfa02b"},"/__docx_assets/5a183aea8406cd.woff2":{"offset":12708726,"length":22944,"mime":"font/woff2","gzipped":true,"hash":"fc58349007f3bf13"},"/__docx_assets/5ecdb49eef0b8f.woff2":{"offset":12731670,"length":18620,"mime":"font/woff2","gzipped":true,"hash":"2d75880152f59f5b"},"/__docx_assets/89e0d6992a2e20.woff2":{"offset":12750290,"length":24436,"mime":"font/woff2","gzipped":true,"hash":"a776d2d55951255f"},"/__docx_assets/e803944f79c904.woff2":{"offset":12774726,"length":35945,"mime":"font/woff2","gzipped":true,"hash":"3d705a3abda234c7"},"/__docx_assets/ad00e27b224d8b.woff2":{"offset":12810671,"length":20532,"mime":"font/woff2","gzipped":true,"hash":"0f82c9c0c3fc5e3d"},"/__docx_assets/daba0ce5c75f43.woff2":{"offset":12831203,"length":32824,"mime":"font/woff2","gzipped":true,"hash":"50daf92967bcc3f0"},"/docs":{"offset":0,"length":24444,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"121316e5e05d5a53"}}}
+{
+  "id": "fastapi",
+  "name": "FastAPI",
+  "version": "v0.115",
+  "commit": "ebcb6f1a",
+  "origin": "https://fastapi.tiangolo.com",
+  "entryPath": "/",
+  "updatedAt": "2026-10-11T10:38:45.197Z",
+  "totalBytes": 12724411,
+  "chunkCount": 336,
+  "routes": {
+    "/": {
+      "offset": 0,
+      "length": 23517,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "038a65bfebf04ea0"
+    },
+    "/newsletter": {
+      "offset": 23517,
+      "length": 12874,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a14cdf3334326cb8"
+    },
+    "/newsletter/": {
+      "offset": 23517,
+      "length": 12874,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a14cdf3334326cb8"
+    },
+    "/ja": {
+      "offset": 36391,
+      "length": 26300,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "abfa17bfd524757a"
+    },
+    "/ja/": {
+      "offset": 36391,
+      "length": 26300,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "abfa17bfd524757a"
+    },
+    "/reference": {
+      "offset": 62691,
+      "length": 12884,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b0e9cd0856f52d75"
+    },
+    "/reference/": {
+      "offset": 62691,
+      "length": 12884,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b0e9cd0856f52d75"
+    },
+    "/de": {
+      "offset": 75575,
+      "length": 25323,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "41ceb4759ce6d2c7"
+    },
+    "/de/": {
+      "offset": 75575,
+      "length": 25323,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "41ceb4759ce6d2c7"
+    },
+    "/hi": {
+      "offset": 100898,
+      "length": 26374,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "29b5f93528a96059"
+    },
+    "/hi/": {
+      "offset": 100898,
+      "length": 26374,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "29b5f93528a96059"
+    },
+    "/learn": {
+      "offset": 127272,
+      "length": 12850,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9d704b941eafd325"
+    },
+    "/learn/": {
+      "offset": 127272,
+      "length": 12850,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9d704b941eafd325"
+    },
+    "/tr": {
+      "offset": 140122,
+      "length": 25422,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "27178fd41ace69f7"
+    },
+    "/tr/": {
+      "offset": 140122,
+      "length": 25422,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "27178fd41ace69f7"
+    },
+    "/es": {
+      "offset": 165544,
+      "length": 24769,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d6eef460d74f5646"
+    },
+    "/es/": {
+      "offset": 165544,
+      "length": 24769,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d6eef460d74f5646"
+    },
+    "/fr": {
+      "offset": 190313,
+      "length": 25183,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "58889476101e6337"
+    },
+    "/fr/": {
+      "offset": 190313,
+      "length": 25183,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "58889476101e6337"
+    },
+    "/pt": {
+      "offset": 215496,
+      "length": 24976,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4d9c5db23625af9c"
+    },
+    "/pt/": {
+      "offset": 215496,
+      "length": 24976,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4d9c5db23625af9c"
+    },
+    "/uk": {
+      "offset": 240472,
+      "length": 27223,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2fc2c9167b3996d0"
+    },
+    "/uk/": {
+      "offset": 240472,
+      "length": 27223,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2fc2c9167b3996d0"
+    },
+    "/ru": {
+      "offset": 267695,
+      "length": 27315,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9d76ae87d7c64bf6"
+    },
+    "/ru/": {
+      "offset": 267695,
+      "length": 27315,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9d76ae87d7c64bf6"
+    },
+    "/zh": {
+      "offset": 295010,
+      "length": 25218,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9d6c5586040033ae"
+    },
+    "/zh/": {
+      "offset": 295010,
+      "length": 25218,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9d6c5586040033ae"
+    },
+    "/features": {
+      "offset": 320228,
+      "length": 17614,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c9b834ee7ed6dbbe"
+    },
+    "/features/": {
+      "offset": 320228,
+      "length": 17614,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c9b834ee7ed6dbbe"
+    },
+    "/zh-hant": {
+      "offset": 337842,
+      "length": 25500,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c90a6509500ddabe"
+    },
+    "/zh-hant/": {
+      "offset": 337842,
+      "length": 25500,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c90a6509500ddabe"
+    },
+    "/ko": {
+      "offset": 363342,
+      "length": 25858,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eaefdf28a8ecb646"
+    },
+    "/ko/": {
+      "offset": 363342,
+      "length": 25858,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eaefdf28a8ecb646"
+    },
+    "/python-types": {
+      "offset": 389200,
+      "length": 20054,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7e2221a9ad573fe3"
+    },
+    "/python-types/": {
+      "offset": 389200,
+      "length": 20054,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7e2221a9ad573fe3"
+    },
+    "/tutorial/path-params": {
+      "offset": 409254,
+      "length": 19268,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1376a47539f25de3"
+    },
+    "/tutorial/path-params/": {
+      "offset": 409254,
+      "length": 19268,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1376a47539f25de3"
+    },
+    "/tutorial": {
+      "offset": 428522,
+      "length": 15983,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6a1f535169b618b4"
+    },
+    "/tutorial/": {
+      "offset": 428522,
+      "length": 15983,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6a1f535169b618b4"
+    },
+    "/tutorial/body-nested-models": {
+      "offset": 444505,
+      "length": 18533,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4b1d5253723d34b7"
+    },
+    "/tutorial/body-nested-models/": {
+      "offset": 444505,
+      "length": 18533,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4b1d5253723d34b7"
+    },
+    "/async": {
+      "offset": 463038,
+      "length": 22660,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "07160afe1aec9b82"
+    },
+    "/async/": {
+      "offset": 463038,
+      "length": 22660,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "07160afe1aec9b82"
+    },
+    "/about": {
+      "offset": 485698,
+      "length": 12740,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "049abdd9779df2c9"
+    },
+    "/about/": {
+      "offset": 485698,
+      "length": 12740,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "049abdd9779df2c9"
+    },
+    "/tutorial/query-params": {
+      "offset": 498438,
+      "length": 16247,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fc1c8bb5eabd658c"
+    },
+    "/tutorial/query-params/": {
+      "offset": 498438,
+      "length": 16247,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fc1c8bb5eabd658c"
+    },
+    "/tutorial/body-multiple-params": {
+      "offset": 514685,
+      "length": 17585,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7f3393fa172b8d4d"
+    },
+    "/tutorial/body-multiple-params/": {
+      "offset": 514685,
+      "length": 17585,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7f3393fa172b8d4d"
+    },
+    "/tutorial/path-params-numeric-validations": {
+      "offset": 532270,
+      "length": 18298,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3548a5d0a8ebcebd"
+    },
+    "/tutorial/path-params-numeric-validations/": {
+      "offset": 532270,
+      "length": 18298,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3548a5d0a8ebcebd"
+    },
+    "/tutorial/query-param-models": {
+      "offset": 550568,
+      "length": 15416,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6e7af9c9ca421b3c"
+    },
+    "/tutorial/query-param-models/": {
+      "offset": 550568,
+      "length": 15416,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6e7af9c9ca421b3c"
+    },
+    "/tutorial/first-steps": {
+      "offset": 565984,
+      "length": 20641,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c40576a3534bda52"
+    },
+    "/tutorial/first-steps/": {
+      "offset": 565984,
+      "length": 20641,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c40576a3534bda52"
+    },
+    "/resources": {
+      "offset": 586625,
+      "length": 12773,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1a8b4d20ee44d644"
+    },
+    "/resources/": {
+      "offset": 586625,
+      "length": 12773,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1a8b4d20ee44d644"
+    },
+    "/tutorial/body": {
+      "offset": 599398,
+      "length": 17453,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4d336d5abf7c1dbd"
+    },
+    "/tutorial/body/": {
+      "offset": 599398,
+      "length": 17453,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4d336d5abf7c1dbd"
+    },
+    "/tutorial/body-fields": {
+      "offset": 616851,
+      "length": 15440,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "02d49ffde2550304"
+    },
+    "/tutorial/body-fields/": {
+      "offset": 616851,
+      "length": 15440,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "02d49ffde2550304"
+    },
+    "/tutorial/query-params-str-validations": {
+      "offset": 632291,
+      "length": 26293,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "acb3f0b954bc8ec6"
+    },
+    "/tutorial/query-params-str-validations/": {
+      "offset": 632291,
+      "length": 26293,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "acb3f0b954bc8ec6"
+    },
+    "/release-notes": {
+      "offset": 658584,
+      "length": 179503,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4b57f6e3bcf493fe"
+    },
+    "/release-notes/": {
+      "offset": 658584,
+      "length": 179503,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4b57f6e3bcf493fe"
+    },
+    "/tutorial/request-form-models": {
+      "offset": 838087,
+      "length": 15089,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8a5340a59f2ad4cf"
+    },
+    "/tutorial/request-form-models/": {
+      "offset": 838087,
+      "length": 15089,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8a5340a59f2ad4cf"
+    },
+    "/tutorial/extra-data-types": {
+      "offset": 853176,
+      "length": 15435,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "28ba4bf586635901"
+    },
+    "/tutorial/extra-data-types/": {
+      "offset": 853176,
+      "length": 15435,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "28ba4bf586635901"
+    },
+    "/tutorial/request-forms-and-files": {
+      "offset": 868611,
+      "length": 14732,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "72d1bcc48dd7cb2b"
+    },
+    "/tutorial/request-forms-and-files/": {
+      "offset": 868611,
+      "length": 14732,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "72d1bcc48dd7cb2b"
+    },
+    "/tutorial/encoder": {
+      "offset": 883343,
+      "length": 14383,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d07c78de559beb97"
+    },
+    "/tutorial/encoder/": {
+      "offset": 883343,
+      "length": 14383,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d07c78de559beb97"
+    },
+    "/tutorial/extra-models": {
+      "offset": 897726,
+      "length": 18445,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "41012dd38dbd97d8"
+    },
+    "/tutorial/extra-models/": {
+      "offset": 897726,
+      "length": 18445,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "41012dd38dbd97d8"
+    },
+    "/tutorial/response-status-code": {
+      "offset": 916171,
+      "length": 15412,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f3e1c12c572e5929"
+    },
+    "/tutorial/response-status-code/": {
+      "offset": 916171,
+      "length": 15412,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f3e1c12c572e5929"
+    },
+    "/tutorial/header-param-models": {
+      "offset": 931583,
+      "length": 15850,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4233c4c6c0c8fdb1"
+    },
+    "/tutorial/header-param-models/": {
+      "offset": 931583,
+      "length": 15850,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4233c4c6c0c8fdb1"
+    },
+    "/tutorial/response-model": {
+      "offset": 947433,
+      "length": 23620,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8aeb5a5d1bd58d11"
+    },
+    "/tutorial/response-model/": {
+      "offset": 947433,
+      "length": 23620,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8aeb5a5d1bd58d11"
+    },
+    "/tutorial/schema-extra-example": {
+      "offset": 971053,
+      "length": 20151,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2324b58438bc708c"
+    },
+    "/tutorial/schema-extra-example/": {
+      "offset": 971053,
+      "length": 20151,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2324b58438bc708c"
+    },
+    "/tutorial/path-operation-configuration": {
+      "offset": 991204,
+      "length": 16793,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "240ad97e9d9a359e"
+    },
+    "/tutorial/path-operation-configuration/": {
+      "offset": 991204,
+      "length": 16793,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "240ad97e9d9a359e"
+    },
+    "/tutorial/request-files": {
+      "offset": 1007997,
+      "length": 19234,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7fb9e2d3596ec69f"
+    },
+    "/tutorial/request-files/": {
+      "offset": 1007997,
+      "length": 19234,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7fb9e2d3596ec69f"
+    },
+    "/tutorial/request-forms": {
+      "offset": 1027231,
+      "length": 15114,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0177979b351a3c5d"
+    },
+    "/tutorial/request-forms/": {
+      "offset": 1027231,
+      "length": 15114,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0177979b351a3c5d"
+    },
+    "/tutorial/cookie-params": {
+      "offset": 1042345,
+      "length": 14645,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d1669fc515fd6a6b"
+    },
+    "/tutorial/cookie-params/": {
+      "offset": 1042345,
+      "length": 14645,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d1669fc515fd6a6b"
+    },
+    "/tutorial/header-params": {
+      "offset": 1056990,
+      "length": 15714,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b142d1c8a0b8744e"
+    },
+    "/tutorial/header-params/": {
+      "offset": 1056990,
+      "length": 15714,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b142d1c8a0b8744e"
+    },
+    "/tutorial/cookie-param-models": {
+      "offset": 1072704,
+      "length": 15702,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a1496667240215d2"
+    },
+    "/tutorial/cookie-param-models/": {
+      "offset": 1072704,
+      "length": 15702,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a1496667240215d2"
+    },
+    "/tutorial/handling-errors": {
+      "offset": 1088406,
+      "length": 19637,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "221a66756d04725e"
+    },
+    "/tutorial/handling-errors/": {
+      "offset": 1088406,
+      "length": 19637,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "221a66756d04725e"
+    },
+    "/tutorial/dependencies/global-dependencies": {
+      "offset": 1108043,
+      "length": 14509,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e95306b13a936520"
+    },
+    "/tutorial/dependencies/global-dependencies/": {
+      "offset": 1108043,
+      "length": 14509,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e95306b13a936520"
+    },
+    "/tutorial/middleware": {
+      "offset": 1122552,
+      "length": 15573,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "66253888feff3dfc"
+    },
+    "/tutorial/middleware/": {
+      "offset": 1122552,
+      "length": 15573,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "66253888feff3dfc"
+    },
+    "/tutorial/cors": {
+      "offset": 1138125,
+      "length": 16016,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0d807b8c6fbbe618"
+    },
+    "/tutorial/cors/": {
+      "offset": 1138125,
+      "length": 16016,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0d807b8c6fbbe618"
+    },
+    "/tutorial/security/first-steps": {
+      "offset": 1154141,
+      "length": 17952,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8c3a9e1f8fd70a97"
+    },
+    "/tutorial/security/first-steps/": {
+      "offset": 1154141,
+      "length": 17952,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8c3a9e1f8fd70a97"
+    },
+    "/tutorial/dependencies": {
+      "offset": 1172093,
+      "length": 18597,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c73cf448c914a220"
+    },
+    "/tutorial/dependencies/": {
+      "offset": 1172093,
+      "length": 18597,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c73cf448c914a220"
+    },
+    "/tutorial/security": {
+      "offset": 1190690,
+      "length": 15017,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "636dc3f59081118a"
+    },
+    "/tutorial/security/": {
+      "offset": 1190690,
+      "length": 15017,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "636dc3f59081118a"
+    },
+    "/tutorial/dependencies/classes-as-dependencies": {
+      "offset": 1205707,
+      "length": 18788,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b887e8b640f3f676"
+    },
+    "/tutorial/dependencies/classes-as-dependencies/": {
+      "offset": 1205707,
+      "length": 18788,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b887e8b640f3f676"
+    },
+    "/tutorial/body-updates": {
+      "offset": 1224495,
+      "length": 16740,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "24f7de975606838f"
+    },
+    "/tutorial/body-updates/": {
+      "offset": 1224495,
+      "length": 16740,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "24f7de975606838f"
+    },
+    "/tutorial/dependencies/dependencies-in-path-operation-decorators": {
+      "offset": 1241235,
+      "length": 16349,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d55c713ccc17bed3"
+    },
+    "/tutorial/dependencies/dependencies-in-path-operation-decorators/": {
+      "offset": 1241235,
+      "length": 16349,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d55c713ccc17bed3"
+    },
+    "/tutorial/security/simple-oauth2": {
+      "offset": 1257584,
+      "length": 24248,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "add2bed1396616e1"
+    },
+    "/tutorial/security/simple-oauth2/": {
+      "offset": 1257584,
+      "length": 24248,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "add2bed1396616e1"
+    },
+    "/tutorial/security/get-current-user": {
+      "offset": 1281832,
+      "length": 17756,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b2c8363248fd0927"
+    },
+    "/tutorial/security/get-current-user/": {
+      "offset": 1281832,
+      "length": 17756,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b2c8363248fd0927"
+    },
+    "/tutorial/dependencies/dependencies-with-yield": {
+      "offset": 1299588,
+      "length": 21753,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0f8ebce9aed0e0ff"
+    },
+    "/tutorial/dependencies/dependencies-with-yield/": {
+      "offset": 1299588,
+      "length": 21753,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0f8ebce9aed0e0ff"
+    },
+    "/tutorial/security/oauth2-jwt": {
+      "offset": 1321341,
+      "length": 29102,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1de679f98a51bdca"
+    },
+    "/tutorial/security/oauth2-jwt/": {
+      "offset": 1321341,
+      "length": 29102,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1de679f98a51bdca"
+    },
+    "/tutorial/sql-databases": {
+      "offset": 1350443,
+      "length": 46949,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c4e6d55507970047"
+    },
+    "/tutorial/sql-databases/": {
+      "offset": 1350443,
+      "length": 46949,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c4e6d55507970047"
+    },
+    "/tutorial/bigger-applications": {
+      "offset": 1397392,
+      "length": 24750,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7dc7352629c0b0a4"
+    },
+    "/tutorial/bigger-applications/": {
+      "offset": 1397392,
+      "length": 24750,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7dc7352629c0b0a4"
+    },
+    "/tutorial/dependencies/sub-dependencies": {
+      "offset": 1422142,
+      "length": 16278,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "42786eab16da1c3e"
+    },
+    "/tutorial/dependencies/sub-dependencies/": {
+      "offset": 1422142,
+      "length": 16278,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "42786eab16da1c3e"
+    },
+    "/tutorial/frontend": {
+      "offset": 1438420,
+      "length": 16544,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "93bb8f30e25d3da9"
+    },
+    "/tutorial/frontend/": {
+      "offset": 1438420,
+      "length": 16544,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "93bb8f30e25d3da9"
+    },
+    "/tutorial/metadata": {
+      "offset": 1454964,
+      "length": 17308,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "948a7b4ddc78b521"
+    },
+    "/tutorial/metadata/": {
+      "offset": 1454964,
+      "length": 17308,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "948a7b4ddc78b521"
+    },
+    "/advanced/response-directly": {
+      "offset": 1472272,
+      "length": 16009,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "616a819272e963c9"
+    },
+    "/advanced/response-directly/": {
+      "offset": 1472272,
+      "length": 16009,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "616a819272e963c9"
+    },
+    "/tutorial/debugging": {
+      "offset": 1488281,
+      "length": 14869,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0ad8319dc032fc69"
+    },
+    "/tutorial/debugging/": {
+      "offset": 1488281,
+      "length": 14869,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0ad8319dc032fc69"
+    },
+    "/tutorial/static-files": {
+      "offset": 1503150,
+      "length": 14409,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7ceeb97056384e34"
+    },
+    "/tutorial/static-files/": {
+      "offset": 1503150,
+      "length": 14409,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7ceeb97056384e34"
+    },
+    "/tutorial/background-tasks": {
+      "offset": 1517559,
+      "length": 16680,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "50e0d7514f6b3237"
+    },
+    "/tutorial/background-tasks/": {
+      "offset": 1517559,
+      "length": 16680,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "50e0d7514f6b3237"
+    },
+    "/tutorial/testing": {
+      "offset": 1534239,
+      "length": 18803,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2fa2e807949c994d"
+    },
+    "/tutorial/testing/": {
+      "offset": 1534239,
+      "length": 18803,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2fa2e807949c994d"
+    },
+    "/tutorial/stream-json-lines": {
+      "offset": 1553042,
+      "length": 17297,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fc6c5c690b0a7a40"
+    },
+    "/tutorial/stream-json-lines/": {
+      "offset": 1553042,
+      "length": 17297,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fc6c5c690b0a7a40"
+    },
+    "/advanced/response-cookies": {
+      "offset": 1570339,
+      "length": 14715,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d33e6b84ef66b20e"
+    },
+    "/advanced/response-cookies/": {
+      "offset": 1570339,
+      "length": 14715,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d33e6b84ef66b20e"
+    },
+    "/advanced/path-operation-advanced-configuration": {
+      "offset": 1585054,
+      "length": 18508,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7f0c1cd55287931e"
+    },
+    "/advanced/path-operation-advanced-configuration/": {
+      "offset": 1585054,
+      "length": 18508,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7f0c1cd55287931e"
+    },
+    "/advanced/custom-response": {
+      "offset": 1603562,
+      "length": 20590,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "86ac8bad262d0f41"
+    },
+    "/advanced/custom-response/": {
+      "offset": 1603562,
+      "length": 20590,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "86ac8bad262d0f41"
+    },
+    "/advanced/additional-status-codes": {
+      "offset": 1624152,
+      "length": 15073,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2760cf43810648a8"
+    },
+    "/advanced/additional-status-codes/": {
+      "offset": 1624152,
+      "length": 15073,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2760cf43810648a8"
+    },
+    "/tutorial/server-sent-events": {
+      "offset": 1639225,
+      "length": 18948,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c6268da529a19f35"
+    },
+    "/tutorial/server-sent-events/": {
+      "offset": 1639225,
+      "length": 18948,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c6268da529a19f35"
+    },
+    "/advanced": {
+      "offset": 1658173,
+      "length": 13275,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6c54c956959e4d24"
+    },
+    "/advanced/": {
+      "offset": 1658173,
+      "length": 13275,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6c54c956959e4d24"
+    },
+    "/advanced/stream-data": {
+      "offset": 1671448,
+      "length": 22153,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "761afd801e581be7"
+    },
+    "/advanced/stream-data/": {
+      "offset": 1671448,
+      "length": 22153,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "761afd801e581be7"
+    },
+    "/advanced/additional-responses": {
+      "offset": 1693601,
+      "length": 18073,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2044ac04d6153239"
+    },
+    "/advanced/additional-responses/": {
+      "offset": 1693601,
+      "length": 18073,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2044ac04d6153239"
+    },
+    "/advanced/events": {
+      "offset": 1711674,
+      "length": 17839,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6f3aa59553c88a10"
+    },
+    "/advanced/events/": {
+      "offset": 1711674,
+      "length": 17839,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6f3aa59553c88a10"
+    },
+    "/advanced/using-request-directly": {
+      "offset": 1729513,
+      "length": 14429,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d18a55f55df8a795"
+    },
+    "/advanced/using-request-directly/": {
+      "offset": 1729513,
+      "length": 14429,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d18a55f55df8a795"
+    },
+    "/advanced/sub-applications": {
+      "offset": 1743942,
+      "length": 14937,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fe60893160de5f53"
+    },
+    "/advanced/sub-applications/": {
+      "offset": 1743942,
+      "length": 14937,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fe60893160de5f53"
+    },
+    "/advanced/dataclasses": {
+      "offset": 1758879,
+      "length": 16111,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "81a95a101701316b"
+    },
+    "/advanced/dataclasses/": {
+      "offset": 1758879,
+      "length": 16111,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "81a95a101701316b"
+    },
+    "/advanced/security": {
+      "offset": 1774990,
+      "length": 13226,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "949d457dcbb5837c"
+    },
+    "/advanced/security/": {
+      "offset": 1774990,
+      "length": 13226,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "949d457dcbb5837c"
+    },
+    "/advanced/templates": {
+      "offset": 1788216,
+      "length": 15478,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7f6fc6f73da6f5de"
+    },
+    "/advanced/templates/": {
+      "offset": 1788216,
+      "length": 15478,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7f6fc6f73da6f5de"
+    },
+    "/advanced/response-change-status-code": {
+      "offset": 1803694,
+      "length": 14318,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6269d7a456aceda8"
+    },
+    "/advanced/response-change-status-code/": {
+      "offset": 1803694,
+      "length": 14318,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6269d7a456aceda8"
+    },
+    "/advanced/middleware": {
+      "offset": 1818012,
+      "length": 15498,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "70d4347b541a3b41"
+    },
+    "/advanced/middleware/": {
+      "offset": 1818012,
+      "length": 15498,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "70d4347b541a3b41"
+    },
+    "/advanced/websockets": {
+      "offset": 1833510,
+      "length": 20051,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4840a4c3e3351c68"
+    },
+    "/advanced/websockets/": {
+      "offset": 1833510,
+      "length": 20051,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4840a4c3e3351c68"
+    },
+    "/advanced/advanced-dependencies": {
+      "offset": 1853561,
+      "length": 20663,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7f5bb54bd655c6c0"
+    },
+    "/advanced/advanced-dependencies/": {
+      "offset": 1853561,
+      "length": 20663,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7f5bb54bd655c6c0"
+    },
+    "/advanced/response-headers": {
+      "offset": 1874224,
+      "length": 14673,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "558fc938edbe1e42"
+    },
+    "/advanced/response-headers/": {
+      "offset": 1874224,
+      "length": 14673,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "558fc938edbe1e42"
+    },
+    "/advanced/security/http-basic-auth": {
+      "offset": 1888897,
+      "length": 17598,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d6d1557b2089ec2f"
+    },
+    "/advanced/security/http-basic-auth/": {
+      "offset": 1888897,
+      "length": 17598,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d6d1557b2089ec2f"
+    },
+    "/advanced/behind-a-proxy": {
+      "offset": 1906495,
+      "length": 20702,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b04af4865bd13a28"
+    },
+    "/advanced/behind-a-proxy/": {
+      "offset": 1906495,
+      "length": 20702,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b04af4865bd13a28"
+    },
+    "/advanced/opentelemetry": {
+      "offset": 1927197,
+      "length": 17302,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b46427a0a4adb4ec"
+    },
+    "/advanced/opentelemetry/": {
+      "offset": 1927197,
+      "length": 17302,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b46427a0a4adb4ec"
+    },
+    "/advanced/testing-websockets": {
+      "offset": 1944499,
+      "length": 13722,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c4c2cec4e95e0157"
+    },
+    "/advanced/testing-websockets/": {
+      "offset": 1944499,
+      "length": 13722,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c4c2cec4e95e0157"
+    },
+    "/advanced/security/oauth2-scopes": {
+      "offset": 1958221,
+      "length": 47041,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f656d224243cbefc"
+    },
+    "/advanced/security/oauth2-scopes/": {
+      "offset": 1958221,
+      "length": 47041,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f656d224243cbefc"
+    },
+    "/editor-support": {
+      "offset": 2005262,
+      "length": 14113,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fdbaae3048a2e66d"
+    },
+    "/editor-support/": {
+      "offset": 2005262,
+      "length": 14113,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fdbaae3048a2e66d"
+    },
+    "/advanced/openapi-webhooks": {
+      "offset": 2019375,
+      "length": 15039,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8b4ca26d8d400bdb"
+    },
+    "/advanced/openapi-webhooks/": {
+      "offset": 2019375,
+      "length": 15039,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8b4ca26d8d400bdb"
+    },
+    "/fastapi-cli": {
+      "offset": 2034414,
+      "length": 15768,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "97e2faf93c11ed58"
+    },
+    "/fastapi-cli/": {
+      "offset": 2034414,
+      "length": 15768,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "97e2faf93c11ed58"
+    },
+    "/advanced/async-tests": {
+      "offset": 2050182,
+      "length": 15635,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "db23003b927c1c64"
+    },
+    "/advanced/async-tests/": {
+      "offset": 2050182,
+      "length": 15635,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "db23003b927c1c64"
+    },
+    "/advanced/testing-events": {
+      "offset": 2065817,
+      "length": 14241,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "afb5da0496ac2afb"
+    },
+    "/advanced/testing-events/": {
+      "offset": 2065817,
+      "length": 14241,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "afb5da0496ac2afb"
+    },
+    "/advanced/json-base64-bytes": {
+      "offset": 2080058,
+      "length": 15865,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a91510297d544726"
+    },
+    "/advanced/json-base64-bytes/": {
+      "offset": 2080058,
+      "length": 15865,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a91510297d544726"
+    },
+    "/advanced/generate-clients": {
+      "offset": 2095923,
+      "length": 19282,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "731787f04fe9c5cf"
+    },
+    "/advanced/generate-clients/": {
+      "offset": 2095923,
+      "length": 19282,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "731787f04fe9c5cf"
+    },
+    "/advanced/wsgi": {
+      "offset": 2115205,
+      "length": 14286,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5734a8634e3c6138"
+    },
+    "/advanced/wsgi/": {
+      "offset": 2115205,
+      "length": 14286,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5734a8634e3c6138"
+    },
+    "/advanced/advanced-python-types": {
+      "offset": 2129491,
+      "length": 14251,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "db5c3cd9572024e9"
+    },
+    "/advanced/advanced-python-types/": {
+      "offset": 2129491,
+      "length": 14251,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "db5c3cd9572024e9"
+    },
+    "/advanced/testing-dependencies": {
+      "offset": 2143742,
+      "length": 15523,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "36f42ca16200a4eb"
+    },
+    "/advanced/testing-dependencies/": {
+      "offset": 2143742,
+      "length": 15523,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "36f42ca16200a4eb"
+    },
+    "/advanced/strict-content-type": {
+      "offset": 2159265,
+      "length": 14939,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2763613757e6a31a"
+    },
+    "/advanced/strict-content-type/": {
+      "offset": 2159265,
+      "length": 14939,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2763613757e6a31a"
+    },
+    "/advanced/openapi-callbacks": {
+      "offset": 2174204,
+      "length": 18181,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dcb170dd0fb94455"
+    },
+    "/advanced/openapi-callbacks/": {
+      "offset": 2174204,
+      "length": 18181,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dcb170dd0fb94455"
+    },
+    "/deployment": {
+      "offset": 2192385,
+      "length": 13624,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "35974eb081e31af7"
+    },
+    "/deployment/": {
+      "offset": 2192385,
+      "length": 13624,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "35974eb081e31af7"
+    },
+    "/deployment/fastapicloud": {
+      "offset": 2206009,
+      "length": 13863,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "47e3e4d91ae587fc"
+    },
+    "/deployment/fastapicloud/": {
+      "offset": 2206009,
+      "length": 13863,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "47e3e4d91ae587fc"
+    },
+    "/advanced/settings": {
+      "offset": 2219872,
+      "length": 20735,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "36e0ef38415de413"
+    },
+    "/advanced/settings/": {
+      "offset": 2219872,
+      "length": 20735,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "36e0ef38415de413"
+    },
+    "/deployment/versions": {
+      "offset": 2240607,
+      "length": 14569,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "580489c7f02c3618"
+    },
+    "/deployment/versions/": {
+      "offset": 2240607,
+      "length": 14569,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "580489c7f02c3618"
+    },
+    "/how-to": {
+      "offset": 2255176,
+      "length": 13153,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "12b286c2fcc898f0"
+    },
+    "/how-to/": {
+      "offset": 2255176,
+      "length": 13153,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "12b286c2fcc898f0"
+    },
+    "/deployment/cloud": {
+      "offset": 2268329,
+      "length": 13493,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ea22f9a8695c31a4"
+    },
+    "/deployment/cloud/": {
+      "offset": 2268329,
+      "length": 13493,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ea22f9a8695c31a4"
+    },
+    "/deployment/https": {
+      "offset": 2281822,
+      "length": 18452,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e48cb820291faf2a"
+    },
+    "/deployment/https/": {
+      "offset": 2281822,
+      "length": 18452,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e48cb820291faf2a"
+    },
+    "/deployment/server-workers": {
+      "offset": 2300274,
+      "length": 15614,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3e692f0f617aea0d"
+    },
+    "/deployment/server-workers/": {
+      "offset": 2300274,
+      "length": 15614,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3e692f0f617aea0d"
+    },
+    "/how-to/conditional-openapi": {
+      "offset": 2315888,
+      "length": 14669,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "78bc79c01873341d"
+    },
+    "/how-to/conditional-openapi/": {
+      "offset": 2315888,
+      "length": 14669,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "78bc79c01873341d"
+    },
+    "/how-to/migrate-from-pydantic-v1-to-pydantic-v2": {
+      "offset": 2330557,
+      "length": 16187,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "022209b028f9f744"
+    },
+    "/how-to/migrate-from-pydantic-v1-to-pydantic-v2/": {
+      "offset": 2330557,
+      "length": 16187,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "022209b028f9f744"
+    },
+    "/deployment/manually": {
+      "offset": 2346744,
+      "length": 15934,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b638cc3a774f4872"
+    },
+    "/deployment/manually/": {
+      "offset": 2346744,
+      "length": 15934,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b638cc3a774f4872"
+    },
+    "/deployment/concepts": {
+      "offset": 2362678,
+      "length": 20721,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4f0a9825924c5af4"
+    },
+    "/deployment/concepts/": {
+      "offset": 2362678,
+      "length": 20721,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4f0a9825924c5af4"
+    },
+    "/deployment/docker": {
+      "offset": 2383399,
+      "length": 24922,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "674bd4e4e41ee2fc"
+    },
+    "/deployment/docker/": {
+      "offset": 2383399,
+      "length": 24922,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "674bd4e4e41ee2fc"
+    },
+    "/how-to/custom-docs-ui-assets": {
+      "offset": 2408321,
+      "length": 18881,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3d567b51eada69ef"
+    },
+    "/how-to/custom-docs-ui-assets/": {
+      "offset": 2408321,
+      "length": 18881,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3d567b51eada69ef"
+    },
+    "/how-to/extending-openapi": {
+      "offset": 2427202,
+      "length": 16051,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fa42d774dd076caf"
+    },
+    "/how-to/extending-openapi/": {
+      "offset": 2427202,
+      "length": 16051,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fa42d774dd076caf"
+    },
+    "/how-to/general": {
+      "offset": 2443253,
+      "length": 13964,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5c30cb6530b97b6b"
+    },
+    "/how-to/general/": {
+      "offset": 2443253,
+      "length": 13964,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5c30cb6530b97b6b"
+    },
+    "/how-to/separate-openapi-schemas": {
+      "offset": 2457217,
+      "length": 16168,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b23b3a5549dbc831"
+    },
+    "/how-to/separate-openapi-schemas/": {
+      "offset": 2457217,
+      "length": 16168,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b23b3a5549dbc831"
+    },
+    "/how-to/graphql": {
+      "offset": 2473385,
+      "length": 14742,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "696aef70abceaf72"
+    },
+    "/how-to/graphql/": {
+      "offset": 2473385,
+      "length": 14742,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "696aef70abceaf72"
+    },
+    "/how-to/custom-request-and-route": {
+      "offset": 2488127,
+      "length": 18425,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2242e5f8cf7af74c"
+    },
+    "/how-to/custom-request-and-route/": {
+      "offset": 2488127,
+      "length": 18425,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2242e5f8cf7af74c"
+    },
+    "/how-to/configure-swagger-ui": {
+      "offset": 2506552,
+      "length": 20311,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "502ad61cd375355a"
+    },
+    "/how-to/configure-swagger-ui/": {
+      "offset": 2506552,
+      "length": 20311,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "502ad61cd375355a"
+    },
+    "/how-to/authentication-error-status-code": {
+      "offset": 2526863,
+      "length": 14020,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8b52d251a0fba76b"
+    },
+    "/how-to/authentication-error-status-code/": {
+      "offset": 2526863,
+      "length": 14020,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8b52d251a0fba76b"
+    },
+    "/how-to/testing-database": {
+      "offset": 2540883,
+      "length": 12989,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "68dd58da54291618"
+    },
+    "/how-to/testing-database/": {
+      "offset": 2540883,
+      "length": 12989,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "68dd58da54291618"
+    },
+    "/reference/exceptions": {
+      "offset": 2553872,
+      "length": 16477,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "08577587d678bdeb"
+    },
+    "/reference/exceptions/": {
+      "offset": 2553872,
+      "length": 16477,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "08577587d678bdeb"
+    },
+    "/reference/background": {
+      "offset": 2570349,
+      "length": 15383,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c04d404ecd63f867"
+    },
+    "/reference/background/": {
+      "offset": 2570349,
+      "length": 15383,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c04d404ecd63f867"
+    },
+    "/reference/dependencies": {
+      "offset": 2585732,
+      "length": 18025,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "00691703a5c35602"
+    },
+    "/reference/dependencies/": {
+      "offset": 2585732,
+      "length": 18025,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "00691703a5c35602"
+    },
+    "/reference/request": {
+      "offset": 2603757,
+      "length": 17230,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cfa0a1a3ac156057"
+    },
+    "/reference/request/": {
+      "offset": 2603757,
+      "length": 17230,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cfa0a1a3ac156057"
+    },
+    "/reference/status": {
+      "offset": 2620987,
+      "length": 19906,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8fe59d5a4d13e914"
+    },
+    "/reference/status/": {
+      "offset": 2620987,
+      "length": 19906,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8fe59d5a4d13e914"
+    },
+    "/reference/uploadfile": {
+      "offset": 2640893,
+      "length": 16266,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5a8fdb5dfe086955"
+    },
+    "/reference/uploadfile/": {
+      "offset": 2640893,
+      "length": 16266,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5a8fdb5dfe086955"
+    },
+    "/reference/parameters": {
+      "offset": 2657159,
+      "length": 61475,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "aa6ca05d26d36392"
+    },
+    "/reference/parameters/": {
+      "offset": 2657159,
+      "length": 61475,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "aa6ca05d26d36392"
+    },
+    "/reference/fastapi": {
+      "offset": 2718634,
+      "length": 119413,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f73d5dbe90bb6478"
+    },
+    "/reference/fastapi/": {
+      "offset": 2718634,
+      "length": 119413,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f73d5dbe90bb6478"
+    },
+    "/reference/apirouter": {
+      "offset": 2838047,
+      "length": 101671,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "265b323938bd840e"
+    },
+    "/reference/apirouter/": {
+      "offset": 2838047,
+      "length": 101671,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "265b323938bd840e"
+    },
+    "/reference/response": {
+      "offset": 2939718,
+      "length": 16947,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c65ca2159ad7c960"
+    },
+    "/reference/response/": {
+      "offset": 2939718,
+      "length": 16947,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c65ca2159ad7c960"
+    },
+    "/reference/sse": {
+      "offset": 2956665,
+      "length": 19474,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a4e3d152bce96043"
+    },
+    "/reference/sse/": {
+      "offset": 2956665,
+      "length": 19474,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a4e3d152bce96043"
+    },
+    "/reference/websockets": {
+      "offset": 2976139,
+      "length": 19378,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c52691c163e91ae7"
+    },
+    "/reference/websockets/": {
+      "offset": 2976139,
+      "length": 19378,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c52691c163e91ae7"
+    },
+    "/reference/httpconnection": {
+      "offset": 2995517,
+      "length": 14833,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d9c722ade22a70df"
+    },
+    "/reference/httpconnection/": {
+      "offset": 2995517,
+      "length": 14833,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d9c722ade22a70df"
+    },
+    "/reference/responses": {
+      "offset": 3010350,
+      "length": 43496,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3a2032e36826f054"
+    },
+    "/reference/responses/": {
+      "offset": 3010350,
+      "length": 43496,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3a2032e36826f054"
+    },
+    "/reference/openapi": {
+      "offset": 3053846,
+      "length": 12850,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "11f3850abbb47af9"
+    },
+    "/reference/openapi/": {
+      "offset": 3053846,
+      "length": 12850,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "11f3850abbb47af9"
+    },
+    "/reference/middleware": {
+      "offset": 3066696,
+      "length": 19647,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2bec2442d54691db"
+    },
+    "/reference/middleware/": {
+      "offset": 3066696,
+      "length": 19647,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2bec2442d54691db"
+    },
+    "/reference/openapi/docs": {
+      "offset": 3086343,
+      "length": 20766,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "987abdeb48d92e65"
+    },
+    "/reference/openapi/docs/": {
+      "offset": 3086343,
+      "length": 20766,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "987abdeb48d92e65"
+    },
+    "/reference/openapi/models": {
+      "offset": 3107109,
+      "length": 28800,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "26fc2b88e96654bb"
+    },
+    "/reference/openapi/models/": {
+      "offset": 3107109,
+      "length": 28800,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "26fc2b88e96654bb"
+    },
+    "/reference/security": {
+      "offset": 3135909,
+      "length": 37838,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3fd5a49b1d274301"
+    },
+    "/reference/security/": {
+      "offset": 3135909,
+      "length": 37838,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3fd5a49b1d274301"
+    },
+    "/css/termynal.css": {
+      "offset": 3173747,
+      "length": 894,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "d9662dc2b760252f"
+    },
+    "/img/favicon.png": {
+      "offset": 3174641,
+      "length": 5066,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f58178f8bfce91cb"
+    },
+    "/css/custom.css": {
+      "offset": 3179707,
+      "length": 3524,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "a959e973ded6effd"
+    },
+    "/img/sponsors/railway-banner.png": {
+      "offset": 3183231,
+      "length": 11619,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "91222bfcb94a9c51"
+    },
+    "/img/logo-margin/logo-teal.png": {
+      "offset": 3194850,
+      "length": 17893,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "391e59f5467d8169"
+    },
+    "/img/sponsors/greptile-banner.png": {
+      "offset": 3212743,
+      "length": 7195,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0cc88c0da33c440f"
+    },
+    "/img/sponsors/subtotal-banner.svg": {
+      "offset": 3219938,
+      "length": 5820,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "d0b102d1007b2320"
+    },
+    "/assets/stylesheets/classic/palette.c7ab7c71.min.css": {
+      "offset": 3225758,
+      "length": 2026,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4c79b93cb0522c6"
+    },
+    "/img/sponsors/fastapicloud.png": {
+      "offset": 3227784,
+      "length": 15506,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e1ab5607125460fa"
+    },
+    "/img/icon-white.svg": {
+      "offset": 3243290,
+      "length": 640,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "b191a41224f9058c"
+    },
+    "/img/sponsors/coderabbit-banner.png": {
+      "offset": 3243930,
+      "length": 9447,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "55263cca9243e5ed"
+    },
+    "/img/sponsors/propelauth-banner.png": {
+      "offset": 3253377,
+      "length": 12821,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4e0c24b164ff1292"
+    },
+    "/img/sponsors/blockbee-banner.png": {
+      "offset": 3266198,
+      "length": 11346,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6d966d7c7fe1c45a"
+    },
+    "/img/sponsors/serpapi-banner.png": {
+      "offset": 3277544,
+      "length": 6481,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7219184bb0a62928"
+    },
+    "/assets/stylesheets/classic/main.1470d0a1.min.css": {
+      "offset": 3284025,
+      "length": 24347,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b0ade62b9bf8b14"
+    },
+    "/__docx_assets/30ba564c563cda.bin": {
+      "offset": 3308372,
+      "length": 546,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "c1edd3350aa8f119"
+    },
+    "/__docx_assets/edba15843e35fd.svg": {
+      "offset": 3308918,
+      "length": 553,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "ed7a5a2e3a2d9752"
+    },
+    "/__docx_assets/0dcd10983eba79.bin": {
+      "offset": 3309471,
+      "length": 2378,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "64fa98846212bbb8"
+    },
+    "/__docx_assets/899b4d5a356f2c.svg": {
+      "offset": 3311849,
+      "length": 893,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "e5073226dfc7c788"
+    },
+    "/__docx_assets/57c675532b1c21.svg": {
+      "offset": 3312742,
+      "length": 963,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "4c75607694237516"
+    },
+    "/img/sponsors/greptile.png": {
+      "offset": 3313705,
+      "length": 7174,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0e54c419690f9be0"
+    },
+    "/img/logos/netflix.svg": {
+      "offset": 3320879,
+      "length": 625,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "ead4e98a96dd6f76"
+    },
+    "/img/sponsors/blockbee.png": {
+      "offset": 3321504,
+      "length": 12964,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3fdcfd879778d01d"
+    },
+    "/img/sponsors/tutorcruncher.png": {
+      "offset": 3334468,
+      "length": 5802,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e4afd034655ac892"
+    },
+    "/img/logos/uber.svg": {
+      "offset": 3340270,
+      "length": 1784,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "e0fa756febd28d84"
+    },
+    "/img/sponsors/serpapi.png": {
+      "offset": 3342054,
+      "length": 10703,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a8d2ebbb87d04975"
+    },
+    "/img/sponsors/coderabbit.png": {
+      "offset": 3352757,
+      "length": 21059,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "bc29475b7239c69a"
+    },
+    "/img/sponsors/railway.png": {
+      "offset": 3373816,
+      "length": 26225,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "5d35d986c5d3ea94"
+    },
+    "/img/sponsors/svix.svg": {
+      "offset": 3400041,
+      "length": 5937,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "592b7e2dca4e61e0"
+    },
+    "/img/sponsors/subtotal.svg": {
+      "offset": 3405978,
+      "length": 2013,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "1c8bb4937f416c9a"
+    },
+    "/img/logos/microsoft.svg": {
+      "offset": 3407991,
+      "length": 1335,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "aac82889f9bd56b9"
+    },
+    "/img/sponsors/dribia.png": {
+      "offset": 3409326,
+      "length": 19181,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "05eed894e48f22ae"
+    },
+    "/img/sponsors/bairesdev.svg": {
+      "offset": 3428507,
+      "length": 1488,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "eb3a6e43be8c4555"
+    },
+    "/img/sponsors/propelauth.png": {
+      "offset": 3429995,
+      "length": 28165,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "933a12be7ff68597"
+    },
+    "/img/sponsors/databento.svg": {
+      "offset": 3458160,
+      "length": 67397,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "71dbeda0bf9fcf73"
+    },
+    "/img/logos/cisco.svg": {
+      "offset": 3525557,
+      "length": 1062,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "655bee1e4b54a0a5"
+    },
+    "/img/index/index-02-redoc-simple.png": {
+      "offset": 3526619,
+      "length": 61626,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "31cceeec5eee41ae"
+    },
+    "/img/fastapi-documentary.jpg": {
+      "offset": 3588245,
+      "length": 99407,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "40eed87498909a60"
+    },
+    "/__docx_assets/d723b6b3366b69.svg": {
+      "offset": 3687652,
+      "length": 2449,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "9c34db8b0b4556dc"
+    },
+    "/img/index/index-01-swagger-ui-simple.png": {
+      "offset": 3690101,
+      "length": 69198,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b50e2928c48ac859"
+    },
+    "/img/vscode-completion.png": {
+      "offset": 3759299,
+      "length": 59108,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e6ed9b702dcc5912"
+    },
+    "/fr/assets/stylesheets/classic/palette.c7ab7c71.min.css": {
+      "offset": 3225758,
+      "length": 2026,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4c79b93cb0522c6"
+    },
+    "/img/index/index-03-swagger-02.png": {
+      "offset": 3818407,
+      "length": 70139,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "dffbb6b59838a1a0"
+    },
+    "/de/assets/stylesheets/classic/palette.c7ab7c71.min.css": {
+      "offset": 3225758,
+      "length": 2026,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4c79b93cb0522c6"
+    },
+    "/ja/assets/stylesheets/classic/palette.c7ab7c71.min.css": {
+      "offset": 3225758,
+      "length": 2026,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4c79b93cb0522c6"
+    },
+    "/tr/assets/stylesheets/classic/palette.c7ab7c71.min.css": {
+      "offset": 3225758,
+      "length": 2026,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4c79b93cb0522c6"
+    },
+    "/img/index/index-06-redoc-02.png": {
+      "offset": 3888546,
+      "length": 72263,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1a2d95228171b0a9"
+    },
+    "/pt/assets/stylesheets/classic/palette.c7ab7c71.min.css": {
+      "offset": 3225758,
+      "length": 2026,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4c79b93cb0522c6"
+    },
+    "/hi/assets/stylesheets/classic/main.1470d0a1.min.css": {
+      "offset": 3284025,
+      "length": 24347,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b0ade62b9bf8b14"
+    },
+    "/tr/assets/stylesheets/classic/main.1470d0a1.min.css": {
+      "offset": 3284025,
+      "length": 24347,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b0ade62b9bf8b14"
+    },
+    "/de/assets/stylesheets/classic/main.1470d0a1.min.css": {
+      "offset": 3284025,
+      "length": 24347,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b0ade62b9bf8b14"
+    },
+    "/img/index/index-04-swagger-03.png": {
+      "offset": 3960809,
+      "length": 62892,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0f5a9dd9f1e66fd3"
+    },
+    "/ja/assets/stylesheets/classic/main.1470d0a1.min.css": {
+      "offset": 3284025,
+      "length": 24347,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b0ade62b9bf8b14"
+    },
+    "/es/assets/stylesheets/classic/palette.c7ab7c71.min.css": {
+      "offset": 3225758,
+      "length": 2026,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4c79b93cb0522c6"
+    },
+    "/img/index/index-05-swagger-04.png": {
+      "offset": 4023701,
+      "length": 66639,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d6469b9cf4fde94b"
+    },
+    "/hi/assets/stylesheets/classic/palette.c7ab7c71.min.css": {
+      "offset": 3225758,
+      "length": 2026,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4c79b93cb0522c6"
+    },
+    "/es/assets/stylesheets/classic/main.1470d0a1.min.css": {
+      "offset": 3284025,
+      "length": 24347,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b0ade62b9bf8b14"
+    },
+    "/fr/assets/stylesheets/classic/main.1470d0a1.min.css": {
+      "offset": 3284025,
+      "length": 24347,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b0ade62b9bf8b14"
+    },
+    "/uk/assets/stylesheets/classic/main.1470d0a1.min.css": {
+      "offset": 3284025,
+      "length": 24347,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b0ade62b9bf8b14"
+    },
+    "/pt/assets/stylesheets/classic/main.1470d0a1.min.css": {
+      "offset": 3284025,
+      "length": 24347,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b0ade62b9bf8b14"
+    },
+    "/ru/assets/stylesheets/classic/palette.c7ab7c71.min.css": {
+      "offset": 3225758,
+      "length": 2026,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4c79b93cb0522c6"
+    },
+    "/img/python-types/image04.png": {
+      "offset": 4090340,
+      "length": 16806,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c4ac74de11ba70cf"
+    },
+    "/ko/assets/stylesheets/classic/palette.c7ab7c71.min.css": {
+      "offset": 3225758,
+      "length": 2026,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4c79b93cb0522c6"
+    },
+    "/img/python-types/image03.png": {
+      "offset": 4107146,
+      "length": 39184,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e2d2d0f9e8145207"
+    },
+    "/zh/assets/stylesheets/classic/palette.c7ab7c71.min.css": {
+      "offset": 3225758,
+      "length": 2026,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4c79b93cb0522c6"
+    },
+    "/uk/assets/stylesheets/classic/palette.c7ab7c71.min.css": {
+      "offset": 3225758,
+      "length": 2026,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4c79b93cb0522c6"
+    },
+    "/img/python-types/image01.png": {
+      "offset": 4146330,
+      "length": 15970,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f6116c43754a549c"
+    },
+    "/img/python-types/image06.png": {
+      "offset": 4162300,
+      "length": 27649,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e37ae5addbfb9ce7"
+    },
+    "/img/tutorial/path-params/image01.png": {
+      "offset": 4189949,
+      "length": 72534,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "dcf5c6df63875eca"
+    },
+    "/zh-hant/assets/stylesheets/classic/palette.c7ab7c71.min.css": {
+      "offset": 3225758,
+      "length": 2026,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4c79b93cb0522c6"
+    },
+    "/zh-hant/assets/stylesheets/classic/main.1470d0a1.min.css": {
+      "offset": 3284025,
+      "length": 24347,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b0ade62b9bf8b14"
+    },
+    "/ko/assets/stylesheets/classic/main.1470d0a1.min.css": {
+      "offset": 3284025,
+      "length": 24347,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b0ade62b9bf8b14"
+    },
+    "/ru/assets/stylesheets/classic/main.1470d0a1.min.css": {
+      "offset": 3284025,
+      "length": 24347,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b0ade62b9bf8b14"
+    },
+    "/zh/assets/stylesheets/classic/main.1470d0a1.min.css": {
+      "offset": 3284025,
+      "length": 24347,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b0ade62b9bf8b14"
+    },
+    "/img/pycharm-completion.png": {
+      "offset": 4262483,
+      "length": 48128,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "714ccb59dc99cf2b"
+    },
+    "/img/python-types/image02.png": {
+      "offset": 4310611,
+      "length": 44181,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d615bfa6f9bc0c1d"
+    },
+    "/img/python-types/image05.png": {
+      "offset": 4354792,
+      "length": 39540,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2d4997b681067b4a"
+    },
+    "/img/tutorial/body-nested-models/image01.png": {
+      "offset": 4394332,
+      "length": 41131,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "06e143402159610c"
+    },
+    "/img/tutorial/path-params/image02.png": {
+      "offset": 4435463,
+      "length": 58536,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2c9772114200fb13"
+    },
+    "/img/tutorial/path-params/image03.png": {
+      "offset": 4493999,
+      "length": 107680,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "8c755d8d3d30bfd1"
+    },
+    "/img/tutorial/query-params-str-validations/image02.png": {
+      "offset": 4601679,
+      "length": 67373,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "fee3148e91ab8518"
+    },
+    "/img/tutorial/body/image02.png": {
+      "offset": 4669052,
+      "length": 74341,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4822a92bc7450dec"
+    },
+    "/img/tutorial/query-param-models/image01.png": {
+      "offset": 4743393,
+      "length": 42171,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2c0a522356be2648"
+    },
+    "/img/tutorial/body/image01.png": {
+      "offset": 4785564,
+      "length": 49646,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1b0f8ca530fdb3f5"
+    },
+    "/img/tutorial/body/image03.png": {
+      "offset": 4835210,
+      "length": 60999,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "88d31b41247e2013"
+    },
+    "/img/async/concurrent-burgers/concurrent-burgers-07.png": {
+      "offset": 4896209,
+      "length": 168031,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d9a1e254f2c97143"
+    },
+    "/img/tutorial/body/image05.png": {
+      "offset": 5064240,
+      "length": 47796,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d7aa71c3fcb0b0b9"
+    },
+    "/img/async/parallel-burgers/parallel-burgers-05.png": {
+      "offset": 5112036,
+      "length": 182908,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3335130d33a0a91f"
+    },
+    "/img/async/concurrent-burgers/concurrent-burgers-06.png": {
+      "offset": 5294944,
+      "length": 163016,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b3355009541a6924"
+    },
+    "/img/async/parallel-burgers/parallel-burgers-04.png": {
+      "offset": 5457960,
+      "length": 216657,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4a9f99ccdc037030"
+    },
+    "/img/async/parallel-burgers/parallel-burgers-03.png": {
+      "offset": 5674617,
+      "length": 166436,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b49844429824a9c4"
+    },
+    "/img/async/concurrent-burgers/concurrent-burgers-01.png": {
+      "offset": 5841053,
+      "length": 201841,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f5a9043e952979e0"
+    },
+    "/img/async/concurrent-burgers/concurrent-burgers-03.png": {
+      "offset": 6042894,
+      "length": 168518,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0f5880dc7e481252"
+    },
+    "/img/async/concurrent-burgers/concurrent-burgers-02.png": {
+      "offset": 6211412,
+      "length": 164843,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0ac0bbb289002c50"
+    },
+    "/img/async/parallel-burgers/parallel-burgers-06.png": {
+      "offset": 6376255,
+      "length": 154633,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b804f3658923ead4"
+    },
+    "/img/async/parallel-burgers/parallel-burgers-02.png": {
+      "offset": 6530888,
+      "length": 201155,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "564e63ee4d6be0c2"
+    },
+    "/img/async/concurrent-burgers/concurrent-burgers-05.png": {
+      "offset": 6732043,
+      "length": 157917,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "05639c7210817eef"
+    },
+    "/img/async/concurrent-burgers/concurrent-burgers-04.png": {
+      "offset": 6889960,
+      "length": 161357,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b1fd361f97e54e7d"
+    },
+    "/img/tutorial/body/image04.png": {
+      "offset": 7051317,
+      "length": 37655,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "04cd60088f905f37"
+    },
+    "/img/async/parallel-burgers/parallel-burgers-01.png": {
+      "offset": 7088972,
+      "length": 222041,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0ee301c216d54753"
+    },
+    "/img/tutorial/body-fields/image01.png": {
+      "offset": 7311013,
+      "length": 73717,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b657a024d8e79366"
+    },
+    "/img/tutorial/cookie-param-models/image01.png": {
+      "offset": 7384730,
+      "length": 41368,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "31450b661a013729"
+    },
+    "/img/tutorial/path-operation-configuration/image04.png": {
+      "offset": 7426098,
+      "length": 34886,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ea60e66860b2244b"
+    },
+    "/img/tutorial/request-form-models/image01.png": {
+      "offset": 7460984,
+      "length": 40821,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6befce37506076a4"
+    },
+    "/img/tutorial/security/image01.png": {
+      "offset": 7501805,
+      "length": 49353,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b297e9962dc839ee"
+    },
+    "/img/tutorial/body-fields/image02.png": {
+      "offset": 7551158,
+      "length": 88749,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "9b4221e8a121e7f1"
+    },
+    "/img/tutorial/security/image03.png": {
+      "offset": 7639907,
+      "length": 86943,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "30fdb81cb59de3ad"
+    },
+    "/img/tutorial/path-operation-configuration/image03.png": {
+      "offset": 7726850,
+      "length": 64614,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "76bae9e243192dbf"
+    },
+    "/img/tutorial/response-status-code/image01.png": {
+      "offset": 7791464,
+      "length": 69346,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "38ef0786360c6934"
+    },
+    "/img/tutorial/path-operation-configuration/image01.png": {
+      "offset": 7860810,
+      "length": 37715,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "239f169c8d71d98b"
+    },
+    "/img/tutorial/security/image02.png": {
+      "offset": 7898525,
+      "length": 85329,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ab635188880db6c3"
+    },
+    "/img/tutorial/header-param-models/image01.png": {
+      "offset": 7983854,
+      "length": 56221,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1cc8a9cd31fe4bab"
+    },
+    "/img/tutorial/path-operation-configuration/image02.png": {
+      "offset": 8040075,
+      "length": 81097,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "eaec4fa7a9c59d27"
+    },
+    "/img/tutorial/query-params-str-validations/image01.png": {
+      "offset": 8121172,
+      "length": 79707,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "94f32e4f2174f89a"
+    },
+    "/img/tutorial/dependencies/image02.png": {
+      "offset": 8200879,
+      "length": 63821,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c0726627053de29f"
+    },
+    "/img/tutorial/response-model/image01.png": {
+      "offset": 8264700,
+      "length": 68228,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c67b154e73db8d86"
+    },
+    "/img/tutorial/path-operation-configuration/image05.png": {
+      "offset": 8332928,
+      "length": 67125,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "fae46323bcacad38"
+    },
+    "/img/tutorial/response-model/image02.png": {
+      "offset": 8400053,
+      "length": 82057,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "acc96fb2dee47266"
+    },
+    "/img/tutorial/response-status-code/image02.png": {
+      "offset": 8482110,
+      "length": 28712,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "18c6a26f8bb97020"
+    },
+    "/img/tutorial/dependencies/image01.png": {
+      "offset": 8510822,
+      "length": 71148,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f210547b018dc914"
+    },
+    "/img/tutorial/security/image07.png": {
+      "offset": 8581970,
+      "length": 55507,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "836b9ae987e3073f"
+    },
+    "/img/tutorial/path-operation-advanced-configuration/image01.png": {
+      "offset": 8637477,
+      "length": 63084,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "dbeaa3a422cef0ab"
+    },
+    "/img/tutorial/sql-databases/image02.png": {
+      "offset": 8700561,
+      "length": 63549,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "224725076119082e"
+    },
+    "/img/tutorial/security/image06.png": {
+      "offset": 8764110,
+      "length": 85407,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b3cc1a89f6357ccf"
+    },
+    "/img/tutorial/security/image04.png": {
+      "offset": 8849517,
+      "length": 79592,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "5b27e960ce6f1523"
+    },
+    "/img/tutorial/security/image08.png": {
+      "offset": 8929109,
+      "length": 83227,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "9c6083a8c4a1eae7"
+    },
+    "/img/tutorial/custom-response/image01.png": {
+      "offset": 9012336,
+      "length": 49144,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7ba8805344d5b44a"
+    },
+    "/img/tutorial/sql-databases/image01.png": {
+      "offset": 9061480,
+      "length": 65421,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ebeb4dcedb64c956"
+    },
+    "/img/tutorial/sub-applications/image01.png": {
+      "offset": 9126901,
+      "length": 45558,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "32b034f11a62c24e"
+    },
+    "/img/tutorial/security/image09.png": {
+      "offset": 9172459,
+      "length": 104881,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "9cd51c873120c128"
+    },
+    "/img/tutorial/metadata/image01.png": {
+      "offset": 9277340,
+      "length": 80738,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "262d68fb7a551459"
+    },
+    "/img/tutorial/debugging/image02.png": {
+      "offset": 9358078,
+      "length": 95254,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "84e746eec4900488"
+    },
+    "/img/tutorial/security/image05.png": {
+      "offset": 9453332,
+      "length": 77294,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "89e1e0173eec00c3"
+    },
+    "/img/tutorial/bigger-applications/image01.png": {
+      "offset": 9530626,
+      "length": 69141,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "db5e67b466be64d6"
+    },
+    "/img/tutorial/metadata/image02.png": {
+      "offset": 9599767,
+      "length": 44670,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1fc39a20e7de3d85"
+    },
+    "/img/tutorial/security/image10.png": {
+      "offset": 9644437,
+      "length": 153925,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a12e0f2b2f068c30"
+    },
+    "/img/tutorial/additional-responses/image01.png": {
+      "offset": 9798362,
+      "length": 67282,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "5e3084636977c606"
+    },
+    "/img/tutorial/debugging/image01.png": {
+      "offset": 9865644,
+      "length": 162480,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d1d4ee8e4aff2507"
+    },
+    "/img/tutorial/sub-applications/image02.png": {
+      "offset": 10028124,
+      "length": 48398,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2016f6e171af5f00"
+    },
+    "/img/tutorial/websockets/image01.png": {
+      "offset": 10076522,
+      "length": 14732,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "9523cafbed859f50"
+    },
+    "/img/tutorial/websockets/image02.png": {
+      "offset": 10091254,
+      "length": 15978,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "234ddbbb8f04e77c"
+    },
+    "/img/tutorial/websockets/image03.png": {
+      "offset": 10107232,
+      "length": 18815,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4e9792c297f97df8"
+    },
+    "/img/tutorial/websockets/image04.png": {
+      "offset": 10126047,
+      "length": 27478,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b1acacab225bd050"
+    },
+    "/img/tutorial/generate-clients/image02.png": {
+      "offset": 10153525,
+      "length": 57259,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "10e11f49c1da8b39"
+    },
+    "/img/tutorial/behind-a-proxy/image01.png": {
+      "offset": 10210784,
+      "length": 26217,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4151570157a913d3"
+    },
+    "/img/tutorial/generate-clients/image01.png": {
+      "offset": 10237001,
+      "length": 72947,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "23418669e97f8fdf"
+    },
+    "/img/tutorial/websockets/image05.png": {
+      "offset": 10309948,
+      "length": 51059,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4157195cb7cce12f"
+    },
+    "/img/tutorial/security/image12.png": {
+      "offset": 10361007,
+      "length": 64962,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b640f50108d3a5fb"
+    },
+    "/img/tutorial/dataclasses/image01.png": {
+      "offset": 10425969,
+      "length": 67558,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e117085cadac0e0a"
+    },
+    "/img/tutorial/json-base64-bytes/image01.png": {
+      "offset": 10493527,
+      "length": 67067,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "469184cec7bfeb2e"
+    },
+    "/img/tutorial/generate-clients/image04.png": {
+      "offset": 10560594,
+      "length": 51888,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "38f716d15a51216d"
+    },
+    "/img/tutorial/behind-a-proxy/image02.png": {
+      "offset": 10612482,
+      "length": 57195,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a0ccfc92c57110f7"
+    },
+    "/img/tutorial/security/image11.png": {
+      "offset": 10669677,
+      "length": 72371,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f104c7956ba2840c"
+    },
+    "/img/tutorial/behind-a-proxy/image03.png": {
+      "offset": 10742048,
+      "length": 69179,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "42dcd07eeda1abca"
+    },
+    "/img/tutorial/openapi-webhooks/image01.png": {
+      "offset": 10811227,
+      "length": 82042,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "09259201f2014763"
+    },
+    "/img/tutorial/generate-clients/image05.png": {
+      "offset": 10893269,
+      "length": 30033,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6f8b9958e8f7e34e"
+    },
+    "/img/tutorial/generate-clients/image06.png": {
+      "offset": 10923302,
+      "length": 40550,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "10d1cda03481b151"
+    },
+    "/img/tutorial/generate-clients/image03.png": {
+      "offset": 10963852,
+      "length": 58750,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "37a64446a2d8a0c4"
+    },
+    "/img/tutorial/opentelemetry/image01.png": {
+      "offset": 11022602,
+      "length": 205056,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4d3383e8909ce4ab"
+    },
+    "/img/tutorial/extending-openapi/image01.png": {
+      "offset": 11227658,
+      "length": 58471,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7c622184cfc1f9c0"
+    },
+    "/img/tutorial/generate-clients/image07.png": {
+      "offset": 11286129,
+      "length": 45966,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b69a4a253e15615e"
+    },
+    "/img/deployment/concepts/process-ram.drawio.svg": {
+      "offset": 11332095,
+      "length": 3685,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "3d900e69f2446abb"
+    },
+    "/img/deployment/https/https04.drawio.svg": {
+      "offset": 11335780,
+      "length": 5246,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "b1713f0651164f54"
+    },
+    "/img/deployment/https/https08.drawio.svg": {
+      "offset": 11341026,
+      "length": 6469,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "672d53d565eb02f6"
+    },
+    "/img/tutorial/generate-clients/image08.png": {
+      "offset": 11347495,
+      "length": 28074,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "96704dd4bcf3fd9e"
+    },
+    "/img/tutorial/separate-openapi-schemas/image02.png": {
+      "offset": 11375569,
+      "length": 82449,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "5fa72cda1e55a9a1"
+    },
+    "/img/deployment/https/https02.drawio.svg": {
+      "offset": 11458018,
+      "length": 4120,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "cf1d187ac5174b33"
+    },
+    "/img/tutorial/openapi-callbacks/image01.png": {
+      "offset": 11462138,
+      "length": 93626,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "62bedf9cc85abf58"
+    },
+    "/img/tutorial/separate-openapi-schemas/image05.png": {
+      "offset": 11555764,
+      "length": 40758,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "9c9a9d921a644160"
+    },
+    "/img/deployment/https/https07.drawio.svg": {
+      "offset": 11596522,
+      "length": 6123,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "846dbc9caaf17fdb"
+    },
+    "/img/deployment/https/https01.drawio.svg": {
+      "offset": 11602645,
+      "length": 3287,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "4ea0c8eeee818c43"
+    },
+    "/img/tutorial/separate-openapi-schemas/image01.png": {
+      "offset": 11605932,
+      "length": 74738,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "961b4bb8e6dfc23a"
+    },
+    "/img/tutorial/separate-openapi-schemas/image04.png": {
+      "offset": 11680670,
+      "length": 52219,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f36a60995c592fa7"
+    },
+    "/img/deployment/concepts/image01.png": {
+      "offset": 11732889,
+      "length": 116881,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "022a93cf8690cc54"
+    },
+    "/img/tutorial/separate-openapi-schemas/image03.png": {
+      "offset": 11849770,
+      "length": 78173,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d15a8c6db0a864f5"
+    },
+    "/img/tutorial/extending-openapi/image02.png": {
+      "offset": 11927943,
+      "length": 10639,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6a26f4b4ddd25d22"
+    },
+    "/img/tutorial/extending-openapi/image03.png": {
+      "offset": 11938582,
+      "length": 10457,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e215b0db838bac86"
+    },
+    "/img/tutorial/extending-openapi/image04.png": {
+      "offset": 11949039,
+      "length": 10544,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0ba0ba09b3b207d4"
+    },
+    "/__docx_assets/571f59902ed298.css": {
+      "offset": 11959583,
+      "length": 344,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "496b36b3b4dd245f"
+    },
+    "/__docx_assets/c1122a3d48655c.bin": {
+      "offset": 11959927,
+      "length": 2119,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "f3ad072de2dbd165"
+    },
+    "/__docx_assets/b1014ee1bc15a5.woff2": {
+      "offset": 11962046,
+      "length": 4371,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "26b7bc588a2665c7"
+    },
+    "/__docx_assets/c533d38667ad6c.woff2": {
+      "offset": 11966417,
+      "length": 4475,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "3bb8dfc33e9ff11c"
+    },
+    "/__docx_assets/f8cea1c91bebd1.woff2": {
+      "offset": 11970892,
+      "length": 25492,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "06b4a142b76136c1"
+    },
+    "/__docx_assets/63a1866c47027d.woff2": {
+      "offset": 11996384,
+      "length": 31848,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "863df35584abeb8a"
+    },
+    "/__docx_assets/dc677a748c1249.woff2": {
+      "offset": 12028232,
+      "length": 18808,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "95f31f86c1810a21"
+    },
+    "/__docx_assets/cfdf6f20d497ac.woff2": {
+      "offset": 12047040,
+      "length": 17652,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "081b9b25a2261b2d"
+    },
+    "/__docx_assets/0437a9930e5e5b.woff2": {
+      "offset": 12064692,
+      "length": 15367,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "7c712fdd6028f62c"
+    },
+    "/__docx_assets/4e54fc361061b4.woff2": {
+      "offset": 12080059,
+      "length": 29420,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "c8d062ed914c39ec"
+    },
+    "/__docx_assets/ce075ab86dc1c6.woff2": {
+      "offset": 12109479,
+      "length": 14363,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "fcb74ecbf14b74af"
+    },
+    "/__docx_assets/78e4260aaa9498.woff2": {
+      "offset": 12123842,
+      "length": 36685,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "479260f39130a72f"
+    },
+    "/__docx_assets/cf69d4bd86681a.woff2": {
+      "offset": 12160527,
+      "length": 41381,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "5d8beb3a63240515"
+    },
+    "/__docx_assets/f24f53f8e279cd.woff2": {
+      "offset": 12201908,
+      "length": 20584,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "c51d6e74d6371e03"
+    },
+    "/__docx_assets/000fec62282349.woff2": {
+      "offset": 12222492,
+      "length": 23692,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "04b20d7dbd4e0a95"
+    },
+    "/__docx_assets/b30e90ae6d7538.woff2": {
+      "offset": 12246184,
+      "length": 22468,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "cf9278a276ab63c4"
+    },
+    "/__docx_assets/890de452eac592.woff2": {
+      "offset": 12268652,
+      "length": 43169,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "8d9777dd9a1c1d38"
+    },
+    "/__docx_assets/45ca9602a5c241.woff2": {
+      "offset": 12311821,
+      "length": 45217,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "de63bb0df1929b6b"
+    },
+    "/__docx_assets/c97752dd1e6482.woff2": {
+      "offset": 12357038,
+      "length": 47241,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "acaf8c8e233b8180"
+    },
+    "/__docx_assets/dfd8b7aab6b3ac.woff2": {
+      "offset": 12404279,
+      "length": 40513,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b3a15da41bba8dcc"
+    },
+    "/__docx_assets/c8000fdd0154f8.woff2": {
+      "offset": 12444792,
+      "length": 10855,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "dc1dec4764893811"
+    },
+    "/__docx_assets/a7526db2115543.woff2": {
+      "offset": 12455647,
+      "length": 10331,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "0e41b06075454185"
+    },
+    "/__docx_assets/eb3fc6cd348814.woff2": {
+      "offset": 12465978,
+      "length": 14975,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "dc21760d86afbe57"
+    },
+    "/__docx_assets/5ecdb49eef0b8f.woff2": {
+      "offset": 12480953,
+      "length": 18620,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b62a410c22018e17"
+    },
+    "/__docx_assets/b88dc42e694acf.woff2": {
+      "offset": 12499573,
+      "length": 14067,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "bab5109a6ab254f2"
+    },
+    "/__docx_assets/ad00e27b224d8b.woff2": {
+      "offset": 12513640,
+      "length": 20532,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "d436c0155bc8eabb"
+    },
+    "/__docx_assets/89e0d6992a2e20.woff2": {
+      "offset": 12534172,
+      "length": 24436,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "9be1ede1d1fdd02b"
+    },
+    "/__docx_assets/daba0ce5c75f43.woff2": {
+      "offset": 12558608,
+      "length": 32824,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "2ec3efc3b87e9aa9"
+    },
+    "/__docx_assets/5a183aea8406cd.woff2": {
+      "offset": 12591432,
+      "length": 22944,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "6090da751d643489"
+    },
+    "/__docx_assets/7dee29c4a83042.woff2": {
+      "offset": 12614376,
+      "length": 35361,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "98669ff26483312e"
+    },
+    "/__docx_assets/e803944f79c904.woff2": {
+      "offset": 12649737,
+      "length": 35945,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "f52b44cee9a6e174"
+    },
+    "/__docx_assets/2f6c59dcc4ca70.woff2": {
+      "offset": 12685682,
+      "length": 38729,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "19a6b5071157b3c5"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 23517,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "038a65bfebf04ea0"
+    }
+  }
+}

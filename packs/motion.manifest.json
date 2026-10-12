@@ -1,1 +1,2225 @@
-{"id":"motion","name":"Motion","version":"v12","commit":"e5bfa1de","origin":"https://motion.dev","entryPath":"/docs","updatedAt":"2026-10-10T18:56:54.226Z","totalBytes":4608981,"chunkCount":273,"routes":{"/docs":{"offset":0,"length":20669,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5776349285f1afc8"},"/docs/react":{"offset":20669,"length":30934,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e4cf18c2e1229c4e"},"/docs/react-motion-component":{"offset":51603,"length":34654,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2a1dcd8db55f554a"},"/docs/react-layout-animations":{"offset":86257,"length":31178,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"202eb9038c63270f"},"/docs/animate":{"offset":117435,"length":35040,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"aa38eb6c3f7ec0de"},"/docs/react-animation":{"offset":152475,"length":34074,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f07f3a3eb845e9bf"},"/docs/react-animate-presence":{"offset":186549,"length":28966,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7f378c290ac1b8a9"},"/docs/react-transitions":{"offset":215515,"length":29806,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9cfaaf128ce4da8b"},"/docs/text-animation":{"offset":245321,"length":34175,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2051ef248a7084b8"},"/docs/three":{"offset":279496,"length":27753,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1b2fae3e69f62356"},"/docs/ai-kit":{"offset":307249,"length":23886,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"28ea4d7c7e9cd330"},"/docs/vue":{"offset":331135,"length":28122,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"aa48b8d1c50bb77b"},"/docs/quick-start":{"offset":359257,"length":27899,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ce8a708930f8c313"},"/docs/svelte":{"offset":387156,"length":26710,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"440fd586030bcb59"},"/docs/react-scroll-animations":{"offset":413866,"length":29638,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0d749de54e94dfa4"},"/docs/studio":{"offset":443504,"length":36432,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0bc30cec471acba4"},"/docs/vgpu":{"offset":479936,"length":28319,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"970b6cdef91f6cef"},"/docs/react-hover-animation":{"offset":508255,"length":24753,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"06bddc08f2981af2"},"/docs/spring":{"offset":533008,"length":28227,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"64ea77b2cb056e81"},"/docs/react-svg-animation":{"offset":561235,"length":28630,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0dcf3377cf39d410"},"/docs/react-animate-activity":{"offset":589865,"length":25273,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0afa0d853010c4b9"},"/docs/scroll":{"offset":615138,"length":26970,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"685fd4d533263054"},"/docs/tween":{"offset":642108,"length":28513,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d9b73303b683d1f0"},"/docs/easing-functions":{"offset":670621,"length":24884,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e3bd0f75f4e1b43"},"/docs/react-animate-view":{"offset":695505,"length":29256,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"41a9d10c2fffbd07"},"/docs/gsap-vs-motion":{"offset":724761,"length":28989,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bbdb897ca1a8972f"},"/docs/react-gestures":{"offset":753750,"length":28405,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7e64c3ca4b3cbbaf"},"/docs/3d-transforms":{"offset":782155,"length":33651,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"627782223238b7a1"},"/docs/svg-animation":{"offset":815806,"length":31782,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bfb3cdaa00c87220"},"/docs/react-lazy-motion":{"offset":847588,"length":23364,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ba2f2df578c7c4f8"},"/docs/react-drag":{"offset":870952,"length":28252,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"93951a96f3b4db8f"},"/docs/react-motion-config":{"offset":899204,"length":24601,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ea500c49e9903fe5"},"/docs/react-layout-group":{"offset":923805,"length":23241,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ba91e2c87684e23d"},"/docs/react-animate-number":{"offset":947046,"length":24617,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d21a13ba7d6e8be1"},"/docs/react-carousel":{"offset":971663,"length":24986,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"437f4b4d9384030e"},"/docs/react-typewriter":{"offset":996649,"length":27845,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"237d5ba5a37cbfcd"},"/docs/react-scramble-text":{"offset":1024494,"length":24708,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1a3477b1efae8160"},"/docs/react-ticker":{"offset":1049202,"length":25364,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fbdaf558b8d3a968"},"/docs/cursor":{"offset":1074566,"length":24794,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ff3131205e62c1ee"},"/docs/react-motion-ui-installation":{"offset":1099360,"length":25518,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8d44a205cb7a917b"},"/docs/react-motion-value":{"offset":1124878,"length":25951,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"20484b7d7a246a5e"},"/docs/react-use-motion-template":{"offset":1150829,"length":23619,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5fed6445696279fc"},"/docs/react-use-motion-value-event":{"offset":1174448,"length":23698,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0df76aeac2f0ce60"},"/docs/react-reorder":{"offset":1198146,"length":25848,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"56317f39a937cc0c"},"/docs/react-use-velocity":{"offset":1223994,"length":23497,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"24c43b7ad09dabef"},"/docs/react-use-transform":{"offset":1247491,"length":25750,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d9829d6db6b26712"},"/docs/react-use-spring":{"offset":1273241,"length":24158,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"093135aab4a4ce10"},"/docs/react-use-time":{"offset":1297399,"length":23868,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4becc854df758cb2"},"/docs/react-use-scroll":{"offset":1321267,"length":26887,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2a821898c6766eaf"},"/docs/react-use-page-in-view":{"offset":1348154,"length":23025,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eb50115300b799a3"},"/docs/react-use-drag-controls":{"offset":1371179,"length":24192,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"806a0254ff444d13"},"/docs/react-accessibility":{"offset":1395371,"length":24802,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f13bf7441b9f292d"},"/docs/react-installation":{"offset":1420173,"length":23668,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"430b18c8609628ba"},"/docs/react-use-reduced-motion":{"offset":1443841,"length":22932,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fbeb05286374de7a"},"/docs/figma":{"offset":1466773,"length":24540,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"55a391c1dd496979"},"/docs/react-use-animate":{"offset":1491313,"length":24473,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ac65e748df99fd43"},"/docs/framer":{"offset":1515786,"length":23524,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"45179294700042d9"},"/docs/react-tailwind":{"offset":1539310,"length":24944,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"146e7b228dcc3f8b"},"/docs/react-use-in-view":{"offset":1564254,"length":25370,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0821aa8be98444a1"},"/docs/base-ui":{"offset":1589624,"length":25201,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2d4e44c98724b40d"},"/docs/radix":{"offset":1614825,"length":25120,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"62e937aa22eb0741"},"/docs/react-upgrade-guide":{"offset":1639945,"length":30159,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"519478f2ccdb9c48"},"/docs/react-use-animation-frame":{"offset":1670104,"length":24051,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bbf485768092b318"},"/docs/react-use-curtains":{"offset":1694155,"length":30488,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8bc46768a0f3c83d"},"/docs/react-reduce-bundle-size":{"offset":1724643,"length":27194,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f18b1f4607f5ddd9"},"/docs/ai-kit-install":{"offset":1751837,"length":23139,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"90d918c3ec05d036"},"/docs/ai-kit-context":{"offset":1774976,"length":24201,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b58f999389fa4a98"},"/docs/resize":{"offset":1799177,"length":23550,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"12b655f70c31f250"},"/docs/attr-effect":{"offset":1822727,"length":23302,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"de63210a27ad8b92"},"/docs/press":{"offset":1846029,"length":27656,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6d44281aa630421a"},"/docs/inview":{"offset":1873685,"length":25632,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3164f21fbfb50c52"},"/docs/layout-animations":{"offset":1899317,"length":25785,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"06dcce18226fc925"},"/docs/prop-effect":{"offset":1925102,"length":23595,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6960617429dc0123"},"/docs/hover":{"offset":1948697,"length":24891,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bb894f24e1a90550"},"/docs/style-effect":{"offset":1973588,"length":24605,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ed3c13e0180eb1a5"},"/docs/frame":{"offset":1998193,"length":24352,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cb6bbaa231b2e91f"},"/docs/arc":{"offset":2022545,"length":25533,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"49165343e2fd46f9"},"/docs/curtains":{"offset":2048078,"length":29919,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1518bce71649ea53"},"/docs/animate-view":{"offset":2077997,"length":33464,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"989826d9d5d9369e"},"/docs/delay":{"offset":2111461,"length":23089,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"64244fd5e952b6f1"},"/docs/svg-effect":{"offset":2134550,"length":25378,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0a1f98b551b5bcee"},"/docs/wordpress":{"offset":2159928,"length":24644,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ddd1e955dd9d18cd"},"/docs/webflow":{"offset":2184572,"length":24121,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a59dfd740435d2dd"},"/docs/split-text":{"offset":2208693,"length":28085,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bcd8177ac4270aca"},"/docs/map-value":{"offset":2236778,"length":24585,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6e2ddf3b15ae52c8"},"/docs/mix":{"offset":2261363,"length":24950,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4a2d8ba912f46e1a"},"/docs/wrap":{"offset":2286313,"length":23797,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3390e435610386a8"},"/docs/transform-value":{"offset":2310110,"length":24418,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"845515edda5d9895"},"/docs/stagger":{"offset":2334528,"length":26271,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"68d784954be3eb49"},"/docs/faqs":{"offset":2360799,"length":23011,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"44786fac51a3a207"},"/docs/css":{"offset":2383810,"length":25649,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"39edd4c248a78417"},"/docs/motion-value":{"offset":2409459,"length":25623,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"652aaa98888317f8"},"/docs/scramble-text":{"offset":2435082,"length":25142,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3014f5eb2506ac81"},"/docs/spring-value":{"offset":2460224,"length":25117,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9a471a2dbcfa7f48"},"/docs/transform":{"offset":2485341,"length":24194,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8d2e47e503224163"},"/docs/squarespace":{"offset":2509535,"length":24413,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e6cf4fbe73fdfcbb"},"/docs/lenis":{"offset":2533948,"length":27957,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8221dcf4b7dde6d1"},"/docs/migrate-from-gsap-to-motion":{"offset":2561905,"length":30290,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5eac31299761dd52"},"/docs/upgrade-guide":{"offset":2592195,"length":25760,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4c267b68efaa0c34"},"/docs/improvements-to-the-web-animations-api-dx":{"offset":2617955,"length":28776,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"38e5006a510a9704"},"/docs/ai-kit-transition-editor":{"offset":2646731,"length":24179,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"289a73676d366fb5"},"/docs/motion-ui-installation":{"offset":2670910,"length":25095,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a6c80dfe9eaca80a"},"/docs/motionscore-code-audit":{"offset":2696005,"length":24942,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d14cf8934baa2565"},"/docs/performance":{"offset":2720947,"length":28867,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bb2e0e8f4b997bc7"},"/docs/ai-kit-generate-css":{"offset":2749814,"length":23793,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2fbf39fc56e4334a"},"/assets/docs-homepage-banner-C5HV9vRN.css":{"offset":2773607,"length":141,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"ce9929191072a461"},"/favicon.svg":{"offset":2773748,"length":368,"mime":"image/svg+xml","gzipped":true,"hash":"846a79c8e001252d"},"/favicon-32.png":{"offset":2774116,"length":645,"mime":"image/png","gzipped":true,"hash":"83155a7aa8b843db"},"/assets/CopyCommandButton-BZa2Foqu.css":{"offset":2774761,"length":541,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"dea2fd45398de874"},"/assets/NotFound-UiHrk7Ho.css":{"offset":2775302,"length":697,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"80b16cc0e216d060"},"/assets/DocsCopyButton-iPkyjcLz.css":{"offset":2775999,"length":578,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"41d90d58baf2346e"},"/assets/use-random-rail-slot-variant-aKtRQtyj.css":{"offset":2776577,"length":2341,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"351bb68b60bd659a"},"/assets/modal-vZxXqTt3.css":{"offset":2778918,"length":1036,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"7431667100b28ef2"},"/favicon-192.png":{"offset":2779954,"length":4126,"mime":"image/png","gzipped":true,"hash":"2cc19232b6830230"},"/assets/ChartFigure-BZr0_jyz.css":{"offset":2784080,"length":1328,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"e1e32ad9a6666cf8"},"/assets/docs-BPOZD0H1.css":{"offset":2785408,"length":2230,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"f1863d2abac3fdd8"},"/assets/tutorials-Cx-3revd.css":{"offset":2787638,"length":6523,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"8ded84fbbd3e516c"},"/assets/docs-XBiBw9oy.css":{"offset":2794161,"length":6459,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"1175a3ea5aea1523"},"/assets/MagazineStudioMocks-CwpuBUjg.css":{"offset":2800620,"length":6565,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"c4bdf74d2585a17d"},"/assets/styles-Jaa8ZyIt.css":{"offset":2807185,"length":10416,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"3da346e208813bcf"},"/assets/index-DWw-ZGnz.css":{"offset":2817601,"length":14264,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"398f3f6f07a2a0ac"},"/assets/interstitials-B-xgBT4K.css":{"offset":2831865,"length":2133,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"f17c10401a5ac96f"},"/assets/diagrams-C0VZG0hm.css":{"offset":2833998,"length":1917,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"769c746dcb962f1a"},"/assets/magazine-b17XYJY_.css":{"offset":2835915,"length":5200,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"b753770fafe64ad7"},"/__docx_assets/234ef41bc2f272.bin":{"offset":2841115,"length":376,"mime":"image/svg+xml","gzipped":true,"hash":"d43fa2123f120d4f"},"/assets/advertise-slots-D2850EHZ.css":{"offset":2841491,"length":1003,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"60abb43a5e3f52e9"},"/assets/docs-fresh-DankQtXc.css":{"offset":2842494,"length":1896,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0aa0407af34e80dd"},"/assets/transition-editor-mock-DBc9dkxQ.css":{"offset":2844390,"length":1550,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"ec8015fe8e44776c"},"/assets/filter-bar-CU3q_rgf.css":{"offset":2845940,"length":1102,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"2accde2353b231c4"},"/assets/ui-brand-lab-Cl0F7pzz.css":{"offset":2847042,"length":3282,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"42e16cb5f90de112"},"/assets/docs-ad-CedXSjpk.css":{"offset":2850324,"length":3452,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"1ec1fddde29b1a85"},"/assets/docs-grid-demo-DzBDp8tI.css":{"offset":2853776,"length":7564,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"54bc548189c3c833"},"/__docx_assets/bc56f60bc9bb59.bin":{"offset":2861340,"length":1539,"mime":"image/jpeg","gzipped":true,"hash":"cfe6fa9d85f4cb28"},"/__docx_assets/b8671486ef0051.bin":{"offset":2862879,"length":3269,"mime":"image/jpeg","gzipped":true,"hash":"81c05375f000bb15"},"/__docx_assets/80e0a5e2e4e822.webp":{"offset":2866148,"length":2540,"mime":"image/webp","gzipped":true,"hash":"d4b5f4a4fb7b26ac"},"/__docx_assets/7f093aa82eaa45.webp":{"offset":2868688,"length":3346,"mime":"image/webp","gzipped":true,"hash":"8f3ce50cf90eb446"},"/__docx_assets/f046a71cbb1137.webp":{"offset":2872034,"length":2217,"mime":"image/webp","gzipped":true,"hash":"1d9625c0aa54d6a3"},"/__docx_assets/b92862b30b8184.webp":{"offset":2874251,"length":1356,"mime":"image/webp","gzipped":true,"hash":"1fc0284e47786f54"},"/__docx_assets/a95a1cc81eaf68.webp":{"offset":2875607,"length":1752,"mime":"image/webp","gzipped":true,"hash":"299e1b9ef24a3afe"},"/__docx_assets/8d72ecb474c44e.webp":{"offset":2877359,"length":1691,"mime":"image/webp","gzipped":true,"hash":"5d182f2ad5b9197c"},"/__docx_assets/2c7eb63e274c7f.webp":{"offset":2879050,"length":2143,"mime":"image/webp","gzipped":true,"hash":"5c29cc80a7af12ef"},"/__docx_assets/1f91757fcf28f2.webp":{"offset":2881193,"length":1567,"mime":"image/webp","gzipped":true,"hash":"9362a5d469a29556"},"/__docx_assets/756471f8556e20.webp":{"offset":2882760,"length":128,"mime":"image/webp","gzipped":true,"hash":"45b61a5aa6ab20bb"},"/__docx_assets/e6d04593008161.webp":{"offset":2882888,"length":21704,"mime":"image/webp","gzipped":true,"hash":"6d40d837280dcff5"},"/__docx_assets/c244567252d111.webp":{"offset":2904592,"length":35807,"mime":"image/webp","gzipped":true,"hash":"aae83b773050c232"},"/__docx_assets/8a72ff36af8dae.webp":{"offset":2940399,"length":1955,"mime":"image/webp","gzipped":true,"hash":"74bb9498eb608aa5"},"/__docx_assets/875ae312572a27.webp":{"offset":2942354,"length":552,"mime":"image/webp","gzipped":true,"hash":"87b8fccf128aba27"},"/__docx_assets/adf33df04cb425.webp":{"offset":2942906,"length":529,"mime":"image/webp","gzipped":true,"hash":"45d15afec94d7a9f"},"/__docx_assets/528742d72537f2.webp":{"offset":2943435,"length":3244,"mime":"image/webp","gzipped":true,"hash":"2297de57768a8264"},"/__docx_assets/391dc0221586a2.webp":{"offset":2946679,"length":2635,"mime":"image/webp","gzipped":true,"hash":"b758a88913d2e3ad"},"/__docx_assets/c1122e3434729f.webp":{"offset":2949314,"length":3728,"mime":"image/webp","gzipped":true,"hash":"0c099b71a87d0e67"},"/__docx_assets/eb79a4d0395f7f.webp":{"offset":2953042,"length":4782,"mime":"image/webp","gzipped":true,"hash":"221eaad5a30fa492"},"/__docx_assets/d1ec99dbc7baa6.webp":{"offset":2957824,"length":8425,"mime":"image/webp","gzipped":true,"hash":"6b4fda2a6036583f"},"/__docx_assets/2d843aabc66b86.webp":{"offset":2966249,"length":8241,"mime":"image/webp","gzipped":true,"hash":"8fbc83e17f6f17c9"},"/__docx_assets/7053259277bafb.webp":{"offset":2974490,"length":17152,"mime":"image/webp","gzipped":true,"hash":"a231e6f8692f0517"},"/__docx_assets/aa16a9e8fd1bf0.webp":{"offset":2991642,"length":18332,"mime":"image/webp","gzipped":true,"hash":"757d69b730fa3ce3"},"/__docx_assets/083a15da3723b9.png":{"offset":3009974,"length":3123,"mime":"image/png","gzipped":true,"hash":"a43b0c1161dd7914"},"/__docx_assets/e66c7ce98f39f2.webp":{"offset":3013097,"length":8965,"mime":"image/webp","gzipped":true,"hash":"a31e477c36e26fe3"},"/__docx_assets/570729b7f53487.png":{"offset":3022062,"length":3505,"mime":"image/png","gzipped":true,"hash":"b1a1fc9e79d4ffe2"},"/__docx_assets/062a0625a34ff6.png":{"offset":3025567,"length":9809,"mime":"image/png","gzipped":true,"hash":"a279e573a9601424"},"/__docx_assets/a613fe3c5d1362.png":{"offset":3035376,"length":8673,"mime":"image/png","gzipped":true,"hash":"ea6a15f0cc882e05"},"/__docx_assets/ed34a9c1788330.png":{"offset":3044049,"length":7780,"mime":"image/png","gzipped":true,"hash":"6155cdd2c8278ca5"},"/__docx_assets/d78de9ff042412.webp":{"offset":3051829,"length":19850,"mime":"image/webp","gzipped":true,"hash":"e35b8c25ea2736d4"},"/__docx_assets/c47681a5d1bc78.png":{"offset":3071679,"length":18837,"mime":"image/png","gzipped":true,"hash":"c3d9d2fcdf4704a1"},"/__docx_assets/965208ac518fcd.webp":{"offset":3090516,"length":2169,"mime":"image/webp","gzipped":true,"hash":"9602cf270fb1187c"},"/__docx_assets/630cfafe7f26ad.webp":{"offset":3092685,"length":1257,"mime":"image/webp","gzipped":true,"hash":"57611e8ec44159c0"},"/__docx_assets/80a93b6bbeca05.webp":{"offset":3093942,"length":2336,"mime":"image/webp","gzipped":true,"hash":"9e67712917e37889"},"/__docx_assets/84f6d03ccb03b9.webp":{"offset":3096278,"length":1723,"mime":"image/webp","gzipped":true,"hash":"bfaf7c6cd062b448"},"/__docx_assets/68776f2766f7b2.webp":{"offset":3098001,"length":5451,"mime":"image/webp","gzipped":true,"hash":"707b28e2a916267c"},"/__docx_assets/dfc4033444a7b0.webp":{"offset":3103452,"length":1968,"mime":"image/webp","gzipped":true,"hash":"75ad17786a03186f"},"/__docx_assets/023e1c8480696c.webp":{"offset":3105420,"length":6014,"mime":"image/webp","gzipped":true,"hash":"f62896572b3c40ba"},"/__docx_assets/a500f974bb6ee0.webp":{"offset":3111434,"length":11084,"mime":"image/webp","gzipped":true,"hash":"c1496d0d8c15bbba"},"/__docx_assets/dc8db149f38b84.webp":{"offset":3122518,"length":6724,"mime":"image/webp","gzipped":true,"hash":"bd939ef2ef8333cb"},"/__docx_assets/0be492c8a7f0cf.webp":{"offset":3129242,"length":17878,"mime":"image/webp","gzipped":true,"hash":"092e867e79a690de"},"/__docx_assets/925e225f52cfd0.webp":{"offset":3147120,"length":14217,"mime":"image/webp","gzipped":true,"hash":"e649cc6564c0d751"},"/__docx_assets/b5e09f8d45ec20.webp":{"offset":3161337,"length":12622,"mime":"image/webp","gzipped":true,"hash":"257803d63e05a2a1"},"/__docx_assets/ddf3ce5317cef3.webp":{"offset":3173959,"length":5621,"mime":"image/webp","gzipped":true,"hash":"c47fe2de05230589"},"/__docx_assets/013daed11679d9.webp":{"offset":3179580,"length":13846,"mime":"image/webp","gzipped":true,"hash":"8b188fcb75c06ae5"},"/__docx_assets/a9e468917ad1d8.png":{"offset":3193426,"length":117050,"mime":"image/png","gzipped":true,"hash":"9a68351b2fb24726"},"/__docx_assets/f5a835dad154a6.webp":{"offset":3310476,"length":34784,"mime":"image/webp","gzipped":true,"hash":"6bbb62ecc76bdbe8"},"/__docx_assets/ae15ea9c93a559.webp":{"offset":3345260,"length":1648,"mime":"image/webp","gzipped":true,"hash":"ee5df5ca7ee42c38"},"/__docx_assets/565b6bd46bef34.webp":{"offset":3346908,"length":19651,"mime":"image/webp","gzipped":true,"hash":"3e76c7d4e9f64e45"},"/__docx_assets/eb60f2a0765fdf.webp":{"offset":3366559,"length":5832,"mime":"image/webp","gzipped":true,"hash":"e83d062f71933de3"},"/__docx_assets/afb3a2093c64f3.png":{"offset":3372391,"length":48943,"mime":"image/png","gzipped":true,"hash":"ab16ffd7e8f4f4d4"},"/__docx_assets/6d02f66922a3e3.webp":{"offset":3421334,"length":3193,"mime":"image/webp","gzipped":true,"hash":"ae00b0d701e5411e"},"/__docx_assets/c84c0b8d61ac55.webp":{"offset":3424527,"length":1237,"mime":"image/webp","gzipped":true,"hash":"310dd09eb41865ac"},"/__docx_assets/696a763fdc435e.webp":{"offset":3425764,"length":1514,"mime":"image/webp","gzipped":true,"hash":"43b29be3f89160f7"},"/__docx_assets/9debf0ef556393.webp":{"offset":3427278,"length":2019,"mime":"image/webp","gzipped":true,"hash":"2c6dda2331f5c17d"},"/__docx_assets/3872c2d80b5a48.webp":{"offset":3429297,"length":1601,"mime":"image/webp","gzipped":true,"hash":"b8be9113bda11639"},"/__docx_assets/7c87ee8742c9ae.webp":{"offset":3430898,"length":1871,"mime":"image/webp","gzipped":true,"hash":"22519d63db13e66f"},"/__docx_assets/7e2f6fe6687f0c.webp":{"offset":3432769,"length":2506,"mime":"image/webp","gzipped":true,"hash":"37ea7a7872bdb25d"},"/__docx_assets/2108ab6b3fe694.webp":{"offset":3435275,"length":1895,"mime":"image/webp","gzipped":true,"hash":"4e62415ebaad0db2"},"/__docx_assets/1fe2038d9a08e0.webp":{"offset":3437170,"length":1567,"mime":"image/webp","gzipped":true,"hash":"3650b2265846b064"},"/__docx_assets/e3844071bb6f09.webp":{"offset":3438737,"length":3354,"mime":"image/webp","gzipped":true,"hash":"8f9f6a2ba250b317"},"/__docx_assets/26ff6458249571.webp":{"offset":3442091,"length":1876,"mime":"image/webp","gzipped":true,"hash":"d1a1b098bfc24978"},"/__docx_assets/5426c73fa7679e.webp":{"offset":3443967,"length":11305,"mime":"image/webp","gzipped":true,"hash":"95e4e5edf8b4bb6b"},"/__docx_assets/5c2005744f19ca.webp":{"offset":3455272,"length":15781,"mime":"image/webp","gzipped":true,"hash":"cae566a4d8a323cf"},"/__docx_assets/3a2df44e82ac69.webp":{"offset":3471053,"length":5195,"mime":"image/webp","gzipped":true,"hash":"789f5f43b0130cfc"},"/__docx_assets/71efaea34b3450.webp":{"offset":3476248,"length":16066,"mime":"image/webp","gzipped":true,"hash":"97503e954255f703"},"/__docx_assets/e4488e446ef6b8.webp":{"offset":3492314,"length":11700,"mime":"image/webp","gzipped":true,"hash":"0abebbb3fa6057f4"},"/__docx_assets/bf7107e14c1b0d.webp":{"offset":3504014,"length":19871,"mime":"image/webp","gzipped":true,"hash":"ff0e9b2c40f19a5e"},"/__docx_assets/e746d0be920058.webp":{"offset":3523885,"length":39562,"mime":"image/webp","gzipped":true,"hash":"fa7c2c9b9409ef4f"},"/__docx_assets/4814a33b28e061.webp":{"offset":3563447,"length":25933,"mime":"image/webp","gzipped":true,"hash":"32aa8e547e6cb78a"},"/__docx_assets/e44144446e8f4e.webp":{"offset":3589380,"length":27954,"mime":"image/webp","gzipped":true,"hash":"81ad6639dd05ac31"},"/__docx_assets/ed993e2eeef0af.webp":{"offset":3617334,"length":460,"mime":"image/webp","gzipped":true,"hash":"ddccca83ec6ab538"},"/__docx_assets/f8bdbcbe7d44ce.webp":{"offset":3617794,"length":341,"mime":"image/webp","gzipped":true,"hash":"0f2a31955faca761"},"/__docx_assets/d56caf32ec3455.webp":{"offset":3618135,"length":6729,"mime":"image/webp","gzipped":true,"hash":"2470f45227524d81"},"/__docx_assets/cdf3e8274e4d0d.webp":{"offset":3624864,"length":2408,"mime":"image/webp","gzipped":true,"hash":"f4969ac9aef11262"},"/__docx_assets/2f9108fdebf048.webp":{"offset":3627272,"length":476,"mime":"image/webp","gzipped":true,"hash":"42c21eeb91ef0b53"},"/__docx_assets/046019cff9fc63.webp":{"offset":3627748,"length":2348,"mime":"image/webp","gzipped":true,"hash":"28dc2bcc8b7e51ac"},"/__docx_assets/49ffe60637270c.png":{"offset":3630096,"length":9009,"mime":"image/png","gzipped":true,"hash":"a05c31889a2df6d2"},"/__docx_assets/c3d3e292d37065.png":{"offset":3639105,"length":14622,"mime":"image/png","gzipped":true,"hash":"f8a1d5d9c2e8b416"},"/__docx_assets/9080470450a581.webp":{"offset":3653727,"length":8544,"mime":"image/webp","gzipped":true,"hash":"11d94f2a73ee593c"},"/__docx_assets/a44442efc35a0e.webp":{"offset":3662271,"length":13088,"mime":"image/webp","gzipped":true,"hash":"2a2d45b8b2272934"},"/__docx_assets/f273802bdb7163.png":{"offset":3675359,"length":10611,"mime":"image/png","gzipped":true,"hash":"c085cdb41ae74d0a"},"/__docx_assets/36c70bea48462e.png":{"offset":3685970,"length":8691,"mime":"image/png","gzipped":true,"hash":"ba4fde55a0718dcc"},"/__docx_assets/b79d5a94fbd886.webp":{"offset":3694661,"length":48637,"mime":"image/webp","gzipped":true,"hash":"b52ab48c6c61af42"},"/__docx_assets/a774eafb8310a9.png":{"offset":3743298,"length":12714,"mime":"image/png","gzipped":true,"hash":"6ade94cbd85d43e0"},"/__docx_assets/796e285861c696.webp":{"offset":3756012,"length":7108,"mime":"image/webp","gzipped":true,"hash":"1ba40be08c48723d"},"/__docx_assets/6c7c35eee3edc9.webp":{"offset":3763120,"length":9123,"mime":"image/webp","gzipped":true,"hash":"a66072c22872a7e0"},"/__docx_assets/46fafb64f1699a.webp":{"offset":3772243,"length":2164,"mime":"image/webp","gzipped":true,"hash":"e199d79126c6b0ad"},"/__docx_assets/ddbca72e3af52c.png":{"offset":3774407,"length":63338,"mime":"image/png","gzipped":true,"hash":"77105963e6cb124c"},"/__docx_assets/68706ff12f3aca.webp":{"offset":3837745,"length":6673,"mime":"image/webp","gzipped":true,"hash":"75faa3b9327af4a9"},"/__docx_assets/2ef7d6feb917f0.webp":{"offset":3844418,"length":8780,"mime":"image/webp","gzipped":true,"hash":"4f248e83b5df2dc9"},"/__docx_assets/b2fc5c4eca6e70.webp":{"offset":3853198,"length":6414,"mime":"image/webp","gzipped":true,"hash":"69a0c2fb915463ae"},"/__docx_assets/ce397f290a0302.webp":{"offset":3859612,"length":1259,"mime":"image/webp","gzipped":true,"hash":"fc193ea25f8ac64e"},"/__docx_assets/e1c9cff7886519.webp":{"offset":3860871,"length":1390,"mime":"image/webp","gzipped":true,"hash":"b83bb8a14edad88b"},"/__docx_assets/43474e24ca606b.webp":{"offset":3862261,"length":3351,"mime":"image/webp","gzipped":true,"hash":"e756bf1089a9a115"},"/__docx_assets/7fe2f24f0a7e7d.webp":{"offset":3865612,"length":7781,"mime":"image/webp","gzipped":true,"hash":"67920ca317eb892b"},"/__docx_assets/108b9bf98dbc85.webp":{"offset":3873393,"length":1277,"mime":"image/webp","gzipped":true,"hash":"058d492adf009ca0"},"/__docx_assets/5ded944a7ad88d.webp":{"offset":3874670,"length":1445,"mime":"image/webp","gzipped":true,"hash":"bd4ffbec7857c4ac"},"/__docx_assets/1a16e5e1346e94.webp":{"offset":3876115,"length":1445,"mime":"image/webp","gzipped":true,"hash":"da14dcc4c9217c06"},"/__docx_assets/9f0bad4b469f73.webp":{"offset":3877560,"length":4829,"mime":"image/webp","gzipped":true,"hash":"820dd42760bf04a3"},"/__docx_assets/a520906f398c0f.webp":{"offset":3882389,"length":1591,"mime":"image/webp","gzipped":true,"hash":"3aaff5cf07de3b46"},"/__docx_assets/c086a6631eceb9.webp":{"offset":3883980,"length":5538,"mime":"image/webp","gzipped":true,"hash":"91438f5377b8a58b"},"/__docx_assets/d9f2a998b9c2e3.webp":{"offset":3889518,"length":3859,"mime":"image/webp","gzipped":true,"hash":"53b639fc9be8d4b9"},"/__docx_assets/2f779ead552297.webp":{"offset":3893377,"length":3379,"mime":"image/webp","gzipped":true,"hash":"a7b2b7751c4eddaf"},"/__docx_assets/3fd68221386791.webp":{"offset":3896756,"length":4863,"mime":"image/webp","gzipped":true,"hash":"2443ac0d396e49bb"},"/__docx_assets/9e52d98cab0573.webp":{"offset":3901619,"length":6373,"mime":"image/webp","gzipped":true,"hash":"13f538c03b76ae59"},"/__docx_assets/9b8caffb7861b3.webp":{"offset":3907992,"length":4923,"mime":"image/webp","gzipped":true,"hash":"9e725262e782f046"},"/__docx_assets/617649797ac936.webp":{"offset":3901619,"length":6373,"mime":"image/webp","gzipped":true,"hash":"13f538c03b76ae59"},"/__docx_assets/df6126ce7ec89d.png":{"offset":3912915,"length":12837,"mime":"image/png","gzipped":true,"hash":"cf10a26b9a31f678"},"/__docx_assets/04ea7e08e1c1b7.png":{"offset":3925752,"length":48946,"mime":"image/png","gzipped":true,"hash":"b7b56b55582eea7c"},"/__docx_assets/af4e267f0fdc60.webp":{"offset":3974698,"length":53874,"mime":"image/webp","gzipped":true,"hash":"7823351e0ef5670e"},"/__docx_assets/cf554d56056015.png":{"offset":4028572,"length":22925,"mime":"image/png","gzipped":true,"hash":"36508df3852ca3e7"},"/__docx_assets/54659ce3acf47b.webp":{"offset":4051497,"length":1187,"mime":"image/webp","gzipped":true,"hash":"016dcd921194042b"},"/__docx_assets/5140baee308541.webp":{"offset":4052684,"length":716,"mime":"image/webp","gzipped":true,"hash":"3245cdf76d639ff6"},"/__docx_assets/1cadda6f89bfd0.webp":{"offset":4053400,"length":938,"mime":"image/webp","gzipped":true,"hash":"fc3b682c44e2d57d"},"/__docx_assets/fdbecc9ebf077b.webp":{"offset":4054338,"length":2923,"mime":"image/webp","gzipped":true,"hash":"6b2fa13c50a3024a"},"/__docx_assets/a62fb37c4410b7.webp":{"offset":4057261,"length":2269,"mime":"image/webp","gzipped":true,"hash":"0f248a37a2d87952"},"/__docx_assets/64feb8aee0e4ff.webp":{"offset":4059530,"length":7779,"mime":"image/webp","gzipped":true,"hash":"6e89658daf6fdec6"},"/__docx_assets/6e70fa9f4716d9.webp":{"offset":4067309,"length":2591,"mime":"image/webp","gzipped":true,"hash":"6e98d28ce02bb8c4"},"/__docx_assets/888494b6a0b221.webp":{"offset":4069900,"length":2737,"mime":"image/webp","gzipped":true,"hash":"ee3b7566d5a4705f"},"/__docx_assets/2fd997847c4e18.webp":{"offset":4072637,"length":5454,"mime":"image/webp","gzipped":true,"hash":"3e5c106d5d1ec5d3"},"/__docx_assets/ba94229c95e79d.webp":{"offset":3883980,"length":5538,"mime":"image/webp","gzipped":true,"hash":"91438f5377b8a58b"},"/__docx_assets/44641657d98345.webp":{"offset":4078091,"length":8700,"mime":"image/webp","gzipped":true,"hash":"208e12d555fa08b6"},"/__docx_assets/fc0f9657b4ebeb.webp":{"offset":4086791,"length":17662,"mime":"image/webp","gzipped":true,"hash":"1bfea18c1fff119a"},"/__docx_assets/29d23f5767b715.webp":{"offset":4104453,"length":8748,"mime":"image/webp","gzipped":true,"hash":"45b6e01e5475ede9"},"/__docx_assets/f679d8ea063d49.webp":{"offset":4113201,"length":3909,"mime":"image/webp","gzipped":true,"hash":"97f2a5325dd33341"},"/__docx_assets/497dde8e48067e.png":{"offset":4117110,"length":18302,"mime":"image/png","gzipped":true,"hash":"dd316ea14198ba02"},"/__docx_assets/ff50d9fdf78443.webp":{"offset":4135412,"length":4751,"mime":"image/webp","gzipped":true,"hash":"8ba6499632583ee0"},"/__docx_assets/05dcf787c4a8dd.webp":{"offset":4140163,"length":14513,"mime":"image/webp","gzipped":true,"hash":"7d21efe9c5ecf6de"},"/__docx_assets/50ed6dba9a3d9f.png":{"offset":4154676,"length":28787,"mime":"image/png","gzipped":true,"hash":"488d0b2420659d0b"},"/__docx_assets/8d4d213d0c2277.png":{"offset":4183463,"length":25023,"mime":"image/png","gzipped":true,"hash":"8c9185b6e2d13bd4"},"/__docx_assets/d2d7eb2b74182a.webp":{"offset":4208486,"length":3628,"mime":"image/webp","gzipped":true,"hash":"b0e03f105fe641cc"},"/__docx_assets/00edafd86fde65.png":{"offset":4212114,"length":15411,"mime":"image/png","gzipped":true,"hash":"9300881ec9a1bab1"},"/__docx_assets/90403bdc754493.png":{"offset":4227525,"length":7974,"mime":"image/png","gzipped":true,"hash":"fd1b01f02b7995a5"},"/__docx_assets/3f8a78003f385a.png":{"offset":4235499,"length":10256,"mime":"image/png","gzipped":true,"hash":"d8d4141ce1d6335f"},"/__docx_assets/cf9f69839f723a.png":{"offset":4245755,"length":12991,"mime":"image/png","gzipped":true,"hash":"d3e433ef46ab7a57"},"/__docx_assets/2585d9b5b3a326.png":{"offset":4258746,"length":11515,"mime":"image/png","gzipped":true,"hash":"9cf527c8e7222b9b"},"/__docx_assets/74e7ca9d9011bb.png":{"offset":4270261,"length":45916,"mime":"image/png","gzipped":true,"hash":"04ba23bf7ab6662a"},"/__docx_assets/600d72306fdfbf.png":{"offset":4316177,"length":53684,"mime":"image/png","gzipped":true,"hash":"95ee0e94a1f98688"},"/__docx_assets/d50b6721b2eb6b.png":{"offset":4369861,"length":104251,"mime":"image/png","gzipped":true,"hash":"516258689cf8f4c0"},"/__docx_assets/4027bf3bb962ee.png":{"offset":4474112,"length":103557,"mime":"image/png","gzipped":true,"hash":"1957b1720245d35b"},"/__docx_assets/0932dca6622f73.woff2":{"offset":4577669,"length":31312,"mime":"font/woff2","gzipped":true,"hash":"35fe8a0ae822f837"},"/":{"offset":0,"length":20669,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5776349285f1afc8"}}}
+{
+  "id": "motion",
+  "name": "Motion",
+  "version": "v12",
+  "commit": "8e3d01e9",
+  "origin": "https://motion.dev",
+  "entryPath": "/docs",
+  "updatedAt": "2026-10-11T10:38:29.267Z",
+  "totalBytes": 5313299,
+  "chunkCount": 313,
+  "routes": {
+    "/docs": {
+      "offset": 0,
+      "length": 19763,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7a7e68885e8bb0ad"
+    },
+    "/docs/react": {
+      "offset": 19763,
+      "length": 30050,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "727cf569629775e5"
+    },
+    "/docs/svelte": {
+      "offset": 49813,
+      "length": 25801,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "19342a68a70a8132"
+    },
+    "/docs/studio": {
+      "offset": 75614,
+      "length": 35514,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f743858fd93904e6"
+    },
+    "/docs/vue": {
+      "offset": 111128,
+      "length": 27256,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f916329c3e677817"
+    },
+    "/docs/animate": {
+      "offset": 138384,
+      "length": 34132,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "197d9a258fe6a469"
+    },
+    "/docs/react-layout-animations": {
+      "offset": 172516,
+      "length": 30305,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a0f61cecd52f2dc2"
+    },
+    "/docs/react-motion-component": {
+      "offset": 202821,
+      "length": 33749,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0a92232ab46e4265"
+    },
+    "/docs/react-transitions": {
+      "offset": 236570,
+      "length": 28938,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5079576d84241097"
+    },
+    "/docs/three": {
+      "offset": 265508,
+      "length": 26882,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6990b9cacdc5ca2d"
+    },
+    "/docs/react-animation": {
+      "offset": 292390,
+      "length": 33176,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "80fdc458e0b16332"
+    },
+    "/docs/react-animate-presence": {
+      "offset": 325566,
+      "length": 28104,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "46a3c2a17586a221"
+    },
+    "/docs/vgpu": {
+      "offset": 353670,
+      "length": 27455,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "beb3d92e34085e4f"
+    },
+    "/docs/text-animation": {
+      "offset": 381125,
+      "length": 33273,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1192d380199bc553"
+    },
+    "/docs/ai-kit": {
+      "offset": 414398,
+      "length": 22987,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "df33d7fbc2b66fc4"
+    },
+    "/docs/quick-start": {
+      "offset": 437385,
+      "length": 27035,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "676db1b54d2f62e9"
+    },
+    "/docs/react-scroll-animations": {
+      "offset": 464420,
+      "length": 28769,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7ef75d35bd086859"
+    },
+    "/docs/spring": {
+      "offset": 493189,
+      "length": 27361,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "80c4eecdf66d5faa"
+    },
+    "/docs/scroll": {
+      "offset": 520550,
+      "length": 26075,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "615c0422efc85849"
+    },
+    "/docs/tween": {
+      "offset": 546625,
+      "length": 27647,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "85d8b3110910fa2a"
+    },
+    "/docs/react-animate-activity": {
+      "offset": 574272,
+      "length": 24363,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2f24ec09e4a27953"
+    },
+    "/docs/svg-animation": {
+      "offset": 598635,
+      "length": 30906,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c26c118cf148598d"
+    },
+    "/docs/react-hover-animation": {
+      "offset": 629541,
+      "length": 23844,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8b22d28878316f78"
+    },
+    "/docs/react-gestures": {
+      "offset": 653385,
+      "length": 27539,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "70ff0fd69f0b51d3"
+    },
+    "/docs/react-lazy-motion": {
+      "offset": 680924,
+      "length": 22461,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "76f6feb43d76a01b"
+    },
+    "/docs/react-animate-view": {
+      "offset": 703385,
+      "length": 28391,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "14d7ab8c4d7c77f3"
+    },
+    "/docs/react-layout-group": {
+      "offset": 731776,
+      "length": 22335,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "78eadac90deb53f1"
+    },
+    "/docs/react-motion-config": {
+      "offset": 754111,
+      "length": 23699,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c360e3c20ca5f460"
+    },
+    "/docs/gsap-vs-motion": {
+      "offset": 777810,
+      "length": 28120,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c4681f4b321e20a1"
+    },
+    "/docs/react-svg-animation": {
+      "offset": 805930,
+      "length": 27764,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d19bb5f03a602c73"
+    },
+    "/docs/3d-transforms": {
+      "offset": 833694,
+      "length": 32752,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7736c23955d82b52"
+    },
+    "/docs/easing-functions": {
+      "offset": 866446,
+      "length": 23975,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "22afd6c0032e0552"
+    },
+    "/docs/react-drag": {
+      "offset": 890421,
+      "length": 27384,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "acbf31548f058656"
+    },
+    "/docs/cursor": {
+      "offset": 917805,
+      "length": 23891,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2fb189a5da81f695"
+    },
+    "/docs/react-carousel": {
+      "offset": 941696,
+      "length": 24081,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "15d173650163c8cd"
+    },
+    "/docs/react-use-scroll": {
+      "offset": 965777,
+      "length": 25978,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "15f42d2780ab1903"
+    },
+    "/docs/react-use-spring": {
+      "offset": 991755,
+      "length": 23253,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4df86151f6640f35"
+    },
+    "/docs/react-use-time": {
+      "offset": 1015008,
+      "length": 22961,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "42d5e6b93ee18f66"
+    },
+    "/docs/react-ticker": {
+      "offset": 1037969,
+      "length": 24453,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "88b56c670e7af39c"
+    },
+    "/docs/react-motion-ui-installation": {
+      "offset": 1062422,
+      "length": 24612,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d79ce6ebc22ddfc1"
+    },
+    "/docs/react-animate-number": {
+      "offset": 1087034,
+      "length": 23711,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2127820c60b45749"
+    },
+    "/docs/react-use-motion-template": {
+      "offset": 1110745,
+      "length": 22714,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c446718dc3c3b16b"
+    },
+    "/docs/react-use-transform": {
+      "offset": 1133459,
+      "length": 24842,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "38049bc665c9f733"
+    },
+    "/docs/react-scramble-text": {
+      "offset": 1158301,
+      "length": 23800,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d8da884e37291961"
+    },
+    "/docs/react-use-motion-value-event": {
+      "offset": 1182101,
+      "length": 22791,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0e6305192d2366f7"
+    },
+    "/docs/react-use-velocity": {
+      "offset": 1204892,
+      "length": 22592,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fc5e7a1f3e164de8"
+    },
+    "/docs/react-typewriter": {
+      "offset": 1227484,
+      "length": 26979,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0253612af24ea449"
+    },
+    "/docs/react-motion-value": {
+      "offset": 1254463,
+      "length": 25044,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0e5faf98e7f01a6d"
+    },
+    "/docs/react-reorder": {
+      "offset": 1279507,
+      "length": 24944,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e12333b4e805e5d3"
+    },
+    "/docs/framer": {
+      "offset": 1304451,
+      "length": 22617,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "99dce22caa30010d"
+    },
+    "/docs/base-ui": {
+      "offset": 1327068,
+      "length": 24295,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "133abc8ade437fd7"
+    },
+    "/docs/react-use-reduced-motion": {
+      "offset": 1351363,
+      "length": 22027,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e735fcf16d383ab2"
+    },
+    "/docs/react-use-drag-controls": {
+      "offset": 1373390,
+      "length": 23286,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "de347df7e545289d"
+    },
+    "/docs/react-use-animation-frame": {
+      "offset": 1396676,
+      "length": 23142,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ea2bc96c93568ed1"
+    },
+    "/docs/react-use-page-in-view": {
+      "offset": 1419818,
+      "length": 22126,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3b88d0e6df8867e2"
+    },
+    "/docs/react-tailwind": {
+      "offset": 1441944,
+      "length": 24039,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6045eaf54dc07631"
+    },
+    "/docs/react-use-animate": {
+      "offset": 1465983,
+      "length": 23570,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0578f3ae3f581abd"
+    },
+    "/docs/react-reduce-bundle-size": {
+      "offset": 1489553,
+      "length": 26318,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b532a196fd914e65"
+    },
+    "/docs/react-use-curtains": {
+      "offset": 1515871,
+      "length": 29620,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1c257cfbc1dfa998"
+    },
+    "/docs/react-use-in-view": {
+      "offset": 1545491,
+      "length": 24461,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6962c28b48bf0704"
+    },
+    "/docs/react-accessibility": {
+      "offset": 1569952,
+      "length": 23895,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a8bc7eb47c5495b1"
+    },
+    "/docs/radix": {
+      "offset": 1593847,
+      "length": 24212,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ebac1bece6ae1a59"
+    },
+    "/docs/react-upgrade-guide": {
+      "offset": 1618059,
+      "length": 29292,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "294ceb5908b7e54a"
+    },
+    "/docs/react-installation": {
+      "offset": 1647351,
+      "length": 22762,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5e97897306bfe5d7"
+    },
+    "/docs/figma": {
+      "offset": 1670113,
+      "length": 23632,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f7a889b901a28c6d"
+    },
+    "/docs/hover": {
+      "offset": 1693745,
+      "length": 23986,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cc9d9dce04979dca"
+    },
+    "/docs/frame": {
+      "offset": 1717731,
+      "length": 23447,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2dec28beb4469448"
+    },
+    "/docs/resize": {
+      "offset": 1741178,
+      "length": 22643,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "49f12a9f643d518a"
+    },
+    "/docs/style-effect": {
+      "offset": 1763821,
+      "length": 23702,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1c7e7a0949016634"
+    },
+    "/docs/inview": {
+      "offset": 1787523,
+      "length": 24728,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "61c36bea38cb4b8a"
+    },
+    "/docs/delay": {
+      "offset": 1812251,
+      "length": 22186,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "57c4bd50f23d91c6"
+    },
+    "/docs/prop-effect": {
+      "offset": 1834437,
+      "length": 22687,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "15f67010895468bf"
+    },
+    "/docs/layout-animations": {
+      "offset": 1857124,
+      "length": 24877,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cca88315b7c84951"
+    },
+    "/docs/attr-effect": {
+      "offset": 1882001,
+      "length": 22401,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "74207ea4a75ce4d5"
+    },
+    "/docs/svg-effect": {
+      "offset": 1904402,
+      "length": 24478,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a46aef44b269638d"
+    },
+    "/docs/animate-view": {
+      "offset": 1928880,
+      "length": 32565,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a4fe81e13f1bff25"
+    },
+    "/docs/mix": {
+      "offset": 1961445,
+      "length": 24051,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "87925d9cafeadae5"
+    },
+    "/docs/press": {
+      "offset": 1985496,
+      "length": 26794,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0a7b59e0de3b2839"
+    },
+    "/docs/curtains": {
+      "offset": 2012290,
+      "length": 29053,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "73135a0dbca6ce90"
+    },
+    "/docs/arc": {
+      "offset": 2041343,
+      "length": 24626,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0e9134eb14d86571"
+    },
+    "/docs/ai-kit-install": {
+      "offset": 2065969,
+      "length": 22233,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6dfe623b73ff6a8c"
+    },
+    "/docs/motion-value": {
+      "offset": 2088202,
+      "length": 24715,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e80d6366928c65f1"
+    },
+    "/docs/transform": {
+      "offset": 2112917,
+      "length": 23290,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1c0664d38a71040b"
+    },
+    "/docs/spring-value": {
+      "offset": 2136207,
+      "length": 24211,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ba38b2538fcf3b39"
+    },
+    "/docs/wordpress": {
+      "offset": 2160418,
+      "length": 23740,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4437b79487b22ce2"
+    },
+    "/docs/webflow": {
+      "offset": 2184158,
+      "length": 23217,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2a86153e80be7cb7"
+    },
+    "/docs/wrap": {
+      "offset": 2207375,
+      "length": 22894,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bfe9b38b52363dbb"
+    },
+    "/docs/stagger": {
+      "offset": 2230269,
+      "length": 25352,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e4f8a0640fe7d23e"
+    },
+    "/docs/css": {
+      "offset": 2255621,
+      "length": 24744,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d61a6fbdfa7cb503"
+    },
+    "/docs/scramble-text": {
+      "offset": 2280365,
+      "length": 24233,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "776619521c3d4dbf"
+    },
+    "/docs/squarespace": {
+      "offset": 2304598,
+      "length": 23509,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c4d0f42034ef4caf"
+    },
+    "/docs/faqs": {
+      "offset": 2328107,
+      "length": 22106,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "14336faffa024c1a"
+    },
+    "/docs/transform-value": {
+      "offset": 2350213,
+      "length": 23513,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "14d235137b94d80f"
+    },
+    "/docs/map-value": {
+      "offset": 2373726,
+      "length": 23679,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c3c1126865ed7aae"
+    },
+    "/docs/lenis": {
+      "offset": 2397405,
+      "length": 27089,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6ceaadc57424f327"
+    },
+    "/docs/migrate-from-gsap-to-motion": {
+      "offset": 2424494,
+      "length": 29424,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c4965089c8f4d3d3"
+    },
+    "/docs/split-text": {
+      "offset": 2453918,
+      "length": 27221,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d1f53ecd3e2e41f3"
+    },
+    "/docs/ai-kit-context": {
+      "offset": 2481139,
+      "length": 23296,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "50f6346614e8414a"
+    },
+    "/docs/performance": {
+      "offset": 2504435,
+      "length": 28002,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bd399f8330f49162"
+    },
+    "/docs/motionscore-code-audit": {
+      "offset": 2532437,
+      "length": 24038,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "43bd5a901bc44e80"
+    },
+    "/docs/motion-ui-installation": {
+      "offset": 2556475,
+      "length": 24187,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "55796dd334b5e0d9"
+    },
+    "/docs/ai-kit-generate-css": {
+      "offset": 2580662,
+      "length": 22892,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "09f221fc722fe2b7"
+    },
+    "/docs/vue-scroll-animations": {
+      "offset": 2603554,
+      "length": 24345,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cfe1449571b27fd5"
+    },
+    "/docs/upgrade-guide": {
+      "offset": 2627899,
+      "length": 24850,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9ae61c37dfd781d6"
+    },
+    "/docs/vue-transitions": {
+      "offset": 2652749,
+      "length": 28261,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7b7f5412aab63575"
+    },
+    "/docs/vue-gestures": {
+      "offset": 2681010,
+      "length": 28200,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8ff9608af83da420"
+    },
+    "/docs/ai-kit-transition-editor": {
+      "offset": 2709210,
+      "length": 23275,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bac10a67065c3412"
+    },
+    "/docs/vue-directive": {
+      "offset": 2732485,
+      "length": 23654,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2f24353c3f54db2d"
+    },
+    "/docs/vue-animate-presence": {
+      "offset": 2756139,
+      "length": 25172,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8a2b17d2d1f28229"
+    },
+    "/docs/vue-animation": {
+      "offset": 2781311,
+      "length": 29260,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e4b411718415bcaf"
+    },
+    "/docs/vue-layout-animations": {
+      "offset": 2810571,
+      "length": 28776,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dbb04cc1a533409e"
+    },
+    "/docs/vue-motion-component": {
+      "offset": 2839347,
+      "length": 32138,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e6de17a8e51931f2"
+    },
+    "/docs/improvements-to-the-web-animations-api-dx": {
+      "offset": 2871485,
+      "length": 27915,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "62a647d9b8e95ace"
+    },
+    "/docs/vue-use-motion-value-event": {
+      "offset": 2899400,
+      "length": 22801,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0efa2784dfbcbb39"
+    },
+    "/docs/vue-cursor": {
+      "offset": 2922201,
+      "length": 22690,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5983ad25a4a1d181"
+    },
+    "/docs/vue-motion-config": {
+      "offset": 2944891,
+      "length": 22604,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ec8f1550dd570e1f"
+    },
+    "/docs/vue-carousel": {
+      "offset": 2967495,
+      "length": 22182,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cc6a0cd7c97e58c8"
+    },
+    "/docs/vue-use-scroll": {
+      "offset": 2989677,
+      "length": 25189,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0a268a948eee0a2d"
+    },
+    "/docs/vue-lazymotion": {
+      "offset": 3014866,
+      "length": 22766,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "556ddf301f328f1c"
+    },
+    "/docs/vue-layout-group": {
+      "offset": 3037632,
+      "length": 22250,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e6b9ec4e1c63d4e0"
+    },
+    "/docs/vue-animate-number": {
+      "offset": 3059882,
+      "length": 22217,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7426ad1f4c4a3014"
+    },
+    "/docs/vue-reorder": {
+      "offset": 3082099,
+      "length": 24672,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0a62d3603cda0b51"
+    },
+    "/docs/vue-use-motion-template": {
+      "offset": 3106771,
+      "length": 22597,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3c7724d38b06b29b"
+    },
+    "/docs/vue-ticker": {
+      "offset": 3129368,
+      "length": 22427,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4bb40d9f0b417e6b"
+    },
+    "/docs/vue-typewriter": {
+      "offset": 3151795,
+      "length": 22186,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e07cb27e3c62ce95"
+    },
+    "/docs/vue-motion-value": {
+      "offset": 3173981,
+      "length": 24864,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "06c64ec5827bbab5"
+    },
+    "/docs/vue-animate-view": {
+      "offset": 3198845,
+      "length": 31915,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6f7ea84b417133b2"
+    },
+    "/docs/vue-use-drag-controls": {
+      "offset": 3230760,
+      "length": 22932,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1300c189e62d88a1"
+    },
+    "/docs/vue-use-animation-frame": {
+      "offset": 3253692,
+      "length": 22542,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b7c75d3281654ed5"
+    },
+    "/docs/vue-use-time": {
+      "offset": 3276234,
+      "length": 22709,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "621a6a22a6a74245"
+    },
+    "/docs/vue-use-spring": {
+      "offset": 3298943,
+      "length": 22935,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0011935e45687c8d"
+    },
+    "/docs/vue-use-transform": {
+      "offset": 3321878,
+      "length": 24627,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "29946414d301c648"
+    },
+    "/docs/vue-use-velocity": {
+      "offset": 3346505,
+      "length": 22566,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4c276e2c4c3b62c0"
+    },
+    "/docs/vue-use-animate": {
+      "offset": 3369071,
+      "length": 23032,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "736623fbdfc014e9"
+    },
+    "/docs/vue-use-in-view": {
+      "offset": 3392103,
+      "length": 24000,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "16a7a9c6308473b5"
+    },
+    "/docs/vue-use-reduced-motion": {
+      "offset": 3416103,
+      "length": 22016,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c4bf98fed0d60e32"
+    },
+    "/docs/vue-radix": {
+      "offset": 3438119,
+      "length": 23419,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0ce8aab28c08301a"
+    },
+    "/assets/ChartFigure-BZr0_jyz.css": {
+      "offset": 3461538,
+      "length": 1328,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "1dd0ab1732e9b329"
+    },
+    "/assets/modal-vZxXqTt3.css": {
+      "offset": 3462866,
+      "length": 1036,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "34811270cea70463"
+    },
+    "/favicon.svg": {
+      "offset": 3463902,
+      "length": 368,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "3842b66821aeda90"
+    },
+    "/favicon-192.png": {
+      "offset": 3464270,
+      "length": 4126,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6eb956b67d746c66"
+    },
+    "/assets/DocsCopyButton-iPkyjcLz.css": {
+      "offset": 3468396,
+      "length": 578,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "e3281a086245137d"
+    },
+    "/assets/MagazineStudioMocks-CwpuBUjg.css": {
+      "offset": 3468974,
+      "length": 6565,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "322e91267f25d474"
+    },
+    "/assets/styles-Jaa8ZyIt.css": {
+      "offset": 3475539,
+      "length": 10416,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "31132f3685293b84"
+    },
+    "/apple-touch-icon.png": {
+      "offset": 3485955,
+      "length": 3694,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c47a232e239c0587"
+    },
+    "/assets/use-random-rail-slot-variant-aKtRQtyj.css": {
+      "offset": 3489649,
+      "length": 2341,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "579ccc1f3d2ba9bc"
+    },
+    "/assets/docs-homepage-banner-C5HV9vRN.css": {
+      "offset": 3491990,
+      "length": 141,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "d07ae1129c746049"
+    },
+    "/assets/index-DWw-ZGnz.css": {
+      "offset": 3492131,
+      "length": 14264,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0a493458c78d2328"
+    },
+    "/favicon-32.png": {
+      "offset": 3506395,
+      "length": 645,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3d38d06db080c982"
+    },
+    "/assets/docs-BPOZD0H1.css": {
+      "offset": 3507040,
+      "length": 2230,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b36c06beb8f86c48"
+    },
+    "/assets/docs-XBiBw9oy.css": {
+      "offset": 3509270,
+      "length": 6459,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "e1ab317fedf97015"
+    },
+    "/assets/diagrams-C0VZG0hm.css": {
+      "offset": 3515729,
+      "length": 1917,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "cf931354a115fc2f"
+    },
+    "/assets/CopyCommandButton-BZa2Foqu.css": {
+      "offset": 3517646,
+      "length": 541,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "3d97ee32f1c5e6ce"
+    },
+    "/assets/tutorials-Cx-3revd.css": {
+      "offset": 3518187,
+      "length": 6523,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "1834b0d8d0400d7b"
+    },
+    "/assets/NotFound-UiHrk7Ho.css": {
+      "offset": 3524710,
+      "length": 697,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "f9cc98d8713c22ef"
+    },
+    "/assets/magazine-b17XYJY_.css": {
+      "offset": 3525407,
+      "length": 5200,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "72dd36a9a517b138"
+    },
+    "/__docx_assets/234ef41bc2f272.bin": {
+      "offset": 3530607,
+      "length": 376,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "8d4141b251b2b771"
+    },
+    "/__docx_assets/bc56f60bc9bb59.bin": {
+      "offset": 3530983,
+      "length": 1539,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "faa7af84f098ea07"
+    },
+    "/__docx_assets/b8671486ef0051.bin": {
+      "offset": 3532522,
+      "length": 3269,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "5858525ac5a5e447"
+    },
+    "/assets/transition-editor-mock-DBc9dkxQ.css": {
+      "offset": 3535791,
+      "length": 1550,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "c7cb2d3635215fdb"
+    },
+    "/assets/filter-bar-CU3q_rgf.css": {
+      "offset": 3537341,
+      "length": 1102,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "9058b204058a92d1"
+    },
+    "/assets/advertise-slots-D2850EHZ.css": {
+      "offset": 3538443,
+      "length": 1003,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "f8b39b12403aa300"
+    },
+    "/assets/interstitials-B-xgBT4K.css": {
+      "offset": 3539446,
+      "length": 2133,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "3cf345871c7972ca"
+    },
+    "/assets/docs-grid-demo-DzBDp8tI.css": {
+      "offset": 3541579,
+      "length": 7564,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "8533dc48e03a3bb5"
+    },
+    "/assets/ui-brand-lab-Cl0F7pzz.css": {
+      "offset": 3549143,
+      "length": 3282,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "df45e66deebaca39"
+    },
+    "/assets/docs-ad-CedXSjpk.css": {
+      "offset": 3552425,
+      "length": 3452,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "ffac72c0b23d2ead"
+    },
+    "/assets/docs-fresh-DankQtXc.css": {
+      "offset": 3555877,
+      "length": 1896,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "f6d5a9f2d326ea52"
+    },
+    "/__docx_assets/c244567252d111.webp": {
+      "offset": 3557773,
+      "length": 35807,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "b4890cd2f523f7e5"
+    },
+    "/__docx_assets/570729b7f53487.png": {
+      "offset": 3593580,
+      "length": 3505,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "78c022ecf346731d"
+    },
+    "/__docx_assets/f046a71cbb1137.webp": {
+      "offset": 3597085,
+      "length": 2217,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "455137f581492069"
+    },
+    "/__docx_assets/b92862b30b8184.webp": {
+      "offset": 3599302,
+      "length": 1356,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "d8291b0a5497cae4"
+    },
+    "/__docx_assets/8d72ecb474c44e.webp": {
+      "offset": 3600658,
+      "length": 1691,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "74a0e46218808e0a"
+    },
+    "/__docx_assets/c47681a5d1bc78.png": {
+      "offset": 3602349,
+      "length": 18837,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "356be769b162aabd"
+    },
+    "/__docx_assets/756471f8556e20.webp": {
+      "offset": 3621186,
+      "length": 128,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "e381077ae38dd7eb"
+    },
+    "/__docx_assets/1f91757fcf28f2.webp": {
+      "offset": 3621314,
+      "length": 1567,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "13fd45a505aa0d78"
+    },
+    "/__docx_assets/083a15da3723b9.png": {
+      "offset": 3622881,
+      "length": 3123,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "94dd2755805838ae"
+    },
+    "/__docx_assets/a95a1cc81eaf68.webp": {
+      "offset": 3626004,
+      "length": 1752,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "7ce7c98053c492aa"
+    },
+    "/__docx_assets/e6d04593008161.webp": {
+      "offset": 3627756,
+      "length": 21704,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "68815c97efc02131"
+    },
+    "/__docx_assets/aa16a9e8fd1bf0.webp": {
+      "offset": 3649460,
+      "length": 18332,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "d31402554b2c8eaf"
+    },
+    "/__docx_assets/2c7eb63e274c7f.webp": {
+      "offset": 3667792,
+      "length": 2143,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "ccff90c0587be476"
+    },
+    "/__docx_assets/7053259277bafb.webp": {
+      "offset": 3669935,
+      "length": 17152,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "ba9aa07de06689cb"
+    },
+    "/__docx_assets/c1122e3434729f.webp": {
+      "offset": 3687087,
+      "length": 3728,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "30925ec6ca64b1b2"
+    },
+    "/__docx_assets/80e0a5e2e4e822.webp": {
+      "offset": 3690815,
+      "length": 2540,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "fb53b9745fda01eb"
+    },
+    "/__docx_assets/7f093aa82eaa45.webp": {
+      "offset": 3693355,
+      "length": 3346,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "37e6d0cc8b5bfa31"
+    },
+    "/__docx_assets/013daed11679d9.webp": {
+      "offset": 3696701,
+      "length": 13846,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "98b6d1116e9ad3d0"
+    },
+    "/__docx_assets/8a72ff36af8dae.webp": {
+      "offset": 3710547,
+      "length": 1955,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "f13750e19c8cd714"
+    },
+    "/__docx_assets/a613fe3c5d1362.png": {
+      "offset": 3712502,
+      "length": 8673,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "924b4124fae252e5"
+    },
+    "/__docx_assets/ed34a9c1788330.png": {
+      "offset": 3721175,
+      "length": 7780,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c9cffe2cd2bd135b"
+    },
+    "/__docx_assets/eb79a4d0395f7f.webp": {
+      "offset": 3728955,
+      "length": 4782,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "1f7df0f08c247941"
+    },
+    "/__docx_assets/d1ec99dbc7baa6.webp": {
+      "offset": 3733737,
+      "length": 8425,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "9a0214d7c5eaee4e"
+    },
+    "/__docx_assets/0be492c8a7f0cf.webp": {
+      "offset": 3742162,
+      "length": 17878,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "cd97d0cda35617f0"
+    },
+    "/__docx_assets/adf33df04cb425.webp": {
+      "offset": 3760040,
+      "length": 529,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "4d2c24e6e7842ab7"
+    },
+    "/__docx_assets/391dc0221586a2.webp": {
+      "offset": 3760569,
+      "length": 2635,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "a57fea28047edcf9"
+    },
+    "/__docx_assets/875ae312572a27.webp": {
+      "offset": 3763204,
+      "length": 552,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "9b2804b7df5297aa"
+    },
+    "/__docx_assets/2d843aabc66b86.webp": {
+      "offset": 3763756,
+      "length": 8241,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "3aa8768253c81754"
+    },
+    "/__docx_assets/528742d72537f2.webp": {
+      "offset": 3771997,
+      "length": 3244,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "aa42a1d0ef1ed7a5"
+    },
+    "/__docx_assets/dc8db149f38b84.webp": {
+      "offset": 3775241,
+      "length": 6724,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "511ced8da2680123"
+    },
+    "/__docx_assets/062a0625a34ff6.png": {
+      "offset": 3781965,
+      "length": 9809,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a67675d69e858a0d"
+    },
+    "/__docx_assets/696a763fdc435e.webp": {
+      "offset": 3791774,
+      "length": 1514,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "bb216524ebea2a55"
+    },
+    "/__docx_assets/b5e09f8d45ec20.webp": {
+      "offset": 3793288,
+      "length": 12622,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "8aa429d90c510261"
+    },
+    "/__docx_assets/84f6d03ccb03b9.webp": {
+      "offset": 3805910,
+      "length": 1723,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "fe589d930585e941"
+    },
+    "/__docx_assets/d78de9ff042412.webp": {
+      "offset": 3807633,
+      "length": 19850,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "ea42bf52df1d191c"
+    },
+    "/__docx_assets/925e225f52cfd0.webp": {
+      "offset": 3827483,
+      "length": 14217,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "386904c7d67415d7"
+    },
+    "/__docx_assets/e66c7ce98f39f2.webp": {
+      "offset": 3841700,
+      "length": 8965,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "f7c26a098e543b0f"
+    },
+    "/__docx_assets/5c2005744f19ca.webp": {
+      "offset": 3850665,
+      "length": 15781,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "b3013d435bd5d795"
+    },
+    "/__docx_assets/f5a835dad154a6.webp": {
+      "offset": 3866446,
+      "length": 34784,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "34eab2f1b03fc7e6"
+    },
+    "/__docx_assets/965208ac518fcd.webp": {
+      "offset": 3901230,
+      "length": 2169,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "5dafa3d289b38508"
+    },
+    "/__docx_assets/630cfafe7f26ad.webp": {
+      "offset": 3903399,
+      "length": 1257,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "267f9c375e5d01e0"
+    },
+    "/__docx_assets/a500f974bb6ee0.webp": {
+      "offset": 3904656,
+      "length": 11084,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "ae6c34dff6edb025"
+    },
+    "/__docx_assets/68776f2766f7b2.webp": {
+      "offset": 3915740,
+      "length": 5451,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "59786497c1997002"
+    },
+    "/__docx_assets/afb3a2093c64f3.png": {
+      "offset": 3921191,
+      "length": 48943,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f33e396513e9871b"
+    },
+    "/__docx_assets/dfc4033444a7b0.webp": {
+      "offset": 3970134,
+      "length": 1968,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "a417903a245ea256"
+    },
+    "/__docx_assets/e3844071bb6f09.webp": {
+      "offset": 3972102,
+      "length": 3354,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "3b19eac329add66b"
+    },
+    "/__docx_assets/eb60f2a0765fdf.webp": {
+      "offset": 3975456,
+      "length": 5832,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "66756f781bd50cbf"
+    },
+    "/__docx_assets/ae15ea9c93a559.webp": {
+      "offset": 3981288,
+      "length": 1648,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "3837690c4ad47a48"
+    },
+    "/__docx_assets/a9e468917ad1d8.png": {
+      "offset": 3982936,
+      "length": 117050,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7e62460015177e85"
+    },
+    "/__docx_assets/046019cff9fc63.webp": {
+      "offset": 4099986,
+      "length": 2348,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "184eaf2f6246616a"
+    },
+    "/__docx_assets/71efaea34b3450.webp": {
+      "offset": 4102334,
+      "length": 16066,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "d780d4f5ed06a486"
+    },
+    "/__docx_assets/023e1c8480696c.webp": {
+      "offset": 4118400,
+      "length": 6014,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "3d2719e22c3f2974"
+    },
+    "/__docx_assets/6d02f66922a3e3.webp": {
+      "offset": 4124414,
+      "length": 3193,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "7a6b8cf89c8336dd"
+    },
+    "/__docx_assets/9debf0ef556393.webp": {
+      "offset": 4127607,
+      "length": 2019,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "afeb3c977ae80e81"
+    },
+    "/__docx_assets/80a93b6bbeca05.webp": {
+      "offset": 4129626,
+      "length": 2336,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "5b3086a5c17a0f28"
+    },
+    "/__docx_assets/3872c2d80b5a48.webp": {
+      "offset": 4131962,
+      "length": 1601,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "16a890668521de29"
+    },
+    "/__docx_assets/e746d0be920058.webp": {
+      "offset": 4133563,
+      "length": 39562,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "4867f7f5ac4a57fe"
+    },
+    "/__docx_assets/565b6bd46bef34.webp": {
+      "offset": 4173125,
+      "length": 19651,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "e7a52bda45ee9cb0"
+    },
+    "/__docx_assets/cdf3e8274e4d0d.webp": {
+      "offset": 4192776,
+      "length": 2408,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "faf3373f40ad7818"
+    },
+    "/__docx_assets/5426c73fa7679e.webp": {
+      "offset": 4195184,
+      "length": 11305,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "acb0cf61ee6f0dfb"
+    },
+    "/__docx_assets/e4488e446ef6b8.webp": {
+      "offset": 4206489,
+      "length": 11700,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "c12958969d6b79be"
+    },
+    "/__docx_assets/c84c0b8d61ac55.webp": {
+      "offset": 4218189,
+      "length": 1237,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "c792a5c9c7e2c2bf"
+    },
+    "/__docx_assets/4814a33b28e061.webp": {
+      "offset": 4219426,
+      "length": 25933,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "2dc9d0978c350846"
+    },
+    "/__docx_assets/e44144446e8f4e.webp": {
+      "offset": 4245359,
+      "length": 27954,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "fb1ccbdfd054350d"
+    },
+    "/__docx_assets/a44442efc35a0e.webp": {
+      "offset": 4273313,
+      "length": 13088,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "247a8060ba0c4d9a"
+    },
+    "/__docx_assets/b79d5a94fbd886.webp": {
+      "offset": 4286401,
+      "length": 48637,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "a59ab309b2c1ba4f"
+    },
+    "/__docx_assets/9080470450a581.webp": {
+      "offset": 4335038,
+      "length": 8544,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "ab2540aae07e675c"
+    },
+    "/__docx_assets/ddf3ce5317cef3.webp": {
+      "offset": 4343582,
+      "length": 5621,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "5c319d99cfa86c84"
+    },
+    "/__docx_assets/7e2f6fe6687f0c.webp": {
+      "offset": 4349203,
+      "length": 2506,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "ad5c7efa288a4d28"
+    },
+    "/__docx_assets/1fe2038d9a08e0.webp": {
+      "offset": 4351709,
+      "length": 1567,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "9d3fb33345a52178"
+    },
+    "/__docx_assets/2f9108fdebf048.webp": {
+      "offset": 4353276,
+      "length": 476,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "6e0366c0a258deeb"
+    },
+    "/__docx_assets/2108ab6b3fe694.webp": {
+      "offset": 4353752,
+      "length": 1895,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "5c847693424bb39f"
+    },
+    "/__docx_assets/26ff6458249571.webp": {
+      "offset": 4355647,
+      "length": 1876,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "69371a758b0cce57"
+    },
+    "/__docx_assets/2ef7d6feb917f0.webp": {
+      "offset": 4357523,
+      "length": 8780,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "77099c79660e5008"
+    },
+    "/__docx_assets/bf7107e14c1b0d.webp": {
+      "offset": 4366303,
+      "length": 19871,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "da47e3801ec55f21"
+    },
+    "/__docx_assets/e1c9cff7886519.webp": {
+      "offset": 4386174,
+      "length": 1390,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "cef595e4427924f4"
+    },
+    "/__docx_assets/ed993e2eeef0af.webp": {
+      "offset": 4387564,
+      "length": 460,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "81c040cd027d97c6"
+    },
+    "/__docx_assets/3a2df44e82ac69.webp": {
+      "offset": 4388024,
+      "length": 5195,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "1cc2f052c7dfb413"
+    },
+    "/__docx_assets/d56caf32ec3455.webp": {
+      "offset": 4393219,
+      "length": 6729,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "a542983240e2d983"
+    },
+    "/__docx_assets/6c7c35eee3edc9.webp": {
+      "offset": 4399948,
+      "length": 9123,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "622cae2b968b854b"
+    },
+    "/__docx_assets/7c87ee8742c9ae.webp": {
+      "offset": 4409071,
+      "length": 1871,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "be50031a5a08705f"
+    },
+    "/__docx_assets/9e52d98cab0573.webp": {
+      "offset": 4410942,
+      "length": 6373,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "867ad4819d2c7e94"
+    },
+    "/__docx_assets/c086a6631eceb9.webp": {
+      "offset": 4417315,
+      "length": 5538,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "fba55f910cedc892"
+    },
+    "/__docx_assets/68706ff12f3aca.webp": {
+      "offset": 4422853,
+      "length": 6673,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "c00c0abdade774f0"
+    },
+    "/__docx_assets/b2fc5c4eca6e70.webp": {
+      "offset": 4429526,
+      "length": 6414,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "5d98438fac0047cf"
+    },
+    "/__docx_assets/43474e24ca606b.webp": {
+      "offset": 4435940,
+      "length": 3351,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "7393fff5e581a1c6"
+    },
+    "/__docx_assets/d9f2a998b9c2e3.webp": {
+      "offset": 4439291,
+      "length": 3859,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "50ed9450062915b0"
+    },
+    "/__docx_assets/796e285861c696.webp": {
+      "offset": 4443150,
+      "length": 7108,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "9320794e166176fa"
+    },
+    "/__docx_assets/46fafb64f1699a.webp": {
+      "offset": 4450258,
+      "length": 2164,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "172972c39114d0a9"
+    },
+    "/__docx_assets/2f779ead552297.webp": {
+      "offset": 4452422,
+      "length": 3379,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "cc9a21b42a6ac659"
+    },
+    "/__docx_assets/f8bdbcbe7d44ce.webp": {
+      "offset": 4455801,
+      "length": 341,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "56b6241eee200211"
+    },
+    "/__docx_assets/af4e267f0fdc60.webp": {
+      "offset": 4456142,
+      "length": 53874,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "dfee9992190baa02"
+    },
+    "/__docx_assets/5ded944a7ad88d.webp": {
+      "offset": 4510016,
+      "length": 1445,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "a6b79299a1c7779b"
+    },
+    "/__docx_assets/fc0f9657b4ebeb.webp": {
+      "offset": 4511461,
+      "length": 17662,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "781529ea9381fcec"
+    },
+    "/__docx_assets/7fe2f24f0a7e7d.webp": {
+      "offset": 4529123,
+      "length": 7781,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "72edc2ae55f51f59"
+    },
+    "/__docx_assets/fdbecc9ebf077b.webp": {
+      "offset": 4536904,
+      "length": 2923,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "764b5afb713dda0b"
+    },
+    "/__docx_assets/54659ce3acf47b.webp": {
+      "offset": 4539827,
+      "length": 1187,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "f74c7c8d1cc53434"
+    },
+    "/__docx_assets/a520906f398c0f.webp": {
+      "offset": 4541014,
+      "length": 1591,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "eb7a534d89932364"
+    },
+    "/__docx_assets/2fd997847c4e18.webp": {
+      "offset": 4542605,
+      "length": 5454,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "7e25eeda3e4c1fec"
+    },
+    "/__docx_assets/3fd68221386791.webp": {
+      "offset": 4548059,
+      "length": 4863,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "0b6e290e2b5bc23a"
+    },
+    "/__docx_assets/f273802bdb7163.png": {
+      "offset": 4552922,
+      "length": 10611,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f6f047b83ac52818"
+    },
+    "/__docx_assets/a774eafb8310a9.png": {
+      "offset": 4563533,
+      "length": 12714,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "18a9fe0eeccf0f99"
+    },
+    "/__docx_assets/36c70bea48462e.png": {
+      "offset": 4576247,
+      "length": 8691,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "eb0a26fe2ca578e1"
+    },
+    "/__docx_assets/9f0bad4b469f73.webp": {
+      "offset": 4584938,
+      "length": 4829,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "d80f1a432d126b70"
+    },
+    "/__docx_assets/ce397f290a0302.webp": {
+      "offset": 4589767,
+      "length": 1259,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "c55a61ee5500335e"
+    },
+    "/__docx_assets/c3d3e292d37065.png": {
+      "offset": 4591026,
+      "length": 14622,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c045870de37f27ed"
+    },
+    "/__docx_assets/49ffe60637270c.png": {
+      "offset": 4605648,
+      "length": 9009,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "84bf9a27d359fe7a"
+    },
+    "/__docx_assets/108b9bf98dbc85.webp": {
+      "offset": 4614657,
+      "length": 1277,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "b7f11b52f7efefcb"
+    },
+    "/__docx_assets/ddbca72e3af52c.png": {
+      "offset": 4615934,
+      "length": 63338,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f5c6efb64e22bf21"
+    },
+    "/__docx_assets/1a16e5e1346e94.webp": {
+      "offset": 4679272,
+      "length": 1445,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "72bea3eb877229b9"
+    },
+    "/__docx_assets/05dcf787c4a8dd.webp": {
+      "offset": 4680717,
+      "length": 14513,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "abdcba63a86c0117"
+    },
+    "/__docx_assets/9b8caffb7861b3.webp": {
+      "offset": 4695230,
+      "length": 4923,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "1235e3ea4cb7a13b"
+    },
+    "/__docx_assets/617649797ac936.webp": {
+      "offset": 4410942,
+      "length": 6373,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "867ad4819d2c7e94"
+    },
+    "/__docx_assets/5140baee308541.webp": {
+      "offset": 4700153,
+      "length": 716,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "f3434fa54f971249"
+    },
+    "/__docx_assets/ff50d9fdf78443.webp": {
+      "offset": 4700869,
+      "length": 4751,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "75668256ae20f250"
+    },
+    "/__docx_assets/ba94229c95e79d.webp": {
+      "offset": 4417315,
+      "length": 5538,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "fba55f910cedc892"
+    },
+    "/__docx_assets/d2d7eb2b74182a.webp": {
+      "offset": 4705620,
+      "length": 3628,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "7fcaeab7fa6844d6"
+    },
+    "/__docx_assets/1cadda6f89bfd0.webp": {
+      "offset": 4709248,
+      "length": 938,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "62c6fd1829daf31b"
+    },
+    "/__docx_assets/a62fb37c4410b7.webp": {
+      "offset": 4710186,
+      "length": 2269,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "2c8b60f3776da1e4"
+    },
+    "/__docx_assets/64feb8aee0e4ff.webp": {
+      "offset": 4712455,
+      "length": 7779,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "de7d29263499b529"
+    },
+    "/__docx_assets/888494b6a0b221.webp": {
+      "offset": 4720234,
+      "length": 2737,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "96a70f5b14d9e0d6"
+    },
+    "/__docx_assets/2585d9b5b3a326.png": {
+      "offset": 4722971,
+      "length": 11515,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "45c0d4225609dfa1"
+    },
+    "/__docx_assets/50ed6dba9a3d9f.png": {
+      "offset": 4734486,
+      "length": 28787,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2e5082455ee42cf8"
+    },
+    "/__docx_assets/8d4d213d0c2277.png": {
+      "offset": 4763273,
+      "length": 25023,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "8db985af9cdc0b6b"
+    },
+    "/__docx_assets/6e70fa9f4716d9.webp": {
+      "offset": 4788296,
+      "length": 2591,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "4e22a4a846971477"
+    },
+    "/__docx_assets/00edafd86fde65.png": {
+      "offset": 4790887,
+      "length": 15411,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ee22729f97d0a273"
+    },
+    "/__docx_assets/cf554d56056015.png": {
+      "offset": 4806298,
+      "length": 22925,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3301bac30d609054"
+    },
+    "/__docx_assets/497dde8e48067e.png": {
+      "offset": 4829223,
+      "length": 18302,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a835671265e15c36"
+    },
+    "/__docx_assets/f679d8ea063d49.webp": {
+      "offset": 4847525,
+      "length": 3909,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "aeff22d14948f79e"
+    },
+    "/__docx_assets/dfc9d6826da618.png": {
+      "offset": 4851434,
+      "length": 2352,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c3255f847952507b"
+    },
+    "/__docx_assets/32bdcf87e53405.webp": {
+      "offset": 4853786,
+      "length": 408,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "49e1a11aa9220fd5"
+    },
+    "/__docx_assets/44641657d98345.webp": {
+      "offset": 4854194,
+      "length": 8700,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "479ecbc88bfe9e08"
+    },
+    "/__docx_assets/df6126ce7ec89d.png": {
+      "offset": 4862894,
+      "length": 12837,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f13697f178bf7eeb"
+    },
+    "/__docx_assets/29d23f5767b715.webp": {
+      "offset": 4875731,
+      "length": 8748,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "653700028e37c2b7"
+    },
+    "/__docx_assets/cf9f69839f723a.png": {
+      "offset": 4884479,
+      "length": 12991,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "62d12c20e154b9ff"
+    },
+    "/__docx_assets/74e7ca9d9011bb.png": {
+      "offset": 4897470,
+      "length": 45916,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "27c0aeb3941063eb"
+    },
+    "/__docx_assets/c26f82434d14c5.webp": {
+      "offset": 4943386,
+      "length": 1518,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "155ce3c26a812c63"
+    },
+    "/__docx_assets/a79ba1d841a1a8.webp": {
+      "offset": 4944904,
+      "length": 564,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "b445bf69cfe55c07"
+    },
+    "/__docx_assets/d50b6721b2eb6b.png": {
+      "offset": 4945468,
+      "length": 104251,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "757ec6908e8893e4"
+    },
+    "/__docx_assets/90403bdc754493.png": {
+      "offset": 5049719,
+      "length": 7974,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "062dee3dd8a51493"
+    },
+    "/__docx_assets/600d72306fdfbf.png": {
+      "offset": 5057693,
+      "length": 53684,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0f49f4077cfd273d"
+    },
+    "/__docx_assets/4027bf3bb962ee.png": {
+      "offset": 5111377,
+      "length": 103557,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "836d89a35406274c"
+    },
+    "/__docx_assets/e2534d6fd1d19c.webp": {
+      "offset": 5214934,
+      "length": 1701,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "446686d935c3d793"
+    },
+    "/__docx_assets/3f8a78003f385a.png": {
+      "offset": 5216635,
+      "length": 10256,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f6cfe9724a988015"
+    },
+    "/__docx_assets/62d63e067e6859.webp": {
+      "offset": 5226891,
+      "length": 2862,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "abd492aca6d0761b"
+    },
+    "/__docx_assets/f10777a340260d.png": {
+      "offset": 5229753,
+      "length": 3288,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "fb8866e6e447fe1a"
+    },
+    "/__docx_assets/04ea7e08e1c1b7.png": {
+      "offset": 5233041,
+      "length": 48946,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e68a93534c297abe"
+    },
+    "/__docx_assets/0932dca6622f73.woff2": {
+      "offset": 5281987,
+      "length": 31312,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "9f1d370c09a2eec3"
+    },
+    "/": {
+      "offset": 0,
+      "length": 19763,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7a7e68885e8bb0ad"
+    }
+  }
+}

@@ -35,7 +35,9 @@ const oldManifest: Record<string, OldEntry> = JSON.parse(
 );
 const dataStart = 4 + manifestLen;
 
-const packsDir = "d:/Dev/crawl/packs";
+const packsDir = process.env.LOCALAPPDATA
+  ? path.join(process.env.LOCALAPPDATA, "docx")
+  : path.resolve("packs");
 fs.mkdirSync(packsDir, { recursive: true });
 
 function buildSitePack(

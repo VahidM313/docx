@@ -1,1 +1,559 @@
-{"id":"tanstack_ranger","name":"TanStack Ranger","version":"v1","commit":"2113ae55","origin":"https://tanstack.com","entryPath":"/ranger/latest/docs/overview","updatedAt":"2026-10-10T16:44:52.040Z","totalBytes":1334918,"chunkCount":74,"routes":{"/ranger/latest/docs/overview":{"offset":0,"length":39764,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"183a98cbdd607682"},"/ranger/latest/docs/framework/react/examples/basic":{"offset":39764,"length":42483,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ad459ab21e5b9736"},"/ranger/latest/docs/framework/react/api/basic":{"offset":82247,"length":41506,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6a9c3dea9573f029"},"/ranger/latest/docs/quick-start":{"offset":123753,"length":42033,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1287b241d04dd5b2"},"/ranger/latest/docs/framework/react/react-ranger":{"offset":165786,"length":39082,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"edf9964b2ef9b363"},"/ranger/latest/docs/installation":{"offset":204868,"length":40415,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c6243cb724a65237"},"/ranger/latest/docs/framework/react/examples/custom-styles":{"offset":245283,"length":43826,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"81cc6a863be691ff"},"/ranger/latest/docs/framework/react/examples/update-on-drag":{"offset":289109,"length":42404,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"abea93a1984e741e"},"/ranger/latest/docs/framework/react/examples/custom-steps":{"offset":331513,"length":42736,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5bb0c1850fb2aa16"},"/ranger/latest/docs/framework/react/examples/logarithmic-interpolator":{"offset":374249,"length":43324,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bf48179e4a9cbb4e"},"/ranger/latest/docs/framework/react/api/custom-styles":{"offset":417573,"length":40579,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bdaef151dafcc284"},"/ranger/latest/docs/framework/react/api/update-on-drag":{"offset":458152,"length":40310,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"26d09c0bfe9dd57b"},"/ranger/latest/docs/framework/react/api/custom-steps":{"offset":498462,"length":40906,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"825894ff51c6a9e1"},"/ranger/latest/docs/framework/react/api/logarithmic-interpolator":{"offset":539368,"length":41022,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1c6ce1566dba3233"},"/favicon-dark.svg":{"offset":580390,"length":1377,"mime":"image/svg+xml","gzipped":true,"hash":"87ddd3cc53780ea9"},"/favicon-light.svg":{"offset":580390,"length":1377,"mime":"image/svg+xml","gzipped":true,"hash":"87ddd3cc53780ea9"},"/assets/railway-white-CFKFsfw2.svg":{"offset":581767,"length":2006,"mime":"image/svg+xml","gzipped":true,"hash":"cdfae42b06c7f002"},"/assets/lovable-black-1mVxR6Bj.svg":{"offset":583773,"length":3574,"mime":"image/svg+xml","gzipped":true,"hash":"2991135aabc14b05"},"/favicon.ico":{"offset":587347,"length":1085,"mime":"image/vnd.microsoft.icon","gzipped":true,"hash":"168a372851d14b1b"},"/favicon-32x32.png":{"offset":588432,"length":1187,"mime":"image/png","gzipped":true,"hash":"34241b997c796120"},"/assets/railway-black-DeBDfNao.svg":{"offset":589619,"length":2008,"mime":"image/svg+xml","gzipped":true,"hash":"f17e0e028a8904e8"},"/assets/lovable-white-DLB1BxKZ.svg":{"offset":591627,"length":3575,"mime":"image/svg+xml","gzipped":true,"hash":"289e15e1680f1bc7"},"/images/brand/tanstack-landscape-white.svg":{"offset":595202,"length":1770,"mime":"image/svg+xml","gzipped":true,"hash":"47b05e85ac4c4ffb"},"/assets/index-CaKFzcjh.css":{"offset":596972,"length":73993,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0b6ed57e3b279ea7"},"/favicon-16x16.png":{"offset":670965,"length":590,"mime":"image/png","gzipped":true,"hash":"a53b782bb5f5aff7"},"/images/brand/tanstack-landscape-black.svg":{"offset":671555,"length":1770,"mime":"image/svg+xml","gzipped":true,"hash":"7f88cc8634ee3f47"},"/assets/render-white-D4l33ygB.svg":{"offset":673325,"length":2037,"mime":"image/svg+xml","gzipped":true,"hash":"a50b023056a6449c"},"/assets/coderabbit-light-ggTFqYhV.svg":{"offset":675362,"length":3869,"mime":"image/svg+xml","gzipped":true,"hash":"183adaaa8dc30b05"},"/assets/render-black-Cz1XqOfh.svg":{"offset":679231,"length":2039,"mime":"image/svg+xml","gzipped":true,"hash":"aa8e27c775b8a80d"},"/assets/cloudflare-white-Co-Tyjbl.svg":{"offset":681270,"length":5586,"mime":"image/svg+xml","gzipped":true,"hash":"e38e46382d5e07c7"},"/assets/cloudflare-black-6Ojsn8yh.svg":{"offset":686856,"length":5273,"mime":"image/svg+xml","gzipped":true,"hash":"e8c1a2879b3e87a1"},"/assets/coderabbit-dark-C3hjOiHQ.svg":{"offset":692129,"length":3855,"mime":"image/svg+xml","gzipped":true,"hash":"a0f236b34d931931"},"/assets/clerk-logo-light-BYN-U_0H.svg":{"offset":695984,"length":2101,"mime":"image/svg+xml","gzipped":true,"hash":"85770f891d615c15"},"/__docx_assets/c652463bc02b14.bin":{"offset":698085,"length":1032,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"b7ef659b9918b562"},"/assets/serpapi-black-DnXRiQQ3.svg":{"offset":699117,"length":5506,"mime":"image/svg+xml","gzipped":true,"hash":"eae3ca3f49eb10bb"},"/assets/prisma-dark-DwgDxLwn.svg":{"offset":704623,"length":2276,"mime":"image/svg+xml","gzipped":true,"hash":"4226546f639ea248"},"/assets/clerk-logo-dark-CRE22T_2.svg":{"offset":706899,"length":2082,"mime":"image/svg+xml","gzipped":true,"hash":"6ac152fa38cf1202"},"/assets/workos-black-DnPI5Ve5.svg":{"offset":708981,"length":1716,"mime":"image/svg+xml","gzipped":true,"hash":"ee02fe0a62ec07b3"},"/assets/serpapi-white-CPxTEZSp.svg":{"offset":710697,"length":5507,"mime":"image/svg+xml","gzipped":true,"hash":"268f7b21f443c087"},"/assets/openrouter-white-BLyN_5Ca.svg":{"offset":716204,"length":1740,"mime":"image/svg+xml","gzipped":true,"hash":"13637f69d0de5fd2"},"/assets/openrouter-black-CJtk3mjZ.svg":{"offset":717944,"length":1739,"mime":"image/svg+xml","gzipped":true,"hash":"5dd9bf63f2f8dea1"},"/assets/prisma-light-Cloa3Onm.svg":{"offset":719683,"length":2278,"mime":"image/svg+xml","gzipped":true,"hash":"275386c848fe7de0"},"/assets/scarf-BJX_-tJ9.svg":{"offset":721961,"length":3869,"mime":"image/svg+xml","gzipped":true,"hash":"76163b7ea851b6af"},"/images/hero-palm-gradient-960.webp":{"offset":725830,"length":28730,"mime":"image/webp","gzipped":true,"hash":"93fbf92042d02785"},"/fonts/Inter-latin.woff2":{"offset":754560,"length":72932,"mime":"font/woff2","gzipped":true,"hash":"950aff451f2f608d"},"/images/brand/tanstack-emblem-black.svg":{"offset":827492,"length":640,"mime":"image/svg+xml","gzipped":true,"hash":"5a2195e2edbc36d7"},"/__docx_assets/d1b233760bed30.woff2":{"offset":828132,"length":6935,"mime":"font/woff2","gzipped":true,"hash":"023e5b00d47f4ca4"},"/__docx_assets/ed3206e8ede4a9.woff2":{"offset":835067,"length":6995,"mime":"font/woff2","gzipped":true,"hash":"c96c57c26b8d4271"},"/__docx_assets/ecb1449c9f014f.woff2":{"offset":842062,"length":14771,"mime":"font/woff2","gzipped":true,"hash":"75de27a62b652578"},"/__docx_assets/6cb3d68941f20a.woff2":{"offset":856833,"length":8291,"mime":"font/woff2","gzipped":true,"hash":"b8c026c80d547069"},"/__docx_assets/f9c74283b1693b.woff2":{"offset":865124,"length":8379,"mime":"font/woff2","gzipped":true,"hash":"827ff291ec7ad3e2"},"/__docx_assets/5f754c3adb80da.woff2":{"offset":873503,"length":76898,"mime":"font/woff2","gzipped":true,"hash":"2a689569fa1d472f"},"/__docx_assets/e577600d58460a.woff2":{"offset":950401,"length":30764,"mime":"font/woff2","gzipped":true,"hash":"b0dbbc6df819eb88"},"/__docx_assets/c70f6b078a0944.woff2":{"offset":981165,"length":8483,"mime":"font/woff2","gzipped":true,"hash":"e4ddc5e461f06274"},"/__docx_assets/7e3d7e3c7de8e8.woff2":{"offset":989648,"length":14731,"mime":"font/woff2","gzipped":true,"hash":"f030ce23a9c2db55"},"/__docx_assets/ae5fc1eadb0588.woff2":{"offset":1004379,"length":13371,"mime":"font/woff2","gzipped":true,"hash":"5a329f24e9a408d8"},"/__docx_assets/2a73cdecea5ce9.woff2":{"offset":1017750,"length":5891,"mime":"font/woff2","gzipped":true,"hash":"9b1b2d0dc61dc5b4"},"/__docx_assets/c097aa95d7ec1b.woff2":{"offset":1023641,"length":6803,"mime":"font/woff2","gzipped":true,"hash":"cfae540b88c18592"},"/__docx_assets/b06594e3dfbc9f.woff2":{"offset":1030444,"length":6063,"mime":"font/woff2","gzipped":true,"hash":"e5a0d1b353cec923"},"/__docx_assets/4c442bc4abb065.woff2":{"offset":1036507,"length":13427,"mime":"font/woff2","gzipped":true,"hash":"055c5a5c51c1b6e9"},"/__docx_assets/b2bd399c7ef212.woff2":{"offset":1049934,"length":5855,"mime":"font/woff2","gzipped":true,"hash":"bff78395d07e458e"},"/fonts/Inter-latin-ext.woff2":{"offset":1055789,"length":133386,"mime":"font/woff2","gzipped":true,"hash":"d2c129ef78916c74"},"/__docx_assets/32a447b3624072.woff2":{"offset":1189175,"length":13007,"mime":"font/woff2","gzipped":true,"hash":"33b3c6001f8dd113"},"/__docx_assets/fd3dd31c82271e.woff2":{"offset":1202182,"length":7715,"mime":"font/woff2","gzipped":true,"hash":"972b8ee5f8ff5391"},"/__docx_assets/86628368fe0c7c.woff2":{"offset":1209897,"length":15643,"mime":"font/woff2","gzipped":true,"hash":"fd07f16153dd55ac"},"/__docx_assets/245a9a663e9393.woff2":{"offset":1225540,"length":6955,"mime":"font/woff2","gzipped":true,"hash":"8605f3d9c723b79b"},"/__docx_assets/796754f6fa2c0f.woff2":{"offset":1232495,"length":14351,"mime":"font/woff2","gzipped":true,"hash":"690c7a9520f8d9aa"},"/__docx_assets/132ba860efc49c.woff2":{"offset":1246846,"length":9375,"mime":"font/woff2","gzipped":true,"hash":"5c080ddf94a1be02"},"/__docx_assets/203ce92810c0a1.woff2":{"offset":1256221,"length":13455,"mime":"font/woff2","gzipped":true,"hash":"a2052c2e7171917f"},"/__docx_assets/eb889034c0832c.woff2":{"offset":1269676,"length":14911,"mime":"font/woff2","gzipped":true,"hash":"b05d0cae7c617430"},"/__docx_assets/2504ad92936998.woff2":{"offset":1284587,"length":8699,"mime":"font/woff2","gzipped":true,"hash":"977d9cf9aec9b099"},"/__docx_assets/677d93cfc15177.woff2":{"offset":1293286,"length":14931,"mime":"font/woff2","gzipped":true,"hash":"c1b3ea3548111f8f"},"/__docx_assets/be7e618c1b6f15.woff2":{"offset":1308217,"length":13403,"mime":"font/woff2","gzipped":true,"hash":"d8074533a74c4065"},"/__docx_assets/707854e807bf3a.woff2":{"offset":1321620,"length":6091,"mime":"font/woff2","gzipped":true,"hash":"b40808097daa64a6"},"/__docx_assets/6988d8097c69a5.woff2":{"offset":1327711,"length":7207,"mime":"font/woff2","gzipped":true,"hash":"381bc33d377ec181"},"/docs":{"offset":0,"length":39764,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"183a98cbdd607682"},"/":{"offset":0,"length":39764,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"183a98cbdd607682"}}}
+{
+  "id": "tanstack_ranger",
+  "name": "TanStack Ranger",
+  "version": "v1",
+  "commit": "6d7eac6b",
+  "origin": "https://tanstack.com",
+  "entryPath": "/ranger/latest/docs/overview",
+  "updatedAt": "2026-10-11T10:38:13.539Z",
+  "totalBytes": 1331994,
+  "chunkCount": 75,
+  "routes": {
+    "/ranger/latest/docs/overview": {
+      "offset": 0,
+      "length": 38866,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "123c9ec5db5406c5"
+    },
+    "/ranger/latest/docs/framework/react/examples/basic": {
+      "offset": 38866,
+      "length": 41602,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5191b84b52544d63"
+    },
+    "/ranger/latest/docs/framework/react/react-ranger": {
+      "offset": 80468,
+      "length": 38169,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "155d3ceb981870b3"
+    },
+    "/ranger/latest/docs/installation": {
+      "offset": 118637,
+      "length": 38682,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1aeabc1bb9b52dbf"
+    },
+    "/ranger/latest/docs/framework/react/api/basic": {
+      "offset": 157319,
+      "length": 40628,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c57f9da1eea5270c"
+    },
+    "/ranger/latest/docs/quick-start": {
+      "offset": 197947,
+      "length": 41163,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7cef8dcd85cf9613"
+    },
+    "/ranger/latest/docs/framework/react/examples/custom-steps": {
+      "offset": 239110,
+      "length": 41838,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f4a083568124a020"
+    },
+    "/ranger/latest/docs/framework/react/examples/update-on-drag": {
+      "offset": 280948,
+      "length": 41498,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ca129f02d2b3717f"
+    },
+    "/ranger/latest/docs/framework/react/examples/custom-styles": {
+      "offset": 322446,
+      "length": 42930,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "449b9e46449b0461"
+    },
+    "/ranger/latest/docs/framework/react/examples/logarithmic-interpolator": {
+      "offset": 365376,
+      "length": 42444,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f6dea89f8e117f0f"
+    },
+    "/ranger/latest/docs/framework/react/api/custom-styles": {
+      "offset": 407820,
+      "length": 39728,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "188e2d61b582f889"
+    },
+    "/ranger/latest/docs/framework/react/api/update-on-drag": {
+      "offset": 447548,
+      "length": 40385,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4b008f56cb8a605f"
+    },
+    "/ranger/latest/docs/framework/react/api/custom-steps": {
+      "offset": 487933,
+      "length": 40964,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6915c1eeef3e81bc"
+    },
+    "/ranger/latest/docs/framework/react/api/logarithmic-interpolator": {
+      "offset": 528897,
+      "length": 41100,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ed807131197b2738"
+    },
+    "/favicon-16x16.png": {
+      "offset": 569997,
+      "length": 590,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a53b782bb5f5aff7"
+    },
+    "/apple-touch-icon.png": {
+      "offset": 570587,
+      "length": 7469,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2abc16a5f4b05ca9"
+    },
+    "/favicon-dark.svg": {
+      "offset": 578056,
+      "length": 1377,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "87ddd3cc53780ea9"
+    },
+    "/assets/coderabbit-light-ggTFqYhV.svg": {
+      "offset": 579433,
+      "length": 3869,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "183adaaa8dc30b05"
+    },
+    "/favicon.ico": {
+      "offset": 583302,
+      "length": 1085,
+      "mime": "image/vnd.microsoft.icon",
+      "gzipped": true,
+      "hash": "168a372851d14b1b"
+    },
+    "/assets/coderabbit-dark-C3hjOiHQ.svg": {
+      "offset": 584387,
+      "length": 3855,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a0f236b34d931931"
+    },
+    "/favicon-light.svg": {
+      "offset": 578056,
+      "length": 1377,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "87ddd3cc53780ea9"
+    },
+    "/images/brand/tanstack-landscape-white.svg": {
+      "offset": 588242,
+      "length": 1770,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "47b05e85ac4c4ffb"
+    },
+    "/images/brand/tanstack-landscape-black.svg": {
+      "offset": 590012,
+      "length": 1770,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "7f88cc8634ee3f47"
+    },
+    "/favicon-32x32.png": {
+      "offset": 591782,
+      "length": 1187,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "34241b997c796120"
+    },
+    "/assets/render-black-Cz1XqOfh.svg": {
+      "offset": 592969,
+      "length": 2039,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "aa8e27c775b8a80d"
+    },
+    "/assets/index-CaKFzcjh.css": {
+      "offset": 595008,
+      "length": 73993,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b6ed57e3b279ea7"
+    },
+    "/assets/cloudflare-black-6Ojsn8yh.svg": {
+      "offset": 669001,
+      "length": 5273,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "e8c1a2879b3e87a1"
+    },
+    "/assets/railway-white-CFKFsfw2.svg": {
+      "offset": 674274,
+      "length": 2006,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "cdfae42b06c7f002"
+    },
+    "/assets/lovable-white-DLB1BxKZ.svg": {
+      "offset": 676280,
+      "length": 3575,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "289e15e1680f1bc7"
+    },
+    "/assets/cloudflare-white-Co-Tyjbl.svg": {
+      "offset": 679855,
+      "length": 5586,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "e38e46382d5e07c7"
+    },
+    "/__docx_assets/c652463bc02b14.bin": {
+      "offset": 685441,
+      "length": 1032,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b7ef659b9918b562"
+    },
+    "/assets/lovable-black-1mVxR6Bj.svg": {
+      "offset": 686473,
+      "length": 3574,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "2991135aabc14b05"
+    },
+    "/assets/render-white-D4l33ygB.svg": {
+      "offset": 690047,
+      "length": 2037,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a50b023056a6449c"
+    },
+    "/assets/railway-black-DeBDfNao.svg": {
+      "offset": 692084,
+      "length": 2008,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "f17e0e028a8904e8"
+    },
+    "/assets/openrouter-black-CJtk3mjZ.svg": {
+      "offset": 694092,
+      "length": 1739,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "5dd9bf63f2f8dea1"
+    },
+    "/assets/serpapi-white-CPxTEZSp.svg": {
+      "offset": 695831,
+      "length": 5507,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "268f7b21f443c087"
+    },
+    "/assets/workos-black-DnPI5Ve5.svg": {
+      "offset": 701338,
+      "length": 1716,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "ee02fe0a62ec07b3"
+    },
+    "/assets/clerk-logo-light-BYN-U_0H.svg": {
+      "offset": 703054,
+      "length": 2101,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "85770f891d615c15"
+    },
+    "/assets/scarf-BJX_-tJ9.svg": {
+      "offset": 705155,
+      "length": 3869,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "76163b7ea851b6af"
+    },
+    "/assets/serpapi-black-DnXRiQQ3.svg": {
+      "offset": 709024,
+      "length": 5506,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "eae3ca3f49eb10bb"
+    },
+    "/assets/clerk-logo-dark-CRE22T_2.svg": {
+      "offset": 714530,
+      "length": 2082,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "6ac152fa38cf1202"
+    },
+    "/assets/prisma-dark-DwgDxLwn.svg": {
+      "offset": 716612,
+      "length": 2276,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "4226546f639ea248"
+    },
+    "/assets/prisma-light-Cloa3Onm.svg": {
+      "offset": 718888,
+      "length": 2278,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "275386c848fe7de0"
+    },
+    "/assets/openrouter-white-BLyN_5Ca.svg": {
+      "offset": 721166,
+      "length": 1740,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "13637f69d0de5fd2"
+    },
+    "/__docx_assets/b06594e3dfbc9f.woff2": {
+      "offset": 722906,
+      "length": 6063,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e5a0d1b353cec923"
+    },
+    "/__docx_assets/c70f6b078a0944.woff2": {
+      "offset": 728969,
+      "length": 8483,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e4ddc5e461f06274"
+    },
+    "/__docx_assets/2a73cdecea5ce9.woff2": {
+      "offset": 737452,
+      "length": 5891,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "9b1b2d0dc61dc5b4"
+    },
+    "/images/brand/tanstack-emblem-black.svg": {
+      "offset": 743343,
+      "length": 640,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "5a2195e2edbc36d7"
+    },
+    "/__docx_assets/f9c74283b1693b.woff2": {
+      "offset": 743983,
+      "length": 8379,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "827ff291ec7ad3e2"
+    },
+    "/__docx_assets/6cb3d68941f20a.woff2": {
+      "offset": 752362,
+      "length": 8291,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b8c026c80d547069"
+    },
+    "/__docx_assets/7e3d7e3c7de8e8.woff2": {
+      "offset": 760653,
+      "length": 14731,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "f030ce23a9c2db55"
+    },
+    "/__docx_assets/d1b233760bed30.woff2": {
+      "offset": 775384,
+      "length": 6935,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "023e5b00d47f4ca4"
+    },
+    "/images/hero-palm-gradient-960.webp": {
+      "offset": 782319,
+      "length": 28730,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "93fbf92042d02785"
+    },
+    "/__docx_assets/ed3206e8ede4a9.woff2": {
+      "offset": 811049,
+      "length": 6995,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "c96c57c26b8d4271"
+    },
+    "/__docx_assets/4c442bc4abb065.woff2": {
+      "offset": 818044,
+      "length": 13427,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "055c5a5c51c1b6e9"
+    },
+    "/__docx_assets/e577600d58460a.woff2": {
+      "offset": 831471,
+      "length": 30764,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b0dbbc6df819eb88"
+    },
+    "/__docx_assets/ecb1449c9f014f.woff2": {
+      "offset": 862235,
+      "length": 14771,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "75de27a62b652578"
+    },
+    "/__docx_assets/32a447b3624072.woff2": {
+      "offset": 877006,
+      "length": 13007,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "33b3c6001f8dd113"
+    },
+    "/__docx_assets/c097aa95d7ec1b.woff2": {
+      "offset": 890013,
+      "length": 6803,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "cfae540b88c18592"
+    },
+    "/__docx_assets/b2bd399c7ef212.woff2": {
+      "offset": 896816,
+      "length": 5855,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "bff78395d07e458e"
+    },
+    "/fonts/Inter-latin.woff2": {
+      "offset": 902671,
+      "length": 72932,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "950aff451f2f608d"
+    },
+    "/__docx_assets/ae5fc1eadb0588.woff2": {
+      "offset": 975603,
+      "length": 13371,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "5a329f24e9a408d8"
+    },
+    "/__docx_assets/5f754c3adb80da.woff2": {
+      "offset": 988974,
+      "length": 76898,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "2a689569fa1d472f"
+    },
+    "/fonts/Inter-latin-ext.woff2": {
+      "offset": 1065872,
+      "length": 133386,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "d2c129ef78916c74"
+    },
+    "/__docx_assets/203ce92810c0a1.woff2": {
+      "offset": 1199258,
+      "length": 13455,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "a2052c2e7171917f"
+    },
+    "/__docx_assets/fd3dd31c82271e.woff2": {
+      "offset": 1212713,
+      "length": 7715,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "972b8ee5f8ff5391"
+    },
+    "/__docx_assets/132ba860efc49c.woff2": {
+      "offset": 1220428,
+      "length": 9375,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "5c080ddf94a1be02"
+    },
+    "/__docx_assets/707854e807bf3a.woff2": {
+      "offset": 1229803,
+      "length": 6091,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b40808097daa64a6"
+    },
+    "/__docx_assets/245a9a663e9393.woff2": {
+      "offset": 1235894,
+      "length": 6955,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "8605f3d9c723b79b"
+    },
+    "/__docx_assets/796754f6fa2c0f.woff2": {
+      "offset": 1242849,
+      "length": 14351,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "690c7a9520f8d9aa"
+    },
+    "/__docx_assets/86628368fe0c7c.woff2": {
+      "offset": 1257200,
+      "length": 15643,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "fd07f16153dd55ac"
+    },
+    "/__docx_assets/2504ad92936998.woff2": {
+      "offset": 1272843,
+      "length": 8699,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "977d9cf9aec9b099"
+    },
+    "/__docx_assets/677d93cfc15177.woff2": {
+      "offset": 1281542,
+      "length": 14931,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "c1b3ea3548111f8f"
+    },
+    "/__docx_assets/6988d8097c69a5.woff2": {
+      "offset": 1296473,
+      "length": 7207,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "381bc33d377ec181"
+    },
+    "/__docx_assets/be7e618c1b6f15.woff2": {
+      "offset": 1303680,
+      "length": 13403,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "d8074533a74c4065"
+    },
+    "/__docx_assets/eb889034c0832c.woff2": {
+      "offset": 1317083,
+      "length": 14911,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b05d0cae7c617430"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 38866,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "123c9ec5db5406c5"
+    },
+    "/": {
+      "offset": 0,
+      "length": 38866,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "123c9ec5db5406c5"
+    }
+  }
+}

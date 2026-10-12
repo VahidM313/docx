@@ -1,1 +1,2316 @@
-{"id":"nextjs","name":"Next.js","version":"v15.3","commit":"4f0c3000","origin":"https://nextjs.org","entryPath":"/docs","updatedAt":"2026-10-10T16:44:13.283Z","totalBytes":25742857,"chunkCount":328,"routes":{"/docs":{"offset":0,"length":52660,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9a4c28b6018ecd1c"},"/docs/app/getting-started/installation":{"offset":52660,"length":73779,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a0fea999cd8aebb8"},"/docs/app/getting-started/project-structure":{"offset":126439,"length":66791,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e016aac7df842e73"},"/docs/app/getting-started/images":{"offset":193230,"length":59820,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a078ee3c7192f77e"},"/docs/app/getting-started":{"offset":253050,"length":52820,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9e528face1271ca3"},"/docs/app/getting-started/server-and-client-components":{"offset":305870,"length":73651,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0ca864682e5f5b9d"},"/docs/app/getting-started/mutating-data":{"offset":379521,"length":70877,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"26c190adecd90b11"},"/docs/app/getting-started/caching":{"offset":450398,"length":88899,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"786507d5cab0200b"},"/docs/app/getting-started/fetching-data":{"offset":539297,"length":76668,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"33cd29f89c6e82c3"},"/docs/app/getting-started/fonts":{"offset":615965,"length":58226,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"851e22d408cae769"},"/docs/app/getting-started/linking-and-navigating":{"offset":674191,"length":70676,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8e1976da6a11890e"},"/docs/app/getting-started/route-handlers":{"offset":744867,"length":62833,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6a445452d0ca217e"},"/docs/app/getting-started/css":{"offset":807700,"length":63190,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0f5029431c16540b"},"/docs/app/getting-started/layouts-and-pages":{"offset":870890,"length":64923,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1b9d7e7f8541d346"},"/docs/app/getting-started/metadata-and-og-images":{"offset":935813,"length":65833,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e90dbd0d40db9ab6"},"/docs/app/getting-started/error-handling":{"offset":1001646,"length":66568,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a211cc5f8788963d"},"/docs/app/getting-started/revalidating":{"offset":1068214,"length":61988,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9377de8b881ee479"},"/docs/app/guides/cdn-caching":{"offset":1130202,"length":60201,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6b8bacdccbbce2ee"},"/docs/app/getting-started/deploying":{"offset":1190403,"length":59839,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"54a3c27b60374e38"},"/docs/app/guides/ai-agents":{"offset":1250242,"length":69848,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b210f1a2b81d4e36"},"/docs/app/guides/backend-for-frontend":{"offset":1320090,"length":84721,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"50422f998182c375"},"/docs/app/getting-started/upgrading":{"offset":1404811,"length":54164,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"49c420d276ca7e82"},"/docs/app/getting-started/proxy":{"offset":1458975,"length":55856,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"684b32390cd6052d"},"/docs/app/guides":{"offset":1514831,"length":58956,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e4a9fbccb5e349e8"},"/docs/app/guides/analytics":{"offset":1573787,"length":59079,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7d1802bdb39c157b"},"/docs/app/guides/client-side-data-fetching":{"offset":1632866,"length":56148,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bb8738178fc96a69"},"/docs/app/guides/authentication":{"offset":1689014,"length":102551,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6b5bfaf78c46d869"},"/docs/app/guides/caching-without-cache-components":{"offset":1791565,"length":67284,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"95dcd9d7553de29d"},"/docs/app/guides/building":{"offset":1858849,"length":76492,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"53a521020d3734e5"},"/docs/app/guides/client-side-data-fetching/swr":{"offset":1935341,"length":70280,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"256a56a130186b92"},"/docs/app/guides/adopting-partial-prefetching":{"offset":2005621,"length":79116,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"88badecc4cadbd1d"},"/docs/app/guides/ci-build-caching":{"offset":2084737,"length":57509,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ef79dc2fbe9e3776"},"/docs/app/guides/authentication-with-cache-components":{"offset":2142246,"length":71476,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4e7156d1c515238a"},"/docs/app/guides/draft-mode":{"offset":2213722,"length":65863,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7c0ff50f46302b31"},"/docs/app/guides/incremental-static-regeneration":{"offset":2279585,"length":68255,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7631f05942e83065"},"/docs/app/guides/data-security":{"offset":2347840,"length":84411,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"565d3689b3cb0828"},"/docs/app/guides/forms":{"offset":2432251,"length":67787,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1670a610d343d6f6"},"/docs/app/guides/custom-server":{"offset":2500038,"length":58769,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2bf398b47efd0bd8"},"/docs/app/guides/content-security-policy":{"offset":2558807,"length":75494,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2184cf25700ea60c"},"/docs/app/guides/debugging":{"offset":2634301,"length":62662,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e95969267675de2d"},"/docs/app/guides/environment-variables":{"offset":2696963,"length":66990,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"38d821e6b523029d"},"/docs/app/guides/deploying-to-platforms":{"offset":2763953,"length":59432,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9a1d1153adcd28f8"},"/docs/app/guides/client-side-data-fetching/tanstack-query":{"offset":2823385,"length":77520,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a13bb293281b74e9"},"/docs/app/guides/css-in-js":{"offset":2900905,"length":60616,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f3b2ba49923a582d"},"/docs/app/guides/how-revalidation-works":{"offset":2961521,"length":59135,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"03ad9d0bcca381c2"},"/docs/app/guides/instant-navigation":{"offset":3020656,"length":88413,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"045cb219b90312d1"},"/docs/app/guides/instrumentation":{"offset":3109069,"length":56652,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"22c9bbfe09734213"},"/docs/app/guides/incremental-static-regeneration-cache-components":{"offset":3165721,"length":67669,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9e2c35e8b70b06dc"},"/docs/app/guides/interactive-apps":{"offset":3233390,"length":93317,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"da02b77a3653aa9f"},"/docs/app/guides/lazy-loading":{"offset":3326707,"length":61273,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1bba95a2eeaa0208"},"/docs/app/guides/migrating-to-cache-components":{"offset":3387980,"length":93750,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f8c69c5de526195f"},"/docs/app/guides/memory-usage":{"offset":3481730,"length":61548,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b5868cf60eb240b9"},"/docs/app/guides/mcp":{"offset":3543278,"length":62079,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"315ac2c7b86b0c33"},"/docs/app/guides/internationalization":{"offset":3605357,"length":67654,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"86c75710a958c6dc"},"/docs/app/guides/json-ld":{"offset":3673011,"length":54860,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a2a2d3f5fbcb9435"},"/docs/app/guides/migrating/from-create-react-app":{"offset":3727871,"length":82621,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"82931c335fdb4b0e"},"/docs/app/guides/migrating/from-vite":{"offset":3810492,"length":83233,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2ae7d4d5e2671e85"},"/docs/app/guides/local-development":{"offset":3893725,"length":67489,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"254369d87689c0b7"},"/docs/app/guides/multi-tenant":{"offset":3961214,"length":49119,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"37a6b3d97bbbf26e"},"/docs/app/guides/keeping-pages-static":{"offset":4010333,"length":77115,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a39c0654143d9b0b"},"/docs/app/guides/mdx":{"offset":4087448,"length":77042,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"db47112437a04ada"},"/docs/app/guides/multi-zones":{"offset":4164490,"length":59458,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4a43fb3693f29861"},"/docs/app/guides/migrating/app-router-migration":{"offset":4223948,"length":94055,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1d320c288df911f0"},"/docs/app/guides/migrating":{"offset":4318003,"length":49198,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"85dc3b5c972cc276"},"/docs/app/guides/offline-support":{"offset":4367201,"length":69698,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6648d155bf9349db"},"/docs/app/guides/open-telemetry":{"offset":4436899,"length":67385,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0b83b3ff07347363"},"/docs/app/guides/sass":{"offset":4504284,"length":56924,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"27caa4979a0d34e2"},"/docs/app/guides/production-checklist":{"offset":4561208,"length":59427,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2747c930c3b5bf9e"},"/docs/app/guides/optimizing-prefetching":{"offset":4620635,"length":77927,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"748421134910854f"},"/docs/app/guides/preventing-flash-before-hydration":{"offset":4698562,"length":76109,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d61d0b4a2abe629e"},"/docs/app/guides/redirecting":{"offset":4774671,"length":68624,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"134236dd33d04604"},"/docs/app/guides/rendering-philosophy":{"offset":4843295,"length":57528,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d3c0e48e288f6436"},"/docs/app/guides/preserving-ui-state":{"offset":4900823,"length":80734,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7ec1f61c4dc9265e"},"/docs/app/guides/public-static-pages":{"offset":4981557,"length":62954,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cb0743039ef38bd2"},"/docs/app/guides/scripts":{"offset":5044511,"length":62232,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"151e959b70bde459"},"/docs/app/guides/prefetching":{"offset":5106743,"length":69217,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"205a4b3425b3d18e"},"/docs/app/guides/ppr-platform-guide":{"offset":5175960,"length":57932,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a1110cd101f47d56"},"/docs/app/guides/self-hosting":{"offset":5233892,"length":72857,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"284082167a0555ef"},"/docs/app/guides/package-bundling":{"offset":5306749,"length":68131,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ad70dabf27589b56"},"/docs/app/guides/progressive-web-apps":{"offset":5374880,"length":79701,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9bcbc68296309f35"},"/docs/app/guides/optimizing-the-static-shell":{"offset":5454581,"length":90549,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5548aeefc5bf8f35"},"/docs/app/guides/static-exports":{"offset":5545130,"length":66635,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ed437f3144b9482b"},"/docs/app/guides/upgrading/codemods":{"offset":5611765,"length":86354,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"68cfeec315187116"},"/docs/app/guides/testing/jest":{"offset":5698119,"length":66694,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a8723573bc8563f6"},"/docs/app/guides/upgrading/version-14":{"offset":5764813,"length":53560,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a4d2528bc2aa1fbe"},"/docs/app/guides/testing":{"offset":5818373,"length":51989,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"be3ced4c67e48835"},"/docs/app/guides/testing/playwright":{"offset":5870362,"length":58054,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"493b57949b802d03"},"/docs/app/guides/server-actions":{"offset":5928416,"length":66678,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"21100588f1e29221"},"/docs/app/guides/testing/vitest":{"offset":5995094,"length":60686,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1b9797f6b13a3e22"},"/docs/app/guides/server-and-client-boundary":{"offset":6055780,"length":66432,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"61fe8cd0cb5cbfb8"},"/docs/app/guides/upgrading":{"offset":6122212,"length":49436,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7a462ab7a7ac10cd"},"/docs/app/guides/streaming":{"offset":6171648,"length":95587,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b9ed3481f473d492"},"/docs/app/guides/upgrading/agent-upgrade":{"offset":6267235,"length":60941,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"79b64b47b5f8688d"},"/docs/app/guides/tailwind-v3-css":{"offset":6328176,"length":56527,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"248afa561645ec78"},"/docs/app/guides/third-party-libraries":{"offset":6384703,"length":66248,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5175994766c7ce89"},"/docs/app/guides/single-page-applications":{"offset":6450951,"length":79267,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ba66452ccdbba42a"},"/docs/app/guides/testing/cypress":{"offset":6530218,"length":67254,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5154045952847b10"},"/docs/app/guides/upgrading/version-15":{"offset":6597472,"length":75274,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"af385447142adc6d"},"/docs/app/guides/view-transitions":{"offset":6672746,"length":75994,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"13a7b8d3cd70e6eb"},"/docs/app/api-reference/components/link":{"offset":6748740,"length":79018,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a68873982bd16a5b"},"/docs/app/api-reference":{"offset":6827758,"length":49749,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b91ec8f9ae13138f"},"/docs/app/api-reference/directives/use-cache-remote":{"offset":6877507,"length":79531,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d9aa8d66b81333f9"},"/docs/app/api-reference/components/image":{"offset":6957038,"length":112054,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"aa64f5b955743432"},"/docs/app/api-reference/directives/use-cache":{"offset":7069092,"length":88879,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7ff8529ad611a3a1"},"/docs/app/guides/upgrading/version-16":{"offset":7157971,"length":114181,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"13fff3e4d8a824f5"},"/docs/app/api-reference/components/font":{"offset":7272152,"length":87848,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bbe8891fd1684eea"},"/docs/app/api-reference/directives":{"offset":7360000,"length":57969,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"306d1b6af66700b2"},"/docs/app/api-reference/directives/use-server":{"offset":7417969,"length":59503,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8484fa07bc8d598e"},"/docs/app/api-reference/components":{"offset":7477472,"length":49533,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7f1b5077cc0eaf74"},"/docs/app/api-reference/directives/use-client":{"offset":7527005,"length":56360,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0a52dcee214d1515"},"/docs/app/api-reference/components/form":{"offset":7583365,"length":64289,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1c309cd62cb31ac8"},"/docs/app/api-reference/directives/use-cache-private":{"offset":7647654,"length":60989,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"06c83d8e3e3870f3"},"/docs/app/guides/videos":{"offset":7708643,"length":68660,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"105bed892f44dfa2"},"/docs/app/api-reference/file-conventions/loading":{"offset":7777303,"length":62864,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a96daa0f37415dfd"},"/docs/app/api-reference/file-conventions/not-found":{"offset":7840167,"length":61383,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9925902aa5f86240"},"/docs/app/api-reference/components/script":{"offset":7901550,"length":65540,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"325770f8a5d47dfd"},"/docs/app/api-reference/file-conventions/parallel-routes":{"offset":7967090,"length":68221,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d43a91366c8b32df"},"/docs/app/api-reference/file-conventions/instrumentation-client":{"offset":8035311,"length":63347,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"153621cf52890a1d"},"/docs/app/api-reference/file-conventions/instrumentation":{"offset":8098658,"length":60179,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"60fb7ebcd26f6496"},"/docs/app/api-reference/file-conventions/dynamic-routes":{"offset":8158837,"length":68746,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0a01f2e4096e2fcc"},"/docs/app/api-reference/file-conventions/proxy":{"offset":8227583,"length":91367,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c70cd95ca3e4dcbf"},"/docs/app/api-reference/file-conventions/default":{"offset":8318950,"length":56067,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e8fd59d3525f34dc"},"/docs/app/api-reference/file-conventions/layout":{"offset":8375017,"length":74011,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9ea8a56db1d6ad13"},"/docs/app/api-reference/file-conventions/forbidden":{"offset":8449028,"length":54869,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"00eb7972ecc69274"},"/docs/app/api-reference/file-conventions":{"offset":8503897,"length":51087,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d96b17e1afb1cbec"},"/docs/app/api-reference/file-conventions/page":{"offset":8554984,"length":62140,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2fa67cc04edee891"},"/docs/app/api-reference/file-conventions/mdx-components":{"offset":8617124,"length":54419,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"86635a0ca5380ffb"},"/docs/app/api-reference/file-conventions/error":{"offset":8671543,"length":64804,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6b001eba3b2ed37d"},"/docs/app/api-reference/file-conventions/intercepting-routes":{"offset":8736347,"length":53978,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"84fc01e85e9a2f32"},"/docs/app/api-reference/file-conventions/metadata/manifest":{"offset":8790325,"length":54766,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"10b2dc482009c39e"},"/docs/app/api-reference/file-conventions/metadata/opengraph-image":{"offset":8845091,"length":70327,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4e7047fd5c3a7065"},"/docs/app/api-reference/file-conventions/route-groups":{"offset":8915418,"length":51627,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d968cf4e70158bda"},"/docs/app/api-reference/file-conventions/metadata/robots":{"offset":8967045,"length":58565,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2da73162d8d1e9a6"},"/docs/app/api-reference/file-conventions/route":{"offset":9025610,"length":73041,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dfaa7613306b9998"},"/docs/app/api-reference/file-conventions/unauthorized":{"offset":9098651,"length":56617,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"98d0cd17e352d9f8"},"/docs/app/api-reference/file-conventions/route-segment-config":{"offset":9155268,"length":52771,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f686cd931e925e5b"},"/docs/app/api-reference/file-conventions/metadata/sitemap":{"offset":9208039,"length":65445,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2cfcdc6c43e4e262"},"/docs/app/api-reference/file-conventions/route-segment-config/instant":{"offset":9273484,"length":64591,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"90889e224f55f493"},"/docs/app/api-reference/file-conventions/src-folder":{"offset":9338075,"length":51200,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8f34faf4d014af5e"},"/docs/app/api-reference/file-conventions/route-segment-config/dynamicParams":{"offset":9389275,"length":51783,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"174e0869a8d2ed6c"},"/docs/app/api-reference/file-conventions/template":{"offset":9441058,"length":58866,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ed228012841ffd80"},"/docs/app/api-reference/file-conventions/metadata/app-icons":{"offset":9499924,"length":62851,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"33a91b8cef0868bb"},"/docs/app/api-reference/file-conventions/metadata":{"offset":9562775,"length":50449,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4af7692f8a0f2d6b"},"/docs/app/api-reference/file-conventions/route-segment-config/ensureStatic":{"offset":9613224,"length":65278,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"286a3d906902a85f"},"/docs/app/api-reference/file-conventions/public-folder":{"offset":9678502,"length":53080,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"52b297f3e945d6fe"},"/docs/app/api-reference/functions/draft-mode":{"offset":9731582,"length":58886,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9f1e691d7404fc01"},"/docs/app/api-reference/functions/cookies":{"offset":9790468,"length":63271,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3c6ef689bd1f4c29"},"/docs/app/api-reference/functions/fetch":{"offset":9853739,"length":60413,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c9558548ce61cd5d"},"/docs/app/api-reference/functions/after":{"offset":9914152,"length":64633,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"59f24eac0b518d7d"},"/docs/app/api-reference/functions/forbidden":{"offset":9978785,"length":62591,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c8239bf765e1e582"},"/docs/app/api-reference/functions/generate-metadata":{"offset":10041376,"length":114559,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c96fee3ef83946f3"},"/docs/app/api-reference/functions/cacheLife":{"offset":10155935,"length":78725,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b5b98ff21e25b7f8"},"/docs/app/api-reference/functions/cacheTag":{"offset":10234660,"length":59880,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2a07daa1d2627fb0"},"/docs/app/api-reference/functions/catchError":{"offset":10294540,"length":61634,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"12d5716c2c6a58df"},"/docs/app/api-reference/functions/connection":{"offset":10356174,"length":56569,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0b51f345dc2c7573"},"/docs/app/api-reference/file-conventions/route-segment-config/prefetch":{"offset":10412743,"length":58447,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e4473c2f70613f86"},"/docs/app/api-reference/file-conventions/route-segment-config/maxDuration":{"offset":10471190,"length":53155,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"189678bcc1adbea1"},"/docs/app/api-reference/functions/generate-image-metadata":{"offset":10524345,"length":61107,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6bdb3e29247dfeb4"},"/docs/app/api-reference/file-conventions/route-segment-config/runtime":{"offset":10585452,"length":51634,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d29ce8e96a75a0e7"},"/docs/app/api-reference/functions":{"offset":10637086,"length":52576,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6aeff680cb57c1aa"},"/docs/app/api-reference/file-conventions/route-segment-config/preferredRegion":{"offset":10689662,"length":53554,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8311de98355edf34"},"/docs/app/api-reference/functions/generate-viewport":{"offset":10743216,"length":64467,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8642bc120ed4c1df"},"/docs/app/api-reference/functions/headers":{"offset":10807683,"length":57698,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3463c53fd5cf6d15"},"/docs/app/api-reference/functions/next-request":{"offset":10865381,"length":55563,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a88e791e17804c2c"},"/docs/app/api-reference/functions/generate-sitemaps":{"offset":10920944,"length":55908,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"02ac3cf59e8a4f65"},"/docs/app/api-reference/functions/generate-static-params":{"offset":10976852,"length":71117,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7417b5c874140c21"},"/docs/app/api-reference/functions/next-response":{"offset":11047969,"length":59947,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2181d70fa6a3f032"},"/docs/app/api-reference/functions/io":{"offset":11107916,"length":58123,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"99e6af84c68991c8"},"/docs/app/api-reference/functions/next-root-params":{"offset":11166039,"length":68635,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8a9d5fdba98a6405"},"/docs/app/api-reference/functions/image-response":{"offset":11234674,"length":61043,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6bdc36f332cbf0b5"},"/docs/app/api-reference/functions/navigation":{"offset":11295717,"length":63875,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7d52b8b9549a1a25"},"/docs/app/api-reference/functions/redirect":{"offset":11359592,"length":62512,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"92c2997ae681bcc3"},"/docs/app/api-reference/functions/not-found":{"offset":11422104,"length":61903,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"04f6f538816bbe9f"},"/docs/app/api-reference/functions/refresh":{"offset":11484007,"length":54743,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"081e86c8656b45c0"},"/docs/app/api-reference/functions/permanentRedirect":{"offset":11538750,"length":56505,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"42ee6c2d1b6166f4"},"/docs/app/api-reference/functions/prefetch":{"offset":11595255,"length":63165,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3c113620a8fb8f6b"},"/docs/app/api-reference/functions/revalidatePath":{"offset":11658420,"length":63763,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"be02b26b9a51ed48"},"/docs/app/api-reference/functions/revalidateTag":{"offset":11722183,"length":59305,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d76bc00a007fab7b"},"/docs/app/api-reference/functions/unauthorized":{"offset":11781488,"length":63561,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"37f53ed58cd1f77d"},"/docs/app/api-reference/functions/unstable_cache":{"offset":11845049,"length":57685,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4f3415ad5412532c"},"/_next/static/immutable/chunks/2lra4q96-7lip.css":{"offset":11902734,"length":1894,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"9c222a57c4689cf5"},"/_next/static/immutable/chunks/19t0k1gbut827.css":{"offset":11904628,"length":5575,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"8216e0939cff3abc"},"/_next/static/immutable/media/logo-twitter-x-dark.1-i769nzu94hl.svg":{"offset":11910203,"length":283,"mime":"image/svg+xml","gzipped":true,"hash":"967816ae3ccbed3d"},"/_next/static/immutable/media/logo-bluesky-light.2may7hm2y7g6v.svg":{"offset":11910486,"length":311,"mime":"image/svg+xml","gzipped":true,"hash":"37487188b4afcaba"},"/_next/static/immutable/media/logo-bluesky-dark.39tbulfg2p-1z.svg":{"offset":11910797,"length":311,"mime":"image/svg+xml","gzipped":true,"hash":"14496ae60198e7df"},"/_next/static/immutable/media/logo-github-dark.1k-70sin_m3qn.svg":{"offset":11911108,"length":464,"mime":"image/svg+xml","gzipped":true,"hash":"a56a51f2bd5d1b7e"},"/_next/static/immutable/media/nextjs-logotype-dark.3h4a2z2v_dkod.svg":{"offset":11911572,"length":821,"mime":"image/svg+xml","gzipped":true,"hash":"3acf923085036614"},"/__docx_assets/eaaa52bbead304.ico":{"offset":11912393,"length":2460,"mime":"image/vnd.microsoft.icon","gzipped":true,"hash":"a2e280e495c87eb7"},"/_next/static/immutable/media/vercel-logotype-dark.3m9ycmsc1ql8m.svg":{"offset":11914853,"length":706,"mime":"image/svg+xml","gzipped":true,"hash":"3567e40a1a62abbb"},"/_next/static/immutable/media/logo-github-light.3dl3lqjq1azpp.svg":{"offset":11915559,"length":466,"mime":"image/svg+xml","gzipped":true,"hash":"a0b9ed86f1ff0018"},"/_next/static/immutable/media/vercel-light.3_gxxexgi1nmy.svg":{"offset":11916025,"length":177,"mime":"image/svg+xml","gzipped":true,"hash":"fe30bc6e5e847458"},"/_next/static/immutable/media/vercel-dark.1f3cgy23m5_jy.svg":{"offset":11916202,"length":176,"mime":"image/svg+xml","gzipped":true,"hash":"5e4bd7297f23d25c"},"/_next/static/immutable/media/nextjs-logotype-light.00-_80jv8_dct.svg":{"offset":11916378,"length":825,"mime":"image/svg+xml","gzipped":true,"hash":"23f0d6a73937f8d4"},"/_next/static/immutable/media/logo-twitter-x-light.0dvkch_c5dvys.svg":{"offset":11917203,"length":285,"mime":"image/svg+xml","gzipped":true,"hash":"c0a199bb25a77a77"},"/__docx_assets/02fdcf026ca34e.bin":{"offset":11917488,"length":35072,"mime":"image/png","gzipped":true,"hash":"e2afadbb9758d102"},"/__docx_assets/f7b3ce66492852.bin":{"offset":11952560,"length":62402,"mime":"image/png","gzipped":true,"hash":"37f2c90e701338f6"},"/__docx_assets/966fd43fe4c947.bin":{"offset":12014962,"length":59336,"mime":"image/png","gzipped":true,"hash":"acec7cf6d16933bf"},"/__docx_assets/10abd9918f77a6.bin":{"offset":12074298,"length":46479,"mime":"image/png","gzipped":true,"hash":"7800587d0abd39b8"},"/_next/static/immutable/chunks/0w9pt7yz4fv9n.css":{"offset":12120777,"length":72610,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"ad766f5d9a61a4a7"},"/_next/static/immutable/media/vercel-logotype-light.0k7echqflwha4.svg":{"offset":12193387,"length":708,"mime":"image/svg+xml","gzipped":true,"hash":"7a79de2caf6a23d2"},"/__docx_assets/502dcf843d667f.bin":{"offset":12194095,"length":134656,"mime":"image/png","gzipped":true,"hash":"c0ec0dad82b24738"},"/__docx_assets/788499c42410fe.bin":{"offset":12328751,"length":74983,"mime":"image/png","gzipped":true,"hash":"3ef720868ef8049c"},"/__docx_assets/13b72c62dcec08.bin":{"offset":12403734,"length":72245,"mime":"image/png","gzipped":true,"hash":"3bcb2da1ae07b467"},"/__docx_assets/1eb67f4ebba891.bin":{"offset":12475979,"length":108962,"mime":"image/png","gzipped":true,"hash":"2be73942a42858ce"},"/__docx_assets/36c6a714a9eda5.bin":{"offset":12584941,"length":77362,"mime":"image/png","gzipped":true,"hash":"b073b64eb5ddcd7b"},"/__docx_assets/cb3280dbd23e1e.bin":{"offset":12662303,"length":112658,"mime":"image/png","gzipped":true,"hash":"1a95dac90e003f08"},"/__docx_assets/23840beef4d4cb.bin":{"offset":12774961,"length":130452,"mime":"image/png","gzipped":true,"hash":"b889b830a6a72c8e"},"/__docx_assets/ba9c2921491c8a.bin":{"offset":12905413,"length":84365,"mime":"image/png","gzipped":true,"hash":"9379bc386ae5484c"},"/__docx_assets/e621bc2bb3f084.bin":{"offset":12989778,"length":104745,"mime":"image/png","gzipped":true,"hash":"6a8fdb24fb803c49"},"/__docx_assets/cd55765a43218b.bin":{"offset":13094523,"length":161754,"mime":"image/png","gzipped":true,"hash":"86de46741e3ff6ac"},"/__docx_assets/e6f3e4b71d070a.bin":{"offset":13256277,"length":68540,"mime":"image/png","gzipped":true,"hash":"9bb92937034842c2"},"/__docx_assets/480fa06b84f381.bin":{"offset":13324817,"length":101891,"mime":"image/png","gzipped":true,"hash":"33bd1cb4eb59df2c"},"/__docx_assets/48083d27604971.bin":{"offset":13426708,"length":116142,"mime":"image/png","gzipped":true,"hash":"71f9043bad2678bc"},"/__docx_assets/9d2084b9682b74.bin":{"offset":13542850,"length":197567,"mime":"image/png","gzipped":true,"hash":"4e3d8106b5af7566"},"/__docx_assets/1a4b97cedcf10c.bin":{"offset":13740417,"length":97691,"mime":"image/png","gzipped":true,"hash":"e61982019bcac350"},"/__docx_assets/db7c4b5682764d.bin":{"offset":13838108,"length":154538,"mime":"image/png","gzipped":true,"hash":"62f63cd423007f6c"},"/__docx_assets/66fbdedad07921.bin":{"offset":13992646,"length":78502,"mime":"image/png","gzipped":true,"hash":"2d162676382bc20c"},"/__docx_assets/e3687b6cf3052a.bin":{"offset":14071148,"length":104889,"mime":"image/png","gzipped":true,"hash":"e2fe01caeab97857"},"/__docx_assets/ee4767c813aef9.bin":{"offset":14176037,"length":78323,"mime":"image/png","gzipped":true,"hash":"8820adecb3c316e7"},"/__docx_assets/8e7334541220ca.bin":{"offset":14254360,"length":131316,"mime":"image/png","gzipped":true,"hash":"19cba4bba0232446"},"/__docx_assets/4cbb176d47a55f.bin":{"offset":14385676,"length":59397,"mime":"image/png","gzipped":true,"hash":"af34ce506ceea6e0"},"/__docx_assets/d1a2a926bbc715.bin":{"offset":14445073,"length":96875,"mime":"image/png","gzipped":true,"hash":"36cc75941e0f09a4"},"/__docx_assets/cc139a454db01b.bin":{"offset":14541948,"length":108594,"mime":"image/png","gzipped":true,"hash":"5a9be634581cf551"},"/__docx_assets/b476f111866ab7.bin":{"offset":14650542,"length":79571,"mime":"image/png","gzipped":true,"hash":"16a87fae3169ead3"},"/__docx_assets/88284c032913a3.bin":{"offset":14730113,"length":70442,"mime":"image/png","gzipped":true,"hash":"96e923fc4f4ffbcc"},"/__docx_assets/67ea51b4638fbf.bin":{"offset":14800555,"length":91247,"mime":"image/png","gzipped":true,"hash":"a8acab77f54d0f92"},"/__docx_assets/95269db45f09bd.bin":{"offset":14891802,"length":118811,"mime":"image/png","gzipped":true,"hash":"6c7db447694e91e9"},"/__docx_assets/73e22185fa31e7.bin":{"offset":15010613,"length":71687,"mime":"image/png","gzipped":true,"hash":"a87f746d2734623d"},"/__docx_assets/77e1d4e9c0ebf0.bin":{"offset":15082300,"length":143611,"mime":"image/png","gzipped":true,"hash":"e8456a9d4de894b9"},"/__docx_assets/e6460d36e7a9fa.bin":{"offset":15225911,"length":76712,"mime":"image/png","gzipped":true,"hash":"329739aef02d0ed7"},"/__docx_assets/dddf6663685874.bin":{"offset":15302623,"length":93018,"mime":"image/png","gzipped":true,"hash":"d1d32ea523b9b5f2"},"/__docx_assets/2af24725397a00.bin":{"offset":15395641,"length":129538,"mime":"image/png","gzipped":true,"hash":"cbac01a97edeb0a7"},"/__docx_assets/9082c3636eb4b0.bin":{"offset":15525179,"length":82469,"mime":"image/png","gzipped":true,"hash":"f83fcf3a04a09efe"},"/__docx_assets/23e137cb8ca22b.bin":{"offset":15607648,"length":167762,"mime":"image/png","gzipped":true,"hash":"323dcbd10009cc89"},"/__docx_assets/806a35ede05f8b.bin":{"offset":15775410,"length":268427,"mime":"image/png","gzipped":true,"hash":"6b1d9cc030a107bf"},"/__docx_assets/e32e34d3e19241.bin":{"offset":16043837,"length":251654,"mime":"image/png","gzipped":true,"hash":"a60bb160e8c2002b"},"/__docx_assets/93ff88472581aa.bin":{"offset":16295491,"length":143233,"mime":"image/png","gzipped":true,"hash":"7cd9ceca88003e77"},"/__docx_assets/542d68fb80833c.bin":{"offset":16438724,"length":162305,"mime":"image/png","gzipped":true,"hash":"1b3767860bfd1dd4"},"/__docx_assets/3f109e63d9c9a3.bin":{"offset":16601029,"length":124946,"mime":"image/png","gzipped":true,"hash":"d0c938813d0c055d"},"/__docx_assets/b1ba6fb00c6749.bin":{"offset":16725975,"length":172936,"mime":"image/png","gzipped":true,"hash":"c0724939a635462c"},"/__docx_assets/13d0826afece33.bin":{"offset":16898911,"length":125158,"mime":"image/png","gzipped":true,"hash":"4800614eb4e19eee"},"/__docx_assets/4c22e30ed49e6f.bin":{"offset":17024069,"length":80930,"mime":"image/png","gzipped":true,"hash":"fd81801909589758"},"/__docx_assets/aa8236207ae897.bin":{"offset":17104999,"length":174043,"mime":"image/png","gzipped":true,"hash":"746de5d62ee7a851"},"/__docx_assets/1276c76d043d79.bin":{"offset":17279042,"length":199943,"mime":"image/png","gzipped":true,"hash":"3e9451640a6104e9"},"/__docx_assets/d9681e7387be9a.bin":{"offset":17478985,"length":80704,"mime":"image/png","gzipped":true,"hash":"d2172ce038053f99"},"/__docx_assets/ee35ff84f4479c.bin":{"offset":17559689,"length":177009,"mime":"image/png","gzipped":true,"hash":"44895c0799669b22"},"/__docx_assets/43d5b4f5bf04e0.bin":{"offset":17736698,"length":57592,"mime":"image/png","gzipped":true,"hash":"affff0aa9c319e2a"},"/__docx_assets/35fd43f8e3e838.bin":{"offset":17794290,"length":62668,"mime":"image/png","gzipped":true,"hash":"71fe6aa5f6f27116"},"/__docx_assets/83a49232992a40.bin":{"offset":17856958,"length":61505,"mime":"image/png","gzipped":true,"hash":"1cfcff07b70fbfaf"},"/__docx_assets/f8eba442a67dec.bin":{"offset":17918463,"length":165845,"mime":"image/png","gzipped":true,"hash":"6d6c29d6306d7131"},"/__docx_assets/ff30e2acf90868.bin":{"offset":18084308,"length":115055,"mime":"image/png","gzipped":true,"hash":"8c4e277890a87784"},"/__docx_assets/44ae8c2dcba852.bin":{"offset":18199363,"length":116253,"mime":"image/png","gzipped":true,"hash":"99966bd279fa817d"},"/__docx_assets/527dafea5bd156.bin":{"offset":18315616,"length":51439,"mime":"image/png","gzipped":true,"hash":"a5106d125330e921"},"/__docx_assets/b6d097e33897f9.bin":{"offset":18367055,"length":116693,"mime":"image/png","gzipped":true,"hash":"09b233cb9bd5e09e"},"/__docx_assets/354bcb1a23a1db.bin":{"offset":18483748,"length":281840,"mime":"image/png","gzipped":true,"hash":"71d4d6458111254b"},"/__docx_assets/51c91d07e93ee6.bin":{"offset":18765588,"length":183029,"mime":"image/png","gzipped":true,"hash":"37c94e63381a1483"},"/__docx_assets/0178b93cd9fdf1.bin":{"offset":18948617,"length":118115,"mime":"image/png","gzipped":true,"hash":"1d603717bbbd7333"},"/__docx_assets/f83e4653b01f21.bin":{"offset":19066732,"length":18030,"mime":"image/png","gzipped":true,"hash":"35bb2afe4f90b6ff"},"/__docx_assets/4f7d33a3af428f.bin":{"offset":19084762,"length":19282,"mime":"image/png","gzipped":true,"hash":"b378de47777a18ab"},"/__docx_assets/6f6b35e3a9a937.bin":{"offset":19104044,"length":104043,"mime":"image/png","gzipped":true,"hash":"efdd24e95e7233e7"},"/__docx_assets/ff0ccd706e3a85.bin":{"offset":19208087,"length":99727,"mime":"image/png","gzipped":true,"hash":"10ea8dc44079fef6"},"/__docx_assets/aa4165baa19c09.bin":{"offset":19307814,"length":107308,"mime":"image/png","gzipped":true,"hash":"4f249b77c904bdb5"},"/__docx_assets/1694798fc932af.bin":{"offset":19415122,"length":98390,"mime":"image/png","gzipped":true,"hash":"d2e9e2fefbd477c3"},"/__docx_assets/049148700f8a8f.bin":{"offset":19513512,"length":19213,"mime":"image/png","gzipped":true,"hash":"41f522b8fb3172ae"},"/__docx_assets/1542f0dcbff402.bin":{"offset":19532725,"length":173888,"mime":"image/png","gzipped":true,"hash":"ad08ef6965ba9678"},"/__docx_assets/6161e968efda40.bin":{"offset":19706613,"length":147583,"mime":"image/png","gzipped":true,"hash":"7e5a510ef952b59b"},"/__docx_assets/88703a6e106bd1.bin":{"offset":19854196,"length":17539,"mime":"image/png","gzipped":true,"hash":"27a7760893b0d390"},"/__docx_assets/b8dc826fa592c1.bin":{"offset":19871735,"length":230884,"mime":"image/png","gzipped":true,"hash":"897fea238840feb1"},"/__docx_assets/0f612586b89244.bin":{"offset":20102619,"length":41316,"mime":"image/png","gzipped":true,"hash":"f218c260d5c3648a"},"/__docx_assets/f5d25dd8c46b31.bin":{"offset":20143935,"length":270599,"mime":"image/png","gzipped":true,"hash":"adec3bd725a0b926"},"/__docx_assets/b3b0667d7c325b.bin":{"offset":20414534,"length":138033,"mime":"image/png","gzipped":true,"hash":"5aebb975f42604cd"},"/__docx_assets/9fa7edd356c73a.bin":{"offset":20552567,"length":180828,"mime":"image/png","gzipped":true,"hash":"12eaeeb731ae90eb"},"/__docx_assets/16f2e3594d8d8a.bin":{"offset":20733395,"length":328306,"mime":"image/png","gzipped":true,"hash":"41ba67ab5e97cb9f"},"/__docx_assets/f4b15888466234.bin":{"offset":21061701,"length":107534,"mime":"image/png","gzipped":true,"hash":"d758da60a3a43d72"},"/__docx_assets/7413370eff05d6.bin":{"offset":21169235,"length":47708,"mime":"image/png","gzipped":true,"hash":"1d502289b2e62614"},"/__docx_assets/ef29fe70961117.bin":{"offset":21216943,"length":45603,"mime":"image/png","gzipped":true,"hash":"7fa376a77160c5d2"},"/__docx_assets/e2bc6d9d31ef37.bin":{"offset":21262546,"length":30792,"mime":"image/png","gzipped":true,"hash":"52527f3b6313af8c"},"/__docx_assets/d5aa5cb24d55e2.bin":{"offset":21293338,"length":37558,"mime":"image/png","gzipped":true,"hash":"8ef1e6857c7db813"},"/__docx_assets/0cbb5b7371658c.bin":{"offset":21330896,"length":41818,"mime":"image/png","gzipped":true,"hash":"658ec5849fb50685"},"/__docx_assets/6d8b9e8b788d18.bin":{"offset":21372714,"length":44671,"mime":"image/png","gzipped":true,"hash":"e216171977b251cb"},"/__docx_assets/fe2f9190d61db6.bin":{"offset":21417385,"length":67297,"mime":"image/png","gzipped":true,"hash":"093a6aeaa91954fc"},"/__docx_assets/64265d03f4378a.bin":{"offset":21484682,"length":38336,"mime":"image/png","gzipped":true,"hash":"d0eb4473e0e2798b"},"/__docx_assets/08e08196988a4e.bin":{"offset":21523018,"length":80633,"mime":"image/png","gzipped":true,"hash":"0135c41789e35d6d"},"/__docx_assets/242896db22e707.bin":{"offset":21603651,"length":38978,"mime":"image/png","gzipped":true,"hash":"a3f08facd7617ede"},"/__docx_assets/880ffd70eebc3a.bin":{"offset":21642629,"length":33638,"mime":"image/png","gzipped":true,"hash":"8286a8c04a33923e"},"/__docx_assets/b4dcf7f226cd74.bin":{"offset":21676267,"length":51374,"mime":"image/png","gzipped":true,"hash":"59d54dbecd9a18b7"},"/__docx_assets/2f5e9058c57cbd.bin":{"offset":21727641,"length":113259,"mime":"image/png","gzipped":true,"hash":"b5afcc63e56f1ba5"},"/__docx_assets/3c6eedf78070a7.bin":{"offset":21840900,"length":52248,"mime":"image/png","gzipped":true,"hash":"236617839a7d860e"},"/__docx_assets/a4999e56959820.bin":{"offset":21893148,"length":82854,"mime":"image/png","gzipped":true,"hash":"8e6c140de3ada0cb"},"/__docx_assets/4cc458c332aaff.bin":{"offset":21976002,"length":243469,"mime":"image/png","gzipped":true,"hash":"7903baa98d34b16b"},"/__docx_assets/d5df2ec4540c7e.bin":{"offset":22219471,"length":61377,"mime":"image/png","gzipped":true,"hash":"20f1410215d074fa"},"/__docx_assets/fa7499971b5b0d.bin":{"offset":22280848,"length":50230,"mime":"image/png","gzipped":true,"hash":"00191e3092b36dde"},"/__docx_assets/dbaadfe5007311.bin":{"offset":22331078,"length":78941,"mime":"image/png","gzipped":true,"hash":"badf6c44a1af573a"},"/__docx_assets/86ce6f572d346c.bin":{"offset":22410019,"length":59848,"mime":"image/png","gzipped":true,"hash":"e079c1f3324e1cd9"},"/__docx_assets/43206c84593a81.bin":{"offset":22469867,"length":92050,"mime":"image/png","gzipped":true,"hash":"0be2da39fa23bea8"},"/__docx_assets/257172e839a744.bin":{"offset":22561917,"length":88330,"mime":"image/png","gzipped":true,"hash":"fea8b00da3773662"},"/__docx_assets/185e2c276791da.bin":{"offset":22650247,"length":207010,"mime":"image/png","gzipped":true,"hash":"8f35d4a082bea57f"},"/__docx_assets/b3dfc2c4aaff56.bin":{"offset":22857257,"length":65496,"mime":"image/png","gzipped":true,"hash":"a32398156528c599"},"/__docx_assets/ca7c3308f73323.bin":{"offset":22922753,"length":63234,"mime":"image/png","gzipped":true,"hash":"b2c27865d8ce39be"},"/__docx_assets/dbe2ff827acb39.bin":{"offset":22985987,"length":73045,"mime":"image/png","gzipped":true,"hash":"5151343e9805c833"},"/__docx_assets/d7ca9ac3e63187.bin":{"offset":23059032,"length":101108,"mime":"image/png","gzipped":true,"hash":"66328f1be07c4125"},"/__docx_assets/4f7a8ed0930176.bin":{"offset":23160140,"length":80249,"mime":"image/png","gzipped":true,"hash":"a2c0734478ad0d76"},"/__docx_assets/7b98a7d3d6eaba.bin":{"offset":23240389,"length":97929,"mime":"image/png","gzipped":true,"hash":"68c191101eb1c7aa"},"/__docx_assets/4f9f5e03e3eb70.bin":{"offset":23338318,"length":159234,"mime":"image/png","gzipped":true,"hash":"25d42c57544633db"},"/__docx_assets/ce67b6ae018b0d.bin":{"offset":23497552,"length":175618,"mime":"image/png","gzipped":true,"hash":"274ce8a0fa5e4fa8"},"/__docx_assets/5002ca0ca9dfe7.bin":{"offset":23673170,"length":154828,"mime":"image/png","gzipped":true,"hash":"090ad6cd46a7255f"},"/__docx_assets/92beb4a516c2ff.bin":{"offset":23827998,"length":129338,"mime":"image/png","gzipped":true,"hash":"8327ca2580a3de64"},"/__docx_assets/41b9793aa088da.bin":{"offset":23957336,"length":138813,"mime":"image/png","gzipped":true,"hash":"0029ccd2ab111a3a"},"/__docx_assets/1b4dc895201d8b.bin":{"offset":24096149,"length":194930,"mime":"image/png","gzipped":true,"hash":"dace326a98bc7ef5"},"/__docx_assets/7be27657eb7808.bin":{"offset":24291079,"length":169137,"mime":"image/png","gzipped":true,"hash":"b7a48e0613577ea6"},"/__docx_assets/1fe80322db6e5c.bin":{"offset":24460216,"length":138653,"mime":"image/png","gzipped":true,"hash":"ff1ac9a90632b20c"},"/__docx_assets/c165f907b3f9c6.bin":{"offset":24598869,"length":45742,"mime":"image/png","gzipped":true,"hash":"da7a236a48e77270"},"/__docx_assets/087cd3d37fabe6.bin":{"offset":24644611,"length":39862,"mime":"image/png","gzipped":true,"hash":"d7b8837e6fae61c6"},"/__docx_assets/0df9f32d2e6168.bin":{"offset":24684473,"length":83800,"mime":"image/png","gzipped":true,"hash":"2bc4fef0022c4eb8"},"/__docx_assets/22a69c615776a4.bin":{"offset":24768273,"length":106678,"mime":"image/png","gzipped":true,"hash":"c91b23374e4562ba"},"/__docx_assets/feb7da55439dd9.bin":{"offset":24874951,"length":96149,"mime":"image/png","gzipped":true,"hash":"07448df5b8ded8f6"},"/__docx_assets/8f776320a3922b.bin":{"offset":24971100,"length":77486,"mime":"image/png","gzipped":true,"hash":"d3948fc8573506b1"},"/__docx_assets/6334b360fd871b.bin":{"offset":25048586,"length":188385,"mime":"image/png","gzipped":true,"hash":"6862252f6ac43745"},"/__docx_assets/1386da266b3ad8.bin":{"offset":25236971,"length":104562,"mime":"image/png","gzipped":true,"hash":"0abe844ae5a64610"},"/__docx_assets/fcf85809581361.bin":{"offset":25341533,"length":177846,"mime":"image/png","gzipped":true,"hash":"9c88fb4415e4d37c"},"/__docx_assets/fcc15c9815d892.bin":{"offset":25519379,"length":83041,"mime":"image/png","gzipped":true,"hash":"0520199806d55561"},"/_next/static/immutable/media/4fa387ec64143e14.3f4zuumv8svu0.woff2":{"offset":25602420,"length":12895,"mime":"font/woff2","gzipped":true,"hash":"a69ae1357ab610d6"},"/_next/static/immutable/media/Geist_Variable-s.p.2v-cf9syxr5ni.woff2":{"offset":25615315,"length":69783,"mime":"font/woff2","gzipped":true,"hash":"2cd9d48c2b609006"},"/_next/static/immutable/media/bbc41e54d2fcbd21.30bdpjkrtcces.woff2":{"offset":25685098,"length":14735,"mime":"font/woff2","gzipped":true,"hash":"16df2b1213c5bcfb"},"/_next/static/immutable/media/5ce348bf30bf5439.27spqqad3wyeo.woff2":{"offset":25699833,"length":6227,"mime":"font/woff2","gzipped":true,"hash":"f2615a2b598bac55"},"/_next/static/immutable/media/7d817b4c03b0c5f1.2jyz_zw3a8jit.woff2":{"offset":25706060,"length":7751,"mime":"font/woff2","gzipped":true,"hash":"95b5bc2c96aea9e7"},"/_next/static/immutable/media/797e433ab948586e.p.1v5bejj26fx9h.woff2":{"offset":25713811,"length":23136,"mime":"font/woff2","gzipped":true,"hash":"3a1b79b2ad1fd975"},"/_next/static/immutable/media/6306c77e7c8268e4.34r5yzckw0h2s.woff2":{"offset":25736947,"length":5910,"mime":"font/woff2","gzipped":true,"hash":"0f7e37acdfc11cbd"},"/":{"offset":0,"length":52660,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9a4c28b6018ecd1c"}}}
+{
+  "id": "nextjs",
+  "name": "Next.js",
+  "version": "v15.3",
+  "commit": "d5731090",
+  "origin": "https://nextjs.org",
+  "entryPath": "/docs",
+  "updatedAt": "2026-10-11T10:37:28.424Z",
+  "totalBytes": 25580137,
+  "chunkCount": 328,
+  "routes": {
+    "/docs": {
+      "offset": 0,
+      "length": 51764,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "73c4bdd3435cf7fd"
+    },
+    "/docs/app/getting-started": {
+      "offset": 51764,
+      "length": 51926,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "18ed1250324f5c73"
+    },
+    "/docs/app/getting-started/error-handling": {
+      "offset": 103690,
+      "length": 65655,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c82bea77d7cc1e00"
+    },
+    "/docs/app/getting-started/metadata-and-og-images": {
+      "offset": 169345,
+      "length": 64930,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d57d61152a27c61a"
+    },
+    "/docs/app/getting-started/css": {
+      "offset": 234275,
+      "length": 62295,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7006ef838a7942ae"
+    },
+    "/docs/app/getting-started/project-structure": {
+      "offset": 296570,
+      "length": 65879,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "34b96187edd81058"
+    },
+    "/docs/app/getting-started/images": {
+      "offset": 362449,
+      "length": 58916,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "146e12b5b501f87e"
+    },
+    "/docs/app/getting-started/caching": {
+      "offset": 421365,
+      "length": 88027,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "deb7c8383835ec30"
+    },
+    "/docs/app/getting-started/server-and-client-components": {
+      "offset": 509392,
+      "length": 72744,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e227c9802c073a2a"
+    },
+    "/docs/app/getting-started/layouts-and-pages": {
+      "offset": 582136,
+      "length": 64007,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e09e83c20171c08b"
+    },
+    "/docs/app/getting-started/route-handlers": {
+      "offset": 646143,
+      "length": 61930,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e10155225fb1ace7"
+    },
+    "/docs/app/getting-started/fetching-data": {
+      "offset": 708073,
+      "length": 75758,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "32e19d06d65bc960"
+    },
+    "/docs/app/getting-started/linking-and-navigating": {
+      "offset": 783831,
+      "length": 69772,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6ff5394124e2214c"
+    },
+    "/docs/app/getting-started/installation": {
+      "offset": 853603,
+      "length": 72849,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "545b7bca406ef9e7"
+    },
+    "/docs/app/getting-started/mutating-data": {
+      "offset": 926452,
+      "length": 69980,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "79617a2770fff6b8"
+    },
+    "/docs/app/getting-started/revalidating": {
+      "offset": 996432,
+      "length": 61088,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9ba64381d19571d3"
+    },
+    "/docs/app/getting-started/fonts": {
+      "offset": 1057520,
+      "length": 57349,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b5e8cd0589602314"
+    },
+    "/docs/app/guides/adopting-partial-prefetching": {
+      "offset": 1114869,
+      "length": 78186,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "64855d2d65dcb412"
+    },
+    "/docs/app/guides/caching-without-cache-components": {
+      "offset": 1193055,
+      "length": 66375,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d2b8ca6e830b659e"
+    },
+    "/docs/app/guides/ai-agents": {
+      "offset": 1259430,
+      "length": 68952,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e89c0b41df7c9072"
+    },
+    "/docs/app/guides/backend-for-frontend": {
+      "offset": 1328382,
+      "length": 83803,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "486fc44014ee4df7"
+    },
+    "/docs/app/guides/ci-build-caching": {
+      "offset": 1412185,
+      "length": 56622,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a73e280d9d550ca3"
+    },
+    "/docs/app/getting-started/proxy": {
+      "offset": 1468807,
+      "length": 54945,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "662f61e84c97d08b"
+    },
+    "/docs/app/guides/authentication": {
+      "offset": 1523752,
+      "length": 101718,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "49fa70fb44a37f02"
+    },
+    "/docs/app/guides/client-side-data-fetching/swr": {
+      "offset": 1625470,
+      "length": 69380,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "177ae5bad652f8ea"
+    },
+    "/docs/app/guides/cdn-caching": {
+      "offset": 1694850,
+      "length": 59322,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "000adf4ce14d1217"
+    },
+    "/docs/app/guides/authentication-with-cache-components": {
+      "offset": 1754172,
+      "length": 70565,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f0dc4abd86b2e6cb"
+    },
+    "/docs/app/guides": {
+      "offset": 1824737,
+      "length": 58089,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e9a39377b5afed51"
+    },
+    "/docs/app/getting-started/deploying": {
+      "offset": 1882826,
+      "length": 58941,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e082269a2b52bf78"
+    },
+    "/docs/app/guides/client-side-data-fetching": {
+      "offset": 1941767,
+      "length": 55229,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "665d9cb78e635aed"
+    },
+    "/docs/app/guides/building": {
+      "offset": 1996996,
+      "length": 75553,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9083d3e2008171cf"
+    },
+    "/docs/app/guides/analytics": {
+      "offset": 2072549,
+      "length": 58192,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "af2217b275945dc4"
+    },
+    "/docs/app/getting-started/upgrading": {
+      "offset": 2130741,
+      "length": 53253,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f7d0530f581b996d"
+    },
+    "/docs/app/guides/client-side-data-fetching/tanstack-query": {
+      "offset": 2183994,
+      "length": 76607,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "da98582de86e12d6"
+    },
+    "/docs/app/guides/forms": {
+      "offset": 2260601,
+      "length": 66878,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b289758c9237932d"
+    },
+    "/docs/app/guides/data-security": {
+      "offset": 2327479,
+      "length": 83519,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0294d98fc5caa48b"
+    },
+    "/docs/app/guides/deploying-to-platforms": {
+      "offset": 2410998,
+      "length": 58533,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7d936725f191e1ea"
+    },
+    "/docs/app/guides/environment-variables": {
+      "offset": 2469531,
+      "length": 66101,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4310e32082a2d484"
+    },
+    "/docs/app/guides/draft-mode": {
+      "offset": 2535632,
+      "length": 64960,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0814c30453a27afa"
+    },
+    "/docs/app/guides/incremental-static-regeneration-cache-components": {
+      "offset": 2600592,
+      "length": 66757,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dd4d6dc9f7cddac4"
+    },
+    "/docs/app/guides/instrumentation": {
+      "offset": 2667349,
+      "length": 55734,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a6500146d1f1694c"
+    },
+    "/docs/app/guides/interactive-apps": {
+      "offset": 2723083,
+      "length": 92423,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "39e0f6c42dc6c2f2"
+    },
+    "/docs/app/guides/custom-server": {
+      "offset": 2815506,
+      "length": 57884,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "421ec7b61323fca1"
+    },
+    "/docs/app/guides/incremental-static-regeneration": {
+      "offset": 2873390,
+      "length": 67350,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f7973168fc8c799b"
+    },
+    "/docs/app/guides/content-security-policy": {
+      "offset": 2940740,
+      "length": 74598,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "175d93aaeb945dc6"
+    },
+    "/docs/app/guides/debugging": {
+      "offset": 3015338,
+      "length": 61765,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ee6a864869194517"
+    },
+    "/docs/app/guides/how-revalidation-works": {
+      "offset": 3077103,
+      "length": 58248,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "35efee3a0770f59e"
+    },
+    "/docs/app/guides/css-in-js": {
+      "offset": 3135351,
+      "length": 59714,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5b037aa4666392a3"
+    },
+    "/docs/app/guides/instant-navigation": {
+      "offset": 3195065,
+      "length": 87550,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5f439f9ef0271b4d"
+    },
+    "/docs/app/guides/mcp": {
+      "offset": 3282615,
+      "length": 61186,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "12b6d46675d36b7f"
+    },
+    "/docs/app/guides/internationalization": {
+      "offset": 3343801,
+      "length": 66761,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "73292a647dcdf9ca"
+    },
+    "/docs/app/guides/multi-zones": {
+      "offset": 3410562,
+      "length": 58556,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0796c67ffe81adeb"
+    },
+    "/docs/app/guides/migrating-to-cache-components": {
+      "offset": 3469118,
+      "length": 92869,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a9c108601cb15b06"
+    },
+    "/docs/app/guides/migrating/from-create-react-app": {
+      "offset": 3561987,
+      "length": 81743,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "70c74f8298f5f524"
+    },
+    "/docs/app/guides/json-ld": {
+      "offset": 3643730,
+      "length": 53949,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e1bf7286a37cf914"
+    },
+    "/docs/app/guides/keeping-pages-static": {
+      "offset": 3697679,
+      "length": 76187,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ee3f09989062c46c"
+    },
+    "/docs/app/guides/multi-tenant": {
+      "offset": 3773866,
+      "length": 48211,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "18cf93dc88f1587c"
+    },
+    "/docs/app/guides/mdx": {
+      "offset": 3822077,
+      "length": 76089,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "062c414aed5eb185"
+    },
+    "/docs/app/guides/memory-usage": {
+      "offset": 3898166,
+      "length": 60658,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "acc07c7de50b14f4"
+    },
+    "/docs/app/guides/local-development": {
+      "offset": 3958824,
+      "length": 66592,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "82ac51bb8ba4a51d"
+    },
+    "/docs/app/guides/lazy-loading": {
+      "offset": 4025416,
+      "length": 60369,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "de7c01a7a3fc6a9f"
+    },
+    "/docs/app/guides/migrating/app-router-migration": {
+      "offset": 4085785,
+      "length": 93203,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "61f0926902eeabab"
+    },
+    "/docs/app/guides/migrating": {
+      "offset": 4178988,
+      "length": 48285,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "becbbf1fd25e26f1"
+    },
+    "/docs/app/guides/migrating/from-vite": {
+      "offset": 4227273,
+      "length": 82376,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3ceedd581ab3d332"
+    },
+    "/docs/app/guides/offline-support": {
+      "offset": 4309649,
+      "length": 68809,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "48b0ac6c128d2dd2"
+    },
+    "/docs/app/guides/rendering-philosophy": {
+      "offset": 4378458,
+      "length": 56598,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cf1d31b45fabe2a0"
+    },
+    "/docs/app/guides/preventing-flash-before-hydration": {
+      "offset": 4435056,
+      "length": 75211,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bb403af14a807d05"
+    },
+    "/docs/app/guides/open-telemetry": {
+      "offset": 4510267,
+      "length": 66488,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f2c665075dfe73d2"
+    },
+    "/docs/app/guides/optimizing-the-static-shell": {
+      "offset": 4576755,
+      "length": 89645,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "64606fbdda417e0d"
+    },
+    "/docs/app/guides/redirecting": {
+      "offset": 4666400,
+      "length": 67705,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c758ec74d3e370f4"
+    },
+    "/docs/app/guides/sass": {
+      "offset": 4734105,
+      "length": 56007,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c845f330b40b61fb"
+    },
+    "/docs/app/guides/ppr-platform-guide": {
+      "offset": 4790112,
+      "length": 57045,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b472c0fc853ac01d"
+    },
+    "/docs/app/guides/production-checklist": {
+      "offset": 4847157,
+      "length": 58550,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b0ff97b503d455cb"
+    },
+    "/docs/app/guides/optimizing-prefetching": {
+      "offset": 4905707,
+      "length": 77010,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "edbe77a36cac3291"
+    },
+    "/docs/app/guides/scripts": {
+      "offset": 4982717,
+      "length": 61329,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "aaa5519dfe032143"
+    },
+    "/docs/app/guides/public-static-pages": {
+      "offset": 5044046,
+      "length": 62059,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b6d5f8c83a644e6"
+    },
+    "/docs/app/guides/prefetching": {
+      "offset": 5106105,
+      "length": 68317,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4d62d80a713ba86e"
+    },
+    "/docs/app/guides/self-hosting": {
+      "offset": 5174422,
+      "length": 71959,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dc8b612d05fdfcd2"
+    },
+    "/docs/app/guides/preserving-ui-state": {
+      "offset": 5246381,
+      "length": 79839,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "59390b0e8ad4cbd0"
+    },
+    "/docs/app/guides/progressive-web-apps": {
+      "offset": 5326220,
+      "length": 78742,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2de15ab9b50c069f"
+    },
+    "/docs/app/guides/package-bundling": {
+      "offset": 5404962,
+      "length": 67243,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e0ca7ee869ce71f6"
+    },
+    "/docs/app/guides/upgrading/version-14": {
+      "offset": 5472205,
+      "length": 52650,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e7b07cdb7e92786a"
+    },
+    "/docs/app/guides/testing": {
+      "offset": 5524855,
+      "length": 51093,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "00ef70efa4588a8a"
+    },
+    "/docs/app/guides/upgrading": {
+      "offset": 5575948,
+      "length": 48523,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ad095380f9037373"
+    },
+    "/docs/app/guides/testing/jest": {
+      "offset": 5624471,
+      "length": 65798,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "43d6ee3fce1e0a0b"
+    },
+    "/docs/app/guides/upgrading/agent-upgrade": {
+      "offset": 5690269,
+      "length": 60047,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b9753948cbb5b8f3"
+    },
+    "/docs/app/guides/testing/playwright": {
+      "offset": 5750316,
+      "length": 57175,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1641a2625d4294c1"
+    },
+    "/docs/app/guides/server-actions": {
+      "offset": 5807491,
+      "length": 65777,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "be7338a34e74b8cb"
+    },
+    "/docs/app/guides/streaming": {
+      "offset": 5873268,
+      "length": 94734,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "612bbf253355e238"
+    },
+    "/docs/app/guides/single-page-applications": {
+      "offset": 5968002,
+      "length": 78296,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c16a6edb4689d2c3"
+    },
+    "/docs/app/guides/testing/cypress": {
+      "offset": 6046298,
+      "length": 66366,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "08757165cc08d4e7"
+    },
+    "/docs/app/guides/static-exports": {
+      "offset": 6112664,
+      "length": 65742,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2bba70556395171e"
+    },
+    "/docs/app/guides/third-party-libraries": {
+      "offset": 6178406,
+      "length": 65355,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "42f536cbfe36ea3d"
+    },
+    "/docs/app/guides/upgrading/codemods": {
+      "offset": 6243761,
+      "length": 85475,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "186328f28ac87f3f"
+    },
+    "/docs/app/guides/tailwind-v3-css": {
+      "offset": 6329236,
+      "length": 55610,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "307cabfaba316650"
+    },
+    "/docs/app/guides/server-and-client-boundary": {
+      "offset": 6384846,
+      "length": 65525,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0a209ec243261bf0"
+    },
+    "/docs/app/guides/testing/vitest": {
+      "offset": 6450371,
+      "length": 59792,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "213f4c657dccfcc7"
+    },
+    "/docs/app/api-reference": {
+      "offset": 6510163,
+      "length": 48840,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "81e22fa65f9fd89e"
+    },
+    "/docs/app/api-reference/components/form": {
+      "offset": 6559003,
+      "length": 63391,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b59cdc1960dbff53"
+    },
+    "/docs/app/api-reference/components/font": {
+      "offset": 6622394,
+      "length": 87039,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "befed7c010039e99"
+    },
+    "/docs/app/guides/upgrading/version-16": {
+      "offset": 6709433,
+      "length": 113278,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b6fe09e5eb6579ca"
+    },
+    "/docs/app/guides/upgrading/version-15": {
+      "offset": 6822711,
+      "length": 74312,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "77f2d5073a55a9fe"
+    },
+    "/docs/app/api-reference/components": {
+      "offset": 6897023,
+      "length": 48624,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1f203f2267cff672"
+    },
+    "/docs/app/api-reference/directives/use-cache-remote": {
+      "offset": 6945647,
+      "length": 78570,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0ee248fd4e7f3c92"
+    },
+    "/docs/app/api-reference/directives/use-client": {
+      "offset": 7024217,
+      "length": 55435,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9921fa974cbbd019"
+    },
+    "/docs/app/api-reference/components/image": {
+      "offset": 7079652,
+      "length": 111168,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8e707c63498075ff"
+    },
+    "/docs/app/api-reference/directives/use-server": {
+      "offset": 7190820,
+      "length": 58640,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ff43a55e639f61e2"
+    },
+    "/docs/app/guides/view-transitions": {
+      "offset": 7249460,
+      "length": 75092,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "04bc37fc686aea77"
+    },
+    "/docs/app/api-reference/directives": {
+      "offset": 7324552,
+      "length": 57068,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "085992cd2af45d98"
+    },
+    "/docs/app/api-reference/directives/use-cache": {
+      "offset": 7381620,
+      "length": 88020,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb90945cbd3ef6ed"
+    },
+    "/docs/app/guides/videos": {
+      "offset": 7469640,
+      "length": 67759,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0bf30c7735af92d3"
+    },
+    "/docs/app/api-reference/directives/use-cache-private": {
+      "offset": 7537399,
+      "length": 60075,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d463b161c1e5c994"
+    },
+    "/docs/app/api-reference/components/link": {
+      "offset": 7597474,
+      "length": 78067,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "116d3412696886fc"
+    },
+    "/docs/app/api-reference/file-conventions/default": {
+      "offset": 7675541,
+      "length": 55150,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9a6ba97c5f25773b"
+    },
+    "/docs/app/api-reference/file-conventions/instrumentation": {
+      "offset": 7730691,
+      "length": 59268,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "95d9bc4c52227c32"
+    },
+    "/docs/app/api-reference/components/script": {
+      "offset": 7789959,
+      "length": 64628,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "14395456161db58d"
+    },
+    "/docs/app/api-reference/file-conventions/parallel-routes": {
+      "offset": 7854587,
+      "length": 67312,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "37cb0dd76c446f14"
+    },
+    "/docs/app/api-reference/file-conventions": {
+      "offset": 7921899,
+      "length": 50173,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0906a80fef2a6033"
+    },
+    "/docs/app/api-reference/file-conventions/loading": {
+      "offset": 7972072,
+      "length": 61963,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "72d0213d2f4ac592"
+    },
+    "/docs/app/api-reference/file-conventions/mdx-components": {
+      "offset": 8034035,
+      "length": 53496,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "62de52da2f7b460b"
+    },
+    "/docs/app/api-reference/file-conventions/proxy": {
+      "offset": 8087531,
+      "length": 90518,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9af156c8e68f9610"
+    },
+    "/docs/app/api-reference/file-conventions/not-found": {
+      "offset": 8178049,
+      "length": 60476,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "43445c5e35582113"
+    },
+    "/docs/app/api-reference/file-conventions/dynamic-routes": {
+      "offset": 8238525,
+      "length": 67838,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b05f37b878712815"
+    },
+    "/docs/app/api-reference/file-conventions/instrumentation-client": {
+      "offset": 8306363,
+      "length": 62434,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4d00815cd835666e"
+    },
+    "/docs/app/api-reference/file-conventions/intercepting-routes": {
+      "offset": 8368797,
+      "length": 53070,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "47d149b14947ac20"
+    },
+    "/docs/app/api-reference/file-conventions/error": {
+      "offset": 8421867,
+      "length": 63898,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ab181f633c240ffb"
+    },
+    "/docs/app/api-reference/file-conventions/forbidden": {
+      "offset": 8485765,
+      "length": 53949,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4a2fe5cbbcf254c1"
+    },
+    "/docs/app/api-reference/file-conventions/page": {
+      "offset": 8539714,
+      "length": 61248,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d5cae352200cbb04"
+    },
+    "/docs/app/api-reference/file-conventions/layout": {
+      "offset": 8600962,
+      "length": 73104,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c0754a764e0f2c96"
+    },
+    "/docs/app/api-reference/file-conventions/route-segment-config": {
+      "offset": 8674066,
+      "length": 51861,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "65ffe4adc9b290c8"
+    },
+    "/docs/app/api-reference/file-conventions/metadata": {
+      "offset": 8725927,
+      "length": 49539,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9a4c6508f1f92e98"
+    },
+    "/docs/app/api-reference/file-conventions/unauthorized": {
+      "offset": 8775466,
+      "length": 55696,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ec851fbdbec33095"
+    },
+    "/docs/app/api-reference/file-conventions/metadata/manifest": {
+      "offset": 8831162,
+      "length": 53843,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d9ebdb637ddc3876"
+    },
+    "/docs/app/api-reference/file-conventions/route-segment-config/dynamicParams": {
+      "offset": 8885005,
+      "length": 50871,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0f172b3a977ba44d"
+    },
+    "/docs/app/api-reference/file-conventions/src-folder": {
+      "offset": 8935876,
+      "length": 50283,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "46e8da6e12d86b2e"
+    },
+    "/docs/app/api-reference/file-conventions/route-groups": {
+      "offset": 8986159,
+      "length": 50713,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "167879f1a958bb0c"
+    },
+    "/docs/app/api-reference/file-conventions/metadata/sitemap": {
+      "offset": 9036872,
+      "length": 64530,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ce125ba15700fc8a"
+    },
+    "/docs/app/api-reference/file-conventions/metadata/robots": {
+      "offset": 9101402,
+      "length": 57692,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d99531d0e746d1a7"
+    },
+    "/docs/app/api-reference/file-conventions/template": {
+      "offset": 9159094,
+      "length": 57957,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3f6ed56049b65e61"
+    },
+    "/docs/app/api-reference/file-conventions/route-segment-config/instant": {
+      "offset": 9217051,
+      "length": 63685,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fcd6ee1a8288a2f3"
+    },
+    "/docs/app/api-reference/file-conventions/metadata/opengraph-image": {
+      "offset": 9280736,
+      "length": 69411,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "efd82f34738a5876"
+    },
+    "/docs/app/api-reference/file-conventions/metadata/app-icons": {
+      "offset": 9350147,
+      "length": 61941,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "abdaa454aae10de7"
+    },
+    "/docs/app/api-reference/file-conventions/public-folder": {
+      "offset": 9412088,
+      "length": 52165,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7bdc1a5895f16b8d"
+    },
+    "/docs/app/api-reference/file-conventions/route": {
+      "offset": 9464253,
+      "length": 72132,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f22ad2c5a288b654"
+    },
+    "/docs/app/api-reference/file-conventions/route-segment-config/ensureStatic": {
+      "offset": 9536385,
+      "length": 64369,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0be69409d0c92264"
+    },
+    "/docs/app/api-reference/functions/cacheTag": {
+      "offset": 9600754,
+      "length": 58978,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6bfa5509e9fbf734"
+    },
+    "/docs/app/api-reference/file-conventions/route-segment-config/runtime": {
+      "offset": 9659732,
+      "length": 50721,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9d24d0e21e6fd32a"
+    },
+    "/docs/app/api-reference/functions/connection": {
+      "offset": 9710453,
+      "length": 55631,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e8a0e3b618eae096"
+    },
+    "/docs/app/api-reference/functions/fetch": {
+      "offset": 9766084,
+      "length": 59514,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a84fb4d3c3da4f8b"
+    },
+    "/docs/app/api-reference/file-conventions/route-segment-config/prefetch": {
+      "offset": 9825598,
+      "length": 57542,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7686bd8d6ed2197d"
+    },
+    "/docs/app/api-reference/functions/catchError": {
+      "offset": 9883140,
+      "length": 60735,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5593d65f7a197756"
+    },
+    "/docs/app/api-reference/file-conventions/route-segment-config/maxDuration": {
+      "offset": 9943875,
+      "length": 52231,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0cfe827e7f6dc22f"
+    },
+    "/docs/app/api-reference/functions/draft-mode": {
+      "offset": 9996106,
+      "length": 57978,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3f03ab1aeee7931a"
+    },
+    "/docs/app/api-reference/functions/forbidden": {
+      "offset": 10054084,
+      "length": 61677,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "032a77d55676acb4"
+    },
+    "/docs/app/api-reference/functions/after": {
+      "offset": 10115761,
+      "length": 63730,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "07238316517ae883"
+    },
+    "/docs/app/api-reference/file-conventions/route-segment-config/preferredRegion": {
+      "offset": 10179491,
+      "length": 52631,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4607070083830ab1"
+    },
+    "/docs/app/api-reference/functions/generate-image-metadata": {
+      "offset": 10232122,
+      "length": 60196,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "168203e116a8890a"
+    },
+    "/docs/app/api-reference/functions/cookies": {
+      "offset": 10292318,
+      "length": 62365,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "401a58759f499136"
+    },
+    "/docs/app/api-reference/functions": {
+      "offset": 10354683,
+      "length": 51676,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4636e1481248c7c8"
+    },
+    "/docs/app/api-reference/functions/generate-metadata": {
+      "offset": 10406359,
+      "length": 113638,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7f8595962ed625e2"
+    },
+    "/docs/app/api-reference/functions/cacheLife": {
+      "offset": 10519997,
+      "length": 77765,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3a6e36d3417aa1ba"
+    },
+    "/docs/app/api-reference/functions/navigation": {
+      "offset": 10597762,
+      "length": 62971,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d2804ac64e0eef37"
+    },
+    "/docs/app/api-reference/functions/headers": {
+      "offset": 10660733,
+      "length": 56806,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5bbd683e9908d32d"
+    },
+    "/docs/app/api-reference/functions/io": {
+      "offset": 10717539,
+      "length": 57236,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7fe830e0d7bc3897"
+    },
+    "/docs/app/api-reference/functions/next-request": {
+      "offset": 10774775,
+      "length": 54645,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cf83182811101d07"
+    },
+    "/docs/app/api-reference/functions/generate-static-params": {
+      "offset": 10829420,
+      "length": 70207,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "69cd7e94531df4c4"
+    },
+    "/docs/app/api-reference/functions/next-response": {
+      "offset": 10899627,
+      "length": 59029,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "115109cdff4b8bcd"
+    },
+    "/docs/app/api-reference/functions/generate-viewport": {
+      "offset": 10958656,
+      "length": 63540,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6deb2174ce361c54"
+    },
+    "/docs/app/api-reference/functions/generate-sitemaps": {
+      "offset": 11022196,
+      "length": 54985,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2a29da8779c11521"
+    },
+    "/docs/app/api-reference/functions/next-root-params": {
+      "offset": 11077181,
+      "length": 67730,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b1b83b0eb17fa040"
+    },
+    "/docs/app/api-reference/functions/image-response": {
+      "offset": 11144911,
+      "length": 60136,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb8888cfb3cf8aef"
+    },
+    "/docs/app/api-reference/functions/permanentRedirect": {
+      "offset": 11205047,
+      "length": 55559,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "094c8cfa17eb8158"
+    },
+    "/docs/app/api-reference/functions/prefetch": {
+      "offset": 11260606,
+      "length": 62262,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ad7443668e3a0939"
+    },
+    "/docs/app/api-reference/functions/not-found": {
+      "offset": 11322868,
+      "length": 61006,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "627e93f3e804f11c"
+    },
+    "/docs/app/api-reference/functions/redirect": {
+      "offset": 11383874,
+      "length": 61606,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "07d7544f008a77d7"
+    },
+    "/docs/app/api-reference/functions/refresh": {
+      "offset": 11445480,
+      "length": 53827,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3484c890ad2da8bb"
+    },
+    "/docs/app/api-reference/functions/revalidateTag": {
+      "offset": 11499307,
+      "length": 58401,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b110d636b4ac7d57"
+    },
+    "/docs/app/api-reference/functions/revalidatePath": {
+      "offset": 11557708,
+      "length": 62852,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b39138a632f73c40"
+    },
+    "/docs/app/api-reference/functions/unauthorized": {
+      "offset": 11620560,
+      "length": 62657,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a06c29fa824e886c"
+    },
+    "/docs/app/api-reference/functions/unstable_cache": {
+      "offset": 11683217,
+      "length": 56797,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "62a3d1efb91bcc6d"
+    },
+    "/_next/static/immutable/media/vercel-light.3_gxxexgi1nmy.svg": {
+      "offset": 11740014,
+      "length": 177,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "fe30bc6e5e847458"
+    },
+    "/_next/static/immutable/media/logo-bluesky-light.2may7hm2y7g6v.svg": {
+      "offset": 11740191,
+      "length": 311,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "37487188b4afcaba"
+    },
+    "/_next/static/immutable/chunks/19t0k1gbut827.css": {
+      "offset": 11740502,
+      "length": 5575,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "8216e0939cff3abc"
+    },
+    "/_next/static/immutable/media/logo-bluesky-dark.39tbulfg2p-1z.svg": {
+      "offset": 11746077,
+      "length": 311,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "14496ae60198e7df"
+    },
+    "/__docx_assets/eaaa52bbead304.ico": {
+      "offset": 11746388,
+      "length": 2460,
+      "mime": "image/vnd.microsoft.icon",
+      "gzipped": true,
+      "hash": "a2e280e495c87eb7"
+    },
+    "/_next/static/immutable/chunks/2lra4q96-7lip.css": {
+      "offset": 11748848,
+      "length": 1894,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "9c222a57c4689cf5"
+    },
+    "/_next/static/immutable/media/vercel-logotype-light.0k7echqflwha4.svg": {
+      "offset": 11750742,
+      "length": 708,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "7a79de2caf6a23d2"
+    },
+    "/_next/static/immutable/media/nextjs-logotype-light.00-_80jv8_dct.svg": {
+      "offset": 11751450,
+      "length": 825,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "23f0d6a73937f8d4"
+    },
+    "/_next/static/immutable/media/vercel-logotype-dark.3m9ycmsc1ql8m.svg": {
+      "offset": 11752275,
+      "length": 706,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "3567e40a1a62abbb"
+    },
+    "/_next/static/immutable/media/nextjs-logotype-dark.3h4a2z2v_dkod.svg": {
+      "offset": 11752981,
+      "length": 821,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "3acf923085036614"
+    },
+    "/_next/static/immutable/media/vercel-dark.1f3cgy23m5_jy.svg": {
+      "offset": 11753802,
+      "length": 176,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "5e4bd7297f23d25c"
+    },
+    "/_next/static/immutable/media/logo-github-light.3dl3lqjq1azpp.svg": {
+      "offset": 11753978,
+      "length": 466,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a0b9ed86f1ff0018"
+    },
+    "/_next/static/immutable/media/logo-github-dark.1k-70sin_m3qn.svg": {
+      "offset": 11754444,
+      "length": 464,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a56a51f2bd5d1b7e"
+    },
+    "/_next/static/immutable/chunks/0w9pt7yz4fv9n.css": {
+      "offset": 11754908,
+      "length": 72610,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "ad766f5d9a61a4a7"
+    },
+    "/_next/static/immutable/media/logo-twitter-x-light.0dvkch_c5dvys.svg": {
+      "offset": 11827518,
+      "length": 285,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "c0a199bb25a77a77"
+    },
+    "/_next/static/immutable/media/logo-twitter-x-dark.1-i769nzu94hl.svg": {
+      "offset": 11827803,
+      "length": 283,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "967816ae3ccbed3d"
+    },
+    "/__docx_assets/0f612586b89244.bin": {
+      "offset": 11828086,
+      "length": 41316,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f218c260d5c3648a"
+    },
+    "/__docx_assets/6f6b35e3a9a937.bin": {
+      "offset": 11869402,
+      "length": 104043,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "efdd24e95e7233e7"
+    },
+    "/__docx_assets/b3b0667d7c325b.bin": {
+      "offset": 11973445,
+      "length": 138033,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "5aebb975f42604cd"
+    },
+    "/__docx_assets/1542f0dcbff402.bin": {
+      "offset": 12111478,
+      "length": 173888,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ad08ef6965ba9678"
+    },
+    "/__docx_assets/ba9c2921491c8a.bin": {
+      "offset": 12285366,
+      "length": 84365,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "9379bc386ae5484c"
+    },
+    "/__docx_assets/502dcf843d667f.bin": {
+      "offset": 12369731,
+      "length": 134656,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c0ec0dad82b24738"
+    },
+    "/__docx_assets/8e7334541220ca.bin": {
+      "offset": 12504387,
+      "length": 131316,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "19cba4bba0232446"
+    },
+    "/__docx_assets/cb3280dbd23e1e.bin": {
+      "offset": 12635703,
+      "length": 112658,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1a95dac90e003f08"
+    },
+    "/__docx_assets/e3687b6cf3052a.bin": {
+      "offset": 12748361,
+      "length": 104889,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e2fe01caeab97857"
+    },
+    "/__docx_assets/9fa7edd356c73a.bin": {
+      "offset": 12853250,
+      "length": 180828,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "12eaeeb731ae90eb"
+    },
+    "/__docx_assets/788499c42410fe.bin": {
+      "offset": 13034078,
+      "length": 74983,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3ef720868ef8049c"
+    },
+    "/__docx_assets/e6f3e4b71d070a.bin": {
+      "offset": 13109061,
+      "length": 68540,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "9bb92937034842c2"
+    },
+    "/__docx_assets/db7c4b5682764d.bin": {
+      "offset": 13177601,
+      "length": 154538,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "62f63cd423007f6c"
+    },
+    "/__docx_assets/e621bc2bb3f084.bin": {
+      "offset": 13332139,
+      "length": 104745,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6a8fdb24fb803c49"
+    },
+    "/__docx_assets/cd55765a43218b.bin": {
+      "offset": 13436884,
+      "length": 161754,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "86de46741e3ff6ac"
+    },
+    "/__docx_assets/48083d27604971.bin": {
+      "offset": 13598638,
+      "length": 116142,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "71f9043bad2678bc"
+    },
+    "/__docx_assets/480fa06b84f381.bin": {
+      "offset": 13714780,
+      "length": 101891,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "33bd1cb4eb59df2c"
+    },
+    "/__docx_assets/6161e968efda40.bin": {
+      "offset": 13816671,
+      "length": 147583,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7e5a510ef952b59b"
+    },
+    "/__docx_assets/16f2e3594d8d8a.bin": {
+      "offset": 13964254,
+      "length": 328306,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "41ba67ab5e97cb9f"
+    },
+    "/__docx_assets/9d2084b9682b74.bin": {
+      "offset": 14292560,
+      "length": 197567,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4e3d8106b5af7566"
+    },
+    "/__docx_assets/f5d25dd8c46b31.bin": {
+      "offset": 14490127,
+      "length": 270599,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "adec3bd725a0b926"
+    },
+    "/__docx_assets/23840beef4d4cb.bin": {
+      "offset": 14760726,
+      "length": 130452,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b889b830a6a72c8e"
+    },
+    "/__docx_assets/1a4b97cedcf10c.bin": {
+      "offset": 14891178,
+      "length": 97691,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e61982019bcac350"
+    },
+    "/__docx_assets/13b72c62dcec08.bin": {
+      "offset": 14988869,
+      "length": 72245,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3bcb2da1ae07b467"
+    },
+    "/__docx_assets/36c6a714a9eda5.bin": {
+      "offset": 15061114,
+      "length": 77362,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b073b64eb5ddcd7b"
+    },
+    "/__docx_assets/88284c032913a3.bin": {
+      "offset": 15138476,
+      "length": 70442,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "96e923fc4f4ffbcc"
+    },
+    "/__docx_assets/3f109e63d9c9a3.bin": {
+      "offset": 15208918,
+      "length": 124946,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d0c938813d0c055d"
+    },
+    "/__docx_assets/73e22185fa31e7.bin": {
+      "offset": 15333864,
+      "length": 71687,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a87f746d2734623d"
+    },
+    "/__docx_assets/ee4767c813aef9.bin": {
+      "offset": 15405551,
+      "length": 78323,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "8820adecb3c316e7"
+    },
+    "/__docx_assets/dddf6663685874.bin": {
+      "offset": 15483874,
+      "length": 93018,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d1d32ea523b9b5f2"
+    },
+    "/__docx_assets/9082c3636eb4b0.bin": {
+      "offset": 15576892,
+      "length": 82469,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f83fcf3a04a09efe"
+    },
+    "/__docx_assets/1eb67f4ebba891.bin": {
+      "offset": 15659361,
+      "length": 108962,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2be73942a42858ce"
+    },
+    "/__docx_assets/23e137cb8ca22b.bin": {
+      "offset": 15768323,
+      "length": 167762,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "323dcbd10009cc89"
+    },
+    "/__docx_assets/e6460d36e7a9fa.bin": {
+      "offset": 15936085,
+      "length": 76712,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "329739aef02d0ed7"
+    },
+    "/__docx_assets/806a35ede05f8b.bin": {
+      "offset": 16012797,
+      "length": 268427,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6b1d9cc030a107bf"
+    },
+    "/__docx_assets/93ff88472581aa.bin": {
+      "offset": 16281224,
+      "length": 143233,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7cd9ceca88003e77"
+    },
+    "/__docx_assets/2af24725397a00.bin": {
+      "offset": 16424457,
+      "length": 129538,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "cbac01a97edeb0a7"
+    },
+    "/__docx_assets/b476f111866ab7.bin": {
+      "offset": 16553995,
+      "length": 79571,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "16a87fae3169ead3"
+    },
+    "/__docx_assets/cc139a454db01b.bin": {
+      "offset": 16633566,
+      "length": 108594,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "5a9be634581cf551"
+    },
+    "/__docx_assets/95269db45f09bd.bin": {
+      "offset": 16742160,
+      "length": 118811,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6c7db447694e91e9"
+    },
+    "/__docx_assets/66fbdedad07921.bin": {
+      "offset": 16860971,
+      "length": 78502,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2d162676382bc20c"
+    },
+    "/__docx_assets/77e1d4e9c0ebf0.bin": {
+      "offset": 16939473,
+      "length": 143611,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e8456a9d4de894b9"
+    },
+    "/__docx_assets/4cbb176d47a55f.bin": {
+      "offset": 17083084,
+      "length": 59397,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "af34ce506ceea6e0"
+    },
+    "/__docx_assets/67ea51b4638fbf.bin": {
+      "offset": 17142481,
+      "length": 91247,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a8acab77f54d0f92"
+    },
+    "/__docx_assets/35fd43f8e3e838.bin": {
+      "offset": 17233728,
+      "length": 62668,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "71fe6aa5f6f27116"
+    },
+    "/__docx_assets/d9681e7387be9a.bin": {
+      "offset": 17296396,
+      "length": 80704,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d2172ce038053f99"
+    },
+    "/__docx_assets/43d5b4f5bf04e0.bin": {
+      "offset": 17377100,
+      "length": 57592,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "affff0aa9c319e2a"
+    },
+    "/__docx_assets/d1a2a926bbc715.bin": {
+      "offset": 17434692,
+      "length": 96875,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "36cc75941e0f09a4"
+    },
+    "/__docx_assets/ee35ff84f4479c.bin": {
+      "offset": 17531567,
+      "length": 177009,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "44895c0799669b22"
+    },
+    "/__docx_assets/542d68fb80833c.bin": {
+      "offset": 17708576,
+      "length": 162305,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1b3767860bfd1dd4"
+    },
+    "/__docx_assets/aa8236207ae897.bin": {
+      "offset": 17870881,
+      "length": 174043,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "746de5d62ee7a851"
+    },
+    "/__docx_assets/e32e34d3e19241.bin": {
+      "offset": 18044924,
+      "length": 251654,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a60bb160e8c2002b"
+    },
+    "/__docx_assets/354bcb1a23a1db.bin": {
+      "offset": 18296578,
+      "length": 281840,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "71d4d6458111254b"
+    },
+    "/__docx_assets/4c22e30ed49e6f.bin": {
+      "offset": 18578418,
+      "length": 80930,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "fd81801909589758"
+    },
+    "/__docx_assets/13d0826afece33.bin": {
+      "offset": 18659348,
+      "length": 125158,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4800614eb4e19eee"
+    },
+    "/__docx_assets/f8eba442a67dec.bin": {
+      "offset": 18784506,
+      "length": 165845,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6d6c29d6306d7131"
+    },
+    "/__docx_assets/b1ba6fb00c6749.bin": {
+      "offset": 18950351,
+      "length": 172936,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c0724939a635462c"
+    },
+    "/__docx_assets/1276c76d043d79.bin": {
+      "offset": 19123287,
+      "length": 199943,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3e9451640a6104e9"
+    },
+    "/__docx_assets/02fdcf026ca34e.bin": {
+      "offset": 19323230,
+      "length": 35072,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e2afadbb9758d102"
+    },
+    "/__docx_assets/966fd43fe4c947.bin": {
+      "offset": 19358302,
+      "length": 59336,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "acec7cf6d16933bf"
+    },
+    "/__docx_assets/10abd9918f77a6.bin": {
+      "offset": 19417638,
+      "length": 46479,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7800587d0abd39b8"
+    },
+    "/__docx_assets/f7b3ce66492852.bin": {
+      "offset": 19464117,
+      "length": 62402,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "37f2c90e701338f6"
+    },
+    "/__docx_assets/ff30e2acf90868.bin": {
+      "offset": 19526519,
+      "length": 115055,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "8c4e277890a87784"
+    },
+    "/__docx_assets/88703a6e106bd1.bin": {
+      "offset": 19641574,
+      "length": 17539,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "27a7760893b0d390"
+    },
+    "/__docx_assets/1694798fc932af.bin": {
+      "offset": 19659113,
+      "length": 98390,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d2e9e2fefbd477c3"
+    },
+    "/__docx_assets/527dafea5bd156.bin": {
+      "offset": 19757503,
+      "length": 51439,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a5106d125330e921"
+    },
+    "/__docx_assets/049148700f8a8f.bin": {
+      "offset": 19808942,
+      "length": 19213,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "41f522b8fb3172ae"
+    },
+    "/__docx_assets/0178b93cd9fdf1.bin": {
+      "offset": 19828155,
+      "length": 118115,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1d603717bbbd7333"
+    },
+    "/__docx_assets/b6d097e33897f9.bin": {
+      "offset": 19946270,
+      "length": 116693,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "09b233cb9bd5e09e"
+    },
+    "/__docx_assets/44ae8c2dcba852.bin": {
+      "offset": 20062963,
+      "length": 116253,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "99966bd279fa817d"
+    },
+    "/__docx_assets/4f7d33a3af428f.bin": {
+      "offset": 20179216,
+      "length": 19282,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b378de47777a18ab"
+    },
+    "/__docx_assets/ff0ccd706e3a85.bin": {
+      "offset": 20198498,
+      "length": 99727,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "10ea8dc44079fef6"
+    },
+    "/__docx_assets/51c91d07e93ee6.bin": {
+      "offset": 20298225,
+      "length": 183029,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "37c94e63381a1483"
+    },
+    "/__docx_assets/f83e4653b01f21.bin": {
+      "offset": 20481254,
+      "length": 18030,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "35bb2afe4f90b6ff"
+    },
+    "/__docx_assets/b8dc826fa592c1.bin": {
+      "offset": 20499284,
+      "length": 230884,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "897fea238840feb1"
+    },
+    "/__docx_assets/83a49232992a40.bin": {
+      "offset": 20730168,
+      "length": 61505,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1cfcff07b70fbfaf"
+    },
+    "/__docx_assets/aa4165baa19c09.bin": {
+      "offset": 20791673,
+      "length": 107308,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4f249b77c904bdb5"
+    },
+    "/__docx_assets/64265d03f4378a.bin": {
+      "offset": 20898981,
+      "length": 38336,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d0eb4473e0e2798b"
+    },
+    "/__docx_assets/d5aa5cb24d55e2.bin": {
+      "offset": 20937317,
+      "length": 37558,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "8ef1e6857c7db813"
+    },
+    "/__docx_assets/880ffd70eebc3a.bin": {
+      "offset": 20974875,
+      "length": 33638,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "8286a8c04a33923e"
+    },
+    "/__docx_assets/b4dcf7f226cd74.bin": {
+      "offset": 21008513,
+      "length": 51374,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "59d54dbecd9a18b7"
+    },
+    "/__docx_assets/7413370eff05d6.bin": {
+      "offset": 21059887,
+      "length": 47708,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1d502289b2e62614"
+    },
+    "/__docx_assets/a4999e56959820.bin": {
+      "offset": 21107595,
+      "length": 82854,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "8e6c140de3ada0cb"
+    },
+    "/__docx_assets/fe2f9190d61db6.bin": {
+      "offset": 21190449,
+      "length": 67297,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "093a6aeaa91954fc"
+    },
+    "/__docx_assets/242896db22e707.bin": {
+      "offset": 21257746,
+      "length": 38978,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a3f08facd7617ede"
+    },
+    "/__docx_assets/2f5e9058c57cbd.bin": {
+      "offset": 21296724,
+      "length": 113259,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b5afcc63e56f1ba5"
+    },
+    "/__docx_assets/4cc458c332aaff.bin": {
+      "offset": 21409983,
+      "length": 243469,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7903baa98d34b16b"
+    },
+    "/__docx_assets/ef29fe70961117.bin": {
+      "offset": 21653452,
+      "length": 45603,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7fa376a77160c5d2"
+    },
+    "/__docx_assets/6d8b9e8b788d18.bin": {
+      "offset": 21699055,
+      "length": 44671,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e216171977b251cb"
+    },
+    "/__docx_assets/d5df2ec4540c7e.bin": {
+      "offset": 21743726,
+      "length": 61377,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "20f1410215d074fa"
+    },
+    "/__docx_assets/08e08196988a4e.bin": {
+      "offset": 21805103,
+      "length": 80633,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0135c41789e35d6d"
+    },
+    "/__docx_assets/f4b15888466234.bin": {
+      "offset": 21885736,
+      "length": 107534,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d758da60a3a43d72"
+    },
+    "/__docx_assets/0cbb5b7371658c.bin": {
+      "offset": 21993270,
+      "length": 41818,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "658ec5849fb50685"
+    },
+    "/__docx_assets/e2bc6d9d31ef37.bin": {
+      "offset": 22035088,
+      "length": 30792,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "52527f3b6313af8c"
+    },
+    "/__docx_assets/3c6eedf78070a7.bin": {
+      "offset": 22065880,
+      "length": 52248,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "236617839a7d860e"
+    },
+    "/__docx_assets/0df9f32d2e6168.bin": {
+      "offset": 22118128,
+      "length": 83800,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2bc4fef0022c4eb8"
+    },
+    "/__docx_assets/22a69c615776a4.bin": {
+      "offset": 22201928,
+      "length": 106678,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c91b23374e4562ba"
+    },
+    "/__docx_assets/d7ca9ac3e63187.bin": {
+      "offset": 22308606,
+      "length": 101108,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "66328f1be07c4125"
+    },
+    "/__docx_assets/dbaadfe5007311.bin": {
+      "offset": 22409714,
+      "length": 78941,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "badf6c44a1af573a"
+    },
+    "/__docx_assets/dbe2ff827acb39.bin": {
+      "offset": 22488655,
+      "length": 73045,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "5151343e9805c833"
+    },
+    "/__docx_assets/1b4dc895201d8b.bin": {
+      "offset": 22561700,
+      "length": 194930,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "dace326a98bc7ef5"
+    },
+    "/__docx_assets/43206c84593a81.bin": {
+      "offset": 22756630,
+      "length": 92050,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0be2da39fa23bea8"
+    },
+    "/__docx_assets/4f9f5e03e3eb70.bin": {
+      "offset": 22848680,
+      "length": 159234,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "25d42c57544633db"
+    },
+    "/__docx_assets/257172e839a744.bin": {
+      "offset": 23007914,
+      "length": 88330,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "fea8b00da3773662"
+    },
+    "/__docx_assets/92beb4a516c2ff.bin": {
+      "offset": 23096244,
+      "length": 129338,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "8327ca2580a3de64"
+    },
+    "/__docx_assets/4f7a8ed0930176.bin": {
+      "offset": 23225582,
+      "length": 80249,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a2c0734478ad0d76"
+    },
+    "/__docx_assets/b3dfc2c4aaff56.bin": {
+      "offset": 23305831,
+      "length": 65496,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a32398156528c599"
+    },
+    "/__docx_assets/86ce6f572d346c.bin": {
+      "offset": 23371327,
+      "length": 59848,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e079c1f3324e1cd9"
+    },
+    "/__docx_assets/5002ca0ca9dfe7.bin": {
+      "offset": 23431175,
+      "length": 154828,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "090ad6cd46a7255f"
+    },
+    "/__docx_assets/185e2c276791da.bin": {
+      "offset": 23586003,
+      "length": 207010,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "8f35d4a082bea57f"
+    },
+    "/__docx_assets/41b9793aa088da.bin": {
+      "offset": 23793013,
+      "length": 138813,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0029ccd2ab111a3a"
+    },
+    "/__docx_assets/7b98a7d3d6eaba.bin": {
+      "offset": 23931826,
+      "length": 97929,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "68c191101eb1c7aa"
+    },
+    "/__docx_assets/1386da266b3ad8.bin": {
+      "offset": 24029755,
+      "length": 104562,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0abe844ae5a64610"
+    },
+    "/__docx_assets/8f776320a3922b.bin": {
+      "offset": 24134317,
+      "length": 77486,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d3948fc8573506b1"
+    },
+    "/__docx_assets/ce67b6ae018b0d.bin": {
+      "offset": 24211803,
+      "length": 175618,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "274ce8a0fa5e4fa8"
+    },
+    "/__docx_assets/ca7c3308f73323.bin": {
+      "offset": 24387421,
+      "length": 63234,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b2c27865d8ce39be"
+    },
+    "/__docx_assets/fcc15c9815d892.bin": {
+      "offset": 24450655,
+      "length": 83041,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0520199806d55561"
+    },
+    "/__docx_assets/feb7da55439dd9.bin": {
+      "offset": 24533696,
+      "length": 96149,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "07448df5b8ded8f6"
+    },
+    "/__docx_assets/7be27657eb7808.bin": {
+      "offset": 24629845,
+      "length": 169137,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b7a48e0613577ea6"
+    },
+    "/__docx_assets/6334b360fd871b.bin": {
+      "offset": 24798982,
+      "length": 188385,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6862252f6ac43745"
+    },
+    "/__docx_assets/fa7499971b5b0d.bin": {
+      "offset": 24987367,
+      "length": 50230,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "00191e3092b36dde"
+    },
+    "/__docx_assets/c165f907b3f9c6.bin": {
+      "offset": 25037597,
+      "length": 45742,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "da7a236a48e77270"
+    },
+    "/__docx_assets/fcf85809581361.bin": {
+      "offset": 25083339,
+      "length": 177846,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "9c88fb4415e4d37c"
+    },
+    "/__docx_assets/087cd3d37fabe6.bin": {
+      "offset": 25261185,
+      "length": 39862,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d7b8837e6fae61c6"
+    },
+    "/__docx_assets/1fe80322db6e5c.bin": {
+      "offset": 25301047,
+      "length": 138653,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ff1ac9a90632b20c"
+    },
+    "/_next/static/immutable/media/6306c77e7c8268e4.34r5yzckw0h2s.woff2": {
+      "offset": 25439700,
+      "length": 5910,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "0f7e37acdfc11cbd"
+    },
+    "/_next/static/immutable/media/bbc41e54d2fcbd21.30bdpjkrtcces.woff2": {
+      "offset": 25445610,
+      "length": 14735,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "16df2b1213c5bcfb"
+    },
+    "/_next/static/immutable/media/Geist_Variable-s.p.2v-cf9syxr5ni.woff2": {
+      "offset": 25460345,
+      "length": 69783,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "2cd9d48c2b609006"
+    },
+    "/_next/static/immutable/media/797e433ab948586e.p.1v5bejj26fx9h.woff2": {
+      "offset": 25530128,
+      "length": 23136,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "3a1b79b2ad1fd975"
+    },
+    "/_next/static/immutable/media/7d817b4c03b0c5f1.2jyz_zw3a8jit.woff2": {
+      "offset": 25553264,
+      "length": 7751,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "95b5bc2c96aea9e7"
+    },
+    "/_next/static/immutable/media/4fa387ec64143e14.3f4zuumv8svu0.woff2": {
+      "offset": 25561015,
+      "length": 12895,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "a69ae1357ab610d6"
+    },
+    "/_next/static/immutable/media/5ce348bf30bf5439.27spqqad3wyeo.woff2": {
+      "offset": 25573910,
+      "length": 6227,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "f2615a2b598bac55"
+    },
+    "/": {
+      "offset": 0,
+      "length": 51764,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "73c4bdd3435cf7fd"
+    }
+  }
+}

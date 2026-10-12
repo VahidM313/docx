@@ -1,1 +1,307 @@
-{"id":"tanstack_config","name":"TanStack Config","version":"latest","commit":"bc7c28dc","origin":"https://tanstack.com","entryPath":"/config/latest/docs/overview","updatedAt":"2026-10-11T14:31:45.921Z","totalBytes":930680,"chunkCount":40,"routes":{"/config/latest/docs/overview":{"offset":0,"length":39025,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b13acd608d8e4a72"},"/config/latest/docs/eslint":{"offset":39025,"length":41315,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3853d2a6d47cd06c"},"/config/latest/docs/vite":{"offset":80340,"length":42515,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"947d2ef0ada6e8a0"},"/config/latest/docs/package-structure":{"offset":122855,"length":40150,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b04437610c42b3f4"},"/config/latest/docs/publish":{"offset":163005,"length":41278,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"58c511293095fc23"},"/config/latest":{"offset":204283,"length":43146,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"af5fc98ed0d520ab"},"/config/v0/docs/overview":{"offset":247429,"length":39039,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3472ea8b4d78e116"},"/config/latest/docs/overview.md":{"offset":286468,"length":417,"mime":"text/markdown","gzipped":true,"hash":"e0a5b4626fb93ca8"},"/config/latest/docs/ci-cd":{"offset":286885,"length":40293,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"808b8695f463ff73"},"/config/latest/docs/dependencies":{"offset":327178,"length":39311,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b128596614a9a4f2"},"/config/latest/docs/eslint.md":{"offset":366489,"length":611,"mime":"text/markdown","gzipped":true,"hash":"d82ad88c13b47797"},"/config/latest/docs/vite.md":{"offset":367100,"length":1473,"mime":"text/markdown","gzipped":true,"hash":"cd687f4d025921d9"},"/config/latest/docs/package-structure.md":{"offset":368573,"length":616,"mime":"text/markdown","gzipped":true,"hash":"7b0862f066c8b9ff"},"/config/latest/docs/publish.md":{"offset":369189,"length":968,"mime":"text/markdown","gzipped":true,"hash":"da7832614f6ffbeb"},"/config/latest/docs/blog":{"offset":370157,"length":37561,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1b8a67559a639858"},"/config/src;script.setAttribute(":{"offset":407718,"length":43163,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"471f42230ad72377"},"/assets/rolldown-runtime-DwyjGMXk.js":{"offset":450881,"length":693,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"5b86b49e119744d0"},"/assets/shared-constants-CaD3CTjf.js":{"offset":451574,"length":710,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"179ab4aaa695ecac"},"/assets/_library-CBIaDOvs.js":{"offset":452284,"length":783,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"e9a971c2923c5257"},"/assets/tanstack-query-CX3PTdhE.js":{"offset":453067,"length":14905,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"e244442d0c9d1554"},"/assets/tanstack-router-0U6bpk3R.js":{"offset":467972,"length":40070,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"394278faffcb9959"},"/assets/index-CaKFzcjh.css":{"offset":508042,"length":73832,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"e4b44f0b4b2a38cd"},"/assets/LibraryLayout-BHEZ1Pv8.js":{"offset":581874,"length":8796,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"97a0c0b8960554d9"},"/assets/index-BUCnWTRz.js":{"offset":590670,"length":319619,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"4812ba03d14c203f"},"/assets/route-DMvGLGYR.js":{"offset":910289,"length":239,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"9ca6297b641c21e7"},"/assets/useLocalStorage-BrXgnvb1.js":{"offset":910528,"length":311,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"12ca91c0b2dac3fc"},"/assets/_version.docs._-DxkWhUHU.js":{"offset":910839,"length":740,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"172dc8a64b719b20"},"/assets/_version.docs-Ct0r8at9.js":{"offset":911579,"length":140,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"0e051867dfa3f2a2"},"/assets/DocContainer-BiGs8guy.js":{"offset":911719,"length":180,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"72ae65bb4320d51c"},"/assets/Doc-CurBxyHD.js":{"offset":911899,"length":1630,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"b0b937133e9d20d3"},"/assets/_version-Bc--5hs4.js":{"offset":913529,"length":901,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"82573a67b8c930dc"},"/assets/config._version.index-DxvL_Bh4.js":{"offset":914430,"length":3378,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"4d21eddad06c7dd7"},"/assets/Badge-Du3C0Q0J.js":{"offset":917808,"length":417,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"759b640997529b27"},"/assets/_version.docs.blog-UC5zXsYF.js":{"offset":918225,"length":1053,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"80c4fb2b77a78c43"},"/assets/Package.es-CmtYt5jS.js":{"offset":919278,"length":1088,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"b317d802ba51cd19"},"/assets/CloudArrowUp.es-nQ2-aDbU.js":{"offset":920366,"length":1065,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"6128cf4154ddfa95"},"/assets/PageHeader-B5PFNjut.js":{"offset":921431,"length":634,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"a69f860cd7634f95"},"/assets/LibraryLanding-kcEHKSOm.js":{"offset":922065,"length":7173,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"f1d1124ec9cb0b9a"},"/assets/GitBranch.es-C-lu2qTE.js":{"offset":929238,"length":799,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"d4d60918075c0ad6"},"/assets/Terminal.es-BAd0GqhW.js":{"offset":930037,"length":643,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"99d3e41632b2632b"},"/":{"offset":0,"length":39025,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b13acd608d8e4a72"},"/docs":{"offset":0,"length":39025,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b13acd608d8e4a72"}}}
+{
+  "id": "tanstack_config",
+  "name": "TanStack Config",
+  "version": "latest",
+  "commit": "bc7c28dc",
+  "origin": "https://tanstack.com",
+  "entryPath": "/config/latest/docs/overview",
+  "updatedAt": "2026-10-11T14:31:45.921Z",
+  "totalBytes": 930680,
+  "chunkCount": 40,
+  "routes": {
+    "/config/latest/docs/overview": {
+      "offset": 0,
+      "length": 39025,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b13acd608d8e4a72"
+    },
+    "/config/latest/docs/eslint": {
+      "offset": 39025,
+      "length": 41315,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3853d2a6d47cd06c"
+    },
+    "/config/latest/docs/vite": {
+      "offset": 80340,
+      "length": 42515,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "947d2ef0ada6e8a0"
+    },
+    "/config/latest/docs/package-structure": {
+      "offset": 122855,
+      "length": 40150,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b04437610c42b3f4"
+    },
+    "/config/latest/docs/publish": {
+      "offset": 163005,
+      "length": 41278,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "58c511293095fc23"
+    },
+    "/config/latest": {
+      "offset": 204283,
+      "length": 43146,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "af5fc98ed0d520ab"
+    },
+    "/config/v0/docs/overview": {
+      "offset": 247429,
+      "length": 39039,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3472ea8b4d78e116"
+    },
+    "/config/latest/docs/overview.md": {
+      "offset": 286468,
+      "length": 417,
+      "mime": "text/markdown",
+      "gzipped": true,
+      "hash": "e0a5b4626fb93ca8"
+    },
+    "/config/latest/docs/ci-cd": {
+      "offset": 286885,
+      "length": 40293,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "808b8695f463ff73"
+    },
+    "/config/latest/docs/dependencies": {
+      "offset": 327178,
+      "length": 39311,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b128596614a9a4f2"
+    },
+    "/config/latest/docs/eslint.md": {
+      "offset": 366489,
+      "length": 611,
+      "mime": "text/markdown",
+      "gzipped": true,
+      "hash": "d82ad88c13b47797"
+    },
+    "/config/latest/docs/vite.md": {
+      "offset": 367100,
+      "length": 1473,
+      "mime": "text/markdown",
+      "gzipped": true,
+      "hash": "cd687f4d025921d9"
+    },
+    "/config/latest/docs/package-structure.md": {
+      "offset": 368573,
+      "length": 616,
+      "mime": "text/markdown",
+      "gzipped": true,
+      "hash": "7b0862f066c8b9ff"
+    },
+    "/config/latest/docs/publish.md": {
+      "offset": 369189,
+      "length": 968,
+      "mime": "text/markdown",
+      "gzipped": true,
+      "hash": "da7832614f6ffbeb"
+    },
+    "/config/latest/docs/blog": {
+      "offset": 370157,
+      "length": 37561,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1b8a67559a639858"
+    },
+    "/config/src;script.setAttribute(": {
+      "offset": 407718,
+      "length": 43163,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "471f42230ad72377"
+    },
+    "/assets/rolldown-runtime-DwyjGMXk.js": {
+      "offset": 450881,
+      "length": 693,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "5b86b49e119744d0"
+    },
+    "/assets/shared-constants-CaD3CTjf.js": {
+      "offset": 451574,
+      "length": 710,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "179ab4aaa695ecac"
+    },
+    "/assets/_library-CBIaDOvs.js": {
+      "offset": 452284,
+      "length": 783,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "e9a971c2923c5257"
+    },
+    "/assets/tanstack-query-CX3PTdhE.js": {
+      "offset": 453067,
+      "length": 14905,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "e244442d0c9d1554"
+    },
+    "/assets/tanstack-router-0U6bpk3R.js": {
+      "offset": 467972,
+      "length": 40070,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "394278faffcb9959"
+    },
+    "/assets/index-CaKFzcjh.css": {
+      "offset": 508042,
+      "length": 73832,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "e4b44f0b4b2a38cd"
+    },
+    "/assets/LibraryLayout-BHEZ1Pv8.js": {
+      "offset": 581874,
+      "length": 8796,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "97a0c0b8960554d9"
+    },
+    "/assets/index-BUCnWTRz.js": {
+      "offset": 590670,
+      "length": 319619,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "4812ba03d14c203f"
+    },
+    "/assets/route-DMvGLGYR.js": {
+      "offset": 910289,
+      "length": 239,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "9ca6297b641c21e7"
+    },
+    "/assets/useLocalStorage-BrXgnvb1.js": {
+      "offset": 910528,
+      "length": 311,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "12ca91c0b2dac3fc"
+    },
+    "/assets/_version.docs._-DxkWhUHU.js": {
+      "offset": 910839,
+      "length": 740,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "172dc8a64b719b20"
+    },
+    "/assets/_version.docs-Ct0r8at9.js": {
+      "offset": 911579,
+      "length": 140,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "0e051867dfa3f2a2"
+    },
+    "/assets/DocContainer-BiGs8guy.js": {
+      "offset": 911719,
+      "length": 180,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "72ae65bb4320d51c"
+    },
+    "/assets/Doc-CurBxyHD.js": {
+      "offset": 911899,
+      "length": 1630,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "b0b937133e9d20d3"
+    },
+    "/assets/_version-Bc--5hs4.js": {
+      "offset": 913529,
+      "length": 901,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "82573a67b8c930dc"
+    },
+    "/assets/config._version.index-DxvL_Bh4.js": {
+      "offset": 914430,
+      "length": 3378,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "4d21eddad06c7dd7"
+    },
+    "/assets/Badge-Du3C0Q0J.js": {
+      "offset": 917808,
+      "length": 417,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "759b640997529b27"
+    },
+    "/assets/_version.docs.blog-UC5zXsYF.js": {
+      "offset": 918225,
+      "length": 1053,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "80c4fb2b77a78c43"
+    },
+    "/assets/Package.es-CmtYt5jS.js": {
+      "offset": 919278,
+      "length": 1088,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "b317d802ba51cd19"
+    },
+    "/assets/CloudArrowUp.es-nQ2-aDbU.js": {
+      "offset": 920366,
+      "length": 1065,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "6128cf4154ddfa95"
+    },
+    "/assets/PageHeader-B5PFNjut.js": {
+      "offset": 921431,
+      "length": 634,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "a69f860cd7634f95"
+    },
+    "/assets/LibraryLanding-kcEHKSOm.js": {
+      "offset": 922065,
+      "length": 7173,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "f1d1124ec9cb0b9a"
+    },
+    "/assets/GitBranch.es-C-lu2qTE.js": {
+      "offset": 929238,
+      "length": 799,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "d4d60918075c0ad6"
+    },
+    "/assets/Terminal.es-BAd0GqhW.js": {
+      "offset": 930037,
+      "length": 643,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "99d3e41632b2632b"
+    },
+    "/": {
+      "offset": 0,
+      "length": 39025,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b13acd608d8e4a72"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 39025,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b13acd608d8e4a72"
+    }
+  }
+}

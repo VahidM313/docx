@@ -15,7 +15,7 @@ on:
         required: false
         default: "all"
   schedule:
-    - cron: "0 4 * * *"
+    - cron: "0 4 * * 0"
 
 permissions:
   contents: write
@@ -46,8 +46,9 @@ jobs:
         shell: pwsh
         run: |
           $env:DOCX_BUILD_COMMIT = $env:DOCX_BUILD_COMMIT.Substring(0, 8)
-          bun install
-          bun x tauri build --no-bundle
+          bun install --frozen-lockfile || bun install
+          bun run build
+          cargo build --release --manifest-path src-tauri/Cargo.toml
 
       - name: Package Docx-core.exe + Standalone Docx.exe (with DOCXPACK trailer) & Upload to Release
         env:
@@ -132,7 +133,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      max-parallel: 10
+      max-parallel: 6
       matrix:
         site: ${{ fromJson(needs.prepare-matrix.outputs.sites) }}
     steps:
@@ -142,8 +143,12 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
 
-      - name: Build .docpack, .manifest.json & .search.json
+      - name: Build .docpack, .manifest.json & .search.json (with regression guard)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          mkdir -p ./dist-packs
+          gh release download packs-latest --pattern "${{ matrix.site }}.manifest.json" --dir ./dist-packs --clobber || true
           bun run scripts/ci-build-site.ts "${{ matrix.site }}" ./dist-packs
 
       - name: Upload Pack to GitHub Release (packs-latest)

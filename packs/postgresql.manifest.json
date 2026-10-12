@@ -1,1 +1,1287 @@
-{"id":"postgresql","name":"PostgreSQL","version":"v17","commit":"b36686a1","origin":"https://www.postgresql.org","entryPath":"/docs/","updatedAt":"2026-10-10T18:57:46.598Z","totalBytes":1658037,"chunkCount":174,"routes":{"/docs":{"offset":0,"length":3279,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0b311cc3c8d35c52"},"/docs/":{"offset":0,"length":3279,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0b311cc3c8d35c52"},"/docs/manuals/archive":{"offset":3279,"length":3397,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f92bcde26a883b5b"},"/docs/manuals/archive/":{"offset":3279,"length":3397,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f92bcde26a883b5b"},"/docs/16/index.html":{"offset":6676,"length":5992,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7d0e06af4f4cd86d"},"/docs/17/index.html":{"offset":12668,"length":5869,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"25e280573621f62a"},"/docs/devel/index.html":{"offset":18537,"length":5913,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4d7bd2b187e3fedb"},"/docs/15/index.html":{"offset":24450,"length":5963,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e39a9f0c49dd772"},"/docs/19/index.html":{"offset":30413,"length":5848,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b2c38a149673d826"},"/docs/online-resources":{"offset":36261,"length":3105,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a3e2d8f6bacd779b"},"/docs/online-resources/":{"offset":36261,"length":3105,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a3e2d8f6bacd779b"},"/docs/current/index.html":{"offset":39366,"length":5889,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f03892d392679dd4"},"/docs/faq":{"offset":45255,"length":3031,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b06d748e63393834"},"/docs/faq/":{"offset":45255,"length":3031,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b06d748e63393834"},"/docs/14/index.html":{"offset":48286,"length":5939,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"245e3f63c1398c4b"},"/docs/18/index.html":{"offset":54225,"length":5887,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a679b5da5292f561"},"/docs/release":{"offset":60112,"length":6443,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"031b236879344fa6"},"/docs/release/":{"offset":60112,"length":6443,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"031b236879344fa6"},"/docs/books":{"offset":66555,"length":8648,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4130e1a976c52b31"},"/docs/books/":{"offset":66555,"length":8648,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4130e1a976c52b31"},"/docs/current":{"offset":75203,"length":5888,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"73f691b6fd82fb73"},"/docs/current/":{"offset":75203,"length":5888,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"73f691b6fd82fb73"},"/docs/10/index.html":{"offset":81091,"length":5687,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"370d2bea0794c842"},"/docs/9.4/index.html":{"offset":86778,"length":5335,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c1a2f10cb14374a7"},"/docs/9.2/index.html":{"offset":92113,"length":5420,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"99f1f7157a49e384"},"/docs/12/index.html":{"offset":97533,"length":5810,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"51f38acc44d4bd93"},"/docs/11/index.html":{"offset":103343,"length":5803,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9026d577e18e6f09"},"/docs/8.3/index.html":{"offset":109146,"length":5379,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"22bc7d35edc0e32a"},"/docs/8.2/index.html":{"offset":114525,"length":5324,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6eb99effbdff87e2"},"/docs/9.3/index.html":{"offset":119849,"length":5350,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"be94266bd08264f3"},"/docs/8.4/index.html":{"offset":125199,"length":5375,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bc6d9e740a83d2d1"},"/docs/9.6/index.html":{"offset":130574,"length":5466,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"390dc3b5c7a0124f"},"/docs/9.5/index.html":{"offset":136040,"length":5420,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2fa52cbb02267e49"},"/docs/9.1/index.html":{"offset":141460,"length":5397,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f6f4d57a2ede9744"},"/docs/8.1/index.html":{"offset":146857,"length":5281,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fd88bc5fffff057a"},"/docs/8.0/index.html":{"offset":152138,"length":10157,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dc22ae2cbca29b8c"},"/docs/9.0/index.html":{"offset":162295,"length":5389,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2bf1e83451eb6b96"},"/docs/13/index.html":{"offset":167684,"length":5875,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1d7b9bc1bb86d473"},"/docs/16/resources.html":{"offset":173559,"length":4311,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"016b2bab25ecc794"},"/docs/16/legalnotice.html":{"offset":177870,"length":3969,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f029e0e45ef81b75"},"/docs/7.1/postgres.html":{"offset":181839,"length":4289,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"83de90ca9ab35cb8"},"/docs/16/intro-whatis.html":{"offset":186128,"length":4273,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0774feed2fa58003"},"/docs/16/notation.html":{"offset":190401,"length":4214,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eb5feba0bc5678de"},"/docs/7.2/index.html":{"offset":194615,"length":4748,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b8d80197bf65d51c"},"/docs/16/preface.html":{"offset":199363,"length":4809,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8e4d3940d1261a4e"},"/docs/16/tutorial.html":{"offset":204172,"length":4673,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4b10561599cde1cc"},"/docs/7.3/index.html":{"offset":208845,"length":4744,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"52a32d98fc8d2891"},"/docs/16/history.html":{"offset":213589,"length":6765,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1e82e5e9cde35012"},"/docs/6.3/book01.htm":{"offset":220354,"length":5800,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9d36b83484c93d8a"},"/docs/7.0/postgres.html":{"offset":226154,"length":10129,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"323b44208b58820d"},"/docs/16/bug-reporting.html":{"offset":236283,"length":9193,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6eeb5ce5e72df8e0"},"/docs/6.4/postgres.htm":{"offset":245476,"length":8748,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"019eac50f22fe0d9"},"/docs/6.5/postgres.htm":{"offset":254224,"length":9464,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"aad94156915d9937"},"/docs/7.4/index.html":{"offset":263688,"length":10366,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ce55eec73888262b"},"/docs/16/tutorial-advanced.html":{"offset":274054,"length":3874,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"43ce781ba716ec70"},"/docs/16/tutorial-sql.html":{"offset":277928,"length":3920,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d433d925013aafc4"},"/docs/16/tutorial-start.html":{"offset":281848,"length":3806,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"790803c1f61dc24b"},"/docs/16/sql-syntax.html":{"offset":285654,"length":4688,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ae07bf061aff3b34"},"/docs/16/dml.html":{"offset":290342,"length":3958,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f521c0b89d8905cd"},"/docs/16/indexes.html":{"offset":294300,"length":4338,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e3fc20447d63eb2b"},"/docs/16/sql.html":{"offset":298638,"length":6951,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6da01e726be5cd0a"},"/docs/16/typeconv.html":{"offset":305589,"length":4380,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3af1ab4de93d153e"},"/docs/16/parallel-query.html":{"offset":309969,"length":4292,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f5c85d5734c4803e"},"/docs/16/ddl.html":{"offset":314261,"length":4941,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d25e452d3a2e72e5"},"/docs/16/performance-tips.html":{"offset":319202,"length":4608,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cd6a4d6c98f06de7"},"/docs/16/textsearch.html":{"offset":323810,"length":4523,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3b23884c00afd732"},"/docs/16/queries.html":{"offset":328333,"length":4534,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"07c3196edd9e159f"},"/docs/16/functions.html":{"offset":332867,"length":6542,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"871770a8dc1b842f"},"/docs/16/mvcc.html":{"offset":339409,"length":4447,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7fb792bd8680a7b7"},"/docs/16/datatype.html":{"offset":343856,"length":7392,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4847fe370daa0f18"},"/docs/16/install-binaries.html":{"offset":351248,"length":3741,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"871873f44a5e217b"},"/docs/16/user-manag.html":{"offset":354989,"length":4404,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4e215e0f0f325c4d"},"/docs/16/wal.html":{"offset":359393,"length":4050,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"112b8dc14f849e35"},"/docs/16/managing-databases.html":{"offset":363443,"length":4119,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5cc098f1fb0513c3"},"/docs/16/install-windows.html":{"offset":367562,"length":4662,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d87cc1608f429bc6"},"/docs/16/installation.html":{"offset":372224,"length":4539,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4cb2acc454d1f8d4"},"/docs/16/runtime-config.html":{"offset":376763,"length":5413,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"19a54e90d371a20f"},"/docs/16/client-authentication.html":{"offset":382176,"length":4910,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c6958fe3343a2e53"},"/docs/16/diskusage.html":{"offset":387086,"length":3836,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"be3302e918c04642"},"/docs/16/runtime.html":{"offset":390922,"length":5052,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0cc0ddb61b27c432"},"/docs/16/maintenance.html":{"offset":395974,"length":5025,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4f3c5ca68a7c1f59"},"/docs/16/charset.html":{"offset":400999,"length":4571,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"128cacc9e7d43855"},"/docs/16/backup.html":{"offset":405570,"length":4564,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fd2cfd7e711b1c0f"},"/docs/16/monitoring.html":{"offset":410134,"length":5149,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"187b54589a16f382"},"/docs/16/high-availability.html":{"offset":415283,"length":5572,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"17934d5f308873c6"},"/docs/16/admin.html":{"offset":420855,"length":7076,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"99ac9f3b71747a5b"},"/docs/16/largeobjects.html":{"offset":427931,"length":4488,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"29ddffc77425021a"},"/docs/16/information-schema.html":{"offset":432419,"length":5425,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f50469602bac6ee7"},"/docs/16/client-interfaces.html":{"offset":437844,"length":6156,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ab517294d5310689"},"/docs/16/extend.html":{"offset":444000,"length":5885,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a33b90ba5f1b47ed"},"/docs/16/ecpg.html":{"offset":449885,"length":6044,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1016d860c4e49bb9"},"/docs/16/server-programming.html":{"offset":455929,"length":6213,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8dd2e41512f90449"},"/docs/16/event-triggers.html":{"offset":462142,"length":4027,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"71af3fdf989e123d"},"/docs/16/pltcl.html":{"offset":466169,"length":4178,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9e76abff0ad54e49"},"/docs/16/regress.html":{"offset":470347,"length":4557,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5d50cd46ef801247"},"/docs/16/rules.html":{"offset":474904,"length":4622,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"14512a8079e8b489"},"/docs/16/plpgsql.html":{"offset":479526,"length":5202,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9a0d637ad0718e85"},"/docs/16/xplang.html":{"offset":484728,"length":4598,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"23abd02563a4cac0"},"/docs/16/logical-replication.html":{"offset":489326,"length":5280,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"805fd2acb91c6ab0"},"/docs/16/libpq.html":{"offset":494606,"length":5447,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f859d480dad25589"},"/docs/16/triggers.html":{"offset":500053,"length":4306,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dbc0451d9cc748ed"},"/docs/16/jit.html":{"offset":504359,"length":3989,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4a5a74462200df99"},"/docs/16/reference-server.html":{"offset":508348,"length":4352,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"25cb024a169fbc49"},"/docs/16/archive-modules.html":{"offset":512700,"length":4357,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"94e5b774cd6ab263"},"/docs/16/logicaldecoding.html":{"offset":517057,"length":4877,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"37a51a072c48cda1"},"/docs/16/plperl.html":{"offset":521934,"length":4693,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"70282533c4f3985d"},"/docs/16/plpython.html":{"offset":526627,"length":4997,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"56c19fe9cf851b28"},"/docs/16/replication-origins.html":{"offset":531624,"length":5258,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d995684fc0a18744"},"/docs/16/reference-client.html":{"offset":536882,"length":4632,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4ad9f90e5927a098"},"/docs/16/protocol.html":{"offset":541514,"length":5321,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1abb42cde0fd041c"},"/docs/16/views.html":{"offset":546835,"length":4581,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c75c4bade5fd3bc3"},"/docs/16/overview.html":{"offset":551416,"length":4438,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"411fb3294211488e"},"/docs/16/spi.html":{"offset":555854,"length":5967,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ca1cd4e83ce3f8cb"},"/docs/16/catalogs.html":{"offset":561821,"length":5158,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ea3aca6ee81ee81b"},"/docs/16/internals.html":{"offset":566979,"length":7557,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1753e5caa765b128"},"/docs/16/sql-commands.html":{"offset":574536,"length":7801,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0751e97b0e5b7b0f"},"/docs/16/bgworker.html":{"offset":582337,"length":7969,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4ebc61c91d411381"},"/docs/16/reference.html":{"offset":590306,"length":8977,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1fd3a3208880b0f5"},"/docs/16/source.html":{"offset":599283,"length":3880,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f915c0a57c5a6b1c"},"/docs/16/nls.html":{"offset":603163,"length":4009,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bf4c7afb48b83ed7"},"/docs/16/plhandler.html":{"offset":607172,"length":7015,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5aa9878c1ad16c9f"},"/docs/16/geqo.html":{"offset":614187,"length":4168,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"95ea637a7be3eec5"},"/docs/16/gist.html":{"offset":618355,"length":3925,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"77162dedfd657833"},"/docs/16/brin.html":{"offset":622280,"length":3775,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"39b4acdb2b057b60"},"/docs/16/spgist.html":{"offset":626055,"length":3892,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"779b321fae378b03"},"/docs/16/gin.html":{"offset":629947,"length":3937,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c6062508a63fb283"},"/docs/16/custom-scan.html":{"offset":633884,"length":4368,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5fb998807ffcc46f"},"/docs/16/custom-rmgr.html":{"offset":638252,"length":5205,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6d2b66fe748c5464"},"/docs/16/tablesample-method.html":{"offset":643457,"length":4895,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"da64c6add56ef5a9"},"/docs/16/btree.html":{"offset":648352,"length":3776,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"03459c3db45faeec"},"/docs/16/tableam.html":{"offset":652128,"length":5392,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4435f6e5c34a0f0e"},"/docs/16/fdwhandler.html":{"offset":657520,"length":4684,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"835e010bbf134de0"},"/docs/16/generic-wal.html":{"offset":662204,"length":5533,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cb63ee25d0dda7c1"},"/docs/16/indexam.html":{"offset":667737,"length":4882,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3318ecb66b157b1b"},"/docs/16/backup-manifest-format.html":{"offset":672619,"length":4085,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"912dadfdffc998b9"},"/docs/16/hash-index.html":{"offset":676704,"length":3638,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"876fc9070855bad0"},"/docs/16/planner-stats-details.html":{"offset":680342,"length":4275,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6d8a6f31193b3d45"},"/docs/16/transactions.html":{"offset":684617,"length":3698,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f01763e7bd3a94b0"},"/docs/16/datetime-appendix.html":{"offset":688315,"length":4295,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a8736ed84b601375"},"/docs/16/storage.html":{"offset":692610,"length":4075,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1527d5ecffd1e017"},"/docs/16/bki.html":{"offset":696685,"length":5342,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a98281603887b270"},"/docs/16/appendixes.html":{"offset":702027,"length":6730,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"90e2e51d8b8450c2"},"/docs/16/features.html":{"offset":708757,"length":5845,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"13e23c0de85b6fb0"},"/docs/16/release.html":{"offset":714602,"length":5093,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b9feeb83fc4e38d0"},"/docs/16/errcodes-appendix.html":{"offset":719695,"length":9448,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ff4ecc9271d268aa"},"/docs/16/sql-keywords-appendix.html":{"offset":729143,"length":11839,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"922091d6475f957f"},"/docs/16/external-projects.html":{"offset":740982,"length":3940,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"337126b9316c72a2"},"/docs/16/sourcerepo.html":{"offset":744922,"length":4164,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"872c9619bc025cb6"},"/docs/16/contrib-prog.html":{"offset":749086,"length":4126,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5951664a0db33cd0"},"/docs/16/docguide.html":{"offset":753212,"length":4598,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ee45216adf201880"},"/docs/16/limits.html":{"offset":757810,"length":4939,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a78cacc3bf451358"},"/docs/16/contrib.html":{"offset":762749,"length":11688,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"db773fe1d943d5bc"},"/docs/16/color.html":{"offset":774437,"length":3640,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d682e5c244fe592e"},"/docs/16/acronyms.html":{"offset":778077,"length":6726,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bddb648c49416100"},"/docs/16/glossary.html":{"offset":784803,"length":21748,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9181f5642a567653"},"/docs/16/appendix-obsolete.html":{"offset":806551,"length":3906,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7a6bbfc143e7ea32"},"/docs/16/biblio.html":{"offset":810457,"length":6326,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"110b32c658bd8662"},"/media/img/empty.png":{"offset":816783,"length":93,"mime":"image/png","gzipped":true,"hash":"44f76478548bd625"},"/favicon.ico":{"offset":816876,"length":1403,"mime":"image/x-icon","gzipped":true,"hash":"832da884f95f173a"},"/__docx_assets/e64127acb0a640.css":{"offset":818279,"length":7609,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"98853001337488fb"},"/__docx_assets/c181c774ee3057.css":{"offset":825888,"length":11931,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"1cfc043e3636d81d"},"/media/css/bootstrap-4.4.1.min.css":{"offset":837819,"length":23658,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"58089075bbf91ead"},"/media/img/about/press/elephant.png":{"offset":861477,"length":49330,"mime":"image/png","gzipped":true,"hash":"16ca5f137c03614e"},"/media/webfonts/fa-regular-400.woff2":{"offset":910807,"length":12243,"mime":"font/woff2","gzipped":true,"hash":"24c0454fa3773e95"},"/media/css/open-sans-woff2.css":{"offset":923050,"length":599,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"3291c0481ac5c9dc"},"/media/css/open-sans-woff.css":{"offset":923649,"length":522,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"5204eab138841df3"},"/media/webfonts/fa-regular-400.eot":{"offset":924171,"length":15044,"mime":"application/vnd.ms-fontobject","gzipped":true,"hash":"105bb81bff5d5af2"},"/media/webfonts/fa-brands-400.woff":{"offset":939215,"length":63750,"mime":"font/woff","gzipped":true,"hash":"ba3818186f0b2f55"},"/media/webfonts/fa-brands-400.eot":{"offset":1002965,"length":64622,"mime":"application/vnd.ms-fontobject","gzipped":true,"hash":"041db17646017e1c"},"/media/webfonts/fa-regular-400.ttf":{"offset":1067587,"length":14991,"mime":"font/ttf","gzipped":true,"hash":"15f43cab3d6f6a36"},"/media/webfonts/fa-solid-900.woff2":{"offset":1082578,"length":38787,"mime":"font/woff2","gzipped":true,"hash":"83f0fe465819a762"},"/media/webfonts/fa-brands-400.woff2":{"offset":1121365,"length":54458,"mime":"font/woff2","gzipped":true,"hash":"ff24100988fdb99d"},"/media/webfonts/fa-brands-400.ttf":{"offset":1175823,"length":64497,"mime":"font/ttf","gzipped":true,"hash":"4a1b3455c42787a3"},"/media/webfonts/fa-solid-900.woff":{"offset":1240320,"length":48734,"mime":"font/woff","gzipped":true,"hash":"160c39e6b51b5247"},"/media/webfonts/fa-regular-400.woff":{"offset":1289054,"length":14717,"mime":"font/woff","gzipped":true,"hash":"a8ff340f6e19ed81"},"/media/webfonts/fa-solid-900.ttf":{"offset":1303771,"length":49577,"mime":"font/ttf","gzipped":true,"hash":"f0059617463175af"},"/media/webfonts/fa-solid-900.eot":{"offset":1353348,"length":49677,"mime":"application/vnd.ms-fontobject","gzipped":true,"hash":"669ca52de75caa8c"},"/media/img/feature/feature_elephant.png":{"offset":1403025,"length":11487,"mime":"image/png","gzipped":true,"hash":"655c0e7a66fbd986"},"/media/img/misc/training.jpg":{"offset":1414512,"length":62894,"mime":"image/jpeg","gzipped":true,"hash":"23085c28c462169a"},"/media/img/misc/bugs.jpg":{"offset":1477406,"length":67505,"mime":"image/jpeg","gzipped":true,"hash":"3ea11f81980c9d0c"},"/media/img/misc/banner.jpg":{"offset":1544911,"length":113126,"mime":"image/jpeg","gzipped":true,"hash":"e8446b51832085db"},"/":{"offset":0,"length":3279,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0b311cc3c8d35c52"}}}
+{
+  "id": "postgresql",
+  "name": "PostgreSQL",
+  "version": "v17",
+  "commit": "54ab1513",
+  "origin": "https://www.postgresql.org",
+  "entryPath": "/docs/",
+  "updatedAt": "2026-10-11T10:38:41.579Z",
+  "totalBytes": 1516813,
+  "chunkCount": 174,
+  "routes": {
+    "/docs": {
+      "offset": 0,
+      "length": 2342,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "15f574bc9ec146b8"
+    },
+    "/docs/": {
+      "offset": 0,
+      "length": 2342,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "15f574bc9ec146b8"
+    },
+    "/docs/manuals/archive": {
+      "offset": 2342,
+      "length": 2433,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ea7f349b5c62040e"
+    },
+    "/docs/manuals/archive/": {
+      "offset": 2342,
+      "length": 2433,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ea7f349b5c62040e"
+    },
+    "/docs/16/index.html": {
+      "offset": 4775,
+      "length": 5060,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d7b50de8bb2ecce1"
+    },
+    "/docs/devel/index.html": {
+      "offset": 9835,
+      "length": 4975,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "91b6215a00091866"
+    },
+    "/docs/18/index.html": {
+      "offset": 14810,
+      "length": 4950,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b66adbc813655d8e"
+    },
+    "/docs/current/index.html": {
+      "offset": 19760,
+      "length": 4953,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5a55002cd5cbf36d"
+    },
+    "/docs/19/index.html": {
+      "offset": 24713,
+      "length": 4909,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b7d057db0695321a"
+    },
+    "/docs/17/index.html": {
+      "offset": 29622,
+      "length": 4933,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4ef4812dbb5056e8"
+    },
+    "/docs/release": {
+      "offset": 34555,
+      "length": 5374,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f1b038ddcd20d747"
+    },
+    "/docs/release/": {
+      "offset": 34555,
+      "length": 5374,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f1b038ddcd20d747"
+    },
+    "/docs/online-resources": {
+      "offset": 39929,
+      "length": 2165,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b13729750b325bd9"
+    },
+    "/docs/online-resources/": {
+      "offset": 39929,
+      "length": 2165,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b13729750b325bd9"
+    },
+    "/docs/current": {
+      "offset": 42094,
+      "length": 4953,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a02c06c270729b29"
+    },
+    "/docs/current/": {
+      "offset": 42094,
+      "length": 4953,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a02c06c270729b29"
+    },
+    "/docs/15/index.html": {
+      "offset": 47047,
+      "length": 5032,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "105606d1054277d8"
+    },
+    "/docs/faq": {
+      "offset": 52079,
+      "length": 2099,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1b7230c0ceaea901"
+    },
+    "/docs/faq/": {
+      "offset": 52079,
+      "length": 2099,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1b7230c0ceaea901"
+    },
+    "/docs/books": {
+      "offset": 54178,
+      "length": 7655,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e13386520cfcbd36"
+    },
+    "/docs/books/": {
+      "offset": 54178,
+      "length": 7655,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e13386520cfcbd36"
+    },
+    "/docs/14/index.html": {
+      "offset": 61833,
+      "length": 5009,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "de14441f6f5d02b8"
+    },
+    "/docs/9.2/index.html": {
+      "offset": 66842,
+      "length": 4490,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "46de2fdc10207df6"
+    },
+    "/docs/8.3/index.html": {
+      "offset": 71332,
+      "length": 4448,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "52ab2f7d305a1810"
+    },
+    "/docs/9.3/index.html": {
+      "offset": 75780,
+      "length": 4429,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "15ecc29ca72ad814"
+    },
+    "/docs/10/index.html": {
+      "offset": 80209,
+      "length": 4758,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "af1bf15e2cc995a5"
+    },
+    "/docs/11/index.html": {
+      "offset": 84967,
+      "length": 4871,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1a8fa437986dc66b"
+    },
+    "/docs/9.1/index.html": {
+      "offset": 89838,
+      "length": 4466,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a480c150b474270f"
+    },
+    "/docs/9.4/index.html": {
+      "offset": 94304,
+      "length": 4412,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "19ba169f0aec6b7e"
+    },
+    "/docs/12/index.html": {
+      "offset": 98716,
+      "length": 4878,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e5f308523f0922eb"
+    },
+    "/docs/9.0/index.html": {
+      "offset": 103594,
+      "length": 4457,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "644f323e644cea7f"
+    },
+    "/docs/8.4/index.html": {
+      "offset": 108051,
+      "length": 4443,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "549f86f169431556"
+    },
+    "/docs/13/index.html": {
+      "offset": 112494,
+      "length": 4942,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e02875e5bdc9f6f8"
+    },
+    "/docs/9.6/index.html": {
+      "offset": 117436,
+      "length": 4544,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f059ea485e70a17d"
+    },
+    "/docs/8.2/index.html": {
+      "offset": 121980,
+      "length": 4394,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5408bedc9995ff7d"
+    },
+    "/docs/9.5/index.html": {
+      "offset": 126374,
+      "length": 4500,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1100250968b14709"
+    },
+    "/docs/8.1/index.html": {
+      "offset": 130874,
+      "length": 4348,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2a1f9ee7cd49f905"
+    },
+    "/docs/8.0/index.html": {
+      "offset": 135222,
+      "length": 9184,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "37b408320a96407f"
+    },
+    "/docs/7.1/postgres.html": {
+      "offset": 144406,
+      "length": 3365,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0700c2ce2c637367"
+    },
+    "/docs/16/intro-whatis.html": {
+      "offset": 147771,
+      "length": 3340,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "46bf78bb23e88571"
+    },
+    "/docs/16/resources.html": {
+      "offset": 151111,
+      "length": 3369,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "332034f60c7faa62"
+    },
+    "/docs/16/legalnotice.html": {
+      "offset": 154480,
+      "length": 3042,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "06722a954c6aee2c"
+    },
+    "/docs/16/notation.html": {
+      "offset": 157522,
+      "length": 3272,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "94e0a96615bf4b10"
+    },
+    "/docs/7.3/index.html": {
+      "offset": 160794,
+      "length": 3811,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e871434e63fa11c1"
+    },
+    "/docs/16/tutorial.html": {
+      "offset": 164605,
+      "length": 3740,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cdce34885c1e583e"
+    },
+    "/docs/16/history.html": {
+      "offset": 168345,
+      "length": 5834,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6fa7040fec2e0733"
+    },
+    "/docs/16/bug-reporting.html": {
+      "offset": 174179,
+      "length": 8261,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8a8cad92493dd9de"
+    },
+    "/docs/7.4/index.html": {
+      "offset": 182440,
+      "length": 9395,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b5f5877143f452b7"
+    },
+    "/docs/6.5/postgres.htm": {
+      "offset": 191835,
+      "length": 8490,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5ebcaefb53b965db"
+    },
+    "/docs/6.3/book01.htm": {
+      "offset": 200325,
+      "length": 4860,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "197787a7383422ba"
+    },
+    "/docs/16/preface.html": {
+      "offset": 205185,
+      "length": 3871,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8bd4a1b426b1eaaa"
+    },
+    "/docs/7.0/postgres.html": {
+      "offset": 209056,
+      "length": 9159,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5022455c08f87b00"
+    },
+    "/docs/7.2/index.html": {
+      "offset": 218215,
+      "length": 3813,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1009920d0e14ff9a"
+    },
+    "/docs/6.4/postgres.htm": {
+      "offset": 222028,
+      "length": 7775,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "723e77e81403e6f1"
+    },
+    "/docs/16/indexes.html": {
+      "offset": 229803,
+      "length": 3393,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "71193c68ebba8d57"
+    },
+    "/docs/16/ddl.html": {
+      "offset": 233196,
+      "length": 4011,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7bb90a89a2f7b9a0"
+    },
+    "/docs/16/parallel-query.html": {
+      "offset": 237207,
+      "length": 3355,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ce66940f1ceb301d"
+    },
+    "/docs/16/functions.html": {
+      "offset": 240562,
+      "length": 5613,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9373df9714ada916"
+    },
+    "/docs/16/datatype.html": {
+      "offset": 246175,
+      "length": 6442,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dc67f059a5c7966e"
+    },
+    "/docs/16/tutorial-sql.html": {
+      "offset": 252617,
+      "length": 2971,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3ab748147a113dbb"
+    },
+    "/docs/16/queries.html": {
+      "offset": 255588,
+      "length": 3603,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e28a40cd26173068"
+    },
+    "/docs/16/sql-syntax.html": {
+      "offset": 259191,
+      "length": 3751,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "96701c3725928cc9"
+    },
+    "/docs/16/sql.html": {
+      "offset": 262942,
+      "length": 6015,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f89bcb93d73b68e5"
+    },
+    "/docs/16/typeconv.html": {
+      "offset": 268957,
+      "length": 3438,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9b7f783918fc0c1c"
+    },
+    "/docs/16/dml.html": {
+      "offset": 272395,
+      "length": 3010,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "812525fefc72a733"
+    },
+    "/docs/16/textsearch.html": {
+      "offset": 275405,
+      "length": 3583,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fbd286ef75373dec"
+    },
+    "/docs/16/performance-tips.html": {
+      "offset": 278988,
+      "length": 3665,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9a7e4bf32d2c52d0"
+    },
+    "/docs/16/tutorial-start.html": {
+      "offset": 282653,
+      "length": 2860,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b3608dd92a93965a"
+    },
+    "/docs/16/mvcc.html": {
+      "offset": 285513,
+      "length": 3501,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "09a500382ea16d63"
+    },
+    "/docs/16/tutorial-advanced.html": {
+      "offset": 289014,
+      "length": 2931,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "46895b64b1001d37"
+    },
+    "/docs/16/admin.html": {
+      "offset": 291945,
+      "length": 6140,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "89b8608f09c6739d"
+    },
+    "/docs/16/user-manag.html": {
+      "offset": 298085,
+      "length": 3462,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f09f3b8c72b87fb2"
+    },
+    "/docs/16/diskusage.html": {
+      "offset": 301547,
+      "length": 2889,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "de9418640252410a"
+    },
+    "/docs/16/install-windows.html": {
+      "offset": 304436,
+      "length": 3718,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "99e40b1d99d41232"
+    },
+    "/docs/16/high-availability.html": {
+      "offset": 308154,
+      "length": 4646,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9ca934468e083824"
+    },
+    "/docs/16/runtime-config.html": {
+      "offset": 312800,
+      "length": 4477,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ee0e5e221fb64dbe"
+    },
+    "/docs/16/client-authentication.html": {
+      "offset": 317277,
+      "length": 3970,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "72f70cd115c39ad0"
+    },
+    "/docs/16/install-binaries.html": {
+      "offset": 321247,
+      "length": 2802,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "befbc50ce23b56bd"
+    },
+    "/docs/16/monitoring.html": {
+      "offset": 324049,
+      "length": 4208,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b22cc0bf1f9d5deb"
+    },
+    "/docs/16/installation.html": {
+      "offset": 328257,
+      "length": 3594,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5ef2201cf6e7afd3"
+    },
+    "/docs/16/charset.html": {
+      "offset": 331851,
+      "length": 3638,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "93763b3ef4b8d744"
+    },
+    "/docs/16/backup.html": {
+      "offset": 335489,
+      "length": 3631,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c29eb825da0645c3"
+    },
+    "/docs/16/wal.html": {
+      "offset": 339120,
+      "length": 3107,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "138ae407ff0e77a3"
+    },
+    "/docs/16/maintenance.html": {
+      "offset": 342227,
+      "length": 4088,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d72a3775de6dc51e"
+    },
+    "/docs/16/runtime.html": {
+      "offset": 346315,
+      "length": 4122,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a750e4a342de2033"
+    },
+    "/docs/16/managing-databases.html": {
+      "offset": 350437,
+      "length": 3178,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "50fdd64b699bb012"
+    },
+    "/docs/16/regress.html": {
+      "offset": 353615,
+      "length": 3622,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9ecf70362d8dbb47"
+    },
+    "/docs/16/pltcl.html": {
+      "offset": 357237,
+      "length": 3232,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "78965af83d1e3a07"
+    },
+    "/docs/16/client-interfaces.html": {
+      "offset": 360469,
+      "length": 5208,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f9283906fb3c3a43"
+    },
+    "/docs/16/plpgsql.html": {
+      "offset": 365677,
+      "length": 4266,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8317b8081cb5bd0c"
+    },
+    "/docs/16/server-programming.html": {
+      "offset": 369943,
+      "length": 5267,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9d48ff18ab78ab8e"
+    },
+    "/docs/16/information-schema.html": {
+      "offset": 375210,
+      "length": 4471,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "30257bb265b30f4e"
+    },
+    "/docs/16/largeobjects.html": {
+      "offset": 379681,
+      "length": 3547,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "192ca3f5f75d0d30"
+    },
+    "/docs/16/jit.html": {
+      "offset": 383228,
+      "length": 3053,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7422d56d1b739099"
+    },
+    "/docs/16/libpq.html": {
+      "offset": 386281,
+      "length": 4517,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "59ecaf5f60dac3ed"
+    },
+    "/docs/16/ecpg.html": {
+      "offset": 390798,
+      "length": 5104,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2cac86499c46427a"
+    },
+    "/docs/16/triggers.html": {
+      "offset": 395902,
+      "length": 3363,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "30840d9c8c4566c3"
+    },
+    "/docs/16/rules.html": {
+      "offset": 399265,
+      "length": 3683,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e8e4851003a73098"
+    },
+    "/docs/16/logical-replication.html": {
+      "offset": 402948,
+      "length": 4349,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f75706c443a9f42b"
+    },
+    "/docs/16/xplang.html": {
+      "offset": 407297,
+      "length": 3652,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2cfa7c129188620c"
+    },
+    "/docs/16/extend.html": {
+      "offset": 410949,
+      "length": 4943,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a6eb53c604abcdb6"
+    },
+    "/docs/16/event-triggers.html": {
+      "offset": 415892,
+      "length": 3091,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ef037355859c5558"
+    },
+    "/docs/16/overview.html": {
+      "offset": 418983,
+      "length": 3501,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8c3ea949862df100"
+    },
+    "/docs/16/sql-commands.html": {
+      "offset": 422484,
+      "length": 6828,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "95e1787890b11252"
+    },
+    "/docs/16/replication-origins.html": {
+      "offset": 429312,
+      "length": 4334,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "43317a5b2945b6e4"
+    },
+    "/docs/16/plperl.html": {
+      "offset": 433646,
+      "length": 3752,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "26f2b58ac2c70218"
+    },
+    "/docs/16/spi.html": {
+      "offset": 437398,
+      "length": 5021,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "df9d465bf2389d76"
+    },
+    "/docs/16/views.html": {
+      "offset": 442419,
+      "length": 3638,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1d5884a047adbd83"
+    },
+    "/docs/16/archive-modules.html": {
+      "offset": 446057,
+      "length": 3431,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cd387d3f620d28c0"
+    },
+    "/docs/16/catalogs.html": {
+      "offset": 449488,
+      "length": 4207,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "47b701902e5b7702"
+    },
+    "/docs/16/bgworker.html": {
+      "offset": 453695,
+      "length": 7038,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "274c5b20c9594472"
+    },
+    "/docs/16/reference-server.html": {
+      "offset": 460733,
+      "length": 3400,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f7309d545c013fc2"
+    },
+    "/docs/16/logicaldecoding.html": {
+      "offset": 464133,
+      "length": 3946,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9547faa947e4dc97"
+    },
+    "/docs/16/plpython.html": {
+      "offset": 468079,
+      "length": 4064,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "789503470b61daad"
+    },
+    "/docs/16/reference-client.html": {
+      "offset": 472143,
+      "length": 3682,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8fbf146487f24d11"
+    },
+    "/docs/16/internals.html": {
+      "offset": 475825,
+      "length": 6592,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d77958b96038ed4d"
+    },
+    "/docs/16/protocol.html": {
+      "offset": 482417,
+      "length": 4383,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "45a56f11bbf92399"
+    },
+    "/docs/16/reference.html": {
+      "offset": 486800,
+      "length": 8003,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e266737a7ed394b8"
+    },
+    "/docs/16/source.html": {
+      "offset": 494803,
+      "length": 2932,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5a496e84c7c51afc"
+    },
+    "/docs/16/gin.html": {
+      "offset": 497735,
+      "length": 2992,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8454e8f7347021c1"
+    },
+    "/docs/16/plhandler.html": {
+      "offset": 500727,
+      "length": 6079,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0677cd454474f3ce"
+    },
+    "/docs/16/btree.html": {
+      "offset": 506806,
+      "length": 2835,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "91eb9f3779643574"
+    },
+    "/docs/16/nls.html": {
+      "offset": 509641,
+      "length": 3068,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a822efe4313c7e26"
+    },
+    "/docs/16/brin.html": {
+      "offset": 512709,
+      "length": 2839,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "91b4274ac447d26b"
+    },
+    "/docs/16/geqo.html": {
+      "offset": 515548,
+      "length": 3222,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "295b29710832abd8"
+    },
+    "/docs/16/indexam.html": {
+      "offset": 518770,
+      "length": 3948,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "178aec184cdccbc0"
+    },
+    "/docs/16/fdwhandler.html": {
+      "offset": 522718,
+      "length": 3751,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6f76e092045d940f"
+    },
+    "/docs/16/generic-wal.html": {
+      "offset": 526469,
+      "length": 4596,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9770ca68e7790795"
+    },
+    "/docs/16/custom-rmgr.html": {
+      "offset": 531065,
+      "length": 4282,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "77f10c977a2535f0"
+    },
+    "/docs/16/tablesample-method.html": {
+      "offset": 535347,
+      "length": 3964,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "10234d1facceb701"
+    },
+    "/docs/16/custom-scan.html": {
+      "offset": 539311,
+      "length": 3435,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a665768b503d9957"
+    },
+    "/docs/16/spgist.html": {
+      "offset": 542746,
+      "length": 2952,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bb8046973461b699"
+    },
+    "/docs/16/gist.html": {
+      "offset": 545698,
+      "length": 2973,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1f03fc588ca9c2bd"
+    },
+    "/docs/16/tableam.html": {
+      "offset": 548671,
+      "length": 4464,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b304b08f17745105"
+    },
+    "/docs/16/hash-index.html": {
+      "offset": 553135,
+      "length": 2694,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "de8171d9b7574fd6"
+    },
+    "/docs/16/release.html": {
+      "offset": 555829,
+      "length": 4144,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f49463079c1f9c77"
+    },
+    "/docs/16/storage.html": {
+      "offset": 559973,
+      "length": 3133,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3a29f863ee9a8028"
+    },
+    "/docs/16/backup-manifest-format.html": {
+      "offset": 563106,
+      "length": 3149,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "66b9b2353e906786"
+    },
+    "/docs/16/appendixes.html": {
+      "offset": 566255,
+      "length": 5795,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8bbc29395f1f7f00"
+    },
+    "/docs/16/features.html": {
+      "offset": 572050,
+      "length": 4906,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a3b429bc3c04b7c7"
+    },
+    "/docs/16/datetime-appendix.html": {
+      "offset": 576956,
+      "length": 3344,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6f33c82d902b37d0"
+    },
+    "/docs/16/bki.html": {
+      "offset": 580300,
+      "length": 4406,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5169ebd75695bba6"
+    },
+    "/docs/16/planner-stats-details.html": {
+      "offset": 584706,
+      "length": 3340,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "048174c876aaf28e"
+    },
+    "/docs/16/errcodes-appendix.html": {
+      "offset": 588046,
+      "length": 8474,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d43c5d7e37a6ac27"
+    },
+    "/docs/16/sql-keywords-appendix.html": {
+      "offset": 596520,
+      "length": 10837,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fcf69581c8885f4e"
+    },
+    "/docs/16/transactions.html": {
+      "offset": 607357,
+      "length": 2761,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cf5a286f359a8d4a"
+    },
+    "/docs/16/contrib.html": {
+      "offset": 610118,
+      "length": 10746,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "368e22e73b0aa52d"
+    },
+    "/docs/16/docguide.html": {
+      "offset": 620864,
+      "length": 3656,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "43466a256c157e4c"
+    },
+    "/docs/16/sourcerepo.html": {
+      "offset": 624520,
+      "length": 3217,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6e535d4ab5cd3d3f"
+    },
+    "/docs/16/contrib-prog.html": {
+      "offset": 627737,
+      "length": 3192,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "87be367299bd718a"
+    },
+    "/docs/16/external-projects.html": {
+      "offset": 630929,
+      "length": 2997,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "381704a2c8555aea"
+    },
+    "/docs/16/limits.html": {
+      "offset": 633926,
+      "length": 4007,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1f697e0c454351ce"
+    },
+    "/docs/16/acronyms.html": {
+      "offset": 637933,
+      "length": 5792,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9641793f35eebab3"
+    },
+    "/docs/16/color.html": {
+      "offset": 643725,
+      "length": 2700,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "270634f17e0fc272"
+    },
+    "/docs/16/glossary.html": {
+      "offset": 646425,
+      "length": 20785,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fe4c21cff00de043"
+    },
+    "/docs/16/appendix-obsolete.html": {
+      "offset": 667210,
+      "length": 2974,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2757679f0f5b20f6"
+    },
+    "/docs/16/biblio.html": {
+      "offset": 670184,
+      "length": 5375,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a9c0cfbab92b8d4e"
+    },
+    "/__docx_assets/e64127acb0a640.css": {
+      "offset": 675559,
+      "length": 7609,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "f7c74b16dc9d7e0d"
+    },
+    "/favicon.ico": {
+      "offset": 683168,
+      "length": 1403,
+      "mime": "image/x-icon",
+      "gzipped": true,
+      "hash": "f67c79765cabc5c4"
+    },
+    "/__docx_assets/c181c774ee3057.css": {
+      "offset": 684571,
+      "length": 11931,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "78a506ff9ddcb8d7"
+    },
+    "/media/img/empty.png": {
+      "offset": 696502,
+      "length": 93,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3fa8ce4d732c1788"
+    },
+    "/media/css/bootstrap-4.4.1.min.css": {
+      "offset": 696595,
+      "length": 23658,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "a0c4ead219708002"
+    },
+    "/media/img/about/press/elephant.png": {
+      "offset": 720253,
+      "length": 49330,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4577c606ae904e4c"
+    },
+    "/media/webfonts/fa-regular-400.woff2": {
+      "offset": 769583,
+      "length": 12243,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "519384021847f449"
+    },
+    "/media/webfonts/fa-regular-400.woff": {
+      "offset": 781826,
+      "length": 14717,
+      "mime": "font/woff",
+      "gzipped": true,
+      "hash": "dcb88d27f669c025"
+    },
+    "/media/webfonts/fa-regular-400.ttf": {
+      "offset": 796543,
+      "length": 14991,
+      "mime": "font/ttf",
+      "gzipped": true,
+      "hash": "99ed705ebff2b066"
+    },
+    "/media/webfonts/fa-regular-400.eot": {
+      "offset": 811534,
+      "length": 15044,
+      "mime": "application/vnd.ms-fontobject",
+      "gzipped": true,
+      "hash": "6de8b01469b73921"
+    },
+    "/media/webfonts/fa-solid-900.woff": {
+      "offset": 826578,
+      "length": 48734,
+      "mime": "font/woff",
+      "gzipped": true,
+      "hash": "e61d16cd9b09750f"
+    },
+    "/media/webfonts/fa-solid-900.woff2": {
+      "offset": 875312,
+      "length": 38787,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "6bdfaedfe6bf109a"
+    },
+    "/media/webfonts/fa-brands-400.ttf": {
+      "offset": 914099,
+      "length": 64497,
+      "mime": "font/ttf",
+      "gzipped": true,
+      "hash": "f9c94663b695ea36"
+    },
+    "/media/webfonts/fa-brands-400.eot": {
+      "offset": 978596,
+      "length": 64622,
+      "mime": "application/vnd.ms-fontobject",
+      "gzipped": true,
+      "hash": "597d57173eb0081b"
+    },
+    "/media/webfonts/fa-brands-400.woff2": {
+      "offset": 1043218,
+      "length": 54458,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e53e09d9da350411"
+    },
+    "/media/webfonts/fa-brands-400.woff": {
+      "offset": 1097676,
+      "length": 63750,
+      "mime": "font/woff",
+      "gzipped": true,
+      "hash": "bfa69f157aa10fdd"
+    },
+    "/media/webfonts/fa-solid-900.eot": {
+      "offset": 1161426,
+      "length": 49677,
+      "mime": "application/vnd.ms-fontobject",
+      "gzipped": true,
+      "hash": "618603740dd64240"
+    },
+    "/media/css/open-sans-woff.css": {
+      "offset": 1211103,
+      "length": 522,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "c62073b0b3efc7e3"
+    },
+    "/media/css/open-sans-woff2.css": {
+      "offset": 1211625,
+      "length": 599,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "6376da095c797379"
+    },
+    "/media/webfonts/fa-solid-900.ttf": {
+      "offset": 1212224,
+      "length": 49577,
+      "mime": "font/ttf",
+      "gzipped": true,
+      "hash": "76c7e11d794a6c00"
+    },
+    "/media/img/feature/feature_elephant.png": {
+      "offset": 1261801,
+      "length": 11487,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "55d059912fd5b953"
+    },
+    "/media/img/misc/training.jpg": {
+      "offset": 1273288,
+      "length": 62894,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "2d8bb69743559a71"
+    },
+    "/media/img/misc/bugs.jpg": {
+      "offset": 1336182,
+      "length": 67505,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "7224c6c25f4ff13f"
+    },
+    "/media/img/misc/banner.jpg": {
+      "offset": 1403687,
+      "length": 113126,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "5baa33fdbfdf642a"
+    },
+    "/": {
+      "offset": 0,
+      "length": 2342,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "15f574bc9ec146b8"
+    }
+  }
+}

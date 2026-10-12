@@ -1,1 +1,1574 @@
-{"id":"sqlite","name":"SQLite","version":"v3.49","commit":"da418c3f","origin":"https://www.sqlite.org","entryPath":"/docs.html","updatedAt":"2026-10-10T18:58:00.318Z","totalBytes":2859832,"chunkCount":222,"routes":{"/docs.html":{"offset":0,"length":10799,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2ceeca9f86b4f92a"},"/index.html":{"offset":10799,"length":3754,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dc6e76f6b3e323ee"},"/about.html":{"offset":14553,"length":4651,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d1cd6489e1b1c6f1"},"/support.html":{"offset":19204,"length":3275,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"290757ab53448861"},"/copyright.html":{"offset":22479,"length":4161,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"99c6a3cd1073d715"},"/quickstart.html":{"offset":26640,"length":4030,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d2bbba318dad09f7"},"/lang_mathfunc.html":{"offset":30670,"length":4329,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6366f7313f313109"},"/c3ref/intro.html":{"offset":34999,"length":2963,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c277ad2ca8114513"},"/features.html":{"offset":37962,"length":3927,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9032766e66fec56a"},"/download.html":{"offset":41889,"length":6176,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"96847836db93c74a"},"/prosupport.html":{"offset":48065,"length":6020,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"192059b5facdfa94"},"/lang_datefunc.html":{"offset":54085,"length":10294,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1cc8554d26cc0cb6"},"/whentouse.html":{"offset":64379,"length":9092,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"90097226cadd6a23"},"/cintro.html":{"offset":73471,"length":8292,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5c3b245441c96ce7"},"/lang.html":{"offset":81763,"length":7793,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b7faac21c53cf14b"},"/lang_corefunc.html":{"offset":89556,"length":12730,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3d1b9816f43b1974"},"/json1.html":{"offset":102286,"length":19361,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3828ce671f112b29"},"/doclist.html":{"offset":121647,"length":6226,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3d77f30376c3f8b6"},"/different.html":{"offset":127873,"length":6832,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b30cbc65df94448d"},"/books.html":{"offset":134705,"length":7360,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b8c2d78e2ee3a723"},"/src/timeline":{"offset":142065,"length":23335,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dd10d6d3497e36ab"},"/c3ref/funclist.html":{"offset":165400,"length":5008,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"550daa3eefd01499"},"/faq.html":{"offset":170408,"length":13471,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"522c6c9e5ec2df49"},"/quirks.html":{"offset":183879,"length":11239,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9b98c312ccbd034e"},"/howtocompile.html":{"offset":195118,"length":7723,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"42daab43dbfd5dbf"},"/news.html":{"offset":202841,"length":20131,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"854ba0f5157d18ae"},"/sitemap.html":{"offset":222972,"length":11012,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"63cf01e2c1ee88cf"},"/tclsqlite.html":{"offset":233984,"length":19256,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f3628f4a732f9fd4"},"/testing.html":{"offset":253240,"length":21163,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d990ba7343e8b2fc"},"/cli.html":{"offset":274403,"length":31743,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f2d65a4f1332a794"},"/chronology.html":{"offset":306146,"length":12596,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5f03ce7c04d5519b"},"/keyword_index.html":{"offset":318742,"length":39834,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e2b2da9ee4a3c9a0"},"/src/login":{"offset":358576,"length":3423,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"19be259e4e20d898"},"/gencol.html":{"offset":361999,"length":5077,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fdbe2583a8e5d291"},"/expridx.html":{"offset":367076,"length":4432,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4d0338ea1b1c56fd"},"/appfunc.html":{"offset":371508,"length":8541,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4b453c5179ff4a41"},"/datatype3.html":{"offset":380049,"length":12858,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b846b5f0d969359b"},"/pragma.html":{"offset":392907,"length":36057,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d14031ff9a5b0980"},"/lang_aggfunc.html":{"offset":428964,"length":51872,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b7718a9686f9bc0f"},"/rescode.html":{"offset":480836,"length":16860,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"befc597f75a628a9"},"/rowvalue.html":{"offset":497696,"length":6755,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8e3e2bbe5347e0f2"},"/dbstat.html":{"offset":504451,"length":5618,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bf374662316515c1"},"/stricttables.html":{"offset":510069,"length":5911,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bd5b769e529c8bcf"},"/loadext.html":{"offset":515980,"length":7737,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f91a07b3cfb1b919"},"/sessionintro.html":{"offset":523717,"length":9338,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"28f868ab1206bca1"},"/rtree.html":{"offset":533055,"length":14743,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1154d2b4deb9fd50"},"/windowfunctions.html":{"offset":547798,"length":149791,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fe16ea4e31abaa3c"},"/fts3.html":{"offset":697589,"length":45967,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fcc102be36f5aaa9"},"/fts5.html":{"offset":743556,"length":56965,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"af4d166d6d92a380"},"/autoinc.html":{"offset":800521,"length":5013,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"945f9da509b0dc07"},"/intern-v-extern-blob.html":{"offset":805534,"length":3686,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3d8da5089b087c92"},"/percentile.html":{"offset":809220,"length":5224,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"15749e7c6a0eb8bb"},"/errlog.html":{"offset":814444,"length":5578,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d9455f38b51fb112"},"/c3ref/backup_finish.html":{"offset":820022,"length":5680,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b53342a7f16841df"},"/csv.html":{"offset":825702,"length":4188,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"acb2911ac05fce78"},"/uintcseq.html":{"offset":829890,"length":3106,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5572679d780bb653"},"/shortnames.html":{"offset":832996,"length":4353,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0af23a3d9c0bcc6e"},"/series.html":{"offset":837349,"length":3601,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bb3e064ea4c2493f"},"/carray.html":{"offset":840950,"length":4561,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ef594022478820f6"},"/zipfile.html":{"offset":845511,"length":7333,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"02cec99e43de5bf5"},"/backup.html":{"offset":852844,"length":8290,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"54e0927d4964c465"},"/limits.html":{"offset":861134,"length":8385,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2a6826477054dee3"},"/spellfix1.html":{"offset":869519,"length":10998,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4376008de6cd5c26"},"/foreignkeys.html":{"offset":880517,"length":13738,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"48d1d5ed607bf132"},"/sqlanalyze.html":{"offset":894255,"length":11258,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6a943583e4d2c51b"},"/uri.html":{"offset":905513,"length":6440,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9f2da8c77c4dcff7"},"/appfileformat.html":{"offset":911953,"length":10982,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"124ed9bc65d2b6b3"},"/wal.html":{"offset":922935,"length":14736,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a375d884aa3bcf2d"},"/rsync.html":{"offset":937671,"length":5944,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a42f3d8521488a9d"},"/rbu.html":{"offset":943615,"length":11325,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"151f0ab4be35f158"},"/fasterthanfs.html":{"offset":954940,"length":9717,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"13b844772cd7756f"},"/partialindex.html":{"offset":964657,"length":55267,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c3b7d7285a809c7d"},"/sqldiff.html":{"offset":1019924,"length":4640,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ce5e54f92f97a31f"},"/sharedcache.html":{"offset":1024564,"length":6623,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"72b0b1d790b4497f"},"/mmap.html":{"offset":1031187,"length":5298,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0933fbe9127464ba"},"/nulls.html":{"offset":1036485,"length":4936,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"38f6b13dab3efa4d"},"/threadsafe.html":{"offset":1041421,"length":3788,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6d2b7ce0881328d0"},"/dbhash.html":{"offset":1045209,"length":3465,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"83583ce61bb5d5d9"},"/withoutrowid.html":{"offset":1048674,"length":7261,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d08dda0331509909"},"/flextypegood.html":{"offset":1055935,"length":12090,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"07544144b249ef78"},"/unlock_notify.html":{"offset":1068025,"length":7647,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"736cf2583a127862"},"/inmemorydb.html":{"offset":1075672,"length":4015,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"192a61f1d0524ef5"},"/security.html":{"offset":1079687,"length":6552,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8b1d69fb7b7443f8"},"/whyc.html":{"offset":1086239,"length":5810,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4c3fdfd106808682"},"/custombuild.html":{"offset":1092049,"length":6634,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"54e7e04c399ac579"},"/isolation.html":{"offset":1098683,"length":6643,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7cf75226195dd7b1"},"/lockingv3.html":{"offset":1105326,"length":11265,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d86362351ffac7ee"},"/famous.html":{"offset":1116591,"length":5123,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"daeb5ee7e4557ffa"},"/whynotgit.html":{"offset":1121714,"length":9371,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5bc654fbd6fd97dd"},"/malloc.html":{"offset":1131085,"length":18034,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3c44975899f0f482"},"/tempfiles.html":{"offset":1149119,"length":10961,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d916f70e1e501893"},"/queryplanner-ng.html":{"offset":1160080,"length":21201,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"253328bea540409c"},"/optoverview.html":{"offset":1181281,"length":23032,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"444f7f21eed66c69"},"/howtocorrupt.html":{"offset":1204313,"length":16112,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cbd8b687b1cf1233"},"/atomiccommit.html":{"offset":1220425,"length":24615,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b0e65c37817f34c5"},"/arch.html":{"offset":1245040,"length":7496,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7ae900d80ac34bfd"},"/opcode.html":{"offset":1252536,"length":37623,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"54655d48d89c3b54"},"/debugging.html":{"offset":1290159,"length":4430,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3b415844c5585997"},"/vfs.html":{"offset":1294589,"length":7667,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7f777b6ec3e020bf"},"/formatchng.html":{"offset":1302256,"length":2914,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a5518f68e8f3554b"},"/35to36.html":{"offset":1305170,"length":6178,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"abb2d8b7ef4294f3"},"/asyncvfs.html":{"offset":1311348,"length":5577,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4eb8930dae09e792"},"/datatypes.html":{"offset":1316925,"length":5604,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e1c43c28b7908923"},"/capi3.html":{"offset":1322529,"length":8413,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f233e2e657cb549a"},"/version3.html":{"offset":1330942,"length":7025,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"108628013b52be1a"},"/privatebranch.html":{"offset":1337967,"length":8173,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"562da6ade2e70342"},"/34to35.html":{"offset":1346140,"length":15918,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5014fea78333e422"},"/vdbe.html":{"offset":1362058,"length":27813,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c688901f4f70229e"},"/fileformat2.html":{"offset":1389871,"length":31103,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4da42a147a96bdd5"},"/vtab.html":{"offset":1420974,"length":30073,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e813461a0c3e16e0"},"/compile.html":{"offset":1451047,"length":36776,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0cae444a91bfe1a0"},"/changes.html":{"offset":1487823,"length":141753,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a9bb3fe695df2fbc"},"/c_interface.html":{"offset":1629576,"length":15766,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"052174b870f8194b"},"/footprint.html":{"offset":1645342,"length":2806,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ac09d2e5fe1a8cb8"},"/mostdeployed.html":{"offset":1648148,"length":3416,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d77617c0b979328e"},"/amalgamation.html":{"offset":1651564,"length":5489,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f1130e81ce24ed2a"},"/fullsql.html":{"offset":1657053,"length":3579,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"800c0c9fe5c68603"},"/releaselog/3_54_0.html":{"offset":1660632,"length":4952,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0189dc29916abf47"},"/onefile.html":{"offset":1665584,"length":2967,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"80525258bf44f305"},"/transactional.html":{"offset":1668551,"length":2723,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c3ca15132076f45d"},"/fileformat.html":{"offset":1671274,"length":31101,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a5be6477d4d39c1b"},"/consortium.html":{"offset":1702375,"length":4147,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"861c9d96d3d4fabf"},"/selfcontained.html":{"offset":1706522,"length":2949,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9a7d3e9c0720aba5"},"/speed.html":{"offset":1709471,"length":2426,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"54fb363cbd2a7548"},"/hirely.html":{"offset":1711897,"length":3075,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"332432e4a144aacc"},"/zeroconf.html":{"offset":1714972,"length":2587,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8d8159cb9838a650"},"/lts.html":{"offset":1717559,"length":4175,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"87d3995cac9766c8"},"/locrsf.html":{"offset":1721734,"length":3422,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"841ab1749fe83efe"},"/c3ref/exec.html":{"offset":1725156,"length":3616,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"39cd5c3ac62d1a15"},"/crew.html":{"offset":1728772,"length":2625,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ea58c2b0ab93bf8c"},"/c3ref/close.html":{"offset":1731397,"length":3185,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"63873d857273d015"},"/serverless.html":{"offset":1734582,"length":3875,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ea048b0fb6a5b020"},"/th3.html":{"offset":1738457,"length":10187,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2d6e862f0085bc9a"},"/c3ref/open.html":{"offset":1748644,"length":7390,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2bbb524a5ac9d0ce"},"/c3ref/sqlite3.html":{"offset":1756034,"length":3528,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"aefb5bd96d789150"},"/c3ref/objlist.html":{"offset":1759562,"length":2665,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1889b13602c81fa0"},"/capi3ref.html":{"offset":1762227,"length":166726,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c718ce50f6c7feb1"},"/c3ref/stmt.html":{"offset":1928953,"length":3343,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3c274eff6f8d14ba"},"/c3ref/constlist.html":{"offset":1932296,"length":8266,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"87728ba677824022"},"/c3ref/c_open_autoproxy.html":{"offset":1940562,"length":3211,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5bae6b722cbe43b9"},"/sqlite.css":{"offset":1943773,"length":2435,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"fc8903cd43025e78"},"/images/nocopy.gif":{"offset":1946208,"length":3472,"mime":"image/gif","gzipped":true,"hash":"d6f76c6acaf84efb"},"/images/sqlite370_banner.svg":{"offset":1949680,"length":5319,"mime":"image/svg+xml","gzipped":true,"hash":"9c8898b6fcff2a5b"},"/images/books/darocha2016.jpg":{"offset":1954999,"length":9064,"mime":"image/jpeg","gzipped":true,"hash":"b8f251b26be5450f"},"/images/books/haldar2.jpg":{"offset":1964063,"length":9827,"mime":"image/jpeg","gzipped":true,"hash":"778a5b70c3300361"},"/images/books/aditya.jpg":{"offset":1973890,"length":6379,"mime":"image/jpeg","gzipped":true,"hash":"0e19a23496504008"},"/images/books/sanderson2018.jpg":{"offset":1980269,"length":5036,"mime":"image/jpeg","gzipped":true,"hash":"b2a72aa8a14fa746"},"/images/books/owens.jpg":{"offset":1985305,"length":6740,"mime":"image/jpeg","gzipped":true,"hash":"52dc5a21e52715ee"},"/images/books/das.jpg":{"offset":1992045,"length":6651,"mime":"image/jpeg","gzipped":true,"hash":"9950a6319749da2b"},"/images/books/vanderLans.jpg":{"offset":1998696,"length":13181,"mime":"image/jpeg","gzipped":true,"hash":"a2c790db324585bf"},"/images/books/kreibich.gif":{"offset":2011877,"length":11172,"mime":"image/gif","gzipped":true,"hash":"2effd7ade4399752"},"/images/books/symbiansql.jpg":{"offset":2023049,"length":8067,"mime":"image/jpeg","gzipped":true,"hash":"f0dcdab136ce4300"},"/images/books/droessler.jpg":{"offset":2031116,"length":3314,"mime":"image/jpeg","gzipped":true,"hash":"02caa7ff7d725be2"},"/images/books/nishizawa2.jpg":{"offset":2034430,"length":13687,"mime":"image/jpeg","gzipped":true,"hash":"f7fba9faf44a0d20"},"/images/books/newman.jpg":{"offset":2048117,"length":9522,"mime":"image/jpeg","gzipped":true,"hash":"9ac1312f67cd5336"},"/images/books/haldar.gif":{"offset":2057639,"length":15120,"mime":"image/gif","gzipped":true,"hash":"4279e6d6c0b5d474"},"/__docx_assets/2ff302a4d899c6.css":{"offset":2072759,"length":15236,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"310bbae84129edd8"},"/images/fts3_leaf_node.png":{"offset":2087995,"length":24358,"mime":"image/png","gzipped":true,"hash":"ae618579ed8c7862"},"/images/sschart20221116.jpg":{"offset":2112353,"length":51638,"mime":"image/jpeg","gzipped":true,"hash":"58f6a8cf00474f2b"},"/images/fts3_doclist2.png":{"offset":2163991,"length":8405,"mime":"image/png","gzipped":true,"hash":"3459d2a25b56b2ff"},"/images/fts5_formula2.png":{"offset":2172396,"length":4321,"mime":"image/png","gzipped":true,"hash":"2d9e7b53b47b9308"},"/images/fts5_formula1.png":{"offset":2176717,"length":6923,"mime":"image/png","gzipped":true,"hash":"92c4ac08293020b4"},"/images/faster-read-blobapi.jpg":{"offset":2183640,"length":12421,"mime":"image/jpeg","gzipped":true,"hash":"bd5f2a0393a2456e"},"/images/fts5_formula3.png":{"offset":2196061,"length":3622,"mime":"image/png","gzipped":true,"hash":"34ce9349714b3101"},"/images/faster-read-sql.jpg":{"offset":2199683,"length":10784,"mime":"image/jpeg","gzipped":true,"hash":"4de15cab4864012f"},"/images/foreignlogos/dropbox.gif":{"offset":2210467,"length":3588,"mime":"image/gif","gzipped":true,"hash":"25c1e42cb4e527d2"},"/images/foreignlogos/bentley.gif":{"offset":2214055,"length":7710,"mime":"image/gif","gzipped":true,"hash":"8554948992aeb29a"},"/images/foreignlogos/bosch_logo1.gif":{"offset":2221765,"length":3739,"mime":"image/gif","gzipped":true,"hash":"68bb814b654219da"},"/images/foreignlogos/apple.gif":{"offset":2225504,"length":5971,"mime":"image/gif","gzipped":true,"hash":"26094b8ea8ae6342"},"/images/faster-write-unsafe.jpg":{"offset":2231475,"length":11778,"mime":"image/jpeg","gzipped":true,"hash":"8dd2d6a20405ad98"},"/images/faster-write-safe.jpg":{"offset":2243253,"length":9552,"mime":"image/jpeg","gzipped":true,"hash":"16beca0e7e4cc590"},"/images/shared.gif":{"offset":2252805,"length":5713,"mime":"image/gif","gzipped":true,"hash":"410bb8f7bc7987bc"},"/images/foreignlogos/adobe.gif":{"offset":2258518,"length":2856,"mime":"image/gif","gzipped":true,"hash":"723361cb7451d24a"},"/images/foreignlogos/airbus2.gif":{"offset":2261374,"length":2645,"mime":"image/gif","gzipped":true,"hash":"b9e678ef1aa7c2b6"},"/images/fts3_doclist.png":{"offset":2264019,"length":20350,"mime":"image/png","gzipped":true,"hash":"27aece80d21c9d17"},"/images/foreignlogos/expensify.png":{"offset":2284369,"length":10809,"mime":"image/png","gzipped":true,"hash":"ea280253d1b6dddd"},"/images/faster-read-mmap.jpg":{"offset":2295178,"length":12874,"mime":"image/jpeg","gzipped":true,"hash":"6a7ba08d26da8d57"},"/images/fts3_interior_node.png":{"offset":2308052,"length":25414,"mime":"image/png","gzipped":true,"hash":"3691f3c868f17a0c"},"/images/foreignlogos/fb.gif":{"offset":2333466,"length":3122,"mime":"image/gif","gzipped":true,"hash":"15d32dd5adde3552"},"/images/foreignlogos/ge.gif":{"offset":2336588,"length":5253,"mime":"image/gif","gzipped":true,"hash":"bc12f292570d068e"},"/images/foreignlogos/google.gif":{"offset":2341841,"length":3582,"mime":"image/gif","gzipped":true,"hash":"406bf8d3d8cc718a"},"/images/foreignlogos/intuit.gif":{"offset":2345423,"length":4363,"mime":"image/gif","gzipped":true,"hash":"98c4dd8db9133b0c"},"/images/foreignlogos/firefox.gif":{"offset":2349786,"length":5145,"mime":"image/gif","gzipped":true,"hash":"45ae5434bc0eecca"},"/images/foreignlogos/loc.jpg":{"offset":2354931,"length":5361,"mime":"image/jpeg","gzipped":true,"hash":"6aed62c2d1be7f22"},"/images/foreignlogos/mcaffee.gif":{"offset":2360292,"length":2804,"mime":"image/gif","gzipped":true,"hash":"cc98b02cbfdf2731"},"/images/ac/commit-2.gif":{"offset":2363096,"length":8368,"mime":"image/gif","gzipped":true,"hash":"5da39c8cf3719a9a"},"/images/foreignlogos/php.gif":{"offset":2371464,"length":3658,"mime":"image/gif","gzipped":true,"hash":"121b031e79152898"},"/images/foreignlogos/nds.png":{"offset":2375122,"length":7305,"mime":"image/png","gzipped":true,"hash":"4e030b5db73ad5ed"},"/images/ac/commit-4.gif":{"offset":2382427,"length":11159,"mime":"image/gif","gzipped":true,"hash":"6607a38438420a3b"},"/images/foreignlogos/microsoft.gif":{"offset":2393586,"length":2181,"mime":"image/gif","gzipped":true,"hash":"1fe0023afbbf4f05"},"/images/foreignlogos/python.gif":{"offset":2395767,"length":2193,"mime":"image/gif","gzipped":true,"hash":"ee92fe6a24144ee0"},"/images/foreignlogos/skype.gif":{"offset":2397960,"length":3401,"mime":"image/gif","gzipped":true,"hash":"d82548417fb477a4"},"/images/foreignlogos/tcl.gif":{"offset":2401361,"length":1778,"mime":"image/gif","gzipped":true,"hash":"218b94386a094c08"},"/images/ac/commit-0.gif":{"offset":2403139,"length":5546,"mime":"image/gif","gzipped":true,"hash":"4cf018eeff841f14"},"/images/ac/commit-3.gif":{"offset":2408685,"length":6972,"mime":"image/gif","gzipped":true,"hash":"b334d9c3f96fd4ff"},"/images/foreignlogos/xojo.png":{"offset":2415657,"length":11349,"mime":"image/png","gzipped":true,"hash":"8ebfef470736f00c"},"/images/ac/commit-1.gif":{"offset":2427006,"length":6150,"mime":"image/gif","gzipped":true,"hash":"48f5bf0318722914"},"/images/foreignlogos/rpm_logo.png":{"offset":2433156,"length":22399,"mime":"image/png","gzipped":true,"hash":"c1d73e7ed07e0a94"},"/__docx_assets/2514b0bfe4e6fc.gif":{"offset":2455555,"length":37344,"mime":"image/gif","gzipped":true,"hash":"bc8842780e437969"},"/images/ac/commit-8.gif":{"offset":2492899,"length":10417,"mime":"image/gif","gzipped":true,"hash":"102b34b3f2f973ed"},"/images/ac/commit-B.gif":{"offset":2503316,"length":6248,"mime":"image/gif","gzipped":true,"hash":"bfcbbea8e639a942"},"/images/ac/commit-6.gif":{"offset":2509564,"length":9765,"mime":"image/gif","gzipped":true,"hash":"6dbf985f2838f4d1"},"/images/ac/commit-7.gif":{"offset":2519329,"length":9497,"mime":"image/gif","gzipped":true,"hash":"b68158443bc5f936"},"/images/ac/commit-5.gif":{"offset":2528826,"length":9755,"mime":"image/gif","gzipped":true,"hash":"caf36de07894c68e"},"/images/ac/commit-9.gif":{"offset":2538581,"length":10433,"mime":"image/gif","gzipped":true,"hash":"00647fc4897e9260"},"/images/ac/rollback-0.gif":{"offset":2549014,"length":7773,"mime":"image/gif","gzipped":true,"hash":"cc4a00b66318d3f2"},"/images/ac/commit-A.gif":{"offset":2556787,"length":12979,"mime":"image/gif","gzipped":true,"hash":"e539e58aba878f13"},"/images/ac/rollback-3.gif":{"offset":2569766,"length":10079,"mime":"image/gif","gzipped":true,"hash":"63fa32de62f779de"},"/images/ac/rollback-4.gif":{"offset":2579845,"length":10549,"mime":"image/gif","gzipped":true,"hash":"92d483a668c4b97e"},"/images/ac/rollback-2.gif":{"offset":2590394,"length":8738,"mime":"image/gif","gzipped":true,"hash":"ca40d13b3f604d75"},"/images/ac/rollback-1.gif":{"offset":2599132,"length":9041,"mime":"image/gif","gzipped":true,"hash":"9ed3ee7ff47e5173"},"/images/ac/rollback-5.gif":{"offset":2608173,"length":6302,"mime":"image/gif","gzipped":true,"hash":"f845f0c78e91e90c"},"/images/ac/multi-0.gif":{"offset":2614475,"length":6304,"mime":"image/gif","gzipped":true,"hash":"51fa1c258950bd91"},"/images/ac/multi-1.gif":{"offset":2620779,"length":11552,"mime":"image/gif","gzipped":true,"hash":"755311b9ed70393b"},"/images/ac/multi-3.gif":{"offset":2632331,"length":11674,"mime":"image/gif","gzipped":true,"hash":"85acee14f455aeba"},"/images/ac/multi-5.gif":{"offset":2644005,"length":7609,"mime":"image/gif","gzipped":true,"hash":"9b779370bffb67c9"},"/images/ac/multi-4.gif":{"offset":2651614,"length":13412,"mime":"image/gif","gzipped":true,"hash":"03a84000a4f7d4b4"},"/images/ac/multi-2.gif":{"offset":2665026,"length":12845,"mime":"image/gif","gzipped":true,"hash":"2cd5c8279ec6a931"},"/images/vfs1.gif":{"offset":2677871,"length":12329,"mime":"image/gif","gzipped":true,"hash":"17bfd66b7f3b67a9"},"/images/private_branch.gif":{"offset":2690200,"length":13573,"mime":"image/gif","gzipped":true,"hash":"14dabe3a98646e31"},"/images/loc.jpg":{"offset":2703773,"length":47561,"mime":"image/jpeg","gzipped":true,"hash":"4cd0ecbcce4668bd"},"/images/sqlitepie.jpg":{"offset":2751334,"length":108498,"mime":"image/jpeg","gzipped":true,"hash":"6f14465d8e7f2235"},"/docs":{"offset":0,"length":10799,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2ceeca9f86b4f92a"},"/":{"offset":0,"length":10799,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2ceeca9f86b4f92a"}}}
+{
+  "id": "sqlite",
+  "name": "SQLite",
+  "version": "v3.49",
+  "commit": "deaf7fc2",
+  "origin": "https://www.sqlite.org",
+  "entryPath": "/docs.html",
+  "updatedAt": "2026-10-11T10:38:42.722Z",
+  "totalBytes": 2591768,
+  "chunkCount": 221,
+  "routes": {
+    "/docs.html": {
+      "offset": 0,
+      "length": 9903,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1ed646ca216853fd"
+    },
+    "/index.html": {
+      "offset": 9903,
+      "length": 2878,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b726698c1fd1555f"
+    },
+    "/features.html": {
+      "offset": 12781,
+      "length": 3036,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "98eedd5c7018ae16"
+    },
+    "/prosupport.html": {
+      "offset": 15817,
+      "length": 5117,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d4674931c6cdc2f6"
+    },
+    "/cintro.html": {
+      "offset": 20934,
+      "length": 7384,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "52249d506b968925"
+    },
+    "/support.html": {
+      "offset": 28318,
+      "length": 2408,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f92a2b4175546996"
+    },
+    "/about.html": {
+      "offset": 30726,
+      "length": 3758,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a67c6db564e94bf6"
+    },
+    "/download.html": {
+      "offset": 34484,
+      "length": 5273,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "60af37154c232f2f"
+    },
+    "/lang.html": {
+      "offset": 39757,
+      "length": 6827,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1cb31cbb62bafbca"
+    },
+    "/quickstart.html": {
+      "offset": 46584,
+      "length": 3145,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fefd407b2497abd3"
+    },
+    "/whentouse.html": {
+      "offset": 49729,
+      "length": 8187,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f9d0e481a4110d21"
+    },
+    "/lang_mathfunc.html": {
+      "offset": 57916,
+      "length": 3434,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c6664ebf760151b3"
+    },
+    "/c3ref/intro.html": {
+      "offset": 61350,
+      "length": 2091,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f5f47e44bbfcb45d"
+    },
+    "/copyright.html": {
+      "offset": 63441,
+      "length": 3275,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eee45a43d938013a"
+    },
+    "/lang_datefunc.html": {
+      "offset": 66716,
+      "length": 9387,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c5e174c0a84aea1d"
+    },
+    "/lang_corefunc.html": {
+      "offset": 76103,
+      "length": 11796,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b2596af921b88a71"
+    },
+    "/json1.html": {
+      "offset": 87899,
+      "length": 18415,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "603b0a6641484bfb"
+    },
+    "/c3ref/funclist.html": {
+      "offset": 106314,
+      "length": 4061,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "58291363979697bf"
+    },
+    "/tclsqlite.html": {
+      "offset": 110375,
+      "length": 18306,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e282557803b43a1c"
+    },
+    "/quirks.html": {
+      "offset": 128681,
+      "length": 10331,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c2e6bf63c81e6686"
+    },
+    "/testing.html": {
+      "offset": 139012,
+      "length": 20236,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "844bb347c7eef7fd"
+    },
+    "/books.html": {
+      "offset": 159248,
+      "length": 6464,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a2c23fb8a1598d1b"
+    },
+    "/faq.html": {
+      "offset": 165712,
+      "length": 12558,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "76971b6aedb66743"
+    },
+    "/howtocompile.html": {
+      "offset": 178270,
+      "length": 6818,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f520b0fb7c77053b"
+    },
+    "/doclist.html": {
+      "offset": 185088,
+      "length": 5333,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c51d266214727f0e"
+    },
+    "/different.html": {
+      "offset": 190421,
+      "length": 5926,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a49c7da52961e3c6"
+    },
+    "/cli.html": {
+      "offset": 196347,
+      "length": 30833,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c035c1109888be37"
+    },
+    "/src/timeline": {
+      "offset": 227180,
+      "length": 22573,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "613a35565fcbd3fc"
+    },
+    "/news.html": {
+      "offset": 249753,
+      "length": 19192,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "181e6b83b8d664b3"
+    },
+    "/sitemap.html": {
+      "offset": 268945,
+      "length": 10055,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f22a6f9d7f3eb478"
+    },
+    "/chronology.html": {
+      "offset": 279000,
+      "length": 11596,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5a9d472276c6fd64"
+    },
+    "/keyword_index.html": {
+      "offset": 290596,
+      "length": 38824,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1c3d91a7dfd3fe19"
+    },
+    "/src/login": {
+      "offset": 329420,
+      "length": 2554,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d7717d53cb37130f"
+    },
+    "/appfunc.html": {
+      "offset": 331974,
+      "length": 7645,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "40d24b5a6ef0142d"
+    },
+    "/datatype3.html": {
+      "offset": 339619,
+      "length": 11915,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bb314a617e1687cd"
+    },
+    "/rtree.html": {
+      "offset": 351534,
+      "length": 13811,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "add5370cad4be352"
+    },
+    "/gencol.html": {
+      "offset": 365345,
+      "length": 4184,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fae4956b02f89e56"
+    },
+    "/stricttables.html": {
+      "offset": 369529,
+      "length": 5015,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "155482b5e481de33"
+    },
+    "/rescode.html": {
+      "offset": 374544,
+      "length": 15899,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "320dd6cae6943963"
+    },
+    "/loadext.html": {
+      "offset": 390443,
+      "length": 6844,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b558aa0baec58c4c"
+    },
+    "/expridx.html": {
+      "offset": 397287,
+      "length": 3543,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a008c20009666c9b"
+    },
+    "/rowvalue.html": {
+      "offset": 400830,
+      "length": 5865,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7439173ed2d837a8"
+    },
+    "/sessionintro.html": {
+      "offset": 406695,
+      "length": 8432,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a64d23134780caab"
+    },
+    "/pragma.html": {
+      "offset": 415127,
+      "length": 35090,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "58005dd72d227b7a"
+    },
+    "/fts3.html": {
+      "offset": 450217,
+      "length": 45026,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ef5bd3d1d2d7024f"
+    },
+    "/lang_aggfunc.html": {
+      "offset": 495243,
+      "length": 50885,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d7eca3add2db581a"
+    },
+    "/dbstat.html": {
+      "offset": 546128,
+      "length": 4733,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a59e90d06596539f"
+    },
+    "/fts5.html": {
+      "offset": 550861,
+      "length": 56024,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "328a5437a2300adc"
+    },
+    "/windowfunctions.html": {
+      "offset": 606885,
+      "length": 148837,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4ef3b3547c81eacf"
+    },
+    "/sqlanalyze.html": {
+      "offset": 755722,
+      "length": 10268,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8773a14949b9b905"
+    },
+    "/spellfix1.html": {
+      "offset": 765990,
+      "length": 10089,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7cb1a741bf0ab6eb"
+    },
+    "/backup.html": {
+      "offset": 776079,
+      "length": 7381,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f5700b4b7e43e788"
+    },
+    "/foreignkeys.html": {
+      "offset": 783460,
+      "length": 12793,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4eb7848cd154e2f8"
+    },
+    "/percentile.html": {
+      "offset": 796253,
+      "length": 4330,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9a8333bc620e13cb"
+    },
+    "/csv.html": {
+      "offset": 800583,
+      "length": 3302,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "818883d407153ad2"
+    },
+    "/errlog.html": {
+      "offset": 803885,
+      "length": 4687,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ebdea1944fcb9e20"
+    },
+    "/limits.html": {
+      "offset": 808572,
+      "length": 7492,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cda1a315f24c388d"
+    },
+    "/series.html": {
+      "offset": 816064,
+      "length": 2718,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "87281e49ef2fc1b0"
+    },
+    "/uintcseq.html": {
+      "offset": 818782,
+      "length": 2225,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a5e63fb396480d74"
+    },
+    "/c3ref/backup_finish.html": {
+      "offset": 821007,
+      "length": 4778,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "edfd44cc8fe50c57"
+    },
+    "/shortnames.html": {
+      "offset": 825785,
+      "length": 3454,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c727e52b92128cee"
+    },
+    "/autoinc.html": {
+      "offset": 829239,
+      "length": 4125,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3d26a9d5d26b70a8"
+    },
+    "/zipfile.html": {
+      "offset": 833364,
+      "length": 6440,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7dcf651b1c899194"
+    },
+    "/carray.html": {
+      "offset": 839804,
+      "length": 3670,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "14f06c02f67fd73f"
+    },
+    "/intern-v-extern-blob.html": {
+      "offset": 843474,
+      "length": 2790,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "12e29bdf8bf041ce"
+    },
+    "/uri.html": {
+      "offset": 846264,
+      "length": 5555,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "571a629a09e55634"
+    },
+    "/rsync.html": {
+      "offset": 851819,
+      "length": 5052,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d92ec8e8d1abd0ca"
+    },
+    "/mmap.html": {
+      "offset": 856871,
+      "length": 4397,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "482e6d89ff2411b9"
+    },
+    "/threadsafe.html": {
+      "offset": 861268,
+      "length": 2907,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "783974108f966905"
+    },
+    "/withoutrowid.html": {
+      "offset": 864175,
+      "length": 6355,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "73198013ec2ca8b3"
+    },
+    "/appfileformat.html": {
+      "offset": 870530,
+      "length": 10072,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f5ecf34270ab0bc4"
+    },
+    "/nulls.html": {
+      "offset": 880602,
+      "length": 4036,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "03074cc24e5ae6d1"
+    },
+    "/fasterthanfs.html": {
+      "offset": 884638,
+      "length": 8816,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2cf0efd3bce86f05"
+    },
+    "/unlock_notify.html": {
+      "offset": 893454,
+      "length": 6751,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ac3ec459a0ca28e5"
+    },
+    "/sharedcache.html": {
+      "offset": 900205,
+      "length": 5718,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cae666cbc1390bd1"
+    },
+    "/wal.html": {
+      "offset": 905923,
+      "length": 13800,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "17e8a70c95ef415c"
+    },
+    "/sqldiff.html": {
+      "offset": 919723,
+      "length": 3743,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7bad188d0e19821b"
+    },
+    "/dbhash.html": {
+      "offset": 923466,
+      "length": 2581,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1abb46944f6640bf"
+    },
+    "/flextypegood.html": {
+      "offset": 926047,
+      "length": 11196,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9ce48af278c3ceaf"
+    },
+    "/rbu.html": {
+      "offset": 937243,
+      "length": 10411,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f7ebd26fe6fd3125"
+    },
+    "/partialindex.html": {
+      "offset": 947654,
+      "length": 54253,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3e19ddb541247153"
+    },
+    "/whynotgit.html": {
+      "offset": 1001907,
+      "length": 8479,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d8eb469b27e17b91"
+    },
+    "/security.html": {
+      "offset": 1010386,
+      "length": 5659,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "40b93f0bd0083e92"
+    },
+    "/malloc.html": {
+      "offset": 1016045,
+      "length": 17071,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9192f3a809d4dee8"
+    },
+    "/optoverview.html": {
+      "offset": 1033116,
+      "length": 22098,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2525219e20e71f1c"
+    },
+    "/famous.html": {
+      "offset": 1055214,
+      "length": 4223,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1fe6be21ce434e9f"
+    },
+    "/tempfiles.html": {
+      "offset": 1059437,
+      "length": 10044,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "116c00eb3193ae0b"
+    },
+    "/inmemorydb.html": {
+      "offset": 1069481,
+      "length": 3123,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a34da7b53919a4d1"
+    },
+    "/atomiccommit.html": {
+      "offset": 1072604,
+      "length": 23637,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "05edc710a7f78305"
+    },
+    "/queryplanner-ng.html": {
+      "offset": 1096241,
+      "length": 20278,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a622e978f6d4c183"
+    },
+    "/isolation.html": {
+      "offset": 1116519,
+      "length": 5729,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "579b2324df568578"
+    },
+    "/lockingv3.html": {
+      "offset": 1122248,
+      "length": 10357,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "67e034c524d736ae"
+    },
+    "/howtocorrupt.html": {
+      "offset": 1132605,
+      "length": 15178,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "aac4d10ac91dd715"
+    },
+    "/whyc.html": {
+      "offset": 1147783,
+      "length": 4913,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2abe7d035ca806ca"
+    },
+    "/custombuild.html": {
+      "offset": 1152696,
+      "length": 5730,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0bcaa3c3db0e978f"
+    },
+    "/opcode.html": {
+      "offset": 1158426,
+      "length": 36653,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d0a667ae89dda5e7"
+    },
+    "/arch.html": {
+      "offset": 1195079,
+      "length": 6599,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "22a0116140cd5b4c"
+    },
+    "/debugging.html": {
+      "offset": 1201678,
+      "length": 3534,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4706fcc0a7fbbe41"
+    },
+    "/c_interface.html": {
+      "offset": 1205212,
+      "length": 14829,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0d0a8ac331e27e0d"
+    },
+    "/datatypes.html": {
+      "offset": 1220041,
+      "length": 4704,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "95a34057dac697aa"
+    },
+    "/fileformat2.html": {
+      "offset": 1224745,
+      "length": 30134,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3fa34cf654534105"
+    },
+    "/version3.html": {
+      "offset": 1254879,
+      "length": 6135,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e7efe1cf49e64b03"
+    },
+    "/vfs.html": {
+      "offset": 1261014,
+      "length": 6767,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d1544019370aa3d8"
+    },
+    "/35to36.html": {
+      "offset": 1267781,
+      "length": 5285,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "75a1ab1df5728963"
+    },
+    "/vtab.html": {
+      "offset": 1273066,
+      "length": 29098,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "77d1311d839f5b75"
+    },
+    "/formatchng.html": {
+      "offset": 1302164,
+      "length": 2026,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f2977ac147cd2cdb"
+    },
+    "/34to35.html": {
+      "offset": 1304190,
+      "length": 14970,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fc40a34e958617e8"
+    },
+    "/compile.html": {
+      "offset": 1319160,
+      "length": 35823,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e81bfa9ff3972965"
+    },
+    "/privatebranch.html": {
+      "offset": 1354983,
+      "length": 7260,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f7a55b03d91ac427"
+    },
+    "/asyncvfs.html": {
+      "offset": 1362243,
+      "length": 4685,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2b43e1ea8cb8dba9"
+    },
+    "/capi3.html": {
+      "offset": 1366928,
+      "length": 7503,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b0f23c0988d2726f"
+    },
+    "/vdbe.html": {
+      "offset": 1374431,
+      "length": 26825,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a2d3e02b50de5fe2"
+    },
+    "/changes.html": {
+      "offset": 1401256,
+      "length": 140781,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "748c683ccc937c0d"
+    },
+    "/speed.html": {
+      "offset": 1542037,
+      "length": 1545,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c3da0523cccc2b8d"
+    },
+    "/selfcontained.html": {
+      "offset": 1543582,
+      "length": 2065,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bd72128e4d1fd77f"
+    },
+    "/footprint.html": {
+      "offset": 1545647,
+      "length": 1927,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "aa8759859753caba"
+    },
+    "/mostdeployed.html": {
+      "offset": 1547574,
+      "length": 2534,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d113067325f8b30f"
+    },
+    "/fullsql.html": {
+      "offset": 1550108,
+      "length": 2698,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cf6a5a34c607a61d"
+    },
+    "/consortium.html": {
+      "offset": 1552806,
+      "length": 3261,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bf7b6cb0ec2ce271"
+    },
+    "/hirely.html": {
+      "offset": 1556067,
+      "length": 2199,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ff3565ad8206baf8"
+    },
+    "/onefile.html": {
+      "offset": 1558266,
+      "length": 2091,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ed382296c5688ff9"
+    },
+    "/releaselog/3_54_0.html": {
+      "offset": 1560357,
+      "length": 4070,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bdbd28a64bb2ba46"
+    },
+    "/transactional.html": {
+      "offset": 1564427,
+      "length": 1838,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "decd2dbbe9511c76"
+    },
+    "/zeroconf.html": {
+      "offset": 1566265,
+      "length": 1701,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ee8ee92b60fee35b"
+    },
+    "/omitted.html": {
+      "offset": 1567966,
+      "length": 2154,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c56aeddf6b672200"
+    },
+    "/amalgamation.html": {
+      "offset": 1570120,
+      "length": 4597,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "29e0caa1daae7121"
+    },
+    "/lang_with.html": {
+      "offset": 1574717,
+      "length": 59001,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "58b349bd4b4bfa8d"
+    },
+    "/c3ref/sqlite3.html": {
+      "offset": 1633718,
+      "length": 2622,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "91ccd1aec82b1c6c"
+    },
+    "/c3ref/close.html": {
+      "offset": 1636340,
+      "length": 2295,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6a1f9cb879a7c99c"
+    },
+    "/c3ref/open.html": {
+      "offset": 1638635,
+      "length": 6492,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ae2f77ede4fd1094"
+    },
+    "/c3ref/bind_blob.html": {
+      "offset": 1645127,
+      "length": 4627,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b511a5221019a435"
+    },
+    "/c3ref/prepare.html": {
+      "offset": 1649754,
+      "length": 3943,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ec688ccc987e864d"
+    },
+    "/c3ref/stmt.html": {
+      "offset": 1653697,
+      "length": 2433,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9a8d2c23f4b4f920"
+    },
+    "/c3ref/finalize.html": {
+      "offset": 1656130,
+      "length": 2025,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a6028b09a3243621"
+    },
+    "/c3ref/step.html": {
+      "offset": 1658155,
+      "length": 3304,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1870c2350d61871e"
+    },
+    "/c3ref/column_blob.html": {
+      "offset": 1661459,
+      "length": 4808,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c76e685dd770feab"
+    },
+    "/c3ref/exec.html": {
+      "offset": 1666267,
+      "length": 2727,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b6b869b6e8416d5a"
+    },
+    "/c3ref/free_table.html": {
+      "offset": 1668994,
+      "length": 2824,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c8c13b85ac7c6a89"
+    },
+    "/c3ref/column_count.html": {
+      "offset": 1671818,
+      "length": 1801,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d504e7badf65d1bd"
+    },
+    "/lang_attach.html": {
+      "offset": 1673619,
+      "length": 49651,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b5d5cf55b23a1664"
+    },
+    "/sqlite.css": {
+      "offset": 1723270,
+      "length": 2435,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "e3473c3fe17d2239"
+    },
+    "/images/sqlite370_banner.svg": {
+      "offset": 1725705,
+      "length": 5319,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "7083438b1949b096"
+    },
+    "/images/books/darocha2016.jpg": {
+      "offset": 1731024,
+      "length": 9064,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "29bf496118c6fa66"
+    },
+    "/images/books/das.jpg": {
+      "offset": 1740088,
+      "length": 6651,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "a5e37c28d14d2e8e"
+    },
+    "/images/books/vanderLans.jpg": {
+      "offset": 1746739,
+      "length": 13181,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "a7c866ec7e49be82"
+    },
+    "/images/books/kreibich.gif": {
+      "offset": 1759920,
+      "length": 11172,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "656d7919c99a3fc2"
+    },
+    "/images/books/aditya.jpg": {
+      "offset": 1771092,
+      "length": 6379,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "35d8bdb6e727934f"
+    },
+    "/images/books/haldar2.jpg": {
+      "offset": 1777471,
+      "length": 9827,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "851c005c182288d9"
+    },
+    "/images/books/sanderson2018.jpg": {
+      "offset": 1787298,
+      "length": 5036,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "8ac11c5ea54756cb"
+    },
+    "/images/books/nishizawa2.jpg": {
+      "offset": 1792334,
+      "length": 13687,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "c61ba67f4b5bb5c7"
+    },
+    "/images/books/owens.jpg": {
+      "offset": 1806021,
+      "length": 6740,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "32f068d2062d6497"
+    },
+    "/images/nocopy.gif": {
+      "offset": 1812761,
+      "length": 3472,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "6c10b3b96357d57b"
+    },
+    "/images/books/haldar.gif": {
+      "offset": 1816233,
+      "length": 15120,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "3c31c1f193a07563"
+    },
+    "/images/books/symbiansql.jpg": {
+      "offset": 1831353,
+      "length": 8067,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "53a54ca0e827da67"
+    },
+    "/images/books/droessler.jpg": {
+      "offset": 1839420,
+      "length": 3314,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "d798bcae60c48720"
+    },
+    "/images/books/newman.jpg": {
+      "offset": 1842734,
+      "length": 9522,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "ccfebd4c632e78be"
+    },
+    "/images/fts3_leaf_node.png": {
+      "offset": 1852256,
+      "length": 24358,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "dcd605b71f76277d"
+    },
+    "/__docx_assets/2ff302a4d899c6.css": {
+      "offset": 1876614,
+      "length": 15236,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "f32c5114c0f62e84"
+    },
+    "/images/sschart20221116.jpg": {
+      "offset": 1891850,
+      "length": 51638,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "877fd59c8960b525"
+    },
+    "/images/fts3_doclist2.png": {
+      "offset": 1943488,
+      "length": 8405,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f76108505cd13f14"
+    },
+    "/images/fts3_interior_node.png": {
+      "offset": 1951893,
+      "length": 25414,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "94f3ac0251039b19"
+    },
+    "/images/foreignlogos/expensify.png": {
+      "offset": 1977307,
+      "length": 10809,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a3c2f8665643158f"
+    },
+    "/images/fts5_formula3.png": {
+      "offset": 1988116,
+      "length": 3622,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c1e28fa063ac6e0d"
+    },
+    "/images/fts3_doclist.png": {
+      "offset": 1991738,
+      "length": 20350,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0818886fe0ca94b3"
+    },
+    "/images/faster-write-safe.jpg": {
+      "offset": 2012088,
+      "length": 9552,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "f87b281d0d9a306e"
+    },
+    "/images/faster-read-mmap.jpg": {
+      "offset": 2021640,
+      "length": 12874,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "70a5bca2cee98ab9"
+    },
+    "/images/faster-write-unsafe.jpg": {
+      "offset": 2034514,
+      "length": 11778,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "6777a79be9aaf9ca"
+    },
+    "/images/shared.gif": {
+      "offset": 2046292,
+      "length": 5713,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "6f9901b958e8e325"
+    },
+    "/images/faster-read-blobapi.jpg": {
+      "offset": 2052005,
+      "length": 12421,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "31a97396a4adf685"
+    },
+    "/images/foreignlogos/apple.gif": {
+      "offset": 2064426,
+      "length": 5971,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "f22681efce34510d"
+    },
+    "/images/faster-read-sql.jpg": {
+      "offset": 2070397,
+      "length": 10784,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "fa23cb18ec102bbe"
+    },
+    "/images/foreignlogos/dropbox.gif": {
+      "offset": 2081181,
+      "length": 3588,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "dcf13a55f35d0455"
+    },
+    "/images/foreignlogos/bentley.gif": {
+      "offset": 2084769,
+      "length": 7710,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "68c65c2e6f140859"
+    },
+    "/images/foreignlogos/adobe.gif": {
+      "offset": 2092479,
+      "length": 2856,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "0d7429d3669e475a"
+    },
+    "/images/fts5_formula2.png": {
+      "offset": 2095335,
+      "length": 4321,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "628c97fd1e7c6982"
+    },
+    "/images/fts5_formula1.png": {
+      "offset": 2099656,
+      "length": 6923,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "04264ab584de4851"
+    },
+    "/images/foreignlogos/bosch_logo1.gif": {
+      "offset": 2106579,
+      "length": 3739,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "6082647409861bf1"
+    },
+    "/images/foreignlogos/airbus2.gif": {
+      "offset": 2110318,
+      "length": 2645,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "73b03776d966ab18"
+    },
+    "/__docx_assets/2514b0bfe4e6fc.gif": {
+      "offset": 2112963,
+      "length": 37344,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "28c391e0b4bf5a15"
+    },
+    "/images/foreignlogos/fb.gif": {
+      "offset": 2150307,
+      "length": 3122,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "a542250b4237b56c"
+    },
+    "/images/foreignlogos/ge.gif": {
+      "offset": 2153429,
+      "length": 5253,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "dbd5cdd786f46249"
+    },
+    "/images/foreignlogos/intuit.gif": {
+      "offset": 2158682,
+      "length": 4363,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "7da28b5562f111d6"
+    },
+    "/images/foreignlogos/loc.jpg": {
+      "offset": 2163045,
+      "length": 5361,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "67322f3e891202b5"
+    },
+    "/images/foreignlogos/google.gif": {
+      "offset": 2168406,
+      "length": 3582,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "97f8b970ddd9a36d"
+    },
+    "/images/foreignlogos/microsoft.gif": {
+      "offset": 2171988,
+      "length": 2181,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "ef2b8699c7d5bd0f"
+    },
+    "/images/foreignlogos/nds.png": {
+      "offset": 2174169,
+      "length": 7305,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3584686ee49d2969"
+    },
+    "/images/foreignlogos/rpm_logo.png": {
+      "offset": 2181474,
+      "length": 22399,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "70085c1f8caa5a4f"
+    },
+    "/images/foreignlogos/tcl.gif": {
+      "offset": 2203873,
+      "length": 1778,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "e2ebfe0250605da2"
+    },
+    "/images/foreignlogos/skype.gif": {
+      "offset": 2205651,
+      "length": 3401,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "8d37d40fc81aa566"
+    },
+    "/images/foreignlogos/python.gif": {
+      "offset": 2209052,
+      "length": 2193,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "9dfca671cdd2b64d"
+    },
+    "/images/foreignlogos/php.gif": {
+      "offset": 2211245,
+      "length": 3658,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "d22f4f3d15305a3e"
+    },
+    "/images/ac/commit-2.gif": {
+      "offset": 2214903,
+      "length": 8368,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "850d660203ece807"
+    },
+    "/images/ac/commit-1.gif": {
+      "offset": 2223271,
+      "length": 6150,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "cdeff2e64b795971"
+    },
+    "/images/ac/commit-0.gif": {
+      "offset": 2229421,
+      "length": 5546,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "8dbe344dbc48ab9b"
+    },
+    "/images/foreignlogos/xojo.png": {
+      "offset": 2234967,
+      "length": 11349,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "5d4d0e05c7f36261"
+    },
+    "/images/ac/commit-3.gif": {
+      "offset": 2246316,
+      "length": 6972,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "4dc40cf4ef9b8c5b"
+    },
+    "/images/foreignlogos/mcaffee.gif": {
+      "offset": 2253288,
+      "length": 2804,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "a7b763ec6bcc6edb"
+    },
+    "/images/foreignlogos/firefox.gif": {
+      "offset": 2256092,
+      "length": 5145,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "dc87e438399170ee"
+    },
+    "/images/ac/commit-4.gif": {
+      "offset": 2261237,
+      "length": 11159,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "6b4832e1738a78f2"
+    },
+    "/images/ac/commit-6.gif": {
+      "offset": 2272396,
+      "length": 9765,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "0d6c65de3cb33524"
+    },
+    "/images/ac/commit-7.gif": {
+      "offset": 2282161,
+      "length": 9497,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "a39c93e0b8fb6008"
+    },
+    "/images/ac/commit-9.gif": {
+      "offset": 2291658,
+      "length": 10433,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "6f1bd84ea2355bc3"
+    },
+    "/images/ac/commit-8.gif": {
+      "offset": 2302091,
+      "length": 10417,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "a22ada118cf96314"
+    },
+    "/images/ac/commit-5.gif": {
+      "offset": 2312508,
+      "length": 9755,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "8ab5f6ad2ba8ab8a"
+    },
+    "/images/ac/multi-4.gif": {
+      "offset": 2322263,
+      "length": 13412,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "27163ccfa52d3b12"
+    },
+    "/images/ac/rollback-2.gif": {
+      "offset": 2335675,
+      "length": 8738,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "48cf53a00bce6c19"
+    },
+    "/images/ac/commit-B.gif": {
+      "offset": 2344413,
+      "length": 6248,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "e6e78d0ee8ca6309"
+    },
+    "/images/ac/commit-A.gif": {
+      "offset": 2350661,
+      "length": 12979,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "3dcaef7bf6c1affd"
+    },
+    "/images/ac/multi-1.gif": {
+      "offset": 2363640,
+      "length": 11552,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "0797ca2421092324"
+    },
+    "/images/ac/rollback-5.gif": {
+      "offset": 2375192,
+      "length": 6302,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "c452c7ff7d6c8085"
+    },
+    "/images/ac/rollback-4.gif": {
+      "offset": 2381494,
+      "length": 10549,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "45d046f1b643c8fc"
+    },
+    "/images/vfs1.gif": {
+      "offset": 2392043,
+      "length": 12329,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "2ef7fd82791be2f3"
+    },
+    "/images/ac/rollback-1.gif": {
+      "offset": 2404372,
+      "length": 9041,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "d4ea2768d9fee002"
+    },
+    "/images/ac/rollback-3.gif": {
+      "offset": 2413413,
+      "length": 10079,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "a22b118259ba9ea1"
+    },
+    "/images/ac/multi-0.gif": {
+      "offset": 2423492,
+      "length": 6304,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "76a7968886877c4c"
+    },
+    "/images/ac/rollback-0.gif": {
+      "offset": 2429796,
+      "length": 7773,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "e520a7badb476c12"
+    },
+    "/images/ac/multi-3.gif": {
+      "offset": 2437569,
+      "length": 11674,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "a32e3538a3507077"
+    },
+    "/images/ac/multi-2.gif": {
+      "offset": 2449243,
+      "length": 12845,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "13580995fe47d235"
+    },
+    "/images/ac/multi-5.gif": {
+      "offset": 2462088,
+      "length": 7609,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "15162d1842599930"
+    },
+    "/images/private_branch.gif": {
+      "offset": 2469697,
+      "length": 13573,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "d90504d95235fcce"
+    },
+    "/images/sqlitepie.jpg": {
+      "offset": 2483270,
+      "length": 108498,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "713d677fa91b7fcc"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 9903,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1ed646ca216853fd"
+    },
+    "/": {
+      "offset": 0,
+      "length": 9903,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1ed646ca216853fd"
+    }
+  }
+}

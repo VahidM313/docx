@@ -1,1 +1,1222 @@
-{"id":"powershell","name":"PowerShell 7.5","version":"v7.5","commit":"27163c2f","updatedAt":"2026-10-11T15:41:34.637Z","totalBytes":5934447,"chunkCount":167,"routes":{"/en-us/powershell/scripting/overview":{"offset":0,"length":27104,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e5ee9046c6ae86a7"},"/en-us/powershell/module/microsoft.powershell.utility/convertfrom-csv":{"offset":27104,"length":29887,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8ada0a8c1ccb99af"},"/en-us/powershell/module/microsoft.powershell.core/about/about_classes":{"offset":56991,"length":34676,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9cfb333525d08566"},"/en-us/powershell/module/microsoft.powershell.core/about/about_functions_advanced":{"offset":91667,"length":26960,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b327f4a299905de8"},"/en-us/powershell/module/microsoft.powershell.core/about/about_modules":{"offset":118627,"length":30084,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4ffaad52e1268ff3"},"/en-us/powershell/module/microsoft.powershell.utility/convertfrom-json":{"offset":148711,"length":30356,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"59e329cc9eab8fde"},"/en-us/powershell/module/microsoft.powershell.core/about/about_types.ps1xml":{"offset":179067,"length":31093,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1955b8dc88ff4802"},"/en-us/powershell/module/microsoft.powershell.utility/convertto-xml":{"offset":210160,"length":27432,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a10e0de9053e994d"},"/en-us/powershell/module/microsoft.powershell.core/about/about_history":{"offset":237592,"length":27045,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9fb27f0b34373805"},"/en-us/powershell/azure":{"offset":264637,"length":23288,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3c90f742d714a067"},"/en-us/powershell/azure/":{"offset":264637,"length":23288,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3c90f742d714a067"},"/en-us/powershell/module/microsoft.powershell.core/about/about_format.ps1xml":{"offset":287925,"length":30401,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3ca007b9394c49ff"},"/en-us/powershell/module/microsoft.powershell.core/about/about_pipelines":{"offset":318326,"length":32564,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"980b99fba7dba8a7"},"/en-us/powershell/module/microsoft.powershell.core/get-help":{"offset":350890,"length":34996,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6de5ccb5310b5015"},"/en-us/powershell/module/microsoft.powershell.core/about/about_aliases":{"offset":385886,"length":27871,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cb8f0d67f0951194"},"/en-us/powershell/module/psreadline/about/about_psreadline":{"offset":413757,"length":29057,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"daf9e6d45d61afdc"},"/en-us/powershell/windows/get-started":{"offset":442814,"length":27900,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c2215281f10061e7"},"/en-us/powershell/module/microsoft.powershell.core/about/about_scripts":{"offset":470714,"length":30903,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1397b2c8b556e015"},"/en-us/powershell/scripting/discover-powershell":{"offset":501617,"length":29135,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b69ffb98e49ac8fb"},"/en-us/powershell/module/microsoft.powershell.core/about/about_classes_properties":{"offset":530752,"length":33341,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"44246155ed2e761d"},"/en-us/powershell/exchange/exchange-management-shell":{"offset":564093,"length":26884,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"64fea9fec0ceb282"},"/en-us/powershell/scripting/learn/ps101/00-introduction":{"offset":590977,"length":26953,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"108780b05a9fdc27"},"/en-us/powershell/scripting/install/install-powershell":{"offset":617930,"length":22207,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"45aa32d3816cc17a"},"/en-us/powershell/dsc/pull-server/enactingconfigurations":{"offset":640137,"length":26735,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"19fccf942957dedc"},"/en-us/powershell/module/microsoft.powershell.utility":{"offset":666872,"length":29074,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a6cf82a48d616af9"},"/en-us/powershell/module/microsoft.powershell.utility/":{"offset":666872,"length":29074,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a6cf82a48d616af9"},"/en-us/powershell/module/microsoft.powershell.core/about/about_classes_constructors":{"offset":695946,"length":30421,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"77bafd37264449ee"},"/en-us/powershell/dsc/configurations/configurations":{"offset":726367,"length":28046,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d2d26473d8f76920"},"/en-us/powershell/module/microsoft.powershell.utility/import-csv":{"offset":754413,"length":32592,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1a1ebd044e4b10e9"},"/en-us/powershell/azure/get-started-azureps":{"offset":787005,"length":27770,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c618bfa980ed182b"},"/en-us/powershell/module/microsoft.powershell.utility/convertto-csv":{"offset":814775,"length":30373,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"992eefb801f5daea"},"/en-us/powershell/module/microsoft.powershell.core/about/about_classes_methods":{"offset":845148,"length":33680,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c82fb64f9815cd72"},"/en-us/powershell/scripting/security/remoting/ssh-remoting-in-powershell":{"offset":878828,"length":30225,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"32ff66406c4d7d95"},"/en-us/powershell/dsc/overview/dscforengineers":{"offset":909053,"length":28153,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5c3c73103e1cf987"},"/en-us/powershell/module/microsoft.powershell.utility/export-csv":{"offset":937206,"length":35245,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c2e002842f9418a0"},"/en-us/powershell/scripting/developer/module/writing-a-windows-powershell-module":{"offset":972451,"length":26415,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"38ba24f648bbe946"},"/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath":{"offset":998866,"length":28849,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"96970a6940c3bd13"},"/en-us/powershell/module/microsoft.powershell.core/about/about_hidden":{"offset":1027715,"length":27264,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"debe1c72abcf7cde"},"/en-us/powershell/module/microsoft.powershell.core/about/about_classes_inheritance":{"offset":1054979,"length":37789,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0e7d9553634ac408"},"/en-us/powershell/module/microsoft.powershell.core/about/about_functions":{"offset":1092768,"length":33135,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"426b2e127c6e433c"},"/en-us/powershell/module/microsoft.powershell.core/about/about_functions_advanced_methods":{"offset":1125903,"length":29052,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f1e0d8ce3be653a4"},"/en-us/powershell/module/microsoft.powershell.core/about/about_functions_outputtypeattribute":{"offset":1154955,"length":27338,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f8b45a255625150f"},"/en-us/powershell/module/microsoft.powershell.core/about/about_methods":{"offset":1182293,"length":29185,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f8961f7f277b4a1c"},"/en-us/powershell/module/microsoft.powershell.core/about/about_preference_variables":{"offset":1211478,"length":42391,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ef2b6bf160a60476"},"/en-us/powershell/module/microsoft.powershell.core/about/about_enum":{"offset":1253869,"length":36012,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7fb3d2c258e201ac"},"/en-us/powershell/module/microsoft.powershell.core/import-module":{"offset":1289881,"length":41696,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ff051822fa14b4da"},"/en-us/powershell/module/microsoft.powershell.core/about/about_functions_advanced_parameters":{"offset":1331577,"length":38683,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9834da47a370244f"},"/en-us/powershell/module/microsoft.powershell.core/about/about_language_keywords":{"offset":1370260,"length":30095,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"278cf08423fa3b87"},"/en-us/powershell/module/microsoft.powershell.core/about/about_variables":{"offset":1400355,"length":30758,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9b5ff61134ab2f2b"},"/en-us/powershell/module/microsoft.powershell.core/about/about_functions_cmdletbindingattribute":{"offset":1431113,"length":28118,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9512f44c4c6f1263"},"/en-us/powershell/module/microsoft.powershell.core/about/about_using":{"offset":1459231,"length":27616,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4a680b1c17f3c2b7"},"/en-us/powershell/module/microsoft.powershell.utility/add-member":{"offset":1486847,"length":32635,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"12166a2db2b94967"},"/en-us/powershell/module/microsoft.powershell.core/get-module":{"offset":1519482,"length":35029,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e1d245b4923a71f"},"/en-us/powershell/module/microsoft.powershell.core/about/about_comments":{"offset":1554511,"length":29560,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a3b41f46cc26e726"},"/en-us/powershell/module/microsoft.powershell.core/about/about_profiles":{"offset":1584071,"length":29333,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8750ee360a7aadfc"},"/en-us/powershell/module/microsoft.powershell.utility/update-typedata":{"offset":1613404,"length":35804,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1992149094038e5e"},"/en-us/powershell/module/microsoft.powershell.core/about/about_command_precedence":{"offset":1649208,"length":29425,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8f0887b88000dffe"},"/en-us/powershell/module/powershellget/install-module":{"offset":1678633,"length":32540,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b3f53e1dc435e64c"},"/en-us/powershell/module/microsoft.powershell.core/about/about_group_policy_settings":{"offset":1711173,"length":28628,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c9da8aa3121bbf0e"},"/en-us/powershell/module/microsoft.powershell.utility/invoke-restmethod":{"offset":1739801,"length":44235,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f6ed5f04a8bb3454"},"/en-us/powershell/module/microsoft.powershell.utility/convertto-json":{"offset":1784036,"length":29301,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ead2ceb8b523780e"},"/en-us/powershell/module/microsoft.powershell.core/remove-module":{"offset":1813337,"length":28855,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"203094653ce92257"},"/en-us/powershell/module/microsoft.powershell.core/get-command":{"offset":1842192,"length":35401,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1922cc5ee3482725"},"/en-us/powershell/module/microsoft.powershell.core/about/about_function_provider":{"offset":1877593,"length":28547,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d9986677ba67511e"},"/en-us/powershell/gallery/powershellget/overview":{"offset":1906140,"length":26304,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2ec68758b0333c20"},"/en-us/powershell/module/microsoft.powershell.psresourceget/install-psresource":{"offset":1932444,"length":32382,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bb27a35710135589"},"/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest":{"offset":1964826,"length":43969,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4327b6bab1c70420"},"/en-us/powershell/module/microsoft.powershell.utility/convertto-html":{"offset":2008795,"length":31559,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e6655f45550102f0"},"/en-us/powershell/module/microsoft.powershell.utility/remove-typedata":{"offset":2040354,"length":28419,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"37a783922c5167b2"},"/en-us/powershell/module/microsoft.powershell.utility/get-typedata":{"offset":2068773,"length":27488,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ef09b065122b041b"},"/en-us/powershell/module/microsoft.powershell.management/copy-itemproperty":{"offset":2096261,"length":28546,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"135a29bccf4d16e9"},"/en-us/powershell/module/microsoft.powershell.core/about/about_signing":{"offset":2124807,"length":29928,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"db57e176b4c12249"},"/en-us/powershell/module/microsoft.powershell.core/about/about_line_editing":{"offset":2154735,"length":26410,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ca37eabd73e6e0a1"},"/en-us/powershell/module/microsoft.powershell.management/copy-item":{"offset":2181145,"length":32900,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"724caf48d4378fde"},"/en-us/powershell/azure/azureps-support-lifecycle":{"offset":2214045,"length":28019,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d38aede5e65b8c41"},"/en-us/powershell/azure/install-azure-powershell":{"offset":2242064,"length":25964,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"58f0d9fbf047d081"},"/en-us/powershell/azure/what-is-azure-powershell":{"offset":2268028,"length":27277,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fcdee58896b4b0a9"},"/en-us/powershell/module/microsoft.powershell.utility/get-member":{"offset":2295305,"length":31927,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"07686f55c9cb36af"},"/en-us/powershell/module/microsoft.powershell.utility/get-date":{"offset":2327232,"length":33056,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"73f4957b0b3f418c"},"/en-us/powershell/module/microsoft.powershell.utility/export-clixml":{"offset":2360288,"length":30506,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"32bff06bcdb0a75f"},"/en-us/powershell/azure/install-azps-windows":{"offset":2390794,"length":27367,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"279e9910093b4196"},"/en-us/powershell/module/microsoft.powershell.utility/import-clixml":{"offset":2418161,"length":29553,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f4946868992f0eab"},"/en-us/powershell/scripting/developer/windows-powershell":{"offset":2447714,"length":26207,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f4b4608adc287f51"},"/en-us/powershell/module":{"offset":2473921,"length":7241,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ba7825433f27122d"},"/en-us/powershell/module/":{"offset":2473921,"length":7241,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ba7825433f27122d"},"/en-us/powershell/azure/release-notes-azureps":{"offset":2481162,"length":212891,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1610cadafe42eb5b"},"/en-us/powershell/azure/migrate-az-16.0.0":{"offset":2694053,"length":30492,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5855c119bb2d3c83"},"/en-us/powershell/azure/install-azps-macos":{"offset":2724545,"length":26341,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a9f08847897aee56"},"/en-us/powershell/azure/install-azps-linux":{"offset":2750886,"length":26168,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b6526e596c25b2ff"},"/en-us/powershell/azure/manage-subscriptions-azureps":{"offset":2777054,"length":26371,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2785e82e2c3f40dd"},"/en-us/powershell/azure/manage-azure-resources-invoke-azrestmethod":{"offset":2803425,"length":27448,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f2c344bf1ec02e46"},"/en-us/powershell/azure/create-azure-service-principal-azureps":{"offset":2830873,"length":29236,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3bed5f4568de4671"},"/en-us/powershell/azure/authenticate-azureps":{"offset":2860109,"length":26728,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e33475f23c5c117c"},"/en-us/powershell/azure/azureps-in-docker":{"offset":2886837,"length":26650,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ccc1389d5dc85a11"},"/en-us/powershell/azure/queries-azureps":{"offset":2913487,"length":26961,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f4a0e24f1bdb6799"},"/en-us/powershell/azure/context-persistence":{"offset":2940448,"length":28629,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0afce32e1620bb98"},"/en-us/powershell/azure/formatting-output":{"offset":2969077,"length":29003,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c5e1b1f00328c958"},"/en-us/powershell/azure/whats-new-overview":{"offset":2998080,"length":27107,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8e296595d8724c38"},"/en-us/powershell/azure/authenticate-mfa":{"offset":3025187,"length":28923,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8c8b47aee853103e"},"/en-us/powershell/azure/upcoming-breaking-changes":{"offset":3054110,"length":33418,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9d73e5b3be3cf8b5"},"/en-us/powershell/module/microsoft.powershell.utility/trace-command":{"offset":3087528,"length":29925,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6b58e84be3b2ee5f"},"/en-us/powershell/module/microsoft.powershell.utility/get-formatdata":{"offset":3117453,"length":27630,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9ed2061ad46e4325"},"/en-us/powershell/module/microsoft.powershell.utility/format-table":{"offset":3145083,"length":32539,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"489677691431e738"},"/en-us/powershell/azure/configure-global-settings":{"offset":3177622,"length":28463,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"74269a9fae85414a"},"/en-us/powershell/azure/new-azureps-module-az":{"offset":3206085,"length":27744,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e2a89b510cb1c6d5"},"/en-us/powershell/azure/quickstart-migrate-azurerm-to-az-automatically":{"offset":3233829,"length":28291,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"29195fadf43eae11"},"/en-us/powershell/azure/az-powershell-proxy":{"offset":3262120,"length":25844,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b1ba4846b7beeac6"},"/en-us/powershell/scripting/developer/format/format-schema-xml-reference":{"offset":3287964,"length":31630,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"885708126184fa2c"},"/en-us/powershell/azure/troubleshooting":{"offset":3319594,"length":31692,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d249cf77c1e214a4"},"/en-us/powershell/azure/migrate-from-azurerm-to-az":{"offset":3351286,"length":27359,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a6bc65958b1dfd7e"},"/en-us/powershell/module/microsoft.powershell.utility/get-tracesource":{"offset":3378645,"length":26384,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e22bcec90719f3ad"},"/en-us/powershell/module/microsoft.powershell.utility/export-formatdata":{"offset":3405029,"length":28629,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"458849ebd9ea58c0"},"/en-us/powershell/azure/az-predictor":{"offset":3433658,"length":26702,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6c911ad6e2dda1c8"},"/en-us/powershell/azure/migrate-az-1.0.0":{"offset":3460360,"length":31856,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0925c3859dfc3fe5"},"/en-us/powershell/module/microsoft.powershell.utility/update-formatdata":{"offset":3492216,"length":27881,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"99a05f344424cd53"},"/en-us/powershell/azure/using-psjobs":{"offset":3520097,"length":26651,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"20c525b507cb1533"},"/en-us/powershell/module/microsoft.powershell.core/about/about_objects":{"offset":3546748,"length":26484,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"122a805ca75b22ea"},"/en-us/powershell/module/microsoft.powershell.core/about/about_command_syntax":{"offset":3573232,"length":28662,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"33540ceb2a2b8b63"},"/en-us/powershell/scripting/developer/format/formatting-file-overview":{"offset":3601894,"length":27982,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"87e06cae656d92a0"},"/en-us/powershell/module/microsoft.powershell.core/about/about_providers":{"offset":3629876,"length":29500,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6399e3fa7312c637"},"/en-us/powershell/module/microsoft.powershell.core/about/about_parameters":{"offset":3659376,"length":28420,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b10a380adff7202d"},"/en-us/powershell/module/microsoft.powershell.core/about/about_redirection":{"offset":3687796,"length":30308,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c54ca7f5f2436970"},"/en-us/powershell/module/microsoft.powershell.core/out-host":{"offset":3718104,"length":27525,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1063e19456920bde"},"/en-us/powershell/scripting/developer/help/writing-help-for-windows-powershell-cmdlets":{"offset":3745629,"length":27239,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7c9589efced71c7e"},"/en-us/powershell/module/microsoft.powershell.core":{"offset":3772868,"length":27254,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e82b092c7d0dafaa"},"/en-us/powershell/module/microsoft.powershell.core/":{"offset":3772868,"length":27254,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e82b092c7d0dafaa"},"/en-us/powershell/module/microsoft.powershell.core/about/about_foreach":{"offset":3800122,"length":27693,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a9c66f80f0ea42b8"},"/en-us/powershell/module/microsoft.powershell.core/update-help":{"offset":3827815,"length":34656,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a41f6ee1e31556b0"},"/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help":{"offset":3862471,"length":32033,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bf51f71328058154"},"/en-us/powershell/scripting/learn/shell/dynamic-help":{"offset":3894504,"length":26442,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1ebe6ef3a21ba06e"},"/en-us/powershell/scripting/developer/help/supporting-online-help":{"offset":3920946,"length":27360,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5d72a8737d1db4dd"},"/en-us/powershell/module/microsoft.powershell.utility/export-alias":{"offset":3948306,"length":29328,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"db500d44df743762"},"/en-us/powershell/module/microsoft.powershell.utility/import-alias":{"offset":3977634,"length":27491,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2de13f905139e200"},"/en-us/powershell/module/microsoft.powershell.utility/get-verb":{"offset":4005125,"length":27681,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"24e3fe9d99d7bf7f"},"/en-us/powershell/scripting/developer/help/writing-comment-based-help-topics":{"offset":4032806,"length":25722,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"78433d7b93802c5e"},"/en-us/powershell/module/microsoft.powershell.utility/get-alias":{"offset":4058528,"length":28135,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f5e9e9b9f79e3a82"},"/en-us/powershell/scripting/developer/help/supporting-updatable-help":{"offset":4086663,"length":25753,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"20ea54dc6daea34b"},"/en-us/powershell/module/microsoft.powershell.utility/remove-alias":{"offset":4112416,"length":26922,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8e2b558db56acaf7"},"/en-us/powershell/module/microsoft.powershell.utility/new-alias":{"offset":4139338,"length":28797,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eaddd68e532cc13a"},"/en-us/powershell/module/microsoft.powershell.utility/set-alias":{"offset":4168135,"length":30260,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e1a5cc919fcc0f69"},"/en-us/powershell/module/microsoft.powershell.management/get-psdrive":{"offset":4198395,"length":29814,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"84f1e26fc444fea1"},"/en-us/powershell/module/microsoft.powershell.management/get-psprovider":{"offset":4228209,"length":27017,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7067c09ac36e4dca"},"/en-us/powershell/module/psreadline/about/about_psreadline_release_notes":{"offset":4255226,"length":29188,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7299ac85ced966f1"},"/__docx_assets/4447d81ce560c7.bin":{"offset":4284414,"length":20,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"261ea754548788d4"},"/static/assets/0.4.03568.8292-0a6c2196/styles/site.css":{"offset":4284434,"length":71315,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"31cd23cfc568bf84"},"/media/logos/logo-powershell-core.svg":{"offset":4355749,"length":1221,"mime":"image/svg+xml","gzipped":true,"hash":"068dd56d9c482b99"},"/__docx_assets/c06b021ebda212.png":{"offset":4356970,"length":123643,"mime":"image/png","gzipped":false,"hash":"ebe65382e2ab7a69"},"/__docx_assets/bb3daf44f231b9.png":{"offset":4480613,"length":137429,"mime":"image/png","gzipped":false,"hash":"e4a70e12a7dc5cf4"},"/__docx_assets/e390cfb1707139.png":{"offset":4618042,"length":121668,"mime":"image/png","gzipped":false,"hash":"b0e19ebfa04e21df"},"/__docx_assets/ce24d28f905d5b.png":{"offset":4739710,"length":125793,"mime":"image/png","gzipped":false,"hash":"ebb149bec22f023b"},"/__docx_assets/bd98da7093d6c8.svg":{"offset":4865503,"length":10589,"mime":"image/svg+xml","gzipped":true,"hash":"7820708613c4dbc3"},"/__docx_assets/bf38d89b6c5a10.svg":{"offset":4876092,"length":30286,"mime":"image/svg+xml","gzipped":true,"hash":"76e375e5aec1da5f"},"/media/logos/logo-powershell.svg":{"offset":4906378,"length":1086,"mime":"image/svg+xml","gzipped":true,"hash":"92e32561a207f2aa"},"/static/assets/0.4.03568.8292-0a6c2196/styles/background-image-pattern-plus.b22b3aa4.svg":{"offset":4907464,"length":355,"mime":"image/svg+xml","gzipped":true,"hash":"28724b3aee6cd891"},"/static/assets/0.4.03568.8292-0a6c2196/styles/docons.0a6c219.0697fd28.woff":{"offset":4907819,"length":30648,"mime":"font/woff","gzipped":false,"hash":"25db40bbcc8e827e"},"/static/assets/0.4.03568.8292-0a6c2196/styles/docons.0a6c219.6bef7a0d.eot":{"offset":4938467,"length":28985,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"86284c45d73dbda9"},"/static/assets/0.4.03568.8292-0a6c2196/styles/docons.0a6c219.02e33c62.ttf":{"offset":4967452,"length":52200,"mime":"font/ttf","gzipped":false,"hash":"ed1f9faf7fbfb25b"},"/static/third-party/SegoeUI/5.32/west-european/italic/latest.eot":{"offset":5019652,"length":23961,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7894d8f2ae3e6258"},"/static/third-party/SegoeUIWeb/1.01.206/SegoeUI-Roman-VF_web.woff":{"offset":5043613,"length":149700,"mime":"font/woff","gzipped":false,"hash":"797f6ae5568d16dc"},"/static/third-party/SegoeUI/5.32/west-european/italic/latest.woff":{"offset":5193313,"length":33744,"mime":"font/woff","gzipped":false,"hash":"663fb6a00edb593e"},"/static/assets/0.4.03568.8292-0a6c2196/styles/docons.0a6c219.321794d1.woff2":{"offset":5227057,"length":25728,"mime":"font/woff2","gzipped":false,"hash":"7263775c1a39c886"},"/static/assets/0.4.03568.8292-0a6c2196/styles/background-image-pattern-pixie-sticks.d49f3ace.svg":{"offset":5252785,"length":7897,"mime":"image/svg+xml","gzipped":true,"hash":"cfc9f415dc551d53"},"/static/assets/0.4.03568.8292-0a6c2196/styles/modal-complete-plain.e9734ed0.svg":{"offset":5260682,"length":416,"mime":"image/svg+xml","gzipped":true,"hash":"3433efbd156f93ca"},"/static/assets/0.4.03568.8292-0a6c2196/styles/quiz-complete.c6e2591a.svg":{"offset":5261098,"length":1261,"mime":"image/svg+xml","gzipped":true,"hash":"46767ea5730ca481"},"/static/third-party/SegoeUI/5.32/west-european/italic/latest.ttf":{"offset":5262359,"length":51000,"mime":"font/ttf","gzipped":false,"hash":"0a94f4a06ee9b6da"},"/static/third-party/SegoeUIWeb/1.01.206/SegoeUI-Roman-VF_web.woff2":{"offset":5313359,"length":118288,"mime":"font/woff2","gzipped":false,"hash":"12579d1652c40b48"},"/en-us/media/event-banners/banner-ignite-2026.png":{"offset":5431647,"length":87031,"mime":"image/png","gzipped":false,"hash":"c93a50aa44062e64"},"/static/third-party/SegoeUI/5.32/west-european/italic/latest.woff2":{"offset":5518678,"length":27624,"mime":"font/woff2","gzipped":false,"hash":"eb7f651fa997d12d"},"/en-us/media/event-banners/banner-build-2026.png":{"offset":5546302,"length":61509,"mime":"image/png","gzipped":false,"hash":"d8069397242ac459"},"/en-us/media/event-banners/banner-ai-skills-fest-2026.jpg":{"offset":5607811,"length":54096,"mime":"image/jpeg","gzipped":false,"hash":"dfc906681565df89"},"/static/third-party/SegoeUIWeb/1.01.206/SegoeUI-Roman-VF_web.ttf":{"offset":5661907,"length":272540,"mime":"font/ttf","gzipped":false,"hash":"df983d52548f877b"},"/docs":{"offset":0,"length":27104,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e5ee9046c6ae86a7"},"/":{"offset":0,"length":27104,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e5ee9046c6ae86a7"}}}
+{
+  "id": "powershell",
+  "name": "PowerShell 7.5",
+  "version": "v7.5",
+  "commit": "27163c2f",
+  "updatedAt": "2026-10-11T15:41:34.637Z",
+  "totalBytes": 5934447,
+  "chunkCount": 167,
+  "routes": {
+    "/en-us/powershell/scripting/overview": {
+      "offset": 0,
+      "length": 27104,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e5ee9046c6ae86a7"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/convertfrom-csv": {
+      "offset": 27104,
+      "length": 29887,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8ada0a8c1ccb99af"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_classes": {
+      "offset": 56991,
+      "length": 34676,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9cfb333525d08566"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_functions_advanced": {
+      "offset": 91667,
+      "length": 26960,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b327f4a299905de8"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_modules": {
+      "offset": 118627,
+      "length": 30084,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4ffaad52e1268ff3"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/convertfrom-json": {
+      "offset": 148711,
+      "length": 30356,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "59e329cc9eab8fde"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_types.ps1xml": {
+      "offset": 179067,
+      "length": 31093,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1955b8dc88ff4802"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/convertto-xml": {
+      "offset": 210160,
+      "length": 27432,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a10e0de9053e994d"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_history": {
+      "offset": 237592,
+      "length": 27045,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9fb27f0b34373805"
+    },
+    "/en-us/powershell/azure": {
+      "offset": 264637,
+      "length": 23288,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3c90f742d714a067"
+    },
+    "/en-us/powershell/azure/": {
+      "offset": 264637,
+      "length": 23288,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3c90f742d714a067"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_format.ps1xml": {
+      "offset": 287925,
+      "length": 30401,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3ca007b9394c49ff"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_pipelines": {
+      "offset": 318326,
+      "length": 32564,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "980b99fba7dba8a7"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/get-help": {
+      "offset": 350890,
+      "length": 34996,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6de5ccb5310b5015"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_aliases": {
+      "offset": 385886,
+      "length": 27871,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb8f0d67f0951194"
+    },
+    "/en-us/powershell/module/psreadline/about/about_psreadline": {
+      "offset": 413757,
+      "length": 29057,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "daf9e6d45d61afdc"
+    },
+    "/en-us/powershell/windows/get-started": {
+      "offset": 442814,
+      "length": 27900,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c2215281f10061e7"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_scripts": {
+      "offset": 470714,
+      "length": 30903,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1397b2c8b556e015"
+    },
+    "/en-us/powershell/scripting/discover-powershell": {
+      "offset": 501617,
+      "length": 29135,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b69ffb98e49ac8fb"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_classes_properties": {
+      "offset": 530752,
+      "length": 33341,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "44246155ed2e761d"
+    },
+    "/en-us/powershell/exchange/exchange-management-shell": {
+      "offset": 564093,
+      "length": 26884,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "64fea9fec0ceb282"
+    },
+    "/en-us/powershell/scripting/learn/ps101/00-introduction": {
+      "offset": 590977,
+      "length": 26953,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "108780b05a9fdc27"
+    },
+    "/en-us/powershell/scripting/install/install-powershell": {
+      "offset": 617930,
+      "length": 22207,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "45aa32d3816cc17a"
+    },
+    "/en-us/powershell/dsc/pull-server/enactingconfigurations": {
+      "offset": 640137,
+      "length": 26735,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "19fccf942957dedc"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility": {
+      "offset": 666872,
+      "length": 29074,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a6cf82a48d616af9"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/": {
+      "offset": 666872,
+      "length": 29074,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a6cf82a48d616af9"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_classes_constructors": {
+      "offset": 695946,
+      "length": 30421,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "77bafd37264449ee"
+    },
+    "/en-us/powershell/dsc/configurations/configurations": {
+      "offset": 726367,
+      "length": 28046,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d2d26473d8f76920"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/import-csv": {
+      "offset": 754413,
+      "length": 32592,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1a1ebd044e4b10e9"
+    },
+    "/en-us/powershell/azure/get-started-azureps": {
+      "offset": 787005,
+      "length": 27770,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c618bfa980ed182b"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/convertto-csv": {
+      "offset": 814775,
+      "length": 30373,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "992eefb801f5daea"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_classes_methods": {
+      "offset": 845148,
+      "length": 33680,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c82fb64f9815cd72"
+    },
+    "/en-us/powershell/scripting/security/remoting/ssh-remoting-in-powershell": {
+      "offset": 878828,
+      "length": 30225,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "32ff66406c4d7d95"
+    },
+    "/en-us/powershell/dsc/overview/dscforengineers": {
+      "offset": 909053,
+      "length": 28153,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5c3c73103e1cf987"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/export-csv": {
+      "offset": 937206,
+      "length": 35245,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c2e002842f9418a0"
+    },
+    "/en-us/powershell/scripting/developer/module/writing-a-windows-powershell-module": {
+      "offset": 972451,
+      "length": 26415,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "38ba24f648bbe946"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath": {
+      "offset": 998866,
+      "length": 28849,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "96970a6940c3bd13"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_hidden": {
+      "offset": 1027715,
+      "length": 27264,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "debe1c72abcf7cde"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_classes_inheritance": {
+      "offset": 1054979,
+      "length": 37789,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0e7d9553634ac408"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_functions": {
+      "offset": 1092768,
+      "length": 33135,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "426b2e127c6e433c"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_functions_advanced_methods": {
+      "offset": 1125903,
+      "length": 29052,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f1e0d8ce3be653a4"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_functions_outputtypeattribute": {
+      "offset": 1154955,
+      "length": 27338,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f8b45a255625150f"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_methods": {
+      "offset": 1182293,
+      "length": 29185,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f8961f7f277b4a1c"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_preference_variables": {
+      "offset": 1211478,
+      "length": 42391,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ef2b6bf160a60476"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_enum": {
+      "offset": 1253869,
+      "length": 36012,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7fb3d2c258e201ac"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/import-module": {
+      "offset": 1289881,
+      "length": 41696,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ff051822fa14b4da"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_functions_advanced_parameters": {
+      "offset": 1331577,
+      "length": 38683,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9834da47a370244f"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_language_keywords": {
+      "offset": 1370260,
+      "length": 30095,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "278cf08423fa3b87"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_variables": {
+      "offset": 1400355,
+      "length": 30758,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9b5ff61134ab2f2b"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_functions_cmdletbindingattribute": {
+      "offset": 1431113,
+      "length": 28118,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9512f44c4c6f1263"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_using": {
+      "offset": 1459231,
+      "length": 27616,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4a680b1c17f3c2b7"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/add-member": {
+      "offset": 1486847,
+      "length": 32635,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "12166a2db2b94967"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/get-module": {
+      "offset": 1519482,
+      "length": 35029,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2e1d245b4923a71f"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_comments": {
+      "offset": 1554511,
+      "length": 29560,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a3b41f46cc26e726"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_profiles": {
+      "offset": 1584071,
+      "length": 29333,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8750ee360a7aadfc"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/update-typedata": {
+      "offset": 1613404,
+      "length": 35804,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1992149094038e5e"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_command_precedence": {
+      "offset": 1649208,
+      "length": 29425,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8f0887b88000dffe"
+    },
+    "/en-us/powershell/module/powershellget/install-module": {
+      "offset": 1678633,
+      "length": 32540,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b3f53e1dc435e64c"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_group_policy_settings": {
+      "offset": 1711173,
+      "length": 28628,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c9da8aa3121bbf0e"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/invoke-restmethod": {
+      "offset": 1739801,
+      "length": 44235,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f6ed5f04a8bb3454"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/convertto-json": {
+      "offset": 1784036,
+      "length": 29301,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ead2ceb8b523780e"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/remove-module": {
+      "offset": 1813337,
+      "length": 28855,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "203094653ce92257"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/get-command": {
+      "offset": 1842192,
+      "length": 35401,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1922cc5ee3482725"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_function_provider": {
+      "offset": 1877593,
+      "length": 28547,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d9986677ba67511e"
+    },
+    "/en-us/powershell/gallery/powershellget/overview": {
+      "offset": 1906140,
+      "length": 26304,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2ec68758b0333c20"
+    },
+    "/en-us/powershell/module/microsoft.powershell.psresourceget/install-psresource": {
+      "offset": 1932444,
+      "length": 32382,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bb27a35710135589"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest": {
+      "offset": 1964826,
+      "length": 43969,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4327b6bab1c70420"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/convertto-html": {
+      "offset": 2008795,
+      "length": 31559,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e6655f45550102f0"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/remove-typedata": {
+      "offset": 2040354,
+      "length": 28419,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "37a783922c5167b2"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/get-typedata": {
+      "offset": 2068773,
+      "length": 27488,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ef09b065122b041b"
+    },
+    "/en-us/powershell/module/microsoft.powershell.management/copy-itemproperty": {
+      "offset": 2096261,
+      "length": 28546,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "135a29bccf4d16e9"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_signing": {
+      "offset": 2124807,
+      "length": 29928,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "db57e176b4c12249"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_line_editing": {
+      "offset": 2154735,
+      "length": 26410,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ca37eabd73e6e0a1"
+    },
+    "/en-us/powershell/module/microsoft.powershell.management/copy-item": {
+      "offset": 2181145,
+      "length": 32900,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "724caf48d4378fde"
+    },
+    "/en-us/powershell/azure/azureps-support-lifecycle": {
+      "offset": 2214045,
+      "length": 28019,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d38aede5e65b8c41"
+    },
+    "/en-us/powershell/azure/install-azure-powershell": {
+      "offset": 2242064,
+      "length": 25964,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "58f0d9fbf047d081"
+    },
+    "/en-us/powershell/azure/what-is-azure-powershell": {
+      "offset": 2268028,
+      "length": 27277,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fcdee58896b4b0a9"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/get-member": {
+      "offset": 2295305,
+      "length": 31927,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "07686f55c9cb36af"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/get-date": {
+      "offset": 2327232,
+      "length": 33056,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "73f4957b0b3f418c"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/export-clixml": {
+      "offset": 2360288,
+      "length": 30506,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "32bff06bcdb0a75f"
+    },
+    "/en-us/powershell/azure/install-azps-windows": {
+      "offset": 2390794,
+      "length": 27367,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "279e9910093b4196"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/import-clixml": {
+      "offset": 2418161,
+      "length": 29553,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f4946868992f0eab"
+    },
+    "/en-us/powershell/scripting/developer/windows-powershell": {
+      "offset": 2447714,
+      "length": 26207,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f4b4608adc287f51"
+    },
+    "/en-us/powershell/module": {
+      "offset": 2473921,
+      "length": 7241,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ba7825433f27122d"
+    },
+    "/en-us/powershell/module/": {
+      "offset": 2473921,
+      "length": 7241,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ba7825433f27122d"
+    },
+    "/en-us/powershell/azure/release-notes-azureps": {
+      "offset": 2481162,
+      "length": 212891,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1610cadafe42eb5b"
+    },
+    "/en-us/powershell/azure/migrate-az-16.0.0": {
+      "offset": 2694053,
+      "length": 30492,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5855c119bb2d3c83"
+    },
+    "/en-us/powershell/azure/install-azps-macos": {
+      "offset": 2724545,
+      "length": 26341,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a9f08847897aee56"
+    },
+    "/en-us/powershell/azure/install-azps-linux": {
+      "offset": 2750886,
+      "length": 26168,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b6526e596c25b2ff"
+    },
+    "/en-us/powershell/azure/manage-subscriptions-azureps": {
+      "offset": 2777054,
+      "length": 26371,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2785e82e2c3f40dd"
+    },
+    "/en-us/powershell/azure/manage-azure-resources-invoke-azrestmethod": {
+      "offset": 2803425,
+      "length": 27448,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f2c344bf1ec02e46"
+    },
+    "/en-us/powershell/azure/create-azure-service-principal-azureps": {
+      "offset": 2830873,
+      "length": 29236,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3bed5f4568de4671"
+    },
+    "/en-us/powershell/azure/authenticate-azureps": {
+      "offset": 2860109,
+      "length": 26728,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e33475f23c5c117c"
+    },
+    "/en-us/powershell/azure/azureps-in-docker": {
+      "offset": 2886837,
+      "length": 26650,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ccc1389d5dc85a11"
+    },
+    "/en-us/powershell/azure/queries-azureps": {
+      "offset": 2913487,
+      "length": 26961,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f4a0e24f1bdb6799"
+    },
+    "/en-us/powershell/azure/context-persistence": {
+      "offset": 2940448,
+      "length": 28629,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0afce32e1620bb98"
+    },
+    "/en-us/powershell/azure/formatting-output": {
+      "offset": 2969077,
+      "length": 29003,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c5e1b1f00328c958"
+    },
+    "/en-us/powershell/azure/whats-new-overview": {
+      "offset": 2998080,
+      "length": 27107,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8e296595d8724c38"
+    },
+    "/en-us/powershell/azure/authenticate-mfa": {
+      "offset": 3025187,
+      "length": 28923,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8c8b47aee853103e"
+    },
+    "/en-us/powershell/azure/upcoming-breaking-changes": {
+      "offset": 3054110,
+      "length": 33418,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9d73e5b3be3cf8b5"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/trace-command": {
+      "offset": 3087528,
+      "length": 29925,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6b58e84be3b2ee5f"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/get-formatdata": {
+      "offset": 3117453,
+      "length": 27630,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9ed2061ad46e4325"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/format-table": {
+      "offset": 3145083,
+      "length": 32539,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "489677691431e738"
+    },
+    "/en-us/powershell/azure/configure-global-settings": {
+      "offset": 3177622,
+      "length": 28463,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "74269a9fae85414a"
+    },
+    "/en-us/powershell/azure/new-azureps-module-az": {
+      "offset": 3206085,
+      "length": 27744,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e2a89b510cb1c6d5"
+    },
+    "/en-us/powershell/azure/quickstart-migrate-azurerm-to-az-automatically": {
+      "offset": 3233829,
+      "length": 28291,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "29195fadf43eae11"
+    },
+    "/en-us/powershell/azure/az-powershell-proxy": {
+      "offset": 3262120,
+      "length": 25844,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b1ba4846b7beeac6"
+    },
+    "/en-us/powershell/scripting/developer/format/format-schema-xml-reference": {
+      "offset": 3287964,
+      "length": 31630,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "885708126184fa2c"
+    },
+    "/en-us/powershell/azure/troubleshooting": {
+      "offset": 3319594,
+      "length": 31692,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d249cf77c1e214a4"
+    },
+    "/en-us/powershell/azure/migrate-from-azurerm-to-az": {
+      "offset": 3351286,
+      "length": 27359,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a6bc65958b1dfd7e"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/get-tracesource": {
+      "offset": 3378645,
+      "length": 26384,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e22bcec90719f3ad"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/export-formatdata": {
+      "offset": 3405029,
+      "length": 28629,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "458849ebd9ea58c0"
+    },
+    "/en-us/powershell/azure/az-predictor": {
+      "offset": 3433658,
+      "length": 26702,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6c911ad6e2dda1c8"
+    },
+    "/en-us/powershell/azure/migrate-az-1.0.0": {
+      "offset": 3460360,
+      "length": 31856,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0925c3859dfc3fe5"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/update-formatdata": {
+      "offset": 3492216,
+      "length": 27881,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "99a05f344424cd53"
+    },
+    "/en-us/powershell/azure/using-psjobs": {
+      "offset": 3520097,
+      "length": 26651,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "20c525b507cb1533"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_objects": {
+      "offset": 3546748,
+      "length": 26484,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "122a805ca75b22ea"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_command_syntax": {
+      "offset": 3573232,
+      "length": 28662,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "33540ceb2a2b8b63"
+    },
+    "/en-us/powershell/scripting/developer/format/formatting-file-overview": {
+      "offset": 3601894,
+      "length": 27982,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "87e06cae656d92a0"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_providers": {
+      "offset": 3629876,
+      "length": 29500,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6399e3fa7312c637"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_parameters": {
+      "offset": 3659376,
+      "length": 28420,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b10a380adff7202d"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_redirection": {
+      "offset": 3687796,
+      "length": 30308,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c54ca7f5f2436970"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/out-host": {
+      "offset": 3718104,
+      "length": 27525,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1063e19456920bde"
+    },
+    "/en-us/powershell/scripting/developer/help/writing-help-for-windows-powershell-cmdlets": {
+      "offset": 3745629,
+      "length": 27239,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7c9589efced71c7e"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core": {
+      "offset": 3772868,
+      "length": 27254,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e82b092c7d0dafaa"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/": {
+      "offset": 3772868,
+      "length": 27254,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e82b092c7d0dafaa"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_foreach": {
+      "offset": 3800122,
+      "length": 27693,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a9c66f80f0ea42b8"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/update-help": {
+      "offset": 3827815,
+      "length": 34656,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a41f6ee1e31556b0"
+    },
+    "/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help": {
+      "offset": 3862471,
+      "length": 32033,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bf51f71328058154"
+    },
+    "/en-us/powershell/scripting/learn/shell/dynamic-help": {
+      "offset": 3894504,
+      "length": 26442,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1ebe6ef3a21ba06e"
+    },
+    "/en-us/powershell/scripting/developer/help/supporting-online-help": {
+      "offset": 3920946,
+      "length": 27360,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5d72a8737d1db4dd"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/export-alias": {
+      "offset": 3948306,
+      "length": 29328,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "db500d44df743762"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/import-alias": {
+      "offset": 3977634,
+      "length": 27491,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2de13f905139e200"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/get-verb": {
+      "offset": 4005125,
+      "length": 27681,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "24e3fe9d99d7bf7f"
+    },
+    "/en-us/powershell/scripting/developer/help/writing-comment-based-help-topics": {
+      "offset": 4032806,
+      "length": 25722,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "78433d7b93802c5e"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/get-alias": {
+      "offset": 4058528,
+      "length": 28135,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f5e9e9b9f79e3a82"
+    },
+    "/en-us/powershell/scripting/developer/help/supporting-updatable-help": {
+      "offset": 4086663,
+      "length": 25753,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "20ea54dc6daea34b"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/remove-alias": {
+      "offset": 4112416,
+      "length": 26922,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8e2b558db56acaf7"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/new-alias": {
+      "offset": 4139338,
+      "length": 28797,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eaddd68e532cc13a"
+    },
+    "/en-us/powershell/module/microsoft.powershell.utility/set-alias": {
+      "offset": 4168135,
+      "length": 30260,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e1a5cc919fcc0f69"
+    },
+    "/en-us/powershell/module/microsoft.powershell.management/get-psdrive": {
+      "offset": 4198395,
+      "length": 29814,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "84f1e26fc444fea1"
+    },
+    "/en-us/powershell/module/microsoft.powershell.management/get-psprovider": {
+      "offset": 4228209,
+      "length": 27017,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7067c09ac36e4dca"
+    },
+    "/en-us/powershell/module/psreadline/about/about_psreadline_release_notes": {
+      "offset": 4255226,
+      "length": 29188,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7299ac85ced966f1"
+    },
+    "/__docx_assets/4447d81ce560c7.bin": {
+      "offset": 4284414,
+      "length": 20,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "261ea754548788d4"
+    },
+    "/static/assets/0.4.03568.8292-0a6c2196/styles/site.css": {
+      "offset": 4284434,
+      "length": 71315,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "31cd23cfc568bf84"
+    },
+    "/media/logos/logo-powershell-core.svg": {
+      "offset": 4355749,
+      "length": 1221,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "068dd56d9c482b99"
+    },
+    "/__docx_assets/c06b021ebda212.png": {
+      "offset": 4356970,
+      "length": 123643,
+      "mime": "image/png",
+      "gzipped": false,
+      "hash": "ebe65382e2ab7a69"
+    },
+    "/__docx_assets/bb3daf44f231b9.png": {
+      "offset": 4480613,
+      "length": 137429,
+      "mime": "image/png",
+      "gzipped": false,
+      "hash": "e4a70e12a7dc5cf4"
+    },
+    "/__docx_assets/e390cfb1707139.png": {
+      "offset": 4618042,
+      "length": 121668,
+      "mime": "image/png",
+      "gzipped": false,
+      "hash": "b0e19ebfa04e21df"
+    },
+    "/__docx_assets/ce24d28f905d5b.png": {
+      "offset": 4739710,
+      "length": 125793,
+      "mime": "image/png",
+      "gzipped": false,
+      "hash": "ebb149bec22f023b"
+    },
+    "/__docx_assets/bd98da7093d6c8.svg": {
+      "offset": 4865503,
+      "length": 10589,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "7820708613c4dbc3"
+    },
+    "/__docx_assets/bf38d89b6c5a10.svg": {
+      "offset": 4876092,
+      "length": 30286,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "76e375e5aec1da5f"
+    },
+    "/media/logos/logo-powershell.svg": {
+      "offset": 4906378,
+      "length": 1086,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "92e32561a207f2aa"
+    },
+    "/static/assets/0.4.03568.8292-0a6c2196/styles/background-image-pattern-plus.b22b3aa4.svg": {
+      "offset": 4907464,
+      "length": 355,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "28724b3aee6cd891"
+    },
+    "/static/assets/0.4.03568.8292-0a6c2196/styles/docons.0a6c219.0697fd28.woff": {
+      "offset": 4907819,
+      "length": 30648,
+      "mime": "font/woff",
+      "gzipped": false,
+      "hash": "25db40bbcc8e827e"
+    },
+    "/static/assets/0.4.03568.8292-0a6c2196/styles/docons.0a6c219.6bef7a0d.eot": {
+      "offset": 4938467,
+      "length": 28985,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "86284c45d73dbda9"
+    },
+    "/static/assets/0.4.03568.8292-0a6c2196/styles/docons.0a6c219.02e33c62.ttf": {
+      "offset": 4967452,
+      "length": 52200,
+      "mime": "font/ttf",
+      "gzipped": false,
+      "hash": "ed1f9faf7fbfb25b"
+    },
+    "/static/third-party/SegoeUI/5.32/west-european/italic/latest.eot": {
+      "offset": 5019652,
+      "length": 23961,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7894d8f2ae3e6258"
+    },
+    "/static/third-party/SegoeUIWeb/1.01.206/SegoeUI-Roman-VF_web.woff": {
+      "offset": 5043613,
+      "length": 149700,
+      "mime": "font/woff",
+      "gzipped": false,
+      "hash": "797f6ae5568d16dc"
+    },
+    "/static/third-party/SegoeUI/5.32/west-european/italic/latest.woff": {
+      "offset": 5193313,
+      "length": 33744,
+      "mime": "font/woff",
+      "gzipped": false,
+      "hash": "663fb6a00edb593e"
+    },
+    "/static/assets/0.4.03568.8292-0a6c2196/styles/docons.0a6c219.321794d1.woff2": {
+      "offset": 5227057,
+      "length": 25728,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "7263775c1a39c886"
+    },
+    "/static/assets/0.4.03568.8292-0a6c2196/styles/background-image-pattern-pixie-sticks.d49f3ace.svg": {
+      "offset": 5252785,
+      "length": 7897,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "cfc9f415dc551d53"
+    },
+    "/static/assets/0.4.03568.8292-0a6c2196/styles/modal-complete-plain.e9734ed0.svg": {
+      "offset": 5260682,
+      "length": 416,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "3433efbd156f93ca"
+    },
+    "/static/assets/0.4.03568.8292-0a6c2196/styles/quiz-complete.c6e2591a.svg": {
+      "offset": 5261098,
+      "length": 1261,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "46767ea5730ca481"
+    },
+    "/static/third-party/SegoeUI/5.32/west-european/italic/latest.ttf": {
+      "offset": 5262359,
+      "length": 51000,
+      "mime": "font/ttf",
+      "gzipped": false,
+      "hash": "0a94f4a06ee9b6da"
+    },
+    "/static/third-party/SegoeUIWeb/1.01.206/SegoeUI-Roman-VF_web.woff2": {
+      "offset": 5313359,
+      "length": 118288,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "12579d1652c40b48"
+    },
+    "/en-us/media/event-banners/banner-ignite-2026.png": {
+      "offset": 5431647,
+      "length": 87031,
+      "mime": "image/png",
+      "gzipped": false,
+      "hash": "c93a50aa44062e64"
+    },
+    "/static/third-party/SegoeUI/5.32/west-european/italic/latest.woff2": {
+      "offset": 5518678,
+      "length": 27624,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "hash": "eb7f651fa997d12d"
+    },
+    "/en-us/media/event-banners/banner-build-2026.png": {
+      "offset": 5546302,
+      "length": 61509,
+      "mime": "image/png",
+      "gzipped": false,
+      "hash": "d8069397242ac459"
+    },
+    "/en-us/media/event-banners/banner-ai-skills-fest-2026.jpg": {
+      "offset": 5607811,
+      "length": 54096,
+      "mime": "image/jpeg",
+      "gzipped": false,
+      "hash": "dfc906681565df89"
+    },
+    "/static/third-party/SegoeUIWeb/1.01.206/SegoeUI-Roman-VF_web.ttf": {
+      "offset": 5661907,
+      "length": 272540,
+      "mime": "font/ttf",
+      "gzipped": false,
+      "hash": "df983d52548f877b"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 27104,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e5ee9046c6ae86a7"
+    },
+    "/": {
+      "offset": 0,
+      "length": 27104,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e5ee9046c6ae86a7"
+    }
+  }
+}

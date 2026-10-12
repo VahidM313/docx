@@ -1,1 +1,531 @@
-{"id":"vite","name":"Vite","version":"v6.3","commit":"79ec2242","origin":"https://vite.dev","entryPath":"/guide/","updatedAt":"2026-10-10T16:44:01.404Z","totalBytes":941652,"chunkCount":44,"routes":{"/guide":{"offset":0,"length":13956,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8c79aac6d6f80e45"},"/guide/":{"offset":0,"length":13956,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8c79aac6d6f80e45"},"/guide/performance":{"offset":13956,"length":11974,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"26b6da793a56c91a"},"/guide/using-plugins":{"offset":25930,"length":10475,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b62f3ed7e5e5f90d"},"/guide/why":{"offset":36405,"length":13813,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"692e112d6cf579f9"},"/guide/cli":{"offset":50218,"length":9957,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3bf5133ff7c78437"},"/guide/build":{"offset":60175,"length":16540,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"602cc572fa9f4dde"},"/guide/features":{"offset":76715,"length":30778,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"83f2ec9080b81fd1"},"/guide/env-and-mode":{"offset":107493,"length":12998,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f5f2b63c8f1b9a1f"},"/guide/backend-integration":{"offset":120491,"length":14566,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"08fab95bd6805120"},"/guide/troubleshooting":{"offset":135057,"length":15941,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c26da81039f965c1"},"/guide/migration":{"offset":150998,"length":16628,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b20e7f283c0847bd"},"/config":{"offset":167626,"length":12477,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"45616af313452006"},"/config/":{"offset":167626,"length":12477,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"45616af313452006"},"/guide/assets":{"offset":180103,"length":12142,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"73b36f75e3490a8e"},"/guide/ssr":{"offset":192245,"length":18709,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e7d5879b6f927d92"},"/guide/philosophy":{"offset":210954,"length":9705,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5ebb7da8b9ade238"},"/guide/dep-pre-bundling":{"offset":220659,"length":11149,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"867b7dc202c0caf6"},"/guide/static-deploy":{"offset":231808,"length":15119,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ef155a501c359100"},"/config/dep-optimization-options":{"offset":246927,"length":10665,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9c96b13cedb660b5"},"/config/ssr-options":{"offset":257592,"length":8804,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"44aa6d4085182f07"},"/guide/api-plugin":{"offset":266396,"length":23050,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a718453bcbfd1bdd"},"/guide/api-environment-frameworks":{"offset":289446,"length":15794,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9c5001f7c025c32e"},"/changes":{"offset":305240,"length":8232,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4305aaf53f08badd"},"/changes/":{"offset":305240,"length":8232,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4305aaf53f08badd"},"/config/preview-options":{"offset":313472,"length":9053,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"489ccdbfa673fd59"},"/config/build-options":{"offset":322525,"length":16007,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d1c0e30af1bd51cc"},"/guide/api-javascript":{"offset":338532,"length":16945,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2346cf94e051a48a"},"/config/worker-options":{"offset":355477,"length":7923,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7946d6ad5e150b87"},"/guide/api-environment":{"offset":363400,"length":12202,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e584460bfcbdc86"},"/guide/api-environment-instances":{"offset":375602,"length":13321,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ed320b559fa06bf3"},"/config/server-options":{"offset":388923,"length":17905,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e6eba29d996b3101"},"/guide/api-hmr":{"offset":406828,"length":15881,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"80a1c21924d3a848"},"/guide/api-environment-plugins":{"offset":422709,"length":14763,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"97baaa6f9e0d65e1"},"/guide/api-environment-runtimes":{"offset":437472,"length":18155,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d604a0e871b2b791"},"/config/shared-options":{"offset":455627,"length":20802,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f55d3586b8b2bcd5"},"/changes/ssr-using-modulerunner":{"offset":476429,"length":8241,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c09b18387ba4275e"},"/changes/hotupdate-hook":{"offset":484670,"length":9501,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"585784fa5826afc5"},"/changes/per-environment-apis":{"offset":494171,"length":8766,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9a246f2a3920b38e"},"/changes/shared-plugins-during-build":{"offset":502937,"length":8839,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"717d35080fd9a4e8"},"/changes/this-environment-in-hooks":{"offset":511776,"length":9072,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"57f43799150777c8"},"/assets/viteconf.Dvk5Ghxu.svg":{"offset":520848,"length":3046,"mime":"image/svg+xml","gzipped":true,"hash":"89a37fb864983f5e"},"/logo-without-border.svg":{"offset":523894,"length":1936,"mime":"image/svg+xml","gzipped":true,"hash":"00003e324504bb5c"},"/assets/vite-dark.D2ACe7TL.svg":{"offset":525830,"length":2103,"mime":"image/svg+xml","gzipped":true,"hash":"601f6b2560d720d2"},"/assets/vite-light.t8GCa_VF.svg":{"offset":527933,"length":2102,"mime":"image/svg+xml","gzipped":true,"hash":"644d50f88273e886"},"/assets/vite-environments.DZyy20w5.svg":{"offset":530035,"length":166563,"mime":"image/svg+xml","gzipped":true,"hash":"e8f6fc3028ab1fd4"},"/assets/vite-plugin-inspect.BSP8m2UZ.webp":{"offset":696598,"length":245054,"mime":"image/webp","gzipped":true,"hash":"099316d754d204f9"},"/docs":{"offset":0,"length":13956,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8c79aac6d6f80e45"},"/":{"offset":0,"length":13956,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8c79aac6d6f80e45"}}}
+{
+  "id": "vite",
+  "name": "Vite",
+  "version": "v6.3",
+  "commit": "e45ab6d7",
+  "origin": "https://vite.dev",
+  "entryPath": "/guide/",
+  "updatedAt": "2026-10-11T10:37:19.021Z",
+  "totalBytes": 2188912,
+  "chunkCount": 69,
+  "routes": {
+    "/guide": {
+      "offset": 0,
+      "length": 13012,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c8a0da3c3b83c76e"
+    },
+    "/guide/": {
+      "offset": 0,
+      "length": 13012,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c8a0da3c3b83c76e"
+    },
+    "/config": {
+      "offset": 13012,
+      "length": 11526,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b73f87015f4a947b"
+    },
+    "/config/": {
+      "offset": 13012,
+      "length": 11526,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b73f87015f4a947b"
+    },
+    "/guide/cli": {
+      "offset": 24538,
+      "length": 9014,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a563d256eaff4dda"
+    },
+    "/guide/why": {
+      "offset": 33552,
+      "length": 12867,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "95716b5e9782cbcc"
+    },
+    "/guide/features": {
+      "offset": 46419,
+      "length": 29822,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ed58276b34fbc902"
+    },
+    "/guide/dep-pre-bundling": {
+      "offset": 76241,
+      "length": 10211,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "57f77b5654fe8701"
+    },
+    "/guide/ssr": {
+      "offset": 86452,
+      "length": 17745,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c31c1fa62fb6be63"
+    },
+    "/guide/philosophy": {
+      "offset": 104197,
+      "length": 8769,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9538a9e057262962"
+    },
+    "/guide/assets": {
+      "offset": 112966,
+      "length": 11201,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bd8b78857302c221"
+    },
+    "/guide/using-plugins": {
+      "offset": 124167,
+      "length": 9528,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ad53aed4ca76c74c"
+    },
+    "/guide/backend-integration": {
+      "offset": 133695,
+      "length": 13605,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "481cc5651db80469"
+    },
+    "/guide/migration": {
+      "offset": 147300,
+      "length": 15691,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c53138bccc37f250"
+    },
+    "/guide/env-and-mode": {
+      "offset": 162991,
+      "length": 12064,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fc3bc1524264b39b"
+    },
+    "/guide/static-deploy": {
+      "offset": 175055,
+      "length": 14176,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "396e18a6ac3b6b7e"
+    },
+    "/guide/build": {
+      "offset": 189231,
+      "length": 15575,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9386565117fcbf9e"
+    },
+    "/guide/performance": {
+      "offset": 204806,
+      "length": 11037,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5d848744fc9aefc4"
+    },
+    "/guide/troubleshooting": {
+      "offset": 215843,
+      "length": 15022,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fd6c399e0a729289"
+    },
+    "/changes": {
+      "offset": 230865,
+      "length": 7282,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4ad59f927a5b89c6"
+    },
+    "/changes/": {
+      "offset": 230865,
+      "length": 7282,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4ad59f927a5b89c6"
+    },
+    "/config/build-options": {
+      "offset": 238147,
+      "length": 15056,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "22fdf9ec5ccd03ae"
+    },
+    "/guide/api-javascript": {
+      "offset": 253203,
+      "length": 15997,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "42727043413bdea9"
+    },
+    "/config/dep-optimization-options": {
+      "offset": 269200,
+      "length": 9723,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1459ff415d1ae595"
+    },
+    "/guide/api-environment": {
+      "offset": 278923,
+      "length": 11260,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "34913001575ef897"
+    },
+    "/guide/api-environment-frameworks": {
+      "offset": 290183,
+      "length": 14840,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b71115d061d10e32"
+    },
+    "/config/server-options": {
+      "offset": 305023,
+      "length": 16951,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fdababb7e01a5ba3"
+    },
+    "/guide/api-plugin": {
+      "offset": 321974,
+      "length": 22079,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2a9e93d295f86cf9"
+    },
+    "/guide/api-hmr": {
+      "offset": 344053,
+      "length": 14918,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0906bc3ec872a23a"
+    },
+    "/config/shared-options": {
+      "offset": 358971,
+      "length": 19857,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f07114374791ff46"
+    },
+    "/config/ssr-options": {
+      "offset": 378828,
+      "length": 7868,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "10e81e5113ac4a03"
+    },
+    "/guide/api-environment-runtimes": {
+      "offset": 386696,
+      "length": 17192,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "09152f535b4039aa"
+    },
+    "/config/worker-options": {
+      "offset": 403888,
+      "length": 6980,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "309d9fa87bf202f1"
+    },
+    "/config/preview-options": {
+      "offset": 410868,
+      "length": 8112,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "950d7e366b290141"
+    },
+    "/guide/api-environment-instances": {
+      "offset": 418980,
+      "length": 12367,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6e1f721e0b17562c"
+    },
+    "/guide/api-environment-plugins": {
+      "offset": 431347,
+      "length": 13812,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ee1ff45a0a0fb19e"
+    },
+    "/changes/hotupdate-hook": {
+      "offset": 445159,
+      "length": 8544,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "46dbeabb0ec8fcc4"
+    },
+    "/changes/ssr-using-modulerunner": {
+      "offset": 453703,
+      "length": 7289,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e3715886af1bc699"
+    },
+    "/changes/shared-plugins-during-build": {
+      "offset": 460992,
+      "length": 7886,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6382248142a866d2"
+    },
+    "/changes/per-environment-apis": {
+      "offset": 468878,
+      "length": 7819,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7314b55d9221520d"
+    },
+    "/changes/this-environment-in-hooks": {
+      "offset": 476697,
+      "length": 8131,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8004e02712fc844b"
+    },
+    "/assets/viteconf.Dvk5Ghxu.svg": {
+      "offset": 484828,
+      "length": 3046,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "89a37fb864983f5e"
+    },
+    "/assets/vite-light.t8GCa_VF.svg": {
+      "offset": 487874,
+      "length": 2102,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "644d50f88273e886"
+    },
+    "/assets/vite-dark.D2ACe7TL.svg": {
+      "offset": 489976,
+      "length": 2103,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "601f6b2560d720d2"
+    },
+    "/logo-without-border.svg": {
+      "offset": 492079,
+      "length": 1936,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "00003e324504bb5c"
+    },
+    "/assets/vite-plugin-inspect.BSP8m2UZ.webp": {
+      "offset": 494015,
+      "length": 245054,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "099316d754d204f9"
+    },
+    "/assets/vite-environments.DZyy20w5.svg": {
+      "offset": 739069,
+      "length": 166563,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "e8f6fc3028ab1fd4"
+    },
+    "/assets/style.DKMfOyQO.css": {
+      "offset": 905632,
+      "length": 47891,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "bedb620dbc0c88c5"
+    },
+    "/assets/primary-button-background.Bjk7gn3x.jpg": {
+      "offset": 953523,
+      "length": 45593,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "688d49c014139c8e"
+    },
+    "/assets/primary-button-background.QdHMRZT6.jpg": {
+      "offset": 999116,
+      "length": 47971,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "77f1725aad3e2a80"
+    },
+    "/assets/KHTekaMono-Regular.CiZ9ZkmZ.woff2": {
+      "offset": 1047087,
+      "length": 40961,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "2cbb020a8140968d"
+    },
+    "/assets/KHTekaMono-Medium.CxAWoJPq.woff2": {
+      "offset": 1088048,
+      "length": 41065,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "6e77403c50008eba"
+    },
+    "/assets/primary-button-background.CHnwvuqy.jpg": {
+      "offset": 1129113,
+      "length": 56358,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "092f0c6e030632ea"
+    },
+    "/assets/APK-Protocol-Medium.C7Mq9oGh.woff2": {
+      "offset": 1185471,
+      "length": 38173,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "0b3d073b1548584b"
+    },
+    "/assets/APK-Protocol-Semi-Bold.CC2BASA5.woff2": {
+      "offset": 1223644,
+      "length": 38313,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "026cce4a39ffeaf4"
+    },
+    "/assets/inter-roman-latin.Di8DUHzh.woff2": {
+      "offset": 1261957,
+      "length": 67828,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "f1780724de9f1526"
+    },
+    "/assets/inter-roman-greek-ext.CqjqNYQ-.woff2": {
+      "offset": 1329785,
+      "length": 16295,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "a920fad3caf08d9c"
+    },
+    "/assets/primary-button-background.DR4xgNht.jpg": {
+      "offset": 1346080,
+      "length": 48527,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "1c791e94e81ac3a3"
+    },
+    "/assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2": {
+      "offset": 1394607,
+      "length": 40521,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e7f646b31fe1539e"
+    },
+    "/assets/primary-button-background.DQk9_E88.jpg": {
+      "offset": 1435128,
+      "length": 49999,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "1f63d58b1af3fac6"
+    },
+    "/assets/inter-roman-greek.BBVDIX6e.woff2": {
+      "offset": 1485127,
+      "length": 29948,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "0af738c9f2ece110"
+    },
+    "/assets/inter-roman-vietnamese.BjW4sHH5.woff2": {
+      "offset": 1515075,
+      "length": 14095,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "73c77e9e56f44037"
+    },
+    "/assets/inter-roman-latin-ext.4ZJIpNVo.woff2": {
+      "offset": 1529170,
+      "length": 110213,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e60f40c3d9ebf9fb"
+    },
+    "/assets/inter-roman-cyrillic.C5lxZ8CY.woff2": {
+      "offset": 1639383,
+      "length": 29192,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "4462eacbb605d693"
+    },
+    "/assets/inter-italic-latin.C2AdPX0b.woff2": {
+      "offset": 1668575,
+      "length": 74824,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "51ce22361c0fd3d6"
+    },
+    "/assets/vite-featurepanel-4-background.Bnx0RZk-.jpg": {
+      "offset": 1743399,
+      "length": 185211,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "a45c019f492a6093"
+    },
+    "/assets/inter-italic-greek.DJ8dCoTZ.woff2": {
+      "offset": 1928610,
+      "length": 32592,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "da2cea9241fc59d4"
+    },
+    "/assets/inter-italic-cyrillic.By2_1cv3.woff2": {
+      "offset": 1961202,
+      "length": 31328,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "d350118d3ccbe16c"
+    },
+    "/assets/inter-italic-vietnamese.BSbpV94h.woff2": {
+      "offset": 1992530,
+      "length": 14907,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "bf89b2e22250b187"
+    },
+    "/assets/inter-italic-latin-ext.CN1xVJS-.woff2": {
+      "offset": 2007437,
+      "length": 120898,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "21cbe44191b113d8"
+    },
+    "/assets/inter-italic-greek-ext.1u6EdAuj.woff2": {
+      "offset": 2128335,
+      "length": 17432,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "08070cee243b003e"
+    },
+    "/assets/inter-italic-cyrillic-ext.r48I6akx.woff2": {
+      "offset": 2145767,
+      "length": 43145,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "79c0e487df594b1a"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 13012,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c8a0da3c3b83c76e"
+    },
+    "/": {
+      "offset": 0,
+      "length": 13012,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c8a0da3c3b83c76e"
+    }
+  }
+}

@@ -1,1 +1,1917 @@
-{"id":"mdn_js","name":"MDN JavaScript","version":"ES2025","commit":"c221e05a","origin":"https://developer.mozilla.org","entryPath":"/en-US/docs/Web/JavaScript","updatedAt":"2026-10-10T16:44:04.520Z","totalBytes":5978105,"chunkCount":269,"routes":{"/en-US/docs/Web/JavaScript":{"offset":0,"length":30377,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"adcc0f2c32c3e4cb"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects":{"offset":30377,"length":29545,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d263cdf51ea59fc3"},"/en-US/docs/Web/JavaScript/Guide/Data_structures":{"offset":59922,"length":37875,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"82975811ec2ad3c7"},"/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling":{"offset":97797,"length":33518,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"38e65b884416d17a"},"/en-US/docs/Web/JavaScript/Guide/Language_overview":{"offset":131315,"length":43556,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b1844b8d2e45539a"},"/en-US/docs/Web/JavaScript/Reference/Operators":{"offset":174871,"length":33747,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5b63c4bd8a48f7af"},"/en-US/docs/Web/JavaScript/Guide":{"offset":208618,"length":29988,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8803495495f62e6a"},"/en-US/docs/Web/JavaScript/Guide/Using_classes":{"offset":238606,"length":38315,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6f35bdd43e09468c"},"/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration":{"offset":276921,"length":32607,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a98d05b21cd26a40"},"/en-US/docs/Web/JavaScript/Guide/Working_with_objects":{"offset":309528,"length":35642,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b708e69732734cb2"},"/en-US/docs/Web/JavaScript/Reference/Functions":{"offset":345170,"length":34897,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7a5979b02b0a9b0a"},"/en-US/docs/Web/JavaScript/Reference":{"offset":380067,"length":32221,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fbdc95093244ff69"},"/en-US/docs/Web/JavaScript/Reference/Statements":{"offset":412288,"length":31213,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b7dd9645ac0358f5"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval":{"offset":443501,"length":36518,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0851b9c6bfa7fad3"},"/en-US/docs/Web/JavaScript/Reference/Statements/for...in":{"offset":480019,"length":32165,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"169210bf5256bc47"},"/en-US/docs/Web/JavaScript/Reference/JavaScript_technologies_overview":{"offset":512184,"length":33591,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"77b36a9a9b27ddc4"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString":{"offset":545775,"length":22840,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"61118e09921ed53b"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object":{"offset":568615,"length":28864,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e164676e1dd42b84"},"/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties":{"offset":597479,"length":28209,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1f39418e7a39c5f0"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp":{"offset":625688,"length":28367,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"72c4fc52111ec170"},"/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness":{"offset":654055,"length":34048,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ce9089fbb0f44095"},"/en-US/docs/Web/JavaScript/Guide/Closures":{"offset":688103,"length":34700,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b575531b744797cf"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math":{"offset":722803,"length":23916,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bbd35cf743953f52"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number":{"offset":746719,"length":27033,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"47b21af6b261730d"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean":{"offset":773752,"length":24302,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5cfbb06b4e9dbb70"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array":{"offset":798054,"length":36654,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6049ac939b90381b"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error":{"offset":834708,"length":25702,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9cfebad095fd6fb0"},"/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain":{"offset":860410,"length":38618,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9c0931f77be8adbc"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/String":{"offset":899028,"length":30483,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"72f73ed9b188830a"},"/en-US/docs/Web/JavaScript/Guide/Memory_management":{"offset":929511,"length":34796,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"72b1b15628373e43"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON":{"offset":964307,"length":25466,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c33c233b5759fb29"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function":{"offset":989773,"length":22858,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4f7963ce85c5e543"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is":{"offset":1012631,"length":21604,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dbc6ead591c2afa1"},"/en-US/docs/Web/JavaScript/Reference/Statements/for...of":{"offset":1034235,"length":32871,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"41f33114f1a4659c"},"/en-US/docs/Web/JavaScript/Reference/Statements/try...catch":{"offset":1067106,"length":32282,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3e24d44d6f56fe23"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set":{"offset":1099388,"length":27706,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d23593d2c35d7d1c"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap":{"offset":1127094,"length":26485,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f55171ac19fbde19"},"/en-US/docs/Web/JavaScript/Reference/Statements/do...while":{"offset":1153579,"length":28561,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f055100f04273c82"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet":{"offset":1182140,"length":23028,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d85a97dd53dc08bc"},"/en-US/docs/Web/JavaScript/Reference/Operators/typeof":{"offset":1205168,"length":31896,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"59c61cc454200add"},"/en-US/docs/Web/JavaScript/Reference/Operators/this":{"offset":1237064,"length":36948,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4a78f3215a2cb80f"},"/en-US/docs/Web/JavaScript/Reference/Statements/const":{"offset":1274012,"length":30641,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"303f3e345282315b"},"/en-US/docs/Web/JavaScript/Reference/Statements/if...else":{"offset":1304653,"length":29939,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"97afaa2a0bdaffe0"},"/en-US/docs/Web/JavaScript/Reference/Statements/let":{"offset":1334592,"length":33036,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5373649963cb6639"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map":{"offset":1367628,"length":28610,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e610e2a64ef5b5c0"},"/en-US/docs/Web/JavaScript/Reference/Operators/new":{"offset":1396238,"length":31732,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"382f0999e7784b4b"},"/en-US/docs/Web/JavaScript/Reference/Statements/var":{"offset":1427970,"length":32084,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d76481a54cde8197"},"/en-US/docs/Web/JavaScript/Reference/Operators/instanceof":{"offset":1460054,"length":31806,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b3803a2f2a684a9a"},"/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence":{"offset":1491860,"length":34412,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8e392ea11d5b24dd"},"/en-US/docs/Web/JavaScript/Guide/Regular_expressions":{"offset":1526272,"length":34770,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c4089ef19ab93ca0"},"/en-US/docs/Web/JavaScript/Reference/Statements/switch":{"offset":1561042,"length":32011,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ca19e21e45cd9a6c"},"/en-US/docs/Web/JavaScript/Reference/Classes":{"offset":1593053,"length":32791,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"66e0dfe85c93ca5f"},"/en-US/docs/Web/JavaScript/Guide/Functions":{"offset":1625844,"length":36769,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"52c32978cd12a4a0"},"/en-US/docs/Web/JavaScript/Guide/Using_promises":{"offset":1662613,"length":36279,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9de5c7f71a50f9c8"},"/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators":{"offset":1698892,"length":30688,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4be28aa59105bbc2"},"/en-US/docs/Web/JavaScript/Guide/Introduction":{"offset":1729580,"length":32214,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9e00e24d77a73a4d"},"/en-US/docs/Web/JavaScript/Guide/Grammar_and_types":{"offset":1761794,"length":40162,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"304c11a7be93bbda"},"/en-US/docs/Web/JavaScript/Guide/Resource_management":{"offset":1801956,"length":35968,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"209e9305ae079a93"},"/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings":{"offset":1837924,"length":34543,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"76ff2638735970cf"},"/en-US/docs/Web/JavaScript/Guide/Indexed_collections":{"offset":1872467,"length":36467,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7b84f3be1902b81b"},"/en-US/docs/Web/JavaScript/Guide/Representing_dates_times":{"offset":1908934,"length":28309,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9fc717b7835baea4"},"/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators":{"offset":1937243,"length":41836,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fa291be84750d1b5"},"/en-US/docs/Web/JavaScript/Guide/Typed_arrays":{"offset":1979079,"length":34652,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2fca47adc139ac30"},"/en-US/docs/Web/JavaScript/Guide/Keyed_collections":{"offset":2013731,"length":30340,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"21864792d66597e0"},"/en-US/docs/Web/JavaScript/Guide/Modules":{"offset":2044071,"length":46191,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7f80f5065c124e10"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction":{"offset":2090262,"length":20901,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f1736bfc65b0144b"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt":{"offset":2111163,"length":27286,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"691b22d64cd45c10"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer":{"offset":2138449,"length":23859,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a1991d2689e93f32"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError":{"offset":2162308,"length":21169,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bd4454f901d6810c"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics":{"offset":2183477,"length":23085,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"be1be36fc53dff1b"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView":{"offset":2206562,"length":23120,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1b63e70fde08d29e"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/AbstractModuleSource":{"offset":2229682,"length":20052,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"526a828199f7f7d0"},"/en-US/docs/Web/JavaScript/Guide/Internationalization":{"offset":2249734,"length":44160,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b28a13e258691b9e"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack":{"offset":2293894,"length":20944,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bffda63049a6e9a4"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array":{"offset":2314838,"length":21602,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e6b15963c9226029"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator":{"offset":2336440,"length":21055,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7fb68f7cf29324fa"},"/en-US/docs/Web/JavaScript/Guide/Meta_programming":{"offset":2357495,"length":30149,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ea083844aa9c32cc"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator":{"offset":2387644,"length":21613,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"88716ff90a9ad37f"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction":{"offset":2409257,"length":20613,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a8eda4764872b354"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array":{"offset":2429870,"length":21950,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"59ad35ca449f23d9"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent":{"offset":2451820,"length":28132,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"841d147c81ca12fd"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date":{"offset":2479952,"length":31110,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4e1123473c83f866"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array":{"offset":2511062,"length":21766,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4eb808c65cd4fdfd"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator":{"offset":2532828,"length":21649,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3920d702115bb0e2"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity":{"offset":2554477,"length":27520,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c49aa4ecc1ce2184"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape":{"offset":2581997,"length":28026,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6bdd63104c1e4edd"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI":{"offset":2610023,"length":30575,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4a710f770996d50c"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent":{"offset":2640598,"length":30577,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8202031da3597c39"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry":{"offset":2671175,"length":24547,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"53ab1ed66aac8ae1"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/DisposableStack":{"offset":2695722,"length":21564,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cf10299afb2349d7"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array":{"offset":2717286,"length":21820,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a027ab84f0744761"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis":{"offset":2739106,"length":30165,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"481b82ef28947063"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURI":{"offset":2769271,"length":28278,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"93a7114f52941b8e"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction":{"offset":2797549,"length":20923,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4743d023e8d988bc"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError":{"offset":2818472,"length":21027,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3886993b8e4b4a97"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float16Array":{"offset":2839499,"length":21888,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"87cb175693c5317d"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN":{"offset":2861387,"length":30628,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ec8289f3bc73e7c4"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise":{"offset":2892015,"length":32810,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6a97ba48124ed4c6"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy":{"offset":2924825,"length":27103,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"686c76c6ed4ea1bd"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt":{"offset":2951928,"length":32020,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bcffae6d9ace6da9"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl":{"offset":2983948,"length":25567,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cd9843a248068483"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN":{"offset":3009515,"length":28923,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0859726eea3a9478"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat":{"offset":3038438,"length":30197,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"52f7fc390a2a333e"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError":{"offset":3068635,"length":20414,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"71ee1d3a3d44a8af"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array":{"offset":3089049,"length":21745,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ffd960ab4ed186c4"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect":{"offset":3110794,"length":23004,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"63b6efcff8dada12"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array":{"offset":3133798,"length":21745,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8952e13e49c33481"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator":{"offset":3155543,"length":26688,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"362ea7f2ea239111"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError":{"offset":3182231,"length":21441,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cd3f9122f111cd5f"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/isFinite":{"offset":3203672,"length":27996,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cc92074189e0946b"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError":{"offset":3231668,"length":21063,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"15ea1821823353ab"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array":{"offset":3252731,"length":21639,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a9b6143000fd7b20"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined":{"offset":3274370,"length":30081,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f14da8ef8c5c42dd"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol":{"offset":3304451,"length":27068,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9f5a792f896d922d"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError":{"offset":3331519,"length":21093,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"344cadbcfc0dccac"},"/en-US/docs/Web/JavaScript/Reference/Operators/Addition":{"offset":3352612,"length":29510,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"60f22eff59ee5d75"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray":{"offset":3382122,"length":29933,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"95f53ea8fb158f47"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError":{"offset":3412055,"length":21048,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6d13701f40dfb3f5"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError":{"offset":3433103,"length":21186,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"378edaf57a96221e"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef":{"offset":3454289,"length":23865,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1558c55034cf83ce"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray":{"offset":3478154,"length":21706,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"93e2a48e203609b5"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal":{"offset":3499860,"length":29980,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d5a5f58e4788e50e"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer":{"offset":3529840,"length":25275,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cd8549af8a9ce177"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array":{"offset":3555115,"length":21704,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d9124b53cf5e5bf9"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/SuppressedError":{"offset":3576819,"length":21312,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3dbf8b2733c595ef"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array":{"offset":3598131,"length":23214,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7383605b0f77c8ad"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array":{"offset":3621345,"length":21704,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3da974a9eff0ae52"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape":{"offset":3643049,"length":28042,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ae8b035b5a7f2e11"},"/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR":{"offset":3671091,"length":28378,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a29335a10031f5c0"},"/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator":{"offset":3699469,"length":28693,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9c7de74a5148675c"},"/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT":{"offset":3728162,"length":28247,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8807257a4c7375e6"},"/en-US/docs/Web/JavaScript/Reference/Operators/async_function":{"offset":3756409,"length":28451,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d75ddd6b26a0284c"},"/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment":{"offset":3784860,"length":27357,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e9a87ba1194e91f7"},"/en-US/docs/Web/JavaScript/Reference/Operators/Decrement":{"offset":3812217,"length":28067,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3106f92046c4294c"},"/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR":{"offset":3840284,"length":28368,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"763b6262400c194c"},"/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND":{"offset":3868652,"length":28461,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"459b833cef244d8a"},"/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment":{"offset":3897113,"length":27302,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b9c37ea6c714912b"},"/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator":{"offset":3924415,"length":31056,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1be25df23c32efc0"},"/en-US/docs/Web/JavaScript/Reference/Operators/await":{"offset":3955471,"length":32647,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ce64be20459db541"},"/en-US/docs/Web/JavaScript/Reference/Operators/Assignment":{"offset":3988118,"length":30328,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0a024bf221570343"},"/en-US/docs/Web/JavaScript/Reference/Operators/class":{"offset":4018446,"length":27983,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1f904cfb5d1c89c8"},"/en-US/docs/Web/JavaScript/Reference/Operators/async_function*":{"offset":4046429,"length":28175,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bd9bcf824854e2a2"},"/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment":{"offset":4074604,"length":27322,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"30c185b875b33e7b"},"/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment":{"offset":4101926,"length":27751,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6677fc43026eff32"},"/en-US/docs/Web/JavaScript/Reference/Operators/delete":{"offset":4129677,"length":31816,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1d7d13c4e2cb9331"},"/en-US/docs/Web/JavaScript/Reference/Operators/import":{"offset":4161493,"length":33572,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4fbbfddb9ff011cf"},"/en-US/docs/Web/JavaScript/Reference/Operators/import.meta":{"offset":4195065,"length":28634,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"81d14c2c92c7bb7f"},"/en-US/docs/Web/JavaScript/Reference/Operators/Equality":{"offset":4223699,"length":30229,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c8069f140ea54962"},"/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring":{"offset":4253928,"length":36042,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"06a013b68c6f3400"},"/en-US/docs/Web/JavaScript/Reference/Operators/Grouping":{"offset":4289970,"length":30473,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5d4b0df8bf592621"},"/en-US/docs/Web/JavaScript/Reference/Operators/import.meta/resolve":{"offset":4320443,"length":30646,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"97a37cbee6070297"},"/en-US/docs/Web/JavaScript/Reference/Operators/Division":{"offset":4351089,"length":28102,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"807a30ce593f8f34"},"/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal":{"offset":4379191,"length":28158,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"27d7066a1713a7c1"},"/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than":{"offset":4407349,"length":27676,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eefeeed961449ebb"},"/en-US/docs/Web/JavaScript/Reference/Operators/function*":{"offset":4435025,"length":28183,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fcaae1698c6bdb36"},"/en-US/docs/Web/JavaScript/Reference/Operators/function":{"offset":4463208,"length":32272,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4c2d6acae3b36a57"},"/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment":{"offset":4495480,"length":27463,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"984da7690d05f66e"},"/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation":{"offset":4522943,"length":30181,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f1e1ee7dcdc3d52c"},"/en-US/docs/Web/JavaScript/Reference/Operators/Division_assignment":{"offset":4553124,"length":27481,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"69cccab39f161a5a"},"/en-US/docs/Web/JavaScript/Reference/Operators/import/defer":{"offset":4580605,"length":27823,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b2ffe4ffb0bb246f"},"/en-US/docs/Web/JavaScript/Reference/Operators/Increment":{"offset":4608428,"length":27976,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7dfe95b32944b5cb"},"/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal":{"offset":4636404,"length":28267,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9c52ba979bd550fd"},"/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment":{"offset":4664671,"length":27717,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"87c826d7b54612d6"},"/en-US/docs/Web/JavaScript/Reference/Operators/import/source":{"offset":4692388,"length":27123,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3a7e026a24eba5d7"},"/en-US/docs/Web/JavaScript/Reference/Operators/Less_than":{"offset":4719511,"length":29718,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"11d683278222fbdf"},"/en-US/docs/Web/JavaScript/Reference/Operators/Inequality":{"offset":4749229,"length":27976,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c8cf171de4a795ff"},"/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment":{"offset":4777205,"length":27326,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"480d6316af290ec0"},"/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND":{"offset":4804531,"length":30004,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e3bae8d824d04b2"},"/en-US/docs/Web/JavaScript/Reference/Operators/in":{"offset":4834535,"length":31474,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3f72e8e30b4f89ea"},"/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift":{"offset":4866009,"length":28434,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5c77525729fa7f26"},"/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR":{"offset":4894443,"length":29976,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8e9d2caf6ec9935e"},"/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT":{"offset":4924419,"length":28352,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7007d90e98782131"},"/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment":{"offset":4952771,"length":28121,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5c868d61d7d6208f"},"/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication":{"offset":4980892,"length":27769,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"001a4c1e6e51cac8"},"/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment":{"offset":5008661,"length":27418,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ba37f199e9f93722"},"/en-US/docs/Web/JavaScript/Reference/Operators/null":{"offset":5036079,"length":28179,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4fdf219b17b09377"},"/en-US/docs/Web/JavaScript/Reference/Operators/new.target":{"offset":5064258,"length":30526,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"54febbd6338ba906"},"/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment":{"offset":5094784,"length":27986,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"12a8e501ed77745d"},"/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing":{"offset":5122770,"length":30284,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"13738998eca5ec94"},"/static/client/270.c4deb27edf934078.css":{"offset":5153054,"length":665,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"7bcf4784c25e28df"},"/static/client/styles-reference-layout.632d2f3884f10ca3.css":{"offset":5153719,"length":418,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"4733e9d2dc4e314f"},"/static/client/9228.c46ef79d5582674d.css":{"offset":5154137,"length":451,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"6d46fe1cc86170dd"},"/static/client/styles-global.13616ebb1fc8ee2f.css":{"offset":5154588,"length":4509,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0e411bdffe894161"},"/static/client/styles-navigation.c3ebf384e65df345.css":{"offset":5159097,"length":756,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"02171c05961802eb"},"/static/client/styles-reference-toc.9b9bd019efd16b86.css":{"offset":5159853,"length":384,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"ac690a56c0c6cb31"},"/static/client/styles-content-section.0a46cad19e719859.css":{"offset":5160237,"length":3206,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"8fb9fb4d4e80360c"},"/static/client/styles-logo.aea5ff6edf1b9cfb.css":{"offset":5163443,"length":270,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"64fe47eaf11905b3"},"/static/client/styles-page-layout.5a4354f33e894319.css":{"offset":5163713,"length":401,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"d0848d3f1002b191"},"/static/client/styles-heading-anchor.0eec5185ab9425b7.css":{"offset":5164114,"length":350,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"702dfa81c1a66ef0"},"/static/client/styles-a11y-menu.5796ee87cb69f93f.css":{"offset":5164464,"length":321,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"46baeb3174d08732"},"/static/client/styles-menu.e2c5c8a53a8854c2.css":{"offset":5164785,"length":1382,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"7d0c83ef3b7224b7"},"/static/client/styles-article-footer.81ae18c89fc527dc.css":{"offset":5166167,"length":401,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"9fe89caad0dec722"},"/static/client/styles-breadcrumbs-bar.2d1bed1ab424b6b3.css":{"offset":5166568,"length":523,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"1efbaffdc155787a"},"/static/client/styles-breadcrumbs.87eb742f4e711dc3.css":{"offset":5167091,"length":478,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"5cddb37bdec7c7c6"},"/static/client/styles-left-sidebar.46e37af4d0b5c883.css":{"offset":5167569,"length":1011,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"11cde7319f9abfcd"},"/favicon.ico":{"offset":5168580,"length":786,"mime":"image/x-icon","gzipped":true,"hash":"847637629fd5e77c"},"/static/client/styles-footer.66072dd619a4ef50.css":{"offset":5169366,"length":923,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"d159b403bc1edcf2"},"/favicon.svg":{"offset":5170289,"length":275,"mime":"image/svg+xml","gzipped":true,"hash":"0ea7fa1e291d3c3e"},"/en-US/docs/Web/JavaScript/Guide/Using_classes/figure8.1.png":{"offset":5170564,"length":2780,"mime":"image/png","gzipped":true,"hash":"9e06413e98e8bb3d"},"/static/client/styles-baseline-indicator.dcd17e42ea043f53.css":{"offset":5173344,"length":2460,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"e77e3e8306a06565"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/issupersetof/diagram.svg":{"offset":5175804,"length":254,"mime":"image/svg+xml","gzipped":true,"hash":"b0a0e747860f6776"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/issubsetof/diagram.svg":{"offset":5176058,"length":254,"mime":"image/svg+xml","gzipped":true,"hash":"7781c9981685b605"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isdisjointfrom/diagram.svg":{"offset":5176312,"length":227,"mime":"image/svg+xml","gzipped":true,"hash":"d07c6ccecb047ed4"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection/diagram.svg":{"offset":5176539,"length":304,"mime":"image/svg+xml","gzipped":true,"hash":"40cb8d9316c7a520"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/difference/diagram.svg":{"offset":5176843,"length":339,"mime":"image/svg+xml","gzipped":true,"hash":"60386ed2d5674a41"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/union/diagram.svg":{"offset":5177182,"length":336,"mime":"image/svg+xml","gzipped":true,"hash":"0feff99c05c0a16b"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/symmetricdifference/diagram.svg":{"offset":5177518,"length":390,"mime":"image/svg+xml","gzipped":true,"hash":"8b4b307636cf8f67"},"/en-US/docs/Web/JavaScript/Guide/Typed_arrays/typed_arrays.png":{"offset":5177908,"length":6137,"mime":"image/png","gzipped":true,"hash":"e78c3a4f085ad4e2"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/promises.png":{"offset":5184045,"length":7460,"mime":"image/png","gzipped":true,"hash":"797ae9f29ec9ac37"},"/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trigonometry.png":{"offset":5191505,"length":3614,"mime":"image/png","gzipped":true,"hash":"1a5fcc3274debab3"},"/static/client/obsolete.103e80a32b90e7f1.svg":{"offset":5195119,"length":173,"mime":"image/svg+xml","gzipped":true,"hash":"38da5cfdc06320c5"},"/static/client/jetbrains-mono-latin.119994ed445212c7.woff2":{"offset":5195292,"length":28444,"mime":"font/woff2","gzipped":true,"hash":"829618765e1d933d"},"/static/client/external-link.4f3a2dc8e402cae5.svg":{"offset":5223736,"length":202,"mime":"image/svg+xml","gzipped":true,"hash":"19ee0db5907c433c"},"/static/client/pending-removal.7300f68a9465c1b9.svg":{"offset":5223938,"length":206,"mime":"image/svg+xml","gzipped":true,"hash":"98f5f120a416ad87"},"/static/client/flask-conical.c16b3d71f14f31d1.svg":{"offset":5224144,"length":231,"mime":"image/svg+xml","gzipped":true,"hash":"52c0c2e9875796e8"},"/static/client/jetbrains-mono-italic-latin.55b330522e5e3ed9.woff2":{"offset":5224375,"length":30888,"mime":"font/woff2","gzipped":true,"hash":"7575e0f39aa5571c"},"/static/client/jetbrains-mono-italic-latin-extended.c25d5e1f309ed948.woff2":{"offset":5255263,"length":20352,"mime":"font/woff2","gzipped":true,"hash":"de4ccec4fe639cfb"},"/static/client/inter-cyrillic.eecfbd79d522303a.woff2":{"offset":5275615,"length":29932,"mime":"font/woff2","gzipped":true,"hash":"c8a29b4ad33e252b"},"/static/client/jetbrains-mono-cyrillic.577e793cdf179ae1.woff2":{"offset":5305547,"length":12915,"mime":"font/woff2","gzipped":true,"hash":"b2cd9eb478eabde1"},"/static/client/trash-2.73b28bc66fb8543c.svg":{"offset":5318462,"length":222,"mime":"image/svg+xml","gzipped":true,"hash":"12663221a5fad02a"},"/static/client/pending-removal-dark.7a08806b42144903.svg":{"offset":5318684,"length":204,"mime":"image/svg+xml","gzipped":true,"hash":"73fe00f93f435b04"},"/static/client/jetbrains-mono-italic-cyrillic.8d00711fdb1702e0.woff2":{"offset":5318888,"length":14275,"mime":"font/woff2","gzipped":true,"hash":"1392c995bd2f61fc"},"/static/client/triangle-alert.cff4c57ccef57da3.svg":{"offset":5333163,"length":209,"mime":"image/svg+xml","gzipped":true,"hash":"c72645a38d81324b"},"/static/client/inter-italic-latin.fd2627ec16333c05.woff2":{"offset":5333372,"length":115990,"mime":"font/woff2","gzipped":true,"hash":"85cea768e0f012bc"},"/static/client/jetbrains-mono-latin-extended.01c891f9c832ce28.woff2":{"offset":5449362,"length":18336,"mime":"font/woff2","gzipped":true,"hash":"ece236f5ae9e13e3"},"/static/client/obsolete-dark.97bd602b44120cb3.svg":{"offset":5467698,"length":173,"mime":"image/svg+xml","gzipped":true,"hash":"cea3def1118d905f"},"/static/client/inter-latin.9a3b1bc220d426ef.woff2":{"offset":5467871,"length":105537,"mime":"font/woff2","gzipped":true,"hash":"5b69b4a4ddfc0844"},"/static/client/inter-italic-latin-extended.0a7409875db33654.woff2":{"offset":5573408,"length":155367,"mime":"font/woff2","gzipped":true,"hash":"4ebf29c52efe9289"},"/static/client/inter-italic-cyrillic.d153dcd2916c4842.woff2":{"offset":5728775,"length":31728,"mime":"font/woff2","gzipped":true,"hash":"07dd767d951869af"},"/static/client/inter-latin-extended.02dc98170ff37b88.woff2":{"offset":5760503,"length":140879,"mime":"font/woff2","gzipped":true,"hash":"a701fce962964af7"},"/static/client/wrench.a3caa7312a364b47.svg":{"offset":5901382,"length":232,"mime":"image/svg+xml","gzipped":true,"hash":"c4629be02b5b5625"},"/static/client/chevron-right.a81fc439dd5e4839.svg":{"offset":5901614,"length":166,"mime":"image/svg+xml","gzipped":true,"hash":"cc805df3083f62eb"},"/static/client/graduation-cap.c7aa0f3430c53718.svg":{"offset":5901780,"length":250,"mime":"image/svg+xml","gzipped":true,"hash":"a7644981fc3657ba"},"/static/client/info.d40b80f84482feba.svg":{"offset":5902030,"length":189,"mime":"image/svg+xml","gzipped":true,"hash":"89729d195b4f5200"},"/static/client/chevron-down.7c923b7054da305b.svg":{"offset":5902219,"length":165,"mime":"image/svg+xml","gzipped":true,"hash":"52149f953f120029"},"/static/client/menu.74ccd9bb64dbf543.svg":{"offset":5902384,"length":171,"mime":"image/svg+xml","gzipped":true,"hash":"eecaeb2842afae6a"},"/static/client/lightbulb.f54f9e803373ffd2.svg":{"offset":5902555,"length":224,"mime":"image/svg+xml","gzipped":true,"hash":"fc26a7f7d5de1646"},"/static/client/circle-check.205f48f66c3c9d17.svg":{"offset":5902779,"length":182,"mime":"image/svg+xml","gzipped":true,"hash":"722617c8df23839f"},"/static/client/mdn-m.70aac857e4a908d0.svg":{"offset":5902961,"length":244,"mime":"image/svg+xml","gzipped":true,"hash":"2c2de877f5dc8463"},"/static/client/arrow-left.29a44bc5a550fe38.svg":{"offset":5903205,"length":173,"mime":"image/svg+xml","gzipped":true,"hash":"8a04589030d71991"},"/static/client/circle-play.6ed4ac1fb3c93a04.svg":{"offset":5903378,"length":185,"mime":"image/svg+xml","gzipped":true,"hash":"76fd6a1be14f481c"},"/static/client/arrow-right.648145f00e77b7f0.svg":{"offset":5903563,"length":173,"mime":"image/svg+xml","gzipped":true,"hash":"862d0dd6ce331cf7"},"/static/client/lock.4befe79c52ccec2a.svg":{"offset":5903736,"length":200,"mime":"image/svg+xml","gzipped":true,"hash":"d6a7106164e893c1"},"/static/client/cog.f23af856fab34421.svg":{"offset":5903936,"length":275,"mime":"image/svg+xml","gzipped":true,"hash":"84b82493871b6ace"},"/static/client/circle-x.4b1c3fa0511867e7.svg":{"offset":5904211,"length":186,"mime":"image/svg+xml","gzipped":true,"hash":"c4aa773d522e5132"},"/static/client/shield-check.07bdc37f20ac5cc6.svg":{"offset":5904397,"length":264,"mime":"image/svg+xml","gzipped":true,"hash":"91243855c24c310b"},"/static/client/cancel.7362f2cdf3515e0d.svg":{"offset":5904661,"length":173,"mime":"image/svg+xml","gzipped":true,"hash":"dac88ac32f8dd58d"},"/static/client/users.f7e6f1f213744762.svg":{"offset":5904834,"length":227,"mime":"image/svg+xml","gzipped":true,"hash":"89c69d6c7f4d8673"},"/static/client/chart-no-axes-combined.aee09a7064cb8b35.svg":{"offset":5905061,"length":223,"mime":"image/svg+xml","gzipped":true,"hash":"e81f67c0f201937f"},"/static/client/BarlowCondensed-SemiBold.199288b668a15dc1.woff2":{"offset":5905284,"length":60276,"mime":"font/woff2","gzipped":true,"hash":"bd4ffadd426d46d9"},"/static/client/bluesky.a9421882d093c829.svg":{"offset":5965560,"length":311,"mime":"image/svg+xml","gzipped":true,"hash":"4e15301dbbc8799d"},"/static/client/x.4c7e68bf52af030a.svg":{"offset":5965871,"length":208,"mime":"image/svg+xml","gzipped":true,"hash":"eb930fd0f6db4539"},"/static/client/github.4d94e1bf436aa7ed.svg":{"offset":5966079,"length":340,"mime":"image/svg+xml","gzipped":true,"hash":"e67e6fb93a75ec6f"},"/static/client/chrome.5978d1a2dbdc06cc.svg":{"offset":5966419,"length":504,"mime":"image/svg+xml","gzipped":true,"hash":"f47040fb1d74eaff"},"/static/client/rss.37214526d7308d0c.svg":{"offset":5966923,"length":199,"mime":"image/svg+xml","gzipped":true,"hash":"48858a7d5d947fd2"},"/static/client/browser-check.20ed6fe43e745587.svg":{"offset":5967122,"length":317,"mime":"image/svg+xml","gzipped":true,"hash":"dc838be20ce551d1"},"/static/client/browser-cross-obsolete.1965543c5f4ff9dd.svg":{"offset":5967439,"length":571,"mime":"image/svg+xml","gzipped":true,"hash":"921d0496208a3089"},"/static/client/browser-cross.196cc93721b774d9.svg":{"offset":5968010,"length":320,"mime":"image/svg+xml","gzipped":true,"hash":"e7483673f798fa59"},"/static/client/browser-check-obsolete.adc8b778f055490d.svg":{"offset":5968330,"length":552,"mime":"image/svg+xml","gzipped":true,"hash":"72cf7f2113feaa87"},"/static/client/limited-dark.38d6262bb2a277a0.svg":{"offset":5968882,"length":193,"mime":"image/svg+xml","gzipped":true,"hash":"2b9353d851b7f827"},"/static/client/high-dark.a3f9e002a70b98e8.svg":{"offset":5969075,"length":183,"mime":"image/svg+xml","gzipped":true,"hash":"19176832187fecd4"},"/static/client/mastodon.1a5c0fde8353f680.svg":{"offset":5969258,"length":498,"mime":"image/svg+xml","gzipped":true,"hash":"4a8620a324bd073c"},"/static/client/low.02894ed3d7bccc6d.svg":{"offset":5969756,"length":183,"mime":"image/svg+xml","gzipped":true,"hash":"cffbdcaa50889cb0"},"/static/client/low-dark.f897f69b7465d5a8.svg":{"offset":5969939,"length":181,"mime":"image/svg+xml","gzipped":true,"hash":"11f617147d7eba44"},"/static/client/edge.8646730d02c8a77d.svg":{"offset":5970120,"length":1210,"mime":"image/svg+xml","gzipped":true,"hash":"98683e078cbffc13"},"/static/client/high.712917a113e51658.svg":{"offset":5971330,"length":183,"mime":"image/svg+xml","gzipped":true,"hash":"b1655f370bd54429"},"/static/client/limited.d8a397eda98d282d.svg":{"offset":5971513,"length":193,"mime":"image/svg+xml","gzipped":true,"hash":"05f3e03cf9a108b0"},"/static/client/safari.7843065f2edf13d1.svg":{"offset":5971706,"length":3204,"mime":"image/svg+xml","gzipped":true,"hash":"b5c3d7c780897c1c"},"/static/client/firefox.56f320db61f46184.svg":{"offset":5974910,"length":3195,"mime":"image/svg+xml","gzipped":true,"hash":"729bc514d00a71a5"},"/docs":{"offset":0,"length":30377,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"adcc0f2c32c3e4cb"},"/":{"offset":0,"length":30377,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"adcc0f2c32c3e4cb"}}}
+{
+  "id": "mdn_js",
+  "name": "MDN JavaScript",
+  "version": "ES2025",
+  "commit": "2088f3d9",
+  "origin": "https://developer.mozilla.org",
+  "entryPath": "/en-US/docs/Web/JavaScript",
+  "updatedAt": "2026-10-11T10:37:21.559Z",
+  "totalBytes": 5810130,
+  "chunkCount": 270,
+  "routes": {
+    "/en-US/docs/Web/JavaScript": {
+      "offset": 0,
+      "length": 29413,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8e356159b6d44525"
+    },
+    "/en-US/docs/Web/JavaScript/Guide": {
+      "offset": 29413,
+      "length": 29025,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "793f786f7c70fc75"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects": {
+      "offset": 58438,
+      "length": 28584,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5c7073e3db9c76bc"
+    },
+    "/en-US/docs/Web/JavaScript/Reference": {
+      "offset": 87022,
+      "length": 31265,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0026e58c49e313d0"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/JavaScript_technologies_overview": {
+      "offset": 118287,
+      "length": 32638,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "74e3109ae63779b6"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators": {
+      "offset": 150925,
+      "length": 32785,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0e05cdbc14c22627"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval": {
+      "offset": 183710,
+      "length": 35568,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dff6eab39aceb4c5"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Using_classes": {
+      "offset": 219278,
+      "length": 37363,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cd17f81a2fb53acc"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling": {
+      "offset": 256641,
+      "length": 32560,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e277412028afcff0"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Functions": {
+      "offset": 289201,
+      "length": 33947,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4439a7522fa814b7"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration": {
+      "offset": 323148,
+      "length": 31648,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c93b80ff24389173"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Statements": {
+      "offset": 354796,
+      "length": 30253,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb322630fd5cf015"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Working_with_objects": {
+      "offset": 385049,
+      "length": 34691,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7d468a738a84399b"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString": {
+      "offset": 419740,
+      "length": 21897,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6231313dbca49122"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Statements/for...in": {
+      "offset": 441637,
+      "length": 31202,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "894e62c982ce699c"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Data_structures": {
+      "offset": 472839,
+      "length": 36925,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "14e6e1d95ccefb6e"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Language_overview": {
+      "offset": 509764,
+      "length": 42616,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a874d70130d10779"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean": {
+      "offset": 552380,
+      "length": 23365,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d646bb785957a0a6"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/String": {
+      "offset": 575745,
+      "length": 29541,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ba0d754989252591"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error": {
+      "offset": 605286,
+      "length": 24757,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a91a78cf09ecbab6"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties": {
+      "offset": 630043,
+      "length": 27264,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e5cbfbae2aaef001"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array": {
+      "offset": 657307,
+      "length": 35702,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "14280e4d3077dea9"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number": {
+      "offset": 693009,
+      "length": 26072,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f9516bcfe746e8d1"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Memory_management": {
+      "offset": 719081,
+      "length": 33840,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b21eb5e0b972fbff"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp": {
+      "offset": 752921,
+      "length": 27424,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9810e5166e54b0b3"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain": {
+      "offset": 780345,
+      "length": 37669,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "85bc7264422804a2"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object": {
+      "offset": 818014,
+      "length": 27912,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b5e50bdd10948165"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is": {
+      "offset": 845926,
+      "length": 20662,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2c88e50fb7b40408"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Closures": {
+      "offset": 866588,
+      "length": 33747,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "98cdfb7bfde5458b"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness": {
+      "offset": 900335,
+      "length": 33094,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "387f21387ad2fe00"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON": {
+      "offset": 933429,
+      "length": 24541,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fa1d6768fa06444e"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function": {
+      "offset": 957970,
+      "length": 21921,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f88fb64b6a8e26f5"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math": {
+      "offset": 979891,
+      "length": 22980,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "438b927378f316ce"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Statements/var": {
+      "offset": 1002871,
+      "length": 31118,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4ef80b2b2712456c"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set": {
+      "offset": 1033989,
+      "length": 26772,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "987a8c1746b24fa6"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Statements/if...else": {
+      "offset": 1060761,
+      "length": 28976,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3aeffd6e3b7f40dd"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap": {
+      "offset": 1089737,
+      "length": 25539,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4d616a7a5e308236"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Statements/try...catch": {
+      "offset": 1115276,
+      "length": 31318,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "314c12f07d28d5e2"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/instanceof": {
+      "offset": 1146594,
+      "length": 30840,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c98e615c136a85db"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/this": {
+      "offset": 1177434,
+      "length": 36000,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8a917afbf024e2c4"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map": {
+      "offset": 1213434,
+      "length": 27658,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4f964cee3c55de92"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/new": {
+      "offset": 1241092,
+      "length": 30769,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0c320c7144ad35f2"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence": {
+      "offset": 1271861,
+      "length": 33458,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "272aab7e6251182e"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet": {
+      "offset": 1305319,
+      "length": 22089,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "95d6a1b782ed13fe"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/typeof": {
+      "offset": 1327408,
+      "length": 30932,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "826a800e21f7ec7a"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Statements/let": {
+      "offset": 1358340,
+      "length": 32083,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ac4bee6c8d8ea391"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Statements/do...while": {
+      "offset": 1390423,
+      "length": 27603,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "91a264b7886a709f"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Statements/for...of": {
+      "offset": 1418026,
+      "length": 31916,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "53e3e2b042e17181"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Statements/const": {
+      "offset": 1449942,
+      "length": 29675,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "72992522c4d94437"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Grammar_and_types": {
+      "offset": 1479617,
+      "length": 39220,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "499d2062c95bf510"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Statements/switch": {
+      "offset": 1518837,
+      "length": 31046,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fd86196eb53e1efc"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Keyed_collections": {
+      "offset": 1549883,
+      "length": 29378,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2fb25bc13c2b494c"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Resource_management": {
+      "offset": 1579261,
+      "length": 35022,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "171462ba47f47119"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Functions": {
+      "offset": 1614283,
+      "length": 35823,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "507fa69aa4a920ba"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators": {
+      "offset": 1650106,
+      "length": 40890,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f6e5da76b0d2811a"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Regular_expressions": {
+      "offset": 1690996,
+      "length": 33818,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "74eb7864faa17e16"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Introduction": {
+      "offset": 1724814,
+      "length": 31245,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "03eab8e334ebfd57"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Using_promises": {
+      "offset": 1756059,
+      "length": 35325,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e653c2125958c517"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators": {
+      "offset": 1791384,
+      "length": 29727,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8a2e7dfafde43058"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Representing_dates_times": {
+      "offset": 1821111,
+      "length": 27359,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "752bcdc888e99b4c"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings": {
+      "offset": 1848470,
+      "length": 33592,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "137176ac36c80043"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Classes": {
+      "offset": 1882062,
+      "length": 31830,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8d94270fa6e2f477"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Typed_arrays": {
+      "offset": 1913892,
+      "length": 33702,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a094c5c89eaf9a6d"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Indexed_collections": {
+      "offset": 1947594,
+      "length": 35523,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d6af8c007e541243"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt": {
+      "offset": 1983117,
+      "length": 26349,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a1115faef74eed7d"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer": {
+      "offset": 2009466,
+      "length": 22917,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e20803e9e77abef2"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView": {
+      "offset": 2032383,
+      "length": 22169,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3fa116c7eb1ca9ce"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction": {
+      "offset": 2054552,
+      "length": 19954,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "83e534ad09c870a1"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack": {
+      "offset": 2074506,
+      "length": 20010,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b95895d4d98b87b"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array": {
+      "offset": 2094516,
+      "length": 20997,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8ede73dd6710dbbb"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array": {
+      "offset": 2115513,
+      "length": 20653,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "88bab9311c4b71e7"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Modules": {
+      "offset": 2136166,
+      "length": 45243,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4e4a11d72ea23a49"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator": {
+      "offset": 2181409,
+      "length": 20121,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "abcd3fd538b5f7ad"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction": {
+      "offset": 2201530,
+      "length": 19663,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "274778ed7be91a41"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Internationalization": {
+      "offset": 2221193,
+      "length": 43217,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "53df4d8501dd4739"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator": {
+      "offset": 2264410,
+      "length": 20679,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb818dfea04aff39"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics": {
+      "offset": 2285089,
+      "length": 22159,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "785dc74fe897afee"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError": {
+      "offset": 2307248,
+      "length": 20222,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c620d496aebbca39"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Meta_programming": {
+      "offset": 2327470,
+      "length": 29188,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "058e0d623b081997"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/AbstractModuleSource": {
+      "offset": 2356658,
+      "length": 19121,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4f799ae210ea2ec"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError": {
+      "offset": 2375779,
+      "length": 20077,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e7cba00eb6be42f0"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry": {
+      "offset": 2395856,
+      "length": 23615,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "48bc5a3a7d765324"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array": {
+      "offset": 2419471,
+      "length": 20816,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "09358a672db8387b"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator": {
+      "offset": 2440287,
+      "length": 20702,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a4c3ad6eb867085e"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float16Array": {
+      "offset": 2460989,
+      "length": 20939,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9f50be994f996d81"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURI": {
+      "offset": 2481928,
+      "length": 27329,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c75b17ca3080fb48"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis": {
+      "offset": 2509257,
+      "length": 29206,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f4891c8ff75f2209"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI": {
+      "offset": 2538463,
+      "length": 29614,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "922a2bfae5d12a64"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape": {
+      "offset": 2568077,
+      "length": 27089,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4997e3b16fb083cf"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent": {
+      "offset": 2595166,
+      "length": 29612,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6f5931677072427b"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent": {
+      "offset": 2624778,
+      "length": 27187,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8883ad788dbb9490"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction": {
+      "offset": 2651965,
+      "length": 19974,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c7984781102f92c1"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date": {
+      "offset": 2671939,
+      "length": 30157,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "47b6db7621ad99d4"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/DisposableStack": {
+      "offset": 2702096,
+      "length": 20627,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4d011c02358b7a3b"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array": {
+      "offset": 2722723,
+      "length": 20868,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "40300fdddd24483d"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity": {
+      "offset": 2743591,
+      "length": 26568,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eedd30d87aa47920"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array": {
+      "offset": 2770159,
+      "length": 20693,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1d92e7c3a33cc7e5"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError": {
+      "offset": 2790852,
+      "length": 20492,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "29ae0ef699661585"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array": {
+      "offset": 2811344,
+      "length": 20796,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "681a5a78d6c6ec21"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/isFinite": {
+      "offset": 2832140,
+      "length": 27057,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "807f3478f6309a76"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN": {
+      "offset": 2859197,
+      "length": 27969,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1a7ad42ec06cecde"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError": {
+      "offset": 2887166,
+      "length": 19464,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7071a1199b22b372"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl": {
+      "offset": 2906630,
+      "length": 24641,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "124f1bfb2b0652c8"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise": {
+      "offset": 2931271,
+      "length": 31870,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "54ceeba62c3732cb"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator": {
+      "offset": 2963141,
+      "length": 25719,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4e98c5b0144dab36"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat": {
+      "offset": 2988860,
+      "length": 29238,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fe429574a95352b6"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt": {
+      "offset": 3018098,
+      "length": 31057,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9827714a3c5ad265"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN": {
+      "offset": 3049155,
+      "length": 29665,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3fa15c4239960f96"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy": {
+      "offset": 3078820,
+      "length": 26147,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f2e86525e9b737d3"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError": {
+      "offset": 3104967,
+      "length": 20117,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9ee3d080177c233a"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array": {
+      "offset": 3125084,
+      "length": 20801,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "21461d72d4279107"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect": {
+      "offset": 3145885,
+      "length": 22077,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b74e99be88801e36"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer": {
+      "offset": 3167962,
+      "length": 24342,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ed77936dc3d54c6c"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray": {
+      "offset": 3192304,
+      "length": 20754,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "42e728dfef4f7da2"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array": {
+      "offset": 3213058,
+      "length": 20752,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "35dd8e7e9ebadc92"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef": {
+      "offset": 3233810,
+      "length": 22937,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2ff694d0f2f3177e"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array": {
+      "offset": 3256747,
+      "length": 22267,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8c2e559727ba6fd6"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol": {
+      "offset": 3279014,
+      "length": 26105,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f9bdc7ea3e664a74"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Addition": {
+      "offset": 3305119,
+      "length": 28556,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7e02809e9201f07c"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape": {
+      "offset": 3333675,
+      "length": 27105,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "37b24238f17eafaa"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/SuppressedError": {
+      "offset": 3360780,
+      "length": 20379,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e108f6a8ad896b77"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError": {
+      "offset": 3381159,
+      "length": 20239,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f309e093b80fb216"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError": {
+      "offset": 3401398,
+      "length": 20143,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "80af7937a6cf33b9"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError": {
+      "offset": 3421541,
+      "length": 20096,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "22fb7aa018fcee82"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array": {
+      "offset": 3441637,
+      "length": 20755,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "420dac96e7889951"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal": {
+      "offset": 3462392,
+      "length": 29046,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6f60f0184e328feb"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined": {
+      "offset": 3491438,
+      "length": 29123,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9de2e3ba4c3b7f2b"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray": {
+      "offset": 3520561,
+      "length": 28977,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7fe8c533f36a0baf"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/await": {
+      "offset": 3549538,
+      "length": 31687,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "98ee3b54edeec047"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment": {
+      "offset": 3581225,
+      "length": 26806,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c447b81c04e0b06a"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment": {
+      "offset": 3608031,
+      "length": 26406,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "97f94da345c257dd"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Decrement": {
+      "offset": 3634437,
+      "length": 27127,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "768f0877eab6eb2f"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR": {
+      "offset": 3661564,
+      "length": 27416,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7487c30f704fc13d"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/async_function": {
+      "offset": 3688980,
+      "length": 27498,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a7e4398af3889c8f"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment": {
+      "offset": 3716478,
+      "length": 26348,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4c0e11f1f9a272d9"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR": {
+      "offset": 3742826,
+      "length": 27424,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2ef900d114402100"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT": {
+      "offset": 3770250,
+      "length": 27304,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f0cc063fb194bd14"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator": {
+      "offset": 3797554,
+      "length": 30096,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "caf3316981eaaf7d"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment": {
+      "offset": 3827650,
+      "length": 26366,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6a5ac208bc5b90e5"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND": {
+      "offset": 3854016,
+      "length": 27511,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c53c805b1cbf8a88"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Assignment": {
+      "offset": 3881527,
+      "length": 29372,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b175c45fb5333ac6"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/async_function*": {
+      "offset": 3910899,
+      "length": 27234,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7106ab4bc97b7658"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator": {
+      "offset": 3938133,
+      "length": 27737,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a57ed2043eb1beed"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/class": {
+      "offset": 3965870,
+      "length": 27043,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4d771c411c555e6d"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Division_assignment": {
+      "offset": 3992913,
+      "length": 26525,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bf52085e535b84f0"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/import.meta": {
+      "offset": 4019438,
+      "length": 27678,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5c5f40df5abf0cc0"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/delete": {
+      "offset": 4047116,
+      "length": 30849,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "aa5bfc3a68f1aae1"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/import.meta/resolve": {
+      "offset": 4077965,
+      "length": 29683,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5a9faa1192cf974d"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/import/defer": {
+      "offset": 4107648,
+      "length": 26879,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c3bdb12345b5b89c"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/function": {
+      "offset": 4134527,
+      "length": 31311,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ef33263848762fbb"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment": {
+      "offset": 4165838,
+      "length": 26508,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9d40c0a531ee8ea3"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/function*": {
+      "offset": 4192346,
+      "length": 27241,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "19021efade74173d"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Equality": {
+      "offset": 4219587,
+      "length": 29267,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5896b6ef0d9e575d"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Grouping": {
+      "offset": 4248854,
+      "length": 29506,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3dde1bd45b7f8803"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Division": {
+      "offset": 4278360,
+      "length": 27158,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cc45b89b06f143d5"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal": {
+      "offset": 4305518,
+      "length": 27209,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c653d4f44ac6df4c"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than": {
+      "offset": 4332727,
+      "length": 26732,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "421646022c06c81e"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring": {
+      "offset": 4359459,
+      "length": 35092,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "19e6e1cab734bf1d"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation": {
+      "offset": 4394551,
+      "length": 29223,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "04115fe5dc3eb1b9"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/import": {
+      "offset": 4423774,
+      "length": 32619,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "919e6fd50295dbb2"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Increment": {
+      "offset": 4456393,
+      "length": 27040,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3a1611b1c29146b5"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/import/source": {
+      "offset": 4483433,
+      "length": 26167,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8eca24368eef1ee0"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND": {
+      "offset": 4509600,
+      "length": 29041,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "07d9d889c6cf6fa5"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Inequality": {
+      "offset": 4538641,
+      "length": 27038,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "aa087fc7584d9880"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift": {
+      "offset": 4565679,
+      "length": 27480,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ee152669f72a6468"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal": {
+      "offset": 4593159,
+      "length": 27319,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "de855c578147bc5e"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment": {
+      "offset": 4620478,
+      "length": 26770,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f8e9b733a108ce13"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment": {
+      "offset": 4647248,
+      "length": 26373,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "19a801b55790c56e"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/in": {
+      "offset": 4673621,
+      "length": 30512,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4ae8ec449ef7ec92"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Less_than": {
+      "offset": 4704133,
+      "length": 28759,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5b1fc33064d8234e"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR": {
+      "offset": 4732892,
+      "length": 29019,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b9bb455b920d92c"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication": {
+      "offset": 4761911,
+      "length": 26821,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8cc01a88c2101c21"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT": {
+      "offset": 4788732,
+      "length": 27402,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "349987a8f3fee3fe"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment": {
+      "offset": 4816134,
+      "length": 27181,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bd07ce6ba73e7811"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment": {
+      "offset": 4843315,
+      "length": 26467,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4e17cba93f9812ca"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/new.target": {
+      "offset": 4869782,
+      "length": 29557,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ba69bccc5a48f6f2"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/null": {
+      "offset": 4899339,
+      "length": 27236,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5bf4a825bc950a60"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment": {
+      "offset": 4926575,
+      "length": 27047,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "037971f773862241"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing": {
+      "offset": 4953622,
+      "length": 29324,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "86993333267fcf35"
+    },
+    "/static/client/styles-page-layout.5a4354f33e894319.css": {
+      "offset": 4982946,
+      "length": 401,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "d0848d3f1002b191"
+    },
+    "/static/client/styles-heading-anchor.0eec5185ab9425b7.css": {
+      "offset": 4983347,
+      "length": 350,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "702dfa81c1a66ef0"
+    },
+    "/static/client/styles-global.13616ebb1fc8ee2f.css": {
+      "offset": 4983697,
+      "length": 4509,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0e411bdffe894161"
+    },
+    "/static/client/styles-reference-layout.632d2f3884f10ca3.css": {
+      "offset": 4988206,
+      "length": 418,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "4733e9d2dc4e314f"
+    },
+    "/static/client/270.c4deb27edf934078.css": {
+      "offset": 4988624,
+      "length": 665,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "7bcf4784c25e28df"
+    },
+    "/static/client/styles-article-footer.81ae18c89fc527dc.css": {
+      "offset": 4989289,
+      "length": 401,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "9fe89caad0dec722"
+    },
+    "/static/client/9228.c46ef79d5582674d.css": {
+      "offset": 4989690,
+      "length": 451,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "6d46fe1cc86170dd"
+    },
+    "/static/client/styles-content-section.0a46cad19e719859.css": {
+      "offset": 4990141,
+      "length": 3206,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "8fb9fb4d4e80360c"
+    },
+    "/static/client/styles-reference-toc.9b9bd019efd16b86.css": {
+      "offset": 4993347,
+      "length": 384,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "ac690a56c0c6cb31"
+    },
+    "/static/client/styles-logo.aea5ff6edf1b9cfb.css": {
+      "offset": 4993731,
+      "length": 270,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "64fe47eaf11905b3"
+    },
+    "/static/client/styles-left-sidebar.46e37af4d0b5c883.css": {
+      "offset": 4994001,
+      "length": 1011,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "11cde7319f9abfcd"
+    },
+    "/static/client/styles-breadcrumbs-bar.2d1bed1ab424b6b3.css": {
+      "offset": 4995012,
+      "length": 523,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "1efbaffdc155787a"
+    },
+    "/static/client/styles-navigation.c3ebf384e65df345.css": {
+      "offset": 4995535,
+      "length": 756,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "02171c05961802eb"
+    },
+    "/static/client/styles-breadcrumbs.87eb742f4e711dc3.css": {
+      "offset": 4996291,
+      "length": 478,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "5cddb37bdec7c7c6"
+    },
+    "/static/client/styles-menu.e2c5c8a53a8854c2.css": {
+      "offset": 4996769,
+      "length": 1382,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "7d0c83ef3b7224b7"
+    },
+    "/static/client/styles-a11y-menu.5796ee87cb69f93f.css": {
+      "offset": 4998151,
+      "length": 321,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "46baeb3174d08732"
+    },
+    "/favicon.svg": {
+      "offset": 4998472,
+      "length": 275,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "0ea7fa1e291d3c3e"
+    },
+    "/favicon.ico": {
+      "offset": 4998747,
+      "length": 786,
+      "mime": "image/x-icon",
+      "gzipped": true,
+      "hash": "847637629fd5e77c"
+    },
+    "/apple-touch-icon.png": {
+      "offset": 4999533,
+      "length": 2133,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2b25d4c89c53b192"
+    },
+    "/static/client/styles-footer.66072dd619a4ef50.css": {
+      "offset": 5001666,
+      "length": 923,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "d159b403bc1edcf2"
+    },
+    "/static/client/styles-baseline-indicator.dcd17e42ea043f53.css": {
+      "offset": 5002589,
+      "length": 2460,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "e77e3e8306a06565"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isdisjointfrom/diagram.svg": {
+      "offset": 5005049,
+      "length": 227,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "d07c6ccecb047ed4"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trigonometry.png": {
+      "offset": 5005276,
+      "length": 3614,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1a5fcc3274debab3"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/symmetricdifference/diagram.svg": {
+      "offset": 5008890,
+      "length": 390,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "8b4b307636cf8f67"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/issupersetof/diagram.svg": {
+      "offset": 5009280,
+      "length": 254,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "b0a0e747860f6776"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/difference/diagram.svg": {
+      "offset": 5009534,
+      "length": 339,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "60386ed2d5674a41"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Typed_arrays/typed_arrays.png": {
+      "offset": 5009873,
+      "length": 6137,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e78c3a4f085ad4e2"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/issubsetof/diagram.svg": {
+      "offset": 5016010,
+      "length": 254,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "7781c9981685b605"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection/diagram.svg": {
+      "offset": 5016264,
+      "length": 304,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "40cb8d9316c7a520"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/promises.png": {
+      "offset": 5016568,
+      "length": 7460,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "797ae9f29ec9ac37"
+    },
+    "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/union/diagram.svg": {
+      "offset": 5024028,
+      "length": 336,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "0feff99c05c0a16b"
+    },
+    "/en-US/docs/Web/JavaScript/Guide/Using_classes/figure8.1.png": {
+      "offset": 5024364,
+      "length": 2780,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "9e06413e98e8bb3d"
+    },
+    "/static/client/external-link.4f3a2dc8e402cae5.svg": {
+      "offset": 5027144,
+      "length": 202,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "19ee0db5907c433c"
+    },
+    "/static/client/obsolete.103e80a32b90e7f1.svg": {
+      "offset": 5027346,
+      "length": 173,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "38da5cfdc06320c5"
+    },
+    "/static/client/trash-2.73b28bc66fb8543c.svg": {
+      "offset": 5027519,
+      "length": 222,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "12663221a5fad02a"
+    },
+    "/static/client/flask-conical.c16b3d71f14f31d1.svg": {
+      "offset": 5027741,
+      "length": 231,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "52c0c2e9875796e8"
+    },
+    "/static/client/obsolete-dark.97bd602b44120cb3.svg": {
+      "offset": 5027972,
+      "length": 173,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "cea3def1118d905f"
+    },
+    "/static/client/triangle-alert.cff4c57ccef57da3.svg": {
+      "offset": 5028145,
+      "length": 209,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "c72645a38d81324b"
+    },
+    "/static/client/pending-removal.7300f68a9465c1b9.svg": {
+      "offset": 5028354,
+      "length": 206,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "98f5f120a416ad87"
+    },
+    "/static/client/jetbrains-mono-italic-cyrillic.8d00711fdb1702e0.woff2": {
+      "offset": 5028560,
+      "length": 14275,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "1392c995bd2f61fc"
+    },
+    "/static/client/jetbrains-mono-cyrillic.577e793cdf179ae1.woff2": {
+      "offset": 5042835,
+      "length": 12915,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b2cd9eb478eabde1"
+    },
+    "/static/client/jetbrains-mono-italic-latin-extended.c25d5e1f309ed948.woff2": {
+      "offset": 5055750,
+      "length": 20352,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "de4ccec4fe639cfb"
+    },
+    "/static/client/jetbrains-mono-italic-latin.55b330522e5e3ed9.woff2": {
+      "offset": 5076102,
+      "length": 30888,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "7575e0f39aa5571c"
+    },
+    "/static/client/inter-cyrillic.eecfbd79d522303a.woff2": {
+      "offset": 5106990,
+      "length": 29932,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "c8a29b4ad33e252b"
+    },
+    "/static/client/inter-italic-cyrillic.d153dcd2916c4842.woff2": {
+      "offset": 5136922,
+      "length": 31728,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "07dd767d951869af"
+    },
+    "/static/client/jetbrains-mono-latin.119994ed445212c7.woff2": {
+      "offset": 5168650,
+      "length": 28444,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "829618765e1d933d"
+    },
+    "/static/client/jetbrains-mono-latin-extended.01c891f9c832ce28.woff2": {
+      "offset": 5197094,
+      "length": 18336,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "ece236f5ae9e13e3"
+    },
+    "/static/client/inter-latin.9a3b1bc220d426ef.woff2": {
+      "offset": 5215430,
+      "length": 105537,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "5b69b4a4ddfc0844"
+    },
+    "/static/client/inter-italic-latin.fd2627ec16333c05.woff2": {
+      "offset": 5320967,
+      "length": 115990,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "85cea768e0f012bc"
+    },
+    "/static/client/BarlowCondensed-SemiBold.199288b668a15dc1.woff2": {
+      "offset": 5436957,
+      "length": 60276,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "bd4ffadd426d46d9"
+    },
+    "/static/client/inter-latin-extended.02dc98170ff37b88.woff2": {
+      "offset": 5497233,
+      "length": 140879,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "a701fce962964af7"
+    },
+    "/static/client/inter-italic-latin-extended.0a7409875db33654.woff2": {
+      "offset": 5638112,
+      "length": 155367,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "4ebf29c52efe9289"
+    },
+    "/static/client/chevron-right.a81fc439dd5e4839.svg": {
+      "offset": 5793479,
+      "length": 166,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "cc805df3083f62eb"
+    },
+    "/static/client/graduation-cap.c7aa0f3430c53718.svg": {
+      "offset": 5793645,
+      "length": 250,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a7644981fc3657ba"
+    },
+    "/static/client/wrench.a3caa7312a364b47.svg": {
+      "offset": 5793895,
+      "length": 232,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "c4629be02b5b5625"
+    },
+    "/static/client/cancel.7362f2cdf3515e0d.svg": {
+      "offset": 5794127,
+      "length": 173,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "dac88ac32f8dd58d"
+    },
+    "/static/client/arrow-right.648145f00e77b7f0.svg": {
+      "offset": 5794300,
+      "length": 173,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "862d0dd6ce331cf7"
+    },
+    "/static/client/info.d40b80f84482feba.svg": {
+      "offset": 5794473,
+      "length": 189,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "89729d195b4f5200"
+    },
+    "/static/client/lock.4befe79c52ccec2a.svg": {
+      "offset": 5794662,
+      "length": 200,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "d6a7106164e893c1"
+    },
+    "/static/client/circle-check.205f48f66c3c9d17.svg": {
+      "offset": 5794862,
+      "length": 182,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "722617c8df23839f"
+    },
+    "/static/client/users.f7e6f1f213744762.svg": {
+      "offset": 5795044,
+      "length": 227,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "89c69d6c7f4d8673"
+    },
+    "/static/client/circle-x.4b1c3fa0511867e7.svg": {
+      "offset": 5795271,
+      "length": 186,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "c4aa773d522e5132"
+    },
+    "/static/client/circle-play.6ed4ac1fb3c93a04.svg": {
+      "offset": 5795457,
+      "length": 185,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "76fd6a1be14f481c"
+    },
+    "/static/client/mdn-m.70aac857e4a908d0.svg": {
+      "offset": 5795642,
+      "length": 244,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "2c2de877f5dc8463"
+    },
+    "/static/client/cog.f23af856fab34421.svg": {
+      "offset": 5795886,
+      "length": 275,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "84b82493871b6ace"
+    },
+    "/static/client/pending-removal-dark.7a08806b42144903.svg": {
+      "offset": 5796161,
+      "length": 204,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "73fe00f93f435b04"
+    },
+    "/static/client/lightbulb.f54f9e803373ffd2.svg": {
+      "offset": 5796365,
+      "length": 224,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "fc26a7f7d5de1646"
+    },
+    "/static/client/arrow-left.29a44bc5a550fe38.svg": {
+      "offset": 5796589,
+      "length": 173,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "8a04589030d71991"
+    },
+    "/static/client/menu.74ccd9bb64dbf543.svg": {
+      "offset": 5796762,
+      "length": 171,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "eecaeb2842afae6a"
+    },
+    "/static/client/chevron-down.7c923b7054da305b.svg": {
+      "offset": 5796933,
+      "length": 165,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "52149f953f120029"
+    },
+    "/static/client/chart-no-axes-combined.aee09a7064cb8b35.svg": {
+      "offset": 5797098,
+      "length": 223,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "e81f67c0f201937f"
+    },
+    "/static/client/shield-check.07bdc37f20ac5cc6.svg": {
+      "offset": 5797321,
+      "length": 264,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "91243855c24c310b"
+    },
+    "/static/client/firefox.56f320db61f46184.svg": {
+      "offset": 5797585,
+      "length": 3195,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "729bc514d00a71a5"
+    },
+    "/static/client/github.4d94e1bf436aa7ed.svg": {
+      "offset": 5800780,
+      "length": 340,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "e67e6fb93a75ec6f"
+    },
+    "/static/client/edge.8646730d02c8a77d.svg": {
+      "offset": 5801120,
+      "length": 1210,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "98683e078cbffc13"
+    },
+    "/static/client/rss.37214526d7308d0c.svg": {
+      "offset": 5802330,
+      "length": 199,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "48858a7d5d947fd2"
+    },
+    "/static/client/bluesky.a9421882d093c829.svg": {
+      "offset": 5802529,
+      "length": 311,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "4e15301dbbc8799d"
+    },
+    "/static/client/browser-check.20ed6fe43e745587.svg": {
+      "offset": 5802840,
+      "length": 317,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "dc838be20ce551d1"
+    },
+    "/static/client/chrome.5978d1a2dbdc06cc.svg": {
+      "offset": 5803157,
+      "length": 504,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "f47040fb1d74eaff"
+    },
+    "/static/client/mastodon.1a5c0fde8353f680.svg": {
+      "offset": 5803661,
+      "length": 498,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "4a8620a324bd073c"
+    },
+    "/static/client/low-dark.f897f69b7465d5a8.svg": {
+      "offset": 5804159,
+      "length": 181,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "11f617147d7eba44"
+    },
+    "/static/client/browser-cross.196cc93721b774d9.svg": {
+      "offset": 5804340,
+      "length": 320,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "e7483673f798fa59"
+    },
+    "/static/client/browser-check-obsolete.adc8b778f055490d.svg": {
+      "offset": 5804660,
+      "length": 552,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "72cf7f2113feaa87"
+    },
+    "/static/client/x.4c7e68bf52af030a.svg": {
+      "offset": 5805212,
+      "length": 208,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "eb930fd0f6db4539"
+    },
+    "/static/client/high.712917a113e51658.svg": {
+      "offset": 5805420,
+      "length": 183,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "b1655f370bd54429"
+    },
+    "/static/client/limited-dark.38d6262bb2a277a0.svg": {
+      "offset": 5805603,
+      "length": 193,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "2b9353d851b7f827"
+    },
+    "/static/client/limited.d8a397eda98d282d.svg": {
+      "offset": 5805796,
+      "length": 193,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "05f3e03cf9a108b0"
+    },
+    "/static/client/high-dark.a3f9e002a70b98e8.svg": {
+      "offset": 5805989,
+      "length": 183,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "19176832187fecd4"
+    },
+    "/static/client/low.02894ed3d7bccc6d.svg": {
+      "offset": 5806172,
+      "length": 183,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "cffbdcaa50889cb0"
+    },
+    "/static/client/safari.7843065f2edf13d1.svg": {
+      "offset": 5806355,
+      "length": 3204,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "b5c3d7c780897c1c"
+    },
+    "/static/client/browser-cross-obsolete.1965543c5f4ff9dd.svg": {
+      "offset": 5809559,
+      "length": 571,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "921d0496208a3089"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 29413,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8e356159b6d44525"
+    },
+    "/": {
+      "offset": 0,
+      "length": 29413,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8e356159b6d44525"
+    }
+  }
+}

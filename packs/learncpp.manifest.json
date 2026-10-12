@@ -1,1 +1,3331 @@
-{"id":"learncpp","name":"LearnCpp.com","version":"2026","commit":"c7e763ea","origin":"https://www.learncpp.com","entryPath":"/","updatedAt":"2026-10-10T16:44:26.783Z","totalBytes":12055926,"chunkCount":309,"routes":{"/":{"offset":0,"length":54769,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7ea24cf267adf2a2"},"/cpp-tutorial/installing-an-integrated-development-environment-ide":{"offset":54769,"length":57108,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f242fbd09a5a8a92"},"/cpp-tutorial/installing-an-integrated-development-environment-ide/":{"offset":54769,"length":57108,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f242fbd09a5a8a92"},"/learn-cpp-site-index":{"offset":111877,"length":65825,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ac87e36a7c946d83"},"/learn-cpp-site-index/":{"offset":111877,"length":65825,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ac87e36a7c946d83"},"/about":{"offset":177702,"length":47465,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6447f5ce04de99dd"},"/about/":{"offset":177702,"length":47465,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6447f5ce04de99dd"},"/cpp-tutorial/introduction-to-cpp-development":{"offset":225167,"length":55507,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"49a3c617a4f1f9e4"},"/cpp-tutorial/introduction-to-cpp-development/":{"offset":225167,"length":55507,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"49a3c617a4f1f9e4"},"/cpp-tutorial/configuring-your-compiler-choosing-a-language-standard":{"offset":280674,"length":56370,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bb6dbb38966668f4"},"/cpp-tutorial/configuring-your-compiler-choosing-a-language-standard/":{"offset":280674,"length":56370,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bb6dbb38966668f4"},"/latest-changes":{"offset":337044,"length":62215,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"578cce57cb369d5c"},"/latest-changes/":{"offset":337044,"length":62215,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"578cce57cb369d5c"},"/cpp-tutorial/configuring-your-compiler-warning-and-error-levels":{"offset":399259,"length":54818,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b003cc83cd8587f7"},"/cpp-tutorial/configuring-your-compiler-warning-and-error-levels/":{"offset":399259,"length":54818,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b003cc83cd8587f7"},"/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries":{"offset":454077,"length":54408,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a87bd0d5ef349855"},"/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/":{"offset":454077,"length":54408,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a87bd0d5ef349855"},"/cpp-tutorial/configuring-your-compiler-build-configurations":{"offset":508485,"length":53937,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c62a1895ae18892d"},"/cpp-tutorial/configuring-your-compiler-build-configurations/":{"offset":508485,"length":53937,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c62a1895ae18892d"},"/cpp-tutorial/a-few-common-cpp-problems":{"offset":562422,"length":55456,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"95edaa9381e77436"},"/cpp-tutorial/a-few-common-cpp-problems/":{"offset":562422,"length":55456,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"95edaa9381e77436"},"/cpp-tutorial/introduction-to-cplusplus":{"offset":617878,"length":54556,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2081241f0b2445bc"},"/cpp-tutorial/introduction-to-cplusplus/":{"offset":617878,"length":54556,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2081241f0b2445bc"},"/cpp-tutorial/introduction-to-programming-languages":{"offset":672434,"length":58267,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b79563d1e264b5d0"},"/cpp-tutorial/introduction-to-programming-languages/":{"offset":672434,"length":58267,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b79563d1e264b5d0"},"/cpp-tutorial/compiling-your-first-program":{"offset":730701,"length":59441,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5794a73ab7af3653"},"/cpp-tutorial/compiling-your-first-program/":{"offset":730701,"length":59441,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5794a73ab7af3653"},"/cpp-tutorial/configuring-your-compiler-compiler-extensions":{"offset":790142,"length":53280,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fe85fd7d62dce13f"},"/cpp-tutorial/configuring-your-compiler-compiler-extensions/":{"offset":790142,"length":53280,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fe85fd7d62dce13f"},"/cpp-tutorial/introduction-to-these-tutorials":{"offset":843422,"length":55622,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cd18e5c22b10949b"},"/cpp-tutorial/introduction-to-these-tutorials/":{"offset":843422,"length":55622,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cd18e5c22b10949b"},"/leave-feedback-report-issue":{"offset":899044,"length":51106,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5adac06188b4a723"},"/leave-feedback-report-issue/":{"offset":899044,"length":51106,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5adac06188b4a723"},"/cpp-tutorial/what-language-standard-is-my-compiler-using":{"offset":950150,"length":53569,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"917fee224f452d5d"},"/cpp-tutorial/what-language-standard-is-my-compiler-using/":{"offset":950150,"length":53569,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"917fee224f452d5d"},"/cpp-tutorial/uninitialized-variables-and-undefined-behavior":{"offset":1003719,"length":56077,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1623d27a8f0146e1"},"/cpp-tutorial/uninitialized-variables-and-undefined-behavior/":{"offset":1003719,"length":56077,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1623d27a8f0146e1"},"/cpp-tutorial/whitespace-and-basic-formatting":{"offset":1059796,"length":56320,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ed65f0b46a46494b"},"/cpp-tutorial/whitespace-and-basic-formatting/":{"offset":1059796,"length":56320,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ed65f0b46a46494b"},"/cpp-tutorial/void-functions-non-value-returning-functions":{"offset":1116116,"length":53875,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"32a8afdc995d6bff"},"/cpp-tutorial/void-functions-non-value-returning-functions/":{"offset":1116116,"length":53875,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"32a8afdc995d6bff"},"/cpp-tutorial/keywords-and-naming-identifiers":{"offset":1169991,"length":56203,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8fd9f95818df8a02"},"/cpp-tutorial/keywords-and-naming-identifiers/":{"offset":1169991,"length":56203,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8fd9f95818df8a02"},"/cpp-tutorial/chapter-1-summary-and-quiz":{"offset":1226194,"length":54881,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"10f7b3396ca9b17d"},"/cpp-tutorial/chapter-1-summary-and-quiz/":{"offset":1226194,"length":54881,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"10f7b3396ca9b17d"},"/cpp-tutorial/variable-assignment-and-initialization":{"offset":1281075,"length":59518,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d6f3b6ce1edc19d8"},"/cpp-tutorial/variable-assignment-and-initialization/":{"offset":1281075,"length":59518,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d6f3b6ce1edc19d8"},"/cpp-tutorial/introduction-to-expressions":{"offset":1340593,"length":55134,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"491266b758259e0e"},"/cpp-tutorial/introduction-to-expressions/":{"offset":1340593,"length":55134,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"491266b758259e0e"},"/cpp-tutorial/introduction-to-literals-and-operators":{"offset":1395727,"length":55958,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"40e93da85f480168"},"/cpp-tutorial/introduction-to-literals-and-operators/":{"offset":1395727,"length":55958,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"40e93da85f480168"},"/cpp-tutorial/introduction-to-objects-and-variables":{"offset":1451685,"length":56680,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"12a4fcd8a0d3e7d8"},"/cpp-tutorial/introduction-to-objects-and-variables/":{"offset":1451685,"length":56680,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"12a4fcd8a0d3e7d8"},"/cpp-tutorial/statements-and-the-structure-of-a-program":{"offset":1508365,"length":57474,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9498f1a673fa1b4a"},"/cpp-tutorial/statements-and-the-structure-of-a-program/":{"offset":1508365,"length":57474,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9498f1a673fa1b4a"},"/cpp-tutorial/developing-your-first-program":{"offset":1565839,"length":56012,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"346222dd9a4df94a"},"/cpp-tutorial/developing-your-first-program/":{"offset":1565839,"length":56012,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"346222dd9a4df94a"},"/cpp-tutorial/comments":{"offset":1621851,"length":56842,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f7fa87463919baed"},"/cpp-tutorial/comments/":{"offset":1621851,"length":56842,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f7fa87463919baed"},"/cpp-tutorial/function-return-values-value-returning-functions":{"offset":1678693,"length":58251,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dc205351559b893c"},"/cpp-tutorial/function-return-values-value-returning-functions/":{"offset":1678693,"length":58251,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dc205351559b893c"},"/cpp-tutorial/introduction-to-functions":{"offset":1736944,"length":55154,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9d68dce1094a806f"},"/cpp-tutorial/introduction-to-functions/":{"offset":1736944,"length":55154,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9d68dce1094a806f"},"/cpp-tutorial/introduction-to-iostream-cout-cin-and-endl":{"offset":1792098,"length":60941,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fd78e314febd1843"},"/cpp-tutorial/introduction-to-iostream-cout-cin-and-endl/":{"offset":1792098,"length":60941,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fd78e314febd1843"},"/cpp-tutorial/introduction-to-local-scope":{"offset":1853039,"length":58027,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d7de4ec76bd5090e"},"/cpp-tutorial/introduction-to-local-scope/":{"offset":1853039,"length":58027,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d7de4ec76bd5090e"},"/cpp-tutorial/introduction-to-the-preprocessor":{"offset":1911066,"length":56394,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2b6e70ed5bf84e5a"},"/cpp-tutorial/introduction-to-the-preprocessor/":{"offset":1911066,"length":56394,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2b6e70ed5bf84e5a"},"/cpp-tutorial/header-guards":{"offset":1967460,"length":56545,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"55be4edf97dcbb86"},"/cpp-tutorial/header-guards/":{"offset":1967460,"length":56545,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"55be4edf97dcbb86"},"/cpp-tutorial/how-to-design-your-first-programs":{"offset":2024005,"length":59069,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c19d15163533386f"},"/cpp-tutorial/how-to-design-your-first-programs/":{"offset":2024005,"length":59069,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c19d15163533386f"},"/cpp-tutorial/introduction-to-function-parameters-and-arguments":{"offset":2083074,"length":57196,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7f01a3fd29c09db4"},"/cpp-tutorial/introduction-to-function-parameters-and-arguments/":{"offset":2083074,"length":57196,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7f01a3fd29c09db4"},"/cpp-tutorial/programs-with-multiple-code-files":{"offset":2140270,"length":56229,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"30713b88122f953f"},"/cpp-tutorial/programs-with-multiple-code-files/":{"offset":2140270,"length":56229,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"30713b88122f953f"},"/cpp-tutorial/why-functions-are-useful-and-how-to-use-them-effectively":{"offset":2196499,"length":53690,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d3c7a8b1d8c6fa09"},"/cpp-tutorial/why-functions-are-useful-and-how-to-use-them-effectively/":{"offset":2196499,"length":53690,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d3c7a8b1d8c6fa09"},"/cpp-tutorial/forward-declarations":{"offset":2250189,"length":58267,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"13a65084d99a4a94"},"/cpp-tutorial/forward-declarations/":{"offset":2250189,"length":58267,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"13a65084d99a4a94"},"/cpp-tutorial/chapter-2-summary-and-quiz":{"offset":2308456,"length":55032,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7244195ef002b82e"},"/cpp-tutorial/chapter-2-summary-and-quiz/":{"offset":2308456,"length":55032,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7244195ef002b82e"},"/cpp-tutorial/header-files":{"offset":2363488,"length":60246,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c9442d08a66389dc"},"/cpp-tutorial/header-files/":{"offset":2363488,"length":60246,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c9442d08a66389dc"},"/cpp-tutorial/naming-collisions-and-an-introduction-to-namespaces":{"offset":2423734,"length":56603,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6155c2e5fa68c301"},"/cpp-tutorial/naming-collisions-and-an-introduction-to-namespaces/":{"offset":2423734,"length":56603,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6155c2e5fa68c301"},"/cpp-tutorial/basic-debugging-tactics":{"offset":2480337,"length":56379,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"46486316655d043a"},"/cpp-tutorial/basic-debugging-tactics/":{"offset":2480337,"length":56379,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"46486316655d043a"},"/cpp-tutorial/syntax-and-semantic-errors":{"offset":2536716,"length":53332,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a4f19cfcab6a9a51"},"/cpp-tutorial/syntax-and-semantic-errors/":{"offset":2536716,"length":53332,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a4f19cfcab6a9a51"},"/cpp-tutorial/a-strategy-for-debugging":{"offset":2590048,"length":55257,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1c9e9c67ec251493"},"/cpp-tutorial/a-strategy-for-debugging/":{"offset":2590048,"length":55257,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1c9e9c67ec251493"},"/cpp-tutorial/more-debugging-tactics":{"offset":2645305,"length":54640,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"86f3cf0ee36d1891"},"/cpp-tutorial/more-debugging-tactics/":{"offset":2645305,"length":54640,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"86f3cf0ee36d1891"},"/cpp-tutorial/the-debugging-process":{"offset":2699945,"length":53884,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d68eaaf465622600"},"/cpp-tutorial/the-debugging-process/":{"offset":2699945,"length":53884,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d68eaaf465622600"},"/cpp-tutorial/void":{"offset":2753829,"length":52805,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c65de6af18bc43af"},"/cpp-tutorial/void/":{"offset":2753829,"length":52805,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c65de6af18bc43af"},"/cpp-tutorial/using-an-integrated-debugger-watching-variables":{"offset":2806634,"length":55137,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"414b3f0d805ecb55"},"/cpp-tutorial/using-an-integrated-debugger-watching-variables/":{"offset":2806634,"length":55137,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"414b3f0d805ecb55"},"/cpp-tutorial/finding-issues-before-they-become-problems":{"offset":2861771,"length":55774,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a4c94e63f24e7da0"},"/cpp-tutorial/finding-issues-before-they-become-problems/":{"offset":2861771,"length":55774,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a4c94e63f24e7da0"},"/cpp-tutorial/boolean-values":{"offset":2917545,"length":54834,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b304ad41e3fe1f22"},"/cpp-tutorial/boolean-values/":{"offset":2917545,"length":54834,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b304ad41e3fe1f22"},"/cpp-tutorial/introduction-to-fundamental-data-types":{"offset":2972379,"length":55114,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0b0de78922a2f95b"},"/cpp-tutorial/introduction-to-fundamental-data-types/":{"offset":2972379,"length":55114,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0b0de78922a2f95b"},"/cpp-tutorial/introduction-to-scientific-notation":{"offset":3027493,"length":55110,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"07d03508d10ecd75"},"/cpp-tutorial/introduction-to-scientific-notation/":{"offset":3027493,"length":55110,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"07d03508d10ecd75"},"/cpp-tutorial/using-an-integrated-debugger-running-and-breakpoints":{"offset":3082603,"length":55744,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a0f2cb94f9068340"},"/cpp-tutorial/using-an-integrated-debugger-running-and-breakpoints/":{"offset":3082603,"length":55744,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a0f2cb94f9068340"},"/cpp-tutorial/using-an-integrated-debugger-the-call-stack":{"offset":3138347,"length":53662,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"71a6f2095751e931"},"/cpp-tutorial/using-an-integrated-debugger-the-call-stack/":{"offset":3138347,"length":53662,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"71a6f2095751e931"},"/cpp-tutorial/chapter-3-summary-and-quiz":{"offset":3192009,"length":54889,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b7d8d9eee9763587"},"/cpp-tutorial/chapter-3-summary-and-quiz/":{"offset":3192009,"length":54889,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b7d8d9eee9763587"},"/cpp-tutorial/fixed-width-integers-and-size-t":{"offset":3246898,"length":58043,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"16a5c7c99f4479c0"},"/cpp-tutorial/fixed-width-integers-and-size-t/":{"offset":3246898,"length":58043,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"16a5c7c99f4479c0"},"/cpp-tutorial/unsigned-integers-and-why-to-avoid-them":{"offset":3304941,"length":56692,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a4ec8767f082e63a"},"/cpp-tutorial/unsigned-integers-and-why-to-avoid-them/":{"offset":3304941,"length":56692,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a4ec8767f082e63a"},"/cpp-tutorial/object-sizes-and-the-sizeof-operator":{"offset":3361633,"length":55315,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e5461cf58707bf13"},"/cpp-tutorial/object-sizes-and-the-sizeof-operator/":{"offset":3361633,"length":55315,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e5461cf58707bf13"},"/cpp-tutorial/introduction-to-if-statements":{"offset":3416948,"length":55922,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7990671980f81f46"},"/cpp-tutorial/introduction-to-if-statements/":{"offset":3416948,"length":55922,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7990671980f81f46"},"/cpp-tutorial/floating-point-numbers":{"offset":3472870,"length":57857,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2571aca812107c06"},"/cpp-tutorial/floating-point-numbers/":{"offset":3472870,"length":57857,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2571aca812107c06"},"/cpp-tutorial/signed-integers":{"offset":3530727,"length":55488,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4a4ab86c3d795c60"},"/cpp-tutorial/signed-integers/":{"offset":3530727,"length":55488,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4a4ab86c3d795c60"},"/cpp-tutorial/using-an-integrated-debugger-stepping":{"offset":3586215,"length":57999,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cd53203dd0d50404"},"/cpp-tutorial/using-an-integrated-debugger-stepping/":{"offset":3586215,"length":57999,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cd53203dd0d50404"},"/cpp-tutorial/remainder-and-exponentiation":{"offset":3644214,"length":55851,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a1a1db91874f55d5"},"/cpp-tutorial/remainder-and-exponentiation/":{"offset":3644214,"length":55851,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a1a1db91874f55d5"},"/cpp-tutorial/constant-variables-named-constants":{"offset":3700065,"length":56841,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"52855b4b647daad4"},"/cpp-tutorial/constant-variables-named-constants/":{"offset":3700065,"length":56841,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"52855b4b647daad4"},"/cpp-tutorial/introduction-to-stdstring_view":{"offset":3756906,"length":54415,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8321776d60e3cb21"},"/cpp-tutorial/introduction-to-stdstring_view/":{"offset":3756906,"length":54415,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8321776d60e3cb21"},"/cpp-tutorial/the-as-if-rule-and-compile-time-optimization":{"offset":3811321,"length":56828,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"631692298b9afa77"},"/cpp-tutorial/the-as-if-rule-and-compile-time-optimization/":{"offset":3811321,"length":56828,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"631692298b9afa77"},"/cpp-tutorial/chars":{"offset":3868149,"length":58431,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"411d8f983c7500bf"},"/cpp-tutorial/chars/":{"offset":3868149,"length":58431,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"411d8f983c7500bf"},"/cpp-tutorial/chapter-4-summary-and-quiz":{"offset":3926580,"length":56551,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"322d8d5af3c1c2de"},"/cpp-tutorial/chapter-4-summary-and-quiz/":{"offset":3926580,"length":56551,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"322d8d5af3c1c2de"},"/cpp-tutorial/literals":{"offset":3983131,"length":56995,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cf00fabb8223f7f0"},"/cpp-tutorial/literals/":{"offset":3983131,"length":56995,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cf00fabb8223f7f0"},"/cpp-tutorial/introduction-to-type-conversion-and-static_cast":{"offset":4040126,"length":57370,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ea9f55d851c426d0"},"/cpp-tutorial/introduction-to-type-conversion-and-static_cast/":{"offset":4040126,"length":57370,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ea9f55d851c426d0"},"/cpp-tutorial/stdstring_view-part-2":{"offset":4097496,"length":59951,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cca57d6b631fcac7"},"/cpp-tutorial/stdstring_view-part-2/":{"offset":4097496,"length":59951,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cca57d6b631fcac7"},"/cpp-tutorial/constexpr-variables":{"offset":4157447,"length":55698,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5bd584ec36fe6f93"},"/cpp-tutorial/constexpr-variables/":{"offset":4157447,"length":55698,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5bd584ec36fe6f93"},"/cpp-tutorial/constant-expressions":{"offset":4213145,"length":58732,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a9300dc2f03305ba"},"/cpp-tutorial/constant-expressions/":{"offset":4213145,"length":58732,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a9300dc2f03305ba"},"/cpp-tutorial/chapter-5-summary-and-quiz":{"offset":4271877,"length":54953,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c7ecdf2f95156ada"},"/cpp-tutorial/chapter-5-summary-and-quiz/":{"offset":4271877,"length":54953,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c7ecdf2f95156ada"},"/cpp-tutorial/introduction-to-stdstring":{"offset":4326830,"length":58158,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3464188ce5f8ed4a"},"/cpp-tutorial/introduction-to-stdstring/":{"offset":4326830,"length":58158,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3464188ce5f8ed4a"},"/cpp-tutorial/arithmetic-operators":{"offset":4384988,"length":54801,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6fcf5ac4eca6af60"},"/cpp-tutorial/arithmetic-operators/":{"offset":4384988,"length":54801,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6fcf5ac4eca6af60"},"/cpp-tutorial/operator-precedence-and-associativity":{"offset":4439789,"length":58474,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"afb6360935a592d3"},"/cpp-tutorial/operator-precedence-and-associativity/":{"offset":4439789,"length":58474,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"afb6360935a592d3"},"/cpp-tutorial/numeral-systems-decimal-binary-hexadecimal-and-octal":{"offset":4498263,"length":55962,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2d6b8444835cc9d1"},"/cpp-tutorial/numeral-systems-decimal-binary-hexadecimal-and-octal/":{"offset":4498263,"length":55962,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2d6b8444835cc9d1"},"/cpp-tutorial/increment-decrement-operators-and-side-effects":{"offset":4554225,"length":54588,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4317883e1f8d27be"},"/cpp-tutorial/increment-decrement-operators-and-side-effects/":{"offset":4554225,"length":54588,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4317883e1f8d27be"},"/cpp-tutorial/logical-operators":{"offset":4608813,"length":58495,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ccdba3a76e1d218b"},"/cpp-tutorial/logical-operators/":{"offset":4608813,"length":58495,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ccdba3a76e1d218b"},"/cpp-tutorial/converting-integers-between-binary-and-decimal-representation":{"offset":4667308,"length":57315,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8d19ed8d7beae8ac"},"/cpp-tutorial/converting-integers-between-binary-and-decimal-representation/":{"offset":4667308,"length":57315,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8d19ed8d7beae8ac"},"/cpp-tutorial/compound-statements-blocks":{"offset":4724623,"length":53260,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1567ebe1f4e1039e"},"/cpp-tutorial/compound-statements-blocks/":{"offset":4724623,"length":53260,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1567ebe1f4e1039e"},"/cpp-tutorial/the-comma-operator":{"offset":4777883,"length":52794,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9621731b01e925d8"},"/cpp-tutorial/the-comma-operator/":{"offset":4777883,"length":52794,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9621731b01e925d8"},"/cpp-tutorial/variable-shadowing-name-hiding":{"offset":4830677,"length":53483,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"57fc3b2dd0a30653"},"/cpp-tutorial/variable-shadowing-name-hiding/":{"offset":4830677,"length":53483,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"57fc3b2dd0a30653"},"/cpp-tutorial/local-variables":{"offset":4884160,"length":55379,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9c52bef0baa49be3"},"/cpp-tutorial/local-variables/":{"offset":4884160,"length":55379,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9c52bef0baa49be3"},"/cpp-tutorial/bit-manipulation-with-bitwise-operators-and-bit-masks":{"offset":4939539,"length":59381,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"534cecef8e93c112"},"/cpp-tutorial/bit-manipulation-with-bitwise-operators-and-bit-masks/":{"offset":4939539,"length":59381,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"534cecef8e93c112"},"/cpp-tutorial/internal-linkage":{"offset":4998920,"length":54653,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d855ccbf5659003f"},"/cpp-tutorial/internal-linkage/":{"offset":4998920,"length":54653,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d855ccbf5659003f"},"/cpp-tutorial/chapter-6-summary-and-quiz":{"offset":5053573,"length":53270,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5890fa96a63c76e6"},"/cpp-tutorial/chapter-6-summary-and-quiz/":{"offset":5053573,"length":53270,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5890fa96a63c76e6"},"/cpp-tutorial/introduction-to-global-variables":{"offset":5106843,"length":54288,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4cadfcfbbe4c654e"},"/cpp-tutorial/introduction-to-global-variables/":{"offset":5106843,"length":54288,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4cadfcfbbe4c654e"},"/cpp-tutorial/the-conditional-operator":{"offset":5161131,"length":55818,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1834954d97dd7e1d"},"/cpp-tutorial/the-conditional-operator/":{"offset":5161131,"length":55818,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1834954d97dd7e1d"},"/cpp-tutorial/bit-flags-and-bit-manipulation-via-stdbitset":{"offset":5216949,"length":55199,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"52824602f5bab239"},"/cpp-tutorial/bit-flags-and-bit-manipulation-via-stdbitset/":{"offset":5216949,"length":55199,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"52824602f5bab239"},"/cpp-tutorial/user-defined-namespaces-and-the-scope-resolution-operator":{"offset":5272148,"length":57691,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b50221d40ba28615"},"/cpp-tutorial/user-defined-namespaces-and-the-scope-resolution-operator/":{"offset":5272148,"length":57691,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b50221d40ba28615"},"/cpp-tutorial/bitwise-operators":{"offset":5329839,"length":58316,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d71fc97dd6fef293"},"/cpp-tutorial/bitwise-operators/":{"offset":5329839,"length":58316,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d71fc97dd6fef293"},"/cpp-tutorial/relational-operators-and-floating-point-comparisons":{"offset":5388155,"length":57589,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fbb1153fe1e032a7"},"/cpp-tutorial/relational-operators-and-floating-point-comparisons/":{"offset":5388155,"length":57589,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fbb1153fe1e032a7"},"/cpp-tutorial/external-linkage-and-variable-forward-declarations":{"offset":5445744,"length":54144,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9ba919f73342822a"},"/cpp-tutorial/external-linkage-and-variable-forward-declarations/":{"offset":5445744,"length":54144,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9ba919f73342822a"},"/cpp-tutorial/inline-functions-and-variables":{"offset":5499888,"length":57674,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"89831661fced6114"},"/cpp-tutorial/inline-functions-and-variables/":{"offset":5499888,"length":57674,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"89831661fced6114"},"/cpp-tutorial/why-non-const-global-variables-are-evil":{"offset":5557562,"length":56687,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b528ab24a1c9f06c"},"/cpp-tutorial/why-non-const-global-variables-are-evil/":{"offset":5557562,"length":56687,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b528ab24a1c9f06c"},"/cpp-tutorial/sharing-global-constants-across-multiple-files-using-inline-variables":{"offset":5614249,"length":55494,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"be2f1f4421ba233c"},"/cpp-tutorial/sharing-global-constants-across-multiple-files-using-inline-variables/":{"offset":5614249,"length":55494,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"be2f1f4421ba233c"},"/cpp-tutorial/unnamed-and-inline-namespaces":{"offset":5669743,"length":53963,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7bb3bb90882262e3"},"/cpp-tutorial/unnamed-and-inline-namespaces/":{"offset":5669743,"length":53963,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7bb3bb90882262e3"},"/cpp-tutorial/static-local-variables":{"offset":5723706,"length":55886,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3bbfffa218ffb531"},"/cpp-tutorial/static-local-variables/":{"offset":5723706,"length":55886,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3bbfffa218ffb531"},"/cpp-tutorial/using-declarations-and-using-directives":{"offset":5779592,"length":58429,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a2e635d2c57560b1"},"/cpp-tutorial/using-declarations-and-using-directives/":{"offset":5779592,"length":58429,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a2e635d2c57560b1"},"/cpp-tutorial/goto-statements":{"offset":5838021,"length":54402,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c8b25b3e1cc5b77a"},"/cpp-tutorial/goto-statements/":{"offset":5838021,"length":54402,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c8b25b3e1cc5b77a"},"/cpp-tutorial/chapter-7-summary-and-quiz":{"offset":5892423,"length":54792,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"832e1e990a9aea41"},"/cpp-tutorial/chapter-7-summary-and-quiz/":{"offset":5892423,"length":54792,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"832e1e990a9aea41"},"/cpp-tutorial/scope-duration-and-linkage-summary":{"offset":5947215,"length":53775,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"80dc6d896cdbe6ab"},"/cpp-tutorial/scope-duration-and-linkage-summary/":{"offset":5947215,"length":53775,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"80dc6d896cdbe6ab"},"/cpp-tutorial/constexpr-if-statements":{"offset":6000990,"length":52809,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5334a4d1601037b5"},"/cpp-tutorial/constexpr-if-statements/":{"offset":6000990,"length":52809,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5334a4d1601037b5"},"/cpp-tutorial/switch-statement-basics":{"offset":6053799,"length":55957,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0c0b595800ca02f6"},"/cpp-tutorial/switch-statement-basics/":{"offset":6053799,"length":55957,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0c0b595800ca02f6"},"/cpp-tutorial/control-flow-introduction":{"offset":6109756,"length":53133,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"be861f5a8bbf6c99"},"/cpp-tutorial/control-flow-introduction/":{"offset":6109756,"length":53133,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"be861f5a8bbf6c99"},"/cpp-tutorial/switch-fallthrough-and-scoping":{"offset":6162889,"length":55399,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"540aa01fffab095c"},"/cpp-tutorial/switch-fallthrough-and-scoping/":{"offset":6162889,"length":55399,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"540aa01fffab095c"},"/cpp-tutorial/common-if-statement-problems":{"offset":6218288,"length":54159,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"206b878af35f102f"},"/cpp-tutorial/common-if-statement-problems/":{"offset":6218288,"length":54159,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"206b878af35f102f"},"/cpp-tutorial/if-statements-and-blocks":{"offset":6272447,"length":55432,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4062574449a1809f"},"/cpp-tutorial/if-statements-and-blocks/":{"offset":6272447,"length":55432,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4062574449a1809f"},"/cpp-tutorial/detecting-and-handling-errors":{"offset":6327879,"length":56633,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"73763da94b11bedb"},"/cpp-tutorial/detecting-and-handling-errors/":{"offset":6327879,"length":56633,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"73763da94b11bedb"},"/cpp-tutorial/assert-and-static_assert":{"offset":6384512,"length":57882,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"273ce8e00c9eefb3"},"/cpp-tutorial/assert-and-static_assert/":{"offset":6384512,"length":57882,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"273ce8e00c9eefb3"},"/cpp-tutorial/stdcin-and-handling-invalid-input":{"offset":6442394,"length":60541,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c080a519fdc775ff"},"/cpp-tutorial/stdcin-and-handling-invalid-input/":{"offset":6442394,"length":60541,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c080a519fdc775ff"},"/cpp-tutorial/for-statements":{"offset":6502935,"length":58354,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7a4ff9618372ff72"},"/cpp-tutorial/for-statements/":{"offset":6502935,"length":58354,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7a4ff9618372ff72"},"/cpp-tutorial/do-while-statements":{"offset":6561289,"length":53269,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c1049ff4b8fbed39"},"/cpp-tutorial/do-while-statements/":{"offset":6561289,"length":53269,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c1049ff4b8fbed39"},"/cpp-tutorial/global-random-numbers-random-h":{"offset":6614558,"length":54712,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e725bdb9cdb35a7"},"/cpp-tutorial/global-random-numbers-random-h/":{"offset":6614558,"length":54712,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e725bdb9cdb35a7"},"/cpp-tutorial/introduction-to-loops-and-while-statements":{"offset":6669270,"length":58034,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dcf708c32ffcb5ce"},"/cpp-tutorial/introduction-to-loops-and-while-statements/":{"offset":6669270,"length":58034,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dcf708c32ffcb5ce"},"/cpp-tutorial/generating-random-numbers-using-mersenne-twister":{"offset":6727304,"length":59787,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"307b8d0a88d06386"},"/cpp-tutorial/generating-random-numbers-using-mersenne-twister/":{"offset":6727304,"length":59787,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"307b8d0a88d06386"},"/cpp-tutorial/halts-exiting-your-program-early":{"offset":6787091,"length":55683,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3c7e2a33dfd4d87b"},"/cpp-tutorial/halts-exiting-your-program-early/":{"offset":6787091,"length":55683,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3c7e2a33dfd4d87b"},"/cpp-tutorial/chapter-9-summary-and-quiz":{"offset":6842774,"length":54107,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"33937546371d847a"},"/cpp-tutorial/chapter-9-summary-and-quiz/":{"offset":6842774,"length":54107,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"33937546371d847a"},"/cpp-tutorial/introduction-to-random-number-generation":{"offset":6896881,"length":60882,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3ddd53013da47969"},"/cpp-tutorial/introduction-to-random-number-generation/":{"offset":6896881,"length":60882,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3ddd53013da47969"},"/cpp-tutorial/chapter-8-summary-and-quiz":{"offset":6957763,"length":57852,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0e5258289a348216"},"/cpp-tutorial/chapter-8-summary-and-quiz/":{"offset":6957763,"length":57852,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0e5258289a348216"},"/cpp-tutorial/introduction-to-testing-your-code":{"offset":7015615,"length":57190,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"077b064d63f04963"},"/cpp-tutorial/introduction-to-testing-your-code/":{"offset":7015615,"length":57190,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"077b064d63f04963"},"/cpp-tutorial/break-and-continue":{"offset":7072805,"length":55413,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fc00145fe90bc607"},"/cpp-tutorial/break-and-continue/":{"offset":7072805,"length":55413,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fc00145fe90bc607"},"/cpp-tutorial/common-semantic-errors-in-c":{"offset":7128218,"length":55815,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6e76227cbe18d867"},"/cpp-tutorial/common-semantic-errors-in-c/":{"offset":7128218,"length":55815,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6e76227cbe18d867"},"/cpp-tutorial/code-coverage":{"offset":7184033,"length":54391,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"db67703efc31c603"},"/cpp-tutorial/code-coverage/":{"offset":7184033,"length":54391,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"db67703efc31c603"},"/cpp-tutorial/default-arguments":{"offset":7238424,"length":54984,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"86fa450f9a81ccd2"},"/cpp-tutorial/default-arguments/":{"offset":7238424,"length":54984,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"86fa450f9a81ccd2"},"/cpp-tutorial/function-overload-resolution-and-ambiguous-matches":{"offset":7293408,"length":56741,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6437379651e68407"},"/cpp-tutorial/function-overload-resolution-and-ambiguous-matches/":{"offset":7293408,"length":56741,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6437379651e68407"},"/cpp-tutorial/narrowing-conversions-list-initialization-and-constexpr-initializers":{"offset":7350149,"length":54813,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0d61c772fabf2f1a"},"/cpp-tutorial/narrowing-conversions-list-initialization-and-constexpr-initializers/":{"offset":7350149,"length":54813,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0d61c772fabf2f1a"},"/cpp-tutorial/implicit-type-conversion":{"offset":7404962,"length":55592,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"04b7308566a00dd2"},"/cpp-tutorial/implicit-type-conversion/":{"offset":7404962,"length":55592,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"04b7308566a00dd2"},"/cpp-tutorial/floating-point-and-integral-promotion":{"offset":7460554,"length":54529,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"124cdd9c8246bd62"},"/cpp-tutorial/floating-point-and-integral-promotion/":{"offset":7460554,"length":54529,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"124cdd9c8246bd62"},"/cpp-tutorial/numeric-conversions":{"offset":7515083,"length":55824,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ae506dc9a18cac0c"},"/cpp-tutorial/numeric-conversions/":{"offset":7515083,"length":55824,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ae506dc9a18cac0c"},"/cpp-tutorial/chapter-10-summary-and-quiz":{"offset":7570907,"length":54230,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bac97cb5539933c7"},"/cpp-tutorial/chapter-10-summary-and-quiz/":{"offset":7570907,"length":54230,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bac97cb5539933c7"},"/cpp-tutorial/typedefs-and-type-aliases":{"offset":7625137,"length":58163,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fd55574738d4d4c4"},"/cpp-tutorial/typedefs-and-type-aliases/":{"offset":7625137,"length":58163,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fd55574738d4d4c4"},"/cpp-tutorial/arithmetic-conversions":{"offset":7683300,"length":54468,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"65673b4785d40cff"},"/cpp-tutorial/arithmetic-conversions/":{"offset":7683300,"length":54468,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"65673b4785d40cff"},"/cpp-tutorial/function-overload-differentiation":{"offset":7737768,"length":54027,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eb64ff8a08e4b724"},"/cpp-tutorial/function-overload-differentiation/":{"offset":7737768,"length":54027,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eb64ff8a08e4b724"},"/cpp-tutorial/type-deduction-for-functions":{"offset":7791795,"length":54937,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"09254096f6040fc9"},"/cpp-tutorial/type-deduction-for-functions/":{"offset":7791795,"length":54937,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"09254096f6040fc9"},"/cpp-tutorial/function-templates":{"offset":7846732,"length":56806,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c9d6c5377561ffcf"},"/cpp-tutorial/function-templates/":{"offset":7846732,"length":56806,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c9d6c5377561ffcf"},"/cpp-tutorial/type-deduction-for-objects-using-the-auto-keyword":{"offset":7903538,"length":55609,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9d77332b13f0c9a1"},"/cpp-tutorial/type-deduction-for-objects-using-the-auto-keyword/":{"offset":7903538,"length":55609,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9d77332b13f0c9a1"},"/cpp-tutorial/deleting-functions":{"offset":7959147,"length":53291,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3b83b75e2d59e2bd"},"/cpp-tutorial/deleting-functions/":{"offset":7959147,"length":53291,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3b83b75e2d59e2bd"},"/cpp-tutorial/introduction-to-function-overloading":{"offset":8012438,"length":53481,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9492ecb5fd947082"},"/cpp-tutorial/introduction-to-function-overloading/":{"offset":8012438,"length":53481,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9492ecb5fd947082"},"/cpp-tutorial/explicit-type-conversion-casting-and-static-cast":{"offset":8065919,"length":57308,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bc0d008d0256653a"},"/cpp-tutorial/explicit-type-conversion-casting-and-static-cast/":{"offset":8065919,"length":57308,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bc0d008d0256653a"},"/cpp-tutorial/constexpr-functions-part-3-and-consteval":{"offset":8123227,"length":55324,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f9c8e4e8c2682bc5"},"/cpp-tutorial/constexpr-functions-part-3-and-consteval/":{"offset":8123227,"length":55324,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f9c8e4e8c2682bc5"},"/cpp-tutorial/non-type-template-parameters":{"offset":8178551,"length":55415,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4f5985fb613609ac"},"/cpp-tutorial/non-type-template-parameters/":{"offset":8178551,"length":55415,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4f5985fb613609ac"},"/cpp-tutorial/function-templates-with-multiple-template-types":{"offset":8233966,"length":56017,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3d74eee6732dcee9"},"/cpp-tutorial/function-templates-with-multiple-template-types/":{"offset":8233966,"length":56017,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3d74eee6732dcee9"},"/cpp-tutorial/constexpr-functions":{"offset":8289983,"length":53898,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b9edd57eb56c0337"},"/cpp-tutorial/constexpr-functions/":{"offset":8289983,"length":53898,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b9edd57eb56c0337"},"/cpp-tutorial/chapter-11-summary-and-quiz":{"offset":8343881,"length":54913,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ae69752c8639d5aa"},"/cpp-tutorial/chapter-11-summary-and-quiz/":{"offset":8343881,"length":54913,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ae69752c8639d5aa"},"/cpp-tutorial/constexpr-functions-part-2":{"offset":8398794,"length":55548,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"79d6107ad32df96f"},"/cpp-tutorial/constexpr-functions-part-2/":{"offset":8398794,"length":55548,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"79d6107ad32df96f"},"/cpp-tutorial/function-template-instantiation":{"offset":8454342,"length":57530,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"30654411d5108968"},"/cpp-tutorial/function-template-instantiation/":{"offset":8454342,"length":57530,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"30654411d5108968"},"/cpp-tutorial/using-function-templates-in-multiple-files":{"offset":8511872,"length":53748,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e7ecb72cac24dfe9"},"/cpp-tutorial/using-function-templates-in-multiple-files/":{"offset":8511872,"length":53748,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e7ecb72cac24dfe9"},"/cpp-tutorial/value-categories-lvalues-and-rvalues":{"offset":8565620,"length":56343,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ba2bcaa4a0c19ff0"},"/cpp-tutorial/value-categories-lvalues-and-rvalues/":{"offset":8565620,"length":56343,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ba2bcaa4a0c19ff0"},"/cpp-tutorial/constexpr-functions-part-4":{"offset":8621963,"length":54662,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4deb063dd0340152"},"/cpp-tutorial/constexpr-functions-part-4/":{"offset":8621963,"length":54662,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4deb063dd0340152"},"/cpp-tutorial/introduction-to-compound-data-types":{"offset":8676625,"length":53807,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bbafdc0d29f64410"},"/cpp-tutorial/introduction-to-compound-data-types/":{"offset":8676625,"length":53807,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bbafdc0d29f64410"},"/cpp-tutorial/chapter-f-summary-and-quiz":{"offset":8730432,"length":52995,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3c59f0534024b0c1"},"/cpp-tutorial/chapter-f-summary-and-quiz/":{"offset":8730432,"length":52995,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3c59f0534024b0c1"},"/cpp-tutorial/lvalue-references":{"offset":8783427,"length":56470,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"08466be56c77f7b3"},"/cpp-tutorial/lvalue-references/":{"offset":8783427,"length":56470,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"08466be56c77f7b3"},"/cpp-tutorial/lvalue-references-to-const":{"offset":8839897,"length":55141,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8c6ff4b8d6b33a97"},"/cpp-tutorial/lvalue-references-to-const/":{"offset":8839897,"length":55141,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8c6ff4b8d6b33a97"},"/cpp-tutorial/pass-by-lvalue-reference":{"offset":8895038,"length":54544,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"13790a29da9ca546"},"/cpp-tutorial/pass-by-lvalue-reference/":{"offset":8895038,"length":54544,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"13790a29da9ca546"},"/__docx_assets/4c29102d7ab6c4.css":{"offset":8949582,"length":36126,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"a3a7133961d08d8d"},"/__docx_assets/be8f2f14a398de.css":{"offset":8985708,"length":1148,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"6b56626bd7b89f4a"},"/__docx_assets/4ff5d08005332b.css":{"offset":8986856,"length":22350,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"8542f02f6da8eb1e"},"/__docx_assets/f285c77ef4360b.css":{"offset":9009206,"length":10483,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"6dd2da8589fcede5"},"/__docx_assets/8eaf6301b0a2ac.css":{"offset":9019689,"length":4706,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"df25cd0a890c5da0"},"/__docx_assets/064cc8ba0d7c43.css":{"offset":9024395,"length":218,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"cbbd87ae8013796a"},"/__docx_assets/9b5561685ea598.css":{"offset":9024613,"length":272,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"4852f2c4e9668f79"},"/__docx_assets/ca86ebe890dc7c.css":{"offset":9024885,"length":350,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"802c60bc7c601902"},"/__docx_assets/7a01557a82e0d3.css":{"offset":9025235,"length":6093,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"90fa01e16375e77d"},"/blog/wp-content/uploads/learncpp.png":{"offset":9031328,"length":4193,"mime":"image/png","gzipped":true,"hash":"ff72d9b000cab98a"},"/__docx_assets/2c95a684fda719.css":{"offset":9035521,"length":1021,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"c3105d8bc229b3f1"},"/__docx_assets/ee070bd9bb3fbb.css":{"offset":9036542,"length":375,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"c8d60c2020b401f2"},"/__docx_assets/7006b1f63f6554.css":{"offset":9036917,"length":632,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"822c564f931b5cf6"},"/__docx_assets/14fcdd5eb6831d.css":{"offset":9037549,"length":408,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"f1f19037316e3485"},"/__docx_assets/021245948469c1.css":{"offset":9037957,"length":19277,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"b960d8326a10dfe3"},"/__docx_assets/eeb93ff70c27ef.css":{"offset":9057234,"length":829,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"c3d33ebad058f199"},"/__docx_assets/5939d2c52c8ce6.css":{"offset":9058063,"length":7080,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"e722e6d089435730"},"/__docx_assets/2be9cb3d588382.css":{"offset":9065143,"length":3369,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"feb6b8f11cf02b94"},"/blog/wp-content/uploads/stripe.jpg":{"offset":9068512,"length":6829,"mime":"image/jpeg","gzipped":true,"hash":"924749e5f11cba8e"},"/__docx_assets/607e6a7a8a79e5.css":{"offset":9075341,"length":2543,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"8bad319ec9dc1d45"},"/images/CppTutorial/Chapter0/CB-OtherCompilerFlags-min.png":{"offset":9077884,"length":11512,"mime":"image/png","gzipped":true,"hash":"504043bec29df988"},"/images/CppTutorial/MakeUseOf.png":{"offset":9089396,"length":4822,"mime":"image/png","gzipped":true,"hash":"053d7369aaf05bab"},"/images/CppTutorial/Chapter0/CB-C++11-min.png":{"offset":9094218,"length":52548,"mime":"image/webp","gzipped":true,"hash":"4e6546a816fe5f07"},"/images/CppTutorial/Chapter0/VS-WarningsAsErrors-min.png":{"offset":9146766,"length":31172,"mime":"image/webp","gzipped":true,"hash":"d4be90679ba88e41"},"/__docx_assets/efeacb6602c4eb.css":{"offset":8985708,"length":1148,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"6b56626bd7b89f4a"},"/__docx_assets/09737aa6e474de.css":{"offset":9024613,"length":272,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"4852f2c4e9668f79"},"/images/CppTutorial/Chapter0/CB-SettingsCompiler-min.png":{"offset":9177938,"length":22852,"mime":"image/webp","gzipped":true,"hash":"9ab883125ce2d81a"},"/images/CppTutorial/Chapter0/CompilersAutoDetection-min.png":{"offset":9200790,"length":22442,"mime":"image/webp","gzipped":true,"hash":"38e0073d46869d7c"},"/images/CppTutorial/Chapter0/VS2019-Project-Language-min.png":{"offset":9223232,"length":37720,"mime":"image/webp","gzipped":true,"hash":"9a689c4a462a6835"},"/images/CppTutorial/Chapter0/Development-min.png":{"offset":9260952,"length":3580,"mime":"image/png","gzipped":true,"hash":"cf78dc2b07eca492"},"/images/CppTutorial/Chapter0/VS-BuildTarget-min.png":{"offset":9264532,"length":10148,"mime":"image/png","gzipped":true,"hash":"6e176ebdcd97e002"},"/images/CppTutorial/Chapter0/VS2019-Installer-min.png":{"offset":9274680,"length":66868,"mime":"image/webp","gzipped":true,"hash":"94d0b76d748360eb"},"/blog/wp-content/uploads/images/CppTutorial/ide/CB-MinGWDownload-min.png":{"offset":9341548,"length":11161,"mime":"image/png","gzipped":true,"hash":"a418d6c748e893a4"},"/images/CppTutorial/Chapter0/CB-EnableAllWarnings-min.png":{"offset":9352709,"length":50930,"mime":"image/webp","gzipped":true,"hash":"e417537960ec595e"},"/images/CppTutorial/Chapter0/VS-EnableAllWarnings-min.png":{"offset":9403639,"length":29876,"mime":"image/webp","gzipped":true,"hash":"366a4ce9771c7956"},"/images/CppTutorial/Chapter0/VS-SolutionExplorerProperties-min.png":{"offset":9433515,"length":23102,"mime":"image/webp","gzipped":true,"hash":"78e4fe2b2e4f815d"},"/images/CppTutorial/Chapter0/LinkingObjects-min.png":{"offset":9456617,"length":13329,"mime":"image/png","gzipped":true,"hash":"eac16402c3f91ab3"},"/images/CppTutorial/Chapter0/CompileSource-min.png":{"offset":9469946,"length":6876,"mime":"image/png","gzipped":true,"hash":"f6985b9a3d64f389"},"/__docx_assets/1355306b609da4.bin":{"offset":9476822,"length":879,"mime":"image/jpeg","gzipped":true,"hash":"64d6b20a536f7e20"},"/__docx_assets/33c9598e19839b.gif":{"offset":9477701,"length":57,"mime":"image/gif","gzipped":true,"hash":"c24a56bae96e6deb"},"/images/CppTutorial/Chapter0/VS2019-Initial-min.png":{"offset":9477758,"length":25654,"mime":"image/webp","gzipped":true,"hash":"b2fd02e21daa6b8c"},"/images/CppTutorial/Chapter0/Portability-min.png":{"offset":9503412,"length":12019,"mime":"image/png","gzipped":true,"hash":"1bf6495e3abbc9a2"},"/images/CppTutorial/Chapter0/VS2019-PrecompiledHeader-min.png":{"offset":9515431,"length":12255,"mime":"image/png","gzipped":true,"hash":"77ca94b2ab6f5b97"},"/images/CppTutorial/Chapter0/CB-BuildTarget-min.png":{"offset":9527686,"length":13466,"mime":"image/png","gzipped":true,"hash":"3a473fd9d274a162"},"/images/CppTutorial/Chapter0/WindowsCommandLine-min.png":{"offset":9541152,"length":4065,"mime":"image/png","gzipped":true,"hash":"f778e63ca00d17dd"},"/images/CppTutorial/Chapter0/Compiling-min.png":{"offset":9545217,"length":9106,"mime":"image/png","gzipped":true,"hash":"5442eec01accd442"},"/images/CppTutorial/Chapter0/VS2019-CreateNewProject-min.png":{"offset":9554323,"length":19150,"mime":"image/webp","gzipped":true,"hash":"87ad3e6229a20c81"},"/images/CppTutorial/Chapter0/VS2019-ConfigureNewProject-min.png":{"offset":9573473,"length":11384,"mime":"image/png","gzipped":true,"hash":"ce7d003eace4b6a8"},"/images/CppTutorial/Chapter0/VS2019-GetStarted-min.png":{"offset":9584857,"length":9794,"mime":"image/webp","gzipped":true,"hash":"60086d555dcce2e7"},"/images/CppTutorial/Chapter0/Interpreting-min.png":{"offset":9594651,"length":6063,"mime":"image/png","gzipped":true,"hash":"b3994bc344467593"},"/images/CppTutorial/Chapter0/VS2017-DesktopWizard-min.png":{"offset":9600714,"length":6787,"mime":"image/png","gzipped":true,"hash":"93580ba6a07b654f"},"/images/CppTutorial/Chapter0/VC2005-Run-min.png":{"offset":9607501,"length":3239,"mime":"image/png","gzipped":true,"hash":"a618984451363e5b"},"/images/CppTutorial/Chapter0/CB-Project-min.png":{"offset":9610740,"length":15359,"mime":"image/png","gzipped":true,"hash":"847077f8b3fe44d0"},"/images/CppTutorial/Chapter0/CB-Closed-min.png":{"offset":9626099,"length":7032,"mime":"image/png","gzipped":true,"hash":"fce9dca4ff0aeae8"},"/images/CppTutorial/Chapter0/CB2017-Save-min.png":{"offset":9633131,"length":9493,"mime":"image/png","gzipped":true,"hash":"cc5be2d842be03f9"},"/images/CppTutorial/Chapter0/CB-Pedantic-min.png":{"offset":9642624,"length":57109,"mime":"image/webp","gzipped":true,"hash":"8f983dd35019c04b"},"/images/CppTutorial/Chapter0/VS2017-NewProject-min.png":{"offset":9699733,"length":23344,"mime":"image/webp","gzipped":true,"hash":"38c9f74b536093f0"},"/images/CppTutorial/Chapter2/VS-AddNewItem1.png":{"offset":9723077,"length":18198,"mime":"image/webp","gzipped":true,"hash":"74c5eb3d5c37a116"},"/images/CppTutorial/Chapter0/VS-DisableExtensions-min.png":{"offset":9741275,"length":33557,"mime":"image/webp","gzipped":true,"hash":"c1e2cb186f31962f"},"/images/CppTutorial/Chapter2/ParametersReturn.png":{"offset":9774832,"length":7597,"mime":"image/webp","gzipped":true,"hash":"867c25ce28773745"},"/images/CppTutorial/Chapter2/VS-AddNewItem2.png":{"offset":9782429,"length":13714,"mime":"image/webp","gzipped":true,"hash":"05873d6790f4c4de"},"/images/CppTutorial/Chapter3/VS-Watch2-min.png":{"offset":9796143,"length":4863,"mime":"image/png","gzipped":true,"hash":"60c27441434053ba"},"/images/CppTutorial/Chapter3/VS-Watch3-min.png":{"offset":9801006,"length":4802,"mime":"image/png","gzipped":true,"hash":"33f52e9ba6827066"},"/images/CppTutorial/Chapter2/CB-AddNewItem5.png":{"offset":9805808,"length":11791,"mime":"image/webp","gzipped":true,"hash":"ff6801a5a2192480"},"/images/CppTutorial/Chapter2/CB-AddNewItem2.png":{"offset":9817599,"length":14319,"mime":"image/webp","gzipped":true,"hash":"32f097ebabda5b80"},"/images/CppTutorial/Section2/MemoryAddresses.png":{"offset":9831918,"length":808,"mime":"image/png","gzipped":true,"hash":"d4f53cf050803528"},"/images/CppTutorial/Chapter3/VS-Watch1-min.png":{"offset":9832726,"length":4645,"mime":"image/png","gzipped":true,"hash":"24d4aa20125a77f0"},"/images/CppTutorial/Chapter3/CB-EvaluateExpression-min.png":{"offset":9837371,"length":8086,"mime":"image/png","gzipped":true,"hash":"b5a9314c8e69772a"},"/images/CppTutorial/Chapter2/CB-AddNewItem3.png":{"offset":9845457,"length":10528,"mime":"image/webp","gzipped":true,"hash":"c0da22fc4b80f66c"},"/images/CppTutorial/Chapter2/CB-AddNewItem1.png":{"offset":9855985,"length":14053,"mime":"image/png","gzipped":true,"hash":"d7315b044a33079b"},"/images/CppTutorial/Chapter3/VS-QuickWatch1-min.png":{"offset":9870038,"length":12681,"mime":"image/png","gzipped":true,"hash":"b39253335b2379f8"},"/images/CppTutorial/Chapter2/CB-AddNewItem4.png":{"offset":9882719,"length":7945,"mime":"image/webp","gzipped":true,"hash":"2eda747954233c08"},"/images/CppTutorial/Chapter3/VS-Breakpoint2-min.png":{"offset":9890664,"length":8855,"mime":"image/png","gzipped":true,"hash":"4e585d725b72dd6d"},"/images/CppTutorial/Chapter3/VS-Watch5-min.png":{"offset":9899519,"length":6164,"mime":"image/png","gzipped":true,"hash":"cb9d49311f40bd4b"},"/images/CppTutorial/Chapter3/VS-Watch4-min.png":{"offset":9905683,"length":5009,"mime":"image/png","gzipped":true,"hash":"6d565c8494b5873d"},"/images/CppTutorial/Chapter3/VS-StepInto4-min.png":{"offset":9910692,"length":9200,"mime":"image/png","gzipped":true,"hash":"26f676dc7e51b33a"},"/images/CppTutorial/Chapter3/VS-QuickWatch2-min.png":{"offset":9919892,"length":2150,"mime":"image/png","gzipped":true,"hash":"9899852ecd5fe509"},"/images/CppTutorial/Section1/IncludeHeader.png":{"offset":9922042,"length":6002,"mime":"image/png","gzipped":true,"hash":"6bcbd8cb1c6eaef6"},"/images/CppTutorial/Chapter3/VS-Breakpoint1-min.png":{"offset":9928044,"length":8026,"mime":"image/png","gzipped":true,"hash":"33364c67f0aa08dc"},"/images/CppTutorial/Chapter3/VS-Watch6-min.png":{"offset":9936070,"length":6311,"mime":"image/png","gzipped":true,"hash":"237248f2869b4dfa"},"/images/CppTutorial/Chapter3/VS-CallStack2-min.png":{"offset":9942381,"length":9849,"mime":"image/png","gzipped":true,"hash":"f58db9c4c3a13c88"},"/images/CppTutorial/Chapter3/VS2019-StepInto-Line9-min.png":{"offset":9952230,"length":11055,"mime":"image/png","gzipped":true,"hash":"9e98c82bedbf3776"},"/images/CppTutorial/Chapter3/VS-CallStack1-min.png":{"offset":9963285,"length":9462,"mime":"image/png","gzipped":true,"hash":"534eb360db32e452"},"/images/CppTutorial/Chapter3/CB-DebuggingSetup-min.png":{"offset":9972747,"length":7248,"mime":"image/png","gzipped":true,"hash":"834b43932527bf48"},"/images/CppTutorial/Chapter3/VS2019-StepInto-Line4-min.png":{"offset":9979995,"length":10381,"mime":"image/png","gzipped":true,"hash":"92b4bacfcba3feef"},"/images/CppTutorial/Chapter3/VS2019-StepInto-Line10-min.png":{"offset":9990376,"length":11142,"mime":"image/png","gzipped":true,"hash":"21423bdf31879fe7"},"/images/CppTutorial/Chapter3/VS-CallStack3-min.png":{"offset":10001518,"length":9973,"mime":"image/png","gzipped":true,"hash":"c2b523d2baadfcc2"},"/images/CppTutorial/Chapter3/VS2019-StepInto-Line5-min.png":{"offset":10011491,"length":11464,"mime":"image/png","gzipped":true,"hash":"87ca7a15bbac2610"},"/__docx_assets/4ed7a3cb549c81.png":{"offset":10022955,"length":26218,"mime":"image/png","gzipped":true,"hash":"e383eb552ad09c1d"},"/blog/wp-content/plugins/learncpp-prism/fonts/monaco/monaco-webfont.woff":{"offset":10049173,"length":21356,"mime":"font/woff","gzipped":true,"hash":"6951a26e0792c84f"},"/__docx_assets/bd0ccba65cfaea.ttf":{"offset":10070529,"length":18532,"mime":"font/ttf","gzipped":true,"hash":"cff649dbc3f19ecb"},"/blog/wp-content/plugins/learncpp-prism/fonts/monaco/monaco-webfont.eot":{"offset":10089061,"length":18511,"mime":"application/vnd.ms-fontobject","gzipped":true,"hash":"fb5b549782761fb3"},"/__docx_assets/cc207e91f716ea.bin":{"offset":10107572,"length":18608,"mime":"application/vnd.ms-fontobject","gzipped":true,"hash":"1b29967b62e5771d"},"/__docx_assets/07ed8eb4342798.bin":{"offset":10107572,"length":18608,"mime":"application/vnd.ms-fontobject","gzipped":true,"hash":"1b29967b62e5771d"},"/blog/wp-content/plugins/learncpp-prism/fonts/monaco/monaco-webfont.svg":{"offset":10126180,"length":14034,"mime":"image/svg+xml","gzipped":true,"hash":"49e66671cd032c07"},"/__docx_assets/7b10012954c366.bin":{"offset":10140214,"length":32494,"mime":"application/vnd.ms-fontobject","gzipped":true,"hash":"4ce0b049e21b2492"},"/__docx_assets/806cde3620287d.bin":{"offset":10140214,"length":32494,"mime":"application/vnd.ms-fontobject","gzipped":true,"hash":"4ce0b049e21b2492"},"/blog/wp-content/themes/septera/resources/fonts/socials.svg":{"offset":10172708,"length":25257,"mime":"image/svg+xml","gzipped":true,"hash":"735bfdf280863327"},"/__docx_assets/9f8c2bffdeac1c.ttf":{"offset":10197965,"length":32411,"mime":"font/ttf","gzipped":true,"hash":"2f68606040433df9"},"/__docx_assets/8b069aaab85a93.svg":{"offset":10230376,"length":9995,"mime":"image/svg+xml","gzipped":true,"hash":"af8c951dbec07a73"},"/blog/wp-content/themes/septera/resources/fonts/socials.woff":{"offset":10240371,"length":22488,"mime":"font/woff","gzipped":true,"hash":"04e0e5a260ea2eb1"},"/blog/wp-content/themes/septera/resources/fonts/socials.ttf":{"offset":10262859,"length":22451,"mime":"font/ttf","gzipped":true,"hash":"11953c445449a0cb"},"/blog/wp-content/themes/septera/resources/fonts/socials.eot":{"offset":10285310,"length":22518,"mime":"application/vnd.ms-fontobject","gzipped":true,"hash":"60d329e79b4422ba"},"/__docx_assets/a402a9d5a51deb.woff":{"offset":10307828,"length":18545,"mime":"font/woff","gzipped":true,"hash":"13d43d17e72182ac"},"/blog/wp-content/plugins/learncpp-prism/fonts/monaco/monaco-webfont.ttf":{"offset":10326373,"length":21112,"mime":"font/ttf","gzipped":true,"hash":"848eb61ef5481389"},"/blog/wp-content/themes/septera/resources/fonts/blocks.eot":{"offset":10347485,"length":33001,"mime":"application/vnd.ms-fontobject","gzipped":true,"hash":"0968f443a2eaf644"},"/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-400.woff2":{"offset":10380486,"length":18692,"mime":"font/woff2","gzipped":true,"hash":"036203e8ad50c4d4"},"/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-700.woff2":{"offset":10399178,"length":18260,"mime":"font/woff2","gzipped":true,"hash":"36e5314e96e955e5"},"/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-ext-400.woff2":{"offset":10417438,"length":15319,"mime":"font/woff2","gzipped":true,"hash":"fc3415903be7812d"},"/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-600.woff2":{"offset":10432757,"length":18656,"mime":"font/woff2","gzipped":true,"hash":"8dfd91986f5ba7fc"},"/blog/wp-content/plugins/cleantalk-spam-protect/css/images/bad_email.svg":{"offset":10451413,"length":920,"mime":"image/svg+xml","gzipped":true,"hash":"a298ff2c0361da46"},"/blog/wp-content/plugins/cleantalk-spam-protect/css/images/good_email.svg":{"offset":10452333,"length":927,"mime":"image/svg+xml","gzipped":true,"hash":"81a783be3f162e76"},"/blog/wp-content/themes/septera/resources/fonts/blocks.svg":{"offset":10453260,"length":68408,"mime":"image/svg+xml","gzipped":true,"hash":"118c81033ea53119"},"/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-500.woff2":{"offset":10521668,"length":18768,"mime":"font/woff2","gzipped":true,"hash":"e0883eed8f0176df"},"/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-ext-600.woff2":{"offset":10540436,"length":15259,"mime":"font/woff2","gzipped":true,"hash":"9a78e9844dfe5dbe"},"/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-ext-800.woff2":{"offset":10555695,"length":15271,"mime":"font/woff2","gzipped":true,"hash":"294288e6ae3f10e7"},"/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-ext-300.woff2":{"offset":10570966,"length":15263,"mime":"font/woff2","gzipped":true,"hash":"a0cb5406001421fd"},"/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-800.woff2":{"offset":10586229,"length":18656,"mime":"font/woff2","gzipped":true,"hash":"f16d7001d0cfa071"},"/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-ext-700.woff2":{"offset":10604885,"length":15007,"mime":"font/woff2","gzipped":true,"hash":"975dcc231913e8cf"},"/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-300.woff2":{"offset":10619892,"length":18684,"mime":"font/woff2","gzipped":true,"hash":"14b35c4b07fdd93d"},"/blog/wp-content/themes/septera/resources/fonts/blocks.ttf":{"offset":10638576,"length":32921,"mime":"font/ttf","gzipped":true,"hash":"1695232bec428298"},"/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-ext-500.woff2":{"offset":10671497,"length":15371,"mime":"font/woff2","gzipped":true,"hash":"5280b5734a9fddcd"},"/blog/wp-content/themes/septera/resources/fonts/blocks.woff":{"offset":10686868,"length":32945,"mime":"font/woff","gzipped":true,"hash":"7ae5e0c3b24a2a93"},"/blog/wp-content/plugins/wpdiscuz/themes/default/css/fonts/sqr721c-webfont.eot":{"offset":10719813,"length":24708,"mime":"application/vnd.ms-fontobject","gzipped":true,"hash":"9a983aa251045317"},"/blog/wp-content/plugins/wpdiscuz/assets/img/loading.gif":{"offset":10744521,"length":2688,"mime":"image/gif","gzipped":true,"hash":"4f00fe64b74307bb"},"/blog/wp-content/plugins/wpdiscuz/assets/third-party/colorbox/images/loading_background.png":{"offset":10747209,"length":147,"mime":"image/png","gzipped":true,"hash":"dd7ae476ac6a7d23"},"/blog/wp-content/plugins/wpdiscuz/assets/third-party/colorbox/images/border.png":{"offset":10747356,"length":89,"mime":"image/png","gzipped":true,"hash":"a4b47faf4e229525"},"/blog/wp-content/plugins/wpdiscuz/assets/third-party/colorbox/images/loading.gif":{"offset":10747445,"length":7258,"mime":"image/gif","gzipped":true,"hash":"c04aed3fb79669c9"},"/blog/wp-content/plugins/wpdiscuz/assets/third-party/colorbox/images/controls.png":{"offset":10754703,"length":1284,"mime":"image/png","gzipped":true,"hash":"b029699c8215c65d"},"/__docx_assets/8d5c077d5d3478.woff2":{"offset":10755987,"length":77179,"mime":"font/woff2","gzipped":true,"hash":"7ff2137b6679ff3a"},"/blog/wp-content/plugins/wpdiscuz/assets/third-party/colorbox/images/overlay.png":{"offset":10833166,"length":129,"mime":"image/png","gzipped":true,"hash":"c97394e95be70606"},"/blog/wp-content/plugins/wpdiscuz/assets/img/file-icons/delete.png":{"offset":10833295,"length":664,"mime":"image/png","gzipped":true,"hash":"5f93a6b5ff74b53d"},"/blog/wp-content/plugins/wpdiscuz/assets/img/delete.png":{"offset":10833959,"length":300,"mime":"image/png","gzipped":true,"hash":"e9ba879814ad2757"},"/blog/wp-content/plugins/wpdiscuz/themes/default/css/fonts/sqr721c-webfont.woff2":{"offset":10834259,"length":18624,"mime":"font/woff2","gzipped":true,"hash":"964cae230fe67b07"},"/blog/wp-content/plugins/wpdiscuz/themes/default/css/fonts/sqr721c-webfont.woff":{"offset":10852883,"length":24686,"mime":"font/woff","gzipped":true,"hash":"d65d2c4d0a2d46fe"},"/blog/wp-content/plugins/wpdiscuz/themes/default/css/fonts/sqr721c-webfont.ttf":{"offset":10877569,"length":24541,"mime":"font/ttf","gzipped":true,"hash":"ef52605dcb81d76b"},"/__docx_assets/19a07973648a85.woff":{"offset":10902110,"length":97937,"mime":"font/woff","gzipped":true,"hash":"992ef212ff3482fb"},"/blog/wp-content/plugins/menu-icons/vendor/codeinwp/icon-picker/css/types/fontawesome-webfont.eot":{"offset":11000047,"length":98645,"mime":"application/vnd.ms-fontobject","gzipped":true,"hash":"77e6680aecd2f9e6"},"/__docx_assets/b81329796e7a49.bin":{"offset":11000047,"length":98645,"mime":"application/vnd.ms-fontobject","gzipped":true,"hash":"77e6680aecd2f9e6"},"/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-brands-400.eot":{"offset":11098692,"length":90753,"mime":"application/vnd.ms-fontobject","gzipped":true,"hash":"fc3fe22b8436a7e0"},"/blog/wp-content/plugins/wpdiscuz/themes/default/css/fonts/sqr721c-webfont.svg":{"offset":11189445,"length":17788,"mime":"image/svg+xml","gzipped":true,"hash":"c4913387f5cac9cd"},"/__docx_assets/93e22fbf382ed2.ttf":{"offset":11207233,"length":98555,"mime":"font/ttf","gzipped":true,"hash":"153436dcc1e8701a"},"/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-regular-400.woff2":{"offset":11305788,"length":13607,"mime":"font/woff2","gzipped":true,"hash":"8331faf3cedd4dff"},"/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-solid-900.woff2":{"offset":11319395,"length":79364,"mime":"font/woff2","gzipped":true,"hash":"7a12290808d22252"},"/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-regular-400.eot":{"offset":11398759,"length":16888,"mime":"application/vnd.ms-fontobject","gzipped":true,"hash":"07f105e54fb7bd7b"},"/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-regular-400.ttf":{"offset":11415647,"length":16831,"mime":"font/ttf","gzipped":true,"hash":"db17f1b51088789a"},"/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-solid-900.eot":{"offset":11432478,"length":104467,"mime":"application/vnd.ms-fontobject","gzipped":true,"hash":"c54f700a9c4ca023"},"/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-regular-400.woff":{"offset":11536945,"length":16785,"mime":"font/woff","gzipped":true,"hash":"d7f83f19c6235ef0"},"/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-brands-400.woff":{"offset":11553730,"length":89851,"mime":"font/woff","gzipped":true,"hash":"6ff58357d4269b10"},"/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-solid-900.ttf":{"offset":11643581,"length":104351,"mime":"font/ttf","gzipped":true,"hash":"dafa3248cd72e10a"},"/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-brands-400.woff2":{"offset":11747932,"length":76655,"mime":"font/woff2","gzipped":true,"hash":"ae027b856e4f10a0"},"/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-solid-900.woff":{"offset":11824587,"length":103336,"mime":"font/woff","gzipped":true,"hash":"90a7a101f425839b"},"/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-brands-400.ttf":{"offset":11927923,"length":90620,"mime":"font/ttf","gzipped":true,"hash":"5b2e0c0e63b45a4a"},"/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-regular-400.svg":{"offset":12018543,"length":37383,"mime":"image/svg+xml","gzipped":true,"hash":"571711bc462964fe"},"/docs":{"offset":0,"length":54769,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7ea24cf267adf2a2"}}}
+{
+  "id": "learncpp",
+  "name": "LearnCpp.com",
+  "version": "2026",
+  "commit": "58501676",
+  "origin": "https://www.learncpp.com",
+  "entryPath": "/",
+  "updatedAt": "2026-10-11T10:37:35.824Z",
+  "totalBytes": 11921543,
+  "chunkCount": 309,
+  "routes": {
+    "/": {
+      "offset": 0,
+      "length": 53991,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "58f05278c1fc7ee1"
+    },
+    "/learn-cpp-site-index": {
+      "offset": 53991,
+      "length": 64952,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7f9fcfd630a41c31"
+    },
+    "/learn-cpp-site-index/": {
+      "offset": 53991,
+      "length": 64952,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7f9fcfd630a41c31"
+    },
+    "/cpp-tutorial/introduction-to-these-tutorials": {
+      "offset": 118943,
+      "length": 54756,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "12db820ee8f25953"
+    },
+    "/cpp-tutorial/introduction-to-these-tutorials/": {
+      "offset": 118943,
+      "length": 54756,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "12db820ee8f25953"
+    },
+    "/leave-feedback-report-issue": {
+      "offset": 173699,
+      "length": 50236,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "05477bcbaaeb1669"
+    },
+    "/leave-feedback-report-issue/": {
+      "offset": 173699,
+      "length": 50236,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "05477bcbaaeb1669"
+    },
+    "/about": {
+      "offset": 223935,
+      "length": 46578,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e31ad97ed94b1417"
+    },
+    "/about/": {
+      "offset": 223935,
+      "length": 46578,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e31ad97ed94b1417"
+    },
+    "/cpp-tutorial/introduction-to-cplusplus": {
+      "offset": 270513,
+      "length": 53702,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "659e08e7c2460604"
+    },
+    "/cpp-tutorial/introduction-to-cplusplus/": {
+      "offset": 270513,
+      "length": 53702,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "659e08e7c2460604"
+    },
+    "/cpp-tutorial/configuring-your-compiler-warning-and-error-levels": {
+      "offset": 324215,
+      "length": 54059,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3d8fe77ed33a4304"
+    },
+    "/cpp-tutorial/configuring-your-compiler-warning-and-error-levels/": {
+      "offset": 324215,
+      "length": 54059,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3d8fe77ed33a4304"
+    },
+    "/cpp-tutorial/introduction-to-programming-languages": {
+      "offset": 378274,
+      "length": 57410,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4851dc632895bcfb"
+    },
+    "/cpp-tutorial/introduction-to-programming-languages/": {
+      "offset": 378274,
+      "length": 57410,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4851dc632895bcfb"
+    },
+    "/cpp-tutorial/a-few-common-cpp-problems": {
+      "offset": 435684,
+      "length": 54596,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "26ab6515301a9631"
+    },
+    "/cpp-tutorial/a-few-common-cpp-problems/": {
+      "offset": 435684,
+      "length": 54596,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "26ab6515301a9631"
+    },
+    "/cpp-tutorial/installing-an-integrated-development-environment-ide": {
+      "offset": 490280,
+      "length": 56251,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0aa1741dca110f63"
+    },
+    "/cpp-tutorial/installing-an-integrated-development-environment-ide/": {
+      "offset": 490280,
+      "length": 56251,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0aa1741dca110f63"
+    },
+    "/cpp-tutorial/configuring-your-compiler-build-configurations": {
+      "offset": 546531,
+      "length": 53082,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3b515f471a9596df"
+    },
+    "/cpp-tutorial/configuring-your-compiler-build-configurations/": {
+      "offset": 546531,
+      "length": 53082,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3b515f471a9596df"
+    },
+    "/cpp-tutorial/introduction-to-cpp-development": {
+      "offset": 599613,
+      "length": 54645,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "482c2c98a2dfa71d"
+    },
+    "/cpp-tutorial/introduction-to-cpp-development/": {
+      "offset": 599613,
+      "length": 54645,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "482c2c98a2dfa71d"
+    },
+    "/latest-changes": {
+      "offset": 654258,
+      "length": 61372,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ce05f8b20b2d1d03"
+    },
+    "/latest-changes/": {
+      "offset": 654258,
+      "length": 61372,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ce05f8b20b2d1d03"
+    },
+    "/cpp-tutorial/configuring-your-compiler-compiler-extensions": {
+      "offset": 715630,
+      "length": 52426,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f38c6c4021114d60"
+    },
+    "/cpp-tutorial/configuring-your-compiler-compiler-extensions/": {
+      "offset": 715630,
+      "length": 52426,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f38c6c4021114d60"
+    },
+    "/cpp-tutorial/compiling-your-first-program": {
+      "offset": 768056,
+      "length": 58579,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "017826e48ef3ba89"
+    },
+    "/cpp-tutorial/compiling-your-first-program/": {
+      "offset": 768056,
+      "length": 58579,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "017826e48ef3ba89"
+    },
+    "/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries": {
+      "offset": 826635,
+      "length": 53556,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d7fdf6a67437ef81"
+    },
+    "/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/": {
+      "offset": 826635,
+      "length": 53556,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d7fdf6a67437ef81"
+    },
+    "/cpp-tutorial/configuring-your-compiler-choosing-a-language-standard": {
+      "offset": 880191,
+      "length": 55509,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b95028915a105822"
+    },
+    "/cpp-tutorial/configuring-your-compiler-choosing-a-language-standard/": {
+      "offset": 880191,
+      "length": 55509,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b95028915a105822"
+    },
+    "/cpp-tutorial/whitespace-and-basic-formatting": {
+      "offset": 935700,
+      "length": 55464,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f1f0882c8b304cc2"
+    },
+    "/cpp-tutorial/whitespace-and-basic-formatting/": {
+      "offset": 935700,
+      "length": 55464,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f1f0882c8b304cc2"
+    },
+    "/cpp-tutorial/keywords-and-naming-identifiers": {
+      "offset": 991164,
+      "length": 55346,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "856c21ba0862e1bc"
+    },
+    "/cpp-tutorial/keywords-and-naming-identifiers/": {
+      "offset": 991164,
+      "length": 55346,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "856c21ba0862e1bc"
+    },
+    "/cpp-tutorial/statements-and-the-structure-of-a-program": {
+      "offset": 1046510,
+      "length": 56621,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "feeb5b5121711cf7"
+    },
+    "/cpp-tutorial/statements-and-the-structure-of-a-program/": {
+      "offset": 1046510,
+      "length": 56621,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "feeb5b5121711cf7"
+    },
+    "/cpp-tutorial/developing-your-first-program": {
+      "offset": 1103131,
+      "length": 55157,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "63978b0ccd28fc6c"
+    },
+    "/cpp-tutorial/developing-your-first-program/": {
+      "offset": 1103131,
+      "length": 55157,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "63978b0ccd28fc6c"
+    },
+    "/cpp-tutorial/introduction-to-objects-and-variables": {
+      "offset": 1158288,
+      "length": 55816,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6fd02d65f799e185"
+    },
+    "/cpp-tutorial/introduction-to-objects-and-variables/": {
+      "offset": 1158288,
+      "length": 55816,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6fd02d65f799e185"
+    },
+    "/cpp-tutorial/what-language-standard-is-my-compiler-using": {
+      "offset": 1214104,
+      "length": 52716,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "11a6772ff3f8b53d"
+    },
+    "/cpp-tutorial/what-language-standard-is-my-compiler-using/": {
+      "offset": 1214104,
+      "length": 52716,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "11a6772ff3f8b53d"
+    },
+    "/cpp-tutorial/introduction-to-iostream-cout-cin-and-endl": {
+      "offset": 1266820,
+      "length": 60079,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d7cf5fa8d9928272"
+    },
+    "/cpp-tutorial/introduction-to-iostream-cout-cin-and-endl/": {
+      "offset": 1266820,
+      "length": 60079,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d7cf5fa8d9928272"
+    },
+    "/cpp-tutorial/variable-assignment-and-initialization": {
+      "offset": 1326899,
+      "length": 58653,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b7171d6c0501b295"
+    },
+    "/cpp-tutorial/variable-assignment-and-initialization/": {
+      "offset": 1326899,
+      "length": 58653,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b7171d6c0501b295"
+    },
+    "/cpp-tutorial/void-functions-non-value-returning-functions": {
+      "offset": 1385552,
+      "length": 53019,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d91ae99419351824"
+    },
+    "/cpp-tutorial/void-functions-non-value-returning-functions/": {
+      "offset": 1385552,
+      "length": 53019,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d91ae99419351824"
+    },
+    "/cpp-tutorial/introduction-to-literals-and-operators": {
+      "offset": 1438571,
+      "length": 55108,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cf59a08e3193b7a7"
+    },
+    "/cpp-tutorial/introduction-to-literals-and-operators/": {
+      "offset": 1438571,
+      "length": 55108,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cf59a08e3193b7a7"
+    },
+    "/cpp-tutorial/introduction-to-functions": {
+      "offset": 1493679,
+      "length": 54215,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d1772562a87f3856"
+    },
+    "/cpp-tutorial/introduction-to-functions/": {
+      "offset": 1493679,
+      "length": 54215,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d1772562a87f3856"
+    },
+    "/cpp-tutorial/chapter-1-summary-and-quiz": {
+      "offset": 1547894,
+      "length": 54023,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e0618df9c227830c"
+    },
+    "/cpp-tutorial/chapter-1-summary-and-quiz/": {
+      "offset": 1547894,
+      "length": 54023,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e0618df9c227830c"
+    },
+    "/cpp-tutorial/function-return-values-value-returning-functions": {
+      "offset": 1601917,
+      "length": 57295,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a09d25a0c1639881"
+    },
+    "/cpp-tutorial/function-return-values-value-returning-functions/": {
+      "offset": 1601917,
+      "length": 57295,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a09d25a0c1639881"
+    },
+    "/cpp-tutorial/introduction-to-expressions": {
+      "offset": 1659212,
+      "length": 54275,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f2b6593fa64ad419"
+    },
+    "/cpp-tutorial/introduction-to-expressions/": {
+      "offset": 1659212,
+      "length": 54275,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f2b6593fa64ad419"
+    },
+    "/cpp-tutorial/comments": {
+      "offset": 1713487,
+      "length": 55983,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0e51e3f0d82cb050"
+    },
+    "/cpp-tutorial/comments/": {
+      "offset": 1713487,
+      "length": 55983,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0e51e3f0d82cb050"
+    },
+    "/cpp-tutorial/uninitialized-variables-and-undefined-behavior": {
+      "offset": 1769470,
+      "length": 55218,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "30674e89f6da7138"
+    },
+    "/cpp-tutorial/uninitialized-variables-and-undefined-behavior/": {
+      "offset": 1769470,
+      "length": 55218,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "30674e89f6da7138"
+    },
+    "/cpp-tutorial/introduction-to-function-parameters-and-arguments": {
+      "offset": 1824688,
+      "length": 56333,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "773835f548ae7bfa"
+    },
+    "/cpp-tutorial/introduction-to-function-parameters-and-arguments/": {
+      "offset": 1824688,
+      "length": 56333,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "773835f548ae7bfa"
+    },
+    "/cpp-tutorial/the-debugging-process": {
+      "offset": 1881021,
+      "length": 53032,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1959318e13cb8561"
+    },
+    "/cpp-tutorial/the-debugging-process/": {
+      "offset": 1881021,
+      "length": 53032,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1959318e13cb8561"
+    },
+    "/cpp-tutorial/more-debugging-tactics": {
+      "offset": 1934053,
+      "length": 53803,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2043334e5275b8f9"
+    },
+    "/cpp-tutorial/more-debugging-tactics/": {
+      "offset": 1934053,
+      "length": 53803,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2043334e5275b8f9"
+    },
+    "/cpp-tutorial/chapter-2-summary-and-quiz": {
+      "offset": 1987856,
+      "length": 54179,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e5a3b4017c7da4a9"
+    },
+    "/cpp-tutorial/chapter-2-summary-and-quiz/": {
+      "offset": 1987856,
+      "length": 54179,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e5a3b4017c7da4a9"
+    },
+    "/cpp-tutorial/introduction-to-local-scope": {
+      "offset": 2042035,
+      "length": 57166,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "221dad9f080c8c99"
+    },
+    "/cpp-tutorial/introduction-to-local-scope/": {
+      "offset": 2042035,
+      "length": 57166,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "221dad9f080c8c99"
+    },
+    "/cpp-tutorial/why-functions-are-useful-and-how-to-use-them-effectively": {
+      "offset": 2099201,
+      "length": 52841,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b162f90934cb5cf"
+    },
+    "/cpp-tutorial/why-functions-are-useful-and-how-to-use-them-effectively/": {
+      "offset": 2099201,
+      "length": 52841,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b162f90934cb5cf"
+    },
+    "/cpp-tutorial/introduction-to-the-preprocessor": {
+      "offset": 2152042,
+      "length": 55537,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4040ff6549daf2df"
+    },
+    "/cpp-tutorial/introduction-to-the-preprocessor/": {
+      "offset": 2152042,
+      "length": 55537,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4040ff6549daf2df"
+    },
+    "/cpp-tutorial/programs-with-multiple-code-files": {
+      "offset": 2207579,
+      "length": 55373,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2267312b692105a1"
+    },
+    "/cpp-tutorial/programs-with-multiple-code-files/": {
+      "offset": 2207579,
+      "length": 55373,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2267312b692105a1"
+    },
+    "/cpp-tutorial/forward-declarations": {
+      "offset": 2262952,
+      "length": 57407,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "292bd0274d53aa4d"
+    },
+    "/cpp-tutorial/forward-declarations/": {
+      "offset": 2262952,
+      "length": 57407,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "292bd0274d53aa4d"
+    },
+    "/cpp-tutorial/header-files": {
+      "offset": 2320359,
+      "length": 59386,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "97769c919b55bc70"
+    },
+    "/cpp-tutorial/header-files/": {
+      "offset": 2320359,
+      "length": 59386,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "97769c919b55bc70"
+    },
+    "/cpp-tutorial/a-strategy-for-debugging": {
+      "offset": 2379745,
+      "length": 54395,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c3d129ae7bb9c532"
+    },
+    "/cpp-tutorial/a-strategy-for-debugging/": {
+      "offset": 2379745,
+      "length": 54395,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c3d129ae7bb9c532"
+    },
+    "/cpp-tutorial/header-guards": {
+      "offset": 2434140,
+      "length": 55690,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "919367e3bf31751d"
+    },
+    "/cpp-tutorial/header-guards/": {
+      "offset": 2434140,
+      "length": 55690,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "919367e3bf31751d"
+    },
+    "/cpp-tutorial/basic-debugging-tactics": {
+      "offset": 2489830,
+      "length": 55524,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f69bc3f1db211fa1"
+    },
+    "/cpp-tutorial/basic-debugging-tactics/": {
+      "offset": 2489830,
+      "length": 55524,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f69bc3f1db211fa1"
+    },
+    "/cpp-tutorial/naming-collisions-and-an-introduction-to-namespaces": {
+      "offset": 2545354,
+      "length": 55746,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c0fe862cdcf819ba"
+    },
+    "/cpp-tutorial/naming-collisions-and-an-introduction-to-namespaces/": {
+      "offset": 2545354,
+      "length": 55746,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c0fe862cdcf819ba"
+    },
+    "/cpp-tutorial/how-to-design-your-first-programs": {
+      "offset": 2601100,
+      "length": 58213,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2cc4d16d5c30095f"
+    },
+    "/cpp-tutorial/how-to-design-your-first-programs/": {
+      "offset": 2601100,
+      "length": 58213,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2cc4d16d5c30095f"
+    },
+    "/cpp-tutorial/syntax-and-semantic-errors": {
+      "offset": 2659313,
+      "length": 52473,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "148e3ce8a64aef1e"
+    },
+    "/cpp-tutorial/syntax-and-semantic-errors/": {
+      "offset": 2659313,
+      "length": 52473,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "148e3ce8a64aef1e"
+    },
+    "/cpp-tutorial/introduction-to-if-statements": {
+      "offset": 2711786,
+      "length": 55068,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "38e7010ed1c65119"
+    },
+    "/cpp-tutorial/introduction-to-if-statements/": {
+      "offset": 2711786,
+      "length": 55068,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "38e7010ed1c65119"
+    },
+    "/cpp-tutorial/using-an-integrated-debugger-watching-variables": {
+      "offset": 2766854,
+      "length": 54280,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fb64f1651496f94d"
+    },
+    "/cpp-tutorial/using-an-integrated-debugger-watching-variables/": {
+      "offset": 2766854,
+      "length": 54280,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fb64f1651496f94d"
+    },
+    "/cpp-tutorial/using-an-integrated-debugger-the-call-stack": {
+      "offset": 2821134,
+      "length": 52806,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "81c58de6334634e3"
+    },
+    "/cpp-tutorial/using-an-integrated-debugger-the-call-stack/": {
+      "offset": 2821134,
+      "length": 52806,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "81c58de6334634e3"
+    },
+    "/cpp-tutorial/signed-integers": {
+      "offset": 2873940,
+      "length": 54540,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "37518beb7675ee01"
+    },
+    "/cpp-tutorial/signed-integers/": {
+      "offset": 2873940,
+      "length": 54540,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "37518beb7675ee01"
+    },
+    "/cpp-tutorial/using-an-integrated-debugger-running-and-breakpoints": {
+      "offset": 2928480,
+      "length": 54886,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "93b6a59ad41ed318"
+    },
+    "/cpp-tutorial/using-an-integrated-debugger-running-and-breakpoints/": {
+      "offset": 2928480,
+      "length": 54886,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "93b6a59ad41ed318"
+    },
+    "/cpp-tutorial/unsigned-integers-and-why-to-avoid-them": {
+      "offset": 2983366,
+      "length": 55829,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "78263dc0210e53ef"
+    },
+    "/cpp-tutorial/unsigned-integers-and-why-to-avoid-them/": {
+      "offset": 2983366,
+      "length": 55829,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "78263dc0210e53ef"
+    },
+    "/cpp-tutorial/boolean-values": {
+      "offset": 3039195,
+      "length": 53974,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e1d5f5f620a89528"
+    },
+    "/cpp-tutorial/boolean-values/": {
+      "offset": 3039195,
+      "length": 53974,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e1d5f5f620a89528"
+    },
+    "/cpp-tutorial/finding-issues-before-they-become-problems": {
+      "offset": 3093169,
+      "length": 54921,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "00598f9f687fb917"
+    },
+    "/cpp-tutorial/finding-issues-before-they-become-problems/": {
+      "offset": 3093169,
+      "length": 54921,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "00598f9f687fb917"
+    },
+    "/cpp-tutorial/fixed-width-integers-and-size-t": {
+      "offset": 3148090,
+      "length": 57185,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9fa0e8dd9a1caff1"
+    },
+    "/cpp-tutorial/fixed-width-integers-and-size-t/": {
+      "offset": 3148090,
+      "length": 57185,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9fa0e8dd9a1caff1"
+    },
+    "/cpp-tutorial/introduction-to-scientific-notation": {
+      "offset": 3205275,
+      "length": 54254,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4d4e794a14b7421"
+    },
+    "/cpp-tutorial/introduction-to-scientific-notation/": {
+      "offset": 3205275,
+      "length": 54254,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4d4e794a14b7421"
+    },
+    "/cpp-tutorial/object-sizes-and-the-sizeof-operator": {
+      "offset": 3259529,
+      "length": 54500,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b54b286fddaf9adf"
+    },
+    "/cpp-tutorial/object-sizes-and-the-sizeof-operator/": {
+      "offset": 3259529,
+      "length": 54500,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b54b286fddaf9adf"
+    },
+    "/cpp-tutorial/chapter-3-summary-and-quiz": {
+      "offset": 3314029,
+      "length": 54034,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "116ee4b7c25566a4"
+    },
+    "/cpp-tutorial/chapter-3-summary-and-quiz/": {
+      "offset": 3314029,
+      "length": 54034,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "116ee4b7c25566a4"
+    },
+    "/cpp-tutorial/void": {
+      "offset": 3368063,
+      "length": 51952,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "12c408e3b741f391"
+    },
+    "/cpp-tutorial/void/": {
+      "offset": 3368063,
+      "length": 51952,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "12c408e3b741f391"
+    },
+    "/cpp-tutorial/introduction-to-fundamental-data-types": {
+      "offset": 3420015,
+      "length": 54259,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "28a9bf9edae7ed0b"
+    },
+    "/cpp-tutorial/introduction-to-fundamental-data-types/": {
+      "offset": 3420015,
+      "length": 54259,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "28a9bf9edae7ed0b"
+    },
+    "/cpp-tutorial/floating-point-numbers": {
+      "offset": 3474274,
+      "length": 56997,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb300e64a6253d15"
+    },
+    "/cpp-tutorial/floating-point-numbers/": {
+      "offset": 3474274,
+      "length": 56997,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb300e64a6253d15"
+    },
+    "/cpp-tutorial/using-an-integrated-debugger-stepping": {
+      "offset": 3531271,
+      "length": 57134,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3dff18dff8f56d4e"
+    },
+    "/cpp-tutorial/using-an-integrated-debugger-stepping/": {
+      "offset": 3531271,
+      "length": 57134,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3dff18dff8f56d4e"
+    },
+    "/cpp-tutorial/constant-variables-named-constants": {
+      "offset": 3588405,
+      "length": 55987,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "51f5dbcdcb0684eb"
+    },
+    "/cpp-tutorial/constant-variables-named-constants/": {
+      "offset": 3588405,
+      "length": 55987,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "51f5dbcdcb0684eb"
+    },
+    "/cpp-tutorial/arithmetic-operators": {
+      "offset": 3644392,
+      "length": 53943,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eb5abf2da78afc67"
+    },
+    "/cpp-tutorial/arithmetic-operators/": {
+      "offset": 3644392,
+      "length": 53943,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eb5abf2da78afc67"
+    },
+    "/cpp-tutorial/chars": {
+      "offset": 3698335,
+      "length": 57576,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a446a5d779e7be7a"
+    },
+    "/cpp-tutorial/chars/": {
+      "offset": 3698335,
+      "length": 57576,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a446a5d779e7be7a"
+    },
+    "/cpp-tutorial/remainder-and-exponentiation": {
+      "offset": 3755911,
+      "length": 54998,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5ab2db786360e8b7"
+    },
+    "/cpp-tutorial/remainder-and-exponentiation/": {
+      "offset": 3755911,
+      "length": 54998,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5ab2db786360e8b7"
+    },
+    "/cpp-tutorial/numeral-systems-decimal-binary-hexadecimal-and-octal": {
+      "offset": 3810909,
+      "length": 55105,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f16f5774a412908b"
+    },
+    "/cpp-tutorial/numeral-systems-decimal-binary-hexadecimal-and-octal/": {
+      "offset": 3810909,
+      "length": 55105,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f16f5774a412908b"
+    },
+    "/cpp-tutorial/stdstring_view-part-2": {
+      "offset": 3866014,
+      "length": 59095,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d8871e991dd6a7f4"
+    },
+    "/cpp-tutorial/stdstring_view-part-2/": {
+      "offset": 3866014,
+      "length": 59095,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d8871e991dd6a7f4"
+    },
+    "/cpp-tutorial/the-as-if-rule-and-compile-time-optimization": {
+      "offset": 3925109,
+      "length": 55973,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "03b6dfa6cb800ca1"
+    },
+    "/cpp-tutorial/the-as-if-rule-and-compile-time-optimization/": {
+      "offset": 3925109,
+      "length": 55973,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "03b6dfa6cb800ca1"
+    },
+    "/cpp-tutorial/constant-expressions": {
+      "offset": 3981082,
+      "length": 57873,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "383bd288d4d828ca"
+    },
+    "/cpp-tutorial/constant-expressions/": {
+      "offset": 3981082,
+      "length": 57873,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "383bd288d4d828ca"
+    },
+    "/cpp-tutorial/introduction-to-type-conversion-and-static_cast": {
+      "offset": 4038955,
+      "length": 56512,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f70d9e3d9c20f107"
+    },
+    "/cpp-tutorial/introduction-to-type-conversion-and-static_cast/": {
+      "offset": 4038955,
+      "length": 56512,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f70d9e3d9c20f107"
+    },
+    "/cpp-tutorial/introduction-to-stdstring": {
+      "offset": 4095467,
+      "length": 57303,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b705279ae26cf70b"
+    },
+    "/cpp-tutorial/introduction-to-stdstring/": {
+      "offset": 4095467,
+      "length": 57303,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b705279ae26cf70b"
+    },
+    "/cpp-tutorial/chapter-5-summary-and-quiz": {
+      "offset": 4152770,
+      "length": 54098,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a743b8888cf6ef6b"
+    },
+    "/cpp-tutorial/chapter-5-summary-and-quiz/": {
+      "offset": 4152770,
+      "length": 54098,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a743b8888cf6ef6b"
+    },
+    "/cpp-tutorial/constexpr-variables": {
+      "offset": 4206868,
+      "length": 54841,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ca62a29a1f9399d1"
+    },
+    "/cpp-tutorial/constexpr-variables/": {
+      "offset": 4206868,
+      "length": 54841,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ca62a29a1f9399d1"
+    },
+    "/cpp-tutorial/chapter-4-summary-and-quiz": {
+      "offset": 4261709,
+      "length": 55676,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5f9d7e91e33dfdef"
+    },
+    "/cpp-tutorial/chapter-4-summary-and-quiz/": {
+      "offset": 4261709,
+      "length": 55676,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5f9d7e91e33dfdef"
+    },
+    "/cpp-tutorial/literals": {
+      "offset": 4317385,
+      "length": 56135,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "59bd8e8ed7b1a358"
+    },
+    "/cpp-tutorial/literals/": {
+      "offset": 4317385,
+      "length": 56135,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "59bd8e8ed7b1a358"
+    },
+    "/cpp-tutorial/introduction-to-stdstring_view": {
+      "offset": 4373520,
+      "length": 53563,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1c50dc2b958267b0"
+    },
+    "/cpp-tutorial/introduction-to-stdstring_view/": {
+      "offset": 4373520,
+      "length": 53563,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1c50dc2b958267b0"
+    },
+    "/cpp-tutorial/operator-precedence-and-associativity": {
+      "offset": 4427083,
+      "length": 57616,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "de2d04c02e1fdd5e"
+    },
+    "/cpp-tutorial/operator-precedence-and-associativity/": {
+      "offset": 4427083,
+      "length": 57616,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "de2d04c02e1fdd5e"
+    },
+    "/cpp-tutorial/bit-flags-and-bit-manipulation-via-stdbitset": {
+      "offset": 4484699,
+      "length": 54341,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ecfd899701b17a0f"
+    },
+    "/cpp-tutorial/bit-flags-and-bit-manipulation-via-stdbitset/": {
+      "offset": 4484699,
+      "length": 54341,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ecfd899701b17a0f"
+    },
+    "/cpp-tutorial/local-variables": {
+      "offset": 4539040,
+      "length": 54523,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1ca451be9747829a"
+    },
+    "/cpp-tutorial/local-variables/": {
+      "offset": 4539040,
+      "length": 54523,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1ca451be9747829a"
+    },
+    "/cpp-tutorial/internal-linkage": {
+      "offset": 4593563,
+      "length": 53797,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dd91f95be2a412cf"
+    },
+    "/cpp-tutorial/internal-linkage/": {
+      "offset": 4593563,
+      "length": 53797,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dd91f95be2a412cf"
+    },
+    "/cpp-tutorial/the-comma-operator": {
+      "offset": 4647360,
+      "length": 51941,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3f3d3a222a7ef896"
+    },
+    "/cpp-tutorial/the-comma-operator/": {
+      "offset": 4647360,
+      "length": 51941,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3f3d3a222a7ef896"
+    },
+    "/cpp-tutorial/logical-operators": {
+      "offset": 4699301,
+      "length": 57639,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d9db095f132042aa"
+    },
+    "/cpp-tutorial/logical-operators/": {
+      "offset": 4699301,
+      "length": 57639,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d9db095f132042aa"
+    },
+    "/cpp-tutorial/introduction-to-global-variables": {
+      "offset": 4756940,
+      "length": 53430,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a094298450e6eee5"
+    },
+    "/cpp-tutorial/introduction-to-global-variables/": {
+      "offset": 4756940,
+      "length": 53430,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a094298450e6eee5"
+    },
+    "/cpp-tutorial/compound-statements-blocks": {
+      "offset": 4810370,
+      "length": 52401,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cd766ec93b4b5122"
+    },
+    "/cpp-tutorial/compound-statements-blocks/": {
+      "offset": 4810370,
+      "length": 52401,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cd766ec93b4b5122"
+    },
+    "/cpp-tutorial/increment-decrement-operators-and-side-effects": {
+      "offset": 4862771,
+      "length": 53735,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f803684a81d47530"
+    },
+    "/cpp-tutorial/increment-decrement-operators-and-side-effects/": {
+      "offset": 4862771,
+      "length": 53735,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f803684a81d47530"
+    },
+    "/cpp-tutorial/relational-operators-and-floating-point-comparisons": {
+      "offset": 4916506,
+      "length": 56730,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2dc843f3fb28b46f"
+    },
+    "/cpp-tutorial/relational-operators-and-floating-point-comparisons/": {
+      "offset": 4916506,
+      "length": 56730,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2dc843f3fb28b46f"
+    },
+    "/cpp-tutorial/the-conditional-operator": {
+      "offset": 4973236,
+      "length": 54966,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bf8c068c2ef3d98b"
+    },
+    "/cpp-tutorial/the-conditional-operator/": {
+      "offset": 4973236,
+      "length": 54966,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bf8c068c2ef3d98b"
+    },
+    "/cpp-tutorial/variable-shadowing-name-hiding": {
+      "offset": 5028202,
+      "length": 52633,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "35c5d91a6a2705dd"
+    },
+    "/cpp-tutorial/variable-shadowing-name-hiding/": {
+      "offset": 5028202,
+      "length": 52633,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "35c5d91a6a2705dd"
+    },
+    "/cpp-tutorial/converting-integers-between-binary-and-decimal-representation": {
+      "offset": 5080835,
+      "length": 56459,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "007e03d5a96bb03e"
+    },
+    "/cpp-tutorial/converting-integers-between-binary-and-decimal-representation/": {
+      "offset": 5080835,
+      "length": 56459,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "007e03d5a96bb03e"
+    },
+    "/cpp-tutorial/bitwise-operators": {
+      "offset": 5137294,
+      "length": 57473,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "16246d68b4f365dc"
+    },
+    "/cpp-tutorial/bitwise-operators/": {
+      "offset": 5137294,
+      "length": 57473,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "16246d68b4f365dc"
+    },
+    "/cpp-tutorial/user-defined-namespaces-and-the-scope-resolution-operator": {
+      "offset": 5194767,
+      "length": 56833,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e293543c659be491"
+    },
+    "/cpp-tutorial/user-defined-namespaces-and-the-scope-resolution-operator/": {
+      "offset": 5194767,
+      "length": 56833,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e293543c659be491"
+    },
+    "/cpp-tutorial/chapter-6-summary-and-quiz": {
+      "offset": 5251600,
+      "length": 52417,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8569dffced25133d"
+    },
+    "/cpp-tutorial/chapter-6-summary-and-quiz/": {
+      "offset": 5251600,
+      "length": 52417,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8569dffced25133d"
+    },
+    "/cpp-tutorial/bit-manipulation-with-bitwise-operators-and-bit-masks": {
+      "offset": 5304017,
+      "length": 58521,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "86b590d6a8789c82"
+    },
+    "/cpp-tutorial/bit-manipulation-with-bitwise-operators-and-bit-masks/": {
+      "offset": 5304017,
+      "length": 58521,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "86b590d6a8789c82"
+    },
+    "/cpp-tutorial/why-non-const-global-variables-are-evil": {
+      "offset": 5362538,
+      "length": 55807,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1bbd3c3ce3cc172a"
+    },
+    "/cpp-tutorial/why-non-const-global-variables-are-evil/": {
+      "offset": 5362538,
+      "length": 55807,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1bbd3c3ce3cc172a"
+    },
+    "/cpp-tutorial/inline-functions-and-variables": {
+      "offset": 5418345,
+      "length": 56815,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "74b8e46bfa003d72"
+    },
+    "/cpp-tutorial/inline-functions-and-variables/": {
+      "offset": 5418345,
+      "length": 56815,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "74b8e46bfa003d72"
+    },
+    "/cpp-tutorial/unnamed-and-inline-namespaces": {
+      "offset": 5475160,
+      "length": 53107,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6e2cbd2e732a1af6"
+    },
+    "/cpp-tutorial/unnamed-and-inline-namespaces/": {
+      "offset": 5475160,
+      "length": 53107,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6e2cbd2e732a1af6"
+    },
+    "/cpp-tutorial/control-flow-introduction": {
+      "offset": 5528267,
+      "length": 52275,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4d7dd68fc5b2982"
+    },
+    "/cpp-tutorial/control-flow-introduction/": {
+      "offset": 5528267,
+      "length": 52275,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4d7dd68fc5b2982"
+    },
+    "/cpp-tutorial/chapter-7-summary-and-quiz": {
+      "offset": 5580542,
+      "length": 53935,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6d4c55818304190b"
+    },
+    "/cpp-tutorial/chapter-7-summary-and-quiz/": {
+      "offset": 5580542,
+      "length": 53935,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6d4c55818304190b"
+    },
+    "/cpp-tutorial/sharing-global-constants-across-multiple-files-using-inline-variables": {
+      "offset": 5634477,
+      "length": 54638,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c738ceb6dabd3e1d"
+    },
+    "/cpp-tutorial/sharing-global-constants-across-multiple-files-using-inline-variables/": {
+      "offset": 5634477,
+      "length": 54638,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c738ceb6dabd3e1d"
+    },
+    "/cpp-tutorial/switch-statement-basics": {
+      "offset": 5689115,
+      "length": 55104,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "134ebed896bab555"
+    },
+    "/cpp-tutorial/switch-statement-basics/": {
+      "offset": 5689115,
+      "length": 55104,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "134ebed896bab555"
+    },
+    "/cpp-tutorial/constexpr-if-statements": {
+      "offset": 5744219,
+      "length": 51955,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0e220d4c830a4617"
+    },
+    "/cpp-tutorial/constexpr-if-statements/": {
+      "offset": 5744219,
+      "length": 51955,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0e220d4c830a4617"
+    },
+    "/cpp-tutorial/external-linkage-and-variable-forward-declarations": {
+      "offset": 5796174,
+      "length": 53290,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "81f8f0294a5ff783"
+    },
+    "/cpp-tutorial/external-linkage-and-variable-forward-declarations/": {
+      "offset": 5796174,
+      "length": 53290,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "81f8f0294a5ff783"
+    },
+    "/cpp-tutorial/using-declarations-and-using-directives": {
+      "offset": 5849464,
+      "length": 57576,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "59fbe88a2902ba31"
+    },
+    "/cpp-tutorial/using-declarations-and-using-directives/": {
+      "offset": 5849464,
+      "length": 57576,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "59fbe88a2902ba31"
+    },
+    "/cpp-tutorial/scope-duration-and-linkage-summary": {
+      "offset": 5907040,
+      "length": 52926,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ef496e49ec315321"
+    },
+    "/cpp-tutorial/scope-duration-and-linkage-summary/": {
+      "offset": 5907040,
+      "length": 52926,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ef496e49ec315321"
+    },
+    "/cpp-tutorial/if-statements-and-blocks": {
+      "offset": 5959966,
+      "length": 54570,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ab238a7eed8c63c5"
+    },
+    "/cpp-tutorial/if-statements-and-blocks/": {
+      "offset": 5959966,
+      "length": 54570,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ab238a7eed8c63c5"
+    },
+    "/cpp-tutorial/switch-fallthrough-and-scoping": {
+      "offset": 6014536,
+      "length": 54537,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e40ddf6250948bb1"
+    },
+    "/cpp-tutorial/switch-fallthrough-and-scoping/": {
+      "offset": 6014536,
+      "length": 54537,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e40ddf6250948bb1"
+    },
+    "/cpp-tutorial/static-local-variables": {
+      "offset": 6069073,
+      "length": 55027,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "27bb6bcb9c9a84ed"
+    },
+    "/cpp-tutorial/static-local-variables/": {
+      "offset": 6069073,
+      "length": 55027,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "27bb6bcb9c9a84ed"
+    },
+    "/cpp-tutorial/common-if-statement-problems": {
+      "offset": 6124100,
+      "length": 53306,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1fa66af52be7a09a"
+    },
+    "/cpp-tutorial/common-if-statement-problems/": {
+      "offset": 6124100,
+      "length": 53306,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1fa66af52be7a09a"
+    },
+    "/cpp-tutorial/goto-statements": {
+      "offset": 6177406,
+      "length": 53544,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "00754e28c3380b4a"
+    },
+    "/cpp-tutorial/goto-statements/": {
+      "offset": 6177406,
+      "length": 53544,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "00754e28c3380b4a"
+    },
+    "/cpp-tutorial/introduction-to-loops-and-while-statements": {
+      "offset": 6230950,
+      "length": 57175,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c3bd77e628982275"
+    },
+    "/cpp-tutorial/introduction-to-loops-and-while-statements/": {
+      "offset": 6230950,
+      "length": 57175,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c3bd77e628982275"
+    },
+    "/cpp-tutorial/do-while-statements": {
+      "offset": 6288125,
+      "length": 52417,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "65af0bb016ddea15"
+    },
+    "/cpp-tutorial/do-while-statements/": {
+      "offset": 6288125,
+      "length": 52417,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "65af0bb016ddea15"
+    },
+    "/cpp-tutorial/chapter-9-summary-and-quiz": {
+      "offset": 6340542,
+      "length": 53255,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ada8006990f73e74"
+    },
+    "/cpp-tutorial/chapter-9-summary-and-quiz/": {
+      "offset": 6340542,
+      "length": 53255,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ada8006990f73e74"
+    },
+    "/cpp-tutorial/code-coverage": {
+      "offset": 6393797,
+      "length": 53531,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "96848a5b2fb24b33"
+    },
+    "/cpp-tutorial/code-coverage/": {
+      "offset": 6393797,
+      "length": 53531,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "96848a5b2fb24b33"
+    },
+    "/cpp-tutorial/assert-and-static_assert": {
+      "offset": 6447328,
+      "length": 57024,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "73229d99ddecf6a6"
+    },
+    "/cpp-tutorial/assert-and-static_assert/": {
+      "offset": 6447328,
+      "length": 57024,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "73229d99ddecf6a6"
+    },
+    "/cpp-tutorial/detecting-and-handling-errors": {
+      "offset": 6504352,
+      "length": 55769,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "577eb143d7440ebd"
+    },
+    "/cpp-tutorial/detecting-and-handling-errors/": {
+      "offset": 6504352,
+      "length": 55769,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "577eb143d7440ebd"
+    },
+    "/cpp-tutorial/global-random-numbers-random-h": {
+      "offset": 6560121,
+      "length": 53855,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "23bb3cf821b066fd"
+    },
+    "/cpp-tutorial/global-random-numbers-random-h/": {
+      "offset": 6560121,
+      "length": 53855,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "23bb3cf821b066fd"
+    },
+    "/cpp-tutorial/for-statements": {
+      "offset": 6613976,
+      "length": 57495,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0404bb2915732367"
+    },
+    "/cpp-tutorial/for-statements/": {
+      "offset": 6613976,
+      "length": 57495,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0404bb2915732367"
+    },
+    "/cpp-tutorial/stdcin-and-handling-invalid-input": {
+      "offset": 6671471,
+      "length": 59687,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f4e638384703dae5"
+    },
+    "/cpp-tutorial/stdcin-and-handling-invalid-input/": {
+      "offset": 6671471,
+      "length": 59687,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f4e638384703dae5"
+    },
+    "/cpp-tutorial/generating-random-numbers-using-mersenne-twister": {
+      "offset": 6731158,
+      "length": 58923,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4ffba61b71f594d6"
+    },
+    "/cpp-tutorial/generating-random-numbers-using-mersenne-twister/": {
+      "offset": 6731158,
+      "length": 58923,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4ffba61b71f594d6"
+    },
+    "/cpp-tutorial/introduction-to-random-number-generation": {
+      "offset": 6790081,
+      "length": 60026,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0bfa9ed11b362bbf"
+    },
+    "/cpp-tutorial/introduction-to-random-number-generation/": {
+      "offset": 6790081,
+      "length": 60026,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0bfa9ed11b362bbf"
+    },
+    "/cpp-tutorial/break-and-continue": {
+      "offset": 6850107,
+      "length": 54550,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d8e8f4b786ac7fc2"
+    },
+    "/cpp-tutorial/break-and-continue/": {
+      "offset": 6850107,
+      "length": 54550,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d8e8f4b786ac7fc2"
+    },
+    "/cpp-tutorial/halts-exiting-your-program-early": {
+      "offset": 6904657,
+      "length": 54825,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f2b531a21b85c6ea"
+    },
+    "/cpp-tutorial/halts-exiting-your-program-early/": {
+      "offset": 6904657,
+      "length": 54825,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f2b531a21b85c6ea"
+    },
+    "/cpp-tutorial/introduction-to-testing-your-code": {
+      "offset": 6959482,
+      "length": 56326,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb61ab7d166f72b5"
+    },
+    "/cpp-tutorial/introduction-to-testing-your-code/": {
+      "offset": 6959482,
+      "length": 56326,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb61ab7d166f72b5"
+    },
+    "/cpp-tutorial/chapter-8-summary-and-quiz": {
+      "offset": 7015808,
+      "length": 56996,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3a0fe8aa70fe4183"
+    },
+    "/cpp-tutorial/chapter-8-summary-and-quiz/": {
+      "offset": 7015808,
+      "length": 56996,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3a0fe8aa70fe4183"
+    },
+    "/cpp-tutorial/common-semantic-errors-in-c": {
+      "offset": 7072804,
+      "length": 54971,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4fbf8b00e4d76979"
+    },
+    "/cpp-tutorial/common-semantic-errors-in-c/": {
+      "offset": 7072804,
+      "length": 54971,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4fbf8b00e4d76979"
+    },
+    "/cpp-tutorial/floating-point-and-integral-promotion": {
+      "offset": 7127775,
+      "length": 53668,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e166fcb6a3ed5be3"
+    },
+    "/cpp-tutorial/floating-point-and-integral-promotion/": {
+      "offset": 7127775,
+      "length": 53668,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e166fcb6a3ed5be3"
+    },
+    "/cpp-tutorial/type-deduction-for-functions": {
+      "offset": 7181443,
+      "length": 54084,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f946c8a1308922cd"
+    },
+    "/cpp-tutorial/type-deduction-for-functions/": {
+      "offset": 7181443,
+      "length": 54084,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f946c8a1308922cd"
+    },
+    "/cpp-tutorial/arithmetic-conversions": {
+      "offset": 7235527,
+      "length": 53614,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4c70a35f4468b6a3"
+    },
+    "/cpp-tutorial/arithmetic-conversions/": {
+      "offset": 7235527,
+      "length": 53614,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4c70a35f4468b6a3"
+    },
+    "/cpp-tutorial/implicit-type-conversion": {
+      "offset": 7289141,
+      "length": 54732,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9432c9f8b4f3479d"
+    },
+    "/cpp-tutorial/implicit-type-conversion/": {
+      "offset": 7289141,
+      "length": 54732,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9432c9f8b4f3479d"
+    },
+    "/cpp-tutorial/introduction-to-function-overloading": {
+      "offset": 7343873,
+      "length": 52625,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "988f6a355f65bc4a"
+    },
+    "/cpp-tutorial/introduction-to-function-overloading/": {
+      "offset": 7343873,
+      "length": 52625,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "988f6a355f65bc4a"
+    },
+    "/cpp-tutorial/deleting-functions": {
+      "offset": 7396498,
+      "length": 52434,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ab09658a9f210bfa"
+    },
+    "/cpp-tutorial/deleting-functions/": {
+      "offset": 7396498,
+      "length": 52434,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ab09658a9f210bfa"
+    },
+    "/cpp-tutorial/default-arguments": {
+      "offset": 7448932,
+      "length": 54128,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0091d052276d3115"
+    },
+    "/cpp-tutorial/default-arguments/": {
+      "offset": 7448932,
+      "length": 54128,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0091d052276d3115"
+    },
+    "/cpp-tutorial/numeric-conversions": {
+      "offset": 7503060,
+      "length": 54971,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "240a29cd58c51573"
+    },
+    "/cpp-tutorial/numeric-conversions/": {
+      "offset": 7503060,
+      "length": 54971,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "240a29cd58c51573"
+    },
+    "/cpp-tutorial/chapter-10-summary-and-quiz": {
+      "offset": 7558031,
+      "length": 53376,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "92856aa3df3cb2e1"
+    },
+    "/cpp-tutorial/chapter-10-summary-and-quiz/": {
+      "offset": 7558031,
+      "length": 53376,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "92856aa3df3cb2e1"
+    },
+    "/cpp-tutorial/function-overload-resolution-and-ambiguous-matches": {
+      "offset": 7611407,
+      "length": 55882,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cc0f0445284a9768"
+    },
+    "/cpp-tutorial/function-overload-resolution-and-ambiguous-matches/": {
+      "offset": 7611407,
+      "length": 55882,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cc0f0445284a9768"
+    },
+    "/cpp-tutorial/narrowing-conversions-list-initialization-and-constexpr-initializers": {
+      "offset": 7667289,
+      "length": 53958,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ae00a8726859940d"
+    },
+    "/cpp-tutorial/narrowing-conversions-list-initialization-and-constexpr-initializers/": {
+      "offset": 7667289,
+      "length": 53958,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ae00a8726859940d"
+    },
+    "/cpp-tutorial/type-deduction-for-objects-using-the-auto-keyword": {
+      "offset": 7721247,
+      "length": 54745,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "32daa5783a2552c0"
+    },
+    "/cpp-tutorial/type-deduction-for-objects-using-the-auto-keyword/": {
+      "offset": 7721247,
+      "length": 54745,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "32daa5783a2552c0"
+    },
+    "/cpp-tutorial/typedefs-and-type-aliases": {
+      "offset": 7775992,
+      "length": 57402,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0927be805194b1d2"
+    },
+    "/cpp-tutorial/typedefs-and-type-aliases/": {
+      "offset": 7775992,
+      "length": 57402,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0927be805194b1d2"
+    },
+    "/cpp-tutorial/function-overload-differentiation": {
+      "offset": 7833394,
+      "length": 53172,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6b87cee904079379"
+    },
+    "/cpp-tutorial/function-overload-differentiation/": {
+      "offset": 7833394,
+      "length": 53172,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6b87cee904079379"
+    },
+    "/cpp-tutorial/function-templates": {
+      "offset": 7886566,
+      "length": 55956,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9464bd4bed38fae2"
+    },
+    "/cpp-tutorial/function-templates/": {
+      "offset": 7886566,
+      "length": 55956,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9464bd4bed38fae2"
+    },
+    "/cpp-tutorial/explicit-type-conversion-casting-and-static-cast": {
+      "offset": 7942522,
+      "length": 56450,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "476a77a77aee4a71"
+    },
+    "/cpp-tutorial/explicit-type-conversion-casting-and-static-cast/": {
+      "offset": 7942522,
+      "length": 56450,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "476a77a77aee4a71"
+    },
+    "/cpp-tutorial/constexpr-functions-part-3-and-consteval": {
+      "offset": 7998972,
+      "length": 54466,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2b499f6fb304ff49"
+    },
+    "/cpp-tutorial/constexpr-functions-part-3-and-consteval/": {
+      "offset": 7998972,
+      "length": 54466,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2b499f6fb304ff49"
+    },
+    "/cpp-tutorial/chapter-11-summary-and-quiz": {
+      "offset": 8053438,
+      "length": 54047,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6bfa9817cbb29b21"
+    },
+    "/cpp-tutorial/chapter-11-summary-and-quiz/": {
+      "offset": 8053438,
+      "length": 54047,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6bfa9817cbb29b21"
+    },
+    "/cpp-tutorial/function-templates-with-multiple-template-types": {
+      "offset": 8107485,
+      "length": 55165,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "06a849d6cd055d14"
+    },
+    "/cpp-tutorial/function-templates-with-multiple-template-types/": {
+      "offset": 8107485,
+      "length": 55165,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "06a849d6cd055d14"
+    },
+    "/cpp-tutorial/using-function-templates-in-multiple-files": {
+      "offset": 8162650,
+      "length": 52890,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "13546b2c1f053ea8"
+    },
+    "/cpp-tutorial/using-function-templates-in-multiple-files/": {
+      "offset": 8162650,
+      "length": 52890,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "13546b2c1f053ea8"
+    },
+    "/cpp-tutorial/non-type-template-parameters": {
+      "offset": 8215540,
+      "length": 54556,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4337908b36c559be"
+    },
+    "/cpp-tutorial/non-type-template-parameters/": {
+      "offset": 8215540,
+      "length": 54556,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4337908b36c559be"
+    },
+    "/cpp-tutorial/function-template-instantiation": {
+      "offset": 8270096,
+      "length": 56667,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b3d7eaa03c41be7e"
+    },
+    "/cpp-tutorial/function-template-instantiation/": {
+      "offset": 8270096,
+      "length": 56667,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b3d7eaa03c41be7e"
+    },
+    "/cpp-tutorial/constexpr-functions": {
+      "offset": 8326763,
+      "length": 53048,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "94047b4e296b1769"
+    },
+    "/cpp-tutorial/constexpr-functions/": {
+      "offset": 8326763,
+      "length": 53048,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "94047b4e296b1769"
+    },
+    "/cpp-tutorial/constexpr-functions-part-2": {
+      "offset": 8379811,
+      "length": 54689,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "86069a7e8942a92e"
+    },
+    "/cpp-tutorial/constexpr-functions-part-2/": {
+      "offset": 8379811,
+      "length": 54689,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "86069a7e8942a92e"
+    },
+    "/cpp-tutorial/constexpr-functions-part-4": {
+      "offset": 8434500,
+      "length": 53801,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7ea34bb9ee706680"
+    },
+    "/cpp-tutorial/constexpr-functions-part-4/": {
+      "offset": 8434500,
+      "length": 53801,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7ea34bb9ee706680"
+    },
+    "/cpp-tutorial/chapter-f-summary-and-quiz": {
+      "offset": 8488301,
+      "length": 52138,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ed48b20b4a6a61a7"
+    },
+    "/cpp-tutorial/chapter-f-summary-and-quiz/": {
+      "offset": 8488301,
+      "length": 52138,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ed48b20b4a6a61a7"
+    },
+    "/cpp-tutorial/value-categories-lvalues-and-rvalues": {
+      "offset": 8540439,
+      "length": 55481,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2856110ac92f3675"
+    },
+    "/cpp-tutorial/value-categories-lvalues-and-rvalues/": {
+      "offset": 8540439,
+      "length": 55481,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2856110ac92f3675"
+    },
+    "/cpp-tutorial/introduction-to-compound-data-types": {
+      "offset": 8595920,
+      "length": 52953,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a9a8a2598c9ca8d8"
+    },
+    "/cpp-tutorial/introduction-to-compound-data-types/": {
+      "offset": 8595920,
+      "length": 52953,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a9a8a2598c9ca8d8"
+    },
+    "/cpp-tutorial/lvalue-references-to-const": {
+      "offset": 8648873,
+      "length": 54287,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5f03fede6fb61a06"
+    },
+    "/cpp-tutorial/lvalue-references-to-const/": {
+      "offset": 8648873,
+      "length": 54287,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5f03fede6fb61a06"
+    },
+    "/cpp-tutorial/lvalue-references": {
+      "offset": 8703160,
+      "length": 55613,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7580c78e95d3b8b2"
+    },
+    "/cpp-tutorial/lvalue-references/": {
+      "offset": 8703160,
+      "length": 55613,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7580c78e95d3b8b2"
+    },
+    "/cpp-tutorial/pass-by-lvalue-reference": {
+      "offset": 8758773,
+      "length": 53682,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3e60b341143643d1"
+    },
+    "/cpp-tutorial/pass-by-lvalue-reference/": {
+      "offset": 8758773,
+      "length": 53682,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3e60b341143643d1"
+    },
+    "/blog/wp-content/uploads/learncpp.png": {
+      "offset": 8812455,
+      "length": 4193,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ff72d9b000cab98a"
+    },
+    "/__docx_assets/2c95a684fda719.css": {
+      "offset": 8816648,
+      "length": 1021,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "c3105d8bc229b3f1"
+    },
+    "/__docx_assets/8eaf6301b0a2ac.css": {
+      "offset": 8817669,
+      "length": 4706,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "df25cd0a890c5da0"
+    },
+    "/__docx_assets/eeb93ff70c27ef.css": {
+      "offset": 8822375,
+      "length": 829,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "c3d33ebad058f199"
+    },
+    "/__docx_assets/ee070bd9bb3fbb.css": {
+      "offset": 8823204,
+      "length": 375,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "c8d60c2020b401f2"
+    },
+    "/__docx_assets/14fcdd5eb6831d.css": {
+      "offset": 8823579,
+      "length": 408,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "f1f19037316e3485"
+    },
+    "/__docx_assets/4c29102d7ab6c4.css": {
+      "offset": 8823987,
+      "length": 36126,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "a3a7133961d08d8d"
+    },
+    "/__docx_assets/ca86ebe890dc7c.css": {
+      "offset": 8860113,
+      "length": 350,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "802c60bc7c601902"
+    },
+    "/__docx_assets/4ff5d08005332b.css": {
+      "offset": 8860463,
+      "length": 22350,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "8542f02f6da8eb1e"
+    },
+    "/__docx_assets/be8f2f14a398de.css": {
+      "offset": 8882813,
+      "length": 1148,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "6b56626bd7b89f4a"
+    },
+    "/__docx_assets/f285c77ef4360b.css": {
+      "offset": 8883961,
+      "length": 10483,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "6dd2da8589fcede5"
+    },
+    "/__docx_assets/5939d2c52c8ce6.css": {
+      "offset": 8894444,
+      "length": 7080,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "e722e6d089435730"
+    },
+    "/__docx_assets/064cc8ba0d7c43.css": {
+      "offset": 8901524,
+      "length": 218,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "cbbd87ae8013796a"
+    },
+    "/__docx_assets/7006b1f63f6554.css": {
+      "offset": 8901742,
+      "length": 632,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "822c564f931b5cf6"
+    },
+    "/__docx_assets/9b5561685ea598.css": {
+      "offset": 8902374,
+      "length": 272,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "4852f2c4e9668f79"
+    },
+    "/__docx_assets/7a01557a82e0d3.css": {
+      "offset": 8902646,
+      "length": 6093,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "90fa01e16375e77d"
+    },
+    "/__docx_assets/021245948469c1.css": {
+      "offset": 8908739,
+      "length": 19277,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b960d8326a10dfe3"
+    },
+    "/blog/wp-content/uploads/stripe.jpg": {
+      "offset": 8928016,
+      "length": 6829,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "924749e5f11cba8e"
+    },
+    "/__docx_assets/efeacb6602c4eb.css": {
+      "offset": 8882813,
+      "length": 1148,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "6b56626bd7b89f4a"
+    },
+    "/__docx_assets/09737aa6e474de.css": {
+      "offset": 8902374,
+      "length": 272,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "4852f2c4e9668f79"
+    },
+    "/images/CppTutorial/Chapter0/Portability-min.png": {
+      "offset": 8934845,
+      "length": 12019,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1bf6495e3abbc9a2"
+    },
+    "/__docx_assets/2be9cb3d588382.css": {
+      "offset": 8946864,
+      "length": 3369,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "feb6b8f11cf02b94"
+    },
+    "/images/CppTutorial/Chapter0/Interpreting-min.png": {
+      "offset": 8950233,
+      "length": 6063,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b3994bc344467593"
+    },
+    "/images/CppTutorial/Chapter0/VS-SolutionExplorerProperties-min.png": {
+      "offset": 8956296,
+      "length": 23102,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "78e4fe2b2e4f815d"
+    },
+    "/images/CppTutorial/Chapter0/VS-WarningsAsErrors-min.png": {
+      "offset": 8979398,
+      "length": 31172,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "d4be90679ba88e41"
+    },
+    "/images/CppTutorial/Chapter0/CB-EnableAllWarnings-min.png": {
+      "offset": 9010570,
+      "length": 50930,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "e417537960ec595e"
+    },
+    "/images/CppTutorial/Chapter0/VS2019-Installer-min.png": {
+      "offset": 9061500,
+      "length": 66868,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "94d0b76d748360eb"
+    },
+    "/images/CppTutorial/Chapter0/CB-OtherCompilerFlags-min.png": {
+      "offset": 9128368,
+      "length": 11512,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "504043bec29df988"
+    },
+    "/images/CppTutorial/Chapter0/VS-DisableExtensions-min.png": {
+      "offset": 9139880,
+      "length": 33557,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "c1e2cb186f31962f"
+    },
+    "/images/CppTutorial/Chapter0/Development-min.png": {
+      "offset": 9173437,
+      "length": 3580,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "cf78dc2b07eca492"
+    },
+    "/images/CppTutorial/MakeUseOf.png": {
+      "offset": 9177017,
+      "length": 4822,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "053d7369aaf05bab"
+    },
+    "/images/CppTutorial/Chapter0/Compiling-min.png": {
+      "offset": 9181839,
+      "length": 9106,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "5442eec01accd442"
+    },
+    "/images/CppTutorial/Chapter0/VS-EnableAllWarnings-min.png": {
+      "offset": 9190945,
+      "length": 29876,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "366a4ce9771c7956"
+    },
+    "/__docx_assets/607e6a7a8a79e5.css": {
+      "offset": 9220821,
+      "length": 2543,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "8bad319ec9dc1d45"
+    },
+    "/images/CppTutorial/Chapter0/CB-BuildTarget-min.png": {
+      "offset": 9223364,
+      "length": 13466,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3a473fd9d274a162"
+    },
+    "/images/CppTutorial/Chapter0/CompilersAutoDetection-min.png": {
+      "offset": 9236830,
+      "length": 22442,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "38e0073d46869d7c"
+    },
+    "/__docx_assets/1355306b609da4.bin": {
+      "offset": 9259272,
+      "length": 879,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "64d6b20a536f7e20"
+    },
+    "/blog/wp-content/uploads/images/CppTutorial/ide/CB-MinGWDownload-min.png": {
+      "offset": 9260151,
+      "length": 11161,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a418d6c748e893a4"
+    },
+    "/images/CppTutorial/Chapter0/VS-BuildTarget-min.png": {
+      "offset": 9271312,
+      "length": 10148,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6e176ebdcd97e002"
+    },
+    "/__docx_assets/33c9598e19839b.gif": {
+      "offset": 9281460,
+      "length": 57,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "c24a56bae96e6deb"
+    },
+    "/images/CppTutorial/Chapter0/VS2019-ConfigureNewProject-min.png": {
+      "offset": 9281517,
+      "length": 11384,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ce7d003eace4b6a8"
+    },
+    "/images/CppTutorial/Chapter0/VS2017-NewProject-min.png": {
+      "offset": 9292901,
+      "length": 23344,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "38c9f74b536093f0"
+    },
+    "/images/CppTutorial/Chapter0/CB2017-Save-min.png": {
+      "offset": 9316245,
+      "length": 9493,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "cc5be2d842be03f9"
+    },
+    "/images/CppTutorial/Chapter0/VS2019-PrecompiledHeader-min.png": {
+      "offset": 9325738,
+      "length": 12255,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "77ca94b2ab6f5b97"
+    },
+    "/images/CppTutorial/Chapter0/VS2017-DesktopWizard-min.png": {
+      "offset": 9337993,
+      "length": 6787,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "93580ba6a07b654f"
+    },
+    "/images/CppTutorial/Chapter0/CB-Closed-min.png": {
+      "offset": 9344780,
+      "length": 7032,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "fce9dca4ff0aeae8"
+    },
+    "/images/CppTutorial/Chapter0/VS2019-Initial-min.png": {
+      "offset": 9351812,
+      "length": 25654,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "b2fd02e21daa6b8c"
+    },
+    "/images/CppTutorial/Chapter0/VC2005-Run-min.png": {
+      "offset": 9377466,
+      "length": 5983,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "ee39b1dcf9510a55"
+    },
+    "/images/CppTutorial/Chapter2/ParametersReturn.png": {
+      "offset": 9383449,
+      "length": 7597,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "867c25ce28773745"
+    },
+    "/images/CppTutorial/Chapter0/CB-Pedantic-min.png": {
+      "offset": 9391046,
+      "length": 57109,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "8f983dd35019c04b"
+    },
+    "/images/CppTutorial/Chapter0/WindowsCommandLine-min.png": {
+      "offset": 9448155,
+      "length": 4065,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f778e63ca00d17dd"
+    },
+    "/images/CppTutorial/Chapter0/CB-Project-min.png": {
+      "offset": 9452220,
+      "length": 15359,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "847077f8b3fe44d0"
+    },
+    "/images/CppTutorial/Chapter0/VS2019-GetStarted-min.png": {
+      "offset": 9467579,
+      "length": 9794,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "60086d555dcce2e7"
+    },
+    "/images/CppTutorial/Chapter0/CB-C++11-min.png": {
+      "offset": 9477373,
+      "length": 52548,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "4e6546a816fe5f07"
+    },
+    "/images/CppTutorial/Chapter0/VS2019-CreateNewProject-min.png": {
+      "offset": 9529921,
+      "length": 19150,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "87ad3e6229a20c81"
+    },
+    "/images/CppTutorial/Chapter0/VS2019-Project-Language-min.png": {
+      "offset": 9549071,
+      "length": 37720,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "9a689c4a462a6835"
+    },
+    "/images/CppTutorial/Chapter0/LinkingObjects-min.png": {
+      "offset": 9586791,
+      "length": 13329,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "eac16402c3f91ab3"
+    },
+    "/images/CppTutorial/Chapter2/VS-AddNewItem1.png": {
+      "offset": 9600120,
+      "length": 18198,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "74c5eb3d5c37a116"
+    },
+    "/images/CppTutorial/Chapter0/CompileSource-min.png": {
+      "offset": 9618318,
+      "length": 6876,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f6985b9a3d64f389"
+    },
+    "/images/CppTutorial/Chapter0/CB-SettingsCompiler-min.png": {
+      "offset": 9625194,
+      "length": 22852,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "9ab883125ce2d81a"
+    },
+    "/images/CppTutorial/Chapter3/VS-Watch3-min.png": {
+      "offset": 9648046,
+      "length": 4802,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "33f52e9ba6827066"
+    },
+    "/images/CppTutorial/Chapter3/VS-Watch5-min.png": {
+      "offset": 9652848,
+      "length": 6164,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "cb9d49311f40bd4b"
+    },
+    "/images/CppTutorial/Chapter3/CB-EvaluateExpression-min.png": {
+      "offset": 9659012,
+      "length": 8086,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b5a9314c8e69772a"
+    },
+    "/images/CppTutorial/Chapter3/VS-QuickWatch1-min.png": {
+      "offset": 9667098,
+      "length": 12681,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b39253335b2379f8"
+    },
+    "/images/CppTutorial/Chapter3/VS-Watch2-min.png": {
+      "offset": 9679779,
+      "length": 4863,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "60c27441434053ba"
+    },
+    "/images/CppTutorial/Chapter2/VS-AddNewItem2.png": {
+      "offset": 9684642,
+      "length": 13714,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "05873d6790f4c4de"
+    },
+    "/images/CppTutorial/Chapter2/CB-AddNewItem1.png": {
+      "offset": 9698356,
+      "length": 14053,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d7315b044a33079b"
+    },
+    "/images/CppTutorial/Chapter2/CB-AddNewItem2.png": {
+      "offset": 9712409,
+      "length": 14319,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "32f097ebabda5b80"
+    },
+    "/images/CppTutorial/Chapter2/CB-AddNewItem4.png": {
+      "offset": 9726728,
+      "length": 7945,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "2eda747954233c08"
+    },
+    "/images/CppTutorial/Chapter2/CB-AddNewItem5.png": {
+      "offset": 9734673,
+      "length": 11791,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "ff6801a5a2192480"
+    },
+    "/images/CppTutorial/Chapter3/VS-Watch4-min.png": {
+      "offset": 9746464,
+      "length": 5009,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6d565c8494b5873d"
+    },
+    "/images/CppTutorial/Chapter3/VS-CallStack3-min.png": {
+      "offset": 9751473,
+      "length": 9973,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c2b523d2baadfcc2"
+    },
+    "/images/CppTutorial/Chapter3/VS-Watch6-min.png": {
+      "offset": 9761446,
+      "length": 6311,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "237248f2869b4dfa"
+    },
+    "/images/CppTutorial/Chapter3/VS-Watch1-min.png": {
+      "offset": 9767757,
+      "length": 4645,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "24d4aa20125a77f0"
+    },
+    "/images/CppTutorial/Chapter3/VS-CallStack2-min.png": {
+      "offset": 9772402,
+      "length": 9849,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f58db9c4c3a13c88"
+    },
+    "/images/CppTutorial/Section1/IncludeHeader.png": {
+      "offset": 9782251,
+      "length": 6002,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6bcbd8cb1c6eaef6"
+    },
+    "/images/CppTutorial/Chapter2/CB-AddNewItem3.png": {
+      "offset": 9788253,
+      "length": 10528,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "c0da22fc4b80f66c"
+    },
+    "/images/CppTutorial/Chapter3/VS-StepInto4-min.png": {
+      "offset": 9798781,
+      "length": 9200,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "26f676dc7e51b33a"
+    },
+    "/images/CppTutorial/Chapter3/VS-CallStack1-min.png": {
+      "offset": 9807981,
+      "length": 9462,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "534eb360db32e452"
+    },
+    "/images/CppTutorial/Chapter3/VS-QuickWatch2-min.png": {
+      "offset": 9817443,
+      "length": 2150,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "9899852ecd5fe509"
+    },
+    "/images/CppTutorial/Chapter3/VS-Breakpoint1-min.png": {
+      "offset": 9819593,
+      "length": 8026,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "33364c67f0aa08dc"
+    },
+    "/images/CppTutorial/Chapter3/VS2019-StepInto-Line4-min.png": {
+      "offset": 9827619,
+      "length": 10381,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "92b4bacfcba3feef"
+    },
+    "/images/CppTutorial/Chapter3/VS2019-StepInto-Line9-min.png": {
+      "offset": 9838000,
+      "length": 11055,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "9e98c82bedbf3776"
+    },
+    "/images/CppTutorial/Section2/MemoryAddresses.png": {
+      "offset": 9849055,
+      "length": 808,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d4f53cf050803528"
+    },
+    "/images/CppTutorial/Chapter3/VS2019-StepInto-Line10-min.png": {
+      "offset": 9849863,
+      "length": 11142,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "21423bdf31879fe7"
+    },
+    "/images/CppTutorial/Chapter3/VS2019-StepInto-Line5-min.png": {
+      "offset": 9861005,
+      "length": 11464,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "87ca7a15bbac2610"
+    },
+    "/images/CppTutorial/Chapter3/VS-Breakpoint2-min.png": {
+      "offset": 9872469,
+      "length": 8855,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4e585d725b72dd6d"
+    },
+    "/images/CppTutorial/Chapter3/CB-DebuggingSetup-min.png": {
+      "offset": 9881324,
+      "length": 7248,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "834b43932527bf48"
+    },
+    "/__docx_assets/4ed7a3cb549c81.png": {
+      "offset": 9888572,
+      "length": 26218,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e383eb552ad09c1d"
+    },
+    "/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-400.woff2": {
+      "offset": 9914790,
+      "length": 18692,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "036203e8ad50c4d4"
+    },
+    "/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-600.woff2": {
+      "offset": 9933482,
+      "length": 18656,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "8dfd91986f5ba7fc"
+    },
+    "/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-ext-400.woff2": {
+      "offset": 9952138,
+      "length": 15319,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "fc3415903be7812d"
+    },
+    "/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-700.woff2": {
+      "offset": 9967457,
+      "length": 18260,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "36e5314e96e955e5"
+    },
+    "/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-800.woff2": {
+      "offset": 9985717,
+      "length": 18656,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "f16d7001d0cfa071"
+    },
+    "/blog/wp-content/plugins/cleantalk-spam-protect/css/images/good_email.svg": {
+      "offset": 10004373,
+      "length": 927,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "81a783be3f162e76"
+    },
+    "/__docx_assets/7b10012954c366.bin": {
+      "offset": 10005300,
+      "length": 32494,
+      "mime": "application/vnd.ms-fontobject",
+      "gzipped": true,
+      "hash": "4ce0b049e21b2492"
+    },
+    "/__docx_assets/806cde3620287d.bin": {
+      "offset": 10005300,
+      "length": 32494,
+      "mime": "application/vnd.ms-fontobject",
+      "gzipped": true,
+      "hash": "4ce0b049e21b2492"
+    },
+    "/blog/wp-content/plugins/cleantalk-spam-protect/css/images/bad_email.svg": {
+      "offset": 10037794,
+      "length": 920,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a298ff2c0361da46"
+    },
+    "/__docx_assets/9f8c2bffdeac1c.ttf": {
+      "offset": 10038714,
+      "length": 32411,
+      "mime": "font/ttf",
+      "gzipped": true,
+      "hash": "2f68606040433df9"
+    },
+    "/blog/wp-content/plugins/menu-icons/vendor/codeinwp/icon-picker/css/types/fontawesome-webfont.eot": {
+      "offset": 10071125,
+      "length": 98645,
+      "mime": "application/vnd.ms-fontobject",
+      "gzipped": true,
+      "hash": "77e6680aecd2f9e6"
+    },
+    "/__docx_assets/b81329796e7a49.bin": {
+      "offset": 10071125,
+      "length": 98645,
+      "mime": "application/vnd.ms-fontobject",
+      "gzipped": true,
+      "hash": "77e6680aecd2f9e6"
+    },
+    "/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-ext-800.woff2": {
+      "offset": 10169770,
+      "length": 15271,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "294288e6ae3f10e7"
+    },
+    "/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-ext-300.woff2": {
+      "offset": 10185041,
+      "length": 15263,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "a0cb5406001421fd"
+    },
+    "/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-ext-600.woff2": {
+      "offset": 10200304,
+      "length": 15259,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "9a78e9844dfe5dbe"
+    },
+    "/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-ext-500.woff2": {
+      "offset": 10215563,
+      "length": 15371,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "5280b5734a9fddcd"
+    },
+    "/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-ext-700.woff2": {
+      "offset": 10230934,
+      "length": 15007,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "975dcc231913e8cf"
+    },
+    "/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-500.woff2": {
+      "offset": 10245941,
+      "length": 18768,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e0883eed8f0176df"
+    },
+    "/blog/wp-content/uploads/omgf/septera-googlefonts/open-sans-normal-latin-300.woff2": {
+      "offset": 10264709,
+      "length": 18684,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "14b35c4b07fdd93d"
+    },
+    "/__docx_assets/bd0ccba65cfaea.ttf": {
+      "offset": 10283393,
+      "length": 18532,
+      "mime": "font/ttf",
+      "gzipped": true,
+      "hash": "cff649dbc3f19ecb"
+    },
+    "/__docx_assets/8d5c077d5d3478.woff2": {
+      "offset": 10301925,
+      "length": 77179,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "7ff2137b6679ff3a"
+    },
+    "/__docx_assets/a402a9d5a51deb.woff": {
+      "offset": 10379104,
+      "length": 18545,
+      "mime": "font/woff",
+      "gzipped": true,
+      "hash": "13d43d17e72182ac"
+    },
+    "/blog/wp-content/plugins/learncpp-prism/fonts/monaco/monaco-webfont.woff": {
+      "offset": 10397649,
+      "length": 21356,
+      "mime": "font/woff",
+      "gzipped": true,
+      "hash": "6951a26e0792c84f"
+    },
+    "/__docx_assets/19a07973648a85.woff": {
+      "offset": 10419005,
+      "length": 97937,
+      "mime": "font/woff",
+      "gzipped": true,
+      "hash": "992ef212ff3482fb"
+    },
+    "/blog/wp-content/plugins/learncpp-prism/fonts/monaco/monaco-webfont.eot": {
+      "offset": 10516942,
+      "length": 18511,
+      "mime": "application/vnd.ms-fontobject",
+      "gzipped": true,
+      "hash": "fb5b549782761fb3"
+    },
+    "/blog/wp-content/plugins/learncpp-prism/fonts/monaco/monaco-webfont.svg": {
+      "offset": 10535453,
+      "length": 14034,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "49e66671cd032c07"
+    },
+    "/__docx_assets/07ed8eb4342798.bin": {
+      "offset": 10549487,
+      "length": 18608,
+      "mime": "application/vnd.ms-fontobject",
+      "gzipped": true,
+      "hash": "1b29967b62e5771d"
+    },
+    "/blog/wp-content/plugins/learncpp-prism/fonts/monaco/monaco-webfont.ttf": {
+      "offset": 10568095,
+      "length": 21112,
+      "mime": "font/ttf",
+      "gzipped": true,
+      "hash": "848eb61ef5481389"
+    },
+    "/__docx_assets/cc207e91f716ea.bin": {
+      "offset": 10549487,
+      "length": 18608,
+      "mime": "application/vnd.ms-fontobject",
+      "gzipped": true,
+      "hash": "1b29967b62e5771d"
+    },
+    "/blog/wp-content/themes/septera/resources/fonts/socials.woff": {
+      "offset": 10589207,
+      "length": 22488,
+      "mime": "font/woff",
+      "gzipped": true,
+      "hash": "04e0e5a260ea2eb1"
+    },
+    "/__docx_assets/8b069aaab85a93.svg": {
+      "offset": 10611695,
+      "length": 9995,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "af8c951dbec07a73"
+    },
+    "/blog/wp-content/themes/septera/resources/fonts/socials.ttf": {
+      "offset": 10621690,
+      "length": 22451,
+      "mime": "font/ttf",
+      "gzipped": true,
+      "hash": "11953c445449a0cb"
+    },
+    "/blog/wp-content/themes/septera/resources/fonts/socials.eot": {
+      "offset": 10644141,
+      "length": 22518,
+      "mime": "application/vnd.ms-fontobject",
+      "gzipped": true,
+      "hash": "60d329e79b4422ba"
+    },
+    "/blog/wp-content/themes/septera/resources/fonts/blocks.eot": {
+      "offset": 10666659,
+      "length": 33001,
+      "mime": "application/vnd.ms-fontobject",
+      "gzipped": true,
+      "hash": "0968f443a2eaf644"
+    },
+    "/blog/wp-content/themes/septera/resources/fonts/socials.svg": {
+      "offset": 10699660,
+      "length": 25257,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "735bfdf280863327"
+    },
+    "/__docx_assets/93e22fbf382ed2.ttf": {
+      "offset": 10724917,
+      "length": 98555,
+      "mime": "font/ttf",
+      "gzipped": true,
+      "hash": "153436dcc1e8701a"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/third-party/colorbox/images/loading_background.png": {
+      "offset": 10823472,
+      "length": 147,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "dd7ae476ac6a7d23"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/img/loading.gif": {
+      "offset": 10823619,
+      "length": 2688,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "4f00fe64b74307bb"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/third-party/colorbox/images/border.png": {
+      "offset": 10826307,
+      "length": 89,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a4b47faf4e229525"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/third-party/colorbox/images/controls.png": {
+      "offset": 10826396,
+      "length": 1284,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b029699c8215c65d"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/third-party/colorbox/images/overlay.png": {
+      "offset": 10827680,
+      "length": 129,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c97394e95be70606"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/third-party/colorbox/images/loading.gif": {
+      "offset": 10827809,
+      "length": 7258,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "c04aed3fb79669c9"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/img/file-icons/delete.png": {
+      "offset": 10835067,
+      "length": 664,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "5f93a6b5ff74b53d"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/themes/default/css/fonts/sqr721c-webfont.svg": {
+      "offset": 10835731,
+      "length": 17788,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "c4913387f5cac9cd"
+    },
+    "/blog/wp-content/themes/septera/resources/fonts/blocks.ttf": {
+      "offset": 10853519,
+      "length": 32921,
+      "mime": "font/ttf",
+      "gzipped": true,
+      "hash": "1695232bec428298"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/themes/default/css/fonts/sqr721c-webfont.eot": {
+      "offset": 10886440,
+      "length": 24708,
+      "mime": "application/vnd.ms-fontobject",
+      "gzipped": true,
+      "hash": "9a983aa251045317"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/themes/default/css/fonts/sqr721c-webfont.woff": {
+      "offset": 10911148,
+      "length": 24686,
+      "mime": "font/woff",
+      "gzipped": true,
+      "hash": "d65d2c4d0a2d46fe"
+    },
+    "/blog/wp-content/themes/septera/resources/fonts/blocks.woff": {
+      "offset": 10935834,
+      "length": 32945,
+      "mime": "font/woff",
+      "gzipped": true,
+      "hash": "7ae5e0c3b24a2a93"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/img/delete.png": {
+      "offset": 10968779,
+      "length": 300,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e9ba879814ad2757"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-brands-400.eot": {
+      "offset": 10969079,
+      "length": 90753,
+      "mime": "application/vnd.ms-fontobject",
+      "gzipped": true,
+      "hash": "fc3fe22b8436a7e0"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/themes/default/css/fonts/sqr721c-webfont.ttf": {
+      "offset": 11059832,
+      "length": 24541,
+      "mime": "font/ttf",
+      "gzipped": true,
+      "hash": "ef52605dcb81d76b"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/themes/default/css/fonts/sqr721c-webfont.woff2": {
+      "offset": 11084373,
+      "length": 18624,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "964cae230fe67b07"
+    },
+    "/blog/wp-content/themes/septera/resources/fonts/blocks.svg": {
+      "offset": 11102997,
+      "length": 68408,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "118c81033ea53119"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-regular-400.woff2": {
+      "offset": 11171405,
+      "length": 13607,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "8331faf3cedd4dff"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-solid-900.woff": {
+      "offset": 11185012,
+      "length": 103336,
+      "mime": "font/woff",
+      "gzipped": true,
+      "hash": "90a7a101f425839b"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-regular-400.woff": {
+      "offset": 11288348,
+      "length": 16785,
+      "mime": "font/woff",
+      "gzipped": true,
+      "hash": "d7f83f19c6235ef0"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-solid-900.woff2": {
+      "offset": 11305133,
+      "length": 79364,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "7a12290808d22252"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-solid-900.eot": {
+      "offset": 11384497,
+      "length": 104467,
+      "mime": "application/vnd.ms-fontobject",
+      "gzipped": true,
+      "hash": "c54f700a9c4ca023"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-regular-400.eot": {
+      "offset": 11488964,
+      "length": 16888,
+      "mime": "application/vnd.ms-fontobject",
+      "gzipped": true,
+      "hash": "07f105e54fb7bd7b"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-regular-400.svg": {
+      "offset": 11505852,
+      "length": 37383,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "571711bc462964fe"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-brands-400.woff": {
+      "offset": 11543235,
+      "length": 89851,
+      "mime": "font/woff",
+      "gzipped": true,
+      "hash": "6ff58357d4269b10"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-solid-900.ttf": {
+      "offset": 11633086,
+      "length": 104351,
+      "mime": "font/ttf",
+      "gzipped": true,
+      "hash": "dafa3248cd72e10a"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-brands-400.woff2": {
+      "offset": 11737437,
+      "length": 76655,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "ae027b856e4f10a0"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-regular-400.ttf": {
+      "offset": 11814092,
+      "length": 16831,
+      "mime": "font/ttf",
+      "gzipped": true,
+      "hash": "db17f1b51088789a"
+    },
+    "/blog/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/webfonts/fa-brands-400.ttf": {
+      "offset": 11830923,
+      "length": 90620,
+      "mime": "font/ttf",
+      "gzipped": true,
+      "hash": "5b2e0c0e63b45a4a"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 53991,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "58f05278c1fc7ee1"
+    }
+  }
+}

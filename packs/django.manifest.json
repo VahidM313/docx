@@ -1,1 +1,2449 @@
-{"id":"django","name":"Django","version":"v6.1","commit":"8ee69446","origin":"https://docs.djangoproject.com","entryPath":"/en/6.1/","updatedAt":"2026-10-10T18:57:49.836Z","totalBytes":3885847,"chunkCount":196,"routes":{"/en/6.1":{"offset":0,"length":11285,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"37f913a77a9b4ad4"},"/en/6.1/":{"offset":0,"length":11285,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"37f913a77a9b4ad4"},"/en/6.1/faq/help":{"offset":11285,"length":8086,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2d6210c0e17abd2a"},"/en/6.1/faq/help/":{"offset":11285,"length":8086,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2d6210c0e17abd2a"},"/en/5.2":{"offset":19371,"length":11260,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e0b6086b64d7458f"},"/en/5.2/":{"offset":19371,"length":11260,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e0b6086b64d7458f"},"/en/dev":{"offset":30631,"length":10696,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c0429539e090281d"},"/en/dev/":{"offset":30631,"length":10696,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c0429539e090281d"},"/en/4.1":{"offset":41327,"length":11292,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6078aaf7a6efabb3"},"/en/4.1/":{"offset":41327,"length":11292,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6078aaf7a6efabb3"},"/en/5.1":{"offset":52619,"length":11329,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6728a717bc400854"},"/en/5.1/":{"offset":52619,"length":11329,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6728a717bc400854"},"/en/4.2":{"offset":63948,"length":11332,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"871c9bc4488b694e"},"/en/4.2/":{"offset":63948,"length":11332,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"871c9bc4488b694e"},"/en/2.1":{"offset":75280,"length":11278,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1f44e4ff5586a80b"},"/en/2.1/":{"offset":75280,"length":11278,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1f44e4ff5586a80b"},"/en/3.1":{"offset":86558,"length":11273,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f99ab3e3e4ebaca3"},"/en/3.1/":{"offset":86558,"length":11273,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f99ab3e3e4ebaca3"},"/en/2.0":{"offset":97831,"length":11343,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b9ae1de666658769"},"/en/2.0/":{"offset":97831,"length":11343,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b9ae1de666658769"},"/en/4.0":{"offset":109174,"length":11295,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"da38e44334fbb790"},"/en/4.0/":{"offset":109174,"length":11295,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"da38e44334fbb790"},"/en/5.0":{"offset":120469,"length":11331,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b691c3fdcd590064"},"/en/5.0/":{"offset":120469,"length":11331,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b691c3fdcd590064"},"/en/1.11":{"offset":131800,"length":11433,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4e45e919baca1074"},"/en/1.11/":{"offset":131800,"length":11433,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4e45e919baca1074"},"/en/3.0":{"offset":143233,"length":11270,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"99e75b538f1c08d3"},"/en/3.0/":{"offset":143233,"length":11270,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"99e75b538f1c08d3"},"/en/3.2":{"offset":154503,"length":11309,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4840e4c0cacb2ed9"},"/en/3.2/":{"offset":154503,"length":11309,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4840e4c0cacb2ed9"},"/en/6.0":{"offset":165812,"length":11286,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bb738cf85b0b00a9"},"/en/6.0/":{"offset":165812,"length":11286,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bb738cf85b0b00a9"},"/en/2.2":{"offset":177098,"length":11305,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4cb841849aad80de"},"/en/2.2/":{"offset":177098,"length":11305,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4cb841849aad80de"},"/en/6.1/intro/install":{"offset":188403,"length":8298,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7757e6972967a825"},"/en/6.1/intro/install/":{"offset":188403,"length":8298,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7757e6972967a825"},"/en/1.10":{"offset":196701,"length":11416,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8043fb04602c98fb"},"/en/1.10/":{"offset":196701,"length":11416,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8043fb04602c98fb"},"/en/6.1/intro/overview":{"offset":208117,"length":13399,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"76fc35da38aeaf62"},"/en/6.1/intro/overview/":{"offset":208117,"length":13399,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"76fc35da38aeaf62"},"/en/1.9":{"offset":221516,"length":11374,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c328a1a941068479"},"/en/1.9/":{"offset":221516,"length":11374,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c328a1a941068479"},"/en/6.1/faq":{"offset":232890,"length":9490,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"08d49cde75ab75d8"},"/en/6.1/faq/":{"offset":232890,"length":9490,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"08d49cde75ab75d8"},"/en/6.1/intro/tutorial08":{"offset":242380,"length":9074,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"94e8593109d0024e"},"/en/6.1/intro/tutorial08/":{"offset":242380,"length":9074,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"94e8593109d0024e"},"/en/1.8":{"offset":251454,"length":10831,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5c2778ea47dfb7e7"},"/en/1.8/":{"offset":251454,"length":10831,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5c2778ea47dfb7e7"},"/en/6.1/intro/tutorial01":{"offset":262285,"length":12245,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eee0bf73746ff4c4"},"/en/6.1/intro/tutorial01/":{"offset":262285,"length":12245,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eee0bf73746ff4c4"},"/en/6.1/intro/tutorial04":{"offset":274530,"length":13479,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c693872f1bb6edc6"},"/en/6.1/intro/tutorial04/":{"offset":274530,"length":13479,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c693872f1bb6edc6"},"/en/6.1/intro/tutorial03":{"offset":288009,"length":14924,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5a81a407b83ef744"},"/en/6.1/intro/tutorial03/":{"offset":288009,"length":14924,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5a81a407b83ef744"},"/en/6.1/intro/tutorial07":{"offset":302933,"length":14289,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3c227764d80838e8"},"/en/6.1/intro/tutorial07/":{"offset":302933,"length":14289,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3c227764d80838e8"},"/en/6.1/intro/reusable-apps":{"offset":317222,"length":13251,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"95491555938dc522"},"/en/6.1/intro/reusable-apps/":{"offset":317222,"length":13251,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"95491555938dc522"},"/en/6.1/intro/tutorial02":{"offset":330473,"length":17704,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bbf6482d1a4e1332"},"/en/6.1/intro/tutorial02/":{"offset":330473,"length":17704,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bbf6482d1a4e1332"},"/en/6.1/intro/contributing":{"offset":348177,"length":17689,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3eb3f287490df2e1"},"/en/6.1/intro/contributing/":{"offset":348177,"length":17689,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3eb3f287490df2e1"},"/en/6.1/intro/tutorial05":{"offset":365866,"length":19364,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8dd95cdbb121f0cf"},"/en/6.1/intro/tutorial05/":{"offset":365866,"length":19364,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8dd95cdbb121f0cf"},"/en/6.1/intro/tutorial06":{"offset":385230,"length":9723,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eb1536f6ccc2dc57"},"/en/6.1/intro/tutorial06/":{"offset":385230,"length":9723,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eb1536f6ccc2dc57"},"/en/6.1/howto":{"offset":394953,"length":7736,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7fedc191bd6cc207"},"/en/6.1/howto/":{"offset":394953,"length":7736,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7fedc191bd6cc207"},"/en/6.1/ref":{"offset":402689,"length":7316,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0216f5cdf9634f02"},"/en/6.1/ref/":{"offset":402689,"length":7316,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0216f5cdf9634f02"},"/en/6.1/ref/models/class":{"offset":410005,"length":8306,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f04390a255178d20"},"/en/6.1/ref/models/class/":{"offset":410005,"length":8306,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f04390a255178d20"},"/en/6.1/py-modindex":{"offset":418311,"length":10315,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"13a78351535c15ff"},"/en/6.1/py-modindex/":{"offset":418311,"length":10315,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"13a78351535c15ff"},"/en/6.1/ref/models/lookups":{"offset":428626,"length":11290,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3dd68826fa1d27fe"},"/en/6.1/ref/models/lookups/":{"offset":428626,"length":11290,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3dd68826fa1d27fe"},"/en/6.1/intro":{"offset":439916,"length":7402,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f1877975729cea12"},"/en/6.1/intro/":{"offset":439916,"length":7402,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f1877975729cea12"},"/en/6.1/topics":{"offset":447318,"length":10224,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6fc4741120d83923"},"/en/6.1/topics/":{"offset":447318,"length":10224,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6fc4741120d83923"},"/en/6.1/contents":{"offset":457542,"length":20234,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"26e4ba928a8485f3"},"/en/6.1/contents/":{"offset":457542,"length":20234,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"26e4ba928a8485f3"},"/en/6.1/ref/models/indexes":{"offset":477776,"length":10763,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8896e037b803d110"},"/en/6.1/ref/models/indexes/":{"offset":477776,"length":10763,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8896e037b803d110"},"/en/6.1/ref/models/options":{"offset":488539,"length":15494,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e2fe9d2f5f7a705"},"/en/6.1/ref/models/options/":{"offset":488539,"length":15494,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e2fe9d2f5f7a705"},"/en/6.1/topics/db/models":{"offset":504033,"length":31296,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"92b17cedbac91931"},"/en/6.1/topics/db/models/":{"offset":504033,"length":31296,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"92b17cedbac91931"},"/en/6.1/ref/models/instances":{"offset":535329,"length":25194,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6a68cea3eb7cdef1"},"/en/6.1/ref/models/instances/":{"offset":535329,"length":25194,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6a68cea3eb7cdef1"},"/en/6.1/topics/db/queries":{"offset":560523,"length":38566,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"64330cad04c61562"},"/en/6.1/topics/db/queries/":{"offset":560523,"length":38566,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"64330cad04c61562"},"/en/6.1/ref/models/fields":{"offset":599089,"length":51394,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"60f541afbf3a6dd4"},"/en/6.1/ref/models/fields/":{"offset":599089,"length":51394,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"60f541afbf3a6dd4"},"/en/6.1/ref/models/querysets":{"offset":650483,"length":71076,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a00516e96d8566de"},"/en/6.1/ref/models/querysets/":{"offset":650483,"length":71076,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a00516e96d8566de"},"/en/6.1/genindex":{"offset":721559,"length":88682,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dbad383e2c06d9b9"},"/en/6.1/genindex/":{"offset":721559,"length":88682,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dbad383e2c06d9b9"},"/en/6.1/ref/schema-editor":{"offset":810241,"length":10618,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e7ed50adc34811ac"},"/en/6.1/ref/schema-editor/":{"offset":810241,"length":10618,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e7ed50adc34811ac"},"/en/6.1/topics/db/sql":{"offset":820859,"length":14031,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1e7b5e8724c2cc82"},"/en/6.1/topics/db/sql/":{"offset":820859,"length":14031,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1e7b5e8724c2cc82"},"/en/6.1/topics/db/search":{"offset":834890,"length":9729,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"25b4945ebf33b55d"},"/en/6.1/topics/db/search/":{"offset":834890,"length":9729,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"25b4945ebf33b55d"},"/en/6.1/topics/migrations":{"offset":844619,"length":25001,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"18eb45b2aa205098"},"/en/6.1/topics/migrations/":{"offset":844619,"length":25001,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"18eb45b2aa205098"},"/en/6.1/ref/models/conditional-expressions":{"offset":869620,"length":11595,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5a310a9dc879882b"},"/en/6.1/ref/models/conditional-expressions/":{"offset":869620,"length":11595,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5a310a9dc879882b"},"/en/6.1/topics/db/managers":{"offset":881215,"length":13897,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"32ed591c19fea3fa"},"/en/6.1/topics/db/managers/":{"offset":881215,"length":13897,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"32ed591c19fea3fa"},"/en/6.1/howto/custom-lookups":{"offset":895112,"length":13107,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1fa192c91f639534"},"/en/6.1/howto/custom-lookups/":{"offset":895112,"length":13107,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1fa192c91f639534"},"/en/6.1/howto/writing-migrations":{"offset":908219,"length":13106,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"95c72e1a4c58dda4"},"/en/6.1/howto/writing-migrations/":{"offset":908219,"length":13106,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"95c72e1a4c58dda4"},"/en/6.1/ref/migration-operations":{"offset":921325,"length":18181,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f0389b09e0ad7d1f"},"/en/6.1/ref/migration-operations/":{"offset":921325,"length":18181,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f0389b09e0ad7d1f"},"/en/6.1/topics/db/aggregation":{"offset":939506,"length":17889,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9e58cf69298f62a4"},"/en/6.1/topics/db/aggregation/":{"offset":939506,"length":17889,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9e58cf69298f62a4"},"/en/6.1/ref/models/relations":{"offset":957395,"length":10503,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"49b3a2f5df519401"},"/en/6.1/ref/models/relations/":{"offset":957395,"length":10503,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"49b3a2f5df519401"},"/en/6.1/howto/custom-model-fields":{"offset":967898,"length":21229,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c4a1d7fc501f53f4"},"/en/6.1/howto/custom-model-fields/":{"offset":967898,"length":21229,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c4a1d7fc501f53f4"},"/en/6.1/topics/db/multi-db":{"offset":989127,"length":19231,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9a3b594d6f60f1a9"},"/en/6.1/topics/db/multi-db/":{"offset":989127,"length":19231,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9a3b594d6f60f1a9"},"/en/6.1/ref/models/expressions":{"offset":1008358,"length":30827,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8b3d4813fa1827fa"},"/en/6.1/ref/models/expressions/":{"offset":1008358,"length":30827,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8b3d4813fa1827fa"},"/en/6.1/ref/models/database-functions":{"offset":1039185,"length":30096,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c675f75264241faf"},"/en/6.1/ref/models/database-functions/":{"offset":1039185,"length":30096,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c675f75264241faf"},"/en/6.1/topics/db/transactions":{"offset":1069281,"length":18924,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6d14b3a0931c0edc"},"/en/6.1/topics/db/transactions/":{"offset":1069281,"length":18924,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6d14b3a0931c0edc"},"/en/6.1/howto/initial-data":{"offset":1088205,"length":8859,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7bba202e202a90df"},"/en/6.1/howto/initial-data/":{"offset":1088205,"length":8859,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7bba202e202a90df"},"/en/6.1/topics/http/shortcuts":{"offset":1097064,"length":12330,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fdfa4e45ce27ccdf"},"/en/6.1/topics/http/shortcuts/":{"offset":1097064,"length":12330,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fdfa4e45ce27ccdf"},"/en/6.1/topics/http/urls":{"offset":1109394,"length":20740,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ae615488b1336370"},"/en/6.1/topics/http/urls/":{"offset":1109394,"length":20740,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ae615488b1336370"},"/en/6.1/ref/views":{"offset":1130134,"length":10241,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"388af6b2eeb5b5de"},"/en/6.1/ref/views/":{"offset":1130134,"length":10241,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"388af6b2eeb5b5de"},"/en/6.1/howto/legacy-databases":{"offset":1140375,"length":8543,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5029358456ab2533"},"/en/6.1/howto/legacy-databases/":{"offset":1140375,"length":8543,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5029358456ab2533"},"/en/6.1/ref/contrib/postgres":{"offset":1148918,"length":8418,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"272c83de43836ceb"},"/en/6.1/ref/contrib/postgres/":{"offset":1148918,"length":8418,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"272c83de43836ceb"},"/en/6.1/topics/http/decorators":{"offset":1157336,"length":9483,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d93b40800579b525"},"/en/6.1/topics/http/decorators/":{"offset":1157336,"length":9483,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d93b40800579b525"},"/en/6.1/ref/template-response":{"offset":1166819,"length":11353,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f4c5c02923de0516"},"/en/6.1/ref/template-response/":{"offset":1166819,"length":11353,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f4c5c02923de0516"},"/en/6.1/topics/http/views":{"offset":1178172,"length":11135,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"13d639c24b83f32b"},"/en/6.1/topics/http/views/":{"offset":1178172,"length":11135,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"13d639c24b83f32b"},"/en/6.1/topics/http/file-uploads":{"offset":1189307,"length":12750,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"58fcce998866195f"},"/en/6.1/topics/http/file-uploads/":{"offset":1189307,"length":12750,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"58fcce998866195f"},"/en/6.1/ref/files/file":{"offset":1202057,"length":9864,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"89fb6a84dd2b6c37"},"/en/6.1/ref/files/file/":{"offset":1202057,"length":9864,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"89fb6a84dd2b6c37"},"/en/6.1/ref/files/storage":{"offset":1211921,"length":11597,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"24410860bd519a2c"},"/en/6.1/ref/files/storage/":{"offset":1211921,"length":11597,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"24410860bd519a2c"},"/en/6.1/topics/db/optimization":{"offset":1223518,"length":15603,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7c207ae1685cf486"},"/en/6.1/topics/db/optimization/":{"offset":1223518,"length":15603,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7c207ae1685cf486"},"/en/6.1/topics/async":{"offset":1239121,"length":15269,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"02323e75a905fddc"},"/en/6.1/topics/async/":{"offset":1239121,"length":15269,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"02323e75a905fddc"},"/en/6.1/ref/databases":{"offset":1254390,"length":28670,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c3341f61da9ecef5"},"/en/6.1/ref/databases/":{"offset":1254390,"length":28670,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c3341f61da9ecef5"},"/en/6.1/ref/request-response":{"offset":1283060,"length":31913,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2c5d1be601ad1eb9"},"/en/6.1/ref/request-response/":{"offset":1283060,"length":31913,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2c5d1be601ad1eb9"},"/en/6.1/topics/class-based-views":{"offset":1314973,"length":9958,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1e19c555654a6ac5"},"/en/6.1/topics/class-based-views/":{"offset":1314973,"length":9958,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1e19c555654a6ac5"},"/en/6.1/topics/class-based-views/generic-editing":{"offset":1324931,"length":11612,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5b964a49d4bd8d16"},"/en/6.1/topics/class-based-views/generic-editing/":{"offset":1324931,"length":11612,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5b964a49d4bd8d16"},"/en/6.1/topics/http/middleware":{"offset":1336543,"length":14847,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"72795ccb2c1f2dec"},"/en/6.1/topics/http/middleware/":{"offset":1336543,"length":14847,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"72795ccb2c1f2dec"},"/en/6.1/topics/templates":{"offset":1351390,"length":17668,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9fb8edeff3af1b2b"},"/en/6.1/topics/templates/":{"offset":1351390,"length":17668,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9fb8edeff3af1b2b"},"/en/6.1/topics/class-based-views/generic-display":{"offset":1369058,"length":13821,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d758dbbcd531d561"},"/en/6.1/topics/class-based-views/generic-display/":{"offset":1369058,"length":13821,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d758dbbcd531d561"},"/en/6.1/ref/contrib/humanize":{"offset":1382879,"length":8823,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7d17faff26613c8b"},"/en/6.1/ref/contrib/humanize/":{"offset":1382879,"length":8823,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7d17faff26613c8b"},"/en/6.1/ref/class-based-views":{"offset":1391702,"length":8928,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e92640424183363"},"/en/6.1/ref/class-based-views/":{"offset":1391702,"length":8928,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e92640424183363"},"/en/6.1/howto/custom-file-storage":{"offset":1400630,"length":9871,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"daee509d73e7cd25"},"/en/6.1/howto/custom-file-storage/":{"offset":1400630,"length":9871,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"daee509d73e7cd25"},"/en/6.1/howto/outputting-csv":{"offset":1410501,"length":10175,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b53a4ea7b1d3fd40"},"/en/6.1/howto/outputting-csv/":{"offset":1410501,"length":10175,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b53a4ea7b1d3fd40"},"/en/6.1/topics/files":{"offset":1420676,"length":11459,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"92c63fe50e4ff285"},"/en/6.1/topics/files/":{"offset":1420676,"length":11459,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"92c63fe50e4ff285"},"/en/6.1/ref/class-based-views/flattened-index":{"offset":1432135,"length":12527,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"350a3012da5392a2"},"/en/6.1/ref/class-based-views/flattened-index/":{"offset":1432135,"length":12527,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"350a3012da5392a2"},"/en/6.1/topics/class-based-views/mixins":{"offset":1444662,"length":18391,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2649d3c241ef4ff5"},"/en/6.1/topics/class-based-views/mixins/":{"offset":1444662,"length":18391,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2649d3c241ef4ff5"},"/en/6.1/howto/outputting-pdf":{"offset":1463053,"length":9333,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2c1f4ed9d60834ac"},"/en/6.1/howto/outputting-pdf/":{"offset":1463053,"length":9333,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2c1f4ed9d60834ac"},"/en/6.1/ref/middleware":{"offset":1472386,"length":18642,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"adec12d9a51c2f49"},"/en/6.1/ref/middleware/":{"offset":1472386,"length":18642,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"adec12d9a51c2f49"},"/en/6.1/ref/templates/language":{"offset":1491028,"length":20135,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f25fd00d342ba4a8"},"/en/6.1/ref/templates/language/":{"offset":1491028,"length":20135,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f25fd00d342ba4a8"},"/en/6.1/ref/templates/builtins":{"offset":1511163,"length":44785,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8346fdc250cc0fb2"},"/en/6.1/ref/templates/builtins/":{"offset":1511163,"length":44785,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8346fdc250cc0fb2"},"/en/6.1/topics/forms":{"offset":1555948,"length":21894,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7c61708be0bb38a8"},"/en/6.1/topics/forms/":{"offset":1555948,"length":21894,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7c61708be0bb38a8"},"/en/6.1/howto/custom-template-backend":{"offset":1577842,"length":9625,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d69d5d64ed97a067"},"/en/6.1/howto/custom-template-backend/":{"offset":1577842,"length":9625,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d69d5d64ed97a067"},"/en/6.1/topics/settings":{"offset":1587467,"length":12064,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c04316d1d4083def"},"/en/6.1/topics/settings/":{"offset":1587467,"length":12064,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c04316d1d4083def"},"/en/6.1/ref/exceptions":{"offset":1599531,"length":12837,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8e2d82de87864725"},"/en/6.1/ref/exceptions/":{"offset":1599531,"length":12837,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8e2d82de87864725"},"/en/6.1/ref/forms/validation":{"offset":1612368,"length":14016,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a4ac9f0e66812631"},"/en/6.1/ref/forms/validation/":{"offset":1612368,"length":14016,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a4ac9f0e66812631"},"/en/6.1/howto/custom-template-tags":{"offset":1626384,"length":27730,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b34c023687e33e16"},"/en/6.1/howto/custom-template-tags/":{"offset":1626384,"length":27730,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b34c023687e33e16"},"/en/6.1/topics/forms/media":{"offset":1654114,"length":13287,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7c6c9e4864685fed"},"/en/6.1/topics/forms/media/":{"offset":1654114,"length":13287,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7c6c9e4864685fed"},"/en/6.1/ref/forms/widgets":{"offset":1667401,"length":21941,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5ab7f11130de6842"},"/en/6.1/ref/forms/widgets/":{"offset":1667401,"length":21941,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5ab7f11130de6842"},"/en/6.1/ref/applications":{"offset":1689342,"length":16350,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"50edecd38f6fb83c"},"/en/6.1/ref/applications/":{"offset":1689342,"length":16350,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"50edecd38f6fb83c"},"/en/6.1/ref/templates/api":{"offset":1705692,"length":24137,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5256d22ea4177a6f"},"/en/6.1/ref/templates/api/":{"offset":1705692,"length":24137,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5256d22ea4177a6f"},"/en/6.1/topics/forms/formsets":{"offset":1729829,"length":20555,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"14627b9902e9d137"},"/en/6.1/topics/forms/formsets/":{"offset":1729829,"length":20555,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"14627b9902e9d137"},"/en/6.1/topics/forms/modelforms":{"offset":1750384,"length":26578,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bbcc7997592e1f16"},"/en/6.1/topics/forms/modelforms/":{"offset":1750384,"length":26578,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bbcc7997592e1f16"},"/en/6.1/ref/forms/fields":{"offset":1776962,"length":29807,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b44d13e8fae02b52"},"/en/6.1/ref/forms/fields/":{"offset":1776962,"length":29807,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b44d13e8fae02b52"},"/en/6.1/ref/forms/api":{"offset":1806769,"length":32964,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"36189ec3dc1913f8"},"/en/6.1/ref/forms/api/":{"offset":1806769,"length":32964,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"36189ec3dc1913f8"},"/en/6.1/ref/django-admin":{"offset":1839733,"length":40892,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9ea9dd25c5825e2b"},"/en/6.1/ref/django-admin/":{"offset":1839733,"length":40892,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9ea9dd25c5825e2b"},"/en/6.1/ref/settings":{"offset":1880625,"length":64711,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c55dd98fe1552b1a"},"/en/6.1/ref/settings/":{"offset":1880625,"length":64711,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c55dd98fe1552b1a"},"/en/6.1/topics/testing":{"offset":1945336,"length":7723,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"73ab8e1492b66156"},"/en/6.1/topics/testing/":{"offset":1945336,"length":7723,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"73ab8e1492b66156"},"/en/6.1/howto/custom-management-commands":{"offset":1953059,"length":14183,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7df88bc2b2555847"},"/en/6.1/howto/custom-management-commands/":{"offset":1953059,"length":14183,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7df88bc2b2555847"},"/en/6.1/howto/deployment":{"offset":1967242,"length":8056,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f857da26771ac9fb"},"/en/6.1/howto/deployment/":{"offset":1967242,"length":8056,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f857da26771ac9fb"},"/en/6.1/howto/static-files/deployment":{"offset":1975298,"length":9459,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1b9fecf02ff32ee8"},"/en/6.1/howto/static-files/deployment/":{"offset":1975298,"length":9459,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1b9fecf02ff32ee8"},"/en/6.1/howto/deployment/asgi":{"offset":1984757,"length":8266,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b4d388c8e498070d"},"/en/6.1/howto/deployment/asgi/":{"offset":1984757,"length":8266,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b4d388c8e498070d"},"/en/6.1/topics/testing/advanced":{"offset":1993023,"length":22186,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1a843d49b662d396"},"/en/6.1/topics/testing/advanced/":{"offset":1993023,"length":22186,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1a843d49b662d396"},"/en/6.1/howto/deployment/checklist":{"offset":2015209,"length":12300,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a4d1ab35270ccb0d"},"/en/6.1/howto/deployment/checklist/":{"offset":2015209,"length":12300,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a4d1ab35270ccb0d"},"/en/6.1/ref/contrib/admin/admindocs":{"offset":2027509,"length":9743,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3027e0d161d580fa"},"/en/6.1/ref/contrib/admin/admindocs/":{"offset":2027509,"length":9743,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3027e0d161d580fa"},"/en/6.1/topics/testing/overview":{"offset":2037252,"length":14500,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c4028c290d61e2ad"},"/en/6.1/topics/testing/overview/":{"offset":2037252,"length":14500,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c4028c290d61e2ad"},"/en/6.1/howto/deployment/wsgi":{"offset":2051752,"length":8523,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d6813c40069203f8"},"/en/6.1/howto/deployment/wsgi/":{"offset":2051752,"length":8523,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d6813c40069203f8"},"/en/6.1/ref/contrib/admin/actions":{"offset":2060275,"length":16609,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ff458b5efccedaed"},"/en/6.1/ref/contrib/admin/actions/":{"offset":2060275,"length":16609,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ff458b5efccedaed"},"/en/6.1/topics/security":{"offset":2076884,"length":15965,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dd9aee875e050b98"},"/en/6.1/topics/security/":{"offset":2076884,"length":15965,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dd9aee875e050b98"},"/en/6.1/howto/error-reporting":{"offset":2092849,"length":13505,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0614ff060e73fa06"},"/en/6.1/howto/error-reporting/":{"offset":2092849,"length":13505,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0614ff060e73fa06"},"/en/6.1/topics/testing/tools":{"offset":2106354,"length":43216,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"abc7fd0e9b222010"},"/en/6.1/topics/testing/tools/":{"offset":2106354,"length":43216,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"abc7fd0e9b222010"},"/en/6.1/releases/security":{"offset":2149570,"length":38697,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"397a0b66f925231e"},"/en/6.1/releases/security/":{"offset":2149570,"length":38697,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"397a0b66f925231e"},"/en/6.1/ref/contrib/admin":{"offset":2188267,"length":61301,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ec7e20ab80748b75"},"/en/6.1/ref/contrib/admin/":{"offset":2188267,"length":61301,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ec7e20ab80748b75"},"/en/6.1/ref/csrf":{"offset":2249568,"length":11843,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a9d5bf25cf113600"},"/en/6.1/ref/csrf/":{"offset":2249568,"length":11843,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a9d5bf25cf113600"},"/en/6.1/topics/signing":{"offset":2261411,"length":11659,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c2d484622bc8e244"},"/en/6.1/topics/signing/":{"offset":2261411,"length":11659,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c2d484622bc8e244"},"/en/6.1/ref/contrib/gis":{"offset":2273070,"length":8283,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0c1acf3e6702aca5"},"/en/6.1/ref/contrib/gis/":{"offset":2273070,"length":8283,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0c1acf3e6702aca5"},"/en/6.1/topics/i18n":{"offset":2281353,"length":8332,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f2ee3fdfff57a07c"},"/en/6.1/topics/i18n/":{"offset":2281353,"length":8332,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f2ee3fdfff57a07c"},"/en/6.1/ref/csp":{"offset":2289685,"length":12480,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cc04a6987da1dc40"},"/en/6.1/ref/csp/":{"offset":2289685,"length":12480,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cc04a6987da1dc40"},"/en/6.1/ref/clickjacking":{"offset":2302165,"length":8950,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8cd18e2e02db702f"},"/en/6.1/ref/clickjacking/":{"offset":2302165,"length":8950,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8cd18e2e02db702f"},"/en/6.1/topics/auth":{"offset":2311115,"length":8342,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ef52497297a2ad50"},"/en/6.1/topics/auth/":{"offset":2311115,"length":8342,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ef52497297a2ad50"},"/en/6.1/topics/i18n/timezones":{"offset":2319457,"length":18322,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9ef67396460a8bf8"},"/en/6.1/topics/i18n/timezones/":{"offset":2319457,"length":18322,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9ef67396460a8bf8"},"/en/6.1/topics/i18n/formatting":{"offset":2337779,"length":10128,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"102904df322785cc"},"/en/6.1/topics/i18n/formatting/":{"offset":2337779,"length":10128,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"102904df322785cc"},"/en/6.1/topics/performance":{"offset":2347907,"length":15399,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d6f7a81d13ddc5e2"},"/en/6.1/topics/performance/":{"offset":2347907,"length":15399,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d6f7a81d13ddc5e2"},"/en/6.1/topics/i18n/translation":{"offset":2363306,"length":41500,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f1cbac33d62d7d72"},"/en/6.1/topics/i18n/translation/":{"offset":2363306,"length":41500,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f1cbac33d62d7d72"},"/en/6.1/topics/auth/default":{"offset":2404806,"length":33756,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a3a7f269c3b6f5fc"},"/en/6.1/topics/auth/default/":{"offset":2404806,"length":33756,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a3a7f269c3b6f5fc"},"/en/6.1/topics/cache":{"offset":2438562,"length":30988,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"02b48b7ef30436f2"},"/en/6.1/topics/cache/":{"offset":2438562,"length":30988,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"02b48b7ef30436f2"},"/en/6.1/topics/auth/passwords":{"offset":2469550,"length":19922,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2b8d0f1f2961ae0d"},"/en/6.1/topics/auth/passwords/":{"offset":2469550,"length":19922,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2b8d0f1f2961ae0d"},"/en/6.1/ref/contrib/auth":{"offset":2489472,"length":18242,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7fd9cf70980c0707"},"/en/6.1/ref/contrib/auth/":{"offset":2489472,"length":18242,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7fd9cf70980c0707"},"/en/6.1/topics/auth/customizing":{"offset":2507714,"length":26671,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9db0ebf27a90f0c4"},"/en/6.1/topics/auth/customizing/":{"offset":2507714,"length":26671,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9db0ebf27a90f0c4"},"/en/6.1/topics/logging":{"offset":2534385,"length":13457,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"32bedb1ae76190a9"},"/en/6.1/topics/logging/":{"offset":2534385,"length":13457,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"32bedb1ae76190a9"},"/en/6.1/topics/tasks":{"offset":2547842,"length":13308,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e2922e2ce87443e2"},"/en/6.1/topics/tasks/":{"offset":2547842,"length":13308,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e2922e2ce87443e2"},"/en/6.1/topics/email":{"offset":2561150,"length":29517,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d3944fd50a5004b5"},"/en/6.1/topics/email/":{"offset":2561150,"length":29517,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d3944fd50a5004b5"},"/en/6.1/ref/contrib/syndication":{"offset":2590667,"length":20449,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3805665680f015f5"},"/en/6.1/ref/contrib/syndication/":{"offset":2590667,"length":20449,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3805665680f015f5"},"/en/6.1/topics/pagination":{"offset":2611116,"length":9313,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1377e63aef0a337d"},"/en/6.1/topics/pagination/":{"offset":2611116,"length":9313,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1377e63aef0a337d"},"/en/6.1/_images/admin01.png":{"offset":2620429,"length":6308,"mime":"image/png","gzipped":true,"hash":"36c5e26f518ab9b5"},"/en/6.1/_images/admin11t.png":{"offset":2626737,"length":6092,"mime":"image/png","gzipped":true,"hash":"4d01f7673beeee1c"},"/en/6.1/_images/admin08t.png":{"offset":2632829,"length":18714,"mime":"image/png","gzipped":true,"hash":"86a3da39a47f1a67"},"/en/6.1/_images/admin09.png":{"offset":2651543,"length":12069,"mime":"image/png","gzipped":true,"hash":"e0a9ccd7bae13271"},"/en/6.1/_images/admin12t.png":{"offset":2663612,"length":29096,"mime":"image/png","gzipped":true,"hash":"f9f6b13ff921a2c6"},"/en/6.1/_images/admin02.png":{"offset":2692708,"length":17940,"mime":"image/png","gzipped":true,"hash":"c7c4d268cef81f3a"},"/en/6.1/_images/admin07.png":{"offset":2710648,"length":16164,"mime":"image/png","gzipped":true,"hash":"c57daea33dd0a1d9"},"/en/6.1/_images/admin03t.png":{"offset":2726812,"length":14210,"mime":"image/png","gzipped":true,"hash":"0bc14e835e7bcc04"},"/en/6.1/_images/admin14t.png":{"offset":2741022,"length":35839,"mime":"image/png","gzipped":true,"hash":"46cf41e60a67e34d"},"/en/6.1/_images/admin04t.png":{"offset":2776861,"length":20638,"mime":"image/png","gzipped":true,"hash":"1fb3d419e35b917e"},"/en/6.1/_images/admin13t.png":{"offset":2797499,"length":39126,"mime":"image/png","gzipped":true,"hash":"7ab4492586f00d54"},"/en/6.1/_images/admin10t.png":{"offset":2836625,"length":51357,"mime":"image/png","gzipped":true,"hash":"47e41d852d71ac3b"},"/__docx_assets/472454d7cdfa21.css":{"offset":2887982,"length":24250,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"53a28ec03140b37f"},"/__docx_assets/65552070fc18ba.png":{"offset":2912232,"length":11099,"mime":"image/png","gzipped":true,"hash":"66baa0816c0594d1"},"/__docx_assets/c54f327e65e1e0.svg":{"offset":2923331,"length":298,"mime":"image/svg+xml","gzipped":true,"hash":"a8a4a972b8c57988"},"/__docx_assets/d0152040be72f1.ico":{"offset":2923629,"length":565,"mime":"image/x-icon","gzipped":true,"hash":"095f6f4629787c52"},"/__docx_assets/71ef485e7dcbb3.png":{"offset":2924194,"length":13724,"mime":"image/png","gzipped":true,"hash":"680f2a63918589e1"},"/__docx_assets/fff46eec0f4b8e.png":{"offset":2937918,"length":1651,"mime":"image/png","gzipped":true,"hash":"4df351abecf8646b"},"/__docx_assets/fb48222ff6bc31.png":{"offset":2939569,"length":18794,"mime":"image/png","gzipped":true,"hash":"f32c88a3f306dbf1"},"/__docx_assets/ebf4b15e9d5280.png":{"offset":2958363,"length":14464,"mime":"image/png","gzipped":true,"hash":"a3862d332e30847e"},"/en/6.1/_images/admin06t.png":{"offset":2972827,"length":6069,"mime":"image/png","gzipped":true,"hash":"f1b216df323dafc3"},"/en/6.1/_images/django_unittest_classes_hierarchy.svg":{"offset":2978896,"length":1991,"mime":"image/svg+xml","gzipped":true,"hash":"d37478c9ee75166d"},"/en/6.1/_images/postmortem.png":{"offset":2980887,"length":12391,"mime":"image/png","gzipped":true,"hash":"d20962eb538d7ace"},"/en/6.1/_images/raw_id_fields.png":{"offset":2993278,"length":3945,"mime":"image/png","gzipped":true,"hash":"79ab080340ea5d83"},"/en/6.1/_images/template-lines.png":{"offset":2997223,"length":14854,"mime":"image/png","gzipped":true,"hash":"d3e7f48dea5a753d"},"/en/6.1/_images/admin05t.png":{"offset":3012077,"length":40010,"mime":"image/png","gzipped":true,"hash":"604873a5353cc443"},"/en/6.1/_images/fieldsets.png":{"offset":3052087,"length":48983,"mime":"image/png","gzipped":true,"hash":"fbaeaca6ca49a3bf"},"/en/6.1/_images/admin-actions.png":{"offset":3101070,"length":54932,"mime":"image/png","gzipped":true,"hash":"7b3a94895f73bceb"},"/en/6.1/_images/adding-actions-to-the-modeladmin.png":{"offset":3156002,"length":75052,"mime":"image/png","gzipped":true,"hash":"448d2726761f946f"},"/en/6.1/_images/actions-as-modeladmin-methods.png":{"offset":3231054,"length":88486,"mime":"image/png","gzipped":true,"hash":"768341d6457dc59e"},"/__docx_assets/c879222b342260.svg":{"offset":3319540,"length":2285,"mime":"image/svg+xml","gzipped":true,"hash":"36533f127dadc510"},"/__docx_assets/6688045ec68386.svg":{"offset":3321825,"length":487,"mime":"image/svg+xml","gzipped":true,"hash":"524156cc38385e34"},"/__docx_assets/f8b636764201f7.svg":{"offset":3322312,"length":742,"mime":"image/svg+xml","gzipped":true,"hash":"bec899c688ee01ed"},"/__docx_assets/04afc11a2dd938.svg":{"offset":3323054,"length":1390,"mime":"image/svg+xml","gzipped":true,"hash":"cbb124d21f332e93"},"/__docx_assets/acf7684778c522.svg":{"offset":3324444,"length":2875,"mime":"image/svg+xml","gzipped":true,"hash":"ab83cc0a6077e8dc"},"/__docx_assets/7f3563f31ce773.svg":{"offset":3327319,"length":1843,"mime":"image/svg+xml","gzipped":true,"hash":"7c2d1c481e8620ac"},"/__docx_assets/7f5c22eb555136.svg":{"offset":3329162,"length":1703,"mime":"image/svg+xml","gzipped":true,"hash":"c37873df664a756c"},"/__docx_assets/f039c37e1db709.svg":{"offset":3330865,"length":1329,"mime":"image/svg+xml","gzipped":true,"hash":"44311568a60f8a63"},"/__docx_assets/f11e7b6d2d47bd.woff2":{"offset":3332194,"length":64906,"mime":"font/woff2","gzipped":true,"hash":"8b888ee1647ba5bf"},"/__docx_assets/a68da4d870184b.woff2":{"offset":3397100,"length":67643,"mime":"font/woff2","gzipped":true,"hash":"94fe987f52ef4f58"},"/__docx_assets/eaa7bcfc2ae432.woff2":{"offset":3464743,"length":69279,"mime":"font/woff2","gzipped":true,"hash":"aefaac32ee102ee3"},"/__docx_assets/576500af9f6e54.woff2":{"offset":3534022,"length":70403,"mime":"font/woff2","gzipped":true,"hash":"06f3c7f2fb315c93"},"/__docx_assets/71737ea7085f8c.woff":{"offset":3604425,"length":65467,"mime":"font/woff","gzipped":true,"hash":"c904931d2691b308"},"/__docx_assets/24ca7701e504f8.woff2":{"offset":3669892,"length":75202,"mime":"font/woff2","gzipped":true,"hash":"cee5566f9d6dfc6e"},"/__docx_assets/9a4480df342b56.woff2":{"offset":3745094,"length":67356,"mime":"font/woff2","gzipped":true,"hash":"0cfdd8a4bc2a984e"},"/__docx_assets/915a05f16bbf5d.woff2":{"offset":3812450,"length":73397,"mime":"font/woff2","gzipped":true,"hash":"a4886a341a3563dc"},"/docs":{"offset":0,"length":11285,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"37f913a77a9b4ad4"},"/":{"offset":0,"length":11285,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"37f913a77a9b4ad4"}}}
+{
+  "id": "django",
+  "name": "Django",
+  "version": "v6.1",
+  "commit": "e542a62e",
+  "origin": "https://docs.djangoproject.com",
+  "entryPath": "/en/6.1/",
+  "updatedAt": "2026-10-11T10:38:48.030Z",
+  "totalBytes": 3744332,
+  "chunkCount": 196,
+  "routes": {
+    "/en/6.1": {
+      "offset": 0,
+      "length": 10349,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb95339750fa22e2"
+    },
+    "/en/6.1/": {
+      "offset": 0,
+      "length": 10349,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb95339750fa22e2"
+    },
+    "/en/5.1": {
+      "offset": 10349,
+      "length": 10393,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ff232a974bc4ef44"
+    },
+    "/en/5.1/": {
+      "offset": 10349,
+      "length": 10393,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ff232a974bc4ef44"
+    },
+    "/en/5.2": {
+      "offset": 20742,
+      "length": 10324,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5b617b6724dd8a5d"
+    },
+    "/en/5.2/": {
+      "offset": 20742,
+      "length": 10324,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5b617b6724dd8a5d"
+    },
+    "/en/dev": {
+      "offset": 31066,
+      "length": 9758,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bba6b548937ad8ae"
+    },
+    "/en/dev/": {
+      "offset": 31066,
+      "length": 9758,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bba6b548937ad8ae"
+    },
+    "/en/5.0": {
+      "offset": 40824,
+      "length": 10395,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "06b51d1a16515d88"
+    },
+    "/en/5.0/": {
+      "offset": 40824,
+      "length": 10395,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "06b51d1a16515d88"
+    },
+    "/en/3.2": {
+      "offset": 51219,
+      "length": 10374,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8ab2b69035fc06dd"
+    },
+    "/en/3.2/": {
+      "offset": 51219,
+      "length": 10374,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8ab2b69035fc06dd"
+    },
+    "/en/2.1": {
+      "offset": 61593,
+      "length": 10344,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "217cf8130643badc"
+    },
+    "/en/2.1/": {
+      "offset": 61593,
+      "length": 10344,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "217cf8130643badc"
+    },
+    "/en/4.1": {
+      "offset": 71937,
+      "length": 10357,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ad53bfc2ade8eab7"
+    },
+    "/en/4.1/": {
+      "offset": 71937,
+      "length": 10357,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ad53bfc2ade8eab7"
+    },
+    "/en/6.0": {
+      "offset": 82294,
+      "length": 10350,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f6b6200573c4c70f"
+    },
+    "/en/6.0/": {
+      "offset": 82294,
+      "length": 10350,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f6b6200573c4c70f"
+    },
+    "/en/6.1/faq/help": {
+      "offset": 92644,
+      "length": 7154,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "818d6325c47c614e"
+    },
+    "/en/6.1/faq/help/": {
+      "offset": 92644,
+      "length": 7154,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "818d6325c47c614e"
+    },
+    "/en/3.1": {
+      "offset": 99798,
+      "length": 10336,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1db2b1d89f1e5b7d"
+    },
+    "/en/3.1/": {
+      "offset": 99798,
+      "length": 10336,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1db2b1d89f1e5b7d"
+    },
+    "/en/1.11": {
+      "offset": 110134,
+      "length": 10496,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b8095fab90e7b787"
+    },
+    "/en/1.11/": {
+      "offset": 110134,
+      "length": 10496,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b8095fab90e7b787"
+    },
+    "/en/4.0": {
+      "offset": 120630,
+      "length": 10359,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bb1b17ab3b4f9b20"
+    },
+    "/en/4.0/": {
+      "offset": 120630,
+      "length": 10359,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bb1b17ab3b4f9b20"
+    },
+    "/en/2.2": {
+      "offset": 130989,
+      "length": 10371,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "55613f23639534bd"
+    },
+    "/en/2.2/": {
+      "offset": 130989,
+      "length": 10371,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "55613f23639534bd"
+    },
+    "/en/2.0": {
+      "offset": 141360,
+      "length": 10406,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d4bf3a5d63dfd493"
+    },
+    "/en/2.0/": {
+      "offset": 141360,
+      "length": 10406,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d4bf3a5d63dfd493"
+    },
+    "/en/3.0": {
+      "offset": 151766,
+      "length": 10334,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "01d6de8a3135ae49"
+    },
+    "/en/3.0/": {
+      "offset": 151766,
+      "length": 10334,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "01d6de8a3135ae49"
+    },
+    "/en/4.2": {
+      "offset": 162100,
+      "length": 10396,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "363d78072adc01b9"
+    },
+    "/en/4.2/": {
+      "offset": 162100,
+      "length": 10396,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "363d78072adc01b9"
+    },
+    "/en/6.1/intro/install": {
+      "offset": 172496,
+      "length": 7363,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "38f6e560c82c762b"
+    },
+    "/en/6.1/intro/install/": {
+      "offset": 172496,
+      "length": 7363,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "38f6e560c82c762b"
+    },
+    "/en/6.1/intro/tutorial01": {
+      "offset": 179859,
+      "length": 11307,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2fb14d05f0af7ed9"
+    },
+    "/en/6.1/intro/tutorial01/": {
+      "offset": 179859,
+      "length": 11307,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2fb14d05f0af7ed9"
+    },
+    "/en/6.1/intro/reusable-apps": {
+      "offset": 191166,
+      "length": 12312,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "588a50c5f2c6f82a"
+    },
+    "/en/6.1/intro/reusable-apps/": {
+      "offset": 191166,
+      "length": 12312,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "588a50c5f2c6f82a"
+    },
+    "/en/6.1/faq": {
+      "offset": 203478,
+      "length": 8555,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "44b7887e4b59e9e5"
+    },
+    "/en/6.1/faq/": {
+      "offset": 203478,
+      "length": 8555,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "44b7887e4b59e9e5"
+    },
+    "/en/6.1/intro/tutorial07": {
+      "offset": 212033,
+      "length": 13350,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a9f08a585a8949df"
+    },
+    "/en/6.1/intro/tutorial07/": {
+      "offset": 212033,
+      "length": 13350,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a9f08a585a8949df"
+    },
+    "/en/6.1/intro/tutorial02": {
+      "offset": 225383,
+      "length": 16768,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fa488064320402a1"
+    },
+    "/en/6.1/intro/tutorial02/": {
+      "offset": 225383,
+      "length": 16768,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fa488064320402a1"
+    },
+    "/en/6.1/intro/tutorial03": {
+      "offset": 242151,
+      "length": 13979,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9ed658ad4da2e000"
+    },
+    "/en/6.1/intro/tutorial03/": {
+      "offset": 242151,
+      "length": 13979,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9ed658ad4da2e000"
+    },
+    "/en/6.1/intro/overview": {
+      "offset": 256130,
+      "length": 12460,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6445d57c23a83c2f"
+    },
+    "/en/6.1/intro/overview/": {
+      "offset": 256130,
+      "length": 12460,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6445d57c23a83c2f"
+    },
+    "/en/6.1/intro/tutorial04": {
+      "offset": 268590,
+      "length": 12540,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "328f6e4948e88075"
+    },
+    "/en/6.1/intro/tutorial04/": {
+      "offset": 268590,
+      "length": 12540,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "328f6e4948e88075"
+    },
+    "/en/6.1/intro/tutorial05": {
+      "offset": 281130,
+      "length": 18409,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dd6ae218f14311ec"
+    },
+    "/en/6.1/intro/tutorial05/": {
+      "offset": 281130,
+      "length": 18409,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dd6ae218f14311ec"
+    },
+    "/en/6.1/intro/tutorial08": {
+      "offset": 299539,
+      "length": 8138,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b9f19f7a42060c00"
+    },
+    "/en/6.1/intro/tutorial08/": {
+      "offset": 299539,
+      "length": 8138,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b9f19f7a42060c00"
+    },
+    "/en/1.10": {
+      "offset": 307677,
+      "length": 10479,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4108ebbcd27dc5e8"
+    },
+    "/en/1.10/": {
+      "offset": 307677,
+      "length": 10479,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4108ebbcd27dc5e8"
+    },
+    "/en/6.1/intro/tutorial06": {
+      "offset": 318156,
+      "length": 8788,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "000c0d0042c7ca1d"
+    },
+    "/en/6.1/intro/tutorial06/": {
+      "offset": 318156,
+      "length": 8788,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "000c0d0042c7ca1d"
+    },
+    "/en/1.9": {
+      "offset": 326944,
+      "length": 10440,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "27bf32f36ffc6358"
+    },
+    "/en/1.9/": {
+      "offset": 326944,
+      "length": 10440,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "27bf32f36ffc6358"
+    },
+    "/en/1.8": {
+      "offset": 337384,
+      "length": 9895,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4d09e557c72cb4d4"
+    },
+    "/en/1.8/": {
+      "offset": 337384,
+      "length": 9895,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4d09e557c72cb4d4"
+    },
+    "/en/6.1/intro/contributing": {
+      "offset": 347279,
+      "length": 16747,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8c34e9005ba85c7d"
+    },
+    "/en/6.1/intro/contributing/": {
+      "offset": 347279,
+      "length": 16747,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8c34e9005ba85c7d"
+    },
+    "/en/6.1/ref/models/class": {
+      "offset": 364026,
+      "length": 7378,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "281c3e736e89748f"
+    },
+    "/en/6.1/ref/models/class/": {
+      "offset": 364026,
+      "length": 7378,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "281c3e736e89748f"
+    },
+    "/en/6.1/ref": {
+      "offset": 371404,
+      "length": 6385,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0f8aedf6df0ddeec"
+    },
+    "/en/6.1/ref/": {
+      "offset": 371404,
+      "length": 6385,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0f8aedf6df0ddeec"
+    },
+    "/en/6.1/intro": {
+      "offset": 377789,
+      "length": 6467,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5aedeb8c7fd5d4b2"
+    },
+    "/en/6.1/intro/": {
+      "offset": 377789,
+      "length": 6467,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5aedeb8c7fd5d4b2"
+    },
+    "/en/6.1/py-modindex": {
+      "offset": 384256,
+      "length": 9366,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "885a2296d2c4a9ba"
+    },
+    "/en/6.1/py-modindex/": {
+      "offset": 384256,
+      "length": 9366,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "885a2296d2c4a9ba"
+    },
+    "/en/6.1/topics": {
+      "offset": 393622,
+      "length": 9286,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b540742c69962799"
+    },
+    "/en/6.1/topics/": {
+      "offset": 393622,
+      "length": 9286,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b540742c69962799"
+    },
+    "/en/6.1/ref/models/options": {
+      "offset": 402908,
+      "length": 14543,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4dd5cf8d551bb130"
+    },
+    "/en/6.1/ref/models/options/": {
+      "offset": 402908,
+      "length": 14543,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4dd5cf8d551bb130"
+    },
+    "/en/6.1/contents": {
+      "offset": 417451,
+      "length": 19279,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "564ade958bc70667"
+    },
+    "/en/6.1/contents/": {
+      "offset": 417451,
+      "length": 19279,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "564ade958bc70667"
+    },
+    "/en/6.1/ref/models/instances": {
+      "offset": 436730,
+      "length": 24233,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5c8ca7f988c2b54e"
+    },
+    "/en/6.1/ref/models/instances/": {
+      "offset": 436730,
+      "length": 24233,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5c8ca7f988c2b54e"
+    },
+    "/en/6.1/topics/db/models": {
+      "offset": 460963,
+      "length": 30324,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d8797325da1937dc"
+    },
+    "/en/6.1/topics/db/models/": {
+      "offset": 460963,
+      "length": 30324,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d8797325da1937dc"
+    },
+    "/en/6.1/howto": {
+      "offset": 491287,
+      "length": 6802,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e012d428fa703a00"
+    },
+    "/en/6.1/howto/": {
+      "offset": 491287,
+      "length": 6802,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e012d428fa703a00"
+    },
+    "/en/6.1/topics/db/queries": {
+      "offset": 498089,
+      "length": 37616,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "11a61f63ce71fbe2"
+    },
+    "/en/6.1/topics/db/queries/": {
+      "offset": 498089,
+      "length": 37616,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "11a61f63ce71fbe2"
+    },
+    "/en/6.1/ref/models/fields": {
+      "offset": 535705,
+      "length": 50437,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7f4594c7f1ae5e9e"
+    },
+    "/en/6.1/ref/models/fields/": {
+      "offset": 535705,
+      "length": 50437,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7f4594c7f1ae5e9e"
+    },
+    "/en/6.1/genindex": {
+      "offset": 586142,
+      "length": 87694,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "55a036fcfa80a123"
+    },
+    "/en/6.1/genindex/": {
+      "offset": 586142,
+      "length": 87694,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "55a036fcfa80a123"
+    },
+    "/en/6.1/ref/models/querysets": {
+      "offset": 673836,
+      "length": 70128,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cfd09f04f1ee42b8"
+    },
+    "/en/6.1/ref/models/querysets/": {
+      "offset": 673836,
+      "length": 70128,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cfd09f04f1ee42b8"
+    },
+    "/en/6.1/ref/models/lookups": {
+      "offset": 743964,
+      "length": 10352,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0c035d0022575f63"
+    },
+    "/en/6.1/ref/models/lookups/": {
+      "offset": 743964,
+      "length": 10352,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0c035d0022575f63"
+    },
+    "/en/6.1/ref/models/indexes": {
+      "offset": 754316,
+      "length": 9820,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "959499429dcdee40"
+    },
+    "/en/6.1/ref/models/indexes/": {
+      "offset": 754316,
+      "length": 9820,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "959499429dcdee40"
+    },
+    "/en/6.1/ref/models/relations": {
+      "offset": 764136,
+      "length": 9558,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0c3644eabc356dd6"
+    },
+    "/en/6.1/ref/models/relations/": {
+      "offset": 764136,
+      "length": 9558,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0c3644eabc356dd6"
+    },
+    "/en/6.1/ref/models/expressions": {
+      "offset": 773694,
+      "length": 29845,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1dab110bc631f5c0"
+    },
+    "/en/6.1/ref/models/expressions/": {
+      "offset": 773694,
+      "length": 29845,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1dab110bc631f5c0"
+    },
+    "/en/6.1/topics/db/search": {
+      "offset": 803539,
+      "length": 8799,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "52f43e2505ae80be"
+    },
+    "/en/6.1/topics/db/search/": {
+      "offset": 803539,
+      "length": 8799,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "52f43e2505ae80be"
+    },
+    "/en/6.1/topics/db/multi-db": {
+      "offset": 812338,
+      "length": 18275,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8b19043d20b8c8bc"
+    },
+    "/en/6.1/topics/db/multi-db/": {
+      "offset": 812338,
+      "length": 18275,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8b19043d20b8c8bc"
+    },
+    "/en/6.1/howto/writing-migrations": {
+      "offset": 830613,
+      "length": 12162,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ac2e22e3c65bba53"
+    },
+    "/en/6.1/howto/writing-migrations/": {
+      "offset": 830613,
+      "length": 12162,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ac2e22e3c65bba53"
+    },
+    "/en/6.1/ref/models/database-functions": {
+      "offset": 842775,
+      "length": 29105,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eefcf14ba262aa62"
+    },
+    "/en/6.1/ref/models/database-functions/": {
+      "offset": 842775,
+      "length": 29105,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eefcf14ba262aa62"
+    },
+    "/en/6.1/topics/db/aggregation": {
+      "offset": 871880,
+      "length": 16940,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a267d849ccf9b5c0"
+    },
+    "/en/6.1/topics/db/aggregation/": {
+      "offset": 871880,
+      "length": 16940,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a267d849ccf9b5c0"
+    },
+    "/en/6.1/topics/db/sql": {
+      "offset": 888820,
+      "length": 13089,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1e26d36837dd3112"
+    },
+    "/en/6.1/topics/db/sql/": {
+      "offset": 888820,
+      "length": 13089,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1e26d36837dd3112"
+    },
+    "/en/6.1/topics/migrations": {
+      "offset": 901909,
+      "length": 24047,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2e44c22c3202a5d8"
+    },
+    "/en/6.1/topics/migrations/": {
+      "offset": 901909,
+      "length": 24047,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2e44c22c3202a5d8"
+    },
+    "/en/6.1/topics/db/managers": {
+      "offset": 925956,
+      "length": 12952,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "242558074ffb9197"
+    },
+    "/en/6.1/topics/db/managers/": {
+      "offset": 925956,
+      "length": 12952,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "242558074ffb9197"
+    },
+    "/en/6.1/ref/migration-operations": {
+      "offset": 938908,
+      "length": 17233,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8d62d52198bfacd9"
+    },
+    "/en/6.1/ref/migration-operations/": {
+      "offset": 938908,
+      "length": 17233,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8d62d52198bfacd9"
+    },
+    "/en/6.1/topics/db/transactions": {
+      "offset": 956141,
+      "length": 17971,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "515fc40dcdf61cb9"
+    },
+    "/en/6.1/topics/db/transactions/": {
+      "offset": 956141,
+      "length": 17971,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "515fc40dcdf61cb9"
+    },
+    "/en/6.1/howto/custom-model-fields": {
+      "offset": 974112,
+      "length": 20280,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "178ebc70dc87db35"
+    },
+    "/en/6.1/howto/custom-model-fields/": {
+      "offset": 974112,
+      "length": 20280,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "178ebc70dc87db35"
+    },
+    "/en/6.1/ref/models/conditional-expressions": {
+      "offset": 994392,
+      "length": 10653,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "585d947d6c21cb57"
+    },
+    "/en/6.1/ref/models/conditional-expressions/": {
+      "offset": 994392,
+      "length": 10653,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "585d947d6c21cb57"
+    },
+    "/en/6.1/ref/schema-editor": {
+      "offset": 1005045,
+      "length": 9669,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5331213afa0e279b"
+    },
+    "/en/6.1/ref/schema-editor/": {
+      "offset": 1005045,
+      "length": 9669,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5331213afa0e279b"
+    },
+    "/en/6.1/howto/custom-lookups": {
+      "offset": 1014714,
+      "length": 12165,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1eced2a62dcd8e30"
+    },
+    "/en/6.1/howto/custom-lookups/": {
+      "offset": 1014714,
+      "length": 12165,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1eced2a62dcd8e30"
+    },
+    "/en/6.1/ref/files/storage": {
+      "offset": 1026879,
+      "length": 10655,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "980753d57930a676"
+    },
+    "/en/6.1/ref/files/storage/": {
+      "offset": 1026879,
+      "length": 10655,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "980753d57930a676"
+    },
+    "/en/6.1/topics/http/views": {
+      "offset": 1037534,
+      "length": 10197,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ca272d687c71f2cb"
+    },
+    "/en/6.1/topics/http/views/": {
+      "offset": 1037534,
+      "length": 10197,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ca272d687c71f2cb"
+    },
+    "/en/6.1/topics/http/file-uploads": {
+      "offset": 1047731,
+      "length": 11809,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3d463884911eae2d"
+    },
+    "/en/6.1/topics/http/file-uploads/": {
+      "offset": 1047731,
+      "length": 11809,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3d463884911eae2d"
+    },
+    "/en/6.1/ref/files/file": {
+      "offset": 1059540,
+      "length": 8924,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "42796c9fe5334a06"
+    },
+    "/en/6.1/ref/files/file/": {
+      "offset": 1059540,
+      "length": 8924,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "42796c9fe5334a06"
+    },
+    "/en/6.1/topics/db/optimization": {
+      "offset": 1068464,
+      "length": 14656,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "31516cd59c1bea2c"
+    },
+    "/en/6.1/topics/db/optimization/": {
+      "offset": 1068464,
+      "length": 14656,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "31516cd59c1bea2c"
+    },
+    "/en/6.1/howto/initial-data": {
+      "offset": 1083120,
+      "length": 7922,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c2669e364d58db59"
+    },
+    "/en/6.1/howto/initial-data/": {
+      "offset": 1083120,
+      "length": 7922,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c2669e364d58db59"
+    },
+    "/en/6.1/topics/async": {
+      "offset": 1091042,
+      "length": 14328,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8ba2c25aaf0078a6"
+    },
+    "/en/6.1/topics/async/": {
+      "offset": 1091042,
+      "length": 14328,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8ba2c25aaf0078a6"
+    },
+    "/en/6.1/topics/http/decorators": {
+      "offset": 1105370,
+      "length": 8539,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "436056f543e76533"
+    },
+    "/en/6.1/topics/http/decorators/": {
+      "offset": 1105370,
+      "length": 8539,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "436056f543e76533"
+    },
+    "/en/6.1/topics/http/shortcuts": {
+      "offset": 1113909,
+      "length": 11386,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "54d62f31182caf70"
+    },
+    "/en/6.1/topics/http/shortcuts/": {
+      "offset": 1113909,
+      "length": 11386,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "54d62f31182caf70"
+    },
+    "/en/6.1/ref/views": {
+      "offset": 1125295,
+      "length": 9299,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "120f45653784d94c"
+    },
+    "/en/6.1/ref/views/": {
+      "offset": 1125295,
+      "length": 9299,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "120f45653784d94c"
+    },
+    "/en/6.1/topics/http/urls": {
+      "offset": 1134594,
+      "length": 19790,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2328b21a8e499cd5"
+    },
+    "/en/6.1/topics/http/urls/": {
+      "offset": 1134594,
+      "length": 19790,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2328b21a8e499cd5"
+    },
+    "/en/6.1/ref/request-response": {
+      "offset": 1154384,
+      "length": 30995,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "61b00557ddcc60a0"
+    },
+    "/en/6.1/ref/request-response/": {
+      "offset": 1154384,
+      "length": 30995,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "61b00557ddcc60a0"
+    },
+    "/en/6.1/ref/databases": {
+      "offset": 1185379,
+      "length": 27727,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ddbedf8d464a610e"
+    },
+    "/en/6.1/ref/databases/": {
+      "offset": 1185379,
+      "length": 27727,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ddbedf8d464a610e"
+    },
+    "/en/6.1/howto/legacy-databases": {
+      "offset": 1213106,
+      "length": 7616,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c8f102492bdc4827"
+    },
+    "/en/6.1/howto/legacy-databases/": {
+      "offset": 1213106,
+      "length": 7616,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c8f102492bdc4827"
+    },
+    "/en/6.1/ref/template-response": {
+      "offset": 1220722,
+      "length": 10415,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3cf6c65b1491988d"
+    },
+    "/en/6.1/ref/template-response/": {
+      "offset": 1220722,
+      "length": 10415,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3cf6c65b1491988d"
+    },
+    "/en/6.1/ref/contrib/postgres": {
+      "offset": 1231137,
+      "length": 7483,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "08c76f6ba1619f24"
+    },
+    "/en/6.1/ref/contrib/postgres/": {
+      "offset": 1231137,
+      "length": 7483,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "08c76f6ba1619f24"
+    },
+    "/en/6.1/topics/files": {
+      "offset": 1238620,
+      "length": 10519,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "709deec69005fb74"
+    },
+    "/en/6.1/topics/files/": {
+      "offset": 1238620,
+      "length": 10519,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "709deec69005fb74"
+    },
+    "/en/6.1/howto/custom-file-storage": {
+      "offset": 1249139,
+      "length": 8937,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9bc8a713e4c03bb2"
+    },
+    "/en/6.1/howto/custom-file-storage/": {
+      "offset": 1249139,
+      "length": 8937,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9bc8a713e4c03bb2"
+    },
+    "/en/6.1/topics/templates": {
+      "offset": 1258076,
+      "length": 16721,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "01e3b46175e3b233"
+    },
+    "/en/6.1/topics/templates/": {
+      "offset": 1258076,
+      "length": 16721,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "01e3b46175e3b233"
+    },
+    "/en/6.1/ref/templates/language": {
+      "offset": 1274797,
+      "length": 19174,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2102a4ac00cf52a1"
+    },
+    "/en/6.1/ref/templates/language/": {
+      "offset": 1274797,
+      "length": 19174,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2102a4ac00cf52a1"
+    },
+    "/en/6.1/howto/outputting-pdf": {
+      "offset": 1293971,
+      "length": 8400,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b6b9982d8859b947"
+    },
+    "/en/6.1/howto/outputting-pdf/": {
+      "offset": 1293971,
+      "length": 8400,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b6b9982d8859b947"
+    },
+    "/en/6.1/ref/templates/builtins": {
+      "offset": 1302371,
+      "length": 43828,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8f90039b88b22ede"
+    },
+    "/en/6.1/ref/templates/builtins/": {
+      "offset": 1302371,
+      "length": 43828,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8f90039b88b22ede"
+    },
+    "/en/6.1/ref/middleware": {
+      "offset": 1346199,
+      "length": 17699,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6a588faef44661be"
+    },
+    "/en/6.1/ref/middleware/": {
+      "offset": 1346199,
+      "length": 17699,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6a588faef44661be"
+    },
+    "/en/6.1/topics/http/middleware": {
+      "offset": 1363898,
+      "length": 13897,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c8c51a35c70bb0e2"
+    },
+    "/en/6.1/topics/http/middleware/": {
+      "offset": 1363898,
+      "length": 13897,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c8c51a35c70bb0e2"
+    },
+    "/en/6.1/ref/class-based-views": {
+      "offset": 1377795,
+      "length": 7987,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "408f1f6f84c2d9b1"
+    },
+    "/en/6.1/ref/class-based-views/": {
+      "offset": 1377795,
+      "length": 7987,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "408f1f6f84c2d9b1"
+    },
+    "/en/6.1/topics/class-based-views": {
+      "offset": 1385782,
+      "length": 9020,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6be47138bacedca7"
+    },
+    "/en/6.1/topics/class-based-views/": {
+      "offset": 1385782,
+      "length": 9020,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6be47138bacedca7"
+    },
+    "/en/6.1/ref/contrib/humanize": {
+      "offset": 1394802,
+      "length": 7882,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9534cbb75696a1f8"
+    },
+    "/en/6.1/ref/contrib/humanize/": {
+      "offset": 1394802,
+      "length": 7882,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9534cbb75696a1f8"
+    },
+    "/en/6.1/howto/outputting-csv": {
+      "offset": 1402684,
+      "length": 9233,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a0d3db07b2f143c9"
+    },
+    "/en/6.1/howto/outputting-csv/": {
+      "offset": 1402684,
+      "length": 9233,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a0d3db07b2f143c9"
+    },
+    "/en/6.1/topics/class-based-views/generic-editing": {
+      "offset": 1411917,
+      "length": 10670,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "15b8488250c8010b"
+    },
+    "/en/6.1/topics/class-based-views/generic-editing/": {
+      "offset": 1411917,
+      "length": 10670,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "15b8488250c8010b"
+    },
+    "/en/6.1/ref/class-based-views/flattened-index": {
+      "offset": 1422587,
+      "length": 11561,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f0336f1ed5d6a16b"
+    },
+    "/en/6.1/ref/class-based-views/flattened-index/": {
+      "offset": 1422587,
+      "length": 11561,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f0336f1ed5d6a16b"
+    },
+    "/en/6.1/topics/class-based-views/mixins": {
+      "offset": 1434148,
+      "length": 17433,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "01299ab68df5315d"
+    },
+    "/en/6.1/topics/class-based-views/mixins/": {
+      "offset": 1434148,
+      "length": 17433,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "01299ab68df5315d"
+    },
+    "/en/6.1/topics/class-based-views/generic-display": {
+      "offset": 1451581,
+      "length": 12869,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4f7f0f2526839235"
+    },
+    "/en/6.1/topics/class-based-views/generic-display/": {
+      "offset": 1451581,
+      "length": 12869,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4f7f0f2526839235"
+    },
+    "/en/6.1/topics/forms": {
+      "offset": 1464450,
+      "length": 20935,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9f694b1b5a12168d"
+    },
+    "/en/6.1/topics/forms/": {
+      "offset": 1464450,
+      "length": 20935,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9f694b1b5a12168d"
+    },
+    "/en/6.1/ref/exceptions": {
+      "offset": 1485385,
+      "length": 11893,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "49b48c88d01ece8d"
+    },
+    "/en/6.1/ref/exceptions/": {
+      "offset": 1485385,
+      "length": 11893,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "49b48c88d01ece8d"
+    },
+    "/en/6.1/ref/forms/validation": {
+      "offset": 1497278,
+      "length": 13063,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c1895b64a3c014d0"
+    },
+    "/en/6.1/ref/forms/validation/": {
+      "offset": 1497278,
+      "length": 13063,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c1895b64a3c014d0"
+    },
+    "/en/6.1/topics/forms/media": {
+      "offset": 1510341,
+      "length": 12343,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "345b77979f94e4aa"
+    },
+    "/en/6.1/topics/forms/media/": {
+      "offset": 1510341,
+      "length": 12343,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "345b77979f94e4aa"
+    },
+    "/en/6.1/howto/custom-template-tags": {
+      "offset": 1522684,
+      "length": 26768,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "63f8f520a3bad27d"
+    },
+    "/en/6.1/howto/custom-template-tags/": {
+      "offset": 1522684,
+      "length": 26768,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "63f8f520a3bad27d"
+    },
+    "/en/6.1/topics/settings": {
+      "offset": 1549452,
+      "length": 11119,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b80764c4a74cbdf8"
+    },
+    "/en/6.1/topics/settings/": {
+      "offset": 1549452,
+      "length": 11119,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b80764c4a74cbdf8"
+    },
+    "/en/6.1/ref/templates/api": {
+      "offset": 1560571,
+      "length": 23180,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dc205041053f38fa"
+    },
+    "/en/6.1/ref/templates/api/": {
+      "offset": 1560571,
+      "length": 23180,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dc205041053f38fa"
+    },
+    "/en/6.1/ref/forms/fields": {
+      "offset": 1583751,
+      "length": 28847,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "65d1176bf3483ac3"
+    },
+    "/en/6.1/ref/forms/fields/": {
+      "offset": 1583751,
+      "length": 28847,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "65d1176bf3483ac3"
+    },
+    "/en/6.1/ref/django-admin": {
+      "offset": 1612598,
+      "length": 39949,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9285fe60709e1e3f"
+    },
+    "/en/6.1/ref/django-admin/": {
+      "offset": 1612598,
+      "length": 39949,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9285fe60709e1e3f"
+    },
+    "/en/6.1/ref/forms/widgets": {
+      "offset": 1652547,
+      "length": 20989,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "629369d4616cefcb"
+    },
+    "/en/6.1/ref/forms/widgets/": {
+      "offset": 1652547,
+      "length": 20989,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "629369d4616cefcb"
+    },
+    "/en/6.1/ref/applications": {
+      "offset": 1673536,
+      "length": 15399,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bdbd9cf9e8365df4"
+    },
+    "/en/6.1/ref/applications/": {
+      "offset": 1673536,
+      "length": 15399,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bdbd9cf9e8365df4"
+    },
+    "/en/6.1/ref/settings": {
+      "offset": 1688935,
+      "length": 63794,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b54ba0c4fdc7539f"
+    },
+    "/en/6.1/ref/settings/": {
+      "offset": 1688935,
+      "length": 63794,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b54ba0c4fdc7539f"
+    },
+    "/en/6.1/topics/forms/modelforms": {
+      "offset": 1752729,
+      "length": 25619,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "10213484b04dd184"
+    },
+    "/en/6.1/topics/forms/modelforms/": {
+      "offset": 1752729,
+      "length": 25619,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "10213484b04dd184"
+    },
+    "/en/6.1/howto/custom-template-backend": {
+      "offset": 1778348,
+      "length": 8691,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "35fcc5dcd6621d69"
+    },
+    "/en/6.1/howto/custom-template-backend/": {
+      "offset": 1778348,
+      "length": 8691,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "35fcc5dcd6621d69"
+    },
+    "/en/6.1/topics/forms/formsets": {
+      "offset": 1787039,
+      "length": 19598,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "89bf52126bbd7acc"
+    },
+    "/en/6.1/topics/forms/formsets/": {
+      "offset": 1787039,
+      "length": 19598,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "89bf52126bbd7acc"
+    },
+    "/en/6.1/ref/forms/api": {
+      "offset": 1806637,
+      "length": 32046,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e9655b7a1a0068b5"
+    },
+    "/en/6.1/ref/forms/api/": {
+      "offset": 1806637,
+      "length": 32046,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e9655b7a1a0068b5"
+    },
+    "/en/6.1/howto/deployment/wsgi": {
+      "offset": 1838683,
+      "length": 7597,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b682eb532614dea0"
+    },
+    "/en/6.1/howto/deployment/wsgi/": {
+      "offset": 1838683,
+      "length": 7597,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b682eb532614dea0"
+    },
+    "/en/6.1/howto/deployment/asgi": {
+      "offset": 1846280,
+      "length": 7335,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c70bc985bdf05c02"
+    },
+    "/en/6.1/howto/deployment/asgi/": {
+      "offset": 1846280,
+      "length": 7335,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c70bc985bdf05c02"
+    },
+    "/en/6.1/howto/custom-management-commands": {
+      "offset": 1853615,
+      "length": 13244,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "424d2478faa69c9b"
+    },
+    "/en/6.1/howto/custom-management-commands/": {
+      "offset": 1853615,
+      "length": 13244,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "424d2478faa69c9b"
+    },
+    "/en/6.1/topics/testing/advanced": {
+      "offset": 1866859,
+      "length": 21236,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "067b29d7ab6dd1d1"
+    },
+    "/en/6.1/topics/testing/advanced/": {
+      "offset": 1866859,
+      "length": 21236,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "067b29d7ab6dd1d1"
+    },
+    "/en/6.1/howto/deployment": {
+      "offset": 1888095,
+      "length": 7122,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3be5313fe929f22c"
+    },
+    "/en/6.1/howto/deployment/": {
+      "offset": 1888095,
+      "length": 7122,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3be5313fe929f22c"
+    },
+    "/en/6.1/howto/static-files/deployment": {
+      "offset": 1895217,
+      "length": 8522,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dd50ac9a89885059"
+    },
+    "/en/6.1/howto/static-files/deployment/": {
+      "offset": 1895217,
+      "length": 8522,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dd50ac9a89885059"
+    },
+    "/en/6.1/releases/security": {
+      "offset": 1903739,
+      "length": 37709,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8a7d1116d4635642"
+    },
+    "/en/6.1/releases/security/": {
+      "offset": 1903739,
+      "length": 37709,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8a7d1116d4635642"
+    },
+    "/en/6.1/topics/testing": {
+      "offset": 1941448,
+      "length": 6790,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ce4f933197ef02c0"
+    },
+    "/en/6.1/topics/testing/": {
+      "offset": 1941448,
+      "length": 6790,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ce4f933197ef02c0"
+    },
+    "/en/6.1/howto/error-reporting": {
+      "offset": 1948238,
+      "length": 12566,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "597b1459c22d6d7b"
+    },
+    "/en/6.1/howto/error-reporting/": {
+      "offset": 1948238,
+      "length": 12566,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "597b1459c22d6d7b"
+    },
+    "/en/6.1/topics/security": {
+      "offset": 1960804,
+      "length": 15032,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e8bf66173e24840e"
+    },
+    "/en/6.1/topics/security/": {
+      "offset": 1960804,
+      "length": 15032,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e8bf66173e24840e"
+    },
+    "/en/6.1/howto/deployment/checklist": {
+      "offset": 1975836,
+      "length": 11357,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "15e76480c3a22f9b"
+    },
+    "/en/6.1/howto/deployment/checklist/": {
+      "offset": 1975836,
+      "length": 11357,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "15e76480c3a22f9b"
+    },
+    "/en/6.1/topics/testing/overview": {
+      "offset": 1987193,
+      "length": 13563,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "90f8d009d7347c89"
+    },
+    "/en/6.1/topics/testing/overview/": {
+      "offset": 1987193,
+      "length": 13563,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "90f8d009d7347c89"
+    },
+    "/en/6.1/ref/contrib/admin": {
+      "offset": 2000756,
+      "length": 60339,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6277022ea3ea5d81"
+    },
+    "/en/6.1/ref/contrib/admin/": {
+      "offset": 2000756,
+      "length": 60339,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6277022ea3ea5d81"
+    },
+    "/en/6.1/topics/testing/tools": {
+      "offset": 2061095,
+      "length": 42270,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "21a76df89b693c3a"
+    },
+    "/en/6.1/topics/testing/tools/": {
+      "offset": 2061095,
+      "length": 42270,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "21a76df89b693c3a"
+    },
+    "/en/6.1/ref/contrib/admin/actions": {
+      "offset": 2103365,
+      "length": 15656,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b57618545116f8b6"
+    },
+    "/en/6.1/ref/contrib/admin/actions/": {
+      "offset": 2103365,
+      "length": 15656,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b57618545116f8b6"
+    },
+    "/en/6.1/ref/contrib/admin/admindocs": {
+      "offset": 2119021,
+      "length": 8810,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "12b6b1d7c25730dd"
+    },
+    "/en/6.1/ref/contrib/admin/admindocs/": {
+      "offset": 2119021,
+      "length": 8810,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "12b6b1d7c25730dd"
+    },
+    "/en/6.1/ref/csrf": {
+      "offset": 2127831,
+      "length": 10909,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "659bbc6c408f5aaa"
+    },
+    "/en/6.1/ref/csrf/": {
+      "offset": 2127831,
+      "length": 10909,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "659bbc6c408f5aaa"
+    },
+    "/en/6.1/topics/auth": {
+      "offset": 2138740,
+      "length": 7414,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2c7accb23c17910c"
+    },
+    "/en/6.1/topics/auth/": {
+      "offset": 2138740,
+      "length": 7414,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2c7accb23c17910c"
+    },
+    "/en/6.1/topics/i18n": {
+      "offset": 2146154,
+      "length": 7403,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "31aac23447d9600f"
+    },
+    "/en/6.1/topics/i18n/": {
+      "offset": 2146154,
+      "length": 7403,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "31aac23447d9600f"
+    },
+    "/en/6.1/topics/signing": {
+      "offset": 2153557,
+      "length": 10717,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5e45d4e5898c835d"
+    },
+    "/en/6.1/topics/signing/": {
+      "offset": 2153557,
+      "length": 10717,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5e45d4e5898c835d"
+    },
+    "/en/6.1/topics/performance": {
+      "offset": 2164274,
+      "length": 14448,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a5023112d4eb9860"
+    },
+    "/en/6.1/topics/performance/": {
+      "offset": 2164274,
+      "length": 14448,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a5023112d4eb9860"
+    },
+    "/en/6.1/topics/i18n/timezones": {
+      "offset": 2178722,
+      "length": 17368,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7359157f44352f51"
+    },
+    "/en/6.1/topics/i18n/timezones/": {
+      "offset": 2178722,
+      "length": 17368,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7359157f44352f51"
+    },
+    "/en/6.1/topics/i18n/translation": {
+      "offset": 2196090,
+      "length": 40553,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "893363cb7ce680cf"
+    },
+    "/en/6.1/topics/i18n/translation/": {
+      "offset": 2196090,
+      "length": 40553,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "893363cb7ce680cf"
+    },
+    "/en/6.1/ref/clickjacking": {
+      "offset": 2236643,
+      "length": 8031,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f76969f5f6ab6922"
+    },
+    "/en/6.1/ref/clickjacking/": {
+      "offset": 2236643,
+      "length": 8031,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f76969f5f6ab6922"
+    },
+    "/en/6.1/ref/csp": {
+      "offset": 2244674,
+      "length": 11539,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "21851552ca34763b"
+    },
+    "/en/6.1/ref/csp/": {
+      "offset": 2244674,
+      "length": 11539,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "21851552ca34763b"
+    },
+    "/en/6.1/topics/i18n/formatting": {
+      "offset": 2256213,
+      "length": 9187,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "394fd56cf752182a"
+    },
+    "/en/6.1/topics/i18n/formatting/": {
+      "offset": 2256213,
+      "length": 9187,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "394fd56cf752182a"
+    },
+    "/en/6.1/ref/contrib/gis": {
+      "offset": 2265400,
+      "length": 7350,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8a2e3c97ff3e781b"
+    },
+    "/en/6.1/ref/contrib/gis/": {
+      "offset": 2265400,
+      "length": 7350,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8a2e3c97ff3e781b"
+    },
+    "/en/6.1/topics/auth/default": {
+      "offset": 2272750,
+      "length": 32830,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1ec6ecd6f4007511"
+    },
+    "/en/6.1/topics/auth/default/": {
+      "offset": 2272750,
+      "length": 32830,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1ec6ecd6f4007511"
+    },
+    "/en/6.1/topics/auth/passwords": {
+      "offset": 2305580,
+      "length": 18973,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "05999983ba4b73b0"
+    },
+    "/en/6.1/topics/auth/passwords/": {
+      "offset": 2305580,
+      "length": 18973,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "05999983ba4b73b0"
+    },
+    "/en/6.1/topics/cache": {
+      "offset": 2324553,
+      "length": 30035,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bb76ba161507f08e"
+    },
+    "/en/6.1/topics/cache/": {
+      "offset": 2324553,
+      "length": 30035,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bb76ba161507f08e"
+    },
+    "/en/6.1/ref/contrib/auth": {
+      "offset": 2354588,
+      "length": 17296,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fa2de58116edc014"
+    },
+    "/en/6.1/ref/contrib/auth/": {
+      "offset": 2354588,
+      "length": 17296,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fa2de58116edc014"
+    },
+    "/en/6.1/topics/auth/customizing": {
+      "offset": 2371884,
+      "length": 25703,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dc0c659347d08fdb"
+    },
+    "/en/6.1/topics/auth/customizing/": {
+      "offset": 2371884,
+      "length": 25703,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dc0c659347d08fdb"
+    },
+    "/en/6.1/topics/logging": {
+      "offset": 2397587,
+      "length": 12518,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b1b573be0fc8ea09"
+    },
+    "/en/6.1/topics/logging/": {
+      "offset": 2397587,
+      "length": 12518,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b1b573be0fc8ea09"
+    },
+    "/en/6.1/topics/tasks": {
+      "offset": 2410105,
+      "length": 12366,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "715849f56c95c608"
+    },
+    "/en/6.1/topics/tasks/": {
+      "offset": 2410105,
+      "length": 12366,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "715849f56c95c608"
+    },
+    "/en/6.1/topics/email": {
+      "offset": 2422471,
+      "length": 28567,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "18ebc23b934446c6"
+    },
+    "/en/6.1/topics/email/": {
+      "offset": 2422471,
+      "length": 28567,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "18ebc23b934446c6"
+    },
+    "/en/6.1/ref/contrib/syndication": {
+      "offset": 2451038,
+      "length": 19504,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "50272afe8bc9f636"
+    },
+    "/en/6.1/ref/contrib/syndication/": {
+      "offset": 2451038,
+      "length": 19504,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "50272afe8bc9f636"
+    },
+    "/en/6.1/topics/pagination": {
+      "offset": 2470542,
+      "length": 8372,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "42250a0587b17094"
+    },
+    "/en/6.1/topics/pagination/": {
+      "offset": 2470542,
+      "length": 8372,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "42250a0587b17094"
+    },
+    "/__docx_assets/fff46eec0f4b8e.png": {
+      "offset": 2478914,
+      "length": 1651,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4751e25ad533bf48"
+    },
+    "/en/6.1/_images/admin04t.png": {
+      "offset": 2480565,
+      "length": 20638,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "65bc727adb4888db"
+    },
+    "/__docx_assets/d0152040be72f1.ico": {
+      "offset": 2501203,
+      "length": 565,
+      "mime": "image/x-icon",
+      "gzipped": true,
+      "hash": "775444701349df04"
+    },
+    "/en/6.1/_images/admin09.png": {
+      "offset": 2501768,
+      "length": 12069,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0d661878d356545a"
+    },
+    "/en/6.1/_images/admin03t.png": {
+      "offset": 2513837,
+      "length": 14210,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "9e59ad1b7d67e7e9"
+    },
+    "/en/6.1/_images/admin11t.png": {
+      "offset": 2528047,
+      "length": 6092,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "35b0316af4f8e442"
+    },
+    "/__docx_assets/ebf4b15e9d5280.png": {
+      "offset": 2534139,
+      "length": 14464,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "098e5dbc04864ca7"
+    },
+    "/en/6.1/_images/admin02.png": {
+      "offset": 2548603,
+      "length": 17940,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b05fc50991be5992"
+    },
+    "/__docx_assets/c54f327e65e1e0.svg": {
+      "offset": 2566543,
+      "length": 298,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "59d9893c74fd3613"
+    },
+    "/en/6.1/_images/admin12t.png": {
+      "offset": 2566841,
+      "length": 29096,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "269c4076d59a8a4e"
+    },
+    "/en/6.1/_images/admin01.png": {
+      "offset": 2595937,
+      "length": 6308,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "83a5903b91c29fe9"
+    },
+    "/__docx_assets/65552070fc18ba.png": {
+      "offset": 2602245,
+      "length": 11099,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "89b130274ab56c8b"
+    },
+    "/__docx_assets/472454d7cdfa21.css": {
+      "offset": 2613344,
+      "length": 24250,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "3088e912ecf8c03e"
+    },
+    "/en/6.1/_images/admin08t.png": {
+      "offset": 2637594,
+      "length": 18714,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0cba14a144f882cc"
+    },
+    "/en/6.1/_images/admin14t.png": {
+      "offset": 2656308,
+      "length": 35839,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "97e3eb9d4adb8bc1"
+    },
+    "/__docx_assets/71ef485e7dcbb3.png": {
+      "offset": 2692147,
+      "length": 13724,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f911e13b1fb6249b"
+    },
+    "/__docx_assets/fb48222ff6bc31.png": {
+      "offset": 2705871,
+      "length": 18794,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "9e69315a51f8d2dc"
+    },
+    "/en/6.1/_images/admin13t.png": {
+      "offset": 2724665,
+      "length": 39126,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e00e933bdc9fb4b3"
+    },
+    "/en/6.1/_images/admin10t.png": {
+      "offset": 2763791,
+      "length": 51357,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "75d6f3fea08df7ae"
+    },
+    "/en/6.1/_images/admin07.png": {
+      "offset": 2815148,
+      "length": 16164,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7388c484f5771eb8"
+    },
+    "/en/6.1/_images/admin-actions.png": {
+      "offset": 2831312,
+      "length": 54932,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6204516298571ecb"
+    },
+    "/en/6.1/_images/raw_id_fields.png": {
+      "offset": 2886244,
+      "length": 3945,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4d25459ee1aa533a"
+    },
+    "/en/6.1/_images/fieldsets.png": {
+      "offset": 2890189,
+      "length": 48983,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ec4fe5fd2096b169"
+    },
+    "/en/6.1/_images/template-lines.png": {
+      "offset": 2939172,
+      "length": 14854,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "35667871aed001fa"
+    },
+    "/en/6.1/_images/django_unittest_classes_hierarchy.svg": {
+      "offset": 2954026,
+      "length": 1991,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "2bb83d427b6b2f7f"
+    },
+    "/en/6.1/_images/postmortem.png": {
+      "offset": 2956017,
+      "length": 12391,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7247e020d42802de"
+    },
+    "/en/6.1/_images/admin06t.png": {
+      "offset": 2968408,
+      "length": 6069,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "239c12e3ba2dac4b"
+    },
+    "/en/6.1/_images/adding-actions-to-the-modeladmin.png": {
+      "offset": 2974477,
+      "length": 75052,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "155ea5ab6dc78034"
+    },
+    "/en/6.1/_images/admin05t.png": {
+      "offset": 3049529,
+      "length": 40010,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "78432d343797efad"
+    },
+    "/en/6.1/_images/actions-as-modeladmin-methods.png": {
+      "offset": 3089539,
+      "length": 88486,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "35c702bb0f393ebb"
+    },
+    "/__docx_assets/24ca7701e504f8.woff2": {
+      "offset": 3178025,
+      "length": 75202,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e78143cd4993a4ce"
+    },
+    "/__docx_assets/eaa7bcfc2ae432.woff2": {
+      "offset": 3253227,
+      "length": 69279,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "925249345a23aeb3"
+    },
+    "/__docx_assets/9a4480df342b56.woff2": {
+      "offset": 3322506,
+      "length": 67356,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b0088433064eb809"
+    },
+    "/__docx_assets/915a05f16bbf5d.woff2": {
+      "offset": 3389862,
+      "length": 73397,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "59018e7f2df5bca7"
+    },
+    "/__docx_assets/acf7684778c522.svg": {
+      "offset": 3463259,
+      "length": 2875,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "1d6551b49425c7b4"
+    },
+    "/__docx_assets/6688045ec68386.svg": {
+      "offset": 3466134,
+      "length": 487,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a4b1098dbc2e8b88"
+    },
+    "/__docx_assets/c879222b342260.svg": {
+      "offset": 3466621,
+      "length": 2285,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "73b52919cd0ac4a5"
+    },
+    "/__docx_assets/f8b636764201f7.svg": {
+      "offset": 3468906,
+      "length": 742,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "b5a80f51d9a45b71"
+    },
+    "/__docx_assets/7f3563f31ce773.svg": {
+      "offset": 3469648,
+      "length": 1843,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "b0143d9cdb80505e"
+    },
+    "/__docx_assets/04afc11a2dd938.svg": {
+      "offset": 3471491,
+      "length": 1390,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "9fff41c68cdf5e53"
+    },
+    "/__docx_assets/f039c37e1db709.svg": {
+      "offset": 3472881,
+      "length": 1329,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "0624afe4df0b8c7e"
+    },
+    "/__docx_assets/576500af9f6e54.woff2": {
+      "offset": 3474210,
+      "length": 70403,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "6865d8be2625fb18"
+    },
+    "/__docx_assets/7f5c22eb555136.svg": {
+      "offset": 3544613,
+      "length": 1703,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "92eb299b2f931cf5"
+    },
+    "/__docx_assets/a68da4d870184b.woff2": {
+      "offset": 3546316,
+      "length": 67643,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "5cae74c1f2f7824a"
+    },
+    "/__docx_assets/71737ea7085f8c.woff": {
+      "offset": 3613959,
+      "length": 65467,
+      "mime": "font/woff",
+      "gzipped": true,
+      "hash": "28c3a4523622c21f"
+    },
+    "/__docx_assets/f11e7b6d2d47bd.woff2": {
+      "offset": 3679426,
+      "length": 64906,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b60e9482b141fcc2"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 10349,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb95339750fa22e2"
+    },
+    "/": {
+      "offset": 0,
+      "length": 10349,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb95339750fa22e2"
+    }
+  }
+}

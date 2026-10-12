@@ -1,1 +1,118 @@
-{"id":"ninja","name":"Ninja Build System","version":"v1.12","commit":"8da99c12","origin":"https://ninja-build.org","entryPath":"/manual.html","updatedAt":"2026-10-11T14:32:25.956Z","totalBytes":279616,"chunkCount":14,"routes":{"/":{"offset":0,"length":1269,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b1b667e26ecf2a19"},"/manual.html":{"offset":1269,"length":21078,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c3dd5696e8865406"},"/manual/introduction.html":{"offset":22347,"length":21439,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a48118840c6b707c"},"/manual/building-ninja.html":{"offset":43786,"length":21435,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fe875f482561ef44"},"/manual/running-ninja.html":{"offset":65221,"length":21439,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"023daca4e42ad4e7"},"/manual/environment-variables.html":{"offset":86660,"length":21440,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"54bebcb7e542491d"},"/manual/extra-tools.html":{"offset":108100,"length":21440,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3de9364723b3da60"},"/manual/writing-your-own.html":{"offset":129540,"length":21438,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f7ba2bd790add53d"},"/manual/lexical-syntax.html":{"offset":150978,"length":21438,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f9a1ad986c7d7f07"},"/manual/rules.html":{"offset":172416,"length":21440,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"14ee5cbb5c0b4dfb"},"/manual/generating-ninja-files.html":{"offset":193856,"length":21440,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c785fa00c53b9f44"},"/manual/depfile.html":{"offset":215296,"length":21440,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dcec9285b0641dde"},"/manual/dyndep.html":{"offset":236736,"length":21440,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"47fbf6bcebaabdc0"},"/manual/version-compatibility.html":{"offset":258176,"length":21440,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2ad2629b4438e1e6"},"/docs":{"offset":1269,"length":21078,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c3dd5696e8865406"}}}
+{
+  "id": "ninja",
+  "name": "Ninja Build System",
+  "version": "v1.12",
+  "commit": "8da99c12",
+  "origin": "https://ninja-build.org",
+  "entryPath": "/manual.html",
+  "updatedAt": "2026-10-11T14:32:25.956Z",
+  "totalBytes": 279616,
+  "chunkCount": 14,
+  "routes": {
+    "/": {
+      "offset": 0,
+      "length": 1269,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b1b667e26ecf2a19"
+    },
+    "/manual.html": {
+      "offset": 1269,
+      "length": 21078,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c3dd5696e8865406"
+    },
+    "/manual/introduction.html": {
+      "offset": 22347,
+      "length": 21439,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a48118840c6b707c"
+    },
+    "/manual/building-ninja.html": {
+      "offset": 43786,
+      "length": 21435,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fe875f482561ef44"
+    },
+    "/manual/running-ninja.html": {
+      "offset": 65221,
+      "length": 21439,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "023daca4e42ad4e7"
+    },
+    "/manual/environment-variables.html": {
+      "offset": 86660,
+      "length": 21440,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "54bebcb7e542491d"
+    },
+    "/manual/extra-tools.html": {
+      "offset": 108100,
+      "length": 21440,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3de9364723b3da60"
+    },
+    "/manual/writing-your-own.html": {
+      "offset": 129540,
+      "length": 21438,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f7ba2bd790add53d"
+    },
+    "/manual/lexical-syntax.html": {
+      "offset": 150978,
+      "length": 21438,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f9a1ad986c7d7f07"
+    },
+    "/manual/rules.html": {
+      "offset": 172416,
+      "length": 21440,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "14ee5cbb5c0b4dfb"
+    },
+    "/manual/generating-ninja-files.html": {
+      "offset": 193856,
+      "length": 21440,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c785fa00c53b9f44"
+    },
+    "/manual/depfile.html": {
+      "offset": 215296,
+      "length": 21440,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dcec9285b0641dde"
+    },
+    "/manual/dyndep.html": {
+      "offset": 236736,
+      "length": 21440,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "47fbf6bcebaabdc0"
+    },
+    "/manual/version-compatibility.html": {
+      "offset": 258176,
+      "length": 21440,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2ad2629b4438e1e6"
+    },
+    "/docs": {
+      "offset": 1269,
+      "length": 21078,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c3dd5696e8865406"
+    }
+  }
+}

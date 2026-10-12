@@ -1,1 +1,405 @@
-{"id":"nestjs","name":"NestJS Documentation","version":"v11","commit":"fd457255","origin":"https://docs.nestjs.com","entryPath":"/","updatedAt":"2026-10-11T14:32:23.874Z","totalBytes":1352934,"chunkCount":32,"routes":{"/controllers":{"offset":0,"length":41473,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"29431beaf4c76f92"},"/first-steps":{"offset":41473,"length":32257,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0932be11ff8cd66c"},"/":{"offset":73730,"length":29370,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"360c033f1eb410e1"},"/middleware":{"offset":103100,"length":33266,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"77b7612ab0022cf9"},"/providers":{"offset":136366,"length":32539,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"354c9aaaff1a3f87"},"/modules":{"offset":168905,"length":33702,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a00214b17ef4b17b"},"/custom-decorators":{"offset":202607,"length":31227,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"11639ac5a5e66c45"},"/exception-filters":{"offset":233834,"length":37564,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dee37dc4500271c4"},"/pipes":{"offset":271398,"length":38684,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e790c3c4ecce639"},"/interceptors":{"offset":310082,"length":34933,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"75cfd15e9f4300f4"},"/fundamentals/custom-providers":{"offset":345015,"length":35434,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f7384543348afae8"},"/guards":{"offset":380449,"length":34312,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8d77603ca3d42b91"},"/fundamentals/lifecycle-events":{"offset":414761,"length":31637,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0db1abd4d78ca89f"},"/techniques/database":{"offset":446398,"length":28229,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ca693de83236619a"},"/fundamentals/async-providers":{"offset":474627,"length":28100,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"69bded95b06b1244"},"/fundamentals/dynamic-modules":{"offset":502727,"length":37844,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"04a7965d01a656f8"},"/fundamentals/testing":{"offset":540571,"length":36611,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d8f2d18cb02dd686"},"/fundamentals/injection-scopes":{"offset":577182,"length":34158,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"277f314ae2bb40e3"},"/techniques/caching":{"offset":611340,"length":33288,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9b4d82d6afb0d15e"},"/techniques/validation":{"offset":644628,"length":39629,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4068d608326ddc0f"},"/techniques/configuration":{"offset":684257,"length":40685,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f8ab6108ac4d72a3"},"/security/authorization":{"offset":724942,"length":55427,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f6489dc859db91b2"},"/security/authentication":{"offset":780369,"length":109814,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8493c5586d2ad3c2"},"/graphql/quick-start":{"offset":890183,"length":37412,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d738c496ae6104ed"},"/cli/overview":{"offset":927595,"length":31421,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8c3425e1c28385cf"},"/websockets/gateways":{"offset":959016,"length":33996,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"13be661766ed8a14"},"/openapi/introduction":{"offset":993012,"length":35624,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0dabbc8aa28c0986"},"/microservices/basics":{"offset":1028636,"length":40526,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c1def3e7e4542c24"},"/styles-VUL7H6WV.css":{"offset":1069162,"length":4970,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"b0eac50da6b4f848"},"/polyfills-LVNOU2XZ.js":{"offset":1074132,"length":12822,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"2a77bd6f7427b1f2"},"/fundamentals/polyfills-LVNOU2XZ.js":{"offset":1086954,"length":3360,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/techniques/styles-VUL7H6WV.css":{"offset":1086954,"length":3360,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/techniques/polyfills-LVNOU2XZ.js":{"offset":1086954,"length":3360,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/fundamentals/main-NFQUXF3V.js":{"offset":1086954,"length":3360,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/fundamentals/styles-VUL7H6WV.css":{"offset":1086954,"length":3360,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/main-NFQUXF3V.js":{"offset":1090314,"length":262620,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"1447b9ff56da78b2"},"/techniques/main-NFQUXF3V.js":{"offset":1086954,"length":3360,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/cli/styles-VUL7H6WV.css":{"offset":1086954,"length":3360,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/graphql/polyfills-LVNOU2XZ.js":{"offset":1086954,"length":3360,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/security/styles-VUL7H6WV.css":{"offset":1086954,"length":3360,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/security/polyfills-LVNOU2XZ.js":{"offset":1086954,"length":3360,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/graphql/styles-VUL7H6WV.css":{"offset":1086954,"length":3360,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/security/main-NFQUXF3V.js":{"offset":1086954,"length":3360,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/graphql/main-NFQUXF3V.js":{"offset":1086954,"length":3360,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/openapi/main-NFQUXF3V.js":{"offset":1086954,"length":3360,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/openapi/polyfills-LVNOU2XZ.js":{"offset":1086954,"length":3360,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/websockets/styles-VUL7H6WV.css":{"offset":1086954,"length":3360,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/openapi/styles-VUL7H6WV.css":{"offset":1086954,"length":3360,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/websockets/main-NFQUXF3V.js":{"offset":1086954,"length":3360,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/cli/polyfills-LVNOU2XZ.js":{"offset":1086954,"length":3360,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/cli/main-NFQUXF3V.js":{"offset":1086954,"length":3360,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/websockets/polyfills-LVNOU2XZ.js":{"offset":1086954,"length":3360,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/microservices/main-NFQUXF3V.js":{"offset":1086954,"length":3360,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/microservices/styles-VUL7H6WV.css":{"offset":1086954,"length":3360,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/microservices/polyfills-LVNOU2XZ.js":{"offset":1086954,"length":3360,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"bcabba878be855f2"},"/docs":{"offset":73730,"length":29370,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"360c033f1eb410e1"}}}
+{
+  "id": "nestjs",
+  "name": "NestJS Documentation",
+  "version": "v11",
+  "commit": "fd457255",
+  "origin": "https://docs.nestjs.com",
+  "entryPath": "/",
+  "updatedAt": "2026-10-11T14:32:23.874Z",
+  "totalBytes": 1352934,
+  "chunkCount": 32,
+  "routes": {
+    "/controllers": {
+      "offset": 0,
+      "length": 41473,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "29431beaf4c76f92"
+    },
+    "/first-steps": {
+      "offset": 41473,
+      "length": 32257,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0932be11ff8cd66c"
+    },
+    "/": {
+      "offset": 73730,
+      "length": 29370,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "360c033f1eb410e1"
+    },
+    "/middleware": {
+      "offset": 103100,
+      "length": 33266,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "77b7612ab0022cf9"
+    },
+    "/providers": {
+      "offset": 136366,
+      "length": 32539,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "354c9aaaff1a3f87"
+    },
+    "/modules": {
+      "offset": 168905,
+      "length": 33702,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a00214b17ef4b17b"
+    },
+    "/custom-decorators": {
+      "offset": 202607,
+      "length": 31227,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "11639ac5a5e66c45"
+    },
+    "/exception-filters": {
+      "offset": 233834,
+      "length": 37564,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dee37dc4500271c4"
+    },
+    "/pipes": {
+      "offset": 271398,
+      "length": 38684,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2e790c3c4ecce639"
+    },
+    "/interceptors": {
+      "offset": 310082,
+      "length": 34933,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "75cfd15e9f4300f4"
+    },
+    "/fundamentals/custom-providers": {
+      "offset": 345015,
+      "length": 35434,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f7384543348afae8"
+    },
+    "/guards": {
+      "offset": 380449,
+      "length": 34312,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8d77603ca3d42b91"
+    },
+    "/fundamentals/lifecycle-events": {
+      "offset": 414761,
+      "length": 31637,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0db1abd4d78ca89f"
+    },
+    "/techniques/database": {
+      "offset": 446398,
+      "length": 28229,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ca693de83236619a"
+    },
+    "/fundamentals/async-providers": {
+      "offset": 474627,
+      "length": 28100,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "69bded95b06b1244"
+    },
+    "/fundamentals/dynamic-modules": {
+      "offset": 502727,
+      "length": 37844,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "04a7965d01a656f8"
+    },
+    "/fundamentals/testing": {
+      "offset": 540571,
+      "length": 36611,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d8f2d18cb02dd686"
+    },
+    "/fundamentals/injection-scopes": {
+      "offset": 577182,
+      "length": 34158,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "277f314ae2bb40e3"
+    },
+    "/techniques/caching": {
+      "offset": 611340,
+      "length": 33288,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9b4d82d6afb0d15e"
+    },
+    "/techniques/validation": {
+      "offset": 644628,
+      "length": 39629,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4068d608326ddc0f"
+    },
+    "/techniques/configuration": {
+      "offset": 684257,
+      "length": 40685,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f8ab6108ac4d72a3"
+    },
+    "/security/authorization": {
+      "offset": 724942,
+      "length": 55427,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f6489dc859db91b2"
+    },
+    "/security/authentication": {
+      "offset": 780369,
+      "length": 109814,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8493c5586d2ad3c2"
+    },
+    "/graphql/quick-start": {
+      "offset": 890183,
+      "length": 37412,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d738c496ae6104ed"
+    },
+    "/cli/overview": {
+      "offset": 927595,
+      "length": 31421,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8c3425e1c28385cf"
+    },
+    "/websockets/gateways": {
+      "offset": 959016,
+      "length": 33996,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "13be661766ed8a14"
+    },
+    "/openapi/introduction": {
+      "offset": 993012,
+      "length": 35624,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0dabbc8aa28c0986"
+    },
+    "/microservices/basics": {
+      "offset": 1028636,
+      "length": 40526,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c1def3e7e4542c24"
+    },
+    "/styles-VUL7H6WV.css": {
+      "offset": 1069162,
+      "length": 4970,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b0eac50da6b4f848"
+    },
+    "/polyfills-LVNOU2XZ.js": {
+      "offset": 1074132,
+      "length": 12822,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "2a77bd6f7427b1f2"
+    },
+    "/fundamentals/polyfills-LVNOU2XZ.js": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/techniques/styles-VUL7H6WV.css": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/techniques/polyfills-LVNOU2XZ.js": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/fundamentals/main-NFQUXF3V.js": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/fundamentals/styles-VUL7H6WV.css": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/main-NFQUXF3V.js": {
+      "offset": 1090314,
+      "length": 262620,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "1447b9ff56da78b2"
+    },
+    "/techniques/main-NFQUXF3V.js": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/cli/styles-VUL7H6WV.css": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/graphql/polyfills-LVNOU2XZ.js": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/security/styles-VUL7H6WV.css": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/security/polyfills-LVNOU2XZ.js": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/graphql/styles-VUL7H6WV.css": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/security/main-NFQUXF3V.js": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/graphql/main-NFQUXF3V.js": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/openapi/main-NFQUXF3V.js": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/openapi/polyfills-LVNOU2XZ.js": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/websockets/styles-VUL7H6WV.css": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/openapi/styles-VUL7H6WV.css": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/websockets/main-NFQUXF3V.js": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/cli/polyfills-LVNOU2XZ.js": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/cli/main-NFQUXF3V.js": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/websockets/polyfills-LVNOU2XZ.js": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/microservices/main-NFQUXF3V.js": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/microservices/styles-VUL7H6WV.css": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/microservices/polyfills-LVNOU2XZ.js": {
+      "offset": 1086954,
+      "length": 3360,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "bcabba878be855f2"
+    },
+    "/docs": {
+      "offset": 73730,
+      "length": 29370,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "360c033f1eb410e1"
+    }
+  }
+}

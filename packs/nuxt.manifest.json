@@ -1,1 +1,1294 @@
-{"id":"nuxt","name":"Nuxt","version":"v4.x","commit":"518ccff4","origin":"https://nuxt.com","entryPath":"/docs/4.x/getting-started/introduction","updatedAt":"2026-10-10T18:56:57.058Z","totalBytes":9388228,"chunkCount":177,"routes":{"/docs/4.x/getting-started/introduction":{"offset":0,"length":51269,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"65b7c7f7daa17e9c"},"/docs/4.x/getting-started/installation":{"offset":51269,"length":54350,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9158b9deefd6ae73"},"/docs/4.x/getting-started/routing":{"offset":105619,"length":57106,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7994cbea11b5153c"},"/docs/4.x/directory-structure":{"offset":162725,"length":58046,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4ef38804f323038b"},"/docs/4.x/getting-started/configuration":{"offset":220771,"length":61091,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"adf422ceb27bdbc9"},"/docs/4.x/getting-started/styling":{"offset":281862,"length":82111,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2c76382dfd14bc6f"},"/docs/4.x/getting-started/state-management":{"offset":363973,"length":62279,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ada82e7f5b1367eb"},"/docs/4.x/getting-started/seo-meta":{"offset":426252,"length":67374,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b1c1a7d125153748"},"/docs/4.x/getting-started/transitions":{"offset":493626,"length":76619,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7b39a4820ca1e465"},"/docs/4.x/getting-started/assets":{"offset":570245,"length":56801,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"934386dac62ccc09"},"/docs/4.x/getting-started/data-fetching":{"offset":627046,"length":103922,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0cbfb6ee07435026"},"/docs/4.x/getting-started/views":{"offset":730968,"length":54299,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6779d9f79f871869"},"/docs/4.x/community/getting-help":{"offset":785267,"length":47282,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d8ae3a119965eb34"},"/docs/examples/hello-world":{"offset":832549,"length":48035,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c57357a8019d0b53"},"/docs/4.x/api":{"offset":880584,"length":46021,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3c05c750755c4cf2"},"/docs/4.x/guide":{"offset":926605,"length":44593,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"12fd46cb02b01985"},"/docs/4.x/getting-started/server":{"offset":971198,"length":54776,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"813c1b454ba7c1a7"},"/docs/4.x/guide/best-practices/devcontainers":{"offset":1025974,"length":52503,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7da7d37daf719ebb"},"/docs/4.x/getting-started/error-handling":{"offset":1078477,"length":60920,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fa47548eef6bf807"},"/docs/4.x/api/composables/use-route":{"offset":1139397,"length":53621,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"078125ce231f647d"},"/docs/4.x/getting-started/deployment":{"offset":1193018,"length":58426,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9bab31796a35a1d3"},"/docs/4.x/guide/concepts/server-engine":{"offset":1251444,"length":49341,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8a46f054536799ce"},"/docs/4.x/guide/concepts/rendering":{"offset":1300785,"length":73358,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dcac3b3b654d4f8e"},"/docs/4.x/getting-started/prerendering":{"offset":1374143,"length":61492,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cd52a164c728539c"},"/docs/4.x/directory-structure/app/pages":{"offset":1435635,"length":84494,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9878ffc5ffae2d71"},"/docs/4.x/api/components/nuxt-link":{"offset":1520129,"length":70968,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d408181b4201a4cb"},"/docs/4.x/getting-started/upgrade":{"offset":1591097,"length":129679,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e8d39010d32e8b70"},"/docs/4.x/guide/modules/getting-started":{"offset":1720776,"length":53829,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d3ab986722a8cc61"},"/docs/4.x/getting-started/layers":{"offset":1774605,"length":55655,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1e5d31dd5ae2826a"},"/docs/4.x/guide/concepts/auto-imports":{"offset":1830260,"length":59336,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1c1651358a8ec34a"},"/docs/4.x/api/nuxt-config":{"offset":1889596,"length":143356,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"10112710d06f33b9"},"/docs/4.x/getting-started/testing":{"offset":2032952,"length":107453,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5cbdf201b549050b"},"/docs/4.x/directory-structure/app/assets":{"offset":2140405,"length":53991,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f30edad922d45efa"},"/docs/4.x/directory-structure/app/utils":{"offset":2194396,"length":58567,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"90925a14be4534e2"},"/docs/4.x/directory-structure/nuxt":{"offset":2252963,"length":54331,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e42f748341ba183f"},"/docs/4.x/directory-structure/app/plugins":{"offset":2307294,"length":73259,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"af3f9fcf4934b716"},"/docs/4.x/directory-structure/app/composables":{"offset":2380553,"length":61395,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6f776edbad63aa4a"},"/docs/4.x/directory-structure/app/app":{"offset":2441948,"length":57978,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f61d9506748e450b"},"/docs/4.x/directory-structure/app/layouts":{"offset":2499926,"length":68440,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e406f70969b481de"},"/docs/4.x/directory-structure/app/components":{"offset":2568366,"length":86013,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1e1b4883abc404a8"},"/docs/4.x/directory-structure/output":{"offset":2654379,"length":54225,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a002adac6fb20279"},"/docs/4.x/api/utils/define-page-meta":{"offset":2708604,"length":66256,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e4937ecf00cc7533"},"/docs/4.x/directory-structure/app/app-config":{"offset":2774860,"length":64751,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"134fab0b85a31177"},"/docs/4.x/directory-structure/app/middleware":{"offset":2839611,"length":70983,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"124e069c9f6fb6ae"},"/docs/4.x/directory-structure/app/error":{"offset":2910594,"length":57503,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1e7614f35d6aea56"},"/docs/4.x/directory-structure/layers":{"offset":2968097,"length":60106,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e72577ab4cee1fac"},"/docs/4.x/directory-structure/app/spa-loading-template":{"offset":3028203,"length":60818,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eb4a0dc0bb0782a9"},"/docs/4.x/directory-structure/content":{"offset":3089021,"length":58817,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"db53d9fc25629dd0"},"/docs/4.x/directory-structure/public":{"offset":3147838,"length":55492,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9bf6e57487c46daa"},"/docs/4.x/directory-structure/package":{"offset":3203330,"length":55565,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f244ff2e517c07da"},"/docs/4.x/directory-structure/nuxtrc":{"offset":3258895,"length":57375,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"18072d09bb9f2e97"},"/docs/4.x/directory-structure/env":{"offset":3316270,"length":59858,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"67349bf81663b6f9"},"/docs/4.x/directory-structure/node_modules":{"offset":3376128,"length":54095,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e120f8f0f8dd4d20"},"/docs/4.x/directory-structure/gitignore":{"offset":3430223,"length":54881,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d62385c44a9c6e41"},"/docs/4.x/directory-structure/test":{"offset":3485104,"length":54960,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a4459de64bbba9b9"},"/docs/4.x/directory-structure/shared":{"offset":3540064,"length":63125,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9d1ef7fa3e52918f"},"/docs/4.x/api/composables/use-runtime-config":{"offset":3603189,"length":55805,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a866237de8825dad"},"/docs/4.x/directory-structure/tsconfig":{"offset":3658994,"length":59334,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b9379de2bd727516"},"/docs/4.x/directory-structure/nuxtignore":{"offset":3718328,"length":56399,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1a990a12f9922501"},"/docs/4.x/directory-structure/nuxt-config":{"offset":3774727,"length":55460,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c802f40544e8a44c"},"/docs/4.x/guide/going-further/runtime-config":{"offset":3830187,"length":60894,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c454b763bb329d48"},"/docs/4.x/directory-structure/server":{"offset":3891081,"length":87947,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e9ad766db371b64"},"/docs/4.x/directory-structure/modules":{"offset":3979028,"length":58867,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1f925a70f9047fbe"},"/docs/4.x/api/composables/use-app-config":{"offset":4037895,"length":47552,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eea20d34bf77df32"},"/docs/4.x/api/composables/use-head":{"offset":4085447,"length":59354,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"24db838bf828a294"},"/docs/4.x/api/composables/use-seo-meta":{"offset":4144801,"length":52332,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8c1b64d079b3c632"},"/docs/examples/advanced/locale":{"offset":4197133,"length":52385,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"314f524c9f711a9d"},"/docs/4.x/api/composables/use-state":{"offset":4249518,"length":52436,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0462dbad941b006f"},"/docs/4.x/api/composables/use-head-safe":{"offset":4301954,"length":52849,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d1792d8e7b461e73"},"/docs/examples/features/meta-tags":{"offset":4354803,"length":51546,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3aac1daaa87be87b"},"/docs/4.x/api/utils/clear-nuxt-state":{"offset":4406349,"length":49409,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f4d78d2afaa44edc"},"/docs/4.x/api/composables/use-fetch":{"offset":4455758,"length":76467,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"762e64e7acbea9de"},"/docs/4.x/api/composables/use-lazy-fetch":{"offset":4532225,"length":56106,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3c4e59769c9d2294"},"/docs/4.x/api/components/nuxt-loading-indicator":{"offset":4588331,"length":50485,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"02845dc6cae8d873"},"/docs/4.x/api/composables/use-async-data":{"offset":4638816,"length":77694,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8ae0f067ce763393"},"/docs/4.x/api/utils/dollarfetch":{"offset":4716510,"length":55329,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5beb552c6eed059e"},"/docs/4.x/api/utils/call-once":{"offset":4771839,"length":54272,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4dff687cfd17c3b2"},"/docs/4.x/guide/modules":{"offset":4826111,"length":45947,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"76a48a4538ec5861"},"/docs/examples/features/state-management":{"offset":4872058,"length":49227,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c2ba253033dd7a22"},"/docs/4.x/api/composables/use-lazy-async-data":{"offset":4921285,"length":53881,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0edcb908da326313"},"/docs/4.x/api/composables/use-nuxt-data":{"offset":4975166,"length":55472,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"da84fca0a3c44398"},"/docs/examples/features/data-fetching":{"offset":5030638,"length":54481,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bed656fdba1f7a8d"},"/docs/4.x/api/composables/use-request-headers":{"offset":5085119,"length":49535,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"25db0916324b900a"},"/docs/4.x/api/utils/define-nuxt-component":{"offset":5134654,"length":50141,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ff2560b5d2cef104"},"/docs/4.x/api/utils/clear-nuxt-data":{"offset":5184795,"length":48586,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"714ff35c94adeae3"},"/docs/4.x/api/utils/refresh-nuxt-data":{"offset":5233381,"length":53038,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"717427f1be0df4a7"},"/docs/4.x/api/composables/use-request-fetch":{"offset":5286419,"length":51042,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b93e2069e7801840"},"/docs/4.x/guide/going-further/hooks":{"offset":5337461,"length":52071,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8a69710fa1418604"},"/docs/4.x/community/reporting-bugs":{"offset":5389532,"length":47024,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e8023844145df4c9"},"/docs/4.x/community/changelog":{"offset":5436556,"length":43929,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9c1ac981948906f2"},"/docs/4.x/community/framework-contribution":{"offset":5480485,"length":51955,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fa9341b797cd13e6"},"/docs/4.x/community/contribution":{"offset":5532440,"length":71929,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0717ea092c9d3ee2"},"/docs/4.x/api/components/nuxt-page":{"offset":5604369,"length":56816,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"79b43261dbe2d681"},"/docs/4.x/community/roadmap":{"offset":5661185,"length":51281,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c4e021e5f43c21ad"},"/docs/examples/advanced/use-cookie":{"offset":5712466,"length":51629,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7e895230256a5bba"},"/docs/examples/advanced/jsx":{"offset":5764095,"length":50138,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1a35cb01632bb021"},"/docs/examples/advanced/error-handling":{"offset":5814233,"length":55703,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5cf072ccdd3f6ad4"},"/docs/examples/routing/middleware":{"offset":5869936,"length":52190,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"48a817525d4a77bb"},"/docs/examples/features/auto-imports":{"offset":5922126,"length":50300,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"19e64fc5dc40b773"},"/docs/examples/advanced/config-extends":{"offset":5972426,"length":55679,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f540a39d2691cc36"},"/docs/examples/features/layouts":{"offset":6028105,"length":55453,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7c7563e46735e3ec"},"/docs/examples/advanced/use-custom-fetch-composable":{"offset":6083558,"length":52087,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c8a8b4920bfd1e96"},"/docs/examples/advanced/module-extend-pages":{"offset":6135645,"length":50121,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6d2bfed4c2b982f3"},"/docs/4.x/guide/concepts/nuxt-lifecycle":{"offset":6185766,"length":56100,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"be05c18cbc702a69"},"/docs/examples/advanced/testing":{"offset":6241866,"length":49712,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1ed7c527b1a6c4c3"},"/docs/examples/advanced/teleport":{"offset":6291578,"length":51494,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9d21672a74775931"},"/docs/examples/experimental/wasm":{"offset":6343072,"length":50552,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7ad047365c2fbcb1"},"/docs/examples/routing/pages":{"offset":6393624,"length":51739,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"09e5441cd4acc269"},"/docs/examples/routing/universal-router":{"offset":6445363,"length":52283,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"25948009e9cce255"},"/docs/4.x/guide/modules/module-anatomy":{"offset":6497646,"length":54644,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d50326f3ce0cd4e9"},"/docs/4.x/guide/best-practices/hydration":{"offset":6552290,"length":56618,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fb51b16b4ebcef47"},"/docs/4.x/guide/ai/mcp":{"offset":6608908,"length":62179,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3a912b2836dfc7ed"},"/docs/4.x/guide/best-practices/performance":{"offset":6671087,"length":68433,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e64ab3c40be2a3dc"},"/docs/4.x/guide/concepts/code-style":{"offset":6739520,"length":47052,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b878fa189e58afdb"},"/docs/4.x/guide/ai/llms-txt":{"offset":6786572,"length":49482,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ed43282558eef402"},"/docs/4.x/guide/concepts/typescript":{"offset":6836054,"length":56242,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5770d4bee32fdc89"},"/docs/4.x/guide/modules/recipes-advanced":{"offset":6892296,"length":61460,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b8abb8207ee2b1dd"},"/docs/4.x/guide/modules/recipes-basics":{"offset":6953756,"length":67522,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"21e48bdf0f434b6b"},"/docs/4.x/guide/best-practices/accessibility":{"offset":7021278,"length":57961,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9c1e06039b19dead"},"/docs/4.x/guide/best-practices/plugins":{"offset":7079239,"length":46210,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a6922cacdd2329bf"},"/docs/4.x/guide/concepts/server-components":{"offset":7125449,"length":62811,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a2b785ffb85cd627"},"/docs/4.x/guide/modules/module-dependencies":{"offset":7188260,"length":51749,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"56feaa83ebef62e6"},"/docs/4.x/guide/modules/testing":{"offset":7240009,"length":52223,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4a635ae7bbe73f13"},"/docs/4.x/guide/recipes/vite-plugin":{"offset":7292232,"length":54914,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"26c2925eddca5384"},"/docs/4.x/guide/going-further/events":{"offset":7347146,"length":49396,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"94f802addd2dd67e"},"/docs/4.x/guide/recipes/mostly-static-sites":{"offset":7396542,"length":55988,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"739488e482852979"},"/docs/4.x/guide/recipes/custom-usefetch":{"offset":7452530,"length":54017,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fac292e26173e266"},"/docs/4.x/guide/going-further/features":{"offset":7506547,"length":54839,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"63e9055f734ef2f0"},"/docs/4.x/guide/modules/ecosystem":{"offset":7561386,"length":48133,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"852f8063c1c52b8b"},"/docs/4.x/guide/recipes/sessions-and-authentication":{"offset":7609519,"length":60646,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"83cd117db0c1ba23"},"/docs/4.x/guide/modules/best-practices":{"offset":7670165,"length":53473,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8d4e6ddf43d5dd7e"},"/docs/4.x/guide/recipes/custom-routing":{"offset":7723638,"length":58896,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"51fe353bf9c5a0a6"},"/docs/4.x/guide/going-further/experimental-features":{"offset":7782534,"length":128342,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9d52c5fe34fb6209"},"/docs/4.x/guide/modules/server-compatibility":{"offset":7910876,"length":68277,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1ead40bab2da375b"},"/docs/4.x/guide/going-further/nuxt-app":{"offset":7979153,"length":50697,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f7e5c92480fa8649"},"/docs/4.x/guide/going-further/kit":{"offset":8029850,"length":49976,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"22f816c1b1e9eb97"},"/docs/4.x/guide/going-further/server-imports":{"offset":8079826,"length":68996,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5942d254e3ee443d"},"/docs/4.x/guide/going-further/layers":{"offset":8148822,"length":66505,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4e9c94d74b099722"},"/docs/4.x/guide/going-further/builders":{"offset":8215327,"length":67051,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"82c5e0c607ddfb93"},"/docs/4.x/api/commands/build":{"offset":8282378,"length":51204,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b4fd7f9bd6bcaca0"},"/docs/4.x/guide/going-further/debugging":{"offset":8333582,"length":52902,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f939f3a008954f82"},"/docs/4.x/api/commands/generate":{"offset":8386484,"length":50606,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"986c03d8cf539b7a"},"/docs/4.x/api/commands/preview":{"offset":8437090,"length":53671,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"adfa29b2682dc602"},"/docs/4.x/api/components/client-only":{"offset":8490761,"length":51892,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6bcacca9547ae0f1"},"/_nuxt/VideoAccordion.ChWJ86xa.css":{"offset":8542653,"length":193,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"c349158f3bd0e721"},"/icon.png":{"offset":8542846,"length":1273,"mime":"image/png","gzipped":true,"hash":"66ab8409e757fb2c"},"/assets/docs/getting-started/server.svg":{"offset":8544119,"length":3483,"mime":"image/svg+xml","gzipped":true,"hash":"73b1cdd6029ead03"},"/_nuxt/entry.CZZzgksI.css":{"offset":8547602,"length":39592,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"de92e41b936e1f71"},"/assets/docs/getting-started/views/pages.svg":{"offset":8587194,"length":3642,"mime":"image/svg+xml","gzipped":true,"hash":"deed6ede49d8a537"},"/assets/docs/getting-started/views/components.svg":{"offset":8590836,"length":3576,"mime":"image/svg+xml","gzipped":true,"hash":"e1b504ebc48d9d15"},"/assets/docs/getting-started/views/layouts.svg":{"offset":8594412,"length":2876,"mime":"image/svg+xml","gzipped":true,"hash":"e1f67e37119c37d2"},"/assets/docs/getting-started/views/app.svg":{"offset":8597288,"length":2835,"mime":"image/svg+xml","gzipped":true,"hash":"28c94a6850fdfcee"},"/assets/docs/concepts/rendering/csr.svg":{"offset":8600123,"length":11549,"mime":"image/svg+xml","gzipped":true,"hash":"1c7d2e55cf09a672"},"/assets/docs/concepts/rendering/ssr.svg":{"offset":8611672,"length":16358,"mime":"image/svg+xml","gzipped":true,"hash":"db5d66db45fc208b"},"/__docx_assets/8631175277bc88.svg":{"offset":8628030,"length":1241,"mime":"image/svg+xml","gzipped":true,"hash":"8e63e2e0e0f2b5cf"},"/__docx_assets/3a05c44d16cf85.svg":{"offset":8629271,"length":1241,"mime":"image/svg+xml","gzipped":true,"hash":"cd83aa67cca0bc52"},"/__docx_assets/c59bce47269d08.svg":{"offset":8630512,"length":1244,"mime":"image/svg+xml","gzipped":true,"hash":"2832949bcab58fce"},"/__docx_assets/0fa5334f7c1c28.svg":{"offset":8631756,"length":1244,"mime":"image/svg+xml","gzipped":true,"hash":"f9dfc4ff13694043"},"/__docx_assets/d77367259d832c.png":{"offset":8633000,"length":17928,"mime":"image/png","gzipped":true,"hash":"bf85e01901698a74"},"/__docx_assets/f0ce81c5c6cc34.png":{"offset":8650928,"length":107510,"mime":"image/png","gzipped":true,"hash":"168b95c89a476ffe"},"/__docx_assets/1016f8085e0fcf.png":{"offset":8758438,"length":129545,"mime":"image/png","gzipped":true,"hash":"79aec0027e44beea"},"/_fonts/2msaTeI3_W3zS_INTHzFI7wzzBxo_ZUDOxC_QFYUI3Q-oaIoteSPRcxgrgy3zikG3fP_0NwSUvUVDPY4E3rBV70.woff2":{"offset":8887983,"length":32095,"mime":"font/woff2","gzipped":true,"hash":"e9cdcc00eb6aef35"},"/_fonts/HgJel4iAS5mDVqJaDUYKmxaMJg4zKHTGmyD1FQkOsTM-2hVuuQIZ4GSGMgNv6dvlqz7cfD6lr7xLohUph7OCgFg.woff2":{"offset":8920078,"length":48441,"mime":"font/woff2","gzipped":true,"hash":"c2f77c72e0f3dd41"},"/_fonts/IGUZK2talPE7hxcZwzgZow-a-NzdLc0q8uZ9glONpRU-bO5ak4M7yNpQAv35KiXsy97XkmRgC5Iw1A2bF81vJy4.woff2":{"offset":8968519,"length":14783,"mime":"font/woff2","gzipped":true,"hash":"a81553c4ea055837"},"/_fonts/5M2MKUFWnEpuT8NeCYosby4H1wQsStpPWE7MBNFFD6Q-6gJALEDS7yNhRMCqenJPe8GZSicXSdryDX23b39FgW8.woff2":{"offset":8983302,"length":20044,"mime":"font/woff2","gzipped":true,"hash":"ff42f2ec0175a267"},"/_fonts/ffbDlYcgTaEOnso-ipkZyoviU7H_qu1vdDKLzdRMiGk-z0cz_vXe9FMQpUr1XPibpV3rF_SBN35ESvr3xAG3hgg.woff2":{"offset":9003346,"length":11295,"mime":"font/woff2","gzipped":true,"hash":"21b0ae0980798b85"},"/_fonts/178SDQEgKlkYIwN3m_zkIjcMBXox4CVikxxdM0ZM8vo-jb38HpZEzI0_yhPLZ-Yy9g2MdhSlJbWEEPtE4J-7mA4.woff2":{"offset":9014641,"length":10671,"mime":"font/woff2","gzipped":true,"hash":"36e58c8d7530177b"},"/_fonts/ez4lVSyRqqCUuKH6dN6OoXAdOd1Tig7Lx0sxWNqSyss-FAPjTJvN2otlgkrcoQlc70SE03hjkWoDwAr5QrM_lH4.woff2":{"offset":9025312,"length":10303,"mime":"font/woff2","gzipped":true,"hash":"5ef466d8ca6f4a51"},"/_fonts/AIcocMSXl6nLNQXbUptJf69FjdmzotJy-Fioo4iy220-SB6HQ5Gm3Vcgx3qj0cg_Wze4ux2YBnw264Bp9JBOtqc.woff2":{"offset":9035615,"length":12032,"mime":"font/woff2","gzipped":true,"hash":"552646cf3e8bc86a"},"/_fonts/UzhR3nAaijOxr33OombACPQO7z-6yxLefOdxL2qrdkM-a0beAYA6HgY0fQ5vpHiCL_P_ChfPRJkoN6xel0ZbT_M.woff2":{"offset":9047647,"length":18772,"mime":"font/woff2","gzipped":true,"hash":"31d0b3e854cf0516"},"/_fonts/zp_5eX_kcCb1NC9W_nqDxOyw80DU-fOCfH6vtlxk4Z8-noxSJKtVKEVnythGOQu3KozvszjDOTsJmBloptS0j1U.woff2":{"offset":9066419,"length":25872,"mime":"font/woff2","gzipped":true,"hash":"bf8976191316176c"},"/_fonts/CFNPQVcnBImzX0EtDNVhm6rxBn1xmGUJ07BRlOI64c-AuN8M25eo79PWJa2sA8bcOzJYOX3pV7Xznm4ZDHm7L4.woff2":{"offset":9092291,"length":27416,"mime":"font/woff2","gzipped":true,"hash":"faf2277bb7157d85"},"/_fonts/gKY12I0xR6XlZGrxmgE6Ajg7dolnFcwq2-CgW16emfc-X7w6QUwy0G27X1sBOv3U2zKeLNfjYiwTzwCsHp_sD_I.woff2":{"offset":9119707,"length":20640,"mime":"font/woff2","gzipped":true,"hash":"6d805cd573b06553"},"/_fonts/ERDypvkxXdChOV_B5u1ryQXmRbXDEMV5qjyhhW3xYeU-k61Y5mwieeHUzISWavQeKX6iyBBLnhRtxyom_DNxZzo.woff2":{"offset":9140347,"length":19072,"mime":"font/woff2","gzipped":true,"hash":"5c165609e25b8897"},"/_fonts/zkQRrBN3g9v_dVJWVkYryI2HWN4gfl77yu_FVFWNDYY-dCKEZ5lgZTVD30ATELD5lKDbBeBCP_ph7B4YtZQnSns.woff2":{"offset":9159419,"length":85311,"mime":"font/woff2","gzipped":true,"hash":"c5728a438c68f7aa"},"/_fonts/IbbswF-_Vv86nKnoVzycaklhFj9_jJEnyisnqN6LmPo-m6Ab3Re0t4DnCyR1DwEHCEvwfevkTcA65xJQ4ZPG4co.woff2":{"offset":9244730,"length":91878,"mime":"font/woff2","gzipped":true,"hash":"382e122f3bfa24c3"},"/_fonts/KCD5gdyGvwD04J2YZVfG5P-c82WM-ESA68SM8qCokq0-VU4O6gA3mknWHXkXUMY7aShByLKqEZOCYay7MuxAVuU.woff2":{"offset":9336608,"length":51620,"mime":"font/woff2","gzipped":true,"hash":"4b4704b50c1befe3"},"/docs":{"offset":0,"length":51269,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"65b7c7f7daa17e9c"},"/":{"offset":0,"length":51269,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"65b7c7f7daa17e9c"}}}
+{
+  "id": "nuxt",
+  "name": "Nuxt",
+  "version": "v4.x",
+  "commit": "7c05a8c2",
+  "origin": "https://nuxt.com",
+  "entryPath": "/docs/4.x/getting-started/introduction",
+  "updatedAt": "2026-10-11T10:38:39.754Z",
+  "totalBytes": 8937602,
+  "chunkCount": 181,
+  "routes": {
+    "/docs/4.x/getting-started/introduction": {
+      "offset": 0,
+      "length": 50282,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d1d0221424fb217d"
+    },
+    "/docs/4.x/getting-started/installation": {
+      "offset": 50282,
+      "length": 53393,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ed71d261d72429e7"
+    },
+    "/docs/4.x/getting-started/views": {
+      "offset": 103675,
+      "length": 53313,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cceeb0e28d77fb24"
+    },
+    "/docs/4.x/getting-started/assets": {
+      "offset": 156988,
+      "length": 55870,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "444dc49691dacfd7"
+    },
+    "/docs/4.x/getting-started/styling": {
+      "offset": 212858,
+      "length": 81116,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3d8ce34739331532"
+    },
+    "/docs/4.x/getting-started/configuration": {
+      "offset": 293974,
+      "length": 60031,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b91b41c03f48a30c"
+    },
+    "/docs/4.x/api": {
+      "offset": 354005,
+      "length": 45040,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1731289c0e191c32"
+    },
+    "/docs/4.x/directory-structure": {
+      "offset": 399045,
+      "length": 57097,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f6270e10c4db094c"
+    },
+    "/docs/4.x/getting-started/routing": {
+      "offset": 456142,
+      "length": 56177,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "30f78127fa6852b9"
+    },
+    "/docs/4.x/getting-started/transitions": {
+      "offset": 512319,
+      "length": 75588,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "122bf3433aa8ba36"
+    },
+    "/docs/4.x/guide": {
+      "offset": 587907,
+      "length": 43657,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "db9b9ee345970629"
+    },
+    "/docs/4.x/getting-started/data-fetching": {
+      "offset": 631564,
+      "length": 102879,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7622f14c03da6970"
+    },
+    "/docs/examples/hello-world": {
+      "offset": 734443,
+      "length": 47032,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c6374afbd43adc3d"
+    },
+    "/docs/4.x/getting-started/seo-meta": {
+      "offset": 781475,
+      "length": 66332,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "37bab0ab2a2354c0"
+    },
+    "/docs/4.x/community/getting-help": {
+      "offset": 847807,
+      "length": 46295,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bc697c1751158073"
+    },
+    "/docs/4.x/getting-started/state-management": {
+      "offset": 894102,
+      "length": 61264,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7bd9d605d66708ec"
+    },
+    "/docs/4.x/directory-structure/app/app": {
+      "offset": 955366,
+      "length": 57024,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "008b41d791ad1349"
+    },
+    "/docs/4.x/getting-started/deployment": {
+      "offset": 1012390,
+      "length": 57543,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c0964647a287e6bb"
+    },
+    "/docs/4.x/api/components/nuxt-page": {
+      "offset": 1069933,
+      "length": 55878,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4a352d3e6e61cb5a"
+    },
+    "/docs/4.x/guide/concepts/server-engine": {
+      "offset": 1125811,
+      "length": 48380,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ae7d5620d5de040e"
+    },
+    "/docs/4.x/guide/concepts/rendering": {
+      "offset": 1174191,
+      "length": 72354,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "92f12ca82f8d39d1"
+    },
+    "/docs/4.x/getting-started/layers": {
+      "offset": 1246545,
+      "length": 54681,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0c5cad4dd4b2168c"
+    },
+    "/docs/4.x/getting-started/prerendering": {
+      "offset": 1301226,
+      "length": 60437,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b9cf6c8672fe3cde"
+    },
+    "/docs/4.x/directory-structure/app/components": {
+      "offset": 1361663,
+      "length": 85046,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a1ad048ce30fcd7b"
+    },
+    "/docs/4.x/guide/concepts/auto-imports": {
+      "offset": 1446709,
+      "length": 58374,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "af0863ef3db036f0"
+    },
+    "/docs/4.x/guide/best-practices/devcontainers": {
+      "offset": 1505083,
+      "length": 51532,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8696a442ec8a8926"
+    },
+    "/docs/4.x/directory-structure/app/pages": {
+      "offset": 1556615,
+      "length": 83506,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "03d21db4af1e3873"
+    },
+    "/docs/4.x/getting-started/testing": {
+      "offset": 1640121,
+      "length": 106442,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ca79f1c1e20a063d"
+    },
+    "/docs/4.x/getting-started/error-handling": {
+      "offset": 1746563,
+      "length": 59908,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ebb1a7ed6bdb79d2"
+    },
+    "/docs/4.x/getting-started/server": {
+      "offset": 1806471,
+      "length": 53810,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b0886ee44bae04d5"
+    },
+    "/docs/4.x/guide/modules/getting-started": {
+      "offset": 1860281,
+      "length": 52868,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7ac8e95245d6eda7"
+    },
+    "/docs/4.x/getting-started/upgrade": {
+      "offset": 1913149,
+      "length": 128827,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3ca4eb3d5531fb4e"
+    },
+    "/docs/4.x/directory-structure/public": {
+      "offset": 2041976,
+      "length": 54512,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1362365530034839"
+    },
+    "/docs/4.x/guide/going-further/runtime-config": {
+      "offset": 2096488,
+      "length": 59871,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb5fad85de6f4a07"
+    },
+    "/docs/4.x/directory-structure/app/assets": {
+      "offset": 2156359,
+      "length": 53029,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9670b9fda6e9573d"
+    },
+    "/docs/4.x/directory-structure/app/app-config": {
+      "offset": 2209388,
+      "length": 63717,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1554afbd5e05be81"
+    },
+    "/docs/4.x/directory-structure/tsconfig": {
+      "offset": 2273105,
+      "length": 58367,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "179ca92c21fd075d"
+    },
+    "/docs/4.x/directory-structure/app/plugins": {
+      "offset": 2331472,
+      "length": 72275,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4eefe78be8cabf3b"
+    },
+    "/docs/4.x/api/composables/use-head": {
+      "offset": 2403747,
+      "length": 58366,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8368ed9a0cfe8139"
+    },
+    "/docs/4.x/directory-structure/nuxt-config": {
+      "offset": 2462113,
+      "length": 54462,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b76715708b28b153"
+    },
+    "/docs/4.x/api/components/client-only": {
+      "offset": 2516575,
+      "length": 50907,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2d47d37a2b24b5db"
+    },
+    "/docs/4.x/api/composables/use-app-config": {
+      "offset": 2567482,
+      "length": 46577,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f7dbe3260faa2f93"
+    },
+    "/docs/4.x/directory-structure/app/layouts": {
+      "offset": 2614059,
+      "length": 67371,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb1f1b94cb6821f9"
+    },
+    "/docs/4.x/api/nuxt-config": {
+      "offset": 2681430,
+      "length": 142573,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cf63f986672e4119"
+    },
+    "/docs/4.x/guide/modules": {
+      "offset": 2824003,
+      "length": 44962,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "014c38d109ad255c"
+    },
+    "/docs/4.x/api/components/dev-only": {
+      "offset": 2868965,
+      "length": 48270,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a7c165a66327b503"
+    },
+    "/docs/4.x/guide/going-further/hooks": {
+      "offset": 2917235,
+      "length": 51076,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "78b82359270938ab"
+    },
+    "/docs/4.x/api/composables/use-runtime-config": {
+      "offset": 2968311,
+      "length": 54797,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "948fca1254ce0c12"
+    },
+    "/docs/4.x/api/components/nuxt-loading-indicator": {
+      "offset": 3023108,
+      "length": 49524,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1deb5491f57d02f5"
+    },
+    "/docs/4.x/api/components/nuxt-link": {
+      "offset": 3072632,
+      "length": 69970,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9e412641f8859ed9"
+    },
+    "/docs/4.x/api/components/nuxt-layout": {
+      "offset": 3142602,
+      "length": 56045,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "66431a73dbecbbae"
+    },
+    "/docs/4.x/api/composables/on-prehydrate": {
+      "offset": 3198647,
+      "length": 53233,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eb4232b81e95d826"
+    },
+    "/docs/4.x/api/components/teleports": {
+      "offset": 3251880,
+      "length": 48522,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e96393499f18beee"
+    },
+    "/docs/4.x/api/components/nuxt-error-boundary": {
+      "offset": 3300402,
+      "length": 50355,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3859f56f9543af10"
+    },
+    "/docs/4.x/api/components/nuxt-img": {
+      "offset": 3350757,
+      "length": 48232,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8dffbab18c1e5c1f"
+    },
+    "/docs/4.x/api/components/nuxt-route-announcer": {
+      "offset": 3398989,
+      "length": 50416,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b9c05da46e845e3f"
+    },
+    "/docs/4.x/api/components/nuxt-time": {
+      "offset": 3449405,
+      "length": 54905,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "032f885060abc39c"
+    },
+    "/docs/4.x/api/components/nuxt-welcome": {
+      "offset": 3504310,
+      "length": 46916,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "aedc80332099c265"
+    },
+    "/docs/4.x/api/components/nuxt-picture": {
+      "offset": 3551226,
+      "length": 47336,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1c582605439f3e84"
+    },
+    "/docs/4.x/api/components/nuxt-island": {
+      "offset": 3598562,
+      "length": 54424,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "13604def3597b857"
+    },
+    "/docs/4.x/api/components/nuxt-announcer": {
+      "offset": 3652986,
+      "length": 52355,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1b2d03198e8814ed"
+    },
+    "/docs/4.x/api/components/nuxt-client-fallback": {
+      "offset": 3705341,
+      "length": 51422,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "291f1375f2bfd467"
+    },
+    "/docs/4.x/api/composables/create-use-fetch": {
+      "offset": 3756763,
+      "length": 62248,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7bf69c9cb315df6c"
+    },
+    "/docs/4.x/api/composables/create-use-async-data": {
+      "offset": 3819011,
+      "length": 56272,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b01f931877c506b6"
+    },
+    "/docs/4.x/api/composables/use-layout": {
+      "offset": 3875283,
+      "length": 48596,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7cd85ec918270150"
+    },
+    "/docs/4.x/api/composables/use-preview-mode": {
+      "offset": 3923879,
+      "length": 53446,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "447f3ce16aef9ed5"
+    },
+    "/docs/4.x/api/composables/use-request-fetch": {
+      "offset": 3977325,
+      "length": 50070,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f24791376c90d2f9"
+    },
+    "/docs/4.x/api/composables/use-nuxt-data": {
+      "offset": 4027395,
+      "length": 54499,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dcf9cf4087f18996"
+    },
+    "/docs/4.x/api/composables/use-cookie": {
+      "offset": 4081894,
+      "length": 66011,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bba09a03b7004b9d"
+    },
+    "/docs/4.x/api/composables/use-fetch": {
+      "offset": 4147905,
+      "length": 75455,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "df91d5d77209fac4"
+    },
+    "/docs/4.x/api/composables/use-nuxt-app": {
+      "offset": 4223360,
+      "length": 69752,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7151d1b5a5a2b1b2"
+    },
+    "/docs/4.x/api/composables/use-async-data": {
+      "offset": 4293112,
+      "length": 76615,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2c7be5857f545d05"
+    },
+    "/docs/4.x/api/composables/use-hydration": {
+      "offset": 4369727,
+      "length": 51605,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d221c6ee9edeab31"
+    },
+    "/docs/4.x/api/composables/use-loading-indicator": {
+      "offset": 4421332,
+      "length": 51359,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a2a34b59bfa85df1"
+    },
+    "/docs/4.x/api/composables/use-error": {
+      "offset": 4472691,
+      "length": 48955,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6827af11caa89891"
+    },
+    "/docs/4.x/api/composables/use-head-safe": {
+      "offset": 4521646,
+      "length": 51881,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4dffe3917d861ef4"
+    },
+    "/docs/4.x/api/composables/use-lazy-async-data": {
+      "offset": 4573527,
+      "length": 52903,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "15c87296c8152f4b"
+    },
+    "/docs/4.x/api/composables/use-lazy-fetch": {
+      "offset": 4626430,
+      "length": 55129,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "41e9df6a039616e0"
+    },
+    "/docs/4.x/api/composables/use-request-event": {
+      "offset": 4681559,
+      "length": 49794,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "27577bbcdf041399"
+    },
+    "/docs/4.x/api/composables/use-announcer": {
+      "offset": 4731353,
+      "length": 54373,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b7975eb9733c55bf"
+    },
+    "/docs/4.x/api/utils/clear-error": {
+      "offset": 4785726,
+      "length": 46812,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "20f8cfc7ecf1016c"
+    },
+    "/docs/4.x/api/composables/use-route-announcer": {
+      "offset": 4832538,
+      "length": 50198,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0c2e95ae60c90acf"
+    },
+    "/docs/4.x/api/utils/add-route-middleware": {
+      "offset": 4882736,
+      "length": 52024,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b493d4bc5f35037d"
+    },
+    "/docs/4.x/api/composables/use-seo-meta": {
+      "offset": 4934760,
+      "length": 51357,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "de3ab9eb6fb7785c"
+    },
+    "/docs/4.x/api/composables/use-request-url": {
+      "offset": 4986117,
+      "length": 48986,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b8bc5a883fbf1601"
+    },
+    "/docs/4.x/api/composables/use-runtime-hook": {
+      "offset": 5035103,
+      "length": 49499,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4052f98190f52f59"
+    },
+    "/docs/4.x/api/composables/use-request-header": {
+      "offset": 5084602,
+      "length": 48645,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6b7b1395595654ae"
+    },
+    "/docs/4.x/api/composables/use-state": {
+      "offset": 5133247,
+      "length": 51472,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f552f61145838da9"
+    },
+    "/docs/4.x/api/utils/call-once": {
+      "offset": 5184719,
+      "length": 53294,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ddc5331ecda6e16a"
+    },
+    "/docs/4.x/api/composables/use-server-seo-meta": {
+      "offset": 5238013,
+      "length": 47813,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b17dc84738b47462"
+    },
+    "/docs/4.x/api/composables/use-response-header": {
+      "offset": 5285826,
+      "length": 49616,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8ccb402ff708c3d7"
+    },
+    "/docs/4.x/api/composables/use-request-headers": {
+      "offset": 5335442,
+      "length": 48562,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c1479cffe01119ef"
+    },
+    "/docs/4.x/api/utils/abort-navigation": {
+      "offset": 5384004,
+      "length": 51111,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f0261c76bf202bd9"
+    },
+    "/docs/4.x/api/utils/dollarfetch": {
+      "offset": 5435115,
+      "length": 54353,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "98ca08aeba6c6c13"
+    },
+    "/docs/4.x/api/composables/use-router": {
+      "offset": 5489468,
+      "length": 53445,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eb633647a0640f0a"
+    },
+    "/docs/4.x/api/composables/use-route": {
+      "offset": 5542913,
+      "length": 52649,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0a99b53693424265"
+    },
+    "/docs/4.x/api/utils/define-nuxt-component": {
+      "offset": 5595562,
+      "length": 49171,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "499d065b2921666b"
+    },
+    "/docs/4.x/api/utils/define-page-meta": {
+      "offset": 5644733,
+      "length": 65191,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8f42f8477a54071d"
+    },
+    "/docs/4.x/api/utils/clear-nuxt-data": {
+      "offset": 5709924,
+      "length": 47623,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "93ab1b2577872a97"
+    },
+    "/docs/4.x/api/utils/on-before-route-update": {
+      "offset": 5757547,
+      "length": 45169,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d7ffc39d26b88218"
+    },
+    "/docs/4.x/api/utils/navigate-to": {
+      "offset": 5802716,
+      "length": 60269,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4f5d9b4ee74651f"
+    },
+    "/docs/4.x/api/utils/define-use-fetch-addon": {
+      "offset": 5862985,
+      "length": 59832,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b49c3b8331c4f30a"
+    },
+    "/docs/4.x/api/utils/define-nuxt-route-middleware": {
+      "offset": 5922817,
+      "length": 51163,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6487a6e3b5dbabdb"
+    },
+    "/docs/4.x/api/utils/prefetch-components": {
+      "offset": 5973980,
+      "length": 46929,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3b8acfe2b2016c97"
+    },
+    "/docs/4.x/api/utils/define-lazy-hydration-component": {
+      "offset": 6020909,
+      "length": 59023,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1953c0b0894e2fe9"
+    },
+    "/docs/4.x/api/utils/define-route-rules": {
+      "offset": 6079932,
+      "length": 50762,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "51712134eec9e257"
+    },
+    "/docs/4.x/api/utils/clear-nuxt-state": {
+      "offset": 6130694,
+      "length": 48446,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "341e24c7aa6a1e3a"
+    },
+    "/docs/4.x/api/utils/define-use-async-data-addon": {
+      "offset": 6179140,
+      "length": 51844,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a359905ac680fba8"
+    },
+    "/docs/4.x/api/utils/create-error": {
+      "offset": 6230984,
+      "length": 52336,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a6df98a0776efb0f"
+    },
+    "/docs/4.x/api/utils/on-nuxt-ready": {
+      "offset": 6283320,
+      "length": 47562,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8fd23c2c1c83d60d"
+    },
+    "/docs/4.x/api/utils/on-before-route-leave": {
+      "offset": 6330882,
+      "length": 45180,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "16f6b99dd03e4498"
+    },
+    "/docs/4.x/api/utils/define-nuxt-plugin": {
+      "offset": 6376062,
+      "length": 55162,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "856dc9954a190c24"
+    },
+    "/docs/4.x/api/commands/add-template": {
+      "offset": 6431224,
+      "length": 55120,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9952fbbd05bcee02"
+    },
+    "/docs/4.x/api/utils/show-error": {
+      "offset": 6486344,
+      "length": 47222,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "66b628a5801c28be"
+    },
+    "/docs/4.x/api/utils/refresh-nuxt-data": {
+      "offset": 6533566,
+      "length": 52062,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "50d7cabbbcb07c99"
+    },
+    "/docs/4.x/api/utils/preload-route-components": {
+      "offset": 6585628,
+      "length": 48283,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "14771c5805bed3b4"
+    },
+    "/docs/4.x/api/commands/overview": {
+      "offset": 6633911,
+      "length": 53924,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7d22bdbb8c2fdfbc"
+    },
+    "/docs/4.x/api/utils/set-response-status": {
+      "offset": 6687835,
+      "length": 47402,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b448f926ee9f436c"
+    },
+    "/docs/4.x/api/utils/prerender-routes": {
+      "offset": 6735237,
+      "length": 48395,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ea8fad2871bb27bd"
+    },
+    "/docs/4.x/api/utils/reload-nuxt-app": {
+      "offset": 6783632,
+      "length": 49536,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a458a444cfa34a42"
+    },
+    "/docs/4.x/api/commands/add": {
+      "offset": 6833168,
+      "length": 50328,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "47788ffbe9c969c8"
+    },
+    "/docs/4.x/api/utils/update-app-config": {
+      "offset": 6883496,
+      "length": 47546,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1b566a41194afd03"
+    },
+    "/docs/4.x/api/utils/refresh-cookie": {
+      "offset": 6931042,
+      "length": 49466,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8fd86a7c0f5b83ed"
+    },
+    "/docs/4.x/api/commands/build-module": {
+      "offset": 6980508,
+      "length": 48604,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "16084ddff048a1c4"
+    },
+    "/docs/4.x/api/utils/preload-components": {
+      "offset": 7029112,
+      "length": 46534,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "19e4bd41d6d63b24"
+    },
+    "/docs/4.x/api/utils/set-page-layout": {
+      "offset": 7075646,
+      "length": 50697,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2cf1f023dff36167"
+    },
+    "/docs/4.x/api/commands/build": {
+      "offset": 7126343,
+      "length": 50233,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3dfe05592ba06964"
+    },
+    "/docs/4.x/api/commands/analyze": {
+      "offset": 7176576,
+      "length": 49426,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7110d3b8140bcb9c"
+    },
+    "/docs/4.x/api/commands/cleanup": {
+      "offset": 7226002,
+      "length": 47694,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "adb5ca7b434f98f2"
+    },
+    "/docs/4.x/api/commands/prepare": {
+      "offset": 7273696,
+      "length": 49040,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c5240acc3133797b"
+    },
+    "/docs/4.x/api/commands/dev": {
+      "offset": 7322736,
+      "length": 62581,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e043592aab8be92e"
+    },
+    "/docs/4.x/api/commands/preview": {
+      "offset": 7385317,
+      "length": 52702,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b9200cba8cf83913"
+    },
+    "/docs/4.x/api/commands/module": {
+      "offset": 7438019,
+      "length": 52857,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "195eeff73e2fc00e"
+    },
+    "/docs/4.x/api/commands/devtools": {
+      "offset": 7490876,
+      "length": 48001,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "318080e3c157a5d0"
+    },
+    "/docs/4.x/api/commands/init": {
+      "offset": 7538877,
+      "length": 52491,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e54b5e95cf3ee75e"
+    },
+    "/docs/4.x/api/commands/info": {
+      "offset": 7591368,
+      "length": 47526,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ed4994a7ac537035"
+    },
+    "/docs/4.x/api/commands/curl": {
+      "offset": 7638894,
+      "length": 51255,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e46d6c2b3828cf2b"
+    },
+    "/docs/4.x/api/commands/docs": {
+      "offset": 7690149,
+      "length": 48213,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "59d87c758763f489"
+    },
+    "/docs/4.x/api/commands/generate": {
+      "offset": 7738362,
+      "length": 49636,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bffd9868085e5175"
+    },
+    "/docs/4.x/api/commands/typecheck": {
+      "offset": 7787998,
+      "length": 50421,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8f4050d1e20712b5"
+    },
+    "/docs/4.x/api/kit/modules": {
+      "offset": 7838419,
+      "length": 69050,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d010047bf81713ce"
+    },
+    "/docs/4.x/api/commands/upgrade": {
+      "offset": 7907469,
+      "length": 49112,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a07800398c98a75c"
+    },
+    "/docs/4.x/api/commands/test": {
+      "offset": 7956581,
+      "length": 48028,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3598b7c0f0949323"
+    },
+    "/docs/4.x/api/commands/task": {
+      "offset": 8004609,
+      "length": 51349,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "639fcd20523e4dc0"
+    },
+    "/docs/4.x/api/kit/programmatic": {
+      "offset": 8055958,
+      "length": 58133,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "295101a642601232"
+    },
+    "/docs/4.x/api/kit/compatibility": {
+      "offset": 8114091,
+      "length": 55130,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "68baae7c897cb2ac"
+    },
+    "/docs/4.x/api/kit/autoimports": {
+      "offset": 8169221,
+      "length": 56141,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "774f5a0cda4c2430"
+    },
+    "/docs/4.x/api/kit/components": {
+      "offset": 8225362,
+      "length": 59573,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f465a7735031bf3e"
+    },
+    "/docs/4.x/api/kit/context": {
+      "offset": 8284935,
+      "length": 55178,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d68c95918ed5db7a"
+    },
+    "/_nuxt/VideoAccordion.CObyy4hC.css": {
+      "offset": 8340113,
+      "length": 193,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "4672725b5be75c40"
+    },
+    "/_nuxt/entry.pM78SRPW.css": {
+      "offset": 8340306,
+      "length": 39693,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "1cff769b476b92ae"
+    },
+    "/icon.png": {
+      "offset": 8379999,
+      "length": 1273,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b33ae0c25e483ac2"
+    },
+    "/assets/docs/getting-started/views/layouts.svg": {
+      "offset": 8381272,
+      "length": 2876,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "82e695511686dcca"
+    },
+    "/assets/docs/getting-started/server.svg": {
+      "offset": 8384148,
+      "length": 3483,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "4de460935f2e5b2c"
+    },
+    "/assets/docs/getting-started/views/components.svg": {
+      "offset": 8387631,
+      "length": 3576,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "ff5431700b64904b"
+    },
+    "/assets/docs/getting-started/views/pages.svg": {
+      "offset": 8391207,
+      "length": 3642,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "04ce6cf752538d8a"
+    },
+    "/__docx_assets/237a28706b400b.svg": {
+      "offset": 8394849,
+      "length": 1264,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "c3ac2255824c1300"
+    },
+    "/__docx_assets/fb9b4fa49d04c0.svg": {
+      "offset": 8396113,
+      "length": 1611,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "d19ca5691f9fa69b"
+    },
+    "/assets/docs/concepts/rendering/csr.svg": {
+      "offset": 8397724,
+      "length": 11549,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "bf71b1c5e58d9bb1"
+    },
+    "/__docx_assets/90b6072fc84597.svg": {
+      "offset": 8409273,
+      "length": 1492,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "07d0724e929ffcb8"
+    },
+    "/__docx_assets/aa89cafe29a163.svg": {
+      "offset": 8410765,
+      "length": 1988,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "7123ed557f219b22"
+    },
+    "/assets/docs/concepts/rendering/ssr.svg": {
+      "offset": 8412753,
+      "length": 16358,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "913ca5fe53cbdc7f"
+    },
+    "/__docx_assets/e3f67ffe38fab0.svg": {
+      "offset": 8429111,
+      "length": 2030,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "909568255c1105d9"
+    },
+    "/assets/docs/getting-started/views/app.svg": {
+      "offset": 8431141,
+      "length": 2835,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "3c59df5c19ac4b93"
+    },
+    "/__docx_assets/34bdb9025d273a.svg": {
+      "offset": 8433976,
+      "length": 3381,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "4e8193908004df26"
+    },
+    "/_fonts/2msaTeI3_W3zS_INTHzFI7wzzBxo_ZUDOxC_QFYUI3Q-oaIoteSPRcxgrgy3zikG3fP_0NwSUvUVDPY4E3rBV70.woff2": {
+      "offset": 8437357,
+      "length": 32095,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "93f33dbe8d5f4327"
+    },
+    "/_fonts/HgJel4iAS5mDVqJaDUYKmxaMJg4zKHTGmyD1FQkOsTM-2hVuuQIZ4GSGMgNv6dvlqz7cfD6lr7xLohUph7OCgFg.woff2": {
+      "offset": 8469452,
+      "length": 48441,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "db0402c831a27aef"
+    },
+    "/_fonts/zkQRrBN3g9v_dVJWVkYryI2HWN4gfl77yu_FVFWNDYY-dCKEZ5lgZTVD30ATELD5lKDbBeBCP_ph7B4YtZQnSns.woff2": {
+      "offset": 8517893,
+      "length": 85311,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "d88ddb44e6beb31f"
+    },
+    "/_fonts/ez4lVSyRqqCUuKH6dN6OoXAdOd1Tig7Lx0sxWNqSyss-FAPjTJvN2otlgkrcoQlc70SE03hjkWoDwAr5QrM_lH4.woff2": {
+      "offset": 8603204,
+      "length": 10303,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "452e9417356ae0f1"
+    },
+    "/_fonts/UzhR3nAaijOxr33OombACPQO7z-6yxLefOdxL2qrdkM-a0beAYA6HgY0fQ5vpHiCL_P_ChfPRJkoN6xel0ZbT_M.woff2": {
+      "offset": 8613507,
+      "length": 18772,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "64082f25f9704eac"
+    },
+    "/_fonts/CFNPQVcnBImzX0EtDNVhm6rxBn1xmGUJ07BRlOI64c-AuN8M25eo79PWJa2sA8bcOzJYOX3pV7Xznm4ZDHm7L4.woff2": {
+      "offset": 8632279,
+      "length": 27416,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b641196f87757ecd"
+    },
+    "/_fonts/ERDypvkxXdChOV_B5u1ryQXmRbXDEMV5qjyhhW3xYeU-k61Y5mwieeHUzISWavQeKX6iyBBLnhRtxyom_DNxZzo.woff2": {
+      "offset": 8659695,
+      "length": 19072,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "6073aeb841bc49dc"
+    },
+    "/_fonts/KCD5gdyGvwD04J2YZVfG5P-c82WM-ESA68SM8qCokq0-VU4O6gA3mknWHXkXUMY7aShByLKqEZOCYay7MuxAVuU.woff2": {
+      "offset": 8678767,
+      "length": 51620,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "3b71feee405008a4"
+    },
+    "/_fonts/AIcocMSXl6nLNQXbUptJf69FjdmzotJy-Fioo4iy220-SB6HQ5Gm3Vcgx3qj0cg_Wze4ux2YBnw264Bp9JBOtqc.woff2": {
+      "offset": 8730387,
+      "length": 12032,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "7aedc5c91bc58859"
+    },
+    "/_fonts/178SDQEgKlkYIwN3m_zkIjcMBXox4CVikxxdM0ZM8vo-jb38HpZEzI0_yhPLZ-Yy9g2MdhSlJbWEEPtE4J-7mA4.woff2": {
+      "offset": 8742419,
+      "length": 10671,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "bce4426a354e132b"
+    },
+    "/_fonts/zp_5eX_kcCb1NC9W_nqDxOyw80DU-fOCfH6vtlxk4Z8-noxSJKtVKEVnythGOQu3KozvszjDOTsJmBloptS0j1U.woff2": {
+      "offset": 8753090,
+      "length": 25872,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "d67aeccedfd1d202"
+    },
+    "/_fonts/IbbswF-_Vv86nKnoVzycaklhFj9_jJEnyisnqN6LmPo-m6Ab3Re0t4DnCyR1DwEHCEvwfevkTcA65xJQ4ZPG4co.woff2": {
+      "offset": 8778962,
+      "length": 91878,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "6f578feaf7f51038"
+    },
+    "/_fonts/5M2MKUFWnEpuT8NeCYosby4H1wQsStpPWE7MBNFFD6Q-6gJALEDS7yNhRMCqenJPe8GZSicXSdryDX23b39FgW8.woff2": {
+      "offset": 8870840,
+      "length": 20044,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "d9905d82952793f5"
+    },
+    "/_fonts/ffbDlYcgTaEOnso-ipkZyoviU7H_qu1vdDKLzdRMiGk-z0cz_vXe9FMQpUr1XPibpV3rF_SBN35ESvr3xAG3hgg.woff2": {
+      "offset": 8890884,
+      "length": 11295,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "85a49f18c048badc"
+    },
+    "/_fonts/IGUZK2talPE7hxcZwzgZow-a-NzdLc0q8uZ9glONpRU-bO5ak4M7yNpQAv35KiXsy97XkmRgC5Iw1A2bF81vJy4.woff2": {
+      "offset": 8902179,
+      "length": 14783,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "29540a9f91e79763"
+    },
+    "/_fonts/gKY12I0xR6XlZGrxmgE6Ajg7dolnFcwq2-CgW16emfc-X7w6QUwy0G27X1sBOv3U2zKeLNfjYiwTzwCsHp_sD_I.woff2": {
+      "offset": 8916962,
+      "length": 20640,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "cc9493fa6093f8d0"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 50282,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d1d0221424fb217d"
+    },
+    "/": {
+      "offset": 0,
+      "length": 50282,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d1d0221424fb217d"
+    }
+  }
+}

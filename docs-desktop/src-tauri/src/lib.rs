@@ -187,21 +187,91 @@ fn curl_get_bytes(url: &str, range: Option<(usize, usize)>) -> Result<Vec<u8>, S
 }
 
 fn get_packs_dir() -> PathBuf {
-    let candidates = [
+    let base = std::env::var_os("LOCALAPPDATA")
+        .map(PathBuf::from)
+        .or_else(|| {
+            std::env::var_os("USERPROFILE")
+                .map(|p| PathBuf::from(p).join("AppData").join("Local"))
+        })
+        .or_else(|| std::env::var_os("APPDATA").map(PathBuf::from))
+        .unwrap_or_else(|| std::env::temp_dir());
+    let dir = base.join("docx");
+    let _ = fs::create_dir_all(&dir);
+    dir
+}
+
+fn migrate_legacy_packs_to_appdata() {
+    let target_dir = get_packs_dir();
+    let mut legacy_dirs = vec![
         PathBuf::from("d:/Dev/crawl/packs"),
-        std::env::current_exe()
-            .ok()
-            .and_then(|p| p.parent().map(|d| d.join("packs")))
-            .unwrap_or_else(|| PathBuf::from("./packs")),
+        PathBuf::from("d:/Dev/docx/packs"),
+        PathBuf::from("C:/Users/vahid/OneDrive/Desktop/packs"),
     ];
-    for c in &candidates {
-        if c.exists() {
-            return c.clone();
+    if let Some(roaming) = std::env::var_os("APPDATA") {
+        legacy_dirs.push(PathBuf::from(roaming).join("docx"));
+    }
+    if let Ok(exe) = std::env::current_exe() {
+        if let Some(parent) = exe.parent() {
+            legacy_dirs.push(parent.join("packs"));
         }
     }
-    let fallback = candidates[1].clone();
-    let _ = fs::create_dir_all(&fallback);
-    fallback
+    if let Ok(cwd) = std::env::current_dir() {
+        legacy_dirs.push(cwd.join("packs"));
+    }
+
+    for legacy in legacy_dirs {
+        if !legacy.exists() || legacy == target_dir {
+            continue;
+        }
+        let legacy_str = legacy.to_string_lossy().to_lowercase();
+        let is_repo_dir = legacy_str.contains("crawl") || legacy_str.contains("d:/dev/docx") || legacy_str.contains("d:\\dev\\docx");
+        if let Ok(entries) = fs::read_dir(&legacy) {
+            for entry in entries.flatten() {
+                let src_path = entry.path();
+                if !src_path.is_file() {
+                    continue;
+                }
+                let name = match src_path.file_name().and_then(|n| n.to_str()) {
+                    Some(n) => n.to_string(),
+                    None => continue,
+                };
+                if name.ends_with(".docpack")
+                    || name.ends_with(".manifest.json")
+                    || name.ends_with(".search.json")
+                    || name == "registry.json"
+                    || name == "app-manifest.local.json"
+                {
+                    let dst_path = target_dir.join(&name);
+                    let should_copy = match (fs::metadata(&src_path), fs::metadata(&dst_path)) {
+                        (Ok(src_m), Ok(dst_m)) => {
+                            if name.ends_with(".docpack") {
+                                src_m.len() > 1024 && dst_m.len() <= 1024
+                            } else {
+                                false
+                            }
+                        }
+                        (Ok(src_m), Err(_)) => !name.ends_with(".docpack") || src_m.len() > 1024,
+                        _ => false,
+                    };
+                    if should_copy {
+                        if !is_repo_dir {
+                            if fs::rename(&src_path, &dst_path).is_err() {
+                                let _ = fs::copy(&src_path, &dst_path);
+                            }
+                        } else {
+                            let _ = fs::copy(&src_path, &dst_path);
+                        }
+                    }
+                    if !is_repo_dir {
+                        let _ = fs::remove_file(&src_path);
+                    }
+                }
+            }
+        }
+        if !is_repo_dir {
+            let _ = fs::remove_dir(&legacy);
+        }
+    }
 }
 
 fn parse_docpack_on_disk(
@@ -241,6 +311,7 @@ fn parse_docpack_on_disk(
     }))
 }
 
+#[allow(dead_code)]
 fn parse_docpack_bytes(buf: Vec<u8>, source: &str) -> Option<Arc<SiteOverridePack>> {
     if buf.len() < 8 {
         return None;
@@ -374,6 +445,7 @@ fn load_asset_store() -> Arc<AssetStore> {
         }
     }
 
+    migrate_legacy_packs_to_appdata();
     let mut overrides = HashMap::new();
     load_exe_trailer_overrides(&mut overrides);
     load_disk_overrides(&mut overrides);
@@ -553,20 +625,18 @@ fn inject_reader_bridge(site_key: &str, mut html: String) -> Vec<u8> {
 ::-webkit-scrollbar-thumb:hover { background-color: #3a3a45 !important; }
 * { scrollbar-width: thin; scrollbar-color: #24242b #070709; }
 
-html.docx-force-dark {
-  filter: invert(0.93) hue-rotate(180deg) !important;
-  background-color: #ffffff !important;
-  min-height: 100%;
+html.docx-smart-dark,
+html.docx-smart-dark body {
+  background-color: #1e1e22 !important;
+  color: #ffffff !important;
+  color-scheme: dark !important;
 }
-html.docx-force-dark body {
+
+html.docx-smart-light,
+html.docx-smart-light body {
   background-color: #ffffff !important;
-}
-html.docx-force-dark img,
-html.docx-force-dark video,
-html.docx-force-dark canvas,
-html.docx-force-dark picture,
-html.docx-force-dark [style*="background-image"] {
-  filter: invert(1) hue-rotate(180deg) !important;
+  color: #000000 !important;
+  color-scheme: light !important;
 }
 
 /* VitePress (Hono, Vue, Elysia, Vite, Pinia, etc.) interactive sidebar & menu rules */
@@ -590,6 +660,65 @@ html.docx-force-dark [style*="background-image"] {
 [data-submenu-trigger], [data-back-button], [data-toggle-nested-button] {
   cursor: pointer;
 }
+
+/* Rust mdBook code block container & syntax highlighting theme rules */
+#mdbook-body-container pre > code {
+  display: block;
+  overflow-x: auto;
+  padding: 1rem;
+  border-radius: 5px;
+}
+#mdbook-body-container :not(pre) > code.hljs {
+  display: inline;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+html.navy #mdbook-body-container pre > code,
+html.coal #mdbook-body-container pre > code,
+html.navy #mdbook-body-container :not(pre) > code.hljs,
+html.coal #mdbook-body-container :not(pre) > code.hljs {
+  background: #1d1f21 !important;
+  color: #c5c8c6;
+}
+html.ayu #mdbook-body-container pre > code,
+html.ayu #mdbook-body-container :not(pre) > code.hljs {
+  background: #191f26 !important;
+  color: #e6e1cf;
+}
+html.light #mdbook-body-container pre > code,
+html.rust #mdbook-body-container pre > code,
+html.light #mdbook-body-container :not(pre) > code.hljs,
+html.rust #mdbook-body-container :not(pre) > code.hljs {
+  background: #f6f7f6 !important;
+  color: #000000;
+}
+html.navy #mdbook-body-container .hljs-comment, html.coal #mdbook-body-container .hljs-comment { color: #969896 !important; }
+html.navy #mdbook-body-container .hljs-variable, html.navy #mdbook-body-container .hljs-attribute, html.navy #mdbook-body-container .hljs-attr, html.navy #mdbook-body-container .hljs-tag, html.navy #mdbook-body-container .hljs-regexp,
+html.coal #mdbook-body-container .hljs-variable, html.coal #mdbook-body-container .hljs-attribute, html.coal #mdbook-body-container .hljs-attr, html.coal #mdbook-body-container .hljs-tag, html.coal #mdbook-body-container .hljs-regexp { color: #cc6666 !important; }
+html.navy #mdbook-body-container .hljs-number, html.navy #mdbook-body-container .hljs-built_in, html.navy #mdbook-body-container .hljs-builtin-name, html.navy #mdbook-body-container .hljs-literal, html.navy #mdbook-body-container .hljs-type, html.navy #mdbook-body-container .hljs-params, html.navy #mdbook-body-container .hljs-meta, html.navy #mdbook-body-container .hljs-symbol,
+html.coal #mdbook-body-container .hljs-number, html.coal #mdbook-body-container .hljs-built_in, html.coal #mdbook-body-container .hljs-builtin-name, html.coal #mdbook-body-container .hljs-literal, html.coal #mdbook-body-container .hljs-type, html.coal #mdbook-body-container .hljs-params, html.coal #mdbook-body-container .hljs-meta, html.coal #mdbook-body-container .hljs-symbol { color: #de935f !important; }
+html.navy #mdbook-body-container .hljs-string, html.navy #mdbook-body-container .hljs-bullet,
+html.coal #mdbook-body-container .hljs-string, html.coal #mdbook-body-container .hljs-bullet { color: #b5bd68 !important; }
+html.navy #mdbook-body-container .hljs-title, html.navy #mdbook-body-container .hljs-section,
+html.coal #mdbook-body-container .hljs-title, html.coal #mdbook-body-container .hljs-section { color: #8abeb7 !important; }
+html.navy #mdbook-body-container .hljs-keyword, html.navy #mdbook-body-container .hljs-selector-tag,
+html.coal #mdbook-body-container .hljs-keyword, html.coal #mdbook-body-container .hljs-selector-tag { color: #b294bb !important; }
+html.ayu #mdbook-body-container .hljs-comment { color: #5c6773 !important; }
+html.ayu #mdbook-body-container .hljs-variable, html.ayu #mdbook-body-container .hljs-attribute, html.ayu #mdbook-body-container .hljs-attr, html.ayu #mdbook-body-container .hljs-regexp, html.ayu #mdbook-body-container .hljs-keyword, html.ayu #mdbook-body-container .hljs-symbol { color: #ff7733 !important; }
+html.ayu #mdbook-body-container .hljs-number, html.ayu #mdbook-body-container .hljs-meta, html.ayu #mdbook-body-container .hljs-builtin-name, html.ayu #mdbook-body-container .hljs-literal, html.ayu #mdbook-body-container .hljs-type, html.ayu #mdbook-body-container .hljs-params { color: #ffee99 !important; }
+html.ayu #mdbook-body-container .hljs-string, html.ayu #mdbook-body-container .hljs-bullet { color: #b8cc52 !important; }
+html.ayu #mdbook-body-container .hljs-title, html.ayu #mdbook-body-container .hljs-built_in, html.ayu #mdbook-body-container .hljs-section { color: #ffb454 !important; }
+html.light #mdbook-body-container .hljs-comment, html.rust #mdbook-body-container .hljs-comment { color: #575757 !important; }
+html.light #mdbook-body-container .hljs-variable, html.light #mdbook-body-container .hljs-attribute, html.light #mdbook-body-container .hljs-attr, html.light #mdbook-body-container .hljs-tag, html.light #mdbook-body-container .hljs-regexp,
+html.rust #mdbook-body-container .hljs-variable, html.rust #mdbook-body-container .hljs-attribute, html.rust #mdbook-body-container .hljs-attr, html.rust #mdbook-body-container .hljs-tag, html.rust #mdbook-body-container .hljs-regexp { color: #d70025 !important; }
+html.light #mdbook-body-container .hljs-number, html.light #mdbook-body-container .hljs-meta, html.light #mdbook-body-container .hljs-built_in, html.light #mdbook-body-container .hljs-builtin-name, html.light #mdbook-body-container .hljs-literal, html.light #mdbook-body-container .hljs-type, html.light #mdbook-body-container .hljs-params,
+html.rust #mdbook-body-container .hljs-number, html.rust #mdbook-body-container .hljs-meta, html.rust #mdbook-body-container .hljs-built_in, html.rust #mdbook-body-container .hljs-builtin-name, html.rust #mdbook-body-container .hljs-literal, html.rust #mdbook-body-container .hljs-type, html.rust #mdbook-body-container .hljs-params { color: #b21e00 !important; }
+html.light #mdbook-body-container .hljs-string, html.light #mdbook-body-container .hljs-symbol, html.light #mdbook-body-container .hljs-bullet,
+html.rust #mdbook-body-container .hljs-string, html.rust #mdbook-body-container .hljs-symbol, html.rust #mdbook-body-container .hljs-bullet { color: #008200 !important; }
+html.light #mdbook-body-container .hljs-title, html.light #mdbook-body-container .hljs-section,
+html.rust #mdbook-body-container .hljs-title, html.rust #mdbook-body-container .hljs-section { color: #0030f2 !important; }
+html.light #mdbook-body-container .hljs-keyword, html.light #mdbook-body-container .hljs-selector-tag,
+html.rust #mdbook-body-container .hljs-keyword, html.rust #mdbook-body-container .hljs-selector-tag { color: #9d00ec !important; }
 </style>
 <script id="docx-reader-bridge">
 (function(){
@@ -620,35 +749,41 @@ html.docx-force-dark [style*="background-image"] {
     } catch (e) {}
   }
 
-  // Only sites that strictly have NO native dark theme use CSS filter inversion.
-  // Sites with native dark themes (Express, Hono, Vue, Tailwind, Shadcn, Django, FastAPI, Python, Qt, Motion, etc.)
-  // use their native theme system and synchronize two-way with the DOCX Dark/Light button.
-  var STRICT_LIGHT_ONLY_SITES = {
+  // Known strictly single-theme sites (also verified dynamically via computed background luminance)
+  var LIGHT_ONLY_SITES = {
     cppreference: true,
     learncpp: true,
     lua: true,
     cmake: true,
-    git: true,
-    curl: true,
-    go: true,
-    htmx: true,
-    ninja: true,
-    llvm: true,
     boost: true,
-    sqlite: true,
-    postgresql: true
+    sqlite: true
   };
 
+  var DARK_ONLY_SITES = {};
+
   var isApplyingTheme = false;
+  var currentSmartMode = null;
+
+  function getSystemDarkDefault() {
+    try {
+      var sys = localStorage.getItem('docx_system_dark');
+      if (sys === '1') return true;
+      if (sys === '0') return false;
+      if (window.matchMedia) {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches;
+      }
+    } catch (e) {}
+    return true;
+  }
 
   function getSavedSiteDark() {
     try {
-      var perSite = localStorage.getItem('docx_dark_v2_' + SITE_ID);
+      var perSite = localStorage.getItem('docx_dark_v3_' + SITE_ID);
       if (perSite !== null) return perSite !== '0';
-      var globalVal = localStorage.getItem('docx_dark_v2');
+      var globalVal = localStorage.getItem('docx_dark_v3');
       if (globalVal !== null) return globalVal !== '0';
     } catch (e) {}
-    return true;
+    return getSystemDarkDefault();
   }
 
   function getSavedThemeEnabled() {
@@ -667,9 +802,202 @@ html.docx-force-dark [style*="background-image"] {
     return SITE_ID === 'cppreference';
   }
 
+  function parseRgba(str) {
+    if (!str || str === 'transparent' || str === 'none') return null;
+    var m = str.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)(?:\s*,\s*([0-9.]+))?\s*\)/i);
+    if (!m) return null;
+    var r = parseInt(m[1], 10);
+    var g = parseInt(m[2], 10);
+    var b = parseInt(m[3], 10);
+    var a = m[4] !== undefined ? parseFloat(m[4]) : 1;
+    return { r: r, g: g, b: b, a: a };
+  }
+
+  function rgbToHslAndLum(r, g, b) {
+    var rn = r / 255, gn = g / 255, bn = b / 255;
+    var max = Math.max(rn, gn, bn), min = Math.min(rn, gn, bn);
+    var h = 0, s = 0, l = (max + min) / 2;
+    if (max !== min) {
+      var d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      switch (max) {
+        case rn: h = (gn - bn) / d + (gn < bn ? 6 : 0); break;
+        case gn: h = (bn - rn) / d + 2; break;
+        case bn: h = (rn - gn) / d + 4; break;
+      }
+      h /= 6;
+    }
+    var lum = 0.2126 * rn + 0.7152 * gn + 0.0722 * bn;
+    return { h: Math.round(h * 360), s: s, l: l, lum: lum };
+  }
+
+  function getEffectivePageLuminance() {
+    try {
+      var candidates = [
+        document.body,
+        document.documentElement,
+        document.querySelector('main, #content, article, .content, .VPDoc, .md-main')
+      ];
+      for (var i = 0; i < candidates.length; i++) {
+        var el = candidates[i];
+        if (!el) continue;
+        var cs = window.getComputedStyle(el);
+        var c = parseRgba(cs.backgroundColor);
+        if (c && c.a > 0.15) {
+          return rgbToHslAndLum(c.r, c.g, c.b).lum;
+        }
+      }
+    } catch (e) {}
+    return null;
+  }
+
+  function clearSmartSingleTheme() {
+    try {
+      var root = document.documentElement;
+      root.classList.remove('docx-smart-dark', 'docx-smart-light', 'docx-force-dark');
+      currentSmartMode = null;
+      var styled = document.querySelectorAll('[data-docx-orig-style]');
+      for (var i = 0; i < styled.length; i++) {
+        var el = styled[i];
+        var orig = el.getAttribute('data-docx-orig-style');
+        el.removeAttribute('data-docx-orig-style');
+        if (orig === '') {
+          el.removeAttribute('style');
+        } else if (orig !== null) {
+          el.setAttribute('style', orig);
+        }
+      }
+    } catch (e) {}
+  }
+
+  // Smart color-preserving restyler for Light-only sites -> Dark mode (dark grey bg + white text + keep visible colors)
+  // and Dark-only sites -> Light mode (white bg + black text + keep visible colors)
+  function applySmartSingleTheme(targetMode) {
+    if (!document.body) return;
+    try {
+      if (currentSmartMode && currentSmartMode !== targetMode) {
+        clearSmartSingleTheme();
+      }
+      var root = document.documentElement;
+      root.classList.remove('docx-force-dark');
+      root.classList.toggle('docx-smart-dark', targetMode === 'dark');
+      root.classList.toggle('docx-smart-light', targetMode === 'light');
+      currentSmartMode = targetMode;
+
+      var skipTags = {
+        IMG: 1, SVG: 1, PATH: 1, CIRCLE: 1, RECT: 1, POLYGON: 1, LINE: 1, POLYLINE: 1,
+        VIDEO: 1, CANVAS: 1, PICTURE: 1, IFRAME: 1, SCRIPT: 1, STYLE: 1, LINK: 1, META: 1, HEAD: 1
+      };
+
+      var all = document.body.getElementsByTagName('*');
+      var len = all.length;
+      for (var i = 0; i < len; i++) {
+        var el = all[i];
+        if (skipTags[el.tagName]) continue;
+        if (el.hasAttribute('data-docx-smart-mode') && el.getAttribute('data-docx-smart-mode') === targetMode) {
+          continue;
+        }
+        var cs = window.getComputedStyle(el);
+        var bg = parseRgba(cs.backgroundColor);
+        var fg = parseRgba(cs.color);
+        var bd = parseRgba(cs.borderTopColor);
+
+        var newBg = null, newFg = null, newBd = null;
+
+        if (targetMode === 'dark') {
+          // Light-only site -> Dark Grey background (#1e1e22 / #27272d) & White text (#ffffff), keeping visible colors
+          if (bg && bg.a > 0.08) {
+            var bgInfo = rgbToHslAndLum(bg.r, bg.g, bg.b);
+            if (bgInfo.lum > 0.48) {
+              if (bgInfo.s < 0.16) {
+                newBg = bgInfo.lum > 0.90 ? '#1e1e22' : '#27272d';
+              } else {
+                var satD = Math.round(Math.min(bgInfo.s * 100, 55));
+                newBg = 'hsl(' + bgInfo.h + ', ' + satD + '%, 20%)';
+              }
+            }
+          }
+          if (fg && fg.a > 0.08) {
+            var fgInfo = rgbToHslAndLum(fg.r, fg.g, fg.b);
+            if (fgInfo.s < 0.14) {
+              if (fgInfo.lum < 0.78) {
+                newFg = fgInfo.lum < 0.35 ? '#ffffff' : '#d4d4d8';
+              }
+            } else {
+              // Colored text: keep as-is if already visible on dark grey; otherwise lift lightness while keeping hue
+              if (fgInfo.lum < 0.48) {
+                var satFgD = Math.round(Math.max(fgInfo.s * 100, 65));
+                newFg = 'hsl(' + fgInfo.h + ', ' + satFgD + '%, 68%)';
+              }
+            }
+          }
+          if (bd && bd.a > 0.08) {
+            var bdInfo = rgbToHslAndLum(bd.r, bd.g, bd.b);
+            if (bdInfo.s < 0.16 && bdInfo.lum > 0.55) {
+              newBd = '#34343d';
+            }
+          }
+        } else {
+          // Dark-only site -> White background (#ffffff / #f4f4f6) & Black text (#000000), keeping visible colors
+          if (bg && bg.a > 0.08) {
+            var bgInfoL = rgbToHslAndLum(bg.r, bg.g, bg.b);
+            if (bgInfoL.lum < 0.48) {
+              if (bgInfoL.s < 0.16) {
+                newBg = bgInfoL.lum < 0.12 ? '#ffffff' : '#f4f4f6';
+              } else {
+                var satL = Math.round(Math.min(bgInfoL.s * 100, 60));
+                newBg = 'hsl(' + bgInfoL.h + ', ' + satL + '%, 92%)';
+              }
+            }
+          }
+          if (fg && fg.a > 0.08) {
+            var fgInfoL = rgbToHslAndLum(fg.r, fg.g, fg.b);
+            if (fgInfoL.s < 0.14) {
+              if (fgInfoL.lum > 0.35) {
+                newFg = fgInfoL.lum > 0.72 ? '#000000' : '#3f3f46';
+              }
+            } else {
+              // Colored text: keep as-is if already visible on white; otherwise darken lightness while keeping hue
+              if (fgInfoL.lum > 0.48) {
+                var satFgL = Math.round(Math.max(fgInfoL.s * 100, 65));
+                newFg = 'hsl(' + fgInfoL.h + ', ' + satFgL + '%, 34%)';
+              }
+            }
+          }
+          if (bd && bd.a > 0.08) {
+            var bdInfoL = rgbToHslAndLum(bd.r, bd.g, bd.b);
+            if (bdInfoL.s < 0.16 && bdInfoL.lum < 0.45) {
+              newBd = '#e4e4e7';
+            }
+          }
+        }
+
+        if (newBg || newFg || newBd) {
+          if (!el.hasAttribute('data-docx-orig-style')) {
+            el.setAttribute('data-docx-orig-style', el.getAttribute('style') || '');
+          }
+          if (newBg) el.style.setProperty('background-color', newBg, 'important');
+          if (newFg) el.style.setProperty('color', newFg, 'important');
+          if (newBd) el.style.setProperty('border-color', newBd, 'important');
+        }
+        el.setAttribute('data-docx-smart-mode', targetMode);
+      }
+    } catch (e) {}
+  }
+
+  function clearSmartTagsAndRestore() {
+    clearSmartSingleTheme();
+    try {
+      var tagged = document.querySelectorAll('[data-docx-smart-mode]');
+      for (var i = 0; i < tagged.length; i++) {
+        tagged[i].removeAttribute('data-docx-smart-mode');
+      }
+    } catch (e) {}
+  }
+
   function syncMediaDarkStylesheets(darkEnabled) {
     try {
-      // 1. Toggle <link media="(prefers-color-scheme: dark)"> (e.g., Python pydoctheme_dark.css & pygments_dark.css)
+      // 1. Toggle <link media="(prefers-color-scheme: dark|light)"> (e.g., Python pydoctheme_dark.css & pygments_dark.css)
       var mediaLinks = document.querySelectorAll('link[media*="prefers-color-scheme"], link[data-docx-dark-media]');
       for (var m = 0; m < mediaLinks.length; m++) {
         var lnk = mediaLinks[m];
@@ -679,10 +1007,12 @@ html.docx-force-dark [style*="background-image"] {
         var origMedia = lnk.getAttribute('data-docx-dark-media') || '';
         if (origMedia.indexOf('dark') !== -1) {
           lnk.setAttribute('media', darkEnabled ? 'all' : 'not all');
+        } else if (origMedia.indexOf('light') !== -1) {
+          lnk.setAttribute('media', darkEnabled ? 'not all' : 'all');
         }
       }
 
-      // 2. Toggle @media (prefers-color-scheme: dark) rules inside same-origin stylesheets (e.g., Three.js, Django)
+      // 2. Toggle @media (prefers-color-scheme: dark|light) rules inside same-origin stylesheets (e.g., Three.js, curl, ninja, htmx, Django, Go)
       for (var s = 0; s < document.styleSheets.length; s++) {
         try {
           var rules = document.styleSheets[s].cssRules;
@@ -692,20 +1022,30 @@ html.docx-force-dark [style*="background-image"] {
             if (rule.type === 4 && rule.media) {
               if (!rule._docxOrigMedia) {
                 var mt = rule.media.mediaText || '';
-                if (mt.indexOf('prefers-color-scheme') !== -1 && mt.indexOf('dark') !== -1) {
+                if (mt.indexOf('prefers-color-scheme') !== -1) {
                   rule._docxOrigMedia = mt;
                 }
               }
               if (rule._docxOrigMedia) {
-                rule.media.mediaText = darkEnabled ? 'all' : 'not all';
+                if (rule._docxOrigMedia.indexOf('dark') !== -1) {
+                  rule.media.mediaText = darkEnabled ? 'all' : 'not all';
+                } else if (rule._docxOrigMedia.indexOf('light') !== -1) {
+                  rule.media.mediaText = darkEnabled ? 'not all' : 'all';
+                }
               }
             }
           }
         } catch (e) {}
       }
 
-      // 3. Angular theme stylesheet switcher (/dark-theme.css vs /light-theme.css)
+      // 3. Angular theme stylesheet switcher (#aio-initial-theme / dark-theme.css vs light-theme.css)
       if (SITE_ID === 'angular' && document.head) {
+        var aioStyle = document.getElementById('aio-initial-theme');
+        if (aioStyle) {
+          aioStyle.textContent = darkEnabled
+            ? '@import url("dark-theme.css");'
+            : '@import url("light-theme.css");';
+        }
         var ngLink = document.getElementById('docx-angular-theme');
         if (!ngLink) {
           ngLink = document.createElement('link');
@@ -721,6 +1061,75 @@ html.docx-force-dark [style*="background-image"] {
     } catch (e) {}
   }
 
+  function applyRustMdbookTheme(themeChoice) {
+    try {
+      var root = document.documentElement;
+      root.classList.add('js');
+      var raw = String(themeChoice || '').toLowerCase().replace(/^mdbook-theme-/, '').replace(/^theme-/, '');
+      if (raw !== 'light' && raw !== 'rust' && raw !== 'coal' && raw !== 'navy' && raw !== 'ayu' && raw !== 'default_theme') {
+        raw = getSavedSiteDark()
+          ? (localStorage.getItem('docx_rust_dark_theme') || 'navy')
+          : (localStorage.getItem('docx_rust_light_theme') || 'light');
+      }
+      localStorage.setItem('docx_rust_theme_choice', raw);
+      var effective = raw;
+      if (raw === 'default_theme') {
+        localStorage.removeItem('mdbook-theme');
+        effective = getSystemDarkDefault()
+          ? (localStorage.getItem('docx_rust_dark_theme') || 'navy')
+          : (localStorage.getItem('docx_rust_light_theme') || 'light');
+      } else {
+        localStorage.setItem('mdbook-theme', raw);
+        if (raw === 'navy' || raw === 'coal' || raw === 'ayu') {
+          localStorage.setItem('docx_rust_dark_theme', raw);
+        } else if (raw === 'light' || raw === 'rust') {
+          localStorage.setItem('docx_rust_light_theme', raw);
+        }
+      }
+
+      root.classList.remove('light', 'rust', 'coal', 'navy', 'ayu', 'default_theme');
+      root.classList.add(effective);
+
+      var isDark = (effective === 'navy' || effective === 'coal' || effective === 'ayu');
+      root.classList.toggle('dark', isDark);
+      root.setAttribute('data-theme', isDark ? 'dark' : 'light');
+      root.style.colorScheme = isDark ? 'dark' : 'light';
+
+      var ayuCss = document.querySelector('#mdbook-ayu-highlight-css, #ayu-highlight-css');
+      var tmwCss = document.querySelector('#mdbook-tomorrow-night-css, #tomorrow-night-css');
+      var hlCss = document.querySelector('#mdbook-highlight-css, #highlight-css');
+      if (ayuCss && tmwCss && hlCss) {
+        if (effective === 'ayu') {
+          ayuCss.disabled = false;
+          tmwCss.disabled = true;
+          hlCss.disabled = true;
+        } else if (effective === 'coal' || effective === 'navy') {
+          ayuCss.disabled = true;
+          tmwCss.disabled = false;
+          hlCss.disabled = true;
+        } else {
+          ayuCss.disabled = true;
+          tmwCss.disabled = true;
+          hlCss.disabled = false;
+        }
+      }
+
+      var btns = document.querySelectorAll('#mdbook-theme-list button.theme, #theme-list button.theme');
+      for (var i = 0; i < btns.length; i++) {
+        var b = btns[i];
+        var bId = String(b.id || '').toLowerCase().replace(/^mdbook-theme-/, '').replace(/^theme-/, '');
+        if (bId === raw) {
+          b.classList.add('theme-selected');
+        } else {
+          b.classList.remove('theme-selected');
+        }
+      }
+      return isDark;
+    } catch (e) {
+      return true;
+    }
+  }
+
   function applyReaderSettings(zoomPct, darkEnabled, themeEnabledOpt, fontEnabledOpt) {
     isApplyingTheme = true;
     try {
@@ -732,32 +1141,69 @@ html.docx-force-dark [style*="background-image"] {
       var fontEnabled = (typeof fontEnabledOpt === 'boolean') ? fontEnabledOpt : getSavedFontEnabled();
       localStorage.setItem('docx_theme_enabled', themeEnabled ? '1' : '0');
       localStorage.setItem('docx_font_enabled', fontEnabled ? '1' : '0');
-      localStorage.setItem('docx_dark_v2', darkEnabled ? '1' : '0');
-      localStorage.setItem('docx_dark_v2_' + SITE_ID, darkEnabled ? '1' : '0');
+      localStorage.setItem('docx_dark_v3', darkEnabled ? '1' : '0');
+      localStorage.setItem('docx_dark_v3_' + SITE_ID, darkEnabled ? '1' : '0');
 
       applyCustomFont(fontEnabled);
 
       var root = document.documentElement;
       if (!themeEnabled) {
-        root.classList.remove('docx-force-dark');
+        clearSmartTagsAndRestore();
         syncMediaDarkStylesheets(false);
-      } else if (STRICT_LIGHT_ONLY_SITES[SITE_ID]) {
+        if (SITE_ID === 'rust') {
+          var savedRustChoice = localStorage.getItem('docx_rust_theme_choice') || localStorage.getItem('mdbook-theme') || 'navy';
+          applyRustMdbookTheme(savedRustChoice);
+        }
+      } else if (LIGHT_ONLY_SITES[SITE_ID]) {
         root.classList.remove('dark');
         root.removeAttribute('data-theme');
         if (darkEnabled) {
-          root.classList.add('docx-force-dark');
+          applySmartSingleTheme('dark');
         } else {
-          root.classList.remove('docx-force-dark');
+          clearSmartTagsAndRestore();
+        }
+      } else if (DARK_ONLY_SITES[SITE_ID]) {
+        if (!darkEnabled) {
+          applySmartSingleTheme('light');
+        } else {
+          clearSmartTagsAndRestore();
         }
       } else {
-        root.classList.remove('docx-force-dark');
+        clearSmartTagsAndRestore();
         var mode = darkEnabled ? 'dark' : 'light';
         localStorage.setItem('theme', mode);
+        localStorage.setItem('zeit-theme', mode);
+        localStorage.setItem('theme-preference', mode);
         localStorage.setItem('vitepress-theme-appearance', mode);
         localStorage.setItem('starlight-theme', mode);
         localStorage.setItem('rustdoc-theme', mode);
+        localStorage.setItem('force-color-theme', darkEnabled ? 'force-dark' : 'force-light');
+        localStorage.setItem('aio-theme', darkEnabled ? 'true' : 'false');
+
+        // Standard .dark / .light classes (Tailwind, React, Next.js, VitePress, Vue, Nuxt, Docker, Bun, Drizzle, Oxc, Hono, Elysia, TanStack)
         root.classList.toggle('dark', !!darkEnabled);
         root.classList.toggle('light', !darkEnabled);
+
+        // Microsoft Learn (PowerShell 7.5 & Windows CMD)
+        if (SITE_ID === 'powershell' || SITE_ID === 'cmd') {
+          root.classList.toggle('theme-dark', !!darkEnabled);
+          root.classList.toggle('theme-light', !darkEnabled);
+          root.classList.remove('theme-high-contrast');
+        }
+
+        // TypeScript Handbook (.dark-theme / .light-theme)
+        if (SITE_ID === 'typescript') {
+          root.classList.toggle('dark-theme', !!darkEnabled);
+          root.classList.toggle('light-theme', !darkEnabled);
+        }
+
+        //PostgreSQL: ensure #form-theme is visible even when external JS was stripped
+        if (SITE_ID === 'postgresql') {
+          var pgForm = document.getElementById('form-theme');
+          if (pgForm) pgForm.classList.remove('d-none');
+        }
+
+        // Standard theme attributes on <html> (Astro, MDN, Drizzle, Go, Git, Express, Qt, Django, PostgreSQL, Motion, NestJS, FastAPI, TanStack React Charts)
         root.setAttribute('data-theme', mode);
         root.setAttribute('data-mode', mode);
         root.setAttribute('mode', mode);
@@ -765,65 +1211,107 @@ html.docx-force-dark [style*="background-image"] {
         root.setAttribute('data-color-mode', mode);
         root.setAttribute('data-md-color-scheme', darkEnabled ? 'slate' : 'default');
         root.style.colorScheme = mode;
+
+        // Rust mdBook (.navy / .coal / .ayu / .light / .rust) — run after root.classList.toggle('light') so 'rust' isn't overwritten by 'light'
+        if (SITE_ID === 'rust') {
+          var curMd = localStorage.getItem('mdbook-theme') || '';
+          var targetMd = darkEnabled
+            ? ((curMd === 'navy' || curMd === 'coal' || curMd === 'ayu') ? curMd : (localStorage.getItem('docx_rust_dark_theme') || 'navy'))
+            : ((curMd === 'light' || curMd === 'rust') ? curMd : (localStorage.getItem('docx_rust_light_theme') || 'light'));
+          applyRustMdbookTheme(targetMd);
+        }
+
+        // Standard theme attributes on <body> (LLVM Furo uses body[data-theme], FastAPI MkDocs uses body[data-md-color-scheme], NestJS/Git use body.dark-mode)
         if (document.body) {
           document.body.setAttribute('data-theme', mode);
           document.body.setAttribute('data-md-color-scheme', darkEnabled ? 'slate' : 'default');
           document.body.classList.toggle('dark-mode', !!darkEnabled);
         }
+
+        // Sync native toggle UI controls (Qt checkbox, Python/Starlight selects, ARIA switches)
         var qtToggle = document.getElementById('th-toggle');
         if (qtToggle && 'checked' in qtToggle) {
           qtToggle.checked = !!darkEnabled;
+        }
+        var selects = document.querySelectorAll('starlight-theme-select select, .theme-selector, #theme-selector');
+        for (var sIdx = 0; sIdx < selects.length; sIdx++) {
+          var sel = selects[sIdx];
+          if (SITE_ID === 'typescript') {
+            sel.value = darkEnabled ? 'force-dark' : 'force-light';
+          } else {
+            sel.value = mode;
+          }
         }
         var toggles = document.querySelectorAll('.theme-toggle, .VPSwitchAppearance');
         for (var i = 0; i < toggles.length; i++) {
           toggles[i].setAttribute('aria-checked', String(!!darkEnabled));
         }
         syncMediaDarkStylesheets(!!darkEnabled);
+
+        // Runtime single-theme check: if after setting native theme attributes, the page background is still light-only or dark-only, convert it!
+        if (document.body) {
+          var pageLum = getEffectivePageLuminance();
+          if (darkEnabled && pageLum !== null && pageLum > 0.62) {
+            applySmartSingleTheme('dark');
+          } else if (!darkEnabled && pageLum !== null && pageLum < 0.20) {
+            applySmartSingleTheme('light');
+          }
+        }
       }
     } catch (e) {}
     setTimeout(function() { isApplyingTheme = false; }, 30);
   }
 
-  // Observe native theme changes triggered by the site's own internal theme toggle button
+  // Observe native theme changes AND handle clicks on the site's own internal theme toggle button
   function setupNativeThemeSync() {
-    if (STRICT_LIGHT_ONLY_SITES[SITE_ID]) return;
     try {
       var root = document.documentElement;
-      var observer = new MutationObserver(function(mutations) {
-        if (isApplyingTheme) return;
-        for (var i = 0; i < mutations.length; i++) {
-          var attr = mutations[i].attributeName;
-          if (attr === 'data-theme' || attr === 'class' || attr === 'data-md-color-scheme' || attr === 'data-mode') {
-            var dt = root.getAttribute('data-theme');
-            var dm = root.getAttribute('data-mode');
-            var md = (document.body && document.body.getAttribute('data-md-color-scheme')) || root.getAttribute('data-md-color-scheme');
-            var newDark = getSavedSiteDark();
-            if (attr === 'data-theme' && (dt === 'dark' || dt === 'light')) {
-              newDark = (dt === 'dark');
-            } else if (attr === 'data-mode' && (dm === 'dark' || dm === 'light')) {
-              newDark = (dm === 'dark');
-            } else if (attr === 'data-md-color-scheme' && md) {
-              newDark = (md === 'slate' || md === 'dark');
-            } else if (attr === 'class') {
-              newDark = root.classList.contains('dark');
+      if (!LIGHT_ONLY_SITES[SITE_ID] && !DARK_ONLY_SITES[SITE_ID]) {
+        var observer = new MutationObserver(function(mutations) {
+          if (isApplyingTheme) return;
+          for (var i = 0; i < mutations.length; i++) {
+            var attr = mutations[i].attributeName;
+            if (attr === 'data-theme' || attr === 'class' || attr === 'data-md-color-scheme' || attr === 'data-mode' || attr === 'mode') {
+              var dt = (document.body && SITE_ID === 'llvm' ? document.body.getAttribute('data-theme') : root.getAttribute('data-theme')) || root.getAttribute('data-theme');
+              var dm = root.getAttribute('data-mode') || root.getAttribute('mode');
+              var md = (document.body && document.body.getAttribute('data-md-color-scheme')) || root.getAttribute('data-md-color-scheme');
+              var newDark = getSavedSiteDark();
+              if (attr === 'data-theme' && (dt === 'dark' || dt === 'light')) {
+                newDark = (dt === 'dark');
+              } else if ((attr === 'data-mode' || attr === 'mode') && (dm === 'dark' || dm === 'light')) {
+                newDark = (dm === 'dark');
+              } else if (attr === 'data-md-color-scheme' && md) {
+                newDark = (md === 'slate' || md === 'dark');
+              } else if (attr === 'class') {
+                if (SITE_ID === 'rust') {
+                  newDark = root.classList.contains('navy') || root.classList.contains('coal') || root.classList.contains('ayu');
+                } else if (SITE_ID === 'powershell' || SITE_ID === 'cmd') {
+                  newDark = root.classList.contains('theme-dark');
+                } else if (SITE_ID === 'typescript') {
+                  newDark = root.classList.contains('dark-theme');
+                } else {
+                  newDark = root.classList.contains('dark');
+                }
+              }
+              if (newDark !== getSavedSiteDark()) {
+                var z = parseInt(localStorage.getItem('docx_zoom') || '100', 10);
+                applyReaderSettings(z, newDark);
+                window.parent.postMessage({
+                  type: 'DOCX_SITE_THEME_CHANGED',
+                  siteId: SITE_ID,
+                  darkMode: newDark
+                }, '*');
+              }
+              break;
             }
-            if (newDark !== getSavedSiteDark()) {
-              var z = parseInt(localStorage.getItem('docx_zoom') || '100', 10);
-              applyReaderSettings(z, newDark);
-              window.parent.postMessage({
-                type: 'DOCX_SITE_THEME_CHANGED',
-                siteId: SITE_ID,
-                darkMode: newDark
-              }, '*');
-            }
-            break;
           }
+        });
+        observer.observe(root, { attributes: true, attributeFilter: ['data-theme', 'class', 'data-md-color-scheme', 'data-mode', 'mode'] });
+        if (document.body) {
+          observer.observe(document.body, { attributes: true, attributeFilter: ['data-md-color-scheme', 'data-theme', 'class'] });
         }
-      });
-      observer.observe(root, { attributes: true, attributeFilter: ['data-theme', 'class', 'data-md-color-scheme', 'data-mode'] });
-      if (document.body) {
-        observer.observe(document.body, { attributes: true, attributeFilter: ['data-md-color-scheme', 'data-theme'] });
       }
+
       var qtToggle = document.getElementById('th-toggle');
       if (qtToggle && !qtToggle.hasAttribute('data-docx-bound')) {
         qtToggle.setAttribute('data-docx-bound', 'true');
@@ -837,6 +1325,77 @@ html.docx-force-dark [style*="background-image"] {
             darkMode: nextDark
           }, '*');
         });
+      }
+
+      // Universal listener for sites' internal theme toggle buttons & select dropdowns
+      if (!window.__docxUniversalThemeToggleBound) {
+        window.__docxUniversalThemeToggleBound = true;
+        document.addEventListener('change', function(e) {
+          var t = e.target;
+          if (!t || !t.matches) return;
+          if (t.matches('starlight-theme-select select, .theme-selector, #theme-selector, select[aria-label*="theme" i]')) {
+            var val = String(t.value || '').toLowerCase();
+            var nextDark = (val === 'dark' || val === 'force-dark')
+              ? true
+              : (val === 'light' || val === 'force-light')
+                ? false
+                : getSystemDarkDefault();
+            var z = parseInt(localStorage.getItem('docx_zoom') || '100', 10);
+            applyReaderSettings(z, nextDark);
+            window.parent.postMessage({
+              type: 'DOCX_SITE_THEME_CHANGED',
+              siteId: SITE_ID,
+              darkMode: nextDark
+            }, '*');
+          }
+        }, true);
+
+        document.addEventListener('click', function(e) {
+          var t = e.target;
+          if (!t || !t.closest) return;
+          // Rust mdBook theme toggle & menu are handled directly by initRustDocsUI
+          if (SITE_ID === 'rust' && t.closest('#mdbook-theme-toggle, #theme-toggle, #mdbook-theme-list, #theme-list')) {
+            return;
+          }
+          // Microsoft Learn (PowerShell & Windows CMD) explicit theme menu items
+          var msLearnBtn = t.closest('[data-theme-to]');
+          if (msLearnBtn) {
+            e.preventDefault();
+            var toVal = String(msLearnBtn.getAttribute('data-theme-to') || '').toLowerCase();
+            var isDarkMs = toVal === 'dark' || toVal === 'high-contrast';
+            var zMs = parseInt(localStorage.getItem('docx_zoom') || '100', 10);
+            applyReaderSettings(zMs, isDarkMs);
+            window.parent.postMessage({
+              type: 'DOCX_SITE_THEME_CHANGED',
+              siteId: SITE_ID,
+              darkMode: isDarkMs
+            }, '*');
+            return;
+          }
+          var toggleEl = t.closest(
+            '.theme-toggle, .VPSwitchAppearance, [data-theme-toggle], ' +
+            '#dark-mode-button, #btn-theme, aio-theme-toggle, .mode-toggle, button.toggle-mode, ' +
+            '[data-test-id="theme-selector-button"], form[data-md-component="palette"] label, ' +
+            'button[aria-label*="theme" i], button[aria-label*="dark" i], button[aria-label*="light" i], button[aria-label*="color mode" i], button[aria-label*="appearance" i], ' +
+            'button[title*="theme" i], button[title*="dark" i], button[title*="light" i], ' +
+            '[role="switch"][aria-label*="theme" i], [role="switch"][aria-label*="dark" i]'
+          );
+          if (toggleEl) {
+            var prevDark = getSavedSiteDark();
+            setTimeout(function() {
+              if (getSavedSiteDark() === prevDark) {
+                var nextDark = !prevDark;
+                var z = parseInt(localStorage.getItem('docx_zoom') || '100', 10);
+                applyReaderSettings(z, nextDark);
+                window.parent.postMessage({
+                  type: 'DOCX_SITE_THEME_CHANGED',
+                  siteId: SITE_ID,
+                  darkMode: nextDark
+                }, '*');
+              }
+            }, 25);
+          }
+        }, false);
       }
     } catch (e) {}
   }
@@ -1299,21 +1858,415 @@ html.docx-force-dark [style*="background-image"] {
   function initRustDocsUI() {
     if (SITE_ID !== 'rust') return;
     try {
-      var sb = document.getElementById('mdbook-sidebar');
-      if (!sb) return;
-      var curPath = window.location.pathname;
-      if (curPath === '/book' || curPath === '/book/' || curPath === '/' || curPath === '/docs') {
-        curPath = '/book/title-page.html';
-      } else if (curPath === '/cargo' || curPath === '/cargo/') {
-        curPath = '/cargo/index.html';
-      }
-      var links = sb.querySelectorAll('a[href]');
-      for (var i = 0; i < links.length; i++) {
-        var a = links[i];
-        var h = a.getAttribute('href') || '';
-        if (h === curPath || curPath.endsWith('/' + h)) {
-          a.classList.add('active');
+      document.documentElement.classList.add('js');
+      var initialChoice = localStorage.getItem('docx_rust_theme_choice') || localStorage.getItem('mdbook-theme') || (getSavedSiteDark() ? 'navy' : 'light');
+      applyRustMdbookTheme(initialChoice);
+
+      function markActiveSidebarLink() {
+        var sb = document.getElementById('mdbook-sidebar') || document.getElementById('sidebar');
+        if (!sb) return;
+        var curPath = window.location.pathname;
+        if (curPath === '/book' || curPath === '/book/' || curPath === '/' || curPath === '/docs') {
+          curPath = '/book/title-page.html';
+        } else if (curPath === '/cargo' || curPath === '/cargo/') {
+          curPath = '/cargo/index.html';
         }
+        var links = sb.querySelectorAll('a[href]');
+        for (var i = 0; i < links.length; i++) {
+          var a = links[i];
+          var h = a.getAttribute('href') || '';
+          if (h === curPath || curPath.endsWith('/' + h)) {
+            a.classList.add('active');
+            var parentLi = a.closest('li.chapter-item');
+            while (parentLi) {
+              parentLi.classList.add('expanded');
+              parentLi = parentLi.parentElement ? parentLi.parentElement.closest('li.chapter-item') : null;
+            }
+          }
+        }
+      }
+      markActiveSidebarLink();
+      setTimeout(markActiveSidebarLink, 120);
+
+      function escHtml(str) {
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;');
+      }
+
+      var RUST_KW = {
+        as: 1, async: 1, await: 1, break: 1, const: 1, continue: 1, crate: 1, dyn: 1,
+        else: 1, enum: 1, extern: 1, fn: 1, for: 1, if: 1, impl: 1, in: 1, let: 1,
+        loop: 1, match: 1, mod: 1, move: 1, mut: 1, pub: 1, ref: 1, return: 1,
+        self: 1, Self: 1, static: 1, struct: 1, super: 1, trait: 1, type: 1,
+        unsafe: 1, use: 1, where: 1, while: 1, yield: 1
+      };
+      var RUST_BUILTINS = {
+        Some: 1, None: 1, Ok: 1, Err: 1, Box: 1, Vec: 1, String: 1, Option: 1, Result: 1,
+        Rc: 1, Arc: 1, RefCell: 1, Cell: 1, Mutex: 1, RwLock: 1, Pin: 1, Future: 1,
+        Copy: 1, Clone: 1, Debug: 1, Default: 1, Drop: 1, Eq: 1, PartialEq: 1, Ord: 1,
+        PartialOrd: 1, Hash: 1, Send: 1, Sync: 1, Sized: 1, Fn: 1, FnMut: 1, FnOnce: 1,
+        Iterator: 1, IntoIterator: 1, From: 1, Into: 1, TryFrom: 1, TryInto: 1,
+        AsRef: 1, AsMut: 1, Deref: 1, DerefMut: 1, Display: 1, ToString: 1, drop: 1
+      };
+      var RUST_TYPES = {
+        i8: 1, i16: 1, i32: 1, i64: 1, i128: 1, isize: 1,
+        u8: 1, u16: 1, u32: 1, u64: 1, u128: 1, usize: 1,
+        f32: 1, f64: 1, bool: 1, char: 1, str: 1
+      };
+      var SHELL_CMDS = {
+        mkdir: 1, cd: 1, ls: 1, dir: 1, echo: 1, cat: 1, rm: 1, del: 1, cp: 1, copy: 1,
+        mv: 1, move: 1, pwd: 1, export: 1, set: 1, source: 1, sudo: 1, apt: 1, brew: 1,
+        curl: 1, sh: 1, bash: 1, git: 1, rustc: 1, cargo: 1, rustup: 1, rustfmt: 1, clippy: 1
+      };
+
+      function highlightRustSegment(text) {
+        var tokRe = /(\/\/[^\n]*|\/\*[\s\S]*?\*\/)|(#!?\[[^\]]*\])|(b?r#+"[\s\S]*?"#+|b?r"[\s\S]*?"|b?"(?:\\[\s\S]|[^"\\])*"|b?'(?:\\.|[^'\\])')|('[a-zA-Z_][a-zA-Z0-9_]*\b)|(\b(?:0x[0-9a-fA-F_]+|0b[01_]+|0o[0-7_]+|\d[\d_]*(?:\.\d[\d_]*)?(?:[eE][+-]?[\d_]+)?)(?:u8|u16|u32|u64|u128|usize|i8|i16|i32|i64|i128|isize|f32|f64)?\b)|(\bfn)(\s+)([a-zA-Z_][a-zA-Z0-9_]*)|(\b[a-z_][a-zA-Z0-9_]*!)|(\b[a-zA-Z_][a-zA-Z0-9_]*\b)/g;
+        var out = '';
+        var lastIdx = 0;
+        var m;
+        while ((m = tokRe.exec(text)) !== null) {
+          if (m.index > lastIdx) {
+            out += escHtml(text.slice(lastIdx, m.index));
+          }
+          if (m[1]) {
+            out += '<span class="hljs-comment">' + escHtml(m[1]) + '</span>';
+          } else if (m[2]) {
+            out += '<span class="hljs-meta">' + escHtml(m[2]) + '</span>';
+          } else if (m[3]) {
+            out += '<span class="hljs-string">' + escHtml(m[3]) + '</span>';
+          } else if (m[4]) {
+            out += '<span class="hljs-symbol">' + escHtml(m[4]) + '</span>';
+          } else if (m[5]) {
+            out += '<span class="hljs-number">' + escHtml(m[5]) + '</span>';
+          } else if (m[6]) {
+            out += '<span class="hljs-keyword">' + escHtml(m[6]) + '</span>' + escHtml(m[7]) + '<span class="hljs-title">' + escHtml(m[8]) + '</span>';
+          } else if (m[9]) {
+            out += '<span class="hljs-built_in">' + escHtml(m[9]) + '</span>';
+          } else if (m[10]) {
+            var id = m[10];
+            if (RUST_KW[id]) {
+              out += '<span class="hljs-keyword">' + id + '</span>';
+            } else if (id === 'true' || id === 'false') {
+              out += '<span class="hljs-literal">' + id + '</span>';
+            } else if (RUST_BUILTINS[id]) {
+              out += '<span class="hljs-built_in">' + id + '</span>';
+            } else if (RUST_TYPES[id] || /^[A-Z][A-Za-z0-9_]*$/.test(id)) {
+              out += '<span class="hljs-type">' + id + '</span>';
+            } else {
+              out += id;
+            }
+          }
+          lastIdx = tokRe.lastIndex;
+        }
+        if (lastIdx < text.length) {
+          out += escHtml(text.slice(lastIdx));
+        }
+        return out;
+      }
+
+      function highlightShellLine(line) {
+        var shRe = /(#[^\n]*)|("(?:\\.|[^"\\])*"|'[^']*')|(\$\{?[A-Za-z0-9_]+\}?|%[A-Za-z0-9_]+%)|(\s--?[A-Za-z0-9_-]+)|(\b[A-Za-z0-9_.-]+\b)/g;
+        var out = '';
+        var lastIdx = 0;
+        var m;
+        while ((m = shRe.exec(line)) !== null) {
+          if (m.index > lastIdx) {
+            out += escHtml(line.slice(lastIdx, m.index));
+          }
+          if (m[1]) {
+            out += '<span class="hljs-comment">' + escHtml(m[1]) + '</span>';
+          } else if (m[2]) {
+            out += '<span class="hljs-string">' + escHtml(m[2]) + '</span>';
+          } else if (m[3]) {
+            out += '<span class="hljs-variable">' + escHtml(m[3]) + '</span>';
+          } else if (m[4]) {
+            out += '<span class="hljs-attr">' + escHtml(m[4]) + '</span>';
+          } else if (m[5]) {
+            var w = m[5];
+            if (SHELL_CMDS[w]) {
+              out += '<span class="hljs-built_in">' + escHtml(w) + '</span>';
+            } else {
+              out += escHtml(w);
+            }
+          }
+          lastIdx = shRe.lastIndex;
+        }
+        if (lastIdx < line.length) {
+          out += escHtml(line.slice(lastIdx));
+        }
+        return out;
+      }
+
+      function highlightConsoleSegment(text, isPureShell) {
+        var lines = text.split('\n');
+        var outLines = [];
+        for (var i = 0; i < lines.length; i++) {
+          var ln = lines[i];
+          var pm = ln.match(/^(\s*)(\$|>)\s+(.*)$/);
+          if (pm) {
+            outLines.push(escHtml(pm[1]) + '<span class="hljs-meta">' + escHtml(pm[2]) + '</span> ' + highlightShellLine(pm[3]));
+          } else if (isPureShell) {
+            outLines.push(highlightShellLine(ln));
+          } else {
+            outLines.push(escHtml(ln));
+          }
+        }
+        return outLines.join('\n');
+      }
+
+      function highlightTomlSegment(text) {
+        var lines = text.split('\n');
+        var outLines = [];
+        for (var i = 0; i < lines.length; i++) {
+          var ln = lines[i];
+          if (/^\s*#/.test(ln)) {
+            outLines.push('<span class="hljs-comment">' + escHtml(ln) + '</span>');
+            continue;
+          }
+          var sec = ln.match(/^(\s*\[\[?[^\]]+\]\]?)(.*)$/);
+          if (sec) {
+            outLines.push('<span class="hljs-section">' + escHtml(sec[1]) + '</span>' + escHtml(sec[2]));
+            continue;
+          }
+          var kv = ln.match(/^(\s*[A-Za-z0-9_.-]+)(\s*=\s*)(.*)$/);
+          if (kv) {
+            var rhs = kv[3].replace(/("(?:\\.|[^"\\])*"|'[^']*')|\b(true|false)\b|\b(\d[\d_.-]*)\b|(#.*$)/g, function(full, s, b, n, c) {
+              if (s) return '<span class="hljs-string">' + escHtml(s) + '</span>';
+              if (b) return '<span class="hljs-literal">' + escHtml(b) + '</span>';
+              if (n) return '<span class="hljs-number">' + escHtml(n) + '</span>';
+              if (c) return '<span class="hljs-comment">' + escHtml(c) + '</span>';
+              return escHtml(full);
+            });
+            outLines.push('<span class="hljs-attr">' + escHtml(kv[1]) + '</span>' + escHtml(kv[2]) + rhs);
+          } else {
+            outLines.push(escHtml(ln));
+          }
+        }
+        return outLines.join('\n');
+      }
+
+      function highlightByLang(text, lang) {
+        if (lang === 'console' || lang === 'cmd' || lang === 'powershell') {
+          return highlightConsoleSegment(text, false);
+        }
+        if (lang === 'bash' || lang === 'sh' || lang === 'zsh' || lang === 'shell') {
+          return highlightConsoleSegment(text, true);
+        }
+        if (lang === 'toml' || lang === 'ini') {
+          return highlightTomlSegment(text);
+        }
+        if (lang === 'text' || lang === 'plaintext') {
+          return escHtml(text);
+        }
+        return highlightRustSegment(text);
+      }
+
+      // 1. Add .hljs to all non-header <code> elements so mdBook inline and block code styling applies
+      var allCodes = document.querySelectorAll('code');
+      for (var cIdx = 0; cIdx < allCodes.length; cIdx++) {
+        var cEl = allCodes[cIdx];
+        if (cEl.parentElement && cEl.parentElement.classList.contains('header')) continue;
+        cEl.classList.add('hljs');
+      }
+
+      // 2. Syntax highlight <pre><code> blocks, setup .boring line toggles & copy-to-clipboard buttons
+      var preCodes = document.querySelectorAll('pre > code');
+      for (var pIdx = 0; pIdx < preCodes.length; pIdx++) {
+        (function(codeBlock) {
+          if (codeBlock.getAttribute('data-docx-hl') === '1') return;
+          codeBlock.setAttribute('data-docx-hl', '1');
+
+          var cls = codeBlock.className || '';
+          var langMatch = cls.match(/language-([a-zA-Z0-9_-]+)/);
+          var lang = langMatch ? langMatch[1].toLowerCase() : 'rust';
+
+          if (window.hljs && typeof window.hljs.highlightBlock === 'function') {
+            try { window.hljs.highlightBlock(codeBlock); } catch (e) {}
+          } else if (!codeBlock.querySelector('[class*="hljs-"]')) {
+            var children = Array.prototype.slice.call(codeBlock.childNodes);
+            for (var nIdx = 0; nIdx < children.length; nIdx++) {
+              var node = children[nIdx];
+              if (node.nodeType === 3) {
+                var txt = node.nodeValue || '';
+                if (txt.length > 0) {
+                  var wrap = document.createElement('span');
+                  wrap.innerHTML = highlightByLang(txt, lang);
+                  var frag = document.createDocumentFragment();
+                  while (wrap.firstChild) {
+                    frag.appendChild(wrap.firstChild);
+                  }
+                  codeBlock.replaceChild(frag, node);
+                }
+              } else if (node.nodeType === 1 && node.classList && node.classList.contains('boring')) {
+                node.innerHTML = highlightByLang(node.textContent || '', lang);
+              }
+            }
+          }
+
+          var preEl = codeBlock.parentElement;
+          if (!preEl) return;
+
+          var hasBoring = codeBlock.querySelectorAll('.boring').length > 0;
+          if (hasBoring) {
+            codeBlock.classList.add('hide-boring');
+          }
+
+          var btnContainer = preEl.querySelector(':scope > .buttons');
+          if (!btnContainer) {
+            btnContainer = document.createElement('div');
+            btnContainer.className = 'buttons';
+            preEl.insertBefore(btnContainer, preEl.firstChild);
+          }
+
+          if (!btnContainer.querySelector('.clip-button')) {
+            var clipBtn = document.createElement('button');
+            clipBtn.className = 'clip-button';
+            clipBtn.title = 'Copy to clipboard';
+            clipBtn.setAttribute('aria-label', 'Copy to clipboard');
+            var tooltip = document.createElement('i');
+            tooltip.className = 'tooltiptext';
+            clipBtn.appendChild(tooltip);
+
+            clipBtn.addEventListener('click', function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              var clone = codeBlock.cloneNode(true);
+              if (codeBlock.classList.contains('hide-boring')) {
+                var borings = clone.querySelectorAll('.boring');
+                for (var b = 0; b < borings.length; b++) {
+                  borings[b].remove();
+                }
+              }
+              var rawText = clone.textContent || '';
+              if (lang === 'console' || lang === 'cmd' || lang === 'powershell') {
+                var rawLines = rawText.split('\n');
+                var cmdLines = [];
+                for (var rl = 0; rl < rawLines.length; rl++) {
+                  var pm = rawLines[rl].match(/^\s*(?:\$|>)\s+(.*)$/);
+                  if (pm) cmdLines.push(pm[1]);
+                }
+                if (cmdLines.length > 0) rawText = cmdLines.join('\n');
+              }
+              if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(rawText).catch(function() {});
+              }
+              tooltip.textContent = 'Copied!';
+              clipBtn.classList.add('tooltipped');
+              setTimeout(function() {
+                clipBtn.classList.remove('tooltipped');
+                tooltip.textContent = '';
+              }, 1400);
+            });
+
+            btnContainer.appendChild(clipBtn);
+          }
+
+          if (hasBoring && !btnContainer.querySelector('.boring-toggle-btn')) {
+            var eyeBtn = document.createElement('button');
+            eyeBtn.className = 'fa-eye boring-toggle-btn';
+            eyeBtn.title = 'Show hidden lines';
+            eyeBtn.setAttribute('aria-label', 'Show hidden lines');
+            var tplEye = document.getElementById('fa-eye');
+            var tplEyeSlash = document.getElementById('fa-eye-slash');
+            function updateEyeIcon(hidden) {
+              eyeBtn.innerHTML = '';
+              if (hidden && tplEye && tplEye.content) {
+                eyeBtn.appendChild(tplEye.content.cloneNode(true));
+              } else if (!hidden && tplEyeSlash && tplEyeSlash.content) {
+                eyeBtn.appendChild(tplEyeSlash.content.cloneNode(true));
+              } else {
+                eyeBtn.textContent = hidden ? '👁' : '🙈';
+              }
+            }
+            updateEyeIcon(true);
+            eyeBtn.addEventListener('click', function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              var nowHidden = codeBlock.classList.toggle('hide-boring');
+              eyeBtn.title = nowHidden ? 'Show hidden lines' : 'Hide lines';
+              eyeBtn.setAttribute('aria-label', eyeBtn.title);
+              updateEyeIcon(nowHidden);
+            });
+            btnContainer.appendChild(eyeBtn);
+          }
+        })(preCodes[pIdx]);
+      }
+
+      // 3. Bind mdBook theme toggle button (#mdbook-theme-toggle / #theme-toggle), popup menu (#mdbook-theme-list), search button, and sidebar fold toggles
+      if (!window.__docxRustUiBound) {
+        window.__docxRustUiBound = true;
+        document.addEventListener('click', function(e) {
+          var t = e.target;
+          if (!t || !t.closest) return;
+
+          var themePopup = document.getElementById('mdbook-theme-list') || document.getElementById('theme-list');
+          var themeToggle = document.getElementById('mdbook-theme-toggle') || document.getElementById('theme-toggle');
+
+          var clickedToggle = t.closest('#mdbook-theme-toggle, #theme-toggle');
+          if (clickedToggle && themePopup) {
+            e.preventDefault();
+            e.stopPropagation();
+            var isOpen = themePopup.style.display === 'block';
+            themePopup.style.display = isOpen ? 'none' : 'block';
+            clickedToggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+            return;
+          }
+
+          var clickedThemeItem = t.closest('#mdbook-theme-list button.theme, #theme-list button.theme');
+          if (clickedThemeItem) {
+            e.preventDefault();
+            e.stopPropagation();
+            var chosenId = String(clickedThemeItem.id || '').toLowerCase().replace(/^mdbook-theme-/, '').replace(/^theme-/, '');
+            isApplyingTheme = true;
+            var isDarkRust = applyRustMdbookTheme(chosenId);
+            localStorage.setItem('docx_dark_v3', isDarkRust ? '1' : '0');
+            localStorage.setItem('docx_dark_v3_rust', isDarkRust ? '1' : '0');
+            if (themePopup) themePopup.style.display = 'none';
+            if (themeToggle) themeToggle.setAttribute('aria-expanded', 'false');
+            window.parent.postMessage({
+              type: 'DOCX_SITE_THEME_CHANGED',
+              siteId: SITE_ID,
+              darkMode: isDarkRust
+            }, '*');
+            setTimeout(function() { isApplyingTheme = false; }, 35);
+            return;
+          }
+
+          if (themePopup && themePopup.style.display === 'block' && !t.closest('#mdbook-theme-list, #theme-list')) {
+            themePopup.style.display = 'none';
+            if (themeToggle) themeToggle.setAttribute('aria-expanded', 'false');
+          }
+
+          var searchBtn = t.closest('#mdbook-search-toggle, #search-toggle');
+          if (searchBtn) {
+            e.preventDefault();
+            e.stopPropagation();
+            window.parent.postMessage({ type: 'OPEN_UNIVERSAL_SEARCH' }, '*');
+            return;
+          }
+
+          var foldToggle = t.closest('.chapter-fold-toggle');
+          if (foldToggle) {
+            e.preventDefault();
+            e.stopPropagation();
+            var chapLi = foldToggle.closest('li.chapter-item');
+            if (chapLi) chapLi.classList.toggle('expanded');
+            return;
+          }
+        }, true);
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            var themePopup = document.getElementById('mdbook-theme-list') || document.getElementById('theme-list');
+            var themeToggle = document.getElementById('mdbook-theme-toggle') || document.getElementById('theme-toggle');
+            if (themePopup && themePopup.style.display === 'block') {
+              themePopup.style.display = 'none';
+              if (themeToggle) themeToggle.setAttribute('aria-expanded', 'false');
+            }
+          }
+        });
       }
     } catch (e) {}
   }
@@ -1440,16 +2393,41 @@ html.docx-force-dark [style*="background-image"] {
     window.addEventListener('hashchange', function() {
       notifyParentReady();
     });
+    window.addEventListener('popstate', function() {
+      setTimeout(notifyParentReady, 30);
+    });
+    if (window.history) {
+      var origPush = window.history.pushState;
+      if (origPush) {
+        window.history.pushState = function() {
+          var res = origPush.apply(this, arguments);
+          setTimeout(notifyParentReady, 40);
+          return res;
+        };
+      }
+      var origReplace = window.history.replaceState;
+      if (origReplace) {
+        window.history.replaceState = function() {
+          var res = origReplace.apply(this, arguments);
+          setTimeout(notifyParentReady, 40);
+          return res;
+        };
+      }
+    }
   } catch (e) {}
 
   window.addEventListener('message', function(e) {
     if (!e.data || e.data.type !== 'DOCX_READER_SETTINGS') return;
+    if (typeof e.data.systemDark === 'boolean') {
+      try { localStorage.setItem('docx_system_dark', e.data.systemDark ? '1' : '0'); } catch (err) {}
+    }
+    var fontOpt = typeof e.data.fontEnabled === 'boolean' ? e.data.fontEnabled : e.data.customFontEnabled;
     if (e.data.siteId && e.data.siteId !== SITE_ID) {
       applyReaderSettings(
         e.data.zoom,
         getSavedSiteDark(),
         e.data.themeEnabled,
-        e.data.customFontEnabled
+        fontOpt
       );
       return;
     }
@@ -1457,7 +2435,7 @@ html.docx-force-dark [style*="background-image"] {
       e.data.zoom,
       e.data.darkMode,
       e.data.themeEnabled,
-      e.data.customFontEnabled
+      fontOpt
     );
   });
 
@@ -1468,6 +2446,9 @@ html.docx-force-dark [style*="background-image"] {
     } else if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k'){
       e.preventDefault(); e.stopPropagation();
       window.parent.postMessage({ type: 'OPEN_UNIVERSAL_SEARCH' }, '*');
+    } else if ((e.ctrlKey || e.metaKey) && !e.shiftKey && !e.altKey && e.key.toLowerCase() === 'd') {
+      e.preventDefault(); e.stopPropagation();
+      window.parent.postMessage({ type: 'DOCX_TOGGLE_BOOKMARK' }, '*');
     } else if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 't') {
       e.preventDefault(); e.stopPropagation();
       window.parent.postMessage({ type: 'DOCX_TAB_ACTION', action: 'new' }, '*');
@@ -1491,11 +2472,39 @@ html.docx-force-dark [style*="background-image"] {
       window.parent.postMessage({ type: 'DOCX_ZOOM_RESET' }, '*');
     }
   }, true);
-  var lastL = 0, lastT = 0;
-  window.addEventListener('mousemove', function(e){
+  var lastL = 0, lastR = 0, lastT = 0, lastC = 0;
+  function checkIframeEdgeHover(e, isLeave) {
     var now = Date.now();
-    if (e.clientX <= 18 && now - lastL > 120) { lastL = now; window.parent.postMessage({ type: 'HOVER_LEFT_EDGE' }, '*'); }
-    if (e.clientY <= 10 && now - lastT > 120) { lastT = now; window.parent.postMessage({ type: 'HOVER_TOP_EDGE' }, '*'); }
+    var w = window.innerWidth || document.documentElement.clientWidth || 1000;
+    var leftThresh = isLeave ? 80 : 14;
+    var rightThresh = isLeave ? 80 : 14;
+    var topThresh = isLeave ? 38 : 12;
+    if (e.clientX <= leftThresh && (isLeave || now - lastL > 40)) {
+      lastL = now;
+      window.parent.postMessage({ type: 'HOVER_LEFT_EDGE', clientY: e.clientY }, '*');
+    } else if (e.clientX >= w - rightThresh && (isLeave || now - lastR > 40)) {
+      lastR = now;
+      window.parent.postMessage({ type: 'HOVER_RIGHT_EDGE', clientY: e.clientY }, '*');
+    } else if (!isLeave && e.clientX > 14 && e.clientX < w - 14 && now - lastC > 25) {
+      lastC = now;
+      window.parent.postMessage({ type: 'IFRAME_CURSOR_CENTER', clientX: e.clientX, clientY: e.clientY }, '*');
+    }
+    if (e.clientY <= topThresh && (isLeave || now - lastT > 40)) {
+      lastT = now;
+      window.parent.postMessage({ type: 'HOVER_TOP_EDGE' }, '*');
+    }
+  }
+  window.addEventListener('mousemove', function(e){
+    checkIframeEdgeHover(e, false);
+  }, { passive: true });
+  window.addEventListener('pointermove', function(e){
+    checkIframeEdgeHover(e, false);
+  }, { passive: true });
+  document.addEventListener('mouseleave', function(e){
+    checkIframeEdgeHover(e, true);
+  }, { passive: true });
+  window.addEventListener('mouseout', function(e){
+    if (!e.relatedTarget) checkIframeEdgeHover(e, true);
   }, { passive: true });
   window.addEventListener('mousedown', function(){
     window.parent.postMessage({ type: 'IFRAME_INTERACT' }, '*');
@@ -1573,6 +2582,37 @@ html.docx-force-dark [style*="background-image"] {
       }
     } catch(err) {}
   }, false);
+
+  function scrollToHashSymbol() {
+    if (!window.location.hash || window.location.hash.length <= 1) return;
+    try {
+      var rawHash = decodeURIComponent(window.location.hash.slice(1));
+      var direct = document.getElementById(rawHash) || document.getElementsByName(rawHash)[0];
+      if (direct) {
+        direct.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+      var lowerHash = rawHash.toLowerCase();
+      var candidates = document.querySelectorAll('tr.t-dsc, h1, h2, h3, h4, dt, code, tt, a');
+      for (var i = 0; i < candidates.length; i++) {
+        var el = candidates[i];
+        var txt = (el.textContent || '').trim().toLowerCase();
+        if (txt === lowerHash || txt === 'std::' + lowerHash || (el.tagName === 'TR' && txt.indexOf(lowerHash) !== -1)) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          el.style.outline = '2px solid rgba(56, 189, 248, 0.75)';
+          el.style.borderRadius = '4px';
+          setTimeout(function() { el.style.outline = ''; }, 2400);
+          break;
+        }
+      }
+    } catch (e) {}
+  }
+  window.addEventListener('hashchange', scrollToHashSymbol);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() { setTimeout(scrollToHashSymbol, 60); });
+  } else {
+    setTimeout(scrollToHashSymbol, 60);
+  }
 })();
 </script>"###
         .replace("__DOCX_SITE_ID__", site_id)
@@ -2039,15 +3079,17 @@ fn fetch_remote_registry(state: tauri::State<'_, AppState>) -> Result<Vec<Remote
         if get_site_origin_and_entry(&item.id).is_none() {
             continue;
         }
-        let (installed, local_commit, local_routes) = if let Some(pack) = guard.get(&item.id) {
-            (
-                true,
-                pack.manifest.commit.clone(),
-                pack.manifest.routes.len(),
-            )
-        } else {
-            (false, String::new(), 0)
-        };
+        let (installed, local_commit, local_routes, local_updated_at) =
+            if let Some(pack) = guard.get(&item.id) {
+                (
+                    true,
+                    pack.manifest.commit.clone(),
+                    pack.manifest.routes.len(),
+                    pack.manifest.updatedAt.clone(),
+                )
+            } else {
+                (false, String::new(), 0, String::new())
+            };
         let effective_bytes = if item.sizeBytes > 0 {
             item.sizeBytes
         } else if item.totalBytes > 0 {
@@ -2061,16 +3103,23 @@ fn fetch_remote_registry(state: tauri::State<'_, AppState>) -> Result<Vec<Remote
             && item.commit != "e3b0c442"
             && effective_bytes >= 1024
             && item.routeCount > 0;
+        let remote_is_newer = if !local_updated_at.is_empty() && !item.updatedAt.is_empty() {
+            item.updatedAt > local_updated_at
+        } else {
+            item.routeCount >= local_routes
+        };
         let update_available = installed
             && !local_commit.is_empty()
             && remote_is_valid
             && local_commit != item.commit
-            && item.routeCount >= local_routes;
+            && remote_is_newer;
         out.push(RemoteRegistryItem {
             id: item.id,
             name: item.name,
             version: item.version,
-            commit: if remote_is_valid {
+            commit: if installed && !update_available && !local_commit.is_empty() {
+                local_commit.clone()
+            } else if remote_is_valid {
                 item.commit
             } else if !local_commit.is_empty() {
                 local_commit.clone()
@@ -2192,10 +3241,10 @@ fn get_extra_search_entries(state: tauri::State<'_, AppState>) -> Vec<serde_json
         }
     }
 
-    // Fallback: synthesize search entries for any installed override pack that didn't have a .search.json file on disk
+    // Fallback: synthesize deep search entries from HTML chunks for any installed override pack without a .search.json file on disk
     let guard = state.store.overrides.read().unwrap();
     for (site_id, pack) in guard.iter() {
-        if site_id == "tailwind" || site_id == "shadcn" || covered_sites.contains(site_id) {
+        if covered_sites.contains(site_id) {
             continue;
         }
         let mut routes: Vec<&String> = pack
@@ -2205,23 +3254,82 @@ fn get_extra_search_entries(state: tauri::State<'_, AppState>) -> Vec<serde_json
             .filter(|(r, e)| {
                 e.mime.contains("text/html")
                     && !r.contains("_static/")
-                    && !r.contains("_ assets")
+                    && !r.contains("_assets/")
                     && !r.ends_with(".js")
                     && !r.ends_with(".css")
             })
             .map(|(r, _)| r)
             .collect();
         routes.sort();
+        let mut site_entries = Vec::new();
         for route in routes {
-            let (title, category) = humanize_route_title(route, &pack.manifest.name);
-            all.push(serde_json::json!({
+            let (mut title, category) = humanize_route_title(route, &pack.manifest.name);
+            let mut headings: Vec<String> = Vec::new();
+            let mut keywords: Vec<String> = Vec::new();
+            if let Some(entry) = pack.manifest.routes.get(route) {
+                if let Some(raw) = pack.read_chunk(entry.offset, entry.length) {
+                    let html = if entry.gzipped {
+                        let mut dec = flate2::read::GzDecoder::new(&raw[..]);
+                        let mut s = String::new();
+                        let _ = dec.read_to_string(&mut s);
+                        s
+                    } else {
+                        String::from_utf8_lossy(&raw).into_owned()
+                    };
+                    if let Some(ts) = html.find("<title") {
+                        if let Some(gt) = html[ts..].find('>') {
+                            let start = ts + gt + 1;
+                            if let Some(te) = html[start..].find("</title>") {
+                                let t_clean = html[start..start + te].trim();
+                                if !t_clean.is_empty() {
+                                    title = t_clean.to_string();
+                                }
+                            }
+                        }
+                    }
+                    for tag in ["<code", "<tt", "<h1", "<h2", "<h3"] {
+                        let mut pos = 0;
+                        while let Some(idx) = html[pos..].find(tag) {
+                            let abs = pos + idx;
+                            pos = abs + tag.len();
+                            if let Some(gt) = html[pos..].find('>') {
+                                let c_start = pos + gt + 1;
+                                if let Some(lt) = html[c_start..].find('<') {
+                                    let token = html[c_start..c_start + lt].trim();
+                                    if token.len() >= 2 && token.len() <= 48 {
+                                        if tag.starts_with("<h") {
+                                            if headings.len() < 20 {
+                                                headings.push(token.to_string());
+                                            }
+                                        } else if keywords.len() < 60 {
+                                            keywords.push(token.to_lowercase());
+                                        }
+                                    }
+                                }
+                            }
+                            if headings.len() >= 20 && keywords.len() >= 60 {
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            let item = serde_json::json!({
                 "title": title,
                 "category": category,
                 "path": route,
                 "site": site_id,
-                "headings": [],
+                "headings": headings,
+                "keywords": keywords,
                 "preview": format!("{} — {} offline documentation ({})", title, pack.manifest.name, route),
-            }));
+            });
+            site_entries.push(item.clone());
+            all.push(item);
+        }
+        if !site_entries.is_empty() {
+            if let Ok(json_bytes) = serde_json::to_vec(&site_entries) {
+                let _ = fs::write(packs_dir.join(format!("{}.search.json", site_id)), json_bytes);
+            }
         }
     }
 
@@ -2322,6 +3430,9 @@ fn run_install_or_update_sync(
     let remote_manifest_bytes = curl_get_bytes(&manifest_url, None)?;
     let remote_manifest: SiteManifest =
         serde_json::from_slice(&remote_manifest_bytes).map_err(|e| e.to_string())?;
+    if remote_manifest.routes.is_empty() || remote_manifest.commit == "e3b0c442" {
+        return Err(format!("Remote manifest for '{}' has 0 routes", site_id));
+    }
 
     let packs_dir = get_packs_dir();
     let _ = fs::create_dir_all(&packs_dir);
@@ -2348,9 +3459,31 @@ fn run_install_or_update_sync(
     if local_route_count > 0
         && (old_commit == remote_manifest.commit
             || (!local_updated_at.is_empty()
-                && local_updated_at > remote_manifest.updatedAt
+                && local_updated_at >= remote_manifest.updatedAt
                 && local_route_count >= remote_manifest.routes.len()))
     {
+        if old_commit != remote_manifest.commit {
+            let mut guard = store.overrides.write().unwrap();
+            if let Some(existing) = guard.get(&site_id).cloned() {
+                let mut reconciled = existing.manifest.clone();
+                reconciled.commit = remote_manifest.commit.clone();
+                if remote_manifest.updatedAt > reconciled.updatedAt {
+                    reconciled.updatedAt = remote_manifest.updatedAt.clone();
+                }
+                if let Ok(json_bytes) = serde_json::to_vec_pretty(&reconciled) {
+                    let _ = fs::write(packs_dir.join(format!("{}.manifest.json", site_id)), json_bytes);
+                }
+                guard.insert(
+                    site_id.clone(),
+                    Arc::new(SiteOverridePack {
+                        manifest: reconciled,
+                        data_start: existing.data_start,
+                        backing: existing.backing.clone(),
+                        source: existing.source.clone(),
+                    }),
+                );
+            }
+        }
         let port = ensure_site_server(&site_id, Arc::clone(&store));
         let _ = window.emit(
             "docpack-progress",
@@ -2365,8 +3498,8 @@ fn run_install_or_update_sync(
         );
         return Ok(DeltaUpdateResult {
             site_id: site_id.clone(),
-            old_commit: old_commit.clone(),
-            new_commit: old_commit,
+            old_commit,
+            new_commit: remote_manifest.commit.clone(),
             total_chunks: local_chunk_count,
             reused_chunks: local_chunk_count,
             downloaded_chunks: 0,
@@ -2381,13 +3514,10 @@ fn run_install_or_update_sync(
         });
     }
 
-    let _ = fs::write(
-        packs_dir.join(format!("{}.manifest.json", site_id)),
-        &remote_manifest_bytes,
-    );
-
     if let Ok(search_bytes) = curl_get_bytes(&search_url, None) {
-        let _ = fs::write(packs_dir.join(format!("{}.search.json", site_id)), search_bytes);
+        if search_bytes.len() > 4 {
+            let _ = fs::write(packs_dir.join(format!("{}.search.json", site_id)), search_bytes);
+        }
     }
 
     {
@@ -2411,6 +3541,29 @@ fn run_install_or_update_sync(
     }
 
     if !local_chunks_by_hash.is_empty() && missing_unique_hashes.is_empty() {
+        {
+            let mut guard = store.overrides.write().unwrap();
+            if let Some(existing) = guard.get(&site_id).cloned() {
+                let mut reconciled = existing.manifest.clone();
+                reconciled.commit = remote_manifest.commit.clone();
+                if remote_manifest.updatedAt > reconciled.updatedAt {
+                    reconciled.updatedAt = remote_manifest.updatedAt.clone();
+                }
+                guard.insert(
+                    site_id.clone(),
+                    Arc::new(SiteOverridePack {
+                        manifest: reconciled,
+                        data_start: existing.data_start,
+                        backing: existing.backing.clone(),
+                        source: existing.source.clone(),
+                    }),
+                );
+            }
+        }
+        let _ = fs::write(
+            packs_dir.join(format!("{}.manifest.json", site_id)),
+            &remote_manifest_bytes,
+        );
         let port = ensure_site_server(&site_id, Arc::clone(&store));
         let _ = window.emit(
             "docpack-progress",
@@ -2467,15 +3620,41 @@ fn run_install_or_update_sync(
             },
         );
 
-        if let Some(parsed) =
-            parse_docpack_on_disk(docpack_path, 0, dl_bytes, "GitHub Release .docpack")
-        {
-            store
-                .overrides
-                .write()
-                .unwrap()
-                .insert(site_id.clone(), parsed);
+        let parsed = match parse_docpack_on_disk(docpack_path.clone(), 0, dl_bytes, "GitHub Release .docpack") {
+            Some(p) => p,
+            None => {
+                let _ = fs::remove_file(&docpack_path);
+                return Err(format!(
+                    "Downloaded {}.docpack ({} bytes) is empty or invalid — please retry after release sync.",
+                    site_id, dl_bytes
+                ));
+            }
+        };
+
+        let mut final_manifest = parsed.manifest.clone();
+        if !remote_manifest.commit.is_empty() && remote_manifest.commit != "e3b0c442" {
+            final_manifest.commit = remote_manifest.commit.clone();
         }
+        if remote_manifest.updatedAt > final_manifest.updatedAt {
+            final_manifest.updatedAt = remote_manifest.updatedAt.clone();
+        }
+        if let Ok(json_bytes) = serde_json::to_vec_pretty(&final_manifest) {
+            let _ = fs::write(packs_dir.join(format!("{}.manifest.json", site_id)), json_bytes);
+        }
+
+        let final_commit = final_manifest.commit.clone();
+        let final_routes = final_manifest.routes.len();
+        let final_chunks = final_manifest.chunkCount;
+
+        store.overrides.write().unwrap().insert(
+            site_id.clone(),
+            Arc::new(SiteOverridePack {
+                manifest: final_manifest,
+                data_start: parsed.data_start,
+                backing: parsed.backing.clone(),
+                source: parsed.source.clone(),
+            }),
+        );
         let port = ensure_site_server(&site_id, Arc::clone(&store));
 
         let _ = window.emit(
@@ -2493,10 +3672,10 @@ fn run_install_or_update_sync(
         return Ok(DeltaUpdateResult {
             site_id: site_id.clone(),
             old_commit,
-            new_commit: remote_manifest.commit.clone(),
-            total_chunks: remote_manifest.chunkCount,
+            new_commit: final_commit,
+            total_chunks: final_chunks,
             reused_chunks: 0,
-            downloaded_chunks: remote_manifest.chunkCount,
+            downloaded_chunks: final_chunks,
             reused_bytes: 0,
             downloaded_bytes: dl_bytes,
             saved_percent: 0.0,
@@ -2506,7 +3685,7 @@ fn run_install_or_update_sync(
                 remote_manifest.name,
                 remote_manifest.version,
                 dl_bytes as f64 / (1024.0 * 1024.0),
-                remote_manifest.routes.len(),
+                final_routes,
                 port
             ),
         });
@@ -2779,16 +3958,11 @@ fn commits_match(a: &str, b: &str) -> bool {
 }
 
 fn read_saved_local_app_commit() -> Option<String> {
-    let candidates = [
-        std::env::temp_dir().join("docx_app_manifest.local.json"),
-        get_packs_dir().join("app-manifest.local.json"),
-    ];
-    for path in &candidates {
-        if let Ok(bytes) = fs::read(path) {
-            if let Ok(manifest) = serde_json::from_slice::<AppManifestRemote>(&bytes) {
-                if !manifest.commit.trim().is_empty() {
-                    return Some(manifest.commit);
-                }
+    let path = get_packs_dir().join("app-manifest.local.json");
+    if let Ok(bytes) = fs::read(path) {
+        if let Ok(manifest) = serde_json::from_slice::<AppManifestRemote>(&bytes) {
+            if !manifest.commit.trim().is_empty() {
+                return Some(manifest.commit);
             }
         }
     }
@@ -2853,7 +4027,6 @@ async fn self_update_app(
         // Fetch and persist remote app-manifest.json so check_app_update knows we are up to date after restart
         let manifest_url = format!("{}/app-manifest.json", RELEASE_BASE_URL);
         if let Ok(manifest_bytes) = curl_get_bytes(&manifest_url, None) {
-            let _ = fs::write(temp_dir.join("docx_app_manifest.local.json"), &manifest_bytes);
             let packs_dir = get_packs_dir();
             let _ = fs::create_dir_all(&packs_dir);
             let _ = fs::write(packs_dir.join("app-manifest.local.json"), &manifest_bytes);
@@ -2964,6 +4137,15 @@ async fn self_update_app(
 }
 
 #[tauri::command]
+fn get_system_theme(window: tauri::Window) -> String {
+    match window.theme() {
+        Ok(tauri::Theme::Light) => "light".to_string(),
+        Ok(tauri::Theme::Dark) => "dark".to_string(),
+        _ => "dark".to_string(),
+    }
+}
+
+#[tauri::command]
 fn window_minimize(window: tauri::Window) {
     let _ = window.minimize();
 }
@@ -2996,6 +4178,7 @@ fn window_toggle_fullscreen(window: tauri::Window) -> bool {
 #[tauri::command]
 fn window_close(window: tauri::Window) {
     let _ = window.close();
+    std::process::exit(0);
 }
 
 #[tauri::command]
@@ -3015,6 +4198,18 @@ fn window_show_ready(window: tauri::Window) {
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     use tauri::Manager;
+
+    // Terminate any previous lingering Docx.exe instance before WebView2 locks EBWebView
+    #[cfg(target_os = "windows")]
+    {
+        let my_pid = std::process::id();
+        let mut kill_cmd = Command::new("taskkill");
+        kill_cmd
+            .args(["/F", "/FI", &format!("PID ne {}", my_pid), "/IM", "Docx.exe"])
+            .creation_flags(0x08000000);
+        let _ = kill_cmd.output();
+    }
+
     let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.old.exe");
     let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.new.exe");
     if let Ok(exe) = std::env::current_exe() {
@@ -3044,6 +4239,12 @@ pub fn run() {
             tailwind_port,
             shadcn_port,
             store,
+        })
+        .on_window_event(|_win, event| {
+            if let tauri::WindowEvent::CloseRequested { .. } | tauri::WindowEvent::Destroyed = event
+            {
+                std::process::exit(0);
+            }
         })
         .setup(|app| {
             if let Some(win) = app.get_webview_window("main") {
@@ -3085,6 +4286,7 @@ pub fn run() {
             bundle_into_single_exe,
             check_app_update,
             self_update_app,
+            get_system_theme,
             window_minimize,
             window_toggle_maximize,
             window_toggle_fullscreen,

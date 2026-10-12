@@ -1,1 +1,1315 @@
-{"id":"cmake","name":"CMake Reference","version":"v4.0","commit":"d99d03d2","origin":"https://cmake.org","entryPath":"/cmake/help/latest/index.html","updatedAt":"2026-10-10T22:22:24.260Z","totalBytes":1728797,"chunkCount":188,"routes":{"/cmake/help/latest/index.html":{"offset":0,"length":4275,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2b1ec796f9e90079"},"/cmake/help/latest/manual/cpack.1.html":{"offset":4275,"length":7747,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cb10a031da0db091"},"/cmake/help/latest/manual/cmake-commands.7.html":{"offset":12022,"length":4688,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0e84c6c51bc05f9b"},"/cmake/help/latest/manual/cmake-gui.1.html":{"offset":16710,"length":5440,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8bc48f52dd4fabc9"},"/cmake/help/latest/manual/ccmake.1.html":{"offset":22150,"length":8616,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ad792851baf876cd"},"/cmake/help/latest/manual/cmake-configure-log.7.html":{"offset":30766,"length":10714,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e843396266340bec"},"/cmake/help/latest/manual/cmake-diagnostics.7.html":{"offset":41480,"length":4752,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"94be8d31bf95a4f0"},"/cmake/help/latest/manual/cmake-compile-features.7.html":{"offset":46232,"length":8930,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"527df2cecf311059"},"/cmake/help/latest/manual/cmake-env-variables.7.html":{"offset":55162,"length":4545,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a2e456f756e2811c"},"/cmake/help/latest/manual/cmake-developer.7.html":{"offset":59707,"length":12945,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ce0c11705b77a52c"},"/cmake/help/latest/manual/cmake.1.html":{"offset":72652,"length":33405,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"05cc760356d65ae7"},"/cmake/help/latest/manual/cmake-cxxmodules.7.html":{"offset":106057,"length":21605,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"448905000cf8dff1"},"/cmake/help/latest/manual/cmake-buildsystem.7.html":{"offset":127662,"length":26338,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8b51e29bed18f3e5"},"/cmake/help/latest/manual/ctest.1.html":{"offset":154000,"length":36542,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"501215b66de95e33"},"/cmake/help/latest/manual/cmake-file-api.7.html":{"offset":190542,"length":25809,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4d3ea08b72146636"},"/cmake/help/latest/manual/cmake-generator-expressions.7.html":{"offset":216351,"length":42080,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5922a0c96cd69976"},"/cmake/help/latest/genindex.html":{"offset":258431,"length":345641,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"80d2976cb4eed956"},"/cmake/help/latest/manual/cmake-server.7.html":{"offset":604072,"length":2934,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a51ed706286cf534"},"/cmake/help/latest/manual/cmake-language.7.html":{"offset":607006,"length":13516,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e869e41f2e8b6c05"},"/cmake/help/latest/manual/cmake-modules.7.html":{"offset":620522,"length":6700,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1b26645ed0ced4ca"},"/cmake/help/latest/manual/cmake-qt.7.html":{"offset":627222,"length":9284,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ad31c84b68c30de0"},"/cmake/help/latest/manual/cmake-variables.7.html":{"offset":636506,"length":14102,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7e3a441e51551f46"},"/cmake/help/latest/manual/cpack-generators.7.html":{"offset":650608,"length":3188,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"44d457ff249bccf1"},"/cmake/help/latest/manual/cmake-properties.7.html":{"offset":653796,"length":11256,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c170e890582229dc"},"/cmake/help/latest/manual/cmake-policies.7.html":{"offset":665052,"length":13672,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b9c20d60bc092ec4"},"/cmake/help/latest/manual/cmake-generators.7.html":{"offset":678724,"length":4840,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f584c1e170939221"},"/cmake/help/latest/manual/cmake-toolchains.7.html":{"offset":683564,"length":16621,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f05259061394a851"},"/cmake/help/latest/guide/tutorial/index.html":{"offset":700185,"length":4644,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"92c249983274d9c0"},"/cmake/help/latest/guide/user-interaction/index.html":{"offset":704829,"length":15196,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0c77b9e01dd361c4"},"/cmake/help/latest/guide/using-dependencies/index.html":{"offset":720025,"length":12145,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cfbf3cd79201ca50"},"/cmake/help/latest/manual/cmake-instrumentation.7.html":{"offset":732170,"length":14990,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6b2b5fba1780ab68"},"/cmake/help/latest/manual/cmake-presets.7.html":{"offset":747160,"length":22560,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a5d4e397d24eff32"},"/cmake/help/latest/manual/cmake-packages.7.html":{"offset":769720,"length":14420,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"34d58e8a9da9358c"},"/cmake/help/latest/release/index.html":{"offset":784140,"length":3104,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e80020f8c447159b"},"/cmake/help/latest/command/cmake_diagnostic.html":{"offset":787244,"length":5483,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f4adb542cdfe8777"},"/cmake/help/latest/command/cmake_parse_arguments.html":{"offset":792727,"length":6079,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6959d4b101de084c"},"/cmake/help/latest/command/break.html":{"offset":798806,"length":3016,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7de74b95df698fe9"},"/cmake/help/latest/command/cmake_pkg_config.html":{"offset":801822,"length":8663,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"28a63f3c6b1c3eef"},"/cmake/help/latest/guide/ide-integration/index.html":{"offset":810485,"length":6406,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bd3b87e9a28751c8"},"/cmake/help/latest/search.html":{"offset":816891,"length":2497,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0b23dff8607cf24a"},"/cmake/help/latest/guide/importing-exporting/index.html":{"offset":819388,"length":16825,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"af8e0ccc0c2af66b"},"/cmake/help/latest/command/cmake_minimum_required.html":{"offset":836213,"length":5031,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c983fc5ddc8a21b6"},"/cmake/help/latest/command/cmake_path.html":{"offset":841244,"length":13103,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fb9e48c50c8eea7e"},"/cmake/help/latest/command/cmake_host_system_information.html":{"offset":854347,"length":8693,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ee52170864d134a0"},"/cmake/help/latest/command/cmake_language.html":{"offset":863040,"length":12451,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2300b0948d560dc7"},"/cmake/help/latest/command/block.html":{"offset":875491,"length":4252,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3979ffa9eaeedd08"},"/cmake/help/latest/command/cmake_policy.html":{"offset":879743,"length":6516,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d9d277cf52143858"},"/cmake/help/latest/command/endmacro.html":{"offset":886259,"length":3070,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5ebba6a12e173b04"},"/cmake/help/latest/command/endfunction.html":{"offset":889329,"length":3069,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"689234901d3bd4de"},"/cmake/help/latest/command/else.html":{"offset":892398,"length":3027,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6d2b078fca61a319"},"/cmake/help/latest/command/continue.html":{"offset":895425,"length":3115,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8a2f075de813526f"},"/cmake/help/latest/command/elseif.html":{"offset":898540,"length":2984,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ca6973fcf84495e9"},"/cmake/help/latest/command/endblock.html":{"offset":901524,"length":2984,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"20b765dabc3b87f3"},"/cmake/help/latest/command/endforeach.html":{"offset":904508,"length":3076,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"301b739e2c52c376"},"/cmake/help/latest/command/find_file.html":{"offset":907584,"length":9111,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7b1f95f25e03584d"},"/cmake/help/latest/command/endwhile.html":{"offset":916695,"length":3082,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"42e8f07b0679c196"},"/cmake/help/latest/command/execute_process.html":{"offset":919777,"length":6589,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cddbc6c7766609f3"},"/cmake/help/latest/command/configure_file.html":{"offset":926366,"length":5764,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"26e373e6edb8d623"},"/cmake/help/latest/command/endif.html":{"offset":932130,"length":3069,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"25f6e1fc39097fb3"},"/cmake/help/latest/command/find_package.html":{"offset":935199,"length":21683,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c3c133955ca18947"},"/cmake/help/latest/command/find_library.html":{"offset":956882,"length":9999,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b848547cc14f1fe1"},"/cmake/help/latest/command/file.html":{"offset":966881,"length":24056,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ced5fe1cc4307b84"},"/cmake/help/latest/command/find_path.html":{"offset":990937,"length":9221,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4a84e0062adc2869"},"/cmake/help/latest/command/foreach.html":{"offset":1000158,"length":4840,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cdc6c7fcf8b20693"},"/cmake/help/latest/command/load_cache.html":{"offset":1004998,"length":4419,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"536eb625070ebaf6"},"/cmake/help/latest/command/get_property.html":{"offset":1009417,"length":4822,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"47795c8d31095e29"},"/cmake/help/latest/command/get_directory_property.html":{"offset":1014239,"length":3641,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"75ad1c8f2968dc6d"},"/cmake/help/latest/command/find_program.html":{"offset":1017880,"length":9329,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b60d388252bba7fe"},"/cmake/help/latest/command/function.html":{"offset":1027209,"length":4274,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1e61e89b41e567fb"},"/cmake/help/latest/command/list.html":{"offset":1031483,"length":10057,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"83a6388a8706ef92"},"/cmake/help/latest/command/if.html":{"offset":1041540,"length":10304,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4dffbe07ff3d307f"},"/cmake/help/latest/command/message.html":{"offset":1051844,"length":6915,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2d0792ccda9398d7"},"/cmake/help/latest/command/include_guard.html":{"offset":1058759,"length":3844,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"12ca83b5158bf45c"},"/cmake/help/latest/command/get_filename_component.html":{"offset":1062603,"length":4302,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d63b703a0aa916a4"},"/cmake/help/latest/command/macro.html":{"offset":1066905,"length":5559,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1fe8080579b1fe41"},"/cmake/help/latest/command/mark_as_advanced.html":{"offset":1072464,"length":3339,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4d8f2f3dbd6e81f3"},"/cmake/help/latest/command/math.html":{"offset":1075803,"length":3646,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f1989e72552bc40f"},"/cmake/help/latest/command/include.html":{"offset":1079449,"length":3619,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e2d29fbe0d721265"},"/cmake/help/latest/command/get_cmake_property.html":{"offset":1083068,"length":3468,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c0579173cf7f249b"},"/cmake/help/latest/command/while.html":{"offset":1086536,"length":3498,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"157f9dd564688f6a"},"/cmake/help/latest/command/set_directory_properties.html":{"offset":1090034,"length":3333,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"962044aa9feb2227"},"/cmake/help/latest/command/separate_arguments.html":{"offset":1093367,"length":4136,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a9f20bb80e86d6d9"},"/cmake/help/latest/command/option.html":{"offset":1097503,"length":3355,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"28ba371825c2217b"},"/cmake/help/latest/command/set_property.html":{"offset":1100858,"length":5391,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4a551b243289d84b"},"/cmake/help/latest/command/string.html":{"offset":1106249,"length":12228,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6f2625594f733580"},"/cmake/help/latest/command/unset.html":{"offset":1118477,"length":4047,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1076501ac664d12b"},"/cmake/help/latest/command/set.html":{"offset":1122524,"length":6119,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e628cd1d0122c1d0"},"/cmake/help/latest/command/variable_watch.html":{"offset":1128643,"length":3804,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0a45a5cc19485b62"},"/cmake/help/latest/command/site_name.html":{"offset":1132447,"length":3000,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f14a21d55a47ea56"},"/cmake/help/latest/command/add_compile_definitions.html":{"offset":1135447,"length":3662,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a05fda599ea7d0d1"},"/cmake/help/latest/command/return.html":{"offset":1139109,"length":4720,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e4d0e0f7902b8676"},"/cmake/help/latest/command/add_compile_options.html":{"offset":1143829,"length":4663,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f19be1d6641db0bd"},"/cmake/help/latest/command/add_custom_target.html":{"offset":1148492,"length":6963,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3da99a45d15ca808"},"/cmake/help/latest/command/add_definitions.html":{"offset":1155455,"length":3775,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"becf657999e9033c"},"/cmake/help/latest/command/add_custom_command.html":{"offset":1159230,"length":14310,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"37ba284cf1d42e99"},"/cmake/help/latest/command/enable_language.html":{"offset":1173540,"length":3962,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4f55335d8ed8c7d5"},"/cmake/help/latest/command/add_dependencies.html":{"offset":1177502,"length":3900,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"582776eb907d7c55"},"/cmake/help/latest/command/add_subdirectory.html":{"offset":1181402,"length":3587,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9f64e546ee84cceb"},"/cmake/help/latest/command/aux_source_directory.html":{"offset":1184989,"length":3341,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"962ab1f8ee6800f8"},"/cmake/help/latest/command/discover_tests.html":{"offset":1188330,"length":5067,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f26f1364a2194c1c"},"/cmake/help/latest/command/add_executable.html":{"offset":1193397,"length":5487,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c55a12310456e563"},"/cmake/help/latest/command/cmake_file_api.html":{"offset":1198884,"length":4470,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"074b8014551cc3f5"},"/cmake/help/latest/command/create_test_sourcelist.html":{"offset":1203354,"length":4663,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f3659116f0ac6558"},"/cmake/help/latest/command/define_property.html":{"offset":1208017,"length":5130,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"af1017004f45b8b5"},"/cmake/help/latest/command/build_command.html":{"offset":1213147,"length":4056,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"44f8de25a2fd65d7"},"/cmake/help/latest/command/add_link_options.html":{"offset":1217203,"length":5274,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1b5b5f7afdd03f16"},"/cmake/help/latest/command/enable_testing.html":{"offset":1222477,"length":3829,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bdfcf7130a9ff359"},"/cmake/help/latest/command/add_library.html":{"offset":1226306,"length":9622,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5d97eaa73c9f8ded"},"/cmake/help/latest/command/cmake_instrumentation.html":{"offset":1235928,"length":4888,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"29738da400ee54c6"},"/cmake/help/latest/command/add_test.html":{"offset":1240816,"length":5791,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b09b560772dc69f6"},"/cmake/help/latest/command/export.html":{"offset":1246607,"length":8169,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"08eeb4a76349a66b"},"/cmake/help/latest/command/include_directories.html":{"offset":1254776,"length":4007,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ee546b193c7e5ffe"},"/cmake/help/latest/command/get_target_property.html":{"offset":1258783,"length":3540,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1d3ccc90fe1976cc"},"/cmake/help/latest/command/source_group.html":{"offset":1262323,"length":4058,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"da50cd8f1e18b920"},"/cmake/help/latest/command/fltk_wrap_ui.html":{"offset":1266381,"length":3050,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"62cd4c909a126ec0"},"/cmake/help/latest/command/set_tests_properties.html":{"offset":1269431,"length":3745,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0dd353e183a73455"},"/cmake/help/latest/command/link_libraries.html":{"offset":1273176,"length":3337,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"effb8194e832a776"},"/cmake/help/latest/command/include_regular_expression.html":{"offset":1276513,"length":3129,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c6cc0afa40823e1d"},"/cmake/help/latest/command/include_external_msproject.html":{"offset":1279642,"length":3576,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"44a799ac46e76c7c"},"/cmake/help/latest/command/project.html":{"offset":1283218,"length":8104,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1b1c21efa09521cc"},"/cmake/help/latest/command/get_source_file_property.html":{"offset":1291322,"length":4031,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"787e9afc728d51a8"},"/cmake/help/latest/command/install.html":{"offset":1295353,"length":25928,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fe8ced0f0b3a95e9"},"/cmake/help/latest/command/set_target_properties.html":{"offset":1321281,"length":3485,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b59b3fad18eeba90"},"/cmake/help/latest/command/set_source_files_properties.html":{"offset":1324766,"length":3959,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0d5ed5f90ce47c3b"},"/cmake/help/latest/command/get_test_property.html":{"offset":1328725,"length":3734,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cf5215effc15c0d0"},"/cmake/help/latest/command/remove_definitions.html":{"offset":1332459,"length":3365,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8cb8d77811d82906"},"/cmake/help/latest/command/link_directories.html":{"offset":1335824,"length":4470,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b8ace740c95d78f8"},"/cmake/help/latest/command/target_link_directories.html":{"offset":1340294,"length":4816,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4c882f9978393ece"},"/cmake/help/latest/command/target_compile_definitions.html":{"offset":1345110,"length":4389,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5c5a918ca358f7e1"},"/cmake/help/latest/command/target_link_options.html":{"offset":1349499,"length":5996,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"10f34f66069db827"},"/cmake/help/latest/command/target_include_directories.html":{"offset":1355495,"length":5515,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e506f8df4cecd86"},"/cmake/help/latest/command/try_run.html":{"offset":1361010,"length":5696,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"56d4804c21387d80"},"/cmake/help/latest/command/ctest_configure.html":{"offset":1366706,"length":4574,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"250451060681d93b"},"/cmake/help/latest/command/target_sources.html":{"offset":1371280,"length":7491,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"24414472aabcd47f"},"/cmake/help/latest/command/target_compile_features.html":{"offset":1378771,"length":4239,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6015de9f055c9b32"},"/cmake/help/latest/command/target_link_libraries.html":{"offset":1383010,"length":11242,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d905fe70bc405461"},"/cmake/help/latest/command/try_compile.html":{"offset":1394252,"length":10989,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"66388dfd388afd4e"},"/cmake/help/latest/command/ctest_build.html":{"offset":1405241,"length":5234,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e851eeb592b62baa"},"/cmake/help/latest/command/target_compile_options.html":{"offset":1410475,"length":5248,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5e7c39e8e5712c1d"},"/cmake/help/latest/command/target_precompile_headers.html":{"offset":1415723,"length":5982,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a9420aa62af547a0"},"/cmake/help/latest/command/ctest_memcheck.html":{"offset":1421705,"length":3759,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"43bdc096c8290753"},"/cmake/help/latest/command/ctest_empty_binary_directory.html":{"offset":1425464,"length":2970,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7f5d9c6c201d9961"},"/cmake/help/latest/command/ctest_coverage.html":{"offset":1428434,"length":3930,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"68f3db5dbf2453c4"},"/cmake/help/latest/command/ctest_start.html":{"offset":1432364,"length":4499,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6efe881bb164375d"},"/cmake/help/latest/command/ctest_upload.html":{"offset":1436863,"length":3371,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b55d4f49fc4604bf"},"/cmake/help/latest/command/install_programs.html":{"offset":1440234,"length":3613,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6fb060626344fc45"},"/cmake/help/latest/command/ctest_submit.html":{"offset":1443847,"length":5122,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"def9ee750e5418dc"},"/cmake/help/latest/command/ctest_update.html":{"offset":1448969,"length":4003,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a051f2bb62cbfbb0"},"/cmake/help/latest/command/ctest_run_script.html":{"offset":1452972,"length":3202,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"da212f40051faf67"},"/cmake/help/latest/command/install_files.html":{"offset":1456174,"length":3680,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2c1548c1315efa43"},"/cmake/help/latest/command/exec_program.html":{"offset":1459854,"length":3933,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c4aba6899402e7dc"},"/cmake/help/latest/command/make_directory.html":{"offset":1463787,"length":3086,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e3b2cdbd1bf0765f"},"/cmake/help/latest/command/load_command.html":{"offset":1466873,"length":3315,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7b0b5dc7ede14f79"},"/cmake/help/latest/command/ctest_read_custom_files.html":{"offset":1470188,"length":3072,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a1b0fd9427efdfab"},"/cmake/help/latest/command/ctest_test.html":{"offset":1473260,"length":8812,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"39157406c420f4db"},"/cmake/help/latest/command/ctest_sleep.html":{"offset":1482072,"length":3046,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"10792cc6f6d64bea"},"/cmake/help/latest/command/build_name.html":{"offset":1485118,"length":3202,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"285404f7a33dcc0f"},"/cmake/help/latest/command/export_library_dependencies.html":{"offset":1488320,"length":3583,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cb074f35d09b770f"},"/cmake/help/latest/command/install_targets.html":{"offset":1491903,"length":3355,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"22004867f0174fe4"},"/cmake/help/latest/command/utility_source.html":{"offset":1495258,"length":3415,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0cd32695cd955c04"},"/cmake/help/latest/command/subdir_depends.html":{"offset":1498673,"length":3057,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"29e8d5c9027e1d21"},"/cmake/help/latest/command/qt_wrap_ui.html":{"offset":1501730,"length":3482,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0f6fa47664ca146c"},"/cmake/help/latest/command/variable_requires.html":{"offset":1505212,"length":3312,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7700e1d7fadc9bc7"},"/cmake/help/latest/command/write_file.html":{"offset":1508524,"length":3375,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d87a41d8189d6b72"},"/cmake/help/latest/command/remove.html":{"offset":1511899,"length":3112,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ba831324bef101d2"},"/cmake/help/latest/command/use_mangled_mesa.html":{"offset":1515011,"length":3172,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1b294f173a91efe8"},"/cmake/help/latest/command/subdirs.html":{"offset":1518183,"length":3444,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4454169e944ca4c9"},"/cmake/help/latest/command/output_required_files.html":{"offset":1521627,"length":3274,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"72032a417b7b5208"},"/cmake/help/latest/command/qt_wrap_cpp.html":{"offset":1524901,"length":3475,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dfbb9a27a2138a69"},"/cmake/help/latest/diagnostic/CMD_AUTHOR.html":{"offset":1528376,"length":3446,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"81af43f4ebea18fb"},"/cmake/help/latest/diagnostic/CMD_EXPERIMENTAL.html":{"offset":1531822,"length":3272,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"33112341a9272ff4"},"/cmake/help/latest/diagnostic/CMD_DEPRECATED.html":{"offset":1535094,"length":3546,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7c3e554c26c36bee"},"/cmake/help/latest/diagnostic/CMD_INSTALL_ABSOLUTE_DESTINATION.html":{"offset":1538640,"length":3357,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"19eb1d4fa7f93e50"},"/cmake/help/latest/diagnostic/CMD_POLICY.html":{"offset":1541997,"length":3351,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"31b81f377d869fcc"},"/cmake/help/latest/_images/GUI-Configure-Dialog.png":{"offset":1545348,"length":32812,"mime":"image/png","gzipped":true,"hash":"6e3c9aafb4586fb4"},"/cmake/help/latest/_static/cmake-logo-16.png":{"offset":1578160,"length":715,"mime":"image/png","gzipped":true,"hash":"516184329f50e36b"},"/cmake/help/latest/_images/VS-Choose-Arch.png":{"offset":1578875,"length":9899,"mime":"image/png","gzipped":true,"hash":"2683e0d97e0e26de"},"/__docx_assets/184aa8e5112e73.css":{"offset":1588774,"length":716,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"9887281b4c2d790d"},"/cmake/help/latest/_static/cmake-favicon.ico":{"offset":1589490,"length":772,"mime":"image/vnd.microsoft.icon","gzipped":true,"hash":"d7c7676a7359ab29"},"/__docx_assets/ad9232d066953d.css":{"offset":1590262,"length":2240,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"667011796885f332"},"/cmake/help/latest/_images/GUI-Choose-Generator.png":{"offset":1592502,"length":39166,"mime":"image/png","gzipped":true,"hash":"ca0a1e270a567aba"},"/cmake/help/latest/_images/GUI-Add-Entry.png":{"offset":1631668,"length":32675,"mime":"image/png","gzipped":true,"hash":"42d62b60cf04d0b0"},"/cmake/help/latest/_images/GUI-Source-Binary.png":{"offset":1664343,"length":59941,"mime":"image/png","gzipped":true,"hash":"ced394202bb71c9f"},"/cmake/help/latest/_static/default.css":{"offset":1724284,"length":48,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"3d6a9395e7f6cb0c"},"/docs":{"offset":0,"length":4275,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2b1ec796f9e90079"},"/":{"offset":0,"length":4275,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2b1ec796f9e90079"},"/cmake/help/latest/_static/classic.css":{"offset":1724332,"length":1126,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"22e7968457239e2c"},"/cmake/help/latest/_static/basic.css":{"offset":1725458,"length":3339,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"8b30647c6eb49281"}}}
+{
+  "id": "cmake",
+  "name": "CMake Reference",
+  "version": "v4.0",
+  "commit": "0f5d1986",
+  "origin": "https://cmake.org",
+  "entryPath": "/cmake/help/latest/index.html",
+  "updatedAt": "2026-10-11T10:37:48.434Z",
+  "totalBytes": 1572246,
+  "chunkCount": 184,
+  "routes": {
+    "/cmake/help/latest/index.html": {
+      "offset": 0,
+      "length": 3401,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3859649daeab24ee"
+    },
+    "/cmake/help/latest/manual/cmake-configure-log.7.html": {
+      "offset": 3401,
+      "length": 9830,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2574b9b970a238e4"
+    },
+    "/cmake/help/latest/manual/ccmake.1.html": {
+      "offset": 13231,
+      "length": 7737,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1ee4e1d65cb5bb80"
+    },
+    "/cmake/help/latest/manual/cpack.1.html": {
+      "offset": 20968,
+      "length": 6867,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3365da948af9b59d"
+    },
+    "/cmake/help/latest/manual/cmake-compile-features.7.html": {
+      "offset": 27835,
+      "length": 8056,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e2f327ad78693db8"
+    },
+    "/cmake/help/latest/manual/cmake-commands.7.html": {
+      "offset": 35891,
+      "length": 3795,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c0fe56efde4d5529"
+    },
+    "/cmake/help/latest/manual/cmake-diagnostics.7.html": {
+      "offset": 39686,
+      "length": 3881,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "07a9d1788d0d37ec"
+    },
+    "/cmake/help/latest/manual/cmake-gui.1.html": {
+      "offset": 43567,
+      "length": 4560,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6322d51b28a3cb73"
+    },
+    "/cmake/help/latest/manual/cmake-env-variables.7.html": {
+      "offset": 48127,
+      "length": 3675,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e2aacae0e812927d"
+    },
+    "/cmake/help/latest/manual/cmake-developer.7.html": {
+      "offset": 51802,
+      "length": 12082,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1a27180e7e123320"
+    },
+    "/cmake/help/latest/manual/cmake.1.html": {
+      "offset": 63884,
+      "length": 32537,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1a4c4198c1b289ac"
+    },
+    "/cmake/help/latest/manual/ctest.1.html": {
+      "offset": 96421,
+      "length": 35667,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cdcb5da11e6f0caf"
+    },
+    "/cmake/help/latest/manual/cmake-cxxmodules.7.html": {
+      "offset": 132088,
+      "length": 20711,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "92e5f4640e063512"
+    },
+    "/cmake/help/latest/manual/cmake-file-api.7.html": {
+      "offset": 152799,
+      "length": 24908,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9b290fc025a0d09d"
+    },
+    "/cmake/help/latest/manual/cmake-buildsystem.7.html": {
+      "offset": 177707,
+      "length": 25456,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "56aaba4ffcde5b17"
+    },
+    "/cmake/help/latest/manual/cmake-generator-expressions.7.html": {
+      "offset": 203163,
+      "length": 41190,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e0bb6f91c7252b42"
+    },
+    "/cmake/help/latest/genindex.html": {
+      "offset": 244353,
+      "length": 344700,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "89fbc33a188e7404"
+    },
+    "/cmake/help/latest/manual/cmake-generators.7.html": {
+      "offset": 589053,
+      "length": 3962,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a1abb6acd0d8930f"
+    },
+    "/cmake/help/latest/manual/cmake-modules.7.html": {
+      "offset": 593015,
+      "length": 5812,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "90d12299c491baab"
+    },
+    "/cmake/help/latest/manual/cmake-language.7.html": {
+      "offset": 598827,
+      "length": 12631,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "739464bd87f28bb3"
+    },
+    "/cmake/help/latest/manual/cmake-packages.7.html": {
+      "offset": 611458,
+      "length": 13535,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "97fa73f1a4b7920b"
+    },
+    "/cmake/help/latest/guide/user-interaction/index.html": {
+      "offset": 624993,
+      "length": 14310,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4293d43e6615103f"
+    },
+    "/cmake/help/latest/guide/tutorial/index.html": {
+      "offset": 639303,
+      "length": 3769,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dcd76c0fc2f8dd75"
+    },
+    "/cmake/help/latest/guide/using-dependencies/index.html": {
+      "offset": 643072,
+      "length": 11270,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "833e9bd5f4395241"
+    },
+    "/cmake/help/latest/manual/cmake-server.7.html": {
+      "offset": 654342,
+      "length": 2059,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b9ccbcda86cfe0fd"
+    },
+    "/cmake/help/latest/manual/cpack-generators.7.html": {
+      "offset": 656401,
+      "length": 2317,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3668dc4c4254682a"
+    },
+    "/cmake/help/latest/manual/cmake-toolchains.7.html": {
+      "offset": 658718,
+      "length": 15736,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "35b323abf1da9f0d"
+    },
+    "/cmake/help/latest/manual/cmake-properties.7.html": {
+      "offset": 674454,
+      "length": 10359,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "27d7bea2ef999415"
+    },
+    "/cmake/help/latest/manual/cmake-policies.7.html": {
+      "offset": 684813,
+      "length": 12793,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "feb7e78bb0c59833"
+    },
+    "/cmake/help/latest/manual/cmake-variables.7.html": {
+      "offset": 697606,
+      "length": 13193,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "12567e1a2425401f"
+    },
+    "/cmake/help/latest/manual/cmake-qt.7.html": {
+      "offset": 710799,
+      "length": 8409,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3aa840e58486ee6a"
+    },
+    "/cmake/help/latest/manual/cmake-instrumentation.7.html": {
+      "offset": 719208,
+      "length": 14089,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a61d4720f09986a2"
+    },
+    "/cmake/help/latest/manual/cmake-presets.7.html": {
+      "offset": 733297,
+      "length": 21656,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eb12f9ee01981f5b"
+    },
+    "/cmake/help/latest/command/cmake_minimum_required.html": {
+      "offset": 754953,
+      "length": 4158,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "97658c0fcce044ce"
+    },
+    "/cmake/help/latest/command/block.html": {
+      "offset": 759111,
+      "length": 3383,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8f5d80114580348a"
+    },
+    "/cmake/help/latest/guide/ide-integration/index.html": {
+      "offset": 762494,
+      "length": 5522,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d98d66fd103b9a0b"
+    },
+    "/cmake/help/latest/release/index.html": {
+      "offset": 768016,
+      "length": 2220,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6b8b3d80ed0c614a"
+    },
+    "/cmake/help/latest/command/break.html": {
+      "offset": 770236,
+      "length": 2142,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1b605a8ebe2ceba6"
+    },
+    "/cmake/help/latest/command/cmake_diagnostic.html": {
+      "offset": 772378,
+      "length": 4613,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "111933efe6e16bdb"
+    },
+    "/cmake/help/latest/search.html": {
+      "offset": 776991,
+      "length": 1623,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d36711c20afd5d9c"
+    },
+    "/cmake/help/latest/command/cmake_language.html": {
+      "offset": 778614,
+      "length": 11578,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "89392523910ed5f9"
+    },
+    "/cmake/help/latest/command/write_file.html": {
+      "offset": 790192,
+      "length": 2506,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d5518168d20287c4"
+    },
+    "/cmake/help/latest/command/cmake_host_system_information.html": {
+      "offset": 792698,
+      "length": 7827,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9e2d4e6fbb52c485"
+    },
+    "/cmake/help/latest/guide/importing-exporting/index.html": {
+      "offset": 800525,
+      "length": 15936,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0c3f141b948ce445"
+    },
+    "/cmake/help/latest/command/endforeach.html": {
+      "offset": 816461,
+      "length": 2204,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6eb2f1d5ba98f7a2"
+    },
+    "/cmake/help/latest/command/endwhile.html": {
+      "offset": 818665,
+      "length": 2210,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "40b22b9865bb2735"
+    },
+    "/cmake/help/latest/command/endblock.html": {
+      "offset": 820875,
+      "length": 2113,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b7c422068055bc8f"
+    },
+    "/cmake/help/latest/command/endif.html": {
+      "offset": 822988,
+      "length": 2198,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d686865c7ae9e4ad"
+    },
+    "/cmake/help/latest/command/else.html": {
+      "offset": 825186,
+      "length": 2152,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c7d58a271398d8d1"
+    },
+    "/cmake/help/latest/command/elseif.html": {
+      "offset": 827338,
+      "length": 2113,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "55f8d4bf43c264dc"
+    },
+    "/cmake/help/latest/command/configure_file.html": {
+      "offset": 829451,
+      "length": 4892,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3b9dc2bb8038cd4c"
+    },
+    "/cmake/help/latest/command/endmacro.html": {
+      "offset": 834343,
+      "length": 2195,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5f079578f0c5cf9e"
+    },
+    "/cmake/help/latest/command/endfunction.html": {
+      "offset": 836538,
+      "length": 2193,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d49f05733028397a"
+    },
+    "/cmake/help/latest/command/execute_process.html": {
+      "offset": 838731,
+      "length": 5713,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "355a3c7a1f46e0d8"
+    },
+    "/cmake/help/latest/command/cmake_policy.html": {
+      "offset": 844444,
+      "length": 5643,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dea117f1ff0b6e9e"
+    },
+    "/cmake/help/latest/command/cmake_parse_arguments.html": {
+      "offset": 850087,
+      "length": 5203,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3e0fcafeca9dea5f"
+    },
+    "/cmake/help/latest/command/cmake_pkg_config.html": {
+      "offset": 855290,
+      "length": 7793,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "40a039d32e3737be"
+    },
+    "/cmake/help/latest/command/continue.html": {
+      "offset": 863083,
+      "length": 2241,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6606bf35897f376e"
+    },
+    "/cmake/help/latest/command/cmake_path.html": {
+      "offset": 865324,
+      "length": 12222,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ffd554da110c3d92"
+    },
+    "/cmake/help/latest/command/file.html": {
+      "offset": 877546,
+      "length": 23171,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ccfd0ca84165d95f"
+    },
+    "/cmake/help/latest/command/include.html": {
+      "offset": 900717,
+      "length": 2751,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "71f3ee22cc818a96"
+    },
+    "/cmake/help/latest/command/load_cache.html": {
+      "offset": 903468,
+      "length": 3555,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eca3ac72b4a8083e"
+    },
+    "/cmake/help/latest/command/get_directory_property.html": {
+      "offset": 907023,
+      "length": 2776,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "28cda74c60d40491"
+    },
+    "/cmake/help/latest/command/foreach.html": {
+      "offset": 909799,
+      "length": 3962,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "875e37e0c08931ac"
+    },
+    "/cmake/help/latest/command/include_guard.html": {
+      "offset": 913761,
+      "length": 2976,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4e1498452e6f2b66"
+    },
+    "/cmake/help/latest/command/get_cmake_property.html": {
+      "offset": 916737,
+      "length": 2599,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e16e6c2b9f2086f5"
+    },
+    "/cmake/help/latest/command/find_path.html": {
+      "offset": 919336,
+      "length": 8352,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fa00ecfd90c73b1c"
+    },
+    "/cmake/help/latest/command/get_property.html": {
+      "offset": 927688,
+      "length": 3953,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "95c0d7bbef24ae0f"
+    },
+    "/cmake/help/latest/command/find_program.html": {
+      "offset": 931641,
+      "length": 8460,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7ed8d18d9734f542"
+    },
+    "/cmake/help/latest/command/get_filename_component.html": {
+      "offset": 940101,
+      "length": 3440,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "77557758f47299e9"
+    },
+    "/cmake/help/latest/command/find_library.html": {
+      "offset": 943541,
+      "length": 9121,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9c46ce54972834ea"
+    },
+    "/cmake/help/latest/command/find_file.html": {
+      "offset": 952662,
+      "length": 8244,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1cb9ef87b844bd6e"
+    },
+    "/cmake/help/latest/command/function.html": {
+      "offset": 960906,
+      "length": 3404,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "613233f9f52b7aad"
+    },
+    "/cmake/help/latest/command/if.html": {
+      "offset": 964310,
+      "length": 9431,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ffff89f038820d75"
+    },
+    "/cmake/help/latest/command/list.html": {
+      "offset": 973741,
+      "length": 9192,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0fa1728f899013b8"
+    },
+    "/cmake/help/latest/command/find_package.html": {
+      "offset": 982933,
+      "length": 20802,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ae5980dfb7736e64"
+    },
+    "/cmake/help/latest/command/site_name.html": {
+      "offset": 1003735,
+      "length": 2132,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "53d27fceeaed469d"
+    },
+    "/cmake/help/latest/command/set_directory_properties.html": {
+      "offset": 1005867,
+      "length": 2465,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d11dc870ba9682af"
+    },
+    "/cmake/help/latest/command/variable_watch.html": {
+      "offset": 1008332,
+      "length": 2934,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "00d3da981d195449"
+    },
+    "/cmake/help/latest/command/unset.html": {
+      "offset": 1011266,
+      "length": 3170,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6bcc66098ddee8ce"
+    },
+    "/cmake/help/latest/command/option.html": {
+      "offset": 1014436,
+      "length": 2486,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9dbe34867ed6657e"
+    },
+    "/cmake/help/latest/command/math.html": {
+      "offset": 1016922,
+      "length": 2774,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f3f759906869deda"
+    },
+    "/cmake/help/latest/command/add_compile_definitions.html": {
+      "offset": 1019696,
+      "length": 2796,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2ebadb5ab9eb4958"
+    },
+    "/cmake/help/latest/command/while.html": {
+      "offset": 1022492,
+      "length": 2624,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "861818e0d7de34f0"
+    },
+    "/cmake/help/latest/command/message.html": {
+      "offset": 1025116,
+      "length": 6049,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4a7e1e08ba73d5eb"
+    },
+    "/cmake/help/latest/command/set_property.html": {
+      "offset": 1031165,
+      "length": 4523,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b003e79490c5d575"
+    },
+    "/cmake/help/latest/command/set.html": {
+      "offset": 1035688,
+      "length": 5240,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2c6475fe93848afc"
+    },
+    "/cmake/help/latest/command/mark_as_advanced.html": {
+      "offset": 1040928,
+      "length": 2472,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "590211845d9b1d40"
+    },
+    "/cmake/help/latest/command/return.html": {
+      "offset": 1043400,
+      "length": 3849,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "09396e64efc771c5"
+    },
+    "/cmake/help/latest/command/separate_arguments.html": {
+      "offset": 1047249,
+      "length": 3265,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e53758fa124ccda1"
+    },
+    "/cmake/help/latest/command/macro.html": {
+      "offset": 1050514,
+      "length": 4690,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "81aea52e5b2f70d3"
+    },
+    "/cmake/help/latest/command/string.html": {
+      "offset": 1055204,
+      "length": 11352,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a419a815bf9a890d"
+    },
+    "/cmake/help/latest/command/add_compile_options.html": {
+      "offset": 1066556,
+      "length": 3788,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d92bed29707acee4"
+    },
+    "/cmake/help/latest/command/build_command.html": {
+      "offset": 1070344,
+      "length": 3182,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f5b24f90e585df21"
+    },
+    "/cmake/help/latest/command/add_test.html": {
+      "offset": 1073526,
+      "length": 4916,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "118ac54af0a60886"
+    },
+    "/cmake/help/latest/command/define_property.html": {
+      "offset": 1078442,
+      "length": 4262,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2936261f10b85668"
+    },
+    "/cmake/help/latest/command/add_definitions.html": {
+      "offset": 1082704,
+      "length": 2902,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d04efc96e09f53fe"
+    },
+    "/cmake/help/latest/command/add_dependencies.html": {
+      "offset": 1085606,
+      "length": 3029,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f17f210c67108013"
+    },
+    "/cmake/help/latest/command/add_link_options.html": {
+      "offset": 1088635,
+      "length": 4407,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fcffaa466fc6fad5"
+    },
+    "/cmake/help/latest/command/add_custom_target.html": {
+      "offset": 1093042,
+      "length": 6093,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7a126f2f02fa97c5"
+    },
+    "/cmake/help/latest/command/cmake_file_api.html": {
+      "offset": 1099135,
+      "length": 3598,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1f83eb46e7a35b97"
+    },
+    "/cmake/help/latest/command/aux_source_directory.html": {
+      "offset": 1102733,
+      "length": 2464,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b020f1f9b591e2e8"
+    },
+    "/cmake/help/latest/command/add_subdirectory.html": {
+      "offset": 1105197,
+      "length": 2722,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "55230b11a8c9b0c2"
+    },
+    "/cmake/help/latest/command/cmake_instrumentation.html": {
+      "offset": 1107919,
+      "length": 4010,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "539d207ffcccca0b"
+    },
+    "/cmake/help/latest/command/create_test_sourcelist.html": {
+      "offset": 1111929,
+      "length": 3797,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "68adad3b77df46ec"
+    },
+    "/cmake/help/latest/command/add_executable.html": {
+      "offset": 1115726,
+      "length": 4618,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7301722b26894deb"
+    },
+    "/cmake/help/latest/command/add_library.html": {
+      "offset": 1120344,
+      "length": 8743,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d37c56cfb12aa071"
+    },
+    "/cmake/help/latest/command/add_custom_command.html": {
+      "offset": 1129087,
+      "length": 13420,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eb57e06629c9975b"
+    },
+    "/cmake/help/latest/command/link_libraries.html": {
+      "offset": 1142507,
+      "length": 2465,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4d6b84ef1f8d62a8"
+    },
+    "/cmake/help/latest/command/link_directories.html": {
+      "offset": 1144972,
+      "length": 3604,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "674f193bdebe4f71"
+    },
+    "/cmake/help/latest/command/enable_language.html": {
+      "offset": 1148576,
+      "length": 3090,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "17bece0ce119caad"
+    },
+    "/cmake/help/latest/command/fltk_wrap_ui.html": {
+      "offset": 1151666,
+      "length": 2177,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e091b7422423ab11"
+    },
+    "/cmake/help/latest/command/include_regular_expression.html": {
+      "offset": 1153843,
+      "length": 2259,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1df40351933c4edb"
+    },
+    "/cmake/help/latest/command/remove_definitions.html": {
+      "offset": 1156102,
+      "length": 2497,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "00aa1e0c258da569"
+    },
+    "/cmake/help/latest/command/get_target_property.html": {
+      "offset": 1158599,
+      "length": 2673,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9402862f1d19d5de"
+    },
+    "/cmake/help/latest/command/discover_tests.html": {
+      "offset": 1161272,
+      "length": 4200,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fe30d2b166b8df9d"
+    },
+    "/cmake/help/latest/command/get_test_property.html": {
+      "offset": 1165472,
+      "length": 2865,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ea46982d0adc7e6e"
+    },
+    "/cmake/help/latest/command/enable_testing.html": {
+      "offset": 1168337,
+      "length": 2962,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8ec8a1a29f9012cf"
+    },
+    "/cmake/help/latest/command/include_directories.html": {
+      "offset": 1171299,
+      "length": 3144,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8fdcc19c3402213b"
+    },
+    "/cmake/help/latest/command/get_source_file_property.html": {
+      "offset": 1174443,
+      "length": 3166,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "73ce4412d0f05f16"
+    },
+    "/cmake/help/latest/command/include_external_msproject.html": {
+      "offset": 1177609,
+      "length": 2715,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d8a94f71d492261f"
+    },
+    "/cmake/help/latest/command/project.html": {
+      "offset": 1180324,
+      "length": 7234,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ddc09321ec46e2c1"
+    },
+    "/cmake/help/latest/command/export.html": {
+      "offset": 1187558,
+      "length": 7291,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f53d24afa5a5c6d5"
+    },
+    "/cmake/help/latest/command/install.html": {
+      "offset": 1194849,
+      "length": 25042,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d7c1df0f990f4a06"
+    },
+    "/cmake/help/latest/command/set_tests_properties.html": {
+      "offset": 1219891,
+      "length": 2878,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3aae6f6a0e70e59f"
+    },
+    "/cmake/help/latest/command/source_group.html": {
+      "offset": 1222769,
+      "length": 3185,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3223d34b5e1b4420"
+    },
+    "/cmake/help/latest/command/target_include_directories.html": {
+      "offset": 1225954,
+      "length": 4640,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2172b62a4e739220"
+    },
+    "/cmake/help/latest/command/target_compile_definitions.html": {
+      "offset": 1230594,
+      "length": 3514,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "46892535714cfe22"
+    },
+    "/cmake/help/latest/command/set_source_files_properties.html": {
+      "offset": 1234108,
+      "length": 3091,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b378566da1f351c0"
+    },
+    "/cmake/help/latest/command/target_link_options.html": {
+      "offset": 1237199,
+      "length": 5129,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "acbde5ea4b6d5ea6"
+    },
+    "/cmake/help/latest/command/target_compile_options.html": {
+      "offset": 1242328,
+      "length": 4376,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e1287954becec65f"
+    },
+    "/cmake/help/latest/command/set_target_properties.html": {
+      "offset": 1246704,
+      "length": 2614,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "72be8fb6ef753dfc"
+    },
+    "/cmake/help/latest/command/target_link_libraries.html": {
+      "offset": 1249318,
+      "length": 10357,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dabd790c54caacc6"
+    },
+    "/cmake/help/latest/command/try_compile.html": {
+      "offset": 1259675,
+      "length": 10109,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "03f5bd64dff81fbc"
+    },
+    "/cmake/help/latest/command/target_link_directories.html": {
+      "offset": 1269784,
+      "length": 3943,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "864ea48980b65437"
+    },
+    "/cmake/help/latest/command/target_compile_features.html": {
+      "offset": 1273727,
+      "length": 3360,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cab50402c87f64b4"
+    },
+    "/cmake/help/latest/command/target_precompile_headers.html": {
+      "offset": 1277087,
+      "length": 5112,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "585d0502b358840d"
+    },
+    "/cmake/help/latest/command/try_run.html": {
+      "offset": 1282199,
+      "length": 4820,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "06488146ce4f9d92"
+    },
+    "/cmake/help/latest/command/ctest_build.html": {
+      "offset": 1287019,
+      "length": 4366,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "02364ee44604b5c6"
+    },
+    "/cmake/help/latest/command/target_sources.html": {
+      "offset": 1291385,
+      "length": 6616,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "17fbb98fdde9a9cc"
+    },
+    "/cmake/help/latest/command/ctest_run_script.html": {
+      "offset": 1298001,
+      "length": 2325,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8186ee11b0c22711"
+    },
+    "/cmake/help/latest/command/ctest_configure.html": {
+      "offset": 1300326,
+      "length": 3701,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "909897d1e733f3ae"
+    },
+    "/cmake/help/latest/command/ctest_upload.html": {
+      "offset": 1304027,
+      "length": 2499,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dbca61bda06132fd"
+    },
+    "/cmake/help/latest/command/ctest_start.html": {
+      "offset": 1306526,
+      "length": 3630,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e9712148b39b2d12"
+    },
+    "/cmake/help/latest/command/ctest_empty_binary_directory.html": {
+      "offset": 1310156,
+      "length": 2100,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b0de159cccb2647e"
+    },
+    "/cmake/help/latest/command/exec_program.html": {
+      "offset": 1312256,
+      "length": 3066,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "840d2a3b32be19ce"
+    },
+    "/cmake/help/latest/command/build_name.html": {
+      "offset": 1315322,
+      "length": 2331,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b3587061add0bed4"
+    },
+    "/cmake/help/latest/command/ctest_read_custom_files.html": {
+      "offset": 1317653,
+      "length": 2201,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "420760aba4baa7e4"
+    },
+    "/cmake/help/latest/command/ctest_memcheck.html": {
+      "offset": 1319854,
+      "length": 2889,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1b245856cc1e063d"
+    },
+    "/cmake/help/latest/command/ctest_submit.html": {
+      "offset": 1322743,
+      "length": 4249,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "45dd7550ccf4262c"
+    },
+    "/cmake/help/latest/command/install_files.html": {
+      "offset": 1326992,
+      "length": 2812,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "642d2aa683b2f027"
+    },
+    "/cmake/help/latest/command/ctest_coverage.html": {
+      "offset": 1329804,
+      "length": 3065,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "764f4fa97799e808"
+    },
+    "/cmake/help/latest/command/export_library_dependencies.html": {
+      "offset": 1332869,
+      "length": 2716,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8a8a6df7b62ccd90"
+    },
+    "/cmake/help/latest/command/ctest_sleep.html": {
+      "offset": 1335585,
+      "length": 2169,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "50c29f13eb7c3216"
+    },
+    "/cmake/help/latest/command/ctest_update.html": {
+      "offset": 1337754,
+      "length": 3142,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bc7a37d563a05ab7"
+    },
+    "/cmake/help/latest/command/ctest_test.html": {
+      "offset": 1340896,
+      "length": 7942,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fc74cb641d2cffa2"
+    },
+    "/cmake/help/latest/command/install_targets.html": {
+      "offset": 1348838,
+      "length": 2490,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a2bc8c97e0a96c95"
+    },
+    "/cmake/help/latest/command/subdirs.html": {
+      "offset": 1351328,
+      "length": 2572,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d2d03d2369b4ec77"
+    },
+    "/cmake/help/latest/command/subdir_depends.html": {
+      "offset": 1353900,
+      "length": 2187,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2fae1be6094d3034"
+    },
+    "/cmake/help/latest/command/output_required_files.html": {
+      "offset": 1356087,
+      "length": 2394,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9d9470e8c7a9f5e8"
+    },
+    "/cmake/help/latest/command/qt_wrap_ui.html": {
+      "offset": 1358481,
+      "length": 2610,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c72a192b67ddc9a6"
+    },
+    "/cmake/help/latest/command/install_programs.html": {
+      "offset": 1361091,
+      "length": 2746,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ee7a4bca43c5759c"
+    },
+    "/cmake/help/latest/command/make_directory.html": {
+      "offset": 1363837,
+      "length": 2216,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8e7b9c16655f60d4"
+    },
+    "/cmake/help/latest/command/qt_wrap_cpp.html": {
+      "offset": 1366053,
+      "length": 2601,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "508f5f6c867c31cf"
+    },
+    "/cmake/help/latest/command/load_command.html": {
+      "offset": 1368654,
+      "length": 2444,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8613ab812aa6cb04"
+    },
+    "/cmake/help/latest/command/remove.html": {
+      "offset": 1371098,
+      "length": 2242,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "87a7a1b4f0b2c0d5"
+    },
+    "/cmake/help/latest/command/utility_source.html": {
+      "offset": 1373340,
+      "length": 2541,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ea66876967cbce49"
+    },
+    "/cmake/help/latest/command/variable_requires.html": {
+      "offset": 1375881,
+      "length": 2444,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d8fa576cb985733c"
+    },
+    "/cmake/help/latest/diagnostic/CMD_AUTHOR.html": {
+      "offset": 1378325,
+      "length": 2580,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "34f8acc6979fd9e9"
+    },
+    "/cmake/help/latest/command/use_mangled_mesa.html": {
+      "offset": 1380905,
+      "length": 2302,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b5eff2495f5900c1"
+    },
+    "/cmake/help/latest/diagnostic/CMD_EXPERIMENTAL.html": {
+      "offset": 1383207,
+      "length": 2404,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "39c9e7dacd43f69e"
+    },
+    "/cmake/help/latest/diagnostic/CMD_DEPRECATED.html": {
+      "offset": 1385611,
+      "length": 2676,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b761b1dee280692"
+    },
+    "/cmake/help/latest/diagnostic/CMD_INSTALL_ABSOLUTE_DESTINATION.html": {
+      "offset": 1388287,
+      "length": 2491,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5f2c00372904e77b"
+    },
+    "/cmake/help/latest/diagnostic/CMD_POLICY.html": {
+      "offset": 1390778,
+      "length": 2484,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6ffea3bfc933d1be"
+    },
+    "/cmake/help/latest/_static/cmake-logo-16.png": {
+      "offset": 1393262,
+      "length": 715,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "516184329f50e36b"
+    },
+    "/__docx_assets/184aa8e5112e73.css": {
+      "offset": 1393977,
+      "length": 716,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "9887281b4c2d790d"
+    },
+    "/__docx_assets/ad9232d066953d.css": {
+      "offset": 1394693,
+      "length": 2240,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "667011796885f332"
+    },
+    "/cmake/help/latest/_images/VS-Choose-Arch.png": {
+      "offset": 1396933,
+      "length": 9899,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2683e0d97e0e26de"
+    },
+    "/cmake/help/latest/_static/cmake-favicon.ico": {
+      "offset": 1406832,
+      "length": 772,
+      "mime": "image/vnd.microsoft.icon",
+      "gzipped": true,
+      "hash": "d7c7676a7359ab29"
+    },
+    "/cmake/help/latest/_images/GUI-Source-Binary.png": {
+      "offset": 1407604,
+      "length": 59941,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ced394202bb71c9f"
+    },
+    "/cmake/help/latest/_images/GUI-Configure-Dialog.png": {
+      "offset": 1467545,
+      "length": 32812,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6e3c9aafb4586fb4"
+    },
+    "/cmake/help/latest/_images/GUI-Add-Entry.png": {
+      "offset": 1500357,
+      "length": 32675,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "42d62b60cf04d0b0"
+    },
+    "/cmake/help/latest/_images/GUI-Choose-Generator.png": {
+      "offset": 1533032,
+      "length": 39166,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ca0a1e270a567aba"
+    },
+    "/cmake/help/latest/_static/default.css": {
+      "offset": 1572198,
+      "length": 48,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "3d6a9395e7f6cb0c"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 3401,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3859649daeab24ee"
+    },
+    "/": {
+      "offset": 0,
+      "length": 3401,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3859649daeab24ee"
+    }
+  }
+}

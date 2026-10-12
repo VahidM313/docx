@@ -1,1 +1,391 @@
-{"id":"tanstack_ai","name":"TanStack AI","version":"latest","commit":"571cf3c2","origin":"https://tanstack.com","entryPath":"/ai/latest/docs/getting-started/overview","updatedAt":"2026-10-10T23:02:02.565Z","totalBytes":1478309,"chunkCount":52,"routes":{"/ai/latest/docs/getting-started/overview":{"offset":0,"length":53068,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2db38e0dce65dfc3"},"/ai/latest/docs/getting-started/quick-start":{"offset":53068,"length":52758,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3638e16f4e6772c5"},"/ai/latest":{"offset":105826,"length":60662,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7fee8b47bd5c9faf"},"/ai/latest/docs/api/ai":{"offset":166488,"length":73991,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a5b175759436dd2b"},"/ai/latest/docs/tutorials/basic-chat":{"offset":240479,"length":53122,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"529cfa5e445d1d17"},"/ai/latest/docs/chat/streaming":{"offset":293601,"length":61238,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a258287859003216"},"/ai/latest/docs/framework/react/examples/basic-chat":{"offset":354839,"length":53983,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"95bb727af0a7e440"},"/ai/latest/docs/getting-started/quick-start-react-native":{"offset":408822,"length":56704,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ecc8755c184c5b24"},"/ai/latest/docs/getting-started/devtools":{"offset":465526,"length":53589,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"64aaec9516d0f4f1"},"/ai/latest/docs/getting-started/quick-start-server":{"offset":519115,"length":51724,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d49dfe448090eef3"},"/ai/latest/docs/adapters/openai":{"offset":570839,"length":75882,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"837e538c2d981adb"},"/ai/latest/docs/getting-started/overview.md":{"offset":646721,"length":2788,"mime":"text/markdown","gzipped":true,"hash":"16caa22ec2f60a34"},"/ai/latest/docs/getting-started/agent-skills":{"offset":649509,"length":54377,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a4ce31b44b1e5617"},"/ai/latest/docs/tutorials/mcp-server":{"offset":703886,"length":53162,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3833bd19fb00ae94"},"/ai/latest/docs/comparison/vercel-ai-sdk":{"offset":757048,"length":90771,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b00f1bf32910ccff"},"/ai/latest/docs/tutorials/generate-image":{"offset":847819,"length":54700,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c2c3934aa63525ed"},"/ai/latest/docs/tutorials/streaming-structured-table":{"offset":902519,"length":54691,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1714180cc539df3d"},"/assets/shared-constants-CaD3CTjf.js":{"offset":957210,"length":710,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"179ab4aaa695ecac"},"/assets/rolldown-runtime-DwyjGMXk.js":{"offset":957920,"length":693,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"5b86b49e119744d0"},"/assets/tanstack-query-CX3PTdhE.js":{"offset":958613,"length":14905,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"e244442d0c9d1554"},"/assets/tanstack-router-0U6bpk3R.js":{"offset":973518,"length":40070,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"394278faffcb9959"},"/assets/index-BUCnWTRz.js":{"offset":1013588,"length":319619,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"4812ba03d14c203f"},"/assets/index-CaKFzcjh.css":{"offset":1333207,"length":73832,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"e4b44f0b4b2a38cd"},"/assets/_library-CBIaDOvs.js":{"offset":1407039,"length":783,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"e9a971c2923c5257"},"/assets/LibraryLayout-BHEZ1Pv8.js":{"offset":1407822,"length":8796,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"97a0c0b8960554d9"},"/assets/useLocalStorage-BrXgnvb1.js":{"offset":1416618,"length":311,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"12ca91c0b2dac3fc"},"/assets/Doc-CurBxyHD.js":{"offset":1416929,"length":1630,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"b0b937133e9d20d3"},"/assets/route-DMvGLGYR.js":{"offset":1418559,"length":239,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"9ca6297b641c21e7"},"/assets/DocContainer-BiGs8guy.js":{"offset":1418798,"length":180,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"72ae65bb4320d51c"},"/assets/_version.docs._-DxkWhUHU.js":{"offset":1418978,"length":740,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"172dc8a64b719b20"},"/assets/_version-Bc--5hs4.js":{"offset":1419718,"length":901,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"82573a67b8c930dc"},"/assets/_version.docs-Ct0r8at9.js":{"offset":1420619,"length":140,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"0e051867dfa3f2a2"},"/assets/ai._version-NYPfLrsK.css":{"offset":1420759,"length":2186,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"f3d5047dabeb0232"},"/assets/BracketsCurly.es-q7ng7rhC.js":{"offset":1422945,"length":1534,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"eb765e6ebf5c47e1"},"/assets/Copy.es-CEdYw6i3.js":{"offset":1424479,"length":594,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"768c1aa3bc4194b2"},"/assets/CheckCircle.es-DBRoK8gm.js":{"offset":1425073,"length":708,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"775f246fa96175e8"},"/assets/Check.es-DrqoPo8F.js":{"offset":1425781,"length":574,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"f618d1c8e5cae3cc"},"/assets/ArrowDown.es-De7Jeonf.js":{"offset":1426355,"length":604,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"8e93d0928e1a2415"},"/assets/ArrowsLeftRight.es-Ct0tT2vq.js":{"offset":1426959,"length":748,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"2d748ebd28774a8a"},"/assets/ai._version.index-DLWR5k5q.js":{"offset":1427707,"length":17457,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"9f783eee9186e4b4"},"/assets/Waveform.es-BfzX-t5G.js":{"offset":1445164,"length":5772,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"a05910a553003c2d"},"/assets/CopyMarkdownButton-6eQhf0Zs.js":{"offset":1450936,"length":149,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"4581406b6ea4adf2"},"/assets/CodeBlock-DqfBuBrd.js":{"offset":1451085,"length":3317,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"0e1605837eb26208"},"/assets/HardDrives.es-XEj1ddhe.js":{"offset":1454402,"length":770,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"a0ed025a6aeabf27"},"/assets/LibraryLanding-kcEHKSOm.js":{"offset":1455172,"length":7173,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"f1d1124ec9cb0b9a"},"/assets/Plug.es-sgiw5RS2.js":{"offset":1462345,"length":1062,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"0e688241c5a078e6"},"/assets/Radio.es-0eZKdaoV.js":{"offset":1463407,"length":1002,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"63de6faf89d8cfc1"},"/assets/Terminal.es-BAd0GqhW.js":{"offset":1464409,"length":643,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"99d3e41632b2632b"},"/assets/Robot.es-D2GIh-a6.js":{"offset":1465052,"length":1044,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"66385ead7fa0ee79"},"/assets/_version.docs.framework._framework.examples._-S1N50aFw.js":{"offset":1466096,"length":8285,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"0f068cef343591d4"},"/assets/Globe.es-CiMzzs4N.js":{"offset":1474381,"length":1465,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"ab9679d058c74b43"},"/assets/ArrowsOut.es-khVDSIZR.js":{"offset":1475846,"length":2463,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"daecc26687fca264"},"/":{"offset":0,"length":53068,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2db38e0dce65dfc3"},"/docs":{"offset":0,"length":53068,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2db38e0dce65dfc3"}}}
+{
+  "id": "tanstack_ai",
+  "name": "TanStack AI",
+  "version": "latest",
+  "commit": "571cf3c2",
+  "origin": "https://tanstack.com",
+  "entryPath": "/ai/latest/docs/getting-started/overview",
+  "updatedAt": "2026-10-10T23:02:02.565Z",
+  "totalBytes": 1478309,
+  "chunkCount": 52,
+  "routes": {
+    "/ai/latest/docs/getting-started/overview": {
+      "offset": 0,
+      "length": 53068,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2db38e0dce65dfc3"
+    },
+    "/ai/latest/docs/getting-started/quick-start": {
+      "offset": 53068,
+      "length": 52758,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3638e16f4e6772c5"
+    },
+    "/ai/latest": {
+      "offset": 105826,
+      "length": 60662,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7fee8b47bd5c9faf"
+    },
+    "/ai/latest/docs/api/ai": {
+      "offset": 166488,
+      "length": 73991,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a5b175759436dd2b"
+    },
+    "/ai/latest/docs/tutorials/basic-chat": {
+      "offset": 240479,
+      "length": 53122,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "529cfa5e445d1d17"
+    },
+    "/ai/latest/docs/chat/streaming": {
+      "offset": 293601,
+      "length": 61238,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a258287859003216"
+    },
+    "/ai/latest/docs/framework/react/examples/basic-chat": {
+      "offset": 354839,
+      "length": 53983,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "95bb727af0a7e440"
+    },
+    "/ai/latest/docs/getting-started/quick-start-react-native": {
+      "offset": 408822,
+      "length": 56704,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ecc8755c184c5b24"
+    },
+    "/ai/latest/docs/getting-started/devtools": {
+      "offset": 465526,
+      "length": 53589,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "64aaec9516d0f4f1"
+    },
+    "/ai/latest/docs/getting-started/quick-start-server": {
+      "offset": 519115,
+      "length": 51724,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d49dfe448090eef3"
+    },
+    "/ai/latest/docs/adapters/openai": {
+      "offset": 570839,
+      "length": 75882,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "837e538c2d981adb"
+    },
+    "/ai/latest/docs/getting-started/overview.md": {
+      "offset": 646721,
+      "length": 2788,
+      "mime": "text/markdown",
+      "gzipped": true,
+      "hash": "16caa22ec2f60a34"
+    },
+    "/ai/latest/docs/getting-started/agent-skills": {
+      "offset": 649509,
+      "length": 54377,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a4ce31b44b1e5617"
+    },
+    "/ai/latest/docs/tutorials/mcp-server": {
+      "offset": 703886,
+      "length": 53162,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3833bd19fb00ae94"
+    },
+    "/ai/latest/docs/comparison/vercel-ai-sdk": {
+      "offset": 757048,
+      "length": 90771,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b00f1bf32910ccff"
+    },
+    "/ai/latest/docs/tutorials/generate-image": {
+      "offset": 847819,
+      "length": 54700,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c2c3934aa63525ed"
+    },
+    "/ai/latest/docs/tutorials/streaming-structured-table": {
+      "offset": 902519,
+      "length": 54691,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1714180cc539df3d"
+    },
+    "/assets/shared-constants-CaD3CTjf.js": {
+      "offset": 957210,
+      "length": 710,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "179ab4aaa695ecac"
+    },
+    "/assets/rolldown-runtime-DwyjGMXk.js": {
+      "offset": 957920,
+      "length": 693,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "5b86b49e119744d0"
+    },
+    "/assets/tanstack-query-CX3PTdhE.js": {
+      "offset": 958613,
+      "length": 14905,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "e244442d0c9d1554"
+    },
+    "/assets/tanstack-router-0U6bpk3R.js": {
+      "offset": 973518,
+      "length": 40070,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "394278faffcb9959"
+    },
+    "/assets/index-BUCnWTRz.js": {
+      "offset": 1013588,
+      "length": 319619,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "4812ba03d14c203f"
+    },
+    "/assets/index-CaKFzcjh.css": {
+      "offset": 1333207,
+      "length": 73832,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "e4b44f0b4b2a38cd"
+    },
+    "/assets/_library-CBIaDOvs.js": {
+      "offset": 1407039,
+      "length": 783,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "e9a971c2923c5257"
+    },
+    "/assets/LibraryLayout-BHEZ1Pv8.js": {
+      "offset": 1407822,
+      "length": 8796,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "97a0c0b8960554d9"
+    },
+    "/assets/useLocalStorage-BrXgnvb1.js": {
+      "offset": 1416618,
+      "length": 311,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "12ca91c0b2dac3fc"
+    },
+    "/assets/Doc-CurBxyHD.js": {
+      "offset": 1416929,
+      "length": 1630,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "b0b937133e9d20d3"
+    },
+    "/assets/route-DMvGLGYR.js": {
+      "offset": 1418559,
+      "length": 239,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "9ca6297b641c21e7"
+    },
+    "/assets/DocContainer-BiGs8guy.js": {
+      "offset": 1418798,
+      "length": 180,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "72ae65bb4320d51c"
+    },
+    "/assets/_version.docs._-DxkWhUHU.js": {
+      "offset": 1418978,
+      "length": 740,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "172dc8a64b719b20"
+    },
+    "/assets/_version-Bc--5hs4.js": {
+      "offset": 1419718,
+      "length": 901,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "82573a67b8c930dc"
+    },
+    "/assets/_version.docs-Ct0r8at9.js": {
+      "offset": 1420619,
+      "length": 140,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "0e051867dfa3f2a2"
+    },
+    "/assets/ai._version-NYPfLrsK.css": {
+      "offset": 1420759,
+      "length": 2186,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "f3d5047dabeb0232"
+    },
+    "/assets/BracketsCurly.es-q7ng7rhC.js": {
+      "offset": 1422945,
+      "length": 1534,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "eb765e6ebf5c47e1"
+    },
+    "/assets/Copy.es-CEdYw6i3.js": {
+      "offset": 1424479,
+      "length": 594,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "768c1aa3bc4194b2"
+    },
+    "/assets/CheckCircle.es-DBRoK8gm.js": {
+      "offset": 1425073,
+      "length": 708,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "775f246fa96175e8"
+    },
+    "/assets/Check.es-DrqoPo8F.js": {
+      "offset": 1425781,
+      "length": 574,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "f618d1c8e5cae3cc"
+    },
+    "/assets/ArrowDown.es-De7Jeonf.js": {
+      "offset": 1426355,
+      "length": 604,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "8e93d0928e1a2415"
+    },
+    "/assets/ArrowsLeftRight.es-Ct0tT2vq.js": {
+      "offset": 1426959,
+      "length": 748,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "2d748ebd28774a8a"
+    },
+    "/assets/ai._version.index-DLWR5k5q.js": {
+      "offset": 1427707,
+      "length": 17457,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "9f783eee9186e4b4"
+    },
+    "/assets/Waveform.es-BfzX-t5G.js": {
+      "offset": 1445164,
+      "length": 5772,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "a05910a553003c2d"
+    },
+    "/assets/CopyMarkdownButton-6eQhf0Zs.js": {
+      "offset": 1450936,
+      "length": 149,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "4581406b6ea4adf2"
+    },
+    "/assets/CodeBlock-DqfBuBrd.js": {
+      "offset": 1451085,
+      "length": 3317,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "0e1605837eb26208"
+    },
+    "/assets/HardDrives.es-XEj1ddhe.js": {
+      "offset": 1454402,
+      "length": 770,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "a0ed025a6aeabf27"
+    },
+    "/assets/LibraryLanding-kcEHKSOm.js": {
+      "offset": 1455172,
+      "length": 7173,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "f1d1124ec9cb0b9a"
+    },
+    "/assets/Plug.es-sgiw5RS2.js": {
+      "offset": 1462345,
+      "length": 1062,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "0e688241c5a078e6"
+    },
+    "/assets/Radio.es-0eZKdaoV.js": {
+      "offset": 1463407,
+      "length": 1002,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "63de6faf89d8cfc1"
+    },
+    "/assets/Terminal.es-BAd0GqhW.js": {
+      "offset": 1464409,
+      "length": 643,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "99d3e41632b2632b"
+    },
+    "/assets/Robot.es-D2GIh-a6.js": {
+      "offset": 1465052,
+      "length": 1044,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "66385ead7fa0ee79"
+    },
+    "/assets/_version.docs.framework._framework.examples._-S1N50aFw.js": {
+      "offset": 1466096,
+      "length": 8285,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "0f068cef343591d4"
+    },
+    "/assets/Globe.es-CiMzzs4N.js": {
+      "offset": 1474381,
+      "length": 1465,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "ab9679d058c74b43"
+    },
+    "/assets/ArrowsOut.es-khVDSIZR.js": {
+      "offset": 1475846,
+      "length": 2463,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "daecc26687fca264"
+    },
+    "/": {
+      "offset": 0,
+      "length": 53068,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2db38e0dce65dfc3"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 53068,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2db38e0dce65dfc3"
+    }
+  }
+}

@@ -1,1 +1,2442 @@
-{"id":"curl","name":"curl & libcurl","version":"v8.13","commit":"608a74e2","origin":"https://curl.se","entryPath":"/docs/","updatedAt":"2026-10-10T16:44:35.787Z","totalBytes":3370891,"chunkCount":338,"routes":{"/docs":{"offset":0,"length":3052,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a5cff55540f0cac7"},"/docs/":{"offset":0,"length":3052,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a5cff55540f0cac7"},"/docs/caextract.html":{"offset":3052,"length":3620,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f789fd1b76d79d46"},"/docs/projdocs.html":{"offset":6672,"length":2784,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bfd690f9c0a764b6"},"/docs/http3.html":{"offset":9456,"length":6448,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b77efbc424215285"},"/docs/bugs.html":{"offset":15904,"length":7480,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"235aa14c4042f56c"},"/docs/faq.html":{"offset":23384,"length":29709,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"57fe4fe9946b8443"},"/docs/history.html":{"offset":53093,"length":8224,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c3b0426c45e5f53f"},"/docs/http-cookies.html":{"offset":61317,"length":5330,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b90c5f29736714ec"},"/docs/governance.html":{"offset":66647,"length":6199,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"071b710926e0ecf8"},"/docs/libs.html":{"offset":72846,"length":3031,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9f933f468475c2f0"},"/docs/features.html":{"offset":75877,"length":4967,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6381deb2f6bf93f1"},"/docs/code-of-conduct.html":{"offset":80844,"length":3142,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"62de44bde12da14e"},"/docs/knownrisks.html":{"offset":83986,"length":5162,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f71782ba00b4563c"},"/docs/install.html":{"offset":89148,"length":14610,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"615a0dec59a8309f"},"/docs/todo.html":{"offset":103758,"length":19970,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8b18a5bad4b84a43"},"/docs/protdocs.html":{"offset":123728,"length":2422,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bfb9b1169d28f129"},"/docs/knownbugs.html":{"offset":126150,"length":11088,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"09045d54dd28669f"},"/docs/tooldocs.html":{"offset":137238,"length":2513,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5cd0b3fde6e7415e"},"/docs/versions.html":{"offset":139751,"length":5551,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"25488fbb0823fda0"},"/docs/url-syntax.html":{"offset":145302,"length":8622,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5d5cc1b85e7b30e4"},"/docs/sslcerts.html":{"offset":153924,"length":5024,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f80c67e811b60a9e"},"/docs/comparison-table.html":{"offset":158948,"length":4533,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bea6f7a6d29ec205"},"/docs/reldocs.html":{"offset":163481,"length":2605,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6ccb36f53e4e306f"},"/docs/websocket.html":{"offset":166086,"length":4693,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9a178cd037ee0fd6"},"/docs/verify.html":{"offset":170779,"length":5508,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cb217ed770860ba4"},"/docs/releases.html":{"offset":176287,"length":12139,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2102bef1f4d17c18"},"/docs/ssl-compared.html":{"offset":188426,"length":5991,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"155494e7d73f48f6"},"/docs/mqtt.html":{"offset":194417,"length":3074,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"35fd33cef1c6990c"},"/docs/secdocs.html":{"offset":197491,"length":2558,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"55ab76c828a6959f"},"/docs/vulnerabilities.html":{"offset":200049,"length":6248,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c831615c9e964412"},"/docs/security.html":{"offset":206297,"length":12571,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8e6e098f98a24355"},"/docs/audits.html":{"offset":218868,"length":2796,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"85f37565be107247"},"/docs/manpage.html":{"offset":221664,"length":95356,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1b575ba2a28549e3"},"/libcurl":{"offset":317020,"length":2931,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9c0b2dcb693a78cd"},"/libcurl/":{"offset":317020,"length":2931,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9c0b2dcb693a78cd"},"/libcurl/c/threadsafe.html":{"offset":319951,"length":4363,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"100d6966d1b81513"},"/docs/optionswhen.html":{"offset":324314,"length":6262,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1be24e9f32b27731"},"/docs/httpscripting.html":{"offset":330576,"length":13418,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8b718316fdbd8210"},"/docs/copyright.html":{"offset":343994,"length":3326,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6305445aa7f1716e"},"/docs/thename.html":{"offset":347320,"length":4303,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"79803afe5811cdb6"},"/libcurl/bindings.html":{"offset":351623,"length":4781,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"44c30921d9f5c781"},"/docs/mk-ca-bundle.html":{"offset":356404,"length":4214,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fbb95777b148b597"},"/docs/tutorial.html":{"offset":360618,"length":16375,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e055180174a05a83"},"/docs/videos":{"offset":376993,"length":16802,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3f8e1ec50f8d3ce5"},"/docs/videos/":{"offset":376993,"length":16802,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3f8e1ec50f8d3ce5"},"/docs/help-us.html":{"offset":393795,"length":4371,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dfbfaf2da877b411"},"/docs/survey":{"offset":398166,"length":2936,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dad156374ed4818e"},"/docs/survey/":{"offset":398166,"length":2936,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dad156374ed4818e"},"/docs/companies.html":{"offset":401102,"length":12005,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"09f5500479963451"},"/docs/whodocs.html":{"offset":413107,"length":2466,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"75126ebc59116d4a"},"/docs/thanks.html":{"offset":415573,"length":33428,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8f9c359e5788c3fa"},"/libcurl/c/getinmemory.html":{"offset":449001,"length":3985,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b168163b06af191c"},"/libcurl/c/libcurl-tutorial.html":{"offset":452986,"length":23806,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"65ca7526abf720a0"},"/libcurl/features.html":{"offset":476792,"length":4013,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1b31d3b35a1d97b1"},"/libcurl/c/allfuncs.html":{"offset":480805,"length":4039,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0f5aca42e4cb6f3f"},"/libcurl/c/example.html":{"offset":484844,"length":6090,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f9f1d966a28347ac"},"/libcurl/c/symbols-in-versions.html":{"offset":490934,"length":15736,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"38f6abfc166e1870"},"/libcurl/c/libcurl.html":{"offset":506670,"length":6475,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b364162e6efa1ffb"},"/libcurl/c/libcurl-multi.html":{"offset":513145,"length":5443,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"483a11b6cf3672e0"},"/libcurl/relatedlibs.html":{"offset":518588,"length":2292,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1dd961c71ac2c530"},"/libcurl/theysay.html":{"offset":520880,"length":6045,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f28b1d0102d06e56"},"/libcurl/competitors.html":{"offset":526925,"length":3919,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e428944ed0aea228"},"/libcurl/c/libcurl-easy.html":{"offset":530844,"length":3098,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7983978f925c5958"},"/libcurl/c":{"offset":533942,"length":2811,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"530b16ef20966a3f"},"/libcurl/c/":{"offset":533942,"length":2811,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"530b16ef20966a3f"},"/libcurl/abi.html":{"offset":536753,"length":3005,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3047d0ff71b7b59f"},"/libcurl/security.html":{"offset":539758,"length":11506,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ac77b61ac3aafe08"},"/libcurl/c/libcurl-share.html":{"offset":551264,"length":3004,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6aba36508cb7ba53"},"/libcurl/using":{"offset":554268,"length":2046,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e7dfe218edf62ce"},"/libcurl/using/":{"offset":554268,"length":2046,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e7dfe218edf62ce"},"/libcurl/c/easy_setopt_options.html":{"offset":556314,"length":9107,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"17427f1c713c8642"},"/libcurl/c/easy_getinfo_options.html":{"offset":565421,"length":3814,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"48cebf0979feb475"},"/libcurl/c/libcurl-url.html":{"offset":569235,"length":3927,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"72118b58d65c66a1"},"/libcurl/c/curl_multi_init.html":{"offset":573162,"length":2987,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"62851a017c8de0d9"},"/libcurl/c/curl_easy_perform.html":{"offset":576149,"length":3551,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ca24c5176701b3a2"},"/libcurl/c/curl_multi_perform.html":{"offset":579700,"length":4014,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f38d09aa24212675"},"/libcurl/c/libcurl-errors.html":{"offset":583714,"length":9787,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"16027b05444144e6"},"/libcurl/c/curl_easy_getinfo.html":{"offset":593501,"length":6523,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1000dea5f7b5f684"},"/libcurl/c/libcurl-env.html":{"offset":600024,"length":3621,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3efc1b5df6784886"},"/libcurl/c/multi_setopt_options.html":{"offset":603645,"length":2776,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"362d8d42f24d6ab0"},"/libcurl/c/curl_multi_add_handle.html":{"offset":606421,"length":3424,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"95667b004064fca0"},"/libcurl/c/curl_easy_setopt.html":{"offset":609845,"length":14396,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"be917061820ee8c1"},"/libcurl/c/curl_easy_reset.html":{"offset":624241,"length":2867,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9dba187d9d175d06"},"/libcurl/c/curl_easy_init.html":{"offset":627108,"length":3263,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2eefc43d06fb1898"},"/libcurl/c/tls-options.html":{"offset":630371,"length":3398,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ce0acde947671bd8"},"/libcurl/c/libcurl-ws.html":{"offset":633769,"length":4815,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"87faf2274a65723e"},"/libcurl/c/CURLOPT_NOSIGNAL.html":{"offset":638584,"length":3335,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2dced221e2f68815"},"/libcurl/c/CURLSHOPT_LOCKFUNC.html":{"offset":641919,"length":3273,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ec9343ded57533f5"},"/libcurl/c/curl_version_info.html":{"offset":645192,"length":6437,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4b244849e3a1cb08"},"/libcurl/c/curl_multi_setopt.html":{"offset":651629,"length":4062,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0e685b9da76166b9"},"/libcurl/c/curl_global_init.html":{"offset":655691,"length":4296,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ef96e834999d761b"},"/docs/optionsall.html":{"offset":659987,"length":6170,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7617c6bb5e764455"},"/libcurl/c/curl_share_setopt.html":{"offset":666157,"length":3022,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"638219c95b5787fc"},"/libcurl/c/CURLOPT_DNS_USE_GLOBAL_CACHE.html":{"offset":669179,"length":3157,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c1c08566b248cddf"},"/docs/irc.html":{"offset":672336,"length":3426,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"655326f24da07f89"},"/docs/survey/2025-1.1":{"offset":675762,"length":19124,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2f761bd4d02c7830"},"/docs/survey/2025-1.1/":{"offset":675762,"length":19124,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2f761bd4d02c7830"},"/libcurl/c/curl_global_init_mem.html":{"offset":694886,"length":3521,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9e9939506252c6f1"},"/libcurl/c/CURLSHOPT_UNLOCKFUNC.html":{"offset":698407,"length":3194,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3d48ae877e8eb525"},"/libcurl/c/curl_multi_remove_handle.html":{"offset":701601,"length":3398,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"86832ab9f5c482a7"},"/libcurl/c/CURLOPT_WRITEDATA.html":{"offset":704999,"length":3153,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e76f5c1a86a5b6d8"},"/libcurl/c/CURLOPT_URL.html":{"offset":708152,"length":4683,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"afbbcd42b8e73199"},"/libcurl/c/CURLOPT_ERRORBUFFER.html":{"offset":712835,"length":3821,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0fd0863a8c059107"},"/libcurl/c/curl_easy_duphandle.html":{"offset":716656,"length":3334,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c448e4f34c9698c3"},"/libcurl/c/CURLOPT_WRITEFUNCTION.html":{"offset":719990,"length":4147,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3c4388c1f9038b2b"},"/libcurl/c/CURLOPT_USERAGENT.html":{"offset":724137,"length":3129,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0af394912e7d113d"},"/libcurl/c/curl_global_cleanup.html":{"offset":727266,"length":3374,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b7119c27a6cc0245"},"/docs/survey/2014.html":{"offset":730640,"length":5058,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"25c418c3c60882b3"},"/libcurl/c/curl_easy_strerror.html":{"offset":735698,"length":2948,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4c7cc151eee4ecb7"},"/libcurl/c/curl_easy_cleanup.html":{"offset":738646,"length":3330,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"91c6470f98b47419"},"/libcurl/c/CURLOPT_UPLOAD.html":{"offset":741976,"length":3630,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"42abbde938bc90bd"},"/libcurl/c/CURLOPT_VERBOSE.html":{"offset":745606,"length":3241,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0272b57c5040cc86"},"/libcurl/c/CURLOPT_READFUNCTION.html":{"offset":748847,"length":4211,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"648f46f44eca223a"},"/libcurl/c/CURLOPT_HEADER.html":{"offset":753058,"length":3285,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"94bd27e7bab8b7aa"},"/libcurl/c/CURLOPT_READDATA.html":{"offset":756343,"length":3187,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"89d904158bef930c"},"/libcurl/c/CURLOPT_DEBUGFUNCTION.html":{"offset":759530,"length":4562,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b5b20ea26e11660e"},"/libcurl/c/CURLOPT_INFILESIZE_LARGE.html":{"offset":764092,"length":3331,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6bd8a3f9cd3c27b8"},"/libcurl/c/CURLOPT_USERPWD.html":{"offset":767423,"length":3748,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8c1e891651095202"},"/libcurl/c/CURLOPT_PROXYUSERPWD.html":{"offset":771171,"length":3239,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"44b677dc9310056d"},"/libcurl/c/CURLOPT_NETRC.html":{"offset":774410,"length":4691,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7d5d799c72e45255"},"/libcurl/c/CURLOPT_KEYPASSWD.html":{"offset":779101,"length":3308,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8e8b73cc9bc37770"},"/favicon.ico":{"offset":782409,"length":2597,"mime":"image/vnd.microsoft.icon","gzipped":true,"hash":"90174bb24a9f7bc8"},"/manpage.css":{"offset":785006,"length":429,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"bd9de0fca6d3c99a"},"/logo/curl-white-symbol.svg":{"offset":785435,"length":245,"mime":"image/svg+xml","gzipped":true,"hash":"67ea1115bd34c88f"},"/curl.css":{"offset":785680,"length":4995,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"2c4ff80f16f10d5f"},"/logo/curl-symbol.svg":{"offset":790675,"length":260,"mime":"image/svg+xml","gzipped":true,"hash":"152d67356301f9be"},"/docs/videos/t/hunting-for-zero-days.jpg":{"offset":790935,"length":10558,"mime":"image/jpeg","gzipped":true,"hash":"4b1ecebe7c3db788"},"/docs/comparison.css":{"offset":801493,"length":198,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"bdb54f927e65762c"},"/docs/videos/t/state-of-curl-in-debian.jpg":{"offset":801691,"length":7801,"mime":"image/jpeg","gzipped":true,"hash":"118b707cfebe543a"},"/docs/videos/t/threedecades.jpg":{"offset":809492,"length":9029,"mime":"image/jpeg","gzipped":true,"hash":"d2eee9f1fcad129c"},"/docs/videos/t/wttr.in-update.jpg":{"offset":818521,"length":8884,"mime":"image/jpeg","gzipped":true,"hash":"bb4a1ccc91379624"},"/docs/videos/t/the-state-of-curl-2026.jpg":{"offset":827405,"length":10561,"mime":"image/jpeg","gzipped":true,"hash":"242c323c98da2d4b"},"/docs/videos/t/quic-hello-from-openssl.jpg":{"offset":837966,"length":8201,"mime":"image/jpeg","gzipped":true,"hash":"5a64515b8a4801cc"},"/docs/videos/t/curl-ctx-ii.jpg":{"offset":846167,"length":4622,"mime":"image/jpeg","gzipped":true,"hash":"e6d8875cdc2202ff"},"/docs/videos/t/curl-security-2026.jpg":{"offset":850789,"length":10361,"mime":"image/jpeg","gzipped":true,"hash":"406171a2b3505138"},"/docs/videos/t/libcurl-real-world.jpg":{"offset":861150,"length":8583,"mime":"image/jpeg","gzipped":true,"hash":"329c85a1355d1481"},"/docs/videos/t/rock-solid-curl.jpg":{"offset":869733,"length":19304,"mime":"image/jpeg","gzipped":true,"hash":"e674a8352f4006db"},"/docs/videos/t/multiplatform-ci-with-jenkins.jpg":{"offset":889037,"length":10022,"mime":"image/jpeg","gzipped":true,"hash":"1ef5957c5a540c26"},"/docs/videos/t/quantitative-comparison-of-quic.jpg":{"offset":899059,"length":8276,"mime":"image/jpeg","gzipped":true,"hash":"f322d652e13ddc3d"},"/docs/videos/t/roadmap2026.jpg":{"offset":907335,"length":18142,"mime":"image/jpeg","gzipped":true,"hash":"870bbb13d0755ff1"},"/docs/videos/t/ai-reality.jpg":{"offset":925477,"length":11959,"mime":"image/jpeg","gzipped":true,"hash":"ebd1f5a2e99d09d9"},"/docs/videos/t/test-clutch-teach.jpg":{"offset":937436,"length":12364,"mime":"image/jpeg","gzipped":true,"hash":"3f9593bedfcae5f7"},"/docs/videos/t/tinycurl.jpg":{"offset":949800,"length":8968,"mime":"image/jpeg","gzipped":true,"hash":"bf893a76858d629c"},"/docs/videos/t/wcurl-one-year.jpg":{"offset":958768,"length":8562,"mime":"image/jpeg","gzipped":true,"hash":"b2638376cde0888f"},"/docs/videos/t/ircbot.jpg":{"offset":967330,"length":9057,"mime":"image/jpeg","gzipped":true,"hash":"8daf2d96bafd16aa"},"/docs/videos/t/100-year-curl.jpg":{"offset":976387,"length":11412,"mime":"image/jpeg","gzipped":true,"hash":"a362d49db59cec40"},"/docs/videos/t/curl-container-2025.jpg":{"offset":987799,"length":5551,"mime":"image/jpeg","gzipped":true,"hash":"ee09c149d3d83e6b"},"/docs/videos/t/performance-and-benchmarking.jpg":{"offset":993350,"length":10211,"mime":"image/jpeg","gzipped":true,"hash":"22c07f7c3bd7b326"},"/docs/videos/t/http-news-2025.jpg":{"offset":1003561,"length":10378,"mime":"image/jpeg","gzipped":true,"hash":"982cc55ecaaf642a"},"/docs/videos/t/ctx-curl.jpg":{"offset":1013939,"length":8475,"mime":"image/jpeg","gzipped":true,"hash":"dce3bfd742cdb8c2"},"/docs/videos/t/ai-slop-attacks.jpg":{"offset":1022414,"length":13998,"mime":"image/jpeg","gzipped":true,"hash":"71e36e7bda0d1aba"},"/docs/videos/t/curl-daemon-agent.jpg":{"offset":1036412,"length":8066,"mime":"image/jpeg","gzipped":true,"hash":"ce1754e2d915cb7a"},"/docs/videos/t/curlx-library.jpg":{"offset":1044478,"length":11001,"mime":"image/jpeg","gzipped":true,"hash":"78e0100c88ced161"},"/docs/videos/t/a-mascot.jpg":{"offset":1055479,"length":10353,"mime":"image/jpeg","gzipped":true,"hash":"a486b50008116c0c"},"/docs/videos/t/giants_standing_on_shoulders.jpg":{"offset":1065832,"length":16310,"mime":"image/jpeg","gzipped":true,"hash":"9e12de48e26ed918"},"/docs/videos/t/artificial-stupidity.jpg":{"offset":1082142,"length":11529,"mime":"image/jpeg","gzipped":true,"hash":"48b359e3b4480c78"},"/docs/videos/t/world-domination.jpg":{"offset":1093671,"length":11950,"mime":"image/jpeg","gzipped":true,"hash":"f64e60235f191c53"},"/docs/videos/t/http-client-for-web-scraping.jpg":{"offset":1105621,"length":9583,"mime":"image/jpeg","gzipped":true,"hash":"36221ab0ab3adfae"},"/docs/videos/t/security-data.jpg":{"offset":1115204,"length":10390,"mime":"image/jpeg","gzipped":true,"hash":"14b31992dd877f57"},"/docs/videos/t/ai-slop-attacks-eurobsdcon.jpg":{"offset":1125594,"length":13880,"mime":"image/jpeg","gzipped":true,"hash":"f32df2776b339ef6"},"/docs/videos/t/security-2025.jpg":{"offset":1139474,"length":10088,"mime":"image/jpeg","gzipped":true,"hash":"8ca46ebfd1f7fe9e"},"/docs/videos/t/roadmap-2025.jpg":{"offset":1149562,"length":20088,"mime":"image/jpeg","gzipped":true,"hash":"e16944b9cdba9183"},"/docs/videos/t/rust-in-curl.jpg":{"offset":1169650,"length":10136,"mime":"image/jpeg","gzipped":true,"hash":"ab3b7f76f5896a69"},"/docs/videos/t/curl-container-2024.jpg":{"offset":1179786,"length":11001,"mime":"image/jpeg","gzipped":true,"hash":"4f4651d36cd146a6"},"/docs/videos/t/tightening-every-bolt.jpg":{"offset":1190787,"length":8900,"mime":"image/jpeg","gzipped":true,"hash":"3f6e95d424fb7dff"},"/docs/videos/t/curl-security-2024.jpg":{"offset":1199687,"length":9776,"mime":"image/jpeg","gzipped":true,"hash":"ebd747a70481f71d"},"/docs/videos/t/trurl.jpg":{"offset":1209463,"length":8689,"mime":"image/jpeg","gzipped":true,"hash":"efd83830167468ab"},"/docs/videos/t/test-clutch.jpg":{"offset":1218152,"length":10533,"mime":"image/jpeg","gzipped":true,"hash":"cdbabb1119b16000"},"/docs/videos/t/curl-parallel-tests.jpg":{"offset":1228685,"length":11228,"mime":"image/jpeg","gzipped":true,"hash":"db200d28667ff0fd"},"/docs/videos/t/release-notes.jpg":{"offset":1239913,"length":17338,"mime":"image/jpeg","gzipped":true,"hash":"2593949e9e298314"},"/docs/videos/t/curl-future-2024.jpg":{"offset":1257251,"length":9222,"mime":"image/jpeg","gzipped":true,"hash":"a3b2f0de52031a52"},"/docs/videos/t/mastering-command-line-2024.jpg":{"offset":1266473,"length":17815,"mime":"image/jpeg","gzipped":true,"hash":"ca3ac1dcc4c83be2"},"/docs/videos/t/getting-started-2024.jpg":{"offset":1284288,"length":16610,"mime":"image/jpeg","gzipped":true,"hash":"4f127308a71f6210"},"/docs/videos/t/performance-2024.jpg":{"offset":1300898,"length":11093,"mime":"image/jpeg","gzipped":true,"hash":"20ea4d3881161c38"},"/docs/videos/t/apple-specialities.jpg":{"offset":1311991,"length":11066,"mime":"image/jpeg","gzipped":true,"hash":"1d117f9ef7fe4f14"},"/docs/videos/t/you-can-do-it.jpg":{"offset":1323057,"length":23992,"mime":"image/jpeg","gzipped":true,"hash":"0f0934475c455c8e"},"/docs/videos/t/start-to-end.jpg":{"offset":1347049,"length":24676,"mime":"image/jpeg","gzipped":true,"hash":"b74933cc1388ffe3"},"/docs/videos/t/do-release.jpg":{"offset":1371725,"length":9988,"mime":"image/jpeg","gzipped":true,"hash":"117ed96fd8df35e7"},"/docs/videos/t/successful-secure.jpg":{"offset":1381713,"length":12085,"mime":"image/jpeg","gzipped":true,"hash":"bf36b9a10f33c47e"},"/docs/videos/t/advanced-libcurl-2024.jpg":{"offset":1393798,"length":11624,"mime":"image/jpeg","gzipped":true,"hash":"6977d59b9a3937b2"},"/docs/videos/t/fuzzing-curl-2024.jpg":{"offset":1405422,"length":10781,"mime":"image/jpeg","gzipped":true,"hash":"5a78c531eb7b5f95"},"/docs/videos/t/just-curl-it.jpg":{"offset":1416203,"length":17656,"mime":"image/jpeg","gzipped":true,"hash":"60fd8a1f98e3a504"},"/docs/videos/t/hyper-in-curl.jpg":{"offset":1433859,"length":4480,"mime":"image/jpeg","gzipped":true,"hash":"41641b0b505cc03a"},"/docs/videos/t/curl-evolutions-2024.jpg":{"offset":1438339,"length":10598,"mime":"image/jpeg","gzipped":true,"hash":"f9081129c0612405"},"/docs/videos/t/experimental-code.jpg":{"offset":1448937,"length":7626,"mime":"image/jpeg","gzipped":true,"hash":"d2d2f5bfba845ff2"},"/docs/videos/t/curl-ci-velocity.jpg":{"offset":1456563,"length":4407,"mime":"image/jpeg","gzipped":true,"hash":"2f44380bf8a476f9"},"/docs/videos/t/getting-started-2022.jpg":{"offset":1460970,"length":13157,"mime":"image/jpeg","gzipped":true,"hash":"10159621b994402d"},"/docs/videos/t/curl-with-rust.jpg":{"offset":1474127,"length":16813,"mime":"image/jpeg","gzipped":true,"hash":"a3026d49c4d7de55"},"/docs/videos/t/curl-security-past-present.jpg":{"offset":1490940,"length":7678,"mime":"image/jpeg","gzipped":true,"hash":"ffd6cb1185b8c3b1"},"/docs/videos/t/next-level-curl.jpg":{"offset":1498618,"length":10478,"mime":"image/jpeg","gzipped":true,"hash":"9665f948f414e922"},"/docs/videos/t/state-of-curl-2022.jpg":{"offset":1509096,"length":11609,"mime":"image/jpeg","gzipped":true,"hash":"85b52e3a88cdcdc0"},"/docs/videos/t/curl-containers-lessons.jpg":{"offset":1520705,"length":10137,"mime":"image/jpeg","gzipped":true,"hash":"25cd4d4c6c139356"},"/docs/videos/t/quic-and-wolfssl.jpg":{"offset":1530842,"length":14406,"mime":"image/jpeg","gzipped":true,"hash":"4077b16aedb6434f"},"/docs/videos/t/curl-apache-tailscale.jpg":{"offset":1545248,"length":13625,"mime":"image/jpeg","gzipped":true,"hash":"8f7881ed3bcb7629"},"/docs/videos/t/mastering-command-line.jpg":{"offset":1558873,"length":10176,"mime":"image/jpeg","gzipped":true,"hash":"91a4addea1359021"},"/docs/videos/t/command-line-variables.jpg":{"offset":1569049,"length":8812,"mime":"image/jpeg","gzipped":true,"hash":"13d95aa0163b1a07"},"/docs/videos/t/quic-http3-curl.jpg":{"offset":1577861,"length":13970,"mime":"image/jpeg","gzipped":true,"hash":"7eb95a4a5d00cc46"},"/docs/videos/t/websocket-with-libcurl.jpg":{"offset":1591831,"length":13067,"mime":"image/jpeg","gzipped":true,"hash":"5c50b2e350932330"},"/docs/videos/t/the-state-of-curl-2024.jpg":{"offset":1604898,"length":11123,"mime":"image/jpeg","gzipped":true,"hash":"3a88dbf18bee7a96"},"/docs/videos/t/mastering-libcurl2.jpg":{"offset":1616021,"length":16616,"mime":"image/jpeg","gzipped":true,"hash":"67ced10f35182c55"},"/docs/videos/t/mastering-libcurl1.jpg":{"offset":1632637,"length":21544,"mime":"image/jpeg","gzipped":true,"hash":"863b4170617f7674"},"/docs/videos/t/libcurl-for-r.jpg":{"offset":1654181,"length":9668,"mime":"image/jpeg","gzipped":true,"hash":"f93a2172d430892d"},"/docs/videos/t/curl-hyper.jpg":{"offset":1663849,"length":18855,"mime":"image/jpeg","gzipped":true,"hash":"d6796f853c974edc"},"/docs/videos/t/curl-driving-it-2019.jpg":{"offset":1682704,"length":10207,"mime":"image/jpeg","gzipped":true,"hash":"87e5eb4f2af5478b"},"/docs/videos/t/curl-better.jpg":{"offset":1692911,"length":17154,"mime":"image/jpeg","gzipped":true,"hash":"071515ae6ec61e96"},"/docs/videos/t/interfacing-rust.jpg":{"offset":1710065,"length":13463,"mime":"image/jpeg","gzipped":true,"hash":"4772b8a1675375fd"},"/docs/videos/t/http3-in-curl-2020.jpg":{"offset":1723528,"length":13289,"mime":"image/jpeg","gzipped":true,"hash":"c97b54dfdac1199c"},"/docs/videos/t/libcurl-under-hood.jpg":{"offset":1736817,"length":19821,"mime":"image/jpeg","gzipped":true,"hash":"1c5e81a72bedaa8d"},"/docs/videos/t/curl-security-2021.jpg":{"offset":1756638,"length":17009,"mime":"image/jpeg","gzipped":true,"hash":"988ac3456855532c"},"/docs/videos/t/curl-docker.jpg":{"offset":1773647,"length":21979,"mime":"image/jpeg","gzipped":true,"hash":"6514002c18a20d11"},"/docs/videos/t/curl-fips-windows.jpg":{"offset":1795626,"length":16982,"mime":"image/jpeg","gzipped":true,"hash":"e609d7ea5fd3d22b"},"/docs/videos/t/the-state-of-curl-2020.jpg":{"offset":1812608,"length":9830,"mime":"image/jpeg","gzipped":true,"hash":"31345d2ebafc797c"},"/docs/videos/t/landing-code.jpg":{"offset":1822438,"length":18939,"mime":"image/jpeg","gzipped":true,"hash":"656220f7907ea5f1"},"/docs/videos/t/testing-for-security.jpg":{"offset":1841377,"length":8667,"mime":"image/jpeg","gzipped":true,"hash":"4ac8fb7197cf0023"},"/docs/videos/t/curl-performance-tools.jpg":{"offset":1850044,"length":8543,"mime":"image/jpeg","gzipped":true,"hash":"750dcafc800e0817"},"/docs/videos/t/http3-in-curl.jpg":{"offset":1858587,"length":20754,"mime":"image/jpeg","gzipped":true,"hash":"16b6db877bcbaa56"},"/docs/videos/t/the-state-of-curl-2021.jpg":{"offset":1879341,"length":25136,"mime":"image/jpeg","gzipped":true,"hash":"2af0ce0ec509cbbc"},"/docs/videos/t/help-me-if-you-can-2020.jpg":{"offset":1904477,"length":11012,"mime":"image/jpeg","gzipped":true,"hash":"ed09b5e77541acc1"},"/docs/videos/t/common-libcurl-mistakes.jpg":{"offset":1915489,"length":25698,"mime":"image/jpeg","gzipped":true,"hash":"52a0805da3bc10ac"},"/docs/videos/t/curl-in-iot.jpg":{"offset":1941187,"length":18473,"mime":"image/jpeg","gzipped":true,"hash":"208ff8505f625871"},"/docs/videos/t/quic-details-2019.jpg":{"offset":1959660,"length":4959,"mime":"image/jpeg","gzipped":true,"hash":"bef648e5c806b956"},"/docs/videos/t/http3-in-curl-2019.jpg":{"offset":1964619,"length":3211,"mime":"image/jpeg","gzipped":true,"hash":"ff1569e4344b2dbb"},"/docs/videos/t/gource-2019.jpg":{"offset":1967830,"length":4033,"mime":"image/jpeg","gzipped":true,"hash":"3ab0c6bbdf6165ba"},"/docs/videos/t/a-day-in-my-life-2018.jpg":{"offset":1971863,"length":2494,"mime":"image/jpeg","gzipped":true,"hash":"7ad4ea3081a3c464"},"/docs/videos/t/effective-test-case-2019.jpg":{"offset":1974357,"length":5970,"mime":"image/jpeg","gzipped":true,"hash":"f6f51f2e30fd1624"},"/docs/videos/t/urls-2018.jpg":{"offset":1980327,"length":2738,"mime":"image/jpeg","gzipped":true,"hash":"2fa6543a48b99540"},"/docs/videos/t/curlator-2019.jpg":{"offset":1983065,"length":5518,"mime":"image/jpeg","gzipped":true,"hash":"e6063bd79d59e537"},"/docs/videos/t/google-and-proxies-2018.jpg":{"offset":1988583,"length":5660,"mime":"image/jpeg","gzipped":true,"hash":"4b385f0e782478b8"},"/docs/videos/t/governance-2019.jpg":{"offset":1994243,"length":9202,"mime":"image/jpeg","gzipped":true,"hash":"7a6c5a10244e9252"},"/docs/videos/t/deprecating-legacy.jpg":{"offset":2003445,"length":5373,"mime":"image/jpeg","gzipped":true,"hash":"6221136996525b3b"},"/docs/videos/t/console-services-2018.jpg":{"offset":2008818,"length":2633,"mime":"image/jpeg","gzipped":true,"hash":"77297cc7064c89ea"},"/docs/videos/t/curl-ci-2018.jpg":{"offset":2011451,"length":4249,"mime":"image/jpeg","gzipped":true,"hash":"3f2cfba3eca5c8a9"},"/docs/videos/t/welcome-to-curlup-2018.jpg":{"offset":2015700,"length":7001,"mime":"image/jpeg","gzipped":true,"hash":"1add595b95f8b172"},"/docs/videos/t/containerized-curl-testing-2018.jpg":{"offset":2022701,"length":7549,"mime":"image/jpeg","gzipped":true,"hash":"d9dd68b3e447c318"},"/docs/videos/t/altsvc-for-the-people-2018.jpg":{"offset":2030250,"length":9166,"mime":"image/jpeg","gzipped":true,"hash":"a7fe0cb15c291957"},"/docs/videos/t/curl-doh-2018.jpg":{"offset":2039416,"length":5687,"mime":"image/jpeg","gzipped":true,"hash":"781fe27f1c3f900b"},"/docs/videos/t/redhat-distributes-curl-2018.jpg":{"offset":2045103,"length":5278,"mime":"image/jpeg","gzipped":true,"hash":"5eac29df7012247a"},"/docs/videos/t/libcurl-in-apache.jpg":{"offset":2050381,"length":6983,"mime":"image/jpeg","gzipped":true,"hash":"4950429ed3063b75"},"/docs/videos/t/fuzzing-curl-2018.jpg":{"offset":2057364,"length":5884,"mime":"image/jpeg","gzipped":true,"hash":"8166354f657ecabe"},"/docs/videos/t/curl-quic-2018.jpg":{"offset":2063248,"length":8314,"mime":"image/jpeg","gzipped":true,"hash":"07ee0de5d71678c2"},"/docs/videos/t/state-of-curl-2019.png":{"offset":2071562,"length":15985,"mime":"image/png","gzipped":true,"hash":"25739d2794e40487"},"/docs/videos/t/how-google-uses-curl-2017.jpg":{"offset":2087547,"length":6276,"mime":"image/jpeg","gzipped":true,"hash":"8b7c7720b04d0e6b"},"/docs/videos/t/curl-now-and-then-2017.jpg":{"offset":2093823,"length":4899,"mime":"image/jpeg","gzipped":true,"hash":"1e140529ca1b71d9"},"/docs/videos/t/hobby-project-with-a-billion.jpg":{"offset":2098722,"length":2995,"mime":"image/jpeg","gzipped":true,"hash":"8dbd271261f118af"},"/docs/videos/t/curl-for-network-debugger-2017.jpg":{"offset":2101717,"length":7856,"mime":"image/jpeg","gzipped":true,"hash":"7e9328fd7405a746"},"/docs/videos/t/wrapping-curl-2017.jpg":{"offset":2109573,"length":3168,"mime":"image/jpeg","gzipped":true,"hash":"de8012c1b9232c6a"},"/docs/videos/t/you-know-whats-cool-2017.jpg":{"offset":2112741,"length":6273,"mime":"image/jpeg","gzipped":true,"hash":"bcec40df2d072131"},"/docs/videos/t/creating-console-websites-2017.jpg":{"offset":2119014,"length":8000,"mime":"image/jpeg","gzipped":true,"hash":"a2617d18120d0a1c"},"/docs/videos/t/web-transport-2017.jpg":{"offset":2127014,"length":10455,"mime":"image/jpeg","gzipped":true,"hash":"ddc30ba664a4aac7"},"/docs/videos/t/negotiate-support.jpg":{"offset":2137469,"length":9845,"mime":"image/jpeg","gzipped":true,"hash":"6e7c6f8d992d1818"},"/docs/videos/t/http2-curl.jpg":{"offset":2147314,"length":7821,"mime":"image/jpeg","gzipped":true,"hash":"1ad18c8f0576f955"},"/docs/videos/t/why-redhat-switched-to-nss-2017.jpg":{"offset":2155135,"length":5219,"mime":"image/jpeg","gzipped":true,"hash":"8f3699149b484877"},"/docs/videos/t/curl-test-suite-2017.jpg":{"offset":2160354,"length":6585,"mime":"image/jpeg","gzipped":true,"hash":"0b326adfaa95e562"},"/docs/videos/t/life-of-a-distro-hacker-2017.jpg":{"offset":2166939,"length":4519,"mime":"image/jpeg","gzipped":true,"hash":"0ed9dbf1742eb689"},"/docs/videos/t/up-to-date-legacy-2017.jpg":{"offset":2171458,"length":6873,"mime":"image/jpeg","gzipped":true,"hash":"7ac91ca7a391e7d7"},"/docs/videos/t/advanced-http-scripting-2017.jpg":{"offset":2178331,"length":7907,"mime":"image/jpeg","gzipped":true,"hash":"3048629440bf47d5"},"/docs/videos/t/internet-all-the-things-2015.jpg":{"offset":2186238,"length":7913,"mime":"image/jpeg","gzipped":true,"hash":"a4d10a24600bcfdf"},"/docs/videos/t/websocket-support-2017.jpg":{"offset":2194151,"length":8903,"mime":"image/jpeg","gzipped":true,"hash":"412e45b0d0ed8895"},"/docs/videos/t/curl-website-2017.jpg":{"offset":2203054,"length":9116,"mime":"image/jpeg","gzipped":true,"hash":"e567e0ad992e5959"},"/docs/videos/t/apache-http2-testing.jpg":{"offset":2212170,"length":5828,"mime":"image/jpeg","gzipped":true,"hash":"0b6f86f83ee201e6"},"/docs/videos/t/the-curl-book-2017.jpg":{"offset":2217998,"length":6061,"mime":"image/jpeg","gzipped":true,"hash":"f31ff3bb2c743e26"},"/libcurl/c/example.css":{"offset":2224059,"length":275,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"c7585f033e29ebe3"},"/docs/thanks.css":{"offset":2224334,"length":86,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"d5ed3245d231197b"},"/docs/survey/2025-1.1/answerlastyear.svg":{"offset":2224420,"length":12400,"mime":"image/svg+xml","gzipped":true,"hash":"6d2b383e7d515d29"},"/docs/survey/2025-1.1/windowsdev.svg":{"offset":2236820,"length":11521,"mime":"image/svg+xml","gzipped":true,"hash":"67b309ff12ebb935"},"/docs/survey/2025-1.1/continentsdev.svg":{"offset":2248341,"length":11687,"mime":"image/svg+xml","gzipped":true,"hash":"a8ccbac3143bae02"},"/docs/survey/2025-1.1/curl-logo.svg":{"offset":2260028,"length":2304,"mime":"image/svg+xml","gzipped":true,"hash":"da551da67729fc73"},"/docs/survey/2025-1.1/continents.svg":{"offset":2262332,"length":13019,"mime":"image/svg+xml","gzipped":true,"hash":"c02908b3b1fcf99a"},"/docs/survey/2025-1.1/responses.svg":{"offset":2275351,"length":11814,"mime":"image/svg+xml","gzipped":true,"hash":"0cfca63720156c33"},"/docs/survey/2025-1.1/curl.css":{"offset":2287165,"length":2784,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"53835fc88912c949"},"/docs/survey/2025-1.1/answerlastyeardev.svg":{"offset":2289949,"length":11358,"mime":"image/svg+xml","gzipped":true,"hash":"386dc55cb161bcdc"},"/docs/survey/2025-1.1/platforms.svg":{"offset":2301307,"length":12911,"mime":"image/svg+xml","gzipped":true,"hash":"8bd5a5eb53e30bb2"},"/docs/survey/2025-1.1/num-protocols.svg":{"offset":2314218,"length":12718,"mime":"image/svg+xml","gzipped":true,"hash":"71fe8218a773cc90"},"/docs/videos/t/http-in-uefi.jpg":{"offset":2326936,"length":11834,"mime":"image/jpeg","gzipped":true,"hash":"681cef52f1a44a22"},"/docs/survey/2025-1.1/top-protocols.svg":{"offset":2338770,"length":13531,"mime":"image/svg+xml","gzipped":true,"hash":"0cda686d33e68f60"},"/docs/survey/2025-1.1/windows.svg":{"offset":2352301,"length":12293,"mime":"image/svg+xml","gzipped":true,"hash":"9cd98e8b986cfadd"},"/docs/survey/2025-1.1/top-protodev.svg":{"offset":2364594,"length":12016,"mime":"image/svg+xml","gzipped":true,"hash":"4390c1d5b52833ac"},"/docs/survey/2025-1.1/windowsarch.svg":{"offset":2376610,"length":11252,"mime":"image/svg+xml","gzipped":true,"hash":"a57e9f579650ec28"},"/docs/survey/2025-1.1/num-platforms.svg":{"offset":2387862,"length":11611,"mime":"image/svg+xml","gzipped":true,"hash":"f83853a863a222d9"},"/docs/survey/2025-1.1/platformdev.svg":{"offset":2399473,"length":11697,"mime":"image/svg+xml","gzipped":true,"hash":"2beeebc647a9a89e"},"/pix/irc-screenshot.png":{"offset":2411170,"length":291140,"mime":"image/png","gzipped":true,"hash":"cda0947140da1347"},"/docs/survey/2025-1.1/quic.svg":{"offset":2702310,"length":11385,"mime":"image/svg+xml","gzipped":true,"hash":"6f0f7d920752113b"},"/docs/survey/2025-1.1/bindingsdev.svg":{"offset":2713695,"length":11792,"mime":"image/svg+xml","gzipped":true,"hash":"908fb4bcedfb18e9"},"/docs/survey/2025-1.1/ssh.svg":{"offset":2725487,"length":11187,"mime":"image/svg+xml","gzipped":true,"hash":"00983cbe20257174"},"/docs/survey/2025-1.1/tls.svg":{"offset":2736674,"length":12327,"mime":"image/svg+xml","gzipped":true,"hash":"0730c39faf6545e3"},"/docs/survey/2025-1.1/windowsarchdev.svg":{"offset":2749001,"length":11029,"mime":"image/svg+xml","gzipped":true,"hash":"ddd639a85af6b1ff"},"/docs/survey/2025-1.1/container.svg":{"offset":2760030,"length":11308,"mime":"image/svg+xml","gzipped":true,"hash":"10fac5d051fa140f"},"/docs/survey/2025-1.1/channelsdev.svg":{"offset":2771338,"length":11951,"mime":"image/svg+xml","gzipped":true,"hash":"4d2ea39e21538b3f"},"/docs/survey/2025-1.1/tolsdev-ossl.svg":{"offset":2783289,"length":11501,"mime":"image/svg+xml","gzipped":true,"hash":"35ee1807c3abf85a"},"/docs/survey/2025-1.1/channels.svg":{"offset":2794790,"length":11973,"mime":"image/svg+xml","gzipped":true,"hash":"7c0ec63bb565111a"},"/docs/survey/2025-1.1/builddev.svg":{"offset":2806763,"length":11239,"mime":"image/svg+xml","gzipped":true,"hash":"4d092d7069b06813"},"/docs/survey/2025-1.1/morecommdev.svg":{"offset":2818002,"length":11469,"mime":"image/svg+xml","gzipped":true,"hash":"cbe56ecdeecdfafe"},"/docs/survey/2025-1.1/features.svg":{"offset":2829471,"length":13162,"mime":"image/svg+xml","gzipped":true,"hash":"533c21452c24c0cc"},"/docs/survey/2025-1.1/yearsuse.svg":{"offset":2842633,"length":11959,"mime":"image/svg+xml","gzipped":true,"hash":"0aaffbda47efa26a"},"/docs/survey/2025-1.1/featuresdev.svg":{"offset":2854592,"length":11645,"mime":"image/svg+xml","gzipped":true,"hash":"4300cd1e3712c831"},"/docs/survey/2025-1.1/morecomm.svg":{"offset":2866237,"length":12413,"mime":"image/svg+xml","gzipped":true,"hash":"1fecfec707be3c81"},"/docs/survey/2025-1.1/bindings.svg":{"offset":2878650,"length":12560,"mime":"image/svg+xml","gzipped":true,"hash":"ce13eb63ab689494"},"/docs/survey/2025-1.1/favoption.svg":{"offset":2891210,"length":13625,"mime":"image/svg+xml","gzipped":true,"hash":"3810fce885ada9e0"},"/docs/survey/2025-1.1/tlsdev.svg":{"offset":2904835,"length":11754,"mime":"image/svg+xml","gzipped":true,"hash":"91c5b3f55a4d1588"},"/docs/survey/2025-1.1/version.svg":{"offset":2916589,"length":12776,"mime":"image/svg+xml","gzipped":true,"hash":"6d24eb5511f1ed51"},"/docs/survey/2025-1.1/build.svg":{"offset":2929365,"length":11761,"mime":"image/svg+xml","gzipped":true,"hash":"53d4afe328bb1da7"},"/docs/survey/2025-1.1/otheropensource.svg":{"offset":2941126,"length":12204,"mime":"image/svg+xml","gzipped":true,"hash":"ef3430bc07fc0dab"},"/docs/survey/2025-1.1/notcontributedev.svg":{"offset":2953330,"length":11978,"mime":"image/svg+xml","gzipped":true,"hash":"a48e0bbf97feaacf"},"/docs/survey/2025-1.1/howgood-bugreports.svg":{"offset":2965308,"length":11224,"mime":"image/svg+xml","gzipped":true,"hash":"b0dc6ac539667730"},"/docs/survey/2025-1.1/howgood-minority.svg":{"offset":2976532,"length":11278,"mime":"image/svg+xml","gzipped":true,"hash":"19bc9508a81fd5a1"},"/docs/survey/2025-1.1/howgood-newcomers.svg":{"offset":2987810,"length":11185,"mime":"image/svg+xml","gzipped":true,"hash":"658be6d496646864"},"/docs/survey/2025-1.1/worstarea.svg":{"offset":2998995,"length":12478,"mime":"image/svg+xml","gzipped":true,"hash":"45e5ccce28b61f12"},"/docs/survey/2025-1.1/howgood-patches.svg":{"offset":3011473,"length":11226,"mime":"image/svg+xml","gzipped":true,"hash":"015f249fc3fb469a"},"/docs/survey/2025-1.1/otheropensourcedev.svg":{"offset":3022699,"length":11403,"mime":"image/svg+xml","gzipped":true,"hash":"f45feb2958940530"},"/docs/survey/2025-1.1/howgood-security.svg":{"offset":3034102,"length":11268,"mime":"image/svg+xml","gzipped":true,"hash":"298be8608c6d475c"},"/docs/survey/2025-1.1/notcontribute.svg":{"offset":3045370,"length":12271,"mime":"image/svg+xml","gzipped":true,"hash":"05bbf6275440303d"},"/docs/survey/2025-1.1/contributed.svg":{"offset":3057641,"length":12062,"mime":"image/svg+xml","gzipped":true,"hash":"27220b58832cb561"},"/docs/survey/2025-1.1/howgood-credits.svg":{"offset":3069703,"length":11258,"mime":"image/svg+xml","gzipped":true,"hash":"fa08648d022488e7"},"/docs/survey/2025-1.1/worstareadev.svg":{"offset":3080961,"length":11765,"mime":"image/svg+xml","gzipped":true,"hash":"8da8ef752ab4a44a"},"/docs/survey/2025-1.1/howgood-info.svg":{"offset":3092726,"length":11246,"mime":"image/svg+xml","gzipped":true,"hash":"692862eddfce7875"},"/docs/survey/2025-1.1/howgood.svg":{"offset":3103972,"length":12079,"mime":"image/svg+xml","gzipped":true,"hash":"ff525e0a69ffd7bf"},"/docs/survey/2025-1.1/bestarea.svg":{"offset":3116051,"length":12754,"mime":"image/svg+xml","gzipped":true,"hash":"b63fb0567ea623e6"},"/docs/survey/2025-1.1/bestareadev.svg":{"offset":3128805,"length":11743,"mime":"image/svg+xml","gzipped":true,"hash":"d20134294aa3c663"},"/docs/survey/2025-1.1/contributeddev.svg":{"offset":3140548,"length":11246,"mime":"image/svg+xml","gzipped":true,"hash":"5b2028bcf5753ba5"},"/docs/survey/2025-1.1/libcurlalts.svg":{"offset":3151794,"length":12155,"mime":"image/svg+xml","gzipped":true,"hash":"bdd8976d4af98457"},"/docs/survey/2025-1.1/remainongithub.svg":{"offset":3163949,"length":12577,"mime":"image/svg+xml","gzipped":true,"hash":"dec2261816cd22d2"},"/docs/survey/charts/chart_009.png":{"offset":3176526,"length":1764,"mime":"image/png","gzipped":true,"hash":"cc632289695e073c"},"/docs/survey/charts/chart_008.png":{"offset":3178290,"length":5895,"mime":"image/png","gzipped":true,"hash":"1417562f70018284"},"/docs/survey/charts/chart_003.png":{"offset":3184185,"length":6555,"mime":"image/png","gzipped":true,"hash":"01971e2c5c65cb42"},"/docs/survey/charts/chart_007.png":{"offset":3190740,"length":1696,"mime":"image/png","gzipped":true,"hash":"2dd827cbcb61c1c6"},"/docs/survey/2025-1.1/newapi.svg":{"offset":3192436,"length":11862,"mime":"image/svg+xml","gzipped":true,"hash":"b581d384fb1b55ba"},"/docs/survey/charts/chart_011.png":{"offset":3204298,"length":1660,"mime":"image/png","gzipped":true,"hash":"3f63fa1b45940e8f"},"/docs/survey/2025-1.1/dltools.svg":{"offset":3205958,"length":12786,"mime":"image/svg+xml","gzipped":true,"hash":"2ddf98d77cd8b61d"},"/docs/survey/charts/chart_010.png":{"offset":3218744,"length":8497,"mime":"image/png","gzipped":true,"hash":"b71778c2bc43bf12"},"/docs/survey/charts/chart_005.png":{"offset":3227241,"length":1954,"mime":"image/png","gzipped":true,"hash":"1ccadc453a83d739"},"/docs/survey/2025-1.1/trurl.svg":{"offset":3229195,"length":12284,"mime":"image/svg+xml","gzipped":true,"hash":"4c47a5718f8b7dd3"},"/docs/survey/2025-1.1/dltoolsdev.svg":{"offset":3241479,"length":11491,"mime":"image/svg+xml","gzipped":true,"hash":"43339f3ac7cf3e55"},"/docs/survey/charts/chart_014.png":{"offset":3252970,"length":6219,"mime":"image/png","gzipped":true,"hash":"51d946bb04b73185"},"/docs/survey/2025-1.1/wantfeatures.svg":{"offset":3259189,"length":13953,"mime":"image/svg+xml","gzipped":true,"hash":"e76714acd2c3a912"},"/docs/survey/2025-1.1/wcurl.svg":{"offset":3273142,"length":12295,"mime":"image/svg+xml","gzipped":true,"hash":"1ab7ce95fdec216f"},"/docs/survey/2025-1.1/libcurlaltsdev.svg":{"offset":3285437,"length":11776,"mime":"image/svg+xml","gzipped":true,"hash":"0edeb000de178dec"},"/docs/survey/charts/chart_004.png":{"offset":3297213,"length":1864,"mime":"image/png","gzipped":true,"hash":"732fb73d3ee96102"},"/docs/survey/charts/chart_015.png":{"offset":3299077,"length":4017,"mime":"image/png","gzipped":true,"hash":"16969a6c742ef7c4"},"/docs/survey/charts/chart_002.png":{"offset":3303094,"length":11020,"mime":"image/png","gzipped":true,"hash":"b5b7c778ce66d297"},"/docs/survey/charts/chart_016.png":{"offset":3314114,"length":6989,"mime":"image/png","gzipped":true,"hash":"c53d60ddb53d0f7e"},"/docs/survey/charts/chart_006.png":{"offset":3321103,"length":2896,"mime":"image/png","gzipped":true,"hash":"c2b5c1aff466f632"},"/docs/survey/charts/chart.png":{"offset":3323999,"length":10583,"mime":"image/png","gzipped":true,"hash":"f1ba044379d99ae1"},"/docs/survey/charts/chart_012.png":{"offset":3334582,"length":18156,"mime":"image/png","gzipped":true,"hash":"f6516602e4138e25"},"/docs/survey/charts/chart_013.png":{"offset":3352738,"length":18153,"mime":"image/png","gzipped":true,"hash":"e15b898525dbf698"},"/":{"offset":0,"length":3052,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a5cff55540f0cac7"}}}
+{
+  "id": "curl",
+  "name": "curl & libcurl",
+  "version": "v8.13",
+  "commit": "b21a529e",
+  "origin": "https://curl.se",
+  "entryPath": "/docs/",
+  "updatedAt": "2026-10-11T10:37:57.227Z",
+  "totalBytes": 3264158,
+  "chunkCount": 339,
+  "routes": {
+    "/docs": {
+      "offset": 0,
+      "length": 2111,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b984521555848447"
+    },
+    "/docs/": {
+      "offset": 0,
+      "length": 2111,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b984521555848447"
+    },
+    "/docs/projdocs.html": {
+      "offset": 2111,
+      "length": 1836,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "35484a301f7e2b67"
+    },
+    "/docs/governance.html": {
+      "offset": 3947,
+      "length": 5249,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "12600b740c2ea7f1"
+    },
+    "/docs/faq.html": {
+      "offset": 9196,
+      "length": 28771,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9d3acbc3e1705329"
+    },
+    "/docs/caextract.html": {
+      "offset": 37967,
+      "length": 2691,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bfcf8c659f6cc1fc"
+    },
+    "/docs/features.html": {
+      "offset": 40658,
+      "length": 4036,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2534506562b3135f"
+    },
+    "/docs/knownbugs.html": {
+      "offset": 44694,
+      "length": 10158,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "440cc06a787d61aa"
+    },
+    "/docs/libs.html": {
+      "offset": 54852,
+      "length": 2085,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b737999eb954775f"
+    },
+    "/docs/history.html": {
+      "offset": 56937,
+      "length": 7285,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a01161f7230b2b20"
+    },
+    "/docs/knownrisks.html": {
+      "offset": 64222,
+      "length": 4219,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "18847effa0c507cb"
+    },
+    "/docs/code-of-conduct.html": {
+      "offset": 68441,
+      "length": 2207,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "68dc57527d50bfba"
+    },
+    "/docs/http3.html": {
+      "offset": 70648,
+      "length": 5517,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "13d970b3a4e22cde"
+    },
+    "/docs/install.html": {
+      "offset": 76165,
+      "length": 13675,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "571f9a7333a829f2"
+    },
+    "/docs/bugs.html": {
+      "offset": 89840,
+      "length": 6537,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8533bc433f64e348"
+    },
+    "/docs/http-cookies.html": {
+      "offset": 96377,
+      "length": 4396,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b073cdddce2c3d82"
+    },
+    "/docs/todo.html": {
+      "offset": 100773,
+      "length": 19048,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9f0e0dcf3674d0fe"
+    },
+    "/docs/protdocs.html": {
+      "offset": 119821,
+      "length": 1468,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "63e05e5b9a9af01d"
+    },
+    "/docs/reldocs.html": {
+      "offset": 121289,
+      "length": 1651,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "af3460c21abd0156"
+    },
+    "/docs/url-syntax.html": {
+      "offset": 122940,
+      "length": 7703,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5816e040298ee702"
+    },
+    "/docs/manpage.html": {
+      "offset": 130643,
+      "length": 94408,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1c4e8ee585e813ac"
+    },
+    "/docs/security.html": {
+      "offset": 225051,
+      "length": 11594,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "324d894cde7d7fea"
+    },
+    "/docs/vulnerabilities.html": {
+      "offset": 236645,
+      "length": 5287,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3b6d0fbeee1ce2be"
+    },
+    "/docs/websocket.html": {
+      "offset": 241932,
+      "length": 3759,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b6eff1c1e1b1e78d"
+    },
+    "/docs/versions.html": {
+      "offset": 245691,
+      "length": 4571,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c6ecbaffdb6e966e"
+    },
+    "/docs/comparison-table.html": {
+      "offset": 250262,
+      "length": 3583,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "87c7665b517964f4"
+    },
+    "/docs/secdocs.html": {
+      "offset": 253845,
+      "length": 1604,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b954caca7bee765b"
+    },
+    "/docs/audits.html": {
+      "offset": 255449,
+      "length": 1850,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3c517ded2abcd832"
+    },
+    "/docs/mqtt.html": {
+      "offset": 257299,
+      "length": 2131,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9ec2e9d492055896"
+    },
+    "/docs/sslcerts.html": {
+      "offset": 259430,
+      "length": 4087,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "55f1a9badda254a4"
+    },
+    "/docs/ssl-compared.html": {
+      "offset": 263517,
+      "length": 5061,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0a959d48fcc2d96e"
+    },
+    "/docs/tooldocs.html": {
+      "offset": 268578,
+      "length": 1561,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "44ef0ff1cd0bd883"
+    },
+    "/docs/releases.html": {
+      "offset": 270139,
+      "length": 11017,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "88ee631b24a647db"
+    },
+    "/docs/verify.html": {
+      "offset": 281156,
+      "length": 4573,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "53df5223dc9d11d6"
+    },
+    "/docs/whodocs.html": {
+      "offset": 285729,
+      "length": 1511,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d88035a271d36539"
+    },
+    "/libcurl/c/threadsafe.html": {
+      "offset": 287240,
+      "length": 3433,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "82e00b08be1270c2"
+    },
+    "/docs/companies.html": {
+      "offset": 290673,
+      "length": 11053,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "63fb0cbdd7148508"
+    },
+    "/docs/tutorial.html": {
+      "offset": 301726,
+      "length": 15436,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "158b45bf74668c6c"
+    },
+    "/docs/optionswhen.html": {
+      "offset": 317162,
+      "length": 5265,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "49b607e404b65212"
+    },
+    "/docs/thename.html": {
+      "offset": 322427,
+      "length": 3365,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c4ddf9494d9ac4c9"
+    },
+    "/docs/httpscripting.html": {
+      "offset": 325792,
+      "length": 12483,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4154a53d044da3c7"
+    },
+    "/docs/help-us.html": {
+      "offset": 338275,
+      "length": 3430,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ce0f5f0d9fc51933"
+    },
+    "/libcurl": {
+      "offset": 341705,
+      "length": 1999,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "05b5f8c575435450"
+    },
+    "/libcurl/": {
+      "offset": 341705,
+      "length": 1999,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "05b5f8c575435450"
+    },
+    "/docs/mk-ca-bundle.html": {
+      "offset": 343704,
+      "length": 3280,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5fed0dfbf2d6dab4"
+    },
+    "/libcurl/bindings.html": {
+      "offset": 346984,
+      "length": 3837,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "02467d164a71cf7f"
+    },
+    "/docs/videos": {
+      "offset": 350821,
+      "length": 15822,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fdeb485af9fe77fb"
+    },
+    "/docs/videos/": {
+      "offset": 350821,
+      "length": 15822,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fdeb485af9fe77fb"
+    },
+    "/docs/thanks.html": {
+      "offset": 366643,
+      "length": 32363,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "27dc6f08e17363cd"
+    },
+    "/docs/survey": {
+      "offset": 399006,
+      "length": 1981,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e0f853a21935974e"
+    },
+    "/docs/survey/": {
+      "offset": 399006,
+      "length": 1981,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e0f853a21935974e"
+    },
+    "/libcurl/c/getinmemory.html": {
+      "offset": 400987,
+      "length": 3071,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f618d5b929b08495"
+    },
+    "/docs/copyright.html": {
+      "offset": 404058,
+      "length": 2391,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "38ff5f5a3f88b8de"
+    },
+    "/libcurl/c/libcurl-easy.html": {
+      "offset": 406449,
+      "length": 2164,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7a57e4cb3b3cdf5e"
+    },
+    "/libcurl/c/libcurl-errors.html": {
+      "offset": 408613,
+      "length": 8837,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cd30cbab71112012"
+    },
+    "/libcurl/c/libcurl-ws.html": {
+      "offset": 417450,
+      "length": 3873,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "37796d900da1db26"
+    },
+    "/libcurl/c/libcurl-multi.html": {
+      "offset": 421323,
+      "length": 4500,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "535215dcb9fcb694"
+    },
+    "/libcurl/c/example.html": {
+      "offset": 425823,
+      "length": 5160,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8e3ba7656b23f090"
+    },
+    "/libcurl/c": {
+      "offset": 430983,
+      "length": 1877,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d85556878a0727cb"
+    },
+    "/libcurl/c/": {
+      "offset": 430983,
+      "length": 1877,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d85556878a0727cb"
+    },
+    "/libcurl/security.html": {
+      "offset": 432860,
+      "length": 10572,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ab53b25da3f45675"
+    },
+    "/libcurl/c/symbols-in-versions.html": {
+      "offset": 443432,
+      "length": 14640,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5ea0d8ba74a89d5f"
+    },
+    "/libcurl/c/libcurl-tutorial.html": {
+      "offset": 458072,
+      "length": 22861,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8e2ac9802aeb64c4"
+    },
+    "/libcurl/c/libcurl.html": {
+      "offset": 480933,
+      "length": 5531,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ea0339dcd6620424"
+    },
+    "/libcurl/c/libcurl-env.html": {
+      "offset": 486464,
+      "length": 2688,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8555c9749c808a1a"
+    },
+    "/libcurl/c/libcurl-url.html": {
+      "offset": 489152,
+      "length": 2983,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "95e042013488cfa1"
+    },
+    "/libcurl/c/multi_setopt_options.html": {
+      "offset": 492135,
+      "length": 1832,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1cbe24fa1db4c845"
+    },
+    "/libcurl/c/easy_getinfo_options.html": {
+      "offset": 493967,
+      "length": 2862,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d4867932ea14b2a9"
+    },
+    "/libcurl/c/libcurl-share.html": {
+      "offset": 496829,
+      "length": 2062,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "086110f6de51c299"
+    },
+    "/libcurl/c/easy_setopt_options.html": {
+      "offset": 498891,
+      "length": 8135,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f99dbaf861cb0713"
+    },
+    "/libcurl/c/curl_multi_perform.html": {
+      "offset": 507026,
+      "length": 3080,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "73e110e4037efc11"
+    },
+    "/libcurl/c/tls-options.html": {
+      "offset": 510106,
+      "length": 2426,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c135a2c1a89a4540"
+    },
+    "/libcurl/c/curl_easy_init.html": {
+      "offset": 512532,
+      "length": 2334,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dc6aa8d7eaf23470"
+    },
+    "/libcurl/c/curl_easy_perform.html": {
+      "offset": 514866,
+      "length": 2620,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b8e8c102d1b40582"
+    },
+    "/libcurl/c/CURLSHOPT_UNLOCKFUNC.html": {
+      "offset": 517486,
+      "length": 2263,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f0b22dffb3798f7f"
+    },
+    "/libcurl/c/curl_multi_remove_handle.html": {
+      "offset": 519749,
+      "length": 2472,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c962ee3a02b1f6c8"
+    },
+    "/libcurl/c/curl_share_setopt.html": {
+      "offset": 522221,
+      "length": 2089,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "79dd49dcdeca3e86"
+    },
+    "/libcurl/c/CURLSHOPT_LOCKFUNC.html": {
+      "offset": 524310,
+      "length": 2342,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "29593574edd4cfbe"
+    },
+    "/libcurl/c/curl_multi_add_handle.html": {
+      "offset": 526652,
+      "length": 2491,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "26b02ca4bde4f164"
+    },
+    "/libcurl/c/curl_multi_setopt.html": {
+      "offset": 529143,
+      "length": 3126,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4a2c6c978336fb7"
+    },
+    "/libcurl/c/curl_easy_getinfo.html": {
+      "offset": 532269,
+      "length": 5588,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a194d58b0388875f"
+    },
+    "/libcurl/c/curl_easy_reset.html": {
+      "offset": 537857,
+      "length": 1942,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8e6909aa40b27eaa"
+    },
+    "/libcurl/c/allfuncs.html": {
+      "offset": 539799,
+      "length": 3067,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "52ca16717df7e163"
+    },
+    "/libcurl/c/curl_easy_setopt.html": {
+      "offset": 542866,
+      "length": 13432,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "abb94820be61ebad"
+    },
+    "/libcurl/c/curl_multi_init.html": {
+      "offset": 556298,
+      "length": 2058,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "de0fa28d32d6d3fd"
+    },
+    "/libcurl/c/curl_global_init_mem.html": {
+      "offset": 558356,
+      "length": 2597,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b6abe365d5081d23"
+    },
+    "/libcurl/relatedlibs.html": {
+      "offset": 560953,
+      "length": 1353,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3750bf6bab6b09fb"
+    },
+    "/libcurl/competitors.html": {
+      "offset": 562306,
+      "length": 2977,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ac0f2509cc0c6449"
+    },
+    "/libcurl/c/CURLOPT_DNS_USE_GLOBAL_CACHE.html": {
+      "offset": 565283,
+      "length": 2234,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "594d89a7805a258c"
+    },
+    "/libcurl/c/curl_version_info.html": {
+      "offset": 567517,
+      "length": 5509,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7b1c2434fbf39fcc"
+    },
+    "/libcurl/abi.html": {
+      "offset": 573026,
+      "length": 2075,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eb1a0ffdf0be51e2"
+    },
+    "/libcurl/c/curl_global_init.html": {
+      "offset": 575101,
+      "length": 3368,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e56c2b81e3c82e90"
+    },
+    "/libcurl/using": {
+      "offset": 578469,
+      "length": 1101,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e49f9e2a66dacaea"
+    },
+    "/libcurl/using/": {
+      "offset": 578469,
+      "length": 1101,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e49f9e2a66dacaea"
+    },
+    "/docs/irc.html": {
+      "offset": 579570,
+      "length": 2490,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "943fd2e05c6621b3"
+    },
+    "/docs/optionsall.html": {
+      "offset": 582060,
+      "length": 5171,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "209172a2dddd5e83"
+    },
+    "/libcurl/features.html": {
+      "offset": 587231,
+      "length": 3075,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c204dd569a7624ca"
+    },
+    "/libcurl/theysay.html": {
+      "offset": 590306,
+      "length": 5110,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1dcaa0e6ece3d8ab"
+    },
+    "/libcurl/c/CURLOPT_NOSIGNAL.html": {
+      "offset": 595416,
+      "length": 2413,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2479dba8109e5d9a"
+    },
+    "/libcurl/c/curl_easy_cleanup.html": {
+      "offset": 597829,
+      "length": 2403,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a1e491111b5b66b9"
+    },
+    "/libcurl/c/CURLOPT_WRITEDATA.html": {
+      "offset": 600232,
+      "length": 2226,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1feebbf79744e614"
+    },
+    "/libcurl/c/CURLOPT_URL.html": {
+      "offset": 602458,
+      "length": 3753,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "25ecbbdcbdba4e89"
+    },
+    "/libcurl/c/curl_easy_strerror.html": {
+      "offset": 606211,
+      "length": 2021,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "28d400a62b4aaa7e"
+    },
+    "/libcurl/c/CURLOPT_VERBOSE.html": {
+      "offset": 608232,
+      "length": 2317,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1c45f43d1bae984b"
+    },
+    "/libcurl/c/CURLOPT_ERRORBUFFER.html": {
+      "offset": 610549,
+      "length": 2895,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f6885020d335b713"
+    },
+    "/libcurl/c/curl_global_cleanup.html": {
+      "offset": 613444,
+      "length": 2447,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ed4d9d3082ce50e4"
+    },
+    "/libcurl/c/CURLOPT_USERAGENT.html": {
+      "offset": 615891,
+      "length": 2206,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cc5acd2f0886297a"
+    },
+    "/docs/survey/2014.html": {
+      "offset": 618097,
+      "length": 4100,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6be577a023e7795f"
+    },
+    "/docs/survey/2025-1.1": {
+      "offset": 622197,
+      "length": 18175,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3a4ad0a87d5a03f2"
+    },
+    "/docs/survey/2025-1.1/": {
+      "offset": 622197,
+      "length": 18175,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3a4ad0a87d5a03f2"
+    },
+    "/libcurl/c/curl_easy_duphandle.html": {
+      "offset": 640372,
+      "length": 2406,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e4d533c793a5a6bb"
+    },
+    "/libcurl/c/CURLOPT_WRITEFUNCTION.html": {
+      "offset": 642778,
+      "length": 3217,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "035749541ab679da"
+    },
+    "/libcurl/c/CURLOPT_FTPPORT.html": {
+      "offset": 645995,
+      "length": 2829,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3dca5014d03fa079"
+    },
+    "/libcurl/c/CURLOPT_FAILONERROR.html": {
+      "offset": 648824,
+      "length": 2400,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d0c03748da9845ff"
+    },
+    "/libcurl/c/CURLOPT_ACCEPTTIMEOUT_MS.html": {
+      "offset": 651224,
+      "length": 2178,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7c14470c9a8162b6"
+    },
+    "/libcurl/c/CURLOPT_INTERFACE.html": {
+      "offset": 653402,
+      "length": 2619,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8579930a8b433bb1"
+    },
+    "/libcurl/c/CURLOPT_MAXREDIRS.html": {
+      "offset": 656021,
+      "length": 2279,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b74ec804ccac0d59"
+    },
+    "/libcurl/c/curl_easy_recv.html": {
+      "offset": 658300,
+      "length": 2970,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0a3f66e87aa9bf8c"
+    },
+    "/libcurl/c/curl_easy_send.html": {
+      "offset": 661270,
+      "length": 2835,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "364ba25df595065b"
+    },
+    "/libcurl/c/CURLOPT_PINNEDPUBLICKEY.html": {
+      "offset": 664105,
+      "length": 3544,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eb392f06ecf542dd"
+    },
+    "/libcurl/c/CURLOPT_CUSTOMREQUEST.html": {
+      "offset": 667649,
+      "length": 3274,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "227eb9bcb709c195"
+    },
+    "/libcurl/c/CURLOPT_SSL_VERIFYSTATUS.html": {
+      "offset": 670923,
+      "length": 2223,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9820458bd0577318"
+    },
+    "/libcurl/c/CURLINFO_PROXY_ERROR.html": {
+      "offset": 673146,
+      "length": 2530,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "24345700d53824d3"
+    },
+    "/favicon.ico": {
+      "offset": 675676,
+      "length": 2597,
+      "mime": "image/vnd.microsoft.icon",
+      "gzipped": true,
+      "hash": "90174bb24a9f7bc8"
+    },
+    "/manpage.css": {
+      "offset": 678273,
+      "length": 429,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "bd9de0fca6d3c99a"
+    },
+    "/logo/curl-symbol.svg": {
+      "offset": 678702,
+      "length": 260,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "152d67356301f9be"
+    },
+    "/curl.css": {
+      "offset": 678962,
+      "length": 4995,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "2c4ff80f16f10d5f"
+    },
+    "/logo/curl-white-symbol.svg": {
+      "offset": 683957,
+      "length": 245,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "67ea1115bd34c88f"
+    },
+    "/docs/videos/t/quic-hello-from-openssl.jpg": {
+      "offset": 684202,
+      "length": 8201,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "5a64515b8a4801cc"
+    },
+    "/docs/videos/t/wttr.in-update.jpg": {
+      "offset": 692403,
+      "length": 8884,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "bb4a1ccc91379624"
+    },
+    "/docs/videos/t/curl-security-2026.jpg": {
+      "offset": 701287,
+      "length": 10361,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "406171a2b3505138"
+    },
+    "/docs/videos/t/threedecades.jpg": {
+      "offset": 711648,
+      "length": 9029,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "d2eee9f1fcad129c"
+    },
+    "/docs/comparison.css": {
+      "offset": 720677,
+      "length": 198,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "bdb54f927e65762c"
+    },
+    "/docs/videos/t/state-of-curl-in-debian.jpg": {
+      "offset": 720875,
+      "length": 7801,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "118b707cfebe543a"
+    },
+    "/docs/videos/t/the-state-of-curl-2026.jpg": {
+      "offset": 728676,
+      "length": 10561,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "242c323c98da2d4b"
+    },
+    "/docs/videos/t/libcurl-real-world.jpg": {
+      "offset": 739237,
+      "length": 8583,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "329c85a1355d1481"
+    },
+    "/docs/videos/t/curl-ctx-ii.jpg": {
+      "offset": 747820,
+      "length": 4622,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "e6d8875cdc2202ff"
+    },
+    "/docs/videos/t/quantitative-comparison-of-quic.jpg": {
+      "offset": 752442,
+      "length": 8276,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "f322d652e13ddc3d"
+    },
+    "/docs/videos/t/hunting-for-zero-days.jpg": {
+      "offset": 760718,
+      "length": 10558,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "4b1ecebe7c3db788"
+    },
+    "/docs/videos/t/rock-solid-curl.jpg": {
+      "offset": 771276,
+      "length": 19304,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "e674a8352f4006db"
+    },
+    "/docs/videos/t/ai-reality.jpg": {
+      "offset": 790580,
+      "length": 11959,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "ebd1f5a2e99d09d9"
+    },
+    "/docs/videos/t/multiplatform-ci-with-jenkins.jpg": {
+      "offset": 802539,
+      "length": 10022,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "1ef5957c5a540c26"
+    },
+    "/docs/videos/t/roadmap2026.jpg": {
+      "offset": 812561,
+      "length": 18142,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "870bbb13d0755ff1"
+    },
+    "/docs/videos/t/ctx-curl.jpg": {
+      "offset": 830703,
+      "length": 8475,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "dce3bfd742cdb8c2"
+    },
+    "/docs/videos/t/100-year-curl.jpg": {
+      "offset": 839178,
+      "length": 11412,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "a362d49db59cec40"
+    },
+    "/docs/videos/t/curl-daemon-agent.jpg": {
+      "offset": 850590,
+      "length": 8066,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "ce1754e2d915cb7a"
+    },
+    "/docs/videos/t/giants_standing_on_shoulders.jpg": {
+      "offset": 858656,
+      "length": 16310,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "9e12de48e26ed918"
+    },
+    "/docs/videos/t/http-client-for-web-scraping.jpg": {
+      "offset": 874966,
+      "length": 9583,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "36221ab0ab3adfae"
+    },
+    "/docs/videos/t/security-2025.jpg": {
+      "offset": 884549,
+      "length": 10088,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "8ca46ebfd1f7fe9e"
+    },
+    "/docs/videos/t/performance-and-benchmarking.jpg": {
+      "offset": 894637,
+      "length": 10211,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "22c07f7c3bd7b326"
+    },
+    "/docs/videos/t/http-news-2025.jpg": {
+      "offset": 904848,
+      "length": 10378,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "982cc55ecaaf642a"
+    },
+    "/docs/videos/t/tinycurl.jpg": {
+      "offset": 915226,
+      "length": 8968,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "bf893a76858d629c"
+    },
+    "/docs/videos/t/a-mascot.jpg": {
+      "offset": 924194,
+      "length": 10353,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "a486b50008116c0c"
+    },
+    "/docs/videos/t/security-data.jpg": {
+      "offset": 934547,
+      "length": 10390,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "14b31992dd877f57"
+    },
+    "/docs/videos/t/artificial-stupidity.jpg": {
+      "offset": 944937,
+      "length": 11529,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "48b359e3b4480c78"
+    },
+    "/docs/videos/t/ai-slop-attacks-eurobsdcon.jpg": {
+      "offset": 956466,
+      "length": 13880,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "f32df2776b339ef6"
+    },
+    "/docs/videos/t/world-domination.jpg": {
+      "offset": 970346,
+      "length": 11950,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "f64e60235f191c53"
+    },
+    "/docs/videos/t/test-clutch-teach.jpg": {
+      "offset": 982296,
+      "length": 12364,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "3f9593bedfcae5f7"
+    },
+    "/docs/videos/t/ai-slop-attacks.jpg": {
+      "offset": 994660,
+      "length": 13998,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "71e36e7bda0d1aba"
+    },
+    "/docs/videos/t/curl-container-2025.jpg": {
+      "offset": 1008658,
+      "length": 5551,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "ee09c149d3d83e6b"
+    },
+    "/docs/videos/t/ircbot.jpg": {
+      "offset": 1014209,
+      "length": 9057,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "8daf2d96bafd16aa"
+    },
+    "/docs/videos/t/wcurl-one-year.jpg": {
+      "offset": 1023266,
+      "length": 8562,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "b2638376cde0888f"
+    },
+    "/docs/videos/t/curlx-library.jpg": {
+      "offset": 1031828,
+      "length": 11001,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "78e0100c88ced161"
+    },
+    "/docs/videos/t/rust-in-curl.jpg": {
+      "offset": 1042829,
+      "length": 10136,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "ab3b7f76f5896a69"
+    },
+    "/docs/videos/t/start-to-end.jpg": {
+      "offset": 1052965,
+      "length": 24676,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "b74933cc1388ffe3"
+    },
+    "/docs/videos/t/curl-future-2024.jpg": {
+      "offset": 1077641,
+      "length": 9222,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "a3b2f0de52031a52"
+    },
+    "/docs/videos/t/tightening-every-bolt.jpg": {
+      "offset": 1086863,
+      "length": 8900,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "3f6e95d424fb7dff"
+    },
+    "/docs/videos/t/curl-security-2024.jpg": {
+      "offset": 1095763,
+      "length": 9776,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "ebd747a70481f71d"
+    },
+    "/docs/videos/t/trurl.jpg": {
+      "offset": 1105539,
+      "length": 8689,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "efd83830167468ab"
+    },
+    "/docs/videos/t/curl-container-2024.jpg": {
+      "offset": 1114228,
+      "length": 11001,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "4f4651d36cd146a6"
+    },
+    "/docs/videos/t/curl-parallel-tests.jpg": {
+      "offset": 1125229,
+      "length": 11228,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "db200d28667ff0fd"
+    },
+    "/docs/videos/t/advanced-libcurl-2024.jpg": {
+      "offset": 1136457,
+      "length": 11624,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "6977d59b9a3937b2"
+    },
+    "/docs/videos/t/apple-specialities.jpg": {
+      "offset": 1148081,
+      "length": 11066,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "1d117f9ef7fe4f14"
+    },
+    "/docs/videos/t/performance-2024.jpg": {
+      "offset": 1159147,
+      "length": 11093,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "20ea4d3881161c38"
+    },
+    "/docs/videos/t/successful-secure.jpg": {
+      "offset": 1170240,
+      "length": 12085,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "bf36b9a10f33c47e"
+    },
+    "/docs/videos/t/release-notes.jpg": {
+      "offset": 1182325,
+      "length": 17338,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "2593949e9e298314"
+    },
+    "/docs/videos/t/roadmap-2025.jpg": {
+      "offset": 1199663,
+      "length": 20088,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "e16944b9cdba9183"
+    },
+    "/docs/videos/t/you-can-do-it.jpg": {
+      "offset": 1219751,
+      "length": 23992,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "0f0934475c455c8e"
+    },
+    "/docs/videos/t/fuzzing-curl-2024.jpg": {
+      "offset": 1243743,
+      "length": 10781,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "5a78c531eb7b5f95"
+    },
+    "/docs/videos/t/do-release.jpg": {
+      "offset": 1254524,
+      "length": 9988,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "117ed96fd8df35e7"
+    },
+    "/docs/videos/t/test-clutch.jpg": {
+      "offset": 1264512,
+      "length": 10533,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "cdbabb1119b16000"
+    },
+    "/docs/videos/t/getting-started-2024.jpg": {
+      "offset": 1275045,
+      "length": 16610,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "4f127308a71f6210"
+    },
+    "/docs/videos/t/mastering-command-line-2024.jpg": {
+      "offset": 1291655,
+      "length": 17815,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "ca3ac1dcc4c83be2"
+    },
+    "/docs/videos/t/curl-security-past-present.jpg": {
+      "offset": 1309470,
+      "length": 7678,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "ffd6cb1185b8c3b1"
+    },
+    "/docs/videos/t/command-line-variables.jpg": {
+      "offset": 1317148,
+      "length": 8812,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "13d95aa0163b1a07"
+    },
+    "/docs/videos/t/curl-evolutions-2024.jpg": {
+      "offset": 1325960,
+      "length": 10598,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "f9081129c0612405"
+    },
+    "/docs/videos/t/hyper-in-curl.jpg": {
+      "offset": 1336558,
+      "length": 4480,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "41641b0b505cc03a"
+    },
+    "/docs/videos/t/quic-http3-curl.jpg": {
+      "offset": 1341038,
+      "length": 13970,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "7eb95a4a5d00cc46"
+    },
+    "/docs/videos/t/experimental-code.jpg": {
+      "offset": 1355008,
+      "length": 7626,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "d2d2f5bfba845ff2"
+    },
+    "/docs/videos/t/mastering-command-line.jpg": {
+      "offset": 1362634,
+      "length": 10176,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "91a4addea1359021"
+    },
+    "/docs/videos/t/next-level-curl.jpg": {
+      "offset": 1372810,
+      "length": 10478,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "9665f948f414e922"
+    },
+    "/docs/videos/t/curl-ci-velocity.jpg": {
+      "offset": 1383288,
+      "length": 4407,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "2f44380bf8a476f9"
+    },
+    "/docs/videos/t/curl-containers-lessons.jpg": {
+      "offset": 1387695,
+      "length": 10137,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "25cd4d4c6c139356"
+    },
+    "/docs/videos/t/getting-started-2022.jpg": {
+      "offset": 1397832,
+      "length": 13157,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "10159621b994402d"
+    },
+    "/docs/videos/t/state-of-curl-2022.jpg": {
+      "offset": 1410989,
+      "length": 11609,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "85b52e3a88cdcdc0"
+    },
+    "/docs/videos/t/curl-apache-tailscale.jpg": {
+      "offset": 1422598,
+      "length": 13625,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "8f7881ed3bcb7629"
+    },
+    "/docs/videos/t/curl-with-rust.jpg": {
+      "offset": 1436223,
+      "length": 16813,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "a3026d49c4d7de55"
+    },
+    "/docs/videos/t/mastering-libcurl2.jpg": {
+      "offset": 1453036,
+      "length": 16616,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "67ced10f35182c55"
+    },
+    "/docs/videos/t/just-curl-it.jpg": {
+      "offset": 1469652,
+      "length": 17656,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "60fd8a1f98e3a504"
+    },
+    "/docs/videos/t/quic-and-wolfssl.jpg": {
+      "offset": 1487308,
+      "length": 14406,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "4077b16aedb6434f"
+    },
+    "/docs/videos/t/mastering-libcurl1.jpg": {
+      "offset": 1501714,
+      "length": 21544,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "863b4170617f7674"
+    },
+    "/docs/videos/t/websocket-with-libcurl.jpg": {
+      "offset": 1523258,
+      "length": 13067,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "5c50b2e350932330"
+    },
+    "/docs/videos/t/the-state-of-curl-2024.jpg": {
+      "offset": 1536325,
+      "length": 11123,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "3a88dbf18bee7a96"
+    },
+    "/docs/videos/t/libcurl-for-r.jpg": {
+      "offset": 1547448,
+      "length": 9668,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "f93a2172d430892d"
+    },
+    "/docs/videos/t/testing-for-security.jpg": {
+      "offset": 1557116,
+      "length": 8667,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "4ac8fb7197cf0023"
+    },
+    "/docs/videos/t/curl-better.jpg": {
+      "offset": 1565783,
+      "length": 17154,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "071515ae6ec61e96"
+    },
+    "/docs/videos/t/curl-in-iot.jpg": {
+      "offset": 1582937,
+      "length": 18473,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "208ff8505f625871"
+    },
+    "/docs/videos/t/the-state-of-curl-2020.jpg": {
+      "offset": 1601410,
+      "length": 9830,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "31345d2ebafc797c"
+    },
+    "/docs/videos/t/quic-details-2019.jpg": {
+      "offset": 1611240,
+      "length": 4959,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "bef648e5c806b956"
+    },
+    "/docs/videos/t/curl-performance-tools.jpg": {
+      "offset": 1616199,
+      "length": 8543,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "750dcafc800e0817"
+    },
+    "/docs/videos/t/help-me-if-you-can-2020.jpg": {
+      "offset": 1624742,
+      "length": 11012,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "ed09b5e77541acc1"
+    },
+    "/docs/videos/t/http3-in-curl-2020.jpg": {
+      "offset": 1635754,
+      "length": 13289,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "c97b54dfdac1199c"
+    },
+    "/docs/videos/t/curl-hyper.jpg": {
+      "offset": 1649043,
+      "length": 18855,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "d6796f853c974edc"
+    },
+    "/docs/videos/t/landing-code.jpg": {
+      "offset": 1667898,
+      "length": 18939,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "656220f7907ea5f1"
+    },
+    "/docs/videos/t/curl-security-2021.jpg": {
+      "offset": 1686837,
+      "length": 17009,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "988ac3456855532c"
+    },
+    "/docs/videos/t/curl-fips-windows.jpg": {
+      "offset": 1703846,
+      "length": 16982,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "e609d7ea5fd3d22b"
+    },
+    "/docs/videos/t/curl-docker.jpg": {
+      "offset": 1720828,
+      "length": 21979,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "6514002c18a20d11"
+    },
+    "/docs/videos/t/http3-in-curl.jpg": {
+      "offset": 1742807,
+      "length": 20754,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "16b6db877bcbaa56"
+    },
+    "/docs/videos/t/the-state-of-curl-2021.jpg": {
+      "offset": 1763561,
+      "length": 25136,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "2af0ce0ec509cbbc"
+    },
+    "/docs/videos/t/common-libcurl-mistakes.jpg": {
+      "offset": 1788697,
+      "length": 25698,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "52a0805da3bc10ac"
+    },
+    "/docs/videos/t/curl-driving-it-2019.jpg": {
+      "offset": 1814395,
+      "length": 10207,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "87e5eb4f2af5478b"
+    },
+    "/docs/videos/t/interfacing-rust.jpg": {
+      "offset": 1824602,
+      "length": 13463,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "4772b8a1675375fd"
+    },
+    "/docs/videos/t/libcurl-under-hood.jpg": {
+      "offset": 1838065,
+      "length": 19821,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "1c5e81a72bedaa8d"
+    },
+    "/docs/videos/t/state-of-curl-2019.png": {
+      "offset": 1857886,
+      "length": 15985,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "25739d2794e40487"
+    },
+    "/docs/videos/t/urls-2018.jpg": {
+      "offset": 1873871,
+      "length": 2738,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "2fa6543a48b99540"
+    },
+    "/docs/videos/t/http3-in-curl-2019.jpg": {
+      "offset": 1876609,
+      "length": 3211,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "ff1569e4344b2dbb"
+    },
+    "/docs/videos/t/redhat-distributes-curl-2018.jpg": {
+      "offset": 1879820,
+      "length": 5278,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "5eac29df7012247a"
+    },
+    "/docs/videos/t/google-and-proxies-2018.jpg": {
+      "offset": 1885098,
+      "length": 5660,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "4b385f0e782478b8"
+    },
+    "/docs/videos/t/gource-2019.jpg": {
+      "offset": 1890758,
+      "length": 4033,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "3ab0c6bbdf6165ba"
+    },
+    "/docs/videos/t/fuzzing-curl-2018.jpg": {
+      "offset": 1894791,
+      "length": 5884,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "8166354f657ecabe"
+    },
+    "/docs/videos/t/curl-ci-2018.jpg": {
+      "offset": 1900675,
+      "length": 4249,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "3f2cfba3eca5c8a9"
+    },
+    "/docs/videos/t/altsvc-for-the-people-2018.jpg": {
+      "offset": 1904924,
+      "length": 9166,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "a7fe0cb15c291957"
+    },
+    "/docs/videos/t/effective-test-case-2019.jpg": {
+      "offset": 1914090,
+      "length": 5970,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "f6f51f2e30fd1624"
+    },
+    "/docs/videos/t/a-day-in-my-life-2018.jpg": {
+      "offset": 1920060,
+      "length": 2494,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "7ad4ea3081a3c464"
+    },
+    "/docs/videos/t/curl-quic-2018.jpg": {
+      "offset": 1922554,
+      "length": 8314,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "07ee0de5d71678c2"
+    },
+    "/docs/videos/t/governance-2019.jpg": {
+      "offset": 1930868,
+      "length": 9202,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "7a6c5a10244e9252"
+    },
+    "/docs/videos/t/console-services-2018.jpg": {
+      "offset": 1940070,
+      "length": 2633,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "77297cc7064c89ea"
+    },
+    "/docs/videos/t/curl-doh-2018.jpg": {
+      "offset": 1942703,
+      "length": 5687,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "781fe27f1c3f900b"
+    },
+    "/docs/videos/t/curlator-2019.jpg": {
+      "offset": 1948390,
+      "length": 5518,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "e6063bd79d59e537"
+    },
+    "/docs/videos/t/deprecating-legacy.jpg": {
+      "offset": 1953908,
+      "length": 5373,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "6221136996525b3b"
+    },
+    "/docs/videos/t/libcurl-in-apache.jpg": {
+      "offset": 1959281,
+      "length": 6983,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "4950429ed3063b75"
+    },
+    "/docs/videos/t/welcome-to-curlup-2018.jpg": {
+      "offset": 1966264,
+      "length": 7001,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "1add595b95f8b172"
+    },
+    "/docs/videos/t/containerized-curl-testing-2018.jpg": {
+      "offset": 1973265,
+      "length": 7549,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "d9dd68b3e447c318"
+    },
+    "/docs/videos/t/why-redhat-switched-to-nss-2017.jpg": {
+      "offset": 1980814,
+      "length": 5219,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "8f3699149b484877"
+    },
+    "/docs/videos/t/internet-all-the-things-2015.jpg": {
+      "offset": 1986033,
+      "length": 7913,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "a4d10a24600bcfdf"
+    },
+    "/docs/videos/t/life-of-a-distro-hacker-2017.jpg": {
+      "offset": 1993946,
+      "length": 4519,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "0ed9dbf1742eb689"
+    },
+    "/docs/videos/t/negotiate-support.jpg": {
+      "offset": 1998465,
+      "length": 9845,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "6e7c6f8d992d1818"
+    },
+    "/docs/videos/t/up-to-date-legacy-2017.jpg": {
+      "offset": 2008310,
+      "length": 6873,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "7ac91ca7a391e7d7"
+    },
+    "/docs/videos/t/curl-test-suite-2017.jpg": {
+      "offset": 2015183,
+      "length": 6585,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "0b326adfaa95e562"
+    },
+    "/docs/videos/t/curl-for-network-debugger-2017.jpg": {
+      "offset": 2021768,
+      "length": 7856,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "7e9328fd7405a746"
+    },
+    "/docs/videos/t/web-transport-2017.jpg": {
+      "offset": 2029624,
+      "length": 10455,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "ddc30ba664a4aac7"
+    },
+    "/docs/videos/t/advanced-http-scripting-2017.jpg": {
+      "offset": 2040079,
+      "length": 7907,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "3048629440bf47d5"
+    },
+    "/docs/videos/t/curl-now-and-then-2017.jpg": {
+      "offset": 2047986,
+      "length": 4899,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "1e140529ca1b71d9"
+    },
+    "/docs/videos/t/apache-http2-testing.jpg": {
+      "offset": 2052885,
+      "length": 5828,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "0b6f86f83ee201e6"
+    },
+    "/docs/videos/t/the-curl-book-2017.jpg": {
+      "offset": 2058713,
+      "length": 6061,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "f31ff3bb2c743e26"
+    },
+    "/docs/videos/t/http2-curl.jpg": {
+      "offset": 2064774,
+      "length": 7821,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "1ad18c8f0576f955"
+    },
+    "/docs/videos/t/hobby-project-with-a-billion.jpg": {
+      "offset": 2072595,
+      "length": 2995,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "8dbd271261f118af"
+    },
+    "/docs/videos/t/wrapping-curl-2017.jpg": {
+      "offset": 2075590,
+      "length": 3168,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "de8012c1b9232c6a"
+    },
+    "/docs/videos/t/creating-console-websites-2017.jpg": {
+      "offset": 2078758,
+      "length": 8000,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "a2617d18120d0a1c"
+    },
+    "/docs/videos/t/how-google-uses-curl-2017.jpg": {
+      "offset": 2086758,
+      "length": 6276,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "8b7c7720b04d0e6b"
+    },
+    "/docs/videos/t/websocket-support-2017.jpg": {
+      "offset": 2093034,
+      "length": 8903,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "412e45b0d0ed8895"
+    },
+    "/docs/videos/t/curl-website-2017.jpg": {
+      "offset": 2101937,
+      "length": 9116,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "e567e0ad992e5959"
+    },
+    "/docs/videos/t/you-know-whats-cool-2017.jpg": {
+      "offset": 2111053,
+      "length": 6273,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "bcec40df2d072131"
+    },
+    "/libcurl/c/example.css": {
+      "offset": 2117326,
+      "length": 275,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "c7585f033e29ebe3"
+    },
+    "/docs/survey/charts/chart_011.png": {
+      "offset": 2117601,
+      "length": 1660,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3f63fa1b45940e8f"
+    },
+    "/docs/survey/charts/chart_009.png": {
+      "offset": 2119261,
+      "length": 1764,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "cc632289695e073c"
+    },
+    "/docs/thanks.css": {
+      "offset": 2121025,
+      "length": 86,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "d5ed3245d231197b"
+    },
+    "/docs/survey/charts/chart_003.png": {
+      "offset": 2121111,
+      "length": 6555,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "01971e2c5c65cb42"
+    },
+    "/docs/survey/charts/chart_010.png": {
+      "offset": 2127666,
+      "length": 8497,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b71778c2bc43bf12"
+    },
+    "/docs/survey/charts/chart_007.png": {
+      "offset": 2136163,
+      "length": 1696,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2dd827cbcb61c1c6"
+    },
+    "/docs/survey/charts/chart_015.png": {
+      "offset": 2137859,
+      "length": 4017,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "16969a6c742ef7c4"
+    },
+    "/docs/survey/charts/chart_014.png": {
+      "offset": 2141876,
+      "length": 6219,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "51d946bb04b73185"
+    },
+    "/docs/survey/charts/chart.png": {
+      "offset": 2148095,
+      "length": 10583,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f1ba044379d99ae1"
+    },
+    "/docs/survey/charts/chart_006.png": {
+      "offset": 2158678,
+      "length": 2896,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c2b5c1aff466f632"
+    },
+    "/docs/survey/charts/chart_008.png": {
+      "offset": 2161574,
+      "length": 5895,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1417562f70018284"
+    },
+    "/docs/videos/t/http-in-uefi.jpg": {
+      "offset": 2167469,
+      "length": 11834,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "681cef52f1a44a22"
+    },
+    "/docs/survey/charts/chart_012.png": {
+      "offset": 2179303,
+      "length": 18156,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f6516602e4138e25"
+    },
+    "/docs/survey/charts/chart_013.png": {
+      "offset": 2197459,
+      "length": 18153,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e15b898525dbf698"
+    },
+    "/docs/survey/charts/chart_005.png": {
+      "offset": 2215612,
+      "length": 1954,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1ccadc453a83d739"
+    },
+    "/docs/survey/charts/chart_004.png": {
+      "offset": 2217566,
+      "length": 1864,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "732fb73d3ee96102"
+    },
+    "/docs/survey/charts/chart_016.png": {
+      "offset": 2219430,
+      "length": 6989,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c53d60ddb53d0f7e"
+    },
+    "/docs/survey/charts/chart_002.png": {
+      "offset": 2226419,
+      "length": 11020,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b5b7c778ce66d297"
+    },
+    "/pix/irc-screenshot.png": {
+      "offset": 2237439,
+      "length": 291140,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "cda0947140da1347"
+    },
+    "/docs/survey/2025-1.1/curl.css": {
+      "offset": 2528579,
+      "length": 2784,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "53835fc88912c949"
+    },
+    "/docs/survey/2025-1.1/builddev.svg": {
+      "offset": 2531363,
+      "length": 11239,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "4d092d7069b06813"
+    },
+    "/docs/survey/2025-1.1/answerlastyear.svg": {
+      "offset": 2542602,
+      "length": 12400,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "6d2b383e7d515d29"
+    },
+    "/docs/survey/2025-1.1/continentsdev.svg": {
+      "offset": 2555002,
+      "length": 11687,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a8ccbac3143bae02"
+    },
+    "/docs/survey/2025-1.1/container.svg": {
+      "offset": 2566689,
+      "length": 11308,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "10fac5d051fa140f"
+    },
+    "/docs/survey/2025-1.1/platformdev.svg": {
+      "offset": 2577997,
+      "length": 11697,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "2beeebc647a9a89e"
+    },
+    "/docs/survey/2025-1.1/curl-logo.svg": {
+      "offset": 2589694,
+      "length": 2304,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "da551da67729fc73"
+    },
+    "/docs/survey/2025-1.1/num-platforms.svg": {
+      "offset": 2591998,
+      "length": 11611,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "f83853a863a222d9"
+    },
+    "/docs/survey/2025-1.1/answerlastyeardev.svg": {
+      "offset": 2603609,
+      "length": 11358,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "386dc55cb161bcdc"
+    },
+    "/docs/survey/2025-1.1/continents.svg": {
+      "offset": 2614967,
+      "length": 13019,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "c02908b3b1fcf99a"
+    },
+    "/docs/survey/2025-1.1/top-protocols.svg": {
+      "offset": 2627986,
+      "length": 13531,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "0cda686d33e68f60"
+    },
+    "/docs/survey/2025-1.1/windowsarchdev.svg": {
+      "offset": 2641517,
+      "length": 11029,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "ddd639a85af6b1ff"
+    },
+    "/docs/survey/2025-1.1/num-protocols.svg": {
+      "offset": 2652546,
+      "length": 12718,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "71fe8218a773cc90"
+    },
+    "/docs/survey/2025-1.1/windowsdev.svg": {
+      "offset": 2665264,
+      "length": 11521,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "67b309ff12ebb935"
+    },
+    "/docs/survey/2025-1.1/top-protodev.svg": {
+      "offset": 2676785,
+      "length": 12016,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "4390c1d5b52833ac"
+    },
+    "/docs/survey/2025-1.1/build.svg": {
+      "offset": 2688801,
+      "length": 11761,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "53d4afe328bb1da7"
+    },
+    "/docs/survey/2025-1.1/windowsarch.svg": {
+      "offset": 2700562,
+      "length": 11252,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a57e9f579650ec28"
+    },
+    "/docs/survey/2025-1.1/platforms.svg": {
+      "offset": 2711814,
+      "length": 12911,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "8bd5a5eb53e30bb2"
+    },
+    "/docs/survey/2025-1.1/windows.svg": {
+      "offset": 2724725,
+      "length": 12293,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "9cd98e8b986cfadd"
+    },
+    "/docs/survey/2025-1.1/responses.svg": {
+      "offset": 2737018,
+      "length": 11814,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "0cfca63720156c33"
+    },
+    "/docs/survey/2025-1.1/tolsdev-ossl.svg": {
+      "offset": 2748832,
+      "length": 11501,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "35ee1807c3abf85a"
+    },
+    "/docs/survey/2025-1.1/ssh.svg": {
+      "offset": 2760333,
+      "length": 11187,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "00983cbe20257174"
+    },
+    "/docs/survey/2025-1.1/version.svg": {
+      "offset": 2771520,
+      "length": 12776,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "6d24eb5511f1ed51"
+    },
+    "/docs/survey/2025-1.1/contributeddev.svg": {
+      "offset": 2784296,
+      "length": 11246,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "5b2028bcf5753ba5"
+    },
+    "/docs/survey/2025-1.1/morecommdev.svg": {
+      "offset": 2795542,
+      "length": 11469,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "cbe56ecdeecdfafe"
+    },
+    "/docs/survey/2025-1.1/featuresdev.svg": {
+      "offset": 2807011,
+      "length": 11645,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "4300cd1e3712c831"
+    },
+    "/docs/survey/2025-1.1/contributed.svg": {
+      "offset": 2818656,
+      "length": 12062,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "27220b58832cb561"
+    },
+    "/docs/survey/2025-1.1/bindings.svg": {
+      "offset": 2830718,
+      "length": 12560,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "ce13eb63ab689494"
+    },
+    "/docs/survey/2025-1.1/tls.svg": {
+      "offset": 2843278,
+      "length": 12327,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "0730c39faf6545e3"
+    },
+    "/docs/survey/2025-1.1/tlsdev.svg": {
+      "offset": 2855605,
+      "length": 11754,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "91c5b3f55a4d1588"
+    },
+    "/docs/survey/2025-1.1/favoption.svg": {
+      "offset": 2867359,
+      "length": 13625,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "3810fce885ada9e0"
+    },
+    "/docs/survey/2025-1.1/bindingsdev.svg": {
+      "offset": 2880984,
+      "length": 11792,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "908fb4bcedfb18e9"
+    },
+    "/docs/survey/2025-1.1/quic.svg": {
+      "offset": 2892776,
+      "length": 11385,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "6f0f7d920752113b"
+    },
+    "/docs/survey/2025-1.1/features.svg": {
+      "offset": 2904161,
+      "length": 13162,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "533c21452c24c0cc"
+    },
+    "/docs/survey/2025-1.1/morecomm.svg": {
+      "offset": 2917323,
+      "length": 12413,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "1fecfec707be3c81"
+    },
+    "/docs/survey/2025-1.1/yearsuse.svg": {
+      "offset": 2929736,
+      "length": 11959,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "0aaffbda47efa26a"
+    },
+    "/docs/survey/2025-1.1/channels.svg": {
+      "offset": 2941695,
+      "length": 11973,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "7c0ec63bb565111a"
+    },
+    "/docs/survey/2025-1.1/notcontributedev.svg": {
+      "offset": 2953668,
+      "length": 11978,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a48e0bbf97feaacf"
+    },
+    "/docs/survey/2025-1.1/channelsdev.svg": {
+      "offset": 2965646,
+      "length": 11951,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "4d2ea39e21538b3f"
+    },
+    "/docs/survey/2025-1.1/notcontribute.svg": {
+      "offset": 2977597,
+      "length": 12271,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "05bbf6275440303d"
+    },
+    "/docs/survey/2025-1.1/howgood-info.svg": {
+      "offset": 2989868,
+      "length": 11246,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "692862eddfce7875"
+    },
+    "/docs/survey/2025-1.1/worstarea.svg": {
+      "offset": 3001114,
+      "length": 12478,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "45e5ccce28b61f12"
+    },
+    "/docs/survey/2025-1.1/howgood-credits.svg": {
+      "offset": 3013592,
+      "length": 11258,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "fa08648d022488e7"
+    },
+    "/docs/survey/2025-1.1/howgood-minority.svg": {
+      "offset": 3024850,
+      "length": 11278,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "19bc9508a81fd5a1"
+    },
+    "/docs/survey/2025-1.1/dltoolsdev.svg": {
+      "offset": 3036128,
+      "length": 11491,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "43339f3ac7cf3e55"
+    },
+    "/docs/survey/2025-1.1/howgood-newcomers.svg": {
+      "offset": 3047619,
+      "length": 11185,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "658be6d496646864"
+    },
+    "/docs/survey/2025-1.1/wantfeatures.svg": {
+      "offset": 3058804,
+      "length": 13953,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "e76714acd2c3a912"
+    },
+    "/docs/survey/2025-1.1/libcurlalts.svg": {
+      "offset": 3072757,
+      "length": 12155,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "bdd8976d4af98457"
+    },
+    "/docs/survey/2025-1.1/bestarea.svg": {
+      "offset": 3084912,
+      "length": 12754,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "b63fb0567ea623e6"
+    },
+    "/docs/survey/2025-1.1/remainongithub.svg": {
+      "offset": 3097666,
+      "length": 12577,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "dec2261816cd22d2"
+    },
+    "/docs/survey/2025-1.1/libcurlaltsdev.svg": {
+      "offset": 3110243,
+      "length": 11776,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "0edeb000de178dec"
+    },
+    "/docs/survey/2025-1.1/otheropensource.svg": {
+      "offset": 3122019,
+      "length": 12204,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "ef3430bc07fc0dab"
+    },
+    "/docs/survey/2025-1.1/dltools.svg": {
+      "offset": 3134223,
+      "length": 12786,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "2ddf98d77cd8b61d"
+    },
+    "/docs/survey/2025-1.1/howgood-security.svg": {
+      "offset": 3147009,
+      "length": 11268,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "298be8608c6d475c"
+    },
+    "/docs/survey/2025-1.1/howgood-patches.svg": {
+      "offset": 3158277,
+      "length": 11226,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "015f249fc3fb469a"
+    },
+    "/docs/survey/2025-1.1/howgood-bugreports.svg": {
+      "offset": 3169503,
+      "length": 11224,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "b0dc6ac539667730"
+    },
+    "/docs/survey/2025-1.1/otheropensourcedev.svg": {
+      "offset": 3180727,
+      "length": 11403,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "f45feb2958940530"
+    },
+    "/docs/survey/2025-1.1/worstareadev.svg": {
+      "offset": 3192130,
+      "length": 11765,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "8da8ef752ab4a44a"
+    },
+    "/docs/survey/2025-1.1/howgood.svg": {
+      "offset": 3203895,
+      "length": 12079,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "ff525e0a69ffd7bf"
+    },
+    "/docs/survey/2025-1.1/bestareadev.svg": {
+      "offset": 3215974,
+      "length": 11743,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "d20134294aa3c663"
+    },
+    "/docs/survey/2025-1.1/newapi.svg": {
+      "offset": 3227717,
+      "length": 11862,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "b581d384fb1b55ba"
+    },
+    "/docs/survey/2025-1.1/wcurl.svg": {
+      "offset": 3239579,
+      "length": 12295,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "1ab7ce95fdec216f"
+    },
+    "/docs/survey/2025-1.1/trurl.svg": {
+      "offset": 3251874,
+      "length": 12284,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "4c47a5718f8b7dd3"
+    },
+    "/": {
+      "offset": 0,
+      "length": 2111,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b984521555848447"
+    }
+  }
+}

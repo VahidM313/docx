@@ -1,1 +1,937 @@
-{"id":"hono","name":"Hono","version":"v4.7","commit":"6abba2ac","origin":"https://hono.dev","entryPath":"/docs/","updatedAt":"2026-10-10T21:16:15.167Z","totalBytes":5965488,"chunkCount":158,"routes":{"/docs":{"offset":0,"length":14395,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dc24f95c7211dba0"},"/examples":{"offset":14395,"length":9080,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ba5429dcbda0669b"},"/docs/getting-started/nextjs":{"offset":23475,"length":12467,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"05a886a1d3948ad6"},"/docs/getting-started/fastly":{"offset":35942,"length":12729,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2adb712b45d3e2fe"},"/docs/getting-started/bun":{"offset":48671,"length":13278,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"af974087202b22e3"},"/docs/concepts/developer-experience":{"offset":61949,"length":10030,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d64c1bcc805cf2ed"},"/docs/getting-started/vercel":{"offset":71979,"length":11696,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1fe3c3d6e5a1a077"},"/docs/concepts/web-standard":{"offset":83675,"length":11144,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a4388551e3e17e51"},"/docs/concepts/middleware":{"offset":94819,"length":11357,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5eaf5db2fa1047de"},"/docs/getting-started/basic":{"offset":106176,"length":13664,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"64f0afa1b5fdc97c"},"/docs/getting-started/cloudflare-workers":{"offset":119840,"length":15669,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"11139ac957940d75"},"/docs/getting-started/cloudflare-workers-vite":{"offset":135509,"length":13446,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"63ea7077e91582fb"},"/docs/getting-started/deno":{"offset":148955,"length":13724,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"61586094090de586"},"/docs/concepts/benchmarks":{"offset":162679,"length":13341,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dce3927d6ff970ad"},"/docs/concepts/routers":{"offset":176020,"length":11907,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b12b1b6f92cc102d"},"/docs/concepts/motivation":{"offset":187927,"length":10445,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9455a905a6be0b6a"},"/docs/concepts/stacks":{"offset":198372,"length":13998,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3ecc6dd020d702ec"},"/docs/getting-started/google-cloud-run":{"offset":212370,"length":12394,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0bfb7a31bbe3ee4a"},"/docs/getting-started/supabase-functions":{"offset":224764,"length":11900,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9207eef9187b77e8"},"/docs/getting-started/aws-lambda":{"offset":236664,"length":13365,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a632fc05e398e7f8"},"/docs/getting-started/lambda-edge":{"offset":250029,"length":12777,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8ff9ad445b98f98b"},"/docs/getting-started/azure-functions":{"offset":262806,"length":12576,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"295bdaa9edc780dd"},"/docs/getting-started/ali-function-compute":{"offset":275382,"length":12181,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"13dcc1b60cfc3860"},"/docs/getting-started/netlify":{"offset":287563,"length":11675,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4ca931f31ff7a153"},"/docs/getting-started/cloudbase":{"offset":299238,"length":11658,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"45c14b64f1be36f6"},"/docs/api/exception":{"offset":310896,"length":12800,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c0920084cbdea41e"},"/docs/api/hono":{"offset":323696,"length":15790,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b800e4ae51ee6998"},"/docs/getting-started/service-worker":{"offset":339486,"length":12751,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0af8d4f5d4f5747f"},"/docs/getting-started/nodejs":{"offset":352237,"length":14755,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5bad0bd534458b60"},"/docs/api/request":{"offset":366992,"length":18361,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d7a7ce3e6a5ad9ef"},"/docs/api/routing":{"offset":385353,"length":18334,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5be0e679c4cecda8"},"/docs/getting-started/webassembly-wasi":{"offset":403687,"length":15494,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4f4ff3c960c38d80"},"/docs/api/context":{"offset":419181,"length":20535,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"54b92a917fc3dafa"},"/docs/guides/faq":{"offset":439716,"length":10575,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a097dbe903bb6129"},"/docs/guides/helpers":{"offset":450291,"length":10718,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"137d7965493ee3b8"},"/docs/guides/others":{"offset":461009,"length":10450,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"66c2298c14a427ae"},"/docs/guides/create-hono":{"offset":471459,"length":12101,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7cfede01531824bc"},"/docs/helpers/accepts":{"offset":483560,"length":11107,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"976dcaabe9eddd73"},"/docs/helpers/conninfo":{"offset":494667,"length":11637,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c262ea69f293be2c"},"/docs/api/presets":{"offset":506304,"length":11578,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7985c8ebd6404ff0"},"/docs/helpers/adapter":{"offset":517882,"length":11836,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"14f23662eb782bb0"},"/docs/guides/testing":{"offset":529718,"length":12164,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"33f3f98cdf917f40"},"/docs/guides/jsx-dom":{"offset":541882,"length":13667,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e8e1fcb948cf1c29"},"/docs/guides/migrating-to-v5":{"offset":555549,"length":14480,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e7428cffb76c26b"},"/docs/guides/best-practices":{"offset":570029,"length":13971,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8e1022f26924c65e"},"/docs/guides/validation":{"offset":584000,"length":14719,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e82fa1334e772836"},"/docs/guides/jsx":{"offset":598719,"length":16047,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d6aa91b77dcfd31f"},"/docs/guides/middleware":{"offset":614766,"length":14329,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"840644a8b536b5c4"},"/docs/guides/rpc":{"offset":629095,"length":22008,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fb82782322a36d60"},"/docs/middleware/builtin/cache":{"offset":651103,"length":12999,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6d7f15777ab6e9c6"},"/docs/helpers/dev":{"offset":664102,"length":11059,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1b37580d5fe741f7"},"/docs/helpers/html":{"offset":675161,"length":12446,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6b34ad359c5a5699"},"/docs/helpers/factory":{"offset":687607,"length":12479,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6ec31a8074862cf3"},"/docs/middleware/builtin/basic-auth":{"offset":700086,"length":12611,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7071ef77cf42ba77"},"/docs/helpers/testing":{"offset":712697,"length":12169,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bcdf885c21cd672c"},"/docs/middleware/builtin/body-limit":{"offset":724866,"length":11927,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dff206cc349a6c17"},"/docs/helpers/proxy":{"offset":736793,"length":12213,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a305a8b87da93795"},"/docs/helpers/jwt":{"offset":749006,"length":13283,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0a8c77870bbcc50c"},"/docs/helpers/css":{"offset":762289,"length":14418,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"aefd6bd9f80e0a08"},"/docs/middleware/builtin/bearer-auth":{"offset":776707,"length":12677,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"abc4bceb384358ac"},"/docs/helpers/route":{"offset":789384,"length":11959,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e859816eeb5d3515"},"/docs/helpers/streaming":{"offset":801343,"length":12081,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d0944b6826e38f2b"},"/docs/helpers/cookie":{"offset":813424,"length":13355,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"95ddd2afd4f98d88"},"/docs/helpers/websocket":{"offset":826779,"length":13025,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d2f201632c7fa1d9"},"/docs/helpers/ssg":{"offset":839804,"length":15993,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"11665c803e333d52"},"/docs/middleware/builtin/combine":{"offset":855797,"length":11591,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8a136cefb306371c"},"/docs/middleware/builtin/etag":{"offset":867388,"length":11419,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"adf26da2c699bcdd"},"/docs/middleware/builtin/ip-restriction":{"offset":878807,"length":11352,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"58b9a27dab67bc75"},"/docs/middleware/builtin/cors":{"offset":890159,"length":12524,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d38ecdf5cc3151a8"},"/docs/middleware/builtin/compress":{"offset":902683,"length":11502,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6a589c8c642ec256"},"/docs/middleware/builtin/context-storage":{"offset":914185,"length":11476,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a17fa01e2c507c46"},"/docs/middleware/builtin/jwk":{"offset":925661,"length":13630,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5e7fad2670871c07"},"/docs/middleware/builtin/jsx-renderer":{"offset":939291,"length":13673,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0d3723f233085639"},"/docs/middleware/builtin/method-not-allowed":{"offset":952964,"length":11268,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"465549b87c4cc5cf"},"/docs/middleware/builtin/csrf":{"offset":964232,"length":12219,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"56d939a8b43de8ae"},"/docs/middleware/builtin/pretty-json":{"offset":976451,"length":11109,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"74913b830f1de925"},"/docs/middleware/builtin/method-override":{"offset":987560,"length":11568,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"34436b898c68c4b8"},"/docs/middleware/builtin/jwt":{"offset":999128,"length":12502,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dce74a8f9ad79624"},"/docs/middleware/builtin/logger":{"offset":1011630,"length":11892,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"162927c2279894af"},"/docs/middleware/builtin/language":{"offset":1023522,"length":13803,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a0769f21477342fb"},"/docs/middleware/builtin/mount":{"offset":1037325,"length":12934,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9231dfc4f45131bb"},"/docs/middleware/builtin/request-id":{"offset":1050259,"length":12310,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"41ae8e6a3f509e0d"},"/docs/middleware/builtin/timing":{"offset":1062569,"length":12117,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6f36698bafe6691f"},"/docs/middleware/builtin/secure-headers":{"offset":1074686,"length":14019,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"68ca66e8f7eede81"},"/examples/validator-error-handling":{"offset":1088705,"length":9808,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c16f83eb3f493a3c"},"/docs/middleware/builtin/timeout":{"offset":1098513,"length":12110,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5fae90fc344a3a00"},"/examples/proxy":{"offset":1110623,"length":9932,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2f0c6f4295ae8986"},"/examples/web-api":{"offset":1120555,"length":10207,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"431bc7522004935e"},"/examples/behind-reverse-proxy":{"offset":1130762,"length":9742,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f6f68b1dd1be2022"},"/examples/grouping-routes-rpc":{"offset":1140504,"length":9777,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"309bbe776efe760c"},"/examples/zod-openapi":{"offset":1150281,"length":10389,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a4a4ed00d9bd0332"},"/docs/middleware/third-party":{"offset":1160670,"length":11825,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0c414c98f68ab533"},"/docs/middleware/builtin/trailing-slash":{"offset":1172495,"length":11555,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1ddf1e1d6f3c2d63"},"/examples/file-upload":{"offset":1184050,"length":10655,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7a884efd8f7c3eba"},"/examples/cbor":{"offset":1194705,"length":10347,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"00119111aaac353b"},"/docs/agents/cli":{"offset":1205052,"length":15420,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"837bf5b2d414b60d"},"/docs/agents":{"offset":1220472,"length":11677,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5e90bb9af067c6a6"},"/examples/swagger-ui":{"offset":1232149,"length":9846,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1cce727e679cb80e"},"/examples/hono-openapi":{"offset":1241995,"length":10783,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"051a9bfc6be7d37d"},"/examples/cloudflare-queue":{"offset":1252778,"length":10388,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a084a7da6f2e003f"},"/examples/htmx":{"offset":1263166,"length":9645,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"55c56f9e839434ad"},"/examples/with-remix":{"offset":1272811,"length":9324,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f292d3aadf1eb03f"},"/examples/stripe-webhook":{"offset":1282135,"length":10979,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2c76233dbca3099f"},"/examples/scalar":{"offset":1293114,"length":11217,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c13a60c50e688cbc"},"/examples/stytch-auth":{"offset":1304331,"length":12633,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"afc704ee667582d4"},"/examples/cloudflare-durable-objects":{"offset":1316964,"length":11248,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dea598550c5e451b"},"/examples/hono-docs":{"offset":1328212,"length":11407,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b418e4ed912b4889"},"/examples/better-auth":{"offset":1339619,"length":11304,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e82bf02b2a596f08"},"/examples/cloudflare-vitest":{"offset":1350923,"length":10703,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"783b85abdcb07790"},"/examples/inferdi":{"offset":1361626,"length":13063,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"158430057c920ddc"},"/examples/prisma":{"offset":1374689,"length":14136,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c17c845eefa66727"},"/examples/pylon":{"offset":1388825,"length":12778,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b204a1069a3981ae"},"/examples/better-auth-on-cloudflare":{"offset":1401603,"length":14264,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a499f4154b813d37"},"/examples/apitally":{"offset":1415867,"length":10718,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7fb9a90034ff7644"},"/examples/hono-authjs":{"offset":1426585,"length":13381,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"80409acbd07e98e2"},"/vp-icons.css":{"offset":1439966,"length":1320,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"84b14445925246d5"},"/images/logo.svg":{"offset":1441286,"length":284,"mime":"image/svg+xml","gzipped":true,"hash":"b8d8045b64b64d83"},"/favicon.ico":{"offset":1441570,"length":2315,"mime":"image/vnd.microsoft.icon","gzipped":true,"hash":"6a65cffba59f84bb"},"/assets/style.DGE5tDMy.css":{"offset":1443885,"length":29065,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"f0b1a90352a7021a"},"/images/ss.png":{"offset":1472950,"length":31262,"mime":"image/png","gzipped":true,"hash":"b1249369984dfaa9"},"/images/bench08.png":{"offset":1504212,"length":183595,"mime":"image/png","gzipped":true,"hash":"e7061de3d71948b7"},"/images/bench01.png":{"offset":1687807,"length":170234,"mime":"image/png","gzipped":true,"hash":"5a6de1f766882e53"},"/images/bench04.png":{"offset":1858041,"length":172370,"mime":"image/png","gzipped":true,"hash":"2d98c0cb1abe0af2"},"/images/bench02.png":{"offset":2030411,"length":176786,"mime":"image/png","gzipped":true,"hash":"878a313ca2674884"},"/images/bench03.png":{"offset":2207197,"length":176286,"mime":"image/png","gzipped":true,"hash":"c1de935edf65a428"},"/images/bench07.png":{"offset":2383483,"length":191461,"mime":"image/png","gzipped":true,"hash":"7ddc68c757bc1d32"},"/images/bench05.png":{"offset":2574944,"length":193817,"mime":"image/png","gzipped":true,"hash":"1499318cfe7a836d"},"/images/bench09.png":{"offset":2768761,"length":194331,"mime":"image/png","gzipped":true,"hash":"995d46c4ca8b6929"},"/images/bench06.png":{"offset":2963092,"length":195007,"mime":"image/png","gzipped":true,"hash":"bd3ed903594fb43c"},"/images/bench10.png":{"offset":3158099,"length":195446,"mime":"image/png","gzipped":true,"hash":"7c7c00dad3a37a7f"},"/images/bench12.png":{"offset":3353545,"length":197899,"mime":"image/png","gzipped":true,"hash":"1f6b28d8368830ff"},"/images/bench11.png":{"offset":3551444,"length":199630,"mime":"image/png","gzipped":true,"hash":"3dcc9b17f929387b"},"/images/bench13.png":{"offset":3751074,"length":195057,"mime":"image/png","gzipped":true,"hash":"402173d4f268c07e"},"/images/timing-example.png":{"offset":3946131,"length":9314,"mime":"image/png","gzipped":true,"hash":"1cfcdd7636152608"},"/images/router-tree.jpg":{"offset":3955445,"length":67177,"mime":"image/jpeg","gzipped":true,"hash":"225b3ab213ab4e2c"},"/images/css-ss.png":{"offset":4022622,"length":83061,"mime":"image/png","gzipped":true,"hash":"acacaba9e2b580c9"},"/images/ss03.png":{"offset":4105683,"length":140046,"mime":"image/png","gzipped":true,"hash":"d3b6aa84dfd676be"},"/images/pylon-example.png":{"offset":4245729,"length":165520,"mime":"image/png","gzipped":true,"hash":"02df0fba2250edc5"},"/images/router-linear.jpg":{"offset":4411249,"length":77041,"mime":"image/jpeg","gzipped":true,"hash":"afc905238578082f"},"/images/router-regexp.jpg":{"offset":4488290,"length":91135,"mime":"image/jpeg","gzipped":true,"hash":"7d1a23c1ebc515a2"},"/images/bench16.png":{"offset":4579425,"length":176124,"mime":"image/png","gzipped":true,"hash":"fc230631fec4c05a"},"/images/bench14.png":{"offset":4755549,"length":198385,"mime":"image/png","gzipped":true,"hash":"d22abe32e6f48bc0"},"/images/bench15.png":{"offset":4953934,"length":197147,"mime":"image/png","gzipped":true,"hash":"49330c0ee3824b87"},"/__docx_assets/84ccf6ebaac199.bin":{"offset":5151081,"length":171189,"mime":"image/png","gzipped":true,"hash":"ace9327ed9cd531c"},"/assets/inter-italic-greek-ext.1u6EdAuj.woff2":{"offset":5322270,"length":17432,"mime":"font/woff2","gzipped":true,"hash":"b69d6a88f91b8357"},"/assets/inter-roman-vietnamese.BjW4sHH5.woff2":{"offset":5339702,"length":14095,"mime":"font/woff2","gzipped":true,"hash":"4cb0cafc5a6aec77"},"/assets/inter-roman-cyrillic.C5lxZ8CY.woff2":{"offset":5353797,"length":29192,"mime":"font/woff2","gzipped":true,"hash":"b8edb6e69fa0ad08"},"/assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2":{"offset":5382989,"length":40521,"mime":"font/woff2","gzipped":true,"hash":"7a69a46962f8ced3"},"/assets/inter-roman-greek-ext.CqjqNYQ-.woff2":{"offset":5423510,"length":16295,"mime":"font/woff2","gzipped":true,"hash":"e76b0ec93b013fdb"},"/assets/inter-roman-greek.BBVDIX6e.woff2":{"offset":5439805,"length":29948,"mime":"font/woff2","gzipped":true,"hash":"f660699d549fea98"},"/assets/inter-italic-latin-ext.CN1xVJS-.woff2":{"offset":5469753,"length":120898,"mime":"font/woff2","gzipped":true,"hash":"e4120f693774ecc0"},"/assets/inter-italic-cyrillic-ext.r48I6akx.woff2":{"offset":5590651,"length":43145,"mime":"font/woff2","gzipped":true,"hash":"a65409b197e391d1"},"/assets/inter-italic-vietnamese.BSbpV94h.woff2":{"offset":5633796,"length":14907,"mime":"font/woff2","gzipped":true,"hash":"9732292cae612031"},"/assets/inter-italic-cyrillic.By2_1cv3.woff2":{"offset":5648703,"length":31328,"mime":"font/woff2","gzipped":true,"hash":"b11269313546f35e"},"/assets/inter-italic-greek.DJ8dCoTZ.woff2":{"offset":5680031,"length":32592,"mime":"font/woff2","gzipped":true,"hash":"e0dae75747cbe0eb"},"/assets/inter-italic-latin.C2AdPX0b.woff2":{"offset":5712623,"length":74824,"mime":"font/woff2","gzipped":true,"hash":"24f73d84af60a14d"},"/assets/inter-roman-latin.Di8DUHzh.woff2":{"offset":5787447,"length":67828,"mime":"font/woff2","gzipped":true,"hash":"dc22174f4c7bd4df"},"/assets/inter-roman-latin-ext.4ZJIpNVo.woff2":{"offset":5855275,"length":110213,"mime":"font/woff2","gzipped":true,"hash":"27df89944e409254"},"/":{"offset":0,"length":14395,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dc24f95c7211dba0"}}}
+{
+  "id": "hono",
+  "name": "Hono",
+  "version": "v4.7",
+  "commit": "8198c6b6",
+  "origin": "https://hono.dev",
+  "entryPath": "/docs/",
+  "updatedAt": "2026-10-11T10:38:31.854Z",
+  "totalBytes": 5511604,
+  "chunkCount": 131,
+  "routes": {
+    "/docs": {
+      "offset": 0,
+      "length": 14393,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8b506376f5534a93"
+    },
+    "/docs/getting-started/vercel": {
+      "offset": 14393,
+      "length": 11687,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "84ee72ee5841c7bb"
+    },
+    "/docs/getting-started/deno": {
+      "offset": 26080,
+      "length": 13719,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "050c4899f4797b5f"
+    },
+    "/docs/getting-started/cloudflare-workers-vite": {
+      "offset": 39799,
+      "length": 13440,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "616d74a69eea8f25"
+    },
+    "/examples": {
+      "offset": 53239,
+      "length": 9078,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4a628d529b4ee3ae"
+    },
+    "/docs/concepts/developer-experience": {
+      "offset": 62317,
+      "length": 10025,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8661ffc55b8c9ae4"
+    },
+    "/docs/getting-started/basic": {
+      "offset": 72342,
+      "length": 13666,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f63073286b5cfba8"
+    },
+    "/docs/getting-started/bun": {
+      "offset": 86008,
+      "length": 13276,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b3393113c009b47c"
+    },
+    "/docs/concepts/stacks": {
+      "offset": 99284,
+      "length": 13994,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9f1862c7c6ca25e6"
+    },
+    "/docs/concepts/middleware": {
+      "offset": 113278,
+      "length": 11344,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "660064448d5a9dec"
+    },
+    "/docs/getting-started/nextjs": {
+      "offset": 124622,
+      "length": 12464,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "946ec14b7bdacdfc"
+    },
+    "/docs/getting-started/cloudflare-workers": {
+      "offset": 137086,
+      "length": 15664,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b23cdf31779fbd80"
+    },
+    "/docs/concepts/routers": {
+      "offset": 152750,
+      "length": 11904,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8e424abdcdb70518"
+    },
+    "/docs/concepts/motivation": {
+      "offset": 164654,
+      "length": 10435,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "66f0ce1dbb200c76"
+    },
+    "/docs/concepts/web-standard": {
+      "offset": 175089,
+      "length": 11136,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fa60c9e2f19ed83c"
+    },
+    "/docs/getting-started/fastly": {
+      "offset": 186225,
+      "length": 12730,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a336d15bceb13188"
+    },
+    "/docs/concepts/benchmarks": {
+      "offset": 198955,
+      "length": 13346,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a9b568873c8b483f"
+    },
+    "/docs/getting-started/aws-lambda": {
+      "offset": 212301,
+      "length": 13358,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fdc785833674de15"
+    },
+    "/docs/getting-started/google-cloud-run": {
+      "offset": 225659,
+      "length": 12387,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3cfc18fcfbe4a067"
+    },
+    "/docs/getting-started/lambda-edge": {
+      "offset": 238046,
+      "length": 12770,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1cb89c14276189c1"
+    },
+    "/docs/getting-started/netlify": {
+      "offset": 250816,
+      "length": 11665,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dfac45507fae6e22"
+    },
+    "/docs/getting-started/supabase-functions": {
+      "offset": 262481,
+      "length": 11893,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dbda74d1fedbe9ab"
+    },
+    "/docs/getting-started/nodejs": {
+      "offset": 274374,
+      "length": 14748,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1509008e06e342e6"
+    },
+    "/docs/api/routing": {
+      "offset": 289122,
+      "length": 18354,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "937f34313ab3d2aa"
+    },
+    "/docs/api/hono": {
+      "offset": 307476,
+      "length": 15810,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bc229a7084698f73"
+    },
+    "/docs/api/exception": {
+      "offset": 323286,
+      "length": 12793,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3bf3549d71a34a53"
+    },
+    "/docs/getting-started/webassembly-wasi": {
+      "offset": 336079,
+      "length": 15486,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9b31b340f653a26e"
+    },
+    "/docs/api/request": {
+      "offset": 351565,
+      "length": 18330,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e7b256c0bd9b1cd1"
+    },
+    "/docs/api/context": {
+      "offset": 369895,
+      "length": 20381,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bf5c9d9ff95b2008"
+    },
+    "/docs/getting-started/cloudbase": {
+      "offset": 390276,
+      "length": 11645,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "42df92390baf07c8"
+    },
+    "/docs/getting-started/azure-functions": {
+      "offset": 401921,
+      "length": 12569,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dca76ac78041ff70"
+    },
+    "/docs/getting-started/ali-function-compute": {
+      "offset": 414490,
+      "length": 12173,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9817986650dfb8a7"
+    },
+    "/docs/getting-started/service-worker": {
+      "offset": 426663,
+      "length": 12752,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "84a07269b9377098"
+    },
+    "/docs/guides/middleware": {
+      "offset": 439415,
+      "length": 14324,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "433d72c000ebee5a"
+    },
+    "/docs/guides/jsx": {
+      "offset": 453739,
+      "length": 16055,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2dd2e40441313d8e"
+    },
+    "/docs/guides/helpers": {
+      "offset": 469794,
+      "length": 10710,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a238ba07be5ed530"
+    },
+    "/docs/guides/create-hono": {
+      "offset": 480504,
+      "length": 12099,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "13dd73c9dab74cde"
+    },
+    "/docs/guides/migrating-to-v5": {
+      "offset": 492603,
+      "length": 14474,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9ef4b747aa77471a"
+    },
+    "/docs/guides/jsx-dom": {
+      "offset": 507077,
+      "length": 13669,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d4b6e2651b2572b0"
+    },
+    "/docs/guides/testing": {
+      "offset": 520746,
+      "length": 12155,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "69c849838234b1c1"
+    },
+    "/docs/guides/validation": {
+      "offset": 532901,
+      "length": 14720,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4c940664ba38b625"
+    },
+    "/docs/api/presets": {
+      "offset": 547621,
+      "length": 11572,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "51d56f9037bfccbc"
+    },
+    "/docs/guides/best-practices": {
+      "offset": 559193,
+      "length": 13966,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "10f8c86127684ba4"
+    },
+    "/docs/guides/rpc": {
+      "offset": 573159,
+      "length": 22007,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b1bf841bcc02478a"
+    },
+    "/docs/guides/others": {
+      "offset": 595166,
+      "length": 10441,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d99996b690c9b66e"
+    },
+    "/docs/guides/faq": {
+      "offset": 605607,
+      "length": 10562,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0171aab6d440a11c"
+    },
+    "/docs/helpers/conninfo": {
+      "offset": 616169,
+      "length": 11629,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "64fea6ce58dcaa23"
+    },
+    "/docs/helpers/accepts": {
+      "offset": 627798,
+      "length": 11101,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "39151dcb0d0ba663"
+    },
+    "/docs/helpers/adapter": {
+      "offset": 638899,
+      "length": 11828,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "074b85537042fd15"
+    },
+    "/docs/middleware/builtin/body-limit": {
+      "offset": 650727,
+      "length": 11921,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1618766f7b3b0b65"
+    },
+    "/docs/helpers/css": {
+      "offset": 662648,
+      "length": 14419,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f3270f12a18bb89a"
+    },
+    "/docs/helpers/jwt": {
+      "offset": 677067,
+      "length": 13279,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5111c9ee52459ef9"
+    },
+    "/docs/helpers/route": {
+      "offset": 690346,
+      "length": 11956,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "84d6dbcc90ab57e3"
+    },
+    "/docs/helpers/proxy": {
+      "offset": 702302,
+      "length": 12207,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b49e5989b045fce5"
+    },
+    "/docs/middleware/builtin/bearer-auth": {
+      "offset": 714509,
+      "length": 12673,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0cbc75ed399becce"
+    },
+    "/docs/helpers/factory": {
+      "offset": 727182,
+      "length": 12477,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5cf70e9172a5cdc7"
+    },
+    "/docs/helpers/websocket": {
+      "offset": 739659,
+      "length": 13023,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b92987b54c3dfd3"
+    },
+    "/docs/helpers/html": {
+      "offset": 752682,
+      "length": 12445,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c8badf0df7fdc9d4"
+    },
+    "/docs/helpers/cookie": {
+      "offset": 765127,
+      "length": 13352,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6ae3eef0b83f0e4a"
+    },
+    "/docs/middleware/builtin/basic-auth": {
+      "offset": 778479,
+      "length": 12607,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3628315b6abaec87"
+    },
+    "/docs/helpers/ssg": {
+      "offset": 791086,
+      "length": 15994,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f6be4a4b1f4376bc"
+    },
+    "/docs/middleware/builtin/cache": {
+      "offset": 807080,
+      "length": 12994,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3cffe8ac1031767b"
+    },
+    "/docs/helpers/dev": {
+      "offset": 820074,
+      "length": 11050,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7d9d1fd75c6c5c0e"
+    },
+    "/docs/helpers/testing": {
+      "offset": 831124,
+      "length": 12171,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bfd22a3c23dbeb29"
+    },
+    "/docs/helpers/streaming": {
+      "offset": 843295,
+      "length": 12083,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7c320f100bb1439a"
+    },
+    "/docs/middleware/builtin/jwt": {
+      "offset": 855378,
+      "length": 12495,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "803c016b6709c12a"
+    },
+    "/docs/middleware/builtin/jwk": {
+      "offset": 867873,
+      "length": 13626,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b286f8e38b69ad55"
+    },
+    "/docs/middleware/builtin/language": {
+      "offset": 881499,
+      "length": 13802,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bef81d02edbe9397"
+    },
+    "/docs/middleware/builtin/combine": {
+      "offset": 895301,
+      "length": 11575,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "506c61e455f635ec"
+    },
+    "/docs/middleware/builtin/cors": {
+      "offset": 906876,
+      "length": 12520,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "20f4a9902da19c55"
+    },
+    "/docs/middleware/builtin/compress": {
+      "offset": 919396,
+      "length": 11496,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1425bff00140f7d6"
+    },
+    "/docs/middleware/builtin/etag": {
+      "offset": 930892,
+      "length": 11409,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "486d2e7217370889"
+    },
+    "/docs/middleware/builtin/mount": {
+      "offset": 942301,
+      "length": 12921,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3cd9b75249170609"
+    },
+    "/docs/middleware/builtin/ip-restriction": {
+      "offset": 955222,
+      "length": 11348,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fef6eb2bd6f8a330"
+    },
+    "/docs/middleware/builtin/csrf": {
+      "offset": 966570,
+      "length": 12210,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "244df52b6a6ed5fb"
+    },
+    "/docs/middleware/builtin/method-not-allowed": {
+      "offset": 978780,
+      "length": 11260,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d5af171548af1fd5"
+    },
+    "/docs/middleware/builtin/method-override": {
+      "offset": 990040,
+      "length": 11559,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "386c12919d578e45"
+    },
+    "/docs/middleware/builtin/context-storage": {
+      "offset": 1001599,
+      "length": 11464,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "150f4d006b44f9ca"
+    },
+    "/docs/middleware/builtin/logger": {
+      "offset": 1013063,
+      "length": 11884,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1cc07fade7906732"
+    },
+    "/docs/middleware/builtin/jsx-renderer": {
+      "offset": 1024947,
+      "length": 13668,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1d9f8bfd8b8ab88d"
+    },
+    "/docs/middleware/builtin/pretty-json": {
+      "offset": 1038615,
+      "length": 11100,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "653a213ca8d2ad68"
+    },
+    "/docs/middleware/third-party": {
+      "offset": 1049715,
+      "length": 11819,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "06ca81e2705d7791"
+    },
+    "/docs/middleware/builtin/timeout": {
+      "offset": 1061534,
+      "length": 12108,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2ac62dea324ace0b"
+    },
+    "/docs/agents/cli": {
+      "offset": 1073642,
+      "length": 16280,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0f1310f1e22fb96e"
+    },
+    "/docs/middleware/builtin/trailing-slash": {
+      "offset": 1089922,
+      "length": 11550,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "34f20c370cacc6df"
+    },
+    "/docs/middleware/builtin/secure-headers": {
+      "offset": 1101472,
+      "length": 14015,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "263772c48b632470"
+    },
+    "/docs/agents": {
+      "offset": 1115487,
+      "length": 11705,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d8753dfda6bc486b"
+    },
+    "/docs/middleware/builtin/request-id": {
+      "offset": 1127192,
+      "length": 12298,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c27ac415f5c57fe8"
+    },
+    "/docs/middleware/builtin/timing": {
+      "offset": 1139490,
+      "length": 12104,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "14a1c35f7c714eaa"
+    },
+    "/vp-icons.css": {
+      "offset": 1151594,
+      "length": 1320,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "9fb7fb40e3dce720"
+    },
+    "/images/router-regexp.jpg": {
+      "offset": 1152914,
+      "length": 91135,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "42482159f0fef3fc"
+    },
+    "/images/router-tree.jpg": {
+      "offset": 1244049,
+      "length": 67177,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "1b1f607ed3a85fe0"
+    },
+    "/images/ss03.png": {
+      "offset": 1311226,
+      "length": 140046,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ae613145aa575372"
+    },
+    "/favicon.ico": {
+      "offset": 1451272,
+      "length": 2315,
+      "mime": "image/vnd.microsoft.icon",
+      "gzipped": true,
+      "hash": "cfbcbdcb87c5e734"
+    },
+    "/images/bench01.png": {
+      "offset": 1453587,
+      "length": 170234,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3a0c5b8f036f0311"
+    },
+    "/images/ss.png": {
+      "offset": 1623821,
+      "length": 31262,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ea9274787b192920"
+    },
+    "/images/bench02.png": {
+      "offset": 1655083,
+      "length": 176786,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c564416924280499"
+    },
+    "/images/logo.svg": {
+      "offset": 1831869,
+      "length": 284,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a1dfdacc03e4e168"
+    },
+    "/images/router-linear.jpg": {
+      "offset": 1832153,
+      "length": 77041,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "54d8f65ab54ecbc2"
+    },
+    "/assets/style.Di7RWZBV.css": {
+      "offset": 1909194,
+      "length": 29073,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "4ca797dc6d74ffcd"
+    },
+    "/images/bench05.png": {
+      "offset": 1938267,
+      "length": 193817,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "9922e6e50c9834f3"
+    },
+    "/images/bench06.png": {
+      "offset": 2132084,
+      "length": 195007,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "53301a531cb28bc1"
+    },
+    "/images/bench03.png": {
+      "offset": 2327091,
+      "length": 176286,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ddc7659bfe69cc87"
+    },
+    "/images/bench04.png": {
+      "offset": 2503377,
+      "length": 172370,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "046650661e818f89"
+    },
+    "/images/bench13.png": {
+      "offset": 2675747,
+      "length": 195057,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c5415ad9b9dcaddf"
+    },
+    "/images/css-ss.png": {
+      "offset": 2870804,
+      "length": 83061,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "73f1aaa89642c5ac"
+    },
+    "/images/bench08.png": {
+      "offset": 2953865,
+      "length": 183595,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "47551ec5e118e3a8"
+    },
+    "/images/bench11.png": {
+      "offset": 3137460,
+      "length": 199630,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "26ad7af2818fcd0f"
+    },
+    "/images/bench14.png": {
+      "offset": 3337090,
+      "length": 198385,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e8ee13990cdd6579"
+    },
+    "/images/bench09.png": {
+      "offset": 3535475,
+      "length": 194331,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "30c45fd149645e4c"
+    },
+    "/images/bench10.png": {
+      "offset": 3729806,
+      "length": 195446,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "77eb63458a64bf99"
+    },
+    "/images/bench07.png": {
+      "offset": 3925252,
+      "length": 191461,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b53d5517a9a93cbb"
+    },
+    "/images/bench16.png": {
+      "offset": 4116713,
+      "length": 176124,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "50ef3b2d0c22fa99"
+    },
+    "/images/bench12.png": {
+      "offset": 4292837,
+      "length": 197899,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ccb21fceb0ec22b7"
+    },
+    "/images/bench15.png": {
+      "offset": 4490736,
+      "length": 197147,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7ac4317a0e7bcead"
+    },
+    "/images/timing-example.png": {
+      "offset": 4687883,
+      "length": 9314,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "5ad1925b498a1ab8"
+    },
+    "/__docx_assets/84ccf6ebaac199.bin": {
+      "offset": 4697197,
+      "length": 171189,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1d70a322031c948e"
+    },
+    "/assets/inter-italic-vietnamese.BSbpV94h.woff2": {
+      "offset": 4868386,
+      "length": 14907,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "bf89b2e22250b187"
+    },
+    "/assets/inter-roman-vietnamese.BjW4sHH5.woff2": {
+      "offset": 4883293,
+      "length": 14095,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "73c77e9e56f44037"
+    },
+    "/assets/inter-italic-cyrillic.By2_1cv3.woff2": {
+      "offset": 4897388,
+      "length": 31328,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "d350118d3ccbe16c"
+    },
+    "/assets/inter-roman-cyrillic.C5lxZ8CY.woff2": {
+      "offset": 4928716,
+      "length": 29192,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "4462eacbb605d693"
+    },
+    "/assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2": {
+      "offset": 4957908,
+      "length": 40521,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e7f646b31fe1539e"
+    },
+    "/assets/inter-italic-latin-ext.CN1xVJS-.woff2": {
+      "offset": 4998429,
+      "length": 120898,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "21cbe44191b113d8"
+    },
+    "/assets/inter-roman-latin-ext.4ZJIpNVo.woff2": {
+      "offset": 5119327,
+      "length": 110213,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e60f40c3d9ebf9fb"
+    },
+    "/assets/inter-italic-cyrillic-ext.r48I6akx.woff2": {
+      "offset": 5229540,
+      "length": 43145,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "79c0e487df594b1a"
+    },
+    "/assets/inter-roman-greek.BBVDIX6e.woff2": {
+      "offset": 5272685,
+      "length": 29948,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "0af738c9f2ece110"
+    },
+    "/assets/inter-roman-greek-ext.CqjqNYQ-.woff2": {
+      "offset": 5302633,
+      "length": 16295,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "a920fad3caf08d9c"
+    },
+    "/assets/inter-italic-latin.C2AdPX0b.woff2": {
+      "offset": 5318928,
+      "length": 74824,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "51ce22361c0fd3d6"
+    },
+    "/assets/inter-roman-latin.Di8DUHzh.woff2": {
+      "offset": 5393752,
+      "length": 67828,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "f1780724de9f1526"
+    },
+    "/assets/inter-italic-greek-ext.1u6EdAuj.woff2": {
+      "offset": 5461580,
+      "length": 17432,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "08070cee243b003e"
+    },
+    "/assets/inter-italic-greek.DJ8dCoTZ.woff2": {
+      "offset": 5479012,
+      "length": 32592,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "da2cea9241fc59d4"
+    },
+    "/": {
+      "offset": 0,
+      "length": 14393,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8b506376f5534a93"
+    }
+  }
+}

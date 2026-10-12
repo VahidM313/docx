@@ -1,1 +1,2701 @@
-{"id":"cppreference","name":"C++ Reference (cppreference)","version":"C++23/26","commit":"a590ee74","updatedAt":"2026-10-10T16:39:44.609Z","totalBytes":8489767,"chunkCount":243,"routes":{"/cpp/26":{"offset":3285345,"length":51992,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fbd1a2d7ba513ce1"},"/cpp/container/vector":{"offset":7508203,"length":43251,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"08d1b8da1976f1bf"},"/cpp/feature_test":{"offset":891878,"length":77359,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"56bac61044ec8bbd"},"/c/99":{"offset":2802928,"length":39787,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7daca53206db3ace"},"/cpp/language/constant_expression":{"offset":8315,"length":51855,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"22196f7fcfd67462"},"/cpp/atomic/memory_order":{"offset":6580535,"length":49145,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2c62523b7d5d4f09"},"/cpp/container/multimap":{"offset":4302334,"length":41484,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"64161df4db762a86"},"/cpp/experimental/scope_exit":{"offset":732246,"length":38105,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3e196018de3275f9"},"/cpp/links/libs":{"offset":4963637,"length":81301,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f05df4d50e9705fb"},"/cpp/regex/basic_regex":{"offset":5839439,"length":38222,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"16d2287451b1b1c0"},"/__docx_assets/63ef4a913cbb2e.svg":{"offset":1710699,"length":248,"mime":"image/svg+xml","gzipped":true,"hash":"bab5d8770875e766"},"/__docx_assets/23ed11532bdaa6.css":{"offset":7293537,"length":6660,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"d517ccbf40fb8534"},"/c/language/initialization":{"offset":5091076,"length":37857,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5035a0d14878dda4"},"/cpp/experimental/ostream_joiner":{"offset":8255121,"length":37426,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"07c78d83d33420c7"},"/c/11":{"offset":6136012,"length":36463,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3b405d98a7e6af6a"},"/cpp/iterator":{"offset":6293950,"length":47056,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8bcb6898a004a5eb"},"/cpp/types":{"offset":6172475,"length":38530,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"253736d375bb0a02"},"/cpp/preprocessor":{"offset":1260939,"length":39151,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e8e363ed7c54653f"},"/cpp/language/overload_resolution":{"offset":5958717,"length":54789,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d4921748743e9654"},"/cpp/utility/variadic":{"offset":3876682,"length":37700,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"88443572ffb8e8f4"},"/cpp/comment":{"offset":8098449,"length":39410,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3353b25ce63a67ee"},"/cpp/20":{"offset":7916128,"length":58128,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"20538ef3dfa9324d"},"/__docx_assets/999ccbb5027b75.css":{"offset":5611734,"length":5937,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"c8eb18f09ca97b97"},"/cpp/23":{"offset":676078,"length":56168,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"da09cf3d2b70592e"},"/cpp/language/contracts":{"offset":7077538,"length":41048,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8e823b59da06c72a"},"/cpp/text/text_encoding":{"offset":6096526,"length":39486,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c60e42d2d6d1acbd"},"/cpp/meta/reflection":{"offset":2269973,"length":49100,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b8b1588561c54605"},"/cpp/14":{"offset":7193560,"length":44050,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"573838d568415635"},"/cpp/atomic/atomic_ref":{"offset":2147074,"length":41977,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8ed6cd582be30386"},"/cpp/language/eval_order":{"offset":587083,"length":43437,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"db39af409078ce45"},"/cpp/language/declarations":{"offset":1420746,"length":44163,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"609eef692eaafc53"},"/cpp/atomic/atomic":{"offset":344789,"length":46218,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fc86535f93c4823d"},"/__docx_assets/edf8ba5c8e57b9.svg":{"offset":5526240,"length":2317,"mime":"image/svg+xml","gzipped":true,"hash":"6af8c7b60a599d3c"},"/c/string":{"offset":7118742,"length":34683,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5c123576bcb20eb4"},"/cpp/meta":{"offset":271142,"length":35200,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ec9aa0edf2e1208a"},"/cpp/utility/bitset":{"offset":5331390,"length":40406,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c27e06f2d8f94f4f"},"/__docx_assets/7bc4384ead6be7.css":{"offset":7551454,"length":8478,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"587efb9d8f603bb3"},"/cpp/language/while":{"offset":1126010,"length":39847,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cef2c65c7c6b9eb3"},"/cpp/compiler_support/29":{"offset":1837388,"length":37819,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6db85f6b0494e13e"},"/cpp/container/set":{"offset":1668398,"length":42301,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"90c2c57ffb70281a"},"/cpp/utility/feature_test":{"offset":468576,"length":44425,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"60c8dbc0a8b5b60b"},"/cpp/utility/initializer_list":{"offset":5717213,"length":40533,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"feb7235bdb2a4bb4"},"/__docx_assets/eff4a5f255d954.svg":{"offset":6211220,"length":165,"mime":"image/svg+xml","gzipped":true,"hash":"2e46c83db00c950f"},"/cpp/language/do":{"offset":3246536,"length":38809,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dc7197f09bfe3afc"},"/cpp/numeric/ratio":{"offset":6879967,"length":36576,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4c7a62be07865c93"},"/cpp/io":{"offset":6376664,"length":40568,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6e24171735605bf6"},"/cpp/numeric":{"offset":8216609,"length":38512,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bec536d0c99d845b"},"/c/language/statements":{"offset":5488114,"length":38126,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b349c39dff3fb39c"},"/cpp/io/basic_ostream":{"offset":2713108,"length":41628,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6dc4a1caeebaf4b0"},"/cpp/thread":{"offset":6417232,"length":45839,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a1ee0035c03ea3cf"},"/cpp/compiler_support/23":{"offset":1174023,"length":49710,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8fdf96207a5097ae"},"/cpp/container/hive":{"offset":2588841,"length":41386,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c8b910cb949e657d"},"/cpp/language/functions":{"offset":6254715,"length":39235,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"709fa78e888527fb"},"/cpp/experimental/concurrency":{"offset":6211385,"length":36768,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4a2b18955a36a151"},"/c/memory":{"offset":2473065,"length":34909,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2f87e18bd327f38b"},"/cpp/language/coroutines":{"offset":3610551,"length":50077,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ec69c8fa3004caf0"},"/cpp/container/deque":{"offset":5757746,"length":42557,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"85608387a92b8bed"},"/cpp/types/numeric_limits":{"offset":4840112,"length":42293,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2dfba5894314055b"},"/cpp/language/switch":{"offset":4669822,"length":42223,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9c11bd14850509a1"},"/cpp/named_req":{"offset":4508492,"length":41006,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0a228b8527b313c6"},"/c/program":{"offset":3573327,"length":37019,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9a3698582578b67f"},"/cpp/experimental/simd":{"offset":1581430,"length":40470,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"99439fd18538eed9"},"/cpp/utility/bit":{"offset":7877236,"length":38892,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"72dfb274ee2c8c7f"},"/cpp/numeric/math":{"offset":4172008,"length":42899,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1fc27cc8563e12b8"},"/cpp/utility/integer_sequence":{"offset":306342,"length":38447,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ef108a8c7fea6143"},"/__docx_assets/5b5b3029326914.png":{"offset":4549498,"length":228,"mime":"image/png","gzipped":true,"hash":"2c16469a5183fb48"},"/cpp/text":{"offset":7300353,"length":36551,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2c70c35659a647dc"},"/__docx_assets/44d0823a3eaaf5.png":{"offset":7717280,"length":247,"mime":"image/png","gzipped":true,"hash":"b724e7fdf3331108"},"/cpp/language/if":{"offset":4712045,"length":45064,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6936c59ff1401ca0"},"/c/keyword":{"offset":3038445,"length":38204,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"46e836790875cc8d"},"/cpp/language/lookup":{"offset":7379047,"length":38559,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1597fcfe97c3f924"},"/cpp/compiler_support/26":{"offset":3076649,"length":51174,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"586d86e127fa0ca5"},"/cpp/meta/type_traits":{"offset":5288268,"length":43122,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f48919312eade1c2"},"/cpp/error":{"offset":8177498,"length":39111,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"298921d7fdca5373"},"/cpp/compiler_support/11":{"offset":4382591,"length":41660,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7873e18aac091cf7"},"/__docx_assets/6cfeb2750ae08b.png":{"offset":1300090,"length":245,"mime":"image/png","gzipped":true,"hash":"ad2f795aac084c8a"},"/cpp/experimental/randint":{"offset":4214907,"length":36394,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"62eee9f1364b3676"},"/__docx_assets/a8dc9eb8149e2b.css":{"offset":5617671,"length":7760,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"8ca4cac65a9b0448"},"/cpp/utility/source_location":{"offset":6629680,"length":38780,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"06ccb84fe6366865"},"/c/header":{"offset":6842325,"length":37642,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"12ee84d8739fa3ca"},"/cpp/29":{"offset":1464909,"length":38475,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ffd839195d36d6b4"},"/c/language/declarations":{"offset":1797137,"length":40251,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"27d9c0891540d15b"},"/cpp/algorithm/ranges":{"offset":2754736,"length":48192,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2f6ab53b10d117a0"},"/cpp/container/mdspan":{"offset":188598,"length":41106,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"04ddd22253db49a7"},"/cpp/links":{"offset":1223733,"length":37206,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6afaf6779cff3d08"},"/__docx_assets/ec0e2fc51496f6.png":{"offset":4508313,"length":179,"mime":"image/png","gzipped":true,"hash":"951f3a3ebb24c8b4"},"/cpp/utility/basic_stacktrace":{"offset":4549931,"length":40443,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"563020957cc5a9eb"},"/cpp/algorithm":{"offset":5667550,"length":49663,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"18442f164f030338"},"/__docx_assets/85aeec907c04d0.svg":{"offset":7300197,"length":156,"mime":"image/svg+xml","gzipped":true,"hash":"5d6b5654783fc354"},"/cpp/experimental/lib_extensions_2":{"offset":1542793,"length":38637,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cf31bcb69c5fe564"},"/cpp/container/list":{"offset":6995182,"length":41967,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cd749a3c3979774e"},"/cpp/language/operator_precedence":{"offset":5625431,"length":42119,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5490d46c7f6efa98"},"/cpp/compiler_support/17":{"offset":3914382,"length":45562,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eb8cca2089bc05e8"},"/cpp/container/span":{"offset":1961904,"length":41108,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"870c6bbdecf837ce"},"/__docx_assets/f5ad9d330dfe85.png":{"offset":1875207,"length":121,"mime":"image/png","gzipped":true,"hash":"ffd76cf171efe3c2"},"/cpp/thread/jthread":{"offset":7037149,"length":40389,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3ca739bc5dbf3f5b"},"/cpp/container/multiset":{"offset":102271,"length":41280,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"52e4122f5c23861e"},"/cpp/string/basic_string":{"offset":3337337,"length":45089,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4368f1eb12e4dc28"},"/cpp/experimental/resource_adaptor":{"offset":6501452,"length":38264,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dda808637f1c8353"},"/cpp/locale":{"offset":2999184,"length":39261,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e6e38cddf0c62f20"},"/cpp/numeric/linalg":{"offset":6013506,"length":40491,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"75c412de2f7edd6a"},"/cpp/utility/expected":{"offset":2671843,"length":41265,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6a5dbd66fc00fc74"},"/__docx_assets/f8001a5ab1aa80.png":{"offset":3610346,"length":205,"mime":"image/png","gzipped":true,"hash":"988d9464b00f547b"},"/cpp/language/value_category":{"offset":4081119,"length":48131,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ecc4ec3c18f74316"},"/cpp/experimental/invocation_type":{"offset":5163892,"length":37258,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"67617945e5a3f6b7"},"/c/language/functions":{"offset":2842715,"length":36158,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f693d90cf5ab2be7"},"/cpp/experimental/parallelism_2":{"offset":4803399,"length":36478,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"830b8d84dbeed8a7"},"/cpp/ranges":{"offset":6753492,"length":48396,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"27b9b73d9fc5d4cd"},"/__docx_assets/c336a0fd78fcbd.css":{"offset":1789063,"length":8074,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"5b3fc696a1fd9217"},"/cpp/numeric/complex":{"offset":3204667,"length":41869,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6f59c07cc47fe47f"},"/cpp/utility/hash":{"offset":6053997,"length":42529,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ef92889c14d1180d"},"/__docx_assets/248b2f50f3837d.svg":{"offset":5201150,"length":175,"mime":"image/svg+xml","gzipped":true,"hash":"a0861df8a857a4ff"},"/cpp/experimental/lib_extensions":{"offset":3752759,"length":40225,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2cf965c2c13c10b8"},"/cpp/chrono":{"offset":4424251,"length":41110,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7294f8f6054c797d"},"/cpp/numeric/simd":{"offset":391007,"length":43741,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eebfd53ca2c4699a"},"/c/language/basic_concepts":{"offset":2189051,"length":35710,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"432453e2fc59490d"},"/cpp/standard_library":{"offset":4251301,"length":51033,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"904ed6622c491826"},"/__docx_assets/c6bee1fa262448.css":{"offset":630520,"length":7999,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"35c23b644b3b68ef"},"/c/23":{"offset":7426000,"length":42178,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"16c77bda387fed15"},"/__docx_assets/b679509e176028.png":{"offset":4549726,"length":205,"mime":"image/png","gzipped":true,"hash":"d8117d62b7c95689"},"/cpp/numeric/constants":{"offset":1750755,"length":38308,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"22d8fdcf64455e7e"},"/c/string/byte":{"offset":5918153,"length":40564,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c799bc7f8683831f"},"/__docx_assets/55daee6819dd55.css":{"offset":7417606,"length":8394,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"a1660f44f9991b1f"},"/cpp/utility/pair":{"offset":8373763,"length":38779,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"617285b9357870f8"},"/cpp/regex":{"offset":4631273,"length":38549,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4350385f78863d83"},"/cpp/language/exceptions":{"offset":7468178,"length":40025,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dfdda6e57dd918ce"},"/cpp/container":{"offset":7237610,"length":55927,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"83353ba5d04d2d34"},"/cpp/language/classes":{"offset":6801888,"length":40437,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"87a4e489bf7b2c75"},"/cpp/execution":{"offset":5044938,"length":46138,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2bb22cc67b531de1"},"/__docx_assets/4589da9d983a96.png":{"offset":7193304,"length":256,"mime":"image/png","gzipped":true,"hash":"a67da6e924b760e7"},"/cpp/string/char_traits":{"offset":4882405,"length":38639,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b077dc73e13de538"},"/cpp/language/for":{"offset":1300335,"length":41152,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1b33979d5e610297"},"/__docx_assets/dcfc8227aeaab7.gif":{"offset":7559932,"length":810,"mime":"image/gif","gzipped":true,"hash":"ae157d374eed07b1"},"/cpp/numeric/valarray":{"offset":5570644,"length":41090,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2bbf120f239dc281"},"/cpp/utility/tuple":{"offset":6539716,"length":40819,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"aa192eb1114616a5"},"/cpp/symbol_index":{"offset":3509229,"length":64098,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3ba9c660d74697b4"},"/cpp/container/forward_list":{"offset":5877661,"length":40492,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8f7005b8dc43eda8"},"/cpp/container/unordered_map":{"offset":848666,"length":43212,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f4da6eaa6b67f7b7"},"/cpp/17":{"offset":3698045,"length":54714,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b8a541293c17936d"},"/cpp/numeric/random":{"offset":5201325,"length":43202,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7586f5c73d700875"},"/__docx_assets/ee4ae0c0388c05.png":{"offset":6501328,"length":124,"mime":"image/png","gzipped":true,"hash":"807d04ad6a67a971"},"/cpp/container/unordered_multimap":{"offset":8292547,"length":41499,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b49335717bff6049"},"/c/error":{"offset":3660628,"length":37417,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"332f8903cfcb97b0"},"/cpp/atomic/atomic_flag":{"offset":1341747,"length":39772,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"28c6bc07f8ffee91"},"/c/language/expressions":{"offset":4343818,"length":38773,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a9132c3cc0ca2359"},"/__docx_assets/25083488c2712e.svg":{"offset":7118586,"length":156,"mime":"image/svg+xml","gzipped":true,"hash":"7415a9fded3dac17"},"/cpp/language/initialization":{"offset":60170,"length":42101,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c322665a82d75273"},"/cpp/experimental/is_detected":{"offset":4037375,"length":37467,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"607e2dafdebb5869"},"/cpp/keyword":{"offset":5446797,"length":41317,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"03acfbf6fe8bc2dd"},"/cpp/compiler_support":{"offset":6668460,"length":85032,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8e7e68e743e4c559"},"/__docx_assets/787eedc3198734.png":{"offset":2358372,"length":1523,"mime":"image/png","gzipped":true,"hash":"effbceba61661546"},"/cpp/container/inplace_vector":{"offset":7336904,"length":42143,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6e7a76294763c141"},"/cpp/container/unordered_set":{"offset":4921044,"length":42593,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"31bb52922d8ffdfd"},"/cpp/compiler_support/20":{"offset":3382426,"length":51167,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8bf3d9bbf25d942b"},"/__docx_assets/72e205d2a3c5c0.png":{"offset":7717527,"length":181,"mime":"image/png","gzipped":true,"hash":"1fdbb6da57de0c2a"},"/__docx_assets/84e00d3e2a343e.png":{"offset":6211005,"length":215,"mime":"image/png","gzipped":true,"hash":"5f2ac352d38622bd"},"/cpp/container/array":{"offset":2507974,"length":40814,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"898eee0dcde9e633"},"/cpp/thread/barrier":{"offset":2957955,"length":41229,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"36e75eea9c3a9049"},"/__docx_assets/95e26100ad1edd.css":{"offset":6248153,"length":6562,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"1c560d43e17faa02"},"/cpp/language/union":{"offset":4129250,"length":42758,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"31eaeb30b97ac7bf"},"/__docx_assets/eecd79adef4cea.png":{"offset":7637909,"length":171,"mime":"image/png","gzipped":true,"hash":"17ee565890e06c43"},"/c/compiler_support":{"offset":7597083,"length":40826,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1dff63f9030a2d3b"},"/cpp/language/types":{"offset":1621900,"length":46498,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0991b15e15d8936e"},"/cpp/thread/thread":{"offset":8450196,"length":39571,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3ebf9e82cbaf1b5f"},"/cpp/language":{"offset":969237,"length":40190,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"192c17f5fbbf5f6e"},"/cpp/numeric/special_functions":{"offset":2397671,"length":37819,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f4a409eb78789210"},"/cpp/contract":{"offset":3127823,"length":36885,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"03db907f9a1cab33"},"/cpp/string/basic_string_view":{"offset":5528557,"length":41840,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"db0db39369c0c167"},"/c/95":{"offset":434748,"length":33828,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"713e5f32261353ae"},"/cpp/string/multibyte":{"offset":3793149,"length":37834,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e15edab0b7bbd0bd"},"/__docx_assets/cd187c8da76725.png":{"offset":7638080,"length":188,"mime":"image/png","gzipped":true,"hash":"2a8ed3fb91b6d933"},"/__docx_assets/96108d7af89b04.png":{"offset":8334046,"length":607,"mime":"image/png","gzipped":true,"hash":"16c8005e844a60b4"},"/cpp/experimental/observer_ptr":{"offset":3999766,"length":37609,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"76cc822cd484a54e"},"/cpp/experimental/propagate_const":{"offset":7678039,"length":39241,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"150c7c436a6b94e5"},"/cpp/language/transactional_memory":{"offset":7974256,"length":42542,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"129182e7eda758c3"},"/cpp/utility/program":{"offset":5371796,"length":38055,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2f5c3a1c0635a412"},"/cpp/utility/format":{"offset":6955700,"length":39482,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"265f81d1fc8b59bf"},"/cpp/coroutine/generator":{"offset":5244527,"length":43741,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c09ad49051bb285f"},"/cpp/language/ascii":{"offset":8137859,"length":39639,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5b68104cfb5a9ac8"},"/c/compiler_support/23":{"offset":1087633,"length":38377,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c0fa55a98f00d18b"},"/__docx_assets/54b6a848f4089f.css":{"offset":1165857,"length":8166,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"581e8899caee46b9"},"/__docx_assets/a6ef24dcb63ca8.png":{"offset":2435490,"length":93,"mime":"image/png","gzipped":true,"hash":"bde36d49ea34ac84"},"/cpp/coroutine":{"offset":3433593,"length":37543,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"45f4b8184113c36e"},"/cpp/experimental/scope_success":{"offset":2919702,"length":38253,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"29bb8c525a9a1e48"},"/c/17":{"offset":6341006,"length":35658,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"78de00609f94c9a2"},"/__docx_assets/8b9455b73b0c9c.svg":{"offset":7677873,"length":166,"mime":"image/svg+xml","gzipped":true,"hash":"5dcfdccf07150f45"},"/__docx_assets/bae939df472923.png":{"offset":2319073,"length":196,"mime":"image/png","gzipped":true,"hash":"0963fcc553f7e9f0"},"/__docx_assets/9fdd5e819a3863.png":{"offset":4839877,"length":235,"mime":"image/png","gzipped":true,"hash":"39e485da7011329c"},"/cpp/language/identifiers":{"offset":7834462,"length":42774,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2d9eafb23a9b6217"},"/cpp/11":{"offset":2003012,"length":56577,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bda73ef92c8866b5"},"/cpp/language/main_function":{"offset":7755868,"length":41545,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5ed3b944a01887d4"},"/cpp/experimental/unique_resource":{"offset":8412542,"length":37654,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"19be7a024b32630d"},"/docs":{"offset":2319269,"length":39103,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"94dc9ab6c2db5f8e"},"/__docx_assets/a8f6241107ab14.css":{"offset":4074842,"length":6277,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"6bc51e626b23dc67"},"/cpp/language/basic_concepts":{"offset":7717708,"length":38160,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3de7d42dc3ea1059"},"/c/types":{"offset":7797413,"length":37049,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"16ef60ce166eca4a"},"/c/language":{"offset":1009427,"length":36334,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b0bc13825965c82c"},"/cpp/string/wide":{"offset":3959944,"length":39822,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1bd54c22bdb53eca"},"/cpp/utility/variant":{"offset":4590374,"length":40899,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c9b8c612d9bd3aa2"},"/cpp/memory":{"offset":2878873,"length":40643,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"807b9341087143a7"},"/cpp/experimental/scope_fail":{"offset":3471136,"length":38093,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e730873530289568"},"/cpp/experimental":{"offset":143551,"length":45047,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ffcf776739ccea8c"},"/cpp/language/range-for":{"offset":1875328,"length":42928,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"250b315893951c41"},"/cpp/container/unordered_multiset":{"offset":2059729,"length":41485,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8599023097757e0e"},"/cpp/utility/optional":{"offset":1045761,"length":41872,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"91e27c601380373a"},"/cpp/string/byte":{"offset":2548788,"length":40053,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6267c9160ecf0196"},"/cpp/memory/new":{"offset":6916543,"length":39157,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8154de3600c406fb"},"/cpp/thread/latch":{"offset":7153425,"length":39879,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e4ebc605feb69691"},"/cpp/index":{"offset":8016798,"length":38013,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"df22d1feb6ec1321"},"/cpp/concepts":{"offset":1381519,"length":39227,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f9e23599c777531c"},"/":{"offset":2319269,"length":39103,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"94dc9ab6c2db5f8e"},"/c/variadic":{"offset":513001,"length":36448,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"699178bdd683721a"},"/cpp/container/map":{"offset":4465361,"length":42952,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"202f1bfbe9c14308"},"/cpp/language/expressions":{"offset":8054811,"length":43638,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ae5c291ddfb145a1"},"/cpp/filesystem":{"offset":7638268,"length":39605,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9a9a398378fd6aee"},"/cpp/compiler_support/14":{"offset":1503384,"length":39409,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5a1b0a9098689c82"},"/__docx_assets/2ada2013647af1.png":{"offset":2059589,"length":140,"mime":"image/png","gzipped":true,"hash":"f736dbe38a663930"},"/c/compiler_support/99":{"offset":5409851,"length":36946,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ff7f279373023dca"},"/__docx_assets/cdea24a6de6615.svg":{"offset":3792984,"length":165,"mime":"image/svg+xml","gzipped":true,"hash":"80daf283a095e4f5"},"/cpp/language/modules":{"offset":1918256,"length":43648,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d14d4c26c4b8f47d"},"/__docx_assets/092ac0a266e1a2.svg":{"offset":5570397,"length":247,"mime":"image/svg+xml","gzipped":true,"hash":"be1ca5d4c55d2755"},"/cpp/regex/ecmascript":{"offset":3830983,"length":45699,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dbdf5eff53e8dfa0"},"/c":{"offset":5128933,"length":34959,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1e34a541dcce5317"},"/__docx_assets/0a61b37e35bdf4.css":{"offset":0,"length":8315,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"788ca2281281418a"},"/cpp/language/type":{"offset":2224761,"length":45212,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"613b8d5a95d9190b"},"/cpp/io/manip":{"offset":2359895,"length":37776,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9ee083695cd3cee6"},"/cpp/language/statements":{"offset":770351,"length":41661,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e695197f944b8858"},"/cpp/numeric/fenv":{"offset":638519,"length":37559,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"21cfedfd2eed50b7"},"/__docx_assets/8a85e386da7e89.png":{"offset":2919516,"length":186,"mime":"image/png","gzipped":true,"hash":"4c22dc2bb2d91afc"},"/cpp/header":{"offset":4757109,"length":46290,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"12c2ee056da7ae90"},"/Main_Page":{"offset":8334653,"length":39110,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2657289f1495af40"},"/cpp/utility/functional":{"offset":2101214,"length":45860,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ed3a5cbb41a2a044"},"/__docx_assets/7807e187df9d36.png":{"offset":1341487,"length":260,"mime":"image/png","gzipped":true,"hash":"2550b55af1c68f9f"},"/__docx_assets/e5351e51946873.png":{"offset":7560742,"length":163,"mime":"image/png","gzipped":true,"hash":"528a6db85065d174"},"/cpp/error/exception":{"offset":1710947,"length":39808,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f6bfc0ef9403135b"},"/cpp/io/basic_istream":{"offset":2630227,"length":41616,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d09274583e65b226"},"/c/preprocessor":{"offset":812012,"length":36654,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"772bc1ecc61ca0a5"},"/cpp":{"offset":6463071,"length":38257,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"71228cdadc92563e"},"/cpp/utility/any":{"offset":5800303,"length":39136,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4fa799ca62172fcb"},"/cpp/experimental/lib_extensions_3":{"offset":7560905,"length":36178,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d47d44e149a74975"},"/cpp/types/type_info":{"offset":549449,"length":37634,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"77dd5005a372540e"},"/cpp/string":{"offset":2435583,"length":37482,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"748e91de1aa422a5"},"/cpp/freestanding":{"offset":3164708,"length":39959,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4224aa45d03fba9c"},"/cpp/language/templates":{"offset":229704,"length":41438,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2699a115f473e3bc"}}}
+{
+  "id": "cppreference",
+  "name": "C++ Reference (cppreference)",
+  "version": "C++23/26",
+  "commit": "8d11fda6",
+  "origin": "https://en.cppreference.com",
+  "entryPath": "/",
+  "updatedAt": "2026-10-12T00:46:12.032Z",
+  "totalBytes": 11150732,
+  "chunkCount": 313,
+  "routes": {
+    "/": {
+      "offset": 0,
+      "length": 38180,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f54813a665753cd5"
+    },
+    "/Main_Page": {
+      "offset": 38180,
+      "length": 38186,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7b71c436a04ef148"
+    },
+    "/cpp": {
+      "offset": 76366,
+      "length": 37323,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f0bcd537bc9acd88"
+    },
+    "/cpp/14": {
+      "offset": 113689,
+      "length": 43116,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "65a4e2090168b6f2"
+    },
+    "/cpp/11": {
+      "offset": 156805,
+      "length": 55678,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f7024bab36bfe414"
+    },
+    "/cpp/29": {
+      "offset": 212483,
+      "length": 37564,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d077aa15cefccae9"
+    },
+    "/cpp/compiler_support/14": {
+      "offset": 250047,
+      "length": 38482,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3f34d00d7ffb1ddf"
+    },
+    "/cpp/compiler_support/11": {
+      "offset": 288529,
+      "length": 40729,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6a3434ccb612f58d"
+    },
+    "/cpp/17": {
+      "offset": 329258,
+      "length": 53770,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7678ec0edead9f6a"
+    },
+    "/cpp/compiler_support/17": {
+      "offset": 383028,
+      "length": 44625,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "58c684ad36a10515"
+    },
+    "/cpp/compiler_support/23": {
+      "offset": 427653,
+      "length": 48771,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "219e6625afd7bade"
+    },
+    "/cpp/compiler_support/20": {
+      "offset": 476424,
+      "length": 50226,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "35a1af25c5044270"
+    },
+    "/cpp/compiler_support/26": {
+      "offset": 526650,
+      "length": 50232,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8a96079eb0424459"
+    },
+    "/cpp/26": {
+      "offset": 576882,
+      "length": 51061,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a57c388e646bf2b4"
+    },
+    "/cpp/23": {
+      "offset": 627943,
+      "length": 55235,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "239ff9414ebba180"
+    },
+    "/cpp/20": {
+      "offset": 683178,
+      "length": 57226,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "63c5d05c691be8dd"
+    },
+    "/cpp/compiler_support": {
+      "offset": 740404,
+      "length": 84074,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7bef9c32c3d49dc1"
+    },
+    "/cpp/comment": {
+      "offset": 824478,
+      "length": 38493,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "78e2ff7365485473"
+    },
+    "/cpp/language/main_function": {
+      "offset": 862971,
+      "length": 40633,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9dd36e7b2f6b2600"
+    },
+    "/cpp/language/contracts": {
+      "offset": 903604,
+      "length": 40133,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8c1ff37a60203663"
+    },
+    "/cpp/language/expressions": {
+      "offset": 943737,
+      "length": 42710,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "57fdd8c2fd33d7db"
+    },
+    "/cpp/language/types": {
+      "offset": 986447,
+      "length": 45573,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0151726c6055433c"
+    },
+    "/cpp/compiler_support/29": {
+      "offset": 1032020,
+      "length": 36895,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f3a65ea5110e7f1e"
+    },
+    "/cpp/language/modules": {
+      "offset": 1068915,
+      "length": 42723,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "58205f39d919b3c2"
+    },
+    "/cpp/language/type": {
+      "offset": 1111638,
+      "length": 44290,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6179bbd9cb123b6f"
+    },
+    "/cpp/preprocessor": {
+      "offset": 1155928,
+      "length": 38222,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5a4d583a2d277176"
+    },
+    "/cpp/language/value_category": {
+      "offset": 1194150,
+      "length": 47211,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bebeeb2e76733b47"
+    },
+    "/cpp/language/lookup": {
+      "offset": 1241361,
+      "length": 37643,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f85a8e088a4534bd"
+    },
+    "/cpp/keyword": {
+      "offset": 1279004,
+      "length": 40384,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "aec1fc4d11e20720"
+    },
+    "/cpp/language/basic_concepts": {
+      "offset": 1319388,
+      "length": 37237,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e2eaa67f39aee40f"
+    },
+    "/cpp/language": {
+      "offset": 1356625,
+      "length": 39263,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0a692f983b45c9b2"
+    },
+    "/cpp/language/identifiers": {
+      "offset": 1395888,
+      "length": 41836,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7e1f7e96e3d15878"
+    },
+    "/cpp/language/ascii": {
+      "offset": 1437724,
+      "length": 38710,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2bf970e32b7d4582"
+    },
+    "/cpp/language/do": {
+      "offset": 1476434,
+      "length": 37884,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "df4a50a2b698a083"
+    },
+    "/cpp/language/operator_precedence": {
+      "offset": 1514318,
+      "length": 41183,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "19488886a538ac09"
+    },
+    "/cpp/language/eval_order": {
+      "offset": 1555501,
+      "length": 42503,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "27544bd3ed0278e1"
+    },
+    "/cpp/language/for": {
+      "offset": 1598004,
+      "length": 40217,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a4fbf40fd6e0f033"
+    },
+    "/cpp/language/statements": {
+      "offset": 1638221,
+      "length": 40731,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "711474eb56cb9189"
+    },
+    "/cpp/language/coroutines": {
+      "offset": 1678952,
+      "length": 49144,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a1735cd63814e3ad"
+    },
+    "/cpp/language/range-for": {
+      "offset": 1728096,
+      "length": 41983,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9cdd590a35dcbb6b"
+    },
+    "/cpp/language/if": {
+      "offset": 1770079,
+      "length": 44125,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3e0043b8e89986b1"
+    },
+    "/cpp/language/while": {
+      "offset": 1814204,
+      "length": 38920,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "128a6e6768585288"
+    },
+    "/cpp/language/switch": {
+      "offset": 1853124,
+      "length": 41303,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "09bee1cc469bb846"
+    },
+    "/cpp/language/constant_expression": {
+      "offset": 1894427,
+      "length": 50914,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2307be8a64808053"
+    },
+    "/cpp/language/initialization": {
+      "offset": 1945341,
+      "length": 41171,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ff2729cc0cb3167a"
+    },
+    "/cpp/language/declarations": {
+      "offset": 1986512,
+      "length": 43232,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d9d168774703dfdd"
+    },
+    "/cpp/language/classes": {
+      "offset": 2029744,
+      "length": 39503,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e870922fda30386b"
+    },
+    "/cpp/language/functions": {
+      "offset": 2069247,
+      "length": 38316,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "054871981b1edac4"
+    },
+    "/cpp/language/overload_resolution": {
+      "offset": 2107563,
+      "length": 53832,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "38547ab614c7269c"
+    },
+    "/cpp/types/numeric_limits": {
+      "offset": 2161395,
+      "length": 41359,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "41e967caca3ccc33"
+    },
+    "/cpp/standard_library": {
+      "offset": 2202754,
+      "length": 50097,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "280cf2acb2349f23"
+    },
+    "/cpp/utility/program": {
+      "offset": 2252851,
+      "length": 37123,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "074f19225d6204c5"
+    },
+    "/cpp/named_req": {
+      "offset": 2289974,
+      "length": 40060,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4897fd14b8e517cc"
+    },
+    "/cpp/header": {
+      "offset": 2330034,
+      "length": 45341,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0575cf884eecb600"
+    },
+    "/cpp/types": {
+      "offset": 2375375,
+      "length": 37598,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ab7e2e6722054cca"
+    },
+    "/cpp/memory/new": {
+      "offset": 2412973,
+      "length": 38219,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ddd741305dcb95fa"
+    },
+    "/cpp/types/type_info": {
+      "offset": 2451192,
+      "length": 36695,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f3c93a708ce86060"
+    },
+    "/cpp/error/exception": {
+      "offset": 2487887,
+      "length": 38874,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6c3a251c416fe70a"
+    },
+    "/cpp/language/union": {
+      "offset": 2526761,
+      "length": 41823,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5115ab05b937157d"
+    },
+    "/cpp/utility/initializer_list": {
+      "offset": 2568584,
+      "length": 39598,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ce89b62e1dc4da71"
+    },
+    "/cpp/language/exceptions": {
+      "offset": 2608182,
+      "length": 39103,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ab3894e60e9f52c5"
+    },
+    "/cpp/freestanding": {
+      "offset": 2647285,
+      "length": 39035,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ea5938501bd56298"
+    },
+    "/cpp/utility/source_location": {
+      "offset": 2686320,
+      "length": 37855,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3e5957c06a966e2e"
+    },
+    "/cpp/utility/variadic": {
+      "offset": 2724175,
+      "length": 36765,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "787bc0086bfda8d7"
+    },
+    "/cpp/language/templates": {
+      "offset": 2760940,
+      "length": 40507,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a21cba6c87a7dd6c"
+    },
+    "/cpp/numeric/ratio": {
+      "offset": 2801447,
+      "length": 35633,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6467bb4a6d841d22"
+    },
+    "/cpp/meta": {
+      "offset": 2837080,
+      "length": 34309,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f88d39b7c06fccfa"
+    },
+    "/cpp/contract": {
+      "offset": 2871389,
+      "length": 35947,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "343a0498e7c4c9a1"
+    },
+    "/cpp/concepts": {
+      "offset": 2907336,
+      "length": 38292,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5b6b895ccae1e78f"
+    },
+    "/cpp/error": {
+      "offset": 2945628,
+      "length": 38180,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cef6cce0afdb23a4"
+    },
+    "/cpp/meta/type_traits": {
+      "offset": 2983808,
+      "length": 42181,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f1cd96655e23ebce"
+    },
+    "/cpp/memory": {
+      "offset": 3025989,
+      "length": 39696,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a7e3e13f84f5f8de"
+    },
+    "/cpp/coroutine": {
+      "offset": 3065685,
+      "length": 36611,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "71eed121fc5fb666"
+    },
+    "/cpp/utility/pair": {
+      "offset": 3102296,
+      "length": 37839,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d618ea5fb6af22a7"
+    },
+    "/cpp/utility/integer_sequence": {
+      "offset": 3140135,
+      "length": 37518,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1140b32b10d3c2ee"
+    },
+    "/cpp/utility/optional": {
+      "offset": 3177653,
+      "length": 40940,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "93866d2f5312f612"
+    },
+    "/cpp/utility/basic_stacktrace": {
+      "offset": 3218593,
+      "length": 39519,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cc6526c3dc9b17c6"
+    },
+    "/cpp/utility/tuple": {
+      "offset": 3258112,
+      "length": 39894,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1def2ee45f78014b"
+    },
+    "/cpp/utility/hash": {
+      "offset": 3298006,
+      "length": 41598,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "99307a23f8257543"
+    },
+    "/cpp/utility/functional": {
+      "offset": 3339604,
+      "length": 44921,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "32d7d13d4229bda4"
+    },
+    "/cpp/meta/reflection": {
+      "offset": 3384525,
+      "length": 48134,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "70d207f60a0494de"
+    },
+    "/cpp/utility/any": {
+      "offset": 3432659,
+      "length": 38203,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f5a9aa2f30268df8"
+    },
+    "/cpp/utility/bitset": {
+      "offset": 3470862,
+      "length": 39465,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f9b4e7f39745f615"
+    },
+    "/cpp/utility/variant": {
+      "offset": 3510327,
+      "length": 39968,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e9ba3981a2172c0c"
+    },
+    "/cpp/utility/bit": {
+      "offset": 3550295,
+      "length": 37963,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a674c6f23cdc555b"
+    },
+    "/cpp/utility/expected": {
+      "offset": 3588258,
+      "length": 40328,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "02ab0dee3a8a3d9f"
+    },
+    "/cpp/container/deque": {
+      "offset": 3628586,
+      "length": 41613,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5e48fecdc9126c4a"
+    },
+    "/cpp/container/vector": {
+      "offset": 3670199,
+      "length": 42308,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "05c508ecfd508f76"
+    },
+    "/cpp/container": {
+      "offset": 3712507,
+      "length": 54970,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "690f9152339835ec"
+    },
+    "/cpp/container/map": {
+      "offset": 3767477,
+      "length": 42016,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9baf8ab793f50a9d"
+    },
+    "/cpp/container/multimap": {
+      "offset": 3809493,
+      "length": 40547,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9fffd168347e890b"
+    },
+    "/cpp/container/forward_list": {
+      "offset": 3850040,
+      "length": 39548,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "96f77f2b52e3e9d5"
+    },
+    "/cpp/container/set": {
+      "offset": 3889588,
+      "length": 41359,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1767fa7d016f2852"
+    },
+    "/cpp/container/array": {
+      "offset": 3930947,
+      "length": 39881,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f9c73a03f26711a0"
+    },
+    "/cpp/container/inplace_vector": {
+      "offset": 3970828,
+      "length": 41212,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d1d86354f7de8cdd"
+    },
+    "/cpp/container/list": {
+      "offset": 4012040,
+      "length": 41027,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "daf402488ddcc6cc"
+    },
+    "/cpp/container/hive": {
+      "offset": 4053067,
+      "length": 40451,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3b6b42ea32662c5d"
+    },
+    "/cpp/container/unordered_map": {
+      "offset": 4093518,
+      "length": 42276,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2a70065deea83f97"
+    },
+    "/cpp/container/unordered_multiset": {
+      "offset": 4135794,
+      "length": 40542,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c5a6ac3dc4d79b8a"
+    },
+    "/cpp/container/mdspan": {
+      "offset": 4176336,
+      "length": 40167,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a53ab8bc8752207e"
+    },
+    "/cpp/container/span": {
+      "offset": 4216503,
+      "length": 40175,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ea1d553947162ca9"
+    },
+    "/cpp/iterator": {
+      "offset": 4256678,
+      "length": 46107,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a585d4d46de255fc"
+    },
+    "/cpp/container/unordered_set": {
+      "offset": 4302785,
+      "length": 41657,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e221117db8064bdc"
+    },
+    "/cpp/container/unordered_multimap": {
+      "offset": 4344442,
+      "length": 40555,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "55b84cc61fc21fdf"
+    },
+    "/cpp/container/multiset": {
+      "offset": 4384997,
+      "length": 40344,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9a199df81ce22347"
+    },
+    "/cpp/string": {
+      "offset": 4425341,
+      "length": 36545,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c9d54104c43de8f4"
+    },
+    "/cpp/string/char_traits": {
+      "offset": 4461886,
+      "length": 37703,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "78ad45f437229053"
+    },
+    "/cpp/string/basic_string": {
+      "offset": 4499589,
+      "length": 44153,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "838c90d6a6406dbd"
+    },
+    "/cpp/algorithm/ranges": {
+      "offset": 4543742,
+      "length": 47240,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "25fb60a4e30b4109"
+    },
+    "/cpp/coroutine/generator": {
+      "offset": 4590982,
+      "length": 42814,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0605324b03ebaf4b"
+    },
+    "/cpp/string/basic_string_view": {
+      "offset": 4633796,
+      "length": 40904,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ce29a2b74f7f1f14"
+    },
+    "/cpp/algorithm": {
+      "offset": 4674700,
+      "length": 48720,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "576eb365dcc634f9"
+    },
+    "/cpp/ranges": {
+      "offset": 4723420,
+      "length": 47459,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cd6506b20fc282c2"
+    },
+    "/cpp/regex": {
+      "offset": 4770879,
+      "length": 37615,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "094fbbbab09b780c"
+    },
+    "/cpp/text": {
+      "offset": 4808494,
+      "length": 35623,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e760ea360d3cf857"
+    },
+    "/cpp/locale": {
+      "offset": 4844117,
+      "length": 38323,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3f76db2bb651715f"
+    },
+    "/cpp/string/byte": {
+      "offset": 4882440,
+      "length": 39125,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "889330356ad2e6fd"
+    },
+    "/cpp/regex/basic_regex": {
+      "offset": 4921565,
+      "length": 37289,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ff6270ed77bc0f35"
+    },
+    "/cpp/utility/format": {
+      "offset": 4958854,
+      "length": 38545,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eb34d32c273860c1"
+    },
+    "/cpp/regex/ecmascript": {
+      "offset": 4997399,
+      "length": 44770,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7bee1d2d3281e5f2"
+    },
+    "/cpp/text/text_encoding": {
+      "offset": 5042169,
+      "length": 38571,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d190c95c4b3a4095"
+    },
+    "/cpp/string/multibyte": {
+      "offset": 5080740,
+      "length": 36902,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "71bb41f29ae17087"
+    },
+    "/cpp/numeric/special_functions": {
+      "offset": 5117642,
+      "length": 36884,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e2bf37134f13a0dc"
+    },
+    "/cpp/numeric": {
+      "offset": 5154526,
+      "length": 37577,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2b91b8f9d484c409"
+    },
+    "/cpp/string/wide": {
+      "offset": 5192103,
+      "length": 38900,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "13759e5bc6f1b5cf"
+    },
+    "/cpp/numeric/math": {
+      "offset": 5231003,
+      "length": 41962,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "af8bf37df2451c36"
+    },
+    "/cpp/numeric/linalg": {
+      "offset": 5272965,
+      "length": 39555,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "219e6bf23c903f94"
+    },
+    "/cpp/numeric/constants": {
+      "offset": 5312520,
+      "length": 37376,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "015624aac8274329"
+    },
+    "/cpp/numeric/simd": {
+      "offset": 5349896,
+      "length": 42798,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "614add608c5179f2"
+    },
+    "/cpp/numeric/fenv": {
+      "offset": 5392694,
+      "length": 36630,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7c09e9b26d4e0a27"
+    },
+    "/cpp/io/manip": {
+      "offset": 5429324,
+      "length": 36844,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b796ae399ec4ddf7"
+    },
+    "/cpp/numeric/valarray": {
+      "offset": 5466168,
+      "length": 40155,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "352679bd5c44b7ab"
+    },
+    "/cpp/io/basic_istream": {
+      "offset": 5506323,
+      "length": 40672,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0f3a63890c95e922"
+    },
+    "/cpp/numeric/random": {
+      "offset": 5546995,
+      "length": 42270,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4491dad6a3327272"
+    },
+    "/cpp/io": {
+      "offset": 5589265,
+      "length": 39639,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e723cfe93b37194a"
+    },
+    "/cpp/chrono": {
+      "offset": 5628904,
+      "length": 40173,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "58d6a19ad4b4e360"
+    },
+    "/cpp/numeric/complex": {
+      "offset": 5669077,
+      "length": 40938,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6655c1b308e728fe"
+    },
+    "/cpp/thread/jthread": {
+      "offset": 5710015,
+      "length": 39441,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5d02bdef03bb493e"
+    },
+    "/cpp/filesystem": {
+      "offset": 5749456,
+      "length": 38668,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "562f0d61e2fd129b"
+    },
+    "/cpp/thread/thread": {
+      "offset": 5788124,
+      "length": 38628,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "978ae81f60882661"
+    },
+    "/cpp/atomic/atomic_ref": {
+      "offset": 5826752,
+      "length": 41043,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "886e3397f64a9de4"
+    },
+    "/cpp/io/basic_ostream": {
+      "offset": 5867795,
+      "length": 40681,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "98f6a6aa3b8884c4"
+    },
+    "/cpp/thread": {
+      "offset": 5908476,
+      "length": 44886,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0cde9faa026edd46"
+    },
+    "/cpp/atomic/atomic": {
+      "offset": 5953362,
+      "length": 45289,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7d0ba11626e2688a"
+    },
+    "/cpp/atomic/atomic_flag": {
+      "offset": 5998651,
+      "length": 38830,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "66e3534dd828128b"
+    },
+    "/cpp/thread/barrier": {
+      "offset": 6037481,
+      "length": 40291,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bf8d4d4c9b4ace02"
+    },
+    "/cpp/experimental/lib_extensions": {
+      "offset": 6077772,
+      "length": 39314,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "141d25fba48df7c3"
+    },
+    "/cpp/thread/latch": {
+      "offset": 6117086,
+      "length": 38924,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5dbf75ac4c7d5f49"
+    },
+    "/cpp/execution": {
+      "offset": 6156010,
+      "length": 45202,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "513ef8d11c9dd700"
+    },
+    "/cpp/utility/feature_test": {
+      "offset": 6201212,
+      "length": 43483,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0542569ef60d608b"
+    },
+    "/cpp/experimental": {
+      "offset": 6244695,
+      "length": 44140,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fc47dcb17a793b1a"
+    },
+    "/cpp/atomic/memory_order": {
+      "offset": 6288835,
+      "length": 48222,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4271d768ca67008f"
+    },
+    "/cpp/feature_test": {
+      "offset": 6337057,
+      "length": 76414,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3354cb0dce0fca70"
+    },
+    "/cpp/experimental/randint": {
+      "offset": 6413471,
+      "length": 35466,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "75a8734fbcaa9ed1"
+    },
+    "/cpp/experimental/invocation_type": {
+      "offset": 6448937,
+      "length": 36330,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e33650a122049d5e"
+    },
+    "/cpp/experimental/resource_adaptor": {
+      "offset": 6485267,
+      "length": 37340,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0c201bb44e2e14bd"
+    },
+    "/cpp/experimental/observer_ptr": {
+      "offset": 6522607,
+      "length": 36680,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c83c3627c4cafed6"
+    },
+    "/cpp/experimental/lib_extensions_2": {
+      "offset": 6559287,
+      "length": 37703,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4825cb533d5883a5"
+    },
+    "/cpp/experimental/ostream_joiner": {
+      "offset": 6596990,
+      "length": 36493,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6b19388e1ed636bb"
+    },
+    "/cpp/experimental/is_detected": {
+      "offset": 6633483,
+      "length": 36534,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1d02f1b5853c6a74"
+    },
+    "/cpp/experimental/propagate_const": {
+      "offset": 6670017,
+      "length": 38314,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "655aac06d32c2256"
+    },
+    "/cpp/experimental/concurrency": {
+      "offset": 6708331,
+      "length": 35827,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3570b2802762dee6"
+    },
+    "/cpp/experimental/lib_extensions_3": {
+      "offset": 6744158,
+      "length": 35247,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3ca1cef3d9a35e59"
+    },
+    "/cpp/experimental/scope_exit": {
+      "offset": 6779405,
+      "length": 37179,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f00221761220f85a"
+    },
+    "/cpp/experimental/scope_success": {
+      "offset": 6816584,
+      "length": 37328,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d4bfe060f0182796"
+    },
+    "/cpp/experimental/unique_resource": {
+      "offset": 6853912,
+      "length": 36717,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e526dea4b93d2f71"
+    },
+    "/cpp/experimental/scope_fail": {
+      "offset": 6890629,
+      "length": 37162,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ca3b36fef9c303c5"
+    },
+    "/cpp/experimental/simd": {
+      "offset": 6927791,
+      "length": 39544,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6ff377e174b63fd0"
+    },
+    "/cpp/experimental/parallelism_2": {
+      "offset": 6967335,
+      "length": 35553,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8260775bd4f1ab64"
+    },
+    "/c": {
+      "offset": 7002888,
+      "length": 34075,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1042a8292c1db150"
+    },
+    "/cpp/links": {
+      "offset": 7036963,
+      "length": 36287,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2e247ec0429eb2c5"
+    },
+    "/cpp/index": {
+      "offset": 7073250,
+      "length": 37079,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0f40942904e503bf"
+    },
+    "/c/99": {
+      "offset": 7110329,
+      "length": 38866,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f936b985d2f782bc"
+    },
+    "/cpp/language/transactional_memory": {
+      "offset": 7149195,
+      "length": 41615,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "939d56a57361cf20"
+    },
+    "/c/95": {
+      "offset": 7190810,
+      "length": 32986,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8783d6ba1563b912"
+    },
+    "/cpp/symbol_index": {
+      "offset": 7223796,
+      "length": 63161,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c261797b6e34223b"
+    },
+    "/cpp/links/libs": {
+      "offset": 7286957,
+      "length": 80353,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f51fc0ae0cfe9cbb"
+    },
+    "/c/language/basic_concepts": {
+      "offset": 7367310,
+      "length": 34821,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2e4901cc0b8b9c34"
+    },
+    "/c/language": {
+      "offset": 7402131,
+      "length": 35426,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "35b07d1aa087e2fe"
+    },
+    "/c/11": {
+      "offset": 7437557,
+      "length": 35562,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4db488049b471289"
+    },
+    "/c/compiler_support/23": {
+      "offset": 7473119,
+      "length": 37455,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4364ff3504daa08a"
+    },
+    "/c/compiler_support": {
+      "offset": 7510574,
+      "length": 39900,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5c71a6fd0ee54966"
+    },
+    "/c/23": {
+      "offset": 7550474,
+      "length": 41257,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "72ed7bdd85962316"
+    },
+    "/c/17": {
+      "offset": 7591731,
+      "length": 34767,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "df0d6db5d4aff1ad"
+    },
+    "/c/compiler_support/99": {
+      "offset": 7626498,
+      "length": 36018,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2448f8be9e88ab47"
+    },
+    "/c/preprocessor": {
+      "offset": 7662516,
+      "length": 35726,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f19922b0f0c075ce"
+    },
+    "/c/keyword": {
+      "offset": 7698242,
+      "length": 37270,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c02f4275a23d0bdf"
+    },
+    "/c/language/expressions": {
+      "offset": 7735512,
+      "length": 37846,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1ad2ad83693d9b6e"
+    },
+    "/c/language/declarations": {
+      "offset": 7773358,
+      "length": 39323,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4bf93d2e17b6f4a"
+    },
+    "/c/language/statements": {
+      "offset": 7812681,
+      "length": 37206,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6ef916e2c36f43f7"
+    },
+    "/c/language/initialization": {
+      "offset": 7849887,
+      "length": 36919,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7ecf8dccc8f3a63d"
+    },
+    "/c/language/functions": {
+      "offset": 7886806,
+      "length": 35250,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8f2173e4ca698033"
+    },
+    "/c/program": {
+      "offset": 7922056,
+      "length": 36082,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ad90d35ad7b27410"
+    },
+    "/c/types": {
+      "offset": 7958138,
+      "length": 36123,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ac34846339793c83"
+    },
+    "/c/header": {
+      "offset": 7994261,
+      "length": 36725,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "116ead8489a48ad6"
+    },
+    "/c/variadic": {
+      "offset": 8030986,
+      "length": 35522,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3b4ebb172d600e08"
+    },
+    "/c/memory": {
+      "offset": 8066508,
+      "length": 34013,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2f8baed6d972ea19"
+    },
+    "/c/error": {
+      "offset": 8100521,
+      "length": 36498,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1aed75c1b203107b"
+    },
+    "/c/string": {
+      "offset": 8137019,
+      "length": 33800,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "59ab12686be1f8d8"
+    },
+    "/c/string/byte": {
+      "offset": 8170819,
+      "length": 39650,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d56f25a5ee930a9c"
+    },
+    "/__docx_assets/a8f6241107ab14.css": {
+      "offset": 8210469,
+      "length": 6277,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "6bc51e626b23dc67"
+    },
+    "/__docx_assets/a8dc9eb8149e2b.css": {
+      "offset": 8216746,
+      "length": 7760,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "8ca4cac65a9b0448"
+    },
+    "/__docx_assets/999ccbb5027b75.css": {
+      "offset": 8224506,
+      "length": 5937,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "c8eb18f09ca97b97"
+    },
+    "/__docx_assets/0a61b37e35bdf4.css": {
+      "offset": 8230443,
+      "length": 8315,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "788ca2281281418a"
+    },
+    "/__docx_assets/54b6a848f4089f.css": {
+      "offset": 8238758,
+      "length": 8166,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "581e8899caee46b9"
+    },
+    "/__docx_assets/23ed11532bdaa6.css": {
+      "offset": 8246924,
+      "length": 6660,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "d517ccbf40fb8534"
+    },
+    "/__docx_assets/c6bee1fa262448.css": {
+      "offset": 8253584,
+      "length": 7999,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "35c23b644b3b68ef"
+    },
+    "/__docx_assets/7bc4384ead6be7.css": {
+      "offset": 8261583,
+      "length": 8478,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "587efb9d8f603bb3"
+    },
+    "/__docx_assets/95e26100ad1edd.css": {
+      "offset": 8270061,
+      "length": 6562,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "1c560d43e17faa02"
+    },
+    "/__docx_assets/c336a0fd78fcbd.css": {
+      "offset": 8276623,
+      "length": 8074,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "5b3fc696a1fd9217"
+    },
+    "/__docx_assets/55daee6819dd55.css": {
+      "offset": 8284697,
+      "length": 8394,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "a1660f44f9991b1f"
+    },
+    "/__docx_assets/edf8ba5c8e57b9.svg": {
+      "offset": 8293091,
+      "length": 2317,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "6af8c7b60a599d3c"
+    },
+    "/__docx_assets/72e205d2a3c5c0.png": {
+      "offset": 8295408,
+      "length": 181,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1fdbb6da57de0c2a"
+    },
+    "/__docx_assets/e5351e51946873.png": {
+      "offset": 8295589,
+      "length": 163,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "528a6db85065d174"
+    },
+    "/__docx_assets/eecd79adef4cea.png": {
+      "offset": 8295752,
+      "length": 171,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "17ee565890e06c43"
+    },
+    "/__docx_assets/ec0e2fc51496f6.png": {
+      "offset": 8295923,
+      "length": 179,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "951f3a3ebb24c8b4"
+    },
+    "/__docx_assets/63ef4a913cbb2e.svg": {
+      "offset": 8296102,
+      "length": 248,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "bab5d8770875e766"
+    },
+    "/__docx_assets/092ac0a266e1a2.svg": {
+      "offset": 8296350,
+      "length": 247,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "be1ca5d4c55d2755"
+    },
+    "/__docx_assets/6cfeb2750ae08b.png": {
+      "offset": 8296597,
+      "length": 245,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ad2f795aac084c8a"
+    },
+    "/__docx_assets/f5ad9d330dfe85.png": {
+      "offset": 8296842,
+      "length": 121,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ffd76cf171efe3c2"
+    },
+    "/__docx_assets/bae939df472923.png": {
+      "offset": 8296963,
+      "length": 196,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0963fcc553f7e9f0"
+    },
+    "/__docx_assets/f8001a5ab1aa80.png": {
+      "offset": 8297159,
+      "length": 205,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "988d9464b00f547b"
+    },
+    "/__docx_assets/8a85e386da7e89.png": {
+      "offset": 8297364,
+      "length": 186,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4c22dc2bb2d91afc"
+    },
+    "/__docx_assets/b679509e176028.png": {
+      "offset": 8297550,
+      "length": 205,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d8117d62b7c95689"
+    },
+    "/__docx_assets/5b5b3029326914.png": {
+      "offset": 8297755,
+      "length": 228,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2c16469a5183fb48"
+    },
+    "/__docx_assets/7807e187df9d36.png": {
+      "offset": 8297983,
+      "length": 260,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2550b55af1c68f9f"
+    },
+    "/__docx_assets/9fdd5e819a3863.png": {
+      "offset": 8298243,
+      "length": 235,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "39e485da7011329c"
+    },
+    "/__docx_assets/96108d7af89b04.png": {
+      "offset": 8298478,
+      "length": 607,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "16c8005e844a60b4"
+    },
+    "/__docx_assets/4589da9d983a96.png": {
+      "offset": 8299085,
+      "length": 256,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a67da6e924b760e7"
+    },
+    "/__docx_assets/84e00d3e2a343e.png": {
+      "offset": 8299341,
+      "length": 215,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "5f2ac352d38622bd"
+    },
+    "/__docx_assets/cd187c8da76725.png": {
+      "offset": 8299556,
+      "length": 188,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2a8ed3fb91b6d933"
+    },
+    "/__docx_assets/8b9455b73b0c9c.svg": {
+      "offset": 8299744,
+      "length": 166,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "5dcfdccf07150f45"
+    },
+    "/__docx_assets/44d0823a3eaaf5.png": {
+      "offset": 8299910,
+      "length": 247,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "b724e7fdf3331108"
+    },
+    "/__docx_assets/dcfc8227aeaab7.gif": {
+      "offset": 8300157,
+      "length": 810,
+      "mime": "image/gif",
+      "gzipped": true,
+      "hash": "ae157d374eed07b1"
+    },
+    "/__docx_assets/2ada2013647af1.png": {
+      "offset": 8300967,
+      "length": 140,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f736dbe38a663930"
+    },
+    "/__docx_assets/787eedc3198734.png": {
+      "offset": 8301107,
+      "length": 1523,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "effbceba61661546"
+    },
+    "/__docx_assets/ee4ae0c0388c05.png": {
+      "offset": 8302630,
+      "length": 124,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "807d04ad6a67a971"
+    },
+    "/__docx_assets/248b2f50f3837d.svg": {
+      "offset": 8302754,
+      "length": 175,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a0861df8a857a4ff"
+    },
+    "/__docx_assets/25083488c2712e.svg": {
+      "offset": 8302929,
+      "length": 156,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "7415a9fded3dac17"
+    },
+    "/__docx_assets/85aeec907c04d0.svg": {
+      "offset": 8303085,
+      "length": 156,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "5d6b5654783fc354"
+    },
+    "/__docx_assets/a6ef24dcb63ca8.png": {
+      "offset": 8303241,
+      "length": 93,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "bde36d49ea34ac84"
+    },
+    "/__docx_assets/eff4a5f255d954.svg": {
+      "offset": 8303334,
+      "length": 165,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "2e46c83db00c950f"
+    },
+    "/__docx_assets/cdea24a6de6615.svg": {
+      "offset": 8303499,
+      "length": 165,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "80daf283a095e4f5"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 38180,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f54813a665753cd5"
+    },
+    "/cpp/io/cout": {
+      "offset": 8303664,
+      "length": 36648,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "15833aa672a81a78"
+    },
+    "/w/cpp/io/cout": {
+      "offset": 8303664,
+      "length": 36648,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "15833aa672a81a78"
+    },
+    "/cpp/io/cin": {
+      "offset": 8340312,
+      "length": 36476,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "65d31965bea8497e"
+    },
+    "/w/cpp/io/cin": {
+      "offset": 8340312,
+      "length": 36476,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "65d31965bea8497e"
+    },
+    "/cpp/io/cerr": {
+      "offset": 8376788,
+      "length": 37202,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d04f0135440c2d8d"
+    },
+    "/w/cpp/io/cerr": {
+      "offset": 8376788,
+      "length": 37202,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d04f0135440c2d8d"
+    },
+    "/cpp/io/manip/endl": {
+      "offset": 8413990,
+      "length": 37713,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6d2e7ec851f12914"
+    },
+    "/w/cpp/io/manip/endl": {
+      "offset": 8413990,
+      "length": 37713,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6d2e7ec851f12914"
+    },
+    "/cpp/io/clog": {
+      "offset": 8451703,
+      "length": 36338,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ce5564104b1af911"
+    },
+    "/w/cpp/io/clog": {
+      "offset": 8451703,
+      "length": 36338,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ce5564104b1af911"
+    },
+    "/cpp/io/manip/flush": {
+      "offset": 8488041,
+      "length": 37334,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "99ecf7bb087fdf21"
+    },
+    "/w/cpp/io/manip/flush": {
+      "offset": 8488041,
+      "length": 37334,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "99ecf7bb087fdf21"
+    },
+    "/cpp/io/manip/setw": {
+      "offset": 8525375,
+      "length": 37789,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c7a5faf51701d3c3"
+    },
+    "/w/cpp/io/manip/setw": {
+      "offset": 8525375,
+      "length": 37789,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c7a5faf51701d3c3"
+    },
+    "/cpp/io/manip/setprecision": {
+      "offset": 8563164,
+      "length": 37253,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "187586257ff24122"
+    },
+    "/w/cpp/io/manip/setprecision": {
+      "offset": 8563164,
+      "length": 37253,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "187586257ff24122"
+    },
+    "/cpp/io/manip/fixed": {
+      "offset": 8600417,
+      "length": 37534,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "40e58c2393a547da"
+    },
+    "/w/cpp/io/manip/fixed": {
+      "offset": 8600417,
+      "length": 37534,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "40e58c2393a547da"
+    },
+    "/cpp/io/manip/boolalpha": {
+      "offset": 8637951,
+      "length": 36779,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4a565ce67484b51b"
+    },
+    "/w/cpp/io/manip/boolalpha": {
+      "offset": 8637951,
+      "length": 36779,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4a565ce67484b51b"
+    },
+    "/cpp/io/basic_iostream": {
+      "offset": 8674730,
+      "length": 41061,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2901cfb6b337ef20"
+    },
+    "/w/cpp/io/basic_iostream": {
+      "offset": 8674730,
+      "length": 41061,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2901cfb6b337ef20"
+    },
+    "/cpp/io/basic_ifstream": {
+      "offset": 8715791,
+      "length": 41830,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "732c995704509640"
+    },
+    "/w/cpp/io/basic_ifstream": {
+      "offset": 8715791,
+      "length": 41830,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "732c995704509640"
+    },
+    "/cpp/io/basic_fstream": {
+      "offset": 8757621,
+      "length": 42328,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8fd5ac2346eafadb"
+    },
+    "/w/cpp/io/basic_fstream": {
+      "offset": 8757621,
+      "length": 42328,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8fd5ac2346eafadb"
+    },
+    "/cpp/io/basic_ofstream": {
+      "offset": 8799949,
+      "length": 41402,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d9027997a319bd41"
+    },
+    "/w/cpp/io/basic_ofstream": {
+      "offset": 8799949,
+      "length": 41402,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d9027997a319bd41"
+    },
+    "/cpp/io/basic_stringstream": {
+      "offset": 8841351,
+      "length": 41210,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "11ddbba7c99a0839"
+    },
+    "/w/cpp/io/basic_stringstream": {
+      "offset": 8841351,
+      "length": 41210,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "11ddbba7c99a0839"
+    },
+    "/cpp/io/basic_ostringstream": {
+      "offset": 8882561,
+      "length": 40435,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "116400eb5b3275d9"
+    },
+    "/w/cpp/io/basic_ostringstream": {
+      "offset": 8882561,
+      "length": 40435,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "116400eb5b3275d9"
+    },
+    "/cpp/io/basic_istringstream": {
+      "offset": 8922996,
+      "length": 40830,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "af6190aa2ad61a61"
+    },
+    "/w/cpp/io/basic_istringstream": {
+      "offset": 8922996,
+      "length": 40830,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "af6190aa2ad61a61"
+    },
+    "/cpp/io/print": {
+      "offset": 8963826,
+      "length": 38537,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e60d3db0d90137d9"
+    },
+    "/w/cpp/io/print": {
+      "offset": 8963826,
+      "length": 38537,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e60d3db0d90137d9"
+    },
+    "/cpp/io/println": {
+      "offset": 9002363,
+      "length": 37992,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1e3a93bd087a153d"
+    },
+    "/w/cpp/io/println": {
+      "offset": 9002363,
+      "length": 37992,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1e3a93bd087a153d"
+    },
+    "/cpp/io/c/scanf": {
+      "offset": 9040355,
+      "length": 42160,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "265044265007fd75"
+    },
+    "/w/cpp/io/c/scanf": {
+      "offset": 9040355,
+      "length": 42160,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "265044265007fd75"
+    },
+    "/cpp/io/c/printf": {
+      "offset": 9082515,
+      "length": 43529,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "69631ac7b87bd578"
+    },
+    "/w/cpp/io/c/printf": {
+      "offset": 9082515,
+      "length": 43529,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "69631ac7b87bd578"
+    },
+    "/cpp/io/c/fopen": {
+      "offset": 9126044,
+      "length": 38025,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "173544380c2aa4a4"
+    },
+    "/w/cpp/io/c/fopen": {
+      "offset": 9126044,
+      "length": 38025,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "173544380c2aa4a4"
+    },
+    "/cpp/header/iostream": {
+      "offset": 9164069,
+      "length": 37642,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2fa726a0ead058ea"
+    },
+    "/w/cpp/header/iostream": {
+      "offset": 9164069,
+      "length": 37642,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2fa726a0ead058ea"
+    },
+    "/cpp/header/vector": {
+      "offset": 9201711,
+      "length": 42250,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "65703334fe39df45"
+    },
+    "/w/cpp/header/vector": {
+      "offset": 9201711,
+      "length": 42250,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "65703334fe39df45"
+    },
+    "/cpp/header/string": {
+      "offset": 9243961,
+      "length": 45201,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5f4033bfc3696c5b"
+    },
+    "/w/cpp/header/string": {
+      "offset": 9243961,
+      "length": 45201,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5f4033bfc3696c5b"
+    },
+    "/cpp/header/algorithm": {
+      "offset": 9289162,
+      "length": 56839,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2fad99477a1206d4"
+    },
+    "/w/cpp/header/algorithm": {
+      "offset": 9289162,
+      "length": 56839,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2fad99477a1206d4"
+    },
+    "/cpp/header/memory": {
+      "offset": 9346001,
+      "length": 53283,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5432b0628be6eda5"
+    },
+    "/w/cpp/header/memory": {
+      "offset": 9346001,
+      "length": 53283,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5432b0628be6eda5"
+    },
+    "/cpp/header/map": {
+      "offset": 9399284,
+      "length": 43656,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4f9d815dd7c59249"
+    },
+    "/w/cpp/header/map": {
+      "offset": 9399284,
+      "length": 43656,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4f9d815dd7c59249"
+    },
+    "/cpp/header/unordered_map": {
+      "offset": 9442940,
+      "length": 44251,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b3013b26843e6b7"
+    },
+    "/w/cpp/header/unordered_map": {
+      "offset": 9442940,
+      "length": 44251,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b3013b26843e6b7"
+    },
+    "/cpp/header/set": {
+      "offset": 9487191,
+      "length": 42955,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "565bbb1c96da2dc1"
+    },
+    "/w/cpp/header/set": {
+      "offset": 9487191,
+      "length": 42955,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "565bbb1c96da2dc1"
+    },
+    "/cpp/header/fstream": {
+      "offset": 9530146,
+      "length": 38939,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0485c5f269586d95"
+    },
+    "/w/cpp/header/fstream": {
+      "offset": 9530146,
+      "length": 38939,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0485c5f269586d95"
+    },
+    "/cpp/header/sstream": {
+      "offset": 9569085,
+      "length": 39849,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2a47591e4c07dca1"
+    },
+    "/w/cpp/header/sstream": {
+      "offset": 9569085,
+      "length": 39849,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2a47591e4c07dca1"
+    },
+    "/cpp/header/iomanip": {
+      "offset": 9608934,
+      "length": 37298,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9b01e44dc24481cd"
+    },
+    "/w/cpp/header/iomanip": {
+      "offset": 9608934,
+      "length": 37298,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9b01e44dc24481cd"
+    },
+    "/cpp/header/cmath": {
+      "offset": 9646232,
+      "length": 45244,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2449fe352d812fea"
+    },
+    "/w/cpp/header/cmath": {
+      "offset": 9646232,
+      "length": 45244,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2449fe352d812fea"
+    },
+    "/cpp/header/cstdio": {
+      "offset": 9691476,
+      "length": 40184,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7d353a661eb112d6"
+    },
+    "/w/cpp/header/cstdio": {
+      "offset": 9691476,
+      "length": 40184,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7d353a661eb112d6"
+    },
+    "/cpp/header/cstdlib": {
+      "offset": 9731660,
+      "length": 40917,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "88f4a19c0067bba8"
+    },
+    "/w/cpp/header/cstdlib": {
+      "offset": 9731660,
+      "length": 40917,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "88f4a19c0067bba8"
+    },
+    "/cpp/header/cstring": {
+      "offset": 9772577,
+      "length": 38782,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7568c03eb295aff1"
+    },
+    "/w/cpp/header/cstring": {
+      "offset": 9772577,
+      "length": 38782,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7568c03eb295aff1"
+    },
+    "/cpp/header/mutex": {
+      "offset": 9811359,
+      "length": 39401,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "be5b8a338da01537"
+    },
+    "/w/cpp/header/mutex": {
+      "offset": 9811359,
+      "length": 39401,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "be5b8a338da01537"
+    },
+    "/cpp/header/thread": {
+      "offset": 9850760,
+      "length": 38699,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8ebd42e21f9cc96a"
+    },
+    "/w/cpp/header/thread": {
+      "offset": 9850760,
+      "length": 38699,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8ebd42e21f9cc96a"
+    },
+    "/cpp/header/utility": {
+      "offset": 9889459,
+      "length": 41729,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5a3836c03a3f9d89"
+    },
+    "/w/cpp/header/utility": {
+      "offset": 9889459,
+      "length": 41729,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5a3836c03a3f9d89"
+    },
+    "/cpp/header/optional": {
+      "offset": 9931188,
+      "length": 39820,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b5ebf85c5ea50a7"
+    },
+    "/w/cpp/header/optional": {
+      "offset": 9931188,
+      "length": 39820,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b5ebf85c5ea50a7"
+    },
+    "/cpp/header/variant": {
+      "offset": 9971008,
+      "length": 39639,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e68ab80ac37b1bfd"
+    },
+    "/w/cpp/header/variant": {
+      "offset": 9971008,
+      "length": 39639,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e68ab80ac37b1bfd"
+    },
+    "/cpp/header/format": {
+      "offset": 10010647,
+      "length": 43580,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bff1507265b9b7e1"
+    },
+    "/w/cpp/header/format": {
+      "offset": 10010647,
+      "length": 43580,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bff1507265b9b7e1"
+    },
+    "/cpp/algorithm/sort": {
+      "offset": 10054227,
+      "length": 41192,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "31e7cc063859c4b6"
+    },
+    "/w/cpp/algorithm/sort": {
+      "offset": 10054227,
+      "length": 41192,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "31e7cc063859c4b6"
+    },
+    "/cpp/algorithm/find": {
+      "offset": 10095419,
+      "length": 41905,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "486c718ccd533c5e"
+    },
+    "/w/cpp/algorithm/find": {
+      "offset": 10095419,
+      "length": 41905,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "486c718ccd533c5e"
+    },
+    "/cpp/algorithm/binary_search": {
+      "offset": 10137324,
+      "length": 41506,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8df9b24eff9d2fa0"
+    },
+    "/w/cpp/algorithm/binary_search": {
+      "offset": 10137324,
+      "length": 41506,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8df9b24eff9d2fa0"
+    },
+    "/cpp/algorithm/lower_bound": {
+      "offset": 10178830,
+      "length": 42534,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "67b917d6236bc38f"
+    },
+    "/w/cpp/algorithm/lower_bound": {
+      "offset": 10178830,
+      "length": 42534,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "67b917d6236bc38f"
+    },
+    "/cpp/algorithm/upper_bound": {
+      "offset": 10221364,
+      "length": 42466,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "78b60133797e905b"
+    },
+    "/w/cpp/algorithm/upper_bound": {
+      "offset": 10221364,
+      "length": 42466,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "78b60133797e905b"
+    },
+    "/cpp/algorithm/transform": {
+      "offset": 10263830,
+      "length": 41431,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7d77d85658bc7246"
+    },
+    "/w/cpp/algorithm/transform": {
+      "offset": 10263830,
+      "length": 41431,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7d77d85658bc7246"
+    },
+    "/cpp/algorithm/for_each": {
+      "offset": 10305261,
+      "length": 41104,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "15efa6ee340bf513"
+    },
+    "/w/cpp/algorithm/for_each": {
+      "offset": 10305261,
+      "length": 41104,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "15efa6ee340bf513"
+    },
+    "/cpp/algorithm/min": {
+      "offset": 10346365,
+      "length": 40154,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c13785697a49e0b0"
+    },
+    "/w/cpp/algorithm/min": {
+      "offset": 10346365,
+      "length": 40154,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c13785697a49e0b0"
+    },
+    "/cpp/algorithm/copy": {
+      "offset": 10386519,
+      "length": 41520,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "85df1a9f8c001a8c"
+    },
+    "/w/cpp/algorithm/copy": {
+      "offset": 10386519,
+      "length": 41520,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "85df1a9f8c001a8c"
+    },
+    "/cpp/algorithm/max": {
+      "offset": 10428039,
+      "length": 40220,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eebab5354964e099"
+    },
+    "/w/cpp/algorithm/max": {
+      "offset": 10428039,
+      "length": 40220,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eebab5354964e099"
+    },
+    "/cpp/algorithm/count": {
+      "offset": 10468259,
+      "length": 41238,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3456c44633216d5c"
+    },
+    "/w/cpp/algorithm/count": {
+      "offset": 10468259,
+      "length": 41238,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3456c44633216d5c"
+    },
+    "/cpp/algorithm/swap": {
+      "offset": 10509497,
+      "length": 42209,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0cc8aa99c1a42acf"
+    },
+    "/w/cpp/algorithm/swap": {
+      "offset": 10509497,
+      "length": 42209,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0cc8aa99c1a42acf"
+    },
+    "/cpp/memory/unique_ptr": {
+      "offset": 10551706,
+      "length": 42936,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9c331be42fd24e4f"
+    },
+    "/w/cpp/memory/unique_ptr": {
+      "offset": 10551706,
+      "length": 42936,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9c331be42fd24e4f"
+    },
+    "/cpp/algorithm/accumulate": {
+      "offset": 10594642,
+      "length": 40930,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "622143fa9d0c4611"
+    },
+    "/w/cpp/algorithm/accumulate": {
+      "offset": 10594642,
+      "length": 40930,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "622143fa9d0c4611"
+    },
+    "/cpp/memory/shared_ptr": {
+      "offset": 10635572,
+      "length": 43018,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cad2cc22d83f5fa9"
+    },
+    "/w/cpp/memory/shared_ptr": {
+      "offset": 10635572,
+      "length": 43018,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cad2cc22d83f5fa9"
+    },
+    "/cpp/memory/weak_ptr": {
+      "offset": 10678590,
+      "length": 39432,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9bea40969cda3dc0"
+    },
+    "/w/cpp/memory/weak_ptr": {
+      "offset": 10678590,
+      "length": 39432,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9bea40969cda3dc0"
+    },
+    "/cpp/string/basic_string/getline": {
+      "offset": 10718022,
+      "length": 38504,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3ce741a3d8d4ff8e"
+    },
+    "/w/cpp/string/basic_string/getline": {
+      "offset": 10718022,
+      "length": 38504,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3ce741a3d8d4ff8e"
+    },
+    "/cpp/string/basic_string/to_string": {
+      "offset": 10756526,
+      "length": 38433,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bc8f399cfe4a7fa3"
+    },
+    "/w/cpp/string/basic_string/to_string": {
+      "offset": 10756526,
+      "length": 38433,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bc8f399cfe4a7fa3"
+    },
+    "/cpp/utility/move": {
+      "offset": 10794959,
+      "length": 38326,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "80c2a2515e36e0a1"
+    },
+    "/w/cpp/utility/move": {
+      "offset": 10794959,
+      "length": 38326,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "80c2a2515e36e0a1"
+    },
+    "/cpp/string/basic_string/stol": {
+      "offset": 10833285,
+      "length": 39552,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "081fd41945ccc8c9"
+    },
+    "/w/cpp/string/basic_string/stol": {
+      "offset": 10833285,
+      "length": 39552,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "081fd41945ccc8c9"
+    },
+    "/cpp/thread/mutex": {
+      "offset": 10872837,
+      "length": 39426,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cc2f55339dc4cab2"
+    },
+    "/w/cpp/thread/mutex": {
+      "offset": 10872837,
+      "length": 39426,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cc2f55339dc4cab2"
+    },
+    "/cpp/utility/forward": {
+      "offset": 10912263,
+      "length": 38115,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6e177a92aa64ea45"
+    },
+    "/w/cpp/utility/forward": {
+      "offset": 10912263,
+      "length": 38115,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6e177a92aa64ea45"
+    },
+    "/cpp/thread/lock_guard": {
+      "offset": 10950378,
+      "length": 39227,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0fb0c71535ddefc8"
+    },
+    "/w/cpp/thread/lock_guard": {
+      "offset": 10950378,
+      "length": 39227,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0fb0c71535ddefc8"
+    },
+    "/cpp/thread/unique_lock": {
+      "offset": 10989605,
+      "length": 39745,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b3dd60abb2d16f0d"
+    },
+    "/w/cpp/thread/unique_lock": {
+      "offset": 10989605,
+      "length": 39745,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b3dd60abb2d16f0d"
+    },
+    "/cpp/thread/condition_variable": {
+      "offset": 11029350,
+      "length": 39777,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "36c1451620a2aa5d"
+    },
+    "/w/cpp/thread/condition_variable": {
+      "offset": 11029350,
+      "length": 39777,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "36c1451620a2aa5d"
+    },
+    "/cpp/thread/future": {
+      "offset": 11069127,
+      "length": 39170,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fdba21a87ba726cd"
+    },
+    "/w/cpp/thread/future": {
+      "offset": 11069127,
+      "length": 39170,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fdba21a87ba726cd"
+    },
+    "/cpp/thread/async": {
+      "offset": 11108297,
+      "length": 42435,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6fbdad2631efc938"
+    },
+    "/w/cpp/thread/async": {
+      "offset": 11108297,
+      "length": 42435,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6fbdad2631efc938"
+    }
+  }
+}

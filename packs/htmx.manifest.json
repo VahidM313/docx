@@ -1,1 +1,279 @@
-{"id":"htmx","name":"htmx","version":"v2.0","commit":"e3a24e80","origin":"https://htmx.org","entryPath":"/docs/","updatedAt":"2026-10-10T23:01:14.238Z","totalBytes":211662,"chunkCount":36,"routes":{"/examples/":{"offset":0,"length":3075,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"fad0183865a207ef"},"/migration-guide-htmx-1/":{"offset":3075,"length":3440,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"01e8599b26fc9776"},"/essays/":{"offset":6515,"length":6821,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"3e95759b72553588"},"/quirks/":{"offset":13336,"length":5756,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"d2913b4eb0b4724e"},"/reference/":{"offset":19092,"length":8315,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"b82832e93ac94327"},"/docs/":{"offset":27407,"length":35103,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"a24a3627cb85507b"},"/attributes/hx-get/":{"offset":62510,"length":2015,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"5b0c44ea2ec3823e"},"/attributes/hx-delete/":{"offset":64525,"length":1978,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"b3562b0e87dbdd9c"},"/attributes/hx-post/":{"offset":66503,"length":1875,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"e80b136012a90407"},"/attributes/hx-patch/":{"offset":68378,"length":1873,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"3601a44e3c861652"},"/attributes/hx-target/":{"offset":70251,"length":2256,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"798ef9de7c8871f4"},"/attributes/hx-put/":{"offset":72507,"length":1876,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"4e8be950f504a6a8"},"/attributes/hx-trigger/":{"offset":74383,"length":5096,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"6fd12113127886e4"},"/attributes/hx-vals/":{"offset":79479,"length":3097,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"634d4ccdeff8e2e5"},"/attributes/hx-push-url/":{"offset":82576,"length":2207,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"677158a6d5c2bf98"},"/attributes/hx-select/":{"offset":84783,"length":1854,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"d1e34ac1fac82d7c"},"/attributes/hx-swap/":{"offset":86637,"length":3781,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"d05af347d4d2fc4a"},"/attributes/hx-boost/":{"offset":90418,"length":2696,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"020e21b56788d753"},"/examples/click-to-edit/":{"offset":93114,"length":3441,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"67ef431823e2fd4d"},"/attributes/hx-indicator/":{"offset":96555,"length":3200,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"c30bd8e6c336b659"},"/examples/delete-row/":{"offset":99755,"length":3708,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"01de4837c8e9589f"},"/attributes/hx-confirm/":{"offset":103463,"length":2171,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"4a549e820e3be7aa"},"/examples/click-to-load/":{"offset":105634,"length":3437,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"0fed7c2bdffd769a"},"/examples/bulk-update/":{"offset":109071,"length":4276,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"2937c0f97df2b31e"},"/examples/lazy-load/":{"offset":113347,"length":2963,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"fa16544399e551f7"},"/examples/infinite-scroll/":{"offset":116310,"length":3566,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"1d726e262bd562f7"},"/examples/edit-row/":{"offset":119876,"length":4772,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"391df67fb09d78db"},"/examples/progress-bar/":{"offset":124648,"length":4554,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"71e8bf2cdabd3cc4"},"/examples/active-search/":{"offset":129202,"length":7279,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"f00daf2352064408"},"/examples/inline-validation/":{"offset":136481,"length":4067,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"2da78c1277fa0c15"},"/js/class-tools.js":{"offset":140548,"length":807,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"2448b3e397694bb7"},"/js/preload.js":{"offset":141355,"length":1882,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"135abd7335000cab"},"/js/demo.js":{"offset":143237,"length":1809,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"944a5365f48beed2"},"/css/site.css":{"offset":145046,"length":2755,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"f00aa476cc9aee04"},"/js/_hyperscript.js":{"offset":147801,"length":25621,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"ddc8f2bb077711aa"},"/js/htmx.js":{"offset":173422,"length":38240,"mime":"application/javascript; charset=utf-8","gzipped":true,"hash":"4503cd394837eb2d"},"/":{"offset":27407,"length":35103,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"a24a3627cb85507b"},"/docs":{"offset":27407,"length":35103,"mime":"text/html; charset=UTF-8","gzipped":true,"hash":"a24a3627cb85507b"}}}
+{
+  "id": "htmx",
+  "name": "htmx",
+  "version": "v2.0",
+  "commit": "e3a24e80",
+  "origin": "https://htmx.org",
+  "entryPath": "/docs/",
+  "updatedAt": "2026-10-10T23:01:14.238Z",
+  "totalBytes": 211662,
+  "chunkCount": 36,
+  "routes": {
+    "/examples/": {
+      "offset": 0,
+      "length": 3075,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "fad0183865a207ef"
+    },
+    "/migration-guide-htmx-1/": {
+      "offset": 3075,
+      "length": 3440,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "01e8599b26fc9776"
+    },
+    "/essays/": {
+      "offset": 6515,
+      "length": 6821,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "3e95759b72553588"
+    },
+    "/quirks/": {
+      "offset": 13336,
+      "length": 5756,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "d2913b4eb0b4724e"
+    },
+    "/reference/": {
+      "offset": 19092,
+      "length": 8315,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "b82832e93ac94327"
+    },
+    "/docs/": {
+      "offset": 27407,
+      "length": 35103,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "a24a3627cb85507b"
+    },
+    "/attributes/hx-get/": {
+      "offset": 62510,
+      "length": 2015,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "5b0c44ea2ec3823e"
+    },
+    "/attributes/hx-delete/": {
+      "offset": 64525,
+      "length": 1978,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "b3562b0e87dbdd9c"
+    },
+    "/attributes/hx-post/": {
+      "offset": 66503,
+      "length": 1875,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "e80b136012a90407"
+    },
+    "/attributes/hx-patch/": {
+      "offset": 68378,
+      "length": 1873,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "3601a44e3c861652"
+    },
+    "/attributes/hx-target/": {
+      "offset": 70251,
+      "length": 2256,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "798ef9de7c8871f4"
+    },
+    "/attributes/hx-put/": {
+      "offset": 72507,
+      "length": 1876,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "4e8be950f504a6a8"
+    },
+    "/attributes/hx-trigger/": {
+      "offset": 74383,
+      "length": 5096,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "6fd12113127886e4"
+    },
+    "/attributes/hx-vals/": {
+      "offset": 79479,
+      "length": 3097,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "634d4ccdeff8e2e5"
+    },
+    "/attributes/hx-push-url/": {
+      "offset": 82576,
+      "length": 2207,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "677158a6d5c2bf98"
+    },
+    "/attributes/hx-select/": {
+      "offset": 84783,
+      "length": 1854,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "d1e34ac1fac82d7c"
+    },
+    "/attributes/hx-swap/": {
+      "offset": 86637,
+      "length": 3781,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "d05af347d4d2fc4a"
+    },
+    "/attributes/hx-boost/": {
+      "offset": 90418,
+      "length": 2696,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "020e21b56788d753"
+    },
+    "/examples/click-to-edit/": {
+      "offset": 93114,
+      "length": 3441,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "67ef431823e2fd4d"
+    },
+    "/attributes/hx-indicator/": {
+      "offset": 96555,
+      "length": 3200,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "c30bd8e6c336b659"
+    },
+    "/examples/delete-row/": {
+      "offset": 99755,
+      "length": 3708,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "01de4837c8e9589f"
+    },
+    "/attributes/hx-confirm/": {
+      "offset": 103463,
+      "length": 2171,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "4a549e820e3be7aa"
+    },
+    "/examples/click-to-load/": {
+      "offset": 105634,
+      "length": 3437,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "0fed7c2bdffd769a"
+    },
+    "/examples/bulk-update/": {
+      "offset": 109071,
+      "length": 4276,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "2937c0f97df2b31e"
+    },
+    "/examples/lazy-load/": {
+      "offset": 113347,
+      "length": 2963,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "fa16544399e551f7"
+    },
+    "/examples/infinite-scroll/": {
+      "offset": 116310,
+      "length": 3566,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "1d726e262bd562f7"
+    },
+    "/examples/edit-row/": {
+      "offset": 119876,
+      "length": 4772,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "391df67fb09d78db"
+    },
+    "/examples/progress-bar/": {
+      "offset": 124648,
+      "length": 4554,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "71e8bf2cdabd3cc4"
+    },
+    "/examples/active-search/": {
+      "offset": 129202,
+      "length": 7279,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "f00daf2352064408"
+    },
+    "/examples/inline-validation/": {
+      "offset": 136481,
+      "length": 4067,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "2da78c1277fa0c15"
+    },
+    "/js/class-tools.js": {
+      "offset": 140548,
+      "length": 807,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "2448b3e397694bb7"
+    },
+    "/js/preload.js": {
+      "offset": 141355,
+      "length": 1882,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "135abd7335000cab"
+    },
+    "/js/demo.js": {
+      "offset": 143237,
+      "length": 1809,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "944a5365f48beed2"
+    },
+    "/css/site.css": {
+      "offset": 145046,
+      "length": 2755,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "f00aa476cc9aee04"
+    },
+    "/js/_hyperscript.js": {
+      "offset": 147801,
+      "length": 25621,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "ddc8f2bb077711aa"
+    },
+    "/js/htmx.js": {
+      "offset": 173422,
+      "length": 38240,
+      "mime": "application/javascript; charset=utf-8",
+      "gzipped": true,
+      "hash": "4503cd394837eb2d"
+    },
+    "/": {
+      "offset": 27407,
+      "length": 35103,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "a24a3627cb85507b"
+    },
+    "/docs": {
+      "offset": 27407,
+      "length": 35103,
+      "mime": "text/html; charset=UTF-8",
+      "gzipped": true,
+      "hash": "a24a3627cb85507b"
+    }
+  }
+}

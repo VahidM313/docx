@@ -1,1 +1,776 @@
-{"id":"tanstack_store","name":"TanStack Store","version":"v0.7","commit":"c6443d14","origin":"https://tanstack.com","entryPath":"/store/latest/docs/overview","updatedAt":"2026-10-10T16:44:49.635Z","totalBytes":2741832,"chunkCount":105,"routes":{"/store/latest/docs/overview":{"offset":0,"length":42030,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"98acf36712f136a9"},"/store/latest/docs/quick-start":{"offset":42030,"length":43338,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"56f565fa6a0ab413"},"/store/latest/docs/framework/react/quick-start":{"offset":85368,"length":42538,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"10e00865fe5814f9"},"/store/latest/docs/reference/index":{"offset":127906,"length":43615,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"21e5918226b5b7ea"},"/store/latest/docs/framework/react/examples/simple":{"offset":171521,"length":49653,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"68160ad55cca8f66"},"/store/latest/docs/installation":{"offset":221174,"length":42314,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f1c7f4183122c6ee"},"/store/latest/docs/reference/interfaces/AtomOptions":{"offset":263488,"length":43827,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"59d95c3c13d81aed"},"/store/latest/docs/reference/interfaces/Readable":{"offset":307315,"length":44131,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"19c540155ce38551"},"/store/latest/docs/reference/interfaces/InteropSubscribable":{"offset":351446,"length":43933,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"af1305129f5becc2"},"/store/latest/docs/reference/interfaces/ReadonlyAtom":{"offset":395379,"length":44476,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d6803be0a61ec84f"},"/store/latest/docs/framework/react/reference/index":{"offset":439855,"length":43277,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e315b50cb7045ed7"},"/store/latest/docs/reference/interfaces/Subscribable":{"offset":483132,"length":44033,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ececea936aabacf7"},"/store/latest/docs/reference/classes/ReadonlyStore":{"offset":527165,"length":45181,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8f0befb776acc3a3"},"/store/latest/docs/reference/interfaces/BaseAtom":{"offset":572346,"length":44318,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"21f1a81dccf49f19"},"/store/latest/docs/reference/interfaces/Subscription":{"offset":616664,"length":43541,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"84c345704cff4df6"},"/store/latest/docs/reference":{"offset":660205,"length":41557,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5ff97ae05102de24"},"/store/latest/docs/reference/interfaces/InternalReadonlyAtom":{"offset":701762,"length":45429,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b95a30dc5f99e391"},"/store/latest/docs/reference/classes/Store":{"offset":747191,"length":45525,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7d4ab91495c25e38"},"/store/latest/docs/reference/interfaces/InternalBaseAtom":{"offset":792716,"length":44738,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a94a0097590ab3d5"},"/store/latest/docs/reference/interfaces/Atom":{"offset":837454,"length":45322,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"94f377dbffcfb2df"},"/store/latest/docs/reference/type-aliases/StoreAction":{"offset":882776,"length":43525,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8cbbf7007e7ff14e"},"/store/latest/docs/reference/functions/flush":{"offset":926301,"length":43074,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4aae0bea9792e4f1"},"/store/latest/docs/reference/type-aliases/Selection":{"offset":969375,"length":43463,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2d597e79d604cdef"},"/store/latest/docs/framework/react/reference/functions/useCreateStore":{"offset":1012838,"length":45079,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"280a1b89587422ff"},"/store/latest/docs/framework/react/reference/functions/createStoreContext":{"offset":1057917,"length":45319,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"afe493221a7e4f46"},"/store/latest/docs/reference/type-aliases/AnyAtom":{"offset":1103236,"length":43039,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9e6e126fe7e6f17f"},"/store/latest/docs/framework/react/reference/functions/useCreateAtom":{"offset":1146275,"length":44769,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"535f83b25cfed435"},"/store/latest/docs/reference/functions/createAsyncAtom":{"offset":1191044,"length":43972,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cf8d3e3d06e34f50"},"/store/latest/docs/reference/functions/createStore":{"offset":1235016,"length":44582,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5af930b5eb770c72"},"/store/latest/docs/reference/functions/toObserver":{"offset":1279598,"length":43985,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2d296ed2b143f382"},"/store/latest/docs/reference/functions/shallow":{"offset":1323583,"length":43662,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7eb130f18a280230"},"/store/latest/docs/reference/type-aliases/Observer":{"offset":1367245,"length":44119,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"af4ed0d726c75141"},"/store/latest/docs/reference/functions/batch":{"offset":1411364,"length":43545,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fd1b109a8b8a4e64"},"/store/latest/docs/reference/type-aliases/StoreActionMap":{"offset":1454909,"length":43914,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"61fdf7ddc5db0536"},"/store/latest/docs/reference/type-aliases/StoreActionsFactory":{"offset":1498823,"length":44952,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"296a12d3b244a778"},"/store/latest/docs/reference/functions/createAtom":{"offset":1543775,"length":45132,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bb3007c4ab6fe558"},"/store/latest/docs/framework/react/examples/store-context":{"offset":1588907,"length":44450,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"925784a853d135e1"},"/store/latest/docs/framework/react/examples/stores":{"offset":1633357,"length":43458,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8461483c12ab3aac"},"/store/latest/docs/framework/react/examples/store-actions":{"offset":1676815,"length":43807,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c228156c36b2c3fc"},"/store/latest/docs/framework/react/reference/functions/useStore-1":{"offset":1720622,"length":44569,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bd2563ded6e7770c"},"/store/latest/docs/framework/react/reference/functions/useSelector":{"offset":1765191,"length":44723,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"30ba0648dada1d09"},"/store/latest/docs/framework/react/reference/functions/useAtom":{"offset":1809914,"length":44376,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e52fa07987fabd33"},"/store/latest/docs/framework/react/reference/functions/useStore":{"offset":1854290,"length":44931,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f4c06400f6af89a6"},"/store/latest/docs/framework/react/reference/interfaces/UseSelectorOptions":{"offset":1899221,"length":43778,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"56b7f52e4356213b"},"/store/latest/docs/framework/react/examples/atoms":{"offset":1942999,"length":44305,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"caf561b7f05bb672"},"/favicon-dark.svg":{"offset":1987304,"length":1377,"mime":"image/svg+xml","gzipped":true,"hash":"87ddd3cc53780ea9"},"/favicon-light.svg":{"offset":1987304,"length":1377,"mime":"image/svg+xml","gzipped":true,"hash":"87ddd3cc53780ea9"},"/assets/coderabbit-light-ggTFqYhV.svg":{"offset":1988681,"length":3869,"mime":"image/svg+xml","gzipped":true,"hash":"183adaaa8dc30b05"},"/assets/cloudflare-white-Co-Tyjbl.svg":{"offset":1992550,"length":5586,"mime":"image/svg+xml","gzipped":true,"hash":"e38e46382d5e07c7"},"/assets/railway-black-DeBDfNao.svg":{"offset":1998136,"length":2008,"mime":"image/svg+xml","gzipped":true,"hash":"f17e0e028a8904e8"},"/assets/lovable-white-DLB1BxKZ.svg":{"offset":2000144,"length":3575,"mime":"image/svg+xml","gzipped":true,"hash":"289e15e1680f1bc7"},"/favicon.ico":{"offset":2003719,"length":1085,"mime":"image/vnd.microsoft.icon","gzipped":true,"hash":"168a372851d14b1b"},"/images/brand/tanstack-landscape-black.svg":{"offset":2004804,"length":1770,"mime":"image/svg+xml","gzipped":true,"hash":"7f88cc8634ee3f47"},"/favicon-32x32.png":{"offset":2006574,"length":1187,"mime":"image/png","gzipped":true,"hash":"34241b997c796120"},"/assets/lovable-black-1mVxR6Bj.svg":{"offset":2007761,"length":3574,"mime":"image/svg+xml","gzipped":true,"hash":"2991135aabc14b05"},"/favicon-16x16.png":{"offset":2011335,"length":590,"mime":"image/png","gzipped":true,"hash":"a53b782bb5f5aff7"},"/images/brand/tanstack-landscape-white.svg":{"offset":2011925,"length":1770,"mime":"image/svg+xml","gzipped":true,"hash":"47b05e85ac4c4ffb"},"/assets/coderabbit-dark-C3hjOiHQ.svg":{"offset":2013695,"length":3855,"mime":"image/svg+xml","gzipped":true,"hash":"a0f236b34d931931"},"/assets/index-CaKFzcjh.css":{"offset":2017550,"length":73993,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0b6ed57e3b279ea7"},"/assets/railway-white-CFKFsfw2.svg":{"offset":2091543,"length":2006,"mime":"image/svg+xml","gzipped":true,"hash":"cdfae42b06c7f002"},"/assets/render-black-Cz1XqOfh.svg":{"offset":2093549,"length":2039,"mime":"image/svg+xml","gzipped":true,"hash":"aa8e27c775b8a80d"},"/assets/workos-black-DnPI5Ve5.svg":{"offset":2095588,"length":1716,"mime":"image/svg+xml","gzipped":true,"hash":"ee02fe0a62ec07b3"},"/assets/render-white-D4l33ygB.svg":{"offset":2097304,"length":2037,"mime":"image/svg+xml","gzipped":true,"hash":"a50b023056a6449c"},"/assets/cloudflare-black-6Ojsn8yh.svg":{"offset":2099341,"length":5273,"mime":"image/svg+xml","gzipped":true,"hash":"e8c1a2879b3e87a1"},"/__docx_assets/c652463bc02b14.bin":{"offset":2104614,"length":1032,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"b7ef659b9918b562"},"/assets/clerk-logo-light-BYN-U_0H.svg":{"offset":2105646,"length":2101,"mime":"image/svg+xml","gzipped":true,"hash":"85770f891d615c15"},"/assets/openrouter-white-BLyN_5Ca.svg":{"offset":2107747,"length":1740,"mime":"image/svg+xml","gzipped":true,"hash":"13637f69d0de5fd2"},"/assets/openrouter-black-CJtk3mjZ.svg":{"offset":2109487,"length":1739,"mime":"image/svg+xml","gzipped":true,"hash":"5dd9bf63f2f8dea1"},"/assets/scarf-BJX_-tJ9.svg":{"offset":2111226,"length":3869,"mime":"image/svg+xml","gzipped":true,"hash":"76163b7ea851b6af"},"/assets/serpapi-white-CPxTEZSp.svg":{"offset":2115095,"length":5507,"mime":"image/svg+xml","gzipped":true,"hash":"268f7b21f443c087"},"/assets/prisma-dark-DwgDxLwn.svg":{"offset":2120602,"length":2276,"mime":"image/svg+xml","gzipped":true,"hash":"4226546f639ea248"},"/assets/serpapi-black-DnXRiQQ3.svg":{"offset":2122878,"length":5506,"mime":"image/svg+xml","gzipped":true,"hash":"eae3ca3f49eb10bb"},"/assets/prisma-light-Cloa3Onm.svg":{"offset":2128384,"length":2278,"mime":"image/svg+xml","gzipped":true,"hash":"275386c848fe7de0"},"/assets/clerk-logo-dark-CRE22T_2.svg":{"offset":2130662,"length":2082,"mime":"image/svg+xml","gzipped":true,"hash":"6ac152fa38cf1202"},"/images/brand/tanstack-emblem-black.svg":{"offset":2132744,"length":640,"mime":"image/svg+xml","gzipped":true,"hash":"5a2195e2edbc36d7"},"/fonts/Inter-latin.woff2":{"offset":2133384,"length":72932,"mime":"font/woff2","gzipped":true,"hash":"950aff451f2f608d"},"/fonts/Inter-latin-ext.woff2":{"offset":2206316,"length":133386,"mime":"font/woff2","gzipped":true,"hash":"d2c129ef78916c74"},"/images/hero-palm-gradient-960.webp":{"offset":2339702,"length":28730,"mime":"image/webp","gzipped":true,"hash":"93fbf92042d02785"},"/__docx_assets/6cb3d68941f20a.woff2":{"offset":2368432,"length":8291,"mime":"font/woff2","gzipped":true,"hash":"b8c026c80d547069"},"/__docx_assets/c097aa95d7ec1b.woff2":{"offset":2376723,"length":6803,"mime":"font/woff2","gzipped":true,"hash":"cfae540b88c18592"},"/__docx_assets/b2bd399c7ef212.woff2":{"offset":2383526,"length":5855,"mime":"font/woff2","gzipped":true,"hash":"bff78395d07e458e"},"/__docx_assets/ecb1449c9f014f.woff2":{"offset":2389381,"length":14771,"mime":"font/woff2","gzipped":true,"hash":"75de27a62b652578"},"/__docx_assets/d1b233760bed30.woff2":{"offset":2404152,"length":6935,"mime":"font/woff2","gzipped":true,"hash":"023e5b00d47f4ca4"},"/__docx_assets/ed3206e8ede4a9.woff2":{"offset":2411087,"length":6995,"mime":"font/woff2","gzipped":true,"hash":"c96c57c26b8d4271"},"/__docx_assets/c70f6b078a0944.woff2":{"offset":2418082,"length":8483,"mime":"font/woff2","gzipped":true,"hash":"e4ddc5e461f06274"},"/__docx_assets/b06594e3dfbc9f.woff2":{"offset":2426565,"length":6063,"mime":"font/woff2","gzipped":true,"hash":"e5a0d1b353cec923"},"/__docx_assets/7e3d7e3c7de8e8.woff2":{"offset":2432628,"length":14731,"mime":"font/woff2","gzipped":true,"hash":"f030ce23a9c2db55"},"/__docx_assets/2a73cdecea5ce9.woff2":{"offset":2447359,"length":5891,"mime":"font/woff2","gzipped":true,"hash":"9b1b2d0dc61dc5b4"},"/__docx_assets/ae5fc1eadb0588.woff2":{"offset":2453250,"length":13371,"mime":"font/woff2","gzipped":true,"hash":"5a329f24e9a408d8"},"/__docx_assets/4c442bc4abb065.woff2":{"offset":2466621,"length":13427,"mime":"font/woff2","gzipped":true,"hash":"055c5a5c51c1b6e9"},"/__docx_assets/f9c74283b1693b.woff2":{"offset":2480048,"length":8379,"mime":"font/woff2","gzipped":true,"hash":"827ff291ec7ad3e2"},"/__docx_assets/32a447b3624072.woff2":{"offset":2488427,"length":13007,"mime":"font/woff2","gzipped":true,"hash":"33b3c6001f8dd113"},"/__docx_assets/e577600d58460a.woff2":{"offset":2501434,"length":30764,"mime":"font/woff2","gzipped":true,"hash":"b0dbbc6df819eb88"},"/__docx_assets/5f754c3adb80da.woff2":{"offset":2532198,"length":76898,"mime":"font/woff2","gzipped":true,"hash":"2a689569fa1d472f"},"/__docx_assets/132ba860efc49c.woff2":{"offset":2609096,"length":9375,"mime":"font/woff2","gzipped":true,"hash":"5c080ddf94a1be02"},"/__docx_assets/245a9a663e9393.woff2":{"offset":2618471,"length":6955,"mime":"font/woff2","gzipped":true,"hash":"8605f3d9c723b79b"},"/__docx_assets/fd3dd31c82271e.woff2":{"offset":2625426,"length":7715,"mime":"font/woff2","gzipped":true,"hash":"972b8ee5f8ff5391"},"/__docx_assets/2504ad92936998.woff2":{"offset":2633141,"length":8699,"mime":"font/woff2","gzipped":true,"hash":"977d9cf9aec9b099"},"/__docx_assets/6988d8097c69a5.woff2":{"offset":2641840,"length":7207,"mime":"font/woff2","gzipped":true,"hash":"381bc33d377ec181"},"/__docx_assets/203ce92810c0a1.woff2":{"offset":2649047,"length":13455,"mime":"font/woff2","gzipped":true,"hash":"a2052c2e7171917f"},"/__docx_assets/eb889034c0832c.woff2":{"offset":2662502,"length":14911,"mime":"font/woff2","gzipped":true,"hash":"b05d0cae7c617430"},"/__docx_assets/707854e807bf3a.woff2":{"offset":2677413,"length":6091,"mime":"font/woff2","gzipped":true,"hash":"b40808097daa64a6"},"/__docx_assets/be7e618c1b6f15.woff2":{"offset":2683504,"length":13403,"mime":"font/woff2","gzipped":true,"hash":"d8074533a74c4065"},"/__docx_assets/86628368fe0c7c.woff2":{"offset":2696907,"length":15643,"mime":"font/woff2","gzipped":true,"hash":"fd07f16153dd55ac"},"/__docx_assets/796754f6fa2c0f.woff2":{"offset":2712550,"length":14351,"mime":"font/woff2","gzipped":true,"hash":"690c7a9520f8d9aa"},"/__docx_assets/677d93cfc15177.woff2":{"offset":2726901,"length":14931,"mime":"font/woff2","gzipped":true,"hash":"c1b3ea3548111f8f"},"/docs":{"offset":0,"length":42030,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"98acf36712f136a9"},"/":{"offset":0,"length":42030,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"98acf36712f136a9"}}}
+{
+  "id": "tanstack_store",
+  "name": "TanStack Store",
+  "version": "v0.7",
+  "commit": "666cd8bd",
+  "origin": "https://tanstack.com",
+  "entryPath": "/store/latest/docs/overview",
+  "updatedAt": "2026-10-11T10:38:10.009Z",
+  "totalBytes": 2712497,
+  "chunkCount": 106,
+  "routes": {
+    "/store/latest/docs/overview": {
+      "offset": 0,
+      "length": 40215,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f66f1f2905fd241c"
+    },
+    "/store/latest/docs/framework/react/examples/simple": {
+      "offset": 40215,
+      "length": 47782,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "47816a88c6acfbfc"
+    },
+    "/store/latest/docs/reference/index": {
+      "offset": 87997,
+      "length": 42733,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fcac2817fef8cafc"
+    },
+    "/store/latest/docs/installation": {
+      "offset": 130730,
+      "length": 41423,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "464512ed75cb6f46"
+    },
+    "/store/latest/docs/quick-start": {
+      "offset": 172153,
+      "length": 43380,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7fee68bcc91cdb6f"
+    },
+    "/store/latest/docs/framework/react/quick-start": {
+      "offset": 215533,
+      "length": 42583,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6a53c13187867f0f"
+    },
+    "/store/latest/docs/framework/react/examples/stores": {
+      "offset": 258116,
+      "length": 42514,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0dc5bb31c4dccf64"
+    },
+    "/store/latest/docs/framework/react/examples/atoms": {
+      "offset": 300630,
+      "length": 42465,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "078574c472620fc1"
+    },
+    "/store/latest/docs/framework/react/examples/store-context": {
+      "offset": 343095,
+      "length": 43563,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1b5450d31111261e"
+    },
+    "/store/latest/docs/framework/react/examples/store-actions": {
+      "offset": 386658,
+      "length": 42953,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "787f354472ec36c5"
+    },
+    "/store/latest/docs/framework/react/reference/index": {
+      "offset": 429611,
+      "length": 42416,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0bc2d0aa660749f2"
+    },
+    "/store/latest/docs/reference/classes/ReadonlyStore": {
+      "offset": 472027,
+      "length": 44311,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "09aa55ce8d08ad56"
+    },
+    "/store/latest/docs/reference/classes/Store": {
+      "offset": 516338,
+      "length": 44635,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f1d9f43e6656b55d"
+    },
+    "/store/latest/docs/reference/interfaces/InternalReadonlyAtom": {
+      "offset": 560973,
+      "length": 44534,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fcf5bd7b2a8b0185"
+    },
+    "/store/latest/docs/reference/interfaces/BaseAtom": {
+      "offset": 605507,
+      "length": 43417,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "923d68bdd62ac58e"
+    },
+    "/store/latest/docs/reference": {
+      "offset": 648924,
+      "length": 40644,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ee7e884c6f26298f"
+    },
+    "/store/latest/docs/reference/interfaces/Atom": {
+      "offset": 689568,
+      "length": 44416,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e440855760ba2b67"
+    },
+    "/store/latest/docs/reference/interfaces/ReadonlyAtom": {
+      "offset": 733984,
+      "length": 44490,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "67e1bded6f0d6c1c"
+    },
+    "/store/latest/docs/reference/interfaces/InteropSubscribable": {
+      "offset": 778474,
+      "length": 43927,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b3afd971450c9725"
+    },
+    "/store/latest/docs/reference/interfaces/AtomOptions": {
+      "offset": 822401,
+      "length": 43870,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb87440c26731bb9"
+    },
+    "/store/latest/docs/reference/interfaces/InternalBaseAtom": {
+      "offset": 866271,
+      "length": 43805,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "77e020fa61e13fd8"
+    },
+    "/store/latest/docs/reference/interfaces/Readable": {
+      "offset": 910076,
+      "length": 44212,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c69e2509315a0bec"
+    },
+    "/store/latest/docs/reference/interfaces/Subscription": {
+      "offset": 954288,
+      "length": 42584,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ab34b0270a41d84c"
+    },
+    "/store/latest/docs/framework/react/reference/functions/createStoreContext": {
+      "offset": 996872,
+      "length": 44435,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2e4ff3935a6e1bcd"
+    },
+    "/store/latest/docs/reference/type-aliases/Observer": {
+      "offset": 1041307,
+      "length": 43211,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1d31020cd9f0938e"
+    },
+    "/store/latest/docs/reference/type-aliases/StoreAction": {
+      "offset": 1084518,
+      "length": 42582,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9b320555fbc4b96f"
+    },
+    "/store/latest/docs/reference/functions/toObserver": {
+      "offset": 1127100,
+      "length": 43085,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "405d1c9888aef21c"
+    },
+    "/store/latest/docs/reference/type-aliases/AnyAtom": {
+      "offset": 1170185,
+      "length": 42108,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2610ff18a080527f"
+    },
+    "/store/latest/docs/reference/functions/createStore": {
+      "offset": 1212293,
+      "length": 43670,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d4d419eff07a6959"
+    },
+    "/store/latest/docs/reference/type-aliases/StoreActionMap": {
+      "offset": 1255963,
+      "length": 42136,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f622e7088fce438a"
+    },
+    "/store/latest/docs/reference/functions/shallow": {
+      "offset": 1298099,
+      "length": 42738,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1f11e3e49515fcc3"
+    },
+    "/store/latest/docs/reference/functions/flush": {
+      "offset": 1340837,
+      "length": 42207,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "05ffe67f2d798ddf"
+    },
+    "/store/latest/docs/reference/functions/batch": {
+      "offset": 1383044,
+      "length": 43573,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb68fd2715e3ca9f"
+    },
+    "/store/latest/docs/reference/functions/createAsyncAtom": {
+      "offset": 1426617,
+      "length": 43069,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fdc560ce823ce287"
+    },
+    "/store/latest/docs/reference/type-aliases/Selection": {
+      "offset": 1469686,
+      "length": 42575,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e2b55425475fd46c"
+    },
+    "/store/latest/docs/reference/functions/createAtom": {
+      "offset": 1512261,
+      "length": 44294,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7730aab993d5ebf8"
+    },
+    "/store/latest/docs/reference/type-aliases/StoreActionsFactory": {
+      "offset": 1556555,
+      "length": 44041,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0ef33c241ad45fd1"
+    },
+    "/store/latest/docs/reference/interfaces/Subscribable": {
+      "offset": 1600596,
+      "length": 44049,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5060f02a7ac2919f"
+    },
+    "/store/latest/docs/framework/react/reference/functions/useSelector": {
+      "offset": 1644645,
+      "length": 43794,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4ebe6f64b6cc63ed"
+    },
+    "/store/latest/docs/framework/react/reference/functions/useStore": {
+      "offset": 1688439,
+      "length": 44034,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7d740afae5ccfb49"
+    },
+    "/store/latest/docs/framework/react/reference/functions/useCreateAtom": {
+      "offset": 1732473,
+      "length": 43849,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0e46d4c7bb7c1d73"
+    },
+    "/store/latest/docs/framework/react/reference/functions/useStore-1": {
+      "offset": 1776322,
+      "length": 43658,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "89ed7df18fc98633"
+    },
+    "/store/latest/docs/framework/react/reference/functions/useCreateStore": {
+      "offset": 1819980,
+      "length": 44142,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cf2b6f6b54c0bf9b"
+    },
+    "/store/latest/docs/framework/react/reference/functions/useAtom": {
+      "offset": 1864122,
+      "length": 43481,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9464f3c0830dac21"
+    },
+    "/store/latest/docs/framework/react/reference/interfaces/UseSelectorOptions": {
+      "offset": 1907603,
+      "length": 42897,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9e4cccd9a37257d6"
+    },
+    "/favicon-16x16.png": {
+      "offset": 1950500,
+      "length": 590,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a53b782bb5f5aff7"
+    },
+    "/apple-touch-icon.png": {
+      "offset": 1951090,
+      "length": 7469,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2abc16a5f4b05ca9"
+    },
+    "/assets/lovable-white-DLB1BxKZ.svg": {
+      "offset": 1958559,
+      "length": 3575,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "289e15e1680f1bc7"
+    },
+    "/images/brand/tanstack-landscape-white.svg": {
+      "offset": 1962134,
+      "length": 1770,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "47b05e85ac4c4ffb"
+    },
+    "/images/brand/tanstack-landscape-black.svg": {
+      "offset": 1963904,
+      "length": 1770,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "7f88cc8634ee3f47"
+    },
+    "/assets/cloudflare-white-Co-Tyjbl.svg": {
+      "offset": 1965674,
+      "length": 5586,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "e38e46382d5e07c7"
+    },
+    "/favicon.ico": {
+      "offset": 1971260,
+      "length": 1085,
+      "mime": "image/vnd.microsoft.icon",
+      "gzipped": true,
+      "hash": "168a372851d14b1b"
+    },
+    "/favicon-light.svg": {
+      "offset": 1972345,
+      "length": 1377,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "87ddd3cc53780ea9"
+    },
+    "/favicon-32x32.png": {
+      "offset": 1973722,
+      "length": 1187,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "34241b997c796120"
+    },
+    "/assets/lovable-black-1mVxR6Bj.svg": {
+      "offset": 1974909,
+      "length": 3574,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "2991135aabc14b05"
+    },
+    "/favicon-dark.svg": {
+      "offset": 1972345,
+      "length": 1377,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "87ddd3cc53780ea9"
+    },
+    "/assets/cloudflare-black-6Ojsn8yh.svg": {
+      "offset": 1978483,
+      "length": 5273,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "e8c1a2879b3e87a1"
+    },
+    "/assets/railway-black-DeBDfNao.svg": {
+      "offset": 1983756,
+      "length": 2008,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "f17e0e028a8904e8"
+    },
+    "/assets/index-CaKFzcjh.css": {
+      "offset": 1985764,
+      "length": 73993,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b6ed57e3b279ea7"
+    },
+    "/assets/railway-white-CFKFsfw2.svg": {
+      "offset": 2059757,
+      "length": 2006,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "cdfae42b06c7f002"
+    },
+    "/assets/render-black-Cz1XqOfh.svg": {
+      "offset": 2061763,
+      "length": 2039,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "aa8e27c775b8a80d"
+    },
+    "/__docx_assets/c652463bc02b14.bin": {
+      "offset": 2063802,
+      "length": 1032,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b7ef659b9918b562"
+    },
+    "/assets/render-white-D4l33ygB.svg": {
+      "offset": 2064834,
+      "length": 2037,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a50b023056a6449c"
+    },
+    "/assets/coderabbit-dark-C3hjOiHQ.svg": {
+      "offset": 2066871,
+      "length": 3855,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a0f236b34d931931"
+    },
+    "/assets/coderabbit-light-ggTFqYhV.svg": {
+      "offset": 2070726,
+      "length": 3869,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "183adaaa8dc30b05"
+    },
+    "/assets/serpapi-white-CPxTEZSp.svg": {
+      "offset": 2074595,
+      "length": 5507,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "268f7b21f443c087"
+    },
+    "/assets/openrouter-white-BLyN_5Ca.svg": {
+      "offset": 2080102,
+      "length": 1740,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "13637f69d0de5fd2"
+    },
+    "/assets/clerk-logo-dark-CRE22T_2.svg": {
+      "offset": 2081842,
+      "length": 2082,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "6ac152fa38cf1202"
+    },
+    "/assets/clerk-logo-light-BYN-U_0H.svg": {
+      "offset": 2083924,
+      "length": 2101,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "85770f891d615c15"
+    },
+    "/assets/prisma-light-Cloa3Onm.svg": {
+      "offset": 2086025,
+      "length": 2278,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "275386c848fe7de0"
+    },
+    "/assets/workos-black-DnPI5Ve5.svg": {
+      "offset": 2088303,
+      "length": 1716,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "ee02fe0a62ec07b3"
+    },
+    "/assets/openrouter-black-CJtk3mjZ.svg": {
+      "offset": 2090019,
+      "length": 1739,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "5dd9bf63f2f8dea1"
+    },
+    "/assets/prisma-dark-DwgDxLwn.svg": {
+      "offset": 2091758,
+      "length": 2276,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "4226546f639ea248"
+    },
+    "/assets/scarf-BJX_-tJ9.svg": {
+      "offset": 2094034,
+      "length": 3869,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "76163b7ea851b6af"
+    },
+    "/assets/serpapi-black-DnXRiQQ3.svg": {
+      "offset": 2097903,
+      "length": 5506,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "eae3ca3f49eb10bb"
+    },
+    "/images/brand/tanstack-emblem-black.svg": {
+      "offset": 2103409,
+      "length": 640,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "5a2195e2edbc36d7"
+    },
+    "/fonts/Inter-latin.woff2": {
+      "offset": 2104049,
+      "length": 72932,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "950aff451f2f608d"
+    },
+    "/images/hero-palm-gradient-960.webp": {
+      "offset": 2176981,
+      "length": 28730,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "93fbf92042d02785"
+    },
+    "/fonts/Inter-latin-ext.woff2": {
+      "offset": 2205711,
+      "length": 133386,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "d2c129ef78916c74"
+    },
+    "/__docx_assets/d1b233760bed30.woff2": {
+      "offset": 2339097,
+      "length": 6935,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "023e5b00d47f4ca4"
+    },
+    "/__docx_assets/b06594e3dfbc9f.woff2": {
+      "offset": 2346032,
+      "length": 6063,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e5a0d1b353cec923"
+    },
+    "/__docx_assets/c70f6b078a0944.woff2": {
+      "offset": 2352095,
+      "length": 8483,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e4ddc5e461f06274"
+    },
+    "/__docx_assets/7e3d7e3c7de8e8.woff2": {
+      "offset": 2360578,
+      "length": 14731,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "f030ce23a9c2db55"
+    },
+    "/__docx_assets/f9c74283b1693b.woff2": {
+      "offset": 2375309,
+      "length": 8379,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "827ff291ec7ad3e2"
+    },
+    "/__docx_assets/ed3206e8ede4a9.woff2": {
+      "offset": 2383688,
+      "length": 6995,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "c96c57c26b8d4271"
+    },
+    "/__docx_assets/32a447b3624072.woff2": {
+      "offset": 2390683,
+      "length": 13007,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "33b3c6001f8dd113"
+    },
+    "/__docx_assets/6cb3d68941f20a.woff2": {
+      "offset": 2403690,
+      "length": 8291,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b8c026c80d547069"
+    },
+    "/__docx_assets/b2bd399c7ef212.woff2": {
+      "offset": 2411981,
+      "length": 5855,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "bff78395d07e458e"
+    },
+    "/__docx_assets/4c442bc4abb065.woff2": {
+      "offset": 2417836,
+      "length": 13427,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "055c5a5c51c1b6e9"
+    },
+    "/__docx_assets/2a73cdecea5ce9.woff2": {
+      "offset": 2431263,
+      "length": 5891,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "9b1b2d0dc61dc5b4"
+    },
+    "/__docx_assets/ecb1449c9f014f.woff2": {
+      "offset": 2437154,
+      "length": 14771,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "75de27a62b652578"
+    },
+    "/__docx_assets/e577600d58460a.woff2": {
+      "offset": 2451925,
+      "length": 30764,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b0dbbc6df819eb88"
+    },
+    "/__docx_assets/ae5fc1eadb0588.woff2": {
+      "offset": 2482689,
+      "length": 13371,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "5a329f24e9a408d8"
+    },
+    "/__docx_assets/c097aa95d7ec1b.woff2": {
+      "offset": 2496060,
+      "length": 6803,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "cfae540b88c18592"
+    },
+    "/__docx_assets/5f754c3adb80da.woff2": {
+      "offset": 2502863,
+      "length": 76898,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "2a689569fa1d472f"
+    },
+    "/__docx_assets/245a9a663e9393.woff2": {
+      "offset": 2579761,
+      "length": 6955,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "8605f3d9c723b79b"
+    },
+    "/__docx_assets/86628368fe0c7c.woff2": {
+      "offset": 2586716,
+      "length": 15643,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "fd07f16153dd55ac"
+    },
+    "/__docx_assets/203ce92810c0a1.woff2": {
+      "offset": 2602359,
+      "length": 13455,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "a2052c2e7171917f"
+    },
+    "/__docx_assets/796754f6fa2c0f.woff2": {
+      "offset": 2615814,
+      "length": 14351,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "690c7a9520f8d9aa"
+    },
+    "/__docx_assets/eb889034c0832c.woff2": {
+      "offset": 2630165,
+      "length": 14911,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b05d0cae7c617430"
+    },
+    "/__docx_assets/677d93cfc15177.woff2": {
+      "offset": 2645076,
+      "length": 14931,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "c1b3ea3548111f8f"
+    },
+    "/__docx_assets/be7e618c1b6f15.woff2": {
+      "offset": 2660007,
+      "length": 13403,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "d8074533a74c4065"
+    },
+    "/__docx_assets/fd3dd31c82271e.woff2": {
+      "offset": 2673410,
+      "length": 7715,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "972b8ee5f8ff5391"
+    },
+    "/__docx_assets/6988d8097c69a5.woff2": {
+      "offset": 2681125,
+      "length": 7207,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "381bc33d377ec181"
+    },
+    "/__docx_assets/132ba860efc49c.woff2": {
+      "offset": 2688332,
+      "length": 9375,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "5c080ddf94a1be02"
+    },
+    "/__docx_assets/707854e807bf3a.woff2": {
+      "offset": 2697707,
+      "length": 6091,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b40808097daa64a6"
+    },
+    "/__docx_assets/2504ad92936998.woff2": {
+      "offset": 2703798,
+      "length": 8699,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "977d9cf9aec9b099"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 40215,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f66f1f2905fd241c"
+    },
+    "/": {
+      "offset": 0,
+      "length": 40215,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f66f1f2905fd241c"
+    }
+  }
+}

@@ -1,1 +1,1483 @@
-{"id":"express","name":"Express.js","version":"v5.1","commit":"048d2b4a","origin":"https://expressjs.com","entryPath":"/","updatedAt":"2026-10-10T21:16:31.239Z","totalBytes":3533812,"chunkCount":130,"routes":{"/":{"offset":0,"length":19748,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7a3f5c3f17aff188"},"/en/blog":{"offset":19748,"length":18699,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a1585ba50e0397e2"},"/en/blog/":{"offset":19748,"length":18699,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a1585ba50e0397e2"},"/en/5x/starter/hello-world":{"offset":38447,"length":20315,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c7dd05af8f855046"},"/en/5x/starter/hello-world/":{"offset":38447,"length":20315,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c7dd05af8f855046"},"/en/5x/guide/using-template-engines":{"offset":58762,"length":21017,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"adbbe46e4898c380"},"/en/5x/guide/using-template-engines/":{"offset":58762,"length":21017,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"adbbe46e4898c380"},"/en/5x/guide/error-handling":{"offset":79779,"length":26201,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"37604a7b1f8e097f"},"/en/5x/guide/error-handling/":{"offset":79779,"length":26201,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"37604a7b1f8e097f"},"/en/5x/guide/using-middleware":{"offset":105980,"length":27293,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"32d8d4010d4bac95"},"/en/5x/guide/using-middleware/":{"offset":105980,"length":27293,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"32d8d4010d4bac95"},"/en/5x/starter/static-files":{"offset":133273,"length":20074,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f9c7adfabf392e19"},"/en/5x/starter/static-files/":{"offset":133273,"length":20074,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f9c7adfabf392e19"},"/en/5x/guide/debugging":{"offset":153347,"length":24143,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b2b38fec3fb1a9f2"},"/en/5x/guide/debugging/":{"offset":153347,"length":24143,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b2b38fec3fb1a9f2"},"/en/5x/guide/routing":{"offset":177490,"length":28851,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f42b94ae7aab3275"},"/en/5x/guide/routing/":{"offset":177490,"length":28851,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f42b94ae7aab3275"},"/en/5x/starter/examples":{"offset":206341,"length":18316,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6313cab745d83d8d"},"/en/5x/starter/examples/":{"offset":206341,"length":18316,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6313cab745d83d8d"},"/en/5x/starter/basic-routing":{"offset":224657,"length":20172,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6690c4fc848ee4d3"},"/en/5x/starter/basic-routing/":{"offset":224657,"length":20172,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6690c4fc848ee4d3"},"/en/5x/starter/faq":{"offset":244829,"length":20965,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8673803a70226bdc"},"/en/5x/starter/faq/":{"offset":244829,"length":20965,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8673803a70226bdc"},"/en/5x/starter/installing":{"offset":265794,"length":21177,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"46bf314e7a2aaeb0"},"/en/5x/starter/installing/":{"offset":265794,"length":21177,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"46bf314e7a2aaeb0"},"/en/5x/starter/generator":{"offset":286971,"length":19586,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f7fb8ff12cc4e334"},"/en/5x/starter/generator/":{"offset":286971,"length":19586,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f7fb8ff12cc4e334"},"/en/support":{"offset":306557,"length":17261,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"521dd0fb3e194235"},"/en/support/":{"offset":306557,"length":17261,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"521dd0fb3e194235"},"/en/5x/guide/writing-middleware":{"offset":323818,"length":25147,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dc4ad5f2cd57b5c6"},"/en/5x/guide/writing-middleware/":{"offset":323818,"length":25147,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dc4ad5f2cd57b5c6"},"/en/5x/guide/behind-proxies":{"offset":348965,"length":20854,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"28e6232979fbbf63"},"/en/5x/guide/behind-proxies/":{"offset":348965,"length":20854,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"28e6232979fbbf63"},"/en/resources":{"offset":369819,"length":17332,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e0d1f2d26999eadb"},"/en/resources/":{"offset":369819,"length":17332,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e0d1f2d26999eadb"},"/en/5x/api/express":{"offset":387151,"length":28008,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c687a36b43281a13"},"/en/5x/api/express/":{"offset":387151,"length":28008,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c687a36b43281a13"},"/en/advanced/best-practice-performance":{"offset":415159,"length":29184,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0746bd5fe28c038b"},"/en/advanced/best-practice-performance/":{"offset":415159,"length":29184,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0746bd5fe28c038b"},"/en/advanced/security-updates":{"offset":444343,"length":19525,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"13dad0367d329f48"},"/en/advanced/security-updates/":{"offset":444343,"length":19525,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"13dad0367d329f48"},"/en/advanced/healthcheck-graceful-shutdown":{"offset":463868,"length":18061,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"964315a595b789c9"},"/en/advanced/healthcheck-graceful-shutdown/":{"offset":463868,"length":18061,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"964315a595b789c9"},"/en/5x/api":{"offset":481929,"length":19329,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"79a456f3f0776d67"},"/en/5x/api/":{"offset":481929,"length":19329,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"79a456f3f0776d67"},"/en/5x/advanced/developing-template-engines":{"offset":501258,"length":19950,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"37cf8f6fe47283f5"},"/en/5x/advanced/developing-template-engines/":{"offset":501258,"length":19950,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"37cf8f6fe47283f5"},"/en/advanced/best-practice-security":{"offset":521208,"length":27484,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8209e1751a58b2f2"},"/en/advanced/best-practice-security/":{"offset":521208,"length":27484,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8209e1751a58b2f2"},"/en/guide/migrating-5":{"offset":548692,"length":30259,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a99d059aa64e86ff"},"/en/guide/migrating-5/":{"offset":548692,"length":30259,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a99d059aa64e86ff"},"/en/guide/migrating-4":{"offset":578951,"length":29185,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8bcfc538c4d11c99"},"/en/guide/migrating-4/":{"offset":578951,"length":29185,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8bcfc538c4d11c99"},"/en/5x/api/request":{"offset":608136,"length":31555,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7ebe1831623a2903"},"/en/5x/api/request/":{"offset":608136,"length":31555,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7ebe1831623a2903"},"/en/5x/guide/overriding-express-api":{"offset":639691,"length":22700,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"37c6a8588f7dcc22"},"/en/5x/guide/overriding-express-api/":{"offset":639691,"length":22700,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"37c6a8588f7dcc22"},"/en/guide/database-integration":{"offset":662391,"length":28221,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ab17e9cc5f288391"},"/en/guide/database-integration/":{"offset":662391,"length":28221,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ab17e9cc5f288391"},"/en/5x/api/router":{"offset":690612,"length":29106,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"08fdf3d66f335a92"},"/en/5x/api/router/":{"offset":690612,"length":29106,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"08fdf3d66f335a92"},"/en/5x/api/response":{"offset":719718,"length":35178,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cbf532d8718954d4"},"/en/5x/api/response/":{"offset":719718,"length":35178,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cbf532d8718954d4"},"/en/5x/api/application":{"offset":754896,"length":43072,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5d78f627a83cddb5"},"/en/5x/api/application/":{"offset":754896,"length":43072,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5d78f627a83cddb5"},"/en/resources/middleware":{"offset":797968,"length":18278,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f8198913b103baee"},"/en/resources/middleware/":{"offset":797968,"length":18278,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f8198913b103baee"},"/en/resources/utils":{"offset":816246,"length":17709,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"201b2bd6ed2a880b"},"/en/resources/utils/":{"offset":816246,"length":17709,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"201b2bd6ed2a880b"},"/en/resources/community":{"offset":833955,"length":18800,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"df7aa7a62fe615d7"},"/en/resources/community/":{"offset":833955,"length":18800,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"df7aa7a62fe615d7"},"/en/resources/middleware/cookie-parser":{"offset":852755,"length":21163,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ae783f18925e6781"},"/en/resources/middleware/cookie-parser/":{"offset":852755,"length":21163,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ae783f18925e6781"},"/en/resources/middleware/method-override":{"offset":873918,"length":22758,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"32e9cc65a11453ce"},"/en/resources/middleware/method-override/":{"offset":873918,"length":22758,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"32e9cc65a11453ce"},"/en/resources/contributing":{"offset":896676,"length":25981,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0c507bc7af866806"},"/en/resources/contributing/":{"offset":896676,"length":25981,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0c507bc7af866806"},"/en/resources/middleware/cookie-session":{"offset":922657,"length":24630,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"063bd36cce6ef27b"},"/en/resources/middleware/cookie-session/":{"offset":922657,"length":24630,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"063bd36cce6ef27b"},"/en/resources/middleware/compression":{"offset":947287,"length":24088,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b24b47917c9ee0aa"},"/en/resources/middleware/compression/":{"offset":947287,"length":24088,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b24b47917c9ee0aa"},"/en/resources/middleware/morgan":{"offset":971375,"length":25921,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"37867791e56c3808"},"/en/resources/middleware/morgan/":{"offset":971375,"length":25921,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"37867791e56c3808"},"/en/resources/middleware/cors":{"offset":997296,"length":24931,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6975b5b18c37c994"},"/en/resources/middleware/cors/":{"offset":997296,"length":24931,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6975b5b18c37c994"},"/en/resources/middleware/response-time":{"offset":1022227,"length":21460,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0dcd059d88e0e84f"},"/en/resources/middleware/response-time/":{"offset":1022227,"length":21460,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0dcd059d88e0e84f"},"/en/resources/middleware/multer":{"offset":1043687,"length":27534,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"88e7f0522d393f4f"},"/en/resources/middleware/multer/":{"offset":1043687,"length":27534,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"88e7f0522d393f4f"},"/en/resources/middleware/errorhandler":{"offset":1071221,"length":21264,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6f37514263f47b36"},"/en/resources/middleware/errorhandler/":{"offset":1071221,"length":21264,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6f37514263f47b36"},"/en/resources/glossary":{"offset":1092485,"length":18725,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c84df00111236b9b"},"/en/resources/glossary/":{"offset":1092485,"length":18725,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c84df00111236b9b"},"/en/resources/middleware/body-parser":{"offset":1111210,"length":26171,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bea55d7ca11c4dca"},"/en/resources/middleware/body-parser/":{"offset":1111210,"length":26171,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bea55d7ca11c4dca"},"/en/resources/middleware/serve-favicon":{"offset":1137381,"length":21469,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ca807d657cf006a8"},"/en/resources/middleware/serve-favicon/":{"offset":1137381,"length":21469,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ca807d657cf006a8"},"/en/resources/middleware/serve-static":{"offset":1158850,"length":23261,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4a37e44a459d9ad2"},"/en/resources/middleware/serve-static/":{"offset":1158850,"length":23261,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4a37e44a459d9ad2"},"/en/resources/middleware/serve-index":{"offset":1182111,"length":21746,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"baaed28b8cd5449e"},"/en/resources/middleware/serve-index/":{"offset":1182111,"length":21746,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"baaed28b8cd5449e"},"/en/blog/2026-05-31-security-releases":{"offset":1203857,"length":20124,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1a2c8507b28229a6"},"/en/blog/2026-05-31-security-releases/":{"offset":1203857,"length":20124,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1a2c8507b28229a6"},"/en/blog/2":{"offset":1223981,"length":18707,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"203c48eeb23d064e"},"/en/blog/2/":{"offset":1223981,"length":18707,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"203c48eeb23d064e"},"/en/resources/middleware/vhost":{"offset":1242688,"length":21897,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cc028fc41ff5ccbc"},"/en/resources/middleware/vhost/":{"offset":1242688,"length":21897,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cc028fc41ff5ccbc"},"/en/blog/2026-09-30-security-releases":{"offset":1264585,"length":22920,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e2a52dbe2b477cb1"},"/en/blog/2026-09-30-security-releases/":{"offset":1264585,"length":22920,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e2a52dbe2b477cb1"},"/en/blog/2026-02-27-security-releases":{"offset":1287505,"length":19419,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5b60302fa5d1fbe2"},"/en/blog/2026-02-27-security-releases/":{"offset":1287505,"length":19419,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5b60302fa5d1fbe2"},"/en/blog/2026-09-09-joining-the-openjs-cna-security-break":{"offset":1306924,"length":19221,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f63c88443b4bbe2d"},"/en/blog/2026-09-09-joining-the-openjs-cna-security-break/":{"offset":1306924,"length":19221,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f63c88443b4bbe2d"},"/en/resources/middleware/session":{"offset":1326145,"length":33705,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e3aac2270d66c512"},"/en/resources/middleware/session/":{"offset":1326145,"length":33705,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e3aac2270d66c512"},"/en/blog/2026-05-18-a-new-look-for-express":{"offset":1359850,"length":22406,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b87f45b40ce08236"},"/en/blog/2026-05-18-a-new-look-for-express/":{"offset":1359850,"length":22406,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b87f45b40ce08236"},"/en/blog/2026-03-30-security-releases":{"offset":1382256,"length":20124,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e71c2e5f1cd282df"},"/en/blog/2026-03-30-security-releases/":{"offset":1382256,"length":20124,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e71c2e5f1cd282df"},"/en/blog/2026-07-31-security-releases":{"offset":1402380,"length":19911,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0fad35906724fba2"},"/en/blog/2026-07-31-security-releases/":{"offset":1402380,"length":19911,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0fad35906724fba2"},"/en/resources/middleware/timeout":{"offset":1422291,"length":22050,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"81c0e04c9f8ed2a7"},"/en/resources/middleware/timeout/":{"offset":1422291,"length":22050,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"81c0e04c9f8ed2a7"},"/en/blog/2026-06-30-security-releases":{"offset":1444341,"length":20470,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"17b37cb112a235f0"},"/en/blog/2026-06-30-security-releases/":{"offset":1444341,"length":20470,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"17b37cb112a235f0"},"/en/blog/2025-12-01-security-releases":{"offset":1464811,"length":19462,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1bd9e29a1af5ab05"},"/en/blog/2025-12-01-security-releases/":{"offset":1464811,"length":19462,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1bd9e29a1af5ab05"},"/en/blog/2026-08-31-security-releases":{"offset":1484273,"length":21579,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f2473e65343e67c8"},"/en/blog/2026-08-31-security-releases/":{"offset":1484273,"length":21579,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f2473e65343e67c8"},"/en/blog/2025-07-18-security-releases":{"offset":1505852,"length":19351,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"54ddeacde9783ddf"},"/en/blog/2025-07-18-security-releases/":{"offset":1505852,"length":19351,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"54ddeacde9783ddf"},"/en/blog/2024-09-29-security-releases":{"offset":1525203,"length":21039,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e3c64bf243b1549b"},"/en/blog/2024-09-29-security-releases/":{"offset":1525203,"length":21039,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e3c64bf243b1549b"},"/en/blog/2025-07-31-security-releases":{"offset":1546242,"length":19591,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"778390f7ec33d492"},"/en/blog/2025-07-31-security-releases/":{"offset":1546242,"length":19591,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"778390f7ec33d492"},"/en/blog/2024-07-16-welcome-post":{"offset":1565833,"length":19458,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5b4d0097ce317747"},"/en/blog/2024-07-16-welcome-post/":{"offset":1565833,"length":19458,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5b4d0097ce317747"},"/en/blog/2025-05-19-security-releases":{"offset":1585291,"length":19822,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e8a797c152f8928"},"/en/blog/2025-05-19-security-releases/":{"offset":1585291,"length":19822,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e8a797c152f8928"},"/en/blog/2025-05-16-express-cleanup-legacy-packages":{"offset":1605113,"length":20185,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d98bad2613320541"},"/en/blog/2025-05-16-express-cleanup-legacy-packages/":{"offset":1605113,"length":20185,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d98bad2613320541"},"/en/blog/write-post":{"offset":1625298,"length":20482,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a85890d783bf7dc8"},"/en/blog/write-post/":{"offset":1625298,"length":20482,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a85890d783bf7dc8"},"/en/blog/2024-10-01-herodevs-partnership-announcement":{"offset":1645780,"length":19831,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4bc5c9c7a7832637"},"/en/blog/2024-10-01-herodevs-partnership-announcement/":{"offset":1645780,"length":19831,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4bc5c9c7a7832637"},"/en/blog/2025-03-31-v5-1-latest-release":{"offset":1665611,"length":25793,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9486bb39eb68bcef"},"/en/blog/2025-03-31-v5-1-latest-release/":{"offset":1665611,"length":25793,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9486bb39eb68bcef"},"/en/blog/3":{"offset":1691404,"length":18740,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d1e0b39e8efad530"},"/en/blog/3/":{"offset":1691404,"length":18740,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d1e0b39e8efad530"},"/en/blog/2024-10-22-security-audit-milestone-achievement":{"offset":1710144,"length":20538,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"af9f767f45f1f283"},"/en/blog/2024-10-22-security-audit-milestone-achievement/":{"offset":1710144,"length":20538,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"af9f767f45f1f283"},"/en/blog/2025-06-05-vulnerability-reporting-process-overhaul":{"offset":1730682,"length":21040,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ad98ec9cbd5ee60b"},"/en/blog/2025-06-05-vulnerability-reporting-process-overhaul/":{"offset":1730682,"length":21040,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ad98ec9cbd5ee60b"},"/en/blog/2024-10-15-v5-release":{"offset":1751722,"length":24593,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1959e79376603908"},"/en/blog/2024-10-15-v5-release/":{"offset":1751722,"length":24593,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1959e79376603908"},"/en/blog/2025-01-09-rewind-2024-triumphs-and-2025-vision":{"offset":1776315,"length":23971,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e5f6092d9e060b8a"},"/en/blog/2025-01-09-rewind-2024-triumphs-and-2025-vision/":{"offset":1776315,"length":23971,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e5f6092d9e060b8a"},"/en/blog/4":{"offset":1800286,"length":18650,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7ab9ce273f648733"},"/en/blog/4/":{"offset":1800286,"length":18650,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7ab9ce273f648733"},"/favicon.svg":{"offset":1818936,"length":882,"mime":"image/svg+xml","gzipped":true,"hash":"0831d7667efa9fa4"},"/apple-touch-icon.png":{"offset":1819818,"length":1001,"mime":"image/png","gzipped":true,"hash":"eb693c7144a4115f"},"/netlify-logo.svg":{"offset":1820819,"length":1621,"mime":"image/svg+xml","gzipped":true,"hash":"bcf49c4bba39dfba"},"/_astro/ec.hkn6n.css":{"offset":1822440,"length":3810,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"d9551718bc39cf06"},"/_astro/Layout.DYZ5tnGN.css":{"offset":1826250,"length":4103,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"35a548a001c397a4"},"/openjs-logo-black.svg":{"offset":1830353,"length":2246,"mime":"image/svg+xml","gzipped":true,"hash":"47ca4054602be05a"},"/_astro/primitives.9-yIY7ON.css":{"offset":1832599,"length":2483,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"2edea23cd8eb1246"},"/openjs-logo-white.svg":{"offset":1835082,"length":2313,"mime":"image/svg+xml","gzipped":true,"hash":"b5e12ad53cb743e6"},"/_astro/patterns.CV66JhXa.css":{"offset":1837395,"length":9131,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"446f5ccbd9fcbcbc"},"/favicon.ico":{"offset":1846526,"length":657,"mime":"image/vnd.microsoft.icon","gzipped":true,"hash":"08d3515423bdae0f"},"/og/blog-2026-09-30-security-releases.png":{"offset":1847183,"length":44595,"mime":"image/png","gzipped":true,"hash":"e8b02cee2d8d492d"},"/og/blog-2026-09-09-joining-the-openjs-cna-security-break.png":{"offset":1891778,"length":51087,"mime":"image/png","gzipped":true,"hash":"fe8d4ac3473157bd"},"/images/logos/express-kawaii.webp":{"offset":1942865,"length":69975,"mime":"image/webp","gzipped":true,"hash":"90f5a7e28c6271d1"},"/og/blog-2026-07-31-security-releases.png":{"offset":2012840,"length":39638,"mime":"image/png","gzipped":true,"hash":"77208ec55f3c2a43"},"/og/blog-2026-05-31-security-releases.png":{"offset":2052478,"length":40489,"mime":"image/png","gzipped":true,"hash":"e65c8d4d55cd8dd7"},"/og/blog-2026-06-30-security-releases.png":{"offset":2092967,"length":39519,"mime":"image/png","gzipped":true,"hash":"682605eb7074cd49"},"/og/blog-2026-08-31-security-releases.png":{"offset":2132486,"length":41488,"mime":"image/png","gzipped":true,"hash":"3434a518619ce3bb"},"/og/blog-2026-05-18-a-new-look-for-express.png":{"offset":2173974,"length":30276,"mime":"image/png","gzipped":true,"hash":"fb9dce22ddc292f0"},"/__docx_assets/e21df10802103c.png":{"offset":2204250,"length":12198,"mime":"image/png","gzipped":true,"hash":"ae9372ed764fb864"},"/og/blog-2024-10-01-herodevs-partnership-announcement.png":{"offset":2216448,"length":48704,"mime":"image/png","gzipped":true,"hash":"6d2c8f152a667698"},"/images/express-mw.png":{"offset":2265152,"length":36353,"mime":"image/png","gzipped":true,"hash":"590d6f31498a4397"},"/og/blog-2024-10-22-security-audit-milestone-achievement.png":{"offset":2301505,"length":50092,"mime":"image/png","gzipped":true,"hash":"8b754c195fbda23e"},"/og/blog-2024-10-15-v5-release.png":{"offset":2351597,"length":44294,"mime":"image/png","gzipped":true,"hash":"f1764d0e2634fc88"},"/og/blog-2024-09-29-security-releases.png":{"offset":2395891,"length":43977,"mime":"image/png","gzipped":true,"hash":"95525285715ed9fe"},"/og/blog-2024-07-16-welcome-post.png":{"offset":2439868,"length":32466,"mime":"image/png","gzipped":true,"hash":"7b97d2def9bd4efb"},"/og/blog-2025-07-18-security-releases.png":{"offset":2472334,"length":39530,"mime":"image/png","gzipped":true,"hash":"224d8b37853498fd"},"/og/blog-2025-05-16-express-cleanup-legacy-packages.png":{"offset":2511864,"length":45620,"mime":"image/png","gzipped":true,"hash":"415e787661e678c3"},"/og/blog-2026-03-30-security-releases.png":{"offset":2557484,"length":40772,"mime":"image/png","gzipped":true,"hash":"4cc432095646b74d"},"/og/blog-2025-07-31-security-releases.png":{"offset":2598256,"length":39240,"mime":"image/png","gzipped":true,"hash":"73404ebffbb19d67"},"/og/blog-2026-02-27-security-releases.png":{"offset":2637496,"length":41824,"mime":"image/png","gzipped":true,"hash":"6269fc9c6878b025"},"/og/blog-2025-05-19-security-releases.png":{"offset":2679320,"length":39847,"mime":"image/png","gzipped":true,"hash":"66b077627ffe1bbc"},"/og/blog-2025-03-31-v5-1-latest-release.png":{"offset":2719167,"length":42952,"mime":"image/png","gzipped":true,"hash":"5dc7ddb8a68cfb7b"},"/og/blog-2025-12-01-security-releases.png":{"offset":2762119,"length":43852,"mime":"image/png","gzipped":true,"hash":"82f9d46d476926ed"},"/og/blog-2025-06-05-vulnerability-reporting-process-overhaul.png":{"offset":2805971,"length":52780,"mime":"image/png","gzipped":true,"hash":"2db71fed5255f217"},"/og/blog-2025-01-09-rewind-2024-triumphs-and-2025-vision.png":{"offset":2858751,"length":49356,"mime":"image/png","gzipped":true,"hash":"5ce0c97f12fc5984"},"/__docx_assets/83ca45f7f805ee.png":{"offset":2908107,"length":131740,"mime":"image/png","gzipped":true,"hash":"0fbcecd3413187b2"},"/__docx_assets/31b75548593d36.png":{"offset":3039847,"length":27240,"mime":"image/jpeg","gzipped":true,"hash":"df16b40b43e56207"},"/__docx_assets/2339de0d6c1b3c.png":{"offset":3067087,"length":15479,"mime":"image/jpeg","gzipped":true,"hash":"c45fb6152d5d574a"},"/images/clustering.png":{"offset":3082566,"length":3699,"mime":"image/png","gzipped":true,"hash":"ae70baeaf0c751bd"},"/images/logos/logo-white.svg":{"offset":3086265,"length":904,"mime":"image/svg+xml","gzipped":true,"hash":"66894fb49e5dc201"},"/images/logos/logo-express-black.svg":{"offset":3087169,"length":2826,"mime":"image/svg+xml","gzipped":true,"hash":"8966550872fc2a6f"},"/images/logos/logo-express-white.svg":{"offset":3089995,"length":2829,"mime":"image/svg+xml","gzipped":true,"hash":"fd8aaa6e3c659457"},"/images/blog/redesign/logo-favicon.png":{"offset":3092824,"length":14921,"mime":"image/png","gzipped":true,"hash":"9d79ee4a1f94e7dc"},"/images/blog/redesign/vision-mission.png":{"offset":3107745,"length":30531,"mime":"image/png","gzipped":true,"hash":"96b75cc315396f6d"},"/images/blog/redesign/brand-values.png":{"offset":3138276,"length":34799,"mime":"image/png","gzipped":true,"hash":"c50261c032748034"},"/images/logos/logo-dark.svg":{"offset":3173075,"length":906,"mime":"image/svg+xml","gzipped":true,"hash":"e2be7404cbc17216"},"/og/blog-write-post.png":{"offset":3173981,"length":30538,"mime":"image/png","gzipped":true,"hash":"f73b7fb0b894dba0"},"/images/blog/redesign/before-after.png":{"offset":3204519,"length":138080,"mime":"image/png","gzipped":true,"hash":"a1e97327da550e61"},"/fonts/JetBrainsMono-Light.woff2":{"offset":3342599,"length":93904,"mime":"font/woff2","gzipped":true,"hash":"161b6ad098af7281"},"/fonts/JetBrainsMono-LightItalic.woff2":{"offset":3436503,"length":97309,"mime":"font/woff2","gzipped":true,"hash":"9c3b62cf1ce39530"},"/docs":{"offset":0,"length":19748,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7a3f5c3f17aff188"}}}
+{
+  "id": "express",
+  "name": "Express.js",
+  "version": "v5.1",
+  "commit": "616986c3",
+  "origin": "https://expressjs.com",
+  "entryPath": "/",
+  "updatedAt": "2026-10-11T10:38:40.088Z",
+  "totalBytes": 3533810,
+  "chunkCount": 130,
+  "routes": {
+    "/": {
+      "offset": 0,
+      "length": 19748,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1810907110bc8245"
+    },
+    "/en/5x/guide/error-handling": {
+      "offset": 19748,
+      "length": 26201,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "14e8c276c038299c"
+    },
+    "/en/5x/guide/error-handling/": {
+      "offset": 19748,
+      "length": 26201,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "14e8c276c038299c"
+    },
+    "/en/blog": {
+      "offset": 45949,
+      "length": 18701,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f33d36fa91b338b8"
+    },
+    "/en/blog/": {
+      "offset": 45949,
+      "length": 18701,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f33d36fa91b338b8"
+    },
+    "/en/5x/guide/behind-proxies": {
+      "offset": 64650,
+      "length": 20854,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b0d9a78e23e26708"
+    },
+    "/en/5x/guide/behind-proxies/": {
+      "offset": 64650,
+      "length": 20854,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b0d9a78e23e26708"
+    },
+    "/en/5x/starter/examples": {
+      "offset": 85504,
+      "length": 18316,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bb448c09305a3b9a"
+    },
+    "/en/5x/starter/examples/": {
+      "offset": 85504,
+      "length": 18316,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bb448c09305a3b9a"
+    },
+    "/en/5x/guide/using-middleware": {
+      "offset": 103820,
+      "length": 27293,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6e1e2bb38596477e"
+    },
+    "/en/5x/guide/using-middleware/": {
+      "offset": 103820,
+      "length": 27293,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6e1e2bb38596477e"
+    },
+    "/en/5x/starter/installing": {
+      "offset": 131113,
+      "length": 21177,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b3edd4285eaf13a5"
+    },
+    "/en/5x/starter/installing/": {
+      "offset": 131113,
+      "length": 21177,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b3edd4285eaf13a5"
+    },
+    "/en/5x/guide/using-template-engines": {
+      "offset": 152290,
+      "length": 21017,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2f5cf7f94d35e93d"
+    },
+    "/en/5x/guide/using-template-engines/": {
+      "offset": 152290,
+      "length": 21017,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2f5cf7f94d35e93d"
+    },
+    "/en/5x/starter/hello-world": {
+      "offset": 173307,
+      "length": 20315,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c5fe64b4f2aba80d"
+    },
+    "/en/5x/starter/hello-world/": {
+      "offset": 173307,
+      "length": 20315,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c5fe64b4f2aba80d"
+    },
+    "/en/5x/starter/generator": {
+      "offset": 193622,
+      "length": 19586,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dc156928f9677660"
+    },
+    "/en/5x/starter/generator/": {
+      "offset": 193622,
+      "length": 19586,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dc156928f9677660"
+    },
+    "/en/5x/starter/basic-routing": {
+      "offset": 213208,
+      "length": 20172,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bff20d180a11def8"
+    },
+    "/en/5x/starter/basic-routing/": {
+      "offset": 213208,
+      "length": 20172,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bff20d180a11def8"
+    },
+    "/en/5x/starter/faq": {
+      "offset": 233380,
+      "length": 20965,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e0ccfa2261a1520d"
+    },
+    "/en/5x/starter/faq/": {
+      "offset": 233380,
+      "length": 20965,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e0ccfa2261a1520d"
+    },
+    "/en/5x/starter/static-files": {
+      "offset": 254345,
+      "length": 20074,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a130b34126b3e8ee"
+    },
+    "/en/5x/starter/static-files/": {
+      "offset": 254345,
+      "length": 20074,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a130b34126b3e8ee"
+    },
+    "/en/support": {
+      "offset": 274419,
+      "length": 17261,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7f9d383abafad0c7"
+    },
+    "/en/support/": {
+      "offset": 274419,
+      "length": 17261,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7f9d383abafad0c7"
+    },
+    "/en/5x/guide/routing": {
+      "offset": 291680,
+      "length": 28851,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f393b2c713017c71"
+    },
+    "/en/5x/guide/routing/": {
+      "offset": 291680,
+      "length": 28851,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f393b2c713017c71"
+    },
+    "/en/5x/guide/writing-middleware": {
+      "offset": 320531,
+      "length": 25147,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "36a8a6f159ef3943"
+    },
+    "/en/5x/guide/writing-middleware/": {
+      "offset": 320531,
+      "length": 25147,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "36a8a6f159ef3943"
+    },
+    "/en/5x/guide/debugging": {
+      "offset": 345678,
+      "length": 24143,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "46faa06c5bc196f0"
+    },
+    "/en/5x/guide/debugging/": {
+      "offset": 345678,
+      "length": 24143,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "46faa06c5bc196f0"
+    },
+    "/en/resources": {
+      "offset": 369821,
+      "length": 17332,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "737c684c02bbfc1a"
+    },
+    "/en/resources/": {
+      "offset": 369821,
+      "length": 17332,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "737c684c02bbfc1a"
+    },
+    "/en/5x/api/express": {
+      "offset": 387153,
+      "length": 28008,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eec0cb8842373b77"
+    },
+    "/en/5x/api/express/": {
+      "offset": 387153,
+      "length": 28008,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eec0cb8842373b77"
+    },
+    "/en/5x/api": {
+      "offset": 415161,
+      "length": 19329,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "93a1f09dd1777232"
+    },
+    "/en/5x/api/": {
+      "offset": 415161,
+      "length": 19329,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "93a1f09dd1777232"
+    },
+    "/en/advanced/security-updates": {
+      "offset": 434490,
+      "length": 19525,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4a53beca7b56c8f9"
+    },
+    "/en/advanced/security-updates/": {
+      "offset": 434490,
+      "length": 19525,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4a53beca7b56c8f9"
+    },
+    "/en/5x/api/response": {
+      "offset": 454015,
+      "length": 35178,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8958394f4b5f0ff7"
+    },
+    "/en/5x/api/response/": {
+      "offset": 454015,
+      "length": 35178,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8958394f4b5f0ff7"
+    },
+    "/en/5x/guide/overriding-express-api": {
+      "offset": 489193,
+      "length": 22700,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8c1989770959850f"
+    },
+    "/en/5x/guide/overriding-express-api/": {
+      "offset": 489193,
+      "length": 22700,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8c1989770959850f"
+    },
+    "/en/guide/migrating-4": {
+      "offset": 511893,
+      "length": 29185,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "627220744dead1be"
+    },
+    "/en/guide/migrating-4/": {
+      "offset": 511893,
+      "length": 29185,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "627220744dead1be"
+    },
+    "/en/advanced/best-practice-security": {
+      "offset": 541078,
+      "length": 27484,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e471bff6adc6944f"
+    },
+    "/en/advanced/best-practice-security/": {
+      "offset": 541078,
+      "length": 27484,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e471bff6adc6944f"
+    },
+    "/en/5x/advanced/developing-template-engines": {
+      "offset": 568562,
+      "length": 19950,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "38df5abe62ff6b52"
+    },
+    "/en/5x/advanced/developing-template-engines/": {
+      "offset": 568562,
+      "length": 19950,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "38df5abe62ff6b52"
+    },
+    "/en/advanced/healthcheck-graceful-shutdown": {
+      "offset": 588512,
+      "length": 18061,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "046f7dcedf30a705"
+    },
+    "/en/advanced/healthcheck-graceful-shutdown/": {
+      "offset": 588512,
+      "length": 18061,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "046f7dcedf30a705"
+    },
+    "/en/guide/database-integration": {
+      "offset": 606573,
+      "length": 28221,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4ddc49ff1ab684ee"
+    },
+    "/en/guide/database-integration/": {
+      "offset": 606573,
+      "length": 28221,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4ddc49ff1ab684ee"
+    },
+    "/en/5x/api/request": {
+      "offset": 634794,
+      "length": 31555,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "21d22c99ffcabe8e"
+    },
+    "/en/5x/api/request/": {
+      "offset": 634794,
+      "length": 31555,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "21d22c99ffcabe8e"
+    },
+    "/en/advanced/best-practice-performance": {
+      "offset": 666349,
+      "length": 29184,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b2288e02575bc997"
+    },
+    "/en/advanced/best-practice-performance/": {
+      "offset": 666349,
+      "length": 29184,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b2288e02575bc997"
+    },
+    "/en/5x/api/application": {
+      "offset": 695533,
+      "length": 43070,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f243bdf6b2437872"
+    },
+    "/en/5x/api/application/": {
+      "offset": 695533,
+      "length": 43070,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f243bdf6b2437872"
+    },
+    "/en/guide/migrating-5": {
+      "offset": 738603,
+      "length": 30259,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cfaa17050bf8fc93"
+    },
+    "/en/guide/migrating-5/": {
+      "offset": 738603,
+      "length": 30259,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cfaa17050bf8fc93"
+    },
+    "/en/5x/api/router": {
+      "offset": 768862,
+      "length": 29106,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7f0bb9c7a554631d"
+    },
+    "/en/5x/api/router/": {
+      "offset": 768862,
+      "length": 29106,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7f0bb9c7a554631d"
+    },
+    "/en/resources/middleware": {
+      "offset": 797968,
+      "length": 18278,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2f616bf239c9c738"
+    },
+    "/en/resources/middleware/": {
+      "offset": 797968,
+      "length": 18278,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2f616bf239c9c738"
+    },
+    "/en/resources/community": {
+      "offset": 816246,
+      "length": 18800,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "afe4f3a04e3cbca3"
+    },
+    "/en/resources/community/": {
+      "offset": 816246,
+      "length": 18800,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "afe4f3a04e3cbca3"
+    },
+    "/en/resources/middleware/multer": {
+      "offset": 835046,
+      "length": 27534,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ab7b9884fb037dea"
+    },
+    "/en/resources/middleware/multer/": {
+      "offset": 835046,
+      "length": 27534,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ab7b9884fb037dea"
+    },
+    "/en/resources/utils": {
+      "offset": 862580,
+      "length": 17709,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "af328e01ef2b4a45"
+    },
+    "/en/resources/utils/": {
+      "offset": 862580,
+      "length": 17709,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "af328e01ef2b4a45"
+    },
+    "/en/resources/middleware/compression": {
+      "offset": 880289,
+      "length": 24088,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fbbdc4e17274dd6d"
+    },
+    "/en/resources/middleware/compression/": {
+      "offset": 880289,
+      "length": 24088,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fbbdc4e17274dd6d"
+    },
+    "/en/resources/middleware/method-override": {
+      "offset": 904377,
+      "length": 22758,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b42bc9e2567fefd2"
+    },
+    "/en/resources/middleware/method-override/": {
+      "offset": 904377,
+      "length": 22758,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b42bc9e2567fefd2"
+    },
+    "/en/resources/middleware/morgan": {
+      "offset": 927135,
+      "length": 25921,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f31e8aab4004f572"
+    },
+    "/en/resources/middleware/morgan/": {
+      "offset": 927135,
+      "length": 25921,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f31e8aab4004f572"
+    },
+    "/en/resources/middleware/errorhandler": {
+      "offset": 953056,
+      "length": 21264,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2439b7cdc8e44b9e"
+    },
+    "/en/resources/middleware/errorhandler/": {
+      "offset": 953056,
+      "length": 21264,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2439b7cdc8e44b9e"
+    },
+    "/en/resources/middleware/cookie-parser": {
+      "offset": 974320,
+      "length": 21163,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b9e810d02331579"
+    },
+    "/en/resources/middleware/cookie-parser/": {
+      "offset": 974320,
+      "length": 21163,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b9e810d02331579"
+    },
+    "/en/resources/middleware/serve-favicon": {
+      "offset": 995483,
+      "length": 21469,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6eda96b1a2899dd5"
+    },
+    "/en/resources/middleware/serve-favicon/": {
+      "offset": 995483,
+      "length": 21469,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6eda96b1a2899dd5"
+    },
+    "/en/resources/middleware/cookie-session": {
+      "offset": 1016952,
+      "length": 24630,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d0e86b0cb3d7f59d"
+    },
+    "/en/resources/middleware/cookie-session/": {
+      "offset": 1016952,
+      "length": 24630,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d0e86b0cb3d7f59d"
+    },
+    "/en/resources/middleware/cors": {
+      "offset": 1041582,
+      "length": 24931,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "489ce8071274f8e9"
+    },
+    "/en/resources/middleware/cors/": {
+      "offset": 1041582,
+      "length": 24931,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "489ce8071274f8e9"
+    },
+    "/en/resources/middleware/body-parser": {
+      "offset": 1066513,
+      "length": 26171,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8da3d217e7e89dd8"
+    },
+    "/en/resources/middleware/body-parser/": {
+      "offset": 1066513,
+      "length": 26171,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8da3d217e7e89dd8"
+    },
+    "/en/resources/glossary": {
+      "offset": 1092684,
+      "length": 18725,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e8a6dc354cabfa8d"
+    },
+    "/en/resources/glossary/": {
+      "offset": 1092684,
+      "length": 18725,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e8a6dc354cabfa8d"
+    },
+    "/en/resources/contributing": {
+      "offset": 1111409,
+      "length": 25980,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "09cc8fa039f21ebf"
+    },
+    "/en/resources/contributing/": {
+      "offset": 1111409,
+      "length": 25980,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "09cc8fa039f21ebf"
+    },
+    "/en/resources/middleware/response-time": {
+      "offset": 1137389,
+      "length": 21460,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bf7010f4ddeff9c6"
+    },
+    "/en/resources/middleware/response-time/": {
+      "offset": 1137389,
+      "length": 21460,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bf7010f4ddeff9c6"
+    },
+    "/en/blog/2026-08-31-security-releases": {
+      "offset": 1158849,
+      "length": 21579,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "398a811fbacd867d"
+    },
+    "/en/blog/2026-08-31-security-releases/": {
+      "offset": 1158849,
+      "length": 21579,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "398a811fbacd867d"
+    },
+    "/en/resources/middleware/timeout": {
+      "offset": 1180428,
+      "length": 22050,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4e72992f9cd7674c"
+    },
+    "/en/resources/middleware/timeout/": {
+      "offset": 1180428,
+      "length": 22050,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4e72992f9cd7674c"
+    },
+    "/en/blog/2026-09-09-joining-the-openjs-cna-security-break": {
+      "offset": 1202478,
+      "length": 19221,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c5f7b80ac795e370"
+    },
+    "/en/blog/2026-09-09-joining-the-openjs-cna-security-break/": {
+      "offset": 1202478,
+      "length": 19221,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c5f7b80ac795e370"
+    },
+    "/en/blog/2026-09-30-security-releases": {
+      "offset": 1221699,
+      "length": 22920,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a28474f5d4e4b3ad"
+    },
+    "/en/blog/2026-09-30-security-releases/": {
+      "offset": 1221699,
+      "length": 22920,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a28474f5d4e4b3ad"
+    },
+    "/en/blog/2026-06-30-security-releases": {
+      "offset": 1244619,
+      "length": 20470,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5f8a8fd82b7c5be5"
+    },
+    "/en/blog/2026-06-30-security-releases/": {
+      "offset": 1244619,
+      "length": 20470,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5f8a8fd82b7c5be5"
+    },
+    "/en/blog/2026-02-27-security-releases": {
+      "offset": 1265089,
+      "length": 19419,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c5cfda50b16ff6f8"
+    },
+    "/en/blog/2026-02-27-security-releases/": {
+      "offset": 1265089,
+      "length": 19419,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c5cfda50b16ff6f8"
+    },
+    "/en/blog/2026-05-31-security-releases": {
+      "offset": 1284508,
+      "length": 20124,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "977e4e3300badb92"
+    },
+    "/en/blog/2026-05-31-security-releases/": {
+      "offset": 1284508,
+      "length": 20124,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "977e4e3300badb92"
+    },
+    "/en/resources/middleware/session": {
+      "offset": 1304632,
+      "length": 33705,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "43f743cb03c139d9"
+    },
+    "/en/resources/middleware/session/": {
+      "offset": 1304632,
+      "length": 33705,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "43f743cb03c139d9"
+    },
+    "/en/blog/2": {
+      "offset": 1338337,
+      "length": 18707,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "64d6d242cbb0b5dc"
+    },
+    "/en/blog/2/": {
+      "offset": 1338337,
+      "length": 18707,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "64d6d242cbb0b5dc"
+    },
+    "/en/resources/middleware/serve-static": {
+      "offset": 1357044,
+      "length": 23261,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2e15847dcd2cffc3"
+    },
+    "/en/resources/middleware/serve-static/": {
+      "offset": 1357044,
+      "length": 23261,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2e15847dcd2cffc3"
+    },
+    "/en/resources/middleware/vhost": {
+      "offset": 1380305,
+      "length": 21897,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "640b13af652adfc3"
+    },
+    "/en/resources/middleware/vhost/": {
+      "offset": 1380305,
+      "length": 21897,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "640b13af652adfc3"
+    },
+    "/en/blog/2026-07-31-security-releases": {
+      "offset": 1402202,
+      "length": 19911,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2aaf39a286cfa135"
+    },
+    "/en/blog/2026-07-31-security-releases/": {
+      "offset": 1402202,
+      "length": 19911,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2aaf39a286cfa135"
+    },
+    "/en/blog/2026-05-18-a-new-look-for-express": {
+      "offset": 1422113,
+      "length": 22404,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "53d1f19d424bfd13"
+    },
+    "/en/blog/2026-05-18-a-new-look-for-express/": {
+      "offset": 1422113,
+      "length": 22404,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "53d1f19d424bfd13"
+    },
+    "/en/blog/2026-03-30-security-releases": {
+      "offset": 1444517,
+      "length": 20124,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5ca5367ae102d4b0"
+    },
+    "/en/blog/2026-03-30-security-releases/": {
+      "offset": 1444517,
+      "length": 20124,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5ca5367ae102d4b0"
+    },
+    "/en/resources/middleware/serve-index": {
+      "offset": 1464641,
+      "length": 21746,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "860955a5ee9eed1c"
+    },
+    "/en/resources/middleware/serve-index/": {
+      "offset": 1464641,
+      "length": 21746,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "860955a5ee9eed1c"
+    },
+    "/en/blog/2025-12-01-security-releases": {
+      "offset": 1486387,
+      "length": 19462,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b0fe434457eadfe6"
+    },
+    "/en/blog/2025-12-01-security-releases/": {
+      "offset": 1486387,
+      "length": 19462,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b0fe434457eadfe6"
+    },
+    "/en/blog/2024-10-15-v5-release": {
+      "offset": 1505849,
+      "length": 24596,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "70408a588948a01d"
+    },
+    "/en/blog/2024-10-15-v5-release/": {
+      "offset": 1505849,
+      "length": 24596,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "70408a588948a01d"
+    },
+    "/en/blog/2024-10-22-security-audit-milestone-achievement": {
+      "offset": 1530445,
+      "length": 20538,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e5d8845d0ca1ebb3"
+    },
+    "/en/blog/2024-10-22-security-audit-milestone-achievement/": {
+      "offset": 1530445,
+      "length": 20538,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e5d8845d0ca1ebb3"
+    },
+    "/en/blog/2025-05-19-security-releases": {
+      "offset": 1550983,
+      "length": 19822,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0274dae7729ba6b7"
+    },
+    "/en/blog/2025-05-19-security-releases/": {
+      "offset": 1550983,
+      "length": 19822,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0274dae7729ba6b7"
+    },
+    "/en/blog/3": {
+      "offset": 1570805,
+      "length": 18742,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fc7fbbd2d9b69b48"
+    },
+    "/en/blog/3/": {
+      "offset": 1570805,
+      "length": 18742,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fc7fbbd2d9b69b48"
+    },
+    "/en/blog/2025-06-05-vulnerability-reporting-process-overhaul": {
+      "offset": 1589547,
+      "length": 21040,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2474534ae741e6ef"
+    },
+    "/en/blog/2025-06-05-vulnerability-reporting-process-overhaul/": {
+      "offset": 1589547,
+      "length": 21040,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2474534ae741e6ef"
+    },
+    "/en/blog/2025-07-18-security-releases": {
+      "offset": 1610587,
+      "length": 19351,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b0655d4c170493ac"
+    },
+    "/en/blog/2025-07-18-security-releases/": {
+      "offset": 1610587,
+      "length": 19351,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b0655d4c170493ac"
+    },
+    "/en/blog/2025-03-31-v5-1-latest-release": {
+      "offset": 1629938,
+      "length": 25792,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "11e893f6c14b509d"
+    },
+    "/en/blog/2025-03-31-v5-1-latest-release/": {
+      "offset": 1629938,
+      "length": 25792,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "11e893f6c14b509d"
+    },
+    "/en/blog/2024-10-01-herodevs-partnership-announcement": {
+      "offset": 1655730,
+      "length": 19831,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a308a798fc644361"
+    },
+    "/en/blog/2024-10-01-herodevs-partnership-announcement/": {
+      "offset": 1655730,
+      "length": 19831,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a308a798fc644361"
+    },
+    "/en/blog/2024-07-16-welcome-post": {
+      "offset": 1675561,
+      "length": 19457,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4bb56c544193b909"
+    },
+    "/en/blog/2024-07-16-welcome-post/": {
+      "offset": 1675561,
+      "length": 19457,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4bb56c544193b909"
+    },
+    "/en/blog/write-post": {
+      "offset": 1695018,
+      "length": 20482,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a75719f86fa89282"
+    },
+    "/en/blog/write-post/": {
+      "offset": 1695018,
+      "length": 20482,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a75719f86fa89282"
+    },
+    "/en/blog/2025-07-31-security-releases": {
+      "offset": 1715500,
+      "length": 19591,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "792c1b231f9ad567"
+    },
+    "/en/blog/2025-07-31-security-releases/": {
+      "offset": 1715500,
+      "length": 19591,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "792c1b231f9ad567"
+    },
+    "/en/blog/2025-05-16-express-cleanup-legacy-packages": {
+      "offset": 1735091,
+      "length": 20184,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c3b431fa8d0678c4"
+    },
+    "/en/blog/2025-05-16-express-cleanup-legacy-packages/": {
+      "offset": 1735091,
+      "length": 20184,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c3b431fa8d0678c4"
+    },
+    "/en/blog/2025-01-09-rewind-2024-triumphs-and-2025-vision": {
+      "offset": 1755275,
+      "length": 23969,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4b2d9674ff2661ec"
+    },
+    "/en/blog/2025-01-09-rewind-2024-triumphs-and-2025-vision/": {
+      "offset": 1755275,
+      "length": 23969,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4b2d9674ff2661ec"
+    },
+    "/en/blog/2024-09-29-security-releases": {
+      "offset": 1779244,
+      "length": 21039,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f0a7616220cf1f75"
+    },
+    "/en/blog/2024-09-29-security-releases/": {
+      "offset": 1779244,
+      "length": 21039,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f0a7616220cf1f75"
+    },
+    "/en/blog/4": {
+      "offset": 1800283,
+      "length": 18651,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "630529d07ad1a3f4"
+    },
+    "/en/blog/4/": {
+      "offset": 1800283,
+      "length": 18651,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "630529d07ad1a3f4"
+    },
+    "/_astro/primitives.9-yIY7ON.css": {
+      "offset": 1818934,
+      "length": 2483,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "9f1b067a0f3c0aa5"
+    },
+    "/_astro/ec.hkn6n.css": {
+      "offset": 1821417,
+      "length": 3810,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "cbd9d9d97804ef35"
+    },
+    "/openjs-logo-white.svg": {
+      "offset": 1825227,
+      "length": 2313,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "6c23dd27d6c3c2b8"
+    },
+    "/netlify-logo.svg": {
+      "offset": 1827540,
+      "length": 1621,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "bbaa23cb32bacc9c"
+    },
+    "/favicon.svg": {
+      "offset": 1829161,
+      "length": 882,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "ef5fd056317af6e4"
+    },
+    "/openjs-logo-black.svg": {
+      "offset": 1830043,
+      "length": 2246,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "032a20103ae9181e"
+    },
+    "/favicon.ico": {
+      "offset": 1832289,
+      "length": 657,
+      "mime": "image/vnd.microsoft.icon",
+      "gzipped": true,
+      "hash": "8fca5608fd5b83b2"
+    },
+    "/_astro/Layout.DYZ5tnGN.css": {
+      "offset": 1832946,
+      "length": 4103,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "945960c38d7937c5"
+    },
+    "/_astro/patterns.CV66JhXa.css": {
+      "offset": 1837049,
+      "length": 9131,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "fc5bacc902ff0826"
+    },
+    "/og/blog-2026-05-31-security-releases.png": {
+      "offset": 1846180,
+      "length": 40489,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "9dcd115d78c639b5"
+    },
+    "/og/blog-2026-08-31-security-releases.png": {
+      "offset": 1886669,
+      "length": 41488,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1a24b0f33132bded"
+    },
+    "/apple-touch-icon.png": {
+      "offset": 1928157,
+      "length": 1001,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "727ed03a39f131aa"
+    },
+    "/images/logos/express-kawaii.webp": {
+      "offset": 1929158,
+      "length": 69975,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "431e539a4398ee80"
+    },
+    "/og/blog-2026-06-30-security-releases.png": {
+      "offset": 1999133,
+      "length": 39519,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2355c7112b441abe"
+    },
+    "/og/blog-2026-07-31-security-releases.png": {
+      "offset": 2038652,
+      "length": 39638,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0adec47d79a62f7b"
+    },
+    "/og/blog-2026-09-30-security-releases.png": {
+      "offset": 2078290,
+      "length": 44595,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2499a55570dc1c08"
+    },
+    "/__docx_assets/e21df10802103c.png": {
+      "offset": 2122885,
+      "length": 12198,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2011ae5eda5a026a"
+    },
+    "/og/blog-2026-09-09-joining-the-openjs-cna-security-break.png": {
+      "offset": 2135083,
+      "length": 51087,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "39041f72727dc9f3"
+    },
+    "/og/blog-2026-05-18-a-new-look-for-express.png": {
+      "offset": 2186170,
+      "length": 30276,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "e97191f18f725787"
+    },
+    "/og/blog-2026-03-30-security-releases.png": {
+      "offset": 2216446,
+      "length": 40772,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "8e5bed361af8a979"
+    },
+    "/og/blog-2025-03-31-v5-1-latest-release.png": {
+      "offset": 2257218,
+      "length": 42952,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "47f5669596473fe2"
+    },
+    "/og/blog-2025-05-19-security-releases.png": {
+      "offset": 2300170,
+      "length": 39847,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "11bbb6652f8957b1"
+    },
+    "/og/blog-2025-07-18-security-releases.png": {
+      "offset": 2340017,
+      "length": 39530,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "d6e0ed257f3fdcfa"
+    },
+    "/images/express-mw.png": {
+      "offset": 2379547,
+      "length": 36353,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1420120efbf1b2df"
+    },
+    "/og/blog-2025-01-09-rewind-2024-triumphs-and-2025-vision.png": {
+      "offset": 2415900,
+      "length": 49356,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "8dcc869b5d02c325"
+    },
+    "/og/blog-2024-10-22-security-audit-milestone-achievement.png": {
+      "offset": 2465256,
+      "length": 50092,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "5d091ae1dcbf88ec"
+    },
+    "/og/blog-2024-07-16-welcome-post.png": {
+      "offset": 2515348,
+      "length": 32466,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "32c34646283be539"
+    },
+    "/og/blog-2024-09-29-security-releases.png": {
+      "offset": 2547814,
+      "length": 43977,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "22c9e19b5669eb9b"
+    },
+    "/og/blog-2024-10-01-herodevs-partnership-announcement.png": {
+      "offset": 2591791,
+      "length": 48704,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "9346aa9be81e5f5f"
+    },
+    "/og/blog-2025-12-01-security-releases.png": {
+      "offset": 2640495,
+      "length": 43852,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "8eaef29c5c434a65"
+    },
+    "/og/blog-2025-07-31-security-releases.png": {
+      "offset": 2684347,
+      "length": 39240,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "39a1c23daca4dc0e"
+    },
+    "/og/blog-2025-06-05-vulnerability-reporting-process-overhaul.png": {
+      "offset": 2723587,
+      "length": 52780,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c1e785be4c7f26e7"
+    },
+    "/og/blog-2026-02-27-security-releases.png": {
+      "offset": 2776367,
+      "length": 41824,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2ab1d6e7730a7068"
+    },
+    "/og/blog-2024-10-15-v5-release.png": {
+      "offset": 2818191,
+      "length": 44294,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "c0cf348f16bd1778"
+    },
+    "/og/blog-2025-05-16-express-cleanup-legacy-packages.png": {
+      "offset": 2862485,
+      "length": 45620,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "eb6ac90501241905"
+    },
+    "/__docx_assets/2339de0d6c1b3c.png": {
+      "offset": 2908105,
+      "length": 15479,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "546e1f4b2581fe02"
+    },
+    "/__docx_assets/31b75548593d36.png": {
+      "offset": 2923584,
+      "length": 27240,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "f8ac357844215b9e"
+    },
+    "/__docx_assets/83ca45f7f805ee.png": {
+      "offset": 2950824,
+      "length": 131740,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4af2c0d4f06fb84f"
+    },
+    "/images/logos/logo-dark.svg": {
+      "offset": 3082564,
+      "length": 906,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "566f1b797d71da14"
+    },
+    "/images/logos/logo-express-white.svg": {
+      "offset": 3083470,
+      "length": 2829,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "19c81b8368cbb978"
+    },
+    "/images/blog/redesign/logo-favicon.png": {
+      "offset": 3086299,
+      "length": 14921,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6959259accee7f55"
+    },
+    "/og/blog-write-post.png": {
+      "offset": 3101220,
+      "length": 30538,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "ab450a2c51481b77"
+    },
+    "/images/logos/logo-white.svg": {
+      "offset": 3131758,
+      "length": 904,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "de08128374fb8b32"
+    },
+    "/images/blog/redesign/vision-mission.png": {
+      "offset": 3132662,
+      "length": 30531,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "efca7e0d0ae8c314"
+    },
+    "/images/clustering.png": {
+      "offset": 3163193,
+      "length": 3699,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "14de90deb9f706b4"
+    },
+    "/images/logos/logo-express-black.svg": {
+      "offset": 3166892,
+      "length": 2826,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "6da47ed3af572a18"
+    },
+    "/images/blog/redesign/brand-values.png": {
+      "offset": 3169718,
+      "length": 34799,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1e926397a4c1edc6"
+    },
+    "/images/blog/redesign/before-after.png": {
+      "offset": 3204517,
+      "length": 138080,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "35dcc5e9ed42fc57"
+    },
+    "/fonts/JetBrainsMono-LightItalic.woff2": {
+      "offset": 3342597,
+      "length": 97309,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "0f4f0868b43a332f"
+    },
+    "/fonts/JetBrainsMono-Light.woff2": {
+      "offset": 3439906,
+      "length": 93904,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e6f5ef9f0baacf12"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 19748,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1810907110bc8245"
+    }
+  }
+}

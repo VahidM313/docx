@@ -1,1 +1,965 @@
-{"id":"tanstack_react_charts","name":"TanStack React Charts","version":"v3","commit":"66fad144","origin":"https://react-charts.tanstack.com","entryPath":"/docs/overview","updatedAt":"2026-10-11T14:31:21.659Z","totalBytes":1212121,"chunkCount":134,"routes":{"/docs/overview":{"offset":0,"length":7668,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d7113d8011593f17"},"/docs/api":{"offset":7668,"length":12398,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7a6a5a418f3c9018"},"/docs/getting-started":{"offset":20066,"length":9355,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cd984958af1b143f"},"/docs/installation":{"offset":29421,"length":7286,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"56f77abaf4b717b9"},"/_next/static/css/2657ae4de046c9fb1627.css":{"offset":36707,"length":8457,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"33353108d5de8e70"},"/_next/static/images/favicon-7912fd2e72dd00c73ac7b7e2720bfeb2.png":{"offset":45164,"length":1329,"mime":"image/png","gzipped":true,"hash":"7d38c16eba59234d"},"/_next/static/css/7ee7d4b5e65210f07e44.css":{"offset":46493,"length":1101,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"d149cbcd27484c78"},"/_next/static/images/logo-light-0d8bc77edc18d0dad4068e24c0c0113b.svg":{"offset":47594,"length":6912,"mime":"image/svg+xml","gzipped":true,"hash":"f376fb22e52a0215"},"/__docx_assets/8f029b73ef9fea.bin":{"offset":54506,"length":736,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"1425c30709ac5fdd"},"/__docx_assets/4c2d4a14f23a8e.woff2":{"offset":55242,"length":10275,"mime":"font/woff2","gzipped":true,"hash":"e7ad2006be3a9db6"},"/__docx_assets/6d0a674525fee3.woff2":{"offset":65517,"length":11236,"mime":"font/woff2","gzipped":true,"hash":"78dae6273afae3a7"},"/__docx_assets/1e8edb2fc100b7.woff2":{"offset":76753,"length":18776,"mime":"font/woff2","gzipped":true,"hash":"c3a26e59f5c7a22a"},"/__docx_assets/dbc85b0dfbaaa3.woff2":{"offset":95529,"length":19024,"mime":"font/woff2","gzipped":true,"hash":"df03093c8bdafe41"},"/__docx_assets/a9d11b3ffe7aa5.woff2":{"offset":114553,"length":85116,"mime":"font/woff2","gzipped":true,"hash":"1682cdbf2a08a39e"},"/__docx_assets/95b9ea830580b5.woff2":{"offset":199669,"length":25988,"mime":"font/woff2","gzipped":true,"hash":"bc24da44dd1443ea"},"/__docx_assets/e3237528af752e.woff2":{"offset":225657,"length":48254,"mime":"font/woff2","gzipped":true,"hash":"7c32208d07e6f561"},"/docs":{"offset":0,"length":7668,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d7113d8011593f17"},"/":{"offset":0,"length":7668,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d7113d8011593f17"},"/docs/examples/scatterplots-and-relationships":{"offset":273911,"length":6779,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bf4eaccf85446276"},"/docs/examples/themes-and-motion":{"offset":280690,"length":6200,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cbedeabf4559b692"},"/docs/examples/maps-and-spatial":{"offset":286890,"length":8347,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a2258c11e8dbdbfe"},"/docs/examples/annotations-and-overlays":{"offset":295237,"length":6799,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b51cb0215dffff36"},"/docs/examples/networks-and-hierarchies":{"offset":302036,"length":10053,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ac80e92f89653858"},"/docs/examples/polar-and-radar":{"offset":312089,"length":9528,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e27b090038ac2966"},"/docs/examples":{"offset":321617,"length":6201,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"13d31cfd353c47d0"},"/docs/examples/interactive-charts":{"offset":327818,"length":9104,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"273c69826ce9261d"},"/docs/examples/bars-and-rankings":{"offset":336922,"length":6578,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6a994d879ffc5972"},"/docs/examples/distributions":{"offset":343500,"length":7507,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e7635a15c512059f"},"/docs/examples/heatmaps-and-densities":{"offset":351007,"length":7591,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4d119bad2381df70"},"/docs/examples/facets-and-multiple-views":{"offset":358598,"length":7718,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9e98e8520a71e06f"},"/docs/examples/lines-and-areas":{"offset":366316,"length":7559,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e6533ec30a36f431"},"/docs/examples/stacked-and-composition":{"offset":373875,"length":8124,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8a257f2372792e4d"},"/docs/examples/intervals-and-financial":{"offset":381999,"length":6880,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dfb8d9e9bcf5cc73"},"/docs/concepts/chart-definitions":{"offset":388879,"length":6167,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bb11ce9d0aaf3782"},"/docs/concepts/layout-axes-and-coordinates":{"offset":395046,"length":10928,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d092e5f10eb20b16"},"/docs/concepts/marks-and-layering":{"offset":405974,"length":8720,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f2b1a77082b9f1eb"},"/docs/concepts/data-and-channels":{"offset":414694,"length":9075,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1bf34b642cf969fd"},"/docs/concepts/scales-and-d3":{"offset":423769,"length":12495,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"46cca88498fdaf0f"},"/docs/concepts/grammar-of-graphics":{"offset":436264,"length":8106,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"88aa1ffc39c802f2"},"/docs/guides/transforms-and-reactivity":{"offset":444370,"length":6565,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c1eda41ee0f9391d"},"/docs/guides/tooltips-and-focus":{"offset":450935,"length":12719,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"57ae4b1c6a664ce6"},"/docs/guides/testing-and-debugging":{"offset":463654,"length":6906,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"483fa117254a863d"},"/docs/guides/migrating":{"offset":470560,"length":8049,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"49d8923210382046"},"/docs/guides/themes-and-styling":{"offset":478609,"length":7991,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7d16524b58edaff9"},"/docs/guides/accessibility":{"offset":486600,"length":9234,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e5d09fff3f5ac58b"},"/docs/guides/bundle-size-and-performance":{"offset":495834,"length":9674,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2c8f93dbe8946b0a"},"/docs/guides/faceting-and-composition":{"offset":505508,"length":6806,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5b52b83a1a96bde3"},"/docs/guides/coming-from-recharts":{"offset":512314,"length":6207,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d4d0f82019dc43b1"},"/docs/guides/legends-and-color":{"offset":518521,"length":8009,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f784e6fd1e042120"},"/docs/guides/custom-marks-and-renderers":{"offset":526530,"length":11341,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b5157eb59bcf8c22"},"/docs/guides/interactions-and-selections":{"offset":537871,"length":14062,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"975272ab16e83965"},"/docs/guides/dynamic-data-and-animation":{"offset":551933,"length":8325,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c36259aefa7f3a4c"},"/docs/guides/large-data":{"offset":560258,"length":7926,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"16482837332c7558"},"/docs/guides/ssr-and-hydration":{"offset":568184,"length":8238,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ad95cb7960458704"},"/docs/guides/typescript":{"offset":576422,"length":6889,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"261c469420f743d7"},"/docs/guides/responsive-charts":{"offset":583311,"length":7825,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"62306cfefc0ddf14"},"/docs/guides/exporting":{"offset":591136,"length":7075,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"22e54d104dee3d9b"},"/docs/guides/choosing-a-chart":{"offset":598211,"length":6880,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0cd814a2903a2c50"},"/docs/guides/framework-tick-labels":{"offset":605091,"length":6075,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"12b522d092a09514"},"/docs/guides/ai-authoring":{"offset":611166,"length":7523,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3a4e446d54671adb"},"/docs/stability":{"offset":618689,"length":5599,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e266bbbf6b2bd1f1"},"/docs/reference/view-composition":{"offset":624288,"length":7277,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0bfcd0d058907120"},"/docs/reference/transforms":{"offset":631565,"length":11173,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"79c612cc3a3ff1df"},"/docs/reference/chart-definitions":{"offset":642738,"length":7003,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e392e9ebe1a4d8ef"},"/docs/reference/scales-guides-and-color":{"offset":649741,"length":16628,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0be5066564aadf63"},"/docs/reference/motion":{"offset":666369,"length":10607,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f31b116957a9809e"},"/docs/reference":{"offset":676976,"length":10044,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0734823bee6f8630"},"/docs/reference/runtime-and-scene":{"offset":687020,"length":8915,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2824563c86773ff3"},"/docs/reference/adapter-controller":{"offset":695935,"length":6411,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0c668017b647cb07"},"/docs/reference/dom-host":{"offset":702346,"length":8906,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"195ba69993da5a7b"},"/docs/reference/marks/rules-links-arrows-vectors-and-ticks":{"offset":711252,"length":7509,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"95f2be4bd9f28d6a"},"/docs/reference/marks/regression":{"offset":718761,"length":6679,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6adfb9c083e2c1a1"},"/docs/reference/marks/contour":{"offset":725440,"length":6306,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"69d51b2e12c92ac4"},"/docs/reference/marks/voronoi":{"offset":731746,"length":6659,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"aa498c6252fe915c"},"/docs/reference/marks/bar-and-rect":{"offset":738405,"length":10396,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"32f7b923454c02b5"},"/docs/reference/marks/sunburst":{"offset":748801,"length":7809,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3d690cc5466b3c05"},"/docs/reference/marks/sankey":{"offset":756610,"length":7794,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"782ab3e475e32970"},"/docs/reference/marks/dodge":{"offset":764404,"length":6512,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e48f9f96d68420d2"},"/docs/reference/marks/hexbin":{"offset":770916,"length":6205,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"33bb4886d12123ce"},"/docs/reference/marks/treemap":{"offset":777121,"length":7303,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a8d637234c0aab0c"},"/docs/reference/marks/violin":{"offset":784424,"length":6578,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d53a5d5eded77590"},"/docs/reference/marks/difference":{"offset":791002,"length":7075,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"90dbccc6f3714fff"},"/docs/reference/marks/polar":{"offset":798077,"length":11862,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bff308a70cb1d15d"},"/docs/reference/marks/waffle":{"offset":809939,"length":6558,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5b08485d2baf136a"},"/docs/reference/marks/dot-and-hexagon":{"offset":816497,"length":6778,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e83d03c4932a3db1"},"/docs/reference/marks/density":{"offset":823275,"length":6527,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"41550d0d04a20d65"},"/docs/reference/marks/text-frame-and-facet":{"offset":829802,"length":8080,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f947a5c8d8b65341"},"/docs/reference/marks/box":{"offset":837882,"length":6891,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f100c866bbe2c47b"},"/docs/reference/marks/focus-guide":{"offset":844773,"length":6362,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e6692b28254346fd"},"/docs/reference/marks/delaunay":{"offset":851135,"length":6484,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8718feed93ec6af1"},"/docs/reference/marks/line-and-area":{"offset":857619,"length":7995,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"63ad784226065c80"},"/docs/reference/marks/ridgeline":{"offset":865614,"length":6700,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ea36a29a44e02496"},"/docs/reference/marks/geo":{"offset":872314,"length":6481,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"05990ab618ab7dde"},"/docs/reference/focus-and-interaction":{"offset":878795,"length":21550,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cf883b9e04616909"},"/docs/reference/custom-extensions":{"offset":900345,"length":11622,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"765d6c1c0a7a3474"},"/docs/reference/chart-spec":{"offset":911967,"length":7785,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"161f589d1fcbe660"},"/docs/reference/types":{"offset":919752,"length":15361,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e1be1b597f79f0bd"},"/docs/reference/rendering-and-export":{"offset":935113,"length":15227,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8a8a8d5fad5e12c1"},"/docs/quick-start":{"offset":950340,"length":6325,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"08c7c0062ad40dab"},"/docs/comparison":{"offset":956665,"length":9345,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"de01bb6edd6a2b63"},"/docs/framework/preact/reference/chart":{"offset":966010,"length":6004,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"17ae54987bf070f3"},"/docs/framework/preact/adapter":{"offset":972014,"length":5741,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"75fda9ba10179c3a"},"/docs/framework/vue/reference/chart":{"offset":977755,"length":6218,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"88f2995f53a7d795"},"/docs/framework/vue/adapter":{"offset":983973,"length":5710,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"37426b002edbfc3d"},"/docs/framework/octane/reference/chart":{"offset":989683,"length":6638,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"28beaff1e30c9a8f"},"/docs/framework/octane/quick-start":{"offset":996321,"length":5856,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5c585f2eba2c5763"},"/docs/framework/octane/adapter":{"offset":1002177,"length":7377,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"95d1eae9d296095f"},"/docs/framework/solid/reference/chart":{"offset":1009554,"length":5995,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"83b710440efd9400"},"/docs/framework/solid/adapter":{"offset":1015549,"length":5704,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fe6a29fa0357fbbd"},"/docs/framework/angular/reference/chart":{"offset":1021253,"length":6292,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8baac6efd3ee812b"},"/docs/framework/angular/adapter":{"offset":1027545,"length":5925,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6bcd924ea500f770"},"/docs/framework/alpine/reference/chart":{"offset":1033470,"length":6027,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4a28467647bbaf0a"},"/docs/framework/alpine/adapter":{"offset":1039497,"length":5586,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b1420a84014f71ae"},"/docs/framework/svelte/reference/chart":{"offset":1045083,"length":6066,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"811200eb38690b2a"},"/docs/framework/svelte/adapter":{"offset":1051149,"length":5627,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f00bc4f77f832fe0"},"/docs/framework/react/reference/chart":{"offset":1056776,"length":7163,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ecbadbc9170ffc33"},"/docs/framework/react/quick-start":{"offset":1063939,"length":6228,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d408b463c78ca5c8"},"/docs/framework/react/adapter":{"offset":1070167,"length":8841,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"58e42f70d13d17de"},"/docs/framework/lit/reference/chart":{"offset":1079008,"length":6179,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6ea5bed63e8788ce"},"/docs/framework/lit/adapter":{"offset":1085187,"length":5635,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a42b0a660a968299"},"/docs/compatibility":{"offset":1090822,"length":6124,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"33c432a938e3cc15"},"/docs/examples/simple":{"offset":1096946,"length":7674,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"09578ac1498312f6"},"/docs/examples/line":{"offset":1104620,"length":7673,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3ef4eb5ba1cc04d2"},"/docs/examples/bar":{"offset":1112293,"length":7673,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4203aa4db75db78a"},"/docs/examples/column":{"offset":1119966,"length":7674,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1563f1247e10d943"},"/docs/examples/area":{"offset":1127640,"length":7673,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b066167ba81d1afd"},"/docs/examples/bubble":{"offset":1135313,"length":7675,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1d406e46dbf8305f"},"/docs/examples/steam":{"offset":1142988,"length":7682,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"39e62e5540af4eba"},"/docs/examples/sparkline":{"offset":1150670,"length":7678,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"73f52e8a5a344872"},"/docs/examples/multiple-axes":{"offset":1158348,"length":7677,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"da509ce266138802"},"/docs/examples/interaction-modes":{"offset":1166025,"length":7680,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"09040d7557961f26"},"/docs/examples/dark-mode":{"offset":1173705,"length":7677,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"aacc8e5393da36dd"},"/docs/examples/dynamic-parent":{"offset":1181382,"length":7689,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d1b0a81d400ffd44"},"/docs/examples/custom-styles":{"offset":1189071,"length":7683,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"acd568a96c423a12"},"/docs/examples/synced-cursors":{"offset":1196754,"length":7683,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0737a70a9987b13e"},"/docs/examples/brushing":{"offset":1204437,"length":7684,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f134315776ba4e41"}}}
+{
+  "id": "tanstack_react_charts",
+  "name": "TanStack React Charts",
+  "version": "v3",
+  "commit": "66fad144",
+  "origin": "https://react-charts.tanstack.com",
+  "entryPath": "/docs/overview",
+  "updatedAt": "2026-10-11T14:31:21.659Z",
+  "totalBytes": 1212121,
+  "chunkCount": 134,
+  "routes": {
+    "/docs/overview": {
+      "offset": 0,
+      "length": 7668,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d7113d8011593f17"
+    },
+    "/docs/api": {
+      "offset": 7668,
+      "length": 12398,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7a6a5a418f3c9018"
+    },
+    "/docs/getting-started": {
+      "offset": 20066,
+      "length": 9355,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cd984958af1b143f"
+    },
+    "/docs/installation": {
+      "offset": 29421,
+      "length": 7286,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "56f77abaf4b717b9"
+    },
+    "/_next/static/css/2657ae4de046c9fb1627.css": {
+      "offset": 36707,
+      "length": 8457,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "33353108d5de8e70"
+    },
+    "/_next/static/images/favicon-7912fd2e72dd00c73ac7b7e2720bfeb2.png": {
+      "offset": 45164,
+      "length": 1329,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "7d38c16eba59234d"
+    },
+    "/_next/static/css/7ee7d4b5e65210f07e44.css": {
+      "offset": 46493,
+      "length": 1101,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "d149cbcd27484c78"
+    },
+    "/_next/static/images/logo-light-0d8bc77edc18d0dad4068e24c0c0113b.svg": {
+      "offset": 47594,
+      "length": 6912,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "f376fb22e52a0215"
+    },
+    "/__docx_assets/8f029b73ef9fea.bin": {
+      "offset": 54506,
+      "length": 736,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "1425c30709ac5fdd"
+    },
+    "/__docx_assets/4c2d4a14f23a8e.woff2": {
+      "offset": 55242,
+      "length": 10275,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e7ad2006be3a9db6"
+    },
+    "/__docx_assets/6d0a674525fee3.woff2": {
+      "offset": 65517,
+      "length": 11236,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "78dae6273afae3a7"
+    },
+    "/__docx_assets/1e8edb2fc100b7.woff2": {
+      "offset": 76753,
+      "length": 18776,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "c3a26e59f5c7a22a"
+    },
+    "/__docx_assets/dbc85b0dfbaaa3.woff2": {
+      "offset": 95529,
+      "length": 19024,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "df03093c8bdafe41"
+    },
+    "/__docx_assets/a9d11b3ffe7aa5.woff2": {
+      "offset": 114553,
+      "length": 85116,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "1682cdbf2a08a39e"
+    },
+    "/__docx_assets/95b9ea830580b5.woff2": {
+      "offset": 199669,
+      "length": 25988,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "bc24da44dd1443ea"
+    },
+    "/__docx_assets/e3237528af752e.woff2": {
+      "offset": 225657,
+      "length": 48254,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "7c32208d07e6f561"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 7668,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d7113d8011593f17"
+    },
+    "/": {
+      "offset": 0,
+      "length": 7668,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d7113d8011593f17"
+    },
+    "/docs/examples/scatterplots-and-relationships": {
+      "offset": 273911,
+      "length": 6779,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bf4eaccf85446276"
+    },
+    "/docs/examples/themes-and-motion": {
+      "offset": 280690,
+      "length": 6200,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cbedeabf4559b692"
+    },
+    "/docs/examples/maps-and-spatial": {
+      "offset": 286890,
+      "length": 8347,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a2258c11e8dbdbfe"
+    },
+    "/docs/examples/annotations-and-overlays": {
+      "offset": 295237,
+      "length": 6799,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b51cb0215dffff36"
+    },
+    "/docs/examples/networks-and-hierarchies": {
+      "offset": 302036,
+      "length": 10053,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ac80e92f89653858"
+    },
+    "/docs/examples/polar-and-radar": {
+      "offset": 312089,
+      "length": 9528,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e27b090038ac2966"
+    },
+    "/docs/examples": {
+      "offset": 321617,
+      "length": 6201,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "13d31cfd353c47d0"
+    },
+    "/docs/examples/interactive-charts": {
+      "offset": 327818,
+      "length": 9104,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "273c69826ce9261d"
+    },
+    "/docs/examples/bars-and-rankings": {
+      "offset": 336922,
+      "length": 6578,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6a994d879ffc5972"
+    },
+    "/docs/examples/distributions": {
+      "offset": 343500,
+      "length": 7507,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e7635a15c512059f"
+    },
+    "/docs/examples/heatmaps-and-densities": {
+      "offset": 351007,
+      "length": 7591,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4d119bad2381df70"
+    },
+    "/docs/examples/facets-and-multiple-views": {
+      "offset": 358598,
+      "length": 7718,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9e98e8520a71e06f"
+    },
+    "/docs/examples/lines-and-areas": {
+      "offset": 366316,
+      "length": 7559,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e6533ec30a36f431"
+    },
+    "/docs/examples/stacked-and-composition": {
+      "offset": 373875,
+      "length": 8124,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8a257f2372792e4d"
+    },
+    "/docs/examples/intervals-and-financial": {
+      "offset": 381999,
+      "length": 6880,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dfb8d9e9bcf5cc73"
+    },
+    "/docs/concepts/chart-definitions": {
+      "offset": 388879,
+      "length": 6167,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bb11ce9d0aaf3782"
+    },
+    "/docs/concepts/layout-axes-and-coordinates": {
+      "offset": 395046,
+      "length": 10928,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d092e5f10eb20b16"
+    },
+    "/docs/concepts/marks-and-layering": {
+      "offset": 405974,
+      "length": 8720,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f2b1a77082b9f1eb"
+    },
+    "/docs/concepts/data-and-channels": {
+      "offset": 414694,
+      "length": 9075,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1bf34b642cf969fd"
+    },
+    "/docs/concepts/scales-and-d3": {
+      "offset": 423769,
+      "length": 12495,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "46cca88498fdaf0f"
+    },
+    "/docs/concepts/grammar-of-graphics": {
+      "offset": 436264,
+      "length": 8106,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "88aa1ffc39c802f2"
+    },
+    "/docs/guides/transforms-and-reactivity": {
+      "offset": 444370,
+      "length": 6565,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c1eda41ee0f9391d"
+    },
+    "/docs/guides/tooltips-and-focus": {
+      "offset": 450935,
+      "length": 12719,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "57ae4b1c6a664ce6"
+    },
+    "/docs/guides/testing-and-debugging": {
+      "offset": 463654,
+      "length": 6906,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "483fa117254a863d"
+    },
+    "/docs/guides/migrating": {
+      "offset": 470560,
+      "length": 8049,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "49d8923210382046"
+    },
+    "/docs/guides/themes-and-styling": {
+      "offset": 478609,
+      "length": 7991,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7d16524b58edaff9"
+    },
+    "/docs/guides/accessibility": {
+      "offset": 486600,
+      "length": 9234,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e5d09fff3f5ac58b"
+    },
+    "/docs/guides/bundle-size-and-performance": {
+      "offset": 495834,
+      "length": 9674,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2c8f93dbe8946b0a"
+    },
+    "/docs/guides/faceting-and-composition": {
+      "offset": 505508,
+      "length": 6806,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5b52b83a1a96bde3"
+    },
+    "/docs/guides/coming-from-recharts": {
+      "offset": 512314,
+      "length": 6207,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d4d0f82019dc43b1"
+    },
+    "/docs/guides/legends-and-color": {
+      "offset": 518521,
+      "length": 8009,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f784e6fd1e042120"
+    },
+    "/docs/guides/custom-marks-and-renderers": {
+      "offset": 526530,
+      "length": 11341,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b5157eb59bcf8c22"
+    },
+    "/docs/guides/interactions-and-selections": {
+      "offset": 537871,
+      "length": 14062,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "975272ab16e83965"
+    },
+    "/docs/guides/dynamic-data-and-animation": {
+      "offset": 551933,
+      "length": 8325,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c36259aefa7f3a4c"
+    },
+    "/docs/guides/large-data": {
+      "offset": 560258,
+      "length": 7926,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "16482837332c7558"
+    },
+    "/docs/guides/ssr-and-hydration": {
+      "offset": 568184,
+      "length": 8238,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ad95cb7960458704"
+    },
+    "/docs/guides/typescript": {
+      "offset": 576422,
+      "length": 6889,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "261c469420f743d7"
+    },
+    "/docs/guides/responsive-charts": {
+      "offset": 583311,
+      "length": 7825,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "62306cfefc0ddf14"
+    },
+    "/docs/guides/exporting": {
+      "offset": 591136,
+      "length": 7075,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "22e54d104dee3d9b"
+    },
+    "/docs/guides/choosing-a-chart": {
+      "offset": 598211,
+      "length": 6880,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0cd814a2903a2c50"
+    },
+    "/docs/guides/framework-tick-labels": {
+      "offset": 605091,
+      "length": 6075,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "12b522d092a09514"
+    },
+    "/docs/guides/ai-authoring": {
+      "offset": 611166,
+      "length": 7523,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3a4e446d54671adb"
+    },
+    "/docs/stability": {
+      "offset": 618689,
+      "length": 5599,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e266bbbf6b2bd1f1"
+    },
+    "/docs/reference/view-composition": {
+      "offset": 624288,
+      "length": 7277,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0bfcd0d058907120"
+    },
+    "/docs/reference/transforms": {
+      "offset": 631565,
+      "length": 11173,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "79c612cc3a3ff1df"
+    },
+    "/docs/reference/chart-definitions": {
+      "offset": 642738,
+      "length": 7003,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e392e9ebe1a4d8ef"
+    },
+    "/docs/reference/scales-guides-and-color": {
+      "offset": 649741,
+      "length": 16628,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0be5066564aadf63"
+    },
+    "/docs/reference/motion": {
+      "offset": 666369,
+      "length": 10607,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f31b116957a9809e"
+    },
+    "/docs/reference": {
+      "offset": 676976,
+      "length": 10044,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0734823bee6f8630"
+    },
+    "/docs/reference/runtime-and-scene": {
+      "offset": 687020,
+      "length": 8915,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2824563c86773ff3"
+    },
+    "/docs/reference/adapter-controller": {
+      "offset": 695935,
+      "length": 6411,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0c668017b647cb07"
+    },
+    "/docs/reference/dom-host": {
+      "offset": 702346,
+      "length": 8906,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "195ba69993da5a7b"
+    },
+    "/docs/reference/marks/rules-links-arrows-vectors-and-ticks": {
+      "offset": 711252,
+      "length": 7509,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "95f2be4bd9f28d6a"
+    },
+    "/docs/reference/marks/regression": {
+      "offset": 718761,
+      "length": 6679,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6adfb9c083e2c1a1"
+    },
+    "/docs/reference/marks/contour": {
+      "offset": 725440,
+      "length": 6306,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "69d51b2e12c92ac4"
+    },
+    "/docs/reference/marks/voronoi": {
+      "offset": 731746,
+      "length": 6659,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "aa498c6252fe915c"
+    },
+    "/docs/reference/marks/bar-and-rect": {
+      "offset": 738405,
+      "length": 10396,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "32f7b923454c02b5"
+    },
+    "/docs/reference/marks/sunburst": {
+      "offset": 748801,
+      "length": 7809,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3d690cc5466b3c05"
+    },
+    "/docs/reference/marks/sankey": {
+      "offset": 756610,
+      "length": 7794,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "782ab3e475e32970"
+    },
+    "/docs/reference/marks/dodge": {
+      "offset": 764404,
+      "length": 6512,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e48f9f96d68420d2"
+    },
+    "/docs/reference/marks/hexbin": {
+      "offset": 770916,
+      "length": 6205,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "33bb4886d12123ce"
+    },
+    "/docs/reference/marks/treemap": {
+      "offset": 777121,
+      "length": 7303,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a8d637234c0aab0c"
+    },
+    "/docs/reference/marks/violin": {
+      "offset": 784424,
+      "length": 6578,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d53a5d5eded77590"
+    },
+    "/docs/reference/marks/difference": {
+      "offset": 791002,
+      "length": 7075,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "90dbccc6f3714fff"
+    },
+    "/docs/reference/marks/polar": {
+      "offset": 798077,
+      "length": 11862,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bff308a70cb1d15d"
+    },
+    "/docs/reference/marks/waffle": {
+      "offset": 809939,
+      "length": 6558,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5b08485d2baf136a"
+    },
+    "/docs/reference/marks/dot-and-hexagon": {
+      "offset": 816497,
+      "length": 6778,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e83d03c4932a3db1"
+    },
+    "/docs/reference/marks/density": {
+      "offset": 823275,
+      "length": 6527,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "41550d0d04a20d65"
+    },
+    "/docs/reference/marks/text-frame-and-facet": {
+      "offset": 829802,
+      "length": 8080,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f947a5c8d8b65341"
+    },
+    "/docs/reference/marks/box": {
+      "offset": 837882,
+      "length": 6891,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f100c866bbe2c47b"
+    },
+    "/docs/reference/marks/focus-guide": {
+      "offset": 844773,
+      "length": 6362,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e6692b28254346fd"
+    },
+    "/docs/reference/marks/delaunay": {
+      "offset": 851135,
+      "length": 6484,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8718feed93ec6af1"
+    },
+    "/docs/reference/marks/line-and-area": {
+      "offset": 857619,
+      "length": 7995,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "63ad784226065c80"
+    },
+    "/docs/reference/marks/ridgeline": {
+      "offset": 865614,
+      "length": 6700,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ea36a29a44e02496"
+    },
+    "/docs/reference/marks/geo": {
+      "offset": 872314,
+      "length": 6481,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "05990ab618ab7dde"
+    },
+    "/docs/reference/focus-and-interaction": {
+      "offset": 878795,
+      "length": 21550,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cf883b9e04616909"
+    },
+    "/docs/reference/custom-extensions": {
+      "offset": 900345,
+      "length": 11622,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "765d6c1c0a7a3474"
+    },
+    "/docs/reference/chart-spec": {
+      "offset": 911967,
+      "length": 7785,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "161f589d1fcbe660"
+    },
+    "/docs/reference/types": {
+      "offset": 919752,
+      "length": 15361,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e1be1b597f79f0bd"
+    },
+    "/docs/reference/rendering-and-export": {
+      "offset": 935113,
+      "length": 15227,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8a8a8d5fad5e12c1"
+    },
+    "/docs/quick-start": {
+      "offset": 950340,
+      "length": 6325,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "08c7c0062ad40dab"
+    },
+    "/docs/comparison": {
+      "offset": 956665,
+      "length": 9345,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "de01bb6edd6a2b63"
+    },
+    "/docs/framework/preact/reference/chart": {
+      "offset": 966010,
+      "length": 6004,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "17ae54987bf070f3"
+    },
+    "/docs/framework/preact/adapter": {
+      "offset": 972014,
+      "length": 5741,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "75fda9ba10179c3a"
+    },
+    "/docs/framework/vue/reference/chart": {
+      "offset": 977755,
+      "length": 6218,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "88f2995f53a7d795"
+    },
+    "/docs/framework/vue/adapter": {
+      "offset": 983973,
+      "length": 5710,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "37426b002edbfc3d"
+    },
+    "/docs/framework/octane/reference/chart": {
+      "offset": 989683,
+      "length": 6638,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "28beaff1e30c9a8f"
+    },
+    "/docs/framework/octane/quick-start": {
+      "offset": 996321,
+      "length": 5856,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5c585f2eba2c5763"
+    },
+    "/docs/framework/octane/adapter": {
+      "offset": 1002177,
+      "length": 7377,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "95d1eae9d296095f"
+    },
+    "/docs/framework/solid/reference/chart": {
+      "offset": 1009554,
+      "length": 5995,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "83b710440efd9400"
+    },
+    "/docs/framework/solid/adapter": {
+      "offset": 1015549,
+      "length": 5704,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fe6a29fa0357fbbd"
+    },
+    "/docs/framework/angular/reference/chart": {
+      "offset": 1021253,
+      "length": 6292,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8baac6efd3ee812b"
+    },
+    "/docs/framework/angular/adapter": {
+      "offset": 1027545,
+      "length": 5925,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6bcd924ea500f770"
+    },
+    "/docs/framework/alpine/reference/chart": {
+      "offset": 1033470,
+      "length": 6027,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4a28467647bbaf0a"
+    },
+    "/docs/framework/alpine/adapter": {
+      "offset": 1039497,
+      "length": 5586,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b1420a84014f71ae"
+    },
+    "/docs/framework/svelte/reference/chart": {
+      "offset": 1045083,
+      "length": 6066,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "811200eb38690b2a"
+    },
+    "/docs/framework/svelte/adapter": {
+      "offset": 1051149,
+      "length": 5627,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f00bc4f77f832fe0"
+    },
+    "/docs/framework/react/reference/chart": {
+      "offset": 1056776,
+      "length": 7163,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ecbadbc9170ffc33"
+    },
+    "/docs/framework/react/quick-start": {
+      "offset": 1063939,
+      "length": 6228,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d408b463c78ca5c8"
+    },
+    "/docs/framework/react/adapter": {
+      "offset": 1070167,
+      "length": 8841,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "58e42f70d13d17de"
+    },
+    "/docs/framework/lit/reference/chart": {
+      "offset": 1079008,
+      "length": 6179,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6ea5bed63e8788ce"
+    },
+    "/docs/framework/lit/adapter": {
+      "offset": 1085187,
+      "length": 5635,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a42b0a660a968299"
+    },
+    "/docs/compatibility": {
+      "offset": 1090822,
+      "length": 6124,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "33c432a938e3cc15"
+    },
+    "/docs/examples/simple": {
+      "offset": 1096946,
+      "length": 7674,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "09578ac1498312f6"
+    },
+    "/docs/examples/line": {
+      "offset": 1104620,
+      "length": 7673,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3ef4eb5ba1cc04d2"
+    },
+    "/docs/examples/bar": {
+      "offset": 1112293,
+      "length": 7673,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4203aa4db75db78a"
+    },
+    "/docs/examples/column": {
+      "offset": 1119966,
+      "length": 7674,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1563f1247e10d943"
+    },
+    "/docs/examples/area": {
+      "offset": 1127640,
+      "length": 7673,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b066167ba81d1afd"
+    },
+    "/docs/examples/bubble": {
+      "offset": 1135313,
+      "length": 7675,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1d406e46dbf8305f"
+    },
+    "/docs/examples/steam": {
+      "offset": 1142988,
+      "length": 7682,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "39e62e5540af4eba"
+    },
+    "/docs/examples/sparkline": {
+      "offset": 1150670,
+      "length": 7678,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "73f52e8a5a344872"
+    },
+    "/docs/examples/multiple-axes": {
+      "offset": 1158348,
+      "length": 7677,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "da509ce266138802"
+    },
+    "/docs/examples/interaction-modes": {
+      "offset": 1166025,
+      "length": 7680,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "09040d7557961f26"
+    },
+    "/docs/examples/dark-mode": {
+      "offset": 1173705,
+      "length": 7677,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "aacc8e5393da36dd"
+    },
+    "/docs/examples/dynamic-parent": {
+      "offset": 1181382,
+      "length": 7689,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d1b0a81d400ffd44"
+    },
+    "/docs/examples/custom-styles": {
+      "offset": 1189071,
+      "length": 7683,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "acd568a96c423a12"
+    },
+    "/docs/examples/synced-cursors": {
+      "offset": 1196754,
+      "length": 7683,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0737a70a9987b13e"
+    },
+    "/docs/examples/brushing": {
+      "offset": 1204437,
+      "length": 7684,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f134315776ba4e41"
+    }
+  }
+}

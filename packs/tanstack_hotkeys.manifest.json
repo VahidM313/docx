@@ -1,1 +1,825 @@
-{"id":"tanstack_hotkeys","name":"TanStack Hotkeys","version":"latest","commit":"2b86bd5b","origin":"https://tanstack.com","entryPath":"/hotkeys/latest/docs/overview","updatedAt":"2026-10-10T16:45:13.591Z","totalBytes":3618620,"chunkCount":114,"routes":{"/hotkeys/latest/docs/overview":{"offset":0,"length":51950,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8efd033a2922d4fa"},"/hotkeys/latest/docs/framework/alpine/quick-start":{"offset":51950,"length":52155,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2c4d86beccd87fce"},"/hotkeys/latest/docs/framework/svelte/quick-start":{"offset":104105,"length":50281,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"39962ead4648ad95"},"/hotkeys/latest/docs/framework/lit/quick-start":{"offset":154386,"length":52439,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8f1f78d7e5afb6e8"},"/hotkeys/latest/docs/framework/react/guides/hotkeys":{"offset":206825,"length":59324,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"14e83d635d43dcba"},"/hotkeys/latest/docs/framework/ember/quick-start":{"offset":266149,"length":51711,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bdb884657c274a9f"},"/hotkeys/latest/docs/framework/react/quick-start":{"offset":317860,"length":50534,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e06271f5be5129cf"},"/hotkeys/latest/docs/framework/preact/guides/hotkeys":{"offset":368394,"length":59617,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"15bd8ca30a61f09e"},"/hotkeys/latest/docs/installation":{"offset":428011,"length":49250,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4aee5814850926fc"},"/hotkeys/latest/docs/framework/octane/quick-start":{"offset":477261,"length":52996,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e56b57f4eca1b44a"},"/hotkeys/latest/docs/framework/angular/quick-start":{"offset":530257,"length":51369,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cc0946149f4af53d"},"/hotkeys/latest/docs/framework/solid/guides/hotkeys":{"offset":581626,"length":60757,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ae6d196398cc1db7"},"/hotkeys/latest/docs/reference/index":{"offset":642383,"length":54653,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1ee82b1308a5ea00"},"/hotkeys/latest/docs/framework/vue/quick-start":{"offset":697036,"length":50392,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"aae8bac1cbd60c26"},"/hotkeys/latest/docs/devtools":{"offset":747428,"length":52441,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a3f21f476e717ac3"},"/hotkeys/latest/docs/framework/react/examples/kitchen-sink":{"offset":799869,"length":64533,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b450346c677855ce"},"/hotkeys/latest/docs/framework/alpine/guides/key-state-tracking":{"offset":864402,"length":51731,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f93fde6042a9f5c0"},"/hotkeys/latest/docs/framework/alpine/reference/index":{"offset":916133,"length":51494,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"56c64e78389b37e5"},"/hotkeys/latest/docs/framework/alpine/guides/sequence-recording":{"offset":967627,"length":52205,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b5fe27b86c601497"},"/hotkeys/latest/docs/framework/alpine/guides/sequences":{"offset":1019832,"length":53472,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eb4bf877978b1b9f"},"/hotkeys/latest/docs/framework/alpine/guides/hotkeys":{"offset":1073304,"length":57375,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b011fb894989ce2e"},"/hotkeys/latest/docs/framework/alpine/guides/formatting-display":{"offset":1130679,"length":51429,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a2aac780d599dd8e"},"/hotkeys/latest/docs/framework/svelte/guides/hotkeys":{"offset":1182108,"length":55625,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d4b66e00248242da"},"/hotkeys/latest/docs/framework/svelte/guides/sequences":{"offset":1237733,"length":51959,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"38bb8ed6ea52e295"},"/hotkeys/latest/docs/framework/ember/examples/kitchen-sink":{"offset":1289692,"length":65218,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"835c585fd46aaa68"},"/hotkeys/latest/docs/framework/svelte/examples/kitchen-sink":{"offset":1354910,"length":54443,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a7d1b372c601f854"},"/hotkeys/latest/docs/framework/octane/examples/kitchen-sink":{"offset":1409353,"length":62300,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0f9e72d94052bb2d"},"/hotkeys/latest/docs/framework/alpine/guides/hotkey-recording":{"offset":1471653,"length":55571,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5c926c7eaa2e0aa3"},"/hotkeys/latest/docs/framework/vanilla/examples/formatForDisplay":{"offset":1527224,"length":56128,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d7bbc25469e9a3de"},"/hotkeys/latest/docs/framework/alpine/examples/kitchen-sink":{"offset":1583352,"length":56085,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"473b36a127cec820"},"/hotkeys/latest/docs/framework/lit/guides/formatting-display":{"offset":1639437,"length":51511,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"276f438305c1c29e"},"/hotkeys/latest/docs/framework/lit/guides/key-state-tracking":{"offset":1690948,"length":52541,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"93222374337e2a8a"},"/hotkeys/latest/docs/framework/lit/guides/hotkey-recording":{"offset":1743489,"length":55730,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b751ecc5a122b0b5"},"/hotkeys/latest/docs/framework/lit/guides/sequence-recording":{"offset":1799219,"length":52820,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d1aa05ae4a05b128"},"/hotkeys/latest/docs/framework/svelte/guides/key-state-tracking":{"offset":1852039,"length":49578,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"144f8af733128c47"},"/hotkeys/latest/docs/framework/lit/guides/sequences":{"offset":1901617,"length":55090,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2d99a10bc973a95d"},"/hotkeys/latest/docs/framework/svelte/guides/hotkey-recording":{"offset":1956707,"length":52590,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9be8b4ff87ca3e10"},"/hotkeys/latest/docs/framework/svelte/guides/formatting-display":{"offset":2009297,"length":51922,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"73b40b90a0fef0c2"},"/hotkeys/latest/docs/framework/svelte/guides/sequence-recording":{"offset":2061219,"length":50598,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a29e058e43468fea"},"/hotkeys/latest/docs/framework/react/guides/hotkey-recording":{"offset":2111817,"length":54639,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8d62019ad403e07f"},"/hotkeys/latest/docs/framework/lit/guides/hotkeys":{"offset":2166456,"length":59973,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1074ac66d80ff70a"},"/hotkeys/latest/docs/framework/lit/examples/kitchen-sink":{"offset":2226429,"length":49482,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4b4ea625339e33ea"},"/hotkeys/latest/docs/framework/react/guides/sequences":{"offset":2275911,"length":54641,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1bf55db90a810e3a"},"/hotkeys/latest/docs/framework/react/guides/formatting-display":{"offset":2330552,"length":51454,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ea4aa3997fedd6c5"},"/hotkeys/latest/docs/framework/react/guides/key-state-tracking":{"offset":2382006,"length":53522,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c8cc13b2f1d1e6b3"},"/hotkeys/latest/docs/framework/react/guides/sequence-recording":{"offset":2435528,"length":51177,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bccd0c8ce979468f"},"/hotkeys/latest/docs/framework/ember/guides/hotkeys":{"offset":2486705,"length":57761,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ff34ad96160d85b1"},"/hotkeys/latest/docs/framework/ember/guides/sequences":{"offset":2544466,"length":53852,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fdf7292275cf68ff"},"/hotkeys/latest/docs/framework/ember/guides/hotkey-recording":{"offset":2598318,"length":55000,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"91650075752f06f6"},"/hotkeys/latest/docs/framework/ember/guides/key-state-tracking":{"offset":2653318,"length":51945,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7e2ad7b326416f67"},"/hotkeys/latest/docs/framework/ember/guides/sequence-recording":{"offset":2705263,"length":52257,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eb2278d0424c0dfa"},"/hotkeys/latest/docs/framework/ember/reference/index":{"offset":2757520,"length":52501,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c3f0d9e2c6bef12f"},"/hotkeys/latest/docs/framework/ember/guides/formatting-display":{"offset":2810021,"length":51840,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"24d03c988c533998"},"/assets/railway-black-DeBDfNao.svg":{"offset":2861861,"length":2008,"mime":"image/svg+xml","gzipped":true,"hash":"f17e0e028a8904e8"},"/favicon-16x16.png":{"offset":2863869,"length":590,"mime":"image/png","gzipped":true,"hash":"a53b782bb5f5aff7"},"/assets/cloudflare-black-6Ojsn8yh.svg":{"offset":2864459,"length":5273,"mime":"image/svg+xml","gzipped":true,"hash":"e8c1a2879b3e87a1"},"/favicon-32x32.png":{"offset":2869732,"length":1187,"mime":"image/png","gzipped":true,"hash":"34241b997c796120"},"/favicon-light.svg":{"offset":2870919,"length":1377,"mime":"image/svg+xml","gzipped":true,"hash":"87ddd3cc53780ea9"},"/images/brand/tanstack-landscape-black.svg":{"offset":2872296,"length":1770,"mime":"image/svg+xml","gzipped":true,"hash":"7f88cc8634ee3f47"},"/favicon.ico":{"offset":2874066,"length":1085,"mime":"image/vnd.microsoft.icon","gzipped":true,"hash":"168a372851d14b1b"},"/assets/lovable-black-1mVxR6Bj.svg":{"offset":2875151,"length":3574,"mime":"image/svg+xml","gzipped":true,"hash":"2991135aabc14b05"},"/images/brand/tanstack-landscape-white.svg":{"offset":2878725,"length":1770,"mime":"image/svg+xml","gzipped":true,"hash":"47b05e85ac4c4ffb"},"/assets/coderabbit-dark-C3hjOiHQ.svg":{"offset":2880495,"length":3855,"mime":"image/svg+xml","gzipped":true,"hash":"a0f236b34d931931"},"/assets/index-CaKFzcjh.css":{"offset":2884350,"length":73993,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0b6ed57e3b279ea7"},"/assets/lovable-white-DLB1BxKZ.svg":{"offset":2958343,"length":3575,"mime":"image/svg+xml","gzipped":true,"hash":"289e15e1680f1bc7"},"/assets/railway-white-CFKFsfw2.svg":{"offset":2961918,"length":2006,"mime":"image/svg+xml","gzipped":true,"hash":"cdfae42b06c7f002"},"/favicon-dark.svg":{"offset":2870919,"length":1377,"mime":"image/svg+xml","gzipped":true,"hash":"87ddd3cc53780ea9"},"/assets/render-white-D4l33ygB.svg":{"offset":2963924,"length":2037,"mime":"image/svg+xml","gzipped":true,"hash":"a50b023056a6449c"},"/assets/coderabbit-light-ggTFqYhV.svg":{"offset":2965961,"length":3869,"mime":"image/svg+xml","gzipped":true,"hash":"183adaaa8dc30b05"},"/assets/cloudflare-white-Co-Tyjbl.svg":{"offset":2969830,"length":5586,"mime":"image/svg+xml","gzipped":true,"hash":"e38e46382d5e07c7"},"/assets/render-black-Cz1XqOfh.svg":{"offset":2975416,"length":2039,"mime":"image/svg+xml","gzipped":true,"hash":"aa8e27c775b8a80d"},"/assets/openrouter-black-CJtk3mjZ.svg":{"offset":2977455,"length":1739,"mime":"image/svg+xml","gzipped":true,"hash":"5dd9bf63f2f8dea1"},"/__docx_assets/c652463bc02b14.bin":{"offset":2979194,"length":1032,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"b7ef659b9918b562"},"/assets/clerk-logo-dark-CRE22T_2.svg":{"offset":2980226,"length":2082,"mime":"image/svg+xml","gzipped":true,"hash":"6ac152fa38cf1202"},"/assets/openrouter-white-BLyN_5Ca.svg":{"offset":2982308,"length":1740,"mime":"image/svg+xml","gzipped":true,"hash":"13637f69d0de5fd2"},"/assets/prisma-dark-DwgDxLwn.svg":{"offset":2984048,"length":2276,"mime":"image/svg+xml","gzipped":true,"hash":"4226546f639ea248"},"/assets/serpapi-white-CPxTEZSp.svg":{"offset":2986324,"length":5507,"mime":"image/svg+xml","gzipped":true,"hash":"268f7b21f443c087"},"/assets/scarf-BJX_-tJ9.svg":{"offset":2991831,"length":3869,"mime":"image/svg+xml","gzipped":true,"hash":"76163b7ea851b6af"},"/assets/serpapi-black-DnXRiQQ3.svg":{"offset":2995700,"length":5506,"mime":"image/svg+xml","gzipped":true,"hash":"eae3ca3f49eb10bb"},"/assets/workos-black-DnPI5Ve5.svg":{"offset":3001206,"length":1716,"mime":"image/svg+xml","gzipped":true,"hash":"ee02fe0a62ec07b3"},"/assets/prisma-light-Cloa3Onm.svg":{"offset":3002922,"length":2278,"mime":"image/svg+xml","gzipped":true,"hash":"275386c848fe7de0"},"/assets/clerk-logo-light-BYN-U_0H.svg":{"offset":3005200,"length":2101,"mime":"image/svg+xml","gzipped":true,"hash":"85770f891d615c15"},"/assets/svelte-DI4JToV3.svg":{"offset":3007301,"length":2231,"mime":"image/svg+xml","gzipped":true,"hash":"11bd250dd5618c77"},"/fonts/Inter-latin.woff2":{"offset":3009532,"length":72932,"mime":"font/woff2","gzipped":true,"hash":"950aff451f2f608d"},"/images/hero-palm-gradient-960.webp":{"offset":3082464,"length":28730,"mime":"image/webp","gzipped":true,"hash":"93fbf92042d02785"},"/fonts/Inter-latin-ext.woff2":{"offset":3111194,"length":133386,"mime":"font/woff2","gzipped":true,"hash":"d2c129ef78916c74"},"/__docx_assets/ecb1449c9f014f.woff2":{"offset":3244580,"length":14771,"mime":"font/woff2","gzipped":true,"hash":"75de27a62b652578"},"/__docx_assets/f9c74283b1693b.woff2":{"offset":3259351,"length":8379,"mime":"font/woff2","gzipped":true,"hash":"827ff291ec7ad3e2"},"/images/brand/tanstack-emblem-black.svg":{"offset":3267730,"length":640,"mime":"image/svg+xml","gzipped":true,"hash":"5a2195e2edbc36d7"},"/__docx_assets/7e3d7e3c7de8e8.woff2":{"offset":3268370,"length":14731,"mime":"font/woff2","gzipped":true,"hash":"f030ce23a9c2db55"},"/__docx_assets/b2bd399c7ef212.woff2":{"offset":3283101,"length":5855,"mime":"font/woff2","gzipped":true,"hash":"bff78395d07e458e"},"/__docx_assets/6cb3d68941f20a.woff2":{"offset":3288956,"length":8291,"mime":"font/woff2","gzipped":true,"hash":"b8c026c80d547069"},"/__docx_assets/32a447b3624072.woff2":{"offset":3297247,"length":13007,"mime":"font/woff2","gzipped":true,"hash":"33b3c6001f8dd113"},"/__docx_assets/c097aa95d7ec1b.woff2":{"offset":3310254,"length":6803,"mime":"font/woff2","gzipped":true,"hash":"cfae540b88c18592"},"/__docx_assets/e577600d58460a.woff2":{"offset":3317057,"length":30764,"mime":"font/woff2","gzipped":true,"hash":"b0dbbc6df819eb88"},"/__docx_assets/c70f6b078a0944.woff2":{"offset":3347821,"length":8483,"mime":"font/woff2","gzipped":true,"hash":"e4ddc5e461f06274"},"/__docx_assets/4c442bc4abb065.woff2":{"offset":3356304,"length":13427,"mime":"font/woff2","gzipped":true,"hash":"055c5a5c51c1b6e9"},"/__docx_assets/b06594e3dfbc9f.woff2":{"offset":3369731,"length":6063,"mime":"font/woff2","gzipped":true,"hash":"e5a0d1b353cec923"},"/__docx_assets/ed3206e8ede4a9.woff2":{"offset":3375794,"length":6995,"mime":"font/woff2","gzipped":true,"hash":"c96c57c26b8d4271"},"/__docx_assets/2a73cdecea5ce9.woff2":{"offset":3382789,"length":5891,"mime":"font/woff2","gzipped":true,"hash":"9b1b2d0dc61dc5b4"},"/__docx_assets/5f754c3adb80da.woff2":{"offset":3388680,"length":76898,"mime":"font/woff2","gzipped":true,"hash":"2a689569fa1d472f"},"/__docx_assets/d1b233760bed30.woff2":{"offset":3465578,"length":6935,"mime":"font/woff2","gzipped":true,"hash":"023e5b00d47f4ca4"},"/__docx_assets/ae5fc1eadb0588.woff2":{"offset":3472513,"length":13371,"mime":"font/woff2","gzipped":true,"hash":"5a329f24e9a408d8"},"/__docx_assets/eb889034c0832c.woff2":{"offset":3485884,"length":14911,"mime":"font/woff2","gzipped":true,"hash":"b05d0cae7c617430"},"/__docx_assets/203ce92810c0a1.woff2":{"offset":3500795,"length":13455,"mime":"font/woff2","gzipped":true,"hash":"a2052c2e7171917f"},"/__docx_assets/132ba860efc49c.woff2":{"offset":3514250,"length":9375,"mime":"font/woff2","gzipped":true,"hash":"5c080ddf94a1be02"},"/__docx_assets/2504ad92936998.woff2":{"offset":3523625,"length":8699,"mime":"font/woff2","gzipped":true,"hash":"977d9cf9aec9b099"},"/__docx_assets/fd3dd31c82271e.woff2":{"offset":3532324,"length":7715,"mime":"font/woff2","gzipped":true,"hash":"972b8ee5f8ff5391"},"/__docx_assets/796754f6fa2c0f.woff2":{"offset":3540039,"length":14351,"mime":"font/woff2","gzipped":true,"hash":"690c7a9520f8d9aa"},"/__docx_assets/6988d8097c69a5.woff2":{"offset":3554390,"length":7207,"mime":"font/woff2","gzipped":true,"hash":"381bc33d377ec181"},"/__docx_assets/707854e807bf3a.woff2":{"offset":3561597,"length":6091,"mime":"font/woff2","gzipped":true,"hash":"b40808097daa64a6"},"/__docx_assets/245a9a663e9393.woff2":{"offset":3567688,"length":6955,"mime":"font/woff2","gzipped":true,"hash":"8605f3d9c723b79b"},"/__docx_assets/86628368fe0c7c.woff2":{"offset":3574643,"length":15643,"mime":"font/woff2","gzipped":true,"hash":"fd07f16153dd55ac"},"/__docx_assets/be7e618c1b6f15.woff2":{"offset":3590286,"length":13403,"mime":"font/woff2","gzipped":true,"hash":"d8074533a74c4065"},"/__docx_assets/677d93cfc15177.woff2":{"offset":3603689,"length":14931,"mime":"font/woff2","gzipped":true,"hash":"c1b3ea3548111f8f"},"/docs":{"offset":0,"length":51950,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8efd033a2922d4fa"},"/":{"offset":0,"length":51950,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8efd033a2922d4fa"}}}
+{
+  "id": "tanstack_hotkeys",
+  "name": "TanStack Hotkeys",
+  "version": "latest",
+  "commit": "926cb75e",
+  "origin": "https://tanstack.com",
+  "entryPath": "/hotkeys/latest/docs/overview",
+  "updatedAt": "2026-10-11T10:38:25.396Z",
+  "totalBytes": 3521493,
+  "chunkCount": 113,
+  "routes": {
+    "/hotkeys/latest/docs/overview": {
+      "offset": 0,
+      "length": 51070,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "12516e97dde1ad8c"
+    },
+    "/hotkeys/latest/docs/framework/react/guides/hotkeys": {
+      "offset": 51070,
+      "length": 58478,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cdd30a40757a49b2"
+    },
+    "/hotkeys/latest/docs/framework/react/quick-start": {
+      "offset": 109548,
+      "length": 49601,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5844ce47c636cf7a"
+    },
+    "/hotkeys/latest/docs/framework/angular/quick-start": {
+      "offset": 159149,
+      "length": 49495,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bc8277527fca9351"
+    },
+    "/hotkeys/latest/docs/framework/vue/quick-start": {
+      "offset": 208644,
+      "length": 48538,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "86afcfe0ca81d67a"
+    },
+    "/hotkeys/latest/docs/framework/lit/quick-start": {
+      "offset": 257182,
+      "length": 51568,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "279fea396a9f286d"
+    },
+    "/hotkeys/latest/docs/framework/ember/quick-start": {
+      "offset": 308750,
+      "length": 50810,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8c5883cc83feefee"
+    },
+    "/hotkeys/latest/docs/framework/alpine/quick-start": {
+      "offset": 359560,
+      "length": 51225,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "13b23cf48e810a06"
+    },
+    "/hotkeys/latest/docs/framework/octane/quick-start": {
+      "offset": 410785,
+      "length": 51093,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a514e3cbd44f4ba3"
+    },
+    "/hotkeys/latest/docs/devtools": {
+      "offset": 461878,
+      "length": 50559,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c02744f168223cc1"
+    },
+    "/hotkeys/latest/docs/framework/solid/guides/hotkeys": {
+      "offset": 512437,
+      "length": 59905,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "339dd655b199a74c"
+    },
+    "/hotkeys/latest/docs/framework/preact/guides/hotkeys": {
+      "offset": 572342,
+      "length": 59720,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c901e3e88f63e2e7"
+    },
+    "/hotkeys/latest/docs/installation": {
+      "offset": 632062,
+      "length": 49331,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "863bb2cabd416445"
+    },
+    "/hotkeys/latest/docs/reference/index": {
+      "offset": 681393,
+      "length": 53763,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "065cb15e2b3526d3"
+    },
+    "/hotkeys/latest/docs/framework/react/examples/kitchen-sink": {
+      "offset": 735156,
+      "length": 63686,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "64abfc057d4336ea"
+    },
+    "/hotkeys/latest/docs/framework/svelte/quick-start": {
+      "offset": 798842,
+      "length": 50390,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8f85713bcd821c65"
+    },
+    "/hotkeys/latest/docs/framework/react/guides/sequences": {
+      "offset": 849232,
+      "length": 52833,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ab0678579e545545"
+    },
+    "/hotkeys/latest/docs/framework/react/guides/formatting-display": {
+      "offset": 902065,
+      "length": 50575,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5f82c4232b761629"
+    },
+    "/hotkeys/latest/docs/framework/angular/guides/hotkey-recording": {
+      "offset": 952640,
+      "length": 51815,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "651cb1f21d1d8ec9"
+    },
+    "/hotkeys/latest/docs/framework/angular/guides/sequences": {
+      "offset": 1004455,
+      "length": 51025,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "185da73c0afdad96"
+    },
+    "/hotkeys/latest/docs/framework/angular/guides/hotkeys": {
+      "offset": 1055480,
+      "length": 54924,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d88f183bdfca8539"
+    },
+    "/hotkeys/latest/docs/framework/react/guides/hotkey-recording": {
+      "offset": 1110404,
+      "length": 53798,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1304d9a29338d8f2"
+    },
+    "/hotkeys/latest/docs/framework/alpine/examples/kitchen-sink": {
+      "offset": 1164202,
+      "length": 54272,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d3ac149b93e60afc"
+    },
+    "/hotkeys/latest/docs/framework/octane/examples/kitchen-sink": {
+      "offset": 1218474,
+      "length": 61511,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f2ed3b9ce52e33f8"
+    },
+    "/hotkeys/latest/docs/framework/angular/examples/kitchen-sink": {
+      "offset": 1279985,
+      "length": 59852,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "55a736f6e742aab4"
+    },
+    "/hotkeys/latest/docs/framework/vanilla/examples/formatForDisplay": {
+      "offset": 1339837,
+      "length": 55221,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5e49a0b5009f6da1"
+    },
+    "/hotkeys/latest/docs/framework/react/guides/sequence-recording": {
+      "offset": 1395058,
+      "length": 51188,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6adc38542a0dde02"
+    },
+    "/hotkeys/latest/docs/framework/ember/examples/kitchen-sink": {
+      "offset": 1446246,
+      "length": 65245,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6307ffddbf3d3ef8"
+    },
+    "/hotkeys/latest/docs/framework/angular/guides/key-state-tracking": {
+      "offset": 1511491,
+      "length": 48427,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9da219d3da0ca8f5"
+    },
+    "/hotkeys/latest/docs/framework/vue/guides/hotkey-recording": {
+      "offset": 1559918,
+      "length": 51353,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "95c076a6f7d9a75b"
+    },
+    "/hotkeys/latest/docs/framework/vue/guides/formatting-display": {
+      "offset": 1611271,
+      "length": 50522,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6e06bfcfa82c4b58"
+    },
+    "/hotkeys/latest/docs/framework/angular/guides/formatting-display": {
+      "offset": 1661793,
+      "length": 50895,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "37b5b7443d52ddb7"
+    },
+    "/hotkeys/latest/docs/framework/vue/guides/sequence-recording": {
+      "offset": 1712688,
+      "length": 50467,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4c01d9595e934b8f"
+    },
+    "/hotkeys/latest/docs/framework/lit/guides/hotkeys": {
+      "offset": 1763155,
+      "length": 59070,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "60f852fd8781efd2"
+    },
+    "/hotkeys/latest/docs/framework/vue/guides/key-state-tracking": {
+      "offset": 1822225,
+      "length": 48142,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "adae955c10d2fdcd"
+    },
+    "/hotkeys/latest/docs/framework/vue/guides/sequences": {
+      "offset": 1870367,
+      "length": 50537,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4e763ea0d8cbf868"
+    },
+    "/hotkeys/latest/docs/framework/angular/guides/sequence-recording": {
+      "offset": 1920904,
+      "length": 49621,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "50a3efc573d1f61c"
+    },
+    "/hotkeys/latest/docs/framework/vue/guides/hotkeys": {
+      "offset": 1970525,
+      "length": 54147,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "da45e7a4788ab3df"
+    },
+    "/hotkeys/latest/docs/framework/lit/examples/kitchen-sink": {
+      "offset": 2024672,
+      "length": 48591,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4b54103f04c538e6"
+    },
+    "/hotkeys/latest/docs/framework/vue/examples/kitchen-sink": {
+      "offset": 2073263,
+      "length": 54164,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d1ca901bbb2f96ab"
+    },
+    "/hotkeys/latest/docs/framework/lit/guides/key-state-tracking": {
+      "offset": 2127427,
+      "length": 51682,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3b5cbe5f0bcd1b2b"
+    },
+    "/hotkeys/latest/docs/framework/lit/guides/formatting-display": {
+      "offset": 2179109,
+      "length": 50606,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6d58b522480cc9b3"
+    },
+    "/hotkeys/latest/docs/framework/lit/guides/sequences": {
+      "offset": 2229715,
+      "length": 54196,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d34b92a092019682"
+    },
+    "/hotkeys/latest/docs/framework/lit/guides/sequence-recording": {
+      "offset": 2283911,
+      "length": 51891,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "22e8ae1562ae39ce"
+    },
+    "/hotkeys/latest/docs/framework/ember/guides/hotkeys": {
+      "offset": 2335802,
+      "length": 56932,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ac6f1fc910765b71"
+    },
+    "/hotkeys/latest/docs/framework/lit/guides/hotkey-recording": {
+      "offset": 2392734,
+      "length": 54812,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4197580993ee7e59"
+    },
+    "/hotkeys/latest/docs/framework/ember/guides/hotkey-recording": {
+      "offset": 2447546,
+      "length": 54105,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0cbd1ea0773fafe1"
+    },
+    "/hotkeys/latest/docs/framework/ember/guides/sequences": {
+      "offset": 2501651,
+      "length": 52990,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6f29a4e64b53ddf1"
+    },
+    "/hotkeys/latest/docs/framework/ember/guides/sequence-recording": {
+      "offset": 2554641,
+      "length": 51360,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "02fb8e824374259a"
+    },
+    "/hotkeys/latest/docs/framework/ember/guides/formatting-display": {
+      "offset": 2606001,
+      "length": 50895,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0c59b155ac5a7a4e"
+    },
+    "/hotkeys/latest/docs/framework/ember/guides/key-state-tracking": {
+      "offset": 2656896,
+      "length": 51049,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f553ad08140ab84b"
+    },
+    "/hotkeys/latest/docs/framework/ember/reference/index": {
+      "offset": 2707945,
+      "length": 51551,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "611a2dcd6c912206"
+    },
+    "/favicon-32x32.png": {
+      "offset": 2759496,
+      "length": 1187,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "34241b997c796120"
+    },
+    "/images/brand/tanstack-landscape-white.svg": {
+      "offset": 2760683,
+      "length": 1770,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "47b05e85ac4c4ffb"
+    },
+    "/assets/cloudflare-white-Co-Tyjbl.svg": {
+      "offset": 2762453,
+      "length": 5586,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "e38e46382d5e07c7"
+    },
+    "/favicon.ico": {
+      "offset": 2768039,
+      "length": 1085,
+      "mime": "image/vnd.microsoft.icon",
+      "gzipped": true,
+      "hash": "168a372851d14b1b"
+    },
+    "/assets/lovable-white-DLB1BxKZ.svg": {
+      "offset": 2769124,
+      "length": 3575,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "289e15e1680f1bc7"
+    },
+    "/assets/coderabbit-dark-C3hjOiHQ.svg": {
+      "offset": 2772699,
+      "length": 3855,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a0f236b34d931931"
+    },
+    "/assets/coderabbit-light-ggTFqYhV.svg": {
+      "offset": 2776554,
+      "length": 3869,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "183adaaa8dc30b05"
+    },
+    "/assets/cloudflare-black-6Ojsn8yh.svg": {
+      "offset": 2780423,
+      "length": 5273,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "e8c1a2879b3e87a1"
+    },
+    "/favicon-light.svg": {
+      "offset": 2785696,
+      "length": 1377,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "87ddd3cc53780ea9"
+    },
+    "/assets/render-black-Cz1XqOfh.svg": {
+      "offset": 2787073,
+      "length": 2039,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "aa8e27c775b8a80d"
+    },
+    "/images/brand/tanstack-landscape-black.svg": {
+      "offset": 2789112,
+      "length": 1770,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "7f88cc8634ee3f47"
+    },
+    "/apple-touch-icon.png": {
+      "offset": 2790882,
+      "length": 7469,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2abc16a5f4b05ca9"
+    },
+    "/assets/lovable-black-1mVxR6Bj.svg": {
+      "offset": 2798351,
+      "length": 3574,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "2991135aabc14b05"
+    },
+    "/favicon-16x16.png": {
+      "offset": 2801925,
+      "length": 590,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a53b782bb5f5aff7"
+    },
+    "/assets/index-CaKFzcjh.css": {
+      "offset": 2802515,
+      "length": 73993,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b6ed57e3b279ea7"
+    },
+    "/favicon-dark.svg": {
+      "offset": 2785696,
+      "length": 1377,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "87ddd3cc53780ea9"
+    },
+    "/assets/render-white-D4l33ygB.svg": {
+      "offset": 2876508,
+      "length": 2037,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a50b023056a6449c"
+    },
+    "/assets/railway-white-CFKFsfw2.svg": {
+      "offset": 2878545,
+      "length": 2006,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "cdfae42b06c7f002"
+    },
+    "/assets/railway-black-DeBDfNao.svg": {
+      "offset": 2880551,
+      "length": 2008,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "f17e0e028a8904e8"
+    },
+    "/__docx_assets/c652463bc02b14.bin": {
+      "offset": 2882559,
+      "length": 1032,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b7ef659b9918b562"
+    },
+    "/assets/openrouter-white-BLyN_5Ca.svg": {
+      "offset": 2883591,
+      "length": 1740,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "13637f69d0de5fd2"
+    },
+    "/assets/prisma-light-Cloa3Onm.svg": {
+      "offset": 2885331,
+      "length": 2278,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "275386c848fe7de0"
+    },
+    "/assets/workos-black-DnPI5Ve5.svg": {
+      "offset": 2887609,
+      "length": 1716,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "ee02fe0a62ec07b3"
+    },
+    "/assets/clerk-logo-light-BYN-U_0H.svg": {
+      "offset": 2889325,
+      "length": 2101,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "85770f891d615c15"
+    },
+    "/assets/clerk-logo-dark-CRE22T_2.svg": {
+      "offset": 2891426,
+      "length": 2082,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "6ac152fa38cf1202"
+    },
+    "/assets/openrouter-black-CJtk3mjZ.svg": {
+      "offset": 2893508,
+      "length": 1739,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "5dd9bf63f2f8dea1"
+    },
+    "/assets/prisma-dark-DwgDxLwn.svg": {
+      "offset": 2895247,
+      "length": 2276,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "4226546f639ea248"
+    },
+    "/assets/serpapi-white-CPxTEZSp.svg": {
+      "offset": 2897523,
+      "length": 5507,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "268f7b21f443c087"
+    },
+    "/assets/serpapi-black-DnXRiQQ3.svg": {
+      "offset": 2903030,
+      "length": 5506,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "eae3ca3f49eb10bb"
+    },
+    "/assets/scarf-BJX_-tJ9.svg": {
+      "offset": 2908536,
+      "length": 3869,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "76163b7ea851b6af"
+    },
+    "/images/brand/tanstack-emblem-black.svg": {
+      "offset": 2912405,
+      "length": 640,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "5a2195e2edbc36d7"
+    },
+    "/images/hero-palm-gradient-960.webp": {
+      "offset": 2913045,
+      "length": 28730,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "93fbf92042d02785"
+    },
+    "/fonts/Inter-latin.woff2": {
+      "offset": 2941775,
+      "length": 72932,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "950aff451f2f608d"
+    },
+    "/fonts/Inter-latin-ext.woff2": {
+      "offset": 3014707,
+      "length": 133386,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "d2c129ef78916c74"
+    },
+    "/__docx_assets/c097aa95d7ec1b.woff2": {
+      "offset": 3148093,
+      "length": 6803,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "cfae540b88c18592"
+    },
+    "/__docx_assets/f9c74283b1693b.woff2": {
+      "offset": 3154896,
+      "length": 8379,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "827ff291ec7ad3e2"
+    },
+    "/__docx_assets/7e3d7e3c7de8e8.woff2": {
+      "offset": 3163275,
+      "length": 14731,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "f030ce23a9c2db55"
+    },
+    "/__docx_assets/b2bd399c7ef212.woff2": {
+      "offset": 3178006,
+      "length": 5855,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "bff78395d07e458e"
+    },
+    "/__docx_assets/6cb3d68941f20a.woff2": {
+      "offset": 3183861,
+      "length": 8291,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b8c026c80d547069"
+    },
+    "/__docx_assets/2a73cdecea5ce9.woff2": {
+      "offset": 3192152,
+      "length": 5891,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "9b1b2d0dc61dc5b4"
+    },
+    "/__docx_assets/32a447b3624072.woff2": {
+      "offset": 3198043,
+      "length": 13007,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "33b3c6001f8dd113"
+    },
+    "/__docx_assets/b06594e3dfbc9f.woff2": {
+      "offset": 3211050,
+      "length": 6063,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e5a0d1b353cec923"
+    },
+    "/__docx_assets/ecb1449c9f014f.woff2": {
+      "offset": 3217113,
+      "length": 14771,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "75de27a62b652578"
+    },
+    "/__docx_assets/ed3206e8ede4a9.woff2": {
+      "offset": 3231884,
+      "length": 6995,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "c96c57c26b8d4271"
+    },
+    "/__docx_assets/4c442bc4abb065.woff2": {
+      "offset": 3238879,
+      "length": 13427,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "055c5a5c51c1b6e9"
+    },
+    "/__docx_assets/d1b233760bed30.woff2": {
+      "offset": 3252306,
+      "length": 6935,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "023e5b00d47f4ca4"
+    },
+    "/__docx_assets/c70f6b078a0944.woff2": {
+      "offset": 3259241,
+      "length": 8483,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e4ddc5e461f06274"
+    },
+    "/__docx_assets/ae5fc1eadb0588.woff2": {
+      "offset": 3267724,
+      "length": 13371,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "5a329f24e9a408d8"
+    },
+    "/__docx_assets/e577600d58460a.woff2": {
+      "offset": 3281095,
+      "length": 30764,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b0dbbc6df819eb88"
+    },
+    "/__docx_assets/5f754c3adb80da.woff2": {
+      "offset": 3311859,
+      "length": 76898,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "2a689569fa1d472f"
+    },
+    "/__docx_assets/fd3dd31c82271e.woff2": {
+      "offset": 3388757,
+      "length": 7715,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "972b8ee5f8ff5391"
+    },
+    "/__docx_assets/6988d8097c69a5.woff2": {
+      "offset": 3396472,
+      "length": 7207,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "381bc33d377ec181"
+    },
+    "/__docx_assets/245a9a663e9393.woff2": {
+      "offset": 3403679,
+      "length": 6955,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "8605f3d9c723b79b"
+    },
+    "/__docx_assets/707854e807bf3a.woff2": {
+      "offset": 3410634,
+      "length": 6091,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b40808097daa64a6"
+    },
+    "/__docx_assets/2504ad92936998.woff2": {
+      "offset": 3416725,
+      "length": 8699,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "977d9cf9aec9b099"
+    },
+    "/__docx_assets/132ba860efc49c.woff2": {
+      "offset": 3425424,
+      "length": 9375,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "5c080ddf94a1be02"
+    },
+    "/__docx_assets/eb889034c0832c.woff2": {
+      "offset": 3434799,
+      "length": 14911,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b05d0cae7c617430"
+    },
+    "/__docx_assets/203ce92810c0a1.woff2": {
+      "offset": 3449710,
+      "length": 13455,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "a2052c2e7171917f"
+    },
+    "/__docx_assets/86628368fe0c7c.woff2": {
+      "offset": 3463165,
+      "length": 15643,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "fd07f16153dd55ac"
+    },
+    "/__docx_assets/677d93cfc15177.woff2": {
+      "offset": 3478808,
+      "length": 14931,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "c1b3ea3548111f8f"
+    },
+    "/__docx_assets/796754f6fa2c0f.woff2": {
+      "offset": 3493739,
+      "length": 14351,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "690c7a9520f8d9aa"
+    },
+    "/__docx_assets/be7e618c1b6f15.woff2": {
+      "offset": 3508090,
+      "length": 13403,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "d8074533a74c4065"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 51070,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "12516e97dde1ad8c"
+    },
+    "/": {
+      "offset": 0,
+      "length": 51070,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "12516e97dde1ad8c"
+    }
+  }
+}

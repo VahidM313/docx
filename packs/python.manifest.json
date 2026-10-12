@@ -1,1 +1,1273 @@
-{"id":"python","name":"Python 3","version":"v3.13","commit":"e4a253ea","origin":"https://docs.python.org","entryPath":"/3/","updatedAt":"2026-10-10T18:56:49.035Z","totalBytes":4850811,"chunkCount":181,"routes":{"/3":{"offset":0,"length":4772,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ee6b0fcb4c9e9470"},"/3/":{"offset":0,"length":4772,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ee6b0fcb4c9e9470"},"/3/download.html":{"offset":4772,"length":3724,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"91a3a11a577790fb"},"/3/reference/index.html":{"offset":8496,"length":6025,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7540a51352d35392"},"/3/using/index.html":{"offset":14521,"length":5256,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"22997e121e5c1c28"},"/3/builtins/index.html":{"offset":19777,"length":5531,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a67dedbed5d3fc10"},"/3/genindex.html":{"offset":25308,"length":3410,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7f614965b7dc01fc"},"/3/extending/index.html":{"offset":28718,"length":6040,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cfc6e0591cff290b"},"/3/faq/index.html":{"offset":34758,"length":4228,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bb7466c02a849d77"},"/3/installing/index.html":{"offset":38986,"length":7400,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ad4b3287eac0c17c"},"/3/howto/index.html":{"offset":46386,"length":4979,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"40ff701cc708e717"},"/3/library/index.html":{"offset":51365,"length":12560,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0a40f18bfb2fd91d"},"/3/whatsnew/index.html":{"offset":63925,"length":12453,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1c1127b792a573b7"},"/3/py-modindex.html":{"offset":76378,"length":14439,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a873aed1d773f29a"},"/3/tutorial/index.html":{"offset":90817,"length":8438,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"101f14e35968b88b"},"/3/deprecations/index.html":{"offset":99255,"length":20367,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4da156a6523c0b1c"},"/3/whatsnew/3.15.html":{"offset":119622,"length":70237,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3874d48dc4bec607"},"/3/c-api/index.html":{"offset":189859,"length":6829,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2f3d3cc8ccafe3b6"},"/3/search.html":{"offset":196688,"length":3178,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bf52687e92258146"},"/3/about.html":{"offset":199866,"length":4659,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e86faad15ad0875c"},"/3/copyright.html":{"offset":204525,"length":4089,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6472f8274f5dd704"},"/3/improve-page-nojs.html":{"offset":208614,"length":4041,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e6c46d685e4786c8"},"/3/index.html":{"offset":212655,"length":4773,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"81bb7b95bd674279"},"/3/bugs.html":{"offset":217428,"length":6047,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"464643f92a11ddfe"},"/3/using/editors.html":{"offset":223475,"length":4618,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e35b17c0e7723dfb"},"/3/reference/introduction.html":{"offset":228093,"length":8371,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8336296a9be6efe5"},"/3/license.html":{"offset":236464,"length":21827,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"51bf37829c5db9a6"},"/3/glossary.html":{"offset":258291,"length":41172,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d824ad3de727849a"},"/3/reference/lexical_analysis.html":{"offset":299463,"length":28214,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b0e8ec0b04ab6195"},"/3/contents.html":{"offset":327677,"length":93594,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c02bdbd91b6d6e66"},"/3/reference/toplevel_components.html":{"offset":421271,"length":5705,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a2ab4922fbb8238f"},"/3/tutorial/appendix.html":{"offset":426976,"length":7514,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fe0790ef88f6704f"},"/3/using/unix.html":{"offset":434490,"length":7375,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"122dbfa13f0f22c0"},"/3/reference/grammar.html":{"offset":441865,"length":12809,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e21bf21ed65bbddf"},"/3/reference/executionmodel.html":{"offset":454674,"length":15289,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fb5ee14922e41027"},"/3/reference/import.html":{"offset":469963,"length":23069,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4bff230b0bd1fe36"},"/3/using/cmdline.html":{"offset":493032,"length":28225,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bfe8cf55f1dc9adc"},"/3/reference/datamodel.html":{"offset":521257,"length":68950,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4e19749f50bad14d"},"/3/using/configure.html":{"offset":590207,"length":31976,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b5ee9bb811611a9c"},"/3/reference/simple_stmts.html":{"offset":622183,"length":22410,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2f96f95d16d5095d"},"/3/reference/compound_stmts.html":{"offset":644593,"length":35665,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3f0f90e6ff0c5cb8"},"/3/reference/expressions.html":{"offset":680258,"length":44362,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"44b09d3e220aa161"},"/3/using/android.html":{"offset":724620,"length":5812,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2c99650d037b7e4b"},"/3/using/ios.html":{"offset":730432,"length":12994,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8cb161172b97e87d"},"/3/using/mac.html":{"offset":743426,"length":13762,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b8c1978c1cace544"},"/3/using/windows.html":{"offset":757188,"length":41980,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9a1bbe81b02b137c"},"/3/genindex-D.html":{"offset":799168,"length":13688,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"67586d74a64e39ec"},"/3/builtins/constants.html":{"offset":812856,"length":6499,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2b82b66b806d1f14"},"/3/builtins/time-complexity.html":{"offset":819355,"length":10579,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"65e8567be8586e93"},"/3/genindex-Symbols.html":{"offset":829934,"length":11190,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e947e87292bbf2c1"},"/3/genindex-B.html":{"offset":841124,"length":11263,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7d76ad484db9655d"},"/3/genindex-E.html":{"offset":852387,"length":19978,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7d2a761669e2b12f"},"/3/builtins/exceptions.html":{"offset":872365,"length":23152,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8ee3244f5b0baed3"},"/3/genindex-C.html":{"offset":895517,"length":25053,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"829cf1a4e03191ac"},"/3/builtins/functions.html":{"offset":920570,"length":49106,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b880c8985dc2868c"},"/3/builtins/stdtypes.html":{"offset":969676,"length":98351,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0073756be67d88cc"},"/3/genindex-H.html":{"offset":1068027,"length":9224,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ec0a33d28e35dcb8"},"/3/builtins/threadsafety.html":{"offset":1077251,"length":12506,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f608742c91692ee4"},"/3/genindex-_.html":{"offset":1089757,"length":10644,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"60d8ef91ee5dec7f"},"/3/genindex-G.html":{"offset":1100401,"length":15510,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"478a6ea691e03431"},"/3/genindex-A.html":{"offset":1115911,"length":14730,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"08b316d7c26b61f1"},"/3/genindex-F.html":{"offset":1130641,"length":14489,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0573f0c06ad9efbf"},"/3/genindex-J.html":{"offset":1145130,"length":4191,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5288a7a3d9d95ac8"},"/3/genindex-N.html":{"offset":1149321,"length":9823,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cf4ff69dfb13def2"},"/3/genindex-K.html":{"offset":1159144,"length":5655,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"adbb07e9fff40a04"},"/3/genindex-V.html":{"offset":1164799,"length":5840,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"616079e884d65fac"},"/3/genindex-X.html":{"offset":1170639,"length":4975,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"771ab7de921f692e"},"/3/genindex-Q.html":{"offset":1175614,"length":4336,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4505a504235d9a1b"},"/3/genindex-L.html":{"offset":1179950,"length":11362,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ab6a44a86945b274"},"/3/genindex-W.html":{"offset":1191312,"length":9169,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5c5b23376967df4b"},"/3/genindex-S.html":{"offset":1200481,"length":28766,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"55a1a9031c1f7779"},"/3/genindex-T.html":{"offset":1229247,"length":13541,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c619d9d67bd41154"},"/3/genindex-I.html":{"offset":1242788,"length":16771,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"92e3a46922b10c8a"},"/3/genindex-O.html":{"offset":1259559,"length":9505,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b47979096af7f497"},"/3/genindex-R.html":{"offset":1269064,"length":19486,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d8d3562817a01b28"},"/3/genindex-U.html":{"offset":1288550,"length":9486,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f7c0d852e8124aea"},"/3/genindex-M.html":{"offset":1298036,"length":17180,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fa73752002a7ed94"},"/3/genindex-P.html":{"offset":1315216,"length":55332,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ba538ced09516bd3"},"/3/genindex-Z.html":{"offset":1370548,"length":4404,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"021fba844430ed87"},"/3/genindex-Y.html":{"offset":1374952,"length":3846,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a60d801b50a481f9"},"/3/faq/installed.html":{"offset":1378798,"length":5184,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1b4215649f82714d"},"/3/faq/gui.html":{"offset":1383982,"length":5749,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"127b181d309fb0bf"},"/3/faq/library.html":{"offset":1389731,"length":19728,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ccf6619741bea42f"},"/3/faq/windows.html":{"offset":1409459,"length":10340,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c49ad224f08f132b"},"/3/faq/general.html":{"offset":1419799,"length":14271,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2ebb9e0d9276ba84"},"/3/c-api/monitoring.html":{"offset":1434070,"length":8881,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ea5bbee041f00886"},"/3/library/security_warnings.html":{"offset":1442951,"length":5618,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9e343455745cfe66"},"/3/faq/extending.html":{"offset":1448569,"length":11324,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d943717c3702ae93"},"/3/howto/a-conceptual-overview-of-asyncio.html":{"offset":1459893,"length":15558,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e9e2ea9f8940e4b1"},"/3/howto/remote_debugging.html":{"offset":1475451,"length":17564,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3b3ad883a59271cd"},"/3/extending/first-extension-module.html":{"offset":1493015,"length":16106,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"16e59104ee79dd95"},"/3/faq/design.html":{"offset":1509121,"length":23419,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0cf9aec14aab009e"},"/3/faq/programming.html":{"offset":1532540,"length":45776,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a5680843c78abbfb"},"/3/genindex-all.html":{"offset":1578316,"length":271503,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"32ef201bd7be9ac6"},"/3/library/datatypes.html":{"offset":1849819,"length":6377,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5b0511d72e7020ee"},"/3/library/intro.html":{"offset":1856196,"length":7832,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4e33eafa1328061a"},"/3/library/text.html":{"offset":1864028,"length":5388,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ef2e05f2e029b9fd"},"/3/library/rlcompleter.html":{"offset":1869416,"length":5837,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f11da88c757168f6"},"/3/library/binary.html":{"offset":1875253,"length":5205,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7a53c89ad31da9e8"},"/3/library/unicodedata.html":{"offset":1880458,"length":9848,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8bc706a98d370724"},"/3/library/stringprep.html":{"offset":1890306,"length":5864,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"84870d5141087d1a"},"/3/library/string.templatelib.html":{"offset":1896170,"length":10460,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c9a2caf30f22a8c3"},"/3/library/readline.html":{"offset":1906630,"length":11325,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5bd48f8ee322fb94"},"/3/library/re.html":{"offset":1917955,"length":36356,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c0a1d66aca22a913"},"/3/library/struct.html":{"offset":1954311,"length":15715,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7431009986bf168e"},"/3/library/difflib.html":{"offset":1970026,"length":20952,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1b952f318bc03da2"},"/3/library/datetime.html":{"offset":1990978,"length":50978,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8b12d5c7a833c454"},"/3/library/string.html":{"offset":2041956,"length":22286,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"07534b33c734be15"},"/3/library/codecs.html":{"offset":2064242,"length":29212,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dbb55cd601710ad8"},"/3/library/textwrap.html":{"offset":2093454,"length":10393,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c6edd8c193a9f6bd"},"/3/library/pprint.html":{"offset":2103847,"length":11583,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7b39a6e3ee92b71c"},"/3/library/calendar.html":{"offset":2115430,"length":15071,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2ded9ef83b6cb7ba"},"/3/library/numeric.html":{"offset":2130501,"length":5784,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1a29fb8f7723d7fd"},"/3/library/reprlib.html":{"offset":2136285,"length":9102,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"030a642e86e958b1"},"/3/library/graphlib.html":{"offset":2145387,"length":8101,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f6f74793dcd8d51a"},"/3/library/zoneinfo.html":{"offset":2153488,"length":12988,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"868565d2f8469c35"},"/3/library/array.html":{"offset":2166476,"length":10639,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"444315632e0676fb"},"/3/library/numbers.html":{"offset":2177115,"length":9220,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"22f9bdd3eb994e7b"},"/3/library/bisect.html":{"offset":2186335,"length":9791,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b9a38566d6a2495b"},"/3/library/collections.html":{"offset":2196126,"length":29345,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e732dcccc1e5a79f"},"/3/library/collections.abc.html":{"offset":2225471,"length":13844,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"73570a93c117eee3"},"/3/library/heapq.html":{"offset":2239315,"length":13408,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ee8418993c4bf1ba"},"/3/library/types.html":{"offset":2252723,"length":13653,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8ff288ad379d5083"},"/3/library/weakref.html":{"offset":2266376,"length":14860,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c50ccb28a1717fce"},"/3/library/copy.html":{"offset":2281236,"length":6572,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"56f96a0ef71c7411"},"/3/library/enum.html":{"offset":2287808,"length":20063,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a58c39f7f6c8b4c1"},"/3/library/math.integer.html":{"offset":2307871,"length":5456,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"700d1c3fbaea38ed"},"/3/library/functional.html":{"offset":2313327,"length":4414,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d4398502cb742e1c"},"/3/library/filesys.html":{"offset":2317741,"length":5574,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"425f9399589d276f"},"/3/library/cmath.html":{"offset":2323315,"length":10861,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"83811eb2d40f82f2"},"/3/library/functools.html":{"offset":2334176,"length":18803,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3df3f5f5547b6411"},"/3/library/fractions.html":{"offset":2352979,"length":9748,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8220a02951dd5df1"},"/3/library/stat.html":{"offset":2362727,"length":11119,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b50d037523da89a5"},"/3/library/random.html":{"offset":2373846,"length":19482,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0178b7a9c368f540"},"/3/library/decimal.html":{"offset":2393328,"length":39906,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ee74d23b851f4619"},"/3/library/math.html":{"offset":2433234,"length":18081,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d3c4d15126d33c26"},"/3/library/statistics.html":{"offset":2451315,"length":23606,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"90f9e06158755209"},"/3/library/itertools.html":{"offset":2474921,"length":24116,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"58080c6310e0cffe"},"/3/library/os.path.html":{"offset":2499037,"length":14995,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7dfbe59fdb251d3d"},"/3/library/pathlib.html":{"offset":2514032,"length":31721,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"08ffe6612e700d93"},"/3/library/filecmp.html":{"offset":2545753,"length":7355,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"88a6892d28a96869"},"/3/library/operator.html":{"offset":2553108,"length":12889,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fc6a77ddc1a09348"},"/3/library/fnmatch.html":{"offset":2565997,"length":6336,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c95b87458dc4058b"},"/3/library/copyreg.html":{"offset":2572333,"length":5518,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"972e7c39247dc667"},"/3/library/linecache.html":{"offset":2577851,"length":5770,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"26114a71759ae3cc"},"/3/library/tempfile.html":{"offset":2583621,"length":13645,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bb3b6b93bba7f6a8"},"/3/library/persistence.html":{"offset":2597266,"length":5772,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"df31bfd7c836477f"},"/3/library/glob.html":{"offset":2603038,"length":7745,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f70a3535ec4d1967"},"/3/library/pickle.html":{"offset":2610783,"length":28256,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a0e8c8943f807b88"},"/3/library/shutil.html":{"offset":2639039,"length":19771,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"96367b143088465d"},"/3/library/marshal.html":{"offset":2658810,"length":7812,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d9c608ac5e2d5de2"},"/3/library/dbm.html":{"offset":2666622,"length":12024,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"974ff6cf38e6c8ac"},"/3/library/sqlite3.html":{"offset":2678646,"length":42290,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"993048d190b22bb7"},"/3/library/shelve.html":{"offset":2720936,"length":10782,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2db704315a4f5bda"},"/3/library/archiving.html":{"offset":2731718,"length":5357,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dcfc63f5efd8780b"},"/3/library/compression.html":{"offset":2737075,"length":4625,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8ddc8b64429be16d"},"/3/library/compression.zstd.html":{"offset":2741700,"length":18698,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c958c6cb93972d20"},"/__docx_assets/72f9f4e4e9a15b.css":{"offset":2760398,"length":1016,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"4eeafcaee94b7074"},"/3/_static/pydoctheme_dark.css":{"offset":2761414,"length":1178,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"72b66a63de9f4024"},"/3/_static/py.svg":{"offset":2762592,"length":936,"mime":"image/svg+xml","gzipped":true,"hash":"761c94d6b4134c7f"},"/__docx_assets/17d3934fef951f.css":{"offset":2763528,"length":1008,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"81a6ab81062f67ea"},"/__docx_assets/8981556eb79e0d.css":{"offset":2764536,"length":1347,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"d9297c9092ec2f42"},"/__docx_assets/6b315f05afb67a.css":{"offset":2765883,"length":4703,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"9d1c940622fec105"},"/3/_static/minus.png":{"offset":2770586,"length":101,"mime":"image/png","gzipped":true,"hash":"3e59ef931933055a"},"/3/_images/mac_installer_04_installation_type.png":{"offset":2770687,"length":119096,"mime":"image/png","gzipped":true,"hash":"39ef8512fb4cb455"},"/3/_images/mac_installer_01_introduction.png":{"offset":2889783,"length":156537,"mime":"image/png","gzipped":true,"hash":"c922723bee4a3451"},"/3/_images/mac_installer_05_custom_install.png":{"offset":3046320,"length":169115,"mime":"image/png","gzipped":true,"hash":"c382b98916026d72"},"/3/_images/datetime-inheritance.svg":{"offset":3215435,"length":1317,"mime":"image/svg+xml","gzipped":true,"hash":"d2b5ba9f4e89aeb9"},"/3/_images/mac_installer_07_applications.png":{"offset":3216752,"length":91077,"mime":"image/png","gzipped":true,"hash":"b40cad01d636e054"},"/3/_images/mac_installer_03_license.png":{"offset":3307829,"length":140566,"mime":"image/png","gzipped":true,"hash":"1a72293a662d9bca"},"/3/_images/tachyon-logo.png":{"offset":3448395,"length":92752,"mime":"image/png","gzipped":true,"hash":"886f5cd01a7f281d"},"/3/_images/mac_installer_06_summary.png":{"offset":3541147,"length":154417,"mime":"image/png","gzipped":true,"hash":"4e814ae5c647817a"},"/3/_images/mac_installer_08_install_certificates.png":{"offset":3695564,"length":166175,"mime":"image/png","gzipped":true,"hash":"b4fce4f812118b95"},"/3/_images/win_installer.png":{"offset":3861739,"length":77804,"mime":"image/png","gzipped":true,"hash":"d6020dd35debb24c"},"/3/_images/mac_installer_02_readme.png":{"offset":3939543,"length":212475,"mime":"image/png","gzipped":true,"hash":"ac8a33cd207cab52"},"/3/_images/mac_installer_09_custom_install_free_threaded.png":{"offset":4152018,"length":187368,"mime":"image/png","gzipped":true,"hash":"5188bb22c70f70f6"},"/3/_images/win_install_freethreaded.png":{"offset":4339386,"length":209878,"mime":"image/png","gzipped":true,"hash":"bc44ac85cb497509"},"/3/_images/heapq-binary-tree.svg":{"offset":4549264,"length":6185,"mime":"image/svg+xml","gzipped":true,"hash":"1291a64e9c680de6"},"/3/_images/pathlib-inheritance.png":{"offset":4555449,"length":5775,"mime":"image/png","gzipped":true,"hash":"922b5e85ca175004"},"/3/_images/kde_example.png":{"offset":4561224,"length":238212,"mime":"image/png","gzipped":true,"hash":"6b1ca7e2e00ed721"},"/3/_static/basic.css":{"offset":4799436,"length":3370,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"142684920d0abd99"},"/3/_static/fonts/Vazirmatn-NL-VF.woff2":{"offset":4802806,"length":48005,"mime":"font/woff2","gzipped":true,"hash":"ca6d61b46dd95dc1"},"/docs":{"offset":0,"length":4772,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ee6b0fcb4c9e9470"},"/":{"offset":0,"length":4772,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ee6b0fcb4c9e9470"}}}
+{
+  "id": "python",
+  "name": "Python 3",
+  "version": "v3.13",
+  "commit": "c2e85ebc",
+  "origin": "https://docs.python.org",
+  "entryPath": "/3/",
+  "updatedAt": "2026-10-11T10:38:25.018Z",
+  "totalBytes": 5941170,
+  "chunkCount": 177,
+  "routes": {
+    "/3": {
+      "offset": 0,
+      "length": 3844,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7efec36a0a34659a"
+    },
+    "/3/": {
+      "offset": 0,
+      "length": 3844,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7efec36a0a34659a"
+    },
+    "/3/download.html": {
+      "offset": 3844,
+      "length": 2800,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "49becf99d807fa33"
+    },
+    "/3/c-api/index.html": {
+      "offset": 6644,
+      "length": 5937,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "144557808c354d7e"
+    },
+    "/3/tutorial/index.html": {
+      "offset": 12581,
+      "length": 7536,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ecb179a886bd92c9"
+    },
+    "/3/howto/index.html": {
+      "offset": 20117,
+      "length": 4087,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2365263e7f36c30e"
+    },
+    "/3/using/index.html": {
+      "offset": 24204,
+      "length": 4363,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5e640a0d3be34e97"
+    },
+    "/3/reference/index.html": {
+      "offset": 28567,
+      "length": 5139,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "efca8456c9fcb6ea"
+    },
+    "/3/faq/index.html": {
+      "offset": 33706,
+      "length": 3335,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bb6fda09ed56c2f1"
+    },
+    "/3/deprecations/index.html": {
+      "offset": 37041,
+      "length": 19458,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e49023e6f3ba05f4"
+    },
+    "/3/genindex.html": {
+      "offset": 56499,
+      "length": 2487,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5663240ca7fc1e6e"
+    },
+    "/3/builtins/index.html": {
+      "offset": 58986,
+      "length": 4643,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7655aefe5f3a29cd"
+    },
+    "/3/whatsnew/3.15.html": {
+      "offset": 63629,
+      "length": 69349,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fb3d99c225685a1d"
+    },
+    "/3/whatsnew/index.html": {
+      "offset": 132978,
+      "length": 11537,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "636ecdd7c4b4c3eb"
+    },
+    "/3/py-modindex.html": {
+      "offset": 144515,
+      "length": 13476,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d2129fa317efb34c"
+    },
+    "/3/extending/index.html": {
+      "offset": 157991,
+      "length": 5148,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d9ff04adeb0e66bf"
+    },
+    "/3/installing/index.html": {
+      "offset": 163139,
+      "length": 6506,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8d635846a6894544"
+    },
+    "/3/library/index.html": {
+      "offset": 169645,
+      "length": 11651,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a49d328e1c5946d3"
+    },
+    "/3/bugs.html": {
+      "offset": 181296,
+      "length": 5159,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f5d9ac1f7e38938f"
+    },
+    "/3/search.html": {
+      "offset": 186455,
+      "length": 2258,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ad5c36d73c522dcd"
+    },
+    "/3/about.html": {
+      "offset": 188713,
+      "length": 3774,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9425f63f7591721e"
+    },
+    "/3/index.html": {
+      "offset": 192487,
+      "length": 3846,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4c36b4f979eb221f"
+    },
+    "/3/copyright.html": {
+      "offset": 196333,
+      "length": 3197,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4a32707544337fcd"
+    },
+    "/3/license.html": {
+      "offset": 199530,
+      "length": 20932,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a6821d5f289cc400"
+    },
+    "/3/c-api/intro.html": {
+      "offset": 220462,
+      "length": 25466,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b9f1e12e914b2043"
+    },
+    "/3/glossary.html": {
+      "offset": 245928,
+      "length": 40262,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e5d87620310c3186"
+    },
+    "/3/contents.html": {
+      "offset": 286190,
+      "length": 92804,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1ffe4eca38dd7f19"
+    },
+    "/3/extending/embedding.html": {
+      "offset": 378994,
+      "length": 11379,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f1dca02f487c3976"
+    },
+    "/3/c-api/stable.html": {
+      "offset": 390373,
+      "length": 28785,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e81584399c182270"
+    },
+    "/3/improve-page-nojs.html": {
+      "offset": 419158,
+      "length": 3157,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d465f399eda08493"
+    },
+    "/3/c-api/refcounting.html": {
+      "offset": 422315,
+      "length": 6367,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8941e172486c198d"
+    },
+    "/3/c-api/exceptions.html": {
+      "offset": 428682,
+      "length": 27590,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "77450821a46a1921"
+    },
+    "/3/c-api/import.html": {
+      "offset": 456272,
+      "length": 11282,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7064994fa50f3e59"
+    },
+    "/3/c-api/sys.html": {
+      "offset": 467554,
+      "length": 12878,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6e6fa90ba05fab0e"
+    },
+    "/3/c-api/utilities.html": {
+      "offset": 480432,
+      "length": 3744,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "66db768420f8fe8c"
+    },
+    "/3/c-api/extension-modules.html": {
+      "offset": 484176,
+      "length": 10760,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bd6deaef3b58a73f"
+    },
+    "/3/c-api/slots.html": {
+      "offset": 494936,
+      "length": 6941,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e9f0dec966864e1f"
+    },
+    "/3/c-api/marshal.html": {
+      "offset": 501877,
+      "length": 4903,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f5647dd0931b2bc5"
+    },
+    "/3/c-api/veryhigh.html": {
+      "offset": 506780,
+      "length": 13621,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2e0746833e7640dc"
+    },
+    "/3/c-api/reflection.html": {
+      "offset": 520401,
+      "length": 4882,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b1be33fc3150bf25"
+    },
+    "/3/c-api/time.html": {
+      "offset": 525283,
+      "length": 5170,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a8af61b82763a54e"
+    },
+    "/3/c-api/codec.html": {
+      "offset": 530453,
+      "length": 6915,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cf7aa75508d27d37"
+    },
+    "/3/c-api/perfmaps.html": {
+      "offset": 537368,
+      "length": 5396,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bf26e40792c8cc27"
+    },
+    "/3/c-api/hash.html": {
+      "offset": 542764,
+      "length": 5722,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c135586d8e8e391b"
+    },
+    "/3/c-api/conversion.html": {
+      "offset": 548486,
+      "length": 8805,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0fc208495eafdf52"
+    },
+    "/3/c-api/arg.html": {
+      "offset": 557291,
+      "length": 16727,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2892a555a213cbff"
+    },
+    "/3/c-api/buffer.html": {
+      "offset": 574018,
+      "length": 14577,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "665fbeabb66e7811"
+    },
+    "/3/c-api/synchronization.html": {
+      "offset": 588595,
+      "length": 9205,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a3b61fe8bfef4372"
+    },
+    "/3/c-api/interp-lifecycle.html": {
+      "offset": 597800,
+      "length": 18745,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "04440eb9ce5e3e01"
+    },
+    "/3/c-api/call.html": {
+      "offset": 616545,
+      "length": 10536,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e15e3f97d409b25a"
+    },
+    "/3/c-api/iter.html": {
+      "offset": 627081,
+      "length": 4382,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "08d164e84e3d7fec"
+    },
+    "/3/c-api/init_config.html": {
+      "offset": 631463,
+      "length": 33513,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ae6b38103f76fdc8"
+    },
+    "/3/c-api/tls.html": {
+      "offset": 664976,
+      "length": 6111,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "48f349c411c1a6db"
+    },
+    "/3/c-api/sequence.html": {
+      "offset": 671087,
+      "length": 7283,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4fda39da257285ca"
+    },
+    "/3/c-api/concrete.html": {
+      "offset": 678370,
+      "length": 5887,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "09cff6f2d6c80f49"
+    },
+    "/3/c-api/abstract.html": {
+      "offset": 684257,
+      "length": 3912,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "175c9db86664dd93"
+    },
+    "/3/c-api/mapping.html": {
+      "offset": 688169,
+      "length": 6276,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5d8b49fed039a2cd"
+    },
+    "/3/c-api/object.html": {
+      "offset": 694445,
+      "length": 16932,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "60f6369fc14502b6"
+    },
+    "/3/c-api/number.html": {
+      "offset": 711377,
+      "length": 7555,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c0043cc73c0ee93a"
+    },
+    "/3/c-api/profiling.html": {
+      "offset": 718932,
+      "length": 7967,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bf242085f73500e2"
+    },
+    "/3/c-api/subinterpreters.html": {
+      "offset": 726899,
+      "length": 12389,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0c50d82dfdfcdb4c"
+    },
+    "/3/c-api/threads.html": {
+      "offset": 739288,
+      "length": 20072,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1c6cf66cd520aa76"
+    },
+    "/3/c-api/apiabiversion.html": {
+      "offset": 759360,
+      "length": 5302,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8c7c66d61c460002"
+    },
+    "/3/tutorial/appetite.html": {
+      "offset": 764662,
+      "length": 5198,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d9a8b0769690a0af"
+    },
+    "/3/tutorial/modules.html": {
+      "offset": 769860,
+      "length": 15443,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fb55174de087150c"
+    },
+    "/3/tutorial/introduction.html": {
+      "offset": 785303,
+      "length": 13789,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fa3ecd1ac9ed1486"
+    },
+    "/3/c-api/structures.html": {
+      "offset": 799092,
+      "length": 17674,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3cd0068026be1b5d"
+    },
+    "/3/tutorial/interpreter.html": {
+      "offset": 816766,
+      "length": 6696,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6cdb10e0d5972b86"
+    },
+    "/3/c-api/objimpl.html": {
+      "offset": 823462,
+      "length": 3961,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9c87da471ca06712"
+    },
+    "/3/c-api/monitoring.html": {
+      "offset": 827423,
+      "length": 7977,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "027faa702fda1a5f"
+    },
+    "/3/c-api/lifecycle.html": {
+      "offset": 835400,
+      "length": 13547,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "89057fe2c5f905ed"
+    },
+    "/3/c-api/gcsupport.html": {
+      "offset": 848947,
+      "length": 12954,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7ffb13495b1a675c"
+    },
+    "/3/c-api/allocation.html": {
+      "offset": 861901,
+      "length": 7202,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a87021d87bf47b00"
+    },
+    "/3/c-api/memory.html": {
+      "offset": 869103,
+      "length": 16873,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "47f4751a2a1f9146"
+    },
+    "/3/tutorial/controlflow.html": {
+      "offset": 885976,
+      "length": 23007,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f80548ebde2e64c5"
+    },
+    "/3/tutorial/datastructures.html": {
+      "offset": 908983,
+      "length": 17872,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f86c2ef2e1beec03"
+    },
+    "/3/c-api/typeobj.html": {
+      "offset": 926855,
+      "length": 49811,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a81490da8594d2b0"
+    },
+    "/3/whatsnew/changelog.html": {
+      "offset": 976666,
+      "length": 1276762,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8e1f5e836cd5e58c"
+    },
+    "/3/tutorial/inputoutput.html": {
+      "offset": 2253428,
+      "length": 14536,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f2f9f1a8cc80bb37"
+    },
+    "/3/using/mac.html": {
+      "offset": 2267964,
+      "length": 12865,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f8f740034922e946"
+    },
+    "/3/tutorial/stdlib.html": {
+      "offset": 2280829,
+      "length": 11856,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1704fcc0a373b84b"
+    },
+    "/3/tutorial/appendix.html": {
+      "offset": 2292685,
+      "length": 6630,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cb5182159bab09e8"
+    },
+    "/3/tutorial/stdlib2.html": {
+      "offset": 2299315,
+      "length": 13008,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "24c7fa77664f3520"
+    },
+    "/3/tutorial/classes.html": {
+      "offset": 2312323,
+      "length": 20995,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "973c654b5ee65b33"
+    },
+    "/3/tutorial/errors.html": {
+      "offset": 2333318,
+      "length": 13836,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d82358add95cbcc8"
+    },
+    "/3/tutorial/whatnow.html": {
+      "offset": 2347154,
+      "length": 5003,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8ac135aa496319ab"
+    },
+    "/3/using/cmdline.html": {
+      "offset": 2352157,
+      "length": 27319,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2ae5b62dd71b8bbd"
+    },
+    "/3/tutorial/interactive.html": {
+      "offset": 2379476,
+      "length": 4527,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "344d22ff15ae24cf"
+    },
+    "/3/tutorial/floatingpoint.html": {
+      "offset": 2384003,
+      "length": 10187,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b58fb1827a55ede6"
+    },
+    "/3/howto/a-conceptual-overview-of-asyncio.html": {
+      "offset": 2394190,
+      "length": 14652,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "49cddb6c270d3ce6"
+    },
+    "/3/using/windows.html": {
+      "offset": 2408842,
+      "length": 41078,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ef9f2c2c5c59caca"
+    },
+    "/3/using/configure.html": {
+      "offset": 2449920,
+      "length": 31085,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c4e2f362963b6d52"
+    },
+    "/3/using/unix.html": {
+      "offset": 2481005,
+      "length": 6483,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e3f03e85df039c31"
+    },
+    "/3/tutorial/venv.html": {
+      "offset": 2487488,
+      "length": 6576,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d06a35ebfe45fbaa"
+    },
+    "/3/reference/toplevel_components.html": {
+      "offset": 2494064,
+      "length": 4818,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "288c5af89c9f3ae0"
+    },
+    "/3/reference/introduction.html": {
+      "offset": 2498882,
+      "length": 7482,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2868ee3abbe90f4b"
+    },
+    "/3/reference/executionmodel.html": {
+      "offset": 2506364,
+      "length": 14385,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c47836a1d950efec"
+    },
+    "/3/reference/import.html": {
+      "offset": 2520749,
+      "length": 22162,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4020aebbe3b6e524"
+    },
+    "/3/using/ios.html": {
+      "offset": 2542911,
+      "length": 12090,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9d7b4a89799cd8bd"
+    },
+    "/3/reference/simple_stmts.html": {
+      "offset": 2555001,
+      "length": 21496,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "de4ff83660ccdb3b"
+    },
+    "/3/reference/lexical_analysis.html": {
+      "offset": 2576497,
+      "length": 27287,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e59c6f94dc3089f6"
+    },
+    "/3/reference/expressions.html": {
+      "offset": 2603784,
+      "length": 43455,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9634a4f3d6f55383"
+    },
+    "/3/reference/compound_stmts.html": {
+      "offset": 2647239,
+      "length": 34780,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c1766ae2b3f8df9b"
+    },
+    "/3/faq/programming.html": {
+      "offset": 2682019,
+      "length": 44859,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "86bc78fdca99aeaf"
+    },
+    "/3/reference/grammar.html": {
+      "offset": 2726878,
+      "length": 11909,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "18fb864d74f1ad1d"
+    },
+    "/3/reference/datamodel.html": {
+      "offset": 2738787,
+      "length": 68046,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "232dbe73b1eca880"
+    },
+    "/3/using/editors.html": {
+      "offset": 2806833,
+      "length": 3731,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "96f7394376b555ea"
+    },
+    "/3/using/android.html": {
+      "offset": 2810564,
+      "length": 4918,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5d68ffa0c246a8f2"
+    },
+    "/3/faq/general.html": {
+      "offset": 2815482,
+      "length": 13373,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4e18d0ecf9d4e795"
+    },
+    "/3/howto/remote_debugging.html": {
+      "offset": 2828855,
+      "length": 16651,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e0ef30ff78aacab9"
+    },
+    "/3/faq/gui.html": {
+      "offset": 2845506,
+      "length": 4863,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "46794e07785614ff"
+    },
+    "/3/faq/extending.html": {
+      "offset": 2850369,
+      "length": 10430,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1e71872de97de3e1"
+    },
+    "/3/faq/library.html": {
+      "offset": 2860799,
+      "length": 18827,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "385e7edf12137342"
+    },
+    "/3/faq/windows.html": {
+      "offset": 2879626,
+      "length": 9452,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1ac5f95c8bdafae6"
+    },
+    "/3/faq/design.html": {
+      "offset": 2889078,
+      "length": 22507,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "59efbba3c433a843"
+    },
+    "/3/genindex-Symbols.html": {
+      "offset": 2911585,
+      "length": 10228,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ca0195ae2b210d99"
+    },
+    "/3/genindex-F.html": {
+      "offset": 2921813,
+      "length": 13534,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cc411db366250eb8"
+    },
+    "/3/genindex-A.html": {
+      "offset": 2935347,
+      "length": 13789,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d17d94f7f1d327cb"
+    },
+    "/3/genindex-_.html": {
+      "offset": 2949136,
+      "length": 9701,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "18fb0e8215d74e3c"
+    },
+    "/3/genindex-C.html": {
+      "offset": 2958837,
+      "length": 24099,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b8041548a67db054"
+    },
+    "/3/faq/installed.html": {
+      "offset": 2982936,
+      "length": 4300,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dcc5a6a39c598178"
+    },
+    "/3/genindex-B.html": {
+      "offset": 2987236,
+      "length": 10315,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8be2f2bb8a947c1f"
+    },
+    "/3/genindex-D.html": {
+      "offset": 2997551,
+      "length": 12747,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "35cd460d8d36df13"
+    },
+    "/3/genindex-E.html": {
+      "offset": 3010298,
+      "length": 19030,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "88ebd50dc94e2b10"
+    },
+    "/3/genindex-H.html": {
+      "offset": 3029328,
+      "length": 8302,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b20e521c00485e22"
+    },
+    "/3/genindex-G.html": {
+      "offset": 3037630,
+      "length": 14566,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "54422862647ddf57"
+    },
+    "/3/genindex-I.html": {
+      "offset": 3052196,
+      "length": 15828,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8523423f55232c2d"
+    },
+    "/3/genindex-U.html": {
+      "offset": 3068024,
+      "length": 8567,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "df9fdf31d9505404"
+    },
+    "/3/genindex-K.html": {
+      "offset": 3076591,
+      "length": 4736,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "083e2c747de43fbb"
+    },
+    "/3/genindex-L.html": {
+      "offset": 3081327,
+      "length": 10430,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "543dd6a7a9f3d61b"
+    },
+    "/3/genindex-T.html": {
+      "offset": 3091757,
+      "length": 12594,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6db0da462a93b43f"
+    },
+    "/3/genindex-Q.html": {
+      "offset": 3104351,
+      "length": 3421,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ac3e53fe33b6c12f"
+    },
+    "/3/genindex-V.html": {
+      "offset": 3107772,
+      "length": 4931,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "acf89e7f03cdc15d"
+    },
+    "/3/genindex-O.html": {
+      "offset": 3112703,
+      "length": 8586,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b089e68703132fe"
+    },
+    "/3/genindex-N.html": {
+      "offset": 3121289,
+      "length": 8895,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3896379565477d00"
+    },
+    "/3/genindex-S.html": {
+      "offset": 3130184,
+      "length": 27793,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3dddaae75599f07e"
+    },
+    "/3/genindex-J.html": {
+      "offset": 3157977,
+      "length": 3271,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "33d33d21f6bf16e6"
+    },
+    "/3/genindex-R.html": {
+      "offset": 3161248,
+      "length": 18530,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b5a84f400be22ec8"
+    },
+    "/3/genindex-P.html": {
+      "offset": 3179778,
+      "length": 54315,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e8d7a85ff1014047"
+    },
+    "/3/genindex-M.html": {
+      "offset": 3234093,
+      "length": 16223,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1f53c63d296ab10c"
+    },
+    "/3/genindex-X.html": {
+      "offset": 3250316,
+      "length": 4052,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "85e3a8fc8097c9d4"
+    },
+    "/3/genindex-W.html": {
+      "offset": 3254368,
+      "length": 8234,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7a0909f70069ccb7"
+    },
+    "/3/builtins/functions.html": {
+      "offset": 3262602,
+      "length": 48193,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "064e3687c4728640"
+    },
+    "/3/builtins/constants.html": {
+      "offset": 3310795,
+      "length": 5612,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ae177a623b675fcf"
+    },
+    "/3/builtins/exceptions.html": {
+      "offset": 3316407,
+      "length": 22244,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bee16a6a9e625706"
+    },
+    "/3/builtins/stdtypes.html": {
+      "offset": 3338651,
+      "length": 97453,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dd26d95d215583f7"
+    },
+    "/3/builtins/threadsafety.html": {
+      "offset": 3436104,
+      "length": 11602,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d31095d280cd2094"
+    },
+    "/3/genindex-Y.html": {
+      "offset": 3447706,
+      "length": 2928,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0926d7714dbdf7ce"
+    },
+    "/3/genindex-Z.html": {
+      "offset": 3450634,
+      "length": 3481,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "22ffdbceb7f8c347"
+    },
+    "/3/genindex-all.html": {
+      "offset": 3454115,
+      "length": 270584,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "45dddc082be33820"
+    },
+    "/3/builtins/time-complexity.html": {
+      "offset": 3724699,
+      "length": 9679,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9c012e6bc68191f2"
+    },
+    "/3/whatsnew/3.12.html": {
+      "offset": 3734378,
+      "length": 67373,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9ba6df40c1af3377"
+    },
+    "/3/whatsnew/3.13.html": {
+      "offset": 3801751,
+      "length": 72747,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a2fede39763b2680"
+    },
+    "/3/whatsnew/3.14.html": {
+      "offset": 3874498,
+      "length": 83571,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "416d9dfa2460a2df"
+    },
+    "/3/whatsnew/3.10.html": {
+      "offset": 3958069,
+      "length": 49815,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "65f22ea90fb8291c"
+    },
+    "/3/whatsnew/3.11.html": {
+      "offset": 4007884,
+      "length": 55397,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e9c7372ec1f63bca"
+    },
+    "/3/whatsnew/3.9.html": {
+      "offset": 4063281,
+      "length": 38965,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3a3d07af7a6cefc9"
+    },
+    "/__docx_assets/8981556eb79e0d.css": {
+      "offset": 4102246,
+      "length": 1347,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "9bfc520975a1b617"
+    },
+    "/__docx_assets/72f9f4e4e9a15b.css": {
+      "offset": 4103593,
+      "length": 1016,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "3713a34fa9468aac"
+    },
+    "/3/_static/py.svg": {
+      "offset": 4104609,
+      "length": 936,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "b8b1e179d0dd86d2"
+    },
+    "/3/_static/pydoctheme_dark.css": {
+      "offset": 4105545,
+      "length": 1178,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "1221ed5df8ff6085"
+    },
+    "/__docx_assets/17d3934fef951f.css": {
+      "offset": 4106723,
+      "length": 1008,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "f9f60e0d4820ed55"
+    },
+    "/__docx_assets/6b315f05afb67a.css": {
+      "offset": 4107731,
+      "length": 4703,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "7a062481f5abd0fc"
+    },
+    "/3/_images/tachyon-logo.png": {
+      "offset": 4112434,
+      "length": 92752,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "6237acf23aee6ff7"
+    },
+    "/3/_static/minus.png": {
+      "offset": 4205186,
+      "length": 101,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2210c71e7401b135"
+    },
+    "/3/_images/mac_installer_06_summary.png": {
+      "offset": 4205287,
+      "length": 154417,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "fe0ee9c748e0b697"
+    },
+    "/3/_images/mac_installer_04_installation_type.png": {
+      "offset": 4359704,
+      "length": 119096,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a183df331de19262"
+    },
+    "/3/_images/mac_installer_01_introduction.png": {
+      "offset": 4478800,
+      "length": 156537,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "f9e9c3714a2a0bc2"
+    },
+    "/3/_images/mac_installer_03_license.png": {
+      "offset": 4635337,
+      "length": 140566,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "47ee38c4567f84b3"
+    },
+    "/3/_images/win_installer.png": {
+      "offset": 4775903,
+      "length": 77804,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "35e7003ccafac288"
+    },
+    "/3/_images/mac_installer_05_custom_install.png": {
+      "offset": 4853707,
+      "length": 169115,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1f05b0a569ca6f79"
+    },
+    "/3/_images/mac_installer_02_readme.png": {
+      "offset": 5022822,
+      "length": 212475,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "63e42b0bf8dbd8ec"
+    },
+    "/3/_images/mac_installer_07_applications.png": {
+      "offset": 5235297,
+      "length": 91077,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "3a680bd0a4a362b8"
+    },
+    "/3/_images/win_install_freethreaded.png": {
+      "offset": 5326374,
+      "length": 209878,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "903085cb63c82206"
+    },
+    "/3/_images/mac_installer_08_install_certificates.png": {
+      "offset": 5536252,
+      "length": 166175,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a91182a63f283f14"
+    },
+    "/3/_images/mac_installer_09_custom_install_free_threaded.png": {
+      "offset": 5702427,
+      "length": 187368,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "0c2e8017932dc523"
+    },
+    "/3/_static/basic.css": {
+      "offset": 5889795,
+      "length": 3370,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "9c990e3eeb01f606"
+    },
+    "/3/_static/fonts/Vazirmatn-NL-VF.woff2": {
+      "offset": 5893165,
+      "length": 48005,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "536f1eee8c18f449"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 3844,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7efec36a0a34659a"
+    },
+    "/": {
+      "offset": 0,
+      "length": 3844,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7efec36a0a34659a"
+    }
+  }
+}

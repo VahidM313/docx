@@ -56,24 +56,8 @@
         <span class="titlebar-title">DOCX</span>
       </div>
 
-      <div class="browser-tabs-strip" id="browserTabsStrip">
-        <div class="browser-tabs-list" id="browserTabsList"></div>
-        <button id="btnNewBrowserTab" class="browser-tab-action-btn" title="New Tab — Open Hub to pick another doc (Ctrl+T)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-            <line x1="12" y1="5" x2="12" y2="19"></line>
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-          </svg>
-        </button>
-        <button id="btnDuplicateBrowserTab" class="browser-tab-action-btn" title="Duplicate Current Tab — Open another page of this doc (Ctrl+Shift+D)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-          </svg>
-        </button>
-      </div>
-
       <div class="titlebar-drag-region" id="titlebarDrag">
-        <span id="titlebarCurrentView" class="titlebar-current-view" style="display: none;">57-Site Documentation Hub</span>
+        <span id="titlebarCurrentView" class="titlebar-current-view">57-Site Documentation Hub</span>
         <span id="titlebarUpdatePill" class="titlebar-update-pill" style="display: none;">
           🔔 <span id="titlebarUpdateCount">0</span> Updates Available
         </span>
@@ -89,6 +73,13 @@
         <button id="btnToggleDarkSite" class="titlebar-chip-btn active" title="Toggle Dark / Light Mode for this documentation site">
           <span id="darkSiteIcon">🌙</span>
           <span id="darkSiteLabel">Dark</span>
+        </button>
+
+        <button id="btnBookmarkPage" class="titlebar-chip-btn" title="Bookmark current documentation page (Ctrl+D)">
+          <svg id="bookmarkTopbarSvg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span id="bookmarkTopbarLabel">Bookmark</span>
         </button>
 
         <div class="features-menu-wrap" id="featuresMenuWrap">
@@ -108,10 +99,19 @@
 
             <label class="feature-toggle-row" for="toggleFeatureTabs">
               <div class="feature-toggle-info">
-                <div class="feature-toggle-title">Browser Tabs</div>
-                <div class="feature-toggle-desc">Multi-tab bar at top (turn OFF for single-view &amp; lower RAM)</div>
+                <div class="feature-toggle-title">Vertical Right Tabs</div>
+                <div class="feature-toggle-desc">Vertical multi-doc tabs on right (turn OFF for single-view &amp; lower RAM)</div>
               </div>
               <input type="checkbox" id="toggleFeatureTabs" class="feature-switch-input" checked />
+              <span class="feature-switch-slider"></span>
+            </label>
+
+            <label class="feature-toggle-row" for="toggleFeatureTabHover">
+              <div class="feature-toggle-info">
+                <div class="feature-toggle-title">Expand Vertical Tabs on Hover</div>
+                <div class="feature-toggle-desc">Slide out tab details on hover (turn OFF to keep compact icons)</div>
+              </div>
+              <input type="checkbox" id="toggleFeatureTabHover" class="feature-switch-input" checked />
               <span class="feature-switch-slider"></span>
             </label>
 
@@ -207,7 +207,21 @@
         <div class="rail-item active" id="railHomeWrap">
           <span class="rail-pill"></span>
           <button id="tabHome" class="rail-btn home-rail-btn active" title="Docx Hub — All 57 Sites">
-            <img src="/logo.png" alt="Docx" class="rail-logo-img" />
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 10.5L12 3l9 7.5V20a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 20v-9.5z"></path>
+              <path d="M9 21.5v-7.5h6v7.5"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Bookmarks Page Icon (Under Doc Hub Icon) -->
+        <div class="rail-item" id="railBookmarksWrap">
+          <span class="rail-pill"></span>
+          <button id="tabBookmarks" class="rail-btn bookmarks-rail-btn" title="Saved Bookmarks — View all bookmarked documentation pages">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span class="rail-bookmark-count" id="railBookmarkCount" style="display: none;">0</span>
           </button>
         </div>
 
@@ -296,12 +310,19 @@
           </div>
         </div>
 
-        <!-- Search Bar inside Channel Drawer -->
+        <!-- Search & Filter Bar inside Column 2 (All Docs) -->
         <div class="drawer-search-wrap">
-          <button id="drawerSearchBtn" class="drawer-search-btn">
-            <span>Search all installed docs...</span>
+          <button id="drawerSearchBtn" class="drawer-search-btn" title="Universal Search across all docs (Ctrl+K)">
+            <span>Universal Search...</span>
             <kbd>Ctrl+K</kbd>
           </button>
+          <input
+            type="text"
+            id="drawerFilterInput"
+            class="drawer-filter-input"
+            placeholder="Filter all 57 docs (click 📌 to pin)..."
+            autocomplete="off"
+          />
         </div>
 
         <!-- Dynamic 57-Site Channel List with Original Colored Icons -->
@@ -471,6 +492,49 @@
         </div>
       </section>
 
+      <!-- BOOKMARKS VIEW: Shows All Bookmarked Documentation Pages -->
+      <section id="viewBookmarks" class="view-panel">
+        <div class="hub-container bookmarks-page-container">
+          <div class="bookmarks-header-card">
+            <div class="bookmarks-header-left">
+              <div class="bookmarks-icon-hero">
+                <svg viewBox="0 0 24 24" fill="rgba(245, 158, 11, 0.2)" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="hub-badge-row">
+                  <span class="hero-badge bookmarks-hero-badge">
+                    ★ Saved Documentation Pages • <span id="bookmarksTotalStat">0 Bookmarks</span>
+                  </span>
+                </div>
+                <h1 class="hub-title">Bookmarked Pages</h1>
+                <p class="hub-subtitle bookmarks-hero-subtitle">
+                  Jump directly to any documentation page you bookmarked using the <strong>Bookmark</strong> button in the top bar (or&nbsp;<kbd class="bookmarks-kbd">Ctrl+D</kbd>).
+                </p>
+              </div>
+            </div>
+            <div class="bookmarks-header-actions">
+              <div class="hub-filter-input-wrap bookmarks-search-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input
+                  type="text"
+                  id="bookmarksFilterInput"
+                  class="hub-site-filter-input"
+                  placeholder="Filter bookmarked pages by title, doc, or path..."
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div id="bookmarksGrid" class="bookmarks-grid"></div>
+        </div>
+      </section>
+
       <!-- TAILWIND VIEW -->
       <section id="viewTailwind" class="view-panel">
         <div class="frame-loading" id="twLoading">
@@ -498,6 +562,37 @@
         <iframe id="iframeDynamic" class="doc-iframe" title="Documentation Pack Viewer"></iframe>
       </section>
     </main>
+
+      <!-- Right Vertical Multi-Doc Tabs Sidebar -->
+      <aside id="rightTabsSidebar" class="right-tabs-sidebar">
+        <div class="right-tabs-header">
+          <div class="right-tabs-title-group">
+            <span class="right-tabs-title">TABS</span>
+            <span id="rightTabsCount" class="right-tabs-count">1</span>
+          </div>
+          <div class="right-tabs-actions">
+            <button id="btnNewBrowserTab" class="browser-tab-action-btn" title="New Tab — Open Hub to pick another doc (Ctrl+T)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <button id="btnDuplicateBrowserTab" class="browser-tab-action-btn" title="Duplicate Current Tab — Open another page of this doc (Ctrl+Shift+D)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+            <button id="btnToggleRightTabs" class="browser-tab-action-btn" title="Collapse / Expand Right Vertical Tabs">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="15" y1="3" x2="15" y2="21"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="browser-tabs-list" id="browserTabsList"></div>
+      </aside>
     </div>
 
     <!-- Universal Search Modal (Ctrl+K) -->

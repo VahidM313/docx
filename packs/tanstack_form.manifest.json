@@ -1,1 +1,1189 @@
-{"id":"tanstack_form","name":"TanStack Form","version":"v1","commit":"25d24cd2","origin":"https://tanstack.com","entryPath":"/form/latest/docs/overview","updatedAt":"2026-10-10T16:44:56.115Z","totalBytes":4656082,"chunkCount":152,"routes":{"/form/latest/docs/overview":{"offset":0,"length":49855,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a11722f13dcdfb27"},"/form/latest/docs/framework/react/guides/basic-concepts":{"offset":49855,"length":52068,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"56904b99372b99ea"},"/form/latest/docs/framework/react/quick-start":{"offset":101923,"length":45318,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"88a8ceada3b1d3d4"},"/form/latest/docs/philosophy":{"offset":147241,"length":45686,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"730fd59076d4db63"},"/form/latest/docs/comparison":{"offset":192927,"length":45044,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e1a86ff8457c9408"},"/form/latest/docs/reference/classes/FormApi":{"offset":237971,"length":58675,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6f3d2f96da01bf3e"},"/form/latest/docs/framework/react/examples/simple":{"offset":296646,"length":51848,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5d08196648ad41a9"},"/form/latest/docs/reference/index":{"offset":348494,"length":45736,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cc0f3914e42dbd4b"},"/form/latest/docs/installation":{"offset":394230,"length":45077,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"51f7babd35ed353e"},"/form/latest/docs/typescript":{"offset":439307,"length":43386,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"08ca7c0dcc1770e0"},"/form/latest/docs/framework/react/guides/custom-errors":{"offset":482693,"length":48348,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"24f5f03f2865e526"},"/form/latest/docs/framework/react/guides/validation":{"offset":531041,"length":54366,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a6e4c649164bdcaf"},"/form/latest/docs/framework/react/guides/dynamic-validation":{"offset":585407,"length":46953,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"30dd0a9d8ec8e6f0"},"/form/latest/docs/framework/react/guides/reactivity":{"offset":632360,"length":45134,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c4b5859e673b4d38"},"/form/latest/docs/framework/react/guides/async-initial-values":{"offset":677494,"length":44132,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0d74b794f0ed2749"},"/form/latest/docs/framework/react/guides/ssr":{"offset":721626,"length":51150,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"29b1e7c87f2b0e70"},"/form/latest/docs/framework/react/guides/listeners":{"offset":772776,"length":45650,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4f53881136ba4d70"},"/form/latest/docs/framework/react/guides/arrays":{"offset":818426,"length":44829,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0b92d157b5adb5f0"},"/form/latest/docs/framework/react/guides/form-composition":{"offset":863255,"length":57972,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bc6b93f65d0704de"},"/form/latest/docs/framework/react/guides/focus-management":{"offset":921227,"length":45855,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b919a3943f8d60f2"},"/form/latest/docs/framework/react/guides/linked-fields":{"offset":967082,"length":44275,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"62b857ea8cc68580"},"/form/latest/docs/framework/react/guides/ui-libraries":{"offset":1011357,"length":48310,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b381119f18e96c52"},"/form/latest/docs/framework/react/guides/form-groups":{"offset":1059667,"length":47109,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"307b7461fa167502"},"/form/latest/docs/framework/react/guides/react-native":{"offset":1106776,"length":43876,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3526a9a0fb070000"},"/form/latest/docs/framework/react/guides/debugging":{"offset":1150652,"length":45802,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8bd92e060293d5f9"},"/form/latest/docs/framework/react/guides/submission-handling":{"offset":1196454,"length":46021,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5a55cc6353792743"},"/form/latest/docs/framework/react/guides/devtools":{"offset":1242475,"length":43445,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e8a4f47f2f85d91f"},"/form/latest/docs/reference/classes/FieldApi":{"offset":1285920,"length":53339,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c45870220b4e2657"},"/form/latest/docs/reference/type-aliases/DeepKeys":{"offset":1339259,"length":43255,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2a6df1363b0f3aff"},"/form/latest/docs/reference/interfaces/FieldValidators":{"offset":1382514,"length":46403,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2eeb5db80c0e377a"},"/form/latest/docs/reference/interfaces/FieldOptions":{"offset":1428917,"length":46600,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a9a02eb95bd45df4"},"/form/latest/docs/reference/interfaces/FormOptions":{"offset":1475517,"length":47408,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c0d197adcfb91f15"},"/form/latest/docs/reference/interfaces/FormValidators":{"offset":1522925,"length":45598,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a9d8bb8fd4d2bf79"},"/form/latest/docs/reference/functions/mergeForm":{"offset":1568523,"length":44536,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2e21efe77c1ac599"},"/form/latest/docs/reference/type-aliases/AnyFieldMeta":{"offset":1613059,"length":42575,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bbb18e428771aea2"},"/form/latest/docs/reference/functions/formOptions":{"offset":1655634,"length":44525,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dcd8ac081108d86a"},"/form/latest/docs/reference/type-aliases/DeepValue":{"offset":1700159,"length":44401,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9d081a390433d5cc"},"/form/latest/docs/reference/interfaces/FieldApiOptions":{"offset":1744560,"length":48255,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"997a83db7415e566"},"/form/latest/docs/reference/type-aliases/ValidationError":{"offset":1792815,"length":42558,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"34861f9b28ef1a5b"},"/form/latest/docs/reference/type-aliases/UpdaterFn":{"offset":1835373,"length":43332,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"24ebdebad0753a74"},"/form/latest/docs/framework/react/reference/functions/useField":{"offset":1878705,"length":45366,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"475b7fcaa6da83ad"},"/form/latest/docs/reference/interfaces/FormState":{"offset":1924071,"length":49600,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"24c13132d4adb872"},"/form/latest/docs/framework/react/reference/variables/Field":{"offset":1973671,"length":45370,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b69b422750952a68"},"/form/latest/docs/reference/type-aliases/ValidationMeta":{"offset":2019041,"length":43435,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a39b37902e80f123"},"/form/latest/docs/reference/type-aliases/StandardSchemaV1":{"offset":2062476,"length":43339,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"53e90d4df1f3dc1d"},"/form/latest/docs/reference/type-aliases/DerivedFormState":{"offset":2105815,"length":46293,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d08ea6e7661b4026"},"/form/latest/docs/framework/react/reference/type-aliases/FieldComponent":{"offset":2152108,"length":45418,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7108635a835f5d30"},"/form/latest/docs/framework/react/reference/functions/useForm":{"offset":2197526,"length":44728,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1a8c49549ef0c3c8"},"/form/latest/docs/reference/type-aliases/BaseFormState":{"offset":2242254,"length":47101,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ab11c399f7d6885e"},"/form/latest/docs/framework/react/reference/index":{"offset":2289355,"length":43444,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"77754921b0c2afa8"},"/form/latest/docs/reference/type-aliases/Updater":{"offset":2332799,"length":44074,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"54ae8a4f5fc19880"},"/form/latest/docs/reference/type-aliases/AnyFormGroupMeta":{"offset":2376873,"length":43511,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c2629c8cfdc41704"},"/form/latest/docs/framework/react/reference/type-aliases/UseField":{"offset":2420384,"length":46289,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fef91af0ee6d5220"},"/form/latest/docs/framework/react/examples/standard-schema":{"offset":2466673,"length":51296,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0a0759663f570c43"},"/form/latest/docs/framework/react/examples/query-integration":{"offset":2517969,"length":51856,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ce4cbf6aa103ab93"},"/form/latest/docs/framework/react/examples/field-errors-from-form-validators":{"offset":2569825,"length":51051,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0651ab108e398834"},"/form/latest/docs/framework/react/examples/dynamic":{"offset":2620876,"length":50768,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"09f362e591196e79"},"/form/latest/docs/reference/interfaces/StandardSchemaV1Issue":{"offset":2671644,"length":43231,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e7d61943a5566156"},"/form/latest/docs/reference/type-aliases/UnwrapFormValidateOrFn":{"offset":2714875,"length":43223,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c132e8a5c7f8737b"},"/form/latest/docs/reference/type-aliases/UnwrapFormAsyncValidateOrFn":{"offset":2758098,"length":43225,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bc749c7f7ff438e6"},"/form/latest/docs/framework/react/examples/devtools":{"offset":2801323,"length":50546,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"964f86125c1285ee"},"/form/latest/docs/framework/react/examples/array":{"offset":2851869,"length":47237,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"47b4d024fd9a1ac4"},"/form/latest/docs/framework/react/examples/remix":{"offset":2899106,"length":45796,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"172e37514e0a9c3f"},"/form/latest/docs/framework/react/examples/next-server-actions":{"offset":2944902,"length":45357,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d5caf40f4940166c"},"/form/latest/docs/framework/react/examples/ui-libraries":{"offset":2990259,"length":46303,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"41dd38e25b388dfa"},"/form/latest/docs/framework/react/examples/multi-step-wizard":{"offset":3036562,"length":51276,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"69c7c03665a3bcdf"},"/form/latest/docs/framework/react/examples/tanstack-start":{"offset":3087838,"length":48033,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4befeb9a0aab4ec5"},"/form/latest/docs/framework/react/examples/large-form":{"offset":3135871,"length":47107,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"db8d42ac0df22dd4"},"/form/latest/docs/reference/interfaces/FieldGroupState":{"offset":3182978,"length":43032,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f6142c02cb88f735"},"/form/latest/docs/reference/interfaces/FieldGroupOptions":{"offset":3226010,"length":44876,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c71b6d663e24a39b"},"/form/latest/docs/reference/classes/FormGroupApi":{"offset":3270886,"length":54929,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5be2c7484806032a"},"/form/latest/docs/reference/classes/FieldGroupApi":{"offset":3325815,"length":52057,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3dfdbafc6d04845e"},"/form/latest/docs/reference/interfaces/BaseFormOptions":{"offset":3377872,"length":43651,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ad0a3e195ddea7e8"},"/form/latest/docs/reference/interfaces/ArrayDeepKeyAndValue":{"offset":3421523,"length":43710,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"96d0d75bef3837cd"},"/form/latest/docs/reference/interfaces/FieldListeners":{"offset":3465233,"length":44095,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c398f93125c8f56a"},"/form/latest/docs/reference/interfaces/AnyDeepKeyAndValue":{"offset":3509328,"length":44394,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"33e46504c0caab27"},"/form/latest/docs/reference/type-aliases/UnwrapFieldAsyncValidateOrFn":{"offset":3553722,"length":43972,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"54327b9f53102857"},"/form/latest/docs/reference/type-aliases/UnwrapFieldValidateOrFn":{"offset":3597694,"length":43891,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ecd562e506f02ffb"},"/form/latest/docs/framework/react/reference/interfaces/UseFieldOptions":{"offset":3641585,"length":44229,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"291a1e29160e7e1c"},"/images/brand/tanstack-landscape-black.svg":{"offset":3685814,"length":1770,"mime":"image/svg+xml","gzipped":true,"hash":"7f88cc8634ee3f47"},"/images/brand/tanstack-landscape-white.svg":{"offset":3687584,"length":1770,"mime":"image/svg+xml","gzipped":true,"hash":"47b05e85ac4c4ffb"},"/assets/lovable-black-1mVxR6Bj.svg":{"offset":3689354,"length":3574,"mime":"image/svg+xml","gzipped":true,"hash":"2991135aabc14b05"},"/assets/render-black-Cz1XqOfh.svg":{"offset":3692928,"length":2039,"mime":"image/svg+xml","gzipped":true,"hash":"aa8e27c775b8a80d"},"/assets/cloudflare-white-Co-Tyjbl.svg":{"offset":3694967,"length":5586,"mime":"image/svg+xml","gzipped":true,"hash":"e38e46382d5e07c7"},"/assets/railway-black-DeBDfNao.svg":{"offset":3700553,"length":2008,"mime":"image/svg+xml","gzipped":true,"hash":"f17e0e028a8904e8"},"/favicon-dark.svg":{"offset":3702561,"length":1377,"mime":"image/svg+xml","gzipped":true,"hash":"87ddd3cc53780ea9"},"/assets/lovable-white-DLB1BxKZ.svg":{"offset":3703938,"length":3575,"mime":"image/svg+xml","gzipped":true,"hash":"289e15e1680f1bc7"},"/assets/index-CaKFzcjh.css":{"offset":3707513,"length":73993,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"0b6ed57e3b279ea7"},"/assets/railway-white-CFKFsfw2.svg":{"offset":3781506,"length":2006,"mime":"image/svg+xml","gzipped":true,"hash":"cdfae42b06c7f002"},"/favicon-32x32.png":{"offset":3783512,"length":1187,"mime":"image/png","gzipped":true,"hash":"34241b997c796120"},"/favicon-16x16.png":{"offset":3784699,"length":590,"mime":"image/png","gzipped":true,"hash":"a53b782bb5f5aff7"},"/assets/render-white-D4l33ygB.svg":{"offset":3785289,"length":2037,"mime":"image/svg+xml","gzipped":true,"hash":"a50b023056a6449c"},"/favicon.ico":{"offset":3787326,"length":1085,"mime":"image/vnd.microsoft.icon","gzipped":true,"hash":"168a372851d14b1b"},"/assets/clerk-logo-light-BYN-U_0H.svg":{"offset":3788411,"length":2101,"mime":"image/svg+xml","gzipped":true,"hash":"85770f891d615c15"},"/assets/cloudflare-black-6Ojsn8yh.svg":{"offset":3790512,"length":5273,"mime":"image/svg+xml","gzipped":true,"hash":"e8c1a2879b3e87a1"},"/favicon-light.svg":{"offset":3702561,"length":1377,"mime":"image/svg+xml","gzipped":true,"hash":"87ddd3cc53780ea9"},"/assets/coderabbit-light-ggTFqYhV.svg":{"offset":3795785,"length":3869,"mime":"image/svg+xml","gzipped":true,"hash":"183adaaa8dc30b05"},"/__docx_assets/c652463bc02b14.bin":{"offset":3799654,"length":1032,"mime":"text/css; charset=utf-8","gzipped":true,"hash":"b7ef659b9918b562"},"/assets/coderabbit-dark-C3hjOiHQ.svg":{"offset":3800686,"length":3855,"mime":"image/svg+xml","gzipped":true,"hash":"a0f236b34d931931"},"/assets/clerk-logo-dark-CRE22T_2.svg":{"offset":3804541,"length":2082,"mime":"image/svg+xml","gzipped":true,"hash":"6ac152fa38cf1202"},"/assets/prisma-dark-DwgDxLwn.svg":{"offset":3806623,"length":2276,"mime":"image/svg+xml","gzipped":true,"hash":"4226546f639ea248"},"/assets/openrouter-white-BLyN_5Ca.svg":{"offset":3808899,"length":1740,"mime":"image/svg+xml","gzipped":true,"hash":"13637f69d0de5fd2"},"/assets/prisma-light-Cloa3Onm.svg":{"offset":3810639,"length":2278,"mime":"image/svg+xml","gzipped":true,"hash":"275386c848fe7de0"},"/assets/scarf-BJX_-tJ9.svg":{"offset":3812917,"length":3869,"mime":"image/svg+xml","gzipped":true,"hash":"76163b7ea851b6af"},"/assets/workos-black-DnPI5Ve5.svg":{"offset":3816786,"length":1716,"mime":"image/svg+xml","gzipped":true,"hash":"ee02fe0a62ec07b3"},"/assets/serpapi-white-CPxTEZSp.svg":{"offset":3818502,"length":5507,"mime":"image/svg+xml","gzipped":true,"hash":"268f7b21f443c087"},"/assets/serpapi-black-DnXRiQQ3.svg":{"offset":3824009,"length":5506,"mime":"image/svg+xml","gzipped":true,"hash":"eae3ca3f49eb10bb"},"/assets/openrouter-black-CJtk3mjZ.svg":{"offset":3829515,"length":1739,"mime":"image/svg+xml","gzipped":true,"hash":"5dd9bf63f2f8dea1"},"/__docx_assets/fca28f7afbe815.png":{"offset":3831254,"length":91383,"mime":"image/png","gzipped":true,"hash":"1f58bc969d9e747e"},"/__docx_assets/c1c0977bb80d01.bin":{"offset":3922637,"length":488,"mime":"image/svg+xml","gzipped":true,"hash":"9239232d89648260"},"/__docx_assets/72a6de2ba431a7.bin":{"offset":3923125,"length":486,"mime":"image/svg+xml","gzipped":true,"hash":"3c69468706697b7b"},"/__docx_assets/37273b528b91ec.bin":{"offset":3923611,"length":485,"mime":"image/svg+xml","gzipped":true,"hash":"bc8370337635ca59"},"/__docx_assets/4656d51b0ae6f3.bin":{"offset":3924096,"length":1363,"mime":"image/svg+xml","gzipped":true,"hash":"355bc932da0cfec5"},"/__docx_assets/dceca1b01e8736.bin":{"offset":3925459,"length":1360,"mime":"image/svg+xml","gzipped":true,"hash":"f915277b4499392c"},"/__docx_assets/d33b0bd30d237c.png":{"offset":3926819,"length":80600,"mime":"image/png","gzipped":true,"hash":"4c31177e66117024"},"/__docx_assets/c549e0c03973a1.bin":{"offset":4007419,"length":1363,"mime":"image/svg+xml","gzipped":true,"hash":"bbf5f63a3f512c1b"},"/__docx_assets/45f46f5cafb348.bin":{"offset":4008782,"length":1358,"mime":"image/svg+xml","gzipped":true,"hash":"4d7f2282913e2625"},"/__docx_assets/6c08064919c38e.bin":{"offset":4010140,"length":1358,"mime":"image/svg+xml","gzipped":true,"hash":"95afa1abcc154cd3"},"/__docx_assets/6d7cafc17831ea.bin":{"offset":4011498,"length":487,"mime":"image/svg+xml","gzipped":true,"hash":"d59a68e96b210b05"},"/__docx_assets/d97cd52ad0dc05.svg":{"offset":4011985,"length":2945,"mime":"image/svg+xml","gzipped":true,"hash":"6fefe7b984820ce7"},"/__docx_assets/9f3e8a186bdbe0.png":{"offset":4014930,"length":32064,"mime":"image/png","gzipped":true,"hash":"43183f0a0ecf7fbe"},"/images/brand/tanstack-emblem-black.svg":{"offset":4046994,"length":640,"mime":"image/svg+xml","gzipped":true,"hash":"5a2195e2edbc36d7"},"/__docx_assets/ae5fc1eadb0588.woff2":{"offset":4047634,"length":13371,"mime":"font/woff2","gzipped":true,"hash":"5a329f24e9a408d8"},"/__docx_assets/ecb1449c9f014f.woff2":{"offset":4061005,"length":14771,"mime":"font/woff2","gzipped":true,"hash":"75de27a62b652578"},"/__docx_assets/2a73cdecea5ce9.woff2":{"offset":4075776,"length":5891,"mime":"font/woff2","gzipped":true,"hash":"9b1b2d0dc61dc5b4"},"/fonts/Inter-latin-ext.woff2":{"offset":4081667,"length":133386,"mime":"font/woff2","gzipped":true,"hash":"d2c129ef78916c74"},"/images/hero-palm-gradient-960.webp":{"offset":4215053,"length":28730,"mime":"image/webp","gzipped":true,"hash":"93fbf92042d02785"},"/__docx_assets/7e3d7e3c7de8e8.woff2":{"offset":4243783,"length":14731,"mime":"font/woff2","gzipped":true,"hash":"f030ce23a9c2db55"},"/__docx_assets/e577600d58460a.woff2":{"offset":4258514,"length":30764,"mime":"font/woff2","gzipped":true,"hash":"b0dbbc6df819eb88"},"/__docx_assets/f9c74283b1693b.woff2":{"offset":4289278,"length":8379,"mime":"font/woff2","gzipped":true,"hash":"827ff291ec7ad3e2"},"/fonts/Inter-latin.woff2":{"offset":4297657,"length":72932,"mime":"font/woff2","gzipped":true,"hash":"950aff451f2f608d"},"/__docx_assets/c097aa95d7ec1b.woff2":{"offset":4370589,"length":6803,"mime":"font/woff2","gzipped":true,"hash":"cfae540b88c18592"},"/__docx_assets/d1b233760bed30.woff2":{"offset":4377392,"length":6935,"mime":"font/woff2","gzipped":true,"hash":"023e5b00d47f4ca4"},"/__docx_assets/c70f6b078a0944.woff2":{"offset":4384327,"length":8483,"mime":"font/woff2","gzipped":true,"hash":"e4ddc5e461f06274"},"/__docx_assets/4c442bc4abb065.woff2":{"offset":4392810,"length":13427,"mime":"font/woff2","gzipped":true,"hash":"055c5a5c51c1b6e9"},"/__docx_assets/32a447b3624072.woff2":{"offset":4406237,"length":13007,"mime":"font/woff2","gzipped":true,"hash":"33b3c6001f8dd113"},"/__docx_assets/ed3206e8ede4a9.woff2":{"offset":4419244,"length":6995,"mime":"font/woff2","gzipped":true,"hash":"c96c57c26b8d4271"},"/__docx_assets/b06594e3dfbc9f.woff2":{"offset":4426239,"length":6063,"mime":"font/woff2","gzipped":true,"hash":"e5a0d1b353cec923"},"/__docx_assets/b2bd399c7ef212.woff2":{"offset":4432302,"length":5855,"mime":"font/woff2","gzipped":true,"hash":"bff78395d07e458e"},"/__docx_assets/6cb3d68941f20a.woff2":{"offset":4438157,"length":8291,"mime":"font/woff2","gzipped":true,"hash":"b8c026c80d547069"},"/__docx_assets/5f754c3adb80da.woff2":{"offset":4446448,"length":76898,"mime":"font/woff2","gzipped":true,"hash":"2a689569fa1d472f"},"/__docx_assets/203ce92810c0a1.woff2":{"offset":4523346,"length":13455,"mime":"font/woff2","gzipped":true,"hash":"a2052c2e7171917f"},"/__docx_assets/eb889034c0832c.woff2":{"offset":4536801,"length":14911,"mime":"font/woff2","gzipped":true,"hash":"b05d0cae7c617430"},"/__docx_assets/86628368fe0c7c.woff2":{"offset":4551712,"length":15643,"mime":"font/woff2","gzipped":true,"hash":"fd07f16153dd55ac"},"/__docx_assets/677d93cfc15177.woff2":{"offset":4567355,"length":14931,"mime":"font/woff2","gzipped":true,"hash":"c1b3ea3548111f8f"},"/__docx_assets/245a9a663e9393.woff2":{"offset":4582286,"length":6955,"mime":"font/woff2","gzipped":true,"hash":"8605f3d9c723b79b"},"/__docx_assets/fd3dd31c82271e.woff2":{"offset":4589241,"length":7715,"mime":"font/woff2","gzipped":true,"hash":"972b8ee5f8ff5391"},"/__docx_assets/707854e807bf3a.woff2":{"offset":4596956,"length":6091,"mime":"font/woff2","gzipped":true,"hash":"b40808097daa64a6"},"/__docx_assets/be7e618c1b6f15.woff2":{"offset":4603047,"length":13403,"mime":"font/woff2","gzipped":true,"hash":"d8074533a74c4065"},"/__docx_assets/2504ad92936998.woff2":{"offset":4616450,"length":8699,"mime":"font/woff2","gzipped":true,"hash":"977d9cf9aec9b099"},"/__docx_assets/132ba860efc49c.woff2":{"offset":4625149,"length":9375,"mime":"font/woff2","gzipped":true,"hash":"5c080ddf94a1be02"},"/__docx_assets/6988d8097c69a5.woff2":{"offset":4634524,"length":7207,"mime":"font/woff2","gzipped":true,"hash":"381bc33d377ec181"},"/__docx_assets/796754f6fa2c0f.woff2":{"offset":4641731,"length":14351,"mime":"font/woff2","gzipped":true,"hash":"690c7a9520f8d9aa"},"/docs":{"offset":0,"length":49855,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a11722f13dcdfb27"},"/":{"offset":0,"length":49855,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a11722f13dcdfb27"}}}
+{
+  "id": "tanstack_form",
+  "name": "TanStack Form",
+  "version": "v1",
+  "commit": "92961196",
+  "origin": "https://tanstack.com",
+  "entryPath": "/form/latest/docs/overview",
+  "updatedAt": "2026-10-11T10:38:11.717Z",
+  "totalBytes": 5145313,
+  "chunkCount": 165,
+  "routes": {
+    "/form/latest/docs/overview": {
+      "offset": 0,
+      "length": 49964,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "65675cae3e5784ee"
+    },
+    "/form/latest/docs/installation": {
+      "offset": 49964,
+      "length": 43237,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "540baf517338b9c2"
+    },
+    "/form/latest/docs/philosophy": {
+      "offset": 93201,
+      "length": 44784,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "63f903571c089c5c"
+    },
+    "/form/latest/docs/framework/react/guides/basic-concepts": {
+      "offset": 137985,
+      "length": 51168,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7eb2e68a26082cab"
+    },
+    "/form/latest/docs/comparison": {
+      "offset": 189153,
+      "length": 43247,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4f9c13b08d067bfb"
+    },
+    "/form/latest/docs/framework/react/quick-start": {
+      "offset": 232400,
+      "length": 44376,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3a8d5792f1ee7b4c"
+    },
+    "/form/latest/docs/reference/index": {
+      "offset": 276776,
+      "length": 44885,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bb703b83b210e370"
+    },
+    "/form/latest/docs/framework/react/examples/simple": {
+      "offset": 321661,
+      "length": 51028,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "88d749c315869d32"
+    },
+    "/form/latest/docs/typescript": {
+      "offset": 372689,
+      "length": 42580,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d1787593d0af3231"
+    },
+    "/form/latest/docs/reference/classes/FormApi": {
+      "offset": 415269,
+      "length": 57798,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e485baacc13e616c"
+    },
+    "/form/latest/docs/framework/react/guides/dynamic-validation": {
+      "offset": 473067,
+      "length": 46091,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "213b938d4adf418d"
+    },
+    "/form/latest/docs/framework/react/guides/react-native": {
+      "offset": 519158,
+      "length": 42038,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4dc0e0503902c009"
+    },
+    "/form/latest/docs/framework/react/guides/linked-fields": {
+      "offset": 561196,
+      "length": 43333,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e5b7e41b61b0f2a0"
+    },
+    "/form/latest/docs/framework/react/guides/validation": {
+      "offset": 604529,
+      "length": 53478,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d26a169ad9cf2f25"
+    },
+    "/form/latest/docs/framework/react/guides/listeners": {
+      "offset": 658007,
+      "length": 44749,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c585983ccec3fc13"
+    },
+    "/form/latest/docs/framework/react/guides/form-groups": {
+      "offset": 702756,
+      "length": 46162,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a623bfc087d88b71"
+    },
+    "/form/latest/docs/framework/react/guides/submission-handling": {
+      "offset": 748918,
+      "length": 44284,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "196addfd1b0c0760"
+    },
+    "/form/latest/docs/framework/react/guides/async-initial-values": {
+      "offset": 793202,
+      "length": 43240,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c35377c4397eb70a"
+    },
+    "/form/latest/docs/framework/react/guides/reactivity": {
+      "offset": 836442,
+      "length": 44234,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a737e763b11e1ded"
+    },
+    "/form/latest/docs/framework/react/guides/arrays": {
+      "offset": 880676,
+      "length": 44890,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "020aefddbde96be5"
+    },
+    "/form/latest/docs/framework/react/guides/focus-management": {
+      "offset": 925566,
+      "length": 45896,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "48bab78f74bff263"
+    },
+    "/form/latest/docs/framework/react/guides/form-composition": {
+      "offset": 971462,
+      "length": 58000,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "278dfce132bf4e12"
+    },
+    "/form/latest/docs/framework/react/guides/ui-libraries": {
+      "offset": 1029462,
+      "length": 48413,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "29581504aec7fa4f"
+    },
+    "/form/latest/docs/framework/react/guides/custom-errors": {
+      "offset": 1077875,
+      "length": 48451,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "495e95fba1ec0e48"
+    },
+    "/form/latest/docs/reference/functions/mergeForm": {
+      "offset": 1126326,
+      "length": 43590,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "afba79ec77692612"
+    },
+    "/form/latest/docs/reference/interfaces/FormOptions": {
+      "offset": 1169916,
+      "length": 46470,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e4319201cae8d629"
+    },
+    "/form/latest/docs/reference/interfaces/FieldValidators": {
+      "offset": 1216386,
+      "length": 45572,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9de9eeffd69df5fa"
+    },
+    "/form/latest/docs/framework/react/guides/devtools": {
+      "offset": 1261958,
+      "length": 42538,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3604536177186ec9"
+    },
+    "/form/latest/docs/reference/type-aliases/DeepKeys": {
+      "offset": 1304496,
+      "length": 42389,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3ba5305b1e6e05b4"
+    },
+    "/form/latest/docs/reference/classes/FieldApi": {
+      "offset": 1346885,
+      "length": 52417,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f4b961176f79b17b"
+    },
+    "/form/latest/docs/reference/interfaces/FormValidators": {
+      "offset": 1399302,
+      "length": 44618,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9b8081fec26c0599"
+    },
+    "/form/latest/docs/reference/interfaces/FieldApiOptions": {
+      "offset": 1443920,
+      "length": 46447,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "44f01f986d44b3b3"
+    },
+    "/form/latest/docs/reference/functions/formOptions": {
+      "offset": 1490367,
+      "length": 43574,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b6b9faf20b6551da"
+    },
+    "/form/latest/docs/reference/interfaces/FieldOptions": {
+      "offset": 1533941,
+      "length": 46596,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3e4c186af95d84f6"
+    },
+    "/form/latest/docs/reference/type-aliases/DeepValue": {
+      "offset": 1580537,
+      "length": 43498,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "91e10fe46cddbe6e"
+    },
+    "/form/latest/docs/framework/react/guides/ssr": {
+      "offset": 1624035,
+      "length": 51225,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3241af81d1302be9"
+    },
+    "/form/latest/docs/framework/react/guides/debugging": {
+      "offset": 1675260,
+      "length": 44949,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5315eebc36347341"
+    },
+    "/form/latest/docs/reference/type-aliases/AnyFieldMeta": {
+      "offset": 1720209,
+      "length": 41637,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bb05ee24ca7bdbc5"
+    },
+    "/form/latest/docs/reference/type-aliases/ValidationMeta": {
+      "offset": 1761846,
+      "length": 42530,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "33354df5e0d90b1b"
+    },
+    "/form/latest/docs/framework/react/reference/variables/Field": {
+      "offset": 1804376,
+      "length": 44487,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "89de5f6f1d8c601c"
+    },
+    "/form/latest/docs/reference/type-aliases/UpdaterFn": {
+      "offset": 1848863,
+      "length": 42387,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "351a83470bfa340f"
+    },
+    "/form/latest/docs/reference/type-aliases/ValidationError": {
+      "offset": 1891250,
+      "length": 41662,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "47141b46e7bcaf2b"
+    },
+    "/form/latest/docs/framework/react/reference/type-aliases/FieldComponent": {
+      "offset": 1932912,
+      "length": 44498,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "41d0b0b97b8d736e"
+    },
+    "/form/latest/docs/reference/type-aliases/BaseFormState": {
+      "offset": 1977410,
+      "length": 46218,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "843fb0bd077dd560"
+    },
+    "/form/latest/docs/reference/classes/FormGroupApi": {
+      "offset": 2023628,
+      "length": 53969,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f0b290b1c2698c32"
+    },
+    "/form/latest/docs/reference/classes/FieldGroupApi": {
+      "offset": 2077597,
+      "length": 51118,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "adf2d942c169cf6c"
+    },
+    "/form/latest/docs/framework/react/reference/type-aliases/UseField": {
+      "offset": 2128715,
+      "length": 44452,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5b2010cbedca7bb6"
+    },
+    "/form/latest/docs/framework/react/reference/functions/useField": {
+      "offset": 2173167,
+      "length": 44492,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6971bac98d96e2ca"
+    },
+    "/form/latest/docs/reference/type-aliases/Updater": {
+      "offset": 2217659,
+      "length": 42233,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "11fead183661f92f"
+    },
+    "/form/latest/docs/reference/type-aliases/DerivedFormState": {
+      "offset": 2259892,
+      "length": 46293,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "746745ded3623e9c"
+    },
+    "/form/latest/docs/framework/react/reference/index": {
+      "offset": 2306185,
+      "length": 43449,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "786ad5d5ad72b78d"
+    },
+    "/form/latest/docs/framework/react/reference/functions/useForm": {
+      "offset": 2349634,
+      "length": 44791,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "edaa24e6e3e4d571"
+    },
+    "/form/latest/docs/reference/interfaces/FormGroupListeners": {
+      "offset": 2394425,
+      "length": 43184,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f23e80f7d0edf58a"
+    },
+    "/form/latest/docs/reference/interfaces/FieldGroupState": {
+      "offset": 2437609,
+      "length": 42105,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "08a3831a1fcfb89c"
+    },
+    "/form/latest/docs/reference/interfaces/FormListenersPropsField": {
+      "offset": 2479714,
+      "length": 43201,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1ebd31f851b64df5"
+    },
+    "/form/latest/docs/reference/interfaces/FormGroupOptions": {
+      "offset": 2522915,
+      "length": 48350,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4f79ed9dc66ccbff"
+    },
+    "/form/latest/docs/reference/interfaces/FormGroupState": {
+      "offset": 2571265,
+      "length": 43442,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d29d0130cccbdd69"
+    },
+    "/form/latest/docs/reference/interfaces/FieldGroupOptions": {
+      "offset": 2614707,
+      "length": 43875,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6f38165686bee439"
+    },
+    "/form/latest/docs/reference/interfaces/FormGroupStoreState": {
+      "offset": 2658582,
+      "length": 43985,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7c0867a6b6907f90"
+    },
+    "/form/latest/docs/reference/interfaces/BaseFormOptions": {
+      "offset": 2702567,
+      "length": 42734,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "aef950e1e5e182d8"
+    },
+    "/form/latest/docs/reference/interfaces/FormGroupMeta": {
+      "offset": 2745301,
+      "length": 47921,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "23eecd2c3664871f"
+    },
+    "/form/latest/docs/reference/interfaces/FormListeners": {
+      "offset": 2793222,
+      "length": 44804,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a07700cc9bb0ca8f"
+    },
+    "/form/latest/docs/reference/interfaces/FormGroupValidators": {
+      "offset": 2838026,
+      "length": 44997,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "81ead24680b66c83"
+    },
+    "/form/latest/docs/reference/interfaces/FieldListeners": {
+      "offset": 2883023,
+      "length": 43092,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d0711b7dcc6b0b5f"
+    },
+    "/form/latest/docs/reference/interfaces/ArrayDeepKeyAndValue": {
+      "offset": 2926115,
+      "length": 42869,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e59abb9ce3e98304"
+    },
+    "/form/latest/docs/reference/interfaces/FormGroupApiOptions": {
+      "offset": 2968984,
+      "length": 49286,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dfd0b015184a99d8"
+    },
+    "/form/latest/docs/reference/interfaces/FormListenersPropsGroup": {
+      "offset": 3018270,
+      "length": 44150,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "34c8b8448b58f023"
+    },
+    "/form/latest/docs/reference/interfaces/AnyDeepKeyAndValue": {
+      "offset": 3062420,
+      "length": 43560,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "affd6cd7abb45149"
+    },
+    "/form/latest/docs/reference/interfaces/UnknownDeepKeyAndValue": {
+      "offset": 3105980,
+      "length": 42549,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3fdf038012715c76"
+    },
+    "/form/latest/docs/reference/interfaces/ValidationLogicProps": {
+      "offset": 3148529,
+      "length": 43502,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5da7a09f8a1c7964"
+    },
+    "/form/latest/docs/reference/type-aliases/AllObjectKeys": {
+      "offset": 3192031,
+      "length": 41965,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3f13142a5270389d"
+    },
+    "/form/latest/docs/reference/interfaces/TupleDeepKeyAndValue": {
+      "offset": 3233996,
+      "length": 42913,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d729b53215a072ab"
+    },
+    "/form/latest/docs/reference/type-aliases/AnyFieldApi": {
+      "offset": 3276909,
+      "length": 41751,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "70e790e28c4d4507"
+    },
+    "/form/latest/docs/reference/interfaces/FormState": {
+      "offset": 3318660,
+      "length": 48681,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1b96b3d22ca6233c"
+    },
+    "/form/latest/docs/reference/type-aliases/AnyFormApi": {
+      "offset": 3367341,
+      "length": 41726,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0009e06f40756d19"
+    },
+    "/form/latest/docs/reference/interfaces/StandardSchemaV1Issue": {
+      "offset": 3409067,
+      "length": 42327,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f61f6087edf4b787"
+    },
+    "/form/latest/docs/reference/interfaces/ValidationLogicValidatorsFn": {
+      "offset": 3451394,
+      "length": 42148,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "26b039d4b3e659a4"
+    },
+    "/form/latest/docs/reference/type-aliases/AllTupleKeys": {
+      "offset": 3493542,
+      "length": 41992,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6f58f7779b5f4c93"
+    },
+    "/form/latest/docs/reference/interfaces/ObjectDeepKeyAndValue": {
+      "offset": 3535534,
+      "length": 43650,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "314bef2ce87c753a"
+    },
+    "/form/latest/docs/reference/type-aliases/AnyFieldGroupApi": {
+      "offset": 3579184,
+      "length": 42460,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b4a10200e9e7e5a0"
+    },
+    "/form/latest/docs/reference/type-aliases/AnyBaseFormState": {
+      "offset": 3621644,
+      "length": 42464,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cf76bfaed67a987f"
+    },
+    "/form/latest/docs/reference/type-aliases/AnyFormOptions": {
+      "offset": 3664108,
+      "length": 41541,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fc60d3a7677e6276"
+    },
+    "/form/latest/docs/reference/type-aliases/ArrayAccessor": {
+      "offset": 3705649,
+      "length": 42150,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eada25ca637a0bf5"
+    },
+    "/form/latest/docs/reference/type-aliases/BroadcastFormApi": {
+      "offset": 3747799,
+      "length": 42247,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e44397cb00d856c1"
+    },
+    "/form/latest/docs/reference/type-aliases/AnyFormGroupMeta": {
+      "offset": 3790046,
+      "length": 41662,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "da7fd3e039f4a9fb"
+    },
+    "/form/latest/docs/reference/type-aliases/AnyFormGroupApi": {
+      "offset": 3831708,
+      "length": 41780,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9360022217bc16ea"
+    },
+    "/form/latest/docs/reference/type-aliases/AnyFormState": {
+      "offset": 3873488,
+      "length": 41496,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9ef576d54c001c1c"
+    },
+    "/form/latest/docs/reference/type-aliases/BroadcastFormId": {
+      "offset": 3914984,
+      "length": 41960,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "66dcb219b8222eb4"
+    },
+    "/form/latest/docs/reference/type-aliases/BroadcastFormSubmissionState": {
+      "offset": 3956944,
+      "length": 41817,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b8b53c79acdad481"
+    },
+    "/form/latest/docs/reference/type-aliases/BroadcastFormState": {
+      "offset": 3998761,
+      "length": 42144,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5da48adeb533b630"
+    },
+    "/form/latest/docs/reference/type-aliases/DeepKeyAndValueObject": {
+      "offset": 4040905,
+      "length": 42569,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2c7e5474b6d0bab8"
+    },
+    "/form/latest/docs/reference/type-aliases/DeepKeyAndValueArray": {
+      "offset": 4083474,
+      "length": 42403,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3409e9dedad4300b"
+    },
+    "/form/latest/docs/reference/type-aliases/DeepKeyAndValueTuple": {
+      "offset": 4125877,
+      "length": 42677,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8bf1f29b56dba2e8"
+    },
+    "/favicon-16x16.png": {
+      "offset": 4168554,
+      "length": 590,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "a53b782bb5f5aff7"
+    },
+    "/favicon-32x32.png": {
+      "offset": 4169144,
+      "length": 1187,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "34241b997c796120"
+    },
+    "/assets/coderabbit-dark-C3hjOiHQ.svg": {
+      "offset": 4170331,
+      "length": 3855,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a0f236b34d931931"
+    },
+    "/favicon-dark.svg": {
+      "offset": 4174186,
+      "length": 1377,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "87ddd3cc53780ea9"
+    },
+    "/assets/lovable-black-1mVxR6Bj.svg": {
+      "offset": 4175563,
+      "length": 3574,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "2991135aabc14b05"
+    },
+    "/assets/coderabbit-light-ggTFqYhV.svg": {
+      "offset": 4179137,
+      "length": 3869,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "183adaaa8dc30b05"
+    },
+    "/images/brand/tanstack-landscape-black.svg": {
+      "offset": 4183006,
+      "length": 1770,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "7f88cc8634ee3f47"
+    },
+    "/favicon-light.svg": {
+      "offset": 4174186,
+      "length": 1377,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "87ddd3cc53780ea9"
+    },
+    "/apple-touch-icon.png": {
+      "offset": 4184776,
+      "length": 7469,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "2abc16a5f4b05ca9"
+    },
+    "/assets/railway-black-DeBDfNao.svg": {
+      "offset": 4192245,
+      "length": 2008,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "f17e0e028a8904e8"
+    },
+    "/__docx_assets/c652463bc02b14.bin": {
+      "offset": 4194253,
+      "length": 1032,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "b7ef659b9918b562"
+    },
+    "/assets/index-CaKFzcjh.css": {
+      "offset": 4195285,
+      "length": 73993,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "0b6ed57e3b279ea7"
+    },
+    "/assets/lovable-white-DLB1BxKZ.svg": {
+      "offset": 4269278,
+      "length": 3575,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "289e15e1680f1bc7"
+    },
+    "/images/brand/tanstack-landscape-white.svg": {
+      "offset": 4272853,
+      "length": 1770,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "47b05e85ac4c4ffb"
+    },
+    "/assets/cloudflare-black-6Ojsn8yh.svg": {
+      "offset": 4274623,
+      "length": 5273,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "e8c1a2879b3e87a1"
+    },
+    "/assets/railway-white-CFKFsfw2.svg": {
+      "offset": 4279896,
+      "length": 2006,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "cdfae42b06c7f002"
+    },
+    "/assets/render-black-Cz1XqOfh.svg": {
+      "offset": 4281902,
+      "length": 2039,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "aa8e27c775b8a80d"
+    },
+    "/favicon.ico": {
+      "offset": 4283941,
+      "length": 1085,
+      "mime": "image/vnd.microsoft.icon",
+      "gzipped": true,
+      "hash": "168a372851d14b1b"
+    },
+    "/assets/cloudflare-white-Co-Tyjbl.svg": {
+      "offset": 4285026,
+      "length": 5586,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "e38e46382d5e07c7"
+    },
+    "/assets/render-white-D4l33ygB.svg": {
+      "offset": 4290612,
+      "length": 2037,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "a50b023056a6449c"
+    },
+    "/assets/clerk-logo-light-BYN-U_0H.svg": {
+      "offset": 4292649,
+      "length": 2101,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "85770f891d615c15"
+    },
+    "/assets/serpapi-white-CPxTEZSp.svg": {
+      "offset": 4294750,
+      "length": 5507,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "268f7b21f443c087"
+    },
+    "/assets/openrouter-black-CJtk3mjZ.svg": {
+      "offset": 4300257,
+      "length": 1739,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "5dd9bf63f2f8dea1"
+    },
+    "/assets/workos-black-DnPI5Ve5.svg": {
+      "offset": 4301996,
+      "length": 1716,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "ee02fe0a62ec07b3"
+    },
+    "/assets/openrouter-white-BLyN_5Ca.svg": {
+      "offset": 4303712,
+      "length": 1740,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "13637f69d0de5fd2"
+    },
+    "/assets/serpapi-black-DnXRiQQ3.svg": {
+      "offset": 4305452,
+      "length": 5506,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "eae3ca3f49eb10bb"
+    },
+    "/assets/scarf-BJX_-tJ9.svg": {
+      "offset": 4310958,
+      "length": 3869,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "76163b7ea851b6af"
+    },
+    "/assets/prisma-light-Cloa3Onm.svg": {
+      "offset": 4314827,
+      "length": 2278,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "275386c848fe7de0"
+    },
+    "/assets/prisma-dark-DwgDxLwn.svg": {
+      "offset": 4317105,
+      "length": 2276,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "4226546f639ea248"
+    },
+    "/assets/clerk-logo-dark-CRE22T_2.svg": {
+      "offset": 4319381,
+      "length": 2082,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "6ac152fa38cf1202"
+    },
+    "/__docx_assets/d33b0bd30d237c.png": {
+      "offset": 4321463,
+      "length": 80600,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "4c31177e66117024"
+    },
+    "/__docx_assets/fca28f7afbe815.png": {
+      "offset": 4402063,
+      "length": 91383,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "1f58bc969d9e747e"
+    },
+    "/__docx_assets/4656d51b0ae6f3.bin": {
+      "offset": 4493446,
+      "length": 1363,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "355bc932da0cfec5"
+    },
+    "/__docx_assets/dceca1b01e8736.bin": {
+      "offset": 4494809,
+      "length": 1360,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "f915277b4499392c"
+    },
+    "/__docx_assets/45f46f5cafb348.bin": {
+      "offset": 4496169,
+      "length": 1358,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "4d7f2282913e2625"
+    },
+    "/__docx_assets/6c08064919c38e.bin": {
+      "offset": 4497527,
+      "length": 1358,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "95afa1abcc154cd3"
+    },
+    "/__docx_assets/c549e0c03973a1.bin": {
+      "offset": 4498885,
+      "length": 1363,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "bbf5f63a3f512c1b"
+    },
+    "/__docx_assets/9f3e8a186bdbe0.png": {
+      "offset": 4500248,
+      "length": 32064,
+      "mime": "image/png",
+      "gzipped": true,
+      "hash": "43183f0a0ecf7fbe"
+    },
+    "/__docx_assets/d97cd52ad0dc05.svg": {
+      "offset": 4532312,
+      "length": 2945,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "6fefe7b984820ce7"
+    },
+    "/__docx_assets/6d7cafc17831ea.bin": {
+      "offset": 4535257,
+      "length": 484,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "1834a43ec9d5f028"
+    },
+    "/__docx_assets/72a6de2ba431a7.bin": {
+      "offset": 4535741,
+      "length": 484,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "d63fb85f58fa6c06"
+    },
+    "/__docx_assets/b2bd399c7ef212.woff2": {
+      "offset": 4536225,
+      "length": 5855,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "bff78395d07e458e"
+    },
+    "/__docx_assets/b06594e3dfbc9f.woff2": {
+      "offset": 4542080,
+      "length": 6063,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e5a0d1b353cec923"
+    },
+    "/__docx_assets/d1b233760bed30.woff2": {
+      "offset": 4548143,
+      "length": 6935,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "023e5b00d47f4ca4"
+    },
+    "/__docx_assets/ecb1449c9f014f.woff2": {
+      "offset": 4555078,
+      "length": 14771,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "75de27a62b652578"
+    },
+    "/__docx_assets/ae5fc1eadb0588.woff2": {
+      "offset": 4569849,
+      "length": 13371,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "5a329f24e9a408d8"
+    },
+    "/__docx_assets/fd3dd31c82271e.woff2": {
+      "offset": 4583220,
+      "length": 7715,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "972b8ee5f8ff5391"
+    },
+    "/__docx_assets/6cb3d68941f20a.woff2": {
+      "offset": 4590935,
+      "length": 8291,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b8c026c80d547069"
+    },
+    "/__docx_assets/203ce92810c0a1.woff2": {
+      "offset": 4599226,
+      "length": 13455,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "a2052c2e7171917f"
+    },
+    "/__docx_assets/ed3206e8ede4a9.woff2": {
+      "offset": 4612681,
+      "length": 6995,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "c96c57c26b8d4271"
+    },
+    "/__docx_assets/2a73cdecea5ce9.woff2": {
+      "offset": 4619676,
+      "length": 5891,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "9b1b2d0dc61dc5b4"
+    },
+    "/__docx_assets/c097aa95d7ec1b.woff2": {
+      "offset": 4625567,
+      "length": 6803,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "cfae540b88c18592"
+    },
+    "/__docx_assets/4c442bc4abb065.woff2": {
+      "offset": 4632370,
+      "length": 13427,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "055c5a5c51c1b6e9"
+    },
+    "/__docx_assets/132ba860efc49c.woff2": {
+      "offset": 4645797,
+      "length": 9375,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "5c080ddf94a1be02"
+    },
+    "/__docx_assets/eb889034c0832c.woff2": {
+      "offset": 4655172,
+      "length": 14911,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b05d0cae7c617430"
+    },
+    "/__docx_assets/c70f6b078a0944.woff2": {
+      "offset": 4670083,
+      "length": 8483,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e4ddc5e461f06274"
+    },
+    "/__docx_assets/32a447b3624072.woff2": {
+      "offset": 4678566,
+      "length": 13007,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "33b3c6001f8dd113"
+    },
+    "/__docx_assets/e577600d58460a.woff2": {
+      "offset": 4691573,
+      "length": 30764,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b0dbbc6df819eb88"
+    },
+    "/__docx_assets/f9c74283b1693b.woff2": {
+      "offset": 4722337,
+      "length": 8379,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "827ff291ec7ad3e2"
+    },
+    "/__docx_assets/5f754c3adb80da.woff2": {
+      "offset": 4730716,
+      "length": 76898,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "2a689569fa1d472f"
+    },
+    "/__docx_assets/7e3d7e3c7de8e8.woff2": {
+      "offset": 4807614,
+      "length": 14731,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "f030ce23a9c2db55"
+    },
+    "/__docx_assets/6988d8097c69a5.woff2": {
+      "offset": 4822345,
+      "length": 7207,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "381bc33d377ec181"
+    },
+    "/__docx_assets/707854e807bf3a.woff2": {
+      "offset": 4829552,
+      "length": 6091,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "b40808097daa64a6"
+    },
+    "/__docx_assets/245a9a663e9393.woff2": {
+      "offset": 4835643,
+      "length": 6955,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "8605f3d9c723b79b"
+    },
+    "/__docx_assets/2504ad92936998.woff2": {
+      "offset": 4842598,
+      "length": 8699,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "977d9cf9aec9b099"
+    },
+    "/__docx_assets/be7e618c1b6f15.woff2": {
+      "offset": 4851297,
+      "length": 13403,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "d8074533a74c4065"
+    },
+    "/__docx_assets/796754f6fa2c0f.woff2": {
+      "offset": 4864700,
+      "length": 14351,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "690c7a9520f8d9aa"
+    },
+    "/__docx_assets/677d93cfc15177.woff2": {
+      "offset": 4879051,
+      "length": 14931,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "c1b3ea3548111f8f"
+    },
+    "/__docx_assets/86628368fe0c7c.woff2": {
+      "offset": 4893982,
+      "length": 15643,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "fd07f16153dd55ac"
+    },
+    "/fonts/Inter-latin-ext.woff2": {
+      "offset": 4909625,
+      "length": 133386,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "d2c129ef78916c74"
+    },
+    "/images/hero-palm-gradient-960.webp": {
+      "offset": 5043011,
+      "length": 28730,
+      "mime": "image/webp",
+      "gzipped": true,
+      "hash": "93fbf92042d02785"
+    },
+    "/fonts/Inter-latin.woff2": {
+      "offset": 5071741,
+      "length": 72932,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "950aff451f2f608d"
+    },
+    "/images/brand/tanstack-emblem-black.svg": {
+      "offset": 5144673,
+      "length": 640,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "5a2195e2edbc36d7"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 49964,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "65675cae3e5784ee"
+    },
+    "/": {
+      "offset": 0,
+      "length": 49964,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "65675cae3e5784ee"
+    }
+  }
+}

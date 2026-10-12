@@ -241,13 +241,15 @@ let currentResults: SearchEntry[] = [];
 let selectedIndex = 0;
 
 let sidebarPinned = false;
-let drawerHidden = localStorage.getItem("docx_drawer_hidden") === "true";
+let drawerHidden = localStorage.getItem("docx_drawer_hidden") !== "false";
 let topbarHidden = false;
 let sidebarCloseTimer: number | null = null;
+let drawerHoverCloseTimer: number | null = null;
 let topbarCloseTimer: number | null = null;
 
-// User-toggleable features (Browser Tabs, Theme Engine, Default Clean Font)
+// User-toggleable features (Browser Tabs, Expand Tabs on Hover, Theme Engine, Default Clean Font)
 let featureTabsEnabled = localStorage.getItem("docx_feature_tabs") !== "0";
+let featureTabHoverExpand = localStorage.getItem("docx_feature_tab_hover_expand") !== "0";
 let featureThemeEnabled = localStorage.getItem("docx_feature_theme") !== "0";
 let featureFontEnabled = localStorage.getItem("docx_feature_font") !== "0";
 
@@ -255,10 +257,21 @@ let readerZoom = Math.max(
   60,
   Math.min(220, parseInt(localStorage.getItem("docx_reader_zoom") || "100", 10) || 100)
 );
-let readerDarkMode = localStorage.getItem("docx_reader_dark_v2") !== "0";
+let systemDarkMode =
+  typeof window !== "undefined" && window.matchMedia
+    ? window.matchMedia("(prefers-color-scheme: dark)").matches
+    : true;
+let readerDarkMode: boolean = (() => {
+  try {
+    const saved = localStorage.getItem("docx_reader_dark_v3");
+    if (saved === "1") return true;
+    if (saved === "0") return false;
+  } catch {}
+  return systemDarkMode;
+})();
 let readerDarkBySite: Record<string, boolean> = (() => {
   try {
-    const raw = localStorage.getItem("docx_reader_dark_by_site_v2");
+    const raw = localStorage.getItem("docx_reader_dark_by_site_v3");
     return raw ? JSON.parse(raw) : {};
   } catch {
     return {};
@@ -288,6 +301,511 @@ let browserTabs: BrowserTab[] = [
 ];
 let activeBrowserTabId: string = "tab-home";
 
+const DEFAULT_PINNED_DOCS = ["tailwind", "shadcn", "react", "nextjs", "typescript", "rust", "python"];
+let pinnedSiteIds: string[] = (() => {
+  try {
+    const raw = localStorage.getItem("docx_pinned_docs_v1");
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) return parsed.filter((x) => typeof x === "string");
+    }
+  } catch {}
+  return [...DEFAULT_PINNED_DOCS];
+})();
+let drawerFilterQuery: string = "";
+let rightTabsCompact: boolean = (() => {
+  try {
+    return localStorage.getItem("docx_right_tabs_compact") !== "false";
+  } catch {
+    return true;
+  }
+})();
+
+let suppressPinClickUntil = 0;
+
+interface DocBookmark {
+  id: string;
+  siteId: string;
+  title: string;
+  pathOrUrl: string;
+  createdAt: number;
+}
+
+let bookmarksList: DocBookmark[] = (() => {
+  try {
+    const raw = localStorage.getItem("docx_bookmarks_v1");
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) {
+        return parsed.filter(
+          (b) => b && typeof b.siteId === "string" && typeof b.pathOrUrl === "string"
+        );
+      }
+    }
+  } catch {}
+  return [];
+})();
+let bookmarksFilterQuery: string = "";
+
+function isSpecialNativeView(siteId: string): boolean {
+  return siteId === "home" || siteId === "bookmarks";
+}
+
+function saveBookmarks() {
+  try {
+    localStorage.setItem("docx_bookmarks_v1", JSON.stringify(bookmarksList));
+  } catch {}
+}
+
+function normalizeBookmarkPath(siteId: string, pathOrUrl?: string): string {
+  const raw = (pathOrUrl || getDefaultEntryPath(siteId) || "/").trim();
+  try {
+    if (raw.startsWith("http://") || raw.startsWith("https://")) {
+      const u = new URL(raw);
+      return `${u.pathname}${u.search}${u.hash}` || "/";
+    }
+  } catch {}
+  return raw.startsWith("/") ? raw : `/${raw}`;
+}
+
+function normalizeBookmarkCompareKey(siteId: string, pathOrUrl?: string): string {
+  const norm = normalizeBookmarkPath(siteId, pathOrUrl)
+    .replace(/\/index\.(html|htm)$/i, "")
+    .replace(/\.(html|htm)$/i, "")
+    .replace(/^\/w\//i, "/")
+    .replace(/\/+$/, "");
+  return `${siteId}::${norm || "/"}`.toLowerCase();
+}
+
+function formatBookmarkDisplayInfo(
+  siteId: string,
+  rawTitle: string,
+  pathOrUrl: string
+): { topicTitle: string; breadcrumb: string; cleanDocName: string } {
+  const brand = getSiteBrand(siteId);
+  const cleanDocName = brand.name.replace(/\s*\([^)]*\)\s*$/, "").trim();
+  const cleanPath = normalizeBookmarkPath(siteId, pathOrUrl)
+    .replace(/\.(html|htm)$/i, "")
+    .replace(/\/index$/i, "")
+    .replace(/^\/(w|docs|guide|en\/[\d.]+)\//i, "/");
+  const segments = cleanPath.split("/").filter(Boolean);
+  const breadcrumb = segments.length > 0 ? segments.join(" › ") : "Documentation Home";
+  const lastSeg = segments[segments.length - 1] || "";
+
+  let candidate = (rawTitle || "").trim();
+  if (candidate.includes(" · ")) {
+    candidate = candidate.split(" · ").slice(1).join(" · ").trim();
+  }
+  candidate = candidate
+    .replace(/\s*[-–—|]\s*(cppreference\.com|C\+\+\s*Reference.*|Rust.*|MDN.*|Docs|Documentation).*$/i, "")
+    .trim();
+
+  if (
+    !candidate ||
+    candidate.toLowerCase() === brand.name.toLowerCase() ||
+    candidate.toLowerCase() === cleanDocName.toLowerCase()
+  ) {
+    if (lastSeg) {
+      if (siteId === "cppreference" && segments.includes("cpp") && lastSeg !== "cpp") {
+        candidate = `std::${lastSeg}`;
+      } else {
+        candidate = lastSeg.replace(/[-_]+/g, " ");
+      }
+    } else {
+      candidate = `${cleanDocName} Overview`;
+    }
+  }
+
+  return {
+    topicTitle: candidate,
+    breadcrumb,
+    cleanDocName,
+  };
+}
+
+function getLiveActiveTabDocState(): { siteId: string; pathOrUrl: string; title: string } | null {
+  const cur = getActiveBrowserTab();
+  if (!cur || isSpecialNativeView(cur.siteId)) return null;
+  const pathOrUrl = normalizeBookmarkPath(cur.siteId, cur.pathOrUrl || getDefaultEntryPath(cur.siteId));
+  const title = cur.title || formatTabTitle(cur.siteId, undefined, pathOrUrl);
+  return {
+    siteId: cur.siteId,
+    pathOrUrl,
+    title,
+  };
+}
+
+function findBookmarkForCurrentPage(): DocBookmark | undefined {
+  const live = getLiveActiveTabDocState();
+  if (!live) return undefined;
+  const targetKey = normalizeBookmarkCompareKey(live.siteId, live.pathOrUrl);
+  return bookmarksList.find(
+    (b) => normalizeBookmarkCompareKey(b.siteId, b.pathOrUrl) === targetKey
+  );
+}
+
+function updateBookmarkUI() {
+  if (railBookmarkCount) {
+    if (bookmarksList.length > 0) {
+      railBookmarkCount.style.display = "inline-flex";
+      railBookmarkCount.textContent = String(bookmarksList.length);
+    } else {
+      railBookmarkCount.style.display = "none";
+    }
+  }
+
+  const live = getLiveActiveTabDocState();
+  const existing = findBookmarkForCurrentPage();
+  const isBookmarked = Boolean(existing);
+
+  const railBookmarksWrap = document.getElementById("railBookmarksWrap");
+  if (railBookmarksWrap) {
+    railBookmarksWrap.classList.toggle("active", activeTab === "bookmarks");
+    tabBookmarks?.classList.toggle("active", activeTab === "bookmarks");
+    tabBookmarks?.classList.toggle("page-bookmarked", isBookmarked);
+  }
+
+  if (btnBookmarkPage) {
+    btnBookmarkPage.classList.toggle("bookmarked", isBookmarked);
+    btnBookmarkPage.classList.toggle("active", isBookmarked);
+    if (bookmarkTopbarLabel) {
+      bookmarkTopbarLabel.textContent = isBookmarked ? "Bookmarked" : "Bookmark";
+    }
+    if (!live) {
+      btnBookmarkPage.title = "Open Saved Bookmarks (or open any documentation page to bookmark it)";
+    } else if (existing) {
+      btnBookmarkPage.title = `★ Bookmarked: ${existing.title} (${existing.pathOrUrl}) — Click or press Ctrl+D to remove`;
+    } else {
+      btnBookmarkPage.title = `Bookmark "${live.title}" (${live.pathOrUrl}) — Click or press Ctrl+D`;
+    }
+  }
+}
+
+function toggleBookmarkCurrentPage() {
+  const live = getLiveActiveTabDocState();
+  if (!live) {
+    switchTab("bookmarks");
+    return;
+  }
+  const existing = findBookmarkForCurrentPage();
+  if (existing) {
+    bookmarksList = bookmarksList.filter((b) => b.id !== existing.id);
+  } else {
+    bookmarksList.unshift({
+      id: `bm-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+      siteId: live.siteId,
+      title: live.title,
+      pathOrUrl: live.pathOrUrl,
+      createdAt: Date.now(),
+    });
+  }
+  saveBookmarks();
+  updateBookmarkUI();
+  renderBookmarksView();
+  renderBrowserTabs();
+}
+
+function removeBookmarkById(id: string) {
+  bookmarksList = bookmarksList.filter((b) => b.id !== id);
+  saveBookmarks();
+  updateBookmarkUI();
+  renderBookmarksView();
+  renderBrowserTabs();
+}
+
+function renderBookmarksView() {
+  if (!bookmarksGrid) return;
+  if (bookmarksTotalStat) {
+    bookmarksTotalStat.textContent = `${bookmarksList.length} Saved Page${
+      bookmarksList.length === 1 ? "" : "s"
+    }`;
+  }
+
+  const q = bookmarksFilterQuery.trim().toLowerCase();
+  const filtered = q
+    ? bookmarksList.filter((b) => {
+        const brand = getSiteBrand(b.siteId);
+        const info = formatBookmarkDisplayInfo(b.siteId, b.title, b.pathOrUrl);
+        return (
+          b.title.toLowerCase().includes(q) ||
+          info.topicTitle.toLowerCase().includes(q) ||
+          b.siteId.toLowerCase().includes(q) ||
+          brand.name.toLowerCase().includes(q) ||
+          b.pathOrUrl.toLowerCase().includes(q)
+        );
+      })
+    : bookmarksList;
+
+  if (bookmarksList.length === 0) {
+    bookmarksGrid.innerHTML = `
+      <div class="bookmarks-empty-state">
+        <div class="bookmarks-empty-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </div>
+        <div class="bookmarks-empty-title">No Bookmarked Pages Yet</div>
+        <div class="bookmarks-empty-sub">
+          Open any documentation page and click the <strong>Bookmark</strong> button in the top bar (or press <kbd class="bookmarks-kbd">Ctrl+D</kbd>) to save it here for instant offline access.
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  if (filtered.length === 0) {
+    bookmarksGrid.innerHTML = `
+      <div class="bookmarks-empty-state">
+        <div class="bookmarks-empty-title">No matching bookmarks for "${escapeHtml(
+          bookmarksFilterQuery
+        )}"</div>
+        <div class="bookmarks-empty-sub">Try searching by documentation name, topic title, or URL path.</div>
+      </div>
+    `;
+    return;
+  }
+
+  bookmarksGrid.innerHTML = filtered
+    .map((bm) => {
+      const brand = getSiteBrand(bm.siteId);
+      const info = formatBookmarkDisplayInfo(bm.siteId, bm.title, bm.pathOrUrl);
+      const dateStr = new Date(bm.createdAt).toLocaleDateString(undefined, {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+      });
+      return `
+        <div
+          class="bookmark-card"
+          data-bm-id="${escapeHtml(bm.id)}"
+          data-bm-site="${escapeHtml(bm.siteId)}"
+          data-bm-path="${escapeHtml(bm.pathOrUrl)}"
+          style="--bm-color: ${brand.color}; --bm-tint: ${brand.bgTint};"
+          title="Click to open ${escapeHtml(info.topicTitle)} in ${escapeHtml(info.cleanDocName)} (${escapeHtml(
+        bm.pathOrUrl
+      )})"
+        >
+          <div class="bookmark-card-top">
+            <div class="bookmark-card-brand">
+              <span class="bookmark-card-icon">${brand.svg || escapeHtml(brand.badge)}</span>
+              <div class="bookmark-card-brand-meta">
+                <span class="bookmark-card-docname">${escapeHtml(info.cleanDocName)}</span>
+                <span class="bookmark-card-version">${escapeHtml(brand.version)}</span>
+              </div>
+            </div>
+            <div class="bookmark-card-actions">
+              <button
+                class="bookmark-action-btn"
+                data-open-bm-newtab="${escapeHtml(bm.id)}"
+                title="Open in New Tab (Ctrl+Click)"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </button>
+              <button
+                class="bookmark-action-btn remove-btn"
+                data-remove-bookmark="${escapeHtml(bm.id)}"
+                title="Remove Bookmark"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="3 6 5 6 21 6"></polyline>
+                  <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path>
+                  <path d="M10 11v6"></path>
+                  <path d="M14 11v6"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="bookmark-card-body">
+            <div class="bookmark-card-title">${escapeHtml(info.topicTitle)}</div>
+            <div class="bookmark-card-breadcrumb">${escapeHtml(info.breadcrumb)}</div>
+          </div>
+          <div class="bookmark-card-footer">
+            <span class="bookmark-card-path">${escapeHtml(bm.pathOrUrl)}</span>
+            <span class="bookmark-card-date">${escapeHtml(dateStr)}</span>
+          </div>
+        </div>
+      `;
+    })
+    .join("");
+
+  bookmarksGrid.querySelectorAll(".bookmark-card").forEach((card) => {
+    card.addEventListener("click", (e) => {
+      const target = e.target as HTMLElement | null;
+      if (target && target.closest("[data-remove-bookmark], [data-open-bm-newtab]")) return;
+      const me = e as MouseEvent;
+      const siteId = card.getAttribute("data-bm-site");
+      const pathOrUrl = card.getAttribute("data-bm-path") || undefined;
+      if (siteId) {
+        switchTab(siteId, pathOrUrl, me.ctrlKey || me.metaKey);
+      }
+    });
+    card.addEventListener("auxclick", (e) => {
+      const me = e as MouseEvent;
+      if (me.button === 1) {
+        me.preventDefault();
+        const siteId = card.getAttribute("data-bm-site");
+        const pathOrUrl = card.getAttribute("data-bm-path") || undefined;
+        if (siteId) {
+          switchTab(siteId, pathOrUrl, true);
+        }
+      }
+    });
+  });
+
+  bookmarksGrid.querySelectorAll("[data-open-bm-newtab]").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const bmId = btn.getAttribute("data-open-bm-newtab");
+      const bm = bookmarksList.find((x) => x.id === bmId);
+      if (bm) {
+        switchTab(bm.siteId, bm.pathOrUrl, true);
+      }
+    });
+  });
+
+  bookmarksGrid.querySelectorAll("[data-remove-bookmark]").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const bmId = btn.getAttribute("data-remove-bookmark");
+      if (bmId) {
+        removeBookmarkById(bmId);
+      }
+    });
+  });
+}
+
+function isDocPinned(siteId: string): boolean {
+  return pinnedSiteIds.includes(siteId);
+}
+
+function savePinnedSitesAndRender() {
+  try {
+    localStorage.setItem("docx_pinned_docs_v1", JSON.stringify(pinnedSiteIds));
+  } catch {}
+  const sites = buildUnifiedSitesList();
+  renderServerRail(sites);
+  renderChannelDrawer(sites);
+  renderHomeHub(sites);
+}
+
+function togglePinDoc(siteId: string) {
+  if (!siteId || isSpecialNativeView(siteId)) return;
+  if (pinnedSiteIds.includes(siteId)) {
+    pinnedSiteIds = pinnedSiteIds.filter((id) => id !== siteId);
+  } else {
+    pinnedSiteIds = [...pinnedSiteIds, siteId];
+  }
+  savePinnedSitesAndRender();
+}
+
+function attachPointerPinnedSort(
+  container: HTMLElement,
+  itemSelector: string,
+  attrName: string,
+  ignoreSelector: string,
+  siteMap: Map<string, UnifiedSiteEntry>
+) {
+  container.querySelectorAll(itemSelector).forEach((node) => {
+    const el = node as HTMLElement;
+    const siteId = el.getAttribute(attrName);
+    if (!siteId) return;
+
+    el.addEventListener("pointerdown", (e: PointerEvent) => {
+      if (e.button !== 0) return;
+      const target = e.target as HTMLElement | null;
+      if (target && ignoreSelector && target.closest(ignoreSelector)) return;
+
+      const startX = e.clientX;
+      const startY = e.clientY;
+      let isDragging = false;
+      let ghostEl: HTMLElement | null = null;
+      const siteInfo = siteMap.get(siteId);
+
+      const onPointerMove = (ev: PointerEvent) => {
+        if (!isDragging) {
+          if (Math.hypot(ev.clientX - startX, ev.clientY - startY) < 5) return;
+          isDragging = true;
+          suppressPinClickUntil = Date.now() + 260;
+          el.classList.add("dragging");
+
+          ghostEl = document.createElement("div");
+          ghostEl.className = "pin-drag-ghost";
+          if (siteInfo) {
+            ghostEl.style.setProperty("--brand-color", siteInfo.color);
+            ghostEl.style.setProperty("--brand-tint", siteInfo.bgTint);
+            ghostEl.innerHTML = `${siteInfo.svg}<span>${escapeHtml(siteInfo.name)}</span>`;
+          } else {
+            ghostEl.textContent = siteId;
+          }
+          document.body.appendChild(ghostEl);
+        }
+
+        if (ghostEl) {
+          ghostEl.style.left = `${ev.clientX}px`;
+          ghostEl.style.top = `${ev.clientY}px`;
+        }
+
+        const otherItems = Array.from(container.querySelectorAll(itemSelector)).filter(
+          (n) => n !== el
+        ) as HTMLElement[];
+        if (otherItems.length === 0) return;
+
+        const insertBeforeTarget = otherItems.find((other) => {
+          const rect = other.getBoundingClientRect();
+          return ev.clientY < rect.top + rect.height / 2;
+        });
+
+        const parent = el.parentElement;
+        if (!parent) return;
+
+        if (insertBeforeTarget) {
+          if (el.nextElementSibling !== insertBeforeTarget) {
+            parent.insertBefore(el, insertBeforeTarget);
+          }
+        } else {
+          const lastOther = otherItems[otherItems.length - 1];
+          if (lastOther && lastOther.nextElementSibling !== el) {
+            parent.insertBefore(el, lastOther.nextElementSibling);
+          }
+        }
+      };
+
+      const onPointerUp = () => {
+        window.removeEventListener("pointermove", onPointerMove);
+        window.removeEventListener("pointerup", onPointerUp);
+        window.removeEventListener("pointercancel", onPointerUp);
+
+        if (ghostEl) {
+          ghostEl.remove();
+          ghostEl = null;
+        }
+        el.classList.remove("dragging");
+
+        if (isDragging) {
+          suppressPinClickUntil = Date.now() + 180;
+          const newOrder = Array.from(container.querySelectorAll(itemSelector))
+            .map((n) => n.getAttribute(attrName) || "")
+            .filter(Boolean);
+          if (newOrder.length > 0) {
+            pinnedSiteIds = newOrder;
+            savePinnedSitesAndRender();
+          }
+        }
+      };
+
+      window.addEventListener("pointermove", onPointerMove);
+      window.addEventListener("pointerup", onPointerUp);
+      window.addEventListener("pointercancel", onPointerUp);
+    });
+  });
+}
+
 let installedPacksCache: PackStatusInfo[] = [];
 let remoteRegistryCache: RemoteRegistryItem[] = [];
 let selectedHubCategory: string = "all";
@@ -297,10 +815,23 @@ let hudHideTimer: number | null = null;
 
 // DOM Elements
 const tabHome = document.getElementById("tabHome") as HTMLButtonElement;
+const tabBookmarks = document.getElementById("tabBookmarks") as HTMLButtonElement;
+const railBookmarkCount = document.getElementById("railBookmarkCount") as HTMLElement;
+const btnBookmarkPage = document.getElementById("btnBookmarkPage") as HTMLButtonElement;
+const bookmarkTopbarLabel = document.getElementById("bookmarkTopbarLabel") as HTMLElement;
+const viewBookmarks = document.getElementById("viewBookmarks") as HTMLElement;
+const bookmarksTotalStat = document.getElementById("bookmarksTotalStat") as HTMLElement;
+const bookmarksFilterInput = document.getElementById("bookmarksFilterInput") as HTMLInputElement;
+const bookmarksGrid = document.getElementById("bookmarksGrid") as HTMLElement;
+
 const installedRailList = document.getElementById("installedRailList") as HTMLElement;
 const drawerChannelsScroll = document.getElementById("drawerChannelsScroll") as HTMLElement;
+const drawerFilterInput = document.getElementById("drawerFilterInput") as HTMLInputElement;
 const brandBtn = document.getElementById("brandBtn") as HTMLElement;
 const titlebarBrandHome = document.getElementById("titlebarBrandHome") as HTMLElement;
+const rightTabsSidebar = document.getElementById("rightTabsSidebar") as HTMLElement;
+const rightTabsCount = document.getElementById("rightTabsCount") as HTMLElement;
+const btnToggleRightTabs = document.getElementById("btnToggleRightTabs") as HTMLButtonElement;
 const browserTabsList = document.getElementById("browserTabsList") as HTMLElement;
 const btnNewBrowserTab = document.getElementById("btnNewBrowserTab") as HTMLButtonElement;
 const btnDuplicateBrowserTab = document.getElementById("btnDuplicateBrowserTab") as HTMLButtonElement;
@@ -333,6 +864,7 @@ const darkSiteLabel = document.getElementById("darkSiteLabel") as HTMLElement;
 const btnFeaturesMenu = document.getElementById("btnFeaturesMenu") as HTMLButtonElement;
 const featuresPopover = document.getElementById("featuresPopover") as HTMLElement;
 const toggleFeatureTabs = document.getElementById("toggleFeatureTabs") as HTMLInputElement;
+const toggleFeatureTabHover = document.getElementById("toggleFeatureTabHover") as HTMLInputElement;
 const toggleFeatureTheme = document.getElementById("toggleFeatureTheme") as HTMLInputElement;
 const toggleFeatureFont = document.getElementById("toggleFeatureFont") as HTMLInputElement;
 
@@ -395,6 +927,7 @@ async function init() {
   setupSidebarAndTopbarHover();
   setupEventListeners();
   setupDownloadProgressListener();
+  await setupSystemThemeSync();
   applyFeatureFlags();
 
   updateSplash(52, "Mounting Embedded & Local .docpack Archives...");
@@ -425,6 +958,46 @@ async function init() {
   setInterval(checkServerHealth, 3000);
 }
 
+async function setupSystemThemeSync() {
+  const applyNewSystemTheme = (isDark: boolean) => {
+    systemDarkMode = isDark;
+    try {
+      localStorage.setItem("docx_system_dark", isDark ? "1" : "0");
+      if (localStorage.getItem("docx_reader_dark_v3") === null) {
+        readerDarkMode = isDark;
+      }
+    } catch {
+      readerDarkMode = isDark;
+    }
+    syncReaderSettingsToAllIframes();
+  };
+
+  try {
+    const sysTheme = await invoke<string>("get_system_theme");
+    if (sysTheme === "light" || sysTheme === "dark") {
+      applyNewSystemTheme(sysTheme === "dark");
+    }
+  } catch {
+    if (typeof window !== "undefined" && window.matchMedia) {
+      applyNewSystemTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    }
+  }
+
+  if (typeof window !== "undefined" && window.matchMedia) {
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    mq.addEventListener?.("change", (ev) => {
+      applyNewSystemTheme(ev.matches);
+    });
+  }
+
+  listen<string>("tauri://theme-changed", (event) => {
+    const t = String(event.payload || "").toLowerCase();
+    if (t === "dark" || t === "light") {
+      applyNewSystemTheme(t === "dark");
+    }
+  }).catch(() => {});
+}
+
 function getSiteDarkMode(siteId: string): boolean {
   if (!siteId || siteId === "home") return readerDarkMode;
   if (typeof readerDarkBySite[siteId] === "boolean") {
@@ -437,12 +1010,12 @@ function setSiteDarkMode(siteId: string, dark: boolean, broadcast = true) {
   if (!siteId || siteId === "home") {
     readerDarkMode = dark;
     try {
-      localStorage.setItem("docx_reader_dark_v2", readerDarkMode ? "1" : "0");
+      localStorage.setItem("docx_reader_dark_v3", readerDarkMode ? "1" : "0");
     } catch {}
   } else {
     readerDarkBySite[siteId] = dark;
     try {
-      localStorage.setItem("docx_reader_dark_by_site_v2", JSON.stringify(readerDarkBySite));
+      localStorage.setItem("docx_reader_dark_by_site_v3", JSON.stringify(readerDarkBySite));
     } catch {}
   }
   if (broadcast) {
@@ -467,15 +1040,23 @@ function updateTopbarDarkButtonUI() {
 
 function applyFeatureFlags() {
   if (toggleFeatureTabs) toggleFeatureTabs.checked = featureTabsEnabled;
+  if (toggleFeatureTabHover) toggleFeatureTabHover.checked = featureTabHoverExpand;
   if (toggleFeatureTheme) toggleFeatureTheme.checked = featureThemeEnabled;
   if (toggleFeatureFont) toggleFeatureFont.checked = featureFontEnabled;
 
   document.body.classList.toggle("tabs-feature-off", !featureTabsEnabled);
+  document.body.classList.toggle("tabs-hover-expand-off", !featureTabHoverExpand);
+  document.body.classList.toggle("right-tabs-pinned-open", featureTabsEnabled && !rightTabsCompact);
   document.body.classList.toggle("theme-feature-off", !featureThemeEnabled);
   document.body.classList.toggle("font-feature-off", !featureFontEnabled);
 
+  if (!featureTabHoverExpand && rightTabsSidebar) {
+    rightTabsSidebar.classList.remove("hover-open");
+  }
+
   try {
     localStorage.setItem("docx_feature_tabs", featureTabsEnabled ? "1" : "0");
+    localStorage.setItem("docx_feature_tab_hover_expand", featureTabHoverExpand ? "1" : "0");
     localStorage.setItem("docx_feature_theme", featureThemeEnabled ? "1" : "0");
     localStorage.setItem("docx_feature_font", featureFontEnabled ? "1" : "0");
     localStorage.setItem("docx_theme_enabled", featureThemeEnabled ? "1" : "0");
@@ -507,7 +1088,10 @@ function setReaderZoom(nextZoom: number) {
 }
 
 function toggleReaderDarkMode() {
-  if (!featureThemeEnabled) return;
+  if (!featureThemeEnabled) {
+    featureThemeEnabled = true;
+    applyFeatureFlags();
+  }
   const targetSite = activeTab;
   const nextDark = !getSiteDarkMode(targetSite);
   setSiteDarkMode(targetSite, nextDark, true);
@@ -531,8 +1115,10 @@ function syncReaderSettingsToAllIframes() {
           siteId: t.siteId,
           zoom: readerZoom,
           darkMode: getSiteDarkMode(t.siteId),
+          systemDark: systemDarkMode,
           themeEnabled: featureThemeEnabled,
           fontEnabled: featureFontEnabled,
+          customFontEnabled: featureFontEnabled,
         },
         "*"
       );
@@ -564,18 +1150,6 @@ function applyDownloadProgress(p: DownloadProgressPayload) {
   if (downloadProgressHud) {
     downloadProgressHud.style.display = "flex";
   }
-  if (dlHudTitle) {
-    dlHudTitle.textContent = `${brand.name} (${brand.version}) — ${p.phase}`;
-  }
-  if (dlHudPhase) {
-    dlHudPhase.textContent = `${pct}%`;
-  }
-  if (dlHudDetail) {
-    dlHudDetail.textContent = p.detail;
-  }
-  if (dlProgressBar) {
-    dlProgressBar.style.width = `${pct}%`;
-  }
 
   // Update inline card progress bar if card is rendered in DOM
   const cardWrap = document.querySelector(`[data-dl-card="${p.site_id}"]`) as HTMLElement | null;
@@ -601,8 +1175,52 @@ function applyDownloadProgress(p: DownloadProgressPayload) {
     deltaBtn.textContent = pct < 100 ? `⏳ Syncing... ${pct}%` : `✓ Updated (${pct}%)`;
   }
 
-  if (pct >= 100 && p.phase.toLowerCase().includes("complete")) {
+  const isDone =
+    pct >= 100 &&
+    (p.phase.toLowerCase().includes("complete") || p.phase.toLowerCase().includes("up to date"));
+  if (isDone) {
     activeDownloads.delete(p.site_id);
+  }
+
+  const activeList = Array.from(activeDownloads.values());
+  if (activeList.length > 1) {
+    const avgPct = Math.round(
+      activeList.reduce((acc, item) => acc + Math.max(0, Math.min(100, item.percent || 0)), 0) /
+        activeList.length
+    );
+    const activeNames = activeList
+      .slice(0, 4)
+      .map((item) => `${getSiteBrand(item.site_id).name} (${Math.round(item.percent || 0)}%)`)
+      .join(" • ");
+    const moreSuffix = activeList.length > 4 ? ` +${activeList.length - 4} more` : "";
+    if (dlHudTitle) {
+      dlHudTitle.textContent = `⚡ Downloading ${activeList.length} Docs in Parallel`;
+    }
+    if (dlHudPhase) {
+      dlHudPhase.textContent = `${avgPct}%`;
+    }
+    if (dlHudDetail) {
+      dlHudDetail.textContent = `${activeNames}${moreSuffix}`;
+    }
+    if (dlProgressBar) {
+      dlProgressBar.style.width = `${avgPct}%`;
+    }
+  } else {
+    if (dlHudTitle) {
+      dlHudTitle.textContent = `${brand.name} (${brand.version}) — ${p.phase}`;
+    }
+    if (dlHudPhase) {
+      dlHudPhase.textContent = `${pct}%`;
+    }
+    if (dlHudDetail) {
+      dlHudDetail.textContent = p.detail;
+    }
+    if (dlProgressBar) {
+      dlProgressBar.style.width = `${pct}%`;
+    }
+  }
+
+  if (activeDownloads.size === 0) {
     hudHideTimer = window.setTimeout(() => {
       if (activeDownloads.size === 0 && downloadProgressHud) {
         downloadProgressHud.style.display = "none";
@@ -638,12 +1256,12 @@ function buildUnifiedSitesList(): UnifiedSiteEntry[] {
     const localCommit = inst?.commit || rem?.local_commit || "";
     const remoteCommit = rem?.commit || inst?.commit || "latest";
     const updateAvailable =
-      Boolean(rem?.update_available) ||
-      (installed &&
-        Boolean(localCommit) &&
-        Boolean(rem?.commit) &&
-        rem!.commit !== "e3b0c442" &&
-        localCommit !== rem!.commit);
+      installed &&
+      Boolean(rem?.update_available) &&
+      Boolean(localCommit) &&
+      Boolean(rem?.commit) &&
+      rem!.commit !== "e3b0c442" &&
+      localCommit !== rem!.commit;
 
     const routeCount = inst?.route_count || rem?.routeCount || 25;
     const chunkCount = inst?.chunk_count || rem?.chunkCount || 25;
@@ -744,6 +1362,8 @@ function renderAllUI(showStartupNotification = false) {
   renderServerRail(sites);
   renderChannelDrawer(sites);
   renderHomeHub(sites);
+  renderBookmarksView();
+  updateBookmarkUI();
   updateNotificationBanner(sites, showStartupNotification);
 }
 
@@ -790,57 +1410,160 @@ function updateNotificationBanner(sites: UnifiedSiteEntry[], _forceShow = false)
   }
 }
 
-// 2. Render Column 1: Discord Server Rail with Original Brand Colors
+// 2. Render Column 1: Main Icon Rail = Pinned Docs (Drag-and-Drop Reorderable) + Any Currently Open Unpinned Docs
 function renderServerRail(sites: UnifiedSiteEntry[]) {
   if (!installedRailList) return;
-  const installed = sites.filter((s) => s.installed);
+  const siteMap = new Map(sites.map((s) => [s.id, s]));
+  const pinnedSites = pinnedSiteIds
+    .map((id) => siteMap.get(id))
+    .filter((s): s is UnifiedSiteEntry => Boolean(s));
+
+  // Collect any open docs (from browserTabs or activeTab) that are NOT pinned so they also show on the main sidebar with selected effect
+  const openUnpinnedIds: string[] = [];
+  if (!isSpecialNativeView(activeTab) && !isDocPinned(activeTab) && siteMap.has(activeTab)) {
+    openUnpinnedIds.push(activeTab);
+  }
+  for (const t of browserTabs) {
+    if (
+      !isSpecialNativeView(t.siteId) &&
+      !isDocPinned(t.siteId) &&
+      !openUnpinnedIds.includes(t.siteId) &&
+      siteMap.has(t.siteId)
+    ) {
+      openUnpinnedIds.push(t.siteId);
+    }
+  }
+  const openUnpinnedSites = openUnpinnedIds
+    .map((id) => siteMap.get(id))
+    .filter((s): s is UnifiedSiteEntry => Boolean(s));
 
   const railHomeWrap = document.getElementById("railHomeWrap");
   if (railHomeWrap) {
     railHomeWrap.classList.toggle("active", activeTab === "home");
     tabHome?.classList.toggle("active", activeTab === "home");
   }
+  updateBookmarkUI();
 
-  installedRailList.innerHTML = installed
-    .map((s) => {
+  const pinnedHtml = pinnedSites
+    .map((s, idx) => {
       const isActive = activeTab === s.id;
       return `
-        <div class="rail-item ${isActive ? "active" : ""}" data-rail-site="${escapeHtml(s.id)}">
+        <div
+          class="rail-item pinned-rail-item ${isActive ? "active" : ""}"
+          data-rail-site="${escapeHtml(s.id)}"
+          data-pinned-item="${escapeHtml(s.id)}"
+        >
           <span class="rail-pill"></span>
           <button
             class="rail-btn brand-rail-btn ${isActive ? "active" : ""}"
             data-open-site="${escapeHtml(s.id)}"
             style="--brand-color: ${s.color}; --brand-tint: ${s.bgTint};"
-            title="${escapeHtml(s.name)} (${escapeHtml(s.version)}) — Click to Open • Ctrl+Click / Middle-Click for New Tab${
+            title="📌 Pinned (#${idx + 1}): ${escapeHtml(s.name)} (${escapeHtml(s.version)}) — Click to Open • Drag to Reorder • Right-Click to Unpin${
         s.updateAvailable ? " — Update Available!" : ""
       }"
           >
             ${s.svg}
             ${s.updateAvailable ? `<span class="rail-update-dot" title="Update Available"></span>` : ""}
           </button>
+          <button class="rail-unpin-btn" data-unpin-site="${escapeHtml(s.id)}" title="Unpin ${escapeHtml(s.name)} from main rail">×</button>
         </div>
       `;
     })
     .join("");
 
+  const unpinnedOpenHtml =
+    openUnpinnedSites.length > 0
+      ? `${pinnedSites.length > 0 ? `<div class="rail-separator" title="Currently Open (Unpinned)"></div>` : ""}${openUnpinnedSites
+          .map((s) => {
+            const isActive = activeTab === s.id;
+            return `
+              <div class="rail-item ${isActive ? "active" : ""}" data-rail-site="${escapeHtml(s.id)}">
+                <span class="rail-pill"></span>
+                <button
+                  class="rail-btn brand-rail-btn ${isActive ? "active" : ""}"
+                  data-open-site="${escapeHtml(s.id)}"
+                  style="--brand-color: ${s.color}; --brand-tint: ${s.bgTint};"
+                  title="📖 Open: ${escapeHtml(s.name)} (${escapeHtml(s.version)}) — Click to View • Right-Click or click + to Pin to Sidebar"
+                >
+                  ${s.svg}
+                  ${s.updateAvailable ? `<span class="rail-update-dot" title="Update Available"></span>` : ""}
+                </button>
+                <button class="rail-pin-btn" data-pin-rail-site="${escapeHtml(s.id)}" title="Pin ${escapeHtml(s.name)} to main sidebar">+</button>
+              </div>
+            `;
+          })
+          .join("")}`
+      : "";
+
+  installedRailList.innerHTML = pinnedHtml + unpinnedOpenHtml;
+
   installedRailList.querySelectorAll("[data-open-site]").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
+    btn.addEventListener("click", async (e) => {
+      if (Date.now() < suppressPinClickUntil) {
+        e.preventDefault();
+        e.stopPropagation();
+        return;
+      }
       const me = e as MouseEvent;
       const siteId = btn.getAttribute("data-open-site");
-      if (siteId) switchTab(siteId, undefined, me.ctrlKey || me.metaKey);
+      if (!siteId) return;
+      const siteEntry = siteMap.get(siteId);
+      if (siteEntry && !siteEntry.installed) {
+        await runGitHubPackUpdate(siteId, true);
+      } else {
+        switchTab(siteId, undefined, me.ctrlKey || me.metaKey);
+      }
     });
-    btn.addEventListener("auxclick", (e) => {
+    btn.addEventListener("auxclick", async (e) => {
       const me = e as MouseEvent;
       if (me.button === 1) {
         me.preventDefault();
         const siteId = btn.getAttribute("data-open-site");
-        if (siteId) switchTab(siteId, undefined, true);
+        if (!siteId) return;
+        const siteEntry = siteMap.get(siteId);
+        if (siteEntry && !siteEntry.installed) {
+          await runGitHubPackUpdate(siteId, true);
+        } else {
+          switchTab(siteId, undefined, true);
+        }
       }
     });
+    btn.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+      const siteId = btn.getAttribute("data-open-site");
+      if (siteId) togglePinDoc(siteId);
+    });
   });
+
+  installedRailList.querySelectorAll("[data-unpin-site]").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const siteId = btn.getAttribute("data-unpin-site");
+      if (siteId) togglePinDoc(siteId);
+    });
+  });
+
+  installedRailList.querySelectorAll("[data-pin-rail-site]").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const siteId = btn.getAttribute("data-pin-rail-site");
+      if (siteId) togglePinDoc(siteId);
+    });
+  });
+
+  // Smooth pointer-based drag-and-drop reordering for pinned items on the main sidebar rail
+  attachPointerPinnedSort(
+    installedRailList,
+    "[data-pinned-item]",
+    "data-pinned-item",
+    "[data-unpin-site]",
+    siteMap
+  );
 }
 
-// 3. Render Column 2: Discord Channel Drawer with All 57 Sites & Original Brand Colored Icons
+// 3. Render Column 2: Second Column = All 57 Docs with Pin/Unpin & Drag-and-Drop Reordering
 function renderChannelDrawer(sites: UnifiedSiteEntry[]) {
   if (!drawerChannelsScroll) return;
 
@@ -855,73 +1578,134 @@ function renderChannelDrawer(sites: UnifiedSiteEntry[]) {
   const installedSites = sites.filter((s) => s.installed);
   const sidebarStatus = document.getElementById("sidebarEngineStatus");
   if (sidebarStatus) {
-    sidebarStatus.textContent = `${installedSites.length}/${sites.length} Installed • HTTP 206`;
+    sidebarStatus.textContent = `${pinnedSiteIds.length} Pinned • ${installedSites.length}/${sites.length} Installed`;
   }
+
+  const q = drawerFilterQuery.trim().toLowerCase();
+  const filteredSites = q
+    ? sites.filter((s) =>
+        `${s.name} ${s.id} ${s.category} ${s.version}`.toLowerCase().includes(q)
+      )
+    : sites;
+
+  const siteMap = new Map(sites.map((s) => [s.id, s]));
+  const pinnedList = pinnedSiteIds
+    .map((id) => siteMap.get(id))
+    .filter((s): s is UnifiedSiteEntry => Boolean(s));
+
+  const pinnedSectionHtml =
+    !q && pinnedList.length > 0
+      ? `
+    <div class="channel-category">
+      <span class="category-label">📌 PINNED SIDEBAR ORDER (${pinnedList.length})</span>
+      ${pinnedList
+        .map((s, idx) => {
+          return `
+        <div class="channel-item-row pinned-drawer-row" data-drawer-pinned-item="${escapeHtml(s.id)}">
+          <button
+            class="channel-item ${activeTab === s.id ? "active" : ""}"
+            data-drawer-site="${escapeHtml(s.id)}"
+            title="Pinned #${idx + 1}: ${escapeHtml(s.name)} — Click to Open • Drag to Reorder"
+          >
+            <span class="channel-drag-handle" title="Drag to reorder">⋮⋮</span>
+            <span class="channel-brand-icon" style="color: ${s.color};">${s.svg}</span>
+            <span class="channel-name">${escapeHtml(s.name)}</span>
+          </button>
+          <button
+            class="channel-pin-btn pinned"
+            data-pin-site="${escapeHtml(s.id)}"
+            title="Unpin ${escapeHtml(s.name)} from main sidebar"
+          >📌</button>
+        </div>
+      `;
+        })
+        .join("")}
+    </div>
+  `
+      : "";
 
   const homeChannelHtml = `
     <div class="channel-category">
-      <span class="category-label">DOCX HUB & INSTALLED (${installedSites.length})</span>
-      <button class="channel-item ${activeTab === "home" ? "active" : ""}" data-drawer-site="home">
-        <span class="channel-brand-icon" style="color: #38bdf8;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-        </span>
-        <span class="channel-name">${sites.length}-Site Hub & Store</span>
-        <span class="channel-tag">${sites.length}</span>
-      </button>
-      ${installedSites
-        .map(
-          (s) => `
-        <button class="channel-item ${activeTab === s.id ? "active" : ""}" data-drawer-site="${escapeHtml(s.id)}" title="${escapeHtml(s.name)} — Click to Open • Ctrl+Click / Middle-Click for New Tab">
-          <span class="channel-brand-icon" style="color: ${s.color};">${s.svg}</span>
-          <span class="channel-name">${escapeHtml(s.name)}</span>
-          ${
-            s.updateAvailable
-              ? `<span class="channel-tag update-tag">Update</span>`
-              : `<span class="channel-tag installed-tag">${escapeHtml(s.version)}</span>`
-          }
+      <span class="category-label">ALL DOCUMENTATION (${filteredSites.length}/${sites.length})</span>
+      <div class="channel-item-row">
+        <button class="channel-item ${activeTab === "home" ? "active" : ""}" data-drawer-site="home">
+          <span class="channel-brand-icon" style="color: #38bdf8;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          </span>
+          <span class="channel-name">${sites.length}-Site Hub & Store</span>
+          <span class="channel-tag">${sites.length}</span>
         </button>
-      `
-        )
-        .join("")}
+      </div>
     </div>
   `;
 
   const categoriesHtml = categories
     .map((cat) => {
-      const catSites = sites.filter((s) => s.category === cat);
+      const catSites = filteredSites.filter((s) => s.category === cat);
+      if (catSites.length === 0) return "";
       return `
         <div class="channel-category">
           <span class="category-label">${escapeHtml(cat.toUpperCase())} (${catSites.length})</span>
           ${catSites
-            .map(
-              (s) => `
-            <button
-              class="channel-item ${activeTab === s.id ? "active" : ""}"
-              data-drawer-site="${escapeHtml(s.id)}"
-              title="${escapeHtml(s.name)} — ${s.installed ? "Click to Open • Ctrl+Click for New Tab" : "Click to Install & Open"}"
-            >
-              <span class="channel-brand-icon" style="color: ${s.color};">${s.svg}</span>
-              <span class="channel-name">${escapeHtml(s.name)}</span>
-              ${
-                s.updateAvailable
-                  ? `<span class="channel-tag update-tag">⚡ Update</span>`
-                  : s.installed
-                  ? `<span class="channel-tag installed-tag">Ready</span>`
-                  : `<span class="channel-tag">☁ ${s.sizeMb}M</span>`
-              }
-            </button>
-          `
-            )
+            .map((s) => {
+              const pinned = isDocPinned(s.id);
+              return `
+            <div class="channel-item-row">
+              <button
+                class="channel-item ${activeTab === s.id ? "active" : ""}"
+                data-drawer-site="${escapeHtml(s.id)}"
+                title="${escapeHtml(s.name)} — ${s.installed ? "Click to Open • Ctrl+Click for New Tab • Right-Click to Pin/Unpin" : "Click to Install & Open"}"
+              >
+                <span class="channel-brand-icon" style="color: ${s.color};">${s.svg}</span>
+                <span class="channel-name">${escapeHtml(s.name)}</span>
+                ${
+                  s.updateAvailable
+                    ? `<span class="channel-tag update-tag">⚡ Update</span>`
+                    : s.installed
+                    ? `<span class="channel-tag installed-tag">${escapeHtml(s.version)}</span>`
+                    : `<span class="channel-tag">☁ ${s.sizeMb}M</span>`
+                }
+              </button>
+              <button
+                class="channel-pin-btn ${pinned ? "pinned" : ""}"
+                data-pin-site="${escapeHtml(s.id)}"
+                title="${pinned ? `Unpin ${escapeHtml(s.name)} from main sidebar` : `Pin ${escapeHtml(s.name)} to main sidebar`}"
+              >📌</button>
+            </div>
+          `;
+            })
             .join("")}
         </div>
       `;
     })
     .join("");
 
-  drawerChannelsScroll.innerHTML = homeChannelHtml + categoriesHtml;
+  drawerChannelsScroll.innerHTML = homeChannelHtml + pinnedSectionHtml + categoriesHtml;
+
+  drawerChannelsScroll.querySelectorAll("[data-pin-site]").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const siteId = btn.getAttribute("data-pin-site");
+      if (siteId) togglePinDoc(siteId);
+    });
+  });
+
+  attachPointerPinnedSort(
+    drawerChannelsScroll,
+    "[data-drawer-pinned-item]",
+    "data-drawer-pinned-item",
+    "[data-pin-site]",
+    siteMap
+  );
 
   drawerChannelsScroll.querySelectorAll("[data-drawer-site]").forEach((btn) => {
     btn.addEventListener("click", async (e) => {
+      if (Date.now() < suppressPinClickUntil) {
+        e.preventDefault();
+        e.stopPropagation();
+        return;
+      }
       const me = e as MouseEvent;
       const target = btn.getAttribute("data-drawer-site");
       if (!target) return;
@@ -952,6 +1736,12 @@ function renderChannelDrawer(sites: UnifiedSiteEntry[]) {
       } else {
         switchTab(target, undefined, true);
       }
+    });
+    btn.addEventListener("contextmenu", (e) => {
+      const target = btn.getAttribute("data-drawer-site");
+      if (!target || target === "home") return;
+      e.preventDefault();
+      togglePinDoc(target);
     });
   });
 }
@@ -1104,8 +1894,15 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
                   <button class="site-btn-open" data-card-open="${escapeHtml(s.id)}" title="Open Documentation (Ctrl+Click for New Tab)">
                     Open Docs
                   </button>
-                  <button class="site-btn-delta" data-card-new-tab="${escapeHtml(s.id)}" title="Open in a New Browser Tab">
+                  <button class="site-btn-delta" data-card-new-tab="${escapeHtml(s.id)}" title="Open in a New Vertical Tab">
                     + Tab
+                  </button>
+                  <button
+                    class="site-btn-delta ${isDocPinned(s.id) ? "highlight-update" : ""}"
+                    data-card-pin="${escapeHtml(s.id)}"
+                    title="${isDocPinned(s.id) ? "Unpin from Main Sidebar Rail" : "Pin to Main Sidebar Rail"}"
+                  >
+                    ${isDocPinned(s.id) ? "📌 Pinned" : "📌 Pin"}
                   </button>
                   <button
                     class="site-btn-delta ${s.updateAvailable ? "highlight-update" : ""}"
@@ -1126,6 +1923,13 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
                   <button class="site-btn-install" data-card-install="${escapeHtml(s.id)}" ${dl ? "disabled" : ""}>
                     ${dl ? `⏳ Downloading... ${dlPct}%` : `⬇ Download & Install (${s.sizeMb} MB)`}
                   </button>
+                  <button
+                    class="site-btn-delta ${isDocPinned(s.id) ? "highlight-update" : ""}"
+                    data-card-pin="${escapeHtml(s.id)}"
+                    title="${isDocPinned(s.id) ? "Unpin from Main Sidebar Rail" : "Pin to Main Sidebar Rail"}"
+                  >
+                    ${isDocPinned(s.id) ? "📌 Pinned" : "📌 Pin"}
+                  </button>
                 `
             }
           </div>
@@ -1133,6 +1937,13 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
       `;
     })
     .join("");
+
+  gridEl.querySelectorAll("[data-card-pin]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const siteId = btn.getAttribute("data-card-pin");
+      if (siteId) togglePinDoc(siteId);
+    });
+  });
 
   gridEl.querySelectorAll("[data-card-open]").forEach((btn) => {
     btn.addEventListener("click", (e) => {
@@ -1190,7 +2001,19 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
   });
 }
 
-async function runGitHubPackUpdate(siteId: string, openAfter = false) {
+const PARALLEL_DOWNLOAD_WORKERS = 6;
+
+async function syncLocalPacksOnlyAndRender() {
+  try {
+    installedPacksCache = await invoke<PackStatusInfo[]>("get_installed_packs");
+    for (const p of installedPacksCache) {
+      if (p.port) sitePorts[p.id] = p.port;
+    }
+  } catch {}
+  renderAllUI(false);
+}
+
+async function runGitHubPackUpdate(siteId: string, openAfter = false, isBatchItem = false) {
   const brand = getSiteBrand(siteId);
   applyDownloadProgress({
     site_id: siteId,
@@ -1202,7 +2025,7 @@ async function runGitHubPackUpdate(siteId: string, openAfter = false) {
   });
 
   const banner = document.getElementById("deltaStatusBanner");
-  if (banner) {
+  if (banner && !isBatchItem) {
     banner.style.display = "block";
     banner.textContent = `Downloading & verifying '${siteId}.docpack' from GitHub Releases...`;
   }
@@ -1211,31 +2034,96 @@ async function runGitHubPackUpdate(siteId: string, openAfter = false) {
     if (res.port) {
       sitePorts[siteId] = res.port;
     }
-    if (banner) {
+    // Keep remoteRegistryCache in sync immediately so the card flips to up-to-date without waiting on network
+    const remEntry = remoteRegistryCache.find((r) => r.id === siteId);
+    if (remEntry) {
+      remEntry.installed = true;
+      remEntry.local_commit = res.new_commit;
+      remEntry.commit = res.new_commit;
+      remEntry.update_available = false;
+    }
+    if (banner && !isBatchItem) {
       banner.textContent = `✓ [${res.site_id.toUpperCase()} ${res.old_commit} → ${res.new_commit}] ${res.message}`;
     }
     activeDownloads.delete(siteId);
-    await syncAllPacksAndRender(false);
+    if (isBatchItem) {
+      await syncLocalPacksOnlyAndRender();
+    } else {
+      await syncAllPacksAndRender(false);
+    }
     if (openAfter) {
       await switchTab(siteId);
     }
   } catch (err) {
     activeDownloads.delete(siteId);
-    if (downloadProgressHud) {
+    if (activeDownloads.size === 0 && downloadProgressHud) {
       downloadProgressHud.style.display = "none";
     }
-    if (banner) {
+    if (banner && !isBatchItem) {
       banner.textContent = `Update notice for ${siteId}: ${String(err)}`;
     }
     renderHomeHub(buildUnifiedSitesList());
   }
 }
 
+async function runBatchPackUpdatesInParallel(
+  targets: UnifiedSiteEntry[],
+  concurrency = PARALLEL_DOWNLOAD_WORKERS,
+  onProgress?: (completedCount: number, completedMb: number, totalMb: string, lastSite: UnifiedSiteEntry) => void
+) {
+  if (targets.length === 0) return;
+  const totalTargetMb = targets
+    .reduce((sum, s) => sum + (parseFloat(s.sizeMb) || 0), 0)
+    .toFixed(1);
+
+  let nextIdx = 0;
+  let completedCount = 0;
+  let completedMb = 0;
+
+  const workerCount = Math.min(concurrency, targets.length);
+  const workers = Array.from({ length: workerCount }, async () => {
+    while (nextIdx < targets.length) {
+      const idx = nextIdx++;
+      const s = targets[idx];
+      if (!s) break;
+      const packMb = parseFloat(s.sizeMb) || 0;
+      await runGitHubPackUpdate(s.id, false, true);
+      completedCount++;
+      completedMb += packMb;
+      onProgress?.(completedCount, completedMb, totalTargetMb, s);
+    }
+  });
+
+  await Promise.all(workers);
+  await syncAllPacksAndRender(false);
+}
+
 async function updateAllOutdatedPacks() {
   const sites = buildUnifiedSitesList().filter((s) => s.updateAvailable);
   if (sites.length === 0) return;
-  for (const s of sites) {
-    await runGitHubPackUpdate(s.id, false);
+  const banner = document.getElementById("deltaStatusBanner");
+  const btnUpdateAllPacks = document.getElementById("btnUpdateAllPacks") as HTMLButtonElement | null;
+  if (btnUpdateAllPacks) btnUpdateAllPacks.disabled = true;
+  if (btnAlertUpdateAll) btnAlertUpdateAll.disabled = true;
+
+  await runBatchPackUpdatesInParallel(
+    sites,
+    PARALLEL_DOWNLOAD_WORKERS,
+    (done, doneMb, totalMb, lastSite) => {
+      if (banner) {
+        banner.style.display = "block";
+        banner.textContent = `⚡ Parallel Update (${PARALLEL_DOWNLOAD_WORKERS}x) [${done}/${sites.length}]: Finished ${lastSite.name} — ${doneMb.toFixed(
+          1
+        )} / ${totalMb} MB completed...`;
+      }
+    }
+  );
+
+  if (btnUpdateAllPacks) btnUpdateAllPacks.disabled = false;
+  if (btnAlertUpdateAll) btnAlertUpdateAll.disabled = false;
+  if (banner) {
+    banner.style.display = "block";
+    banner.textContent = `✓ Updated all ${sites.length} documentation packs in parallel!`;
   }
 }
 
@@ -1268,29 +2156,30 @@ async function downloadAllOrRemainingDocs() {
     .reduce((sum, s) => sum + (parseFloat(s.sizeMb) || 0), 0)
     .toFixed(1);
 
-  let completedMb = 0;
-
-  for (let i = 0; i < targets.length; i++) {
-    const s = targets[i];
-    const packMb = parseFloat(s.sizeMb) || 0;
-    if (label) {
-      label.textContent = `⏳ [${i + 1}/${targets.length}] ${s.name} (${completedMb.toFixed(1)} / ${totalTargetMb} MB)`;
-    }
-    if (banner) {
-      banner.style.display = "block";
-      banner.textContent = `Batch Download [${i + 1}/${targets.length}]: ${s.name} (${s.sizeMb} MB) — ${completedMb.toFixed(
-        1
-      )} MB / ${totalTargetMb} MB completed...`;
-    }
-    await runGitHubPackUpdate(s.id, false);
-    completedMb += packMb;
+  if (label) {
+    label.textContent = `⏳ Downloading ${targets.length} Docs (${PARALLEL_DOWNLOAD_WORKERS}x Parallel)...`;
   }
 
+  await runBatchPackUpdatesInParallel(
+    targets,
+    PARALLEL_DOWNLOAD_WORKERS,
+    (done, doneMb, totalMb, lastSite) => {
+      if (label) {
+        label.textContent = `⏳ [${done}/${targets.length}] Parallel (${doneMb.toFixed(1)} / ${totalMb} MB)`;
+      }
+      if (banner) {
+        banner.style.display = "block";
+        banner.textContent = `⚡ Parallel Batch Download (${PARALLEL_DOWNLOAD_WORKERS}x) [${done}/${targets.length}]: Finished ${lastSite.name} — ${doneMb.toFixed(
+          1
+        )} MB / ${totalMb} MB completed...`;
+      }
+    }
+  );
+
   if (btn) btn.disabled = false;
-  await syncAllPacksAndRender(false);
   if (banner) {
     banner.style.display = "block";
-    banner.textContent = `✓ Downloaded/updated ${targets.length} documentation packs (${totalTargetMb} MB)! All ${allSites.length} packs are now up to date.`;
+    banner.textContent = `✓ Downloaded/updated ${targets.length} documentation packs (${totalTargetMb} MB) in parallel! All ${allSites.length} packs are now up to date.`;
   }
 }
 
@@ -1352,20 +2241,127 @@ function setupWindowControls() {
   });
 }
 
-// Discord Hover Sidebar & Collapsible Custom Topbar Logic
-function openHoverSidebar() {
+let lastPointerX = -1;
+let lastPointerY = -1;
+let rightTabsCloseTimer: number | null = null;
+
+function isPointerInsideLeftSidebar(): boolean {
+  return Boolean(discordSidebar?.matches(":hover") || leftEdgeSensor?.matches(":hover"));
+}
+
+function isPointerOverHomeIcon(yOverride?: number): boolean {
+  const railHomeWrap = document.getElementById("railHomeWrap");
+  if (railHomeWrap?.matches(":hover") || tabHome?.matches(":hover")) {
+    return true;
+  }
+  const checkY = typeof yOverride === "number" ? yOverride : lastPointerY;
+  if (checkY < 0) return false;
+  const rect = (railHomeWrap || tabHome)?.getBoundingClientRect();
+  if (!rect || rect.height === 0) {
+    return checkY >= 36 && checkY <= 104;
+  }
+  return checkY >= rect.top - 8 && checkY <= rect.bottom + 8;
+}
+
+function openHoverRightTabs() {
+  if (!rightTabsSidebar || !featureTabsEnabled || !featureTabHoverExpand) return;
+  if (rightTabsCloseTimer) {
+    window.clearTimeout(rightTabsCloseTimer);
+    rightTabsCloseTimer = null;
+  }
+  rightTabsSidebar.classList.add("hover-open");
+}
+
+function scheduleCloseHoverRightTabs(delay = 15) {
+  if (rightTabsCloseTimer) {
+    window.clearTimeout(rightTabsCloseTimer);
+    rightTabsCloseTimer = null;
+  }
+  if (delay <= 0) {
+    if (rightTabsSidebar && !rightTabsSidebar.matches(":hover")) {
+      rightTabsSidebar.classList.remove("hover-open");
+    }
+    return;
+  }
+  rightTabsCloseTimer = window.setTimeout(() => {
+    if (!rightTabsSidebar) return;
+    if (rightTabsSidebar.matches(":hover")) return;
+    rightTabsSidebar.classList.remove("hover-open");
+  }, delay);
+}
+
+function openHoverDrawer() {
+  if (drawerHoverCloseTimer) {
+    window.clearTimeout(drawerHoverCloseTimer);
+    drawerHoverCloseTimer = null;
+  }
   if (sidebarCloseTimer) {
     window.clearTimeout(sidebarCloseTimer);
     sidebarCloseTimer = null;
   }
   discordSidebar.classList.add("open");
+  discordSidebar.classList.add("drawer-hover-open");
 }
 
-function scheduleCloseHoverSidebar(delay = 220) {
-  if (sidebarPinned) return;
-  if (sidebarCloseTimer) window.clearTimeout(sidebarCloseTimer);
+function scheduleCloseHoverDrawer(delay = 20) {
+  if (drawerHoverCloseTimer) {
+    window.clearTimeout(drawerHoverCloseTimer);
+    drawerHoverCloseTimer = null;
+  }
+  if (delay <= 0) {
+    if (!isPointerInsideLeftSidebar()) {
+      discordSidebar.classList.remove("drawer-hover-open");
+    }
+    return;
+  }
+  drawerHoverCloseTimer = window.setTimeout(() => {
+    if (!isPointerInsideLeftSidebar()) {
+      discordSidebar.classList.remove("drawer-hover-open");
+    }
+  }, delay);
+}
+
+// Discord Hover Sidebar & Collapsible Custom Topbar Logic
+function openHoverSidebar(checkHomeY?: number) {
+  if (sidebarCloseTimer) {
+    window.clearTimeout(sidebarCloseTimer);
+    sidebarCloseTimer = null;
+  }
+  if (drawerHoverCloseTimer) {
+    window.clearTimeout(drawerHoverCloseTimer);
+    drawerHoverCloseTimer = null;
+  }
+  discordSidebar.classList.add("open");
+  if (isPointerOverHomeIcon(checkHomeY)) {
+    discordSidebar.classList.add("drawer-hover-open");
+  }
+}
+
+function scheduleCloseHoverSidebar(delay = 20) {
+  if (sidebarCloseTimer) {
+    window.clearTimeout(sidebarCloseTimer);
+    sidebarCloseTimer = null;
+  }
+  if (delay <= 0) {
+    if (!isPointerInsideLeftSidebar()) {
+      if (!sidebarPinned) {
+        discordSidebar.classList.remove("open");
+      }
+      discordSidebar.classList.remove("drawer-hover-open");
+    }
+    return;
+  }
   sidebarCloseTimer = window.setTimeout(() => {
-    discordSidebar.classList.remove("open");
+    if (isPointerInsideLeftSidebar()) {
+      if (lastPointerX <= 74 && isPointerOverHomeIcon()) {
+        discordSidebar.classList.add("drawer-hover-open");
+      }
+      return;
+    }
+    if (!sidebarPinned) {
+      discordSidebar.classList.remove("open");
+    }
+    discordSidebar.classList.remove("drawer-hover-open");
   }, delay);
 }
 
@@ -1380,6 +2376,9 @@ function toggleDrawerHidden() {
   try {
     localStorage.setItem("docx_drawer_hidden", String(drawerHidden));
   } catch {}
+  if (drawerHidden) {
+    discordSidebar.classList.remove("drawer-hover-open");
+  }
   applyDrawerState();
 }
 
@@ -1420,11 +2419,119 @@ function scheduleClosePeekTopbar(delay = 350) {
   }, delay);
 }
 
+function handleGlobalPointerMove(e: MouseEvent | PointerEvent) {
+  lastPointerX = e.clientX;
+  lastPointerY = e.clientY;
+
+  // 1. Left Sidebar & Doc Hub First Icon fast-cursor detection + immediate collapse outside bounds
+  const sidebarIsOpen = sidebarPinned || discordSidebar.classList.contains("open");
+  const drawerIsOpen = discordSidebar.classList.contains("drawer-hover-open") || !drawerHidden;
+  if (e.clientX <= 22 || (sidebarIsOpen && e.clientX <= 74)) {
+    openHoverSidebar(e.clientY);
+  } else if (discordSidebar.classList.contains("drawer-hover-open") && e.clientX > 320) {
+    scheduleCloseHoverDrawer(0);
+    if (!sidebarPinned) scheduleCloseHoverSidebar(0);
+  } else if (!drawerIsOpen && !sidebarPinned && discordSidebar.classList.contains("open") && e.clientX > 76) {
+    scheduleCloseHoverSidebar(0);
+  }
+
+  // 2. Right Vertical Tabs fast-cursor detection + immediate collapse outside bounds
+  if (rightTabsSidebar && featureTabsEnabled) {
+    const isHoverOpen = rightTabsSidebar.classList.contains("hover-open");
+    if (!isHoverOpen) {
+      if (e.clientX >= window.innerWidth - 52 && e.clientY >= 36) {
+        openHoverRightTabs();
+      }
+    } else if (e.clientX < window.innerWidth - 228 && !rightTabsSidebar.matches(":hover")) {
+      scheduleCloseHoverRightTabs(0);
+    }
+  }
+}
+
 function setupSidebarAndTopbarHover() {
   applyDrawerState();
-  leftEdgeSensor.addEventListener("mouseenter", () => openHoverSidebar());
-  discordSidebar.addEventListener("mouseenter", () => openHoverSidebar());
-  discordSidebar.addEventListener("mouseleave", () => scheduleCloseHoverSidebar(220));
+
+  window.addEventListener("pointermove", handleGlobalPointerMove, { passive: true });
+  window.addEventListener("mousemove", handleGlobalPointerMove, { passive: true });
+  window.addEventListener("pointerover", handleGlobalPointerMove, { passive: true });
+
+  // Catch fast cursor exits from the doc viewport/iframe into either sidebar
+  const onViewportLeave = (e: MouseEvent | PointerEvent) => {
+    lastPointerX = e.clientX;
+    lastPointerY = e.clientY;
+    if (!viewportContainer) return;
+    const vRect = viewportContainer.getBoundingClientRect();
+    if (e.clientX <= vRect.left + 32) {
+      openHoverSidebar(e.clientY);
+    } else if (e.clientX >= vRect.right - 32) {
+      openHoverRightTabs();
+    }
+    if (e.clientY <= vRect.top + 18) {
+      peekTopbar();
+    }
+  };
+  viewportContainer?.addEventListener("mouseleave", onViewportLeave, { passive: true });
+  viewportContainer?.addEventListener("pointerleave", onViewportLeave, { passive: true });
+
+  leftEdgeSensor.addEventListener("mouseenter", (e) => {
+    lastPointerX = e.clientX;
+    lastPointerY = e.clientY;
+    openHoverSidebar(e.clientY);
+  });
+  leftEdgeSensor.addEventListener("mousemove", (e) => {
+    lastPointerX = e.clientX;
+    lastPointerY = e.clientY;
+    openHoverSidebar(e.clientY);
+  });
+  leftEdgeSensor.addEventListener("mouseleave", () => scheduleCloseHoverSidebar(35));
+
+  discordSidebar.addEventListener("mouseenter", (e) => {
+    lastPointerX = e.clientX;
+    lastPointerY = e.clientY;
+    openHoverSidebar(e.clientY);
+  });
+  discordSidebar.addEventListener("mousemove", (e) => {
+    lastPointerX = e.clientX;
+    lastPointerY = e.clientY;
+    if (sidebarCloseTimer) {
+      window.clearTimeout(sidebarCloseTimer);
+      sidebarCloseTimer = null;
+    }
+    if (drawerHoverCloseTimer) {
+      window.clearTimeout(drawerHoverCloseTimer);
+      drawerHoverCloseTimer = null;
+    }
+    if (e.clientX <= 74 && isPointerOverHomeIcon(e.clientY)) {
+      openHoverDrawer();
+    }
+  });
+  discordSidebar.addEventListener("mouseleave", (e) => {
+    lastPointerX = e.clientX;
+    lastPointerY = e.clientY;
+    scheduleCloseHoverDrawer(15);
+    scheduleCloseHoverSidebar(15);
+  });
+
+  rightTabsSidebar?.addEventListener("mouseenter", () => openHoverRightTabs());
+  rightTabsSidebar?.addEventListener("pointerenter", () => openHoverRightTabs());
+  rightTabsSidebar?.addEventListener("mousemove", () => openHoverRightTabs());
+  rightTabsSidebar?.addEventListener("mouseleave", (e) => {
+    lastPointerX = e.clientX;
+    lastPointerY = e.clientY;
+    scheduleCloseHoverRightTabs(0);
+  });
+
+  // Hovering on the first icon (Doc Hub) in the main sidebar expands the second column (.discord-channel-drawer)
+  // and keeps it expanded as long as the cursor stays anywhere inside #discordSidebar.
+  const railHomeWrap = document.getElementById("railHomeWrap");
+  const channelDrawer = document.querySelector(".discord-channel-drawer") as HTMLElement | null;
+  railHomeWrap?.addEventListener("mouseenter", () => openHoverDrawer());
+  railHomeWrap?.addEventListener("mouseover", () => openHoverDrawer());
+  railHomeWrap?.addEventListener("pointerenter", () => openHoverDrawer());
+  tabHome?.addEventListener("mouseenter", () => openHoverDrawer());
+  tabHome?.addEventListener("mouseover", () => openHoverDrawer());
+  tabHome?.addEventListener("pointerenter", () => openHoverDrawer());
+  channelDrawer?.addEventListener("mouseenter", () => openHoverDrawer());
 
   btnToggleDrawer?.addEventListener("click", () => toggleDrawerHidden());
   btnCollapseDrawer?.addEventListener("click", () => toggleDrawerHidden());
@@ -1478,7 +2585,7 @@ async function refreshExtraSearchEntries() {
     }
   }
 
-  const seen = new Set<string>();
+  const byKey = new Map<string, SearchEntry>();
   const merged: SearchEntry[] = [];
 
   const pushUnique = (items: SearchEntry[], requireInstalled: boolean) => {
@@ -1488,15 +2595,41 @@ async function refreshExtraSearchEntries() {
         continue;
       }
       const normPath = item.path.replace(/\/+$/, "") || "/";
-      const key = `${item.site}:${normPath}`;
-      if (seen.has(key)) continue;
-      seen.add(key);
+      const key = `${item.site}:${normPath}:${(item.title || "").toLowerCase()}`;
+      const existing = byKey.get(key);
+      if (existing) {
+        if (item.keywords && item.keywords.length > (existing.keywords?.length || 0)) {
+          existing.keywords = item.keywords;
+        }
+        if (item.headings && item.headings.length > (existing.headings?.length || 0)) {
+          existing.headings = item.headings;
+        }
+        if (item.description && item.description.length > (existing.description?.length || 0)) {
+          existing.description = item.description;
+        }
+        continue;
+      }
+      // Pre-compute normalized lowercase fields for fast full-content search
+      const brand = getSiteBrand(item.site);
+      const anyItem = item as any;
+      anyItem._siteLower = `${item.site} ${brand.name}`.toLowerCase();
+      anyItem._titleLower = (item.title || "").toLowerCase();
+      anyItem._descLower = (item.description || item.preview || "").toLowerCase();
+      anyItem._pathLower = (item.path || "").toLowerCase();
+      anyItem._catLower = (item.category || "").toLowerCase();
+      const kwArr = (item.keywords || []).map((k) => String(k).toLowerCase());
+      const hdArr = (item.headings || []).map((h) => String(h).toLowerCase());
+      anyItem._kwSet = new Set(kwArr);
+      anyItem._headingsLower = [...kwArr, ...hdArr].join(" ");
+
+      byKey.set(key, item);
       merged.push(item);
     }
   };
 
-  pushUnique(baseSearchIndex, false);
+  // Prioritize deep dynamicExtra entries from .search.json / .docpack first
   pushUnique(dynamicExtra, false);
+  pushUnique(baseSearchIndex, false);
   pushUnique(bundledExtraSearchIndex, true);
 
   searchIndex = merged;
@@ -1675,6 +2808,7 @@ function getActiveBrowserTab(): BrowserTab {
 
 function formatTabTitle(siteId: string, rawTitle?: string, pathOrUrl?: string): string {
   if (siteId === "home") return "57-Site Hub";
+  if (siteId === "bookmarks") return "Saved Bookmarks";
   const brand = getSiteBrand(siteId);
   if (rawTitle && rawTitle.trim()) {
     const cleaned = rawTitle
@@ -1702,25 +2836,48 @@ function formatTabTitle(siteId: string, rawTitle?: string, pathOrUrl?: string): 
 
 function renderBrowserTabs() {
   if (!browserTabsList) return;
+  if (rightTabsSidebar) {
+    rightTabsSidebar.classList.toggle("compact", rightTabsCompact);
+  }
+  document.body.classList.toggle("right-tabs-pinned-open", featureTabsEnabled && !rightTabsCompact);
+  if (rightTabsCount) {
+    rightTabsCount.textContent = String(browserTabs.length);
+  }
 
   browserTabsList.innerHTML = browserTabs
     .map((t) => {
       const isActive = t.id === activeBrowserTabId;
       const isHome = t.siteId === "home";
+      const isBookmarks = t.siteId === "bookmarks";
       const brand = getSiteBrand(t.siteId);
       const badgeHtml = isHome
-        ? `<span class="browser-tab-badge home-badge">⌂</span>`
-        : `<span class="browser-tab-badge" style="background: ${brand.bgTint}; color: ${brand.color}; border: 1px solid ${brand.color}44;">${escapeHtml(
-            brand.badge
-          )}</span>`;
+        ? `<span class="browser-tab-badge home-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5V20a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 20v-9.5z"/><path d="M9 21.5v-7.5h6v7.5"/></svg></span>`
+        : isBookmarks
+        ? `<span class="browser-tab-badge bookmarks-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></span>`
+        : `<span class="browser-tab-badge" style="background: ${brand.bgTint}; color: ${brand.color}; border: 1px solid ${brand.color}44;">${brand.svg || escapeHtml(brand.badge)}</span>`;
       const showClose = browserTabs.length > 1 || !isHome;
+      const subLabel = isHome
+        ? "All 57 Docs"
+        : isBookmarks
+        ? `${bookmarksList.length} Saved Page${bookmarksList.length === 1 ? "" : "s"}`
+        : `${brand.version} · ${t.pathOrUrl || "/"}`;
+      const tabAccent = isHome ? "#ffffff" : isBookmarks ? "#f59e0b" : brand.color;
+      const tabTint = isHome
+        ? "rgba(255, 255, 255, 0.14)"
+        : isBookmarks
+        ? "rgba(245, 158, 11, 0.16)"
+        : brand.bgTint;
 
       return `
-        <div class="browser-tab-item ${isActive ? "active" : ""}" data-tab-id="${t.id}" title="${escapeHtml(
+        <div class="browser-tab-item ${isActive ? "active" : ""}" data-tab-id="${t.id}" style="--tab-accent: ${tabAccent}; --tab-tint: ${tabTint};" title="${escapeHtml(
         t.title
-      )} (${escapeHtml(t.pathOrUrl)})">
+      )} (${escapeHtml(subLabel)})">
+          <span class="tab-rail-pill"></span>
           ${badgeHtml}
-          <span class="browser-tab-title">${escapeHtml(t.title)}</span>
+          <div class="browser-tab-info">
+            <span class="browser-tab-title">${escapeHtml(t.title)}</span>
+            <span class="browser-tab-sub">${escapeHtml(subLabel)}</span>
+          </div>
           ${
             showClose
               ? `<button class="browser-tab-close" data-close-tab="${t.id}" title="Close Tab (Ctrl+W)">×</button>`
@@ -1767,7 +2924,7 @@ function renderBrowserTabs() {
 }
 
 function ensureTabDomPanel(tab: BrowserTab) {
-  if (tab.siteId === "home" || !viewportContainer) return;
+  if (isSpecialNativeView(tab.siteId) || !viewportContainer) return;
   if (tab.panelEl && tab.iframeEl && tab.loadingEl) return;
 
   const brand = getSiteBrand(tab.siteId);
@@ -1796,7 +2953,7 @@ function ensureTabDomPanel(tab: BrowserTab) {
 }
 
 async function loadTabFrame(tab: BrowserTab, forceReload = false) {
-  if (tab.siteId === "home") return;
+  if (isSpecialNativeView(tab.siteId)) return;
 
   if (tab.siteId !== "tailwind" && tab.siteId !== "shadcn") {
     try {
@@ -1832,16 +2989,19 @@ async function loadTabFrame(tab: BrowserTab, forceReload = false) {
       syncReaderSettingsToAllIframes();
       try {
         const docTitle = iframe.contentDocument?.title;
-        const docPath = iframe.contentWindow?.location?.pathname;
+        const loc = iframe.contentWindow?.location;
+        const docPath = loc ? `${loc.pathname}${loc.search || ""}${loc.hash || ""}` : undefined;
         if (docPath) tab.pathOrUrl = docPath;
         tab.title = formatTabTitle(tab.siteId, docTitle, tab.pathOrUrl);
-        renderBrowserTabs();
       } catch {}
+      renderBrowserTabs();
+      updateBookmarkUI();
     };
     iframe.src = url;
   } else {
     loadingEl.style.display = "none";
     syncReaderSettingsToAllIframes();
+    updateBookmarkUI();
   }
 }
 
@@ -1857,28 +3017,39 @@ function activateBrowserTab(tabId: string) {
   renderBrowserTabs();
   renderServerRail(sites);
   renderChannelDrawer(sites);
+  if (target.siteId === "bookmarks") {
+    renderBookmarksView();
+  }
+  updateBookmarkUI();
 
   if (titlebarCurrentView) {
     if (target.siteId === "home") {
       titlebarCurrentView.textContent = `${sites.length}-Site Hub`;
+    } else if (target.siteId === "bookmarks") {
+      titlebarCurrentView.textContent = `Saved Bookmarks (${bookmarksList.length})`;
     } else {
       const brand = getSiteBrand(target.siteId);
       titlebarCurrentView.textContent = `${brand.name} (${brand.version})`;
     }
   }
 
-  // Hide legacy static panels and only show either viewHome or the active tab's panelEl
+  // Hide legacy static panels and only show viewHome, viewBookmarks, or the active tab's panelEl
   [viewTailwind, viewShadcn, viewDynamic].forEach((v) => v?.classList.remove("active"));
   if (target.siteId === "home") {
     viewHome?.classList.add("active");
+    viewBookmarks?.classList.remove("active");
+  } else if (target.siteId === "bookmarks") {
+    viewHome?.classList.remove("active");
+    viewBookmarks?.classList.add("active");
   } else {
     viewHome?.classList.remove("active");
+    viewBookmarks?.classList.remove("active");
     ensureTabDomPanel(target);
   }
 
   for (const t of browserTabs) {
     if (t.panelEl) {
-      t.panelEl.classList.toggle("active", t.id === target.id && target.siteId !== "home");
+      t.panelEl.classList.toggle("active", t.id === target.id && !isSpecialNativeView(target.siteId));
     }
   }
 }
@@ -1914,6 +3085,7 @@ function closeBrowserTab(tabId: string) {
     activateBrowserTab(nextTab.id);
   } else {
     renderBrowserTabs();
+    renderServerRail(buildUnifiedSitesList());
   }
 }
 
@@ -1936,7 +3108,7 @@ function openBlankPickerTab() {
 async function duplicateActiveBrowserTab() {
   if (!featureTabsEnabled) return;
   const current = getActiveBrowserTab();
-  if (!current || current.siteId === "home") {
+  if (!current || isSpecialNativeView(current.siteId)) {
     openBlankPickerTab();
     return;
   }
@@ -1969,46 +3141,50 @@ async function switchTab(tab: string, targetPathOrUrl?: string, forceNewTab = fa
       pathOrUrl: "/",
     };
     if (browserTabs.length === 0) browserTabs.push(single);
-    if (tab === "home") {
+    if (isSpecialNativeView(tab)) {
       if (single.panelEl) {
         single.panelEl.remove();
         single.panelEl = undefined;
         single.iframeEl = undefined;
         single.loadingEl = undefined;
       }
-      single.siteId = "home";
-      single.title = "57-Site Hub";
-      single.pathOrUrl = "/";
+      single.siteId = tab;
+      single.title = formatTabTitle(tab);
+      single.pathOrUrl = tab === "bookmarks" ? "/bookmarks" : "/";
       activateBrowserTab(single.id);
-      if (!sidebarPinned) scheduleCloseHoverSidebar(120);
+      if (!sidebarPinned) scheduleCloseHoverSidebar(25);
       return;
     }
     const entryPath = targetPathOrUrl || getDefaultEntryPath(tab);
-    const siteChanged = single.siteId !== tab;
+    const siteChanged = single.siteId !== tab || Boolean(targetPathOrUrl);
     single.siteId = tab;
     single.pathOrUrl = entryPath;
     single.title = formatTabTitle(tab, undefined, entryPath);
     activateBrowserTab(single.id);
     await loadTabFrame(single, siteChanged);
-    if (!sidebarPinned) scheduleCloseHoverSidebar(120);
+    if (!sidebarPinned) scheduleCloseHoverSidebar(25);
     return;
   }
 
-  if (tab === "home" && !forceNewTab) {
-    const existingHome = browserTabs.find((t) => t.siteId === "home");
-    if (existingHome) {
-      activateBrowserTab(existingHome.id);
+  if (isSpecialNativeView(tab) && !forceNewTab) {
+    const existingSpecial = browserTabs.find((t) => t.siteId === tab);
+    if (existingSpecial) {
+      activateBrowserTab(existingSpecial.id);
     } else {
-      const homeTab: BrowserTab = {
+      const specialTab: BrowserTab = {
         id: `tab-${++tabSeq}`,
-        siteId: "home",
-        title: "57-Site Hub",
-        pathOrUrl: "/",
+        siteId: tab,
+        title: formatTabTitle(tab),
+        pathOrUrl: tab === "bookmarks" ? "/bookmarks" : "/",
       };
-      browserTabs.unshift(homeTab);
-      activateBrowserTab(homeTab.id);
+      if (tab === "home") {
+        browserTabs.unshift(specialTab);
+      } else {
+        browserTabs.push(specialTab);
+      }
+      activateBrowserTab(specialTab.id);
     }
-    if (!sidebarPinned) scheduleCloseHoverSidebar(120);
+    if (!sidebarPinned) scheduleCloseHoverSidebar(25);
     return;
   }
 
@@ -2026,7 +3202,7 @@ async function switchTab(tab: string, targetPathOrUrl?: string, forceNewTab = fa
     browserTabs.push(newTab);
     activateBrowserTab(newTab.id);
     await loadTabFrame(newTab, true);
-    if (!sidebarPinned) scheduleCloseHoverSidebar(120);
+    if (!sidebarPinned) scheduleCloseHoverSidebar(25);
     return;
   }
 
@@ -2038,7 +3214,7 @@ async function switchTab(tab: string, targetPathOrUrl?: string, forceNewTab = fa
     current.title = formatTabTitle(tab, undefined, defaultEntryPath);
     activateBrowserTab(current.id);
     await loadTabFrame(current, true);
-    if (!sidebarPinned) scheduleCloseHoverSidebar(120);
+    if (!sidebarPinned) scheduleCloseHoverSidebar(25);
     return;
   }
 
@@ -2048,21 +3224,28 @@ async function switchTab(tab: string, targetPathOrUrl?: string, forceNewTab = fa
       current.pathOrUrl = targetPathOrUrl;
       current.title = formatTabTitle(tab, undefined, targetPathOrUrl);
       activateBrowserTab(current.id);
-      await loadTabFrame(current, false);
+      await loadTabFrame(current, true);
     } else {
       activateBrowserTab(current.id);
     }
-    if (!sidebarPinned) scheduleCloseHoverSidebar(120);
+    if (!sidebarPinned) scheduleCloseHoverSidebar(25);
     return;
   }
 
-  // Case 4: User is viewing Doc A and clicks Doc B in the Sidebar/Search:
-  // If Doc B already has an open tab (and no new deep path was forced), switch to it;
+  // Case 4: User is viewing Doc A (or Bookmarks) and clicks Doc B in the Sidebar/Search/Bookmarks:
+  // If Doc B already has an open tab, switch to it (and navigate to targetPathOrUrl if specified);
   // otherwise open Doc B in a new tab so Doc A stays open in its tab!
   const existingSiteTab = browserTabs.find((t) => t.siteId === tab);
-  if (existingSiteTab && !targetPathOrUrl) {
-    activateBrowserTab(existingSiteTab.id);
-    if (!sidebarPinned) scheduleCloseHoverSidebar(120);
+  if (existingSiteTab) {
+    if (targetPathOrUrl && existingSiteTab.pathOrUrl !== targetPathOrUrl) {
+      existingSiteTab.pathOrUrl = targetPathOrUrl;
+      existingSiteTab.title = formatTabTitle(tab, undefined, targetPathOrUrl);
+      activateBrowserTab(existingSiteTab.id);
+      await loadTabFrame(existingSiteTab, true);
+    } else {
+      activateBrowserTab(existingSiteTab.id);
+    }
+    if (!sidebarPinned) scheduleCloseHoverSidebar(25);
     return;
   }
 
@@ -2077,7 +3260,7 @@ async function switchTab(tab: string, targetPathOrUrl?: string, forceNewTab = fa
   await loadTabFrame(newSiteTab, true);
 
   if (!sidebarPinned) {
-    scheduleCloseHoverSidebar(120);
+    scheduleCloseHoverSidebar(25);
   }
 }
 
@@ -2095,6 +3278,101 @@ function resolveUrl(site: string, pathOrUrl: string): string {
 }
 
 // Universal Search Logic across all installed documentation packs
+function scoreSearchEntries(q: string, tokens: string[], subTokens: string[], filterSite: string): SearchEntry[] {
+  const scored: { item: SearchEntry; score: number }[] = [];
+
+  for (let i = 0; i < searchIndex.length; i++) {
+    const item = searchIndex[i];
+    if (filterSite !== "all" && item.site !== filterSite) continue;
+
+    const anyItem = item as any;
+    const siteLower: string = anyItem._siteLower ?? `${item.site} ${getSiteBrand(item.site).name}`.toLowerCase();
+    const titleLower: string = anyItem._titleLower ?? (item.title || "").toLowerCase();
+    const descLower: string = anyItem._descLower ?? (item.description || item.preview || "").toLowerCase();
+    const pathLower: string = anyItem._pathLower ?? (item.path || "").toLowerCase();
+    const catLower: string = anyItem._catLower ?? (item.category || "").toLowerCase();
+    const kwSet: Set<string> | undefined = anyItem._kwSet;
+    const headingsLower: string =
+      anyItem._headingsLower ??
+      [...(item.keywords || []), ...(item.headings || [])].map((k) => k.toLowerCase()).join(" ");
+
+    let score = 0;
+
+    if (titleLower === q || titleLower === `std::${q}`) score += 160;
+    else if (titleLower.startsWith(q) || titleLower.startsWith(`std::${q}`)) score += 95;
+    else if (titleLower.includes(q)) score += 60;
+
+    if (kwSet && (kwSet.has(q) || kwSet.has(`std::${q}`))) {
+      score += 75;
+    }
+
+    if (pathLower.endsWith(`/${q}`) || pathLower.endsWith(`#${q}`)) {
+      score += 80;
+    } else if (pathLower.includes(`/${q}`) || pathLower.includes(`-${q}-`)) {
+      score += 42;
+    }
+
+    if (item.site.toLowerCase() === q) score += 70;
+    else if (siteLower.includes(q)) score += 28;
+
+    let matchedTokens = 0;
+    for (let t = 0; t < tokens.length; t++) {
+      const token = tokens[t];
+      let tokHit = false;
+      if (titleLower.includes(token)) {
+        score += 34;
+        tokHit = true;
+      }
+      if (kwSet && kwSet.has(token)) {
+        score += 40;
+        tokHit = true;
+      } else if (headingsLower.includes(token)) {
+        score += 20;
+        tokHit = true;
+      }
+      if (pathLower.includes(token)) {
+        score += 18;
+        tokHit = true;
+      }
+      if (catLower.includes(token)) {
+        score += 12;
+        tokHit = true;
+      }
+      if (descLower.includes(token)) {
+        score += 14;
+        tokHit = true;
+      }
+      if (siteLower.includes(token)) {
+        score += 18;
+        tokHit = true;
+      }
+      if (tokHit) matchedTokens++;
+    }
+
+    for (let s = 0; s < subTokens.length; s++) {
+      const sub = subTokens[s];
+      if (kwSet && kwSet.has(sub)) score += 28;
+      else if (titleLower.includes(sub)) score += 18;
+      else if (headingsLower.includes(sub)) score += 10;
+    }
+
+    if (tokens.length > 1 && matchedTokens === tokens.length) {
+      score += 45;
+    }
+
+    if (score > 0 && activeTab !== "home" && item.site === activeTab) {
+      score += 10;
+    }
+
+    if (score > 0) {
+      scored.push({ item, score });
+    }
+  }
+
+  scored.sort((a, b) => b.score - a.score);
+  return scored.slice(0, 75).map((r) => r.item);
+}
+
 function performSearch(query: string) {
   const q = query.trim().toLowerCase();
   if (!q) {
@@ -2129,48 +3407,16 @@ function performSearch(query: string) {
     }
   } else {
     const tokens = q.split(/\s+/).filter(Boolean);
-    const scored = searchIndex
-      .filter((item) => currentFilter === "all" || item.site === currentFilter)
-      .map((item) => {
-        let score = 0;
-        const brand = getSiteBrand(item.site);
-        const siteLower = `${item.site} ${brand.name}`.toLowerCase();
-        const titleLower = (item.title || "").toLowerCase();
-        const descLower = (item.description || item.preview || "").toLowerCase();
-        const pathLower = (item.path || "").toLowerCase();
-        const categoryLower = (item.category || "").toLowerCase();
-        const headingsLower = [...(item.keywords || []), ...(item.headings || [])]
-          .map((k) => k.toLowerCase())
-          .join(" ");
+    const subTokens = q
+      .split(/[\s:./()-]+/)
+      .filter((t) => t.length >= 2 && !tokens.includes(t));
 
-        if (titleLower === q) score += 120;
-        else if (titleLower.startsWith(q)) score += 70;
-        else if (titleLower.includes(q)) score += 45;
-
-        if (item.site.toLowerCase() === q || brand.name.toLowerCase() === q) score += 65;
-        else if (siteLower.includes(q)) score += 30;
-
-        for (const token of tokens) {
-          if (titleLower.includes(token)) score += 28;
-          if (siteLower.includes(token)) score += 22;
-          if (headingsLower.includes(token)) score += 16;
-          if (pathLower.includes(token)) score += 12;
-          if (categoryLower.includes(token)) score += 12;
-          if (descLower.includes(token)) score += 6;
-        }
-
-        // Slight boost for the currently open documentation site
-        if (score > 0 && activeTab !== "home" && item.site === activeTab) {
-          score += 8;
-        }
-
-        return { item, score };
-      })
-      .filter((res) => res.score > 0)
-      .sort((a, b) => b.score - a.score)
-      .map((res) => res.item);
-
-    currentResults = scored.slice(0, 60);
+    let results = scoreSearchEntries(q, tokens, subTokens, currentFilter);
+    // If a single-doc filter was active and had 0 matches, automatically search across all installed docs
+    if (results.length === 0 && currentFilter !== "all") {
+      results = scoreSearchEntries(q, tokens, subTokens, "all");
+    }
+    currentResults = results;
   }
 
   selectedIndex = 0;
@@ -2187,11 +3433,26 @@ function renderSearchResults(query: string) {
     return;
   }
 
+  const qLower = query.trim().toLowerCase();
+  const qTokens = qLower ? qLower.split(/[\s:./()-]+/).filter((t) => t.length >= 2) : [];
+
   searchResultsList.innerHTML = currentResults
     .map((item, idx) => {
       const isSelected = idx === selectedIndex;
       const brand = getSiteBrand(item.site);
-      const snippet = item.description || item.preview || item.path;
+      let snippet = item.description || item.preview || item.path;
+
+      if (qLower && !snippet.toLowerCase().includes(qLower)) {
+        const matchedExtras = [...(item.headings || []), ...(item.keywords || [])]
+          .filter((h) => {
+            const hl = String(h).toLowerCase();
+            return hl.includes(qLower) || qTokens.some((tk) => hl.includes(tk));
+          })
+          .slice(0, 5);
+        if (matchedExtras.length > 0) {
+          snippet = `${matchedExtras.join(", ")} — ${snippet}`;
+        }
+      }
 
       return `
         <div class="search-result-item ${isSelected ? "selected" : ""}" data-index="${idx}">
@@ -2244,11 +3505,23 @@ function selectResult(index: number, forceNewTab = false) {
 function highlight(text: string, query: string): string {
   if (!query) return escapeHtml(text);
   const escaped = escapeHtml(text);
-  const q = escapeRegex(query.trim());
-  const regex = new RegExp(`(${q})`, "gi");
+  const parts = Array.from(
+    new Set(
+      query
+        .trim()
+        .split(/[\s:./()-]+/)
+        .filter((t) => t.length >= 2)
+        .concat([query.trim()])
+    )
+  )
+    .filter(Boolean)
+    .sort((a, b) => b.length - a.length)
+    .map(escapeRegex);
+  if (parts.length === 0) return escaped;
+  const regex = new RegExp(`(${parts.join("|")})`, "gi");
   return escaped.replace(
     regex,
-    "<mark style='background:rgba(255,255,255,0.22);color:#fff;border-radius:2px;padding:0 2px;'>$1</mark>"
+    "<mark style='background:rgba(56,189,248,0.28);color:#fff;border-radius:2px;padding:0 2px;'>$1</mark>"
   );
 }
 
@@ -2297,17 +3570,46 @@ async function checkServerHealth(): Promise<void> {
 
 function getActiveIframe(): HTMLIFrameElement | null {
   const cur = getActiveBrowserTab();
-  if (!cur || cur.siteId === "home") return null;
+  if (!cur || isSpecialNativeView(cur.siteId)) return null;
   return cur.iframeEl || null;
 }
 
 function setupEventListeners() {
   tabHome?.addEventListener("click", () => switchTab("home"));
+  tabBookmarks?.addEventListener("click", (e) => {
+    const me = e as MouseEvent;
+    switchTab("bookmarks", undefined, me.ctrlKey || me.metaKey);
+  });
+  tabBookmarks?.addEventListener("auxclick", (e) => {
+    const me = e as MouseEvent;
+    if (me.button === 1) {
+      me.preventDefault();
+      switchTab("bookmarks", undefined, true);
+    }
+  });
+  btnBookmarkPage?.addEventListener("click", () => toggleBookmarkCurrentPage());
+  bookmarksFilterInput?.addEventListener("input", () => {
+    bookmarksFilterQuery = bookmarksFilterInput.value;
+    renderBookmarksView();
+  });
+
   brandBtn?.addEventListener("click", () => switchTab("home"));
   titlebarBrandHome?.addEventListener("click", () => switchTab("home"));
 
   btnNewBrowserTab?.addEventListener("click", () => openBlankPickerTab());
   btnDuplicateBrowserTab?.addEventListener("click", () => duplicateActiveBrowserTab());
+  btnToggleRightTabs?.addEventListener("click", () => {
+    rightTabsCompact = !rightTabsCompact;
+    try {
+      localStorage.setItem("docx_right_tabs_compact", String(rightTabsCompact));
+    } catch {}
+    renderBrowserTabs();
+  });
+
+  drawerFilterInput?.addEventListener("input", () => {
+    drawerFilterQuery = drawerFilterInput.value;
+    renderChannelDrawer(buildUnifiedSitesList());
+  });
 
   btnZoomOut?.addEventListener("click", () => setReaderZoom(readerZoom - 10));
   btnZoomReset?.addEventListener("click", () => setReaderZoom(100));
@@ -2355,6 +3657,11 @@ function setupEventListeners() {
 
   toggleFeatureTabs?.addEventListener("change", () => {
     featureTabsEnabled = Boolean(toggleFeatureTabs.checked);
+    applyFeatureFlags();
+  });
+
+  toggleFeatureTabHover?.addEventListener("change", () => {
+    featureTabHoverExpand = Boolean(toggleFeatureTabHover.checked);
     applyFeatureFlags();
   });
 
@@ -2492,7 +3799,7 @@ function setupEventListeners() {
     renderSearchFilterChips();
   });
 
-  // Cross-iframe messages for Ctrl+K, Zoom, Dark Reader, Multi-Tab, Fullscreen, and Edge Hover
+  // Cross-iframe messages for Ctrl+K, Zoom, Dark Reader, Multi-Tab, Fullscreen, Bookmark, and Edge Hover
   window.addEventListener("message", (e) => {
     if (!e.data || !e.data.type) return;
     if (e.data.type === "OPEN_UNIVERSAL_SEARCH") {
@@ -2523,8 +3830,11 @@ function setupEventListeners() {
           matchingTab.pathOrUrl
         );
         renderBrowserTabs();
+        updateBookmarkUI();
       }
       syncReaderSettingsToAllIframes();
+    } else if (e.data.type === "DOCX_TOGGLE_BOOKMARK") {
+      toggleBookmarkCurrentPage();
     } else if (e.data.type === "DOCX_SITE_THEME_CHANGED") {
       if (e.data.siteId) {
         setSiteDarkMode(String(e.data.siteId), Boolean(e.data.darkMode), false);
@@ -2534,7 +3844,7 @@ function setupEventListeners() {
     } else if (e.data.type === "DOCX_OPEN_NEW_TAB") {
       const siteId = String(e.data.siteId || activeTab);
       const urlOrPath = String(e.data.url || "/docs");
-      if (siteId && siteId !== "home") {
+      if (siteId && !isSpecialNativeView(siteId)) {
         switchTab(siteId, urlOrPath, true);
       }
     } else if (e.data.type === "DOCX_TAB_ACTION") {
@@ -2549,11 +3859,39 @@ function setupEventListeners() {
     } else if (e.data.type === "DOCX_ZOOM_RESET") {
       setReaderZoom(100);
     } else if (e.data.type === "HOVER_LEFT_EDGE") {
-      openHoverSidebar();
+      const iframeY = typeof e.data.clientY === "number" ? e.data.clientY : -1;
+      const vTop = viewportContainer ? viewportContainer.getBoundingClientRect().top : 38;
+      const parentY = iframeY >= 0 ? vTop + iframeY : lastPointerY;
+      lastPointerX = 12;
+      if (parentY >= 0) lastPointerY = parentY;
+      openHoverSidebar(parentY);
+      if (iframeY >= 0 && iframeY <= 68) {
+        openHoverDrawer();
+      }
+    } else if (e.data.type === "HOVER_RIGHT_EDGE") {
+      if (rightTabsSidebar) {
+        const rRect = rightTabsSidebar.getBoundingClientRect();
+        lastPointerX = rRect.left + 12;
+      }
+      openHoverRightTabs();
+    } else if (e.data.type === "IFRAME_CURSOR_CENTER") {
+      lastPointerX = 420;
+      if (rightTabsSidebar?.classList.contains("hover-open") && !rightTabsSidebar.matches(":hover")) {
+        scheduleCloseHoverRightTabs(0);
+      }
+      if (
+        (discordSidebar.classList.contains("open") || discordSidebar.classList.contains("drawer-hover-open")) &&
+        !discordSidebar.matches(":hover")
+      ) {
+        scheduleCloseHoverDrawer(0);
+        scheduleCloseHoverSidebar(0);
+      }
     } else if (e.data.type === "HOVER_TOP_EDGE") {
       peekTopbar();
     } else if (e.data.type === "IFRAME_INTERACT") {
       closeFeaturesPopover();
+      rightTabsSidebar?.classList.remove("hover-open");
+      discordSidebar.classList.remove("drawer-hover-open");
       if (!sidebarPinned) {
         discordSidebar.classList.remove("open");
       }
@@ -2583,6 +3921,12 @@ function setupEventListeners() {
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "w" && !e.shiftKey && !e.altKey) {
       e.preventDefault();
       closeBrowserTab(activeBrowserTabId);
+      return;
+    }
+
+    if ((e.ctrlKey || e.metaKey) && !e.shiftKey && !e.altKey && e.key.toLowerCase() === "d") {
+      e.preventDefault();
+      toggleBookmarkCurrentPage();
       return;
     }
 
@@ -2673,14 +4017,14 @@ function setupEventListeners() {
 
   btnReload?.addEventListener("click", () => {
     const cur = getActiveBrowserTab();
-    if (cur && cur.siteId !== "home") {
+    if (cur && !isSpecialNativeView(cur.siteId)) {
       loadTabFrame(cur, true);
     }
   });
 
   btnExternal?.addEventListener("click", () => {
     const cur = getActiveBrowserTab();
-    if (cur && cur.siteId !== "home") {
+    if (cur && !isSpecialNativeView(cur.siteId)) {
       window.open(resolveUrl(cur.siteId, cur.pathOrUrl || "/docs"), "_blank");
     }
   });

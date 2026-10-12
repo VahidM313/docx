@@ -1,1 +1,1056 @@
-{"id":"oxc","name":"Oxc (Oxidation Compiler)","version":"latest","commit":"fbdc5dc0","origin":"https://oxc.rs","entryPath":"/docs/guide/introduction.html","updatedAt":"2026-10-10T16:44:13.655Z","totalBytes":1279077,"chunkCount":123,"routes":{"/docs/guide/introduction.html":{"offset":0,"length":8735,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2513644881c679e2"},"/docs/guide/usage/linter.html":{"offset":8735,"length":11811,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"36246cdccb2fa2e0"},"/docs/guide/usage/linter/ci.html":{"offset":20546,"length":10731,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"44d0042b1ee20104"},"/docs/guide/usage/formatter.html":{"offset":31277,"length":10361,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9e37916d1a0462cc"},"/docs/guide/usage/oxc-node.html":{"offset":41638,"length":10377,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f7a5390bf4e2971c"},"/docs/guide/usage/linter/nested-config.html":{"offset":52015,"length":11180,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bc142d0867117f83"},"/docs/guide/usage/minifier.html":{"offset":63195,"length":9112,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f2a8e2ff6f1c04a5"},"/docs/guide/usage/linter/editors.html":{"offset":72307,"length":10334,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0e267db71dc22f64"},"/docs/guide/usage/parser.html":{"offset":82641,"length":9542,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8fe0108d9bd777c0"},"/docs/guide/usage/resolver.html":{"offset":92183,"length":8688,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9e2e7c7c5c05fd2d"},"/docs/guide/usage/transformer.html":{"offset":100871,"length":10253,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4292379036b78c92"},"/docs/guide/what-is-oxc.html":{"offset":111124,"length":9690,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"32c7b67471f5f4e0"},"/docs/guide/usage/coding-agents.html":{"offset":120814,"length":9464,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4a865d39241d6100"},"/docs/learn/parser_in_rust/intro.html":{"offset":130278,"length":8612,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b9fbc2c7ae1cc9cb"},"/docs/guide/usage/linter/quickstart.html":{"offset":138890,"length":10909,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"885c3623693bb58d"},"/docs/contribute/introduction.html":{"offset":149799,"length":9460,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a382b98a8ece497e"},"/docs/guide/usage/linter/config.html":{"offset":159259,"length":14834,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"aff41f9f22092d51"},"/docs/guide/usage/linter/js-plugins.html":{"offset":174093,"length":11181,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c430a257cd3fea14"},"/docs/guide/usage/linter/output-formats.html":{"offset":185274,"length":11633,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6628691939a42a36"},"/docs/guide/usage/linter/ignore-files.html":{"offset":196907,"length":10427,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"50dbec0ce8d89e5a"},"/docs/guide/usage/linter/ignore-comments.html":{"offset":207334,"length":10093,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1e83d075ddd1f2b5"},"/docs/guide/usage/linter/lsp-config-reference.html":{"offset":217427,"length":9920,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f3724287ae3bd0fb"},"/docs/guide/usage/linter/automatic-fixes.html":{"offset":227347,"length":9329,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"61ca6f06711bb243"},"/docs/guide/usage/linter/multi-file-analysis.html":{"offset":236676,"length":9701,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ca77f985260ca5fa"},"/docs/guide/usage/linter/plugins.html":{"offset":246377,"length":11079,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"35cbc97de2c80288"},"/docs/guide/usage/linter/type-aware.html":{"offset":257456,"length":13661,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b4686e7a01e1aba7"},"/docs/guide/usage/linter/config-file-reference.html":{"offset":271117,"length":16158,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1752c2eff5fbf851"},"/docs/guide/usage/linter/writing-js-plugins.html":{"offset":287275,"length":13347,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4d7b8b51ce8ea114"},"/docs/guide/usage/linter/cli.html":{"offset":300622,"length":11097,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"03383deb1a6a0c82"},"/docs/guide/usage/linter/rules.html":{"offset":311719,"length":29259,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"659b12e7deb9db66"},"/docs/guide/usage/linter/migrate-from-eslint.html":{"offset":340978,"length":12107,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"77414418e8993481"},"/docs/guide/usage/linter/versioning.html":{"offset":353085,"length":10143,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c0eb37c8b3eb1f4d"},"/docs/guide/usage/formatter/quickstart.html":{"offset":363228,"length":10649,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0b046ac1fcc6285c"},"/docs/guide/usage/transformer/lowering.html":{"offset":373877,"length":11190,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b2fcbc977e506bdc"},"/docs/guide/usage/formatter/ignore-files.html":{"offset":385067,"length":9880,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"fa7772516d3413dd"},"/docs/guide/usage/formatter/language-support.html":{"offset":394947,"length":9841,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ec7f11744dbca56a"},"/docs/guide/usage/formatter/ci.html":{"offset":404788,"length":10333,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"71b63b4ba703a345"},"/docs/guide/usage/formatter/cli.html":{"offset":415121,"length":9231,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5fd626ec6cf31b29"},"/docs/guide/usage/formatter/config-file-reference.html":{"offset":424352,"length":15617,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"27eaf7082f72fc4c"},"/docs/guide/usage/formatter/config.html":{"offset":439969,"length":11595,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bcb54625d0c02abb"},"/docs/guide/usage/formatter/editors.html":{"offset":451564,"length":10125,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9f2da624c8e0ad78"},"/docs/guide/usage/formatter/unsupported-features.html":{"offset":461689,"length":8821,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ac3a0943479746ed"},"/docs/guide/usage/formatter/ignore-comments.html":{"offset":470510,"length":9084,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eebf4d133e85b015"},"/docs/guide/usage/formatter/sorting.html":{"offset":479594,"length":10661,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"20ba43ed7146366a"},"/docs/guide/usage/formatter/migrate-from-prettier.html":{"offset":490255,"length":12162,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"de939e72aff00732"},"/docs/guide/usage/formatter/embedded-formatting.html":{"offset":502417,"length":9798,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"565b9e9050a8b336"},"/docs/guide/usage/transformer/typescript.html":{"offset":512215,"length":12566,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b09e9282a9888bf2"},"/docs/guide/usage/transformer/jsx.html":{"offset":524781,"length":11146,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"457e0d140ef88fd2"},"/docs/guide/usage/transformer/react-compiler.html":{"offset":535927,"length":9945,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"704c87b1d3d0a61a"},"/docs/guide/usage/transformer/global-variable-replacement.html":{"offset":545872,"length":10249,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"bb636aa3f00aaf88"},"/docs/guide/projects.html":{"offset":556121,"length":10349,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"32926ea042180597"},"/docs/guide/usage/minifier/dead-code-elimination.html":{"offset":566470,"length":12066,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5ab924586e8f4668"},"/docs/guide/usage/minifier/faq.html":{"offset":578536,"length":8935,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b78f2218d4f3a1b9"},"/docs/guide/usage/minifier/syntax-normalization.html":{"offset":587471,"length":9311,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"06cf52ef9e94e40b"},"/docs/guide/usage/transformer/isolated-declarations.html":{"offset":596782,"length":9195,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b4fb9121c5691732"},"/docs/guide/media.html":{"offset":605977,"length":8874,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"72928e6e7d6bcae8"},"/docs/guide/usage/minifier/mangling.html":{"offset":614851,"length":10381,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"62be8f13fdebc24b"},"/docs/guide/usage/minifier/codegen.html":{"offset":625232,"length":9812,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4ebb65159bf356f8"},"/docs/guide/usage/linter/rules/import/no-cycle.html":{"offset":635044,"length":10227,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c18874cbbdb66e9d"},"/docs/guide/benchmarks.html":{"offset":645271,"length":8852,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8fe9d7502122a5b4"},"/docs/guide/usage/transformer/plugins.html":{"offset":654123,"length":10747,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"aa84cff7ec8431c4"},"/docs/guide/troubleshooting.html":{"offset":664870,"length":8847,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c9f3225058e97e69"},"/docs/guide/usage/linter/rules":{"offset":673717,"length":29259,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b3b8658c3d8602aa"},"/docs/guide/usage/linter/rules/eslint/accessor-pairs":{"offset":702976,"length":9956,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"faadc6b28ad584e8"},"/docs/guide/usage/linter/rules/jsx_a11y/anchor-ambiguous-text":{"offset":712932,"length":9962,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e71c7ebd1d7d01be"},"/docs/guide/usage/linter/rules/jsx_a11y/aria-proptypes":{"offset":722894,"length":9767,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e5d71aeadd19540a"},"/docs/guide/usage/linter/rules/jsx_a11y/aria-role":{"offset":732661,"length":10716,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4d0a0a47bfdfc7e7"},"/docs/guide/usage/linter/rules/jsx_a11y/anchor-is-valid":{"offset":743377,"length":10792,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"930c99e25e704ece"},"/docs/guide/usage/linter/rules/oxc/approx-constant":{"offset":754169,"length":9666,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d1195b494e440531"},"/docs/guide/usage/linter/rules/jsx_a11y/alt-text":{"offset":763835,"length":10147,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3afda47e5b715776"},"/docs/guide/usage/linter/rules/typescript/adjacent-overload-signatures":{"offset":773982,"length":9914,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a46acebd21e7b13b"},"/docs/guide/usage/linter/rules/jsx_a11y/aria-unsupported-elements":{"offset":783896,"length":9798,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"edcc34b81ffd7393"},"/docs/guide/usage/linter/rules/jsx_a11y/aria-activedescendant-has-tabindex":{"offset":793694,"length":9916,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"15e3f4ac14bfdd18"},"/docs/guide/usage/linter/rules/eslint/array-callback-return":{"offset":803610,"length":10107,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"20d7e5e42eebe63b"},"/docs/guide/usage/linter/rules/eslint/arrow-body-style":{"offset":813717,"length":10595,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"924e50e56b8ea044"},"/docs/guide/usage/linter/rules/typescript/array-type":{"offset":824312,"length":10318,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"73975b52f58c8f6e"},"/docs/guide/usage/linter/rules/promise/always-return":{"offset":834630,"length":10660,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"e1d4351c7f62e512"},"/docs/guide/usage/linter/rules/jsx_a11y/anchor-has-content":{"offset":845290,"length":10113,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2d7f26c961d436d6"},"/docs/guide/usage/linter/rules/jsx_a11y/aria-props":{"offset":855403,"length":9778,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"768156236783d6d1"},"/docs/guide/usage/linter/rules/promise/avoid-new":{"offset":865181,"length":9748,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a0b7bbfcab1ab8c1"},"/docs/guide/usage/linter/rules/oxc/bad-bitwise-operator":{"offset":874929,"length":9809,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0e22ab920b6b0338"},"/docs/guide/usage/linter/rules/oxc/bad-comparison-sequence":{"offset":884738,"length":9698,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8c4f6976b6a830c5"},"/docs/guide/usage/linter/rules/oxc/bad-char-at-comparison":{"offset":894436,"length":9667,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c2da40a219c82d2d"},"/docs/guide/usage/linter/rules/oxc/bad-array-method-on-arguments":{"offset":904103,"length":9970,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0d7a5a3ac2ff5c4c"},"/docs/guide/usage/linter/rules/oxc/bad-object-literal-comparison":{"offset":914073,"length":9745,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dba70ea92d57dd8f"},"/docs/guide/usage/linter/rules/eslint/block-scoped-var":{"offset":923818,"length":10131,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"cd41f21b40fb9a25"},"/docs/guide/usage/linter/rules/typescript/ban-tslint-comment":{"offset":933949,"length":9601,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ab7ba26b4c6ae068"},"/docs/guide/usage/linter/rules/typescript/await-thenable":{"offset":943550,"length":10003,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"3bfad84e892f17ba"},"/docs/guide/usage/linter/rules/typescript/ban-types":{"offset":953553,"length":9798,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"f3119157f09ff66d"},"/docs/guide/usage/linter/rules/oxc/branches-sharing-code":{"offset":963351,"length":9763,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8b63e1965b8789a8"},"/docs/guide/usage/linter/rules/oxc/bad-replace-all-arg":{"offset":973114,"length":9643,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"013f76d06a6e8ff8"},"/docs/guide/usage/linter/rules/typescript/ban-ts-comment":{"offset":982757,"length":10412,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9ab9a54f0889b4f4"},"/docs/guide/usage/linter/rules/oxc/bad-min-max-func":{"offset":993169,"length":9671,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9f85864864e602f4"},"/docs/guide/usage/linter/rules/jsx_a11y/autocomplete-valid":{"offset":1002840,"length":9763,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1c58336ce6d26f8d"},"/docs/guide/usage/linter/rules/oxc/bad-match-all-arg":{"offset":1012603,"length":9633,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"91348f93e88ee994"},"/docs/guide/usage/linter/rules/typescript/class-literal-property-style":{"offset":1022236,"length":9869,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"6bea1cd7decc5c59"},"/docs/guide/usage/linter/rules/unicorn/catch-error-name":{"offset":1032105,"length":10184,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"dbd060c7151e3fea"},"/docs/guide/usage/linter/rules/eslint/capitalized-comments":{"offset":1042289,"length":10079,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"b1f2cc93df13c9a4"},"/docs/guide/usage/linter/rules/react/button-has-type":{"offset":1052368,"length":9829,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"aca1a9a10adb3f15"},"/docs/guide/usage/linter/rules/jsdoc/check-tag-names":{"offset":1062197,"length":10361,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"ee96d4c8aaef8176"},"/docs/guide/usage/linter/rules/react/checked-requires-onchange-or-readonly":{"offset":1072558,"length":10199,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"14de035825c8cc4b"},"/docs/guide/usage/linter/rules/node/callback-return":{"offset":1082757,"length":10468,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"8a8d28a62bf99244"},"/docs/guide/usage/linter/rules/promise/catch-or-return":{"offset":1093225,"length":10085,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"a6ea89450ff7b191"},"/docs/guide/usage/linter/rules/jsdoc/check-property-names":{"offset":1103310,"length":9785,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d68ad0c90ca791d1"},"/docs/guide/usage/linter/rules/react/capitalized-calls":{"offset":1113095,"length":9834,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"7a111c18bf4e55c5"},"/docs/guide/usage/linter/rules/jsx_a11y/click-events-have-key-events":{"offset":1122929,"length":9731,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"aaa1c9ebb477a618"},"/docs/guide/usage/linter/rules/jsdoc/check-access":{"offset":1132660,"length":9895,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0d5314529b301658"},"/docs/guide/usage/linter/rules/eslint/class-methods-use-this":{"offset":1142555,"length":10219,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"d2e67929ea7249ac"},"/docs/guide/usage/linter/rules/unicorn/consistent-empty-array-spread":{"offset":1152774,"length":9752,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"651659b309e4836d"},"/docs/guide/usage/linter/rules/vitest/consistent-each-for":{"offset":1162526,"length":10137,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"9de2de2e1cedbc6c"},"/docs/guide/usage/linter/rules/eslint/complexity":{"offset":1172663,"length":10543,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"0daf9a1eca9b9be4"},"/docs/guide/usage/linter/rules/unicorn/consistent-assert":{"offset":1183206,"length":9688,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"4ed8faec77d654ba"},"/docs/guide/usage/linter/rules/unicorn/consistent-date-clone":{"offset":1192894,"length":9745,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2539571b81c6d59f"},"/docs/guide/usage/linter/rules/vue/component-definition-name-casing":{"offset":1202639,"length":9858,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"c0e08a86ca9fa873"},"/docs/guide/usage/linter/rules/unicorn/consistent-function-scoping":{"offset":1212497,"length":10492,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"eb5eb23046e7b08a"},"/docs/guide/usage/linter/rules/unicorn/consistent-existence-index-check":{"offset":1222989,"length":9872,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"1f1883f6c8e5a5d7"},"/docs/guide/usage/linter/rules/typescript/consistent-generic-constructors":{"offset":1232861,"length":9883,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"abebff0d5c47632b"},"/docs/guide/usage/linter/rules/typescript/consistent-return":{"offset":1242744,"length":10013,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"5912c721bddde31d"},"/docs/guide/usage/linter/rules/typescript/consistent-indexed-object-style":{"offset":1252757,"length":10047,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"edb0b2809e6bcbc4"},"/docs/guide/usage/linter/rules/unicorn/consistent-template-literal-escape":{"offset":1262804,"length":9662,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"34b5fb9e54272d6c"},"/logo-without-border.svg":{"offset":1272466,"length":1846,"mime":"image/svg+xml","gzipped":true,"hash":"5c2800dbe491029b"},"/assets/oxc-dark.CUw-fM3A.svg":{"offset":1274312,"length":2382,"mime":"image/svg+xml","gzipped":true,"hash":"111550e82277667b"},"/assets/oxc-light.Bj9AWGSR.svg":{"offset":1276694,"length":2383,"mime":"image/svg+xml","gzipped":true,"hash":"3ab81408da97b49e"},"/docs":{"offset":0,"length":8735,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2513644881c679e2"},"/":{"offset":0,"length":8735,"mime":"text/html; charset=utf-8","gzipped":true,"hash":"2513644881c679e2"}}}
+{
+  "id": "oxc",
+  "name": "Oxc (Oxidation Compiler)",
+  "version": "latest",
+  "commit": "bdb71849",
+  "origin": "https://oxc.rs",
+  "entryPath": "/docs/guide/introduction.html",
+  "updatedAt": "2026-10-11T10:37:33.937Z",
+  "totalBytes": 2254734,
+  "chunkCount": 147,
+  "routes": {
+    "/docs/guide/introduction.html": {
+      "offset": 0,
+      "length": 7782,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a4c2b15ead66f4da"
+    },
+    "/docs/guide/usage/linter.html": {
+      "offset": 7782,
+      "length": 10872,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "634506e7ea3d8e01"
+    },
+    "/docs/contribute/introduction.html": {
+      "offset": 18654,
+      "length": 8525,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3973050d11d3ac24"
+    },
+    "/docs/guide/usage/linter/nested-config.html": {
+      "offset": 27179,
+      "length": 10229,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c88942b500f6738b"
+    },
+    "/docs/guide/usage/oxc-node.html": {
+      "offset": 37408,
+      "length": 9438,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "981a0784334bffa2"
+    },
+    "/docs/guide/what-is-oxc.html": {
+      "offset": 46846,
+      "length": 8751,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "696d1ea5533d124f"
+    },
+    "/docs/guide/usage/parser.html": {
+      "offset": 55597,
+      "length": 8603,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "69a99f3b956ea874"
+    },
+    "/docs/guide/usage/linter/config.html": {
+      "offset": 64200,
+      "length": 13880,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d6faff72cce527b9"
+    },
+    "/docs/guide/usage/resolver.html": {
+      "offset": 78080,
+      "length": 7738,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7666b5b009ddec76"
+    },
+    "/docs/guide/usage/formatter.html": {
+      "offset": 85818,
+      "length": 9423,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0da573386d852319"
+    },
+    "/docs/guide/usage/coding-agents.html": {
+      "offset": 95241,
+      "length": 8508,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "82319c4479497b4c"
+    },
+    "/docs/guide/usage/linter/editors.html": {
+      "offset": 103749,
+      "length": 9383,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d49a03d0fc1b10fa"
+    },
+    "/docs/learn/parser_in_rust/intro.html": {
+      "offset": 113132,
+      "length": 7684,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "76e9808948460dcd"
+    },
+    "/docs/guide/usage/minifier.html": {
+      "offset": 120816,
+      "length": 8172,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "47b101778cfea507"
+    },
+    "/docs/guide/usage/linter/ci.html": {
+      "offset": 128988,
+      "length": 9783,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ab9586111dcf10e2"
+    },
+    "/docs/guide/usage/linter/quickstart.html": {
+      "offset": 138771,
+      "length": 9954,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8b7f6a56fa104d8c"
+    },
+    "/docs/guide/usage/transformer.html": {
+      "offset": 148725,
+      "length": 9320,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0a67e981ece55f8c"
+    },
+    "/docs/guide/usage/linter/plugins.html": {
+      "offset": 158045,
+      "length": 10137,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bc58d8b385294911"
+    },
+    "/docs/guide/usage/linter/type-aware.html": {
+      "offset": 168182,
+      "length": 12699,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7f8408ec3e086757"
+    },
+    "/docs/guide/usage/formatter/quickstart.html": {
+      "offset": 180881,
+      "length": 9698,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5b62dc52662bf46a"
+    },
+    "/docs/guide/usage/linter/migrate-from-eslint.html": {
+      "offset": 190579,
+      "length": 11173,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "59d893b13c67db53"
+    },
+    "/docs/guide/usage/linter/automatic-fixes.html": {
+      "offset": 201752,
+      "length": 8379,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bfb12ffa609f7947"
+    },
+    "/docs/guide/usage/linter/ignore-files.html": {
+      "offset": 210131,
+      "length": 9477,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5736326a79b412d3"
+    },
+    "/docs/guide/usage/linter/ignore-comments.html": {
+      "offset": 219608,
+      "length": 9140,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d5f7ae5be61577cf"
+    },
+    "/docs/guide/usage/linter/writing-js-plugins.html": {
+      "offset": 228748,
+      "length": 12399,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "168b9726107b5711"
+    },
+    "/docs/guide/usage/linter/cli.html": {
+      "offset": 241147,
+      "length": 10147,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6b13986fb2c63f64"
+    },
+    "/docs/guide/usage/linter/lsp-config-reference.html": {
+      "offset": 251294,
+      "length": 8978,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "2dee3f4481449e8a"
+    },
+    "/docs/guide/usage/linter/js-plugins.html": {
+      "offset": 260272,
+      "length": 10232,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c16a19744677e67b"
+    },
+    "/docs/guide/usage/linter/config-file-reference.html": {
+      "offset": 270504,
+      "length": 15192,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b2ea9dd6f6837fec"
+    },
+    "/docs/guide/usage/linter/rules.html": {
+      "offset": 285696,
+      "length": 28217,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "10f85d69d054ae33"
+    },
+    "/docs/guide/usage/linter/output-formats.html": {
+      "offset": 313913,
+      "length": 10673,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "51fded1146b62f39"
+    },
+    "/docs/guide/usage/linter/versioning.html": {
+      "offset": 324586,
+      "length": 9196,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0ce04035db3cacee"
+    },
+    "/docs/guide/usage/linter/multi-file-analysis.html": {
+      "offset": 333782,
+      "length": 8761,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "448d0f780f50351f"
+    },
+    "/docs/guide/usage/transformer/react-compiler.html": {
+      "offset": 342543,
+      "length": 8999,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "005316e340cb360d"
+    },
+    "/docs/guide/usage/transformer/lowering.html": {
+      "offset": 351542,
+      "length": 10261,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c77d5b079a9c956f"
+    },
+    "/docs/guide/usage/formatter/embedded-formatting.html": {
+      "offset": 361803,
+      "length": 8847,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "78e250b06af2984d"
+    },
+    "/docs/guide/usage/formatter/ignore-files.html": {
+      "offset": 370650,
+      "length": 8940,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "eb3e8f65ee4b0e42"
+    },
+    "/docs/guide/usage/formatter/editors.html": {
+      "offset": 379590,
+      "length": 9173,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "72d064391ad9b3e2"
+    },
+    "/docs/guide/usage/formatter/migrate-from-prettier.html": {
+      "offset": 388763,
+      "length": 11220,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "11fc1f75cf67282e"
+    },
+    "/docs/guide/usage/formatter/config.html": {
+      "offset": 399983,
+      "length": 10652,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b77d7056090be0be"
+    },
+    "/docs/guide/usage/formatter/sorting.html": {
+      "offset": 410635,
+      "length": 9712,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e3901e4d0cb2d511"
+    },
+    "/docs/guide/usage/formatter/language-support.html": {
+      "offset": 420347,
+      "length": 8899,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dd073e3abc1d7a72"
+    },
+    "/docs/guide/usage/transformer/jsx.html": {
+      "offset": 429246,
+      "length": 10215,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ae5ea5983bad8316"
+    },
+    "/docs/guide/usage/formatter/config-file-reference.html": {
+      "offset": 439461,
+      "length": 14677,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "675107a720cc89ca"
+    },
+    "/docs/guide/usage/formatter/cli.html": {
+      "offset": 454138,
+      "length": 8287,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "12d30022ca26e27d"
+    },
+    "/docs/guide/usage/formatter/unsupported-features.html": {
+      "offset": 462425,
+      "length": 7882,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1f651015d92776f1"
+    },
+    "/docs/guide/usage/formatter/ignore-comments.html": {
+      "offset": 470307,
+      "length": 8131,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b7b699a95aae8374"
+    },
+    "/docs/guide/usage/transformer/typescript.html": {
+      "offset": 478438,
+      "length": 11611,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d1250694e6ed9dca"
+    },
+    "/docs/guide/usage/formatter/ci.html": {
+      "offset": 490049,
+      "length": 9376,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "af680e1cdd6eb661"
+    },
+    "/docs/guide/benchmarks.html": {
+      "offset": 499425,
+      "length": 7905,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9cda99bf69d5a136"
+    },
+    "/docs/guide/usage/minifier/codegen.html": {
+      "offset": 507330,
+      "length": 8873,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8ae09f188b876cfc"
+    },
+    "/docs/guide/usage/transformer/plugins.html": {
+      "offset": 516203,
+      "length": 9814,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ebc93446f43dac94"
+    },
+    "/docs/contribute/parser.html": {
+      "offset": 526017,
+      "length": 8255,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c880b06562b2eeca"
+    },
+    "/docs/guide/usage/transformer/isolated-declarations.html": {
+      "offset": 534272,
+      "length": 8242,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c9583b1d6d9d1965"
+    },
+    "/docs/guide/usage/minifier/syntax-normalization.html": {
+      "offset": 542514,
+      "length": 8356,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "24edff6a7ddb9d6f"
+    },
+    "/docs/guide/usage/transformer/global-variable-replacement.html": {
+      "offset": 550870,
+      "length": 9297,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "6e4d59df37adddef"
+    },
+    "/docs/guide/usage/minifier/dead-code-elimination.html": {
+      "offset": 560167,
+      "length": 11126,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "751332b7f55a018a"
+    },
+    "/docs/guide/usage/minifier/faq.html": {
+      "offset": 571293,
+      "length": 7985,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dda9a33054dad70c"
+    },
+    "/docs/contribute/development.html": {
+      "offset": 579278,
+      "length": 7871,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7c7dc62a9a7b19c1"
+    },
+    "/docs/guide/media.html": {
+      "offset": 587149,
+      "length": 7925,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "61052c69536cacb2"
+    },
+    "/docs/guide/projects.html": {
+      "offset": 595074,
+      "length": 9409,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "18e892e1a00ff9a2"
+    },
+    "/docs/guide/usage/minifier/mangling.html": {
+      "offset": 604483,
+      "length": 9443,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f6601024db573159"
+    },
+    "/docs/contribute/parser/ast.html": {
+      "offset": 613926,
+      "length": 11568,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "9e0c78089707f18f"
+    },
+    "/docs/guide/usage/linter/rules/import/no-cycle.html": {
+      "offset": 625494,
+      "length": 9287,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8c3b938132a65035"
+    },
+    "/docs/guide/troubleshooting.html": {
+      "offset": 634781,
+      "length": 7894,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "dc9113e13770c849"
+    },
+    "/docs/contribute/linter.html": {
+      "offset": 642675,
+      "length": 7562,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "3f84532d73d535d3"
+    },
+    "/docs/contribute/linter/adding-rules.html": {
+      "offset": 650237,
+      "length": 13731,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "608ef1394ec28f8f"
+    },
+    "/docs/contribute/security.html": {
+      "offset": 663968,
+      "length": 7232,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d64e6c4940ee370f"
+    },
+    "/docs/contribute/minifier.html": {
+      "offset": 671200,
+      "length": 8067,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1faef2194c77ea0d"
+    },
+    "/docs/contribute/formatter.html": {
+      "offset": 679267,
+      "length": 7076,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b7d3b1516bc3bc7b"
+    },
+    "/docs/contribute/rules.html": {
+      "offset": 686343,
+      "length": 8086,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5c2518adf122f936"
+    },
+    "/docs/guide/usage/linter/rules": {
+      "offset": 694429,
+      "length": 28217,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e0c3ac9fd558d445"
+    },
+    "/docs/contribute/language_server.html": {
+      "offset": 722646,
+      "length": 7745,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "513a8f33f55266fe"
+    },
+    "/docs/contribute/resolver.html": {
+      "offset": 730391,
+      "length": 6545,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b81e783c97c308cf"
+    },
+    "/docs/contribute/transformer.html": {
+      "offset": 736936,
+      "length": 6733,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "89511af48dd72f59"
+    },
+    "/docs/contribute/profiling.html": {
+      "offset": 743669,
+      "length": 9887,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b6e31ec1de206c48"
+    },
+    "/docs/contribute/vscode.html": {
+      "offset": 753556,
+      "length": 7814,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f86f0a00e4f30a19"
+    },
+    "/docs/contribute/debugging.html": {
+      "offset": 761370,
+      "length": 8596,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c608dc10e372101d"
+    },
+    "/docs/guide/usage/linter/rules/eslint/accessor-pairs": {
+      "offset": 769966,
+      "length": 9011,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5276ccbbe46f56e7"
+    },
+    "/docs/guide/usage/linter/rules/jsx_a11y/anchor-is-valid": {
+      "offset": 778977,
+      "length": 9859,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a34b6e4cc84b5708"
+    },
+    "/docs/guide/usage/linter/rules/jsx_a11y/anchor-has-content": {
+      "offset": 788836,
+      "length": 9168,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "339120c3d1442142"
+    },
+    "/docs/guide/usage/linter/rules/jsx_a11y/aria-proptypes": {
+      "offset": 798004,
+      "length": 8817,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "44e141371569330b"
+    },
+    "/docs/guide/usage/linter/rules/jsx_a11y/alt-text": {
+      "offset": 806821,
+      "length": 9205,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "791b1947e1f42b1b"
+    },
+    "/docs/guide/usage/linter/rules/eslint/arrow-body-style": {
+      "offset": 816026,
+      "length": 9645,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "25be16ab223df267"
+    },
+    "/docs/guide/usage/linter/rules/eslint/array-callback-return": {
+      "offset": 825671,
+      "length": 9168,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a370b94b7357defb"
+    },
+    "/docs/guide/usage/linter/rules/promise/always-return": {
+      "offset": 834839,
+      "length": 9718,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4100ae62c4913c5d"
+    },
+    "/docs/guide/usage/linter/rules/typescript/array-type": {
+      "offset": 844557,
+      "length": 9364,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "cdbd02ff833f89b9"
+    },
+    "/docs/guide/usage/linter/rules/jsx_a11y/aria-unsupported-elements": {
+      "offset": 853921,
+      "length": 8850,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "f37f5e5111ea1db1"
+    },
+    "/docs/guide/usage/linter/rules/jsx_a11y/aria-role": {
+      "offset": 862771,
+      "length": 9776,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a143934f858f3f38"
+    },
+    "/docs/guide/usage/linter/rules/jsx_a11y/anchor-ambiguous-text": {
+      "offset": 872547,
+      "length": 9021,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "5e94f9fc9511c4b4"
+    },
+    "/docs/guide/usage/linter/rules/oxc/approx-constant": {
+      "offset": 881568,
+      "length": 8722,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "28297044bdfd6dd4"
+    },
+    "/docs/guide/usage/linter/rules/jsx_a11y/aria-activedescendant-has-tabindex": {
+      "offset": 890290,
+      "length": 8966,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "59ea4665ab949cdd"
+    },
+    "/docs/guide/usage/linter/rules/jsx_a11y/aria-props": {
+      "offset": 899256,
+      "length": 8832,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "57961eab3e449bc0"
+    },
+    "/docs/guide/usage/linter/rules/typescript/adjacent-overload-signatures": {
+      "offset": 908088,
+      "length": 8970,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "95fd9645ec4a2bf8"
+    },
+    "/docs/guide/usage/linter/rules/typescript/ban-ts-comment": {
+      "offset": 917058,
+      "length": 9465,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0fd19ac8c172833a"
+    },
+    "/docs/guide/usage/linter/rules/typescript/ban-tslint-comment": {
+      "offset": 926523,
+      "length": 8652,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c5e4acc3ae5e54c4"
+    },
+    "/docs/guide/usage/linter/rules/oxc/bad-replace-all-arg": {
+      "offset": 935175,
+      "length": 8700,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "4ad77a989314e385"
+    },
+    "/docs/guide/usage/linter/rules/oxc/bad-match-all-arg": {
+      "offset": 943875,
+      "length": 8696,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "0785d568c48d7dfa"
+    },
+    "/docs/guide/usage/linter/rules/promise/avoid-new": {
+      "offset": 952571,
+      "length": 8805,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "046e623fa2e99ab6"
+    },
+    "/docs/guide/usage/linter/rules/oxc/bad-object-literal-comparison": {
+      "offset": 961376,
+      "length": 8808,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "c6bb7125899fe5df"
+    },
+    "/docs/guide/usage/linter/rules/oxc/bad-comparison-sequence": {
+      "offset": 970184,
+      "length": 8754,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "12bf0b75586e61cd"
+    },
+    "/docs/guide/usage/linter/rules/typescript/await-thenable": {
+      "offset": 978938,
+      "length": 9065,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a434962e8c104ee4"
+    },
+    "/docs/guide/usage/linter/rules/oxc/bad-char-at-comparison": {
+      "offset": 988003,
+      "length": 8726,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "ad1d719a4d890577"
+    },
+    "/docs/guide/usage/linter/rules/oxc/bad-bitwise-operator": {
+      "offset": 996729,
+      "length": 8865,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "bae513db86489561"
+    },
+    "/docs/guide/usage/linter/rules/oxc/bad-min-max-func": {
+      "offset": 1005594,
+      "length": 8730,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e87e31f6ae019a14"
+    },
+    "/docs/guide/usage/linter/rules/oxc/bad-array-method-on-arguments": {
+      "offset": 1014324,
+      "length": 9034,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "fe4efb44289c7b07"
+    },
+    "/docs/guide/usage/linter/rules/jsx_a11y/autocomplete-valid": {
+      "offset": 1023358,
+      "length": 8820,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d2c06e8e4e3b8c0a"
+    },
+    "/docs/guide/usage/linter/rules/eslint/block-scoped-var": {
+      "offset": 1032178,
+      "length": 9187,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8cbbe6a9863f7fd5"
+    },
+    "/docs/guide/usage/linter/rules/eslint/capitalized-comments": {
+      "offset": 1041365,
+      "length": 9131,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "e7916b684869e7b5"
+    },
+    "/docs/guide/usage/linter/rules/typescript/ban-types": {
+      "offset": 1050496,
+      "length": 8853,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "1fca2fb6f0db0b7b"
+    },
+    "/docs/guide/usage/linter/rules/react/capitalized-calls": {
+      "offset": 1059349,
+      "length": 8892,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d1db95efa2df5158"
+    },
+    "/docs/guide/usage/linter/rules/node/callback-return": {
+      "offset": 1068241,
+      "length": 9536,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d5591ddf0014c2df"
+    },
+    "/docs/guide/usage/linter/rules/oxc/branches-sharing-code": {
+      "offset": 1077777,
+      "length": 8825,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "8d9446f44259e535"
+    },
+    "/docs/guide/usage/linter/rules/react/button-has-type": {
+      "offset": 1086602,
+      "length": 8881,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "d37bb0ebf382c779"
+    },
+    "/docs/guide/usage/linter/rules/promise/catch-or-return": {
+      "offset": 1095483,
+      "length": 9152,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "7bc1b0ecb8119e5a"
+    },
+    "/docs/guide/usage/linter/rules/unicorn/catch-error-name": {
+      "offset": 1104635,
+      "length": 9249,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "b69257d7eb05c6b2"
+    },
+    "/docs/guide/usage/linter/rules/jsdoc/check-access": {
+      "offset": 1113884,
+      "length": 8951,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "68293e963bf139b4"
+    },
+    "/docs/guide/usage/linter/rules/jsdoc/check-property-names": {
+      "offset": 1122835,
+      "length": 8841,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a5978928dc960b44"
+    },
+    "/docs/guide/usage/linter/rules/jsdoc/check-tag-names": {
+      "offset": 1131676,
+      "length": 9418,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "01f14b0c3184e0e5"
+    },
+    "/docs/guide/usage/linter/rules/react/checked-requires-onchange-or-readonly": {
+      "offset": 1141094,
+      "length": 9253,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "67e19e598ae6ef23"
+    },
+    "/logo-without-border.svg": {
+      "offset": 1150347,
+      "length": 1846,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "5c2800dbe491029b"
+    },
+    "/assets/oxc-dark.CUw-fM3A.svg": {
+      "offset": 1152193,
+      "length": 2382,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "111550e82277667b"
+    },
+    "/assets/oxc-light.Bj9AWGSR.svg": {
+      "offset": 1154575,
+      "length": 2383,
+      "mime": "image/svg+xml",
+      "gzipped": true,
+      "hash": "3ab81408da97b49e"
+    },
+    "/assets/style.L4sk4Riy.css": {
+      "offset": 1156958,
+      "length": 47598,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": true,
+      "hash": "38a3639f06de19a9"
+    },
+    "/assets/APK-Protocol-Semi-Bold.CC2BASA5.woff2": {
+      "offset": 1204556,
+      "length": 38313,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "026cce4a39ffeaf4"
+    },
+    "/assets/KHTekaMono-Regular.CiZ9ZkmZ.woff2": {
+      "offset": 1242869,
+      "length": 40961,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "2cbb020a8140968d"
+    },
+    "/assets/primary-button-background.DR4xgNht.jpg": {
+      "offset": 1283830,
+      "length": 48527,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "1c791e94e81ac3a3"
+    },
+    "/assets/APK-Protocol-Medium.C7Mq9oGh.woff2": {
+      "offset": 1332357,
+      "length": 38173,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "0b3d073b1548584b"
+    },
+    "/assets/KHTekaMono-Medium.CxAWoJPq.woff2": {
+      "offset": 1370530,
+      "length": 41065,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "6e77403c50008eba"
+    },
+    "/assets/primary-button-background.CHnwvuqy.jpg": {
+      "offset": 1411595,
+      "length": 56358,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "092f0c6e030632ea"
+    },
+    "/assets/inter-roman-greek.BBVDIX6e.woff2": {
+      "offset": 1467953,
+      "length": 29948,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "0af738c9f2ece110"
+    },
+    "/assets/primary-button-background.QdHMRZT6.jpg": {
+      "offset": 1497901,
+      "length": 47971,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "77f1725aad3e2a80"
+    },
+    "/assets/inter-roman-vietnamese.BjW4sHH5.woff2": {
+      "offset": 1545872,
+      "length": 14095,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "73c77e9e56f44037"
+    },
+    "/assets/inter-roman-cyrillic.C5lxZ8CY.woff2": {
+      "offset": 1559967,
+      "length": 29192,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "4462eacbb605d693"
+    },
+    "/assets/primary-button-background.Bjk7gn3x.jpg": {
+      "offset": 1589159,
+      "length": 45593,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "688d49c014139c8e"
+    },
+    "/assets/inter-roman-greek-ext.CqjqNYQ-.woff2": {
+      "offset": 1634752,
+      "length": 16295,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "a920fad3caf08d9c"
+    },
+    "/assets/primary-button-background.DQk9_E88.jpg": {
+      "offset": 1651047,
+      "length": 49999,
+      "mime": "image/jpeg",
+      "gzipped": true,
+      "hash": "1f63d58b1af3fac6"
+    },
+    "/assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2": {
+      "offset": 1701046,
+      "length": 40521,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e7f646b31fe1539e"
+    },
+    "/assets/inter-roman-latin.Di8DUHzh.woff2": {
+      "offset": 1741567,
+      "length": 67828,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "f1780724de9f1526"
+    },
+    "/assets/inter-roman-latin-ext.4ZJIpNVo.woff2": {
+      "offset": 1809395,
+      "length": 110213,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "e60f40c3d9ebf9fb"
+    },
+    "/assets/inter-italic-latin.C2AdPX0b.woff2": {
+      "offset": 1919608,
+      "length": 74824,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "51ce22361c0fd3d6"
+    },
+    "/assets/inter-italic-greek.DJ8dCoTZ.woff2": {
+      "offset": 1994432,
+      "length": 32592,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "da2cea9241fc59d4"
+    },
+    "/assets/inter-italic-vietnamese.BSbpV94h.woff2": {
+      "offset": 2027024,
+      "length": 14907,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "bf89b2e22250b187"
+    },
+    "/assets/inter-italic-cyrillic-ext.r48I6akx.woff2": {
+      "offset": 2041931,
+      "length": 43145,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "79c0e487df594b1a"
+    },
+    "/assets/inter-italic-latin-ext.CN1xVJS-.woff2": {
+      "offset": 2085076,
+      "length": 120898,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "21cbe44191b113d8"
+    },
+    "/assets/inter-italic-greek-ext.1u6EdAuj.woff2": {
+      "offset": 2205974,
+      "length": 17432,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "08070cee243b003e"
+    },
+    "/assets/inter-italic-cyrillic.By2_1cv3.woff2": {
+      "offset": 2223406,
+      "length": 31328,
+      "mime": "font/woff2",
+      "gzipped": true,
+      "hash": "d350118d3ccbe16c"
+    },
+    "/docs": {
+      "offset": 0,
+      "length": 7782,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a4c2b15ead66f4da"
+    },
+    "/": {
+      "offset": 0,
+      "length": 7782,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": true,
+      "hash": "a4c2b15ead66f4da"
+    }
+  }
+}
