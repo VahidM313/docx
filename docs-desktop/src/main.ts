@@ -24,6 +24,10 @@ const SITE_ENTRY_PATHS: Record<string, string> = {
   vite: "/guide/",
   astro: "/en/getting-started/",
   mdn_js: "/en-US/docs/Web/JavaScript",
+  mdn_css: "/en-US/docs/Web/CSS",
+  css: "/en-US/docs/Web/CSS",
+  mdn_html: "/en-US/docs/Web/HTML",
+  html: "/en-US/docs/Web/HTML",
   htmx: "/docs/",
   typescript: "/docs/handbook/intro.html",
   bun: "/docs",
@@ -74,6 +78,68 @@ const SITE_ENTRY_PATHS: Record<string, string> = {
   fastapi: "/",
   postgresql: "/docs/",
   sqlite: "/docs.html",
+  react_hook_form: "/get-started",
+  radix_ui: "/primitives/docs/overview/introduction",
+  zustand: "/getting-started/introduction",
+  lucide: "/icons",
+  swr: "/docs/getting-started",
+  pinia: "/introduction.html",
+  vueuse: "/guide/",
+  vue_router: "/introduction.html",
+  svelte: "/docs/svelte/overview",
+  solidjs: "/quick-start",
+  nodejs: "/docs/latest-v22.x/api/",
+  zod: "/",
+  gin: "/docs/",
+  gorm: "/docs/",
+  redis: "/docs/latest/",
+  prisma: "/docs/getting-started",
+  mongodb: "/docs/manual/",
+  sqlalchemy: "/en/20/",
+  pytorch: "/docs/stable/index.html",
+  langchain: "/docs/introduction/",
+  huggingface: "/docs/transformers/index",
+  ollama: "/",
+  numpy: "/doc/stable/",
+  pandas: "/docs/",
+  scikit_learn: "/stable/",
+  kubernetes: "/docs/home/",
+  nginx: "/en/docs/",
+  opentofu: "/docs/intro/",
+  ansible: "/ansible/latest/index.html",
+  tokio: "/tokio/tutorial",
+  axum: "/axum/latest/axum/",
+  json_cpp: "/",
+  fmt_cpp: "/latest/",
+  raylib: "/cheatsheet/cheatsheet.html",
+  system_design: "/",
+  design_patterns: "/vanilla-design-patterns/",
+  material_design: "/foundations",
+  refactoring: "/refactoring",
+  better_auth: "/docs/introduction",
+  duckdb: "/docs/",
+  mysql: "/doc/refman/8.4/en/",
+  mariadb: "/kb/en/documentation/",
+  chroma: "/",
+  qdrant: "/documentation/",
+  tensorflow: "/api_docs/python/tf",
+  keras: "/",
+  flask: "/",
+  pydantic: "/",
+  requests_py: "/",
+  celery: "/",
+  serde: "/",
+  actix_web: "/docs/",
+  bevy: "/learn/quick-start/introduction/",
+  clap: "/clap/latest/clap/",
+  fiber: "/",
+  echo: "/docs",
+  cobra: "/",
+  opencv: "/4.x/",
+  imgui: "/",
+  catch2: "/",
+  spdlog: "/",
+  matplotlib: "/stable/",
 };
 
 const DEFAULT_PACK_SIZES_MB: Record<string, number> = {
@@ -84,6 +150,8 @@ const DEFAULT_PACK_SIZES_MB: Record<string, number> = {
   vite: 0.9,
   astro: 7.17,
   mdn_js: 5.74,
+  mdn_css: 8.47,
+  mdn_html: 5.41,
   htmx: 0.21,
   typescript: 12.35,
   bun: 4.63,
@@ -134,6 +202,68 @@ const DEFAULT_PACK_SIZES_MB: Record<string, number> = {
   fastapi: 12.33,
   postgresql: 1.6,
   sqlite: 2.75,
+  react_hook_form: 3.2,
+  radix_ui: 4.8,
+  zustand: 1.5,
+  lucide: 5.2,
+  swr: 1.8,
+  pinia: 2.1,
+  vueuse: 6.5,
+  vue_router: 2.4,
+  svelte: 4.6,
+  solidjs: 3.1,
+  nodejs: 8.5,
+  zod: 1.2,
+  gin: 1.8,
+  gorm: 2.2,
+  redis: 5.4,
+  prisma: 6.1,
+  mongodb: 7.8,
+  sqlalchemy: 6.9,
+  pytorch: 11.2,
+  langchain: 8.4,
+  huggingface: 9.6,
+  ollama: 1.4,
+  numpy: 7.2,
+  pandas: 9.8,
+  scikit_learn: 10.5,
+  kubernetes: 8.7,
+  nginx: 2.6,
+  opentofu: 4.5,
+  ansible: 6.3,
+  tokio: 3.8,
+  axum: 3.2,
+  json_cpp: 1.9,
+  fmt_cpp: 1.5,
+  raylib: 2.8,
+  system_design: 4.2,
+  design_patterns: 5.6,
+  material_design: 6.8,
+  refactoring: 4.9,
+  better_auth: 3.5,
+  duckdb: 6.8,
+  mysql: 12.0,
+  mariadb: 9.5,
+  chroma: 2.2,
+  qdrant: 3.8,
+  tensorflow: 14.5,
+  keras: 4.8,
+  flask: 2.9,
+  pydantic: 4.2,
+  requests_py: 1.8,
+  celery: 3.6,
+  serde: 2.1,
+  actix_web: 4.5,
+  bevy: 5.4,
+  clap: 2.8,
+  fiber: 3.1,
+  echo: 2.4,
+  cobra: 1.6,
+  opencv: 11.8,
+  imgui: 3.2,
+  catch2: 2.5,
+  spdlog: 1.5,
+  matplotlib: 8.5,
 };
 
 function getDefaultEntryPath(siteId: string): string {
@@ -295,7 +425,7 @@ let browserTabs: BrowserTab[] = [
   {
     id: "tab-home",
     siteId: "home",
-    title: "57-Site Hub",
+    title: "121-Site Hub",
     pathOrUrl: "/",
   },
 ];
@@ -918,7 +1048,7 @@ function dismissSplashScreen() {
 
 async function init() {
   const startTs = performance.now();
-  updateSplash(24, "Initializing 57-Site Offline Engine...");
+  updateSplash(24, "Initializing 121-Site Offline Engine...");
   requestAnimationFrame(() => {
     invoke("window_show_ready").catch(() => {});
   });
@@ -955,6 +1085,10 @@ async function init() {
 
   // Sync remote registry from GitHub Releases asynchronously after splash opens
   syncAllPacksAndRender(true).catch(() => {});
+  // Periodically re-check GitHub Releases for docpack and app updates every 2 hours while app is open
+  setInterval(() => {
+    syncAllPacksAndRender(true).catch(() => {});
+  }, 2 * 60 * 60 * 1000);
   setInterval(checkServerHealth, 3000);
 }
 
@@ -1563,16 +1697,25 @@ function renderServerRail(sites: UnifiedSiteEntry[]) {
   );
 }
 
-// 3. Render Column 2: Second Column = All 57 Docs with Pin/Unpin & Drag-and-Drop Reordering
+// 3. Render Column 2: Second Column = All 121 Docs with Pin/Unpin & Drag-and-Drop Reordering
 function renderChannelDrawer(sites: UnifiedSiteEntry[]) {
   if (!drawerChannelsScroll) return;
 
   const categories = [
     "Frontend & UI",
+    "React Ecosystem",
+    "Vue Ecosystem",
+    "Web Frameworks & Tools",
     "TanStack Suite",
-    "Backend & JS/TS",
-    "Systems & Languages",
-    "DevOps, Build & Shells",
+    "Backend, Auth & APIs",
+    "Databases & SQL",
+    "AI & Machine Learning",
+    "Python Ecosystem",
+    "Rust Ecosystem",
+    "Go (Golang)",
+    "C & C++ Ecosystem",
+    "DevOps & Cloud",
+    "Architecture & Design",
   ];
 
   const installedSites = sites.filter((s) => s.installed);
@@ -1746,7 +1889,7 @@ function renderChannelDrawer(sites: UnifiedSiteEntry[]) {
   });
 }
 
-// 4. Render Redesigned 57-Site Home Hub
+// 4. Render Redesigned 121-Site Home Hub
 function renderHomeHub(sites: UnifiedSiteEntry[]) {
   const gridEl = document.getElementById("allSitesGrid");
   if (!gridEl) return;
@@ -1790,6 +1933,14 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
   if (catCountAll) catCountAll.textContent = String(sites.length);
   if (catCountInstalled) catCountInstalled.textContent = String(installedCount);
   if (catCountUpdates) catCountUpdates.textContent = String(updatesCount);
+
+  // Dynamically update the count badge on all 10 category tab pills
+  document.querySelectorAll<HTMLElement>("[data-cat-pill]").forEach((el) => {
+    const cat = el.getAttribute("data-cat-pill");
+    if (cat) {
+      el.textContent = String(sites.filter((s) => s.category === cat).length);
+    }
+  });
 
   const q = hubSearchQuery.trim().toLowerCase();
   const filtered = sites.filter((s) => {
@@ -2013,7 +2164,14 @@ async function syncLocalPacksOnlyAndRender() {
   renderAllUI(false);
 }
 
-async function runGitHubPackUpdate(siteId: string, openAfter = false, isBatchItem = false) {
+interface BatchDownloadSummary {
+  succeeded: number;
+  failed: number;
+  succeededMb: number;
+  failedSites: string[];
+}
+
+async function runGitHubPackUpdate(siteId: string, openAfter = false, isBatchItem = false): Promise<boolean> {
   const brand = getSiteBrand(siteId);
   applyDownloadProgress({
     site_id: siteId,
@@ -2054,31 +2212,51 @@ async function runGitHubPackUpdate(siteId: string, openAfter = false, isBatchIte
     if (openAfter) {
       await switchTab(siteId);
     }
+    return true;
   } catch (err) {
     activeDownloads.delete(siteId);
     if (activeDownloads.size === 0 && downloadProgressHud) {
       downloadProgressHud.style.display = "none";
     }
     if (banner && !isBatchItem) {
-      banner.textContent = `Update notice for ${siteId}: ${String(err)}`;
+      banner.style.display = "block";
+      const errStr = String(err);
+      if (errStr.includes("404") || errStr.includes("manifest")) {
+        banner.textContent = `⚠️ '${brand.name}' is not yet available on GitHub Releases (packs-latest). It needs to be crawled and built first.`;
+      } else {
+        banner.textContent = `Notice for ${brand.name}: ${errStr}`;
+      }
     }
     renderHomeHub(buildUnifiedSitesList());
+    return false;
   }
 }
 
 async function runBatchPackUpdatesInParallel(
   targets: UnifiedSiteEntry[],
   concurrency = PARALLEL_DOWNLOAD_WORKERS,
-  onProgress?: (completedCount: number, completedMb: number, totalMb: string, lastSite: UnifiedSiteEntry) => void
-) {
-  if (targets.length === 0) return;
+  onProgress?: (
+    processedCount: number,
+    totalCount: number,
+    completedMb: number,
+    totalMb: string,
+    lastSite: UnifiedSiteEntry,
+    success: boolean
+  ) => void
+): Promise<BatchDownloadSummary> {
+  if (targets.length === 0) {
+    return { succeeded: 0, failed: 0, succeededMb: 0, failedSites: [] };
+  }
   const totalTargetMb = targets
     .reduce((sum, s) => sum + (parseFloat(s.sizeMb) || 0), 0)
     .toFixed(1);
 
   let nextIdx = 0;
-  let completedCount = 0;
+  let processedCount = 0;
+  let succeededCount = 0;
+  let failedCount = 0;
   let completedMb = 0;
+  const failedSites: string[] = [];
 
   const workerCount = Math.min(concurrency, targets.length);
   const workers = Array.from({ length: workerCount }, async () => {
@@ -2087,15 +2265,27 @@ async function runBatchPackUpdatesInParallel(
       const s = targets[idx];
       if (!s) break;
       const packMb = parseFloat(s.sizeMb) || 0;
-      await runGitHubPackUpdate(s.id, false, true);
-      completedCount++;
-      completedMb += packMb;
-      onProgress?.(completedCount, completedMb, totalTargetMb, s);
+      const ok = await runGitHubPackUpdate(s.id, false, true);
+      if (ok) {
+        succeededCount++;
+        completedMb += packMb;
+      } else {
+        failedCount++;
+        failedSites.push(s.name);
+      }
+      processedCount++;
+      onProgress?.(processedCount, targets.length, completedMb, totalTargetMb, s, ok);
     }
   });
 
   await Promise.all(workers);
   await syncAllPacksAndRender(false);
+  return {
+    succeeded: succeededCount,
+    failed: failedCount,
+    succeededMb: completedMb,
+    failedSites,
+  };
 }
 
 async function updateAllOutdatedPacks() {
@@ -2106,13 +2296,13 @@ async function updateAllOutdatedPacks() {
   if (btnUpdateAllPacks) btnUpdateAllPacks.disabled = true;
   if (btnAlertUpdateAll) btnAlertUpdateAll.disabled = true;
 
-  await runBatchPackUpdatesInParallel(
+  const res = await runBatchPackUpdatesInParallel(
     sites,
     PARALLEL_DOWNLOAD_WORKERS,
-    (done, doneMb, totalMb, lastSite) => {
+    (done, total, doneMb, totalMb, lastSite, ok) => {
       if (banner) {
         banner.style.display = "block";
-        banner.textContent = `⚡ Parallel Update (${PARALLEL_DOWNLOAD_WORKERS}x) [${done}/${sites.length}]: Finished ${lastSite.name} — ${doneMb.toFixed(
+        banner.textContent = `⚡ Parallel Update (${PARALLEL_DOWNLOAD_WORKERS}x) [${done}/${total}]: ${ok ? "✓" : "❌"} ${lastSite.name} — ${doneMb.toFixed(
           1
         )} / ${totalMb} MB completed...`;
       }
@@ -2123,7 +2313,13 @@ async function updateAllOutdatedPacks() {
   if (btnAlertUpdateAll) btnAlertUpdateAll.disabled = false;
   if (banner) {
     banner.style.display = "block";
-    banner.textContent = `✓ Updated all ${sites.length} documentation packs in parallel!`;
+    if (res.failed === 0) {
+      banner.textContent = `✓ Updated all ${res.succeeded} documentation packs in parallel!`;
+    } else if (res.succeeded > 0) {
+      banner.textContent = `⚠️ Updated ${res.succeeded} packs (${res.succeededMb.toFixed(1)} MB), but ${res.failed} updates failed: ${res.failedSites.slice(0, 4).join(", ")}${res.failedSites.length > 4 ? ` +${res.failedSites.length - 4} more` : ""}.`;
+    } else {
+      banner.textContent = `❌ Failed to update documentation packs. Please check network connection or GitHub Release availability.`;
+    }
   }
 }
 
@@ -2160,18 +2356,18 @@ async function downloadAllOrRemainingDocs() {
     label.textContent = `⏳ Downloading ${targets.length} Docs (${PARALLEL_DOWNLOAD_WORKERS}x Parallel)...`;
   }
 
-  await runBatchPackUpdatesInParallel(
+  const res = await runBatchPackUpdatesInParallel(
     targets,
     PARALLEL_DOWNLOAD_WORKERS,
-    (done, doneMb, totalMb, lastSite) => {
+    (done, total, doneMb, totalMb, lastSite, ok) => {
       if (label) {
-        label.textContent = `⏳ [${done}/${targets.length}] Parallel (${doneMb.toFixed(1)} / ${totalMb} MB)`;
+        label.textContent = `⏳ [${done}/${total}] (${doneMb.toFixed(1)} / ${totalMb} MB)`;
       }
       if (banner) {
         banner.style.display = "block";
-        banner.textContent = `⚡ Parallel Batch Download (${PARALLEL_DOWNLOAD_WORKERS}x) [${done}/${targets.length}]: Finished ${lastSite.name} — ${doneMb.toFixed(
+        banner.textContent = `⚡ Parallel Batch Download (${PARALLEL_DOWNLOAD_WORKERS}x) [${done}/${total}]: ${ok ? "✓" : "❌"} ${lastSite.name} — ${doneMb.toFixed(
           1
-        )} MB / ${totalMb} MB completed...`;
+        )} MB completed...`;
       }
     }
   );
@@ -2179,7 +2375,13 @@ async function downloadAllOrRemainingDocs() {
   if (btn) btn.disabled = false;
   if (banner) {
     banner.style.display = "block";
-    banner.textContent = `✓ Downloaded/updated ${targets.length} documentation packs (${totalTargetMb} MB) in parallel! All ${allSites.length} packs are now up to date.`;
+    if (res.failed === 0) {
+      banner.textContent = `✓ Downloaded/updated all ${res.succeeded} documentation packs (${res.succeededMb.toFixed(1)} MB) in parallel! All ${allSites.length} packs are now up to date.`;
+    } else if (res.succeeded > 0) {
+      banner.textContent = `⚠️ Downloaded ${res.succeeded} packs (${res.succeededMb.toFixed(1)} MB), but ${res.failed} packs are not yet published to GitHub Releases (packs-latest): ${res.failedSites.slice(0, 5).join(", ")}${res.failedSites.length > 5 ? ` +${res.failedSites.length - 5} more` : ""}.`;
+    } else {
+      banner.textContent = `⚠️ None of the ${res.failed} docs could be downloaded: They have not yet been crawled and published to GitHub Releases (packs-latest). They need to be built first.`;
+    }
   }
 }
 
@@ -2738,10 +2940,19 @@ function renderSearchDocPickerPanel(siteIds: string[], countsBySite: Map<string,
   const categories = [
     { id: "all", label: `All (${siteIds.length})` },
     { id: "Frontend & UI", label: "Frontend" },
+    { id: "React Ecosystem", label: "React" },
+    { id: "Vue Ecosystem", label: "Vue" },
+    { id: "Web Frameworks & Tools", label: "Web Frameworks" },
     { id: "TanStack Suite", label: "TanStack" },
-    { id: "Backend & JS/TS", label: "Backend" },
-    { id: "Systems & Languages", label: "Systems" },
-    { id: "DevOps, Build & Shells", label: "DevOps" },
+    { id: "Backend, Auth & APIs", label: "Backend & Auth" },
+    { id: "Databases & SQL", label: "Databases" },
+    { id: "AI & Machine Learning", label: "AI & ML" },
+    { id: "Python Ecosystem", label: "Python" },
+    { id: "Rust Ecosystem", label: "Rust" },
+    { id: "Go (Golang)", label: "Go" },
+    { id: "C & C++ Ecosystem", label: "C / C++" },
+    { id: "DevOps & Cloud", label: "DevOps" },
+    { id: "Architecture & Design", label: "Architecture" },
   ];
 
   catsEl.innerHTML = categories
@@ -2807,7 +3018,7 @@ function getActiveBrowserTab(): BrowserTab {
 }
 
 function formatTabTitle(siteId: string, rawTitle?: string, pathOrUrl?: string): string {
-  if (siteId === "home") return "57-Site Hub";
+  if (siteId === "home") return "121-Site Hub";
   if (siteId === "bookmarks") return "Saved Bookmarks";
   const brand = getSiteBrand(siteId);
   if (rawTitle && rawTitle.trim()) {
@@ -2857,7 +3068,7 @@ function renderBrowserTabs() {
         : `<span class="browser-tab-badge" style="background: ${brand.bgTint}; color: ${brand.color}; border: 1px solid ${brand.color}44;">${brand.svg || escapeHtml(brand.badge)}</span>`;
       const showClose = browserTabs.length > 1 || !isHome;
       const subLabel = isHome
-        ? "All 57 Docs"
+        ? "All 121 Docs"
         : isBookmarks
         ? `${bookmarksList.length} Saved Page${bookmarksList.length === 1 ? "" : "s"}`
         : `${brand.version} · ${t.pathOrUrl || "/"}`;
@@ -3072,7 +3283,7 @@ function closeBrowserTab(tabId: string) {
     const fallbackHome: BrowserTab = {
       id: `tab-${++tabSeq}`,
       siteId: "home",
-      title: "57-Site Hub",
+      title: "121-Site Hub",
       pathOrUrl: "/",
     };
     browserTabs.push(fallbackHome);
@@ -3137,7 +3348,7 @@ async function switchTab(tab: string, targetPathOrUrl?: string, forceNewTab = fa
     const single = browserTabs[0] || {
       id: `tab-${++tabSeq}`,
       siteId: "home",
-      title: "57-Site Hub",
+      title: "121-Site Hub",
       pathOrUrl: "/",
     };
     if (browserTabs.length === 0) browserTabs.push(single);
@@ -3710,11 +3921,11 @@ function setupEventListeners() {
     const appUpd = await checkAppCoreUpdateStatus();
     if (banner) {
       if (appUpd && appUpd.updateAvailable) {
-        banner.textContent = `✓ Synced 57-Site Registry • New App Core available (${appUpd.localCommit} → ${appUpd.remoteCommit}, only ${appUpd.coreSizeMb} MB delta download)!`;
+        banner.textContent = `✓ Synced 121-Site Registry • New App Core available (${appUpd.localCommit} → ${appUpd.remoteCommit}, only ${appUpd.coreSizeMb} MB delta download)!`;
       } else if (appUpd) {
-        banner.textContent = `✓ Synced live 57-Site Registry from GitHub Releases (packs-latest). App Core (${appUpd.remoteCommit}) is up to date.`;
+        banner.textContent = `✓ Synced live 121-Site Registry from GitHub Releases (packs-latest). App Core (${appUpd.remoteCommit}) is up to date.`;
       } else {
-        banner.textContent = "✓ Synced live 57-Site Registry from GitHub Releases (packs-latest).";
+        banner.textContent = "✓ Synced live 121-Site Registry from GitHub Releases (packs-latest).";
       }
     }
   });

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-11T23:59:52.904Z",
+  "updatedAt": "2026-10-17T01:34:07.057Z",
   "packs": {
     "angular": {
       "id": "angular",
@@ -91,15 +91,14 @@
       "name": "C++ Reference (cppreference)",
       "version": "C++23/26",
       "commit": "8d11fda6",
-      "updatedAt": "2026-10-11T23:57:26.602Z",
-      "sizeMB": 7.92,
-      "totalBytes": 8303664,
+      "updatedAt": "2026-10-12T00:46:12.032Z",
+      "sizeMB": 10.63,
+      "totalBytes": 11150732,
       "chunkCount": 313,
       "routeCount": 384,
       "manifestFile": "cppreference.manifest.json",
       "packFile": "cppreference.docpack",
-      "searchFile": "cppreference.search.json",
-      "sizeBytes": 11201721
+      "searchFile": "cppreference.search.json"
     },
     "curl": {
       "id": "curl",
@@ -296,6 +295,34 @@
       "manifestFile": "lua.manifest.json",
       "packFile": "lua.docpack",
       "searchFile": "lua.search.json"
+    },
+    "mdn_css": {
+      "id": "mdn_css",
+      "name": "MDN CSS",
+      "version": "CSS3 / Modern",
+      "commit": "bc004f32",
+      "updatedAt": "2026-10-17T00:42:11.674Z",
+      "sizeMB": 8.47,
+      "totalBytes": 8885573,
+      "chunkCount": 362,
+      "routeCount": 367,
+      "manifestFile": "mdn_css.manifest.json",
+      "packFile": "mdn_css.docpack",
+      "searchFile": "mdn_css.search.json"
+    },
+    "mdn_html": {
+      "id": "mdn_html",
+      "name": "MDN HTML",
+      "version": "HTML5",
+      "commit": "ea7a1ef1",
+      "updatedAt": "2026-10-17T00:42:48.092Z",
+      "sizeMB": 5.41,
+      "totalBytes": 5675661,
+      "chunkCount": 269,
+      "routeCount": 271,
+      "manifestFile": "mdn_html.manifest.json",
+      "packFile": "mdn_html.docpack",
+      "searchFile": "mdn_html.search.json"
     },
     "mdn_js": {
       "id": "mdn_js",

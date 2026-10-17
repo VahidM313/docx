@@ -1,4 +1,4 @@
-name: Build & Publish Docx App + 57 Docpacks
+name: Build & Publish Docx App + 121 Docpacks
 
 on:
   push:
@@ -11,11 +11,11 @@ on:
   workflow_dispatch:
     inputs:
       sites:
-        description: "Comma-separated site IDs to build, 'all' for all 57 sites, or 'none' to only build Docx.exe"
+        description: "Site IDs to build: 'missing' (only unbuilt packs, recommended), 'all' (all 121), 'none' (only Docx.exe), or comma-separated IDs (e.g. redis,duckdb)"
         required: false
-        default: "all"
+        default: "missing"
   schedule:
-    - cron: "0 4 * * 0"
+    - cron: "0 4 * * *"
 
 permissions:
   contents: write
@@ -59,7 +59,7 @@ jobs:
           $shortSha = $env:SHORT_SHA.Substring(0, 8)
           gh release view packs-latest *> $null
           if ($LASTEXITCODE -ne 0) {
-            gh release create packs-latest --title "Docx 57-Site Offline Documentation Hub & Packs (Latest)" --notes "Standalone Docx.exe, delta-updatable Docx-core.exe, and 57 content-hashed Max-Gzip .docpack archives."
+            gh release create packs-latest --title "Docx 121-Site Offline Documentation Hub & Packs (Latest)" --notes "Standalone Docx.exe, delta-updatable Docx-core.exe, and 121 content-hashed Max-Gzip .docpack archives."
           }
 
           New-Item -ItemType Directory -Force -Path "./ci-dist" | Out-Null
@@ -102,10 +102,11 @@ jobs:
 
   prepare-matrix:
     name: Prepare Docpack Matrix
-    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && github.event.inputs.sites != 'none')
+    if: github.event_name == 'push' || github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && github.event.inputs.sites != 'none')
     runs-on: ubuntu-latest
     outputs:
       sites: ${{ steps.list.outputs.sites }}
+      count: ${{ steps.list.outputs.count }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -117,19 +118,52 @@ jobs:
         id: list
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          INPUT_SITES: ${{ github.event.inputs.sites || 'all' }}
+          INPUT_SITES: ${{ github.event.inputs.sites || '' }}
+          EVENT_NAME: ${{ github.event_name }}
         run: |
-          gh release view packs-latest >/dev/null 2>&1 || gh release create packs-latest --title "Docx Pre-Built Documentation Packs (Latest)" --notes "Content-hashed Max-Gzip .docpack archives supporting HTTP 206 Partial Range delta updates."
-          if [ "$INPUT_SITES" = "all" ]; then
-            SITES_JSON=$(bun run scripts/ci-build-site.ts --list-json)
-          else
-            SITES_JSON=$(bun -e 'console.log(JSON.stringify(process.env.INPUT_SITES.split(",").map(s=>s.trim()).filter(Boolean)))')
-          fi
-          echo "sites=$SITES_JSON" >> "$GITHUB_OUTPUT"
+          gh release view packs-latest >/dev/null 2>&1 || gh release create packs-latest --title "Docx 121-Site Offline Documentation Hub & Packs (Latest)" --notes "Content-hashed Max-Gzip .docpack archives supporting HTTP 206 Partial Range delta updates."
+          bun -e '
+            const fs = require("fs");
+            const { execSync } = require("child_process");
+            const { SITE_CATALOG } = require("./scripts/ci-build-site.ts");
+            const allIds = SITE_CATALOG.map(s => s.id);
+            let mode = process.env.INPUT_SITES;
+            if (!mode || mode === "") {
+              mode = process.env.EVENT_NAME === "schedule" ? "all" : "missing";
+            }
+
+            let resolved = [];
+            if (mode === "all") {
+              resolved = allIds;
+            } else if (mode === "missing") {
+              let existingPacks = new Set();
+              try {
+                const out = execSync("gh release view packs-latest --json assets", { encoding: "utf8" });
+                const json = JSON.parse(out);
+                existingPacks = new Set(
+                  (json.assets || [])
+                    .map(a => a.name)
+                    .filter(n => n.endsWith(".docpack"))
+                    .map(n => n.replace(".docpack", ""))
+                );
+              } catch (e) {
+                console.warn("Could not query packs-latest assets:", e);
+              }
+              resolved = allIds.filter(id => !existingPacks.has(id));
+            } else {
+              resolved = mode.split(",").map(s => s.trim()).filter(s => allIds.includes(s));
+            }
+
+            console.log(`Resolved ${resolved.length} sites to build:`, resolved);
+            const out = process.env.GITHUB_OUTPUT;
+            fs.appendFileSync(out, `sites=${JSON.stringify(resolved)}\n`);
+            fs.appendFileSync(out, `count=${resolved.length}\n`);
+          '
 
   build-pack:
     name: Build Pack (${{ matrix.site }})
     needs: prepare-matrix
+    if: needs.prepare-matrix.outputs.count != '0'
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -163,8 +197,8 @@ jobs:
 
   update-registry:
     name: Update Master registry.json
-    needs: build-pack
-    if: always() && needs.prepare-matrix.result == 'success'
+    needs: [prepare-matrix, build-pack]
+    if: always() && needs.prepare-matrix.result == 'success' && needs.prepare-matrix.outputs.count != '0'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

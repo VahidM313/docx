@@ -205,7 +205,7 @@ async function enrichCppReferenceDocpack() {
 function cleanPageTitle(rawTitle: string, siteName: string): string {
   let t = decodeHtmlEntities(rawTitle);
   t = t
-    .replace(/\s*[|—–-]\s*(cppreference\.com|Learn C\+\+|The Rust Programming Language|Rust Documentation|React|Vue\.js|Angular|Next\.js|TypeScript|Python [\d.]+ documentation|MDN Web Docs|Go Documentation|Tailwind CSS|shadcn\/ui|Documentation|Docs)\s*$/i, "")
+    .replace(/\s*[|—–-]\s*(cppreference\.com|Learn C\+\+|The Rust Programming Language|Rust Documentation|React|Vue\.js|Angular|Next\.js|TypeScript|Python [\d.]+ documentation|MDN Web Docs|MDN|Go Documentation|Tailwind CSS|shadcn\/ui|Documentation|Docs)\s*$/i, "")
     .trim();
   return t || siteName;
 }
