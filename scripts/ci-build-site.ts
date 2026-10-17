@@ -778,6 +778,15 @@ export const SITE_CATALOG: SiteConfig[] = [
     maxPages: 120,
   },
   {
+    id: "caddy",
+    name: "Caddy Server",
+    version: "v2.9",
+    origin: "https://caddyserver.com",
+    entryPath: "/docs/",
+    allowedPrefixes: ["/docs"],
+    maxPages: 140,
+  },
+  {
     id: "opentofu",
     name: "OpenTofu / Terraform",
     version: "v1.9",

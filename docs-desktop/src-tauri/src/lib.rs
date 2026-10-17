@@ -568,6 +568,7 @@ fn get_site_origin_and_entry(site_id: &str) -> Option<(&'static str, &'static st
         "scikit_learn" => Some(("https://scikit-learn.org", "/stable/")),
         "kubernetes" => Some(("https://kubernetes.io", "/docs/home/")),
         "nginx" => Some(("https://nginx.org", "/en/docs/")),
+        "caddy" => Some(("https://caddyserver.com", "/docs/")),
         "opentofu" => Some(("https://opentofu.org", "/docs/intro/")),
         "ansible" => Some(("https://docs.ansible.com", "/ansible/latest/index.html")),
         "tokio" => Some(("https://tokio.rs", "/tokio/tutorial")),

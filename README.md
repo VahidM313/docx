@@ -1,16 +1,16 @@
 <div align="center">
   <img src="docs-desktop/public/logo.png" alt="Docx Logo" width="96" height="96" />
 
-  # Docx — 121-Site Offline Documentation Engine
+  # Docx — 122-Site Offline Documentation Engine
 
-  **Ultra-fast, 100% offline desktop documentation hub for 121 developer ecosystems — powered by Tauri v2 (Rust), Max-Gzip Level 9 `.docpack` archives, and HTTP 206 Partial Range delta updates.**
+  **Ultra-fast, 100% offline desktop documentation hub for 122 developer ecosystems — powered by Tauri v2 (Rust), Max-Gzip Level 9 `.docpack` archives, and HTTP 206 Partial Range delta updates.**
 
   <p align="center">
     <a href="https://github.com/VahidM313/docx/releases/download/packs-latest/Docx.exe">
       <img src="https://img.shields.io/badge/%E2%AC%87_Download_Docx.exe-Windows_x64_(Standalone)-38bdf8?style=for-the-badge&logo=windows&logoColor=white" alt="Download Docx.exe for Windows" />
     </a>
     <a href="https://github.com/VahidM313/docx/releases/tag/packs-latest">
-      <img src="https://img.shields.io/badge/Docpack_Registry-121_Offline_Sites-22c55e?style=for-the-badge&logo=github&logoColor=white" alt="121 Offline Docpacks" />
+      <img src="https://img.shields.io/badge/Docpack_Registry-122_Offline_Sites-22c55e?style=for-the-badge&logo=github&logoColor=white" alt="122 Offline Docpacks" />
     </a>
   </p>
 </div>
@@ -28,7 +28,7 @@ No installer or external runtime required — download and run the standalone ex
 
 ## ✨ Key Features
 
-- **121 Documentation Ecosystems**: Instant offline access across 14 specialized developer categories: Frontend & UI, React, Vue, Web Frameworks, TanStack, Backend & Auth, Databases & SQL (including Vector DBs), AI & Machine Learning, Python, Rust, Go, C/C++, DevOps, and Architecture.
+- **122 Documentation Ecosystems**: Instant offline access across 14 specialized developer categories: Frontend & UI, React, Vue, Web Frameworks, TanStack, Backend & Auth, Databases & SQL (including Vector DBs), AI & Machine Learning, Python, Rust, Go, C/C++, DevOps, and Architecture.
 - **Original Website Fidelity**: Renders the authentic documentation pages, styles, syntax highlighting, and interactive layouts locally via embedded Rust HTTP servers (`127.0.0.1`).
 - **HTTP 206 Partial Range Delta Updates**: Compares local SHA-256 chunk hashes against [`registry.json`](https://github.com/VahidM313/docx/releases/download/packs-latest/registry.json) on GitHub Releases and downloads only modified chunks.
 - **Universal Spotlight Search (`Ctrl + K`)**: Instant search across all installed documentation packs with keyboard navigation and category filtering.
@@ -39,7 +39,7 @@ No installer or external runtime required — download and run the standalone ex
 
 ---
 
-## 📚 Included Documentation Catalog (121 Sites Across 14 Categories)
+## 📚 Included Documentation Catalog (122 Sites Across 14 Categories)
 
 ### 🎨 1. Frontend & UI (8)
 | Site | ID | Source |
@@ -178,12 +178,13 @@ No installer or external runtime required — download and run the standalone ex
 | **LLVM Infrastructure v20.1** | `llvm` | `https://llvm.org/docs/` |
 | **Lua 5.4 Reference** | `lua` | `https://www.lua.org/manual/5.4/` |
 
-### 🐳 13. DevOps & Cloud (11)
+### 🐳 13. DevOps & Cloud (12)
 | Site | ID | Source |
 | :--- | :--- | :--- |
 | **Docker Docs v28** | `docker` | `https://docs.docker.com/get-started/` |
 | **Kubernetes v1.32** | `kubernetes` | `https://kubernetes.io/docs/home/` |
 | **Nginx v1.26** | `nginx` | `https://nginx.org/en/docs/` |
+| **Caddy Server v2.9** | `caddy` | `https://caddyserver.com/docs/` |
 | **OpenTofu / Terraform v1.9** | `opentofu` | `https://opentofu.org/docs/intro/` |
 | **Ansible v11** | `ansible` | `https://docs.ansible.com/ansible/latest/` |
 | **Git Reference Manual** | `git` | `https://git-scm.com/docs/git` |
