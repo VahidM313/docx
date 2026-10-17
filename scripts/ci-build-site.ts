@@ -1462,7 +1462,9 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
 
         // Inject Docx scrollbar + dark mode + link navigation bridge before </body>
         const snippet = getInjectedSnippet(site.origin);
-        if (html.includes("</body>")) {
+        if (site.id === "lucide") {
+          html = html.replace("</body>", `<script src="/assets/docx-lucide-bundle.js"></script>${snippet}</body>`);
+        } else if (html.includes("</body>")) {
           html = html.replace("</body>", `${snippet}</body>`);
         } else {
           html += snippet;
@@ -1580,6 +1582,14 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
         rawAssets.set(localRoute, { bytes: buf, mime });
       })
     );
+  }
+
+  if (site.id === "lucide") {
+    const bundlePath = path.resolve(__dirname, "../docs-desktop/src-tauri/src/lucide_bundle.js");
+    if (fs.existsSync(bundlePath)) {
+      const bundleBuf = fs.readFileSync(bundlePath);
+      rawAssets.set("/assets/docx-lucide-bundle.js", { bytes: bundleBuf, mime: "application/javascript; charset=utf-8" });
+    }
   }
 
   // 4. Pack all HTML + CSS + Fonts + Images into Max-Gzip content-hashed chunks

@@ -720,6 +720,13 @@ fn inject_reader_bridge(site_key: &str, mut html: String) -> Vec<u8> {
         html = html.replace("href=\"/qt/", "href=\"/qt-6/");
     }
 
+    if site_id == "lucide" {
+        html = html.replace(
+            "</body>",
+            r#"<script src="/assets/docx-lucide-bundle.js"></script></body>"#,
+        );
+    }
+
     // Strip any legacy baked-in <style id="docx-styled-scroll">...</script> snippet from older docpacks
     // so its unconditional dark-mode override never conflicts with runtime theme synchronization.
     if let Some(old_idx) = html.find("<style id=\"docx-styled-scroll\">") {
@@ -731,6 +738,10 @@ fn inject_reader_bridge(site_key: &str, mut html: String) -> Vec<u8> {
     }
 
     let inject = r###"<style id="docx-styled-scroll">
+/* Hide empty Carbon ad floating banner in Lucide Icons */
+.floating-ad, .VPDocAsideCarbonAds, .VPCarbonAds {
+  display: none !important;
+}
 ::-webkit-scrollbar { width: 8px !important; height: 8px !important; }
 ::-webkit-scrollbar-track { background: #070709 !important; }
 ::-webkit-scrollbar-thumb { background-color: #24242b !important; border-radius: 999px !important; border: 2px solid #070709 !important; min-height: 36px !important; }
@@ -2874,6 +2885,18 @@ fn resolve_from_store(
     if site_id == "pytorch" && (decoded_path == "/" || decoded_path == "/docs" || decoded_path == "/docs/stable" || decoded_path == "/docs/stable/" || decoded_path == "/docs/stable/index.html") {
         candidates.insert(0, "/docs/stable/index.html".to_string());
         candidates.insert(0, "/docs/stable/".to_string());
+    }
+
+    if site_id == "lucide"
+        && (decoded_path == "/assets/docx-lucide-bundle.js"
+            || decoded_path == "/docx-lucide-bundle.js")
+    {
+        static LUCIDE_BUNDLE: &str = include_str!("lucide_bundle.js");
+        return Some((
+            "application/javascript; charset=utf-8".to_string(),
+            false,
+            LUCIDE_BUNDLE.as_bytes().to_vec(),
+        ));
     }
 
     if let Ok(guard) = store.overrides.read() {
