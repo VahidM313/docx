@@ -553,16 +553,16 @@ fn get_site_origin_and_entry(site_id: &str) -> Option<(&'static str, &'static st
         "solidjs" => Some(("https://docs.solidjs.com", "/quick-start")),
         "nodejs" => Some(("https://nodejs.org", "/docs/latest-v22.x/api/")),
         "zod" => Some(("https://zod.dev", "/")),
-        "gin" => Some(("https://gin-gonic.com", "/docs/")),
+        "gin" => Some(("https://gin-gonic.com", "/en/docs/")),
         "gorm" => Some(("https://gorm.io", "/docs/")),
         "redis" => Some(("https://redis.io", "/docs/latest/")),
         "prisma" => Some(("https://www.prisma.io", "/docs/getting-started")),
         "mongodb" => Some(("https://www.mongodb.com", "/docs/manual/")),
         "sqlalchemy" => Some(("https://docs.sqlalchemy.org", "/en/20/")),
         "pytorch" => Some(("https://pytorch.org", "/docs/stable/index.html")),
-        "langchain" => Some(("https://python.langchain.com", "/docs/introduction/")),
+        "langchain" => Some(("https://python.langchain.com", "/oss/python/langchain/overview")),
         "huggingface" => Some(("https://huggingface.co", "/docs/transformers/index")),
-        "ollama" => Some(("https://ollama.com", "/")),
+        "ollama" => Some(("https://ollama.com", "/library")),
         "numpy" => Some(("https://numpy.org", "/doc/stable/")),
         "pandas" => Some(("https://pandas.pydata.org", "/docs/")),
         "scikit_learn" => Some(("https://scikit-learn.org", "/stable/")),
@@ -586,7 +586,7 @@ fn get_site_origin_and_entry(site_id: &str) -> Option<(&'static str, &'static st
         "chroma" => Some(("https://docs.trychroma.com", "/")),
         "qdrant" => Some(("https://qdrant.tech", "/documentation/")),
         "tensorflow" => Some(("https://www.tensorflow.org", "/api_docs/python/tf")),
-        "keras" => Some(("https://keras.io", "/")),
+        "keras" => Some(("https://keras.io", "/guides/")),
         "flask" => Some(("https://flask.palletsprojects.com", "/")),
         "pydantic" => Some(("https://docs.pydantic.dev", "/")),
         "requests_py" => Some(("https://requests.readthedocs.io", "/")),
@@ -595,13 +595,13 @@ fn get_site_origin_and_entry(site_id: &str) -> Option<(&'static str, &'static st
         "actix_web" => Some(("https://actix.rs", "/docs/")),
         "bevy" => Some(("https://bevyengine.org", "/learn/quick-start/introduction/")),
         "clap" => Some(("https://docs.rs", "/clap/latest/clap/")),
-        "fiber" => Some(("https://gofiber.io", "/")),
+        "fiber" => Some(("https://docs.gofiber.io", "/")),
         "echo" => Some(("https://echo.labstack.com", "/docs")),
         "cobra" => Some(("https://cobra.dev", "/")),
         "opencv" => Some(("https://docs.opencv.org", "/4.x/")),
-        "imgui" => Some(("https://github.com/ocornut/imgui", "/")),
-        "catch2" => Some(("https://github.com/catchorg/Catch2", "/")),
-        "spdlog" => Some(("https://github.com/gabime/spdlog", "/")),
+        "imgui" => Some(("https://pthom.github.io", "/imgui_manual_online/manual/imgui_manual.html")),
+        "catch2" => Some(("https://github.com", "/catchorg/Catch2/blob/devel/docs/Readme.md")),
+        "spdlog" => Some(("https://github.com", "/gabime/spdlog/wiki")),
         "matplotlib" => Some(("https://matplotlib.org", "/stable/")),
         _ => None,
     }
@@ -636,6 +636,48 @@ fn guess_mime_from_path(path: &str) -> &'static str {
     }
 }
 
+fn strip_html_attribute(html: &mut String, attr_name: &str) {
+    let mut search_from = 0;
+    while let Some(pos) = html[search_from..].find(attr_name) {
+        let abs_pos = search_from + pos;
+        if abs_pos > 0 {
+            let prev = html.as_bytes()[abs_pos - 1];
+            if prev != b' ' && prev != b'\t' && prev != b'\n' {
+                search_from = abs_pos + attr_name.len();
+                continue;
+            }
+        }
+        let after_attr = abs_pos + attr_name.len();
+        if after_attr < html.len() && html.as_bytes()[after_attr] == b'=' {
+            let val_start = after_attr + 1;
+            if val_start < html.len() {
+                let quote = html.as_bytes()[val_start];
+                if quote == b'"' || quote == b'\'' {
+                    if let Some(end_quote) = html[val_start + 1..].find(quote as char) {
+                        let abs_end = val_start + 1 + end_quote + 1;
+                        html.replace_range(abs_pos..abs_end, "");
+                        search_from = abs_pos;
+                        continue;
+                    }
+                } else {
+                    let mut end = val_start;
+                    while end < html.len() {
+                        let b = html.as_bytes()[end];
+                        if b == b' ' || b == b'>' || b == b'\t' || b == b'\n' {
+                            break;
+                        }
+                        end += 1;
+                    }
+                    html.replace_range(abs_pos..end, "");
+                    search_from = abs_pos;
+                    continue;
+                }
+            }
+        }
+        search_from = abs_pos + attr_name.len();
+    }
+}
+
 fn inject_reader_bridge(site_key: &str, mut html: String) -> Vec<u8> {
     if html.contains("id=\"docx-reader-bridge\"") {
         return html.into_bytes();
@@ -658,15 +700,18 @@ fn inject_reader_bridge(site_key: &str, mut html: String) -> Vec<u8> {
         html = html.replace(&format!("src=\"{}/", origin), "src=\"/");
     }
 
-    // Neutralize blocking external analytics/hydration/preload tags so pages like Motion and Qt render in <10ms
-    if site_id != "threejs" && site_id != "nestjs" && site_id != "angular" {
+    // Strip SRI integrity and crossorigin hashes to prevent browsers blocking rewritten local stylesheets (Git, Cobra)
+    strip_html_attribute(&mut html, "integrity");
+    strip_html_attribute(&mut html, "crossorigin");
+
+    // Neutralize blocking external analytics/hydration/preload tags so pages render in <10ms, while preserving SPAs (Three.js, Nest, Angular, Lucide)
+    if site_id != "threejs" && site_id != "nestjs" && site_id != "angular" && site_id != "lucide" {
         html = html
             .replace("rel=\"modulepreload\"", "rel=\"docx-disabled\"")
             .replace("rel='modulepreload'", "rel='docx-disabled'");
     }
     html = html
         .replace("https://www.googletagmanager.com/gtm.js", "data:text/javascript,")
-        .replace("//www.qt.io/hubfs/", "data:text/plain,")
         .replace("https://api.motion.dev/score/badge", "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7#")
         .replace("import \"https://motion.dev/assets/", "// import \"https://motion.dev/assets/")
         .replace("import \"/assets/manifest-", "// import \"/assets/manifest-");
@@ -704,6 +749,14 @@ html.docx-smart-light body {
   background-color: #ffffff !important;
   color: #000000 !important;
   color-scheme: light !important;
+}
+
+/* Responsive media containment (prevents Pandas & scientific SVGs and wide images from overflowing) */
+.bd-content svg, .bd-content img, .figure svg, .figure img, svg.output_svg, .jp-RenderedSVG,
+article img, article svg:not([class*="icon"]):not([class*="lucide"]),
+main img, main svg:not([class*="icon"]):not([class*="lucide"]) {
+  max-width: 100% !important;
+  height: auto !important;
 }
 
 /* VitePress (Hono, Vue, Elysia, Vite, Pinia, etc.) interactive sidebar & menu rules */
@@ -823,7 +876,12 @@ html.rust #mdbook-body-container .hljs-keyword, html.rust #mdbook-body-container
     lua: true,
     cmake: true,
     boost: true,
-    sqlite: true
+    sqlite: true,
+    tanstack_react_charts: true,
+    raylib: true,
+    material_design: true,
+    refactoring: true,
+    design_patterns: true
   };
 
   var DARK_ONLY_SITES = {};
@@ -2779,10 +2837,43 @@ fn resolve_from_store(
         candidates.insert(0, format!("{}.html", qt6));
         candidates.insert(0, qt6);
     }
+    if site_id == "qt" && !decoded_path.starts_with("/qt-6/") {
+        let trimmed_qt = decoded_path.trim_start_matches('/');
+        candidates.push(format!("/qt-6/{}", trimmed_qt));
+        candidates.push(format!("/qt-6/{}.html", trimmed_qt));
+    }
 
     if site_id == "boost" && !decoded_path.starts_with("/doc/libs/latest") {
         candidates.insert(0, format!("/doc/libs/latest{}/index.html", decoded_path));
         candidates.insert(0, format!("/doc/libs/latest{}", decoded_path));
+    }
+
+    if site_id == "langchain" && (decoded_path == "/" || decoded_path == "/docs" || decoded_path == "/docs/" || decoded_path == "/docs/introduction" || decoded_path == "/docs/introduction/") {
+        candidates.insert(0, "/oss/python/langchain/overview".to_string());
+        candidates.insert(0, "/oss/python/langchain/overview.html".to_string());
+    }
+
+    if site_id == "keras" && (decoded_path == "/" || decoded_path == "/docs" || decoded_path == "/guides") {
+        candidates.insert(0, "/guides/".to_string());
+        candidates.insert(0, "/guides/index.html".to_string());
+        candidates.insert(0, "/guides".to_string());
+    }
+
+    if site_id == "ollama" && (decoded_path == "/" || decoded_path == "/docs" || decoded_path == "/library") {
+        candidates.insert(0, "/library".to_string());
+        candidates.insert(0, "/library/index.html".to_string());
+        candidates.insert(0, "/library/".to_string());
+    }
+
+    if site_id == "gin" && (decoded_path == "/" || decoded_path == "/docs" || decoded_path == "/docs/") {
+        candidates.insert(0, "/en/docs/".to_string());
+        candidates.insert(0, "/en/docs/index.html".to_string());
+        candidates.insert(0, "/en/docs".to_string());
+    }
+
+    if site_id == "pytorch" && (decoded_path == "/" || decoded_path == "/docs" || decoded_path == "/docs/stable" || decoded_path == "/docs/stable/" || decoded_path == "/docs/stable/index.html") {
+        candidates.insert(0, "/docs/stable/index.html".to_string());
+        candidates.insert(0, "/docs/stable/".to_string());
     }
 
     if let Ok(guard) = store.overrides.read() {
@@ -3664,8 +3755,24 @@ fn run_install_or_update_sync(
         });
     }
 
-    // Use single-stream full .docpack download if not installed OR if > 6 chunks changed
-    if local_chunks_by_hash.is_empty() || missing_unique_hashes.len() > 6 {
+    let missing_bytes: usize = remote_manifest
+        .routes
+        .values()
+        .filter(|entry| missing_unique_hashes.contains(&entry.hash))
+        .map(|entry| (entry.hash.clone(), entry.length))
+        .collect::<HashMap<String, usize>>()
+        .values()
+        .sum();
+    let missing_chunks_count = missing_unique_hashes.len();
+    let max_delta_bytes = (remote_manifest.totalBytes * 65) / 100;
+
+    // Use single-stream full .docpack download ONLY if not installed locally,
+    // or if the delta exceeds 65% of total pack size or > 250 chunks.
+    let should_full_download = local_chunks_by_hash.is_empty()
+        || missing_chunks_count > 250
+        || (remote_manifest.totalBytes > 0 && missing_bytes > max_delta_bytes);
+
+    if should_full_download {
         let expected_total = 4 + remote_manifest_bytes.len() + remote_manifest.totalBytes;
         let docpack_path = packs_dir.join(format!("{}.docpack", site_id));
         let full_pack_bytes = curl_download_with_progress(
@@ -3761,7 +3868,7 @@ fn run_install_or_update_sync(
         });
     }
 
-    // Already installed and <= 6 chunks changed: perform HTTP 206 Partial Content Range Delta Update!
+    // Already installed and delta is within budget: perform HTTP 206 Partial Content Range Delta Update!
     let hdr_bytes = curl_get_bytes(&pack_url, Some((0, 3)))?;
     let embedded_manifest_len = if hdr_bytes.len() >= 4 {
         u32::from_le_bytes([hdr_bytes[0], hdr_bytes[1], hdr_bytes[2], hdr_bytes[3]]) as usize

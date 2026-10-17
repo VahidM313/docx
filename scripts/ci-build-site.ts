@@ -10,6 +10,8 @@ export interface SiteConfig {
   entryPath: string;
   allowedPrefixes: string[];
   maxPages?: number;
+  userAgent?: string;
+  customHeaders?: Record<string, string>;
 }
 
 export const SITE_CATALOG: SiteConfig[] = [
@@ -617,7 +619,7 @@ export const SITE_CATALOG: SiteConfig[] = [
     version: "v1.9",
     origin: "https://docs.solidjs.com",
     entryPath: "/quick-start",
-    allowedPrefixes: ["/quick-start", "/concepts", "/guides", "/reference"],
+    allowedPrefixes: ["/quick-start", "/concepts", "/guides", "/reference", "/solid-router", "/solid-meta"],
     maxPages: 120,
   },
   // Backend & APIs (4 Sites)
@@ -644,8 +646,8 @@ export const SITE_CATALOG: SiteConfig[] = [
     name: "Gin (Go Web)",
     version: "v1.10",
     origin: "https://gin-gonic.com",
-    entryPath: "/docs/",
-    allowedPrefixes: ["/docs/"],
+    entryPath: "/en/docs/",
+    allowedPrefixes: ["/docs/", "/en/docs/"],
     maxPages: 100,
   },
   {
@@ -701,7 +703,7 @@ export const SITE_CATALOG: SiteConfig[] = [
     version: "v2.6",
     origin: "https://pytorch.org",
     entryPath: "/docs/stable/index.html",
-    allowedPrefixes: ["/docs/stable/"],
+    allowedPrefixes: ["/docs/stable/", "/docs/2."],
     maxPages: 160,
   },
   {
@@ -709,8 +711,8 @@ export const SITE_CATALOG: SiteConfig[] = [
     name: "LangChain",
     version: "v0.3",
     origin: "https://python.langchain.com",
-    entryPath: "/docs/introduction/",
-    allowedPrefixes: ["/docs/"],
+    entryPath: "/oss/python/langchain/overview",
+    allowedPrefixes: ["/docs/", "/oss/python/langchain/"],
     maxPages: 150,
   },
   {
@@ -727,8 +729,8 @@ export const SITE_CATALOG: SiteConfig[] = [
     name: "Ollama",
     version: "v0.5",
     origin: "https://ollama.com",
-    entryPath: "/",
-    allowedPrefixes: ["/"],
+    entryPath: "/library",
+    allowedPrefixes: ["/library", "/blog", "/download"],
     maxPages: 80,
   },
   {
@@ -904,6 +906,7 @@ export const SITE_CATALOG: SiteConfig[] = [
     entryPath: "/doc/refman/8.4/en/",
     allowedPrefixes: ["/doc/refman/8.4/en/"],
     maxPages: 160,
+    userAgent: "DocxCrawler/1.0",
   },
   {
     id: "mariadb",
@@ -940,13 +943,14 @@ export const SITE_CATALOG: SiteConfig[] = [
     entryPath: "/api_docs/python/tf",
     allowedPrefixes: ["/api_docs/python/tf", "/tutorials"],
     maxPages: 180,
+    userAgent: "Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0",
   },
   {
     id: "keras",
     name: "Keras",
     version: "3.8",
     origin: "https://keras.io",
-    entryPath: "/",
+    entryPath: "/guides/",
     allowedPrefixes: ["/getting_started", "/guides", "/api"],
     maxPages: 140,
   },
@@ -1026,7 +1030,7 @@ export const SITE_CATALOG: SiteConfig[] = [
     id: "fiber",
     name: "Fiber (Go)",
     version: "v2.52",
-    origin: "https://gofiber.io",
+    origin: "https://docs.gofiber.io",
     entryPath: "/",
     allowedPrefixes: ["/"],
     maxPages: 110,
@@ -1055,24 +1059,25 @@ export const SITE_CATALOG: SiteConfig[] = [
     version: "4.11",
     origin: "https://docs.opencv.org",
     entryPath: "/4.x/",
-    allowedPrefixes: ["/4.x/"],
+    allowedPrefixes: ["/4.x/", "/4."],
     maxPages: 160,
+    userAgent: "Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0",
   },
   {
     id: "imgui",
     name: "Dear ImGui",
     version: "v1.91",
-    origin: "https://github.com/ocornut/imgui",
-    entryPath: "/",
-    allowedPrefixes: ["/ocornut/imgui"],
+    origin: "https://pthom.github.io",
+    entryPath: "/imgui_manual_online/manual/imgui_manual.html",
+    allowedPrefixes: ["/imgui_manual_online/"],
     maxPages: 80,
   },
   {
     id: "catch2",
     name: "Catch2",
     version: "v3.7",
-    origin: "https://github.com/catchorg/Catch2",
-    entryPath: "/",
+    origin: "https://github.com",
+    entryPath: "/catchorg/Catch2/blob/devel/docs/Readme.md",
     allowedPrefixes: ["/catchorg/Catch2"],
     maxPages: 80,
   },
@@ -1080,8 +1085,8 @@ export const SITE_CATALOG: SiteConfig[] = [
     id: "spdlog",
     name: "spdlog",
     version: "v1.15",
-    origin: "https://github.com/gabime/spdlog",
-    entryPath: "/",
+    origin: "https://github.com",
+    entryPath: "/gabime/spdlog/wiki",
     allowedPrefixes: ["/gabime/spdlog"],
     maxPages: 80,
   },
@@ -1160,33 +1165,73 @@ function isChallengeOrBlockHtml(html: string): boolean {
   );
 }
 
+const FIREFOX_UA = "Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0";
+const BOT_UA = "DocxCrawler/1.0";
+
 async function fetchWithTimeout(
   url: string,
   timeoutMs = 12000,
   maxRetries = 4,
-  onRateLimited?: () => void
+  onRateLimited?: () => void,
+  siteConfig?: SiteConfig
 ): Promise<Response | null> {
   let originReferer = "";
   try {
     originReferer = new URL(url).origin + "/";
   } catch {}
 
+  const isMysql = siteConfig?.id === "mysql" || url.includes("mysql.com");
+  const isFirefoxTarget =
+    siteConfig?.id === "opencv" ||
+    siteConfig?.id === "tensorflow" ||
+    url.includes("opencv.org") ||
+    url.includes("tensorflow.org");
+
   for (let attempt = 0; attempt < maxRetries; attempt++) {
     const ctrl = new AbortController();
     const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+
+    let ua = USER_AGENT;
+    let sendSecChUa = true;
+
+    if (siteConfig?.userAgent) {
+      ua = siteConfig.userAgent;
+      sendSecChUa = false;
+    } else if (isMysql) {
+      ua = BOT_UA;
+      sendSecChUa = false;
+    } else if (isFirefoxTarget || attempt >= 1) {
+      ua = FIREFOX_UA;
+      sendSecChUa = false;
+    }
+
+    if (attempt >= 2 && !isMysql) {
+      ua = BOT_UA;
+      sendSecChUa = false;
+    }
+
+    const headers: Record<string, string> = {
+      "User-Agent": ua,
+      "Accept": "text/html,application/xhtml+xml,text/css,application/javascript,*/*;q=0.8",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cache-Control": "no-cache",
+      ...(originReferer ? { Referer: originReferer } : {}),
+      ...(siteConfig?.customHeaders || {}),
+    };
+
+    if (sendSecChUa) {
+      headers["Sec-Ch-Ua"] = '"Chromium";v="131", "Not_A Brand";v="24"';
+      headers["Sec-Ch-Ua-Mobile"] = "?0";
+      headers["Sec-Ch-Ua-Platform"] = '"Windows"';
+      headers["Sec-Fetch-Dest"] = "document";
+      headers["Sec-Fetch-Mode"] = "navigate";
+      headers["Sec-Fetch-Site"] = "same-origin";
+      headers["Upgrade-Insecure-Requests"] = "1";
+    }
+
     try {
       const res = await fetch(url, {
-        headers: {
-          "User-Agent": USER_AGENT,
-          Accept: "text/html,application/xhtml+xml,text/css,application/javascript,*/*;q=0.8",
-          "Accept-Language": "en-US,en;q=0.9",
-          "Cache-Control": "no-cache",
-          "Sec-Fetch-Dest": "document",
-          "Sec-Fetch-Mode": "navigate",
-          "Sec-Fetch-Site": "same-origin",
-          "Upgrade-Insecure-Requests": "1",
-          ...(originReferer ? { Referer: originReferer } : {}),
-        },
+        headers,
         redirect: "follow",
         signal: ctrl.signal,
       });
@@ -1279,7 +1324,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
     await Promise.all(
       batch.map(async (relPath) => {
         const fullUrl = new URL(relPath, site.origin).href;
-        const res = await fetchWithTimeout(fullUrl, 12000, 4, handleRateLimitSignal);
+        const res = await fetchWithTimeout(fullUrl, 12000, 4, handleRateLimitSignal, site);
         if (!res || !res.ok) return;
         const ct = res.headers.get("content-type") || "";
         if (!ct.includes("html")) return;
@@ -1309,11 +1354,11 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
           keywords: [site.id, ...rawTitle.toLowerCase().split(/\W+/).filter(Boolean)].slice(0, 12),
         });
 
-        // Discover same-origin page links <a href="...">
-        const hrefRegex = /<a\b[^>]*?\bhref=["']([^"'#]+)["']/gi;
+        // Discover same-origin page links <a href="..."> (supporting both quoted and unquoted attributes)
+        const hrefRegex = /<a\b[^>]*?\bhref=(?:"([^"'#]+)"|'([^"'#]+)'|([^\s>"'#]+))/gi;
         let m: RegExpExecArray | null;
         while ((m = hrefRegex.exec(html)) !== null) {
-          const rawHref = m[1].trim();
+          const rawHref = (m[1] || m[2] || m[3] || "").trim();
           if (!rawHref || rawHref.startsWith("mailto:") || rawHref.startsWith("javascript:")) continue;
           try {
             let effectiveHref = rawHref;
@@ -1331,51 +1376,67 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
         }
 
         // Discover and rewrite stylesheets <link rel="stylesheet"|"preload stylesheet" href="...">
-        html = html.replace(
-          /(<link\b[^>]*?\bhref=["'])([^"']+)(["'][^>]*>)/gi,
-          (fullTag, prefix, rawHref, suffix) => {
-            if (!/\brel=["'][^"']*(?:stylesheet|icon)\b/i.test(fullTag)) {
-              return fullTag;
-            }
-            try {
-              const resolved = new URL(rawHref.replace(/&amp;/g, "&"), pageUrl.href);
-              const localRoute = assetUrlToLocalRoute(resolved.href, site.origin);
-              pendingAssetUrls.set(resolved.href, localRoute);
-              const cleanPrefix = prefix.replace(/rel=["']preload stylesheet["']/i, 'rel="stylesheet"');
-              const cleanSuffix = suffix.replace(/rel=["']preload stylesheet["']/i, 'rel="stylesheet"');
-              return `${cleanPrefix}${localRoute}${cleanSuffix}`;
-            } catch {
-              return fullTag;
-            }
+        // Handles both quoted and unquoted attributes (e.g. Qdrant) and strips SRI integrity/crossorigin hashes (e.g. Git, Cobra)
+        html = html.replace(/<link\b([^>]*?)>/gi, (fullTag, attrs) => {
+          const relMatch = attrs.match(/\brel=(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i);
+          const relVal = (relMatch ? (relMatch[1] || relMatch[2] || relMatch[3] || "") : "").toLowerCase();
+          const isStyleOrIcon = relVal.includes("stylesheet") || relVal.includes("icon");
+          const isLucideModule = site.id === "lucide" && relVal.includes("modulepreload");
+          if (!isStyleOrIcon && !isLucideModule) {
+            return fullTag;
           }
-        );
+          const hrefMatch = attrs.match(/\bhref=(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i);
+          if (!hrefMatch) return fullTag;
+          const rawHref = (hrefMatch[1] || hrefMatch[2] || hrefMatch[3] || "").trim();
+          try {
+            const resolved = new URL(rawHref.replace(/&amp;/g, "&"), pageUrl.href);
+            const localRoute = assetUrlToLocalRoute(resolved.href, site.origin);
+            pendingAssetUrls.set(resolved.href, localRoute);
+            let cleanedAttrs = attrs
+              .replace(/\bintegrity=(?:"[^"]*"|'[^']*'|[^\s>]+)/gi, "")
+              .replace(/\bcrossorigin=(?:"[^"]*"|'[^']*'|[^\s>]+)/gi, "");
+            cleanedAttrs = cleanedAttrs.replace(/\bhref=(?:"[^"]*"|'[^']*'|[^\s>]+)/i, `href="${localRoute}"`);
+            cleanedAttrs = cleanedAttrs.replace(/\brel=(?:"preload stylesheet"|'preload stylesheet')/i, 'rel="stylesheet"');
+            return `<link ${cleanedAttrs.trim()}>`;
+          } catch {
+            return fullTag;
+          }
+        });
 
-        // Discover and rewrite images <img src="..."> (remove srcset so browser uses local src)
+        // Discover and rewrite images <img src="..."> (remove srcset so browser uses local src, handle unquoted src)
         html = html
-          .replace(/\bsrcset=["'][^"']*["']/gi, "")
-          .replace(/(<img\b[^>]*?\bsrc=["'])([^"']+)(["'])/gi, (fullMatch, prefix, rawSrc, suffix) => {
+          .replace(/\bsrcset=(?:"[^"]*"|'[^']*'|[^\s>]+)/gi, "")
+          .replace(/<img\b([^>]*?)>/gi, (fullMatch, attrs) => {
+            const srcMatch = attrs.match(/\bsrc=(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i);
+            if (!srcMatch) return fullMatch;
+            const rawSrc = (srcMatch[1] || srcMatch[2] || srcMatch[3] || "").trim();
             if (rawSrc.startsWith("data:")) return fullMatch;
             try {
               const resolved = new URL(rawSrc.replace(/&amp;/g, "&"), pageUrl.href);
               const localRoute = assetUrlToLocalRoute(resolved.href, site.origin);
               pendingAssetUrls.set(resolved.href, localRoute);
-              return `${prefix}${localRoute}${suffix}`;
+              const cleanedAttrs = attrs.replace(/\bsrc=(?:"[^"]*"|'[^']*'|[^\s>]+)/i, `src="${localRoute}"`);
+              return `<img ${cleanedAttrs.trim()}>`;
             } catch {
               return fullMatch;
             }
           });
 
-        if (site.id === "angular" || site.id === "nestjs" || site.id === "threejs" || site.id === "rust") {
-          // Keep same-origin JS bundles for SPA sites, Three.js page scripts & Rust mdBook highlight/book scripts, strip only external analytics
+        if (site.id === "angular" || site.id === "nestjs" || site.id === "threejs" || site.id === "rust" || site.id === "lucide") {
+          // Keep same-origin JS bundles for SPA sites, Lucide icon search/filtering, Three.js page scripts & Rust mdBook highlight/book scripts
           html = html.replace(
-            /(<script\b[^>]*?\bsrc=["'])([^"']+)(["'][^>]*>\s*<\/script>)/gi,
-            (fullScript, pre, rawSrc, suf) => {
+            /<script\b([^>]*?)>\s*<\/script>/gi,
+            (fullScript, attrs) => {
+              const srcMatch = attrs.match(/\bsrc=(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i);
+              if (!srcMatch) return fullScript;
+              const rawSrc = (srcMatch[1] || srcMatch[2] || srcMatch[3] || "").trim();
               try {
                 const resolved = new URL(rawSrc.replace(/&amp;/g, "&"), pageUrl.href);
                 if (resolved.origin !== site.origin) return "";
                 const localRoute = assetUrlToLocalRoute(resolved.href, site.origin);
                 pendingAssetUrls.set(resolved.href, localRoute);
-                return `${pre}${localRoute}${suf}`;
+                const cleanedAttrs = attrs.replace(/\bsrc=(?:"[^"]*"|'[^']*'|[^\s>]+)/i, `src="${localRoute}"`);
+                return `<script ${cleanedAttrs.trim()}></script>`;
               } catch {
                 return "";
               }
@@ -1465,7 +1526,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
       slice.map(async ([fullUrl, localRoute]) => {
         const normKey = normalizeRouteKey(localRoute);
         if (rawAssets.has(normKey)) return;
-        const res = await fetchWithTimeout(fullUrl, 10000, 3, handleRateLimitSignal);
+        const res = await fetchWithTimeout(fullUrl, 10000, 3, handleRateLimitSignal, site);
         if (!res || !res.ok) return;
         const ct = res.headers.get("content-type") || "";
         const mime = guessMime(localRoute, ct);
@@ -1509,7 +1570,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
       slice.map(async ([fullUrl, localRoute]) => {
         const normKey = normalizeRouteKey(localRoute);
         if (rawAssets.has(normKey)) return;
-        const res = await fetchWithTimeout(fullUrl, 8000, 3, handleRateLimitSignal);
+        const res = await fetchWithTimeout(fullUrl, 8000, 3, handleRateLimitSignal, site);
         if (!res || !res.ok) return;
         const arr = await res.arrayBuffer();
         if (arr.byteLength > 300 * 1024) return;

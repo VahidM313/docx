@@ -939,7 +939,7 @@ export const SITE_BRANDS: Record<string, SiteBrand> = {
       "High-level deep learning API running seamlessly on top of JAX, PyTorch, and TensorFlow with unified model definitions.",
     svg: `<svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" fill="#d00000"/><path d="M8 7v10M8 12l5-5M8 12l5 5" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
     defaultRoutes: [
-      { label: "Documentation", path: "/" },
+      { label: "Guides", path: "/guides/" },
       { label: "Getting Started", path: "/getting_started/" },
       { label: "Core API", path: "/api/models/" },
       { label: "Layers", path: "/api/layers/" },
@@ -956,7 +956,7 @@ export const SITE_BRANDS: Record<string, SiteBrand> = {
       "Context-aware reasoning framework for developing LLM applications, RAG pipelines, agents, and chains.",
     svg: `<svg viewBox="0 0 24 24" fill="none" stroke="#00a67e" stroke-width="1.8" stroke-linecap="round"><circle cx="7" cy="7" r="4"/><circle cx="17" cy="17" r="4"/><path d="M10 10l4 4M7 11v6a2 2 0 0 0 2 2h6"/></svg>`,
     defaultRoutes: [
-      { label: "Introduction", path: "/docs/introduction/" },
+      { label: "Overview", path: "/oss/python/langchain/overview" },
       { label: "Tutorials", path: "/docs/tutorials/" },
       { label: "Agents", path: "/docs/concepts/agents/" },
       { label: "RAG Pipeline", path: "/docs/tutorials/rag/" },
@@ -990,7 +990,7 @@ export const SITE_BRANDS: Record<string, SiteBrand> = {
       "Get up and running with large language models locally: Llama 3, DeepSeek, Mistral, Gemma, and REST API.",
     svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M8 5a4 4 0 0 1 8 0"/><circle cx="9.5" cy="12.5" r="1" fill="currentColor"/><circle cx="14.5" cy="12.5" r="1" fill="currentColor"/><path d="M11 16h2"/></svg>`,
     defaultRoutes: [
-      { label: "Overview", path: "/" },
+      { label: "Library", path: "/library" },
       { label: "Modelfile", path: "/docs/modelfile" },
       { label: "API Reference", path: "/docs/api" },
       { label: "CLI Guide", path: "/docs/cli" },
@@ -1325,10 +1325,10 @@ export const SITE_BRANDS: Record<string, SiteBrand> = {
       "The fastest full-featured web framework for Go featuring martini-like API with custom radix tree routing.",
     svg: `<svg viewBox="0 0 24 24" fill="none" stroke="#00add8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M5 3l7 14 7-14H5z"/></svg>`,
     defaultRoutes: [
-      { label: "Docs Home", path: "/docs/" },
-      { label: "Quick Start", path: "/docs/quickstart/" },
-      { label: "Examples", path: "/docs/examples/" },
-      { label: "Custom Middleware", path: "/docs/examples/custom-middleware/" },
+      { label: "Docs Home", path: "/en/docs/" },
+      { label: "Quick Start", path: "/en/docs/quickstart/" },
+      { label: "Examples", path: "/en/docs/examples/" },
+      { label: "Custom Middleware", path: "/en/docs/examples/custom-middleware/" },
     ],
   },
   gorm: {
@@ -1528,8 +1528,8 @@ export const SITE_BRANDS: Record<string, SiteBrand> = {
       "Bloat-free Immediate Mode Graphical User Interface for C++: game tooling, debug overlays, renderer-agnostic backends.",
     svg: `<svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#9b51e0" stroke-width="1.8"/><rect x="6" y="6" width="6" height="4" rx="1" fill="#9b51e0"/><line x1="6" y1="14" x2="18" y2="14" stroke="#9b51e0" stroke-width="1.8"/><circle cx="12" cy="14" r="2.5" fill="#9b51e0"/></svg>`,
     defaultRoutes: [
-      { label: "Overview", path: "/" },
-      { label: "Wiki", path: "/wiki" },
+      { label: "Interactive Manual", path: "/imgui_manual_online/manual/imgui_manual.html" },
+      { label: "Dear ImGui Manual", path: "/imgui_manual_online/manual/imgui_manual.html" },
     ],
   },
   catch2: {
@@ -1543,9 +1543,8 @@ export const SITE_BRANDS: Record<string, SiteBrand> = {
       "Modern, C++-native test framework for unit tests, TDD and BDD with clean assertion macros, matchers, and generators.",
     svg: `<svg viewBox="0 0 24 24" fill="none" stroke="#ff6600" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg>`,
     defaultRoutes: [
-      { label: "Overview", path: "/" },
-      { label: "Tutorial", path: "/docs/tutorial.md" },
-      { label: "Assertions", path: "/docs/assertions.md" },
+      { label: "Documentation", path: "/catchorg/Catch2/blob/devel/docs/Readme.md" },
+      { label: "Tutorial", path: "/catchorg/Catch2/blob/devel/docs/tutorial.md" },
     ],
   },
   spdlog: {
@@ -1559,8 +1558,7 @@ export const SITE_BRANDS: Record<string, SiteBrand> = {
       "Super fast, header-only / compiled C++ logging library: asynchronous logging, rotating sinks, multi-threading, and formatting.",
     svg: `<svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="7" y1="9" x2="17" y2="9"/><line x1="7" y1="13" x2="14" y2="13"/></svg>`,
     defaultRoutes: [
-      { label: "Documentation", path: "/" },
-      { label: "Wiki & Examples", path: "/wiki" },
+      { label: "Wiki & Documentation", path: "/gabime/spdlog/wiki" },
     ],
   },
   llvm: {
