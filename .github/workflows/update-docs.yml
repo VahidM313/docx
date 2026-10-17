@@ -1,4 +1,4 @@
-name: Build & Publish Docx App + 122 Docpacks
+name: Build & Publish Docx App + 121 Docpacks
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       sites:
-        description: "Site IDs to build: 'missing' (only unbuilt packs, recommended), 'all' (all 122), 'none' (only Docx.exe), or comma-separated IDs (e.g. redis,duckdb)"
+        description: "Site IDs to build: 'missing' (only unbuilt packs, recommended), 'all' (all 121), 'none' (only Docx.exe), or comma-separated IDs (e.g. redis,duckdb)"
         required: false
         default: "missing"
   schedule:
@@ -59,7 +59,7 @@ jobs:
           $shortSha = $env:SHORT_SHA.Substring(0, 8)
           gh release view packs-latest *> $null
           if ($LASTEXITCODE -ne 0) {
-            gh release create packs-latest --title "Docx 122-Site Offline Documentation Hub & Packs (Latest)" --notes "Standalone Docx.exe, delta-updatable Docx-core.exe, and 122 content-hashed Max-Gzip .docpack archives."
+            gh release create packs-latest --title "Docx 121-Site Offline Documentation Hub & Packs (Latest)" --notes "Standalone Docx.exe, delta-updatable Docx-core.exe, and 121 content-hashed Max-Gzip .docpack archives."
           }
 
           New-Item -ItemType Directory -Force -Path "./ci-dist" | Out-Null
@@ -121,7 +121,7 @@ jobs:
           INPUT_SITES: ${{ github.event.inputs.sites || '' }}
           EVENT_NAME: ${{ github.event_name }}
         run: |
-          gh release view packs-latest >/dev/null 2>&1 || gh release create packs-latest --title "Docx 122-Site Offline Documentation Hub & Packs (Latest)" --notes "Content-hashed Max-Gzip .docpack archives supporting HTTP 206 Partial Range delta updates."
+          gh release view packs-latest >/dev/null 2>&1 || gh release create packs-latest --title "Docx 121-Site Offline Documentation Hub & Packs (Latest)" --notes "Content-hashed Max-Gzip .docpack archives supporting HTTP 206 Partial Range delta updates."
           bun -e '
             const fs = require("fs");
             const { execSync } = require("child_process");

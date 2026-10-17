@@ -1,16 +1,16 @@
 <div align="center">
   <img src="docs-desktop/public/logo.png" alt="Docx Logo" width="96" height="96" />
 
-  # Docx — 122-Site Offline Documentation Engine
+  # Docx — 121-Site Offline Documentation Engine
 
-  **Ultra-fast, 100% offline desktop documentation hub for 122 developer ecosystems — powered by Tauri v2 (Rust), Max-Gzip Level 9 `.docpack` archives, and HTTP 206 Partial Range delta updates.**
+  **Ultra-fast, 100% offline desktop documentation hub for 121 developer ecosystems — powered by Tauri v2 (Rust), Max-Gzip Level 9 `.docpack` archives, and HTTP 206 Partial Range delta updates.**
 
   <p align="center">
     <a href="https://github.com/VahidM313/docx/releases/download/packs-latest/Docx.exe">
       <img src="https://img.shields.io/badge/%E2%AC%87_Download_Docx.exe-Windows_x64_(Standalone)-38bdf8?style=for-the-badge&logo=windows&logoColor=white" alt="Download Docx.exe for Windows" />
     </a>
     <a href="https://github.com/VahidM313/docx/releases/tag/packs-latest">
-      <img src="https://img.shields.io/badge/Docpack_Registry-122_Offline_Sites-22c55e?style=for-the-badge&logo=github&logoColor=white" alt="122 Offline Docpacks" />
+      <img src="https://img.shields.io/badge/Docpack_Registry-121_Offline_Sites-22c55e?style=for-the-badge&logo=github&logoColor=white" alt="121 Offline Docpacks" />
     </a>
   </p>
 </div>
@@ -28,7 +28,7 @@ No installer or external runtime required — download and run the standalone ex
 
 ## ✨ Key Features
 
-- **122 Documentation Ecosystems**: Instant offline access across 14 specialized developer categories: Frontend & UI, React, Vue, Web Frameworks, TanStack, Backend & Auth, Databases & SQL (including Vector DBs), AI & Machine Learning, Python, Rust, Go, C/C++, DevOps, and Architecture.
+- **121 Documentation Ecosystems**: Instant offline access across 14 specialized developer categories: Frontend & UI, React, Vue, Web Frameworks, TanStack, Backend & Auth, Databases & SQL (including Vector DBs), AI & Machine Learning, Python, Rust, Go, C/C++, DevOps, and Architecture.
 - **Original Website Fidelity**: Renders the authentic documentation pages, styles, syntax highlighting, and interactive layouts locally via embedded Rust HTTP servers (`127.0.0.1`).
 - **HTTP 206 Partial Range Delta Updates**: Compares local SHA-256 chunk hashes against [`registry.json`](https://github.com/VahidM313/docx/releases/download/packs-latest/registry.json) on GitHub Releases and downloads only modified chunks.
 - **Universal Spotlight Search (`Ctrl + K`)**: Instant search across all installed documentation packs with keyboard navigation and category filtering.
@@ -39,7 +39,7 @@ No installer or external runtime required — download and run the standalone ex
 
 ---
 
-## 📚 Included Documentation Catalog (122 Sites Across 14 Categories)
+## 📚 Included Documentation Catalog (121 Sites Across 14 Categories)
 
 ### 🎨 1. Frontend & UI (8)
 | Site | ID | Source |
@@ -194,12 +194,11 @@ No installer or external runtime required — download and run the standalone ex
 | **PowerShell 7.5** | `powershell` | `https://learn.microsoft.com/en-us/powershell/` |
 | **Windows CMD** | `cmd` | `https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/` |
 
-### 🏛️ 14. Architecture & Design (4)
+### 🏛️ 14. Architecture & Design (3)
 | Site | ID | Source |
 | :--- | :--- | :--- |
-| **System Design Primer** | `system_design` | `https://github.com/donnemartin/system-design-primer` |
-| **Software Design Patterns** | `design_patterns` | `https://www.patterns.dev` |
-| **Material Design 3 (M3)** | `material_design` | `https://m3.material.io` |
+| **Software Design Patterns** | `design_patterns` | `https://refactoring.guru/design-patterns` |
+| **Material Design 3 (Web)** | `material_design` | `https://material-web.dev` |
 | **Refactoring & Clean Code** | `refactoring` | `https://refactoring.guru` |
 
 ---

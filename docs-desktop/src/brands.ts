@@ -1754,25 +1754,8 @@ export const SITE_BRANDS: Record<string, SiteBrand> = {
   },
 
   // ==========================================
-  // 14. Architecture & Design (4)
+  // 14. Architecture & Design (3)
   // ==========================================
-  system_design: {
-    id: "system_design",
-    name: "System Design Primer",
-    version: "2026",
-    category: "Architecture & Design",
-    color: "#6366f1",
-    bgTint: "rgba(99, 102, 241, 0.15)",
-    description:
-      "Comprehensive engineering guide to learning large-scale system design: scalability, microservices, caches, replication, and CAP theorem.",
-    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="6" height="5" rx="1"/><rect x="16" y="3" width="6" height="5" rx="1"/><rect x="9" y="16" width="6" height="5" rx="1"/><path d="M5 8v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8M12 14v2"/></svg>`,
-    defaultRoutes: [
-      { label: "Overview", path: "/" },
-      { label: "Scalability", path: "/#performance-vs-scalability" },
-      { label: "Load Balancing", path: "/#load-balancer" },
-      { label: "Databases", path: "/#relational-database-management-system-rdbms" },
-    ],
-  },
   design_patterns: {
     id: "design_patterns",
     name: "Software Design Patterns",
@@ -1781,29 +1764,31 @@ export const SITE_BRANDS: Record<string, SiteBrand> = {
     color: "#06b6d4",
     bgTint: "rgba(6, 182, 212, 0.15)",
     description:
-      "Patterns.dev modern software architecture: Singleton, Factory, Observer, Render Props, Compound Components, and Islands.",
+      "Comprehensive design patterns reference: Creational, Structural, and Behavioral patterns with real-world examples and diagrams.",
     svg: `<svg viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.8"><polygon points="12 2 19 8.5 12 15 5 8.5 12 2"/><polygon points="12 9 19 15.5 12 22 5 15.5 12 9"/></svg>`,
     defaultRoutes: [
-      { label: "Design Patterns", path: "/vanilla-design-patterns/" },
-      { label: "React Patterns", path: "/react-design-patterns/" },
-      { label: "Rendering Patterns", path: "/rendering-patterns/" },
+      { label: "Design Patterns", path: "/design-patterns" },
+      { label: "Creational", path: "/design-patterns/creational-patterns" },
+      { label: "Structural", path: "/design-patterns/structural-patterns" },
+      { label: "Behavioral", path: "/design-patterns/behavioral-patterns" },
     ],
   },
   material_design: {
     id: "material_design",
-    name: "Material Design 3",
+    name: "Material Design 3 (Web)",
     version: "M3",
     category: "Architecture & Design",
     color: "#a855f7",
     bgTint: "rgba(168, 85, 247, 0.15)",
     description:
-      "Google's open-source design system: dynamic color theming, elevation, typography scales, tokens, and accessible components.",
+      "Google's Material Design 3 Web Components: accessible UI components, design tokens, dynamic color theming, and typography.",
     svg: `<svg viewBox="0 0 24 24" fill="none"><circle cx="7.5" cy="7.5" r="4.5" stroke="#a855f7" stroke-width="1.8"/><rect x="12" y="12" width="9" height="9" rx="2" stroke="#a855f7" stroke-width="1.8"/><polygon points="16.5 3 21 11 12 11 16.5 3" stroke="#a855f7" stroke-width="1.8"/></svg>`,
     defaultRoutes: [
-      { label: "Foundations", path: "/foundations" },
-      { label: "Color System", path: "/styles/color/overview" },
-      { label: "Typography", path: "/styles/typography/overview" },
-      { label: "Components", path: "/components" },
+      { label: "Introduction", path: "/about/intro/" },
+      { label: "Theming", path: "/theming/material-theming/" },
+      { label: "Buttons", path: "/components/button/" },
+      { label: "Dialogs", path: "/components/dialog/" },
+      { label: "Text Fields", path: "/components/text-field/" },
     ],
   },
   refactoring: {
