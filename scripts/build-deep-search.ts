@@ -3,7 +3,9 @@ import path from "path";
 import { gzipSync, gunzipSync } from "zlib";
 import { createHash } from "crypto";
 
-const APPDATA_DIR = "C:/Users/vahid/AppData/Local/docx";
+const APPDATA_DIR = process.env.LOCALAPPDATA
+  ? path.join(process.env.LOCALAPPDATA, "docx")
+  : path.join(process.env.USERPROFILE ?? "C:/Users/Public", "AppData/Local/docx");
 const REPO_PACKS_DIR = path.resolve(import.meta.dir, "..", "packs");
 
 function fnv1aHex(buf: Buffer): string {

@@ -19,14 +19,46 @@ const APK_OUT_SRC = path.join(
 );
 const ROOT_APK_ARM = path.join(ROOT, "Docx-arm64-v8a-release.apk");
 const ROOT_APK = path.join(ROOT, "Docx.apk");
-const DESKTOP_APK = "C:/Users/vahid/OneDrive/Desktop/Docx.apk";
+const DESKTOP_APK = path.join(process.env.USERPROFILE ?? "C:/Users/Public/Desktop", "Desktop", "Docx.apk");
 
 const t0 = performance.now();
 
 // 1. Prepare environment variables
-const androidHome = process.env.ANDROID_HOME || "D:\\Android\\SDK";
-const ndkHome = process.env.NDK_HOME || path.join(androidHome, "ndk", "30.0.16248370");
-const javaHome = process.env.JAVA_HOME || "C:\\Program Files\\Microsoft\\jdk-21.0.12.101-hotspot";
+// All tool paths are overridable via env. Defaults match standard Android Studio installs.
+const androidHome =
+  process.env.ANDROID_HOME ||
+  process.env.ANDROID_SDK_ROOT ||
+  path.join(process.env.LOCALAPPDATA ?? "", "Android", "Sdk");
+const ndkVersionsDir = path.join(androidHome, "ndk");
+if (!fs.existsSync(ndkVersionsDir)) {
+  console.error(`✗ Android SDK/NDK not found at ${androidHome}`);
+  console.error("  Install Android Studio (or set ANDROID_HOME to your SDK path) and retry.");
+  process.exit(1);
+}
+const ndkHome =
+  process.env.NDK_HOME || path.join(ndkVersionsDir, fs.readdirSync(ndkVersionsDir).sort().pop() ?? "");
+
+// Locate a JDK: JAVA_HOME first, then standard install roots (no personal paths).
+let javaHome = process.env.JAVA_HOME || "";
+if (!javaHome) {
+  const jdkRoots = ["C:\\Program Files\\Java", "C:\\Program Files\\Eclipse Adoptium", "C:\\Program Files\\Microsoft"]
+    .filter((d) => fs.existsSync(d));
+  for (const root of jdkRoots) {
+    const candidates = fs
+      .readdirSync(root)
+      .filter((d) => /jdk/i.test(d))
+      .sort()
+      .reverse();
+    if (candidates.length) {
+      javaHome = path.join(root, candidates[0]);
+      break;
+    }
+  }
+}
+if (!javaHome) {
+  console.error("✗ No JDK found. Install Java 17+ (or set JAVA_HOME) and retry.");
+  process.exit(1);
+}
 const llvmBin = path.join(ndkHome, "toolchains", "llvm", "prebuilt", "windows-x86_64", "bin");
 const platformTools = path.join(androidHome, "platform-tools");
 const cmdlineTools = path.join(androidHome, "cmdline-tools", "latest", "bin");

@@ -13,8 +13,14 @@ interface SearchEntry {
   keywords: string[];
 }
 
-const tailwindDocsDir = "d:/Dev/crawl/tailwindcss-site/src/docs";
-const shadcnDocsDir = "d:/Dev/crawl/shadcn-site/apps/v4/content/docs";
+// Source workspace checkout — required; point it at the checked-out crawl workspace.
+const CRAWL_ROOT = process.env.CRAWL_ROOT ?? "";
+if (!CRAWL_ROOT) {
+  console.error("✗ CRAWL_ROOT is not set. Point it at the workspace containing tailwindcss-site/ and shadcn-site/.");
+  process.exit(1);
+}
+const tailwindDocsDir = path.join(CRAWL_ROOT, "tailwindcss-site", "src", "docs");
+const shadcnDocsDir = path.join(CRAWL_ROOT, "shadcn-site", "apps", "v4", "content", "docs");
 
 const searchIndex: SearchEntry[] = [];
 
@@ -181,6 +187,6 @@ function indexShadcnDir(dir: string, baseRelative = "") {
 
 indexShadcnDir(shadcnDocsDir);
 
-const outputPath = "d:/Dev/crawl/search-index.json";
+const outputPath = path.join(CRAWL_ROOT, "search-index.json");
 fs.writeFileSync(outputPath, JSON.stringify(searchIndex, null, 2), "utf-8");
 console.log(`Generated search index with ${searchIndex.length} items to ${outputPath}`);

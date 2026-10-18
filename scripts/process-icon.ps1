@@ -1,6 +1,5 @@
+param([Parameter(Mandatory = $true)][string]$inputPath)
 Add-Type -AssemblyName System.Drawing
-
-$inputPath = "C:\Users\vahid\.gemini\antigravity\brain\189629d5-fae8-4b4b-be40-e9dec688a5f9\.user_uploaded\media_1791635832987_7ecf9e36.jpg"
 $srcBmp = [System.Drawing.Bitmap]::new($inputPath)
 $w = $srcBmp.Width
 $h = $srcBmp.Height

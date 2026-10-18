@@ -170,14 +170,22 @@ function packStaticAndPublic(prefix: "tw" | "sh", siteRoot: string) {
   console.log(`Packed ${prefix} static+public in ${Date.now() - t0}ms`);
 }
 
+// Source workspace checkout — required; point it at the workspace containing
+// tailwindcss-site/ and shadcn-site/ (the crawl workspace checkout).
+const CRAWL_ROOT = process.env.CRAWL_ROOT ?? "";
+if (!CRAWL_ROOT) {
+  console.error("✗ CRAWL_ROOT is not set. Point it at the workspace containing tailwindcss-site/ and shadcn-site/.");
+  process.exit(1);
+}
+
 const tStart = Date.now();
-packStaticAndPublic("tw", "d:/Dev/crawl/tailwindcss-site");
-packStaticAndPublic("sh", "d:/Dev/crawl/shadcn-site/apps/v4");
+packStaticAndPublic("tw", path.join(CRAWL_ROOT, "tailwindcss-site"));
+packStaticAndPublic("sh", path.join(CRAWL_ROOT, "shadcn-site", "apps", "v4"));
 
-const searchIndex = JSON.parse(fs.readFileSync("d:/Dev/crawl/search-index.json", "utf-8"));
+const searchIndex = JSON.parse(fs.readFileSync(path.join(CRAWL_ROOT, "search-index.json"), "utf-8"));
 
-const twAppDir = "d:/Dev/crawl/tailwindcss-site/.next/server/app";
-const shAppDir = "d:/Dev/crawl/shadcn-site/apps/v4/.next/server/app";
+const twAppDir = path.join(CRAWL_ROOT, "tailwindcss-site", ".next", "server", "app");
+const shAppDir = path.join(CRAWL_ROOT, "shadcn-site", "apps", "v4", ".next", "server", "app");
 
 const extraTwRoutes = [
   "/index",
@@ -253,7 +261,7 @@ const manifestJson = Buffer.from(JSON.stringify(manifest), "utf-8");
 const header = Buffer.alloc(4);
 header.writeUInt32LE(manifestJson.length, 0);
 
-const outPath = "d:/Dev/crawl/docs-desktop/src-tauri/assets.pack";
+const outPath = path.join(CRAWL_ROOT, "docs-desktop", "src-tauri", "assets.pack");
 const finalBuffer = Buffer.concat([header, manifestJson, ...chunks.map((c) => Buffer.from(c.buffer, c.byteOffset, c.byteLength))]);
 fs.writeFileSync(outPath, finalBuffer);
 

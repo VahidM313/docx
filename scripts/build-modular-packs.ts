@@ -28,7 +28,18 @@ export interface SiteManifest {
   routes: Record<string, HashedManifestEntry>;
 }
 
-const packBuf = fs.readFileSync("d:/Dev/crawl/docs-desktop/src-tauri/assets.pack");
+// Source workspace checkout — override with CRAWL_ROOT=<path> when regenerating.
+const CRAWL_ROOT = process.env.CRAWL_ROOT ?? "";
+function crawlPath(...p: string[]): string {
+  if (!CRAWL_ROOT) {
+    console.error("✗ CRAWL_ROOT is not set. Point it at the checked-out crawl workspace containing");
+    console.error("  tailwindcss-site/, shadcn-site/ and docs-desktop/src-tauri/assets.pack");
+    process.exit(1);
+  }
+  return path.join(CRAWL_ROOT, ...p);
+}
+
+const packBuf = fs.readFileSync(crawlPath("docs-desktop", "src-tauri", "assets.pack"));
 const manifestLen = packBuf.readUInt32LE(0);
 const oldManifest: Record<string, OldEntry> = JSON.parse(
   packBuf.subarray(4, 4 + manifestLen).toString("utf-8")
@@ -135,4 +146,4 @@ const registry = {
 };
 
 fs.writeFileSync(path.join(packsDir, "registry.json"), JSON.stringify(registry, null, 2), "utf-8");
-console.log("Wrote d:/Dev/crawl/packs/registry.json");
+console.log(`Wrote ${path.resolve("packs", "registry.json")}`);
