@@ -142,9 +142,10 @@ jobs:
       - name: Build Android ARMv8 Release APK
         working-directory: docs-desktop
         env:
-          ANDROID_HOME: ${{ env.ANDROID_HOME }}
+          ANDROID_HOME: /usr/local/lib/android/sdk
           NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
         run: |
+          export PATH="/usr/local/lib/android/sdk/cmdline-tools/latest/bin:/usr/local/lib/android/sdk/platform-tools:$PATH"
           bun run tauri android build -t aarch64 --apk --ci
 
       - name: Upload Android Release APK to Release
