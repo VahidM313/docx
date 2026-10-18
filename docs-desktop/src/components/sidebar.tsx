@@ -4,71 +4,43 @@ import { useApp } from "../lib/store";
 import { SITES, SITE_CATEGORIES, getBrand, getSiteIconHtml } from "../lib/catalog";
 import { Dialog, DialogContent } from "../ui";
 import { Input, Badge } from "../ui";
-import { Home, Bookmark as BookmarkIcon, Puzzle, X, Search as SearchIcon } from "lucide-react";
+import { Home, Bookmark as BookmarkIcon, Puzzle, X, Search as SearchIcon, Pin, PinOff } from "lucide-react";
 
-/* ---------------- Rail (left, slim, colorful) ---------------- */
-export function SidebarRail() {
-  const app = useApp();
-  const hoverExpand = app.flags.sidebarHoverExpand;
-  const [hover, setHover] = React.useState(false);
-
-  if (!hoverExpand) {
-    /* flag off: sidebar pinned expanded — occupies layout width */
-    return (
-      <div className="hidden h-full w-60 shrink-0 border-r border-border md:block">
-        <RailMenu app={app} scrollRows />
-      </div>
-    );
-  }
-
-  return (
-    <div className="relative hidden h-full w-12 shrink-0 md:block" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-      <aside className="absolute inset-0 flex w-12 flex-col items-center gap-2 border-r border-border bg-background-deep py-3">
-        <RailBtn active={app.activeTabId === "home" && !app.bookmarksOpen} onClick={app.goHome} label="Home hub">
-          <Home size={17} />
-        </RailBtn>
-        <RailBtn
-          active={app.bookmarksOpen}
-          onClick={() => app.setBookmarksOpen(true)}
-          label="Bookmarks"
-          badge={app.bookmarks.length > 0 ? app.bookmarks.length : undefined}
-        >
-          <BookmarkIcon size={16} />
-        </RailBtn>
-
-        <div className="my-1 h-px w-6 bg-border" />
-
-        <PinnedRail app={app} />
-
-        <div className="mt-auto">
-          <RailBtn active={app.drawerOpen} onClick={() => app.setDrawerOpen(true)} label="All sites">
-            <Puzzle size={16} />
-          </RailBtn>
-        </div>
-      </aside>
-
-      {/* hover expansion */}
-      <AnimatePresence>
-        {hover && (
-          <motion.aside
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -10, transition: { duration: 0.12 } }}
-            transition={{ duration: 0.16, ease: "easeOut" }}
-            className="absolute left-0 top-0 z-40 h-full w-60 border-r border-border bg-popover/95 shadow-lift backdrop-blur"
-          >
-            <RailMenu app={app} scrollRows />
-          </motion.aside>
-        )}
-      </AnimatePresence>
+/* ---------------- Rail (left, hidden until edge-hover unless pinned) ---------------- */
+export function SidebarRail({ pinned }: { pinned?: boolean }) {
+  return pinned ? (
+    /* pinned: fixed open, occupies layout width */
+    <div className="h-full w-60 border-r border-border bg-background-deep">
+      <RailMenu pinned />
+    </div>
+  ) : (
+    /* hover overlay: floats over the content, closes on leave */
+    <div className="h-full w-60 border-r border-border bg-background-deep shadow-lift">
+      <RailMenu />
     </div>
   );
 }
 
 /** Content shared by the slim rail's hover panel and the pinned sidebar. */
-function RailMenu({ app, scrollRows }: { app: ReturnType<typeof useApp>; scrollRows?: boolean }) {
+function RailMenu({ pinned, scrollRows }: { pinned?: boolean; scrollRows?: boolean }) {
+  const app = useApp();
   return (
     <div className="flex h-full flex-col gap-0.5 px-2 py-3">
+      <div className="mb-1 flex items-center justify-between px-2">
+        <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+          {pinned ? "Sidebar" : "Library"}
+        </span>
+        <button
+          onClick={() => app.setSidebarPin()}
+          title={pinned ? "Unpin — hide until you hover the left edge" : "Pin — keep open on screen"}
+          className={
+            "grid h-6 w-6 place-items-center rounded-md transition-colors hover:bg-accent " +
+            (pinned ? "grad-text" : "text-muted-foreground")
+          }
+        >
+          {pinned ? <PinOff size={13} /> : <Pin size={13} />}
+        </button>
+      </div>
       <RailRow
         icon={<Home size={16} />}
         label="Home hub"
@@ -98,39 +70,6 @@ function RailMenu({ app, scrollRows }: { app: ReturnType<typeof useApp>; scrollR
           onClick={() => app.setDrawerOpen(true)}
         />
       </div>
-    </div>
-  );
-}
-
-/** Colorful pinned-site icon strip for the slim rail. */
-function PinnedRail({ app }: { app: ReturnType<typeof useApp> }) {
-  const pinned = app.pinned.filter((id) => SITES.some((s) => s.id === id));
-  return (
-    <div className="flex flex-col items-center gap-2">
-      {pinned.map((id) => {
-        const b = getBrand(id);
-        return (
-          <motion.button
-            key={id}
-            initial={{ opacity: 0, scale: 0.7 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ type: "spring", stiffness: 500, damping: 28 }}
-            onClick={() => app.openSite(id)}
-            title={`📌 ${b.name}`}
-            className={
-              "grid h-8 w-8 place-items-center rounded-xl transition-all hover:scale-110 " +
-              (app.activeTab?.siteId === id ? "shadow-lift ring-2 ring-ring/50" : "")
-            }
-            style={{ background: b.bgTint, color: b.color }}
-            onDoubleClick={() => app.togglePin(id)}
-            onContextMenu={(e) => {
-              e.preventDefault();
-              app.togglePin(id);
-            }}
-            dangerouslySetInnerHTML={{ __html: getSiteIconHtml(id) }}
-          />
-        );
-      })}
     </div>
   );
 }
@@ -168,46 +107,6 @@ function PinnedRows({ app }: { app: ReturnType<typeof useApp> }) {
         );
       })}
     </>
-  );
-}
-
-function RailBtn({
-  active,
-  onClick,
-  label,
-  badge,
-  children,
-}: {
-  active?: boolean;
-  onClick: () => void;
-  label: string;
-  badge?: number;
-  children: React.ReactNode;
-}) {
-  return (
-    <button
-      onClick={onClick}
-      title={label}
-      className={
-        "relative grid h-9 w-9 place-items-center rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-soft " +
-        (active
-          ? "bg-surface text-foreground shadow-soft"
-          : "text-muted-foreground hover:bg-surface hover:text-foreground")
-      }
-    >
-      {active && (
-        <motion.span
-          layoutId="rail-active"
-          className="absolute -left-3 h-5 w-1 rounded-full grad-bg"
-        />
-      )}
-      {children}
-      {!!badge && (
-        <span className="grad-bg absolute -right-0.5 -top-0.5 grid h-4 min-w-4 place-items-center rounded-full px-1 text-[9px] font-bold text-white">
-          {badge}
-        </span>
-      )}
-    </button>
   );
 }
 

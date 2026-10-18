@@ -1,8 +1,8 @@
 import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown } from "lucide-react";
 import { AppProvider, useApp } from "./lib/store";
 import { Tauri } from "./lib/tauri";
+import { cursorPosition, getCurrentWindow } from "@tauri-apps/api/window";
 import { loadSearchIndex, preloadInstalledSites } from "./lib/search";
 import Titlebar from "./components/titlebar";
 import VerticalTabs from "./components/tabsBar";
@@ -97,38 +97,110 @@ function Shell() {
 
   /* ---------- view ---------- */
   const isHome = app.activeTab?.siteId === "home";
+  const isHomeRef = React.useRef(isHome);
+  isHomeRef.current = isHome;
+
+  /* While a Radix dropdown (portaled outside the transient panels) is open,
+     its parent panel must not collapse under the cursor. */
+  const [overlayLocked, setOverlayLocked] = React.useState(false);
+  React.useEffect(() => {
+    const check = () => setOverlayLocked(!!document.querySelector("[data-radix-popper-content-wrapper]"));
+    const mo = new MutationObserver(check);
+    mo.observe(document.body, { childList: true, subtree: true });
+    check();
+    return () => mo.disconnect();
+  }, []);
+
+  /* WebKit clears CSS :hover reliably for plain DOM, but the reader doc sits in
+     a cross-origin iframe: Chrome drops the boundary events when the cursor
+     crosses into it, so hover-pinned panels would stay open while reading.
+     Poll the real OS cursor (works across iframes) and reveal each transient
+     surface only while the cursor is genuinely at its strip or on its panel. */
+  const [openZones, setOpenZones] = React.useState<string[]>([]);
+  React.useEffect(() => {
+    if (app.pins.topbar && app.pins.sidebar && app.pins.tabs) return;
+    if (overlayLocked) return; // keep panels while a menu is open
+    const win = getCurrentWindow();
+    const prev = { topbar: false, sidebar: false, tabs: false };
+    const tick = async () => {
+      try {
+        const [cur, origin] = await Promise.all([cursorPosition(), win.innerPosition()]);
+        const dpr = window.devicePixelRatio || 1;
+        const cx = (cur.x - origin.x) / dpr;
+        const cy = (cur.y - origin.y) / dpr;
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+        const z: string[] = [];
+        if (!app.pins.topbar) {
+          const onStrip = cy > -2 && cy < 6;
+          const onPanel = prev.topbar && cy < 48;
+          if (onStrip || onPanel) z.push("topbar");
+          prev.topbar = onStrip || onPanel;
+        }
+        if (!app.pins.sidebar) {
+          const onStrip = cx > -2 && cx < 6;
+          const onPanel = prev.sidebar && cx < 248;
+          if (onStrip || onPanel) z.push("sidebar");
+          prev.sidebar = onStrip || onPanel;
+        }
+        if (!app.pins.tabs && !isHomeRef.current) {
+          const onStrip = cx > w - 54 && cx <= w;
+          const onPanel = prev.tabs && cx > w - 262 && cx <= w;
+          if (onStrip || onPanel) z.push("tabs");
+          prev.tabs = onStrip || onPanel;
+        }
+        setOpenZones(z);
+      } catch {
+        /* window gone or query failed — leave state as is */
+      }
+    };
+    const iv = setInterval(tick, 120);
+    tick();
+    return () => clearInterval(iv);
+  }, [app.pins, overlayLocked]);
+
+  const topbarOpen = app.pins.topbar || overlayLocked || openZones.includes("topbar");
+  const sidebarOpen = app.pins.sidebar || overlayLocked || openZones.includes("sidebar");
+  const tabsOpen =
+    (app.pins.tabs || overlayLocked || openZones.includes("tabs")) && !isHome;
 
   return (
     <TooltipProvider>
       <div className="flex h-full flex-col overflow-hidden bg-background">
-        {/* top edge sensor reveals a hidden topbar */}
-        <div
-          className="fixed left-0 right-0 top-0 z-[45] h-1.5"
-          onMouseEnter={() => app.topbarHidden && app.setTopbarHidden(false)}
-          style={{ pointerEvents: app.topbarHidden ? "auto" : "none" }}
-        />
-        <motion.div
-          animate={{ height: app.topbarHidden ? 0 : 44, opacity: app.topbarHidden ? 0 : 1 }}
-          transition={{ duration: 0.22, ease: "easeOut" }}
-          className="relative z-40 shrink-0 overflow-visible"
-        >
-          <Titlebar readerApi={readerApi} />
-        </motion.div>
-
-        <div className="flex min-h-0 flex-1">
-          {/* left edge sensor reveals a hidden sidebar */}
+        {/* ---- top bar: pinned = fixed, else slides in from the top edge ---- */}
+        {app.pins.topbar ? (
+          <div className="relative z-40 shrink-0">
+            <Titlebar readerApi={readerApi} />
+          </div>
+        ) : (
           <div
-            className="fixed bottom-0 left-0 top-11 z-[45] w-2"
-            onMouseEnter={() => app.sidebarHidden && app.setSidebarHidden(false)}
-            style={{ pointerEvents: app.sidebarHidden ? "auto" : "none" }}
-          />
-          <motion.div
-            animate={{ marginLeft: app.sidebarHidden ? -(app.flags.sidebarHoverExpand ? 48 : 240) : 0 }}
-            transition={{ duration: 0.22, ease: "easeOut" }}
-            className="shrink-0 overflow-visible"
+            className={
+              "pointer-events-none fixed inset-x-0 top-0 z-[60] -translate-y-[46px] opacity-0 transition-all duration-200 ease-out " +
+              (topbarOpen ? "pointer-events-auto translate-y-0 opacity-100" : "")
+            }
           >
-            <SidebarRail />
-          </motion.div>
+            <Titlebar readerApi={readerApi} />
+          </div>
+        )}
+
+        {/* ---- main row ---- */}
+        <div className="flex min-h-0 flex-1">
+          {/* ---- sidebar: pinned = fixed, else hidden until left-edge hover ---- */}
+          {app.pins.sidebar ? (
+            <div className="z-40 shrink-0">
+              <SidebarRail pinned />
+            </div>
+          ) : (
+            <div
+              className={
+                "pointer-events-none fixed bottom-0 left-0 z-[55] w-60 -translate-x-64 opacity-0 transition-all duration-200 ease-out " +
+                (sidebarOpen ? "pointer-events-auto translate-x-0 opacity-100 shadow-lift" : "")
+              }
+              style={{ top: app.pins.topbar ? 44 : 0 }}
+            >
+              <SidebarRail />
+            </div>
+          )}
 
           <div className="relative min-w-0 flex-1">
             {isHome && (
@@ -145,23 +217,8 @@ function Shell() {
             <ReaderPanels apiRef={readerApi} />
           </div>
 
-          {!isHome && app.flags.siteTabs && <VerticalTabs />}
+          {!isHome && app.flags.siteTabs && <VerticalTabs open={tabsOpen} />}
         </div>
-
-        {/* floating reveal buttons when bars are hidden */}
-        <AnimatePresence>
-          {app.topbarHidden && (
-            <motion.button
-              initial={{ opacity: 0, y: -8 }}
-              animate={{ opacity: 0.55, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              onMouseEnter={() => app.setTopbarHidden(false)}
-              className="fixed left-1/2 top-1 z-[46] -translate-x-1/2 rounded-b-lg border border-t-0 border-border bg-popover/90 px-2 py-0.5 text-[10px] text-muted-foreground backdrop-blur"
-            >
-              <ChevronDown size={11} className="mx-auto" />
-            </motion.button>
-          )}
-        </AnimatePresence>
 
         <ChannelDrawer />
         <CommandPalette />

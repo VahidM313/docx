@@ -16,7 +16,8 @@ import {
   Settings2,
   Download,
   Sparkles,
-  ChevronUp,
+  Pin,
+  PinOff,
   EyeOff,
 } from "lucide-react";
 import { type ReaderPanelsApi } from "./readerPanels";
@@ -187,14 +188,15 @@ export default function Titlebar(props: { readerApi: React.RefObject<ReaderPanel
 
       <FeaturesMenu />
 
-      <Tooltip label="Hide top bar (hover the top edge to reveal)">
+      {/* topbar pin — fixed vs hover-reveal */}
+      <Tooltip label={app.pins.topbar ? "Unpin top bar — hides until you hover the top edge" : "Pin top bar — always visible"}>
         <Button
           variant="ghost"
           size="iconSm"
-          className="no-drag hidden lg:inline-flex"
-          onClick={() => app.setTopbarHidden(true)}
+          className={"no-drag" + (app.pins.topbar ? " grad-text" : "")}
+          onClick={() => app.togglePinSurface("topbar")}
         >
-          <ChevronUp size={13} />
+          {app.pins.topbar ? <PinOff size={13} /> : <Pin size={13} />}
         </Button>
       </Tooltip>
 
@@ -243,18 +245,6 @@ export default function Titlebar(props: { readerApi: React.RefObject<ReaderPanel
             <Switch checked={app.flags.siteTabs} onCheckedChange={(v) => app.setFlag("siteTabs", v)} />
           </div>
           <div className="flex items-center justify-between rounded-lg px-2 py-2 text-sm hover:bg-accent">
-            <span>
-              Sidebar hover-expand
-              <span className="block text-[10.5px] text-muted-foreground">
-                {app.flags.sidebarHoverExpand ? "shows labels while hovered" : "pinned expanded on screen"}
-              </span>
-            </span>
-            <Switch
-              checked={app.flags.sidebarHoverExpand}
-              onCheckedChange={(v) => app.setFlag("sidebarHoverExpand", v)}
-            />
-          </div>
-          <div className="flex items-center justify-between rounded-lg px-2 py-2 text-sm hover:bg-accent">
             <span>Per-site theme & font</span>
             <Switch checked={app.flags.themeSync} onCheckedChange={(v) => app.setFlag("themeSync", v)} />
           </div>
@@ -262,6 +252,26 @@ export default function Titlebar(props: { readerApi: React.RefObject<ReaderPanel
             <span>Custom reading font</span>
             <Switch checked={app.flags.customFont} onCheckedChange={(v) => app.setFlag("customFont", v)} />
           </div>
+
+          <DropdownMenuLabel className="mt-1">Auto-hide chrome</DropdownMenuLabel>
+          <DropdownMenuItem className="justify-between" onClick={() => app.togglePinSurface("topbar")}>
+            <span className="flex items-center gap-2">
+              <Pin size={13} className={app.pins.topbar ? "grad-text" : ""} /> Top bar
+            </span>
+            <span className="text-[10.5px] text-muted-foreground">{app.pins.topbar ? "pinned" : "hover to show"}</span>
+          </DropdownMenuItem>
+          <DropdownMenuItem className="justify-between" onClick={() => app.togglePinSurface("sidebar")}>
+            <span className="flex items-center gap-2">
+              <Pin size={13} className={app.pins.sidebar ? "grad-text" : ""} /> Sidebar
+            </span>
+            <span className="text-[10.5px] text-muted-foreground">{app.pins.sidebar ? "pinned" : "hover to show"}</span>
+          </DropdownMenuItem>
+          <DropdownMenuItem className="justify-between" onClick={() => app.togglePinSurface("tabs")}>
+            <span className="flex items-center gap-2">
+              <Pin size={13} className={app.pins.tabs ? "grad-text" : ""} /> Tab rail
+            </span>
+            <span className="text-[10.5px] text-muted-foreground">{app.pins.tabs ? "pinned open" : "hover to expand"}</span>
+          </DropdownMenuItem>
 
           <DropdownMenuLabel className="mt-1">Site theme</DropdownMenuLabel>
           <div className="grid grid-cols-3 gap-1 rounded-xl bg-muted p-1">
@@ -287,11 +297,11 @@ export default function Titlebar(props: { readerApi: React.RefObject<ReaderPanel
           </div>
 
           <div className="mt-1 flex gap-1">
-            <DropdownMenuItem className="flex-1 justify-center gap-1.5" onClick={() => app.setTopbarHidden(true)}>
-              <EyeOff size={13} /> Hide topbar
+            <DropdownMenuItem className="flex-1 justify-center gap-1.5" onClick={() => app.togglePinSurface("topbar")}>
+              <Pin size={13} className={app.pins.topbar ? "grad-text" : ""} /> Top bar
             </DropdownMenuItem>
-            <DropdownMenuItem className="flex-1 justify-center gap-1.5" onClick={() => app.setSidebarHidden(true)}>
-              <EyeOff size={13} /> Hide sidebar
+            <DropdownMenuItem className="flex-1 justify-center gap-1.5" onClick={() => app.togglePinSurface("sidebar")}>
+              <Pin size={13} className={app.pins.sidebar ? "grad-text" : ""} /> Sidebar
             </DropdownMenuItem>
           </div>
 

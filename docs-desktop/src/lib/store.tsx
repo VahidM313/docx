@@ -54,8 +54,13 @@ export interface FeatureFlags {
   siteTabs: boolean;
   themeSync: boolean;
   customFont: boolean;
-  /** Sidebar expands with labels on hover (true) or stays pinned expanded (false). */
-  sidebarHoverExpand: boolean;
+}
+
+/** Which chrome surfaces are pinned fixed-open (vs hover-reveal transient). */
+export interface UiPins {
+  topbar: boolean;
+  sidebar: boolean;
+  tabs: boolean;
 }
 
 /** Defaults merged over whatever the user has persisted (flag migrations). */
@@ -63,8 +68,10 @@ export const DEFAULT_FLAGS: FeatureFlags = {
   siteTabs: true,
   themeSync: true,
   customFont: true,
-  sidebarHoverExpand: true,
 };
+
+/** Everything starts transient: hover the edges to reveal. */
+export const DEFAULT_PINS: UiPins = { topbar: false, sidebar: false, tabs: false };
 
 export interface Toast {
   id: number;
@@ -101,8 +108,7 @@ interface AppState {
   siteDark: Record<string, boolean>;
   flags: FeatureFlags;
   readerZoom: number;
-  topbarHidden: boolean;
-  sidebarHidden: boolean;
+  pins: UiPins;
 
   packs: PackStatusInfo[];
   registry: RemoteRegistryItem[];
@@ -139,8 +145,10 @@ interface AppApi extends AppState {
   setThemeMode: (m: ThemeMode) => void;
   setForceTheme: (f: ForceTheme) => void;
   cycleForceTheme: () => void;
-  setTopbarHidden: (v: boolean) => void;
-  setSidebarHidden: (v: boolean) => void;
+  setTopbarPin: (v?: boolean) => void;
+  setSidebarPin: (v?: boolean) => void;
+  setTabsPin: (v?: boolean) => void;
+  togglePinSurface: (k: keyof UiPins) => void;
   effectiveSiteDark: (siteId: string) => boolean;
   toggleSiteDark: (siteId: string) => void;
   setFlag: (k: keyof FeatureFlags, v: boolean) => void;
@@ -198,8 +206,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       siteDark: load<Record<string, boolean>>("docx_site_dark", {}),
       flags: { ...DEFAULT_FLAGS, ...load< Partial<FeatureFlags>>("docx_feature_flags_v1", {}) },
       readerZoom: load<number>("docx_reader_zoom", 100),
-      topbarHidden: false,
-      sidebarHidden: false,
+      pins: { ...DEFAULT_PINS, ...load<Partial<UiPins>>("docx_ui_pins_v1", {}) },
 
       packs: [],
       registry: [],
@@ -256,8 +263,21 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       });
     };
 
-    const setTopbarHidden = (v: boolean) => setState({ topbarHidden: v });
-    const setSidebarHidden = (v: boolean) => setState({ sidebarHidden: v });
+    const setPinSurface = (k: keyof UiPins, v: boolean) =>
+      setState((s) => {
+        const next = { ...s.pins, [k]: v };
+        save("docx_ui_pins_v1", next);
+        return { pins: next };
+      });
+    const togglePinSurface = (k: keyof UiPins) =>
+      setState((s) => {
+        const next = { ...s.pins, [k]: !s.pins[k] };
+        save("docx_ui_pins_v1", next);
+        return { pins: next };
+      });
+    const setTopbarPin = (v?: boolean) => setPinSurface("topbar", v ?? !state.pins.topbar);
+    const setSidebarPin = (v?: boolean) => setPinSurface("sidebar", v ?? !state.pins.sidebar);
+    const setTabsPin = (v?: boolean) => setPinSurface("tabs", v ?? !state.pins.tabs);
 
     /** Is the app chrome dark right now (no force involvement). */
     const appDark = (s: AppState) => s.themeMode === "dark" || (s.themeMode === "system" && s.systemDark);
@@ -556,8 +576,10 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       setThemeMode,
       setForceTheme,
       cycleForceTheme,
-      setTopbarHidden,
-      setSidebarHidden,
+      setTopbarPin,
+      setSidebarPin,
+      setTabsPin,
+      togglePinSurface,
       effectiveSiteDark,
       toggleSiteDark,
       setFlag,
