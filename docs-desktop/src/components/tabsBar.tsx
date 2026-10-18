@@ -15,18 +15,14 @@ export default function VerticalTabs() {
 
   return (
     <div
-      className="group/tabs relative z-30 flex w-[52px] shrink-0 flex-col border-r border-border bg-background-deep py-2 transition-[width] duration-200 hover:w-56"
+      className="group/tabs relative z-30 flex w-[52px] shrink-0 flex-col border-l border-border bg-background-deep py-2 transition-[width] duration-200 hover:w-56"
     >
       {/* home */}
       <VTIcon
         active={active === "home"}
         onClick={app.goHome}
         label="Hub"
-        icon={
-          <span className="grad-bg grid h-7 w-7 place-items-center rounded-lg shadow-soft">
-            <img src="/logo.png" alt="" className="h-[17px] w-[17px]" draggable={false} />
-          </span>
-        }
+        icon={<img src="/logo.png" alt="" className="logo-glyph h-[18px] w-[18px]" draggable={false} />}
       />
 
       <div className="mx-2 my-2 h-px bg-border" />
@@ -117,7 +113,7 @@ function VTIcon({
       {active && (
         <motion.span
           layoutId="vtab-active"
-          className="absolute -left-2 h-5 w-1 rounded-full"
+          className="absolute -right-2 h-5 w-1 rounded-full"
           style={accent ? { background: accent } : { background: "var(--grad)" }}
         />
       )}

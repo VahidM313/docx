@@ -123,14 +123,12 @@ function Shell() {
             style={{ pointerEvents: app.sidebarHidden ? "auto" : "none" }}
           />
           <motion.div
-            animate={{ width: app.sidebarHidden ? 0 : 48 }}
+            animate={{ marginLeft: app.sidebarHidden ? -(app.flags.sidebarHoverExpand ? 48 : 240) : 0 }}
             transition={{ duration: 0.22, ease: "easeOut" }}
-            className="shrink-0 overflow-hidden"
+            className="shrink-0 overflow-visible"
           >
             <SidebarRail />
           </motion.div>
-
-          {!isHome && app.flags.siteTabs && <VerticalTabs />}
 
           <div className="relative min-w-0 flex-1">
             {isHome && (
@@ -146,6 +144,8 @@ function Shell() {
             )}
             <ReaderPanels apiRef={readerApi} />
           </div>
+
+          {!isHome && app.flags.siteTabs && <VerticalTabs />}
         </div>
 
         {/* floating reveal buttons when bars are hidden */}

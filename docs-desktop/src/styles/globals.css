@@ -149,6 +149,14 @@ body,
   margin: 0;
 }
 
+/* App logo glyph: white on dark, black on light, never on a tile */
+.logo-glyph {
+  filter: none;
+}
+html:not(.dark) .logo-glyph {
+  filter: invert(1);
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

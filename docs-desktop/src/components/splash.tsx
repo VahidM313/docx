@@ -37,11 +37,7 @@ export function Splash() {
             transition={{ type: "spring", stiffness: 260, damping: 20 }}
             className="relative mb-5"
           >
-            <div className="grad-border grid h-20 w-20 place-items-center rounded-3xl border border-border bg-card shadow-lift">
-              <span className="grad-bg grid h-12 w-12 place-items-center rounded-2xl shadow-soft">
-                <img src="/logo.png" alt="Docx" className="h-9 w-9" draggable={false} />
-              </span>
-            </div>
+            <img src="/logo.png" alt="Docx" className="logo-glyph relative mb-5 h-20 w-20" draggable={false} />
             <motion.span
               className="absolute -inset-2 rounded-3xl border border-[var(--grad-b)]/40"
               animate={{ scale: [1, 1.15, 1], opacity: [0.7, 0, 0.7] }}

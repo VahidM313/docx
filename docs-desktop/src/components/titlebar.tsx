@@ -80,9 +80,7 @@ export default function Titlebar(props: { readerApi: React.RefObject<ReaderPanel
         className="no-drag flex items-center gap-2 rounded-md px-2 py-1 transition-colors hover:bg-accent"
         title="Home"
       >
-        <span className="grad-bg grid h-5 w-5 place-items-center rounded-md shadow-soft">
-          <img src="/logo.png" alt="Docx" className="h-4 w-4" draggable={false} />
-        </span>
+        <img src="/logo.png" alt="Docx" className="logo-glyph h-5 w-5" draggable={false} />
         <span className="hidden text-[13px] font-semibold tracking-tight sm:inline">Docx</span>
       </button>
 
@@ -243,6 +241,18 @@ export default function Titlebar(props: { readerApi: React.RefObject<ReaderPanel
           <div className="flex items-center justify-between rounded-lg px-2 py-2 text-sm hover:bg-accent">
             <span>Site tabs</span>
             <Switch checked={app.flags.siteTabs} onCheckedChange={(v) => app.setFlag("siteTabs", v)} />
+          </div>
+          <div className="flex items-center justify-between rounded-lg px-2 py-2 text-sm hover:bg-accent">
+            <span>
+              Sidebar hover-expand
+              <span className="block text-[10.5px] text-muted-foreground">
+                {app.flags.sidebarHoverExpand ? "shows labels while hovered" : "pinned expanded on screen"}
+              </span>
+            </span>
+            <Switch
+              checked={app.flags.sidebarHoverExpand}
+              onCheckedChange={(v) => app.setFlag("sidebarHoverExpand", v)}
+            />
           </div>
           <div className="flex items-center justify-between rounded-lg px-2 py-2 text-sm hover:bg-accent">
             <span>Per-site theme & font</span>

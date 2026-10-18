@@ -54,7 +54,17 @@ export interface FeatureFlags {
   siteTabs: boolean;
   themeSync: boolean;
   customFont: boolean;
+  /** Sidebar expands with labels on hover (true) or stays pinned expanded (false). */
+  sidebarHoverExpand: boolean;
 }
+
+/** Defaults merged over whatever the user has persisted (flag migrations). */
+export const DEFAULT_FLAGS: FeatureFlags = {
+  siteTabs: true,
+  themeSync: true,
+  customFont: true,
+  sidebarHoverExpand: true,
+};
 
 export interface Toast {
   id: number;
@@ -186,11 +196,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       themeMode: load<ThemeMode>("docx_theme_mode", "system"),
       forceTheme: load<ForceTheme>("docx_force_theme", "off"),
       siteDark: load<Record<string, boolean>>("docx_site_dark", {}),
-      flags: load<FeatureFlags>("docx_feature_flags_v1", {
-        siteTabs: true,
-        themeSync: true,
-        customFont: true,
-      }),
+      flags: { ...DEFAULT_FLAGS, ...load< Partial<FeatureFlags>>("docx_feature_flags_v1", {}) },
       readerZoom: load<number>("docx_reader_zoom", 100),
       topbarHidden: false,
       sidebarHidden: false,
