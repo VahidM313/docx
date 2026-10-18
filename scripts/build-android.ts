@@ -19,7 +19,21 @@ const APK_OUT_SRC = path.join(
 );
 const ROOT_APK_ARM = path.join(ROOT, "Docx-arm64-v8a-release.apk");
 const ROOT_APK = path.join(ROOT, "Docx.apk");
-const DESKTOP_APK = path.join(process.env.USERPROFILE ?? "C:/Users/Public/Desktop", "Desktop", "Docx.apk");
+const DESKTOP_APK = desktopOutDir("Docx.apk");
+
+/** Real Desktop folder (handles OneDrive folder redirection without hardcoding it). */
+function desktopOutDir(...p: string[]): string {
+  try {
+    const r = spawnSync(
+      "powershell",
+      ["-NoProfile", "-Command", "[Environment]::GetFolderPath('Desktop')"],
+      { encoding: "utf8" },
+    );
+    const out = r.stdout?.trim();
+    if (out && fs.existsSync(out)) return path.join(out, ...p);
+  } catch {}
+  return path.join(process.env.USERPROFILE ?? "C:/Users/Public", "Desktop", ...p);
+}
 
 const t0 = performance.now();
 

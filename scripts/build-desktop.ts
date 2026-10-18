@@ -7,7 +7,20 @@ const DESKTOP_DIR = path.join(ROOT, "docs-desktop");
 const DIST_INDEX = path.join(DESKTOP_DIR, "dist", "index.html");
 const TAURI_MANIFEST = path.join(DESKTOP_DIR, "src-tauri", "Cargo.toml");
 const RELEASE_EXE = path.join(DESKTOP_DIR, "src-tauri", "target", "release", "app.exe");
-const DESKTOP_OUT_EXE = path.join(process.env.USERPROFILE ?? "C:/Users/Public/Desktop", "Desktop", "Docx.exe");
+/** Real Desktop folder (handles OneDrive folder redirection without hardcoding it). */
+function getDesktopDir(): string {
+  try {
+    const r = spawnSync(
+      "powershell",
+      ["-NoProfile", "-Command", "[Environment]::GetFolderPath('Desktop')"],
+      { encoding: "utf8" },
+    );
+    const p = r.stdout?.trim();
+    if (p && fs.existsSync(p)) return p;
+  } catch {}
+  return path.join(process.env.USERPROFILE ?? "C:/Users/Public", "Desktop");
+}
+const DESKTOP_OUT_EXE = path.join(getDesktopDir(), "Docx.exe");
 
 function getNewestMtimeMs(dirOrFile: string): number {
   if (!fs.existsSync(dirOrFile)) return 0;
