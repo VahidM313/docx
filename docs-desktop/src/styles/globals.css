@@ -1,0 +1,236 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------------------------------------------
+   Design tokens — Docx (light: white-based, dark: near-black-based)
+   --------------------------------------------- */
+:root {
+  --background: #fafafa;
+  --background-deep: #f4f4f5;
+  --foreground: #18181b;
+
+  --surface: #ffffff;
+  --surface-translucent: rgba(255, 255, 255, 0.82);
+
+  --card: #ffffff;
+  --card-foreground: #18181b;
+
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+
+  --accent: #f4f4f5;
+  --accent-foreground: #18181b;
+
+  --popover: #ffffff;
+  --popover-foreground: #18181b;
+
+  --border: rgba(0, 0, 0, 0.08);
+  --input: rgba(0, 0, 0, 0.10);
+  --ring: #6366f1;
+
+  --primary: #18181b;
+  --primary-foreground: #fafafa;
+
+  /* rainbow gradient — the app-wide colorful thread */
+  --grad-a: #6366f1;   /* indigo  */
+  --grad-b: #d946ef;   /* fuchsia */
+  --grad-c: #0ea5e9;   /* sky     */
+  --grad: linear-gradient(120deg, var(--grad-a), var(--grad-b) 45%, var(--grad-c));
+
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 16px -4px rgba(0, 0, 0, 0.06);
+  --shadow-lift: 0 2px 4px rgba(0, 0, 0, 0.05), 0 12px 32px -8px rgba(0, 0, 0, 0.14);
+}
+
+.dark {
+  --background: #0a0a0d;
+  --background-deep: #070709;
+  --foreground: #fafafa;
+
+  --surface: #121216;
+  --surface-translucent: rgba(18, 18, 22, 0.82);
+
+  --card: #16161b;
+  --card-foreground: #fafafa;
+
+  --muted: #1e1e24;
+  --muted-foreground: #a1a1aa;
+
+  --accent: #232329;
+  --accent-foreground: #fafafa;
+
+  --popover: #16161b;
+  --popover-foreground: #fafafa;
+
+  --border: rgba(255, 255, 255, 0.09);
+  --input: rgba(255, 255, 255, 0.12);
+  --ring: #8b8cf7;
+
+  --primary: #fafafa;
+  --primary-foreground: #18181b;
+
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.5), 0 4px 16px -4px rgba(0, 0, 0, 0.55);
+  --shadow-lift: 0 2px 4px rgba(0, 0, 0, 0.55), 0 14px 36px -8px rgba(0, 0, 0, 0.7);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-deep: var(--background-deep);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --shadow-soft: var(--shadow-soft);
+  --shadow-lift: var(--shadow-lift);
+
+  --font-sans:
+    "Segoe UI", "SF Pro Text", system-ui, -apple-system, sans-serif;
+
+  --radius-xl: 0.875rem;
+  --radius-2xl: 1.125rem;
+  --radius-3xl: 1.5rem;
+
+  --animate-fade-in: fade-in 0.28s ease-out both;
+  --animate-rise: rise 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-pop: pop 0.32s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  --animate-shimmer: shimmer 2.2s linear infinite;
+  --animate-gradient-pan: gradient-pan 9s ease infinite;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-spin-slow: spin 14s linear infinite;
+  --animate-pulse-ring: pulse-ring 2.2s ease-out infinite;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px) scale(0.99); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  @keyframes pop {
+    0% { opacity: 0; transform: scale(0.92); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  @keyframes shimmer {
+    from { background-position: 200% 0; }
+    to { background-position: -200% 0; }
+  }
+  @keyframes gradient-pan {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0) }
+    50% { transform: translateY(-10px) }
+  }
+  @keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 0.7; }
+    70% { transform: scale(1.8); opacity: 0; }
+    100% { transform: scale(1.8); opacity: 0; }
+  }
+}
+
+html,
+body,
+#app-root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Gradient helpers used across the app */
+.grad-text {
+  background: var(--grad);
+  background-size: 220% 220%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-pan 9s ease infinite;
+}
+.grad-bg {
+  background: var(--grad);
+  background-size: 220% 220%;
+  animation: gradient-pan 9s ease infinite;
+}
+.grad-border {
+  position: relative;
+}
+.grad-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: var(--grad);
+  background-size: 220% 220%;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+  animation: gradient-pan 9s ease infinite;
+}
+.grad-border:hover::before {
+  opacity: 1;
+}
+
+/* Aurora background blobs for the hub hero */
+.aurora-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(64px);
+  opacity: 0.5;
+  will-change: transform;
+}
+.dark .aurora-blob {
+  opacity: 0.28;
+}
+
+/* Scrollbars */
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+*::-webkit-scrollbar-thumb:hover { background: var(--muted-foreground); background-clip: content-box; }
+*::-webkit-scrollbar-track { background: transparent; }
+
+/* Titlebar drag regions (must stay native) */
+.drag-region { -webkit-app-region: drag; }
+.no-drag { -webkit-app-region: no-drag; }
+
+/* Selection */
+::selection {
+  background: color-mix(in oklab, var(--ring) 30%, transparent);
+}
+
+/* Focus ring default */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 1px;
+}
