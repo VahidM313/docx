@@ -190,16 +190,34 @@ fn curl_get_bytes(url: &str, range: Option<(usize, usize)>) -> Result<Vec<u8>, S
     Ok(bytes.to_vec())
 }
 
-static CUSTOM_PACKS_DIR: std::sync::OnceLock<PathBuf> = std::sync::OnceLock::new();
+static CUSTOM_PACKS_DIR: std::sync::RwLock<Option<PathBuf>> = std::sync::RwLock::new(None);
 
 pub fn set_packs_dir(dir: PathBuf) {
-    let _ = CUSTOM_PACKS_DIR.set(dir);
+    let _ = fs::create_dir_all(&dir);
+    if let Ok(mut lock) = CUSTOM_PACKS_DIR.write() {
+        *lock = Some(dir);
+    }
 }
 
 fn get_packs_dir() -> PathBuf {
-    if let Some(dir) = CUSTOM_PACKS_DIR.get() {
-        let _ = fs::create_dir_all(dir);
-        return dir.clone();
+    if let Ok(lock) = CUSTOM_PACKS_DIR.read() {
+        if let Some(dir) = lock.as_ref() {
+            let _ = fs::create_dir_all(dir);
+            return dir.clone();
+        }
+    }
+    #[cfg(target_os = "android")]
+    {
+        for candidate in [
+            "/data/user/0/com.docx.hub/files/docx",
+            "/data/data/com.docx.hub/files/docx",
+            "/storage/emulated/0/Android/data/com.docx.hub/files/docx",
+        ] {
+            let p = PathBuf::from(candidate);
+            if fs::create_dir_all(&p).is_ok() {
+                return p;
+            }
+        }
     }
     let base = std::env::var_os("LOCALAPPDATA")
         .map(PathBuf::from)
@@ -4540,6 +4558,7 @@ pub fn run() {
         ensure_site_server(&id, Arc::clone(&store));
     }
 
+    let store_clone = Arc::clone(&store);
     tauri::Builder::default()
         .manage(AppState {
             tailwind_port,
@@ -4552,13 +4571,29 @@ pub fn run() {
                 std::process::exit(0);
             }
         })
-        .setup(|app| {
+        .setup(move |app| {
             #[cfg(mobile)]
             {
                 use tauri::Manager;
                 if let Ok(app_dir) = app.path().app_data_dir() {
                     set_packs_dir(app_dir.join("docx"));
                 }
+            }
+            // Re-scan verified packs_dir to ensure any previously downloaded packs are fully loaded
+            {
+                let mut guard = store_clone.overrides.write().unwrap();
+                load_disk_overrides(&mut guard);
+            }
+            let extra_ids: Vec<String> = store_clone
+                .overrides
+                .read()
+                .unwrap()
+                .keys()
+                .filter(|k| *k != "tailwind" && *k != "shadcn")
+                .cloned()
+                .collect();
+            for id in extra_ids {
+                ensure_site_server(&id, Arc::clone(&store_clone));
             }
             if let Some(win) = app.get_webview_window("main") {
                 let _ = win.set_background_color(Some(tauri::window::Color(0, 0, 0, 255)));
