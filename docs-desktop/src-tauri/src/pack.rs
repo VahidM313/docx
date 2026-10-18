@@ -152,11 +152,7 @@ fn migrate_legacy_packs_to_appdata() {
     #[cfg(desktop)]
     {
         let target_dir = get_packs_dir();
-        let mut legacy_dirs = vec![
-            PathBuf::from("d:/Dev/crawl/packs"),
-            PathBuf::from("d:/Dev/docx/packs"),
-            PathBuf::from("C:/Users/vahid/OneDrive/Desktop/packs"),
-        ];
+        let mut legacy_dirs: Vec<PathBuf> = Vec::new();
         if let Some(roaming) = std::env::var_os("APPDATA") {
             legacy_dirs.push(PathBuf::from(roaming).join("docx"));
         }

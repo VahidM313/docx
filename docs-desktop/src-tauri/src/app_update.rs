@@ -109,8 +109,6 @@ pub(crate) async fn self_update_app(
         let exe_path = std::env::current_exe().map_err(|e| e.to_string())?;
         let _ = fs::remove_file(exe_path.with_extension("old.exe"));
         let _ = fs::remove_file(exe_path.with_extension("new.exe"));
-        let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.old.exe");
-        let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.new.exe");
 
         let temp_dir = std::env::temp_dir();
         let tmp_core_path = temp_dir.join("Docx_core_dl.tmp");
@@ -184,8 +182,6 @@ pub(crate) async fn self_update_app(
                ping 127.0.0.1 -n 2 -w 200 >nul 2>&1\r\n\
              )\r\n\
              :done\r\n\
-             del /F /Q \"C:\\Users\\vahid\\OneDrive\\Desktop\\Docx.old.exe\" >nul 2>&1\r\n\
-             del /F /Q \"C:\\Users\\vahid\\OneDrive\\Desktop\\Docx.new.exe\" >nul 2>&1\r\n\
              start \"\" \"{target}\"\r\n\
              del /F /Q \"%~f0\" >nul 2>&1\r\n",
             staged = staged_str,

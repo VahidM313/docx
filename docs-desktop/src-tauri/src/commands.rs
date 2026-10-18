@@ -315,9 +315,16 @@ pub(crate) fn bundle_into_single_exe(state: tauri::State<'_, AppState>) -> Resul
     let tmp_path = temp_dir.join("Docx_bundle_staged.exe");
     fs::write(&tmp_path, &exe_bytes).map_err(|e| e.to_string())?;
 
-    let out_path = PathBuf::from("C:/Users/vahid/OneDrive/Desktop/Docx.exe");
-    let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.old.exe");
-    let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.new.exe");
+    let out_path = std::env::var_os("USERPROFILE")
+        .map(|home| PathBuf::from(home).join("Desktop").join("Docx.exe"))
+        .or_else(|| std::env::var_os("DESKTOP").map(PathBuf::from).map(|p| p.join("Docx.exe")))
+        .unwrap_or_else(|| temp_dir.join("Docx.exe"));
+    let out_parent_stem = out_path
+        .parent()
+        .map(|p| p.to_path_buf())
+        .unwrap_or_else(|| temp_dir.clone());
+    let _ = fs::remove_file(out_parent_stem.join("Docx.old.exe"));
+    let _ = fs::remove_file(out_parent_stem.join("Docx.new.exe"));
 
     if fs::copy(&tmp_path, &out_path).is_ok() {
         let _ = fs::remove_file(&tmp_path);

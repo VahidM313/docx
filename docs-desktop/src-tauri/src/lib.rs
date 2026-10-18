@@ -50,8 +50,7 @@ pub fn run() {
 
     #[cfg(target_os = "windows")]
     {
-        let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.old.exe");
-        let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.new.exe");
+        // Clean up self-update staging leftovers next to the running exe
         if let Ok(exe) = std::env::current_exe() {
             let _ = fs::remove_file(exe.with_extension("old.exe"));
             let _ = fs::remove_file(exe.with_extension("new.exe"));
