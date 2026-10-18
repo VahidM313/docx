@@ -5,6 +5,11 @@ target/
 tailwindcss-site/
 shadcn-site/
 *.exe
+*.apk
 *.pack
 *.docpack
 .DS_Store
+.gradle/
+.kotlin/
+.tauri/
+**/build/

@@ -438,6 +438,24 @@ export const SITE_BRANDS: Record<string, SiteBrand> = {
       "Complete Mozilla Developer Network JavaScript language reference, built-in objects, and Web APIs.",
     svg: `<svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" fill="#f7df1e"/><path d="M10.5 13.5V16.8C10.5 17.6 9.9 18.2 9 18.2C8.2 18.2 7.7 17.7 7.5 17M14.5 16.8C14.9 17.7 15.7 18.2 16.8 18.2C17.9 18.2 18.7 17.6 18.7 16.7C18.7 15.7 18 15.3 16.7 14.8C15.5 14.3 14.8 13.8 14.8 12.8C14.8 11.9 15.5 11.3 16.6 11.3C17.5 11.3 18.1 11.7 18.4 12.4" stroke="#000000" stroke-width="1.9" stroke-linecap="round"/></svg>`,
   },
+  mdn_wasm: {
+    id: "mdn_wasm",
+    name: "MDN WebAssembly",
+    version: "Wasm 2.0",
+    category: "Web Frameworks & Tools",
+    color: "#654ff0",
+    bgTint: "rgba(101, 79, 240, 0.16)",
+    description:
+      "Complete Mozilla Developer Network WebAssembly documentation: concepts, JavaScript API, memory, and C/C++/Rust compilation.",
+    svg: `<svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" fill="#654ff0"/><path d="M6.5 7.5L8.5 16.5L10.5 10L12.5 16.5L14.5 7.5" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 16.5L17.5 7.5L19.5 16.5M16.2 13.5H18.8" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+    defaultRoutes: [
+      { label: "Overview", path: "/en-US/docs/WebAssembly" },
+      { label: "Concepts", path: "/en-US/docs/WebAssembly/Concepts" },
+      { label: "JS Interface", path: "/en-US/docs/WebAssembly/JavaScript_interface" },
+      { label: "C/C++ to Wasm", path: "/en-US/docs/WebAssembly/C_to_wasm" },
+      { label: "Rust to Wasm", path: "/en-US/docs/WebAssembly/Rust_to_wasm" },
+    ],
+  },
 
   // ==========================================
   // 5. TanStack Suite (16)
@@ -987,13 +1005,14 @@ export const SITE_BRANDS: Record<string, SiteBrand> = {
     color: "#f3f4f6",
     bgTint: "rgba(243, 244, 246, 0.15)",
     description:
-      "Get up and running with large language models locally: Llama 3, DeepSeek, Mistral, Gemma, and REST API.",
+      "Official Ollama Documentation (docs.ollama.com): run and build local LLMs, REST API reference, Python/JS SDKs, context windows, and Modelfile.",
     svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M8 5a4 4 0 0 1 8 0"/><circle cx="9.5" cy="12.5" r="1" fill="currentColor"/><circle cx="14.5" cy="12.5" r="1" fill="currentColor"/><path d="M11 16h2"/></svg>`,
     defaultRoutes: [
-      { label: "Library", path: "/library" },
-      { label: "Modelfile", path: "/docs/modelfile" },
-      { label: "API Reference", path: "/docs/api" },
-      { label: "CLI Guide", path: "/docs/cli" },
+      { label: "Quickstart", path: "/" },
+      { label: "API Reference", path: "/api" },
+      { label: "CLI Guide", path: "/cli" },
+      { label: "Modelfile", path: "/modelfile" },
+      { label: "Context Window", path: "/context-window" },
     ],
   },
   numpy: {
@@ -1571,6 +1590,24 @@ export const SITE_BRANDS: Record<string, SiteBrand> = {
     description:
       "Modular compiler technologies: LLVM IR language reference, Clang C/C++ compiler, optimization passes, and LLD linker.",
     svg: `<svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12" stroke="#22c55e" stroke-width="1.8" stroke-linecap="round"/><path d="M12 6V12L16 16" stroke="#22c55e" stroke-width="2" stroke-linecap="round"/></svg>`,
+  },
+  emscripten: {
+    id: "emscripten",
+    name: "Emscripten",
+    version: "v4.0",
+    category: "C & C++ Ecosystem",
+    color: "#d13438",
+    bgTint: "rgba(209, 52, 56, 0.16)",
+    description:
+      "Open-source LLVM-to-WebAssembly compiler: compile C and C++ codebases, OpenGL, and POSIX APIs into high-speed WebAssembly.",
+    svg: `<svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" fill="#d13438"/><path d="M8 8H16M8 12H13.5M8 16H16" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="12" r="1.5" fill="#ffffff"/></svg>`,
+    defaultRoutes: [
+      { label: "Docs Home", path: "/docs/" },
+      { label: "Getting Started", path: "/docs/getting_started/index.html" },
+      { label: "API Reference", path: "/docs/api_reference/index.html" },
+      { label: "Porting Guide", path: "/docs/porting/index.html" },
+      { label: "Optimizing", path: "/docs/optimizing/Optimizing-Code.html" },
+    ],
   },
   lua: {
     id: "lua",

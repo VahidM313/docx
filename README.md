@@ -1,34 +1,38 @@
 <div align="center">
   <img src="docs-desktop/public/logo.png" alt="Docx Logo" width="96" height="96" />
 
-  # Docx — 121-Site Offline Documentation Engine
+  # Docx — 123-Site Offline Documentation Engine
 
-  **Ultra-fast, 100% offline desktop documentation hub for 121 developer ecosystems — powered by Tauri v2 (Rust), Max-Gzip Level 9 `.docpack` archives, and HTTP 206 Partial Range delta updates.**
+  **Ultra-fast, 100% offline desktop documentation hub for 123 developer ecosystems — powered by Tauri v2 (Rust), Max-Gzip Level 9 `.docpack` archives, and HTTP 206 Partial Range delta updates.**
 
   <p align="center">
     <a href="https://github.com/VahidM313/docx/releases/download/packs-latest/Docx.exe">
       <img src="https://img.shields.io/badge/%E2%AC%87_Download_Docx.exe-Windows_x64_(Standalone)-38bdf8?style=for-the-badge&logo=windows&logoColor=white" alt="Download Docx.exe for Windows" />
     </a>
+    <a href="https://github.com/VahidM313/docx/releases/download/packs-latest/Docx-arm64-v8a-release.apk">
+      <img src="https://img.shields.io/badge/%E2%AC%87_Download_Docx.apk-Android_ARMv8_(arm64)-3ddc84?style=for-the-badge&logo=android&logoColor=white" alt="Download Docx.apk for Android" />
+    </a>
     <a href="https://github.com/VahidM313/docx/releases/tag/packs-latest">
-      <img src="https://img.shields.io/badge/Docpack_Registry-121_Offline_Sites-22c55e?style=for-the-badge&logo=github&logoColor=white" alt="121 Offline Docpacks" />
+      <img src="https://img.shields.io/badge/Docpack_Registry-123_Offline_Sites-22c55e?style=for-the-badge&logo=github&logoColor=white" alt="123 Offline Docpacks" />
     </a>
   </p>
 </div>
 
 ---
 
-## ⬇ Direct Download (Windows)
+## ⬇ Direct Downloads (Windows & Android)
 
-No installer or external runtime required — download and run the standalone executable directly:
+No installer or external runtime required — download and run directly:
 
-- 👉 **[Download `Docx.exe` (Latest Standalone Windows x64 Binary)](https://github.com/VahidM313/docx/releases/download/packs-latest/Docx.exe)**
+- 💻 **[Download `Docx.exe` (Latest Standalone Windows x64 Binary)](https://github.com/VahidM313/docx/releases/download/packs-latest/Docx.exe)**
+- 📱 **[Download `Docx.apk` (Latest Android ARMv8 `arm64-v8a` Release APK)](https://github.com/VahidM313/docx/releases/download/packs-latest/Docx-arm64-v8a-release.apk)**
 - 📦 **[Browse All `.docpack` Archives on GitHub Releases (`packs-latest`)](https://github.com/VahidM313/docx/releases/tag/packs-latest)**
 
 ---
 
 ## ✨ Key Features
 
-- **121 Documentation Ecosystems**: Instant offline access across 14 specialized developer categories: Frontend & UI, React, Vue, Web Frameworks, TanStack, Backend & Auth, Databases & SQL (including Vector DBs), AI & Machine Learning, Python, Rust, Go, C/C++, DevOps, and Architecture.
+- **123 Documentation Ecosystems**: Instant offline access across 14 specialized developer categories: Frontend & UI, React, Vue, Web Frameworks, TanStack, Backend & Auth, Databases & SQL (including Vector DBs), AI & Machine Learning, Python, Rust, Go, C/C++, DevOps, and Architecture.
 - **Original Website Fidelity**: Renders the authentic documentation pages, styles, syntax highlighting, and interactive layouts locally via embedded Rust HTTP servers (`127.0.0.1`).
 - **HTTP 206 Partial Range Delta Updates**: Compares local SHA-256 chunk hashes against [`registry.json`](https://github.com/VahidM313/docx/releases/download/packs-latest/registry.json) on GitHub Releases and downloads only modified chunks.
 - **Universal Spotlight Search (`Ctrl + K`)**: Instant search across all installed documentation packs with keyboard navigation and category filtering.
@@ -39,7 +43,7 @@ No installer or external runtime required — download and run the standalone ex
 
 ---
 
-## 📚 Included Documentation Catalog (121 Sites Across 14 Categories)
+## 📚 Included Documentation Catalog (123 Sites Across 14 Categories)
 
 ### 🎨 1. Frontend & UI (8)
 | Site | ID | Source |
@@ -72,7 +76,7 @@ No installer or external runtime required — download and run the standalone ex
 | **VueUse v12.0** | `vueuse` | `https://vueuse.org` |
 | **Vue Router v4.5** | `vue_router` | `https://router.vuejs.org` |
 
-### 🌐 4. Web Frameworks & Tools (9)
+### 🌐 4. Web Frameworks & Tools (10)
 | Site | ID | Source |
 | :--- | :--- | :--- |
 | **Svelte v5.0** | `svelte` | `https://svelte.dev` |
@@ -84,6 +88,7 @@ No installer or external runtime required — download and run the standalone ex
 | **Oxc Compiler** | `oxc` | `https://oxc.rs/docs/` |
 | **TypeScript v5.8** | `typescript` | `https://www.typescriptlang.org/docs/` |
 | **MDN JavaScript ES2025** | `mdn_js` | `https://developer.mozilla.org/en-US/docs/Web/JavaScript` |
+| **MDN WebAssembly** | `mdn_wasm` | `https://developer.mozilla.org/en-US/docs/WebAssembly` |
 
 ### ⚡ 5. TanStack Suite (16)
 `tanstack_start`, `tanstack_router`, `tanstack_query`, `tanstack_table`, `tanstack_form`, `tanstack_virtual`, `tanstack_store`, `tanstack_db`, `tanstack_ai`, `tanstack_pacer`, `tanstack_ranger`, `tanstack_config`, `tanstack_devtools`, `tanstack_hotkeys`, `tanstack_react_charts`, `tanstack_create_tsrouter_app`
@@ -122,7 +127,7 @@ No installer or external runtime required — download and run the standalone ex
 | **Keras 3.8** | `keras` | `https://keras.io` |
 | **LangChain v0.3** | `langchain` | `https://python.langchain.com/docs/` |
 | **Hugging Face v4.49** | `huggingface` | `https://huggingface.co/docs/` |
-| **Ollama v0.5** | `ollama` | `https://ollama.com` |
+| **Ollama v0.5** | `ollama` | `https://docs.ollama.com` |
 | **NumPy v2.2** | `numpy` | `https://numpy.org/doc/stable/` |
 | **Pandas v2.2** | `pandas` | `https://pandas.pydata.org/docs/` |
 | **Scikit-learn v1.6** | `scikit_learn` | `https://scikit-learn.org/stable/` |
@@ -161,7 +166,7 @@ No installer or external runtime required — download and run the standalone ex
 | **Echo (Go Web) v4.13** | `echo` | `https://echo.labstack.com` |
 | **Cobra (Go CLI) v1.9** | `cobra` | `https://cobra.dev` |
 
-### ⚡ 12. C & C++ Ecosystem (13)
+### ⚡ 12. C & C++ Ecosystem (14)
 | Site | ID | Source |
 | :--- | :--- | :--- |
 | **C++ Reference** | `cppreference` | `https://en.cppreference.com/` |
@@ -176,6 +181,7 @@ No installer or external runtime required — download and run the standalone ex
 | **Catch2 v3.7** | `catch2` | `https://github.com/catchorg/Catch2` |
 | **spdlog v1.15** | `spdlog` | `https://github.com/gabime/spdlog` |
 | **LLVM Infrastructure v20.1** | `llvm` | `https://llvm.org/docs/` |
+| **Emscripten v4.0** | `emscripten` | `https://emscripten.org/docs/` |
 | **Lua 5.4 Reference** | `lua` | `https://www.lua.org/manual/5.4/` |
 
 ### 🐳 13. DevOps & Cloud (12)

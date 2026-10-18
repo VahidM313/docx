@@ -2,7 +2,7 @@
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>Docx</title>
     <style>
       html, body {
@@ -38,7 +38,7 @@
           </div>
         </div>
         <div class="splash-brand-title">DOCX</div>
-        <div class="splash-brand-subtitle">121-SITE OFFLINE DOCUMENTATION ENGINE</div>
+        <div class="splash-brand-subtitle">123-SITE OFFLINE DOCUMENTATION ENGINE</div>
         <div class="splash-progress-track">
           <div id="splashProgressBar" class="splash-progress-fill"></div>
         </div>
@@ -51,13 +51,29 @@
 
     <!-- Custom Frameless Discord-Style Top Window Bar -->
     <header id="customTitlebar" class="custom-titlebar">
+      <!-- Mobile Back Button (shown on mobile when in doc/bookmarks view) -->
+      <button id="btnMobileBack" class="mobile-header-btn mobile-back-btn" title="Back to Hub" aria-label="Back to Hub" style="display: none;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <!-- Mobile Menu Button (Hamburger) -->
+      <button id="btnMobileMenu" class="mobile-header-btn mobile-menu-btn" title="Open Docs Menu" aria-label="Open Docs Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
       <div class="titlebar-brand-zone" id="titlebarBrandHome" title="Switch to Docx Hub">
         <img src="/logo.png" alt="Docx" class="titlebar-logo" />
         <span class="titlebar-title">DOCX</span>
       </div>
 
       <div class="titlebar-drag-region" id="titlebarDrag">
-        <span id="titlebarCurrentView" class="titlebar-current-view">121-Site Documentation Hub</span>
+        <span id="titlebarCurrentView" class="titlebar-current-view">123-Site Documentation Hub</span>
         <span id="titlebarUpdatePill" class="titlebar-update-pill" style="display: none;">
           🔔 <span id="titlebarUpdateCount">0</span> Updates Available
         </span>
@@ -206,7 +222,7 @@
         <!-- Docx Home Server Icon -->
         <div class="rail-item active" id="railHomeWrap">
           <span class="rail-pill"></span>
-          <button id="tabHome" class="rail-btn home-rail-btn active" title="Docx Hub — All 121 Sites">
+          <button id="tabHome" class="rail-btn home-rail-btn active" title="Docx Hub — All 123 Sites">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 10.5L12 3l9 7.5V20a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 20v-9.5z"></path>
               <path d="M9 21.5v-7.5h6v7.5"></path>
@@ -270,12 +286,12 @@
         </div>
       </div>
 
-      <!-- Column 2: Discord Channel Drawer (246px) with All 121 Sites & Original Colored Icons -->
+      <!-- Column 2: Discord Channel Drawer (246px) with All 123 Sites & Original Colored Icons -->
       <div class="discord-channel-drawer">
         <div class="drawer-header">
           <div class="drawer-server-title" id="brandBtn">
             <img src="/logo.png" alt="Docx" class="drawer-title-logo" />
-            <span>Docx 121-Site Hub</span>
+            <span>Docx 123-Site Hub</span>
           </div>
           <div class="drawer-nav-controls">
             <button id="btnBack" class="drawer-ctrl-btn" title="Back">
@@ -320,12 +336,12 @@
             type="text"
             id="drawerFilterInput"
             class="drawer-filter-input"
-            placeholder="Filter all 121 docs (click 📌 to pin)..."
+            placeholder="Filter all 123 docs (click 📌 to pin)..."
             autocomplete="off"
           />
         </div>
 
-        <!-- Dynamic 121-Site Channel List with Original Colored Icons -->
+        <!-- Dynamic 123-Site Channel List with Original Colored Icons -->
         <div id="drawerChannelsScroll" class="drawer-channels-scroll"></div>
 
         <!-- Discord Bottom User / Engine Status Bar -->
@@ -336,15 +352,18 @@
           </div>
           <div class="user-meta">
             <div class="user-name">Docx Engine</div>
-            <div class="user-ports" id="sidebarEngineStatus">121 Cloud Packs • HTTP 206</div>
+            <div class="user-ports" id="sidebarEngineStatus">123 Cloud Packs • HTTP 206</div>
           </div>
         </div>
       </div>
     </aside>
 
+    <!-- Mobile Sidebar Backdrop Overlay -->
+    <div id="mobileSidebarBackdrop" class="mobile-sidebar-backdrop"></div>
+
     <!-- Main Content Area -->
     <main class="viewport-container" id="viewportContainer">
-      <!-- HOME VIEW: Redesigned for All 121 Documentation Sites -->
+      <!-- HOME VIEW: Redesigned for All 123 Documentation Sites -->
       <section id="viewHome" class="view-panel active">
         <div class="hub-container">
           <!-- Compact Hero Header -->
@@ -356,12 +375,12 @@
               <div>
                 <div class="hub-badge-row">
                   <span class="hero-badge" id="heroEcosystemBadge">
-                    <span class="pulse-icon">●</span> 121 Documentation Ecosystems • <span id="heroInstalledStat">121/121 Installed (450+ MB)</span> • HTTP 206 Delta Updates
+                    <span class="pulse-icon">●</span> 123 Documentation Ecosystems • <span id="heroInstalledStat">123/123 Installed (450+ MB)</span> • HTTP 206 Delta Updates
                   </span>
                 </div>
                 <h1 class="hub-title">Docx Developer Hub</h1>
                 <p class="hub-subtitle">
-                  Browse, instant-search, install, and partial-update any of the <strong>121 offline documentation packs</strong> from GitHub Releases — or bundle your installed packs into a single standalone <code>Docx.exe</code>.
+                  Browse, instant-search, install, and partial-update any of the <strong>123 offline documentation packs</strong> from GitHub Releases — or bundle your installed packs into a single standalone <code>Docx.exe</code>.
                 </p>
               </div>
             </div>
@@ -383,7 +402,7 @@
                     <polyline points="7 10 12 15 17 10"></polyline>
                     <line x1="12" y1="15" x2="12" y2="3"></line>
                   </svg>
-                  <span id="btnDownloadAllDocsLabel">⬇ Download All 121 Docs</span>
+                  <span id="btnDownloadAllDocsLabel">⬇ Download All 123 Docs</span>
                 </button>
 
                 <button id="btnRefreshRegistry" class="hub-action-btn">
@@ -438,7 +457,7 @@
             <div class="hub-category-tabs" id="hubCategoryTabs">
               <button class="hub-cat-tab active" data-cat="all">
                 <span>All Docs</span>
-                <span class="cat-count" id="catCountAll">121</span>
+                <span class="cat-count" id="catCountAll">123</span>
               </button>
               <button class="hub-cat-tab" data-cat="installed">
                 <span class="dot-installed">●</span>
@@ -464,7 +483,7 @@
               </button>
               <button class="hub-cat-tab" data-cat="Web Frameworks & Tools">
                 <span>Web Frameworks</span>
-                <span class="cat-count" data-cat-pill="Web Frameworks & Tools">9</span>
+                <span class="cat-count" data-cat-pill="Web Frameworks & Tools">10</span>
               </button>
               <button class="hub-cat-tab" data-cat="TanStack Suite">
                 <span>TanStack Suite</span>
@@ -496,7 +515,7 @@
               </button>
               <button class="hub-cat-tab" data-cat="C & C++ Ecosystem">
                 <span>C / C++</span>
-                <span class="cat-count" data-cat-pill="C & C++ Ecosystem">13</span>
+                <span class="cat-count" data-cat-pill="C & C++ Ecosystem">14</span>
               </button>
               <button class="hub-cat-tab" data-cat="DevOps & Cloud">
                 <span>DevOps & Cloud</span>
@@ -517,13 +536,13 @@
                 type="text"
                 id="hubSiteFilterInput"
                 class="hub-site-filter-input"
-                placeholder="Filter all 121 docs (e.g. Python, Rust, Go, C++, React, Vue, TanStack, Docker, Caddy, DuckDB, Chroma...)"
+                placeholder="Filter all 123 docs (e.g. Python, Rust, Go, C++, React, Vue, TanStack, Docker, Caddy, DuckDB, Chroma...)"
                 autocomplete="off"
               />
             </div>
           </div>
 
-          <!-- Unified 121-Site Grid with Original Brand Colors -->
+          <!-- Unified 123-Site Grid with Original Brand Colors -->
           <div id="allSitesGrid" class="all-sites-grid"></div>
         </div>
       </section>
@@ -589,7 +608,7 @@
         <iframe id="iframeShadcn" class="doc-iframe" title="shadcn/ui Documentation"></iframe>
       </section>
 
-      <!-- DYNAMIC CLOUD PACK VIEW (For any installed pack from the 121 sites) -->
+      <!-- DYNAMIC CLOUD PACK VIEW (For any installed pack from the 123 sites) -->
       <section id="viewDynamic" class="view-panel">
         <div class="frame-loading" id="dynamicLoading">
           <div class="spinner"></div>
@@ -675,6 +694,45 @@
         </div>
       </div>
     </div>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav id="mobileBottomBar" class="mobile-bottom-bar">
+      <button id="btnMobileNavHome" class="mobile-nav-item active" title="Docx Hub">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 10.5L12 3l9 7.5V20a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 20v-9.5z"></path>
+          <path d="M9 21.5v-7.5h6v7.5"></path>
+        </svg>
+        <span>Hub</span>
+      </button>
+
+      <button id="btnMobileNavDocs" class="mobile-nav-item" title="Browse 123 Docs">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+        <span>Docs</span>
+      </button>
+
+      <button id="btnMobileNavSearch" class="mobile-nav-item" title="Universal Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <span>Search</span>
+      </button>
+
+      <button id="btnMobileNavBookmarks" class="mobile-nav-item" title="Saved Bookmarks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <span>Bookmarks</span>
+      </button>
+
+      <button id="btnMobileNavTheme" class="mobile-nav-item" title="Toggle Dark/Light Mode">
+        <span id="mobileThemeEmoji">🌙</span>
+        <span id="mobileThemeLabel">Theme</span>
+      </button>
+    </nav>
 
     <script type="module" src="/src/main.ts"></script>
   </body>

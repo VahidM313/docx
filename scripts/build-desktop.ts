@@ -79,8 +79,10 @@ if (fs.existsSync(DESKTOP_OUT_EXE)) {
 
 const finalBytes = trailerAndFooter.length > 0 ? Buffer.concat([coreBytes, trailerAndFooter]) : coreBytes;
 fs.writeFileSync(DESKTOP_OUT_EXE, finalBytes);
+const ROOT_OUT_EXE = path.join(ROOT, "Docx.exe");
+try { fs.writeFileSync(ROOT_OUT_EXE, finalBytes); } catch {}
 
 const elapsedSec = ((performance.now() - t0) / 1000).toFixed(2);
 console.log(
-  `✅ Built & deployed to ${DESKTOP_OUT_EXE} (${(finalBytes.length / (1024 * 1024)).toFixed(2)} MB) in ${elapsedSec}s!`
+  `✅ Built & deployed to:\n   - ${DESKTOP_OUT_EXE}\n   - ${ROOT_OUT_EXE}\n   (${(finalBytes.length / (1024 * 1024)).toFixed(2)} MB in ${elapsedSec}s!)`
 );

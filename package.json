@@ -7,6 +7,9 @@
     "dev:tailwind": "cd tailwindcss-site && bun run dev --port 3001",
     "dev:shadcn": "cd shadcn-site/apps/v4 && bun x next dev --turbopack --port 4000",
     "index": "bun run scripts/generate-search-index.ts && copy /Y search-index.json docs-desktop\\public\\search-index.json",
-    "build": "bun run scripts/build-desktop.ts"
+    "build": "bun run scripts/build-all.ts",
+    "build:all": "bun run scripts/build-all.ts",
+    "build:desktop": "bun run scripts/build-desktop.ts",
+    "build:android": "bun run scripts/build-android.ts"
   }
 }

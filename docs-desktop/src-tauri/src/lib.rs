@@ -5,6 +5,7 @@ use std::net::{TcpListener, TcpStream};
 #[cfg(target_os = "windows")]
 use std::os::windows::process::CommandExt;
 use std::path::PathBuf;
+#[cfg(target_os = "windows")]
 use std::process::Command;
 use std::sync::{Arc, RwLock};
 use std::thread;
@@ -170,23 +171,36 @@ fn fnv1a_hash_hex(bytes: &[u8]) -> String {
 }
 
 fn curl_get_bytes(url: &str, range: Option<(usize, usize)>) -> Result<Vec<u8>, String> {
-    let mut cmd = Command::new("curl.exe");
-    cmd.arg("-sL").arg("--fail");
-    if let Some((start, end)) = range {
-        cmd.arg("-r").arg(format!("{}-{}", start, end));
-    }
-    cmd.arg(url);
-    #[cfg(target_os = "windows")]
-    cmd.creation_flags(0x08000000); // CREATE_NO_WINDOW
+    let client = reqwest::blocking::Client::builder()
+        .user_agent("Docx/1.0")
+        .timeout(Duration::from_secs(60))
+        .build()
+        .map_err(|e| format!("HTTP client error: {}", e))?;
 
-    let output = cmd.output().map_err(|e| format!("curl error: {}", e))?;
-    if !output.status.success() {
-        return Err(format!("HTTP fetch failed for {}", url));
+    let mut req = client.get(url);
+    if let Some((start, end)) = range {
+        req = req.header("Range", format!("bytes={}-{}", start, end));
     }
-    Ok(output.stdout)
+
+    let resp = req.send().map_err(|e| format!("HTTP fetch error for {}: {}", url, e))?;
+    if !resp.status().is_success() && resp.status() != reqwest::StatusCode::PARTIAL_CONTENT {
+        return Err(format!("HTTP fetch failed with status {} for {}", resp.status(), url));
+    }
+    let bytes = resp.bytes().map_err(|e| format!("HTTP body read error for {}: {}", url, e))?;
+    Ok(bytes.to_vec())
+}
+
+static CUSTOM_PACKS_DIR: std::sync::OnceLock<PathBuf> = std::sync::OnceLock::new();
+
+pub fn set_packs_dir(dir: PathBuf) {
+    let _ = CUSTOM_PACKS_DIR.set(dir);
 }
 
 fn get_packs_dir() -> PathBuf {
+    if let Some(dir) = CUSTOM_PACKS_DIR.get() {
+        let _ = fs::create_dir_all(dir);
+        return dir.clone();
+    }
     let base = std::env::var_os("LOCALAPPDATA")
         .map(PathBuf::from)
         .or_else(|| {
@@ -201,75 +215,78 @@ fn get_packs_dir() -> PathBuf {
 }
 
 fn migrate_legacy_packs_to_appdata() {
-    let target_dir = get_packs_dir();
-    let mut legacy_dirs = vec![
-        PathBuf::from("d:/Dev/crawl/packs"),
-        PathBuf::from("d:/Dev/docx/packs"),
-        PathBuf::from("C:/Users/vahid/OneDrive/Desktop/packs"),
-    ];
-    if let Some(roaming) = std::env::var_os("APPDATA") {
-        legacy_dirs.push(PathBuf::from(roaming).join("docx"));
-    }
-    if let Ok(exe) = std::env::current_exe() {
-        if let Some(parent) = exe.parent() {
-            legacy_dirs.push(parent.join("packs"));
+    #[cfg(desktop)]
+    {
+        let target_dir = get_packs_dir();
+        let mut legacy_dirs = vec![
+            PathBuf::from("d:/Dev/crawl/packs"),
+            PathBuf::from("d:/Dev/docx/packs"),
+            PathBuf::from("C:/Users/vahid/OneDrive/Desktop/packs"),
+        ];
+        if let Some(roaming) = std::env::var_os("APPDATA") {
+            legacy_dirs.push(PathBuf::from(roaming).join("docx"));
         }
-    }
-    if let Ok(cwd) = std::env::current_dir() {
-        legacy_dirs.push(cwd.join("packs"));
-    }
+        if let Ok(exe) = std::env::current_exe() {
+            if let Some(parent) = exe.parent() {
+                legacy_dirs.push(parent.join("packs"));
+            }
+        }
+        if let Ok(cwd) = std::env::current_dir() {
+            legacy_dirs.push(cwd.join("packs"));
+        }
 
-    for legacy in legacy_dirs {
-        if !legacy.exists() || legacy == target_dir {
-            continue;
-        }
-        let legacy_str = legacy.to_string_lossy().to_lowercase();
-        let is_repo_dir = legacy_str.contains("crawl") || legacy_str.contains("d:/dev/docx") || legacy_str.contains("d:\\dev\\docx");
-        if let Ok(entries) = fs::read_dir(&legacy) {
-            for entry in entries.flatten() {
-                let src_path = entry.path();
-                if !src_path.is_file() {
-                    continue;
-                }
-                let name = match src_path.file_name().and_then(|n| n.to_str()) {
-                    Some(n) => n.to_string(),
-                    None => continue,
-                };
-                if name.ends_with(".docpack")
-                    || name.ends_with(".manifest.json")
-                    || name.ends_with(".search.json")
-                    || name == "registry.json"
-                    || name == "app-manifest.local.json"
-                {
-                    let dst_path = target_dir.join(&name);
-                    let should_copy = match (fs::metadata(&src_path), fs::metadata(&dst_path)) {
-                        (Ok(src_m), Ok(dst_m)) => {
-                            if name.ends_with(".docpack") {
-                                src_m.len() > 1024 && dst_m.len() <= 1024
-                            } else {
-                                false
-                            }
-                        }
-                        (Ok(src_m), Err(_)) => !name.ends_with(".docpack") || src_m.len() > 1024,
-                        _ => false,
+        for legacy in legacy_dirs {
+            if !legacy.exists() || legacy == target_dir {
+                continue;
+            }
+            let legacy_str = legacy.to_string_lossy().to_lowercase();
+            let is_repo_dir = legacy_str.contains("crawl") || legacy_str.contains("d:/dev/docx") || legacy_str.contains("d:\\dev\\docx");
+            if let Ok(entries) = fs::read_dir(&legacy) {
+                for entry in entries.flatten() {
+                    let src_path = entry.path();
+                    if !src_path.is_file() {
+                        continue;
+                    }
+                    let name = match src_path.file_name().and_then(|n| n.to_str()) {
+                        Some(n) => n.to_string(),
+                        None => continue,
                     };
-                    if should_copy {
-                        if !is_repo_dir {
-                            if fs::rename(&src_path, &dst_path).is_err() {
+                    if name.ends_with(".docpack")
+                        || name.ends_with(".manifest.json")
+                        || name.ends_with(".search.json")
+                        || name == "registry.json"
+                        || name == "app-manifest.local.json"
+                    {
+                        let dst_path = target_dir.join(&name);
+                        let should_copy = match (fs::metadata(&src_path), fs::metadata(&dst_path)) {
+                            (Ok(src_m), Ok(dst_m)) => {
+                                if name.ends_with(".docpack") {
+                                    src_m.len() > 1024 && dst_m.len() <= 1024
+                                } else {
+                                    false
+                                }
+                            }
+                            (Ok(src_m), Err(_)) => !name.ends_with(".docpack") || src_m.len() > 1024,
+                            _ => false,
+                        };
+                        if should_copy {
+                            if !is_repo_dir {
+                                if fs::rename(&src_path, &dst_path).is_err() {
+                                    let _ = fs::copy(&src_path, &dst_path);
+                                }
+                            } else {
                                 let _ = fs::copy(&src_path, &dst_path);
                             }
-                        } else {
-                            let _ = fs::copy(&src_path, &dst_path);
                         }
-                    }
-                    if !is_repo_dir {
-                        let _ = fs::remove_file(&src_path);
+                        if !is_repo_dir {
+                            let _ = fs::remove_file(&src_path);
+                        }
                     }
                 }
             }
-        }
-        if !is_repo_dir {
-            let _ = fs::remove_dir(&legacy);
+            if !is_repo_dir {
+                let _ = fs::remove_dir(&legacy);
+            }
         }
     }
 }
@@ -492,6 +509,7 @@ fn get_site_origin_and_entry(site_id: &str) -> Option<(&'static str, &'static st
         "mdn_js" | "js" => Some(("https://developer.mozilla.org", "/en-US/docs/Web/JavaScript")),
         "mdn_css" | "css" => Some(("https://developer.mozilla.org", "/en-US/docs/Web/CSS")),
         "mdn_html" | "html" => Some(("https://developer.mozilla.org", "/en-US/docs/Web/HTML")),
+        "mdn_wasm" | "wasm" => Some(("https://developer.mozilla.org", "/en-US/docs/WebAssembly")),
         "htmx" => Some(("https://htmx.org", "/docs/")),
         "bun" => Some(("https://bun.sh", "/docs")),
         "elysia" => Some(("https://elysiajs.com", "/table-of-content")),
@@ -502,6 +520,7 @@ fn get_site_origin_and_entry(site_id: &str) -> Option<(&'static str, &'static st
         "cppreference" => Some(("https://en.cppreference.com", "/")),
         "learncpp" => Some(("https://www.learncpp.com", "/")),
         "llvm" => Some(("https://llvm.org", "/docs/")),
+        "emscripten" => Some(("https://emscripten.org", "/docs/")),
         "lua" => Some(("https://www.lua.org", "/manual/5.4/")),
         "docker" => Some(("https://docs.docker.com", "/get-started/")),
         "git" => Some(("https://git-scm.com", "/docs/git")),
@@ -562,7 +581,7 @@ fn get_site_origin_and_entry(site_id: &str) -> Option<(&'static str, &'static st
         "pytorch" => Some(("https://pytorch.org", "/docs/stable/index.html")),
         "langchain" => Some(("https://python.langchain.com", "/oss/python/langchain/overview")),
         "huggingface" => Some(("https://huggingface.co", "/docs/transformers/index")),
-        "ollama" => Some(("https://ollama.com", "/library")),
+        "ollama" => Some(("https://docs.ollama.com", "/")),
         "numpy" => Some(("https://numpy.org", "/doc/stable/")),
         "pandas" => Some(("https://pandas.pydata.org", "/docs/")),
         "scikit_learn" => Some(("https://scikit-learn.org", "/stable/")),
@@ -688,6 +707,7 @@ fn inject_reader_bridge(site_key: &str, mut html: String) -> Vec<u8> {
         "css" => "mdn_css",
         "html" => "mdn_html",
         "js" => "mdn_js",
+        "wasm" => "mdn_wasm",
         other => other,
     };
     let origin = get_site_origin_and_entry(site_id)
@@ -718,6 +738,13 @@ fn inject_reader_bridge(site_key: &str, mut html: String) -> Vec<u8> {
 
     if site_id == "qt" {
         html = html.replace("href=\"/qt/", "href=\"/qt-6/");
+    }
+
+    // Ensure all documentation pages are responsive on mobile screens
+    if !html.contains("name=\"viewport\"") && !html.contains("name='viewport'") {
+        if let Some(pos) = html.find("<head>").or_else(|| html.find("<HEAD>")) {
+            html.insert_str(pos + 6, "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover\" />");
+        }
     }
 
     if site_id == "lucide" {
@@ -2820,6 +2847,7 @@ fn resolve_from_store(
         "css" => ("mdn_css", "css"),
         "html" => ("mdn_html", "html"),
         "js" => ("mdn_js", "js"),
+        "wasm" => ("mdn_wasm", "wasm"),
         other => (other, other),
     };
 
@@ -2871,9 +2899,11 @@ fn resolve_from_store(
     }
 
     if site_id == "ollama" && (decoded_path == "/" || decoded_path == "/docs" || decoded_path == "/library") {
-        candidates.insert(0, "/library".to_string());
-        candidates.insert(0, "/library/index.html".to_string());
-        candidates.insert(0, "/library/".to_string());
+        candidates.insert(0, "/".to_string());
+        candidates.insert(0, "/index.html".to_string());
+        candidates.push("/library".to_string());
+        candidates.push("/library/index.html".to_string());
+        candidates.push("/library/".to_string());
     }
 
     if site_id == "gin" && (decoded_path == "/" || decoded_path == "/docs" || decoded_path == "/docs/") {
@@ -3541,49 +3571,61 @@ fn curl_download_with_progress(
     use tauri::Emitter;
     let _ = fs::remove_file(dest_path);
 
-    let mut cmd = Command::new("curl.exe");
-    cmd.arg("-sL").arg("--fail").arg("-o").arg(dest_path).arg(url);
-    #[cfg(target_os = "windows")]
-    cmd.creation_flags(0x08000000); // CREATE_NO_WINDOW
+    let client = reqwest::blocking::Client::builder()
+        .user_agent("Docx/1.0")
+        .timeout(Duration::from_secs(300))
+        .build()
+        .map_err(|e| format!("HTTP client error: {}", e))?;
 
-    let mut child = cmd.spawn().map_err(|e| format!("Failed to spawn curl: {}", e))?;
+    let mut resp = client
+        .get(url)
+        .send()
+        .map_err(|e| format!("HTTP download request error for {}: {}", url, e))?;
+
+    if !resp.status().is_success() {
+        return Err(format!("HTTP download failed with status {} for {}", resp.status(), url));
+    }
+
+    let total = resp.content_length().map(|l| l as usize).unwrap_or(expected_total).max(1);
+    let mut file = File::create(dest_path).map_err(|e| format!("Failed to create file: {}", e))?;
+    let mut buffer = [0u8; 65536];
+    let mut cur_bytes = 0usize;
+    let mut last_emit = std::time::Instant::now();
 
     loop {
-        match child.try_wait() {
-            Ok(Some(status)) => {
-                if !status.success() {
-                    let _ = fs::remove_file(dest_path);
-                    return Err(format!("HTTP download failed for {}", url));
-                }
-                break;
-            }
-            Ok(None) => {
-                let cur_bytes = fs::metadata(dest_path).map(|m| m.len() as usize).unwrap_or(0);
-                let total = expected_total.max(cur_bytes).max(1);
-                let pct = ((cur_bytes as f64 / total as f64) * 92.0)
-                    .round()
-                    .clamp(8.0, 95.0) as u8;
-                let _ = window.emit(
-                    "docpack-progress",
-                    DownloadProgressPayload {
-                        site_id: site_id.to_string(),
-                        phase: "Downloading .docpack".to_string(),
-                        downloaded_bytes: cur_bytes,
-                        total_bytes: total,
-                        percent: pct,
-                        detail: format!(
-                            "{:.2} MB / {:.2} MB ({}%)",
-                            cur_bytes as f64 / (1024.0 * 1024.0),
-                            total as f64 / (1024.0 * 1024.0),
-                            pct
-                        ),
-                    },
-                );
-                thread::sleep(Duration::from_millis(65));
-            }
-            Err(e) => return Err(format!("Download wait error: {}", e)),
+        let bytes_read = resp.read(&mut buffer).map_err(|e| format!("Download stream read error: {}", e))?;
+        if bytes_read == 0 {
+            break;
+        }
+        file.write_all(&buffer[..bytes_read]).map_err(|e| format!("Download file write error: {}", e))?;
+        cur_bytes += bytes_read;
+
+        if last_emit.elapsed() >= Duration::from_millis(65) || cur_bytes == total {
+            last_emit = std::time::Instant::now();
+            let pct = ((cur_bytes as f64 / total as f64) * 92.0)
+                .round()
+                .clamp(8.0, 95.0) as u8;
+            let _ = window.emit(
+                "docpack-progress",
+                DownloadProgressPayload {
+                    site_id: site_id.to_string(),
+                    phase: "Downloading .docpack".to_string(),
+                    downloaded_bytes: cur_bytes,
+                    total_bytes: total,
+                    percent: pct,
+                    detail: format!(
+                        "{:.2} MB / {:.2} MB ({}%)",
+                        cur_bytes as f64 / (1024.0 * 1024.0),
+                        total as f64 / (1024.0 * 1024.0),
+                        pct
+                    ),
+                },
+            );
         }
     }
+
+    file.flush().map_err(|e| format!("File flush error: {}", e))?;
+    drop(file);
 
     fs::read(dest_path).map_err(|e| format!("Failed to read downloaded pack: {}", e))
 }
@@ -4062,6 +4104,13 @@ async fn test_partial_delta_update(
 
 #[tauri::command]
 fn bundle_into_single_exe(state: tauri::State<'_, AppState>) -> Result<String, String> {
+    #[cfg(not(desktop))]
+    {
+        let _ = state;
+        return Err("Standalone single-binary bundling is only supported on desktop platforms.".to_string());
+    }
+    #[cfg(desktop)]
+    {
     let exe_path = std::env::current_exe().map_err(|e| e.to_string())?;
     let mut exe_bytes = fs::read(&exe_path).map_err(|e| e.to_string())?;
 
@@ -4125,6 +4174,7 @@ fn bundle_into_single_exe(state: tauri::State<'_, AppState>) -> Result<String, S
     }
 
     Err("Could not overwrite Desktop\\Docx.exe while locked.".to_string())
+    }
 }
 
 #[derive(serde::Deserialize, serde::Serialize, Clone)]
@@ -4209,6 +4259,13 @@ async fn self_update_app(
     window: tauri::Window,
     state: tauri::State<'_, AppState>,
 ) -> Result<String, String> {
+    #[cfg(not(all(desktop, target_os = "windows")))]
+    {
+        let _ = (window, state);
+        return Err("App core self-update is only supported on Windows desktop.".to_string());
+    }
+    #[cfg(all(desktop, target_os = "windows"))]
+    {
     let store = Arc::clone(&state.store);
     tauri::async_runtime::spawn_blocking(move || {
         use std::os::windows::process::CommandExt;
@@ -4334,6 +4391,7 @@ async fn self_update_app(
     })
     .await
     .map_err(|e| e.to_string())?
+    }
 }
 
 #[tauri::command]
@@ -4347,49 +4405,72 @@ fn get_system_theme(window: tauri::Window) -> String {
 
 #[tauri::command]
 fn window_minimize(window: tauri::Window) {
+    #[cfg(desktop)]
     let _ = window.minimize();
+    #[cfg(not(desktop))]
+    let _ = window;
 }
 
 #[tauri::command]
 fn window_toggle_maximize(window: tauri::Window) {
-    if window.is_maximized().unwrap_or(false) {
-        let _ = window.unmaximize();
-    } else {
-        let _ = window.maximize();
+    #[cfg(desktop)]
+    {
+        if window.is_maximized().unwrap_or(false) {
+            let _ = window.unmaximize();
+        } else {
+            let _ = window.maximize();
+        }
     }
+    #[cfg(not(desktop))]
+    let _ = window;
 }
 
 #[tauri::command]
 fn window_toggle_fullscreen(window: tauri::Window) -> bool {
-    let is_fs = window.is_fullscreen().unwrap_or(false);
-    let next_fs = !is_fs;
-    if next_fs {
-        if window.is_maximized().unwrap_or(false) {
-            let _ = window.unmaximize();
+    #[cfg(desktop)]
+    {
+        let is_fs = window.is_fullscreen().unwrap_or(false);
+        let next_fs = !is_fs;
+        if next_fs {
+            if window.is_maximized().unwrap_or(false) {
+                let _ = window.unmaximize();
+            }
+            let _ = window.set_fullscreen(true);
+        } else {
+            let _ = window.set_fullscreen(false);
+            let _ = window.maximize();
         }
-        let _ = window.set_fullscreen(true);
-    } else {
-        let _ = window.set_fullscreen(false);
-        let _ = window.maximize();
+        next_fs
     }
-    next_fs
+    #[cfg(not(desktop))]
+    {
+        let _ = window;
+        false
+    }
 }
 
 #[tauri::command]
 fn window_close(window: tauri::Window) {
     let _ = window.close();
+    #[cfg(desktop)]
     std::process::exit(0);
 }
 
 #[tauri::command]
 fn window_start_dragging(window: tauri::Window) {
+    #[cfg(desktop)]
     let _ = window.start_dragging();
+    #[cfg(not(desktop))]
+    let _ = window;
 }
 
 #[tauri::command]
 fn window_show_ready(window: tauri::Window) {
-    if !window.is_maximized().unwrap_or(false) {
-        let _ = window.maximize();
+    #[cfg(desktop)]
+    {
+        if !window.is_maximized().unwrap_or(false) {
+            let _ = window.maximize();
+        }
     }
     let _ = window.show();
     let _ = window.set_focus();
@@ -4410,11 +4491,14 @@ pub fn run() {
         let _ = kill_cmd.output();
     }
 
-    let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.old.exe");
-    let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.new.exe");
-    if let Ok(exe) = std::env::current_exe() {
-        let _ = fs::remove_file(exe.with_extension("old.exe"));
-        let _ = fs::remove_file(exe.with_extension("new.exe"));
+    #[cfg(target_os = "windows")]
+    {
+        let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.old.exe");
+        let _ = fs::remove_file("C:/Users/vahid/OneDrive/Desktop/Docx.new.exe");
+        if let Ok(exe) = std::env::current_exe() {
+            let _ = fs::remove_file(exe.with_extension("old.exe"));
+            let _ = fs::remove_file(exe.with_extension("new.exe"));
+        }
     }
 
     let store = load_asset_store();
@@ -4447,23 +4531,37 @@ pub fn run() {
             }
         })
         .setup(|app| {
+            #[cfg(mobile)]
+            {
+                use tauri::Manager;
+                if let Ok(app_dir) = app.path().app_data_dir() {
+                    set_packs_dir(app_dir.join("docx"));
+                }
+            }
             if let Some(win) = app.get_webview_window("main") {
                 let _ = win.set_background_color(Some(tauri::window::Color(0, 0, 0, 255)));
-                if let Some(icon) = app.default_window_icon().cloned() {
-                    let _ = win.set_icon(icon);
-                } else if let Ok(icon) =
-                    tauri::image::Image::from_bytes(include_bytes!("../icons/icon.png"))
+                #[cfg(desktop)]
                 {
-                    let _ = win.set_icon(icon);
-                }
-                let _ = win.maximize();
+                    if let Some(icon) = app.default_window_icon().cloned() {
+                        let _ = win.set_icon(icon);
+                    } else if let Ok(icon) =
+                        tauri::image::Image::from_bytes(include_bytes!("../icons/icon.png"))
+                    {
+                        let _ = win.set_icon(icon);
+                    }
+                    let _ = win.maximize();
 
-                // Fallback in case frontend invoke is delayed
-                let win_clone = win.clone();
-                thread::spawn(move || {
-                    thread::sleep(Duration::from_millis(380));
-                    let _ = win_clone.show();
-                });
+                    // Fallback in case frontend invoke is delayed
+                    let win_clone = win.clone();
+                    thread::spawn(move || {
+                        thread::sleep(Duration::from_millis(380));
+                        let _ = win_clone.show();
+                    });
+                }
+                #[cfg(mobile)]
+                {
+                    let _ = win.show();
+                }
             }
             Ok(())
         })

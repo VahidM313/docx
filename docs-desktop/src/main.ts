@@ -28,6 +28,9 @@ const SITE_ENTRY_PATHS: Record<string, string> = {
   css: "/en-US/docs/Web/CSS",
   mdn_html: "/en-US/docs/Web/HTML",
   html: "/en-US/docs/Web/HTML",
+  mdn_wasm: "/en-US/docs/WebAssembly",
+  wasm: "/en-US/docs/WebAssembly",
+  emscripten: "/docs/",
   htmx: "/docs/",
   typescript: "/docs/handbook/intro.html",
   bun: "/docs",
@@ -99,7 +102,7 @@ const SITE_ENTRY_PATHS: Record<string, string> = {
   pytorch: "/docs/stable/index.html",
   langchain: "/oss/python/langchain/overview",
   huggingface: "/docs/transformers/index",
-  ollama: "/library",
+  ollama: "/",
   numpy: "/doc/stable/",
   pandas: "/docs/",
   scikit_learn: "/stable/",
@@ -152,6 +155,8 @@ const DEFAULT_PACK_SIZES_MB: Record<string, number> = {
   mdn_js: 5.74,
   mdn_css: 8.47,
   mdn_html: 5.41,
+  mdn_wasm: 3.8,
+  emscripten: 8.5,
   htmx: 0.21,
   typescript: 12.35,
   bun: 4.63,
@@ -425,7 +430,7 @@ let browserTabs: BrowserTab[] = [
   {
     id: "tab-home",
     siteId: "home",
-    title: "121-Site Hub",
+    title: "123-Site Hub",
     pathOrUrl: "/",
   },
 ];
@@ -1048,7 +1053,7 @@ function dismissSplashScreen() {
 
 async function init() {
   const startTs = performance.now();
-  updateSplash(24, "Initializing 121-Site Offline Engine...");
+  updateSplash(24, "Initializing 123-Site Offline Engine...");
   requestAnimationFrame(() => {
     invoke("window_show_ready").catch(() => {});
   });
@@ -2523,6 +2528,20 @@ function scheduleCloseHoverDrawer(delay = 20) {
   }, delay);
 }
 
+function toggleMobileDrawer(forceOpen?: boolean) {
+  if (!discordSidebar) return;
+  const isCurrentlyOpen = discordSidebar.classList.contains("mobile-open");
+  const shouldOpen = typeof forceOpen === "boolean" ? forceOpen : !isCurrentlyOpen;
+  const backdrop = document.getElementById("mobileSidebarBackdrop");
+  if (shouldOpen) {
+    discordSidebar.classList.add("open", "mobile-open");
+    backdrop?.classList.add("visible");
+  } else {
+    discordSidebar.classList.remove("open", "mobile-open");
+    backdrop?.classList.remove("visible");
+  }
+}
+
 // Discord Hover Sidebar & Collapsible Custom Topbar Logic
 function openHoverSidebar(checkHomeY?: number) {
   if (sidebarCloseTimer) {
@@ -3018,7 +3037,7 @@ function getActiveBrowserTab(): BrowserTab {
 }
 
 function formatTabTitle(siteId: string, rawTitle?: string, pathOrUrl?: string): string {
-  if (siteId === "home") return "121-Site Hub";
+  if (siteId === "home") return "123-Site Hub";
   if (siteId === "bookmarks") return "Saved Bookmarks";
   const brand = getSiteBrand(siteId);
   if (rawTitle && rawTitle.trim()) {
@@ -3068,7 +3087,7 @@ function renderBrowserTabs() {
         : `<span class="browser-tab-badge" style="background: ${brand.bgTint}; color: ${brand.color}; border: 1px solid ${brand.color}44;">${brand.svg || escapeHtml(brand.badge)}</span>`;
       const showClose = browserTabs.length > 1 || !isHome;
       const subLabel = isHome
-        ? "All 121 Docs"
+        ? "All 123 Docs"
         : isBookmarks
         ? `${bookmarksList.length} Saved Page${bookmarksList.length === 1 ? "" : "s"}`
         : `${brand.version} · ${t.pathOrUrl || "/"}`;
@@ -3237,12 +3256,27 @@ function activateBrowserTab(tabId: string) {
     if (target.siteId === "home") {
       titlebarCurrentView.textContent = `${sites.length}-Site Hub`;
     } else if (target.siteId === "bookmarks") {
-      titlebarCurrentView.textContent = `Saved Bookmarks (${bookmarksList.length})`;
+      titlebarCurrentView.textContent = `Bookmarks (${bookmarksList.length})`;
     } else {
       const brand = getSiteBrand(target.siteId);
-      titlebarCurrentView.textContent = `${brand.name} (${brand.version})`;
+      titlebarCurrentView.textContent = brand.name;
     }
   }
+
+  // Mobile Top Bar Back button & Bottom Bar Active indicator
+  const mobileBackBtn = document.getElementById("btnMobileBack") as HTMLElement;
+  if (mobileBackBtn) {
+    mobileBackBtn.style.display = target.siteId === "home" ? "none" : "inline-flex";
+  }
+  document.querySelectorAll(".mobile-nav-item").forEach((el) => el.classList.remove("active"));
+  if (target.siteId === "home") {
+    document.getElementById("btnMobileNavHome")?.classList.add("active");
+  } else if (target.siteId === "bookmarks") {
+    document.getElementById("btnMobileNavBookmarks")?.classList.add("active");
+  } else {
+    document.getElementById("btnMobileNavDocs")?.classList.add("active");
+  }
+  toggleMobileDrawer(false);
 
   // Hide legacy static panels and only show viewHome, viewBookmarks, or the active tab's panelEl
   [viewTailwind, viewShadcn, viewDynamic].forEach((v) => v?.classList.remove("active"));
@@ -3283,7 +3317,7 @@ function closeBrowserTab(tabId: string) {
     const fallbackHome: BrowserTab = {
       id: `tab-${++tabSeq}`,
       siteId: "home",
-      title: "121-Site Hub",
+      title: "123-Site Hub",
       pathOrUrl: "/",
     };
     browserTabs.push(fallbackHome);
@@ -3348,7 +3382,7 @@ async function switchTab(tab: string, targetPathOrUrl?: string, forceNewTab = fa
     const single = browserTabs[0] || {
       id: `tab-${++tabSeq}`,
       siteId: "home",
-      title: "121-Site Hub",
+      title: "123-Site Hub",
       pathOrUrl: "/",
     };
     if (browserTabs.length === 0) browserTabs.push(single);
@@ -3909,6 +3943,31 @@ function setupEventListeners() {
 
   btnAlertDismiss?.addEventListener("click", () => {
     if (updateAlertBanner) updateAlertBanner.style.display = "none";
+  });
+
+  // Mobile Top Bar & Bottom Navigation Listeners
+  document.getElementById("btnMobileMenu")?.addEventListener("click", () => toggleMobileDrawer());
+  document.getElementById("btnMobileBack")?.addEventListener("click", () => switchTab("home"));
+  document.getElementById("mobileSidebarBackdrop")?.addEventListener("click", () => toggleMobileDrawer(false));
+
+  document.getElementById("btnMobileNavHome")?.addEventListener("click", () => {
+    switchTab("home");
+    toggleMobileDrawer(false);
+  });
+  document.getElementById("btnMobileNavDocs")?.addEventListener("click", () => toggleMobileDrawer(true));
+  document.getElementById("btnMobileNavSearch")?.addEventListener("click", () => {
+    toggleMobileDrawer(false);
+    openUniversalSearch();
+  });
+  document.getElementById("btnMobileNavBookmarks")?.addEventListener("click", () => {
+    switchTab("bookmarks");
+    toggleMobileDrawer(false);
+  });
+  document.getElementById("btnMobileNavTheme")?.addEventListener("click", () => {
+    btnToggleDarkSite?.click();
+    const isDark = document.body.classList.contains("dark") || !document.body.classList.contains("light-mode");
+    const emoji = document.getElementById("mobileThemeEmoji");
+    if (emoji) emoji.textContent = isDark ? "🌙" : "☀️";
   });
 
   document.getElementById("btnRefreshRegistry")?.addEventListener("click", async () => {
