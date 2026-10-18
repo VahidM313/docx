@@ -1,0 +1,17 @@
+{
+  "id": "tanstack_devtools",
+  "order": 41,
+  "name": "TanStack Devtools",
+  "version": "latest",
+  "category": "TanStack Suite",
+  "color": "#f43f5e",
+  "bgTint": "rgba(244, 63, 94, 0.15)",
+  "description": "Integrated debugging panel for router, query, and form cache inspection.",
+  "origin": "https://tanstack.com",
+  "entryPath": "/devtools/latest/docs/overview",
+  "allowedPrefixes": [
+    "/devtools/latest/docs"
+  ],
+  "maxPages": 60,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#f43f5e\" stroke-width=\"2\"><path d=\"M12 20h9\"/><path d=\"M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z\"/></svg>"
+}

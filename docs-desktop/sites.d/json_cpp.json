@@ -1,0 +1,35 @@
+{
+  "id": "json_cpp",
+  "order": 98,
+  "name": "nlohmann/json (C++)",
+  "version": "v3.11",
+  "category": "C & C++ Ecosystem",
+  "color": "#f59e0b",
+  "bgTint": "rgba(245, 158, 11, 0.15)",
+  "description": "JSON for Modern C++: intuitive syntax, first-class container integration, serialization, and header-only design.",
+  "origin": "https://json.nlohmann.me",
+  "entryPath": "/",
+  "allowedPrefixes": [
+    "/"
+  ],
+  "maxPages": 80,
+  "defaultRoutes": [
+    {
+      "label": "Overview",
+      "path": "/"
+    },
+    {
+      "label": "Integration",
+      "path": "/integration/"
+    },
+    {
+      "label": "API Reference",
+      "path": "/api/basic_json/"
+    },
+    {
+      "label": "Features",
+      "path": "/features/arbitrary_types/"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.8\" stroke-linecap=\"round\"><path d=\"M8 4c-2 0-3 1-3 3v2c0 1.5-1 2-2 2 1 0 2 .5 2 2v2c0 2 1 3 3 3M16 4c2 0 3 1 3 3v2c0 1.5 1 2 2 2-1 0-2 .5-2 2v2c0 2-1 3-3 3\"/></svg>"
+}

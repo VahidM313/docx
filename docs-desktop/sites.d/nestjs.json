@@ -1,0 +1,17 @@
+{
+  "id": "nestjs",
+  "order": 49,
+  "name": "NestJS",
+  "version": "v11",
+  "category": "Backend, Auth & APIs",
+  "color": "#ea2845",
+  "bgTint": "rgba(234, 40, 69, 0.15)",
+  "description": "Progressive Node.js framework for building efficient, scalable enterprise server-side applications with TypeScript.",
+  "origin": "https://docs.nestjs.com",
+  "entryPath": "/",
+  "allowedPrefixes": [
+    "/"
+  ],
+  "maxPages": 150,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ea2845\" stroke-width=\"1.9\" stroke-linecap=\"round\"><path d=\"M12 3C7 3 3 7 3 12C3 17 7 21 12 21C17 21 21 17 21 12\"/><path d=\"M15 4C18.5 5.5 20 9 18 13C16 17 11 18 8 15C6 13 7 9 10 8C13 7 15 10 13 12\"/></svg>"
+}

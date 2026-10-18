@@ -1,0 +1,17 @@
+{
+  "id": "oxc",
+  "order": 25,
+  "name": "Oxc (Oxidation Compiler)",
+  "version": "latest",
+  "category": "Web Frameworks & Tools",
+  "color": "#fb923c",
+  "bgTint": "rgba(251, 146, 60, 0.15)",
+  "description": "Collection of high-performance JavaScript/TypeScript tools written in Rust: oxlint, parser, transformer, resolver.",
+  "origin": "https://oxc.rs",
+  "entryPath": "/docs/guide/introduction.html",
+  "allowedPrefixes": [
+    "/docs/"
+  ],
+  "maxPages": 120,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10 13 2\"/></svg>"
+}

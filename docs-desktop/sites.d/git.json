@@ -1,0 +1,18 @@
+{
+  "id": "git",
+  "order": 114,
+  "name": "Git Reference Manual",
+  "version": "v2.49",
+  "category": "DevOps & Cloud",
+  "color": "#f05032",
+  "bgTint": "rgba(240, 80, 50, 0.15)",
+  "description": "Official Git documentation: commands, workflows, branching, merge/rebase strategies, and Pro Git book chapters.",
+  "origin": "https://git-scm.com",
+  "entryPath": "/docs/git",
+  "allowedPrefixes": [
+    "/docs",
+    "/book/en/v2"
+  ],
+  "maxPages": 160,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 2.5L2.5 12L12 21.5L21.5 12L12 2.5Z\" stroke=\"#f05032\" stroke-width=\"1.8\" stroke-linejoin=\"round\"/><circle cx=\"9.5\" cy=\"12\" r=\"2\" fill=\"#f05032\"/><circle cx=\"14.5\" cy=\"9\" r=\"2\" fill=\"#f05032\"/><circle cx=\"14.5\" cy=\"15\" r=\"2\" fill=\"#f05032\"/><path d=\"M9.5 12H14.5M14.5 9V15\" stroke=\"#ffffff\" stroke-width=\"1.5\"/></svg>"
+}

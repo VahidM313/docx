@@ -1,0 +1,35 @@
+{
+  "id": "nginx",
+  "order": 110,
+  "name": "Nginx",
+  "version": "v1.26",
+  "category": "DevOps & Cloud",
+  "color": "#009639",
+  "bgTint": "rgba(0, 150, 57, 0.15)",
+  "description": "High-performance HTTP web server, reverse proxy, load balancer, mail proxy, and generic TCP/UDP proxy.",
+  "origin": "https://nginx.org",
+  "entryPath": "/en/docs/",
+  "allowedPrefixes": [
+    "/en/docs/"
+  ],
+  "maxPages": 120,
+  "defaultRoutes": [
+    {
+      "label": "Documentation",
+      "path": "/en/docs/"
+    },
+    {
+      "label": "Core Module",
+      "path": "/en/docs/http/ngx_http_core_module.html"
+    },
+    {
+      "label": "Reverse Proxy",
+      "path": "/en/docs/http/ngx_http_proxy_module.html"
+    },
+    {
+      "label": "Beginner's Guide",
+      "path": "/en/docs/beginners_guide.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><polygon points=\"12 2 22 8 22 16 12 22 2 16 2 8 12 2\" stroke=\"#009639\" stroke-width=\"1.8\" stroke-linejoin=\"round\"/><path d=\"M8 16V8l8 8V8\" stroke=\"#009639\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+}

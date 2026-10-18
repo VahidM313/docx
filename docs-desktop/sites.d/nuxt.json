@@ -1,0 +1,17 @@
+{
+  "id": "nuxt",
+  "order": 15,
+  "name": "Nuxt",
+  "version": "v4.x",
+  "category": "Vue Ecosystem",
+  "color": "#00dc82",
+  "bgTint": "rgba(0, 220, 130, 0.15)",
+  "description": "The Intuitive Vue Framework: file-based routing, auto-imports, SSR/SSG rendering, and Nitro server engine.",
+  "origin": "https://nuxt.com",
+  "entryPath": "/docs/4.x/getting-started/introduction",
+  "allowedPrefixes": [
+    "/docs"
+  ],
+  "maxPages": 150,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#00dc82\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 18L7.5 7L13 18H2Z\"/><path d=\"M10 18L14.5 9L19 18H10Z\"/><path d=\"M16 18L19 12L22 18H16Z\"/></svg>"
+}

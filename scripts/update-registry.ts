@@ -1,12 +1,26 @@
 import fs from "fs";
 import path from "path";
+import crypto from "crypto";
 
 const dir = path.resolve("packs");
+const iconsDir = path.resolve("docs-desktop", "catalog", "icons");
 const localAppData = process.env.LOCALAPPDATA ? path.join(process.env.LOCALAPPDATA, "docx") : null;
 const packs: Record<string, any> = {};
 
 const scanDirs = [dir];
 if (localAppData && fs.existsSync(localAppData)) scanDirs.push(localAppData);
+
+/** Short content hash of the captured icon so clients know when to re-fetch it. */
+function iconMeta(id: string): { iconFile?: string; iconETag?: string } {
+  const png = path.join(iconsDir, `${id}.icon.png`);
+  if (!fs.existsSync(png)) return {};
+  const hash = crypto
+    .createHash("sha256")
+    .update(fs.readFileSync(png))
+    .digest("hex")
+    .slice(0, 16);
+  return { iconFile: `${id}.icon.png`, iconETag: hash };
+}
 
 for (const d of scanDirs) {
   for (const f of fs.readdirSync(d)) {
@@ -27,12 +41,13 @@ for (const d of scanDirs) {
       manifestFile: `${m.id}.manifest.json`,
       packFile: `${m.id}.docpack`,
       searchFile: `${m.id}.search.json`,
+      ...iconMeta(m.id),
     };
   }
 }
 
 const registry = {
-  version: 1,
+  version: 2,
   updatedAt: new Date().toISOString(),
   packs,
 };

@@ -1,0 +1,35 @@
+{
+  "id": "qdrant",
+  "order": 62,
+  "name": "Qdrant Vector DB",
+  "version": "v1.13",
+  "category": "Databases & SQL",
+  "color": "#dc2626",
+  "bgTint": "rgba(220, 38, 38, 0.15)",
+  "description": "Vector similarity search engine and database written in Rust: payload-based filtering, HNSW index, quantization, and gRPC/REST APIs.",
+  "origin": "https://qdrant.tech",
+  "entryPath": "/documentation/",
+  "allowedPrefixes": [
+    "/documentation/"
+  ],
+  "maxPages": 120,
+  "defaultRoutes": [
+    {
+      "label": "Documentation",
+      "path": "/documentation/"
+    },
+    {
+      "label": "Quickstart",
+      "path": "/documentation/quick-start/"
+    },
+    {
+      "label": "Search & Filtering",
+      "path": "/documentation/concepts/search/"
+    },
+    {
+      "label": "Collections",
+      "path": "/documentation/concepts/collections/"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><polygon points=\"12 2 21 7.5 21 16.5 12 22 3 16.5 3 7.5 12 2\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><circle cx=\"12\" cy=\"12\" r=\"3.5\" fill=\"#dc2626\"/></svg>"
+}

@@ -171,6 +171,9 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
 
+      - name: Catalog consistency gate (sites.d ↔ sites.json)
+        run: bun scripts/gen-catalog.ts --check
+
       - name: Ensure packs-latest release exists & resolve matrix
         id: list
         env:
@@ -252,9 +255,41 @@ jobs:
             "./dist-packs/${{ matrix.site }}.search.json" \
             --clobber
 
+  refresh-icons:
+    name: Capture Site Icons (hybrid favicon strategy)
+    needs: [prepare-matrix, build-pack]
+    if: always() && needs.prepare-matrix.result == 'success' && needs.prepare-matrix.outputs.count != '0'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Download previously cached icons from packs-latest
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p ./docs-desktop/catalog/icons
+          gh release download packs-latest --pattern "*.icon.png" --pattern "*.meta.json" --dir ./docs-desktop/catalog/icons --clobber || true
+
+      - name: Capture missing / stale icons (cached by source ETag + content hash)
+        run: bun scripts/capture-icons.ts
+
+      - name: Upload icon assets to packs-latest
+        if: always() && hashFiles('docs-desktop/catalog/icons/*.icon.png') != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload packs-latest ./docs-desktop/catalog/icons/*.icon.png ./docs-desktop/catalog/icons/*.meta.json --clobber
+
   update-registry:
     name: Update Master registry.json
-    needs: [prepare-matrix, build-pack]
+    needs: [prepare-matrix, build-pack, refresh-icons]
     if: always() && needs.prepare-matrix.result == 'success' && needs.prepare-matrix.outputs.count != '0'
     runs-on: ubuntu-latest
     steps:
@@ -268,18 +303,22 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mkdir -p ./rel-manifests
+          mkdir -p ./rel-manifests/icons
           gh release download packs-latest --pattern "*.manifest.json" --dir ./rel-manifests --clobber
+          # Icon assets feed the iconETag freshness anchors in the registry
+          gh release download packs-latest --pattern "*.icon.png" --dir ./rel-manifests/icons --clobber
           bun -e '
             const fs = require("fs");
             const path = require("path");
+            const crypto = require("crypto");
             const dir = "./rel-manifests";
+            const iconsDir = "./rel-manifests/icons";
             const packs = {};
             for (const f of fs.readdirSync(dir)) {
               if (!f.endsWith(".manifest.json")) continue;
               const m = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
               if (!m.commit || m.commit === "e3b0c442" || !m.totalBytes) continue;
-              packs[m.id] = {
+              const entry = {
                 id: m.id,
                 name: m.name,
                 version: m.version,
@@ -293,9 +332,15 @@ jobs:
                 packFile: `${m.id}.docpack`,
                 searchFile: `${m.id}.search.json`
               };
+              const iconPath = path.join(iconsDir, `${m.id}.icon.png`);
+              if (fs.existsSync(iconPath)) {
+                entry.iconFile = `${m.id}.icon.png`;
+                entry.iconETag = crypto.createHash("sha256").update(fs.readFileSync(iconPath)).digest("hex").slice(0, 16);
+              }
+              packs[m.id] = entry;
             }
             const registry = {
-              version: 1,
+              version: 2,
               updatedAt: new Date().toISOString(),
               packs
             };

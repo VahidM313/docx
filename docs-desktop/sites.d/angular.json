@@ -1,0 +1,21 @@
+{
+  "id": "angular",
+  "order": 23,
+  "name": "Angular",
+  "version": "v17",
+  "category": "Web Frameworks & Tools",
+  "color": "#dd0031",
+  "bgTint": "rgba(221, 0, 49, 0.15)",
+  "description": "The web development platform for enterprise applications: Signals, hydration, control flow syntax.",
+  "origin": "https://v17.angular.io",
+  "entryPath": "/docs",
+  "allowedPrefixes": [
+    "/docs",
+    "/guide",
+    "/tutorial",
+    "/api",
+    "/start"
+  ],
+  "maxPages": 140,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><polygon points=\"12 2 21 5.5 19.5 17.5 12 22 4.5 17.5 3 5.5 12 2\" stroke=\"#dd0031\" stroke-width=\"1.8\" stroke-linejoin=\"round\"/><polygon points=\"12 5.5 16.5 15.5 14.5 15.5 13.5 13 10.5 13 9.5 15.5 7.5 15.5 12 5.5\" fill=\"#dd0031\"/></svg>"
+}

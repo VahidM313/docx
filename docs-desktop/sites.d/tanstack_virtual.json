@@ -1,0 +1,17 @@
+{
+  "id": "tanstack_virtual",
+  "order": 34,
+  "name": "TanStack Virtual",
+  "version": "v3",
+  "category": "TanStack Suite",
+  "color": "#8b5cf6",
+  "bgTint": "rgba(139, 92, 246, 0.15)",
+  "description": "Headless UI for virtualizing large element lists with dynamic row heights and smooth scrolling.",
+  "origin": "https://tanstack.com",
+  "entryPath": "/virtual/latest/docs/introduction",
+  "allowedPrefixes": [
+    "/virtual/latest/docs"
+  ],
+  "maxPages": 80,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#8b5cf6\" stroke-width=\"2\"><line x1=\"4\" y1=\"6\" x2=\"20\" y2=\"6\"/><line x1=\"4\" y1=\"12\" x2=\"20\" y2=\"12\"/><line x1=\"4\" y1=\"18\" x2=\"20\" y2=\"18\"/></svg>"
+}

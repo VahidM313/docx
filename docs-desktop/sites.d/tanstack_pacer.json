@@ -1,0 +1,17 @@
+{
+  "id": "tanstack_pacer",
+  "order": 38,
+  "name": "TanStack Pacer",
+  "version": "latest",
+  "category": "TanStack Suite",
+  "color": "#0284c7",
+  "bgTint": "rgba(2, 132, 199, 0.15)",
+  "description": "Rate-limiting, concurrency scheduling, batching, and async pacing utilities.",
+  "origin": "https://tanstack.com",
+  "entryPath": "/pacer/latest/docs/overview",
+  "allowedPrefixes": [
+    "/pacer/latest/docs"
+  ],
+  "maxPages": 80,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#0284c7\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><polyline points=\"12 6 12 12 16 14\"/></svg>"
+}

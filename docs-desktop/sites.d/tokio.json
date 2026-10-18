@@ -1,0 +1,35 @@
+{
+  "id": "tokio",
+  "order": 82,
+  "name": "Tokio (Async Rust)",
+  "version": "v1.43",
+  "category": "Rust Ecosystem",
+  "color": "#a855f7",
+  "bgTint": "rgba(168, 85, 247, 0.15)",
+  "description": "Asynchronous runtime for Rust providing non-blocking I/O, timers, channels, and multi-threaded work-stealing scheduler.",
+  "origin": "https://tokio.rs",
+  "entryPath": "/tokio/tutorial",
+  "allowedPrefixes": [
+    "/tokio/"
+  ],
+  "maxPages": 100,
+  "defaultRoutes": [
+    {
+      "label": "Tutorial",
+      "path": "/tokio/tutorial"
+    },
+    {
+      "label": "Hello Tokio",
+      "path": "/tokio/tutorial/hello-tokio"
+    },
+    {
+      "label": "Spawning",
+      "path": "/tokio/tutorial/spawning"
+    },
+    {
+      "label": "Async In Depth",
+      "path": "/tokio/tutorial/async"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><circle cx=\"12\" cy=\"12\" r=\"9\" stroke=\"#a855f7\" stroke-width=\"1.8\"/><path d=\"M8 12h8M12 8v8\" stroke=\"#a855f7\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>"
+}

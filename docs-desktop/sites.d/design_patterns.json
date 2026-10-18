@@ -1,0 +1,35 @@
+{
+  "id": "design_patterns",
+  "order": 120,
+  "name": "Software Design Patterns",
+  "version": "2026",
+  "category": "Architecture & Design",
+  "color": "#06b6d4",
+  "bgTint": "rgba(6, 182, 212, 0.15)",
+  "description": "Comprehensive design patterns reference: Creational, Structural, and Behavioral patterns with real-world examples and diagrams.",
+  "origin": "https://refactoring.guru",
+  "entryPath": "/design-patterns",
+  "allowedPrefixes": [
+    "/design-patterns"
+  ],
+  "maxPages": 100,
+  "defaultRoutes": [
+    {
+      "label": "Design Patterns",
+      "path": "/design-patterns"
+    },
+    {
+      "label": "Creational",
+      "path": "/design-patterns/creational-patterns"
+    },
+    {
+      "label": "Structural",
+      "path": "/design-patterns/structural-patterns"
+    },
+    {
+      "label": "Behavioral",
+      "path": "/design-patterns/behavioral-patterns"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#06b6d4\" stroke-width=\"1.8\"><polygon points=\"12 2 19 8.5 12 15 5 8.5 12 2\"/><polygon points=\"12 9 19 15.5 12 22 5 15.5 12 9\"/></svg>"
+}

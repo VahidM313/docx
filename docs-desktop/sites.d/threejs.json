@@ -1,0 +1,18 @@
+{
+  "id": "threejs",
+  "order": 5,
+  "name": "Three.js",
+  "version": "r175",
+  "category": "Frontend & UI",
+  "color": "#000000",
+  "bgTint": "rgba(255, 255, 255, 0.15)",
+  "description": "JavaScript 3D Library: WebGL & WebGPU renderers, geometries, materials, shaders, lights, and scene graph.",
+  "origin": "https://threejs.org",
+  "entryPath": "/docs/",
+  "allowedPrefixes": [
+    "/docs/",
+    "/manual/"
+  ],
+  "maxPages": 140,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linejoin=\"round\"><path d=\"M12 2L3 7L12 12L21 7L12 2Z\"/><path d=\"M3 17L12 22L21 17\"/><path d=\"M3 12L12 17L21 12\"/></svg>"
+}

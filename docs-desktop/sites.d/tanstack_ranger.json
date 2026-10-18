@@ -1,0 +1,17 @@
+{
+  "id": "tanstack_ranger",
+  "order": 39,
+  "name": "TanStack Ranger",
+  "version": "v1",
+  "category": "TanStack Suite",
+  "color": "#d946ef",
+  "bgTint": "rgba(217, 70, 239, 0.15)",
+  "description": "Headless multi-range slider and range picker primitives for web interfaces.",
+  "origin": "https://tanstack.com",
+  "entryPath": "/ranger/latest/docs/overview",
+  "allowedPrefixes": [
+    "/ranger/latest/docs"
+  ],
+  "maxPages": 60,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#d946ef\" stroke-width=\"2\"><line x1=\"4\" y1=\"12\" x2=\"20\" y2=\"12\"/><circle cx=\"8\" cy=\"12\" r=\"3\"/><circle cx=\"16\" cy=\"12\" r=\"3\"/></svg>"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "solidjs",
+  "order": 20,
+  "name": "SolidJS",
+  "version": "v1.9",
+  "category": "Web Frameworks & Tools",
+  "color": "#4f88c6",
+  "bgTint": "rgba(79, 136, 198, 0.15)",
+  "description": "Simple and performant reactivity for building user interfaces without a virtual DOM.",
+  "origin": "https://docs.solidjs.com",
+  "entryPath": "/quick-start",
+  "allowedPrefixes": [
+    "/quick-start",
+    "/concepts",
+    "/guides",
+    "/reference",
+    "/solid-router",
+    "/solid-meta"
+  ],
+  "maxPages": 120,
+  "defaultRoutes": [
+    {
+      "label": "Quick Start",
+      "path": "/quick-start"
+    },
+    {
+      "label": "Signals",
+      "path": "/concepts/signals"
+    },
+    {
+      "label": "Effects",
+      "path": "/concepts/effects"
+    },
+    {
+      "label": "API Reference",
+      "path": "/reference"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 2L3 7v10l9 5 9-5V7l-9-5z\" stroke=\"#4f88c6\" stroke-width=\"1.8\"/><path d=\"M12 6l5 3-5 3-5-3 5-3zM7 11.5l5 3v5l-5-3v-5zM17 11.5v5l-5 3v-5l5-3z\" fill=\"#4f88c6\" fill-opacity=\"0.3\"/></svg>"
+}

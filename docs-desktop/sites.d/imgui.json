@@ -1,0 +1,27 @@
+{
+  "id": "imgui",
+  "order": 102,
+  "name": "Dear ImGui",
+  "version": "v1.91",
+  "category": "C & C++ Ecosystem",
+  "color": "#9b51e0",
+  "bgTint": "rgba(155, 81, 224, 0.15)",
+  "description": "Bloat-free Immediate Mode Graphical User Interface for C++: game tooling, debug overlays, renderer-agnostic backends.",
+  "origin": "https://pthom.github.io",
+  "entryPath": "/imgui_manual_online/manual/imgui_manual.html",
+  "allowedPrefixes": [
+    "/imgui_manual_online/"
+  ],
+  "maxPages": 80,
+  "defaultRoutes": [
+    {
+      "label": "Interactive Manual",
+      "path": "/imgui_manual_online/manual/imgui_manual.html"
+    },
+    {
+      "label": "Dear ImGui Manual",
+      "path": "/imgui_manual_online/manual/imgui_manual.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" stroke=\"#9b51e0\" stroke-width=\"1.8\"/><rect x=\"6\" y=\"6\" width=\"6\" height=\"4\" rx=\"1\" fill=\"#9b51e0\"/><line x1=\"6\" y1=\"14\" x2=\"18\" y2=\"14\" stroke=\"#9b51e0\" stroke-width=\"1.8\"/><circle cx=\"12\" cy=\"14\" r=\"2.5\" fill=\"#9b51e0\"/></svg>"
+}

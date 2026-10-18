@@ -1,0 +1,36 @@
+{
+  "id": "langchain",
+  "order": 66,
+  "name": "LangChain",
+  "version": "v0.3",
+  "category": "AI & Machine Learning",
+  "color": "#00a67e",
+  "bgTint": "rgba(0, 166, 126, 0.15)",
+  "description": "Context-aware reasoning framework for developing LLM applications, RAG pipelines, agents, and chains.",
+  "origin": "https://python.langchain.com",
+  "entryPath": "/oss/python/langchain/overview",
+  "allowedPrefixes": [
+    "/docs/",
+    "/oss/python/langchain/"
+  ],
+  "maxPages": 150,
+  "defaultRoutes": [
+    {
+      "label": "Overview",
+      "path": "/oss/python/langchain/overview"
+    },
+    {
+      "label": "Tutorials",
+      "path": "/docs/tutorials/"
+    },
+    {
+      "label": "Agents",
+      "path": "/docs/concepts/agents/"
+    },
+    {
+      "label": "RAG Pipeline",
+      "path": "/docs/tutorials/rag/"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#00a67e\" stroke-width=\"1.8\" stroke-linecap=\"round\"><circle cx=\"7\" cy=\"7\" r=\"4\"/><circle cx=\"17\" cy=\"17\" r=\"4\"/><path d=\"M10 10l4 4M7 11v6a2 2 0 0 0 2 2h6\"/></svg>"
+}

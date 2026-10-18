@@ -1,0 +1,35 @@
+{
+  "id": "duckdb",
+  "order": 57,
+  "name": "DuckDB",
+  "version": "v1.2",
+  "category": "Databases & SQL",
+  "color": "#fff000",
+  "bgTint": "rgba(255, 240, 0, 0.15)",
+  "description": "Fast in-process analytical SQL database engine: columnar vectorized execution, zero dependencies, and Parquet/Arrow support.",
+  "origin": "https://duckdb.org",
+  "entryPath": "/docs/",
+  "allowedPrefixes": [
+    "/docs"
+  ],
+  "maxPages": 150,
+  "defaultRoutes": [
+    {
+      "label": "Docs Home",
+      "path": "/docs/"
+    },
+    {
+      "label": "SQL Guide",
+      "path": "/docs/sql/introduction"
+    },
+    {
+      "label": "Data Import",
+      "path": "/docs/data/overview"
+    },
+    {
+      "label": "Client APIs",
+      "path": "/docs/api/overview"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><circle cx=\"12\" cy=\"12\" r=\"10\" fill=\"#fff000\" fill-opacity=\"0.15\" stroke=\"#fff000\" stroke-width=\"1.8\"/><path d=\"M8 14c1.5 2 4.5 2 6 0M9 9h.01M15 9h.01\" stroke=\"#fff000\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M6 12c2-1 4-1 6 0s4 1 6 0\" stroke=\"#fff000\" stroke-width=\"1.5\"/></svg>"
+}

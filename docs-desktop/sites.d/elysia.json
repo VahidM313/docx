@@ -1,0 +1,26 @@
+{
+  "id": "elysia",
+  "order": 50,
+  "name": "ElysiaJS",
+  "version": "v1.2",
+  "category": "Backend, Auth & APIs",
+  "color": "#c084fc",
+  "bgTint": "rgba(192, 132, 252, 0.15)",
+  "description": "Ergonomic Framework for Humans: end-to-end type safety with Eden Treaty, OpenAPI, and Bun performance.",
+  "origin": "https://elysiajs.com",
+  "entryPath": "/table-of-content.html",
+  "allowedPrefixes": [
+    "/at-glance",
+    "/quick-start",
+    "/table-of-content",
+    "/essential",
+    "/life-cycle",
+    "/patterns",
+    "/eden",
+    "/plugins",
+    "/integrations",
+    "/tutorial"
+  ],
+  "maxPages": 120,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 2L19 7V17L12 22L5 17V7L12 2Z\"/><path d=\"M8 12H16M8 8.5H14M8 15.5H13\" stroke=\"#f472b6\"/></svg>"
+}

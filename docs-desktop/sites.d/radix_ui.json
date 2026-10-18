@@ -1,0 +1,35 @@
+{
+  "id": "radix_ui",
+  "order": 11,
+  "name": "Radix Primitives",
+  "version": "v1.1",
+  "category": "React Ecosystem",
+  "color": "#15b886",
+  "bgTint": "rgba(21, 184, 134, 0.15)",
+  "description": "Unstyled, accessible UI components for building high-quality design systems and web apps.",
+  "origin": "https://www.radix-ui.com",
+  "entryPath": "/primitives/docs/overview/introduction",
+  "allowedPrefixes": [
+    "/primitives/docs"
+  ],
+  "maxPages": 140,
+  "defaultRoutes": [
+    {
+      "label": "Overview",
+      "path": "/primitives/docs/overview/introduction"
+    },
+    {
+      "label": "Dialog",
+      "path": "/primitives/docs/components/dialog"
+    },
+    {
+      "label": "Dropdown Menu",
+      "path": "/primitives/docs/components/dropdown-menu"
+    },
+    {
+      "label": "Tooltip",
+      "path": "/primitives/docs/components/tooltip"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 25 25\" fill=\"none\"><path d=\"M12 25C18.6274 25 24 19.6274 24 13C24 6.37258 18.6274 1 12 1C5.37258 1 0 6.37258 0 13C0 19.6274 5.37258 25 12 25Z\" fill=\"#15b886\" fill-opacity=\"0.2\"/><path d=\"M12 6V18M6 12H18\" stroke=\"#15b886\" stroke-width=\"2.5\" stroke-linecap=\"round\"/></svg>"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "astro",
+  "order": 21,
+  "name": "Astro",
+  "version": "v5.6",
+  "category": "Web Frameworks & Tools",
+  "color": "#ff5d01",
+  "bgTint": "rgba(255, 93, 1, 0.15)",
+  "description": "The web framework for content-driven websites with Islands Architecture and Content Collections.",
+  "origin": "https://docs.astro.build",
+  "entryPath": "/en/getting-started/",
+  "allowedPrefixes": [
+    "/en/"
+  ],
+  "maxPages": 160,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 3L4.5 19H8.5L10.2 14.8H13.8L15.5 19H19.5L12 3Z\" stroke=\"#ff5d01\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M9.5 19.5C9.5 21 10.6 22 12 22C13.4 22 14.5 21 14.5 19.5\" stroke=\"#fbbf24\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>"
+}

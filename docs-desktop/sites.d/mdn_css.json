@@ -1,0 +1,39 @@
+{
+  "id": "mdn_css",
+  "order": 2,
+  "name": "MDN CSS",
+  "version": "CSS3 / Modern",
+  "category": "Frontend & UI",
+  "color": "#2563eb",
+  "bgTint": "rgba(37, 99, 235, 0.15)",
+  "description": "Complete Mozilla Developer Network CSS reference: selectors, flexbox, grid, animations, and properties.",
+  "origin": "https://developer.mozilla.org",
+  "entryPath": "/en-US/docs/Web/CSS",
+  "allowedPrefixes": [
+    "/en-US/docs/Web/CSS"
+  ],
+  "maxPages": 180,
+  "defaultRoutes": [
+    {
+      "label": "Reference",
+      "path": "/en-US/docs/Web/CSS/Reference"
+    },
+    {
+      "label": "Selectors",
+      "path": "/en-US/docs/Web/CSS/CSS_selectors"
+    },
+    {
+      "label": "Flexbox",
+      "path": "/en-US/docs/Web/CSS/CSS_flexible_box_layout"
+    },
+    {
+      "label": "Grid",
+      "path": "/en-US/docs/Web/CSS/CSS_grid_layout"
+    },
+    {
+      "label": "Animations",
+      "path": "/en-US/docs/Web/CSS/CSS_animations"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M4.5 3L6 19.5L12 21.2L18 19.5L19.5 3H4.5Z\" stroke=\"#2563eb\" stroke-width=\"1.8\" stroke-linejoin=\"round\"/><path d=\"M7 7H17L16.5 11H8.5L8.8 14H15.5L15 17.5L12 18.3L9 17.5L8.8 15.5\" stroke=\"#2563eb\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+}

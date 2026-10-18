@@ -1,0 +1,35 @@
+{
+  "id": "nodejs",
+  "order": 46,
+  "name": "Node.js API",
+  "version": "v22 LTS",
+  "category": "Backend, Auth & APIs",
+  "color": "#5fa04e",
+  "bgTint": "rgba(95, 160, 78, 0.15)",
+  "description": "Official Node.js JavaScript runtime API: fs, path, http, crypto, streams, worker_threads, buffer, and child_process.",
+  "origin": "https://nodejs.org",
+  "entryPath": "/docs/latest-v22.x/api/",
+  "allowedPrefixes": [
+    "/docs/latest-v22.x/api/"
+  ],
+  "maxPages": 180,
+  "defaultRoutes": [
+    {
+      "label": "API Index",
+      "path": "/docs/latest-v22.x/api/"
+    },
+    {
+      "label": "File System (fs)",
+      "path": "/docs/latest-v22.x/api/fs.html"
+    },
+    {
+      "label": "HTTP",
+      "path": "/docs/latest-v22.x/api/http.html"
+    },
+    {
+      "label": "Streams",
+      "path": "/docs/latest-v22.x/api/stream.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 2L3 7.2v9.6L12 22l9-5.2V7.2L12 2z\" stroke=\"#5fa04e\" stroke-width=\"1.8\" stroke-linejoin=\"round\"/><circle cx=\"12\" cy=\"12\" r=\"3.5\" stroke=\"#5fa04e\" stroke-width=\"1.8\"/></svg>"
+}

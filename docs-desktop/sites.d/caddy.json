@@ -1,0 +1,39 @@
+{
+  "id": "caddy",
+  "order": 111,
+  "name": "Caddy Server",
+  "version": "v2.9",
+  "category": "DevOps & Cloud",
+  "color": "#22b473",
+  "bgTint": "rgba(34, 180, 115, 0.15)",
+  "description": "Enterprise-ready, fast, modern HTTP/2 & HTTP/3 open source web server with automatic HTTPS written in Go: Caddyfile syntax, reverse proxy, and modular architecture.",
+  "origin": "https://caddyserver.com",
+  "entryPath": "/docs/",
+  "allowedPrefixes": [
+    "/docs"
+  ],
+  "maxPages": 140,
+  "defaultRoutes": [
+    {
+      "label": "Getting Started",
+      "path": "/docs/getting-started"
+    },
+    {
+      "label": "Caddyfile",
+      "path": "/docs/caddyfile"
+    },
+    {
+      "label": "Reverse Proxy",
+      "path": "/docs/quick-starts/reverse-proxy"
+    },
+    {
+      "label": "Automatic HTTPS",
+      "path": "/docs/automatic-https"
+    },
+    {
+      "label": "CLI Reference",
+      "path": "/docs/command-line"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"3\" stroke=\"#22b473\" stroke-width=\"1.8\"/><path d=\"M7 14l5-5 5 5\" stroke=\"#22b473\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12\" cy=\"14\" r=\"1.5\" fill=\"#22b473\"/></svg>"
+}

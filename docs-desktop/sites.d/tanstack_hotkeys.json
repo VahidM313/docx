@@ -1,0 +1,17 @@
+{
+  "id": "tanstack_hotkeys",
+  "order": 42,
+  "name": "TanStack Hotkeys",
+  "version": "latest",
+  "category": "TanStack Suite",
+  "color": "#a855f7",
+  "bgTint": "rgba(168, 85, 247, 0.15)",
+  "description": "Type-safe keyboard shortcut binding and keyboard navigation system.",
+  "origin": "https://tanstack.com",
+  "entryPath": "/hotkeys/latest/docs/overview",
+  "allowedPrefixes": [
+    "/hotkeys/latest/docs"
+  ],
+  "maxPages": 60,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#a855f7\" stroke-width=\"2\"><rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\"/><path d=\"M6 8h.01M10 8h.01M14 8h.01M18 8h.01M6 12h.01M18 12h.01M8 16h8\"/></svg>"
+}

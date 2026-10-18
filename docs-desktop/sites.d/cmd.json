@@ -1,0 +1,17 @@
+{
+  "id": "cmd",
+  "order": 119,
+  "name": "Windows CMD Commands",
+  "version": "Win11/Server",
+  "category": "DevOps & Cloud",
+  "color": "#a1a1aa",
+  "bgTint": "rgba(161, 161, 170, 0.15)",
+  "description": "Complete A-Z reference of Windows Command Prompt (cmd.exe) internal and external commands, batch scripts, and syntax.",
+  "origin": "https://learn.microsoft.com",
+  "entryPath": "/en-us/windows-server/administration/windows-commands/windows-commands",
+  "allowedPrefixes": [
+    "/en-us/windows-server/administration/windows-commands/"
+  ],
+  "maxPages": 160,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><rect x=\"2.5\" y=\"4\" width=\"19\" height=\"16\" rx=\"3\" stroke=\"#a1a1aa\" stroke-width=\"1.8\"/><path d=\"M6 9L9.5 12L6 15M11 15H15\" stroke=\"#ffffff\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+}

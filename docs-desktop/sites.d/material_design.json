@@ -1,0 +1,42 @@
+{
+  "id": "material_design",
+  "order": 121,
+  "name": "Material Design 3 (Web)",
+  "version": "M3",
+  "category": "Architecture & Design",
+  "color": "#a855f7",
+  "bgTint": "rgba(168, 85, 247, 0.15)",
+  "description": "Google's Material Design 3 Web Components: accessible UI components, design tokens, dynamic color theming, and typography.",
+  "origin": "https://material-web.dev",
+  "entryPath": "/components/button/",
+  "allowedPrefixes": [
+    "/components/",
+    "/theming/",
+    "/about/",
+    "/"
+  ],
+  "maxPages": 80,
+  "defaultRoutes": [
+    {
+      "label": "Introduction",
+      "path": "/about/intro/"
+    },
+    {
+      "label": "Theming",
+      "path": "/theming/material-theming/"
+    },
+    {
+      "label": "Buttons",
+      "path": "/components/button/"
+    },
+    {
+      "label": "Dialogs",
+      "path": "/components/dialog/"
+    },
+    {
+      "label": "Text Fields",
+      "path": "/components/text-field/"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><circle cx=\"7.5\" cy=\"7.5\" r=\"4.5\" stroke=\"#a855f7\" stroke-width=\"1.8\"/><rect x=\"12\" y=\"12\" width=\"9\" height=\"9\" rx=\"2\" stroke=\"#a855f7\" stroke-width=\"1.8\"/><polygon points=\"16.5 3 21 11 12 11 16.5 3\" stroke=\"#a855f7\" stroke-width=\"1.8\"/></svg>"
+}

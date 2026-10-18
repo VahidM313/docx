@@ -1,0 +1,31 @@
+{
+  "id": "clap",
+  "order": 87,
+  "name": "Clap (Rust CLI)",
+  "version": "v4.5",
+  "category": "Rust Ecosystem",
+  "color": "#d97706",
+  "bgTint": "rgba(217, 119, 6, 0.15)",
+  "description": "Full featured, fast Command Line Argument Parser for Rust: derive macros, builder pattern, subcommands, and completions.",
+  "origin": "https://docs.rs",
+  "entryPath": "/clap/latest/clap/",
+  "allowedPrefixes": [
+    "/clap"
+  ],
+  "maxPages": 90,
+  "defaultRoutes": [
+    {
+      "label": "Documentation",
+      "path": "/clap/latest/clap/"
+    },
+    {
+      "label": "Derive Tutorial",
+      "path": "/clap/latest/clap/_derive/_tutorial/index.html"
+    },
+    {
+      "label": "Builder Pattern",
+      "path": "/clap/latest/clap/struct.Command.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"1.8\" stroke-linecap=\"round\"><path d=\"M4 17l6-6-6-6M12 19h8\"/></svg>"
+}

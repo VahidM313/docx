@@ -1,0 +1,35 @@
+{
+  "id": "actix_web",
+  "order": 84,
+  "name": "Actix Web",
+  "version": "v4.9",
+  "category": "Rust Ecosystem",
+  "color": "#00a1d6",
+  "bgTint": "rgba(0, 161, 214, 0.15)",
+  "description": "Powerful, pragmatic, and extremely fast web framework for Rust: actor system foundation, middlewares, extractors, and WebSocket.",
+  "origin": "https://actix.rs",
+  "entryPath": "/docs/",
+  "allowedPrefixes": [
+    "/docs"
+  ],
+  "maxPages": 100,
+  "defaultRoutes": [
+    {
+      "label": "Documentation",
+      "path": "/docs/"
+    },
+    {
+      "label": "Getting Started",
+      "path": "/docs/getting-started/"
+    },
+    {
+      "label": "Extractors",
+      "path": "/docs/extractors/"
+    },
+    {
+      "label": "Middleware",
+      "path": "/docs/middleware/"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#00a1d6\" stroke-width=\"1.8\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 6v6l4 2\"/></svg>"
+}

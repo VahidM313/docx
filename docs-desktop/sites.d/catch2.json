@@ -1,0 +1,27 @@
+{
+  "id": "catch2",
+  "order": 103,
+  "name": "Catch2 (C++ Testing)",
+  "version": "v3.7",
+  "category": "C & C++ Ecosystem",
+  "color": "#ff6600",
+  "bgTint": "rgba(255, 102, 0, 0.15)",
+  "description": "Modern, C++-native test framework for unit tests, TDD and BDD with clean assertion macros, matchers, and generators.",
+  "origin": "https://github.com",
+  "entryPath": "/catchorg/Catch2/blob/devel/docs/Readme.md",
+  "allowedPrefixes": [
+    "/catchorg/Catch2"
+  ],
+  "maxPages": 80,
+  "defaultRoutes": [
+    {
+      "label": "Documentation",
+      "path": "/catchorg/Catch2/blob/devel/docs/Readme.md"
+    },
+    {
+      "label": "Tutorial",
+      "path": "/catchorg/Catch2/blob/devel/docs/tutorial.md"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ff6600\" stroke-width=\"1.8\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"m9 12 2 2 4-4\"/></svg>"
+}

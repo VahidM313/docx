@@ -1,0 +1,43 @@
+{
+  "id": "ollama",
+  "order": 68,
+  "name": "Ollama",
+  "version": "v0.5",
+  "category": "AI & Machine Learning",
+  "color": "#f3f4f6",
+  "bgTint": "rgba(243, 244, 246, 0.15)",
+  "description": "Official Ollama Documentation (docs.ollama.com): run and build local LLMs, REST API reference, Python/JS SDKs, context windows, and Modelfile.",
+  "origin": "https://docs.ollama.com",
+  "entryPath": "/",
+  "allowedPrefixes": [
+    "/",
+    "/api",
+    "/cli",
+    "/modelfile",
+    "/context-window"
+  ],
+  "maxPages": 100,
+  "defaultRoutes": [
+    {
+      "label": "Quickstart",
+      "path": "/"
+    },
+    {
+      "label": "API Reference",
+      "path": "/api"
+    },
+    {
+      "label": "CLI Guide",
+      "path": "/cli"
+    },
+    {
+      "label": "Modelfile",
+      "path": "/modelfile"
+    },
+    {
+      "label": "Context Window",
+      "path": "/context-window"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"13\" r=\"8\"/><path d=\"M8 5a4 4 0 0 1 8 0\"/><circle cx=\"9.5\" cy=\"12.5\" r=\"1\" fill=\"currentColor\"/><circle cx=\"14.5\" cy=\"12.5\" r=\"1\" fill=\"currentColor\"/><path d=\"M11 16h2\"/></svg>"
+}

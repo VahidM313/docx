@@ -1,0 +1,18 @@
+{
+  "id": "qt",
+  "order": 96,
+  "name": "Qt 6 Documentation",
+  "version": "Qt 6.9",
+  "category": "C & C++ Ecosystem",
+  "color": "#41cd52",
+  "bgTint": "rgba(65, 205, 82, 0.15)",
+  "description": "Cross-platform C++ & QML application development framework: Qt Widgets, Qt Quick, Signals & Slots, CMake API.",
+  "origin": "https://doc.qt.io",
+  "entryPath": "/",
+  "allowedPrefixes": [
+    "/qt-6/",
+    "/"
+  ],
+  "maxPages": 140,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M5 4H19L21 6V18L17 20H5L3 18V6L5 4Z\" stroke=\"#41cd52\" stroke-width=\"1.9\"/><path d=\"M9.5 9C7.8 9 6.8 10.2 6.8 12C6.8 13.8 7.8 15 9.5 15C11.2 15 12.2 13.8 12.2 12C12.2 10.2 11.2 9 9.5 9ZM10.5 13.8L12.3 15.8M15.5 8.5V14.5C15.5 15.2 16 15.5 16.8 15.5M14.2 10.5H17\" stroke=\"#41cd52\" stroke-width=\"1.7\" stroke-linecap=\"round\"/></svg>"
+}

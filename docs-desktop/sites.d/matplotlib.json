@@ -1,0 +1,35 @@
+{
+  "id": "matplotlib",
+  "order": 80,
+  "name": "Matplotlib",
+  "version": "v3.10",
+  "category": "Python Ecosystem",
+  "color": "#11557c",
+  "bgTint": "rgba(17, 85, 124, 0.15)",
+  "description": "Comprehensive Python library for creating static, animated, and interactive visualizations, plots, and figures.",
+  "origin": "https://matplotlib.org",
+  "entryPath": "/stable/",
+  "allowedPrefixes": [
+    "/stable/"
+  ],
+  "maxPages": 160,
+  "defaultRoutes": [
+    {
+      "label": "Documentation",
+      "path": "/stable/"
+    },
+    {
+      "label": "Plot Types",
+      "path": "/stable/plot_types/index.html"
+    },
+    {
+      "label": "Tutorials",
+      "path": "/stable/tutorials/index.html"
+    },
+    {
+      "label": "API Reference",
+      "path": "/stable/api/index.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" stroke=\"#11557c\" stroke-width=\"1.8\"/><path d=\"M4 17l4-6 4 4 4-8 4 5\" stroke=\"#38bdf8\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"8\" cy=\"11\" r=\"1.5\" fill=\"#f59e0b\"/><circle cx=\"12\" cy=\"15\" r=\"1.5\" fill=\"#10b981\"/><circle cx=\"16\" cy=\"7\" r=\"1.5\" fill=\"#ec4899\"/></svg>"
+}

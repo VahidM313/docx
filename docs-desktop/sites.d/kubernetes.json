@@ -1,0 +1,35 @@
+{
+  "id": "kubernetes",
+  "order": 109,
+  "name": "Kubernetes",
+  "version": "v1.32",
+  "category": "DevOps & Cloud",
+  "color": "#326ce5",
+  "bgTint": "rgba(50, 108, 229, 0.15)",
+  "description": "Automated container orchestration: deployment, scaling, pods, services, ingress, and cluster management.",
+  "origin": "https://kubernetes.io",
+  "entryPath": "/docs/home/",
+  "allowedPrefixes": [
+    "/docs/"
+  ],
+  "maxPages": 160,
+  "defaultRoutes": [
+    {
+      "label": "Docs Home",
+      "path": "/docs/home/"
+    },
+    {
+      "label": "Concepts",
+      "path": "/docs/concepts/"
+    },
+    {
+      "label": "Tasks",
+      "path": "/docs/tasks/"
+    },
+    {
+      "label": "Kubectl",
+      "path": "/docs/reference/kubectl/"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><polygon points=\"12 2 21 7.2 21 16.8 12 22 3 16.8 3 7.2 12 2\" stroke=\"#326ce5\" stroke-width=\"1.8\" stroke-linejoin=\"round\"/><circle cx=\"12\" cy=\"12\" r=\"3\" stroke=\"#326ce5\" stroke-width=\"1.8\"/><path d=\"M12 2v7M12 15v7M3 7.2l6.2 3.6M14.8 13.2L21 16.8M3 16.8l6.2-3.6M14.8 10.8L21 7.2\" stroke=\"#326ce5\" stroke-width=\"1.5\"/></svg>"
+}

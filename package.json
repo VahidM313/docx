@@ -11,5 +11,8 @@
     "build:all": "bun run scripts/build-all.ts",
     "build:desktop": "bun run scripts/build-desktop.ts",
     "build:android": "bun run scripts/build-android.ts"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
   }
 }

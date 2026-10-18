@@ -1,0 +1,35 @@
+{
+  "id": "sqlalchemy",
+  "order": 77,
+  "name": "SQLAlchemy",
+  "version": "v2.0",
+  "category": "Python Ecosystem",
+  "color": "#d71f00",
+  "bgTint": "rgba(215, 31, 0, 0.15)",
+  "description": "The Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL.",
+  "origin": "https://docs.sqlalchemy.org",
+  "entryPath": "/en/20/",
+  "allowedPrefixes": [
+    "/en/20/"
+  ],
+  "maxPages": 150,
+  "defaultRoutes": [
+    {
+      "label": "Documentation",
+      "path": "/en/20/"
+    },
+    {
+      "label": "Unified Tutorial",
+      "path": "/en/20/tutorial/index.html"
+    },
+    {
+      "label": "ORM Quick Start",
+      "path": "/en/20/orm/quickstart.html"
+    },
+    {
+      "label": "Core Architecture",
+      "path": "/en/20/core/index.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><circle cx=\"12\" cy=\"12\" r=\"9\" stroke=\"#d71f00\" stroke-width=\"1.8\"/><path d=\"M8 12h8M12 8v8\" stroke=\"#d71f00\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>"
+}

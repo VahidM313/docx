@@ -1,0 +1,35 @@
+{
+  "id": "zod",
+  "order": 51,
+  "name": "Zod",
+  "version": "v3.24",
+  "category": "Backend, Auth & APIs",
+  "color": "#3e67b1",
+  "bgTint": "rgba(62, 103, 177, 0.15)",
+  "description": "TypeScript-first schema declaration and validation library with static type inference and zero dependencies.",
+  "origin": "https://zod.dev",
+  "entryPath": "/",
+  "allowedPrefixes": [
+    "/"
+  ],
+  "maxPages": 60,
+  "defaultRoutes": [
+    {
+      "label": "Documentation",
+      "path": "/"
+    },
+    {
+      "label": "Basic Usage",
+      "path": "/#basic-usage"
+    },
+    {
+      "label": "Primitives",
+      "path": "/#primitives"
+    },
+    {
+      "label": "Objects",
+      "path": "/#objects"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><polygon points=\"5 4 19 4 7 20 19 20\" stroke=\"#3e67b1\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+}

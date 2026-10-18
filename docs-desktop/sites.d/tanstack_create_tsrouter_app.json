@@ -1,0 +1,17 @@
+{
+  "id": "tanstack_create_tsrouter_app",
+  "order": 44,
+  "name": "Create TS Router App",
+  "version": "latest",
+  "category": "TanStack Suite",
+  "color": "#0284c7",
+  "bgTint": "rgba(2, 132, 199, 0.15)",
+  "description": "CLI generator for scaffolding modern type-safe TanStack Router projects.",
+  "origin": "https://tanstack.com",
+  "entryPath": "/router/latest/docs/framework/react/quick-start",
+  "allowedPrefixes": [
+    "/router/latest/docs/framework/react"
+  ],
+  "maxPages": 60,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#0284c7\" stroke-width=\"2\"><polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10 13 2\"/></svg>"
+}

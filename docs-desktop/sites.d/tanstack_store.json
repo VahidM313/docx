@@ -1,0 +1,17 @@
+{
+  "id": "tanstack_store",
+  "order": 35,
+  "name": "TanStack Store",
+  "version": "v0.7",
+  "category": "TanStack Suite",
+  "color": "#ec4899",
+  "bgTint": "rgba(236, 72, 153, 0.15)",
+  "description": "Framework agnostic, lightweight state management store with granular subscriptions.",
+  "origin": "https://tanstack.com",
+  "entryPath": "/store/latest/docs/overview",
+  "allowedPrefixes": [
+    "/store/latest/docs"
+  ],
+  "maxPages": 80,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ec4899\" stroke-width=\"2\"><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"/><path d=\"M21 12c0 1.66-4 3-9 3s-9-1.34-9-3\"/><path d=\"M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5\"/></svg>"
+}

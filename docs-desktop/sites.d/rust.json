@@ -1,0 +1,19 @@
+{
+  "id": "rust",
+  "order": 81,
+  "name": "Rust Stable Suite",
+  "version": "1.86",
+  "category": "Rust Ecosystem",
+  "color": "#f97316",
+  "bgTint": "rgba(249, 115, 22, 0.15)",
+  "description": "Full Rust documentation suite: The Rust Book, Standard Library API (`std`), Cargo Book, Rustonomicon & Reference.",
+  "origin": "https://doc.rust-lang.org",
+  "entryPath": "/book/",
+  "allowedPrefixes": [
+    "/book/",
+    "/rust-by-example/",
+    "/cargo/"
+  ],
+  "maxPages": 180,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\"><circle cx=\"12\" cy=\"12\" r=\"6.5\"/><circle cx=\"12\" cy=\"12\" r=\"2.5\"/><path d=\"M12 2V5M12 19V22M2 12H5M19 12H22M4.9 4.9L7.1 7.1M16.9 16.9L19.1 19.1M19.1 4.9L16.9 7.1M7.1 16.9L4.9 19.1\" stroke-linecap=\"round\"/></svg>"
+}

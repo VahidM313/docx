@@ -1,0 +1,35 @@
+{
+  "id": "opentofu",
+  "order": 112,
+  "name": "OpenTofu / Terraform",
+  "version": "v1.9",
+  "category": "DevOps & Cloud",
+  "color": "#ffda19",
+  "bgTint": "rgba(255, 218, 25, 0.15)",
+  "description": "Open-source Infrastructure as Code tool for declaratively managing cloud resources across AWS, GCP, and Azure.",
+  "origin": "https://opentofu.org",
+  "entryPath": "/docs/intro/",
+  "allowedPrefixes": [
+    "/docs/"
+  ],
+  "maxPages": 140,
+  "defaultRoutes": [
+    {
+      "label": "Introduction",
+      "path": "/docs/intro/"
+    },
+    {
+      "label": "Language",
+      "path": "/docs/language/"
+    },
+    {
+      "label": "CLI Reference",
+      "path": "/docs/cli/"
+    },
+    {
+      "label": "State",
+      "path": "/docs/language/state/"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ffda19\" stroke-width=\"1.8\" stroke-linejoin=\"round\"><path d=\"M12 2L4 6.5v9L12 20l8-4.5v-9L12 2z\"/><path d=\"M12 2v18M4 6.5l8 4.5 8-4.5\"/></svg>"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "shadcn",
+  "order": 1,
+  "name": "shadcn/ui",
+  "version": "v4.0",
+  "category": "Frontend & UI",
+  "color": "#ffffff",
+  "bgTint": "rgba(255, 255, 255, 0.14)",
+  "description": "Beautifully designed accessible UI components built with Radix UI, Base UI, and Tailwind CSS.",
+  "kind": "embedded",
+  "entryPath": "/docs",
+  "defaultRoutes": [
+    {
+      "label": "Components",
+      "path": "/docs/components"
+    },
+    {
+      "label": "Button",
+      "path": "/docs/components/radix/button"
+    },
+    {
+      "label": "Dialog",
+      "path": "/docs/components/radix/dialog"
+    },
+    {
+      "label": "Sidebar",
+      "path": "/docs/components/radix/sidebar"
+    },
+    {
+      "label": "Data Table",
+      "path": "/docs/components/radix/data-table"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 256 256\" fill=\"none\"><line x1=\"208\" y1=\"128\" x2=\"128\" y2=\"208\" stroke=\"currentColor\" stroke-width=\"28\" stroke-linecap=\"round\"/><line x1=\"192\" y1=\"40\" x2=\"40\" y2=\"192\" stroke=\"currentColor\" stroke-width=\"28\" stroke-linecap=\"round\"/></svg>",
+  "origin": "https://ui.shadcn.com"
+}

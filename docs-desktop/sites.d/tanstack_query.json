@@ -1,0 +1,17 @@
+{
+  "id": "tanstack_query",
+  "order": 31,
+  "name": "TanStack Query",
+  "version": "v5",
+  "category": "TanStack Suite",
+  "color": "#ef4444",
+  "bgTint": "rgba(239, 68, 68, 0.15)",
+  "description": "Powerful asynchronous state management for TS/JS, React, Solid, Vue, Svelte, and Angular.",
+  "origin": "https://tanstack.com",
+  "entryPath": "/query/latest/docs/framework/react/overview",
+  "allowedPrefixes": [
+    "/query/latest/docs"
+  ],
+  "maxPages": 120,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 3\"/></svg>"
+}

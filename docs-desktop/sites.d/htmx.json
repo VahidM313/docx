@@ -1,0 +1,22 @@
+{
+  "id": "htmx",
+  "order": 4,
+  "name": "htmx",
+  "version": "v4.0",
+  "category": "Frontend & UI",
+  "color": "#3d72d7",
+  "bgTint": "rgba(61, 114, 215, 0.15)",
+  "description": "High power tools for HTML: access AJAX, CSS Transitions, WebSockets, and SSE directly in markup.",
+  "origin": "https://htmx.org",
+  "entryPath": "/docs/",
+  "allowedPrefixes": [
+    "/docs",
+    "/attributes",
+    "/headers",
+    "/events",
+    "/reference",
+    "/examples"
+  ],
+  "maxPages": 100,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"7 8 3 12 7 16\"/><polyline points=\"17 8 21 12 17 16\"/><line x1=\"14\" y1=\"4\" x2=\"10\" y2=\"20\" stroke=\"#38bdf8\"/></svg>"
+}

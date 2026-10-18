@@ -1,0 +1,39 @@
+{
+  "id": "zustand",
+  "order": 12,
+  "name": "Zustand",
+  "version": "v5.0",
+  "category": "React Ecosystem",
+  "color": "#e8912d",
+  "bgTint": "rgba(232, 145, 45, 0.15)",
+  "description": "Small, fast and scalable bearbones state management solution using simplified flux principles.",
+  "origin": "https://zustand.docs.pmnd.rs",
+  "entryPath": "/learn/getting-started/introduction",
+  "allowedPrefixes": [
+    "/learn",
+    "/reference",
+    "/getting-started",
+    "/guides",
+    "/"
+  ],
+  "maxPages": 100,
+  "defaultRoutes": [
+    {
+      "label": "Introduction",
+      "path": "/learn/getting-started/introduction"
+    },
+    {
+      "label": "Comparison",
+      "path": "/learn/getting-started/comparison"
+    },
+    {
+      "label": "TypeScript",
+      "path": "/learn/guides/beginner-typescript"
+    },
+    {
+      "label": "Reset State",
+      "path": "/learn/guides/how-to-reset-state"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#e8912d\" stroke-width=\"1.8\" stroke-linecap=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><circle cx=\"9\" cy=\"10\" r=\"1.5\" fill=\"#e8912d\"/><circle cx=\"15\" cy=\"10\" r=\"1.5\" fill=\"#e8912d\"/><path d=\"M9 15c1 1 5 1 6 0\"/></svg>"
+}

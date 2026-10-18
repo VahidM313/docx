@@ -1,0 +1,36 @@
+{
+  "id": "requests_py",
+  "order": 78,
+  "name": "Requests (Python HTTP)",
+  "version": "v2.32",
+  "category": "Python Ecosystem",
+  "color": "#2b5b84",
+  "bgTint": "rgba(43, 91, 132, 0.18)",
+  "description": "HTTP for Humans: simple, elegant Python HTTP client library supporting keep-alive, connection pooling, and SSL.",
+  "origin": "https://requests.readthedocs.io",
+  "entryPath": "/",
+  "allowedPrefixes": [
+    "/en/latest",
+    "/"
+  ],
+  "maxPages": 80,
+  "defaultRoutes": [
+    {
+      "label": "Documentation",
+      "path": "/"
+    },
+    {
+      "label": "Quickstart",
+      "path": "/user/quickstart/"
+    },
+    {
+      "label": "Advanced Usage",
+      "path": "/user/advanced/"
+    },
+    {
+      "label": "API Reference",
+      "path": "/api/"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"1.8\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"2\"/><path d=\"M7 15l5-5 5 5M12 10v8\" stroke-linecap=\"round\"/></svg>"
+}

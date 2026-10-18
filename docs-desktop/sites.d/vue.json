@@ -1,0 +1,20 @@
+{
+  "id": "vue",
+  "order": 14,
+  "name": "Vue.js",
+  "version": "v3.5",
+  "category": "Vue Ecosystem",
+  "color": "#42b883",
+  "bgTint": "rgba(66, 184, 131, 0.15)",
+  "description": "The Progressive JavaScript Framework: Composition API, Single-File Components, reactive ref/computed.",
+  "origin": "https://vuejs.org",
+  "entryPath": "/guide/introduction.html",
+  "allowedPrefixes": [
+    "/guide/",
+    "/api/",
+    "/tutorial/",
+    "/examples/"
+  ],
+  "maxPages": 150,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 15L2 3H6.5L12 10.5L17.5 3H22L12 15Z\" fill=\"#42b883\"/><path d=\"M12 15L6.5 3H9.5L12 7.5L14.5 3H17.5L12 15Z\" fill=\"#35495e\"/></svg>"
+}

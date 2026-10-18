@@ -1,0 +1,36 @@
+{
+  "id": "boost",
+  "order": 97,
+  "name": "Boost C++ Libraries",
+  "version": "v1.87",
+  "category": "C & C++ Ecosystem",
+  "color": "#f7901e",
+  "bgTint": "rgba(247, 144, 30, 0.15)",
+  "description": "Peer-reviewed portable C++ source libraries: Boost.Asio, Beast, Spirit, Filesystem, Graph, MultiIndex, and Math.",
+  "origin": "https://www.boost.org",
+  "entryPath": "/doc/libs/latest/index.html",
+  "allowedPrefixes": [
+    "/doc/libs/latest/",
+    "/doc/"
+  ],
+  "maxPages": 140,
+  "defaultRoutes": [
+    {
+      "label": "All Libraries",
+      "path": "/doc/libs/latest/libs/libraries.htm"
+    },
+    {
+      "label": "Boost.Asio",
+      "path": "/doc/libs/latest/doc/html/boost_asio.html"
+    },
+    {
+      "label": "Boost.Beast",
+      "path": "/doc/libs/latest/libs/beast/doc/html/index.html"
+    },
+    {
+      "label": "Getting Started",
+      "path": "/doc/libs/latest/more/getting_started/index.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#f7901e\" stroke-width=\"1.9\" stroke-linejoin=\"round\"><polygon points=\"12 2 19 6 19 14 12 18 5 14 5 6 12 2\"/><polyline points=\"5 14 12 22 19 14\"/><circle cx=\"12\" cy=\"10\" r=\"2.5\"/></svg>"
+}

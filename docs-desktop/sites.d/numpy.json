@@ -1,0 +1,35 @@
+{
+  "id": "numpy",
+  "order": 69,
+  "name": "NumPy",
+  "version": "v2.2",
+  "category": "AI & Machine Learning",
+  "color": "#4dabcf",
+  "bgTint": "rgba(77, 171, 207, 0.15)",
+  "description": "The fundamental package for scientific computing with Python: N-dimensional arrays, linear algebra, and FFT.",
+  "origin": "https://numpy.org",
+  "entryPath": "/doc/stable/",
+  "allowedPrefixes": [
+    "/doc/stable/"
+  ],
+  "maxPages": 150,
+  "defaultRoutes": [
+    {
+      "label": "Documentation",
+      "path": "/doc/stable/"
+    },
+    {
+      "label": "User Guide",
+      "path": "/doc/stable/user/"
+    },
+    {
+      "label": "Array Basics",
+      "path": "/doc/stable/user/absolute_beginners.html"
+    },
+    {
+      "label": "API Reference",
+      "path": "/doc/stable/reference/"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" stroke=\"#4dabcf\" stroke-width=\"1.8\"/><path d=\"M7 8v8M12 8v8M17 8v8M3 12h18\" stroke=\"#4dabcf\" stroke-width=\"1.8\"/></svg>"
+}

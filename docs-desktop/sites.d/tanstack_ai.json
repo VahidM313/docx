@@ -1,0 +1,17 @@
+{
+  "id": "tanstack_ai",
+  "order": 37,
+  "name": "TanStack AI",
+  "version": "latest",
+  "category": "TanStack Suite",
+  "color": "#6366f1",
+  "bgTint": "rgba(99, 102, 241, 0.15)",
+  "description": "AI chat hooks, streaming utilities, and LLM integrations for TanStack applications.",
+  "origin": "https://tanstack.com",
+  "entryPath": "/ai/latest/docs/overview",
+  "allowedPrefixes": [
+    "/ai/latest/docs"
+  ],
+  "maxPages": 80,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#6366f1\" stroke-width=\"2\"><polygon points=\"12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2\"/></svg>"
+}

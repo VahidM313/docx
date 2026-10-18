@@ -1,0 +1,36 @@
+{
+  "id": "pytorch",
+  "order": 63,
+  "name": "PyTorch",
+  "version": "v2.6",
+  "category": "AI & Machine Learning",
+  "color": "#ee4c2c",
+  "bgTint": "rgba(238, 76, 44, 0.15)",
+  "description": "Open source machine learning framework that accelerates research prototyping and production deployment.",
+  "origin": "https://pytorch.org",
+  "entryPath": "/docs/stable/index.html",
+  "allowedPrefixes": [
+    "/docs/stable/",
+    "/docs/2."
+  ],
+  "maxPages": 160,
+  "defaultRoutes": [
+    {
+      "label": "Docs Home",
+      "path": "/docs/stable/index.html"
+    },
+    {
+      "label": "torch.nn",
+      "path": "/docs/stable/nn.html"
+    },
+    {
+      "label": "torch.Tensor",
+      "path": "/docs/stable/tensors.html"
+    },
+    {
+      "label": "Autograd",
+      "path": "/docs/stable/autograd.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M13.5 3a9 9 0 0 0-4.8 16.7l1.2-2.3a6.4 6.4 0 0 1 3.6-11.8V3z\" fill=\"#ee4c2c\"/><circle cx=\"16.5\" cy=\"5.5\" r=\"1.5\" fill=\"#ee4c2c\"/><path d=\"M12 10.5v3l2.5 1.5\" stroke=\"#ee4c2c\" stroke-width=\"1.8\" stroke-linecap=\"round\"/></svg>"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "tensorflow",
+  "order": 64,
+  "name": "TensorFlow",
+  "version": "v2.18",
+  "category": "AI & Machine Learning",
+  "color": "#ff6f00",
+  "bgTint": "rgba(255, 111, 0, 0.15)",
+  "description": "End-to-end open source machine learning platform: automatic differentiation, tensors, Keras layers, and distributed training.",
+  "origin": "https://www.tensorflow.org",
+  "entryPath": "/api_docs/python/tf",
+  "allowedPrefixes": [
+    "/api_docs/python/tf",
+    "/tutorials"
+  ],
+  "maxPages": 180,
+  "defaultRoutes": [
+    {
+      "label": "API Reference",
+      "path": "/api_docs/python/tf"
+    },
+    {
+      "label": "Tensors (tf.Tensor)",
+      "path": "/api_docs/python/tf/Tensor"
+    },
+    {
+      "label": "Keras in TF",
+      "path": "/api_docs/python/tf/keras"
+    },
+    {
+      "label": "tf.data",
+      "path": "/api_docs/python/tf/data"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 2L4 6.5v9L12 20l8-4.5v-9L12 2z\" stroke=\"#ff6f00\" stroke-width=\"1.8\"/><path d=\"M12 2v18M12 8l8-4.5M12 8L4 3.5\" stroke=\"#ff6f00\" stroke-width=\"1.5\"/></svg>"
+}

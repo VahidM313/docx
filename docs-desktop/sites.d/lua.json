@@ -1,0 +1,19 @@
+{
+  "id": "lua",
+  "order": 107,
+  "name": "Lua 5.4 Reference",
+  "version": "v5.4",
+  "category": "C & C++ Ecosystem",
+  "color": "#000080",
+  "bgTint": "rgba(0, 0, 128, 0.2)",
+  "description": "Powerful, efficient, lightweight, embeddable scripting language: manual, C API, auxiliary library, and metatables.",
+  "origin": "https://www.lua.org",
+  "entryPath": "/manual/5.4/",
+  "allowedPrefixes": [
+    "/manual/5.4/",
+    "/docs.html",
+    "/pil/"
+  ],
+  "maxPages": 80,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><circle cx=\"12\" cy=\"12\" r=\"9\" stroke=\"#3b82f6\" stroke-width=\"1.8\"/><circle cx=\"15.5\" cy=\"8.5\" r=\"2.5\" fill=\"#3b82f6\"/><circle cx=\"8\" cy=\"15\" r=\"1.5\" fill=\"#ffffff\"/></svg>"
+}

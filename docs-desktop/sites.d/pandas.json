@@ -1,0 +1,35 @@
+{
+  "id": "pandas",
+  "order": 70,
+  "name": "Pandas",
+  "version": "v2.2",
+  "category": "AI & Machine Learning",
+  "color": "#6495ed",
+  "bgTint": "rgba(100, 149, 237, 0.18)",
+  "description": "Fast, powerful, and flexible open source data analysis and data manipulation tool for Python DataFrames.",
+  "origin": "https://pandas.pydata.org",
+  "entryPath": "/docs/",
+  "allowedPrefixes": [
+    "/docs/"
+  ],
+  "maxPages": 160,
+  "defaultRoutes": [
+    {
+      "label": "Documentation",
+      "path": "/docs/"
+    },
+    {
+      "label": "Getting Started",
+      "path": "/docs/getting_started/index.html"
+    },
+    {
+      "label": "User Guide",
+      "path": "/docs/user_guide/index.html"
+    },
+    {
+      "label": "API Reference",
+      "path": "/docs/reference/index.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#6495ed\" stroke-width=\"1.8\"><rect x=\"4\" y=\"4\" width=\"6\" height=\"7\" rx=\"1\"/><rect x=\"14\" y=\"4\" width=\"6\" height=\"11\" rx=\"1\"/><rect x=\"4\" y=\"15\" width=\"6\" height=\"5\" rx=\"1\"/><rect x=\"14\" y=\"19\" width=\"6\" height=\"1\" rx=\"0.5\"/></svg>"
+}

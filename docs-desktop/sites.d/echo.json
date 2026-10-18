@@ -1,0 +1,36 @@
+{
+  "id": "echo",
+  "order": 92,
+  "name": "Echo (Go Framework)",
+  "version": "v4.13",
+  "category": "Go (Golang)",
+  "color": "#2563eb",
+  "bgTint": "rgba(37, 99, 235, 0.15)",
+  "description": "High performance, extensible, minimalist Go web framework: optimized HTTP router, group APIs, and data binding.",
+  "origin": "https://echo.labstack.com",
+  "entryPath": "/docs",
+  "allowedPrefixes": [
+    "/docs",
+    "/guide"
+  ],
+  "maxPages": 100,
+  "defaultRoutes": [
+    {
+      "label": "Documentation",
+      "path": "/docs"
+    },
+    {
+      "label": "Quick Start",
+      "path": "/docs/quick-start"
+    },
+    {
+      "label": "Routing",
+      "path": "/docs/routing"
+    },
+    {
+      "label": "Context",
+      "path": "/docs/context"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><circle cx=\"12\" cy=\"12\" r=\"9\" stroke=\"#38bdf8\" stroke-width=\"1.8\"/><circle cx=\"12\" cy=\"12\" r=\"4.5\" stroke=\"#38bdf8\" stroke-width=\"1.5\"/></svg>"
+}

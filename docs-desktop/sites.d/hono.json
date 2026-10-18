@@ -1,0 +1,22 @@
+{
+  "id": "hono",
+  "order": 48,
+  "name": "Hono",
+  "version": "v4.7",
+  "category": "Backend, Auth & APIs",
+  "color": "#ff5c13",
+  "bgTint": "rgba(255, 92, 19, 0.15)",
+  "description": "Ultrafast web framework built on Web Standards for Cloudflare Workers, Bun, Deno, and Node.js with RPC.",
+  "origin": "https://hono.dev",
+  "entryPath": "/docs/",
+  "allowedPrefixes": [
+    "/docs",
+    "/examples",
+    "/helpers",
+    "/middleware",
+    "/guides",
+    "/api"
+  ],
+  "maxPages": 130,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 2C12 2 6 8 6 14C6 17.8 8.7 21 12 21C15.3 21 18 17.8 18 14C18 11 16.2 8.5 14.5 7C14.5 9.5 13 10.5 12 10.5C11 10.5 12.8 6 12 2Z\" stroke=\"#ff5c13\" stroke-width=\"1.9\" stroke-linejoin=\"round\"/></svg>"
+}

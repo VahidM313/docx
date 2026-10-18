@@ -1,0 +1,17 @@
+{
+  "id": "nextjs",
+  "order": 9,
+  "name": "Next.js",
+  "version": "v15.3",
+  "category": "React Ecosystem",
+  "color": "#e4e4e7",
+  "bgTint": "rgba(228, 228, 231, 0.14)",
+  "description": "The React Framework for the Web featuring App Router, Server Actions, and Turbopack.",
+  "origin": "https://nextjs.org",
+  "entryPath": "/docs",
+  "allowedPrefixes": [
+    "/docs"
+  ],
+  "maxPages": 180,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"currentColor\" stroke-width=\"1.8\"/><path d=\"M8.5 16V8L16.8 18.2\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M15.5 8V13\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>"
+}

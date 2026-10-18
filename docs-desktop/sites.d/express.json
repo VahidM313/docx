@@ -1,0 +1,18 @@
+{
+  "id": "express",
+  "order": 47,
+  "name": "Express.js",
+  "version": "v5.1",
+  "category": "Backend, Auth & APIs",
+  "color": "#94a3b8",
+  "bgTint": "rgba(148, 163, 184, 0.15)",
+  "description": "Fast, unopinionated, minimalist web framework for Node.js: routing, middleware, request/response API.",
+  "origin": "https://expressjs.com",
+  "entryPath": "/",
+  "allowedPrefixes": [
+    "/en/",
+    "/"
+  ],
+  "maxPages": 120,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M4 8H11M4 12H9M4 16H11\"/><path d=\"M14 9L20 16M20 9L14 16\"/></svg>"
+}

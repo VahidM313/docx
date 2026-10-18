@@ -1,0 +1,17 @@
+{
+  "id": "postgresql",
+  "order": 52,
+  "name": "PostgreSQL",
+  "version": "v17",
+  "category": "Databases & SQL",
+  "color": "#38bdf8",
+  "bgTint": "rgba(56, 189, 248, 0.15)",
+  "description": "The World's Most Advanced Open Source Relational Database: SQL syntax, JSONB, indexing, MVCC, and replication.",
+  "origin": "https://www.postgresql.org",
+  "entryPath": "/docs/",
+  "allowedPrefixes": [
+    "/docs/"
+  ],
+  "maxPages": 150,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"1.8\" stroke-linecap=\"round\"><ellipse cx=\"12\" cy=\"6\" rx=\"8\" ry=\"3.2\"/><path d=\"M4 6V12C4 13.8 7.6 15.2 12 15.2C16.4 15.2 20 13.8 20 12V6\"/><path d=\"M4 12V18C4 19.8 7.6 21.2 12 21.2C16.4 21.2 20 19.8 20 18V12\"/></svg>"
+}

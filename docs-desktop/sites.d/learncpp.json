@@ -1,0 +1,18 @@
+{
+  "id": "learncpp",
+  "order": 95,
+  "name": "LearnCpp.com",
+  "version": "2026",
+  "category": "C & C++ Ecosystem",
+  "color": "#60a5fa",
+  "bgTint": "rgba(96, 165, 250, 0.15)",
+  "description": "Top-rated comprehensive C++ tutorial series: fundamentals, object-oriented programming, templates, and C++20/23.",
+  "origin": "https://www.learncpp.com",
+  "entryPath": "/",
+  "allowedPrefixes": [
+    "/cpp-tutorial/",
+    "/"
+  ],
+  "maxPages": 160,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#60a5fa\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 2.5L2 7L12 11.5L22 7L12 2.5Z\" stroke-width=\"1.8\"/><path d=\"M22 7V12\" stroke-width=\"1.8\"/><path d=\"M7 19.5C5.2 18.5 4.5 16.5 4.5 14.8C4.5 13 5.2 11.2 7 10.2C8.2 9.5 9.5 9.7 10.5 10.2\" stroke-width=\"2\"/><path d=\"M14 12V16M12 14H16\" stroke-width=\"2\"/><path d=\"M19.5 12V16M17.5 14H21.5\" stroke-width=\"2\"/></svg>"
+}

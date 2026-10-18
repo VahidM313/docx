@@ -1,0 +1,35 @@
+{
+  "id": "prisma",
+  "order": 59,
+  "name": "Prisma ORM",
+  "version": "v6.4",
+  "category": "Databases & SQL",
+  "color": "#2d3748",
+  "bgTint": "rgba(45, 55, 72, 0.15)",
+  "description": "Next-generation Node.js and TypeScript ORM with schema migrations, type-safe queries, and relation handling.",
+  "origin": "https://www.prisma.io",
+  "entryPath": "/docs/getting-started",
+  "allowedPrefixes": [
+    "/docs"
+  ],
+  "maxPages": 150,
+  "defaultRoutes": [
+    {
+      "label": "Getting Started",
+      "path": "/docs/getting-started"
+    },
+    {
+      "label": "Prisma Client",
+      "path": "/docs/concepts/components/prisma-client"
+    },
+    {
+      "label": "Prisma Schema",
+      "path": "/docs/concepts/components/prisma-schema"
+    },
+    {
+      "label": "CRUD Operations",
+      "path": "/docs/concepts/components/prisma-client/crud"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M18.8 19.3L12 2.5 5.2 19.3 12 21.5l6.8-2.2z\" stroke=\"#38bdf8\" stroke-width=\"1.8\" stroke-linejoin=\"round\"/><path d=\"M12 2.5v19\" stroke=\"#38bdf8\" stroke-width=\"1.5\"/></svg>"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "cobra",
+  "order": 93,
+  "name": "Cobra (Go CLI)",
+  "version": "v1.9",
+  "category": "Go (Golang)",
+  "color": "#00add8",
+  "bgTint": "rgba(0, 173, 216, 0.15)",
+  "description": "Commander for modern Go CLI applications: commands, args, flags, POSIX compliance, and auto-generated shell completions.",
+  "origin": "https://cobra.dev",
+  "entryPath": "/",
+  "allowedPrefixes": [
+    "/"
+  ],
+  "maxPages": 80,
+  "defaultRoutes": [
+    {
+      "label": "Documentation",
+      "path": "/"
+    },
+    {
+      "label": "User Guide",
+      "path": "/user-guide/"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#00add8\" stroke-width=\"1.8\"><path d=\"M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z\"/><path d=\"M8 12l3 3 5-5\"/></svg>"
+}

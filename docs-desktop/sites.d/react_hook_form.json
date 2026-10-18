@@ -1,0 +1,38 @@
+{
+  "id": "react_hook_form",
+  "order": 10,
+  "name": "React Hook Form",
+  "version": "v7.54",
+  "category": "React Ecosystem",
+  "color": "#ec5990",
+  "bgTint": "rgba(236, 89, 144, 0.15)",
+  "description": "Performant, flexible and extensible forms with easy-to-use validation for React & Next.js.",
+  "origin": "https://react-hook-form.com",
+  "entryPath": "/get-started",
+  "allowedPrefixes": [
+    "/get-started",
+    "/docs",
+    "/api",
+    "/ts"
+  ],
+  "maxPages": 120,
+  "defaultRoutes": [
+    {
+      "label": "Get Started",
+      "path": "/get-started"
+    },
+    {
+      "label": "useForm API",
+      "path": "/docs/useform"
+    },
+    {
+      "label": "useController",
+      "path": "/docs/usecontroller"
+    },
+    {
+      "label": "TS Types",
+      "path": "/ts"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ec5990\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"/><rect x=\"8\" y=\"2\" width=\"8\" height=\"4\" rx=\"1\" ry=\"1\"/><path d=\"m9 14 2 2 4-4\"/></svg>"
+}

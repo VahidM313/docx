@@ -1,0 +1,35 @@
+{
+  "id": "mysql",
+  "order": 53,
+  "name": "MySQL",
+  "version": "v8.4 LTS",
+  "category": "Databases & SQL",
+  "color": "#00758f",
+  "bgTint": "rgba(0, 117, 143, 0.16)",
+  "description": "The world's most popular open-source database: SQL syntax, InnoDB engine, replication, optimizer, and indexing.",
+  "origin": "https://dev.mysql.com",
+  "entryPath": "/doc/refman/8.4/en/",
+  "allowedPrefixes": [
+    "/doc/refman/8.4/en/"
+  ],
+  "maxPages": 160,
+  "defaultRoutes": [
+    {
+      "label": "Reference Manual",
+      "path": "/doc/refman/8.4/en/"
+    },
+    {
+      "label": "SQL Syntax",
+      "path": "/doc/refman/8.4/en/sql-statements.html"
+    },
+    {
+      "label": "InnoDB Engine",
+      "path": "/doc/refman/8.4/en/innodb-storage-engine.html"
+    },
+    {
+      "label": "Functions",
+      "path": "/doc/refman/8.4/en/functions.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 3C7 3 3 6.5 3 11c0 3 1.8 5.7 4.5 7.2L6 21l3.5-1.5C10.3 19.8 11.1 20 12 20c5 0 9-3.5 9-9s-4-8-9-8z\" stroke=\"#00758f\" stroke-width=\"1.8\"/><circle cx=\"9\" cy=\"10\" r=\"1.5\" fill=\"#f29111\"/><path d=\"M13 14c2-1 3-3 3-5\" stroke=\"#00758f\" stroke-width=\"1.8\" stroke-linecap=\"round\"/></svg>"
+}

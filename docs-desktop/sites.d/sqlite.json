@@ -1,0 +1,17 @@
+{
+  "id": "sqlite",
+  "order": 55,
+  "name": "SQLite",
+  "version": "v3.49",
+  "category": "Databases & SQL",
+  "color": "#0ea5e9",
+  "bgTint": "rgba(14, 165, 233, 0.15)",
+  "description": "Self-contained, high-reliability, embedded SQL database engine: C/C++ API, SQL syntax, PRAGMAs, and WAL mode.",
+  "origin": "https://www.sqlite.org",
+  "entryPath": "/docs.html",
+  "allowedPrefixes": [
+    "/"
+  ],
+  "maxPages": 140,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#0ea5e9\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20.2 3.8C16.5 3.8 11 7.5 8.5 13.5L6 20L10.5 16.5C15.5 14 20.2 8.5 20.2 3.8Z\"/><path d=\"M8.5 13.5L14 11\"/><path d=\"M4 20H18\"/></svg>"
+}

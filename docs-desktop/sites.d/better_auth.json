@@ -1,0 +1,35 @@
+{
+  "id": "better_auth",
+  "order": 45,
+  "name": "Better Auth",
+  "version": "v1.1",
+  "category": "Backend, Auth & APIs",
+  "color": "#f59e0b",
+  "bgTint": "rgba(245, 158, 11, 0.15)",
+  "description": "The comprehensive authentication framework for TypeScript: email/password, social OAuth, 2FA, passkeys, sessions, and plugins.",
+  "origin": "https://www.better-auth.com",
+  "entryPath": "/docs/introduction",
+  "allowedPrefixes": [
+    "/docs"
+  ],
+  "maxPages": 120,
+  "defaultRoutes": [
+    {
+      "label": "Introduction",
+      "path": "/docs/introduction"
+    },
+    {
+      "label": "Installation",
+      "path": "/docs/installation"
+    },
+    {
+      "label": "Basic Usage",
+      "path": "/docs/basic-usage"
+    },
+    {
+      "label": "Plugins",
+      "path": "/docs/plugins"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"11\" width=\"18\" height=\"11\" rx=\"2\" ry=\"2\"/><path d=\"M7 11V7a5 5 0 0 1 10 0v4\"/><circle cx=\"12\" cy=\"16\" r=\"1.5\"/></svg>"
+}

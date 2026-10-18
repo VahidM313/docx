@@ -1,0 +1,18 @@
+{
+  "id": "django",
+  "order": 74,
+  "name": "Django",
+  "version": "v6.1",
+  "category": "Python Ecosystem",
+  "color": "#44b78b",
+  "bgTint": "rgba(68, 183, 139, 0.15)",
+  "description": "The web framework for perfectionists with deadlines: ORM Models, Views, Templates, Admin, Auth, and Migrations.",
+  "origin": "https://docs.djangoproject.com",
+  "entryPath": "/en/6.1/",
+  "allowedPrefixes": [
+    "/en/6.1/",
+    "/en/"
+  ],
+  "maxPages": 150,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#44b78b\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M12 4V16C12 17.7 10.5 19 8.5 19C6.5 19 5 17.7 5 16C5 14.3 6.5 13 8.5 13C9.8 13 11 13.5 12 14.2\"/><path d=\"M16 9V17.5C16 19.5 15 20.8 13.2 21.3\"/><circle cx=\"16\" cy=\"5.5\" r=\"1\" fill=\"#44b78b\"/></svg>"
+}

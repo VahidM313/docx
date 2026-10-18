@@ -1,0 +1,33 @@
+{
+  "id": "lucide",
+  "order": 7,
+  "name": "Lucide Icons",
+  "version": "v0.475",
+  "category": "Frontend & UI",
+  "color": "#f56565",
+  "bgTint": "rgba(245, 101, 101, 0.15)",
+  "description": "Beautiful & consistent icon toolkit made by the community, supporting React, Vue, Svelte, and HTML.",
+  "origin": "https://lucide.dev",
+  "entryPath": "/icons",
+  "allowedPrefixes": [
+    "/icons",
+    "/guide",
+    "/packages"
+  ],
+  "maxPages": 140,
+  "defaultRoutes": [
+    {
+      "label": "Icon Directory",
+      "path": "/icons"
+    },
+    {
+      "label": "Installation",
+      "path": "/guide/installation"
+    },
+    {
+      "label": "React Package",
+      "path": "/guide/packages/lucide-react"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#f56565\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"/></svg>"
+}

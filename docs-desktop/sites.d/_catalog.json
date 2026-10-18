@@ -1,0 +1,19 @@
+{
+  "comment": "Catalog meta consumed by scripts/gen-catalog.ts. `categories` fixes the hub-side category display order; `site.order` inside each sites.d/<id>.json fixes position within the catalog beyond category grouping.",
+  "categories": [
+    "Frontend & UI",
+    "React Ecosystem",
+    "Vue Ecosystem",
+    "Web Frameworks & Tools",
+    "TanStack Suite",
+    "Backend, Auth & APIs",
+    "Databases & SQL",
+    "AI & Machine Learning",
+    "Python Ecosystem",
+    "Rust Ecosystem",
+    "Go (Golang)",
+    "C & C++ Ecosystem",
+    "DevOps & Cloud",
+    "Architecture & Design"
+  ]
+}

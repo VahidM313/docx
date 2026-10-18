@@ -1,0 +1,35 @@
+{
+  "id": "raylib",
+  "order": 100,
+  "name": "Raylib Cheatsheet & API",
+  "version": "v5.5",
+  "category": "C & C++ Ecosystem",
+  "color": "#ffffff",
+  "bgTint": "rgba(255, 255, 255, 0.14)",
+  "description": "Simple, easy-to-use library to enjoy videogames programming in C/C++: 2D/3D graphics, audio, and windowing.",
+  "origin": "https://www.raylib.com",
+  "entryPath": "/cheatsheet/cheatsheet.html",
+  "allowedPrefixes": [
+    "/cheatsheet/"
+  ],
+  "maxPages": 40,
+  "defaultRoutes": [
+    {
+      "label": "Cheatsheet",
+      "path": "/cheatsheet/cheatsheet.html"
+    },
+    {
+      "label": "Core API",
+      "path": "/cheatsheet/cheatsheet.html#core"
+    },
+    {
+      "label": "Shapes",
+      "path": "/cheatsheet/cheatsheet.html#shapes"
+    },
+    {
+      "label": "Textures",
+      "path": "/cheatsheet/cheatsheet.html#textures"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" stroke=\"currentColor\" stroke-width=\"1.8\"/><path d=\"M7 17l5-5-5-5M13 17h4\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "cppreference",
+  "order": 94,
+  "name": "C++ Reference (cppreference)",
+  "version": "C++23/26",
+  "category": "C & C++ Ecosystem",
+  "color": "#3b82f6",
+  "bgTint": "rgba(59, 130, 246, 0.15)",
+  "description": "Complete C and C++ standard library reference: STL containers, algorithms, ranges, coroutines, and memory model.",
+  "origin": "https://en.cppreference.com",
+  "entryPath": "/",
+  "allowedPrefixes": [
+    "/cpp",
+    "/c",
+    "/w/",
+    "/Main_Page"
+  ],
+  "maxPages": 200,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M10 8.5C8.5 7.2 6 7.5 4.8 9.2C3.6 10.9 3.6 13.1 4.8 14.8C6 16.5 8.5 16.8 10 15.5\"/><path d=\"M14 10V14M12 12H16\"/><path d=\"M19.5 10V14M17.5 12H21.5\"/></svg>"
+}

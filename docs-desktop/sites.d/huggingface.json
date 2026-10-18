@@ -1,0 +1,35 @@
+{
+  "id": "huggingface",
+  "order": 67,
+  "name": "Hugging Face",
+  "version": "v4.49",
+  "category": "AI & Machine Learning",
+  "color": "#ffbc00",
+  "bgTint": "rgba(255, 188, 0, 0.15)",
+  "description": "The platform where the machine learning community collaborates on models, datasets, Transformers, and apps.",
+  "origin": "https://huggingface.co",
+  "entryPath": "/docs/transformers/index",
+  "allowedPrefixes": [
+    "/docs/transformers"
+  ],
+  "maxPages": 160,
+  "defaultRoutes": [
+    {
+      "label": "Transformers",
+      "path": "/docs/transformers/index"
+    },
+    {
+      "label": "Quick Tour",
+      "path": "/docs/transformers/quicktour"
+    },
+    {
+      "label": "Pipelines",
+      "path": "/docs/transformers/pipeline_tutorial"
+    },
+    {
+      "label": "Models",
+      "path": "/docs/transformers/model_summary"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"#ffbc00\" stroke-width=\"1.8\"/><circle cx=\"9\" cy=\"10\" r=\"1.5\" fill=\"#ffbc00\"/><circle cx=\"15\" cy=\"10\" r=\"1.5\" fill=\"#ffbc00\"/><path d=\"M8 15c1.5 2 6.5 2 8 0\" stroke=\"#ffbc00\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><path d=\"M4 11c-1 2 0 4 2 4M20 11c1 2 0 4-2 4\" stroke=\"#ffbc00\" stroke-width=\"1.8\" stroke-linecap=\"round\"/></svg>"
+}

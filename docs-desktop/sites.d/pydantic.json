@@ -1,0 +1,36 @@
+{
+  "id": "pydantic",
+  "order": 76,
+  "name": "Pydantic",
+  "version": "v2.10",
+  "category": "Python Ecosystem",
+  "color": "#e92063",
+  "bgTint": "rgba(233, 32, 99, 0.15)",
+  "description": "Data validation and settings management using Python type annotations with Rust-powered core (pydantic-core).",
+  "origin": "https://docs.pydantic.dev",
+  "entryPath": "/",
+  "allowedPrefixes": [
+    "/latest",
+    "/"
+  ],
+  "maxPages": 120,
+  "defaultRoutes": [
+    {
+      "label": "Documentation",
+      "path": "/"
+    },
+    {
+      "label": "Models",
+      "path": "/concepts/models/"
+    },
+    {
+      "label": "Fields",
+      "path": "/concepts/fields/"
+    },
+    {
+      "label": "Validators",
+      "path": "/concepts/validators/"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"#e92063\" stroke-width=\"1.8\"/><path d=\"M9 7h4a3 3 0 0 1 0 6H9V7zm0 6h4.5a3 3 0 0 1 0 6H9v-6z\" fill=\"#e92063\"/></svg>"
+}

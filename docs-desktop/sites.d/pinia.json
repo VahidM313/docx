@@ -1,0 +1,43 @@
+{
+  "id": "pinia",
+  "order": 16,
+  "name": "Pinia",
+  "version": "v3.0",
+  "category": "Vue Ecosystem",
+  "color": "#ffd859",
+  "bgTint": "rgba(255, 216, 89, 0.15)",
+  "description": "The intuitive, type-safe store and state management library for Vue 3 with Devtools support and SSR.",
+  "origin": "https://pinia.vuejs.org",
+  "entryPath": "/introduction.html",
+  "allowedPrefixes": [
+    "/introduction",
+    "/getting-started",
+    "/core-concepts",
+    "/cookbook",
+    "/api"
+  ],
+  "maxPages": 100,
+  "defaultRoutes": [
+    {
+      "label": "Introduction",
+      "path": "/introduction.html"
+    },
+    {
+      "label": "Getting Started",
+      "path": "/getting-started.html"
+    },
+    {
+      "label": "State",
+      "path": "/core-concepts/state.html"
+    },
+    {
+      "label": "Getters",
+      "path": "/core-concepts/getters.html"
+    },
+    {
+      "label": "Actions",
+      "path": "/core-concepts/actions.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 2L4 7v6c0 5.5 3.8 10 8 11 4.2-1 8-5.5 8-11V7l-8-5z\" stroke=\"#ffd859\" stroke-width=\"1.8\"/><circle cx=\"12\" cy=\"11\" r=\"3\" fill=\"#ffd859\"/></svg>"
+}

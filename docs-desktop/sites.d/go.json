@@ -1,0 +1,18 @@
+{
+  "id": "go",
+  "order": 88,
+  "name": "Go (Golang)",
+  "version": "go1.24",
+  "category": "Go (Golang)",
+  "color": "#00add8",
+  "bgTint": "rgba(0, 173, 216, 0.15)",
+  "description": "Official Go language specification, Effective Go, Standard Library packages, modules, and concurrency guides.",
+  "origin": "https://go.dev",
+  "entryPath": "/doc/",
+  "allowedPrefixes": [
+    "/doc/",
+    "/ref/"
+  ],
+  "maxPages": 140,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><rect x=\"2\" y=\"5\" width=\"20\" height=\"14\" rx=\"4\" stroke=\"#00add8\" stroke-width=\"1.9\"/><path d=\"M10.5 10.2C9.8 9.4 8.2 9.4 7.3 10.4C6.4 11.4 6.5 13 7.4 13.9C8.3 14.8 9.9 14.7 10.6 13.7V12.2H8.9\" stroke=\"#00add8\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"15.5\" cy=\"12\" r=\"2.5\" stroke=\"#00add8\" stroke-width=\"1.9\"/></svg>"
+}

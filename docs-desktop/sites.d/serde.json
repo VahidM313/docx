@@ -1,0 +1,31 @@
+{
+  "id": "serde",
+  "order": 85,
+  "name": "Serde (Rust)",
+  "version": "v1.0",
+  "category": "Rust Ecosystem",
+  "color": "#f97316",
+  "bgTint": "rgba(249, 115, 22, 0.15)",
+  "description": "Generic serialization/deserialization framework for Rust data structures: JSON, Postcard, Bincode, YAML, and CBOR.",
+  "origin": "https://serde.rs",
+  "entryPath": "/",
+  "allowedPrefixes": [
+    "/"
+  ],
+  "maxPages": 90,
+  "defaultRoutes": [
+    {
+      "label": "Overview",
+      "path": "/"
+    },
+    {
+      "label": "Attributes",
+      "path": "/attributes.html"
+    },
+    {
+      "label": "Custom Serialization",
+      "path": "/custom-serialization.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#f97316\" stroke-width=\"1.8\" stroke-linecap=\"round\"><path d=\"M7 8h10M7 12h10M7 16h6\"/><rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/></svg>"
+}

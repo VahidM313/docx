@@ -1,0 +1,37 @@
+{
+  "id": "flask",
+  "order": 75,
+  "name": "Flask",
+  "version": "v3.1",
+  "category": "Python Ecosystem",
+  "color": "#ffffff",
+  "bgTint": "rgba(255, 255, 255, 0.15)",
+  "description": "Lightweight WSGI Python web framework: flexible routing, Jinja templating, blueprints, signals, and request handling.",
+  "origin": "https://flask.palletsprojects.com",
+  "entryPath": "/",
+  "allowedPrefixes": [
+    "/en/stable",
+    "/en/latest",
+    "/"
+  ],
+  "maxPages": 100,
+  "defaultRoutes": [
+    {
+      "label": "Documentation",
+      "path": "/"
+    },
+    {
+      "label": "Quickstart",
+      "path": "/quickstart/"
+    },
+    {
+      "label": "API Reference",
+      "path": "/api/"
+    },
+    {
+      "label": "Blueprints",
+      "path": "/blueprints/"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"><path d=\"M9 3h6M10 3v5l-6 11a2 2 0 0 0 1.7 3h12.6a2 2 0 0 0 1.7-3L14 8V3\"/><path d=\"M7 16h10\"/></svg>"
+}

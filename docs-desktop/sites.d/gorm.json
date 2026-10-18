@@ -1,0 +1,35 @@
+{
+  "id": "gorm",
+  "order": 90,
+  "name": "GORM (Go ORM)",
+  "version": "v1.25",
+  "category": "Go (Golang)",
+  "color": "#00add8",
+  "bgTint": "rgba(0, 173, 216, 0.15)",
+  "description": "The fantastic ORM library for Golang: associations, hooks, preloading, transactions, and auto-migrations.",
+  "origin": "https://gorm.io",
+  "entryPath": "/docs/",
+  "allowedPrefixes": [
+    "/docs/"
+  ],
+  "maxPages": 120,
+  "defaultRoutes": [
+    {
+      "label": "Overview",
+      "path": "/docs/"
+    },
+    {
+      "label": "CRUD Interface",
+      "path": "/docs/create.html"
+    },
+    {
+      "label": "Query",
+      "path": "/docs/query.html"
+    },
+    {
+      "label": "Associations",
+      "path": "/docs/belongs_to.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#00add8\" stroke-width=\"1.8\"><ellipse cx=\"12\" cy=\"7\" rx=\"8\" ry=\"3.5\"/><path d=\"M4 7v10c0 1.9 3.6 3.5 8 3.5s8-1.6 8-3.5V7\"/></svg>"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "opencv",
+  "order": 101,
+  "name": "OpenCV C++",
+  "version": "v4.11",
+  "category": "C & C++ Ecosystem",
+  "color": "#5c3ca5",
+  "bgTint": "rgba(92, 60, 165, 0.16)",
+  "description": "Open Source Computer Vision Library: real-time image processing, camera calibration, object detection, DNN module, and GPU CUDA.",
+  "origin": "https://docs.opencv.org",
+  "entryPath": "/4.x/",
+  "allowedPrefixes": [
+    "/4.x/",
+    "/4."
+  ],
+  "maxPages": 160,
+  "defaultRoutes": [
+    {
+      "label": "Reference Manual",
+      "path": "/4.x/"
+    },
+    {
+      "label": "Core Module",
+      "path": "/4.x/d0/d7a/classcv_1_1Mat.html"
+    },
+    {
+      "label": "Image Processing",
+      "path": "/4.x/d7/da8/tutorial_table_of_content_imgproc.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><circle cx=\"12\" cy=\"7\" r=\"4\" stroke=\"#e11d48\" stroke-width=\"1.8\"/><circle cx=\"7\" cy=\"16\" r=\"4\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><circle cx=\"17\" cy=\"16\" r=\"4\" stroke=\"#2563eb\" stroke-width=\"1.8\"/></svg>"
+}

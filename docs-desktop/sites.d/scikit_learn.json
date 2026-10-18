@@ -1,0 +1,35 @@
+{
+  "id": "scikit_learn",
+  "order": 71,
+  "name": "Scikit-learn",
+  "version": "v1.6",
+  "category": "AI & Machine Learning",
+  "color": "#f89939",
+  "bgTint": "rgba(248, 153, 57, 0.15)",
+  "description": "Machine learning in Python: classification, regression, clustering, dimensionality reduction, and model selection.",
+  "origin": "https://scikit-learn.org",
+  "entryPath": "/stable/",
+  "allowedPrefixes": [
+    "/stable/"
+  ],
+  "maxPages": 160,
+  "defaultRoutes": [
+    {
+      "label": "Documentation",
+      "path": "/stable/"
+    },
+    {
+      "label": "User Guide",
+      "path": "/stable/user_guide.html"
+    },
+    {
+      "label": "Supervised Learning",
+      "path": "/stable/supervised_learning.html"
+    },
+    {
+      "label": "API Reference",
+      "path": "/stable/modules/classes.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><circle cx=\"12\" cy=\"12\" r=\"9\" stroke=\"#f89939\" stroke-width=\"1.8\"/><path d=\"M7 14l3-4 4 3 3-5\" stroke=\"#38bdf8\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"7\" cy=\"14\" r=\"1.5\" fill=\"#f89939\"/><circle cx=\"17\" cy=\"8\" r=\"1.5\" fill=\"#38bdf8\"/></svg>"
+}

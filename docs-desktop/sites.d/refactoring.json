@@ -1,0 +1,36 @@
+{
+  "id": "refactoring",
+  "order": 122,
+  "name": "Refactoring & Architecture",
+  "version": "2026",
+  "category": "Architecture & Design",
+  "color": "#ec4899",
+  "bgTint": "rgba(236, 72, 153, 0.15)",
+  "description": "Clean Code, Refactoring techniques, Code Smells, SOLID principles, and architectural design patterns.",
+  "origin": "https://refactoring.guru",
+  "entryPath": "/refactoring",
+  "allowedPrefixes": [
+    "/refactoring",
+    "/design-patterns"
+  ],
+  "maxPages": 140,
+  "defaultRoutes": [
+    {
+      "label": "Refactoring",
+      "path": "/refactoring"
+    },
+    {
+      "label": "Code Smells",
+      "path": "/refactoring/smells"
+    },
+    {
+      "label": "Design Patterns",
+      "path": "/design-patterns"
+    },
+    {
+      "label": "Clean Code",
+      "path": "/refactoring/techniques"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ec4899\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.19\"/><path d=\"M12 9v4l3 2\"/></svg>"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "vite",
+  "order": 22,
+  "name": "Vite",
+  "version": "v6.3",
+  "category": "Web Frameworks & Tools",
+  "color": "#bd34fe",
+  "bgTint": "rgba(189, 52, 254, 0.15)",
+  "description": "Next generation frontend tooling with instant HMR, Rollup/Rolldown bundling, and plugin API.",
+  "origin": "https://vite.dev",
+  "entryPath": "/guide/",
+  "allowedPrefixes": [
+    "/guide",
+    "/config",
+    "/changes"
+  ],
+  "maxPages": 120,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M21 4L12 21L3 4L12 7.5L21 4Z\" stroke=\"#bd34fe\" stroke-width=\"1.8\" stroke-linejoin=\"round\"/><path d=\"M13.5 3L10 11.5H14L11 18\" stroke=\"#ffd62e\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "svelte",
+  "order": 19,
+  "name": "Svelte",
+  "version": "v5.0",
+  "category": "Web Frameworks & Tools",
+  "color": "#ff3e00",
+  "bgTint": "rgba(255, 62, 0, 0.15)",
+  "description": "Cybernetically enhanced web apps with Runes, fine-grained signals, zero-runtime compilation, and speed.",
+  "origin": "https://svelte.dev",
+  "entryPath": "/docs/svelte/overview",
+  "allowedPrefixes": [
+    "/docs"
+  ],
+  "maxPages": 140,
+  "defaultRoutes": [
+    {
+      "label": "Overview",
+      "path": "/docs/svelte/overview"
+    },
+    {
+      "label": "Runes",
+      "path": "/docs/svelte/runes"
+    },
+    {
+      "label": "Reactivity",
+      "path": "/docs/svelte/what-is-reactivity"
+    },
+    {
+      "label": "Components",
+      "path": "/docs/svelte/basic-markup"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c-2.48 0-4.5-1.5-4.5-3.5h2c0 1 1.12 1.5 2.5 1.5s2.5-.5 2.5-1.5c0-2-5-1.5-5-4 0-1.5 1.34-2.5 3-2.5s3 1 3 2.5h-2c0-.7-.5-1-1-1s-1 .3-1 1c0 1.8 5 1.5 5 4 0 1.8-1.5 3-3.5 3z\" fill=\"#ff3e00\"/></svg>"
+}

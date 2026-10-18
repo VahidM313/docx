@@ -1,0 +1,31 @@
+{
+  "id": "axum",
+  "order": 83,
+  "name": "Axum (Rust Web)",
+  "version": "v0.8",
+  "category": "Rust Ecosystem",
+  "color": "#ef4444",
+  "bgTint": "rgba(239, 68, 68, 0.15)",
+  "description": "Ergonomic and modular web framework built with Tokio, Tower, and Hyper for high-performance Rust microservices.",
+  "origin": "https://docs.rs",
+  "entryPath": "/axum/latest/axum/",
+  "allowedPrefixes": [
+    "/axum/"
+  ],
+  "maxPages": 120,
+  "defaultRoutes": [
+    {
+      "label": "Documentation",
+      "path": "/axum/latest/axum/"
+    },
+    {
+      "label": "Routing",
+      "path": "/axum/latest/axum/routing/index.html"
+    },
+    {
+      "label": "Extractors",
+      "path": "/axum/latest/axum/extract/index.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"1.8\" stroke-linecap=\"round\"><path d=\"M4 18L12 4l8 14H4z\"/><path d=\"M9 13h6\"/></svg>"
+}

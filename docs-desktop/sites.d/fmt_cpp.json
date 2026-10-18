@@ -1,0 +1,31 @@
+{
+  "id": "fmt_cpp",
+  "order": 99,
+  "name": "{fmt} C++ Formatting",
+  "version": "v11.1",
+  "category": "C & C++ Ecosystem",
+  "color": "#10b981",
+  "bgTint": "rgba(16, 185, 129, 0.15)",
+  "description": "Fast, safe alternative to C stdio and C++ iostreams (underlying implementation for std::format).",
+  "origin": "https://fmt.dev",
+  "entryPath": "/latest/",
+  "allowedPrefixes": [
+    "/latest/"
+  ],
+  "maxPages": 80,
+  "defaultRoutes": [
+    {
+      "label": "Overview",
+      "path": "/latest/"
+    },
+    {
+      "label": "API Reference",
+      "path": "/latest/api.html"
+    },
+    {
+      "label": "Syntax",
+      "path": "/latest/syntax.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M4 7h16M4 12h12M4 17h8\"/></svg>"
+}

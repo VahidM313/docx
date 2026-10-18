@@ -1,0 +1,17 @@
+{
+  "id": "tanstack_router",
+  "order": 30,
+  "name": "TanStack Router",
+  "version": "v1",
+  "category": "TanStack Suite",
+  "color": "#10b981",
+  "bgTint": "rgba(16, 185, 129, 0.15)",
+  "description": "Fully type-safe client & SSR routing with first-class search params, loaders, and code splitting.",
+  "origin": "https://tanstack.com",
+  "entryPath": "/router/latest/docs/framework/react/overview",
+  "allowedPrefixes": [
+    "/router/latest/docs"
+  ],
+  "maxPages": 120,
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2\" stroke-linecap=\"round\"><circle cx=\"6\" cy=\"19\" r=\"3\"/><circle cx=\"18\" cy=\"5\" r=\"3\"/><path d=\"M12 19h4.5a3.5 3.5 0 0 0 0-7h-9a3.5 3.5 0 0 1 0-7H12\"/></svg>"
+}

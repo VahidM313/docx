@@ -1,0 +1,35 @@
+{
+  "id": "redis",
+  "order": 56,
+  "name": "Redis",
+  "version": "v7.4",
+  "category": "Databases & SQL",
+  "color": "#dc382d",
+  "bgTint": "rgba(220, 56, 45, 0.15)",
+  "description": "In-memory data structure store used as a distributed key-value database, cache, streams, and message broker.",
+  "origin": "https://redis.io",
+  "entryPath": "/docs/latest/",
+  "allowedPrefixes": [
+    "/docs/latest/"
+  ],
+  "maxPages": 160,
+  "defaultRoutes": [
+    {
+      "label": "Documentation",
+      "path": "/docs/latest/"
+    },
+    {
+      "label": "Commands",
+      "path": "/docs/latest/commands/"
+    },
+    {
+      "label": "Data Structures",
+      "path": "/docs/latest/develop/data-types/"
+    },
+    {
+      "label": "Pub/Sub",
+      "path": "/docs/latest/develop/interact/pubsub/"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 2L3 6.5l9 4.5 9-4.5L12 2zM3 11l9 4.5 9-4.5M3 15.5l9 4.5 9-4.5\" stroke=\"#dc382d\" stroke-width=\"1.8\" stroke-linejoin=\"round\"/></svg>"
+}
