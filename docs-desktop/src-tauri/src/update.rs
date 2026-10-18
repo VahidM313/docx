@@ -8,6 +8,7 @@ use std::sync::Arc;
 use std::time::Duration;
 
 use crate::config::RELEASE_BASE_URL;
+use crate::error::{read_guard, write_guard, DocxError};
 use crate::pack::{get_packs_dir, parse_docpack_on_disk, AssetStore, ManifestEntry, SiteManifest, SiteOverridePack};
 use crate::server::{ensure_site_server, AppState};
 use crate::util::curl_get_bytes;
@@ -45,37 +46,41 @@ pub(crate) fn curl_download_with_progress(
     expected_total: usize,
     site_id: &str,
     window: &tauri::Window,
-) -> Result<Vec<u8>, String> {
+) -> crate::error::Result<Vec<u8>> {
     use tauri::Emitter;
     let _ = fs::remove_file(dest_path);
 
     let client = reqwest::blocking::Client::builder()
         .user_agent("Docx/1.0")
         .timeout(Duration::from_secs(300))
-        .build()
-        .map_err(|e| format!("HTTP client error: {}", e))?;
+        .build()?;
 
-    let mut resp = client
-        .get(url)
-        .send()
-        .map_err(|e| format!("HTTP download request error for {}: {}", url, e))?;
+    let mut resp = client.get(url).send()?;
 
-    if !resp.status().is_success() {
-        return Err(format!("HTTP download failed with status {} for {}", resp.status(), url));
+    let status = resp.status();
+    if !status.is_success() {
+        return Err(DocxError::HttpStatus {
+            status: status.as_u16(),
+            url: url.to_string(),
+        });
     }
 
     let total = resp.content_length().map(|l| l as usize).unwrap_or(expected_total).max(1);
-    let mut file = File::create(dest_path).map_err(|e| format!("Failed to create file: {}", e))?;
+    let mut file =
+        File::create(dest_path).map_err(|e| DocxError::io_path(dest_path, &e))?;
     let mut buffer = [0u8; 65536];
     let mut cur_bytes = 0usize;
     let mut last_emit = std::time::Instant::now();
 
     loop {
-        let bytes_read = resp.read(&mut buffer).map_err(|e| format!("Download stream read error: {}", e))?;
+        let bytes_read = resp
+            .read(&mut buffer)
+            .map_err(|e| DocxError::http(url, format!("download stream read error: {e}")))?;
         if bytes_read == 0 {
             break;
         }
-        file.write_all(&buffer[..bytes_read]).map_err(|e| format!("Download file write error: {}", e))?;
+        file.write_all(&buffer[..bytes_read])
+            .map_err(|e| DocxError::io_path(dest_path, &e))?;
         cur_bytes += bytes_read;
 
         if last_emit.elapsed() >= Duration::from_millis(65) || cur_bytes == total {
@@ -102,17 +107,17 @@ pub(crate) fn curl_download_with_progress(
         }
     }
 
-    file.flush().map_err(|e| format!("File flush error: {}", e))?;
+    file.flush().map_err(|e| DocxError::io_path(dest_path, &e))?;
     drop(file);
 
-    fs::read(dest_path).map_err(|e| format!("Failed to read downloaded pack: {}", e))
+    fs::read(dest_path).map_err(|e| DocxError::io_path(dest_path, &e))
 }
 
 pub(crate) fn run_install_or_update_sync(
     site_id: String,
     store: Arc<AssetStore>,
     window: tauri::Window,
-) -> Result<DeltaUpdateResult, String> {
+) -> crate::error::Result<DeltaUpdateResult> {
     use tauri::Emitter;
 
     let manifest_url = format!("{}/{}.manifest.json", RELEASE_BASE_URL, site_id);
@@ -132,10 +137,11 @@ pub(crate) fn run_install_or_update_sync(
     );
 
     let remote_manifest_bytes = curl_get_bytes(&manifest_url, None)?;
-    let remote_manifest: SiteManifest =
-        serde_json::from_slice(&remote_manifest_bytes).map_err(|e| e.to_string())?;
+    let remote_manifest: SiteManifest = serde_json::from_slice(&remote_manifest_bytes)?;
     if remote_manifest.routes.is_empty() || remote_manifest.commit == "e3b0c442" {
-        return Err(format!("Remote manifest for '{}' has 0 routes", site_id));
+        return Err(DocxError::invalid_pack(format!(
+            "Remote manifest for '{site_id}' has 0 routes"
+        )));
     }
 
     let packs_dir = get_packs_dir();
@@ -149,7 +155,7 @@ pub(crate) fn run_install_or_update_sync(
     let mut local_chunk_count = 0usize;
 
     {
-        let guard = store.overrides.read().unwrap();
+        let guard = read_guard(&store.overrides)?;
         if let Some(pack) = guard.get(&site_id) {
             old_commit = pack.manifest.commit.clone();
             local_updated_at = pack.manifest.updatedAt.clone();
@@ -167,7 +173,7 @@ pub(crate) fn run_install_or_update_sync(
                 && local_route_count >= remote_manifest.routes.len()))
     {
         if old_commit != remote_manifest.commit {
-            let mut guard = store.overrides.write().unwrap();
+            let mut guard = write_guard(&store.overrides)?;
             if let Some(existing) = guard.get(&site_id).cloned() {
                 let mut reconciled = existing.manifest.clone();
                 reconciled.commit = remote_manifest.commit.clone();
@@ -218,21 +224,19 @@ pub(crate) fn run_install_or_update_sync(
         });
     }
 
-    if let Ok(search_bytes) = curl_get_bytes(&search_url, None) {
-        if search_bytes.len() > 4 {
+    if let Ok(search_bytes) = curl_get_bytes(&search_url, None)
+        && search_bytes.len() > 4 {
             let _ = fs::write(packs_dir.join(format!("{}.search.json", site_id)), search_bytes);
         }
-    }
 
     {
-        let guard = store.overrides.read().unwrap();
+        let guard = read_guard(&store.overrides)?;
         if let Some(pack) = guard.get(&site_id) {
             for entry in pack.manifest.routes.values() {
-                if !entry.hash.is_empty() {
-                    if let Some(chunk) = pack.read_chunk(entry.offset, entry.length) {
+                if !entry.hash.is_empty()
+                    && let Some(chunk) = pack.read_chunk(entry.offset, entry.length) {
                         local_chunks_by_hash.insert(entry.hash.clone(), chunk);
                     }
-                }
             }
         }
     }
@@ -246,7 +250,7 @@ pub(crate) fn run_install_or_update_sync(
 
     if !local_chunks_by_hash.is_empty() && missing_unique_hashes.is_empty() {
         {
-            let mut guard = store.overrides.write().unwrap();
+            let mut guard = write_guard(&store.overrides)?;
             if let Some(existing) = guard.get(&site_id).cloned() {
                 let mut reconciled = existing.manifest.clone();
                 reconciled.commit = remote_manifest.commit.clone();
@@ -340,14 +344,14 @@ pub(crate) fn run_install_or_update_sync(
             },
         );
 
-        let parsed = match parse_docpack_on_disk(docpack_path.clone(), 0, dl_bytes, "GitHub Release .docpack") {
+        let parsed = match parse_docpack_on_disk(docpack_path.clone(), 0, dl_bytes, "GitHub Release .docpack")
+        {
             Some(p) => p,
             None => {
                 let _ = fs::remove_file(&docpack_path);
-                return Err(format!(
-                    "Downloaded {}.docpack ({} bytes) is empty or invalid — please retry after release sync.",
-                    site_id, dl_bytes
-                ));
+                return Err(DocxError::invalid_pack(format!(
+                    "Downloaded {site_id}.docpack ({dl_bytes} bytes) is empty or invalid — please retry after release sync."
+                )));
             }
         };
 
@@ -366,7 +370,7 @@ pub(crate) fn run_install_or_update_sync(
         let final_routes = final_manifest.routes.len();
         let final_chunks = final_manifest.chunkCount;
 
-        store.overrides.write().unwrap().insert(
+        write_guard(&store.overrides)?.insert(
             site_id.clone(),
             Arc::new(SiteOverridePack {
                 manifest: final_manifest,
@@ -493,7 +497,7 @@ pub(crate) fn run_install_or_update_sync(
         routes: new_routes,
     };
 
-    let manifest_json = serde_json::to_vec(&final_manifest).map_err(|e| e.to_string())?;
+    let manifest_json = serde_json::to_vec(&final_manifest)?;
     let mut full_docpack = Vec::with_capacity(4 + manifest_json.len() + new_pack_data.len());
     full_docpack.extend_from_slice(&(manifest_json.len() as u32).to_le_bytes());
     full_docpack.extend_from_slice(&manifest_json);
@@ -501,17 +505,13 @@ pub(crate) fn run_install_or_update_sync(
 
     let docpack_path = packs_dir.join(format!("{}.docpack", site_id));
     let full_len = full_docpack.len();
-    fs::write(&docpack_path, &full_docpack).map_err(|e| e.to_string())?;
+    fs::write(&docpack_path, &full_docpack).map_err(|e| DocxError::io_path(&docpack_path, &e))?;
     drop(full_docpack);
 
     if let Some(parsed) =
         parse_docpack_on_disk(docpack_path, 0, full_len, "GitHub Delta .docpack")
     {
-        store
-            .overrides
-            .write()
-            .unwrap()
-            .insert(site_id.clone(), parsed);
+        write_guard(&store.overrides)?.insert(site_id.clone(), parsed);
     }
     let port = ensure_site_server(&site_id, Arc::clone(&store));
 
@@ -563,11 +563,12 @@ pub(crate) async fn install_or_update_from_github(
     site_id: String,
     window: tauri::Window,
     state: tauri::State<'_, AppState>,
-) -> Result<DeltaUpdateResult, String> {
+) -> std::result::Result<DeltaUpdateResult, String> {
     let store = Arc::clone(&state.store);
     tauri::async_runtime::spawn_blocking(move || run_install_or_update_sync(site_id, store, window))
         .await
         .map_err(|e| format!("Task join error: {}", e))?
+        .map_err(|e| e.to_string())
 }
 
 

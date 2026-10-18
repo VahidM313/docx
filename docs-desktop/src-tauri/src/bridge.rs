@@ -93,11 +93,10 @@ pub(crate) fn inject_reader_bridge(site_key: &str, mut html: String) -> Vec<u8> 
     }
 
     // Ensure all documentation pages are responsive on mobile screens
-    if !html.contains("name=\"viewport\"") && !html.contains("name='viewport'") {
-        if let Some(pos) = html.find("<head>").or_else(|| html.find("<HEAD>")) {
+    if !html.contains("name=\"viewport\"") && !html.contains("name='viewport'")
+        && let Some(pos) = html.find("<head>").or_else(|| html.find("<HEAD>")) {
             html.insert_str(pos + 6, "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover\" />");
         }
-    }
 
     if site_id == "lucide" {
         html = html.replace(

@@ -116,12 +116,11 @@ pub(crate) fn set_packs_dir(dir: PathBuf) {
 }
 
 pub(crate) fn get_packs_dir() -> PathBuf {
-    if let Ok(lock) = CUSTOM_PACKS_DIR.read() {
-        if let Some(dir) = lock.as_ref() {
+    if let Ok(lock) = CUSTOM_PACKS_DIR.read()
+        && let Some(dir) = lock.as_ref() {
             let _ = fs::create_dir_all(dir);
             return dir.clone();
         }
-    }
     #[cfg(target_os = "android")]
     {
         for candidate in [
@@ -142,7 +141,7 @@ pub(crate) fn get_packs_dir() -> PathBuf {
                 .map(|p| PathBuf::from(p).join("AppData").join("Local"))
         })
         .or_else(|| std::env::var_os("APPDATA").map(PathBuf::from))
-        .unwrap_or_else(|| std::env::temp_dir());
+        .unwrap_or_else(std::env::temp_dir);
     let dir = base.join("docx");
     let _ = fs::create_dir_all(&dir);
     dir
@@ -156,11 +155,10 @@ fn migrate_legacy_packs_to_appdata() {
         if let Some(roaming) = std::env::var_os("APPDATA") {
             legacy_dirs.push(PathBuf::from(roaming).join("docx"));
         }
-        if let Ok(exe) = std::env::current_exe() {
-            if let Some(parent) = exe.parent() {
+        if let Ok(exe) = std::env::current_exe()
+            && let Some(parent) = exe.parent() {
                 legacy_dirs.push(parent.join("packs"));
             }
-        }
         if let Ok(cwd) = std::env::current_dir() {
             legacy_dirs.push(cwd.join("packs"));
         }
@@ -284,7 +282,7 @@ fn load_exe_trailer_overrides(overrides: &mut HashMap<String, Arc<SiteOverridePa
     if &footer[8..16] != TRAILER_MAGIC {
         return;
     }
-    let trailer_len = u64::from_le_bytes(footer[0..8].try_into().unwrap());
+    let trailer_len = u64::from_le_bytes(footer[0..8].try_into().expect("footer is always 16 bytes"));
     if file_len < 16 + trailer_len {
         return;
     }
@@ -322,8 +320,8 @@ pub(crate) fn load_disk_overrides(overrides: &mut HashMap<String, Arc<SiteOverri
     if let Ok(entries) = fs::read_dir(&packs_dir) {
         for entry in entries.flatten() {
             let path = entry.path();
-            if path.extension().and_then(|e| e.to_str()) == Some("docpack") {
-                if let Ok(meta) = fs::metadata(&path) {
+            if path.extension().and_then(|e| e.to_str()) == Some("docpack")
+                && let Ok(meta) = fs::metadata(&path) {
                     let pack_len = meta.len() as usize;
                     if let Some(pack) =
                         parse_docpack_on_disk(path.clone(), 0, pack_len, "Modular .docpack")
@@ -340,18 +338,33 @@ pub(crate) fn load_disk_overrides(overrides: &mut HashMap<String, Arc<SiteOverri
                         }
                     }
                 }
-            }
         }
     }
 }
 
 pub(crate) fn load_asset_store() -> Arc<AssetStore> {
-    let len_bytes: [u8; 4] = ASSETS_PACK[0..4].try_into().expect("Invalid pack header");
-    let manifest_len = u32::from_le_bytes(len_bytes) as usize;
-    let manifest_slice = &ASSETS_PACK[4..4 + manifest_len];
-    let mut base_manifest: HashMap<String, ManifestEntry> =
-        serde_json::from_slice(manifest_slice).expect("Failed to parse asset manifest");
-    let base_data_start = 4 + manifest_len;
+    // The embedded base manifest is a compile-time stub (doc packs have long
+    // since moved to .docpack overrides) — parse defensively so even a corrupt
+    // build artifact only degrades to "no base assets" instead of panicking.
+    let mut base_manifest: HashMap<String, ManifestEntry> = HashMap::new();
+    let mut base_data_start = ASSETS_PACK.len();
+    if let Some(len_bytes) = ASSETS_PACK.get(0..4).and_then(|s| <[u8; 4]>::try_from(s).ok()) {
+        let manifest_len = u32::from_le_bytes(len_bytes) as usize;
+        if let Some(manifest_slice) = ASSETS_PACK.get(4..4 + manifest_len) {
+            match serde_json::from_slice(manifest_slice) {
+                Ok(m) => {
+                    base_data_start = 4 + manifest_len;
+                    base_manifest = m;
+                }
+                Err(e) => {
+                    log::error!(
+                        "embedded base asset manifest unparsable ({}); continuing without base assets",
+                        e
+                    );
+                }
+            }
+        }
+    }
 
     for entry in base_manifest.values_mut() {
         if entry.hash.is_empty() {

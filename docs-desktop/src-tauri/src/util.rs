@@ -2,6 +2,8 @@
 
 use std::time::Duration;
 
+use crate::error::{DocxError, Result};
+
 pub(crate) fn fnv1a_hash_hex(bytes: &[u8]) -> String {
     let mut hash: u64 = 0xcbf29ce484222325;
     for &b in bytes {
@@ -11,23 +13,29 @@ pub(crate) fn fnv1a_hash_hex(bytes: &[u8]) -> String {
     format!("{:016x}", hash)
 }
 
-pub(crate) fn curl_get_bytes(url: &str, range: Option<(usize, usize)>) -> Result<Vec<u8>, String> {
+/// Plain GET returning the full body. Ranges map onto the HTTP `Range` header
+/// so callers can express both full fetches and partial-content (delta) fetches
+/// with one helper.
+pub(crate) fn curl_get_bytes(url: &str, range: Option<(usize, usize)>) -> Result<Vec<u8>> {
     let client = reqwest::blocking::Client::builder()
         .user_agent("Docx/1.0")
         .timeout(Duration::from_secs(60))
-        .build()
-        .map_err(|e| format!("HTTP client error: {}", e))?;
+        .build()?;
 
     let mut req = client.get(url);
     if let Some((start, end)) = range {
         req = req.header("Range", format!("bytes={}-{}", start, end));
     }
 
-    let resp = req.send().map_err(|e| format!("HTTP fetch error for {}: {}", url, e))?;
-    if !resp.status().is_success() && resp.status() != reqwest::StatusCode::PARTIAL_CONTENT {
-        return Err(format!("HTTP fetch failed with status {} for {}", resp.status(), url));
+    let resp = req.send()?;
+    let status = resp.status();
+    if !status.is_success() && status != reqwest::StatusCode::PARTIAL_CONTENT {
+        return Err(DocxError::HttpStatus {
+            status: status.as_u16(),
+            url: url.to_string(),
+        });
     }
-    let bytes = resp.bytes().map_err(|e| format!("HTTP body read error for {}: {}", url, e))?;
+    let bytes = resp.bytes()?;
     Ok(bytes.to_vec())
 }
 
@@ -36,8 +44,8 @@ pub(crate) fn url_decode(input: &str) -> String {
     let mut out = Vec::with_capacity(bytes.len());
     let mut i = 0;
     while i < bytes.len() {
-        if bytes[i] == b'%' && i + 2 < bytes.len() {
-            if let (Some(h), Some(l)) = (
+        if bytes[i] == b'%' && i + 2 < bytes.len()
+            && let (Some(h), Some(l)) = (
                 (bytes[i + 1] as char).to_digit(16),
                 (bytes[i + 2] as char).to_digit(16),
             ) {
@@ -45,7 +53,6 @@ pub(crate) fn url_decode(input: &str) -> String {
                 i += 3;
                 continue;
             }
-        }
         out.push(bytes[i]);
         i += 1;
     }

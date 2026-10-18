@@ -13,6 +13,7 @@ mod bridge;
 mod catalog;
 mod commands;
 mod config;
+mod error;
 mod pack;
 mod search;
 mod server;
@@ -62,14 +63,18 @@ pub fn run() {
     let shadcn_port = ensure_site_server("shadcn", Arc::clone(&store));
 
     // Also start servers for any additional installed .docpack overrides
-    let extra_ids: Vec<String> = store
-        .overrides
-        .read()
-        .unwrap()
-        .keys()
-        .filter(|k| *k != "tailwind" && *k != "shadcn")
-        .cloned()
-        .collect();
+    let extra_ids = error::read_guard(&store.overrides)
+        .map(|guard| {
+            guard
+                .keys()
+                .filter(|k| *k != "tailwind" && *k != "shadcn")
+                .cloned()
+                .collect::<Vec<String>>()
+        })
+        .unwrap_or_else(|e| {
+            log::error!("overrides lock poisoned at startup: {}", e);
+            Vec::new()
+        });
     for id in extra_ids {
         ensure_site_server(&id, Arc::clone(&store));
     }
@@ -97,17 +102,23 @@ pub fn run() {
             }
             // Re-scan verified packs_dir to ensure any previously downloaded packs are fully loaded
             {
-                let mut guard = store_clone.overrides.write().unwrap();
-                load_disk_overrides(&mut guard);
+                match error::write_guard(&store_clone.overrides) {
+                    Ok(mut guard) => load_disk_overrides(&mut guard),
+                    Err(e) => log::error!("overrides lock poisoned during setup: {}", e),
+                }
             }
-            let extra_ids: Vec<String> = store_clone
-                .overrides
-                .read()
-                .unwrap()
-                .keys()
-                .filter(|k| *k != "tailwind" && *k != "shadcn")
-                .cloned()
-                .collect();
+            let extra_ids = error::read_guard(&store_clone.overrides)
+                .map(|guard| {
+                    guard
+                        .keys()
+                        .filter(|k| *k != "tailwind" && *k != "shadcn")
+                        .cloned()
+                        .collect::<Vec<String>>()
+                })
+                .unwrap_or_else(|e| {
+                    log::error!("overrides lock poisoned during setup: {}", e);
+                    Vec::new()
+                });
             for id in extra_ids {
                 ensure_site_server(&id, Arc::clone(&store_clone));
             }

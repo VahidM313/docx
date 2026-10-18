@@ -7,6 +7,7 @@ use std::thread;
 use std::time::Duration;
 
 use crate::config::{APP_BUILD_COMMIT, RELEASE_BASE_URL, TRAILER_MAGIC};
+use crate::error::{read_guard, DocxError};
 use crate::pack::get_packs_dir;
 use crate::server::AppState;
 use crate::update::{curl_download_with_progress, DownloadProgressPayload};
@@ -44,13 +45,11 @@ fn commits_match(a: &str, b: &str) -> bool {
 
 fn read_saved_local_app_commit() -> Option<String> {
     let path = get_packs_dir().join("app-manifest.local.json");
-    if let Ok(bytes) = fs::read(path) {
-        if let Ok(manifest) = serde_json::from_slice::<AppManifestRemote>(&bytes) {
-            if !manifest.commit.trim().is_empty() {
+    if let Ok(bytes) = fs::read(path)
+        && let Ok(manifest) = serde_json::from_slice::<AppManifestRemote>(&bytes)
+            && !manifest.commit.trim().is_empty() {
                 return Some(manifest.commit);
             }
-        }
-    }
     None
 }
 
@@ -102,11 +101,11 @@ pub(crate) async fn self_update_app(
     #[cfg(all(desktop, target_os = "windows"))]
     {
     let store = Arc::clone(&state.store);
-    tauri::async_runtime::spawn_blocking(move || {
+    tauri::async_runtime::spawn_blocking(move || -> crate::error::Result<String> {
         use std::os::windows::process::CommandExt;
         use tauri::Emitter;
 
-        let exe_path = std::env::current_exe().map_err(|e| e.to_string())?;
+        let exe_path = std::env::current_exe()?;
         let _ = fs::remove_file(exe_path.with_extension("old.exe"));
         let _ = fs::remove_file(exe_path.with_extension("new.exe"));
 
@@ -146,7 +145,7 @@ pub(crate) async fn self_update_app(
         );
 
         let mut trailer_payload: Vec<u8> = Vec::new();
-        let guard = store.overrides.read().unwrap();
+        let guard = read_guard(&store.overrides)?;
         for pack in guard.values() {
             if let Some(bytes) = pack.read_full_pack_bytes() {
                 let len = bytes.len() as u32;
@@ -164,7 +163,7 @@ pub(crate) async fn self_update_app(
         }
 
         fs::write(&staged_exe_path, &new_exe_bytes)
-            .map_err(|e| format!("Failed to stage updated Docx.exe in TEMP: {}", e))?;
+            .map_err(|e| DocxError::io_path(&staged_exe_path, &e))?;
 
         // Write a hidden background updater script in %TEMP% that waits for process exit,
         // overwrites Docx.exe in-place (zero .old.exe files!), and immediately relaunches Docx.exe
@@ -221,7 +220,8 @@ pub(crate) async fn self_update_app(
         ))
     })
     .await
-    .map_err(|e| e.to_string())?
+    .map_err(|e| format!("Task join error: {}", e))?
+    .map_err(|e| e.to_string())
     }
 }
 

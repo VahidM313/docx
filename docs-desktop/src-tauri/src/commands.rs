@@ -27,7 +27,9 @@ pub struct PackStatusInfo {
 
 #[tauri::command]
 pub(crate) fn check_servers(state: tauri::State<'_, AppState>) -> ServerStatus {
-    let ports = state.store.site_ports.read().unwrap().clone();
+    let ports = crate::error::read_guard(&state.store.site_ports)
+        .map(|g| g.clone())
+        .unwrap_or_default();
     ServerStatus {
         tailwind: true,
         shadcn: true,
@@ -42,8 +44,14 @@ pub(crate) fn check_servers(state: tauri::State<'_, AppState>) -> ServerStatus {
 #[tauri::command]
 pub(crate) fn get_installed_packs(state: tauri::State<'_, AppState>) -> Vec<PackStatusInfo> {
     let mut list = Vec::new();
-    let guard = state.store.overrides.read().unwrap();
-    let ports = state.store.site_ports.read().unwrap();
+    let Ok(guard) = crate::error::read_guard(&state.store.overrides) else {
+        log::error!("overrides lock poisoned; installed-pack list unavailable");
+        return list;
+    };
+    let Ok(ports) = crate::error::read_guard(&state.store.site_ports) else {
+        log::error!("site-ports lock poisoned; installed-pack list unavailable");
+        return list;
+    };
 
     for (site_id, prefix, default_name, default_ver) in [
         ("tailwind", "tw:", "Tailwind CSS", "v4.3.0"),
@@ -169,7 +177,7 @@ pub(crate) fn fetch_remote_registry(state: tauri::State<'_, AppState>) -> Result
         Ok(b) => b,
         Err(e) => {
             let local_reg = get_packs_dir().join("registry.json");
-            fs::read(&local_reg).map_err(|_| e)?
+            fs::read(&local_reg).map_err(|_| e.to_string())?
         }
     };
     let parsed_raw: Vec<RemoteRegistryEntryRaw> =
@@ -182,7 +190,7 @@ pub(crate) fn fetch_remote_registry(state: tauri::State<'_, AppState>) -> Result
                 .map_err(|e| e.to_string())?
         };
 
-    let guard = state.store.overrides.read().unwrap();
+    let guard = crate::error::read_guard(&state.store.overrides).map_err(|e| e.to_string())?;
     let mut out = Vec::with_capacity(parsed_raw.len());
     for item in parsed_raw {
         if get_site_origin_and_entry(&item.id).is_none() {
@@ -266,8 +274,12 @@ pub(crate) fn delete_docpack(site_id: String, state: tauri::State<'_, AppState>)
     let _ = fs::remove_file(&search_path);
 
     {
-        let mut guard = state.store.overrides.write().unwrap();
-        guard.remove(&site_id);
+        match crate::error::write_guard(&state.store.overrides) {
+            Ok(mut guard) => {
+                guard.remove(&site_id);
+            }
+            Err(e) => return Err(e.to_string()),
+        }
     }
 
     Ok(format!("Deleted documentation pack for '{}'", site_id))
@@ -289,7 +301,7 @@ pub(crate) fn bundle_into_single_exe(state: tauri::State<'_, AppState>) -> Resul
         let old_trailer_len = u64::from_le_bytes(
             exe_bytes[exe_bytes.len() - 16..exe_bytes.len() - 8]
                 .try_into()
-                .unwrap(),
+                .unwrap_or([0u8; 8]),
         ) as usize;
         if exe_bytes.len() >= 16 + old_trailer_len {
             exe_bytes.truncate(exe_bytes.len() - 16 - old_trailer_len);
@@ -297,7 +309,7 @@ pub(crate) fn bundle_into_single_exe(state: tauri::State<'_, AppState>) -> Resul
     }
 
     let mut trailer_payload: Vec<u8> = Vec::new();
-    let guard = state.store.overrides.read().unwrap();
+    let guard = crate::error::read_guard(&state.store.overrides).map_err(|e| e.to_string())?;
     for pack in guard.values() {
         if let Some(bytes) = pack.read_full_pack_bytes() {
             let len = bytes.len() as u32;

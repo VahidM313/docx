@@ -37,11 +37,10 @@ fn fetch_live_fallback(
     store: &AssetStore,
 ) -> Option<(String, bool, Vec<u8>)> {
     let cache_key = format!("{}:{}", site_key, raw_target);
-    if let Ok(guard) = store.fallback_cache.read() {
-        if let Some((mime, bytes)) = guard.get(&cache_key) {
+    if let Ok(guard) = store.fallback_cache.read()
+        && let Some((mime, bytes)) = guard.get(&cache_key) {
             return Some((mime.clone(), false, bytes.clone()));
         }
-    }
 
     let (origin, entry_path) = get_site_origin_and_entry(site_key)?;
     let target_url = if decoded_path == "/" || decoded_path == "/docs" {
@@ -99,8 +98,8 @@ fn resolve_from_store(
         decoded_path.trim_end_matches(".html").to_string(),
     ];
 
-    if decoded_path == "/" || decoded_path == "/docs" {
-        if let Some((_, entry_path)) = get_site_origin_and_entry(site_id) {
+    if (decoded_path == "/" || decoded_path == "/docs")
+        && let Some((_, entry_path)) = get_site_origin_and_entry(site_id) {
             let trimmed = entry_path.trim_end_matches('/');
             if !trimmed.is_empty() {
                 candidates.push(entry_path.to_string());
@@ -110,7 +109,6 @@ fn resolve_from_store(
             candidates.push("/".to_string());
             candidates.push("/index.html".to_string());
         }
-    }
 
     if site_id == "qt" && decoded_path.starts_with("/qt/") {
         let qt6 = decoded_path.replacen("/qt/", "/qt-6/", 1);
@@ -170,8 +168,8 @@ fn resolve_from_store(
         ));
     }
 
-    if let Ok(guard) = store.overrides.read() {
-        if let Some(pack) = guard.get(site_id) {
+    if let Ok(guard) = store.overrides.read()
+        && let Some(pack) = guard.get(site_id) {
             let mut entry_opt = None;
             for c in &candidates {
                 if let Some(found) = pack.manifest.routes.get(c) {
@@ -193,13 +191,11 @@ fn resolve_from_store(
                     }
                 }
             }
-            if let Some(entry) = entry_opt {
-                if let Some(chunk_bytes) = pack.read_chunk(entry.offset, entry.length) {
+            if let Some(entry) = entry_opt
+                && let Some(chunk_bytes) = pack.read_chunk(entry.offset, entry.length) {
                     return Some((entry.mime.clone(), entry.gzipped, chunk_bytes));
                 }
-            }
         }
-    }
 
     let lookup_key = format!("{}:{}", base_prefix, decoded_path);
     let entry_opt = store.base_manifest.get(&lookup_key).or_else(|| {
@@ -331,13 +327,31 @@ fn handle_client(mut stream: TcpStream, site_key: String, store: Arc<AssetStore>
 
 
 pub(crate) fn ensure_site_server(site_id: &str, store: Arc<AssetStore>) -> u16 {
-    if let Ok(guard) = store.site_ports.read() {
-        if let Some(&port) = guard.get(site_id) {
+    // Phase 2 will replace this with a single multiplexing server; for now the
+    // per-site listener stays, but binding never panics — a bind failure is
+    // logged and surfaced to callers/UI as "port 0" (server unavailable).
+    if let Ok(guard) = store.site_ports.read()
+        && let Some(&port) = guard.get(site_id) {
             return port;
         }
-    }
-    let listener = TcpListener::bind("127.0.0.1:0").expect("Failed to bind embedded HTTP server");
-    let port = listener.local_addr().unwrap().port();
+    let listener = match TcpListener::bind("127.0.0.1:0") {
+        Ok(l) => l,
+        Err(e) => {
+            log::error!("embedded HTTP server bind failed for '{}': {}", site_id, e);
+            return 0;
+        }
+    };
+    let port = match listener.local_addr() {
+        Ok(a) => a.port(),
+        Err(e) => {
+            log::error!(
+                "embedded HTTP server local_addr failed for '{}': {}",
+                site_id,
+                e
+            );
+            return 0;
+        }
+    };
     let key_owned = site_id.to_string();
 
     if let Ok(mut guard) = store.site_ports.write() {

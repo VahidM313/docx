@@ -61,9 +61,8 @@ pub(crate) fn get_extra_search_entries(state: tauri::State<'_, AppState>) -> Vec
                 .and_then(|n| n.to_str())
                 .map(|s| s.ends_with(".search.json"))
                 .unwrap_or(false)
-            {
-                if let Ok(bytes) = fs::read(&path) {
-                    if let Ok(items) = serde_json::from_slice::<Vec<serde_json::Value>>(&bytes) {
+                && let Ok(bytes) = fs::read(&path)
+                    && let Ok(items) = serde_json::from_slice::<Vec<serde_json::Value>>(&bytes) {
                         for item in &items {
                             if let Some(site) = item.get("site").and_then(|v| v.as_str()) {
                                 covered_sites.insert(site.to_string());
@@ -71,13 +70,17 @@ pub(crate) fn get_extra_search_entries(state: tauri::State<'_, AppState>) -> Vec
                         }
                         all.extend(items);
                     }
-                }
-            }
         }
     }
 
     // Fallback: synthesize deep search entries from HTML chunks for any installed override pack without a .search.json file on disk
-    let guard = state.store.overrides.read().unwrap();
+    let guard = match crate::error::read_guard(&state.store.overrides) {
+        Ok(g) => g,
+        Err(e) => {
+            log::error!("overrides lock poisoned; extra search unavailable: {}", e);
+            return all;
+        }
+    };
     for (site_id, pack) in guard.iter() {
         if covered_sites.contains(site_id) {
             continue;
@@ -101,8 +104,8 @@ pub(crate) fn get_extra_search_entries(state: tauri::State<'_, AppState>) -> Vec
             let (mut title, category) = humanize_route_title(route, &pack.manifest.name);
             let mut headings: Vec<String> = Vec::new();
             let mut keywords: Vec<String> = Vec::new();
-            if let Some(entry) = pack.manifest.routes.get(route) {
-                if let Some(raw) = pack.read_chunk(entry.offset, entry.length) {
+            if let Some(entry) = pack.manifest.routes.get(route)
+                && let Some(raw) = pack.read_chunk(entry.offset, entry.length) {
                     let html = if entry.gzipped {
                         let mut dec = flate2::read::GzDecoder::new(&raw[..]);
                         let mut s = String::new();
@@ -111,8 +114,8 @@ pub(crate) fn get_extra_search_entries(state: tauri::State<'_, AppState>) -> Vec
                     } else {
                         String::from_utf8_lossy(&raw).into_owned()
                     };
-                    if let Some(ts) = html.find("<title") {
-                        if let Some(gt) = html[ts..].find('>') {
+                    if let Some(ts) = html.find("<title")
+                        && let Some(gt) = html[ts..].find('>') {
                             let start = ts + gt + 1;
                             if let Some(te) = html[start..].find("</title>") {
                                 let t_clean = html[start..start + te].trim();
@@ -121,7 +124,6 @@ pub(crate) fn get_extra_search_entries(state: tauri::State<'_, AppState>) -> Vec
                                 }
                             }
                         }
-                    }
                     for tag in ["<code", "<tt", "<h1", "<h2", "<h3"] {
                         let mut pos = 0;
                         while let Some(idx) = html[pos..].find(tag) {
@@ -148,7 +150,6 @@ pub(crate) fn get_extra_search_entries(state: tauri::State<'_, AppState>) -> Vec
                         }
                     }
                 }
-            }
             let item = serde_json::json!({
                 "title": title,
                 "category": category,
@@ -161,11 +162,10 @@ pub(crate) fn get_extra_search_entries(state: tauri::State<'_, AppState>) -> Vec
             site_entries.push(item.clone());
             all.push(item);
         }
-        if !site_entries.is_empty() {
-            if let Ok(json_bytes) = serde_json::to_vec(&site_entries) {
+        if !site_entries.is_empty()
+            && let Ok(json_bytes) = serde_json::to_vec(&site_entries) {
                 let _ = fs::write(packs_dir.join(format!("{}.search.json", site_id)), json_bytes);
             }
-        }
     }
 
     all
