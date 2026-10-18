@@ -380,7 +380,7 @@
                 </div>
                 <h1 class="hub-title">Docx Developer Hub</h1>
                 <p class="hub-subtitle">
-                  Browse, instant-search, install, and partial-update any of the <strong>123 offline documentation packs</strong> from GitHub Releases — or bundle your installed packs into a single standalone <code>Docx.exe</code>.
+                  Instant offline access, lightning search, and delta updates across <strong>123 developer documentation ecosystems</strong>.
                 </p>
               </div>
             </div>
@@ -405,6 +405,15 @@
                   <span id="btnDownloadAllDocsLabel">⬇ Download All 123 Docs</span>
                 </button>
 
+                <button id="btnCategoryDownload" class="hub-action-btn hub-action-cat-dl" style="display: none;" title="Download all uninstalled documentation packs in this category">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span id="btnCategoryDownloadLabel">⬇ Install All in Category</span>
+                </button>
+
                 <button id="btnRefreshRegistry" class="hub-action-btn">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <polyline points="23 4 23 10 17 10"></polyline>
@@ -413,7 +422,7 @@
                   <span>Check Updates</span>
                 </button>
 
-                <button id="btnSelfUpdateApp" class="hub-action-btn hub-action-accent" style="display: none;" title="Update only the ~4 MB Docx-core.exe binary in-place and restart automatically while preserving all local/embedded documentation packs">
+                <button id="btnSelfUpdateApp" class="hub-action-btn hub-action-accent desktop-only-action" style="display: none;" title="Update only the ~4 MB Docx-core.exe binary in-place and restart automatically while preserving all local/embedded documentation packs">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"></path>
                   </svg>
@@ -424,11 +433,11 @@
                   <span>⚡ Update All Outdated Packs</span>
                 </button>
 
-                <button id="btnBundleSingleExe" class="hub-action-btn hub-action-bundle" title="Pack all installed .docpack files directly into Desktop\Docx.exe">
+                <button id="btnBundleSingleExe" class="hub-action-btn hub-action-bundle desktop-only-action" title="Pack all installed .docpack files directly into standalone Desktop\Docx.exe">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
                   </svg>
-                  <span>Bundle Into Single Docx.exe</span>
+                  <span>Export Portable .exe</span>
                 </button>
               </div>
             </div>

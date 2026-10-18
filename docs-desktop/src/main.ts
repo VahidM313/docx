@@ -436,16 +436,16 @@ let browserTabs: BrowserTab[] = [
 ];
 let activeBrowserTabId: string = "tab-home";
 
-const DEFAULT_PINNED_DOCS = ["tailwind", "shadcn", "react", "nextjs", "typescript", "rust", "python"];
+const DEFAULT_PINNED_DOCS: string[] = [];
 let pinnedSiteIds: string[] = (() => {
   try {
-    const raw = localStorage.getItem("docx_pinned_docs_v1");
+    const raw = localStorage.getItem("docx_pinned_docs_v2");
     if (raw) {
       const parsed = JSON.parse(raw);
       if (Array.isArray(parsed)) return parsed.filter((x) => typeof x === "string");
     }
   } catch {}
-  return [...DEFAULT_PINNED_DOCS];
+  return [];
 })();
 let drawerFilterQuery: string = "";
 let rightTabsCompact: boolean = (() => {
@@ -821,7 +821,7 @@ function isDocPinned(siteId: string): boolean {
 
 function savePinnedSitesAndRender() {
   try {
-    localStorage.setItem("docx_pinned_docs_v1", JSON.stringify(pinnedSiteIds));
+    localStorage.setItem("docx_pinned_docs_v2", JSON.stringify(pinnedSiteIds));
   } catch {}
   const sites = buildUnifiedSitesList();
   renderServerRail(sites);
@@ -1932,6 +1932,32 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
     }
   }
 
+  const btnCatDl = document.getElementById("btnCategoryDownload") as HTMLButtonElement | null;
+  const btnCatDlLabel = document.getElementById("btnCategoryDownloadLabel");
+  const isSpecificCat =
+    selectedHubCategory !== "all" &&
+    selectedHubCategory !== "installed" &&
+    selectedHubCategory !== "updates";
+
+  if (btnCatDl && btnCatDlLabel) {
+    if (isSpecificCat) {
+      const catSites = sites.filter((s) => s.category === selectedHubCategory);
+      const uninstalledCatSites = catSites.filter((s) => !s.installed);
+      btnCatDl.style.display = "inline-flex";
+      if (uninstalledCatSites.length > 0) {
+        btnCatDlLabel.textContent = `⬇ Install All ${selectedHubCategory} (${uninstalledCatSites.length} left)`;
+        btnCatDl.classList.remove("all-installed");
+        btnCatDl.title = `Install ${uninstalledCatSites.length} remaining documentation packs in ${selectedHubCategory}`;
+      } else {
+        btnCatDlLabel.textContent = `✓ All ${catSites.length} in ${selectedHubCategory} Installed`;
+        btnCatDl.classList.add("all-installed");
+        btnCatDl.title = `All ${catSites.length} documentation packs in ${selectedHubCategory} are installed`;
+      }
+    } else {
+      btnCatDl.style.display = "none";
+    }
+  }
+
   const catCountAll = document.getElementById("catCountAll");
   const catCountInstalled = document.getElementById("catCountInstalled");
   const catCountUpdates = document.getElementById("catCountUpdates");
@@ -2074,6 +2100,13 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
                         : "↻ Sync"
                     }
                   </button>
+                  <button
+                    class="site-btn-delete"
+                    data-card-delete="${escapeHtml(s.id)}"
+                    title="Delete local .docpack for ${escapeHtml(s.name)} to free storage space"
+                  >
+                    🗑
+                  </button>
                 `
                 : `
                   <button class="site-btn-install" data-card-install="${escapeHtml(s.id)}" ${dl ? "disabled" : ""}>
@@ -2153,6 +2186,31 @@ function renderHomeHub(sites: UnifiedSiteEntry[]) {
     btn.addEventListener("click", async () => {
       const siteId = btn.getAttribute("data-card-install");
       if (siteId) await runGitHubPackUpdate(siteId, true);
+    });
+  });
+
+  gridEl.querySelectorAll("[data-card-delete]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const siteId = btn.getAttribute("data-card-delete");
+      if (!siteId) return;
+      const currentSites = buildUnifiedSitesList();
+      const site = currentSites.find((s) => s.id === siteId);
+      const name = site?.name || siteId;
+      if (
+        !confirm(
+          `Delete downloaded documentation for "${name}"?\nThis removes the local .docpack file to free disk space.`
+        )
+      ) {
+        return;
+      }
+      btn.textContent = "⏳...";
+      btn.setAttribute("disabled", "true");
+      try {
+        await invoke("delete_docpack", { siteId });
+        await syncLocalPacksOnlyAndRender();
+      } catch (err) {
+        alert(`Failed to delete: ${String(err)}`);
+      }
     });
   });
 }
@@ -2390,6 +2448,57 @@ async function downloadAllOrRemainingDocs() {
   }
 }
 
+async function downloadCategoryDocs() {
+  if (
+    selectedHubCategory === "all" ||
+    selectedHubCategory === "installed" ||
+    selectedHubCategory === "updates"
+  ) {
+    return;
+  }
+  const btn = document.getElementById("btnCategoryDownload") as HTMLButtonElement | null;
+  const label = document.getElementById("btnCategoryDownloadLabel");
+  const banner = document.getElementById("deltaStatusBanner");
+
+  const allSites = buildUnifiedSitesList();
+  const catSites = allSites.filter((s) => s.category === selectedHubCategory);
+  const remaining = catSites.filter((s) => !s.installed);
+  const outdated = catSites.filter((s) => s.updateAvailable);
+  const targets = remaining.length > 0 ? remaining : outdated;
+
+  if (targets.length === 0) {
+    if (banner) {
+      banner.style.display = "block";
+      banner.textContent = `✓ All ${catSites.length} documentation packs in "${selectedHubCategory}" are already installed and up to date!`;
+    }
+    return;
+  }
+
+  if (btn) btn.disabled = true;
+  if (label) label.textContent = `⏳ Downloading ${targets.length} Docs in ${selectedHubCategory}...`;
+
+  const res = await runBatchPackUpdatesInParallel(
+    targets,
+    PARALLEL_DOWNLOAD_WORKERS,
+    (done, total, doneMb, totalMb, lastSite, ok) => {
+      if (label) {
+        label.textContent = `⏳ [${done}/${total}] (${doneMb.toFixed(1)} / ${totalMb} MB)`;
+      }
+      if (banner) {
+        banner.style.display = "block";
+        banner.textContent = `⚡ Category Download (${selectedHubCategory}) [${done}/${total}]: ${ok ? "✓" : "❌"} ${lastSite.name} — ${doneMb.toFixed(1)} MB...`;
+      }
+    }
+  );
+
+  if (btn) btn.disabled = false;
+  await syncAllPacksAndRender(false);
+  if (banner) {
+    banner.style.display = "block";
+    banner.textContent = `✓ Completed downloading ${res.succeeded}/${targets.length} docs in "${selectedHubCategory}"!`;
+  }
+}
+
 // Custom Window Controls via Tauri Backend Commands
 async function toggleAppFullscreen() {
   try {
@@ -2448,6 +2557,10 @@ function setupWindowControls() {
   });
 }
 
+function isMobileView(): boolean {
+  return window.innerWidth <= 768;
+}
+
 let lastPointerX = -1;
 let lastPointerY = -1;
 let rightTabsCloseTimer: number | null = null;
@@ -2471,6 +2584,7 @@ function isPointerOverHomeIcon(yOverride?: number): boolean {
 }
 
 function openHoverRightTabs() {
+  if (isMobileView()) return;
   if (!rightTabsSidebar || !featureTabsEnabled || !featureTabHoverExpand) return;
   if (rightTabsCloseTimer) {
     window.clearTimeout(rightTabsCloseTimer);
@@ -2498,6 +2612,7 @@ function scheduleCloseHoverRightTabs(delay = 15) {
 }
 
 function openHoverDrawer() {
+  if (isMobileView()) return;
   if (drawerHoverCloseTimer) {
     window.clearTimeout(drawerHoverCloseTimer);
     drawerHoverCloseTimer = null;
@@ -2534,16 +2649,17 @@ function toggleMobileDrawer(forceOpen?: boolean) {
   const shouldOpen = typeof forceOpen === "boolean" ? forceOpen : !isCurrentlyOpen;
   const backdrop = document.getElementById("mobileSidebarBackdrop");
   if (shouldOpen) {
-    discordSidebar.classList.add("open", "mobile-open");
+    discordSidebar.classList.add("mobile-open");
     backdrop?.classList.add("visible");
   } else {
-    discordSidebar.classList.remove("open", "mobile-open");
+    discordSidebar.classList.remove("mobile-open");
     backdrop?.classList.remove("visible");
   }
 }
 
 // Discord Hover Sidebar & Collapsible Custom Topbar Logic
 function openHoverSidebar(checkHomeY?: number) {
+  if (isMobileView()) return;
   if (sidebarCloseTimer) {
     window.clearTimeout(sidebarCloseTimer);
     sidebarCloseTimer = null;
@@ -2641,6 +2757,7 @@ function scheduleClosePeekTopbar(delay = 350) {
 }
 
 function handleGlobalPointerMove(e: MouseEvent | PointerEvent) {
+  if (isMobileView()) return;
   lastPointerX = e.clientX;
   lastPointerY = e.clientY;
 
@@ -2678,6 +2795,7 @@ function setupSidebarAndTopbarHover() {
 
   // Catch fast cursor exits from the doc viewport/iframe into either sidebar
   const onViewportLeave = (e: MouseEvent | PointerEvent) => {
+    if (isMobileView()) return;
     lastPointerX = e.clientX;
     lastPointerY = e.clientY;
     if (!viewportContainer) return;
@@ -2695,18 +2813,24 @@ function setupSidebarAndTopbarHover() {
   viewportContainer?.addEventListener("pointerleave", onViewportLeave, { passive: true });
 
   leftEdgeSensor.addEventListener("mouseenter", (e) => {
+    if (isMobileView()) return;
     lastPointerX = e.clientX;
     lastPointerY = e.clientY;
     openHoverSidebar(e.clientY);
   });
   leftEdgeSensor.addEventListener("mousemove", (e) => {
+    if (isMobileView()) return;
     lastPointerX = e.clientX;
     lastPointerY = e.clientY;
     openHoverSidebar(e.clientY);
   });
-  leftEdgeSensor.addEventListener("mouseleave", () => scheduleCloseHoverSidebar(35));
+  leftEdgeSensor.addEventListener("mouseleave", () => {
+    if (isMobileView()) return;
+    scheduleCloseHoverSidebar(35);
+  });
 
   discordSidebar.addEventListener("mouseenter", (e) => {
+    if (isMobileView()) return;
     lastPointerX = e.clientX;
     lastPointerY = e.clientY;
     openHoverSidebar(e.clientY);
@@ -3941,6 +4065,10 @@ function setupEventListeners() {
     await downloadAllOrRemainingDocs();
   });
 
+  document.getElementById("btnCategoryDownload")?.addEventListener("click", async () => {
+    await downloadCategoryDocs();
+  });
+
   btnAlertDismiss?.addEventListener("click", () => {
     if (updateAlertBanner) updateAlertBanner.style.display = "none";
   });
@@ -4129,6 +4257,7 @@ function setupEventListeners() {
     } else if (e.data.type === "DOCX_ZOOM_RESET") {
       setReaderZoom(100);
     } else if (e.data.type === "HOVER_LEFT_EDGE") {
+      if (isMobileView()) return;
       const iframeY = typeof e.data.clientY === "number" ? e.data.clientY : -1;
       const vTop = viewportContainer ? viewportContainer.getBoundingClientRect().top : 38;
       const parentY = iframeY >= 0 ? vTop + iframeY : lastPointerY;
@@ -4139,12 +4268,14 @@ function setupEventListeners() {
         openHoverDrawer();
       }
     } else if (e.data.type === "HOVER_RIGHT_EDGE") {
+      if (isMobileView()) return;
       if (rightTabsSidebar) {
         const rRect = rightTabsSidebar.getBoundingClientRect();
         lastPointerX = rRect.left + 12;
       }
       openHoverRightTabs();
     } else if (e.data.type === "IFRAME_CURSOR_CENTER") {
+      if (isMobileView()) return;
       lastPointerX = 420;
       if (rightTabsSidebar?.classList.contains("hover-open") && !rightTabsSidebar.matches(":hover")) {
         scheduleCloseHoverRightTabs(0);
@@ -4157,6 +4288,7 @@ function setupEventListeners() {
         scheduleCloseHoverSidebar(0);
       }
     } else if (e.data.type === "HOVER_TOP_EDGE") {
+      if (isMobileView()) return;
       peekTopbar();
     } else if (e.data.type === "IFRAME_INTERACT") {
       closeFeaturesPopover();

@@ -2637,6 +2637,9 @@ html.rust #mdbook-body-container .hljs-keyword, html.rust #mdbook-body-container
   }, true);
   var lastL = 0, lastR = 0, lastT = 0, lastC = 0;
   function checkIframeEdgeHover(e, isLeave) {
+    if (window.innerWidth <= 768 || ('ontouchstart' in window && navigator.maxTouchPoints > 0)) {
+      return;
+    }
     var now = Date.now();
     var w = window.innerWidth || document.documentElement.clientWidth || 1000;
     var leftThresh = isLeave ? 80 : 14;
@@ -4103,6 +4106,25 @@ async fn test_partial_delta_update(
 
 
 #[tauri::command]
+fn delete_docpack(site_id: String, state: tauri::State<'_, AppState>) -> Result<String, String> {
+    let packs_dir = get_packs_dir();
+    let docpack_path = packs_dir.join(format!("{}.docpack", site_id));
+    let manifest_path = packs_dir.join(format!("{}.manifest.json", site_id));
+    let search_path = packs_dir.join(format!("{}.search.json", site_id));
+
+    let _ = fs::remove_file(&docpack_path);
+    let _ = fs::remove_file(&manifest_path);
+    let _ = fs::remove_file(&search_path);
+
+    {
+        let mut guard = state.store.overrides.write().unwrap();
+        guard.remove(&site_id);
+    }
+
+    Ok(format!("Deleted documentation pack for '{}'", site_id))
+}
+
+#[tauri::command]
 fn bundle_into_single_exe(state: tauri::State<'_, AppState>) -> Result<String, String> {
     #[cfg(not(desktop))]
     {
@@ -4582,6 +4604,7 @@ pub fn run() {
             install_or_update_from_github,
             test_partial_delta_update,
             bundle_into_single_exe,
+            delete_docpack,
             check_app_update,
             self_update_app,
             get_system_theme,

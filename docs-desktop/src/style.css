@@ -2457,6 +2457,41 @@ body.tabs-feature-off .viewport-container {
   color: #ffffff;
 }
 
+.site-btn-delete {
+  padding: 6px 9px;
+  border-radius: 8px;
+  border: 1px solid rgba(239, 68, 68, 0.28);
+  background: rgba(239, 68, 68, 0.08);
+  color: #f87171;
+  font-size: 0.74rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.site-btn-delete:hover {
+  background: rgba(239, 68, 68, 0.25);
+  border-color: #ef4444;
+  color: #ffffff;
+}
+
+.hub-action-cat-dl {
+  background: rgba(168, 85, 247, 0.15);
+  border-color: rgba(168, 85, 247, 0.45);
+  color: #c084fc;
+  font-weight: 700;
+}
+
+.hub-action-cat-dl:hover {
+  background: #a855f7;
+  border-color: #a855f7;
+  color: #000000;
+}
+
 /* =========================================================
    5. Universal Search Modal (Pure Carbon Black)
    ========================================================= */
@@ -3515,7 +3550,9 @@ body.font-feature-off {
   #btnToggleTopbar,
   #btnRailToggleTopbar,
   #btnPinSidebar,
-  #btnToggleDrawer {
+  #btnToggleDrawer,
+  #btnBundleSingleExe,
+  .desktop-only-action {
     display: none !important;
   }
 
@@ -3670,11 +3707,17 @@ body.font-feature-off {
     transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.22s ease !important;
   }
 
-  .discord-sidebar.open,
+  /* Mobile: strictly require .mobile-open to reveal the drawer. Ignore desktop .open! */
   .discord-sidebar.mobile-open {
     transform: translateX(0) !important;
     opacity: 1 !important;
     pointer-events: auto !important;
+  }
+
+  .discord-sidebar:not(.mobile-open) {
+    transform: translateX(-100%) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
   }
 
   .discord-server-rail {
