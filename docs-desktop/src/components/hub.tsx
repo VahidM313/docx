@@ -6,6 +6,7 @@ import { Button, Badge, Input } from "../ui";
 import {
   ArrowDownToLine,
   ArrowUpCircle,
+  HardDrive,
   HardDriveDownload,
   Pin,
   PinOff,
@@ -27,6 +28,15 @@ export default function HomeHub() {
     () => entries.reduce((a, e) => a + (e.remote?.sizeBytes ?? 0) / (1024 * 1024), 0),
     [entries],
   );
+  const installedSizeMb = React.useMemo(
+    () => installed.reduce((a, e) => a + (e.local?.size_mb ?? 0), 0),
+    [installed],
+  );
+  const outdatedSizeMb = React.useMemo(
+    () => outdated.reduce((a, e) => a + (e.remote?.sizeBytes ?? 0) / (1024 * 1024), 0),
+    [outdated],
+  );
+  const installedPercent = entries.length ? (installed.length / entries.length) * 100 : 0;
 
   const filtered = React.useMemo(() => {
     const ql = q.toLowerCase();
@@ -63,8 +73,16 @@ export default function HomeHub() {
           <StatCard label="Installed" value={installed.length} suffix={`/ ${entries.length}`}>
             <HardDriveDownload size={15} />
           </StatCard>
-          <StatCard label="Updates ready" value={outdated.length} highlight={outdated.length > 0}>
+          <StatCard
+            label="Updates ready"
+            value={outdated.length}
+            suffix={outdatedSizeMb > 0 ? `· ${outdatedSizeMb.toFixed(0)} MB` : undefined}
+            highlight={outdated.length > 0}
+          >
             <ArrowUpCircle size={15} />
+          </StatCard>
+          <StatCard label="Installed size" value={Math.round(installedSizeMb)} suffix="MB" subtle>
+            <HardDrive size={15} />
           </StatCard>
           <StatCard label="Full library" value={Math.round(totalMb)} suffix="MB" subtle>
             <Zap size={15} />
@@ -72,8 +90,14 @@ export default function HomeHub() {
 
           <div className="ml-auto flex gap-2">
             {outdated.length > 0 && (
-              <Button variant="gradient" size="sm" className="gap-2" onClick={() => app.batchUpdateOutdated()}>
-                <ArrowUpCircle size={14} /> Update all ({outdated.length})
+              <Button
+                variant="gradient"
+                size="sm"
+                className="gap-2"
+                title={`Delta-downloads only changed chunks where possible`}
+                onClick={() => app.batchUpdateOutdated()}
+              >
+                <ArrowUpCircle size={14} /> Update all ({outdated.length} · {outdatedSizeMb.toFixed(0)} MB)
               </Button>
             )}
             <Button

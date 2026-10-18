@@ -1,8 +1,8 @@
 import * as React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useApp } from "../lib/store";
-import { search, ensureExtraEntries, highlight, type SearchEntry } from "../lib/search";
-import { getBrand, getSiteIconHtml } from "../lib/catalog";
+import { search, ensureExtraEntries, highlight, indexedCount, type SearchEntry } from "../lib/search";
+import { getBrand, getSiteIconHtml, SITE_MAP } from "../lib/catalog";
 import { Dialog, DialogContent } from "../ui";
 
 interface Hit {
@@ -13,6 +13,7 @@ interface Hit {
 export default function CommandPalette() {
   const app = useApp();
   const [q, setQ] = React.useState("");
+  const [debouncedQ, setDebouncedQ] = React.useState("");
   const [siteFilter, setSiteFilter] = React.useState<string | null>(null);
   const [hits, setHits] = React.useState<Hit[]>([]);
   const [cursor, setCursor] = React.useState(0);
@@ -22,6 +23,7 @@ export default function CommandPalette() {
   React.useEffect(() => {
     if (app.paletteOpen) {
       setQ("");
+      setDebouncedQ("");
       setSiteFilter(null);
       setHits([]);
       setCursor(0);
@@ -29,16 +31,31 @@ export default function CommandPalette() {
     }
   }, [app.paletteOpen]);
 
+  /* debounce typing so the scoring pass never runs per keystroke */
   React.useEffect(() => {
-    if (!q.trim()) {
+    const t = window.setTimeout(() => setDebouncedQ(q), 130);
+    return () => window.clearTimeout(t);
+  }, [q]);
+
+  React.useEffect(() => {
+    if (!debouncedQ.trim()) {
       setHits([]);
       return;
     }
-    const r = search(q, siteFilter ?? undefined, 60);
-    setHits(r);
-    setCursor(0);
-    if (r.length && r[0].entry.site) ensureExtraEntries(r[0].entry.site).then(() => setHits(search(q, siteFilter ?? undefined, 60)));
-  }, [q, siteFilter]);
+    const run = () => {
+      const r = search(debouncedQ, siteFilter ?? undefined, 120);
+      setHits(r);
+      setCursor(0);
+    };
+    run();
+    // make sure the first-hit site has its per-pack entries merged in, then rescore once
+    const firstSite = search(debouncedQ, siteFilter ?? undefined, 4)[0]?.entry.site;
+    if (firstSite) {
+      ensureExtraEntries(firstSite).then(() => {
+        if (SITE_MAP[firstSite]) run();
+      });
+    }
+  }, [debouncedQ, siteFilter]);
 
   React.useEffect(() => {
     if (!app.paletteOpen) return;
@@ -80,7 +97,7 @@ export default function CommandPalette() {
       if (!groups.has(name)) groups.set(name, []);
       groups.get(name)!.push(h);
     }
-    return [...groups.entries()].slice(0, 12);
+    return [...groups.entries()].slice(0, 20);
   }, [hits]);
 
   return (
@@ -91,7 +108,7 @@ export default function CommandPalette() {
             ref={inputRef}
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="Search 12,400+ pages across every installed site…"
+            placeholder={`Search ${indexedCount().toLocaleString()}+ offline pages — try "usestate" or "tokio spawn"`}
             className="h-10 w-full bg-transparent px-3 text-sm outline-none placeholder:text-muted-foreground"
             spellCheck={false}
           />
@@ -130,7 +147,7 @@ export default function CommandPalette() {
                 />
                 <span className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">{site}</span>
               </div>
-              {list.slice(0, 6).map((h) => {
+              {list.slice(0, 7).map((h) => {
                 const flatIndex = hits.indexOf(h);
                 return (
                   <motion.button
@@ -147,7 +164,7 @@ export default function CommandPalette() {
                     <div className="min-w-0 flex-1">
                       <div
                         className="truncate text-[13.5px] font-medium [&_.hlq]:bg-[var(--grad-b)]/20 [&_.hlq]:rounded [&_.hlq]:px-0.5 [&_.hlq]:font-bold [&_.hlq]:text-[var(--grad-b)]" 
-                        dangerouslySetInnerHTML={{ __html: highlight(h.entry.title, q) }}
+                        dangerouslySetInnerHTML={{ __html: highlight(h.entry.title, debouncedQ) }}
                       />
                       <div className="truncate text-[11px] text-muted-foreground">
                         {h.entry.path}

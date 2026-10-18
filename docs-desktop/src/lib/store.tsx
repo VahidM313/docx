@@ -7,6 +7,7 @@ import {
   type ServerStatus,
 } from "./tauri";
 import { SITES, SITE_MAP, getEntryPath, getSiteOrigin, EMBEDDED_SITE_IDS, type SiteBrand } from "./catalog";
+import { preloadInstalledSites } from "./search";
 
 /* ------------------------------------------------------------------ */
 /* Persistence helpers                                                 */
@@ -46,6 +47,9 @@ export interface DocBookmark {
 
 export type ThemeMode = "light" | "dark" | "system";
 
+/** Force mode overrides every site's dark setting when not "off". */
+export type ForceTheme = "off" | "dark" | "light";
+
 export interface FeatureFlags {
   siteTabs: boolean;
   themeSync: boolean;
@@ -83,9 +87,12 @@ interface AppState {
 
   systemDark: boolean;
   themeMode: ThemeMode;
+  forceTheme: ForceTheme;
   siteDark: Record<string, boolean>;
   flags: FeatureFlags;
   readerZoom: number;
+  topbarHidden: boolean;
+  sidebarHidden: boolean;
 
   packs: PackStatusInfo[];
   registry: RemoteRegistryItem[];
@@ -120,6 +127,11 @@ interface AppApi extends AppState {
   dismissSplash: () => void;
 
   setThemeMode: (m: ThemeMode) => void;
+  setForceTheme: (f: ForceTheme) => void;
+  cycleForceTheme: () => void;
+  setTopbarHidden: (v: boolean) => void;
+  setSidebarHidden: (v: boolean) => void;
+  effectiveSiteDark: (siteId: string) => boolean;
   toggleSiteDark: (siteId: string) => void;
   setFlag: (k: keyof FeatureFlags, v: boolean) => void;
   setReaderZoom: (z: number) => void;
@@ -172,6 +184,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       splash: { percent: 8, text: "Initializing offline engine…" },
       systemDark: true,
       themeMode: load<ThemeMode>("docx_theme_mode", "system"),
+      forceTheme: load<ForceTheme>("docx_force_theme", "off"),
       siteDark: load<Record<string, boolean>>("docx_site_dark", {}),
       flags: load<FeatureFlags>("docx_feature_flags_v1", {
         siteTabs: true,
@@ -179,6 +192,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         customFont: true,
       }),
       readerZoom: load<number>("docx_reader_zoom", 100),
+      topbarHidden: false,
+      sidebarHidden: false,
 
       packs: [],
       registry: [],
@@ -215,9 +230,42 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       setState({ themeMode: m });
     };
 
+    const setForceTheme = (f: ForceTheme) => {
+      save("docx_force_theme", f);
+      setState({ forceTheme: f });
+    };
+
+    const cycleForceTheme = () => {
+      const next: ForceTheme =
+        state.forceTheme === "off" ? "dark" : state.forceTheme === "dark" ? "light" : "off";
+      setForceTheme(next);
+      toast({
+        kind: "info",
+        message:
+          next === "dark"
+            ? "Force dark: every site renders dark"
+            : next === "light"
+              ? "Force light: every site renders light"
+              : "Force off: per-site theme respected",
+      });
+    };
+
+    const setTopbarHidden = (v: boolean) => setState({ topbarHidden: v });
+    const setSidebarHidden = (v: boolean) => setState({ sidebarHidden: v });
+
+    /** Is the app chrome dark right now (no force involvement). */
+    const appDark = (s: AppState) => s.themeMode === "dark" || (s.themeMode === "system" && s.systemDark);
+
+    /** Effective per-site dark, honoring the force override. */
+    const effectiveSiteDark = (siteId: string) => {
+      if (state.forceTheme === "dark") return true;
+      if (state.forceTheme === "light") return false;
+      return state.siteDark[siteId] ?? appDark(state);
+    };
+
     const toggleSiteDark = (siteId: string) =>
       setState((s) => {
-        const next = { ...s.siteDark, [siteId]: !(s.siteDark[siteId] ?? false) };
+        const next = { ...s.siteDark, [siteId]: !(s.siteDark[siteId] ?? appDark(s)) };
         save("docx_site_dark", next);
         return { siteDark: next };
       });
@@ -239,6 +287,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       try {
         const packs = await Tauri.getInstalledPacks();
         setState({ packs });
+        if (packs.length) void preloadInstalledSites(packs);
       } catch {}
       if (opts?.withRegistry !== false) {
         try {
@@ -499,6 +548,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       setSplash: (percent: number, text: string) => setState({ splash: { percent, text } }),
       dismissSplash: () => setState({ phase: "ready" }),
       setThemeMode,
+      setForceTheme,
+      cycleForceTheme,
+      setTopbarHidden,
+      setSidebarHidden,
+      effectiveSiteDark,
       toggleSiteDark,
       setFlag,
       setReaderZoom,

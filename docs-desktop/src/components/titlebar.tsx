@@ -6,7 +6,6 @@ import { Button, Switch, Tooltip, DropdownMenu, DropdownMenuTrigger, DropdownMen
 import {
   Minus,
   PanelLeft,
-  LayoutDashboard,
   X,
   Square,
   Copy,
@@ -17,6 +16,8 @@ import {
   Settings2,
   Download,
   Sparkles,
+  ChevronUp,
+  EyeOff,
 } from "lucide-react";
 import { type ReaderPanelsApi } from "./readerPanels";
 import { motion, AnimatePresence } from "framer-motion";
@@ -53,9 +54,15 @@ export default function Titlebar(props: { readerApi: React.RefObject<ReaderPanel
   const brand = active?.siteId ? getBrand(active.siteId) : null;
 
   const title = isReader ? `${brand!.name} ${brand!.version}` : "123-Site Documentation Hub";
-  const darkOn = isReader ? (app.siteDark[active!.siteId] ?? false) : app.isDark;
+  const darkOn = isReader ? app.effectiveSiteDark(active!.siteId) : app.isDark;
+  const forced = app.forceTheme;
+  const forcedOn = forced === "dark" || forced === "light";
   const isBookmarked =
     isReader && !!app.bookmarks.find((b) => b.siteId === active!.siteId && b.pathOrUrl === active!.pathOrUrl);
+
+  const outdatedSizeMb = app.entries
+    .filter((e) => e.updateAvailable && e.installed)
+    .reduce((a, e) => a + (e.remote?.sizeBytes ?? 0) / (1024 * 1024), 0);
 
   return (
     <header className="drag-region relative z-40 flex h-11 w-full shrink-0 items-center gap-1 border-b border-border bg-surface px-1.5">
@@ -73,8 +80,8 @@ export default function Titlebar(props: { readerApi: React.RefObject<ReaderPanel
         className="no-drag flex items-center gap-2 rounded-md px-2 py-1 transition-colors hover:bg-accent"
         title="Home"
       >
-        <span className="grad-bg flex h-5 w-5 items-center justify-center rounded-md text-[11px] font-black text-white shadow-soft">
-          D
+        <span className="grad-bg grid h-5 w-5 place-items-center rounded-md shadow-soft">
+          <img src="/logo.png" alt="Docx" className="h-4 w-4" draggable={false} />
         </span>
         <span className="hidden text-[13px] font-semibold tracking-tight sm:inline">Docx</span>
       </button>
@@ -86,8 +93,20 @@ export default function Titlebar(props: { readerApi: React.RefObject<ReaderPanel
         {title}
       </div>
 
-      {/* update pill */}
-      <Chip headline={app.outdatedCount > 0} count={app.outdatedCount} />
+      {/* update pill (count + size) */}
+      {app.outdatedCount > 0 && (
+        <Tooltip label={`Update ${app.outdatedCount} packs (${outdatedSizeMb.toFixed(0)} MB) — uses fast delta downloads when possible`}>
+          <motion.button
+            initial={{ opacity: 0, scale: 0.9, y: -4 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            onClick={() => app.batchUpdateOutdated()}
+            className="no-drag flex items-center gap-1.5 rounded-full border border-[var(--grad-a)]/40 bg-[var(--grad-a)]/10 px-2.5 py-0.5 text-[11px] font-semibold text-[var(--grad-b)] transition-colors hover:bg-[var(--grad-a)]/20"
+          >
+            <Download size={12} />
+            {app.outdatedCount} · {outdatedSizeMb.toFixed(0)} MB
+          </motion.button>
+        </Tooltip>
+      )}
 
       <div className="flex-1" />
 
@@ -112,37 +131,53 @@ export default function Titlebar(props: { readerApi: React.RefObject<ReaderPanel
             </Tooltip>
           </div>
 
-          <Tooltip label={darkOn ? "Light page" : "Dark page"}>
+          {/* theme chip: forced mode cycles off; otherwise toggles this site */}
+          <Tooltip
+            label={
+              forced === "dark"
+                ? "Force dark active — click to return to per-site themes"
+                : forced === "light"
+                  ? "Force light active — click to return to per-site themes"
+                  : darkOn
+                    ? "Make this page light"
+                    : "Make this page dark"
+            }
+          >
             <Button
               variant="ghost"
               size="sm"
-              className="no-drag h-8 gap-1.5 px-2"
+              className={"no-drag h-8 gap-1.5 px-2 " + (forcedOn ? "text-[var(--grad-a)]" : "")}
               onClick={() => {
-                if (EMBEDDED_SITE_IDS.includes(active!.siteId) || !props.readerApi.current) {
+                if (forcedOn) {
+                  app.setForceTheme("off");
+                  app.toast({ kind: "info", message: "Back to per-site themes" });
+                } else if (EMBEDDED_SITE_IDS.includes(active!.siteId) || !props.readerApi.current) {
                   app.toggleSiteDark(active!.siteId);
                 } else {
                   props.readerApi.current.toggleDark(active!.siteId);
                 }
               }}
             >
-              <MoonStar size={14} className={darkOn ? "text-amber-400" : ""} />
-              <span className="hidden text-xs md:inline">{darkOn ? "Dark" : "Light"}</span>
+              <MoonStar size={14} className={forced === "dark" || (forced === "off" && darkOn) ? "text-amber-400" : ""} />
+              <span className="hidden text-xs md:inline">
+                {forced === "dark" ? "Force dark" : forced === "light" ? "Force light" : darkOn ? "Dark" : "Light"}
+              </span>
             </Button>
           </Tooltip>
 
-          <Tooltip label={isBookmarked ? "Remove bookmark" : "Bookmark page"}>
-            <Button
-              variant="ghost"
-              size="sm"
-              className={"no-drag h-8 gap-1.5 px-2 " + (isBookmarked ? "text-[var(--grad-b)]" : "")}
-              onClick={() =>
-                props.readerApi.current?.bookmarkToggle(active!)
-              }
-            >
-              <Bookmark size={14} fill={isBookmarked ? "currentColor" : "none"} />
-              <span className="hidden text-xs lg:inline">{isBookmarked ? "Saved" : "Save"}</span>
-            </Button>
-          </Tooltip>
+          {(isBookmarked || forced === "off") && (
+            <Tooltip label={isBookmarked ? "Remove bookmark" : "Bookmark page"}>
+              <Button
+                variant="ghost"
+                size="sm"
+                className={"no-drag h-8 gap-1.5 px-2 " + (isBookmarked ? "text-[var(--grad-b)]" : "")}
+                onClick={() => props.readerApi.current?.bookmarkToggle(active!)}
+              >
+                <Bookmark size={14} fill={isBookmarked ? "currentColor" : "none"} />
+                <span className="hidden text-xs lg:inline">{isBookmarked ? "Saved" : "Save"}</span>
+              </Button>
+            </Tooltip>
+          )}
         </>
       )}
 
@@ -154,7 +189,18 @@ export default function Titlebar(props: { readerApi: React.RefObject<ReaderPanel
 
       <FeaturesMenu />
 
-      <Tooltip label="Boardless mode">
+      <Tooltip label="Hide top bar (hover the top edge to reveal)">
+        <Button
+          variant="ghost"
+          size="iconSm"
+          className="no-drag hidden lg:inline-flex"
+          onClick={() => app.setTopbarHidden(true)}
+        >
+          <ChevronUp size={13} />
+        </Button>
+      </Tooltip>
+
+      <Tooltip label="Borderless mode">
         <Button
           variant="ghost"
           size="iconSm"
@@ -179,27 +225,12 @@ export default function Titlebar(props: { readerApi: React.RefObject<ReaderPanel
     </header>
   );
 
-  function Chip({ headline, count }: { headline: boolean; count: number }) {
-    return (
-      <AnimatePresence>
-        {headline && (
-          <motion.button
-            initial={{ opacity: 0, scale: 0.9, y: -4 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            onClick={() => app.batchUpdateOutdated()}
-            className="no-drag flex items-center gap-1.5 rounded-full border border-[var(--grad-b)]/40 bg-[var(--grad-b)]/10 px-2.5 py-0.5 text-[11px] font-semibold text-[var(--grad-b)] transition-colors hover:bg-[var(--grad-b)]/20"
-            title="Update all outdated packs"
-          >
-            <Download size={12} />
-            {count} updates
-          </motion.button>
-        )}
-      </AnimatePresence>
-    );
-  }
-
   function FeaturesMenu() {
+    const forces: { key: "off" | "dark" | "light"; label: string }[] = [
+      { key: "off", label: "Per-site" },
+      { key: "dark", label: "Force dark" },
+      { key: "light", label: "Force light" },
+    ];
     return (
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
@@ -207,7 +238,7 @@ export default function Titlebar(props: { readerApi: React.RefObject<ReaderPanel
             <Settings2 size={15} />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-64 p-2">
+        <DropdownMenuContent align="end" className="w-72 p-2">
           <DropdownMenuLabel>Docx features</DropdownMenuLabel>
           <div className="flex items-center justify-between rounded-lg px-2 py-2 text-sm hover:bg-accent">
             <span>Site tabs</span>
@@ -221,20 +252,47 @@ export default function Titlebar(props: { readerApi: React.RefObject<ReaderPanel
             <span>Custom reading font</span>
             <Switch checked={app.flags.customFont} onCheckedChange={(v) => app.setFlag("customFont", v)} />
           </div>
+
+          <DropdownMenuLabel className="mt-1">Site theme</DropdownMenuLabel>
+          <div className="grid grid-cols-3 gap-1 rounded-xl bg-muted p-1">
+            {forces.map((f) => (
+              <button
+                key={f.key}
+                onClick={() => app.setForceTheme(f.key)}
+                className={
+                  "relative rounded-lg px-2 py-1.5 text-[11.5px] font-medium transition-colors " +
+                  (app.forceTheme === f.key ? "text-white" : "text-muted-foreground hover:text-foreground")
+                }
+              >
+                {app.forceTheme === f.key && (
+                  <motion.span
+                    layoutId="force-seg"
+                    className="absolute inset-0 rounded-lg grad-bg"
+                    transition={{ type: "spring", stiffness: 500, damping: 36 }}
+                  />
+                )}
+                <span className="relative z-10">{f.label}</span>
+              </button>
+            ))}
+          </div>
+
+          <div className="mt-1 flex gap-1">
+            <DropdownMenuItem className="flex-1 justify-center gap-1.5" onClick={() => app.setTopbarHidden(true)}>
+              <EyeOff size={13} /> Hide topbar
+            </DropdownMenuItem>
+            <DropdownMenuItem className="flex-1 justify-center gap-1.5" onClick={() => app.setSidebarHidden(true)}>
+              <EyeOff size={13} /> Hide sidebar
+            </DropdownMenuItem>
+          </div>
+
           <DropdownMenuItem className="mt-1 justify-between" onClick={() => app.checkAppUpdate()}>
             <span className="flex items-center gap-2">
               <Sparkles size={14} /> Check app update
             </span>
-            {app.appUpdate?.update_available && (
-              <Badgeish>v{app.appUpdate.target_version}</Badgeish>
-            )}
+            {app.appUpdate?.update_available && <Badgeish>v{app.appUpdate.target_version}</Badgeish>}
           </DropdownMenuItem>
           {app.appUpdate?.update_available && (
-            <DropdownMenuItem
-              danger
-              onClick={() => app.selfUpdateApp()}
-              className="justify-between"
-            >
+            <DropdownMenuItem danger onClick={() => app.selfUpdateApp()} className="justify-between">
               <span className="flex items-center gap-2 text-amber-500">
                 <Download size={14} /> Update app now
               </span>

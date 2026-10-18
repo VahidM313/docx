@@ -72,7 +72,22 @@ export async function ensureExtraEntries(siteId: string) {
   } catch {}
 }
 
-export function search(query: string, filterSite?: string, limit = 40): { entry: SearchEntry; score: number }[] {
+/** Preload per-pack entries for every installed pack (background, deferred so
+ *  it never floods the IPC queue or stalls the boot path). */
+export async function preloadInstalledSites(packs: { id: string }[]) {
+  await new Promise((r) => window.setTimeout(r, 2800));
+  const BATCH = 6;
+  for (let i = 0; i < packs.length; i += BATCH) {
+    await Promise.allSettled(packs.slice(i, i + BATCH).map((p) => ensureExtraEntries(p.id)));
+    await new Promise((r) => window.setTimeout(r, 150));
+  }
+}
+
+export function indexedCount(): number {
+  return baseIndex.length;
+}
+
+export function search(query: string, filterSite?: string, limit = 120): { entry: SearchEntry; score: number }[] {
   const tokens = tokenize(query);
   if (!tokens.length) return [];
   const seen = new Map<string, { entry: SearchEntry; score: number }>();

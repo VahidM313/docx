@@ -1,10 +1,11 @@
 import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 import { AppProvider, useApp } from "./lib/store";
 import { Tauri } from "./lib/tauri";
-import { loadSearchIndex } from "./lib/search";
+import { loadSearchIndex, preloadInstalledSites } from "./lib/search";
 import Titlebar from "./components/titlebar";
-import TabsBar from "./components/tabsBar";
+import VerticalTabs from "./components/tabsBar";
 import HomeHub from "./components/hub";
 import { SidebarRail, ChannelDrawer } from "./components/sidebar";
 import { ReaderPanels, type ReaderPanelsApi } from "./components/readerPanels";
@@ -100,11 +101,37 @@ function Shell() {
   return (
     <TooltipProvider>
       <div className="flex h-full flex-col overflow-hidden bg-background">
-        <Titlebar readerApi={readerApi} />
-        <TabsBar />
+        {/* top edge sensor reveals a hidden topbar */}
+        <div
+          className="fixed left-0 right-0 top-0 z-[45] h-1.5"
+          onMouseEnter={() => app.topbarHidden && app.setTopbarHidden(false)}
+          style={{ pointerEvents: app.topbarHidden ? "auto" : "none" }}
+        />
+        <motion.div
+          animate={{ height: app.topbarHidden ? 0 : 44, opacity: app.topbarHidden ? 0 : 1 }}
+          transition={{ duration: 0.22, ease: "easeOut" }}
+          className="relative z-40 shrink-0 overflow-visible"
+        >
+          <Titlebar readerApi={readerApi} />
+        </motion.div>
 
         <div className="flex min-h-0 flex-1">
-          <SidebarRail />
+          {/* left edge sensor reveals a hidden sidebar */}
+          <div
+            className="fixed bottom-0 left-0 top-11 z-[45] w-2"
+            onMouseEnter={() => app.sidebarHidden && app.setSidebarHidden(false)}
+            style={{ pointerEvents: app.sidebarHidden ? "auto" : "none" }}
+          />
+          <motion.div
+            animate={{ width: app.sidebarHidden ? 0 : 48 }}
+            transition={{ duration: 0.22, ease: "easeOut" }}
+            className="shrink-0 overflow-hidden"
+          >
+            <SidebarRail />
+          </motion.div>
+
+          {!isHome && app.flags.siteTabs && <VerticalTabs />}
+
           <div className="relative min-w-0 flex-1">
             {isHome && (
               <motion.div
@@ -120,6 +147,21 @@ function Shell() {
             <ReaderPanels apiRef={readerApi} />
           </div>
         </div>
+
+        {/* floating reveal buttons when bars are hidden */}
+        <AnimatePresence>
+          {app.topbarHidden && (
+            <motion.button
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 0.55, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              onMouseEnter={() => app.setTopbarHidden(false)}
+              className="fixed left-1/2 top-1 z-[46] -translate-x-1/2 rounded-b-lg border border-t-0 border-border bg-popover/90 px-2 py-0.5 text-[10px] text-muted-foreground backdrop-blur"
+            >
+              <ChevronDown size={11} className="mx-auto" />
+            </motion.button>
+          )}
+        </AnimatePresence>
 
         <ChannelDrawer />
         <CommandPalette />

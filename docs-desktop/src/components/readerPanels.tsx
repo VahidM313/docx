@@ -113,7 +113,7 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
             type: "DOCX_READER_SETTINGS",
             siteId: t.siteId,
             zoom: app.readerZoom,
-            darkMode: app.siteDark[t.siteId] ?? false,
+            darkMode: app.effectiveSiteDark(t.siteId),
             systemDark: app.isDark,
             themeEnabled: app.flags.themeSync,
             fontEnabled: app.flags.customFont,
@@ -124,9 +124,9 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
       } catch {}
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [app.readerZoom, app.siteDark, app.flags, app.isDark, app.tabs]);
+  }, [app.readerZoom, app.effectiveSiteDark, app.flags, app.isDark, app.tabs]);
 
-  React.useEffect(broadcast, [app.readerZoom, app.siteDark, app.isDark, app.flags.themeSync, app.flags.customFont, app.tabs, broadcast]);
+  React.useEffect(broadcast, [app.readerZoom, app.effectiveSiteDark, app.flags.themeSync, app.flags.customFont, app.tabs, broadcast]);
 
   /* ---- imperative api ---- */
   React.useImperativeHandle(props.apiRef, () => ({
@@ -160,7 +160,7 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
   }, []);
 
   return (
-    <div className="absolute inset-0 top-11" id="reader-panels-root">
+    <div className="absolute inset-0" id="reader-panels-root">
       {webTabs.map((t) => {
         const url = urlsRef.current[`${t.id}|${t.pathOrUrl ?? ""}`] ?? undefined;
         return (

@@ -38,8 +38,8 @@ export function Splash() {
             className="relative mb-5"
           >
             <div className="grad-border grid h-20 w-20 place-items-center rounded-3xl border border-border bg-card shadow-lift">
-              <span className="grad-bg grid h-12 w-12 place-items-center rounded-2xl text-2xl font-black text-white shadow-soft">
-                D
+              <span className="grad-bg grid h-12 w-12 place-items-center rounded-2xl shadow-soft">
+                <img src="/logo.png" alt="Docx" className="h-9 w-9" draggable={false} />
               </span>
             </div>
             <motion.span

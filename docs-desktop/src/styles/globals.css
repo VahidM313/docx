@@ -32,45 +32,45 @@
   --primary: #18181b;
   --primary-foreground: #fafafa;
 
-  /* rainbow gradient — the app-wide colorful thread */
-  --grad-a: #6366f1;   /* indigo  */
-  --grad-b: #d946ef;   /* fuchsia */
-  --grad-c: #0ea5e9;   /* sky     */
-  --grad: linear-gradient(120deg, var(--grad-a), var(--grad-b) 45%, var(--grad-c));
+  /* calm two-tone accent — the app-wide colorful thread */
+  --grad-a: #0ea5e9;   /* sky     */
+  --grad-b: #2dd4bf;   /* teal    */
+  --grad-c: #64748b;   /* slate   */
+  --grad: linear-gradient(120deg, var(--grad-a), var(--grad-b) 60%, var(--grad-c) 140%);
 
   --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 16px -4px rgba(0, 0, 0, 0.06);
   --shadow-lift: 0 2px 4px rgba(0, 0, 0, 0.05), 0 12px 32px -8px rgba(0, 0, 0, 0.14);
 }
 
 .dark {
-  --background: #0a0a0d;
-  --background-deep: #070709;
-  --foreground: #fafafa;
+  --background: #060608;
+  --background-deep: #040406;
+  --foreground: #f4f4f5;
 
-  --surface: #121216;
-  --surface-translucent: rgba(18, 18, 22, 0.82);
+  --surface: #0e0e12;
+  --surface-translucent: rgba(13, 13, 17, 0.82);
 
-  --card: #16161b;
-  --card-foreground: #fafafa;
+  --card: #111115;
+  --card-foreground: #f4f4f5;
 
-  --muted: #1e1e24;
-  --muted-foreground: #a1a1aa;
+  --muted: #191920;
+  --muted-foreground: #9b9ba4;
 
-  --accent: #232329;
-  --accent-foreground: #fafafa;
+  --accent: #1e1e25;
+  --accent-foreground: #f4f4f5;
 
-  --popover: #16161b;
-  --popover-foreground: #fafafa;
+  --popover: #111115;
+  --popover-foreground: #f4f4f5;
 
-  --border: rgba(255, 255, 255, 0.09);
+  --border: rgba(255, 255, 255, 0.08);
   --input: rgba(255, 255, 255, 0.12);
-  --ring: #8b8cf7;
+  --ring: #38bdf8;
 
-  --primary: #fafafa;
-  --primary-foreground: #18181b;
+  --primary: #f4f4f5;
+  --primary-foreground: #101013;
 
-  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.5), 0 4px 16px -4px rgba(0, 0, 0, 0.55);
-  --shadow-lift: 0 2px 4px rgba(0, 0, 0, 0.55), 0 14px 36px -8px rgba(0, 0, 0, 0.7);
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.6), 0 4px 16px -4px rgba(0, 0, 0, 0.6);
+  --shadow-lift: 0 2px 4px rgba(0, 0, 0, 0.65), 0 14px 36px -8px rgba(0, 0, 0, 0.75);
 }
 
 @theme inline {
