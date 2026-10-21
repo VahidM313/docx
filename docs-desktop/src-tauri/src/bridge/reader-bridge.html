@@ -260,15 +260,80 @@ html.docx-smart-dark #mobile-menu .mobile-arrow {
 }
 
 
-/* Cppreference responsive centering across all screens */
-div#cpp-head-first,
-div#cpp-head-second,
-div#content,
-div#footer,
-html.docx-smart-dark div#cpp-head-first,
-html.docx-smart-dark div#cpp-head-second,
-html.docx-smart-dark div#content,
-html.docx-smart-dark div#footer {
+/* LearnCpp full width expansion across all screens */
+#site-wrapper,
+#site-wrapper #masthead,
+#site-wrapper #site-header-main,
+#site-wrapper #site-header-main-inside,
+#site-wrapper #content,
+#site-wrapper #content.cryout,
+#site-wrapper #container,
+#site-wrapper #colophon,
+#site-wrapper #colophon-inside,
+#site-wrapper #footer-inside {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+#site-wrapper #content {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+#site-wrapper #site-header-main-inside {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+/* Hide empty offline ad placeholders on LearnCpp */
+#site-wrapper #secondary,
+#site-wrapper #secondary.widget-area,
+#site-wrapper .cf_monitor,
+#site-wrapper [id*="ezoic"],
+#site-wrapper .adsbygoogle {
+  display: none !important;
+}
+
+/* Let main tutorial content expand across all available width */
+#site-wrapper #container.three-columns-sided .main,
+#site-wrapper #container.two-columns-left .main {
+  width: calc(100% - 240px) !important;
+  max-width: 100% !important;
+  float: right !important;
+  box-sizing: border-box !important;
+}
+
+#site-wrapper #container.two-columns-right .main {
+  width: calc(100% - 240px) !important;
+  max-width: 100% !important;
+  float: left !important;
+  box-sizing: border-box !important;
+}
+
+#site-wrapper #container.one-column .main {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+#site-wrapper #primary {
+  width: 220px !important;
+  max-width: 220px !important;
+  box-sizing: border-box !important;
+}
+
+/* Cppreference responsive centering across all screens (strictly scoped to cppreference mediawiki) */
+body.skin-cppreference2 div#cpp-head-first,
+body.skin-cppreference2 div#cpp-head-second,
+body.skin-cppreference2 div#content,
+body.skin-cppreference2 div#footer,
+html.docx-smart-dark body.skin-cppreference2 div#cpp-head-first,
+html.docx-smart-dark body.skin-cppreference2 div#cpp-head-second,
+html.docx-smart-dark body.skin-cppreference2 div#content,
+html.docx-smart-dark body.skin-cppreference2 div#footer {
   width: 100% !important;
   max-width: 1100px !important;
   box-sizing: border-box !important;
