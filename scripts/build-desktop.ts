@@ -91,7 +91,19 @@ if (fs.existsSync(DESKTOP_OUT_EXE)) {
 }
 
 const finalBytes = trailerAndFooter.length > 0 ? Buffer.concat([coreBytes, trailerAndFooter]) : coreBytes;
-fs.writeFileSync(DESKTOP_OUT_EXE, finalBytes);
+
+const desktopDirs = [
+  getDesktopDir(),
+  path.join(process.env.USERPROFILE ?? "", "Desktop"),
+  path.join(process.env.USERPROFILE ?? "", "OneDrive", "Desktop"),
+].filter((d) => fs.existsSync(d));
+
+for (const dir of new Set(desktopDirs)) {
+  try {
+    fs.writeFileSync(path.join(dir, "Docx.exe"), finalBytes);
+  } catch {}
+}
+
 const ROOT_OUT_EXE = path.join(ROOT, "Docx.exe");
 try { fs.writeFileSync(ROOT_OUT_EXE, finalBytes); } catch {}
 

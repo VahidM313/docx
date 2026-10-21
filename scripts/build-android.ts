@@ -107,20 +107,42 @@ if (build.status !== 0) {
   process.exit(build.status ?? 1);
 }
 
-if (!fs.existsSync(APK_OUT_SRC)) {
-  console.error(`❌ Expected APK not found at ${APK_OUT_SRC}`);
+let actualApkPath = APK_OUT_SRC;
+if (!fs.existsSync(actualApkPath)) {
+  const candidates = [
+    path.join(DESKTOP_DIR, "src-tauri", "gen", "android", "app", "build", "outputs", "apk", "universal", "release", "app-universal-release.apk"),
+    path.join(DESKTOP_DIR, "src-tauri", "gen", "android", "app", "build", "outputs", "apk", "arm64", "release", "app-arm64-v8a-release.apk"),
+    path.join(DESKTOP_DIR, "src-tauri", "gen", "android", "app", "build", "outputs", "apk", "release", "app-release.apk"),
+  ];
+  for (const c of candidates) {
+    if (fs.existsSync(c)) {
+      actualApkPath = c;
+      break;
+    }
+  }
+}
+
+if (!fs.existsSync(actualApkPath)) {
+  console.error(`❌ Expected APK not found at ${actualApkPath}`);
   process.exit(1);
 }
 
 // 4. Deploy APK to repository root and Desktop
-const apkBytes = fs.readFileSync(APK_OUT_SRC);
+const apkBytes = fs.readFileSync(actualApkPath);
 fs.writeFileSync(ROOT_APK_ARM, apkBytes);
 fs.writeFileSync(ROOT_APK, apkBytes);
-try {
-  if (fs.existsSync(path.dirname(DESKTOP_APK))) {
-    fs.writeFileSync(DESKTOP_APK, apkBytes);
-  }
-} catch {}
+
+const desktopDirs = [
+  desktopOutDir(),
+  path.join(process.env.USERPROFILE ?? "", "Desktop"),
+  path.join(process.env.USERPROFILE ?? "", "OneDrive", "Desktop"),
+].filter((d) => fs.existsSync(d));
+
+for (const dir of new Set(desktopDirs)) {
+  try {
+    fs.writeFileSync(path.join(dir, "Docx.apk"), apkBytes);
+  } catch {}
+}
 
 const elapsedSec = ((performance.now() - t0) / 1000).toFixed(2);
 const sizeMB = (apkBytes.length / (1024 * 1024)).toFixed(2);
