@@ -13,6 +13,17 @@ pub(crate) fn fnv1a_hash_hex(bytes: &[u8]) -> String {
     format!("{:016x}", hash)
 }
 
+pub(crate) fn sha256_hex_16(bytes: &[u8]) -> String {
+    let d = ring::digest::digest(&ring::digest::SHA256, bytes);
+    let slice = d.as_ref();
+    let mut out = String::with_capacity(16);
+    for b in &slice[..8] {
+        use std::fmt::Write;
+        let _ = write!(&mut out, "{:02x}", b);
+    }
+    out
+}
+
 /// Plain GET returning the full body. Ranges map onto the HTTP `Range` header
 /// so callers can express both full fetches and partial-content (delta) fetches
 /// with one helper.

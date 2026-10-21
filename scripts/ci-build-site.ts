@@ -402,10 +402,10 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
           html += snippet;
         }
 
-        // Minify & normalize HTML: strip comments, transient nonces, and collapse whitespace
+        // Minify & normalize HTML: strip comments, transient nonces, and collapse repeated whitespace safely
         html = html.replace(/<!--(?!\[if)[\s\S]*?-->/g, "");
         html = html.replace(/\snonce=["'][^"']*["']/gi, "");
-        html = html.replace(/>\s{2,}</g, "><");
+        html = html.replace(/>\s{2,}</g, "> <");
 
         const htmlBytes = Buffer.from(html, "utf-8");
         rawAssets.set(routeKey, { bytes: htmlBytes, mime: "text/html; charset=utf-8" });

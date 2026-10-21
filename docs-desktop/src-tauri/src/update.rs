@@ -48,7 +48,7 @@ pub(crate) fn curl_download_with_progress(
     window: &tauri::Window,
 ) -> crate::error::Result<Vec<u8>> {
     use tauri::Emitter;
-    let _ = fs::remove_file(dest_path);
+    let tmp_dest = dest_path.with_extension("tmp");
 
     let client = reqwest::blocking::Client::builder()
         .user_agent("Docx/1.0")
@@ -67,7 +67,7 @@ pub(crate) fn curl_download_with_progress(
 
     let total = resp.content_length().map(|l| l as usize).unwrap_or(expected_total).max(1);
     let mut file =
-        File::create(dest_path).map_err(|e| DocxError::io_path(dest_path, &e))?;
+        File::create(&tmp_dest).map_err(|e| DocxError::io_path(&tmp_dest, &e))?;
     let mut buffer = [0u8; 65536];
     let mut cur_bytes = 0usize;
     let mut last_emit = std::time::Instant::now();
@@ -107,13 +107,53 @@ pub(crate) fn curl_download_with_progress(
         }
     }
 
-    file.flush().map_err(|e| DocxError::io_path(dest_path, &e))?;
+    file.flush().map_err(|e| DocxError::io_path(&tmp_dest, &e))?;
     drop(file);
 
-    fs::read(dest_path).map_err(|e| DocxError::io_path(dest_path, &e))
+    let bytes = fs::read(&tmp_dest).map_err(|e| DocxError::io_path(&tmp_dest, &e))?;
+    let _ = fs::rename(&tmp_dest, dest_path);
+    Ok(bytes)
 }
 
 pub(crate) const DPTC_MAGIC: &[u8; 4] = b"DPTC";
+
+pub fn parse_remote_data_start(hdr_bytes: &[u8], fallback_len: usize) -> usize {
+    if hdr_bytes.starts_with(crate::pack::DOCP_MAGIC) {
+        if hdr_bytes.len() >= 12 {
+            let m_len = u32::from_le_bytes([hdr_bytes[8], hdr_bytes[9], hdr_bytes[10], hdr_bytes[11]]) as usize;
+            16 + m_len
+        } else {
+            16 + fallback_len
+        }
+    } else if hdr_bytes.len() >= 4 {
+        let m_len = u32::from_le_bytes([hdr_bytes[0], hdr_bytes[1], hdr_bytes[2], hdr_bytes[3]]) as usize;
+        4 + m_len
+    } else {
+        4 + fallback_len
+    }
+}
+
+pub fn coalesce_byte_ranges(ranges: &[(usize, usize)], max_gap: usize) -> Vec<(usize, usize)> {
+    if ranges.is_empty() {
+        return Vec::new();
+    }
+    let mut sorted = ranges.to_vec();
+    sorted.sort_by_key(|r| r.0);
+
+    let mut coalesced: Vec<(usize, usize)> = Vec::new();
+    let mut cur = sorted[0];
+
+    for next in sorted.into_iter().skip(1) {
+        if next.0 <= cur.1.saturating_add(max_gap) {
+            cur.1 = cur.1.max(next.1);
+        } else {
+            coalesced.push(cur);
+            cur = next;
+        }
+    }
+    coalesced.push(cur);
+    coalesced
+}
 
 pub fn apply_binary_delta_to_pack(
     local_chunks: &HashMap<String, Vec<u8>>,
@@ -132,8 +172,9 @@ pub fn apply_binary_delta_to_pack(
         delta_bytes[23],
     ]) as usize;
 
-    let manifest_start = 24;
-    let manifest_end = manifest_start + manifest_len;
+    let manifest_start: usize = 24;
+    let manifest_end = manifest_start.checked_add(manifest_len)
+        .ok_or_else(|| DocxError::invalid_pack("Manifest length overflow"))?;
     if delta_bytes.len() < manifest_end + 4 {
         return Err(DocxError::invalid_pack("Truncated delta patch manifest"));
     }
@@ -163,18 +204,32 @@ pub fn apply_binary_delta_to_pack(
         ]) as usize;
         offset += 20;
 
-        if offset + len > delta_bytes.len() {
+        let chunk_end = offset.checked_add(len)
+            .ok_or_else(|| DocxError::invalid_pack("Chunk length overflow"))?;
+        if chunk_end > delta_bytes.len() {
             return Err(DocxError::invalid_pack("Truncated chunk data in delta"));
         }
-        delta_chunks.insert(hash, &delta_bytes[offset..offset + len]);
-        offset += len;
+        let chunk_slice = &delta_bytes[offset..chunk_end];
+        let computed = crate::util::sha256_hex_16(chunk_slice);
+        if computed != hash {
+            return Err(DocxError::invalid_pack(format!(
+                "Checksum mismatch for delta chunk: expected {}, got {}",
+                hash, computed
+            )));
+        }
+        delta_chunks.insert(hash, chunk_slice);
+        offset = chunk_end;
     }
 
     let mut new_pack_data = Vec::new();
     let mut new_routes = HashMap::new();
     let mut placed_hashes: HashMap<String, (usize, usize)> = HashMap::new();
 
-    for (route, entry) in &target_manifest.routes {
+    // Deterministic route ordering by route key
+    let mut sorted_routes: Vec<_> = target_manifest.routes.iter().collect();
+    sorted_routes.sort_by_key(|(route, _)| *route);
+
+    for (route, entry) in sorted_routes {
         let (final_offset, final_length) = if let Some(&(off, len)) = placed_hashes.get(&entry.hash) {
             (off, len)
         } else if let Some(d_slice) = delta_chunks.get(&entry.hash) {
@@ -426,8 +481,11 @@ pub(crate) fn run_install_or_update_sync(
         if let Ok(delta_bytes) = curl_get_bytes(&delta_url, None)
             && delta_bytes.starts_with(b"DPTC")
         {
-            if let Ok((final_manifest, new_pack_data)) =
-                apply_binary_delta_to_pack(&local_chunks_by_hash, &delta_bytes)
+            let hash_ok = delta_meta.hash.is_empty()
+                || crate::util::sha256_hex_16(&delta_bytes) == delta_meta.hash;
+            if hash_ok
+                && let Ok((final_manifest, new_pack_data)) =
+                    apply_binary_delta_to_pack(&local_chunks_by_hash, &delta_bytes)
             {
                 let manifest_json = serde_json::to_vec(&final_manifest)?;
                 let mut full_docpack =
@@ -441,8 +499,12 @@ pub(crate) fn run_install_or_update_sync(
                 full_docpack.extend_from_slice(&new_pack_data);
 
                 let docpack_path = packs_dir.join(format!("{}.docpack", site_id));
+                let tmp_docpack = packs_dir.join(format!("{}.docpack.tmp", site_id));
                 let full_len = full_docpack.len();
-                let _ = fs::write(&docpack_path, &full_docpack);
+                fs::write(&tmp_docpack, &full_docpack)
+                    .map_err(|e| DocxError::io_path(&tmp_docpack, &e))?;
+                fs::rename(&tmp_docpack, &docpack_path)
+                    .map_err(|e| DocxError::io_path(&docpack_path, &e))?;
                 let _ = fs::write(
                     packs_dir.join(format!("{}.manifest.json", site_id)),
                     &manifest_json,
@@ -615,26 +677,96 @@ pub(crate) fn run_install_or_update_sync(
     }
 
     // Already installed and delta is within budget: perform HTTP 206 Partial Content Range Delta Update!
-    let hdr_bytes = curl_get_bytes(&pack_url, Some((0, 3)))?;
-    let embedded_manifest_len = if hdr_bytes.len() >= 4 {
-        u32::from_le_bytes([hdr_bytes[0], hdr_bytes[1], hdr_bytes[2], hdr_bytes[3]]) as usize
-    } else {
-        remote_manifest_bytes.len()
-    };
-    let remote_data_start = 4 + embedded_manifest_len;
+    let hdr_bytes = curl_get_bytes(&pack_url, Some((0, 15)))?;
+    let remote_data_start = parse_remote_data_start(&hdr_bytes, remote_manifest_bytes.len());
+
+    let client = reqwest::blocking::Client::builder()
+        .user_agent("Docx/1.0")
+        .pool_max_idle_per_host(8)
+        .tcp_keepalive(Duration::from_secs(30))
+        .timeout(Duration::from_secs(60))
+        .build()?;
+
+    let mut missing_chunks_by_offset: Vec<(usize, usize, String)> = Vec::new();
+    for rem_entry in remote_manifest.routes.values() {
+        if !local_chunks_by_hash.contains_key(&rem_entry.hash) {
+            missing_chunks_by_offset.push((rem_entry.offset, rem_entry.length, rem_entry.hash.clone()));
+        }
+    }
+    missing_chunks_by_offset.sort_by_key(|c| c.0);
+    missing_chunks_by_offset.dedup_by(|a, b| a.2 == b.2);
+
+    let raw_ranges: Vec<(usize, usize)> = missing_chunks_by_offset
+        .iter()
+        .map(|c| (c.0, c.0 + c.1))
+        .collect();
+    let coalesced_ranges = coalesce_byte_ranges(&raw_ranges, 65536);
+
+    let mut fetched_chunks_by_hash: HashMap<String, Vec<u8>> = HashMap::new();
+    let mut downloaded_bytes = 0usize;
+    let total_ranges = coalesced_ranges.len().max(1);
+
+    for (range_idx, (r_start, r_end)) in coalesced_ranges.iter().enumerate() {
+        let abs_start = remote_data_start + r_start;
+        let abs_end = remote_data_start + r_end - 1;
+
+        let pct = 10 + ((range_idx * 85) / total_ranges) as u8;
+        let _ = window.emit(
+            "docpack-progress",
+            DownloadProgressPayload {
+                site_id: site_id.clone(),
+                phase: "HTTP 206 Delta Sync".to_string(),
+                downloaded_bytes,
+                total_bytes: remote_manifest.totalBytes.max(1),
+                percent: pct,
+                detail: format!(
+                    "Fetching coalesced range {}/{} ({:.1} KB)...",
+                    range_idx + 1,
+                    total_ranges,
+                    (r_end - r_start) as f64 / 1024.0
+                ),
+            },
+        );
+
+        let mut req = client.get(&pack_url);
+        req = req.header("Range", format!("bytes={}-{}", abs_start, abs_end));
+        let resp = req.send()?;
+        let status = resp.status();
+        if !status.is_success() && status != reqwest::StatusCode::PARTIAL_CONTENT {
+            return Err(DocxError::HttpStatus {
+                status: status.as_u16(),
+                url: pack_url.clone(),
+            });
+        }
+        let range_data = resp.bytes()?.to_vec();
+        downloaded_bytes += range_data.len();
+
+        for &(chunk_offset, chunk_len, ref chunk_hash) in &missing_chunks_by_offset {
+            if chunk_offset >= *r_start && chunk_offset + chunk_len <= *r_end {
+                let slice_start = chunk_offset - *r_start;
+                let slice_end = slice_start + chunk_len;
+                if slice_end <= range_data.len() {
+                    fetched_chunks_by_hash.insert(
+                        chunk_hash.clone(),
+                        range_data[slice_start..slice_end].to_vec(),
+                    );
+                }
+            }
+        }
+    }
+
     let mut new_pack_data: Vec<u8> = Vec::new();
     let mut new_routes: HashMap<String, ManifestEntry> = HashMap::new();
     let mut placed_hashes: HashMap<String, (usize, usize)> = HashMap::new();
-
     let mut reused_chunks = 0usize;
     let mut downloaded_chunks = 0usize;
     let mut reused_bytes = 0usize;
-    let mut downloaded_bytes = 0usize;
-    let total_routes = remote_manifest.routes.len().max(1);
 
-    for (idx, (route, rem_entry)) in remote_manifest.routes.iter().enumerate() {
-        let (final_offset, final_length) = if let Some(&already) = placed_hashes.get(&rem_entry.hash)
-        {
+    let mut sorted_routes: Vec<_> = remote_manifest.routes.iter().collect();
+    sorted_routes.sort_by_key(|(route, _)| *route);
+
+    for (route, rem_entry) in sorted_routes {
+        let (final_offset, final_length) = if let Some(&already) = placed_hashes.get(&rem_entry.hash) {
             already
         } else if let Some(local_bytes) = local_chunks_by_hash.get(&rem_entry.hash) {
             let off = new_pack_data.len();
@@ -644,33 +776,18 @@ pub(crate) fn run_install_or_update_sync(
             reused_chunks += 1;
             reused_bytes += len;
             (off, len)
-        } else {
-            let pct = 10 + ((idx * 85) / total_routes) as u8;
-            let _ = window.emit(
-                "docpack-progress",
-                DownloadProgressPayload {
-                    site_id: site_id.clone(),
-                    phase: "HTTP 206 Delta Sync".to_string(),
-                    downloaded_bytes,
-                    total_bytes: remote_manifest.totalBytes.max(1),
-                    percent: pct,
-                    detail: format!(
-                        "Reused {} chunks • Fetching changed chunk #{} via HTTP 206...",
-                        reused_chunks,
-                        downloaded_chunks + 1
-                    ),
-                },
-            );
-            let abs_start = remote_data_start + rem_entry.offset;
-            let abs_end = abs_start + rem_entry.length - 1;
-            let range_bytes = curl_get_bytes(&pack_url, Some((abs_start, abs_end)))?;
+        } else if let Some(fetched_bytes) = fetched_chunks_by_hash.get(&rem_entry.hash) {
             let off = new_pack_data.len();
-            let len = range_bytes.len();
-            new_pack_data.extend_from_slice(&range_bytes);
+            let len = fetched_bytes.len();
+            new_pack_data.extend_from_slice(fetched_bytes);
             placed_hashes.insert(rem_entry.hash.clone(), (off, len));
             downloaded_chunks += 1;
-            downloaded_bytes += len;
             (off, len)
+        } else {
+            return Err(DocxError::invalid_pack(format!(
+                "Failed to locate chunk hash {} for route {}",
+                rem_entry.hash, route
+            )));
         };
 
         new_routes.insert(
@@ -711,8 +828,11 @@ pub(crate) fn run_install_or_update_sync(
     full_docpack.extend_from_slice(&new_pack_data);
 
     let docpack_path = packs_dir.join(format!("{}.docpack", site_id));
+    let tmp_docpack = packs_dir.join(format!("{}.docpack.tmp", site_id));
     let full_len = full_docpack.len();
-    fs::write(&docpack_path, &full_docpack).map_err(|e| DocxError::io_path(&docpack_path, &e))?;
+    fs::write(&tmp_docpack, &full_docpack).map_err(|e| DocxError::io_path(&tmp_docpack, &e))?;
+    fs::rename(&tmp_docpack, &docpack_path).map_err(|e| DocxError::io_path(&docpack_path, &e))?;
+    let _ = fs::write(packs_dir.join(format!("{}.manifest.json", site_id)), &manifest_json);
     drop(full_docpack);
 
     if let Some(parsed) =
@@ -787,7 +907,7 @@ mod tests {
         let mut local_chunks = HashMap::new();
         local_chunks.insert("aaaa111122223333".to_string(), b"chunkA".to_vec());
 
-        let manifest_json = r#"{"id":"tailwind","name":"Tailwind CSS","version":"1.1","commit":"22222222","compression":"brotli","routes":{"/a":{"offset":0,"length":6,"mime":"text/plain","gzipped":false,"hash":"aaaa111122223333"},"/b":{"offset":6,"length":6,"mime":"text/plain","gzipped":false,"hash":"bbbb111122223333"}}}"#;
+        let manifest_json = r#"{"id":"tailwind","name":"Tailwind CSS","version":"1.1","commit":"22222222","compression":"brotli","routes":{"/a":{"offset":0,"length":6,"mime":"text/plain","gzipped":false,"hash":"aaaa111122223333"},"/b":{"offset":6,"length":6,"mime":"text/plain","gzipped":false,"hash":"1a1ac5ba1c6da240"}}}"#;
         let mut delta_bytes = Vec::new();
         delta_bytes.extend_from_slice(b"DPTC");
         delta_bytes.extend_from_slice(b"11111111");
@@ -795,7 +915,7 @@ mod tests {
         delta_bytes.extend_from_slice(&(manifest_json.len() as u32).to_le_bytes());
         delta_bytes.extend_from_slice(manifest_json.as_bytes());
         delta_bytes.extend_from_slice(&1u32.to_le_bytes());
-        delta_bytes.extend_from_slice(b"bbbb111122223333");
+        delta_bytes.extend_from_slice(b"1a1ac5ba1c6da240");
         delta_bytes.extend_from_slice(&6u32.to_le_bytes());
         delta_bytes.extend_from_slice(b"chunkB");
 
@@ -807,6 +927,59 @@ mod tests {
         let route_b = new_manifest.routes.get("/b").unwrap();
         assert_eq!(&pack_data[route_a.offset..route_a.offset + route_a.length], b"chunkA");
         assert_eq!(&pack_data[route_b.offset..route_b.offset + route_b.length], b"chunkB");
+    }
+
+    #[test]
+    fn test_v2_remote_data_start_detection() {
+        // v2 header: DOCP (4) + version 2 (2) + flags 2 (2) + manifest_len 500 (4) + reserved 0 (4)
+        let mut v2_hdr = Vec::new();
+        v2_hdr.extend_from_slice(b"DOCP");
+        v2_hdr.extend_from_slice(&2u16.to_le_bytes());
+        v2_hdr.extend_from_slice(&2u16.to_le_bytes());
+        v2_hdr.extend_from_slice(&500u32.to_le_bytes());
+        v2_hdr.extend_from_slice(&0u32.to_le_bytes());
+
+        let start = parse_remote_data_start(&v2_hdr, 100);
+        assert_eq!(start, 16 + 500);
+
+        // v1 header: manifest_len 250 (4)
+        let mut v1_hdr = Vec::new();
+        v1_hdr.extend_from_slice(&250u32.to_le_bytes());
+        let start_v1 = parse_remote_data_start(&v1_hdr, 100);
+        assert_eq!(start_v1, 4 + 250);
+    }
+
+    #[test]
+    fn test_delta_patch_corrupt_hash_rejected() {
+        let mut local_chunks = HashMap::new();
+        local_chunks.insert("aaaa111122223333".to_string(), b"chunkA".to_vec());
+
+        // Delta says chunk hash is "cccc111122223333" but data is "bad_data" which hashes to something else
+        let manifest_json = r#"{"id":"tailwind","name":"Tailwind CSS","version":"1.1","commit":"22222222","compression":"brotli","routes":{"/b":{"offset":0,"length":8,"mime":"text/plain","gzipped":false,"hash":"cccc111122223333"}}}"#;
+        let mut delta_bytes = Vec::new();
+        delta_bytes.extend_from_slice(b"DPTC");
+        delta_bytes.extend_from_slice(b"11111111");
+        delta_bytes.extend_from_slice(b"22222222");
+        delta_bytes.extend_from_slice(&(manifest_json.len() as u32).to_le_bytes());
+        delta_bytes.extend_from_slice(manifest_json.as_bytes());
+        delta_bytes.extend_from_slice(&1u32.to_le_bytes());
+        delta_bytes.extend_from_slice(b"cccc111122223333");
+        delta_bytes.extend_from_slice(&8u32.to_le_bytes());
+        delta_bytes.extend_from_slice(b"bad_data");
+
+        let result = apply_binary_delta_to_pack(&local_chunks, &delta_bytes);
+        assert!(result.is_err(), "Should reject corrupt chunk hash in delta");
+    }
+
+    #[test]
+    fn test_coalesce_byte_ranges() {
+        // [100..200], [210..300] with gap 10 <= 64KB should coalesce to [100..300]
+        // [500000..600000] gap is huge, should remain separate
+        let ranges = vec![(100, 200), (210, 300), (500000, 600000)];
+        let coalesced = coalesce_byte_ranges(&ranges, 65536);
+        assert_eq!(coalesced.len(), 2);
+        assert_eq!(coalesced[0], (100, 300));
+        assert_eq!(coalesced[1], (500000, 600000));
     }
 }
 

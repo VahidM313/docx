@@ -353,17 +353,19 @@ pub(crate) fn parse_docpack_on_disk(
         let version = u16::from_le_bytes([v2_hdr[0], v2_hdr[1]]);
         let _flags = u16::from_le_bytes([v2_hdr[2], v2_hdr[3]]);
         let m_len = u32::from_le_bytes([v2_hdr[4], v2_hdr[5], v2_hdr[6], v2_hdr[7]]) as usize;
-        if version != 2 || pack_len < 16 + m_len {
+        let full_hdr_len = 16usize.checked_add(m_len)?;
+        if version != 2 || pack_len < full_hdr_len {
             return None;
         }
-        (m_len, 16 + m_len)
+        (m_len, full_hdr_len)
     } else {
         // Format v1: manifest_len (4)
         let m_len = u32::from_le_bytes(magic_or_len) as usize;
-        if pack_len < 4 + m_len {
+        let full_hdr_len = 4usize.checked_add(m_len)?;
+        if pack_len < full_hdr_len {
             return None;
         }
-        (m_len, 4 + m_len)
+        (m_len, full_hdr_len)
     };
 
     let mut manifest_buf = vec![0u8; manifest_len];

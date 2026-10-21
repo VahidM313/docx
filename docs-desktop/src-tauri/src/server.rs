@@ -37,15 +37,15 @@ pub fn decompress_html_body_if_needed(
 ) -> String {
     if encoding == Some("br") {
         let mut decompressor = brotli::Decompressor::new(body, 4096);
-        let mut decompressed = String::new();
-        if decompressor.read_to_string(&mut decompressed).is_ok() {
-            return decompressed;
+        let mut out_bytes = Vec::new();
+        if decompressor.read_to_end(&mut out_bytes).is_ok() {
+            return String::from_utf8_lossy(&out_bytes).into_owned();
         }
     } else if gzipped {
         let mut decoder = flate2::read::GzDecoder::new(body);
-        let mut decompressed = String::new();
-        if decoder.read_to_string(&mut decompressed).is_ok() {
-            return decompressed;
+        let mut out_bytes = Vec::new();
+        if decoder.read_to_end(&mut out_bytes).is_ok() {
+            return String::from_utf8_lossy(&out_bytes).into_owned();
         }
     }
     String::from_utf8_lossy(body).into_owned()
