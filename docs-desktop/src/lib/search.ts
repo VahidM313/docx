@@ -17,12 +17,13 @@ export interface SearchEntry {
 
 let baseIndex: SearchEntry[] = [];
 const extraBySite: Record<string, boolean> = {};
-let loaded = false;
+const extraKeys = new Set<string>();
+let basePromise: Promise<void> | null = null;
 
 const escapeRegex = (str: string) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 function tokenize(q: string): string[] {
-  return q.toLowerCase().split(/\s+/).filter(Boolean);
+  return q.toLowerCase().split(/\s+/).filter(Boolean).slice(0, 8);
 }
 
 function scoreEntry(entry: SearchEntry, tokens: string[], filterSite?: string): number {
@@ -42,44 +43,60 @@ function scoreEntry(entry: SearchEntry, tokens: string[], filterSite?: string): 
   return score;
 }
 
-export async function loadSearchIndex(onProgress?: (n: number) => void) {
-  try {
-    const res = await fetch("/search-index.json");
-    if (res.ok) {
-      const data = await res.json();
-      const entries: SearchEntry[] = Array.isArray(data) ? data : (data.entries ?? []);
-      baseIndex = entries.filter((e) => e && e.site && e.title !== undefined && e.path);
+/** Load the small built-in index once, on demand (never during boot). */
+export function ensureBaseIndex(): Promise<void> {
+  if (basePromise) return basePromise;
+  basePromise = (async () => {
+    try {
+      const res = await fetch("/search-index.json");
+      if (res.ok) {
+        const data = await res.json();
+        const entries: SearchEntry[] = Array.isArray(data) ? data : (data.entries ?? []);
+        baseIndex = entries.filter((e) => e && e.site && e.title !== undefined && e.path);
+        for (const e of baseIndex) extraKeys.add(`${e.site}|${e.path}`);
+      }
+    } catch {
+      /* offline search degrades to the deep per-site indexes */
     }
-  } catch {}
-  onProgress?.(baseIndex.length);
+  })();
+  return basePromise;
 }
 
+/** Back-compat alias. */
+export const loadSearchIndex = ensureBaseIndex;
+
+/**
+ * Merge one pack's deep search entries.
+ *
+ * Important: the Rust command is site-scoped. Previously it returned every
+ * installed pack and the caller appended that full payload once per site,
+ * multiplying the index by the number of installed packs.
+ */
 export async function ensureExtraEntries(siteId: string) {
   if (!SITE_MAP[siteId] || extraBySite[siteId]) return;
   extraBySite[siteId] = true;
   try {
     const extra = await Tauri.getExtraSearchEntries(siteId);
+    const brand = getBrand(siteId);
+    let added = 0;
     for (const e of extra) {
+      if (!e || !e.path) continue;
+      const key = `${siteId}|${e.path}`;
+      if (extraKeys.has(key)) continue;
+      extraKeys.add(key);
       baseIndex.push({
         site: siteId,
-        siteName: getBrand(siteId).name,
+        siteName: brand.name,
         title: e.title,
         path: e.path,
         preview: e.preview,
         category: e.category ?? "Reference",
       });
+      added += 1;
+      if (added >= 12000) break; // hard cap per pack — keeps search memory bounded
     }
-  } catch {}
-}
-
-/** Preload per-pack entries for every installed pack (background, deferred so
- *  it never floods the IPC queue or stalls the boot path). */
-export async function preloadInstalledSites(packs: { id: string }[]) {
-  await new Promise((r) => window.setTimeout(r, 2800));
-  const BATCH = 6;
-  for (let i = 0; i < packs.length; i += BATCH) {
-    await Promise.allSettled(packs.slice(i, i + BATCH).map((p) => ensureExtraEntries(p.id)));
-    await new Promise((r) => window.setTimeout(r, 150));
+  } catch {
+    extraBySite[siteId] = false;
   }
 }
 

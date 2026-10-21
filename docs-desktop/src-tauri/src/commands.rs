@@ -450,3 +450,65 @@ pub(crate) fn window_show_ready(window: tauri::Window) {
     let _ = window.set_focus();
 }
 
+/// Cursor position relative to the webview in logical pixels.
+///
+/// Used by the hover-reveal chrome. One IPC call replaces the previous pair
+/// (`cursorPosition` + `innerPosition`) polled several times per second.
+#[tauri::command]
+pub(crate) fn cursor_in_window(window: tauri::Window) -> Option<(f64, f64)> {
+    #[cfg(desktop)]
+    {
+        // A minimized window sits at a sentinel position (-32000, -32000), so
+        // cursor maths would report nonsense and pop the hover panels open.
+        if window.is_minimized().unwrap_or(false) {
+            return None;
+        }
+        let cursor = window.cursor_position().ok()?;
+        let origin = window.inner_position().ok()?;
+        let scale = window.scale_factor().ok().filter(|s| *s > 0.0).unwrap_or(1.0);
+        return Some((
+            (cursor.x - origin.x as f64) / scale,
+            (cursor.y - origin.y as f64) / scale,
+        ));
+    }
+    #[cfg(not(desktop))]
+    {
+        let _ = window;
+        None
+    }
+}
+
+#[tauri::command]
+pub(crate) fn open_in_browser(url: String) -> Result<(), String> {
+    if !url.starts_with("http://") && !url.starts_with("https://") {
+        return Err("Invalid URL scheme".into());
+    }
+
+    #[cfg(target_os = "windows")]
+    {
+        use std::os::windows::process::CommandExt;
+        let mut cmd = std::process::Command::new("cmd");
+        cmd.args(["/C", "start", "", &url])
+            .creation_flags(0x08000000); // CREATE_NO_WINDOW
+        let _ = cmd.spawn().map_err(|e| e.to_string())?;
+        return Ok(());
+    }
+
+    #[cfg(target_os = "macos")]
+    {
+        let _ = std::process::Command::new("open").arg(&url).spawn().map_err(|e| e.to_string())?;
+        return Ok(());
+    }
+
+    #[cfg(target_os = "linux")]
+    {
+        let _ = std::process::Command::new("xdg-open").arg(&url).spawn().map_err(|e| e.to_string())?;
+        return Ok(());
+    }
+
+    #[cfg(not(any(target_os = "windows", target_os = "macos", target_os = "linux")))]
+    {
+        let _ = url;
+        Ok(())
+    }
+}

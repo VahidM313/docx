@@ -22,9 +22,10 @@ mod util;
 
 use app_update::{check_app_update, self_update_app};
 use commands::{
-    bundle_into_single_exe, check_servers, delete_docpack, ensure_site_server_cmd,
-    fetch_remote_registry, get_installed_packs, get_system_theme, window_close,
-    window_minimize, window_show_ready, window_start_dragging, window_toggle_fullscreen,
+    bundle_into_single_exe, check_servers, cursor_in_window, delete_docpack,
+    ensure_site_server_cmd, fetch_remote_registry, get_installed_packs,
+    get_system_theme, open_in_browser, window_close, window_minimize,
+    window_show_ready, window_start_dragging, window_toggle_fullscreen,
     window_toggle_maximize,
 };
 use pack::{load_asset_store, load_disk_overrides};
@@ -62,22 +63,9 @@ pub fn run() {
     let tailwind_port = ensure_site_server("tailwind", Arc::clone(&store));
     let shadcn_port = ensure_site_server("shadcn", Arc::clone(&store));
 
-    // Also start servers for any additional installed .docpack overrides
-    let extra_ids = error::read_guard(&store.overrides)
-        .map(|guard| {
-            guard
-                .keys()
-                .filter(|k| *k != "tailwind" && *k != "shadcn")
-                .cloned()
-                .collect::<Vec<String>>()
-        })
-        .unwrap_or_else(|e| {
-            log::error!("overrides lock poisoned at startup: {}", e);
-            Vec::new()
-        });
-    for id in extra_ids {
-        ensure_site_server(&id, Arc::clone(&store));
-    }
+    // Other packs are served by an embedded listener created on demand when a
+    // document is opened. Starting one thread/socket per installed pack during
+    // boot wasted memory and file descriptors for packs the user never reads.
 
     let store_clone = Arc::clone(&store);
     tauri::Builder::default()
@@ -106,21 +94,6 @@ pub fn run() {
                     Ok(mut guard) => load_disk_overrides(&mut guard),
                     Err(e) => log::error!("overrides lock poisoned during setup: {}", e),
                 }
-            }
-            let extra_ids = error::read_guard(&store_clone.overrides)
-                .map(|guard| {
-                    guard
-                        .keys()
-                        .filter(|k| *k != "tailwind" && *k != "shadcn")
-                        .cloned()
-                        .collect::<Vec<String>>()
-                })
-                .unwrap_or_else(|e| {
-                    log::error!("overrides lock poisoned during setup: {}", e);
-                    Vec::new()
-                });
-            for id in extra_ids {
-                ensure_site_server(&id, Arc::clone(&store_clone));
             }
             if let Some(win) = app.get_webview_window("main") {
                 let _ = win.set_background_color(Some(tauri::window::Color(0, 0, 0, 255)));
@@ -172,6 +145,8 @@ pub fn run() {
             window_close,
             window_start_dragging,
             window_show_ready,
+            cursor_in_window,
+            open_in_browser,
         ])
         .run(tauri::generate_context!())
         .expect("error while building tauri application");

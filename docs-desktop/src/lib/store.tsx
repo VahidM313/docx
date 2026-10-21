@@ -151,6 +151,7 @@ interface AppState {
   sidebarOpen: boolean;
   zenMode: boolean;
   openedDocs: string[];
+  overrideDocTheme: boolean;
 }
 
 interface AppApi extends AppState {
@@ -222,6 +223,8 @@ interface AppApi extends AppState {
   markDocOpened: (id: string) => void;
   setZenMode: (v: boolean | ((prev: boolean) => boolean)) => void;
   toggleZenMode: () => void;
+  setOverrideDocTheme: (v: boolean | ((prev: boolean) => boolean)) => void;
+  toggleOverrideDocTheme: () => void;
 
   toast: (t: Omit<Toast, "id">) => void;
   dropToast: (id: number) => void;
@@ -285,6 +288,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       sidebarOpen: load<boolean>("docx_sidebar_open", true),
       zenMode: false,
       openedDocs: load<string[]>("docx_opened_docs_v2", []),
+      overrideDocTheme: load<boolean>("docx_override_doc_theme_v1", false),
     },
   );
 
@@ -357,13 +361,14 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
     /** Effective per-site dark, honoring the force override and per-doc preferences. */
     const effectiveSiteDark = (siteId: string) => {
+      if (state.overrideDocTheme) return isDark;
       if (state.forceTheme === "dark") return true;
       if (state.forceTheme === "light") return false;
       const pref = state.docPrefs[siteId]?.theme;
       if (pref === "dark") return true;
       if (pref === "light") return false;
-      if (pref === "system") return appDark(state);
-      return state.siteDark[siteId] ?? appDark(state);
+      if (pref === "system") return isDark;
+      return state.siteDark[siteId] ?? isDark;
     };
 
     const getDocPrefs = (siteId: string): DocPreferences => {
@@ -792,6 +797,26 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         });
       },
       toggleZenMode: () => setState((s) => ({ zenMode: !s.zenMode })),
+      setOverrideDocTheme: (val: boolean | ((prev: boolean) => boolean)) => {
+        setState((s) => {
+          const next = typeof val === "function" ? val(s.overrideDocTheme) : val;
+          save("docx_override_doc_theme_v1", next);
+          return { overrideDocTheme: next };
+        });
+      },
+      toggleOverrideDocTheme: () => {
+        setState((s) => {
+          const next = !s.overrideDocTheme;
+          save("docx_override_doc_theme_v1", next);
+          toast({
+            kind: "info",
+            message: next
+              ? `Doc theme matching app theme (${isDark ? "Dark" : "Light"})`
+              : "Using individual doc theme preferences",
+          });
+          return { overrideDocTheme: next };
+        });
+      },
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state, entries, activeTab, outdatedCount, isDark]);

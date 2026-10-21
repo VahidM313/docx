@@ -1,5 +1,4 @@
 import * as React from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { useApp, type BrowserTab } from "../lib/store";
 import { Tauri } from "../lib/tauri";
 import { getBrand, getEntryPath, EMBEDDED_SITE_IDS } from "../lib/catalog";
@@ -10,6 +9,7 @@ export interface ReaderPanelsApi {
   zoomBy: (deltaPercent: number) => void; // 0 = reset
   toggleDark: (siteId: string) => void;
   bookmarkToggle: (tab: BrowserTab) => void;
+  reload: () => void;
 }
 
 function tabTitle(tab: BrowserTab) {
@@ -26,18 +26,11 @@ function tabTitle(tab: BrowserTab) {
   return b.name;
 }
 
-function resolveUrl(serverPorts: Record<string, number>, siteId: string, path?: string) {
-  return `http://localhost:${serverPorts[siteId] ?? 0}${path ?? getEntryPath(siteId)}`;
-}
-
 const IframePanel = React.forwardRef<
   HTMLIFrameElement,
   { tab: BrowserTab; url: string; active: boolean; onLoad: () => void }
 >(({ tab, url, active, onLoad }, ref) => (
-  <div
-    className="absolute inset-0"
-    style={{ display: active ? "block" : "none" }}
-  >
+  <div className="absolute inset-0" style={{ display: active ? "block" : "none" }}>
     <iframe
       key={tab.id}
       ref={ref}
@@ -51,14 +44,36 @@ const IframePanel = React.forwardRef<
 ));
 IframePanel.displayName = "IframePanel";
 
+/** Keep at most this many document renderers alive. Each one is a full
+ *  cross-origin web renderer, so unbounded tab counts are a memory leak. */
+const MAX_LIVE_IFRAMES = 3;
+
 export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | null> }) {
   const app = useApp();
   const urlsRef = React.useRef<Record<string, string>>({});
   const iframeRefs = React.useRef<Record<string, HTMLIFrameElement | null>>({});
   const [loading, setLoading] = React.useState<Record<string, boolean>>({});
   const [, force] = React.useState(0);
+  const [mounted, setMounted] = React.useState<string[]>([]);
 
   const webTabs = app.tabs.filter((t) => t.siteId !== "home");
+  const activeWeb = webTabs.find((t) => t.id === app.activeTabId) ?? null;
+
+  /* Only load tabs once they are activated; evict the oldest beyond the cap. */
+  const activeWebId = activeWeb?.id ?? null;
+  React.useEffect(() => {
+    if (!activeWebId) return;
+    setMounted((prev) => {
+      const next = prev.filter((id) => id !== activeWebId);
+      next.push(activeWebId);
+      return next.length > MAX_LIVE_IFRAMES ? next.slice(next.length - MAX_LIVE_IFRAMES) : next;
+    });
+  }, [activeWebId]);
+
+  const liveTabs = React.useMemo(
+    () => webTabs.filter((t) => mounted.includes(t.id)),
+    [webTabs, mounted],
+  );
 
   /* ---- resolve server ports & urls whenever tabs change ---- */
   React.useEffect(() => {
@@ -103,11 +118,12 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [app.tabs]);
 
-  /* ---- broadcast reader settings to all iframes ---- */
+  /* ---- broadcast reader settings to live iframes ---- */
   const broadcast = React.useCallback(() => {
     if (!app.flags.themeSync && !app.flags.customFont) return;
-    for (const t of webTabs) {
+    for (const t of liveTabs) {
       try {
+        const prefs = app.getDocPrefs(t.siteId);
         iframeRefs.current[t.id]?.contentWindow?.postMessage(
           {
             type: "DOCX_READER_SETTINGS",
@@ -118,15 +134,17 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
             themeEnabled: app.flags.themeSync,
             fontEnabled: app.flags.customFont,
             customFontEnabled: app.flags.customFont,
+            fontSize: prefs.fontSize,
+            fontFamily: prefs.fontFamily,
           },
           "*",
         );
       } catch {}
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [app.readerZoom, app.effectiveSiteDark, app.flags, app.isDark, app.tabs]);
+  }, [app.readerZoom, app.effectiveSiteDark, app.flags, app.isDark, app.overrideDocTheme, app.docPrefs, liveTabs]);
 
-  React.useEffect(broadcast, [app.readerZoom, app.effectiveSiteDark, app.flags.themeSync, app.flags.customFont, app.tabs, broadcast]);
+  React.useEffect(broadcast, [app.readerZoom, app.effectiveSiteDark, app.flags.themeSync, app.flags.customFont, app.docPrefs, app.overrideDocTheme, app.isDark, liveTabs, broadcast]);
 
   /* ---- imperative api ---- */
   React.useImperativeHandle(props.apiRef, () => ({
@@ -144,7 +162,21 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
       const wasSaved = app.bookmarks.some(
         (x) => x.siteId === tab.siteId && x.pathOrUrl === (tab.pathOrUrl ?? getEntryPath(tab.siteId)),
       );
-      app.toast({ kind: wasSaved ? "info" : "success", message: wasSaved ? `Bookmark removed — ${b.name}` : `Bookmark saved — ${b.name}` });
+      app.toast({
+        kind: wasSaved ? "info" : "success",
+        message: wasSaved ? `Bookmark removed — ${b.name}` : `Bookmark saved — ${b.name}`,
+      });
+    },
+    reload: () => {
+      if (!activeWebId) return;
+      const activeIframe = iframeRefs.current[activeWebId];
+      if (activeIframe) {
+        try {
+          activeIframe.contentWindow?.location.reload();
+        } catch {
+          activeIframe.src = activeIframe.src;
+        }
+      }
     },
   }));
 
@@ -152,7 +184,7 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
   React.useEffect(() => {
     const h = (e: Event) => {
       const st = (e as CustomEvent).detail;
-      st.site_ports && Object.assign(urlsRef.current, {}, st.site_ports);
+      if (st.site_ports) Object.assign(urlsRef.current, {}, st.site_ports);
       force((n) => n + 1);
     };
     window.document.addEventListener("docx:servers", h);
@@ -161,7 +193,7 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
 
   return (
     <div className="absolute inset-0" id="reader-panels-root">
-      {webTabs.map((t) => {
+      {liveTabs.map((t) => {
         const url = urlsRef.current[`${t.id}|${t.pathOrUrl ?? ""}`] ?? undefined;
         return (
           <IframePanel
@@ -173,28 +205,18 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
             url={url ?? "about:blank"}
             active={t.id === app.activeTabId}
             onLoad={() => {
-              window.setTimeout(() => setLoading((l) => ({ ...l, [t.id]: false })), 350);
+              window.setTimeout(() => setLoading((l) => ({ ...l, [t.id]: false })), 250);
               broadcast();
             }}
           />
         );
       })}
-      <AnimatePresence>
-        {webTabs
-          .filter((t) => loading[t.id] && t.id === app.activeTabId)
-          .map((t) => (
-            <motion.div
-              key={`loading-${t.id}`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="pointer-events-none absolute left-1/2 top-11 z-50 -translate-x-1/2 rounded-full border border-border bg-popover/90 px-4 py-1.5 text-xs font-medium shadow-lift backdrop-blur flex items-center gap-2"
-            >
-              <Loader2 className="animate-spin" size={13} />
-              Loading {getBrand(t.siteId).name}…
-            </motion.div>
-          ))}
-      </AnimatePresence>
+      {activeWeb && loading[activeWeb.id] && (
+        <div className="pointer-events-none absolute left-1/2 top-3 z-50 flex -translate-x-1/2 items-center gap-2 rounded-md border border-border bg-popover px-3 py-1.5 text-xs font-medium shadow-lift">
+          <Loader2 className="animate-spin text-brand" size={13} />
+          Loading {getBrand(activeWeb.siteId).name}…
+        </div>
+      )}
     </div>
   );
 }

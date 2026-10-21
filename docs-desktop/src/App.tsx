@@ -1,25 +1,54 @@
 import * as React from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { AppProvider, useApp } from "./lib/store";
 import { Tauri } from "./lib/tauri";
-import { cursorPosition, getCurrentWindow } from "@tauri-apps/api/window";
-import { loadSearchIndex, preloadInstalledSites } from "./lib/search";
-import Titlebar from "./components/titlebar";
-import VerticalTabs from "./components/tabsBar";
+import { DomainRail } from "./components/domainRail";
+import { ChannelSidebar } from "./components/channelSidebar";
+import { DiscordHeader } from "./components/discordHeader";
+import { MemberOutline } from "./components/memberOutline";
+import { MobileDiscordDrawer, MobileDiscordBottomBar } from "./components/mobileDiscordNav";
+import { MobileTabSwitcher } from "./components/mobileTabSwitcher";
+import { MobileReaderHeader, MobileNavBottomBar } from "./components/mobileHeader";
+import { SettingsModal } from "./components/settingsModal";
 import HomeHub from "./components/hub";
-import { SidebarRail, ChannelDrawer } from "./components/sidebar";
 import { ReaderPanels, type ReaderPanelsApi } from "./components/readerPanels";
 import CommandPalette from "./components/palette";
 import BookmarksDialog from "./components/bookmarks";
 import { ToastHost, DownloadHud } from "./components/toasts";
 import { Splash } from "./components/splash";
 import { TooltipProvider } from "./ui";
+import { Minimize2 } from "lucide-react";
 
 function Shell() {
   const app = useApp();
   const readerApi = React.useRef<ReaderPanelsApi | null>(null);
+  const [mobileDrawerOpen, setMobileDrawerOpen] = React.useState(false);
 
-  /* ---------- theme (9.1): light = white-based, dark = near-black ---------- */
+  // Responsive mobile state and mobile view mode
+  const [isMobile, setIsMobile] = React.useState(
+    () => typeof window !== "undefined" && window.innerWidth < 768
+  );
+  // "nav" (side-by-side domain rail + channel sidebar) | "reader" (full-screen doc) | "tabs" (Chrome-style tab switcher)
+  const [mobileView, setMobileView] = React.useState<"nav" | "reader" | "tabs">("nav");
+
+  React.useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // When active tab changes to a doc on mobile, switch to reader view automatically
+  const activeSiteId = app.activeTab?.siteId;
+  React.useEffect(() => {
+    if (isMobile && activeSiteId && activeSiteId !== "home") {
+      setMobileView("reader");
+    }
+  }, [isMobile, activeSiteId]);
+
+  // Zen / Fullscreen edge-hover tracking
+  const [zenTopHovered, setZenTopHovered] = React.useState(false);
+  const [zenLeftHovered, setZenLeftHovered] = React.useState(false);
+
+  /* ---------- theme ---------- */
   React.useEffect(() => {
     document.documentElement.classList.toggle("dark", app.isDark);
   }, [app.isDark]);
@@ -27,56 +56,42 @@ function Shell() {
   /* ---------- boot ---------- */
   React.useEffect(() => {
     (async () => {
-      const th = await Tauri.getSystemTheme().catch(() => "light" as const);
+      const mq = window.matchMedia("(prefers-color-scheme: dark)");
+      app.setSystemDark(mq.matches);
+
       app.setSplash(24, "Reading local packs");
-      await app.refreshPacks();
+      try {
+        await app.refreshPacks();
+      } catch {}
       app.setSplash(58, "Syncing with releases");
-      await Tauri.themeChanged((t) => {
-        // payload is the new system theme; only meaningful in system mode
-        document.documentElement.classList.toggle("dark", app.themeMode === "system" ? t === "dark" : app.isDark);
-      });
-      await Tauri.downloadProgress((p) => {
-        app.applyDownload(p);
-      });
+      try {
+        await Tauri.themeChanged((t) => app.setSystemDark(t === "dark"));
+        await Tauri.downloadProgress((p) => {
+          app.applyDownload(p);
+        });
+      } catch {}
       app.setSplash(82, "Warming up UI");
       try {
         const st = await Tauri.checkServers();
         window.document.dispatchEvent(new CustomEvent("docx:servers", { detail: st }));
       } catch {}
       app.setSplash(100, "Ready");
-      await app.checkAppUpdate();
-      app.dismissSplash();
-      Tauri.windowShowReady();
-      loadSearchIndex().catch(() => {});
-
-      /* keep systemDark responsive to OS */
       try {
-        Tauri.themeChanged;
-        const mq = window.matchMedia("(prefers-color-scheme: dark)");
-        const sync = () => {
-          const dark = app.themeMode === "system" ? mq.matches : app.isDark;
-          document.documentElement.classList.toggle("dark", dark);
-        };
-        mq.addEventListener("change", () => {
-          sync();
-          if (app.themeMode === "system") window.location.reload();
-        });
+        await app.checkAppUpdate();
+      } catch {}
+      app.dismissSplash();
+      try {
+        Tauri.windowShowReady();
       } catch {}
 
-      /* interim: keep systemDark state via conv poll */
-      const iv = window.setInterval(async () => {
-        const t = await Tauri.getSystemTheme().catch(() => null);
-        if (t) document.documentElement.classList.toggle("dark", app.themeMode === "system" ? t === "dark" : app.isDark);
-      }, 10000);
-      (window as unknown as { __docxThemePoll?: number }).__docxThemePoll = iv;
+      /* keep system theme in sync without polling the backend */
+      const onScheme = () => app.setSystemDark(mq.matches);
+      try {
+        mq.addEventListener("change", onScheme);
+      } catch {}
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  /* re-sync theme when mode changes */
-  React.useEffect(() => {
-    document.documentElement.classList.toggle("dark", app.isDark);
-  }, [app.themeMode, app.systemDark, app.isDark]);
 
   /* ---------- global shortcuts ---------- */
   React.useEffect(() => {
@@ -87,140 +102,243 @@ function Shell() {
       } else if (e.ctrlKey && e.key === "Tab") {
         e.preventDefault();
         app.cycleTab(e.shiftKey ? -1 : 1);
+      } else if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "w") {
+        if (app.activeTabId && app.activeTabId !== "home") {
+          e.preventDefault();
+          app.closeTab(app.activeTabId);
+        }
+      } else if (e.key === "F11") {
+        e.preventDefault();
+        app.toggleZenMode();
       } else if (e.key === "Escape") {
+        if (app.zenMode) app.setZenMode(false);
         if (app.paletteOpen) app.setPaletteOpen(false);
+        if (app.settingsOpen) app.setSettingsOpen(false);
+        if (app.bookmarksOpen) app.setBookmarksOpen(false);
+        if (mobileDrawerOpen) setMobileDrawerOpen(false);
       }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [app]);
+  }, [app, mobileDrawerOpen]);
 
-  /* ---------- view ---------- */
-  const isHome = app.activeTab?.siteId === "home";
-  const isHomeRef = React.useRef(isHome);
-  isHomeRef.current = isHome;
+  // =========================================================
+  // DEDICATED MOBILE VIEWPORT EXPERIENCE (< 768px)
+  // =========================================================
+  if (isMobile) {
+    return (
+      <TooltipProvider>
+        <div className="relative flex h-full w-full overflow-hidden bg-background text-foreground font-sans select-none">
+          {/* Mobile View: 1. Chrome-Style Tabs Switcher */}
+          {mobileView === "tabs" && (
+            <MobileTabSwitcher
+              onSelectTab={(id) => {
+                app.activateTab(id);
+                setMobileView("reader");
+              }}
+              onNewTab={() => setMobileView("nav")}
+              onClose={() => setMobileView(app.activeTabId && app.activeTabId !== "home" ? "reader" : "nav")}
+            />
+          )}
 
-  /* While a Radix dropdown (portaled outside the transient panels) is open,
-     its parent panel must not collapse under the cursor. */
-  const [overlayLocked, setOverlayLocked] = React.useState(false);
-  React.useEffect(() => {
-    const check = () => setOverlayLocked(!!document.querySelector("[data-radix-popper-content-wrapper]"));
-    const mo = new MutationObserver(check);
-    mo.observe(document.body, { childList: true, subtree: true });
-    check();
-    return () => mo.disconnect();
-  }, []);
+          {/* Mobile View: 2. Full-Screen Document Reader (Distraction-free, zero sidebars) */}
+          {mobileView === "reader" && app.activeTabId && app.activeTabId !== "home" && (
+            <div className="flex flex-col flex-1 h-full w-full overflow-hidden bg-background">
+              {/* Pure Mobile Header */}
+              <MobileReaderHeader
+                readerApi={readerApi}
+                onOpenNav={() => setMobileView("nav")}
+                onOpenTabs={() => setMobileView("tabs")}
+              />
 
-  /* WebKit clears CSS :hover reliably for plain DOM, but the reader doc sits in
-     a cross-origin iframe: Chrome drops the boundary events when the cursor
-     crosses into it, so hover-pinned panels would stay open while reading.
-     Poll the real OS cursor (works across iframes) and reveal each transient
-     surface only while the cursor is genuinely at its strip or on its panel. */
-  const [openZones, setOpenZones] = React.useState<string[]>([]);
-  React.useEffect(() => {
-    if (app.pins.topbar && app.pins.sidebar && app.pins.tabs) return;
-    if (overlayLocked) return; // keep panels while a menu is open
-    const win = getCurrentWindow();
-    const prev = { topbar: false, sidebar: false, tabs: false };
-    const tick = async () => {
-      try {
-        const [cur, origin] = await Promise.all([cursorPosition(), win.innerPosition()]);
-        const dpr = window.devicePixelRatio || 1;
-        const cx = (cur.x - origin.x) / dpr;
-        const cy = (cur.y - origin.y) / dpr;
-        const w = window.innerWidth;
-        const h = window.innerHeight;
-        const z: string[] = [];
-        if (!app.pins.topbar) {
-          const onStrip = cy > -2 && cy < 6;
-          const onPanel = prev.topbar && cy < 48;
-          if (onStrip || onPanel) z.push("topbar");
-          prev.topbar = onStrip || onPanel;
-        }
-        if (!app.pins.sidebar) {
-          const onStrip = cx > -2 && cx < 6;
-          const onPanel = prev.sidebar && cx < 248;
-          if (onStrip || onPanel) z.push("sidebar");
-          prev.sidebar = onStrip || onPanel;
-        }
-        if (!app.pins.tabs && !isHomeRef.current) {
-          const onStrip = cx > w - 54 && cx <= w;
-          const onPanel = prev.tabs && cx > w - 262 && cx <= w;
-          if (onStrip || onPanel) z.push("tabs");
-          prev.tabs = onStrip || onPanel;
-        }
-        setOpenZones(z);
-      } catch {
-        /* window gone or query failed — leave state as is */
-      }
-    };
-    const iv = setInterval(tick, 120);
-    tick();
-    return () => clearInterval(iv);
-  }, [app.pins, overlayLocked]);
-
-  const topbarOpen = app.pins.topbar || overlayLocked || openZones.includes("topbar");
-  const sidebarOpen = app.pins.sidebar || overlayLocked || openZones.includes("sidebar");
-  const tabsOpen =
-    (app.pins.tabs || overlayLocked || openZones.includes("tabs")) && !isHome;
-
-  return (
-    <TooltipProvider>
-      <div className="flex h-full flex-col overflow-hidden bg-background">
-        {/* ---- top bar: pinned = fixed, else slides in from the top edge ---- */}
-        {app.pins.topbar ? (
-          <div className="relative z-40 shrink-0">
-            <Titlebar readerApi={readerApi} />
-          </div>
-        ) : (
-          <div
-            className={
-              "pointer-events-none fixed inset-x-0 top-0 z-[60] -translate-y-[46px] opacity-0 transition-all duration-200 ease-out " +
-              (topbarOpen ? "pointer-events-auto translate-y-0 opacity-100" : "")
-            }
-          >
-            <Titlebar readerApi={readerApi} />
-          </div>
-        )}
-
-        {/* ---- main row ---- */}
-        <div className="flex min-h-0 flex-1">
-          {/* ---- sidebar: pinned = fixed, else hidden until left-edge hover ---- */}
-          {app.pins.sidebar ? (
-            <div className="z-40 shrink-0">
-              <SidebarRail pinned />
-            </div>
-          ) : (
-            <div
-              className={
-                "pointer-events-none fixed bottom-0 left-0 z-[55] w-60 -translate-x-64 opacity-0 transition-all duration-200 ease-out " +
-                (sidebarOpen ? "pointer-events-auto translate-x-0 opacity-100 shadow-lift" : "")
-              }
-              style={{ top: app.pins.topbar ? 44 : 0 }}
-            >
-              <SidebarRail />
+              {/* Document Reader Area */}
+              <main className="relative flex-1 min-w-0 h-full overflow-hidden bg-background">
+                <ReaderPanels apiRef={readerApi} />
+              </main>
             </div>
           )}
 
-          <div className="relative min-w-0 flex-1">
-            {isHome && (
-              <motion.div
-                key="hub"
-                initial={{ opacity: 0, scale: 0.995 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.22, ease: "easeOut" }}
-                className="absolute inset-0 z-10 bg-background"
+          {/* Mobile View: 3. Domain Rail + Channel Sidebar Side-by-Side in ONE View! */}
+          {(mobileView === "nav" || (!app.activeTabId || app.activeTabId === "home")) && (
+            <div className="flex flex-col flex-1 h-full w-full overflow-hidden bg-background">
+              {/* Main side-by-side view */}
+              <div className="flex flex-1 min-h-0 w-full overflow-hidden">
+                {/* Left: Domain Rail (Compact 72px) */}
+                <div className="w-[72px] shrink-0 h-full border-r border-border bg-rail z-20">
+                  <DomainRail onNavigate={() => setMobileView("reader")} />
+                </div>
+
+                {/* Right: Channel Sidebar (Fills remaining width of the screen) */}
+                <div className="flex-1 min-w-0 h-full overflow-hidden bg-surface z-10">
+                  <ChannelSidebar onNavigate={() => setMobileView("reader")} />
+                </div>
+              </div>
+
+              {/* Bottom Dock: Search, Settings, Chrome Tabs Switcher */}
+              <MobileNavBottomBar onOpenTabs={() => setMobileView("tabs")} />
+            </div>
+          )}
+
+          {/* Modals & Overlays */}
+          <SettingsModal />
+          <CommandPalette />
+          <BookmarksDialog />
+          <ToastHost />
+          <DownloadHud />
+        </div>
+      </TooltipProvider>
+    );
+  }
+
+  // =========================================================
+  // DESKTOP DISCORD CLONE EXPERIENCE (>= 768px)
+  // =========================================================
+  return (
+    <TooltipProvider>
+      <div className="relative flex h-full w-full overflow-hidden bg-background text-foreground font-sans select-none">
+        {/* ========================================================= */}
+        {/* ZEN FULLSCREEN MODE EDGE HOVER ZONES                      */}
+        {/* ========================================================= */}
+        {app.zenMode && (
+          <>
+            {/* Top edge hover sensor */}
+            <div
+              className="fixed top-0 left-0 right-0 h-3 z-[60]"
+              onMouseEnter={() => setZenTopHovered(true)}
+            />
+
+            {/* Left edge hover sensor */}
+            <div
+              className="fixed top-0 left-0 bottom-0 w-3 z-[60]"
+              onMouseEnter={() => setZenLeftHovered(true)}
+            />
+
+            {/* Quick Exit Floating Pill */}
+            <button
+              type="button"
+              onClick={() => app.setZenMode(false)}
+              className="fixed top-3 right-3 z-[70] flex items-center gap-1.5 rounded-full border border-border bg-popover/90 px-3 py-1 text-xs font-semibold text-foreground shadow-lift backdrop-blur-md opacity-30 hover:opacity-100 transition-opacity"
+              title="Exit Fullscreen (Esc or F11)"
+            >
+              <Minimize2 className="h-3.5 w-3.5" />
+              <span>Exit Zen (Esc)</span>
+            </button>
+
+            {/* Revealing Header on Top Edge Hover */}
+            <div
+              className={
+                "fixed top-0 left-0 right-0 z-[65] shadow-lift transition-transform duration-200 ease-out " +
+                (zenTopHovered ? "translate-y-0" : "-translate-y-full")
+              }
+              onMouseLeave={() => setZenTopHovered(false)}
+            >
+              <DiscordHeader
+                readerApi={readerApi}
+                onMobileMenu={() => setMobileDrawerOpen(true)}
+              />
+            </div>
+
+            {/* Revealing Navigation on Left Edge Hover */}
+            <div
+              className={
+                "fixed top-0 left-0 bottom-0 z-[65] flex shadow-lift transition-transform duration-200 ease-out " +
+                (zenLeftHovered ? "translate-x-0" : "-translate-x-full")
+              }
+              onMouseLeave={() => {
+                setZenLeftHovered(false);
+                app.setSidebarHovered(false);
+              }}
+            >
+              <div className="h-full shrink-0 z-30">
+                <DomainRail />
+              </div>
+              <div
+                className={
+                  "h-full shrink-0 z-20 overflow-hidden discord-sidebar-transition " +
+                  (app.sidebarOpen ? "w-[240px] opacity-100" : "w-0 opacity-0 pointer-events-none")
+                }
               >
+                <div
+                  className={
+                    "w-[240px] h-full shrink-0 transition-transform duration-[320ms] ease-[cubic-bezier(0.2,0.8,0.2,1)] " +
+                    (app.sidebarOpen ? "translate-x-0" : "-translate-x-full")
+                  }
+                >
+                  <ChannelSidebar />
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+
+        {/* ========================================================= */}
+        {/* NORMAL MODE NAVIGATION                                    */}
+        {/* ========================================================= */}
+        {!app.zenMode && (
+          <>
+            {/* 1. Desktop Domain Rail (Always visible on desktop) */}
+            <div className="hidden md:flex h-full shrink-0 z-30">
+              <DomainRail />
+            </div>
+
+            {/* 2. Desktop Channel Sidebar (Smooth expanding / collapsing with sliding drawer effect) */}
+            <div
+              className={
+                "hidden md:flex h-full shrink-0 z-20 overflow-hidden discord-sidebar-transition " +
+                (app.sidebarOpen ? "w-[240px] opacity-100" : "w-0 opacity-0 pointer-events-none")
+              }
+            >
+              <div
+                className={
+                  "w-[240px] h-full shrink-0 transition-transform duration-[320ms] ease-[cubic-bezier(0.2,0.8,0.2,1)] " +
+                  (app.sidebarOpen ? "translate-x-0" : "-translate-x-full")
+                }
+              >
+                <ChannelSidebar />
+              </div>
+            </div>
+          </>
+        )}
+
+        {/* ========================================================= */}
+        {/* MAIN READER / CONTENT PANE                                */}
+        {/* ========================================================= */}
+        <div className="flex flex-1 flex-col min-w-0 h-full overflow-hidden bg-background">
+          {/* Normal Header (hidden in Zen mode) */}
+          {!app.zenMode && (
+            <DiscordHeader
+              readerApi={readerApi}
+              onMobileMenu={() => setMobileDrawerOpen(true)}
+            />
+          )}
+
+          {/* Reader / Home Content */}
+          <main className="relative min-w-0 flex-1 h-full overflow-hidden bg-background">
+            {app.activeTab?.siteId === "home" && (
+              <div className="absolute inset-0 z-10 bg-background overflow-y-auto">
                 <HomeHub />
-              </motion.div>
+              </div>
             )}
             <ReaderPanels apiRef={readerApi} />
-          </div>
+          </main>
 
-          {!isHome && app.flags.siteTabs && <VerticalTabs open={tabsOpen} />}
+          {/* Discord Mobile Bottom Navigation Bar (< md, hidden in Zen) */}
+          {!app.zenMode && (
+            <MobileDiscordBottomBar onOpenDrawer={() => setMobileDrawerOpen(true)} />
+          )}
         </div>
 
-        <ChannelDrawer />
+        {/* 3. Discord Right Outline / Member List Sidebar */}
+        {!app.zenMode && <MemberOutline />}
+
+        {/* 4. Mobile Slide-out Drawer */}
+        <MobileDiscordDrawer
+          open={mobileDrawerOpen}
+          onClose={() => setMobileDrawerOpen(false)}
+        />
+
+        {/* 5. Modals & Overlays */}
+        <SettingsModal />
         <CommandPalette />
         <BookmarksDialog />
         <ToastHost />

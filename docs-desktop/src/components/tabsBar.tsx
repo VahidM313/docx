@@ -1,155 +1,179 @@
 import * as React from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { useApp } from "../lib/store";
 import { getBrand, getSiteIconHtml } from "../lib/catalog";
-import { X, Plus, Bookmark, Pin, PinOff } from "lucide-react";
+import { X, Plus, Bookmark, PanelRight, PanelRightClose } from "lucide-react";
 
 /**
  * Vertical reader tabs, docked right.
  *
- * Unpinned (default): the rail is a constant 52px icon strip — hovering it
- * opens a labelled panel that overlays the content and closes when the
- * cursor leaves. The panel carries a pin button to fix it open.
- * Pinned: the labelled panel is always open and takes layout width.
- * The Hub button is intentionally not part of the rail.
+ * The rail is always on screen in its minimized icon form. Hovering it opens
+ * the labelled panel as an overlay; there is intentionally no "pinned open"
+ * state. On touch devices the small toggle at the top of the rail expands it.
+ * The Home button is intentionally not part of this rail.
  */
-export default function VerticalTabs({ open }: { open?: boolean }) {
+export default function VerticalTabs({ expanded }: { expanded?: boolean }) {
   const app = useApp();
   const webTabs = app.tabs.filter((t) => t.siteId !== "home");
   const active = app.activeTabId;
-
-  const actions = (
-    <>
-      <PanelRow
-        icon={<Plus size={15} />}
-        label="All documentation"
-        onClick={() => app.setDrawerOpen(true)}
-        muted
-      />
-      <PanelRow
-        icon={<Bookmark size={14} />}
-        label="Bookmarks"
-        onClick={() => app.setBookmarksOpen(true)}
-        muted
-      />
-    </>
-  );
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [hoverCapable, setHoverCapable] = React.useState(false);
+  const [desktop, setDesktop] = React.useState(() => window.innerWidth >= 768);
+  React.useEffect(() => {
+    const hover = window.matchMedia("(hover: hover)");
+    const wide = window.matchMedia("(min-width: 768px)");
+    const sync = () => {
+      setHoverCapable(hover.matches);
+      setDesktop(wide.matches);
+    };
+    sync();
+    hover.addEventListener("change", sync);
+    wide.addEventListener("change", sync);
+    return () => {
+      hover.removeEventListener("change", sync);
+      wide.removeEventListener("change", sync);
+    };
+  }, []);
+  // The hover panel is a desktop-only affordance; on narrow layouts the rail
+  // button toggles the panel instead.
+  const open = mobileOpen || (desktop && hoverCapable && !!expanded);
 
   const panel = (
-    <div className="flex h-full flex-col gap-0.5 px-2 py-2.5">
-      <div className="mb-1 flex items-center justify-between px-2">
-        <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Tabs</span>
+    <div className="flex h-full flex-col bg-background-deep">
+      <div className="flex h-12 shrink-0 items-center justify-between border-b border-border px-3">
+        <span className="text-[10.5px] font-bold uppercase tracking-wider text-muted-foreground">Open tabs</span>
         <button
-          onClick={() => app.setTabsPin()}
-          title={app.pins.tabs ? "Unpin — collapse to icons" : "Pin — keep open on screen"}
-          className={
-            "grid h-6 w-6 place-items-center rounded-md transition-colors hover:bg-accent " +
-            (app.pins.tabs ? "grad-text" : "text-muted-foreground")
-          }
+          onClick={() => setMobileOpen(false)}
+          className="grid h-6 w-6 place-items-center rounded text-muted-foreground hover:bg-accent hover:text-foreground md:hidden"
+          title="Close"
         >
-          {app.pins.tabs ? <PinOff size={13} /> : <Pin size={13} />}
+          <X size={13} />
         </button>
       </div>
-      <div className="min-h-0 flex-1 space-y-0.5 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        <AnimatePresence initial={false}>
-          {webTabs.map((t) => {
-            const brand = getBrand(t.siteId);
-            const activeTab = t.id === active;
-            return (
-              <motion.div
-                key={t.id}
-                initial={{ opacity: 0, x: 10 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 8, transition: { duration: 0.12 } }}
-              >
-                <PanelRow
-                  icon={
-                    <span
-                      className="grid h-6 w-6 shrink-0 place-items-center rounded-lg"
-                      style={{ background: brand.bgTint, color: brand.color }}
-                      dangerouslySetInnerHTML={{ __html: getSiteIconHtml(t.siteId) }}
-                    />
-                  }
-                  label={t.title ?? brand.name}
-                  active={activeTab}
-                  onClick={() => app.activateTab(t.id)}
-                  onClose={() => app.closeTab(t.id)}
-                  onAux={(e) => e.button === 1 && app.closeTab(t.id)}
-                />
-              </motion.div>
-            );
-          })}
-        </AnimatePresence>
-      </div>
-      <div className="mx-0.5 my-1 h-px bg-border" />
-      {actions}
-    </div>
-  );
 
-  /* pinned: fixed open, occupying width */
-  if (app.pins.tabs) {
-    return (
-      <div className="z-30 h-full w-64 shrink-0 border-l border-border bg-background-deep">
-        {panel}
-      </div>
-    );
-  }
-
-  /* unpinned: constant icon rail; the overlay panel opens while the cursor is
-     at the rail or on the panel (driven by the shell's cursor poll) */
-  return (
-    <div className="relative z-30 h-full w-[52px] shrink-0 border-l border-border bg-background-deep">
-      {/* icon strip */}
-      <div className="absolute inset-0 flex flex-col items-center gap-1 py-2">
+      <div className="min-h-0 flex-1 space-y-px overflow-y-auto p-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        {!webTabs.length && (
+          <p className="px-2 py-3 text-[12px] leading-relaxed text-muted-foreground">
+            No open documents. Use <span className="font-semibold text-foreground">Browse docs</span> to open one.
+          </p>
+        )}
         {webTabs.map((t) => {
           const brand = getBrand(t.siteId);
           const activeTab = t.id === active;
           return (
-            <motion.button
+            <div
               key={t.id}
-              initial={{ opacity: 0, scale: 0.7 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.7 }}
+              className={
+                "group flex h-9 w-full items-center gap-2.5 rounded px-2 transition-colors " +
+                (activeTab ? "bg-accent text-foreground" : "text-muted-foreground hover:bg-accent/70 hover:text-foreground")
+              }
+            >
+              <button
+                onClick={() => {
+                  app.activateTab(t.id);
+                  setMobileOpen(false);
+                }}
+                onAuxClick={(e) => e.button === 1 && app.closeTab(t.id)}
+                title={t.title ?? brand.name}
+                className="flex min-w-0 flex-1 items-center gap-2.5 text-left"
+              >
+                <span
+                  className="grid h-6 w-6 shrink-0 place-items-center rounded-md bg-muted"
+                  dangerouslySetInnerHTML={{ __html: getSiteIconHtml(t.siteId) }}
+                />
+                <span className="truncate text-[12.5px] font-medium">{t.title ?? brand.name}</span>
+              </button>
+              <button
+                onClick={() => app.closeTab(t.id)}
+                title="Close tab"
+                className="grid h-5 w-5 shrink-0 place-items-center rounded text-muted-foreground opacity-0 transition-opacity hover:bg-background hover:text-foreground group-hover:opacity-100"
+              >
+                <X size={12} />
+              </button>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="shrink-0 border-t border-border p-2">
+        <PanelAction
+          icon={<Plus size={15} />}
+          label="Browse docs"
+          onClick={() => {
+            app.setDrawerOpen(true);
+            setMobileOpen(false);
+          }}
+        />
+        <PanelAction
+          icon={<Bookmark size={14} />}
+          label="Bookmarks"
+          onClick={() => {
+            app.setBookmarksOpen(true);
+            setMobileOpen(false);
+          }}
+        />
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="relative z-30 h-full w-12 shrink-0 border-l border-border bg-rail md:w-14">
+      <div className="absolute inset-0 flex flex-col items-center gap-1 overflow-y-auto py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <button
+          onClick={() => setMobileOpen((v) => !v)}
+          className="grid h-8 w-8 shrink-0 place-items-center rounded-md text-muted-foreground hover:bg-accent hover:text-foreground md:hidden"
+          title={mobileOpen ? "Close tab list" : "Open tab list"}
+        >
+          {mobileOpen ? <PanelRightClose size={16} /> : <PanelRight size={16} />}
+        </button>
+
+        {webTabs.map((t) => {
+          const brand = getBrand(t.siteId);
+          const activeTab = t.id === active;
+          return (
+            <button
+              key={t.id}
               onClick={() => app.activateTab(t.id)}
               onAuxClick={(e) => e.button === 1 && app.closeTab(t.id)}
               title={t.title ?? brand.name}
               className={
-                "relative grid h-9 w-9 place-items-center rounded-xl transition-all hover:scale-105 " +
-                (activeTab ? "bg-surface shadow-soft ring-1 ring-border" : "hover:bg-surface/60")
+                "relative grid h-9 w-9 shrink-0 place-items-center rounded-md bg-muted transition-colors hover:bg-accent " +
+                (activeTab ? "ring-1 ring-brand" : "")
               }
             >
+              {activeTab && <span className="absolute -right-2 h-5 w-1 rounded-l-full bg-foreground" />}
               <span
                 className="grid h-5 w-5 place-items-center"
-                style={{ color: brand.color }}
                 dangerouslySetInnerHTML={{ __html: getSiteIconHtml(t.siteId) }}
               />
-              {activeTab && <span className="absolute -right-1 h-4 w-0.5 rounded-full" style={{ background: brand.color }} />}
-            </motion.button>
+            </button>
           );
         })}
+
         <div className="mt-auto flex flex-col items-center gap-1">
           <button
             onClick={() => app.setDrawerOpen(true)}
-            title="All documentation"
-            className="grid h-9 w-9 place-items-center rounded-xl text-muted-foreground transition-colors hover:bg-surface/60 hover:text-foreground"
+            title="Browse docs"
+            className="grid h-9 w-9 place-items-center rounded-md text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
           >
-            <Plus size={15} />
+            <Plus size={16} />
           </button>
           <button
             onClick={() => app.setBookmarksOpen(true)}
             title="Bookmarks"
-            className="grid h-9 w-9 place-items-center rounded-xl text-muted-foreground transition-colors hover:bg-surface/60 hover:text-foreground"
+            className="grid h-9 w-9 place-items-center rounded-md text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
           >
             <Bookmark size={14} />
           </button>
         </div>
       </div>
 
-      {/* expanding overlay panel (over the content; never resizes the rail) */}
+      {/* expanding overlay (never resizes the rail) */}
       <aside
         className={
-          "pointer-events-none absolute right-0 top-0 z-40 h-full w-64 translate-x-6 border-l border-border bg-popover/95 opacity-0 shadow-lift backdrop-blur transition-all duration-200 ease-out " +
-          (open ? "pointer-events-auto translate-x-0 opacity-100" : "")
+          "absolute right-full top-0 z-40 h-full w-[268px] border-r border-border shadow-lift transition-all duration-150 ease-out " +
+          (open
+            ? "pointer-events-auto translate-x-0 opacity-100"
+            : "pointer-events-none translate-x-2 opacity-0")
         }
       >
         {panel}
@@ -158,50 +182,14 @@ export default function VerticalTabs({ open }: { open?: boolean }) {
   );
 }
 
-function PanelRow({
-  icon,
-  label,
-  active,
-  onClick,
-  onClose,
-  onAux,
-  muted,
-}: {
-  icon: React.ReactNode;
-  label: string;
-  active?: boolean;
-  onClick: () => void;
-  onClose?: () => void;
-  onAux?: (e: React.MouseEvent) => void;
-  muted?: boolean;
-}) {
+function PanelAction({ icon, label, onClick }: { icon: React.ReactNode; label: string; onClick: () => void }) {
   return (
     <button
       onClick={onClick}
-      onAuxClick={onAux}
-      title={label}
-      className={
-        "flex h-9 w-full shrink-0 items-center gap-2.5 rounded-xl px-2 transition-colors " +
-        (active
-          ? "bg-surface text-foreground shadow-soft"
-          : (muted ? "text-muted-foreground" : "text-muted-foreground hover:text-foreground") +
-            " hover:bg-accent hover:text-foreground")
-      }
+      className="flex h-8 w-full items-center gap-2 rounded px-2 text-[12.5px] font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
     >
-      <span className="grid h-6 w-6 shrink-0 place-items-center">{icon}</span>
-      <span className="min-w-0 flex-1 truncate text-left text-[12.5px] font-medium">{label}</span>
-      {onClose && (
-        <span
-          role="button"
-          onClick={(e) => {
-            e.stopPropagation();
-            onClose();
-          }}
-          className="grid h-5 w-5 shrink-0 place-items-center rounded-md opacity-60 transition-all hover:bg-accent hover:opacity-100"
-        >
-          <X size={11} />
-        </span>
-      )}
+      <span className="grid h-5 w-5 place-items-center">{icon}</span>
+      {label}
     </button>
   );
 }

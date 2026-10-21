@@ -53,7 +53,20 @@ export const Tauri = {
   windowToggleMaximize: () => invoke("window_toggle_maximize"),
   windowToggleFullscreen: () => invoke("window_toggle_fullscreen"),
   windowClose: () => invoke("window_close"),
+  minimize: () => invoke("window_minimize"),
+  toggleMaximize: () => invoke("window_toggle_maximize"),
+  close: () => invoke("window_close"),
+  openBrowser: async (url: string) => {
+    try {
+      await invoke("open_in_browser", { url });
+    } catch {
+      try {
+        window.open(url, "_blank");
+      } catch {}
+    }
+  },
   windowStartDragging: () => invoke("window_start_dragging"),
+  cursorInWindow: () => invoke<[number, number] | null>("cursor_in_window"),
 
   checkServers: () => invoke<ServerStatus>("check_servers"),
   getInstalledPacks: () => invoke<PackStatusInfo[]>("get_installed_packs"),

@@ -2,13 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Docx — 123-Site Documentation Hub</title>
     <style>
-      html { background: #fafafa; }
-      html.dark { background: #0a0a0d; }
+      html { background: #2b2d31; }
+      html:not(.dark) { background: #f2f3f5; }
       #app-root { height: 100vh; }
     </style>
+    <script>
+      try {
+        const mode = JSON.parse(localStorage.getItem("docx_theme_mode") || '"dark"');
+        const dark =
+          mode === "dark" ||
+          (mode === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.classList.toggle("dark", dark);
+      } catch {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
   </head>
   <body>
     <div id="app-root"></div>

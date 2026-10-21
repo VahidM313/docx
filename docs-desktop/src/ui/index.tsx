@@ -1,7 +1,6 @@
 // shadcn/ui-style primitives (vendored, Tailwind v4 tokens)
 import * as React from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
-import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 import * as SwitchPrimitive from "@radix-ui/react-switch";
 import * as ProgressPrimitive from "@radix-ui/react-progress";
@@ -11,22 +10,22 @@ import { cn } from "../lib/utils";
 
 /* --------- Button --------- */
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium transition-all duration-200 disabled:pointer-events-none disabled:opacity-50 select-none [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 active:scale-[0.98]",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors duration-150 disabled:pointer-events-none disabled:opacity-50 select-none [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground shadow-soft hover:opacity-90",
-        gradient: "text-white shadow-soft hover:brightness-110 grad-bg",
-        outline: "border border-border bg-surface hover:bg-accent hover:shadow-soft",
+        default: "bg-primary text-primary-foreground hover:bg-brand-hover",
+        gradient: "bg-brand text-white hover:bg-brand-hover",
+        outline: "border border-border-strong bg-transparent hover:bg-accent",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         soft: "bg-muted text-foreground hover:bg-accent",
-        danger: "bg-red-500/10 text-red-500 hover:bg-red-500/20 dark:bg-red-500/15 dark:text-red-400",
+        danger: "bg-danger/15 text-danger hover:bg-danger/25",
       },
       size: {
-        default: "h-9 px-4",
+        default: "h-8 px-3.5",
         sm: "h-7 rounded-md px-2.5 text-xs",
-        lg: "h-11 rounded-xl px-6 text-base",
-        icon: "h-9 w-9",
+        lg: "h-10 rounded-md px-5 text-base",
+        icon: "h-8 w-8",
         iconSm: "h-7 w-7 rounded-md",
       },
     },
@@ -48,7 +47,7 @@ const Input = React.forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLI
     <input
       ref={ref}
       className={cn(
-        "flex h-9 w-full rounded-lg border border-input bg-surface px-3 py-1 text-sm shadow-none transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/50 disabled:opacity-50",
+        "flex h-8 w-full rounded-md border border-border-strong bg-input px-3 py-1 text-sm shadow-none transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/50 disabled:opacity-50",
         className,
       )}
       {...props}
@@ -65,7 +64,7 @@ function Badge({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1 rounded-full border border-border px-2 py-0.5 text-[11px] font-medium leading-none",
+        "inline-flex items-center gap-1 rounded-md border border-border px-2 py-0.5 text-[11px] font-medium leading-none",
         className,
       )}
       {...props}
@@ -77,7 +76,7 @@ function Badge({
 function Card({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cn("rounded-2xl border border-border bg-card text-card-foreground shadow-soft", className)}
+      className={cn("rounded-lg border border-border bg-card text-card-foreground", className)}
       {...props}
     />
   );
@@ -99,7 +98,7 @@ function Progress({
       value={value != null ? Math.min(100, Math.max(0, value)) : undefined}
     >
       <ProgressPrimitive.Indicator
-        className={cn("h-full w-full grad-bg transition-transform duration-300 ease-out", barClassName)}
+        className={cn("h-full w-full bg-brand transition-transform duration-300 ease-out", barClassName)}
         style={{ transform: `translateX(-${100 - (value ?? 0)}%)` }}
       />
     </ProgressPrimitive.Root>
@@ -114,7 +113,7 @@ const Switch = React.forwardRef<
   <SwitchPrimitive.Root
     ref={ref}
     className={cn(
-      "peer inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/50 disabled:opacity-50 data-[state=checked]:bg-gradient-to-r data-[state=checked]:from-[var(--grad-a)] data-[state=checked]:to-[var(--grad-b)] data-[state=unchecked]:bg-muted",
+      "peer inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/50 disabled:opacity-50 data-[state=checked]:bg-brand data-[state=unchecked]:bg-muted",
       className,
     )}
     {...props}
@@ -141,7 +140,7 @@ function Tooltip({ label, side = "bottom", children }: { label: string; side?: "
         <TooltipPrimitive.Content
           side={side}
           sideOffset={6}
-          className="z-[100] rounded-md bg-primary px-2 py-1 text-xs font-medium text-primary-foreground shadow-lift animate-fade-in"
+          className="z-[100] rounded-md bg-[#111214] px-2.5 py-1.5 text-xs font-medium text-white shadow-lift animate-fade-in"
         >
           {label}
         </TooltipPrimitive.Content>
@@ -170,19 +169,19 @@ function DialogContent({
 }: React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content> & { side?: "left" | "right" }) {
   const sideClasses =
     side === "left"
-      ? "inset-y-0 left-0 h-full w-[320px] border-r data-[state=open]:animate-in data-[state=closed]:animate-out"
+      ? "inset-y-0 left-0 h-full w-[min(88vw,360px)] border-r data-[state=open]:animate-in data-[state=closed]:animate-out"
       : side === "right"
-        ? "inset-y-0 right-0 h-full w-[360px] border-l"
+        ? "inset-y-0 right-0 h-full w-[min(88vw,380px)] border-l"
         : "";
   return (
     <DialogPrimitive.Portal>
-      <DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-black/45 backdrop-blur-[2px] data-[state=open]:animate-fade-in" />
+      <DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-black/60 data-[state=open]:animate-fade-in" />
       <DialogPrimitive.Content
         className={cn(
           "fixed z-50 border bg-popover p-0 text-popover-foreground shadow-lift focus:outline-none",
           side
             ? sideClasses
-            : "left-1/2 top-1/2 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-2xl animate-pop",
+            : "left-1/2 top-1/2 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-lg animate-pop",
           className,
         )}
         {...props}
@@ -192,53 +191,6 @@ function DialogContent({
     </DialogPrimitive.Portal>
   );
 }
-
-/* --------- DropdownMenu --------- */
-const DropdownMenu = DropdownMenuPrimitive.Root;
-const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
-function DropdownMenuContent({
-  className,
-  sideOffset = 6,
-  ...props
-}: React.ComponentProps<typeof DropdownMenuPrimitive.Content>) {
-  return (
-    <DropdownMenuPrimitive.Portal>
-      <DropdownMenuPrimitive.Content
-        sideOffset={sideOffset}
-        className={cn(
-          "z-[100] min-w-[10rem] overflow-hidden rounded-xl border border-border bg-popover p-1 text-popover-foreground shadow-lift animate-pop",
-          className,
-        )}
-        {...props}
-      />
-    </DropdownMenuPrimitive.Portal>
-  );
-}
-const DropdownMenuItem = React.forwardRef<
-  React.ComponentRef<typeof DropdownMenuPrimitive.Item>,
-  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & { danger?: boolean }
->(({ className, danger, ...props }, ref) => (
-  <DropdownMenuPrimitive.Item
-    ref={ref}
-    className={cn(
-      "relative flex cursor-pointer select-none items-center gap-2 rounded-lg px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:size-4",
-      danger && "text-red-500 focus:text-red-500",
-      className,
-    )}
-    {...props}
-  />
-));
-DropdownMenuItem.displayName = "DropdownMenuItem";
-const DropdownMenuSeparator = React.forwardRef<
-  React.ComponentRef<typeof DropdownMenuPrimitive.Separator>,
-  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>
->(({ className, ...props }, ref) => (
-  <DropdownMenuPrimitive.Separator ref={ref} className={cn("-mx-1 my-1 h-px bg-border", className)} {...props} />
-));
-DropdownMenuSeparator.displayName = "DropdownMenuSeparator";
-const DropdownMenuLabel = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
-  <div className={cn("px-2 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground", className)} {...props} />
-);
 
 export {
   Button,
@@ -255,10 +207,4 @@ export {
   DialogClose,
   DialogContent,
   DialogTitle,
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuLabel,
 };

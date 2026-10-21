@@ -87,3 +87,32 @@ export function countByCategory(sites: { brand: SiteBrand }[]): Record<string, n
   for (const s of sites) counts[s.brand.category] = (counts[s.brand.category] ?? 0) + 1;
   return counts;
 }
+
+/** Resolves the adaptive brand color for light and dark themes */
+export function getAdaptiveBrandColor(color: string, isDark: boolean): string {
+  const c = (color || "").trim().toLowerCase();
+  if (c === "#ffffff" || c === "#fff" || c === "white") {
+    return isDark ? "#ffffff" : "#09090b";
+  }
+  if (c === "#000000" || c === "#000" || c === "black" || c === "#09090b") {
+    return isDark ? "#ffffff" : "#09090b";
+  }
+  if (!isDark && (c === "#fef08a" || c === "#facc15" || c === "#fde047")) {
+    return "#ca8a04";
+  }
+  return color || (isDark ? "#ffffff" : "#09090b");
+}
+
+/** Returns the SVG markup adapted with correct theme colors and contrast */
+export function getAdaptiveSiteSvg(brand: SiteBrand, isDark: boolean): string {
+  let svg = brand?.svg || "";
+  const color = getAdaptiveBrandColor(brand?.color, isDark);
+  if (!isDark) {
+    svg = svg.replace(/fill="#fff(fff)?"/gi, `fill="${color}"`);
+    svg = svg.replace(/stroke="#fff(fff)?"/gi, `stroke="${color}"`);
+  } else {
+    svg = svg.replace(/fill="#000(000)?"/gi, `fill="${color}"`);
+    svg = svg.replace(/stroke="#000(000)?"/gi, `stroke="${color}"`);
+  }
+  return svg;
+}
