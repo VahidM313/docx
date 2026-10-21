@@ -288,8 +288,10 @@ html.docx-smart-dark #mobile-menu .mobile-arrow {
   padding-right: 1.5rem !important;
 }
 
-/* Hide empty offline ad placeholders on LearnCpp */
+/* Hide empty sidebars and offline ad placeholders on LearnCpp */
+#site-wrapper #primary,
 #site-wrapper #secondary,
+#site-wrapper #primary.widget-area,
 #site-wrapper #secondary.widget-area,
 #site-wrapper .cf_monitor,
 #site-wrapper [id*="ezoic"],
@@ -297,31 +299,19 @@ html.docx-smart-dark #mobile-menu .mobile-arrow {
   display: none !important;
 }
 
-/* Let main tutorial content expand across all available width */
+/* Let main tutorial content expand across full available width */
+#site-wrapper #container .main,
 #site-wrapper #container.three-columns-sided .main,
-#site-wrapper #container.two-columns-left .main {
-  width: calc(100% - 240px) !important;
-  max-width: 100% !important;
-  float: right !important;
-  box-sizing: border-box !important;
-}
-
-#site-wrapper #container.two-columns-right .main {
-  width: calc(100% - 240px) !important;
-  max-width: 100% !important;
-  float: left !important;
-  box-sizing: border-box !important;
-}
-
+#site-wrapper #container.three-columns-left .main,
+#site-wrapper #container.three-columns-right .main,
+#site-wrapper #container.two-columns-left .main,
+#site-wrapper #container.two-columns-right .main,
 #site-wrapper #container.one-column .main {
   width: 100% !important;
   max-width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-#site-wrapper #primary {
-  width: 220px !important;
-  max-width: 220px !important;
+  float: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
   box-sizing: border-box !important;
 }
 
