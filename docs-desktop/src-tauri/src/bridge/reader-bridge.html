@@ -31,6 +31,41 @@ html.docx-smart-light body {
   color-scheme: light !important;
 }
 
+/* Persian typography & RTL layout */
+html.docx-fa-active body,
+html.docx-fa-active article,
+html.docx-fa-active main,
+html.docx-fa-active .markdown,
+html.docx-fa-active .content,
+html.docx-fa-active #content {
+  font-family: 'Vazirmatn', 'Sahel', 'Segoe UI', Tahoma, -apple-system, sans-serif !important;
+}
+.docx-fa-block {
+  direction: rtl !important;
+  text-align: right !important;
+  line-height: 1.85 !important;
+}
+.docx-fa-block pre,
+.docx-fa-block code,
+.docx-fa-block kbd,
+.docx-fa-block .hljs,
+.docx-fa-block [class*="language-"],
+.docx-fa-block [class*="highlight"],
+.docx-fa-block pre code,
+.docx-fa-block svg,
+.docx-fa-block .katex,
+.docx-fa-block math {
+  direction: ltr !important;
+  text-align: left !important;
+  unicode-bidi: isolate !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+}
+.docx-fa-inline-code {
+  direction: ltr !important;
+  display: inline-block !important;
+  unicode-bidi: isolate !important;
+}
+
 /* Responsive media containment (prevents Pandas & scientific SVGs and wide images from overflowing) */
 .bd-content svg, .bd-content img, .figure svg, .figure img, svg.output_svg, .jp-RenderedSVG,
 article img, article svg:not([class*="icon"]):not([class*="lucide"]),
@@ -2666,6 +2701,160 @@ devsite-header {
       }
     } catch(err) {}
   }, false);
+
+  /* ========================================================= */
+  /* DOCX OFFLINE PERSIAN (FARSI) TRANSLATION ENGINE           */
+  /* ========================================================= */
+  var isPersianMode = false;
+  var pendingTranslationMap = {};
+
+  function fnv1a(str) {
+    var norm = (str || '').trim().replace(/\s+/g, ' ');
+    var h = 0x811c9dc5;
+    for (var i = 0; i < norm.length; i++) {
+      h ^= norm.charCodeAt(i);
+      h = Math.imul(h, 0x01000193);
+    }
+    var hex = (h >>> 0).toString(16);
+    while (hex.length < 8) hex = '0' + hex;
+    return hex;
+  }
+
+  function getTranslatableElements() {
+    var selectors = 'article p, article li, article h1, article h2, article h3, article h4, article h5, article h6, article blockquote, article td, article th, main p, main li, main h1, main h2, main h3, main h4, main blockquote, main td, main th, .markdown p, .markdown li, .markdown h1, .markdown h2, .markdown h3, .content p, .content li, .content h1, .content h2, .content h3, #content p, #content li, body p, body li';
+    var candidateNodes = document.querySelectorAll(selectors);
+    var validNodes = [];
+    for (var i = 0; i < candidateNodes.length; i++) {
+      var node = candidateNodes[i];
+      if (node.closest('pre, code, svg, math, script, style, noscript, .katex, .docx-no-translate')) continue;
+      var text = (node.textContent || '').trim();
+      if (text.length < 3 || /^[\d\s.,:;!?(){}\[\]\-_/\\+=<>*&^%$#@~`|]+$/.test(text)) continue;
+      validNodes.push(node);
+    }
+    return validNodes;
+  }
+
+  function tokenizeNode(element) {
+    var codeTokens = [];
+    var clone = element.cloneNode(true);
+    var codeElements = clone.querySelectorAll('code, kbd, .hljs, [class*="language-"]');
+    for (var i = 0; i < codeElements.length; i++) {
+      var ce = codeElements[i];
+      var placeholder = '⟦CODE_' + i + '⟧';
+      codeTokens.push({
+        token: placeholder,
+        html: ce.outerHTML
+      });
+      var placeholderNode = document.createTextNode(placeholder);
+      ce.parentNode.replaceChild(placeholderNode, ce);
+    }
+    var text = (clone.textContent || '').trim().replace(/\s+/g, ' ');
+    return {
+      text: text,
+      codeTokens: codeTokens
+    };
+  }
+
+  function restoreTokens(translatedText, codeTokens) {
+    var result = translatedText;
+    for (var i = 0; i < codeTokens.length; i++) {
+      var ct = codeTokens[i];
+      var safeCodeHtml = '<bdi dir="ltr" class="docx-fa-inline-code">' + ct.html + '</bdi>';
+      result = result.split(ct.token).join(safeCodeHtml);
+    }
+    return result;
+  }
+
+  function applyPersianTranslation() {
+    isPersianMode = true;
+    document.documentElement.classList.add('docx-fa-active');
+    var elements = getTranslatableElements();
+    var batchToRequest = [];
+
+    for (var i = 0; i < elements.length; i++) {
+      var el = elements[i];
+      if (!el.dataset.docxOriginal) {
+        el.dataset.docxOriginal = el.innerHTML;
+      }
+
+      var tokenized = tokenizeNode(el);
+      if (!tokenized.text) continue;
+      var hash = fnv1a(tokenized.text);
+      el.dataset.docxHash = hash;
+
+      var cached = null;
+      try {
+        var raw = localStorage.getItem('docx_tr_' + hash);
+        if (raw) cached = JSON.parse(raw).translated;
+      } catch (e) {}
+
+      if (cached) {
+        el.innerHTML = restoreTokens(cached, tokenized.codeTokens);
+        el.classList.add('docx-fa-block');
+      } else {
+        var reqId = 'tr_' + i + '_' + Date.now();
+        pendingTranslationMap[reqId] = {
+          element: el,
+          codeTokens: tokenized.codeTokens,
+          hash: hash
+        };
+        batchToRequest.push({
+          id: reqId,
+          text: tokenized.text,
+          hash: hash
+        });
+      }
+    }
+
+    if (batchToRequest.length > 0) {
+      window.parent.postMessage({
+        type: 'DOCX_REQUEST_TRANSLATION',
+        items: batchToRequest
+      }, '*');
+    }
+  }
+
+  function restoreEnglish() {
+    isPersianMode = false;
+    document.documentElement.classList.remove('docx-fa-active');
+    var elements = document.querySelectorAll('[data-docx-original]');
+    for (var i = 0; i < elements.length; i++) {
+      var el = elements[i];
+      el.innerHTML = el.dataset.docxOriginal;
+      el.classList.remove('docx-fa-block');
+      delete el.dataset.docxOriginal;
+      delete el.dataset.docxHash;
+    }
+  }
+
+  window.addEventListener('message', function(e) {
+    if (!e.data) return;
+    if (e.data.type === 'DOCX_TRANSLATE_FA') {
+      applyPersianTranslation();
+    } else if (e.data.type === 'DOCX_RESTORE_EN') {
+      restoreEnglish();
+    } else if (e.data.type === 'DOCX_TRANSLATIONS_READY' && e.data.translations) {
+      var trs = e.data.translations;
+      for (var reqId in trs) {
+        var entry = pendingTranslationMap[reqId];
+        if (entry && entry.element) {
+          var translated = (trs[reqId] && trs[reqId].translated) ? trs[reqId].translated : trs[reqId];
+          if (translated) {
+            entry.element.innerHTML = restoreTokens(translated, entry.codeTokens);
+            entry.element.classList.add('docx-fa-block');
+            try {
+              localStorage.setItem('docx_tr_' + entry.hash, JSON.stringify({
+                hash: entry.hash,
+                translated: translated,
+                updatedAt: Date.now()
+              }));
+            } catch(err) {}
+          }
+          delete pendingTranslationMap[reqId];
+        }
+      }
+    }
+  });
 
   function scrollToHashSymbol() {
     if (!window.location.hash || window.location.hash.length <= 1) return;

@@ -17,7 +17,14 @@ import {
   Type,
   RotateCcw,
   Sparkles,
+  Languages,
+  DownloadCloud,
+  CheckCircle2,
+  Trash2,
 } from "lucide-react";
+import { initTranslationModel, subscribeModelStatus } from "../lib/translator/engine";
+import { getTranslationCacheStats, clearTranslationCache } from "../lib/translator/cache";
+import type { TranslationModelProgress } from "../lib/translator/types";
 
 const FONT_FAMILIES = [
   { id: "default", name: "Doc Native", desc: "Default doc stylesheet font", sample: "const code = true;" },
@@ -30,9 +37,30 @@ const FONT_FAMILIES = [
 
 export function SettingsModal() {
   const app = useApp();
-  const [activeTab, setActiveTab] = React.useState<"doc-prefs" | "appearance" | "display" | "packs" | "about">(
+  const [activeTab, setActiveTab] = React.useState<"doc-prefs" | "appearance" | "display" | "packs" | "translation" | "about">(
     "doc-prefs",
   );
+
+  const [cacheStats, setCacheStats] = React.useState<{ count: number; estimatedBytes: number }>({ count: 0, estimatedBytes: 0 });
+  const [modelProgress, setModelProgress] = React.useState<TranslationModelProgress>({
+    status: app.modelStatus,
+    percent: app.modelPercent,
+  });
+
+  React.useEffect(() => {
+    return subscribeModelStatus((p) => {
+      setModelProgress(p);
+      if (p.status !== app.modelStatus) {
+        app.setModelStatus(p.status, p.percent);
+      }
+    });
+  }, [app]);
+
+  React.useEffect(() => {
+    if (app.settingsOpen && activeTab === "translation") {
+      getTranslationCacheStats().then(setCacheStats);
+    }
+  }, [app.settingsOpen, activeTab]);
 
   // Determine currently selected site for doc preferences
   const activeSiteId = app.activeTab?.siteId && app.activeTab.siteId !== "home"
@@ -167,6 +195,20 @@ export function SettingsModal() {
               >
                 <HardDrive className="h-4 w-4" />
                 <span>Packs & Storage</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setActiveTab("translation")}
+                className={
+                  "flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs font-medium transition-colors cursor-pointer " +
+                  (activeTab === "translation"
+                    ? "bg-accent text-foreground font-semibold"
+                    : "text-muted-foreground hover:bg-accent/50 hover:text-foreground")
+                }
+              >
+                <Languages className="h-4 w-4 text-emerald-400" />
+                <span>Translation (فارسی)</span>
               </button>
 
               <button
@@ -703,6 +745,128 @@ export function SettingsModal() {
                       </Button>
                     );
                   })()}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* ========================================================= */}
+          {/* TAB: LANGUAGE & TRANSLATION                               */}
+          {/* ========================================================= */}
+          {activeTab === "translation" && (
+            <div className="space-y-6 max-w-xl pr-6">
+              <div>
+                <h2 className="text-lg font-bold text-foreground">Language & Offline Translation</h2>
+                <p className="text-xs text-muted-foreground mt-1">
+                  Translate developer documentation into Persian (فارسی) using Meta NLLB-200 while preserving all code, API signatures, and terminal syntax intact.
+                </p>
+              </div>
+
+              {/* Setting 1: Show Toggle in Header */}
+              <div className="flex items-center justify-between rounded-lg border border-border bg-card p-4">
+                <div>
+                  <div className="text-sm font-semibold text-foreground">Header Translation Button</div>
+                  <div className="text-xs text-muted-foreground mt-0.5">
+                    Show the [ FA | فارسی ] one-click translation button in the document header.
+                  </div>
+                </div>
+                <Switch
+                  checked={app.translationPrefs.showToggleInHeader}
+                  onCheckedChange={(v) => app.setTranslationPrefs({ showToggleInHeader: v })}
+                />
+              </div>
+
+              {/* Setting 2: Auto-Translate */}
+              <div className="flex items-center justify-between rounded-lg border border-border bg-card p-4">
+                <div>
+                  <div className="text-sm font-semibold text-foreground">Auto-Translate to Persian</div>
+                  <div className="text-xs text-muted-foreground mt-0.5">
+                    Automatically translate pages to Persian when opened in the reader.
+                  </div>
+                </div>
+                <Switch
+                  checked={app.translationPrefs.autoTranslate}
+                  onCheckedChange={(v) => app.setTranslationPrefs({ autoTranslate: v })}
+                />
+              </div>
+
+              {/* Setting 3: Offline AI Translation Model (Meta NLLB-200) */}
+              <div className="rounded-lg border border-border bg-card p-4 space-y-3">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <div className="text-sm font-semibold text-foreground">Meta NLLB-200 Translation Model</div>
+                      <span className="rounded bg-emerald-500/15 border border-emerald-500/30 px-1.5 py-0.5 text-[10px] font-bold text-emerald-400">
+                        pes_Arab
+                      </span>
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                      Meta's No Language Left Behind (NLLB-200 600M quantized). Runs 100% locally via WebAssembly with SIMD. Translates all 147+ documentation sites offline.
+                    </p>
+                  </div>
+                  {modelProgress.status === "ready" ? (
+                    <div className="flex items-center gap-1.5 shrink-0 rounded-lg bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 text-xs font-semibold text-emerald-400">
+                      <CheckCircle2 className="h-3.5 w-3.5" />
+                      <span>Ready (Offline)</span>
+                    </div>
+                  ) : modelProgress.status === "downloading" ? (
+                    <div className="flex items-center gap-1.5 shrink-0 rounded-lg bg-brand/15 border border-brand/30 px-2.5 py-1 text-xs font-semibold text-brand animate-pulse">
+                      <RefreshCw className="h-3.5 w-3.5 animate-spin" />
+                      <span>Downloading {modelProgress.percent}%</span>
+                    </div>
+                  ) : (
+                    <Button
+                      variant="gradient"
+                      size="sm"
+                      onClick={() => initTranslationModel()}
+                      className="gap-1.5 shrink-0"
+                    >
+                      <DownloadCloud className="h-3.5 w-3.5" />
+                      <span>Download Model (~300 MB)</span>
+                    </Button>
+                  )}
+                </div>
+
+                {modelProgress.status === "downloading" && (
+                  <div className="space-y-1 pt-1">
+                    <div className="flex justify-between text-[11px] text-muted-foreground">
+                      <span>{modelProgress.message || "Downloading model weights…"}</span>
+                      <span className="font-semibold">{modelProgress.percent}%</span>
+                    </div>
+                    <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
+                      <div
+                        className="h-full bg-brand transition-all duration-300"
+                        style={{ width: `${Math.max(5, modelProgress.percent)}%` }}
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Setting 4: Persistent Translation Cache */}
+              <div className="rounded-lg border border-border bg-card p-4 space-y-3">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="text-sm font-semibold text-foreground">Local Translation Cache</div>
+                    <div className="text-xs text-muted-foreground mt-0.5">
+                      {cacheStats.count} paragraphs cached on disk ({Math.round(cacheStats.estimatedBytes / 1024)} KB) • Loads in 0ms with zero CPU.
+                    </div>
+                  </div>
+                  {cacheStats.count > 0 && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={async () => {
+                        await clearTranslationCache();
+                        setCacheStats({ count: 0, estimatedBytes: 0 });
+                        app.toast({ kind: "info", message: "Translation cache cleared." });
+                      }}
+                      className="gap-1.5 text-danger hover:bg-danger/10 hover:text-danger hover:border-danger/40 h-8"
+                    >
+                      <Trash2 className="h-3.5 w-3.5" />
+                      <span>Clear Cache</span>
+                    </Button>
+                  )}
                 </div>
               </div>
             </div>

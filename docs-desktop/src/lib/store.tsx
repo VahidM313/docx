@@ -7,6 +7,11 @@ import {
   type ServerStatus,
 } from "./tauri";
 import { SITES, SITE_MAP, getEntryPath, getSiteOrigin, EMBEDDED_SITE_IDS, type SiteBrand } from "./catalog";
+import {
+  DEFAULT_TRANSLATION_PREFS,
+  type TranslationPreferences,
+  type TranslationModelStatus,
+} from "./translator/types";
 
 /* ------------------------------------------------------------------ */
 /* Persistence helpers                                                 */
@@ -159,6 +164,11 @@ interface AppState {
   zenMode: boolean;
   openedDocs: string[];
   overrideDocTheme: boolean;
+
+  translationPrefs: TranslationPreferences;
+  modelStatus: TranslationModelStatus;
+  modelPercent: number;
+  activeDocFa: boolean;
 }
 
 interface AppApi extends AppState {
@@ -233,6 +243,10 @@ interface AppApi extends AppState {
   setOverrideDocTheme: (v: boolean | ((prev: boolean) => boolean)) => void;
   toggleOverrideDocTheme: () => void;
 
+  setTranslationPrefs: (patch: Partial<TranslationPreferences>) => void;
+  setModelStatus: (status: TranslationModelStatus, percent?: number) => void;
+  toggleActiveDocFa: (v?: boolean) => void;
+
   toast: (t: Omit<Toast, "id">) => void;
   dropToast: (id: number) => void;
 }
@@ -296,6 +310,14 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       zenMode: false,
       openedDocs: load<string[]>("docx_opened_docs_v2", []),
       overrideDocTheme: load<boolean>("docx_override_doc_theme_v1", false),
+
+      translationPrefs: {
+        ...DEFAULT_TRANSLATION_PREFS,
+        ...load<Partial<TranslationPreferences>>("docx_translation_prefs_v1", {}),
+      },
+      modelStatus: load<boolean>("docx_model_ready_v1", false) ? "ready" : "not-downloaded",
+      modelPercent: load<boolean>("docx_model_ready_v1", false) ? 100 : 0,
+      activeDocFa: false,
     },
   );
 
@@ -837,6 +859,24 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
           });
           return { overrideDocTheme: next };
         });
+      },
+      setTranslationPrefs: (patch: Partial<TranslationPreferences>) => {
+        setState((s) => {
+          const next = { ...s.translationPrefs, ...patch };
+          save("docx_translation_prefs_v1", next);
+          return { translationPrefs: next };
+        });
+      },
+      setModelStatus: (status: TranslationModelStatus, percent = 0) => {
+        if (status === "ready") {
+          save("docx_model_ready_v1", true);
+        } else if (status === "not-downloaded") {
+          save("docx_model_ready_v1", false);
+        }
+        setState({ modelStatus: status, modelPercent: percent });
+      },
+      toggleActiveDocFa: (v?: boolean) => {
+        setState((s) => ({ activeDocFa: typeof v === "boolean" ? v : !s.activeDocFa }));
       },
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps

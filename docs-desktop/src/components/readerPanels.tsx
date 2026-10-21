@@ -2,12 +2,14 @@ import * as React from "react";
 import { useApp, type BrowserTab } from "../lib/store";
 import { Tauri } from "../lib/tauri";
 import { getBrand, getEntryPath, EMBEDDED_SITE_IDS } from "../lib/catalog";
+import { translateTasks } from "../lib/translator/engine";
 import { Loader2 } from "lucide-react";
 
 /** Imperative API the titlebar/outside controls can call. */
 export interface ReaderPanelsApi {
   zoomBy: (deltaPercent: number) => void; // 0 = reset
   toggleDark: (siteId: string) => void;
+  togglePersian?: (enable?: boolean) => void;
   bookmarkToggle: (tab: BrowserTab) => void;
   reload: () => void;
 }
@@ -146,6 +148,37 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
 
   React.useEffect(broadcast, [app.readerZoom, app.effectiveSiteDark, app.flags.themeSync, app.flags.customFont, app.docPrefs, app.overrideDocTheme, app.isDark, liveTabs, broadcast]);
 
+  /* ---- Persian translation bridge ---- */
+  React.useEffect(() => {
+    if (!activeWebId) return;
+    const iframe = iframeRefs.current[activeWebId];
+    if (!iframe?.contentWindow) return;
+    iframe.contentWindow.postMessage(
+      { type: app.activeDocFa ? "DOCX_TRANSLATE_FA" : "DOCX_RESTORE_EN" },
+      "*",
+    );
+  }, [app.activeDocFa, activeWebId]);
+
+  React.useEffect(() => {
+    const handleMessage = async (e: MessageEvent) => {
+      if (e.data?.type === "DOCX_REQUEST_TRANSLATION" && Array.isArray(e.data.items)) {
+        const results = await translateTasks(e.data.items);
+        const activeIframe = activeWebId ? iframeRefs.current[activeWebId] : null;
+        if (activeIframe?.contentWindow) {
+          activeIframe.contentWindow.postMessage(
+            {
+              type: "DOCX_TRANSLATIONS_READY",
+              translations: results,
+            },
+            "*",
+          );
+        }
+      }
+    };
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, [activeWebId]);
+
   /* ---- imperative api ---- */
   React.useImperativeHandle(props.apiRef, () => ({
     zoomBy: (delta) => {
@@ -155,6 +188,9 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
     toggleDark: (siteId) => {
       app.toggleSiteDark(siteId);
       // broadcast happens via effect after state change
+    },
+    togglePersian: (enable) => {
+      app.toggleActiveDocFa(enable);
     },
     bookmarkToggle: (tab) => {
       const b = getBrand(tab.siteId);

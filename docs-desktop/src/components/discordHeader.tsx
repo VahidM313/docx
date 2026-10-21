@@ -19,6 +19,7 @@ import {
   Sun,
   Moon,
   Sparkles,
+  Languages,
 } from "lucide-react";
 import { type ReaderPanelsApi } from "./readerPanels";
 
@@ -277,6 +278,42 @@ export function DiscordHeader({
                   <span className="hidden sm:inline text-[11px]">Light</span>
                 </>
               )}
+            </button>
+          </Tooltip>
+        )}
+
+        {/* Persian (Farsi) Offline Translation Toggle */}
+        {isReader && active?.siteId && app.translationPrefs.showToggleInHeader && (
+          <Tooltip
+            label={
+              app.activeDocFa
+                ? "ترجمه فارسی فعال است (کلیک برای زبان انگلیسی) • Persian Translation Active (Click to switch to English)"
+                : "ترجمه صفحه به فارسی (آفلاین) • Translate page to Persian (Offline)"
+            }
+            side="bottom"
+          >
+            <button
+              type="button"
+              onClick={() => {
+                const next = !app.activeDocFa;
+                app.toggleActiveDocFa(next);
+                app.toast({
+                  kind: "info",
+                  message: next ? "در حال ترجمه به فارسی… (کدها دست‌نخورده می‌مانند)" : "Restored original English text",
+                });
+              }}
+              className={
+                "no-drag flex items-center gap-1.5 px-2 h-7 rounded-lg border text-xs font-semibold transition-all cursor-pointer shadow-xs mr-1 " +
+                (app.activeDocFa
+                  ? "border-emerald-500/70 bg-emerald-500/15 text-emerald-400 hover:bg-emerald-500/25"
+                  : "border-border bg-surface/90 hover:bg-accent text-muted-foreground hover:text-foreground")
+              }
+              aria-label="Toggle Persian Translation"
+            >
+              <Languages className={"h-3.5 w-3.5 " + (app.activeDocFa ? "text-emerald-400" : "text-muted-foreground")} />
+              <span className="text-[11px] font-bold">
+                {app.activeDocFa ? "فارسی" : "FA"}
+              </span>
             </button>
           </Tooltip>
         )}
