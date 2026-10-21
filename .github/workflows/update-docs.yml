@@ -249,11 +249,15 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release upload packs-latest \
-            "./dist-packs/${{ matrix.site }}.docpack" \
-            "./dist-packs/${{ matrix.site }}.manifest.json" \
-            "./dist-packs/${{ matrix.site }}.search.json" \
-            --clobber
+          upload_args=(
+            "./dist-packs/${{ matrix.site }}.docpack"
+            "./dist-packs/${{ matrix.site }}.manifest.json"
+            "./dist-packs/${{ matrix.site }}.search.json"
+          )
+          if [ -f "./dist-packs/${{ matrix.site }}.delta" ]; then
+            upload_args+=("./dist-packs/${{ matrix.site }}.delta")
+          fi
+          gh release upload packs-latest "${upload_args[@]}" --clobber
 
   refresh-icons:
     name: Capture Site Icons (hybrid favicon strategy)

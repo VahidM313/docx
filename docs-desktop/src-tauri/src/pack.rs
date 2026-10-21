@@ -307,6 +307,7 @@ fn migrate_legacy_packs_to_appdata() {
 
 pub(crate) const DOCP_MAGIC: &[u8; 4] = b"DOCP";
 
+#[allow(dead_code)]
 pub fn decompress_chunk_if_needed(
     data: &[u8],
     encoding: Option<&str>,
