@@ -211,30 +211,14 @@ export default function HomeHub() {
               size="sm"
               className="gap-1.5"
               onClick={() => {
-                if (cat === "all") {
-                  const missing = entries.filter((e) => !e.installed && !e.activeDownload).map((e) => e.id);
-                  if (!missing.length) return app.toast({ kind: "info", message: "Every pack is already installed." });
-                  Promise.allSettled(missing.map((id) => app.installSite(id)));
-                } else {
-                  handleDownloadCategory(cat);
-                }
+                const missing = entries.filter((e) => !e.installed && !e.activeDownload).map((e) => e.id);
+                if (!missing.length) return app.toast({ kind: "info", message: "Every pack is already installed." });
+                Promise.allSettled(missing.map((id) => app.installSite(id)));
               }}
-              title={cat === "all" ? "Download all missing packs" : `Download all missing packs in ${cat}`}
+              title="Download all missing offline documentation packs across the library"
             >
-              <ArrowDownToLine size={14} /> {cat === "all" ? "Get missing" : `Download all (${categoryMissing.length})`}
+              <ArrowDownToLine size={14} /> Get missing
             </Button>
-
-            {cat !== "all" && categoryInstalled.length > 0 && (
-              <Button
-                variant="outline"
-                size="sm"
-                className="gap-1.5 text-danger hover:bg-danger/10 hover:text-danger hover:border-danger/40"
-                onClick={() => handleDeleteCategory(cat)}
-                title={`Delete installed packs in ${cat}`}
-              >
-                <Trash2 size={13} /> Delete category ({categoryInstalled.length})
-              </Button>
-            )}
 
             {installed.length > 0 && (
               <Button
