@@ -4,8 +4,8 @@
   "name": "React",
   "version": "v19.1",
   "category": "React Ecosystem",
-  "color": "#61dafb",
-  "bgTint": "rgba(97, 218, 251, 0.14)",
+  "color": "#00d8ff",
+  "bgTint": "rgba(0, 216, 255, 0.14)",
   "description": "The library for web and native user interfaces with Hooks, Server Components, and Actions.",
   "origin": "https://react.dev",
   "entryPath": "/learn",
@@ -14,5 +14,5 @@
     "/reference"
   ],
   "maxPages": 180,
-  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\"><circle cx=\"12\" cy=\"12\" r=\"2.1\" fill=\"currentColor\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4.2\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4.2\" transform=\"rotate(60 12 12)\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4.2\" transform=\"rotate(120 12 12)\"/></svg>"
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><ellipse cx=\"12\" cy=\"12\" rx=\"10.5\" ry=\"4.2\" stroke=\"#00d8ff\" stroke-width=\"1.4\" fill=\"none\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10.5\" ry=\"4.2\" transform=\"rotate(60 12 12)\" stroke=\"#00d8ff\" stroke-width=\"1.4\" fill=\"none\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10.5\" ry=\"4.2\" transform=\"rotate(120 12 12)\" stroke=\"#00d8ff\" stroke-width=\"1.4\" fill=\"none\"/><circle cx=\"12\" cy=\"12\" r=\"2.2\" fill=\"#00d8ff\"/></svg>"
 }

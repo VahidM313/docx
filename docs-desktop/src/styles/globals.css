@@ -3,79 +3,99 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* ---------------------------------------------
-   Design tokens — Docx (light: white-based, dark: near-black-based)
+   Design tokens — Discord-style flat chrome.
+   Dark is the primary surface. Light mirrors it.
    --------------------------------------------- */
 :root {
-  --background: #fafafa;
-  --background-deep: #f4f4f5;
-  --foreground: #18181b;
+  /* Discord Pure White Light Theme */
+  --background: #ffffff;
+  --background-deep: #ffffff;
+  --rail: #ffffff;
+  --foreground: #09090b;
 
   --surface: #ffffff;
-  --surface-translucent: rgba(255, 255, 255, 0.82);
+  --surface-translucent: rgba(255, 255, 255, 0.95);
 
   --card: #ffffff;
-  --card-foreground: #18181b;
+  --card-foreground: #09090b;
 
   --muted: #f4f4f5;
-  --muted-foreground: #71717a;
+  --muted-foreground: #374151;
 
   --accent: #f4f4f5;
-  --accent-foreground: #18181b;
+  --accent-foreground: #09090b;
 
   --popover: #ffffff;
-  --popover-foreground: #18181b;
+  --popover-foreground: #09090b;
 
-  --border: rgba(0, 0, 0, 0.08);
-  --input: rgba(0, 0, 0, 0.10);
-  --ring: #6366f1;
+  --border: #d4d4d8;
+  --border-strong: #9ca3af;
+  --input: #f4f4f5;
+  --ring: #2563eb;
 
-  --primary: #18181b;
-  --primary-foreground: #fafafa;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
 
-  /* calm two-tone accent — the app-wide colorful thread */
-  --grad-a: #0ea5e9;   /* sky     */
-  --grad-b: #2dd4bf;   /* teal    */
-  --grad-c: #64748b;   /* slate   */
-  --grad: linear-gradient(120deg, var(--grad-a), var(--grad-b) 60%, var(--grad-c) 140%);
+  --brand: #2563eb;
+  --brand-hover: #1d4ed8;
+  --danger: #d83c3e;
+  --success: #248046;
+  --warning: #b7791f;
 
-  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 16px -4px rgba(0, 0, 0, 0.06);
-  --shadow-lift: 0 2px 4px rgba(0, 0, 0, 0.05), 0 12px 32px -8px rgba(0, 0, 0, 0.14);
+  /* legacy aliases kept for older components */
+  --grad-a: var(--brand);
+  --grad-b: var(--brand);
+  --grad-c: var(--brand);
+  --grad: var(--brand);
+
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-lift: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .dark {
-  --background: #060608;
-  --background-deep: #040406;
-  --foreground: #f4f4f5;
+  /* Discord Onyx (AMOLED / Pure Black) theme - Strictly Black, No Dark Gray */
+  --background: #000000;
+  --background-deep: #000000;
+  --rail: #000000;
+  --foreground: #f2f3f5;
 
-  --surface: #0e0e12;
-  --surface-translucent: rgba(13, 13, 17, 0.82);
+  --surface: #000000;
+  --surface-translucent: rgba(0, 0, 0, 0.95);
 
-  --card: #111115;
-  --card-foreground: #f4f4f5;
+  --card: #000000;
+  --card-foreground: #f2f3f5;
 
-  --muted: #191920;
-  --muted-foreground: #9b9ba4;
+  --muted: #0a0a0c;
+  --muted-foreground: #949ba4;
 
-  --accent: #1e1e25;
-  --accent-foreground: #f4f4f5;
+  --accent: #111214;
+  --accent-foreground: #ffffff;
 
-  --popover: #111115;
-  --popover-foreground: #f4f4f5;
+  --popover: #000000;
+  --popover-foreground: #f2f3f5;
 
-  --border: rgba(255, 255, 255, 0.08);
-  --input: rgba(255, 255, 255, 0.12);
-  --ring: #38bdf8;
+  --border: #141416;
+  --border-strong: #1e1f22;
+  --input: #080808;
+  --ring: #3b82f6;
 
-  --primary: #f4f4f5;
-  --primary-foreground: #101013;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
 
-  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.6), 0 4px 16px -4px rgba(0, 0, 0, 0.6);
-  --shadow-lift: 0 2px 4px rgba(0, 0, 0, 0.65), 0 14px 36px -8px rgba(0, 0, 0, 0.75);
+  --brand: #2563eb;
+  --brand-hover: #1d4ed8;
+  --danger: #f23f43;
+  --success: #23a55a;
+  --warning: #f0b232;
+
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.6);
+  --shadow-lift: 0 8px 24px rgba(0, 0, 0, 0.9);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-background-deep: var(--background-deep);
+  --color-rail: var(--rail);
   --color-foreground: var(--foreground);
   --color-surface: var(--surface);
   --color-card: var(--card);
@@ -87,58 +107,35 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-danger: var(--danger);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
 
   --shadow-soft: var(--shadow-soft);
   --shadow-lift: var(--shadow-lift);
 
-  --font-sans:
-    "Segoe UI", "SF Pro Text", system-ui, -apple-system, sans-serif;
+  --font-sans: "gg sans", "Segoe UI", "SF Pro Text", system-ui, -apple-system, sans-serif;
 
-  --radius-xl: 0.875rem;
-  --radius-2xl: 1.125rem;
-  --radius-3xl: 1.5rem;
+  --radius-lg: 0.375rem;
+  --radius-xl: 0.5rem;
 
-  --animate-fade-in: fade-in 0.28s ease-out both;
-  --animate-rise: rise 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
-  --animate-pop: pop 0.32s cubic-bezier(0.34, 1.56, 0.64, 1) both;
-  --animate-shimmer: shimmer 2.2s linear infinite;
-  --animate-gradient-pan: gradient-pan 9s ease infinite;
-  --animate-float: float 7s ease-in-out infinite;
-  --animate-spin-slow: spin 14s linear infinite;
-  --animate-pulse-ring: pulse-ring 2.2s ease-out infinite;
+  --animate-fade-in: fade-in 0.16s ease-out both;
+  --animate-pop: pop 0.16s ease-out both;
 
   @keyframes fade-in {
     from { opacity: 0; }
     to { opacity: 1; }
   }
-  @keyframes rise {
-    from { opacity: 0; transform: translateY(14px) scale(0.99); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
-  }
   @keyframes pop {
-    0% { opacity: 0; transform: scale(0.92); }
-    100% { opacity: 1; transform: scale(1); }
-  }
-  @keyframes shimmer {
-    from { background-position: 200% 0; }
-    to { background-position: -200% 0; }
-  }
-  @keyframes gradient-pan {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-  }
-  @keyframes float {
-    0%, 100% { transform: translateY(0) }
-    50% { transform: translateY(-10px) }
-  }
-  @keyframes pulse-ring {
-    0% { transform: scale(1); opacity: 0.7; }
-    70% { transform: scale(1.8); opacity: 0; }
-    100% { transform: scale(1.8); opacity: 0; }
+    from { opacity: 0; transform: scale(0.97); }
+    to { opacity: 1; transform: scale(1); }
   }
 }
 
@@ -149,12 +146,12 @@ body,
   margin: 0;
 }
 
-/* App logo glyph: white on dark, black on light, never on a tile */
-.logo-glyph {
-  filter: none;
-}
+/* App logo glyph: black in light theme, white with subtle shadow in dark theme */
 html:not(.dark) .logo-glyph {
-  filter: invert(1);
+  filter: brightness(0);
+}
+html.dark .logo-glyph {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
 }
 
 body {
@@ -164,21 +161,26 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow: hidden;
   user-select: none;
+  transition: background-color 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.18s ease;
 }
 
-/* Gradient helpers used across the app */
+aside, header, nav, main {
+  transition: background-color 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.18s ease;
+}
+
+.discord-server-btn, .discord-channel-item, .discord-folder-expanded {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Flat accent helpers (legacy class names) */
 .grad-text {
-  background: var(--grad);
-  background-size: 220% 220%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: gradient-pan 9s ease infinite;
+  color: var(--brand);
 }
 .grad-bg {
-  background: var(--grad);
-  background-size: 220% 220%;
-  animation: gradient-pan 9s ease infinite;
+  background: var(--brand);
 }
 .grad-border {
   position: relative;
@@ -189,38 +191,29 @@ body {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: var(--grad);
-  background-size: 220% 220%;
+  background: var(--brand);
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   opacity: 0;
-  transition: opacity 0.25s ease;
+  transition: opacity 0.15s ease;
   pointer-events: none;
-  animation: gradient-pan 9s ease infinite;
 }
 .grad-border:hover::before {
-  opacity: 1;
+  opacity: 0.6;
 }
 
-/* Aurora background blobs for the hub hero */
+/* Legacy class kept harmless after the redesign. */
 .aurora-blob {
-  position: absolute;
-  border-radius: 9999px;
-  filter: blur(64px);
-  opacity: 0.5;
-  will-change: transform;
-}
-.dark .aurora-blob {
-  opacity: 0.28;
+  display: none;
 }
 
 /* Scrollbars */
-*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar { width: 8px; height: 8px; }
 *::-webkit-scrollbar-thumb {
-  background: var(--border);
+  background: var(--border-strong);
   border-radius: 8px;
   border: 2px solid transparent;
   background-clip: content-box;
@@ -234,7 +227,7 @@ body {
 
 /* Selection */
 ::selection {
-  background: color-mix(in oklab, var(--ring) 30%, transparent);
+  background: color-mix(in oklab, var(--brand) 45%, transparent);
 }
 
 /* Focus ring default */
@@ -242,3 +235,137 @@ body {
   outline: 2px solid var(--ring);
   outline-offset: 1px;
 }
+
+/* Mobile safe areas (Android/iOS) */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* ---------------------------------------------
+   Discord Clone UI Utilities
+   --------------------------------------------- */
+/* Domain rail indicator: on the LEFT edge */
+.discord-pill {
+  position: absolute;
+  left: 0;
+  right: auto;
+  width: 4.5px;
+  border-radius: 0 4px 4px 0;
+  background-color: var(--foreground);
+  transition: height 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.2s ease, transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform: translateY(-50%) scaleX(1);
+  transform-origin: left center;
+  top: 50%;
+  pointer-events: none;
+  z-index: 20;
+}
+.discord-pill-idle {
+  height: 0px;
+  opacity: 0;
+  transform: translateY(-50%) scaleY(0);
+}
+.discord-pill-unread {
+  height: 8px;
+  opacity: 0.95;
+  transform: translateY(-50%) scaleY(1);
+}
+.discord-pill-open {
+  height: 14px;
+  opacity: 0.95;
+  transform: translateY(-50%) scaleY(1);
+}
+.discord-pill-hover {
+  height: 20px;
+  opacity: 1;
+  transform: translateY(-50%) scaleY(1);
+}
+.discord-pill-active {
+  height: 40px;
+  opacity: 1;
+  transform: translateY(-50%) scaleY(1);
+}
+
+/* Vertical tab indicator (right outline): on the RIGHT edge */
+.vertical-tab-pill {
+  position: absolute;
+  right: 0;
+  left: auto;
+  width: 4.5px;
+  border-radius: 4px 0 0 4px;
+  background-color: var(--foreground);
+  transition: height 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.2s ease, transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform: translateY(-50%) scaleX(1);
+  transform-origin: right center;
+  top: 50%;
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* Dedicated smooth expanding & collapsing sidebar transitions */
+.discord-sidebar-transition {
+  transition: width 0.32s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.25s ease !important;
+  will-change: width, opacity;
+}
+
+.discord-vertical-tabs-transition {
+  transition: width 0.32s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.32s ease !important;
+  will-change: width;
+}
+
+.discord-server-btn {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, filter 0.15s ease;
+  cursor: pointer;
+  user-select: none;
+}
+/* No primary background change on active - only indicator shows status! */
+.discord-server-btn.active {
+  border-radius: 16px !important;
+}
+
+/* Discord folder capsule */
+.discord-folder-expanded {
+  border-radius: 24px;
+  background-color: rgba(17, 18, 20, 0.45);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 0;
+  gap: 6px;
+  width: 56px;
+  transition: all 0.2s ease;
+}
+html:not(.dark) .discord-folder-expanded {
+  background-color: rgba(227, 229, 232, 0.6);
+}
+
+/* Discord channel hover & active states */
+.discord-channel-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  margin: 1px 8px;
+  border-radius: 6px;
+  color: var(--muted-foreground);
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  cursor: pointer;
+}
+.discord-channel-item:hover {
+  background-color: color-mix(in oklab, var(--accent) 50%, transparent);
+  color: var(--foreground);
+}
+.discord-channel-item.active {
+  background-color: var(--accent);
+  color: var(--foreground);
+}
+

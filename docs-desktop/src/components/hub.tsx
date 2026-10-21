@@ -1,5 +1,4 @@
 import * as React from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { useApp, type SiteEntry } from "../lib/store";
 import { SITE_CATEGORIES, getSiteIconHtml } from "../lib/catalog";
 import { Button, Badge, Input } from "../ui";
@@ -11,9 +10,9 @@ import {
   Pin,
   PinOff,
   Search as SearchIcon,
-  Sparkles,
   Trash2,
   Zap,
+  Compass,
 } from "lucide-react";
 
 export default function HomeHub() {
@@ -22,8 +21,8 @@ export default function HomeHub() {
   const [cat, setCat] = React.useState<string>("all");
 
   const entries = app.entries;
-  const installed = entries.filter((e) => e.installed);
-  const outdated = entries.filter((e) => e.updateAvailable && e.installed);
+  const installed = React.useMemo(() => entries.filter((e) => e.installed), [entries]);
+  const outdated = React.useMemo(() => entries.filter((e) => e.updateAvailable && e.installed), [entries]);
   const totalMb = React.useMemo(
     () => entries.reduce((a, e) => a + (e.remote?.sizeBytes ?? 0) / (1024 * 1024), 0),
     [entries],
@@ -36,7 +35,6 @@ export default function HomeHub() {
     () => outdated.reduce((a, e) => a + (e.remote?.sizeBytes ?? 0) / (1024 * 1024), 0),
     [outdated],
   );
-  const installedPercent = entries.length ? (installed.length / entries.length) * 100 : 0;
 
   const filtered = React.useMemo(() => {
     const ql = q.toLowerCase();
@@ -48,102 +46,77 @@ export default function HomeHub() {
   }, [entries, q, cat]);
 
   return (
-    <div className="relative h-full overflow-y-auto">
-      {/* ---------------- Hero ---------------- */}
-      <div className="relative overflow-hidden border-b border-border px-6 pb-8 pt-6 md:px-10">
-        <Aurora />
-        <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-          <div className="mb-1 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-            <Sparkles size={13} className="grad-text" />
-            Offline documentation hub
+    <div className="h-full overflow-y-auto">
+      {/* header */}
+      <div className="border-b border-border px-4 py-5 md:px-8 md:py-6">
+        <div className="flex flex-wrap items-start gap-4">
+          <div className="min-w-0 flex-1">
+            <div className="mb-1 flex items-center gap-2 text-[10.5px] font-bold uppercase tracking-[0.14em] text-muted-foreground">
+              <Compass size={13} className="text-brand" />
+              Offline documentation
+            </div>
+            <h1 className="text-xl font-bold tracking-tight md:text-2xl">Home</h1>
+            <p className="mt-1 max-w-2xl text-[12.5px] leading-relaxed text-muted-foreground">
+              {entries.length} documentation ecosystems, cached locally. Everything below works without a connection.
+            </p>
           </div>
-          <h1 className="text-3xl font-black tracking-tight md:text-[40px] md:leading-[1.1]">
-            Your entire staircase of{" "}
-            <span className="grad-text">developer docs</span>
-            <br className="hidden md:block" /> — fast, offline, always current.
-          </h1>
-        </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.12, duration: 0.45 }}
-          className="mt-5 flex flex-wrap items-center gap-3"
-        >
-          <StatCard label="Installed" value={installed.length} suffix={`/ ${entries.length}`}>
-            <HardDriveDownload size={15} />
-          </StatCard>
-          <StatCard
-            label="Updates ready"
-            value={outdated.length}
-            suffix={outdatedSizeMb > 0 ? `· ${outdatedSizeMb.toFixed(0)} MB` : undefined}
-            highlight={outdated.length > 0}
-          >
-            <ArrowUpCircle size={15} />
-          </StatCard>
-          <StatCard label="Installed size" value={Math.round(installedSizeMb)} suffix="MB" subtle>
-            <HardDrive size={15} />
-          </StatCard>
-          <StatCard label="Full library" value={Math.round(totalMb)} suffix="MB" subtle>
-            <Zap size={15} />
-          </StatCard>
-
-          <div className="ml-auto flex gap-2">
+          <div className="flex flex-wrap gap-2">
             {outdated.length > 0 && (
               <Button
                 variant="gradient"
                 size="sm"
-                className="gap-2"
-                title={`Delta-downloads only changed chunks where possible`}
+                className="gap-1.5"
                 onClick={() => app.batchUpdateOutdated()}
               >
-                <ArrowUpCircle size={14} /> Update all ({outdated.length} · {outdatedSizeMb.toFixed(0)} MB)
+                <ArrowUpCircle size={14} /> Update all · {outdated.length}
               </Button>
             )}
             <Button
               variant="outline"
               size="sm"
-              className="gap-2"
+              className="gap-1.5"
               onClick={() => {
                 const missing = entries.filter((e) => !e.installed && !e.activeDownload).map((e) => e.id);
-                if (!missing.length) return app.toast({ kind: "info", message: "Every pack is already installed 🎉" });
+                if (!missing.length) return app.toast({ kind: "info", message: "Every pack is already installed." });
                 Promise.allSettled(missing.map((id) => app.installSite(id)));
               }}
             >
               <ArrowDownToLine size={14} /> Get missing
             </Button>
           </div>
-        </motion.div>
+        </div>
+
+        <div className="mt-4 flex flex-wrap gap-2">
+          <StatChip icon={<HardDriveDownload size={13} />} label="Installed" value={`${installed.length}/${entries.length}`} />
+          <StatChip
+            icon={<ArrowUpCircle size={13} />}
+            label="Updates"
+            value={outdated.length ? `${outdated.length} · ${outdatedSizeMb.toFixed(0)} MB` : "none"}
+            highlight={outdated.length > 0}
+          />
+          <StatChip icon={<HardDrive size={13} />} label="On disk" value={`${Math.round(installedSizeMb)} MB`} />
+          <StatChip icon={<Zap size={13} />} label="Full library" value={`${Math.round(totalMb)} MB`} />
+        </div>
       </div>
 
-      {/* ---------------- Filter bar ---------------- */}
-      <div className="sticky top-0 z-20 flex items-center gap-2 overflow-x-auto border-b border-border bg-[var(--surface-translucent)] px-6 py-2.5 backdrop-blur-md md:px-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      {/* filter bar */}
+      <div className="sticky top-0 z-20 flex items-center gap-1.5 overflow-x-auto border-b border-border bg-background px-4 py-2 md:px-8 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <CatChip label="All" value="all" active={cat} setActive={setCat} />
         {SITE_CATEGORIES.map((c) => (
           <CatChip key={c} label={CAT_LABEL[c] ?? c} value={c} active={cat} setActive={setCat} />
         ))}
-        <div className="relative ml-auto w-44 shrink-0">
+        <div className="relative ml-auto w-44 shrink-0 md:w-56">
           <SearchIcon size={13} className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-muted-foreground" />
-          <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search sites" className="h-8 pl-8 text-[13px]" />
+          <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Filter sites" className="h-8 pl-8 text-[13px]" />
         </div>
       </div>
 
-      {/* ---------------- Grid ---------------- */}
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-3.5 px-6 py-5 pb-16 md:grid-cols-[repeat(auto-fill,minmax(270px,1fr))] md:px-10">
-        <AnimatePresence mode="popLayout">
-          {filtered.map((e, i) => (
-            <motion.div
-              key={e.id}
-              layout
-              initial={{ opacity: 0, y: 16, scale: 0.97 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ delay: Math.min(i * 0.015, 0.35), type: "spring", stiffness: 420, damping: 32 }}
-            >
-              <SiteCard entry={e} />
-            </motion.div>
-          ))}
-        </AnimatePresence>
+      {/* grid */}
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-3 px-4 py-4 pb-16 md:px-8">
+        {filtered.map((e) => (
+          <SiteCard key={e.id} entry={e} />
+        ))}
       </div>
     </div>
   );
@@ -182,90 +155,52 @@ function CatChip({
     <button
       onClick={() => setActive(isActive ? "all" : value)}
       className={
-        "relative shrink-0 rounded-full px-3 py-1 text-[12px] font-medium transition-colors " +
-        (isActive ? "text-white" : "text-muted-foreground hover:text-foreground")
+        "shrink-0 rounded px-2.5 py-1 text-[12px] font-medium transition-colors " +
+        (isActive ? "bg-brand text-white" : "text-muted-foreground hover:bg-accent hover:text-foreground")
       }
     >
-      {isActive && (
-        <motion.span
-          layoutId="cat-chip"
-          className="absolute inset-0 rounded-full grad-bg shadow-soft"
-          transition={{ type: "spring", stiffness: 500, damping: 36 }}
-        />
-      )}
-      <span className="relative z-10">{label}</span>
+      {label}
     </button>
   );
 }
 
-function Aurora() {
+function StatChip({
+  icon,
+  label,
+  value,
+  highlight,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  value: string;
+  highlight?: boolean;
+}) {
   return (
-    <div className="pointer-events-none absolute inset-0" aria-hidden>
-      <div
-        className="aurora-blob h-56 w-72 animate-float"
-        style={{ background: "var(--grad-a)", top: "-70px", left: "6%", animationDelay: "0s" }}
-      />
-      <div
-        className="aurora-blob h-64 w-80 animate-float"
-        style={{ background: "var(--grad-b)", top: "-40px", left: "42%", animationDelay: "1.4s" }}
-      />
-      <div
-        className="aurora-blob h-52 w-96 animate-float"
-        style={{ background: "var(--grad-c)", top: "-90px", right: "6%", animationDelay: "2.8s" }}
-      />
-      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-[var(--background)]" />
+    <div className="flex items-center gap-2 rounded-md border border-border bg-card px-2.5 py-1.5">
+      <span className={highlight ? "text-brand" : "text-muted-foreground"}>{icon}</span>
+      <span className="text-[12px] font-semibold">{value}</span>
+      <span className="text-[10.5px] uppercase tracking-wide text-muted-foreground">{label}</span>
     </div>
   );
 }
 
-function StatCard({
-  label,
-  value,
-  suffix,
-  highlight,
-  subtle,
-  children,
-}: {
-  label: string;
-  value: number;
-  suffix?: string;
-  highlight?: boolean;
-  subtle?: boolean;
-  children: React.ReactNode;
-}) {
-  return (
-    <button
-      onClick={undefined}
-      className={
-        "group flex items-center gap-3 rounded-2xl border px-4 py-2.5 text-left transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lift " +
-        (highlight
-          ? "border-[var(--grad-b)]/40 bg-[var(--grad-b)]/10"
-          : subtle
-            ? "border-border bg-surface/70"
-            : "border-border bg-surface shadow-soft")
-      }
-    >
-      <span
-        className={
-          "grid h-8 w-8 place-items-center rounded-xl transition-transform group-hover:scale-110 " +
-          (highlight ? "grad-bg text-white" : "bg-muted text-muted-foreground")
-        }
-      >
-        {children}
-      </span>
-      <span>
-        <span className="block text-lg font-bold leading-none tabular-nums">
-          {value}
-          {suffix && <span className={"text-[11px] font-medium text-muted-foreground"}> {suffix}</span>}
-        </span>
-        <span className="text-[11px] text-muted-foreground">{label}</span>
-      </span>
-    </button>
-  );
+function formatDocBytes(bytes?: number, sizeMb?: number): string {
+  let b = 0;
+  if (bytes != null && bytes > 0) {
+    b = bytes;
+  } else if (sizeMb != null && sizeMb > 0) {
+    b = Math.round(sizeMb * 1024 * 1024);
+  }
+  if (!b || b <= 0) return "0 KB";
+  if (b < 1024 * 1024) {
+    return `${Math.round(b / 1024)} KB`;
+  }
+  const mb = b / (1024 * 1024);
+  return mb < 10 ? `${mb.toFixed(1)} MB` : `${Math.round(mb)} MB`;
 }
 
 /* ---------------- Site card ---------------- */
-function SiteCard({ entry }: { entry: SiteEntry }) {
+const SiteCard = React.memo(function SiteCard({ entry }: { entry: SiteEntry }) {
   const app = useApp();
   const b = entry.brand;
   const pinned = app.pinned.includes(entry.id);
@@ -274,7 +209,7 @@ function SiteCard({ entry }: { entry: SiteEntry }) {
 
   return (
     <div
-      className="grad-border group relative flex h-[164px] cursor-pointer flex-col rounded-2xl border border-border bg-card p-4 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-lift"
+      className="group relative flex min-h-[158px] cursor-pointer flex-col rounded-lg border border-border bg-card p-3.5 transition-colors hover:border-border-strong hover:bg-accent/30"
       onClick={() => {
         if (entry.installed) app.openSite(entry.id);
         else app.installSite(entry.id);
@@ -284,56 +219,49 @@ function SiteCard({ entry }: { entry: SiteEntry }) {
         setMenuOpen({ x: e.clientX, y: e.clientY });
       }}
     >
-      {/* floating pin */}
       <button
         onClick={(ev) => {
           ev.stopPropagation();
           app.togglePin(entry.id);
         }}
         className={
-          "absolute right-3 top-3 grid h-6 w-6 place-items-center rounded-lg text-[11px] transition-all " +
+          "absolute right-2.5 top-2.5 grid h-6 w-6 place-items-center rounded transition-colors " +
           (pinned
-            ? "grad-bg text-white opacity-100 shadow-soft"
-            : "bg-muted text-muted-foreground opacity-0 group-hover:opacity-100 hover:scale-110")
+            ? "bg-brand text-white"
+            : "bg-muted text-muted-foreground opacity-0 group-hover:opacity-100 hover:bg-accent hover:text-foreground")
         }
-        title={pinned ? "Unpin" : "Pin to sidebar"}
+        title={pinned ? "Unpin from sidebar" : "Pin to sidebar"}
       >
         {pinned ? <PinOff size={11} /> : <Pin size={11} />}
       </button>
 
-      <div className="flex items-start gap-3">
-        <motion.span
-          whileHover={{ rotate: [0, -6, 6, 0], scale: 1.1 }}
-          transition={{ duration: 0.45 }}
-          className="grid h-11 w-11 shrink-0 place-items-center rounded-xl"
-          style={{ background: b.bgTint, color: b.color, boxShadow: `0 6px 18px -8px ${b.color}55` }}
+      <div className="flex items-start gap-2.5">
+        <span
+          className="grid h-10 w-10 shrink-0 place-items-center rounded-md bg-muted"
           dangerouslySetInnerHTML={{ __html: getSiteIconHtml(entry.id, entry.remote?.iconFile, entry.remote?.iconETag) }}
         />
         <div className="min-w-0 flex-1 pr-6">
-          <div className="flex items-baseline gap-1.5">
-            <span className="truncate text-[14.5px] font-semibold leading-tight">{b.name}</span>
-          </div>
-          <div className="mt-0 flex items-center gap-1.5 text-[11px] text-muted-foreground">
+          <div className="truncate text-[13.5px] font-semibold leading-tight">{b.name}</div>
+          <div className="mt-0.5 flex items-center gap-1.5 text-[10.5px] text-muted-foreground">
             <span className="font-medium" style={{ color: b.color }}>
               {b.version}
             </span>
-            <span className="flex items-center gap-1">
-              •
+            <span className="text-border-strong">•</span>
+            <span>
               {entry.activeDownload
                 ? "downloading…"
                 : entry.installed
-                  ? `${entry.local!.size_mb} MB`
+                  ? formatDocBytes(undefined, entry.local!.size_mb)
                   : entry.remote
-                    ? `${Math.round(entry.remote.sizeBytes / (1024 * 1024))} MB`
-                    : "remote only"}
+                    ? formatDocBytes(entry.remote.sizeBytes)
+                    : "not available"}
             </span>
           </div>
         </div>
       </div>
 
-      <p className="mt-2 line-clamp-2 flex-1 text-[12px] leading-relaxed text-muted-foreground">{b.description}</p>
+      <p className="mt-2 line-clamp-2 flex-1 text-[11.5px] leading-relaxed text-muted-foreground">{b.description}</p>
 
-      {/* action row */}
       <div className="mt-3 flex items-center gap-2">
         {entry.activeDownload && entry.activeDownload.percent < 100 ? (
           <div className="flex-1">
@@ -341,7 +269,7 @@ function SiteCard({ entry }: { entry: SiteEntry }) {
               <span>{entry.activeDownload.phase}</span>
               <span className="tabular-nums">{Math.round(entry.activeDownload.percent)}%</span>
             </div>
-            <ProgressShine percent={entry.activeDownload.percent} />
+            <ProgressBar percent={entry.activeDownload.percent} />
           </div>
         ) : entry.updateAvailable ? (
           <>
@@ -364,7 +292,7 @@ function SiteCard({ entry }: { entry: SiteEntry }) {
             <Button
               variant="ghost"
               size="iconSm"
-              className="ml-auto shrink-0 transition-colors hover:bg-red-500/10 hover:text-red-500"
+              className="ml-auto shrink-0 hover:bg-danger/10 hover:text-danger"
               title="Delete pack"
               onClick={(ev) => {
                 ev.stopPropagation();
@@ -389,7 +317,7 @@ function SiteCard({ entry }: { entry: SiteEntry }) {
             </Button>
             {entry.remote && (
               <Badge className="text-[10px] text-muted-foreground">
-                {Math.round(entry.remote.sizeBytes / (1024 * 1024))} MB
+                {formatDocBytes(entry.remote.sizeBytes)}
               </Badge>
             )}
           </>
@@ -397,13 +325,9 @@ function SiteCard({ entry }: { entry: SiteEntry }) {
       </div>
 
       {dl && dl.percent >= 100 && (
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="absolute inset-x-4 bottom-2 text-center text-[10px] font-semibold text-emerald-500"
-        >
-          ✓ Indexed — opening…
-        </motion.div>
+        <div className="absolute inset-x-4 bottom-2 text-center text-[10px] font-semibold text-success">
+          Indexed — opening…
+        </div>
       )}
 
       {menuOpen && (
@@ -411,7 +335,7 @@ function SiteCard({ entry }: { entry: SiteEntry }) {
       )}
     </div>
   );
-}
+});
 
 function OpenChip() {
   return (
@@ -421,23 +345,12 @@ function OpenChip() {
   );
 }
 
-function ProgressShine({ percent }: { percent: number }) {
+function ProgressBar({ percent }: { percent: number }) {
   return (
-    <div className="relative h-1.5 overflow-hidden rounded-full bg-muted">
-      <motion.div
-        className="grad-bg h-full rounded-full"
-        initial={{ width: 0 }}
-        animate={{ width: `${Math.min(100, Math.max(4, percent))}%` }}
-        transition={{ ease: "easeOut", duration: 0.4 }}
-      />
+    <div className="h-1.5 overflow-hidden rounded-full bg-muted">
       <div
-        className="absolute inset-0 rounded-full opacity-60"
-        style={{
-          background:
-            "linear-gradient(110deg, transparent 30%, rgba(255,255,255,.55) 50%, transparent 70%)",
-          backgroundSize: "200% 100%",
-          animation: "shimmer 2.2s linear infinite",
-        }}
+        className="h-full rounded-full bg-brand transition-[width] duration-300"
+        style={{ width: `${Math.min(100, Math.max(4, percent))}%` }}
       />
     </div>
   );
@@ -466,19 +379,17 @@ function SiteContextMenu({
     return () => window.removeEventListener("mousedown", close);
   }, [onClose]);
 
-  const top = Math.min(pos.y, window.innerHeight - 150);
-  const left = Math.min(pos.x, window.innerWidth - 190);
+  const top = Math.min(pos.y, window.innerHeight - 170);
+  const left = Math.min(pos.x, window.innerWidth - 200);
 
   return (
-    <motion.div
+    <div
       ref={ref}
-      initial={{ opacity: 0, scale: 0.94 }}
-      animate={{ opacity: 1, scale: 1 }}
-      className="fixed z-[80] w-44 overflow-visible rounded-xl border border-border bg-popover p-1 text-popover-foreground shadow-lift"
+      className="fixed z-[80] w-48 overflow-visible rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-lift animate-pop"
       style={{ top, left }}
     >
       <MenuItem
-        icon={<Pin size={13} className={pinned ? "grad-text" : ""} />}
+        icon={<Pin size={13} className={pinned ? "text-brand" : ""} />}
         onClick={() => {
           app.togglePin(entry.id);
           onClose();
@@ -519,7 +430,7 @@ function SiteContextMenu({
           Delete offline pack
         </MenuItem>
       )}
-    </motion.div>
+    </div>
   );
 }
 
@@ -538,8 +449,8 @@ export function MenuItem({
     <button
       onClick={onClick}
       className={
-        "flex w-full items-center gap-2 rounded-lg px-2.5 py-1.5 text-left text-[12.5px] transition-colors " +
-        (danger ? "text-red-500 hover:bg-red-500/10" : "hover:bg-accent")
+        "flex w-full items-center gap-2 rounded px-2.5 py-1.5 text-left text-[12.5px] transition-colors " +
+        (danger ? "text-danger hover:bg-danger/10" : "hover:bg-accent")
       }
     >
       {icon}
