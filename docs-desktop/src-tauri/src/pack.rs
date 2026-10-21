@@ -1,7 +1,7 @@
 //! `.docpack` storage: format parsing, embedded-trailer + on-disk pack discovery,
 //! and the shared `AssetStore` used by servers, commands and the updater.
 
-use std::collections::HashMap;
+use std::collections::{HashMap, VecDeque};
 use std::fs::{self, File};
 use std::io::{Read, Seek, SeekFrom};
 use std::path::PathBuf;
@@ -15,7 +15,7 @@ use crate::util::fnv1a_hash_hex;
 /// path is removed in the cleanup pass.
 pub(crate) static ASSETS_PACK: &[u8] = b"\x02\x00\x00\x00{}";
 
-#[derive(serde::Deserialize, serde::Serialize, Clone)]
+#[derive(serde::Deserialize, serde::Serialize, Clone, Debug)]
 pub struct ManifestEntry {
     pub offset: usize,
     pub length: usize,
@@ -23,9 +23,23 @@ pub struct ManifestEntry {
     pub gzipped: bool,
     #[serde(default)]
     pub hash: String,
+    #[serde(default)]
+    pub encoding: Option<String>,
+    #[serde(default)]
+    pub raw_length: Option<usize>,
 }
 
-#[derive(serde::Deserialize, serde::Serialize, Clone)]
+#[derive(serde::Deserialize, serde::Serialize, Clone, Debug, Default)]
+#[allow(non_snake_case)]
+pub struct DeltaMetadata {
+    pub fromCommit: String,
+    pub toCommit: String,
+    pub sizeBytes: usize,
+    #[serde(default)]
+    pub hash: String,
+}
+
+#[derive(serde::Deserialize, serde::Serialize, Clone, Debug)]
 #[allow(non_snake_case)]
 pub struct SiteManifest {
     pub id: String,
@@ -38,6 +52,10 @@ pub struct SiteManifest {
     pub totalBytes: usize,
     #[serde(default)]
     pub chunkCount: usize,
+    #[serde(default)]
+    pub compression: Option<String>,
+    #[serde(default)]
+    pub delta: Option<DeltaMetadata>,
     pub routes: HashMap<String, ManifestEntry>,
 }
 
@@ -100,7 +118,75 @@ pub struct AssetStore {
     pub base_data_start: usize,
     pub overrides: RwLock<HashMap<String, Arc<SiteOverridePack>>>,
     pub site_ports: RwLock<HashMap<String, u16>>,
-    pub fallback_cache: RwLock<HashMap<String, (String, Vec<u8>)>>,
+    pub fallback_cache: FallbackCache,
+}
+
+/// Small bounded LRU for proxied live-fallback assets.
+///
+/// This used to be an unbounded `HashMap<String, (String, Vec<u8>)>`: every
+/// remote image/font/JS byte a documentation page touched stayed resident for
+/// the lifetime of the process. A single image-heavy docs site could pin
+/// hundreds of megabytes. Anything above `MAX_ENTRY_BYTES` is streamed and
+/// never cached.
+pub struct FallbackCache {
+    inner: RwLock<FallbackCacheInner>,
+}
+
+struct FallbackCacheInner {
+    entries: HashMap<String, (String, Vec<u8>)>,
+    order: VecDeque<String>,
+    bytes: usize,
+}
+
+const FALLBACK_CACHE_MAX_BYTES: usize = 12 * 1024 * 1024;
+const FALLBACK_CACHE_MAX_ENTRIES: usize = 128;
+const FALLBACK_CACHE_MAX_ENTRY_BYTES: usize = 512 * 1024;
+
+impl FallbackCache {
+    pub fn new() -> Self {
+        Self {
+            inner: RwLock::new(FallbackCacheInner {
+                entries: HashMap::new(),
+                order: VecDeque::new(),
+                bytes: 0,
+            }),
+        }
+    }
+
+    pub fn get(&self, key: &str) -> Option<(String, Vec<u8>)> {
+        let guard = self.inner.read().ok()?;
+        guard
+            .entries
+            .get(key)
+            .map(|(mime, bytes)| (mime.clone(), bytes.clone()))
+    }
+
+    pub fn insert(&self, key: String, mime: String, bytes: Vec<u8>) {
+        if bytes.is_empty() || bytes.len() > FALLBACK_CACHE_MAX_ENTRY_BYTES {
+            return;
+        }
+        let Ok(mut guard) = self.inner.write() else {
+            return;
+        };
+        if let Some((_, old)) = guard.entries.remove(&key) {
+            guard.bytes = guard.bytes.saturating_sub(old.len());
+            guard.order.retain(|k| k != &key);
+        }
+        guard.bytes += bytes.len();
+        guard.order.push_back(key.clone());
+        guard.entries.insert(key, (mime, bytes));
+
+        while guard.bytes > FALLBACK_CACHE_MAX_BYTES
+            || guard.order.len() > FALLBACK_CACHE_MAX_ENTRIES
+        {
+            let Some(oldest) = guard.order.pop_front() else {
+                break;
+            };
+            if let Some((_, dropped)) = guard.entries.remove(&oldest) {
+                guard.bytes = guard.bytes.saturating_sub(dropped.len());
+            }
+        }
+    }
 }
 
 
@@ -219,6 +305,28 @@ fn migrate_legacy_packs_to_appdata() {
     }
 }
 
+pub(crate) const DOCP_MAGIC: &[u8; 4] = b"DOCP";
+
+pub fn decompress_chunk_if_needed(
+    data: &[u8],
+    encoding: Option<&str>,
+    gzipped: bool,
+) -> Result<Vec<u8>, std::io::Error> {
+    if encoding == Some("br") {
+        let mut decompressor = brotli::Decompressor::new(data, 4096);
+        let mut out = Vec::new();
+        decompressor.read_to_end(&mut out)?;
+        Ok(out)
+    } else if gzipped {
+        let mut decoder = flate2::read::GzDecoder::new(data);
+        let mut out = Vec::new();
+        decoder.read_to_end(&mut out)?;
+        Ok(out)
+    } else {
+        Ok(data.to_vec())
+    }
+}
+
 pub(crate) fn parse_docpack_on_disk(
     path: PathBuf,
     file_offset: u64,
@@ -230,19 +338,39 @@ pub(crate) fn parse_docpack_on_disk(
     }
     let mut file = File::open(&path).ok()?;
     file.seek(SeekFrom::Start(file_offset)).ok()?;
-    let mut len_bytes = [0u8; 4];
-    file.read_exact(&mut len_bytes).ok()?;
-    let manifest_len = u32::from_le_bytes(len_bytes) as usize;
-    if pack_len < 4 + manifest_len {
-        return None;
-    }
+
+    let mut magic_or_len = [0u8; 4];
+    file.read_exact(&mut magic_or_len).ok()?;
+
+    let (manifest_len, data_start) = if &magic_or_len == DOCP_MAGIC {
+        // Format v2: DOCP (4) + version (2) + flags (2) + manifest_len (4) + reserved (4) = 16 bytes header
+        if pack_len < 16 {
+            return None;
+        }
+        let mut v2_hdr = [0u8; 12];
+        file.read_exact(&mut v2_hdr).ok()?;
+        let version = u16::from_le_bytes([v2_hdr[0], v2_hdr[1]]);
+        let _flags = u16::from_le_bytes([v2_hdr[2], v2_hdr[3]]);
+        let m_len = u32::from_le_bytes([v2_hdr[4], v2_hdr[5], v2_hdr[6], v2_hdr[7]]) as usize;
+        if version != 2 || pack_len < 16 + m_len {
+            return None;
+        }
+        (m_len, 16 + m_len)
+    } else {
+        // Format v1: manifest_len (4)
+        let m_len = u32::from_le_bytes(magic_or_len) as usize;
+        if pack_len < 4 + m_len {
+            return None;
+        }
+        (m_len, 4 + m_len)
+    };
+
     let mut manifest_buf = vec![0u8; manifest_len];
     file.read_exact(&mut manifest_buf).ok()?;
     let manifest: SiteManifest = serde_json::from_slice(&manifest_buf).ok()?;
     if manifest.routes.is_empty() || get_site_origin_and_entry(&manifest.id).is_none() {
         return None;
     }
-    let data_start = 4 + manifest_len;
 
     Some(Arc::new(SiteOverridePack {
         manifest,
@@ -384,8 +512,38 @@ pub(crate) fn load_asset_store() -> Arc<AssetStore> {
         base_data_start,
         overrides: RwLock::new(overrides),
         site_ports: RwLock::new(HashMap::new()),
-        fallback_cache: RwLock::new(HashMap::new()),
+        fallback_cache: FallbackCache::new(),
     })
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_parse_v2_docpack_header() {
+        let manifest_json = r#"{"id":"tailwind","name":"Tailwind CSS","version":"1.0","commit":"abc12345","compression":"brotli","routes":{"/index.html":{"offset":0,"length":10,"mime":"text/html; charset=utf-8","gzipped":false,"encoding":"br","hash":"1234567890abcdef"}}}"#;
+        let mut pack_bytes = Vec::new();
+        pack_bytes.extend_from_slice(b"DOCP");
+        pack_bytes.extend_from_slice(&2u16.to_le_bytes()); // version 2
+        pack_bytes.extend_from_slice(&2u16.to_le_bytes()); // Brotli flag
+        pack_bytes.extend_from_slice(&(manifest_json.len() as u32).to_le_bytes());
+        pack_bytes.extend_from_slice(&0u32.to_le_bytes()); // reserved
+        pack_bytes.extend_from_slice(manifest_json.as_bytes());
+        pack_bytes.extend_from_slice(b"0123456789");
+
+        let temp_dir = std::env::temp_dir();
+        let temp_file = temp_dir.join("test_v2.docpack");
+        std::fs::write(&temp_file, &pack_bytes).unwrap();
+
+        let parsed = parse_docpack_on_disk(temp_file.clone(), 0, pack_bytes.len(), "test")
+            .expect("Failed to parse v2 docpack");
+        assert_eq!(parsed.manifest.id, "tailwind");
+        assert_eq!(parsed.data_start, 16 + manifest_json.len());
+        let route = parsed.manifest.routes.get("/index.html").unwrap();
+        assert_eq!(route.encoding.as_deref(), Some("br"));
+        let _ = std::fs::remove_file(temp_file);
+    }
 }
 
 

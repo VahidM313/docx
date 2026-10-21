@@ -482,6 +482,8 @@ pub(crate) fn run_install_or_update_sync(
                 mime: rem_entry.mime.clone(),
                 gzipped: rem_entry.gzipped,
                 hash: rem_entry.hash.clone(),
+                encoding: rem_entry.encoding.clone(),
+                raw_length: rem_entry.raw_length,
             },
         );
     }
@@ -494,6 +496,8 @@ pub(crate) fn run_install_or_update_sync(
         updatedAt: remote_manifest.updatedAt.clone(),
         totalBytes: new_pack_data.len(),
         chunkCount: placed_hashes.len(),
+        compression: remote_manifest.compression.clone(),
+        delta: remote_manifest.delta.clone(),
         routes: new_routes,
     };
 
