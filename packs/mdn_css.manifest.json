@@ -2,2581 +2,3204 @@
   "id": "mdn_css",
   "name": "MDN CSS",
   "version": "CSS3 / Modern",
-  "commit": "bc004f32",
+  "commit": "c33deee0",
+  "compression": "brotli",
   "origin": "https://developer.mozilla.org",
   "entryPath": "/en-US/docs/Web/CSS",
-  "updatedAt": "2026-10-17T00:42:11.674Z",
-  "totalBytes": 8885573,
+  "updatedAt": "2026-10-21T04:25:58.301Z",
+  "totalBytes": 7419583,
   "chunkCount": 362,
   "routes": {
-    "/en-US/docs/Web/CSS": {
+    "/": {
       "offset": 0,
-      "length": 35667,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "984fa6ca0bafa2f1"
-    },
-    "/en-US/docs/Web/CSS/Reference/Properties": {
-      "offset": 35667,
-      "length": 39544,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "b1d9626c20a006b3"
-    },
-    "/en-US/docs/Web/CSS/Reference/At-rules": {
-      "offset": 75211,
-      "length": 34158,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "54f4c576a722d908"
-    },
-    "/en-US/docs/Web/CSS/Reference/Values": {
-      "offset": 109369,
-      "length": 32685,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "c6b96828dd16df8b"
-    },
-    "/en-US/docs/Web/CSS/Reference/Selectors": {
-      "offset": 142054,
-      "length": 33087,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "8c6c5d568e5a7865"
-    },
-    "/en-US/docs/Web/CSS/Reference": {
-      "offset": 175141,
-      "length": 48225,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "89ac9853e4489d73"
-    },
-    "/en-US/docs/Web/CSS/Guides/Box_model/Introduction": {
-      "offset": 223366,
-      "length": 34419,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "d9b87c2eaa60af70"
-    },
-    "/en-US/docs/Web/CSS/Guides/Animations/Using": {
-      "offset": 257785,
-      "length": 41343,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "d4fd8f2de943b468"
-    },
-    "/en-US/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element": {
-      "offset": 299128,
-      "length": 33957,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "c160148df8686476"
-    },
-    "/en-US/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts": {
-      "offset": 333085,
-      "length": 36274,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "72e79697cb258632"
-    },
-    "/en-US/docs/Web/CSS/Guides": {
-      "offset": 369359,
-      "length": 41102,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "ae93337ea655fd6e"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts": {
-      "offset": 410461,
-      "length": 41768,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "8d085110a58b347b"
-    },
-    "/en-US/docs/Web/CSS/Guides/Colors/Applying_color": {
-      "offset": 452229,
-      "length": 39362,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "51db411c3746e3fb"
-    },
-    "/en-US/docs/Web/CSS/How_to/Layout_cookbook": {
-      "offset": 491591,
-      "length": 33694,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "588c455dfd1bd17d"
-    },
-    "/en-US/docs/Web/CSS/How_to/Layout_cookbook/Card": {
-      "offset": 525285,
-      "length": 35020,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "bfbfcd9b56195814"
-    },
-    "/en-US/docs/Web/CSS/Guides/Colors/Color_format_converter": {
-      "offset": 560305,
-      "length": 37935,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "71d6f737ec512349"
-    },
-    "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator": {
-      "offset": 598240,
-      "length": 33216,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "571c3ab10d1e467e"
-    },
-    "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator": {
-      "offset": 631456,
-      "length": 32539,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "2f1284cea203e256"
-    },
-    "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator": {
-      "offset": 663995,
-      "length": 32568,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "32f6c1ba8d3e871a"
-    },
-    "/en-US/docs/Web/CSS/Guides/Shapes/Shape_generator": {
-      "offset": 696563,
-      "length": 34645,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "1142b28d19aa778f"
-    },
-    "/en-US/docs/Web/CSS/Guides/Cascade/Inheritance": {
-      "offset": 731208,
-      "length": 34479,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "c671134b5dea961f"
-    },
-    "/en-US/docs/Web/CSS/Guides/Colors/Color_mixer": {
-      "offset": 765687,
-      "length": 39046,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "606af6d8fd65e9ce"
-    },
-    "/en-US/docs/Web/CSS/Guides/Cascade/Specificity": {
-      "offset": 804733,
-      "length": 42781,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "8722ab39e4c8e469"
-    },
-    "/en-US/docs/Web/CSS/Guides/Syntax/Introduction": {
-      "offset": 847514,
-      "length": 36244,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "5524e8bff967ae3d"
-    },
-    "/en-US/docs/Web/CSS/Guides/Cascade/Introduction": {
-      "offset": 883758,
-      "length": 42177,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "4722087ed43634a5"
-    },
-    "/en-US/docs/Web/CSS/Guides/Scoping": {
-      "offset": 925935,
-      "length": 33922,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "e73f2a63fae97ab3"
-    },
-    "/en-US/docs/Web/CSS/Guides/Nesting": {
-      "offset": 959857,
-      "length": 33071,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "40e644675fa63165"
-    },
-    "/en-US/docs/Web/CSS/Guides/Shadow_parts": {
-      "offset": 992928,
-      "length": 33435,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "12d2cd6f5b434367"
-    },
-    "/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types": {
-      "offset": 1026363,
-      "length": 38198,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "030497bcd1491f7c"
-    },
-    "/en-US/docs/Web/CSS/Guides/Containment": {
-      "offset": 1064561,
-      "length": 33930,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "652a22c53a5d8134"
-    },
-    "/en-US/docs/Web/CSS/Guides/Media_queries": {
-      "offset": 1098491,
-      "length": 36319,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "49deb51e43ccd420"
-    },
-    "/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context": {
-      "offset": 1134810,
-      "length": 37206,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "5734c2bedca9fec2"
-    },
-    "/en-US/docs/Web/CSS/Guides/Display/Containing_block": {
-      "offset": 1172016,
-      "length": 36882,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "fe4fb19774c3d377"
-    },
-    "/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing": {
-      "offset": 1208898,
-      "length": 40487,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "bf5f647a6ca58bdf"
-    },
-    "/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing": {
-      "offset": 1249385,
-      "length": 34792,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "9a203f9d112a62fa"
-    },
-    "/en-US/docs/Web/CSS/Guides/Values_and_units/Textual_data_types": {
-      "offset": 1284177,
-      "length": 34546,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "2b3bd5668734ef55"
-    },
-    "/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context": {
-      "offset": 1318723,
-      "length": 36966,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "6a802f1e9610be62"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout": {
-      "offset": 1355689,
-      "length": 36970,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "20779d1b1ab29208"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout": {
-      "offset": 1392659,
-      "length": 35252,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "367c937926aa1e2b"
-    },
-    "/en-US/docs/Web/CSS/Guides/Multicol_layout": {
-      "offset": 1427911,
-      "length": 38521,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "ad4dd690209d266e"
-    },
-    "/en-US/docs/Web/CSS/Guides/Transitions/Using": {
-      "offset": 1466432,
-      "length": 39951,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "07cad0f34d60f6ed"
-    },
-    "/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties": {
-      "offset": 1506383,
-      "length": 37775,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "16c35d1570abc405"
-    },
-    "/en-US/docs/Web/CSS/Guides/Transforms/Using": {
-      "offset": 1544158,
-      "length": 36899,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "4cc60866820a14b7"
-    },
-    "/en-US/docs/Web/CSS/Reference/Properties/border-image": {
-      "offset": 1581057,
-      "length": 39671,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "b3dd463cbc60bad6"
-    },
-    "/en-US/docs/Web/CSS/Reference/Values/color_value": {
-      "offset": 1620728,
-      "length": 45004,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "05c40369a17d2816"
-    },
-    "/en-US/docs/Web/CSS/Reference/Properties/border-radius": {
-      "offset": 1665732,
-      "length": 38947,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "2d7d219dfd17f6ae"
-    },
-    "/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix": {
-      "offset": 1704679,
-      "length": 40451,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "1868ff8f0e1e3d95"
-    },
-    "/en-US/docs/Web/CSS/Reference/Properties/box-shadow": {
-      "offset": 1745130,
-      "length": 39327,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "d90cbbab92193ae2"
-    },
-    "/en-US/docs/Web/CSS/Reference/Values/basic-shape": {
-      "offset": 1784457,
-      "length": 40084,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "10feec08041989ce"
-    },
-    "/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes": {
-      "offset": 1824541,
-      "length": 40805,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "9e540d5a938e3cc8"
-    },
-    "/en-US/docs/Web/CSS/Reference/Values/Functions": {
-      "offset": 1865346,
-      "length": 41727,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "e5909efb4c3ea8b0"
-    },
-    "/en-US/docs/Web/CSS/Reference/Values/Data_types": {
-      "offset": 1907073,
-      "length": 38413,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "4f77e9b21d249e2f"
-    },
-    "/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements": {
-      "offset": 1945486,
-      "length": 39021,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "1d25022ff6d9407e"
-    },
-    "/en-US/docs/Web/CSS/Reference/Selectors/Combinators": {
-      "offset": 1984507,
-      "length": 32678,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "c6c4173b4e9864f5"
-    },
-    "/en-US/docs/Web/CSS/Guides/Anchor_positioning": {
-      "offset": 2017185,
-      "length": 34355,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "f6e9a9aea48411dc"
-    },
-    "/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations": {
-      "offset": 2051540,
-      "length": 36357,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "67024ff5c29b4d02"
-    },
-    "/en-US/docs/Web/CSS/Guides/Basic_user_interface": {
-      "offset": 2087897,
-      "length": 34823,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "e8bbbc96fcc7083b"
-    },
-    "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders": {
-      "offset": 2122720,
-      "length": 36310,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "f616d4e6ba2409f8"
-    },
-    "/en-US/docs/Web/CSS/Guides/Animations": {
-      "offset": 2159030,
-      "length": 37182,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "c680a67e3a0383f4"
-    },
-    "/en-US/docs/Web/CSS/Guides/Animation_triggers": {
-      "offset": 2196212,
-      "length": 34874,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "3e293f1b87340131"
-    },
-    "/en-US/docs/Web/CSS/Guides/Box_model": {
-      "offset": 2231086,
-      "length": 35377,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "7f4157187b9dde92"
-    },
-    "/en-US/docs/Web/CSS/Guides/Cascade": {
-      "offset": 2266463,
-      "length": 34145,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "e7661be624c64b8a"
-    },
-    "/en-US/docs/Web/CSS/Guides/Colors": {
-      "offset": 2300608,
-      "length": 36221,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "aa3170d6ec674129"
-    },
-    "/en-US/docs/Web/CSS/Guides/Box_alignment": {
-      "offset": 2336829,
-      "length": 34003,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "aa77671ea7f1eb98"
-    },
-    "/en-US/docs/Web/CSS/Guides/Box_sizing": {
-      "offset": 2370832,
-      "length": 35612,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "8ea1641039bbd1d7"
-    },
-    "/en-US/docs/Web/CSS/Guides/Color_adjustment": {
-      "offset": 2406444,
-      "length": 33101,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "e04196d192dfbd03"
-    },
-    "/en-US/docs/Web/CSS/Guides/Conditional_rules": {
-      "offset": 2439545,
-      "length": 35938,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "64cab8a6ca71240f"
-    },
-    "/en-US/docs/Web/CSS/Guides/Counter_styles": {
-      "offset": 2475483,
-      "length": 33938,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "2c27ee677b9d2c51"
-    },
-    "/en-US/docs/Web/CSS/Guides/CSSOM_view": {
-      "offset": 2509421,
-      "length": 33476,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "a719ed0d400184ce"
-    },
-    "/en-US/docs/Web/CSS/Guides/Custom_functions_and_mixins": {
-      "offset": 2542897,
-      "length": 33764,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "e7588a21737bbbcb"
-    },
-    "/en-US/docs/Web/CSS/Guides/Compositing_and_blending": {
-      "offset": 2576661,
-      "length": 34201,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "c81ef4613d8f0440"
-    },
-    "/en-US/docs/Web/CSS/Guides/Custom_highlight_API": {
-      "offset": 2610862,
-      "length": 34537,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "d98f0e838d4d4822"
-    },
-    "/en-US/docs/Web/CSS/Guides/Font_loading": {
-      "offset": 2645399,
-      "length": 33039,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "89af8f4e03b30a28"
-    },
-    "/en-US/docs/Web/CSS/Guides/Filter_effects": {
-      "offset": 2678438,
-      "length": 35085,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "8caefb0c9546809e"
-    },
-    "/en-US/docs/Web/CSS/Guides/Cascading_variables": {
-      "offset": 2713523,
-      "length": 34547,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "fdd9e05ef2d7d8ef"
-    },
-    "/en-US/docs/Web/CSS/Guides/Easing_functions": {
-      "offset": 2748070,
-      "length": 33402,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "acea7a1c23a5ade2"
-    },
-    "/en-US/docs/Web/CSS/Guides/Environment_variables": {
-      "offset": 2781472,
-      "length": 33481,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "82a0456038564800"
-    },
-    "/en-US/docs/Web/CSS/Guides/Display": {
-      "offset": 2814953,
-      "length": 34010,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "52ddfc91f75781f8"
-    },
-    "/en-US/docs/Web/CSS/Guides/Inline_layout": {
-      "offset": 2848963,
-      "length": 33292,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "a5f7e7fef77497aa"
-    },
-    "/en-US/docs/Web/CSS/Guides/Images": {
-      "offset": 2882255,
-      "length": 33721,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "0a9957c0ab746ffe"
-    },
-    "/en-US/docs/Web/CSS/Guides/Gaps": {
-      "offset": 2915976,
-      "length": 39783,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "e19872f01c4711ba"
-    },
-    "/en-US/docs/Web/CSS/Guides/Fonts": {
-      "offset": 2955759,
-      "length": 36641,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "438b9c28e577f57c"
-    },
-    "/en-US/docs/Web/CSS/Guides/Generated_content": {
-      "offset": 2992400,
-      "length": 34557,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "587273db8c333ca3"
-    },
-    "/en-US/docs/Web/CSS/Guides/Fragmentation": {
-      "offset": 3026957,
-      "length": 33662,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "966728b041e339ac"
-    },
-    "/en-US/docs/Web/CSS/Guides/Motion_path": {
-      "offset": 3060619,
-      "length": 34295,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "08011f63c7426440"
-    },
-    "/en-US/docs/Web/CSS/Guides/Logical_properties_and_values": {
-      "offset": 3094914,
-      "length": 35982,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "2a3e9de844efa364"
-    },
-    "/en-US/docs/Web/CSS/Guides/Masking": {
-      "offset": 3130896,
-      "length": 34462,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "9d8ef506004fe733"
-    },
-    "/en-US/docs/Web/CSS/Guides/Namespaces": {
-      "offset": 3165358,
-      "length": 33546,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "0daeacd3a847be19"
-    },
-    "/en-US/docs/Web/CSS/Guides/Overflow": {
-      "offset": 3198904,
-      "length": 36813,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "83a54dee72f933a8"
-    },
-    "/en-US/docs/Web/CSS/Guides/Lists": {
-      "offset": 3235717,
-      "length": 33681,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "c9963eea5b6d9034"
-    },
-    "/en-US/docs/Web/CSS/Guides/Paged_media": {
-      "offset": 3269398,
-      "length": 33545,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "3bea30d56b0135bc"
-    },
-    "/en-US/docs/Web/CSS/Guides/Overscroll_behavior": {
-      "offset": 3302943,
-      "length": 33897,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "f6cfee6475e243c0"
-    },
-    "/en-US/docs/Web/CSS/Guides/Round_display": {
-      "offset": 3336840,
-      "length": 33002,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "095a0e8e5c268738"
-    },
-    "/en-US/docs/Web/CSS/Guides/Positioned_layout": {
-      "offset": 3369842,
-      "length": 34550,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "caadab6d1f0845b3"
-    },
-    "/en-US/docs/Web/CSS/Guides/Pseudo-elements": {
-      "offset": 3404392,
-      "length": 34712,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "5acaecb8d921c0d6"
-    },
-    "/en-US/docs/Web/CSS/Guides/Properties_and_values_API": {
-      "offset": 3439104,
-      "length": 34585,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "cc75d3e5150783e3"
-    },
-    "/en-US/docs/Web/CSS/Guides/Scroll_anchoring": {
-      "offset": 3473689,
-      "length": 32990,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "0bdc877d9d690c4f"
-    },
-    "/en-US/docs/Web/CSS/Guides/Scrollbars_styling": {
-      "offset": 3506679,
-      "length": 33945,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "29dfbd6503431527"
-    },
-    "/en-US/docs/Web/CSS/Guides/Scroll-driven_animations": {
-      "offset": 3540624,
-      "length": 34612,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "ec99740dcba4055e"
-    },
-    "/en-US/docs/Web/CSS/Guides/Scroll_snap": {
-      "offset": 3575236,
-      "length": 36734,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "bc7a33749e20f457"
-    },
-    "/en-US/docs/Web/CSS/Guides/Selectors": {
-      "offset": 3611970,
-      "length": 36993,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "3b8e108313e2d5c9"
-    },
-    "/en-US/docs/Web/CSS/Guides/Ruby_layout": {
-      "offset": 3648963,
-      "length": 33285,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "bcb0d0ea96c7fe7f"
-    },
-    "/en-US/docs/Web/CSS/Guides/Shapes": {
-      "offset": 3682248,
-      "length": 35086,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "e462604e4b5258ee"
-    },
-    "/en-US/docs/Web/CSS/Guides/Transforms": {
-      "offset": 3717334,
-      "length": 38412,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "99bdfbeee08bf72a"
-    },
-    "/en-US/docs/Web/CSS/Guides/Table": {
-      "offset": 3755746,
-      "length": 33851,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "d2e356aa549f7630"
-    },
-    "/en-US/docs/Web/CSS/Guides/Text": {
-      "offset": 3789597,
-      "length": 33754,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "6d237810a4674a87"
-    },
-    "/en-US/docs/Web/CSS/Guides/Text_decoration": {
-      "offset": 3823351,
-      "length": 34878,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "cd6cc266377955d2"
-    },
-    "/en-US/docs/Web/CSS/Guides/Syntax": {
-      "offset": 3858229,
-      "length": 34236,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "118f77b34fe0f040"
-    },
-    "/en-US/docs/Web/CSS/Guides/View_transitions": {
-      "offset": 3892465,
-      "length": 33696,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "af7c29997e7d2429"
-    },
-    "/en-US/docs/Web/CSS/Guides/Will_change": {
-      "offset": 3926161,
-      "length": 32742,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "6c75f80952f64f2d"
-    },
-    "/en-US/docs/Web/CSS/Guides/Values_and_units": {
-      "offset": 3958903,
-      "length": 37275,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "10e73a80fa952a71"
-    },
-    "/en-US/docs/Web/CSS/Guides/WebXR_DOM_overlays": {
-      "offset": 3996178,
-      "length": 33224,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "b63db754c193d083"
-    },
-    "/en-US/docs/Web/CSS/Guides/Transitions": {
-      "offset": 4029402,
-      "length": 34260,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "119a044f348f46ea"
-    },
-    "/en-US/docs/Web/CSS/Guides/Viewport": {
-      "offset": 4063662,
-      "length": 33703,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "f9f41147ff96d77e"
-    },
-    "/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties": {
-      "offset": 4097365,
-      "length": 33845,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "164416de15735dc9"
-    },
-    "/en-US/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries": {
-      "offset": 4131210,
-      "length": 38993,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "bd2cad2dd7240642"
-    },
-    "/en-US/docs/Web/CSS/Guides/Writing_modes": {
-      "offset": 4170203,
-      "length": 34530,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "b8c92fe9c7294444"
-    },
-    "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds": {
-      "offset": 4204733,
-      "length": 34019,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "3b3e1aaf9e856907"
-    },
-    "/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding": {
-      "offset": 4238752,
-      "length": 41172,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "9969db5ba1c93589"
-    },
-    "/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using": {
-      "offset": 4279924,
-      "length": 46233,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "3acfadc963849d62"
-    },
-    "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images": {
-      "offset": 4326157,
-      "length": 34471,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "942401ead7c4c9f1"
-    },
-    "/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables": {
-      "offset": 4360628,
-      "length": 34372,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "4bf1e43b8d8f1b79"
-    },
-    "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds": {
-      "offset": 4395000,
-      "length": 39013,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "c4835942c7337329"
-    },
-    "/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox": {
-      "offset": 4434013,
-      "length": 35176,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "34958d774e755152"
-    },
-    "/en-US/docs/Web/CSS/Guides/Box_alignment/Overview": {
-      "offset": 4469189,
-      "length": 38365,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "bf485d067b3f1ca3"
-    },
-    "/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations/Border_shape_nav_menu": {
-      "offset": 4507554,
-      "length": 36657,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "0758088073272cd1"
-    },
-    "/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios": {
-      "offset": 4544211,
-      "length": 41607,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "c6626aae7d0a2711"
-    },
-    "/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors": {
-      "offset": 4585818,
-      "length": 44912,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "ed08da348d84d374"
-    },
-    "/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout": {
-      "offset": 4630730,
-      "length": 34707,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "1d4cc160b534f215"
-    },
-    "/en-US/docs/Web/CSS/Guides/Box_alignment/In_multi-column_layout": {
-      "offset": 4665437,
-      "length": 33209,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "6188a9a52bf96915"
-    },
-    "/en-US/docs/Web/CSS/Guides/Colors/Color_values": {
-      "offset": 4698646,
-      "length": 43991,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "4b72d106ee4b269f"
-    },
-    "/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties": {
-      "offset": 4742637,
-      "length": 40535,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "d48f70f86e2bb217"
-    },
-    "/en-US/docs/Web/CSS/Guides/Colors/Using_color_wisely": {
-      "offset": 4783172,
-      "length": 38100,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "099a231d7ba3f0d3"
-    },
-    "/en-US/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts": {
-      "offset": 4821272,
-      "length": 35221,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "8bd65125ecd90fd5"
-    },
-    "/en-US/docs/Web/CSS/Guides/Multicol_layout/Handling_overflow": {
-      "offset": 4856493,
-      "length": 36618,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "402d42a3c6d87c1b"
-    },
-    "/en-US/docs/Web/CSS/Guides/Multicol_layout/Spanning_balancing_columns": {
-      "offset": 4893111,
-      "length": 35026,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "7701e5e66a68767a"
-    },
-    "/en-US/docs/Web/CSS/Guides/Multicol_layout/Styling_columns": {
-      "offset": 4928137,
-      "length": 34412,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "02c92651da6229cb"
-    },
-    "/en-US/docs/Web/CSS/Guides/Multicol_layout/Using": {
-      "offset": 4962549,
-      "length": 36768,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "157f249a8ac98707"
-    },
-    "/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries": {
-      "offset": 4999317,
-      "length": 42765,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "fabcad6b8794528d"
-    },
-    "/en-US/docs/Web/CSS/Guides/Multicol_layout/Handling_content_breaks": {
-      "offset": 5042082,
-      "length": 34957,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "d57c37345836dcc4"
-    },
-    "/en-US/docs/Web/CSS/Guides/Containment/Container_queries": {
-      "offset": 5077039,
-      "length": 36419,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "e48fe46743ac88b4"
-    },
-    "/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries": {
-      "offset": 5113458,
-      "length": 43520,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "8db1b363394f9a9d"
-    },
-    "/en-US/docs/Web/CSS/Guides/Containment/Using": {
-      "offset": 5156978,
-      "length": 37924,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "76e3571627c57cc1"
-    },
-    "/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries": {
-      "offset": 5194902,
-      "length": 37046,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "bfaf8ca7e8e94a7c"
-    },
-    "/en-US/docs/Web/CSS/Guides/Display/Flow_layout": {
-      "offset": 5231948,
-      "length": 33798,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "42b6e7c9de8f8696"
-    },
-    "/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters": {
-      "offset": 5265746,
-      "length": 39695,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "eb748b10faa9dab5"
-    },
-    "/en-US/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts": {
-      "offset": 5305441,
-      "length": 38369,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "57b09ee847684bcd"
-    },
-    "/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout": {
-      "offset": 5343810,
-      "length": 38411,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "4d5b5c6cd406d21b"
-    },
-    "/en-US/docs/Web/CSS/Guides/Custom_functions_and_mixins/Using_custom_functions": {
-      "offset": 5382221,
-      "length": 37996,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "3a80fa64f625d91d"
-    },
-    "/en-US/docs/Web/CSS/Guides/Display/Flow_layout_and_overflow": {
-      "offset": 5420217,
-      "length": 36896,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "dbd952b7e4c2850f"
-    },
-    "/en-US/docs/Web/CSS/Guides/Inline_layout/Inline_formatting_context": {
-      "offset": 5457113,
-      "length": 34623,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "f9a0313e714351be"
-    },
-    "/en-US/docs/Web/CSS/Guides/Display/In_flow_and_out_of_flow": {
-      "offset": 5491736,
-      "length": 35386,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "562ea6b27068b809"
-    },
-    "/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model": {
-      "offset": 5527122,
-      "length": 39070,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "f3acfb36e771468f"
-    },
-    "/en-US/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes": {
-      "offset": 5566192,
-      "length": 37225,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "f12d2a4c60013122"
-    },
-    "/en-US/docs/Web/CSS/Guides/Display/Multi-keyword_syntax": {
-      "offset": 5603417,
-      "length": 38302,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "e4f03995ac5c4c93"
-    },
-    "/en-US/docs/Web/CSS/Guides/Display/Formatting_contexts": {
-      "offset": 5641719,
-      "length": 36911,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "d4ac6df728a53f67"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods": {
-      "offset": 5678630,
-      "length": 38039,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "ec8a35b63113d352"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items": {
-      "offset": 5716669,
-      "length": 37676,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "ce605e19cca734b2"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios": {
-      "offset": 5754345,
-      "length": 40283,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "d98f505a35a1cb0a"
-    },
-    "/en-US/docs/Web/CSS/Guides/Filter_effects/Using": {
-      "offset": 5794628,
-      "length": 38787,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "8ad055baecb41c80"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items": {
-      "offset": 5833415,
-      "length": 39988,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "f900355d5818597c"
-    },
-    "/en-US/docs/Web/CSS/Guides/Environment_variables/Using": {
-      "offset": 5873403,
-      "length": 37959,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "260cefac099f1a51"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items": {
-      "offset": 5911362,
-      "length": 39819,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "532ce350566b1f7e"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts": {
-      "offset": 5951181,
-      "length": 41394,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "f843af2612a19bcc"
-    },
-    "/en-US/docs/Web/CSS/Guides/Fonts/OpenType_fonts": {
-      "offset": 5992575,
-      "length": 42425,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "ad5a44868af1e9b3"
-    },
-    "/en-US/docs/Web/CSS/Guides/Fonts/WOFF": {
-      "offset": 6035000,
-      "length": 34424,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "0d76f452c932eebb"
-    },
-    "/en-US/docs/Web/CSS/Guides/Fonts/Variable_fonts": {
-      "offset": 6069424,
-      "length": 43913,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "215a541a6647199a"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases": {
-      "offset": 6113337,
-      "length": 38959,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "8eaed160daf724aa"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods": {
-      "offset": 6152296,
-      "length": 40228,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "bc7cb63c2b452611"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Box_alignment": {
-      "offset": 6192524,
-      "length": 39315,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "f7a5c111d95687be"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Auto-placement": {
-      "offset": 6231839,
-      "length": 39385,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "cdef31f218f0592b"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas": {
-      "offset": 6271224,
-      "length": 38879,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "a3f3002fe235a8ad"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement": {
-      "offset": 6310103,
-      "length": 38767,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "722cb64f83c59664"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines": {
-      "offset": 6348870,
-      "length": 38547,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "23857ef7db3a8372"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Accessibility": {
-      "offset": 6387417,
-      "length": 36263,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "161e8694131960d4"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes": {
-      "offset": 6423680,
-      "length": 39918,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "1c1819cd62631516"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts": {
-      "offset": 6463598,
-      "length": 40595,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "1f0debcad9a0f1d1"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid": {
-      "offset": 6504193,
-      "length": 38432,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "5bca032f8011df14"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes": {
-      "offset": 6542625,
-      "length": 36036,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "b1fabf45f3aff7d0"
-    },
-    "/static/client/styles-heading-anchor.0eec5185ab9425b7.css": {
-      "offset": 6578661,
-      "length": 350,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "117085aec5dbffa8"
-    },
-    "/static/client/270.c4deb27edf934078.css": {
-      "offset": 6579011,
-      "length": 665,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "38d563402611fddd"
-    },
-    "/static/client/styles-reference-layout.632d2f3884f10ca3.css": {
-      "offset": 6579676,
-      "length": 418,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "b5573751648cc426"
-    },
-    "/static/client/9228.c46ef79d5582674d.css": {
-      "offset": 6580094,
-      "length": 451,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "3c33f72c0520c661"
-    },
-    "/static/client/styles-global.13616ebb1fc8ee2f.css": {
-      "offset": 6580545,
-      "length": 4509,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "766581abbf6f4999"
-    },
-    "/static/client/styles-content-section.ee79aa021892f35a.css": {
-      "offset": 6585054,
-      "length": 3213,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "89b7222e752453ce"
-    },
-    "/static/client/styles-reference-toc.9b9bd019efd16b86.css": {
-      "offset": 6588267,
-      "length": 384,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "b095020c994ce628"
-    },
-    "/static/client/styles-article-footer.81ae18c89fc527dc.css": {
-      "offset": 6588651,
-      "length": 401,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "45e040a09542f082"
-    },
-    "/static/client/styles-left-sidebar.46e37af4d0b5c883.css": {
-      "offset": 6589052,
-      "length": 1011,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "ea7cf4836665ee70"
-    },
-    "/static/client/styles-page-layout.5a4354f33e894319.css": {
-      "offset": 6590063,
-      "length": 401,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "b92717c6ebe929ea"
-    },
-    "/static/client/styles-menu.e2c5c8a53a8854c2.css": {
-      "offset": 6590464,
-      "length": 1382,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "c448a565e7a68361"
-    },
-    "/static/client/styles-a11y-menu.5796ee87cb69f93f.css": {
-      "offset": 6591846,
-      "length": 321,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "5a24312fea8426ad"
-    },
-    "/static/client/styles-logo.aea5ff6edf1b9cfb.css": {
-      "offset": 6592167,
-      "length": 270,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "c535fed3a478fe66"
-    },
-    "/static/client/styles-navigation.c3ebf384e65df345.css": {
-      "offset": 6592437,
-      "length": 756,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "793feacbd1ba994b"
-    },
-    "/static/client/styles-breadcrumbs-bar.2d1bed1ab424b6b3.css": {
-      "offset": 6593193,
-      "length": 523,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "61b38b0e7aa8a2a6"
-    },
-    "/static/client/styles-breadcrumbs.87eb742f4e711dc3.css": {
-      "offset": 6593716,
-      "length": 478,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "41ade526a09eb014"
-    },
-    "/static/client/styles-footer.66072dd619a4ef50.css": {
-      "offset": 6594194,
-      "length": 923,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "4020c3d41c9c4786"
+      "length": 27664,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 327361,
+      "hash": "5e3722413d5ddd64"
     },
     "/apple-touch-icon.png": {
-      "offset": 6595117,
-      "length": 2133,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "7b88cb09d333e171"
-    },
-    "/favicon.svg": {
-      "offset": 6597250,
-      "length": 275,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "7216a77ed472a8b3"
-    },
-    "/favicon.ico": {
-      "offset": 6597525,
-      "length": 786,
-      "mime": "image/x-icon",
-      "gzipped": true,
-      "hash": "7db03220256db785"
-    },
-    "/en-US/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element/cookbook-center.png": {
-      "offset": 6598311,
-      "length": 4130,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "27a3137ba4f71c9a"
-    },
-    "/en-US/docs/Web/CSS/Guides/Box_model/Introduction/boxmodel.png": {
-      "offset": 6602441,
-      "length": 3367,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "7fa6f876e74aec28"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts/basics1.svg": {
-      "offset": 6605808,
-      "length": 756,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "0c433773ed6284ca"
-    },
-    "/en-US/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts/cookbook-multiple-columns.png": {
-      "offset": 6606564,
-      "length": 79784,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "5b4b0a654ce06ec3"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts/basics5.svg": {
-      "offset": 6686348,
-      "length": 822,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "70f0fe74205eb2c8"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts/basics7.svg": {
-      "offset": 6687170,
-      "length": 798,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "3a801434ae1e4cf1"
-    },
-    "/en-US/docs/Web/CSS/Guides/Syntax/Introduction/css_syntax_-_declaration.png": {
-      "offset": 6687968,
-      "length": 8598,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "813dcb67e60ee44a"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts/basics4.svg": {
-      "offset": 6696566,
-      "length": 774,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "d724b21f9655b04f"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts/basics3.svg": {
-      "offset": 6697340,
-      "length": 798,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "e2914ed8bf47e69e"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts/basics2.svg": {
-      "offset": 6698138,
-      "length": 790,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "49bff15ac79361e0"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts/basics6.svg": {
-      "offset": 6698928,
-      "length": 848,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "223a2d4c351d5f95"
-    },
-    "/en-US/docs/Web/CSS/How_to/Layout_cookbook/Card/cards.png": {
-      "offset": 6699776,
-      "length": 272919,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "2e8931aae9e28f42"
-    },
-    "/en-US/docs/Web/CSS/Guides/Syntax/Introduction/css_syntax_-_block.png": {
-      "offset": 6972695,
-      "length": 6868,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "93dc73b295b14ebf"
-    },
-    "/en-US/docs/Web/CSS/Guides/Transitions/Using/transitionsprinciple.png": {
-      "offset": 6979563,
-      "length": 8717,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "c7fb74311b41e1fa"
-    },
-    "/en-US/docs/Web/CSS/Guides/Syntax/Introduction/css_syntax_-_statements_venn_diag.png": {
-      "offset": 6988280,
-      "length": 11181,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "67b85fefcbf0e997"
-    },
-    "/en-US/docs/Web/CSS/Guides/Syntax/Introduction/ruleset.png": {
-      "offset": 6999461,
-      "length": 13139,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "bf7da6b983a26302"
-    },
-    "/en-US/docs/Web/CSS/Guides/Syntax/Introduction/declaration-block.png": {
-      "offset": 7012600,
-      "length": 24825,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "a367f08032f5ffb3"
-    },
-    "/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties/border2.png": {
-      "offset": 7037425,
-      "length": 1689,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "88ad3f47592c4c51"
-    },
-    "/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties/border1.png": {
-      "offset": 7039114,
-      "length": 1690,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "12230f6651e7155f"
-    },
-    "/en-US/docs/Web/CSS/Guides/Display/Containing_block/box-model.png": {
-      "offset": 7040804,
-      "length": 2930,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "7475340b6d9b54b3"
-    },
-    "/static/client/styles-baseline-indicator.dcd17e42ea043f53.css": {
-      "offset": 7043734,
-      "length": 2460,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "5f61318e1eebf2be"
-    },
-    "/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties/corner3.png": {
-      "offset": 7046194,
-      "length": 1937,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "213342ae98d0e026"
-    },
-    "/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties/corner1.png": {
-      "offset": 7048131,
-      "length": 1668,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "ffa95ed41f761a1d"
-    },
-    "/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties/border4.png": {
-      "offset": 7049799,
-      "length": 1922,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "6ea64794863fa965"
-    },
-    "/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties/border3.png": {
-      "offset": 7051721,
-      "length": 1847,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "7180d03f29424945"
-    },
-    "/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties/corner2.png": {
-      "offset": 7053568,
-      "length": 1874,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "030e17ce4a4f39ee"
-    },
-    "/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties/corner4.png": {
-      "offset": 7055442,
-      "length": 1972,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "553618f647f1f9ca"
-    },
-    "/en-US/docs/Web/CSS/Guides/Transforms/Using/logo.png": {
-      "offset": 7057414,
-      "length": 5261,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "2d6ed9f1fd5c1189"
-    },
-    "/en-US/docs/Web/CSS/Reference/Properties/border-radius/top-left-bottom-right.png": {
-      "offset": 7062675,
-      "length": 243,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "d5b7f7aabad996b3"
-    },
-    "/en-US/docs/Web/CSS/Reference/Properties/border-radius/bottom-right.png": {
-      "offset": 7062918,
-      "length": 256,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "1aae2e89f4d4225b"
-    },
-    "/en-US/docs/Web/CSS/Reference/Properties/border-radius/top-right.png": {
-      "offset": 7063174,
-      "length": 193,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "9f4cd25445d28835"
-    },
-    "/en-US/docs/Web/CSS/Reference/Properties/border-radius/top-right-bottom-left.png": {
-      "offset": 7063367,
-      "length": 236,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "9f9f83fe132a0e8b"
-    },
-    "/en-US/docs/Web/CSS/Reference/Properties/border-radius/bottom-left.png": {
-      "offset": 7063603,
-      "length": 193,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "5ef4dcc9b4c19dd4"
-    },
-    "/en-US/docs/Web/CSS/Reference/Properties/border-image/border.png": {
-      "offset": 7063796,
-      "length": 530,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "705c33e554676172"
-    },
-    "/en-US/docs/Web/CSS/Reference/Properties/border-radius/top-left.png": {
-      "offset": 7064326,
-      "length": 202,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "f01e154401013428"
-    },
-    "/en-US/docs/Web/CSS/Reference/Properties/border-radius/all-corner.png": {
-      "offset": 7064528,
-      "length": 281,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "700d7545680f792f"
-    },
-    "/shared-assets/images/diagrams/css/anchor-positioning/position-area.svg": {
-      "offset": 7064809,
-      "length": 3326,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "66cd8083c8a1efdf"
-    },
-    "/en-US/docs/Web/CSS/Guides/Box_alignment/Overview/align-container-subjects.png": {
-      "offset": 7068135,
-      "length": 228,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "09f4af1822169fa0"
-    },
-    "/en-US/docs/Web/CSS/Guides/Box_alignment/Overview/two-axes.png": {
-      "offset": 7068363,
-      "length": 2779,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "620138aeff7a439a"
-    },
-    "/en-US/docs/Web/CSS/Guides/Box_model/boxmodel.png": {
-      "offset": 7071142,
-      "length": 8657,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "8ccc77f0033abfe7"
-    },
-    "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images/scaled_mdn_logo.png": {
-      "offset": 7079799,
-      "length": 17833,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "886501d41c79e7b9"
-    },
-    "/en-US/docs/Web/CSS/Guides/Box_alignment/Overview/writing-mode-start.png": {
-      "offset": 7097632,
-      "length": 1370,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "b8eeac53f13fd3ba"
-    },
-    "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images/stretched_firefox_logo.png": {
-      "offset": 7099002,
-      "length": 22752,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "37a235827f3bbdb7"
-    },
-    "/en-US/docs/Web/CSS/Reference/Values/basic-shape/shapes-reference-box.png": {
-      "offset": 7121754,
-      "length": 101372,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "8fa4efba8b8081e9"
-    },
-    "/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout/block_axis.png": {
-      "offset": 7223126,
-      "length": 5514,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "ba414d718a6476f6"
-    },
-    "/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout/inline_axis.png": {
-      "offset": 7228640,
-      "length": 4776,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "db6afdda2b42c5f4"
-    },
-    "/en-US/docs/Web/CSS/Guides/Box_alignment/Overview/justify-content-start.png": {
-      "offset": 7233416,
-      "length": 242,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "32c6095da4843a4c"
-    },
-    "/en-US/docs/Web/CSS/Guides/Colors/Color_values/640px-hsl_color_solid_cylinder.png": {
-      "offset": 7233658,
-      "length": 45916,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "fe9a42fa9cca8db3"
-    },
-    "/en-US/docs/Web/CSS/Guides/Box_alignment/Overview/justify-content-space-between.png": {
-      "offset": 7279574,
-      "length": 242,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "d041b96c16ca8c31"
-    },
-    "/en-US/docs/Web/CSS/Guides/Colors/Using_color_wisely/paletton3.png": {
-      "offset": 7279816,
-      "length": 45241,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "0b8e97bb98d80506"
-    },
-    "/en-US/docs/Web/CSS/Guides/Colors/Using_color_wisely/paletton1.png": {
-      "offset": 7325057,
-      "length": 44957,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "d92c1c82ccd89b36"
-    },
-    "/en-US/docs/Web/CSS/Guides/Colors/Using_color_wisely/paletton2.png": {
-      "offset": 7370014,
-      "length": 45444,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "765a351e7dbee40b"
-    },
-    "/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout/mdn-horizontal.png": {
-      "offset": 7415458,
-      "length": 3271,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "ee49b96b59488fe5"
-    },
-    "/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout/mdn-vertical.png": {
-      "offset": 7418729,
-      "length": 3385,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "d3473a2fad659e97"
-    },
-    "/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout/box-model.png": {
-      "offset": 7422114,
-      "length": 20400,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "49f720441da31144"
-    },
-    "/en-US/docs/Web/CSS/Guides/Colors/Using_color_wisely/paletton-color-detail.png": {
-      "offset": 7442514,
-      "length": 8284,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "e710cf731d159750"
-    },
-    "/en-US/docs/Web/CSS/Guides/Containment/Container_queries/container-query.svg": {
-      "offset": 7450798,
-      "length": 11771,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "06e691bc3cb27b0b"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items/basics1.png": {
-      "offset": 7462569,
-      "length": 3382,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "ce73073c57f0de2a"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items/align10.png": {
-      "offset": 7465951,
-      "length": 4610,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "2b44cc92796d2ba4"
-    },
-    "/en-US/docs/Web/CSS/Guides/Colors/Using_color_wisely/paletton4.png": {
-      "offset": 7470561,
-      "length": 44931,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "4098cba28c1d5ae3"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios/ratios2.png": {
-      "offset": 7515492,
-      "length": 2764,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "52648630b21d97f3"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios/basics7.png": {
-      "offset": 7518256,
-      "length": 4415,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "1b6de3dbc0c7c947"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios/ratios1.png": {
-      "offset": 7522671,
-      "length": 4507,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "a85e3296e2628e5f"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items/align11.png": {
-      "offset": 7527178,
-      "length": 4888,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "3a47d50860422670"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items/order-property.png": {
-      "offset": 7532066,
-      "length": 2181,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "4ed8ff391ead74e1"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items/order-card.png": {
-      "offset": 7534247,
-      "length": 10861,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "c401a566bc078ceb"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items/align9.png": {
-      "offset": 7545108,
-      "length": 4285,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "cbfd4e1db003da00"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items/order-rtl.png": {
-      "offset": 7549393,
-      "length": 5821,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "f83fed2aaad73230"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios/ratios3.png": {
-      "offset": 7555214,
-      "length": 3159,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "cc115932ca11d889"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align6.png": {
-      "offset": 7558373,
-      "length": 4426,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "17099f19e512e469"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/basics5.png": {
-      "offset": 7562799,
-      "length": 4054,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "dda701beb3685d92"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align5.png": {
-      "offset": 7566853,
-      "length": 6701,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "79cdb8c80aef82f3"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align1.png": {
-      "offset": 7573554,
-      "length": 8179,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "de6e4d839aa51b1b"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align4.png": {
-      "offset": 7581733,
-      "length": 6136,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "66134630d0ff1da1"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align3.png": {
-      "offset": 7587869,
-      "length": 7549,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "c049ed124c266648"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align2.png": {
-      "offset": 7595418,
-      "length": 6992,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "a59badad77373513"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts/1_grid_track.png": {
-      "offset": 7602410,
-      "length": 192,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "65542072856c3205"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts/1-grid-inspector.png": {
-      "offset": 7602602,
-      "length": 51617,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "31bb8aa0d42dd48f"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align10.png": {
-      "offset": 7465951,
-      "length": 4610,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "2b44cc92796d2ba4"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/basics6.png": {
-      "offset": 7654219,
-      "length": 3698,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "b691b7d9a42075b7"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align8.png": {
-      "offset": 7562799,
-      "length": 4054,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "dda701beb3685d92"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align9.png": {
-      "offset": 7657917,
-      "length": 6241,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "2918cb98a89369b9"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align11.png": {
-      "offset": 7664158,
-      "length": 6431,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "4493d881dfc46618"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align7.png": {
-      "offset": 7670589,
-      "length": 2240,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "30a3cbed31316ce7"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Box_alignment/7_inline_axis.png": {
-      "offset": 7672829,
-      "length": 5220,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "a74464ea0634435f"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Box_alignment/block_axis.png": {
-      "offset": 7223126,
-      "length": 5514,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "ba414d718a6476f6"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts/1_grid_area.png": {
-      "offset": 7678049,
-      "length": 190,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "e05d920759aeb4dd"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts/1_grid_cell.png": {
-      "offset": 7678239,
-      "length": 197,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "25f20e5908d04778"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods/2_abspos_example.png": {
-      "offset": 7678436,
-      "length": 18939,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "18829a5ea1c2ab90"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts/1_diagram_numbered_grid_lines.png": {
-      "offset": 7697375,
-      "length": 7189,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "6f9de7d33878a081"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts/1_nested_grids_in_flow.png": {
-      "offset": 7704564,
-      "length": 6315,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "e1c5949c6314a94a"
-    },
-    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases/flex-cards.png": {
-      "offset": 7710879,
-      "length": 31361,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "9f1ef6b76d522fec"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas/4_media_objects.png": {
-      "offset": 7742240,
-      "length": 20566,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "eeacda0b443a239d"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas/4_area.png": {
-      "offset": 7762806,
-      "length": 8099,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "7f4aa0b9ad9b9854"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Box_alignment/7_auto_margins.png": {
-      "offset": 7770905,
-      "length": 10544,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "2794be3b21ba84d0"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement/highlighted_grid.png": {
-      "offset": 7781449,
-      "length": 7882,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "139aac44a0720adf"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Box_alignment/7_space-between.png": {
-      "offset": 7789331,
-      "length": 7562,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "6c819f7fbeb8ac7d"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas/4_layout.png": {
-      "offset": 7796893,
-      "length": 6356,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "62605b005c888243"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines/5_named_lines1.png": {
-      "offset": 7803249,
-      "length": 7908,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "f0daf839eaf3016d"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines/5_multiple_lines_from_areas.png": {
-      "offset": 7811157,
-      "length": 10936,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "aea73d96a1652c87"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes/8-horizontal-tb.png": {
-      "offset": 7822093,
-      "length": 6030,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "b2390c6e713af6f0"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid/gap.png": {
-      "offset": 7828123,
-      "length": 20944,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "1e808d5a278db95d"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines/5_named_lines2.png": {
-      "offset": 7849067,
-      "length": 26666,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "183cf316dad9f6b3"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts/11-grid-inspector-12col.png": {
-      "offset": 7875733,
-      "length": 55921,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "5bc86d0a7d61ad62"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts/11-responsive-areas.png": {
-      "offset": 7931654,
-      "length": 43236,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "043ee715dd6ae2be"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts/11-grid-auto-flow-sparse.png": {
-      "offset": 7974890,
-      "length": 54037,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "56f19c8c2679a02c"
-    },
-    "/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts/11-grid-inspector-12col-layout.png": {
-      "offset": 8028927,
-      "length": 73660,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "943d1feca8881acc"
-    },
-    "/static/client/external-link.4f3a2dc8e402cae5.svg": {
-      "offset": 8102587,
-      "length": 202,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "b38eb77257c17b65"
-    },
-    "/static/client/obsolete.103e80a32b90e7f1.svg": {
-      "offset": 8102789,
-      "length": 173,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "81f1209b92086c84"
-    },
-    "/static/client/pending-removal.7300f68a9465c1b9.svg": {
-      "offset": 8102962,
-      "length": 206,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "f42a51394935b22c"
-    },
-    "/static/client/obsolete-dark.97bd602b44120cb3.svg": {
-      "offset": 8103168,
-      "length": 173,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "6b6153eb170903de"
-    },
-    "/static/client/pending-removal-dark.7a08806b42144903.svg": {
-      "offset": 8103341,
-      "length": 204,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "4136230236b1ce02"
-    },
-    "/static/client/inter-latin-extended.02dc98170ff37b88.woff2": {
-      "offset": 8103545,
-      "length": 140879,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "0e386516317f0372"
-    },
-    "/static/client/inter-italic-latin.fd2627ec16333c05.woff2": {
-      "offset": 8244424,
-      "length": 115990,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "7c6014ade2bc7d53"
-    },
-    "/static/client/inter-latin.9a3b1bc220d426ef.woff2": {
-      "offset": 8360414,
-      "length": 105537,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "04cbcf1d5c8e7a37"
-    },
-    "/static/client/jetbrains-mono-latin-extended.01c891f9c832ce28.woff2": {
-      "offset": 8465951,
-      "length": 18336,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "35a53a2da72935ed"
-    },
-    "/static/client/jetbrains-mono-cyrillic.577e793cdf179ae1.woff2": {
-      "offset": 8484287,
-      "length": 12915,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "9b1f9c68102b03d3"
-    },
-    "/static/client/jetbrains-mono-italic-latin-extended.c25d5e1f309ed948.woff2": {
-      "offset": 8497202,
-      "length": 20352,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "8803ab0f4d563963"
-    },
-    "/static/client/inter-cyrillic.eecfbd79d522303a.woff2": {
-      "offset": 8517554,
-      "length": 29932,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "b887b4325735b5bd"
-    },
-    "/static/client/jetbrains-mono-italic-latin.55b330522e5e3ed9.woff2": {
-      "offset": 8547486,
-      "length": 30888,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "0bb99444b007292b"
-    },
-    "/static/client/inter-italic-cyrillic.d153dcd2916c4842.woff2": {
-      "offset": 8578374,
-      "length": 31728,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "4ae31863ed2df2da"
-    },
-    "/static/client/jetbrains-mono-latin.119994ed445212c7.woff2": {
-      "offset": 8610102,
-      "length": 28444,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "424cc1da26c4152a"
-    },
-    "/static/client/inter-italic-latin-extended.0a7409875db33654.woff2": {
-      "offset": 8638546,
-      "length": 155367,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "2f6f5156c9f379bb"
-    },
-    "/static/client/flask-conical.c16b3d71f14f31d1.svg": {
-      "offset": 8793913,
-      "length": 231,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "4d01c5a789597d61"
-    },
-    "/static/client/triangle-alert.cff4c57ccef57da3.svg": {
-      "offset": 8794144,
-      "length": 209,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "5092e3bee80ce040"
-    },
-    "/static/client/circle-check.205f48f66c3c9d17.svg": {
-      "offset": 8794353,
-      "length": 182,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "83d42dce79755d9d"
-    },
-    "/static/client/trash-2.73b28bc66fb8543c.svg": {
-      "offset": 8794535,
-      "length": 222,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "2ddd2c89561c9b1e"
-    },
-    "/static/client/arrow-left.29a44bc5a550fe38.svg": {
-      "offset": 8794757,
-      "length": 173,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "35fe648b0b43c0c1"
-    },
-    "/static/client/circle-x.4b1c3fa0511867e7.svg": {
-      "offset": 8794930,
-      "length": 186,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "c53e7faf3f6098fa"
-    },
-    "/static/client/jetbrains-mono-italic-cyrillic.8d00711fdb1702e0.woff2": {
-      "offset": 8795116,
-      "length": 14275,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "8efc3044254be7cb"
-    },
-    "/static/client/BarlowCondensed-SemiBold.199288b668a15dc1.woff2": {
-      "offset": 8809391,
-      "length": 60276,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "a7b01d2562d6decd"
-    },
-    "/static/client/info.d40b80f84482feba.svg": {
-      "offset": 8869667,
-      "length": 189,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "a2a3b568ca25e61c"
-    },
-    "/static/client/arrow-right.648145f00e77b7f0.svg": {
-      "offset": 8869856,
-      "length": 173,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "c99e8f87aa5881cc"
-    },
-    "/static/client/graduation-cap.c7aa0f3430c53718.svg": {
-      "offset": 8870029,
-      "length": 250,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "2ac4806c29fc8391"
-    },
-    "/static/client/cog.f23af856fab34421.svg": {
-      "offset": 8870279,
-      "length": 275,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "d8b0fbf1b09f1d4e"
-    },
-    "/static/client/lightbulb.f54f9e803373ffd2.svg": {
-      "offset": 8870554,
-      "length": 224,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "998ac17d0184d8be"
-    },
-    "/static/client/lock.4befe79c52ccec2a.svg": {
-      "offset": 8870778,
-      "length": 200,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "fc672f6bccbcb47b"
-    },
-    "/static/client/wrench.a3caa7312a364b47.svg": {
-      "offset": 8870978,
-      "length": 232,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "385696fec3b7503e"
-    },
-    "/static/client/chevron-right.a81fc439dd5e4839.svg": {
-      "offset": 8871210,
-      "length": 166,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "8f711adf3f6e8f26"
-    },
-    "/static/client/chevron-down.7c923b7054da305b.svg": {
-      "offset": 8871376,
-      "length": 165,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "af69d22b3644766f"
-    },
-    "/static/client/github.4d94e1bf436aa7ed.svg": {
-      "offset": 8871541,
-      "length": 340,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "1d6effbf2047a7ae"
-    },
-    "/static/client/mdn-m.70aac857e4a908d0.svg": {
-      "offset": 8871881,
-      "length": 244,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "7818b0cbe4009341"
-    },
-    "/static/client/shield-check.07bdc37f20ac5cc6.svg": {
-      "offset": 8872125,
-      "length": 264,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "556fcb69fc51bda7"
-    },
-    "/static/client/circle-play.6ed4ac1fb3c93a04.svg": {
-      "offset": 8872389,
-      "length": 185,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "83d0c7092bddb6cd"
-    },
-    "/static/client/cancel.7362f2cdf3515e0d.svg": {
-      "offset": 8872574,
-      "length": 173,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "ec9c27236ea137ac"
-    },
-    "/static/client/users.f7e6f1f213744762.svg": {
-      "offset": 8872747,
-      "length": 227,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "60fdb36f1a4096f7"
-    },
-    "/static/client/chart-no-axes-combined.aee09a7064cb8b35.svg": {
-      "offset": 8872974,
-      "length": 223,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "d34c5968db81f3d3"
-    },
-    "/static/client/bluesky.a9421882d093c829.svg": {
-      "offset": 8873197,
-      "length": 311,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "ecae0efedcc6ef12"
-    },
-    "/static/client/mastodon.1a5c0fde8353f680.svg": {
-      "offset": 8873508,
-      "length": 498,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "b65ca9049cb08698"
-    },
-    "/static/client/rss.37214526d7308d0c.svg": {
-      "offset": 8874006,
-      "length": 199,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "9b5b5b4fd2caa9f4"
-    },
-    "/static/client/menu.74ccd9bb64dbf543.svg": {
-      "offset": 8874205,
-      "length": 171,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "7993999bcc6dbb19"
-    },
-    "/static/client/x.4c7e68bf52af030a.svg": {
-      "offset": 8874376,
-      "length": 208,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "2652feb5e28e1a3e"
-    },
-    "/static/client/limited-dark.38d6262bb2a277a0.svg": {
-      "offset": 8874584,
-      "length": 193,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "a633613e28698e52"
-    },
-    "/static/client/browser-check.20ed6fe43e745587.svg": {
-      "offset": 8874777,
-      "length": 317,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "c1ab7ecf99dc978a"
-    },
-    "/static/client/limited.d8a397eda98d282d.svg": {
-      "offset": 8875094,
-      "length": 193,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "dea548b9a43f48d1"
-    },
-    "/static/client/low.02894ed3d7bccc6d.svg": {
-      "offset": 8875287,
-      "length": 183,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "de982178f06c6c4b"
-    },
-    "/static/client/high-dark.a3f9e002a70b98e8.svg": {
-      "offset": 8875470,
-      "length": 183,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "35539338f4e9312a"
-    },
-    "/static/client/browser-cross.196cc93721b774d9.svg": {
-      "offset": 8875653,
-      "length": 320,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "f452b88bcfc20c96"
-    },
-    "/static/client/low-dark.f897f69b7465d5a8.svg": {
-      "offset": 8875973,
-      "length": 181,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "c3d16bd684e4123c"
-    },
-    "/static/client/high.712917a113e51658.svg": {
-      "offset": 8876154,
-      "length": 183,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "01d41ce9ed579591"
-    },
-    "/static/client/browser-check-obsolete.adc8b778f055490d.svg": {
-      "offset": 8876337,
-      "length": 552,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "27ac1742e71294dc"
-    },
-    "/static/client/browser-cross-obsolete.1965543c5f4ff9dd.svg": {
-      "offset": 8876889,
-      "length": 571,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "08c470c9dc80d958"
-    },
-    "/static/client/chrome.5978d1a2dbdc06cc.svg": {
-      "offset": 8877460,
-      "length": 504,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "ac2a1d9fa14b1ea8"
-    },
-    "/static/client/edge.8646730d02c8a77d.svg": {
-      "offset": 8877964,
-      "length": 1210,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "143e9072299a763c"
-    },
-    "/static/client/safari.7843065f2edf13d1.svg": {
-      "offset": 8879174,
-      "length": 3204,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "6ff4433de5ed88d1"
-    },
-    "/static/client/firefox.56f320db61f46184.svg": {
-      "offset": 8882378,
-      "length": 3195,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "ddca254c2e3d418d"
+      "offset": 27664,
+      "length": 2171,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 2171,
+      "hash": "b9bbd8ac23a561e1"
     },
     "/docs": {
       "offset": 0,
-      "length": 35667,
+      "length": 27664,
       "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "984fa6ca0bafa2f1"
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 327361,
+      "hash": "5e3722413d5ddd64"
     },
-    "/": {
+    "/en-US/docs/Web/CSS": {
       "offset": 0,
-      "length": 35667,
+      "length": 27664,
       "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "984fa6ca0bafa2f1"
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 327361,
+      "hash": "5e3722413d5ddd64"
+    },
+    "/en-US/docs/Web/CSS/Guides": {
+      "offset": 29835,
+      "length": 31236,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 346608,
+      "hash": "91f98c0e5c7376d8"
+    },
+    "/en-US/docs/Web/CSS/Guides/Anchor_positioning": {
+      "offset": 61071,
+      "length": 26723,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 326773,
+      "hash": "bd127d15dfc6dfb8"
+    },
+    "/en-US/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries": {
+      "offset": 87794,
+      "length": 30005,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 339591,
+      "hash": "dfab27647e5266f6"
+    },
+    "/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding": {
+      "offset": 117799,
+      "length": 31751,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 352397,
+      "hash": "56d8189f5d62dd0b"
+    },
+    "/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using": {
+      "offset": 149550,
+      "length": 35980,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 382032,
+      "hash": "e84eaa3ddbae881b"
+    },
+    "/en-US/docs/Web/CSS/Guides/Animation_triggers": {
+      "offset": 185530,
+      "length": 27444,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 326070,
+      "hash": "0e4d75eb6faceb07"
+    },
+    "/en-US/docs/Web/CSS/Guides/Animations": {
+      "offset": 212974,
+      "length": 28376,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 334668,
+      "hash": "37dbd10d37982c5c"
+    },
+    "/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties": {
+      "offset": 241350,
+      "length": 26497,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 319932,
+      "hash": "c98e3400a9b98a8e"
+    },
+    "/en-US/docs/Web/CSS/Guides/Animations/Using": {
+      "offset": 267847,
+      "length": 31914,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 353642,
+      "hash": "214f5e1346ea992a"
+    },
+    "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders": {
+      "offset": 299761,
+      "length": 27674,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 333139,
+      "hash": "d40072d435d6cbf4"
+    },
+    "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator": {
+      "offset": 327435,
+      "length": 25509,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 316903,
+      "hash": "c0dcc84332fc35c6"
+    },
+    "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator": {
+      "offset": 352944,
+      "length": 25535,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 316964,
+      "hash": "3edfc61bc6a4fb31"
+    },
+    "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator": {
+      "offset": 378479,
+      "length": 26007,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 318761,
+      "hash": "0dee45113b2244d4"
+    },
+    "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images": {
+      "offset": 404486,
+      "length": 26945,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 325986,
+      "hash": "66cfd3bfaac7b933"
+    },
+    "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images/scaled_mdn_logo.png": {
+      "offset": 431431,
+      "length": 17824,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 17824,
+      "hash": "444b0e594f5bb71c"
+    },
+    "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images/stretched_firefox_logo.png": {
+      "offset": 449255,
+      "length": 22724,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 22724,
+      "hash": "55c12ab5fd5d7b3c"
+    },
+    "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds": {
+      "offset": 471979,
+      "length": 30075,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 356749,
+      "hash": "04bc4a4ee8c6951a"
+    },
+    "/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds": {
+      "offset": 502054,
+      "length": 26550,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 323564,
+      "hash": "894fc88bc8e1131a"
+    },
+    "/en-US/docs/Web/CSS/Guides/Basic_user_interface": {
+      "offset": 528604,
+      "length": 27213,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 325866,
+      "hash": "2f3583c0cbdd4079"
+    },
+    "/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations": {
+      "offset": 555817,
+      "length": 27488,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 335440,
+      "hash": "4d636257a077f4d7"
+    },
+    "/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations/Border_shape_nav_menu": {
+      "offset": 583305,
+      "length": 28161,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 330078,
+      "hash": "9a6885870cd57865"
+    },
+    "/en-US/docs/Web/CSS/Guides/Box_alignment": {
+      "offset": 611466,
+      "length": 26499,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 322976,
+      "hash": "24ee926f561cf0b9"
+    },
+    "/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables": {
+      "offset": 637965,
+      "length": 26829,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 322409,
+      "hash": "b12756c48f2031c1"
+    },
+    "/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox": {
+      "offset": 664794,
+      "length": 27490,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 328101,
+      "hash": "787c3d053784847c"
+    },
+    "/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout": {
+      "offset": 692284,
+      "length": 27208,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 324864,
+      "hash": "a3e54f849645135d"
+    },
+    "/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout/block_axis.png": {
+      "offset": 719492,
+      "length": 6022,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 6022,
+      "hash": "16a151a657309279"
+    },
+    "/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout/inline_axis.png": {
+      "offset": 725514,
+      "length": 5070,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 5070,
+      "hash": "cb2d66cf55ea1747"
+    },
+    "/en-US/docs/Web/CSS/Guides/Box_alignment/In_multi-column_layout": {
+      "offset": 730584,
+      "length": 25917,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 318031,
+      "hash": "6337e25754a6e515"
+    },
+    "/en-US/docs/Web/CSS/Guides/Box_alignment/Overview": {
+      "offset": 756501,
+      "length": 29462,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 338923,
+      "hash": "f091f31789fe0882"
+    },
+    "/en-US/docs/Web/CSS/Guides/Box_alignment/Overview/align-container-subjects.png": {
+      "offset": 785963,
+      "length": 221,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 221,
+      "hash": "bbd003e991f28068"
+    },
+    "/en-US/docs/Web/CSS/Guides/Box_alignment/Overview/justify-content-space-between.png": {
+      "offset": 786184,
+      "length": 256,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 256,
+      "hash": "cd5412a58cee2c36"
+    },
+    "/en-US/docs/Web/CSS/Guides/Box_alignment/Overview/justify-content-start.png": {
+      "offset": 786440,
+      "length": 257,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 257,
+      "hash": "6d44074a5074fb9a"
+    },
+    "/en-US/docs/Web/CSS/Guides/Box_alignment/Overview/two-axes.png": {
+      "offset": 786697,
+      "length": 2925,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 2925,
+      "hash": "5ba72f622b5fd4e7"
+    },
+    "/en-US/docs/Web/CSS/Guides/Box_alignment/Overview/writing-mode-start.png": {
+      "offset": 789622,
+      "length": 1432,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 1432,
+      "hash": "978a759ffc32b269"
+    },
+    "/en-US/docs/Web/CSS/Guides/Box_model": {
+      "offset": 791054,
+      "length": 26920,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 329232,
+      "hash": "9399b081aa7ebf63"
+    },
+    "/en-US/docs/Web/CSS/Guides/Box_model/Introduction": {
+      "offset": 817974,
+      "length": 26778,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 325370,
+      "hash": "9ea92e921b70f7ca"
+    },
+    "/en-US/docs/Web/CSS/Guides/Box_model/Introduction/boxmodel.png": {
+      "offset": 844752,
+      "length": 3583,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 3583,
+      "hash": "4e1bc0319e0f2398"
+    },
+    "/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing": {
+      "offset": 848335,
+      "length": 27165,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 325355,
+      "hash": "85aa17fd2b35e1af"
+    },
+    "/en-US/docs/Web/CSS/Guides/Box_model/boxmodel.png": {
+      "offset": 875500,
+      "length": 9673,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 9673,
+      "hash": "a950c800fbfc44ff"
+    },
+    "/en-US/docs/Web/CSS/Guides/Box_sizing": {
+      "offset": 885173,
+      "length": 27157,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 329125,
+      "hash": "1c3d4acb655cd088"
+    },
+    "/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios": {
+      "offset": 912330,
+      "length": 32298,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 353623,
+      "hash": "b42c69988fc4f03d"
+    },
+    "/en-US/docs/Web/CSS/Guides/CSSOM_view": {
+      "offset": 944628,
+      "length": 26185,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 320391,
+      "hash": "00c607f781a398e4"
+    },
+    "/en-US/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts": {
+      "offset": 970813,
+      "length": 29486,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 333511,
+      "hash": "9eb8446d1afa13f6"
+    },
+    "/en-US/docs/Web/CSS/Guides/Cascade": {
+      "offset": 1000299,
+      "length": 26735,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 322966,
+      "hash": "92a0787a22d86117"
+    },
+    "/en-US/docs/Web/CSS/Guides/Cascade/Inheritance": {
+      "offset": 1027034,
+      "length": 27042,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 327031,
+      "hash": "80919ce66b204a9b"
+    },
+    "/en-US/docs/Web/CSS/Guides/Cascade/Introduction": {
+      "offset": 1054076,
+      "length": 32721,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 353482,
+      "hash": "cf55ae076dcd238e"
+    },
+    "/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing": {
+      "offset": 1086797,
+      "length": 31099,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 348203,
+      "hash": "33c821532e4c5bee"
+    },
+    "/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties": {
+      "offset": 1117896,
+      "length": 28680,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 342496,
+      "hash": "f63fb86984abf01d"
+    },
+    "/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties/border1.png": {
+      "offset": 1146576,
+      "length": 1667,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 1667,
+      "hash": "c450f02e899c6d2d"
+    },
+    "/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties/border2.png": {
+      "offset": 1148243,
+      "length": 1666,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 1666,
+      "hash": "5e94490dedb67e36"
+    },
+    "/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties/border3.png": {
+      "offset": 1149909,
+      "length": 1824,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 1824,
+      "hash": "280b936ee8eaad1b"
+    },
+    "/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties/border4.png": {
+      "offset": 1151733,
+      "length": 1899,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 1899,
+      "hash": "841c158ff551b986"
+    },
+    "/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties/corner1.png": {
+      "offset": 1153632,
+      "length": 1645,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 1645,
+      "hash": "f79401ff0a40fba7"
+    },
+    "/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties/corner2.png": {
+      "offset": 1155277,
+      "length": 1851,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 1851,
+      "hash": "c734eec4c4f461be"
+    },
+    "/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties/corner3.png": {
+      "offset": 1157128,
+      "length": 1914,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 1914,
+      "hash": "60f66c8733226b0a"
+    },
+    "/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties/corner4.png": {
+      "offset": 1159042,
+      "length": 1949,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 1949,
+      "hash": "999a76a93ce8c2d5"
+    },
+    "/en-US/docs/Web/CSS/Guides/Cascade/Specificity": {
+      "offset": 1160991,
+      "length": 33040,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 356864,
+      "hash": "d12273147ab3310a"
+    },
+    "/en-US/docs/Web/CSS/Guides/Cascading_variables": {
+      "offset": 1194031,
+      "length": 27133,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 323330,
+      "hash": "8b8aa8330b283083"
+    },
+    "/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties": {
+      "offset": 1221164,
+      "length": 31197,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 351070,
+      "hash": "ef55a3c74b13a065"
+    },
+    "/en-US/docs/Web/CSS/Guides/Color_adjustment": {
+      "offset": 1252361,
+      "length": 25904,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 319835,
+      "hash": "9585e5e5e2f87be3"
+    },
+    "/en-US/docs/Web/CSS/Guides/Colors": {
+      "offset": 1278265,
+      "length": 27603,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 330633,
+      "hash": "f7a5a59ae352ba68"
+    },
+    "/en-US/docs/Web/CSS/Guides/Colors/Applying_color": {
+      "offset": 1305868,
+      "length": 30188,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 339023,
+      "hash": "a6d9bb5ea53794b0"
+    },
+    "/en-US/docs/Web/CSS/Guides/Colors/Color_format_converter": {
+      "offset": 1336056,
+      "length": 29258,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 335738,
+      "hash": "31cd9583e1f0cdb7"
+    },
+    "/en-US/docs/Web/CSS/Guides/Colors/Color_mixer": {
+      "offset": 1365314,
+      "length": 30458,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 340312,
+      "hash": "4d35dcc1ebe0a594"
+    },
+    "/en-US/docs/Web/CSS/Guides/Colors/Color_values": {
+      "offset": 1395772,
+      "length": 34090,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 358970,
+      "hash": "f7732eba7f8df146"
+    },
+    "/en-US/docs/Web/CSS/Guides/Colors/Color_values/640px-hsl_color_solid_cylinder.png": {
+      "offset": 1429862,
+      "length": 46237,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 46237,
+      "hash": "6729f722fa742b39"
+    },
+    "/en-US/docs/Web/CSS/Guides/Colors/Using_color_wisely": {
+      "offset": 1476099,
+      "length": 29147,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 330825,
+      "hash": "c1918bf4d8520f28"
+    },
+    "/en-US/docs/Web/CSS/Guides/Colors/Using_color_wisely/paletton-color-detail.png": {
+      "offset": 1505246,
+      "length": 8568,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 8568,
+      "hash": "ccf9a21b8157e4b4"
+    },
+    "/en-US/docs/Web/CSS/Guides/Colors/Using_color_wisely/paletton1.png": {
+      "offset": 1513814,
+      "length": 45029,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 45029,
+      "hash": "f3d5ea0f0f60ffbb"
+    },
+    "/en-US/docs/Web/CSS/Guides/Colors/Using_color_wisely/paletton2.png": {
+      "offset": 1558843,
+      "length": 45527,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 45527,
+      "hash": "72ada3e17ffd3141"
+    },
+    "/en-US/docs/Web/CSS/Guides/Colors/Using_color_wisely/paletton3.png": {
+      "offset": 1604370,
+      "length": 45334,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 45334,
+      "hash": "6b1538072af9e83e"
+    },
+    "/en-US/docs/Web/CSS/Guides/Colors/Using_color_wisely/paletton4.png": {
+      "offset": 1649704,
+      "length": 45021,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 45021,
+      "hash": "7131ee17ad6322c5"
+    },
+    "/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors": {
+      "offset": 1694725,
+      "length": 35119,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 370025,
+      "hash": "e2fe1208c502858e"
+    },
+    "/en-US/docs/Web/CSS/Guides/Compositing_and_blending": {
+      "offset": 1729844,
+      "length": 26918,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 321795,
+      "hash": "d344eee4e8d1e397"
+    },
+    "/en-US/docs/Web/CSS/Guides/Conditional_rules": {
+      "offset": 1756762,
+      "length": 27421,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 329260,
+      "hash": "99714292acfeb87c"
+    },
+    "/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries": {
+      "offset": 1784183,
+      "length": 34015,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 374654,
+      "hash": "0b880fc48fd3a8f8"
+    },
+    "/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries": {
+      "offset": 1818198,
+      "length": 28349,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 333260,
+      "hash": "a149471d941252fb"
+    },
+    "/en-US/docs/Web/CSS/Guides/Containment": {
+      "offset": 1846547,
+      "length": 26576,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 323352,
+      "hash": "4adb97b20078a59a"
+    },
+    "/en-US/docs/Web/CSS/Guides/Containment/Container_queries": {
+      "offset": 1873123,
+      "length": 27962,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 330942,
+      "hash": "29fa74eda67c3c43"
+    },
+    "/en-US/docs/Web/CSS/Guides/Containment/Container_queries/container-query.svg": {
+      "offset": 1901085,
+      "length": 9715,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 39291,
+      "hash": "67cd18f160e89657"
+    },
+    "/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries": {
+      "offset": 1910800,
+      "length": 33263,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 358022,
+      "hash": "c3b5b4654b2727cd"
+    },
+    "/en-US/docs/Web/CSS/Guides/Containment/Using": {
+      "offset": 1944063,
+      "length": 29130,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 332221,
+      "hash": "3a000794f30d5ca6"
+    },
+    "/en-US/docs/Web/CSS/Guides/Counter_styles": {
+      "offset": 1973193,
+      "length": 26525,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 322547,
+      "hash": "acac21cbe27bc24c"
+    },
+    "/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters": {
+      "offset": 1999718,
+      "length": 30671,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 348930,
+      "hash": "094332c7d578f47b"
+    },
+    "/en-US/docs/Web/CSS/Guides/Custom_functions_and_mixins": {
+      "offset": 2030389,
+      "length": 26409,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 321324,
+      "hash": "ccf27a80f56b41b9"
+    },
+    "/en-US/docs/Web/CSS/Guides/Custom_functions_and_mixins/Using_custom_functions": {
+      "offset": 2056798,
+      "length": 29241,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 337457,
+      "hash": "36cc6b8b5ef197ba"
+    },
+    "/en-US/docs/Web/CSS/Guides/Custom_highlight_API": {
+      "offset": 2086039,
+      "length": 27025,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 323361,
+      "hash": "7c947f2b84f0472b"
+    },
+    "/en-US/docs/Web/CSS/Guides/Display": {
+      "offset": 2113064,
+      "length": 26472,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 324188,
+      "hash": "0794398a6fca9c5c"
+    },
+    "/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout": {
+      "offset": 2139536,
+      "length": 29382,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 338775,
+      "hash": "30a035de4f767735"
+    },
+    "/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout/box-model.png": {
+      "offset": 2168918,
+      "length": 21147,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 21147,
+      "hash": "287276c85138ee7a"
+    },
+    "/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout/mdn-horizontal.png": {
+      "offset": 2190065,
+      "length": 3659,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 3659,
+      "hash": "4f2bc09f20824fcf"
+    },
+    "/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout/mdn-vertical.png": {
+      "offset": 2193724,
+      "length": 3719,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 3719,
+      "hash": "a4b34b858b18d6e1"
+    },
+    "/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context": {
+      "offset": 2197443,
+      "length": 28301,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 332664,
+      "hash": "9c583156af8c6c0c"
+    },
+    "/en-US/docs/Web/CSS/Guides/Display/Containing_block": {
+      "offset": 2225744,
+      "length": 28110,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 335294,
+      "hash": "197d404540252591"
+    },
+    "/en-US/docs/Web/CSS/Guides/Display/Containing_block/box-model.png": {
+      "offset": 2253854,
+      "length": 3107,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 3107,
+      "hash": "60a8e773c2268f16"
+    },
+    "/en-US/docs/Web/CSS/Guides/Display/Flow_layout": {
+      "offset": 2256961,
+      "length": 26299,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 319257,
+      "hash": "4ec1c25f6750a078"
+    },
+    "/en-US/docs/Web/CSS/Guides/Display/Flow_layout_and_overflow": {
+      "offset": 2283260,
+      "length": 28039,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 333489,
+      "hash": "10cb414974faa898"
+    },
+    "/en-US/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes": {
+      "offset": 2311299,
+      "length": 28310,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 337140,
+      "hash": "edb190eddf454ee0"
+    },
+    "/en-US/docs/Web/CSS/Guides/Display/Formatting_contexts": {
+      "offset": 2339609,
+      "length": 28246,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 331033,
+      "hash": "ea7a87eed5655d0d"
+    },
+    "/en-US/docs/Web/CSS/Guides/Display/In_flow_and_out_of_flow": {
+      "offset": 2367855,
+      "length": 27753,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 327949,
+      "hash": "b4eac76637928474"
+    },
+    "/en-US/docs/Web/CSS/Guides/Display/Multi-keyword_syntax": {
+      "offset": 2395608,
+      "length": 29615,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 335922,
+      "hash": "0e98cd272bef4896"
+    },
+    "/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model": {
+      "offset": 2425223,
+      "length": 29883,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 338564,
+      "hash": "f8df6b5f3407bdfc"
+    },
+    "/en-US/docs/Web/CSS/Guides/Easing_functions": {
+      "offset": 2455106,
+      "length": 26096,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 319022,
+      "hash": "29c0e0749bacba9c"
+    },
+    "/en-US/docs/Web/CSS/Guides/Environment_variables": {
+      "offset": 2481202,
+      "length": 26118,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 318948,
+      "hash": "39d9855f4dc9953e"
+    },
+    "/en-US/docs/Web/CSS/Guides/Environment_variables/Using": {
+      "offset": 2507320,
+      "length": 29177,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 333164,
+      "hash": "4c0ae9faa478d615"
+    },
+    "/en-US/docs/Web/CSS/Guides/Filter_effects": {
+      "offset": 2536497,
+      "length": 27501,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 327882,
+      "hash": "1a61f8b55dcb80c9"
+    },
+    "/en-US/docs/Web/CSS/Guides/Filter_effects/Using": {
+      "offset": 2563998,
+      "length": 29832,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 342661,
+      "hash": "036e9465167aac2c"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout": {
+      "offset": 2593830,
+      "length": 27435,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 329508,
+      "hash": "2d0caf58e531416c"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items": {
+      "offset": 2621265,
+      "length": 30705,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 356439,
+      "hash": "b7b745cdeaeaa4c9"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align1.png": {
+      "offset": 2651970,
+      "length": 8622,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 8622,
+      "hash": "ef0c7f4259f383a8"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align10.png": {
+      "offset": 2660592,
+      "length": 4667,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 4667,
+      "hash": "7c07c97c72533dff"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align11.png": {
+      "offset": 2665259,
+      "length": 7018,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 7018,
+      "hash": "ffa00f25357ab89a"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align2.png": {
+      "offset": 2672277,
+      "length": 6969,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 6969,
+      "hash": "f61bf174e3e54a6a"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align3.png": {
+      "offset": 2679246,
+      "length": 7550,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 7550,
+      "hash": "80b6e054dc741b75"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align4.png": {
+      "offset": 2686796,
+      "length": 6629,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 6629,
+      "hash": "bd1af3d88168312b"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align5.png": {
+      "offset": 2693425,
+      "length": 7165,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 7165,
+      "hash": "c91570d800ea6e04"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align6.png": {
+      "offset": 2700590,
+      "length": 4511,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 4511,
+      "hash": "a57b67773009d30e"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align7.png": {
+      "offset": 2705101,
+      "length": 2295,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 2295,
+      "hash": "fd644b625d41e79e"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align8.png": {
+      "offset": 2707396,
+      "length": 4098,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 4098,
+      "hash": "844d140a5c7103a9"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/align9.png": {
+      "offset": 2711494,
+      "length": 6596,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 6596,
+      "hash": "38f4277758f9fce7"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/basics5.png": {
+      "offset": 2707396,
+      "length": 4098,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 4098,
+      "hash": "844d140a5c7103a9"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items/basics6.png": {
+      "offset": 2718090,
+      "length": 3746,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 3746,
+      "hash": "9d7d9700b6616c9a"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts": {
+      "offset": 2721836,
+      "length": 32188,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 358339,
+      "hash": "ace73d0b8d6903a3"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts/basics1.svg": {
+      "offset": 2754024,
+      "length": 669,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 1937,
+      "hash": "f9d2466aa7bdfd32"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts/basics2.svg": {
+      "offset": 2754693,
+      "length": 695,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 2049,
+      "hash": "95c62a5158730b9d"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts/basics3.svg": {
+      "offset": 2755388,
+      "length": 695,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 2021,
+      "hash": "9b3ee20bb544d635"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts/basics4.svg": {
+      "offset": 2756083,
+      "length": 678,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 1964,
+      "hash": "56570aecbf0fa7a7"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts/basics5.svg": {
+      "offset": 2756761,
+      "length": 718,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 2255,
+      "hash": "fd91c897f85f8741"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts/basics6.svg": {
+      "offset": 2757479,
+      "length": 754,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 2298,
+      "hash": "956f8f0ac2f461f5"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts/basics7.svg": {
+      "offset": 2758233,
+      "length": 691,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 2381,
+      "hash": "52ecb9ad939ccbc5"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios": {
+      "offset": 2758924,
+      "length": 31073,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 348827,
+      "hash": "60ff73e173971461"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios/basics7.png": {
+      "offset": 2789997,
+      "length": 4512,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 4512,
+      "hash": "0fec11c0f7e9b6be"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios/ratios1.png": {
+      "offset": 2794509,
+      "length": 4548,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 4548,
+      "hash": "e370bfce7df6c25f"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios/ratios2.png": {
+      "offset": 2799057,
+      "length": 2767,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 2767,
+      "hash": "1317b2f70745e3aa"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios/ratios3.png": {
+      "offset": 2801824,
+      "length": 3199,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 3199,
+      "hash": "847d06918b8c2b77"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items": {
+      "offset": 2805023,
+      "length": 28865,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 333425,
+      "hash": "369070bc1b7376ab"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items/align10.png": {
+      "offset": 2660592,
+      "length": 4667,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 4667,
+      "hash": "7c07c97c72533dff"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items/align11.png": {
+      "offset": 2833888,
+      "length": 4958,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 4958,
+      "hash": "b267379cf90825c8"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items/align9.png": {
+      "offset": 2838846,
+      "length": 4359,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 4359,
+      "hash": "3ae4ebd1ab6e3e5a"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items/basics1.png": {
+      "offset": 2843205,
+      "length": 3464,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 3464,
+      "hash": "95b362ef3fcd99a5"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items/order-card.png": {
+      "offset": 2846669,
+      "length": 11334,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 11334,
+      "hash": "1a894102a7e60e3f"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items/order-property.png": {
+      "offset": 2858003,
+      "length": 2200,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 2200,
+      "hash": "dfc0a1d8ecc6d110"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items/order-rtl.png": {
+      "offset": 2860203,
+      "length": 6020,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 6020,
+      "hash": "1e57be56f78f089f"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods": {
+      "offset": 2866223,
+      "length": 29153,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 334550,
+      "hash": "ac584648c13fb594"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases": {
+      "offset": 2895376,
+      "length": 29916,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 342227,
+      "hash": "3f02ea3b4ec6a909"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases/flex-cards.png": {
+      "offset": 2925292,
+      "length": 32274,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 32274,
+      "hash": "c477ad869e1eb9e9"
+    },
+    "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items": {
+      "offset": 2957566,
+      "length": 30534,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 347137,
+      "hash": "e53854a0cc3df388"
+    },
+    "/en-US/docs/Web/CSS/Guides/Font_loading": {
+      "offset": 2988100,
+      "length": 25955,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 318472,
+      "hash": "45f33010da0f9dc9"
+    },
+    "/en-US/docs/Web/CSS/Guides/Fonts": {
+      "offset": 3014055,
+      "length": 27765,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 333375,
+      "hash": "4679bc315f158fdb"
+    },
+    "/en-US/docs/Web/CSS/Guides/Fonts/OpenType_fonts": {
+      "offset": 3041820,
+      "length": 32477,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 371971,
+      "hash": "592c81d4eb44e028"
+    },
+    "/en-US/docs/Web/CSS/Guides/Fonts/Variable_fonts": {
+      "offset": 3074297,
+      "length": 33880,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 364200,
+      "hash": "d0d96453237a022f"
+    },
+    "/en-US/docs/Web/CSS/Guides/Fonts/WOFF": {
+      "offset": 3108177,
+      "length": 26876,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 324474,
+      "hash": "1adf4a84b6757c47"
+    },
+    "/en-US/docs/Web/CSS/Guides/Fragmentation": {
+      "offset": 3135053,
+      "length": 26256,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 320268,
+      "hash": "ce289e70eb4af412"
+    },
+    "/en-US/docs/Web/CSS/Guides/Gaps": {
+      "offset": 3161309,
+      "length": 30562,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 343453,
+      "hash": "3f92ef82682f0e52"
+    },
+    "/en-US/docs/Web/CSS/Guides/Generated_content": {
+      "offset": 3191871,
+      "length": 27190,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 325243,
+      "hash": "c3c9f0316c655f37"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout": {
+      "offset": 3219061,
+      "length": 28184,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 334430,
+      "hash": "890333404f140069"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Accessibility": {
+      "offset": 3247245,
+      "length": 28452,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 326901,
+      "hash": "5c45f141b7d52e99"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Auto-placement": {
+      "offset": 3275697,
+      "length": 30283,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 349145,
+      "hash": "787188317e4d62e9"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts": {
+      "offset": 3305980,
+      "length": 31859,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 363513,
+      "hash": "c4a81767a79eebae"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts/1-grid-inspector.png": {
+      "offset": 3337839,
+      "length": 51816,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 51816,
+      "hash": "e0bfc31484f4e503"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts/1_diagram_numbered_grid_lines.png": {
+      "offset": 3389655,
+      "length": 8249,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 8249,
+      "hash": "e4e22affff360a2a"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts/1_grid_area.png": {
+      "offset": 3397904,
+      "length": 392,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 392,
+      "hash": "67e99361b77910b4"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts/1_grid_cell.png": {
+      "offset": 3398296,
+      "length": 400,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 400,
+      "hash": "d62fadd65bb52240"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts/1_grid_track.png": {
+      "offset": 3398696,
+      "length": 395,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 395,
+      "hash": "d758507263e15a48"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts/1_nested_grids_in_flow.png": {
+      "offset": 3399091,
+      "length": 7269,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 7269,
+      "hash": "0dc8fc33406931c0"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Box_alignment": {
+      "offset": 3406360,
+      "length": 30101,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 353789,
+      "hash": "1f71e4520032f772"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Box_alignment/7_auto_margins.png": {
+      "offset": 3436461,
+      "length": 12538,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 12538,
+      "hash": "511374fbd8065e4e"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Box_alignment/7_inline_axis.png": {
+      "offset": 3448999,
+      "length": 5694,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 5694,
+      "hash": "dda9fb1871d0088e"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Box_alignment/7_space-between.png": {
+      "offset": 3454693,
+      "length": 9611,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 9611,
+      "hash": "1ff313c8ae489ca7"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Box_alignment/block_axis.png": {
+      "offset": 719492,
+      "length": 6022,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 6022,
+      "hash": "16a151a657309279"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts": {
+      "offset": 3464304,
+      "length": 31263,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 350291,
+      "hash": "6b706fb1aa5a5538"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts/11-grid-auto-flow-sparse.png": {
+      "offset": 3495567,
+      "length": 57816,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 57816,
+      "hash": "e9460ef6ebdf2509"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts/11-grid-inspector-12col-layout.png": {
+      "offset": 3553383,
+      "length": 75084,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 75084,
+      "hash": "72e1b9022fc6c81b"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts/11-grid-inspector-12col.png": {
+      "offset": 3628467,
+      "length": 56930,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 56930,
+      "hash": "0136a06e7f343b0f"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts/11-responsive-areas.png": {
+      "offset": 3685397,
+      "length": 43347,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 43347,
+      "hash": "8ea1af766dd514e5"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes": {
+      "offset": 3728744,
+      "length": 27832,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 330718,
+      "hash": "b8b1e09976babc45"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas": {
+      "offset": 3756576,
+      "length": 29728,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 344718,
+      "hash": "61c9202168382896"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas/4_area.png": {
+      "offset": 3786304,
+      "length": 8506,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 8506,
+      "hash": "75c817b3af4fa4ae"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas/4_layout.png": {
+      "offset": 3794810,
+      "length": 6951,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 6951,
+      "hash": "1d763fc9be2b3b5b"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas/4_media_objects.png": {
+      "offset": 3801761,
+      "length": 20877,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 20877,
+      "hash": "ddf5e2d0bb5059e6"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement": {
+      "offset": 3822638,
+      "length": 29674,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 348606,
+      "hash": "02c2848ed43e6df9"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement/highlighted_grid.png": {
+      "offset": 3852312,
+      "length": 8087,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 8087,
+      "hash": "61ff4cea5e968db8"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes": {
+      "offset": 3860399,
+      "length": 30871,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 348879,
+      "hash": "18559e77119e9edd"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes/8-horizontal-tb.png": {
+      "offset": 3891270,
+      "length": 6315,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 6315,
+      "hash": "a2adbda2a921f2af"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines": {
+      "offset": 3897585,
+      "length": 29632,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 341737,
+      "hash": "92781b8669bf8d12"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines/5_multiple_lines_from_areas.png": {
+      "offset": 3927217,
+      "length": 11697,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 11697,
+      "hash": "b6d4171deeb0585c"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines/5_named_lines1.png": {
+      "offset": 3938914,
+      "length": 8308,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 8308,
+      "hash": "0d2b4345768f4186"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines/5_named_lines2.png": {
+      "offset": 3947222,
+      "length": 27502,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 27502,
+      "hash": "03021d7588ac368f"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods": {
+      "offset": 3974724,
+      "length": 30984,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 353308,
+      "hash": "ac3f00e6980a8ccc"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods/2_abspos_example.png": {
+      "offset": 4005708,
+      "length": 20531,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 20531,
+      "hash": "64fe302c948f0212"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid": {
+      "offset": 4026239,
+      "length": 29461,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 344832,
+      "hash": "3fadf6222d4aa72b"
+    },
+    "/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid/gap.png": {
+      "offset": 4055700,
+      "length": 25625,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 25625,
+      "hash": "162400fcfbaee46f"
+    },
+    "/en-US/docs/Web/CSS/Guides/Images": {
+      "offset": 4081325,
+      "length": 26279,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 322031,
+      "hash": "8e019ae73b835675"
+    },
+    "/en-US/docs/Web/CSS/Guides/Inline_layout": {
+      "offset": 4107604,
+      "length": 26018,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 319272,
+      "hash": "2f3de9f7f77bd2ba"
+    },
+    "/en-US/docs/Web/CSS/Guides/Inline_layout/Inline_formatting_context": {
+      "offset": 4133622,
+      "length": 27241,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 327289,
+      "hash": "a44b1b93baa3b748"
+    },
+    "/en-US/docs/Web/CSS/Guides/Lists": {
+      "offset": 4160863,
+      "length": 26376,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 321033,
+      "hash": "f749ee69c042521d"
+    },
+    "/en-US/docs/Web/CSS/Guides/Logical_properties_and_values": {
+      "offset": 4187239,
+      "length": 27207,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 332563,
+      "hash": "5c4d18631c33f918"
+    },
+    "/en-US/docs/Web/CSS/Guides/Masking": {
+      "offset": 4214446,
+      "length": 26856,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 325622,
+      "hash": "1fdac7ddb3632076"
+    },
+    "/en-US/docs/Web/CSS/Guides/Media_queries": {
+      "offset": 4241302,
+      "length": 27486,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 331361,
+      "hash": "37fc1eb944d0e2f6"
+    },
+    "/en-US/docs/Web/CSS/Guides/Motion_path": {
+      "offset": 4268788,
+      "length": 26934,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 323768,
+      "hash": "e866af0034bd5fbe"
+    },
+    "/en-US/docs/Web/CSS/Guides/Multicol_layout": {
+      "offset": 4295722,
+      "length": 29491,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 335963,
+      "hash": "1d1f0e804fcdbf92"
+    },
+    "/en-US/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts": {
+      "offset": 4325213,
+      "length": 27533,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 328213,
+      "hash": "f50e1a87734a43df"
+    },
+    "/en-US/docs/Web/CSS/Guides/Multicol_layout/Handling_content_breaks": {
+      "offset": 4352746,
+      "length": 27390,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 325612,
+      "hash": "a31ee73de9cf6c41"
+    },
+    "/en-US/docs/Web/CSS/Guides/Multicol_layout/Handling_overflow": {
+      "offset": 4380136,
+      "length": 28069,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 330644,
+      "hash": "e58da731ffde57bb"
+    },
+    "/en-US/docs/Web/CSS/Guides/Multicol_layout/Spanning_balancing_columns": {
+      "offset": 4408205,
+      "length": 27523,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 327544,
+      "hash": "e7447b4d08a1fb23"
+    },
+    "/en-US/docs/Web/CSS/Guides/Multicol_layout/Styling_columns": {
+      "offset": 4435728,
+      "length": 26933,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 323721,
+      "hash": "f83f95d7d2f8595e"
+    },
+    "/en-US/docs/Web/CSS/Guides/Multicol_layout/Using": {
+      "offset": 4462661,
+      "length": 27880,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 336622,
+      "hash": "9c3e658b33385380"
+    },
+    "/en-US/docs/Web/CSS/Guides/Namespaces": {
+      "offset": 4490541,
+      "length": 26367,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 319838,
+      "hash": "043ae0c76a0d61e7"
+    },
+    "/en-US/docs/Web/CSS/Guides/Nesting": {
+      "offset": 4516908,
+      "length": 25888,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 317315,
+      "hash": "69fc146ec194df07"
+    },
+    "/en-US/docs/Web/CSS/Guides/Overflow": {
+      "offset": 4542796,
+      "length": 28289,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 330554,
+      "hash": "23591c95d0b1f701"
+    },
+    "/en-US/docs/Web/CSS/Guides/Overscroll_behavior": {
+      "offset": 4571085,
+      "length": 26545,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 321286,
+      "hash": "1e2be37053e212b1"
+    },
+    "/en-US/docs/Web/CSS/Guides/Paged_media": {
+      "offset": 4597630,
+      "length": 26193,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 320420,
+      "hash": "19208005ebeafa70"
+    },
+    "/en-US/docs/Web/CSS/Guides/Positioned_layout": {
+      "offset": 4623823,
+      "length": 26908,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 327623,
+      "hash": "680f48d1649bccb0"
+    },
+    "/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context": {
+      "offset": 4650731,
+      "length": 28353,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 333229,
+      "hash": "9a22d5096caa0e0b"
+    },
+    "/en-US/docs/Web/CSS/Guides/Properties_and_values_API": {
+      "offset": 4679084,
+      "length": 27141,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 323561,
+      "hash": "a47441b77d5ed375"
+    },
+    "/en-US/docs/Web/CSS/Guides/Pseudo-elements": {
+      "offset": 4706225,
+      "length": 26975,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 326636,
+      "hash": "862a74aaaf56d119"
+    },
+    "/en-US/docs/Web/CSS/Guides/Round_display": {
+      "offset": 4733200,
+      "length": 25891,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 316753,
+      "hash": "38d1f2b74f6b4f31"
+    },
+    "/en-US/docs/Web/CSS/Guides/Ruby_layout": {
+      "offset": 4759091,
+      "length": 25943,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 319525,
+      "hash": "85ddcef08a6a91d1"
+    },
+    "/en-US/docs/Web/CSS/Guides/Scoping": {
+      "offset": 4785034,
+      "length": 26662,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 320382,
+      "hash": "2b0878ed6d62066e"
+    },
+    "/en-US/docs/Web/CSS/Guides/Scroll-driven_animations": {
+      "offset": 4811696,
+      "length": 27090,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 326219,
+      "hash": "80ed608b91e04671"
+    },
+    "/en-US/docs/Web/CSS/Guides/Scroll_anchoring": {
+      "offset": 4838786,
+      "length": 25894,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 316642,
+      "hash": "ee1e165e26cd3614"
+    },
+    "/en-US/docs/Web/CSS/Guides/Scroll_snap": {
+      "offset": 4864680,
+      "length": 28141,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 332676,
+      "hash": "d13f47279899b4e2"
+    },
+    "/en-US/docs/Web/CSS/Guides/Scrollbars_styling": {
+      "offset": 4892821,
+      "length": 26675,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 321688,
+      "hash": "8dcfc794919daca2"
+    },
+    "/en-US/docs/Web/CSS/Guides/Selectors": {
+      "offset": 4919496,
+      "length": 27698,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 337552,
+      "hash": "a2ae69162a9e8b9e"
+    },
+    "/en-US/docs/Web/CSS/Guides/Shadow_parts": {
+      "offset": 4947194,
+      "length": 26216,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 319484,
+      "hash": "d131dd2093b680ae"
+    },
+    "/en-US/docs/Web/CSS/Guides/Shapes": {
+      "offset": 4973410,
+      "length": 27452,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 326115,
+      "hash": "d5b2eb0d672d5bc9"
+    },
+    "/en-US/docs/Web/CSS/Guides/Shapes/Shape_generator": {
+      "offset": 5000862,
+      "length": 27334,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 321888,
+      "hash": "92640659fd5d3aab"
+    },
+    "/en-US/docs/Web/CSS/Guides/Syntax": {
+      "offset": 5028196,
+      "length": 26723,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 322265,
+      "hash": "1ffca7b90349d786"
+    },
+    "/en-US/docs/Web/CSS/Guides/Syntax/Introduction": {
+      "offset": 5054919,
+      "length": 28166,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 328930,
+      "hash": "22a7df99cd6c585e"
+    },
+    "/en-US/docs/Web/CSS/Guides/Syntax/Introduction/css_syntax_-_block.png": {
+      "offset": 5083085,
+      "length": 6880,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 6880,
+      "hash": "687fadadd26cc605"
+    },
+    "/en-US/docs/Web/CSS/Guides/Syntax/Introduction/css_syntax_-_declaration.png": {
+      "offset": 5089965,
+      "length": 9030,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 9030,
+      "hash": "14ee130337ca47d1"
+    },
+    "/en-US/docs/Web/CSS/Guides/Syntax/Introduction/css_syntax_-_statements_venn_diag.png": {
+      "offset": 5098995,
+      "length": 11176,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 11176,
+      "hash": "e2139dc3e92ecbdc"
+    },
+    "/en-US/docs/Web/CSS/Guides/Syntax/Introduction/declaration-block.png": {
+      "offset": 5110171,
+      "length": 25640,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 25640,
+      "hash": "267285685dcc738d"
+    },
+    "/en-US/docs/Web/CSS/Guides/Syntax/Introduction/ruleset.png": {
+      "offset": 5135811,
+      "length": 13895,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 13895,
+      "hash": "819465d97d1d3c15"
+    },
+    "/en-US/docs/Web/CSS/Guides/Table": {
+      "offset": 5149706,
+      "length": 26515,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 322098,
+      "hash": "892e2a7a0c33671d"
+    },
+    "/en-US/docs/Web/CSS/Guides/Text": {
+      "offset": 5176221,
+      "length": 26267,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 323735,
+      "hash": "20eb2f331a884d91"
+    },
+    "/en-US/docs/Web/CSS/Guides/Text_decoration": {
+      "offset": 5202488,
+      "length": 27206,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 326863,
+      "hash": "a0688503a82764c8"
+    },
+    "/en-US/docs/Web/CSS/Guides/Transforms": {
+      "offset": 5229694,
+      "length": 29486,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 346118,
+      "hash": "c20e6ddbff7f8567"
+    },
+    "/en-US/docs/Web/CSS/Guides/Transforms/Using": {
+      "offset": 5259180,
+      "length": 28174,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 338946,
+      "hash": "057ec87cab55fed4"
+    },
+    "/en-US/docs/Web/CSS/Guides/Transforms/Using/logo.png": {
+      "offset": 5287354,
+      "length": 5238,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 5238,
+      "hash": "d58fda7bb5c55e8a"
+    },
+    "/en-US/docs/Web/CSS/Guides/Transitions": {
+      "offset": 5292592,
+      "length": 26749,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 325500,
+      "hash": "155ee6f2a97bd482"
+    },
+    "/en-US/docs/Web/CSS/Guides/Transitions/Using": {
+      "offset": 5319341,
+      "length": 30655,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 344211,
+      "hash": "029d2cb436f04f91"
+    },
+    "/en-US/docs/Web/CSS/Guides/Transitions/Using/transitionsprinciple.png": {
+      "offset": 5349996,
+      "length": 8749,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 8749,
+      "hash": "1784ccdce7b33bcd"
+    },
+    "/en-US/docs/Web/CSS/Guides/Values_and_units": {
+      "offset": 5358745,
+      "length": 28143,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 340745,
+      "hash": "5a3b13791baece58"
+    },
+    "/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types": {
+      "offset": 5386888,
+      "length": 29197,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 338805,
+      "hash": "1c1e7b188f46dc26"
+    },
+    "/en-US/docs/Web/CSS/Guides/Values_and_units/Textual_data_types": {
+      "offset": 5416085,
+      "length": 26983,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 323013,
+      "hash": "c746b3f20c4cab71"
+    },
+    "/en-US/docs/Web/CSS/Guides/View_transitions": {
+      "offset": 5443068,
+      "length": 26378,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 321992,
+      "hash": "cf740a961add307e"
+    },
+    "/en-US/docs/Web/CSS/Guides/Viewport": {
+      "offset": 5469446,
+      "length": 26418,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 318906,
+      "hash": "f196b850b1fa22e3"
+    },
+    "/en-US/docs/Web/CSS/Guides/WebXR_DOM_overlays": {
+      "offset": 5495864,
+      "length": 26046,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 317412,
+      "hash": "9725b79b7bd33335"
+    },
+    "/en-US/docs/Web/CSS/Guides/Will_change": {
+      "offset": 5521910,
+      "length": 25682,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 316236,
+      "hash": "5ea3a83b9defeac0"
+    },
+    "/en-US/docs/Web/CSS/Guides/Writing_modes": {
+      "offset": 5547592,
+      "length": 26892,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 327062,
+      "hash": "fe3c86974995ae72"
+    },
+    "/en-US/docs/Web/CSS/How_to/Layout_cookbook": {
+      "offset": 5574484,
+      "length": 26207,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 320061,
+      "hash": "b7b32e8119115e27"
+    },
+    "/en-US/docs/Web/CSS/How_to/Layout_cookbook/Card": {
+      "offset": 5600691,
+      "length": 27432,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 325512,
+      "hash": "ff2444f10f3761b0"
+    },
+    "/en-US/docs/Web/CSS/How_to/Layout_cookbook/Card/cards.png": {
+      "offset": 5628123,
+      "length": 274949,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 274949,
+      "hash": "78c688d64b3bfd19"
+    },
+    "/en-US/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element": {
+      "offset": 5903072,
+      "length": 26624,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 324481,
+      "hash": "c169f94cf071626c"
+    },
+    "/en-US/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element/cookbook-center.png": {
+      "offset": 5929696,
+      "length": 4804,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 4804,
+      "hash": "c3f5e630cb4d2ce9"
+    },
+    "/en-US/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts": {
+      "offset": 5934500,
+      "length": 27794,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 329811,
+      "hash": "30d06b61ed3f2f2b"
+    },
+    "/en-US/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts/cookbook-multiple-columns.png": {
+      "offset": 5962294,
+      "length": 80186,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 80186,
+      "hash": "e09b79e420eb8d8f"
+    },
+    "/en-US/docs/Web/CSS/Reference": {
+      "offset": 6042480,
+      "length": 33759,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 483580,
+      "hash": "95575ea4947915d1"
+    },
+    "/en-US/docs/Web/CSS/Reference/At-rules": {
+      "offset": 6076239,
+      "length": 25990,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 327055,
+      "hash": "5b4be63e2e8ff8b7"
+    },
+    "/en-US/docs/Web/CSS/Reference/Properties": {
+      "offset": 6102229,
+      "length": 28202,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 382761,
+      "hash": "60d3e470a64a0b56"
+    },
+    "/en-US/docs/Web/CSS/Reference/Properties/border-image": {
+      "offset": 6130431,
+      "length": 30476,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 359966,
+      "hash": "e5f2b749b48df97f"
+    },
+    "/en-US/docs/Web/CSS/Reference/Properties/border-image/border.png": {
+      "offset": 6160907,
+      "length": 507,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 507,
+      "hash": "ae6ca8d5963b11cd"
+    },
+    "/en-US/docs/Web/CSS/Reference/Properties/border-radius": {
+      "offset": 6161414,
+      "length": 29962,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 349347,
+      "hash": "8c4f32c704694716"
+    },
+    "/en-US/docs/Web/CSS/Reference/Properties/border-radius/all-corner.png": {
+      "offset": 6191376,
+      "length": 264,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 264,
+      "hash": "deec3ee0a578f234"
+    },
+    "/en-US/docs/Web/CSS/Reference/Properties/border-radius/bottom-left.png": {
+      "offset": 6191640,
+      "length": 181,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 181,
+      "hash": "650d86113364fc13"
+    },
+    "/en-US/docs/Web/CSS/Reference/Properties/border-radius/bottom-right.png": {
+      "offset": 6191821,
+      "length": 244,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 244,
+      "hash": "fc10bc7fba2b1a88"
+    },
+    "/en-US/docs/Web/CSS/Reference/Properties/border-radius/top-left-bottom-right.png": {
+      "offset": 6192065,
+      "length": 226,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 226,
+      "hash": "a59e6dfe6b7ca38d"
+    },
+    "/en-US/docs/Web/CSS/Reference/Properties/border-radius/top-left.png": {
+      "offset": 6192291,
+      "length": 190,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 190,
+      "hash": "fd2d7f2649462893"
+    },
+    "/en-US/docs/Web/CSS/Reference/Properties/border-radius/top-right-bottom-left.png": {
+      "offset": 6192481,
+      "length": 220,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 220,
+      "hash": "6a79351305296c9b"
+    },
+    "/en-US/docs/Web/CSS/Reference/Properties/border-radius/top-right.png": {
+      "offset": 6192701,
+      "length": 182,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 182,
+      "hash": "2630967b0c5f0ed2"
+    },
+    "/en-US/docs/Web/CSS/Reference/Properties/box-shadow": {
+      "offset": 6192883,
+      "length": 30166,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 344318,
+      "hash": "c212b1197c708fcb"
+    },
+    "/en-US/docs/Web/CSS/Reference/Selectors": {
+      "offset": 6223049,
+      "length": 25947,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 318000,
+      "hash": "91c6a57c86c837ff"
+    },
+    "/en-US/docs/Web/CSS/Reference/Selectors/Combinators": {
+      "offset": 6248996,
+      "length": 25649,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 316389,
+      "hash": "597ef74a8dcd0657"
+    },
+    "/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes": {
+      "offset": 6274645,
+      "length": 30884,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 363648,
+      "hash": "dbd08c2070499dac"
+    },
+    "/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements": {
+      "offset": 6305529,
+      "length": 29738,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 346637,
+      "hash": "fa6393407d022653"
+    },
+    "/en-US/docs/Web/CSS/Reference/Values": {
+      "offset": 6335267,
+      "length": 25596,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 316809,
+      "hash": "708de81c32fd22bc"
+    },
+    "/en-US/docs/Web/CSS/Reference/Values/Data_types": {
+      "offset": 6360863,
+      "length": 28895,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 344829,
+      "hash": "bb0f45ef38690efb"
+    },
+    "/en-US/docs/Web/CSS/Reference/Values/Functions": {
+      "offset": 6389758,
+      "length": 31191,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 371334,
+      "hash": "f38bc35d123c14b5"
+    },
+    "/en-US/docs/Web/CSS/Reference/Values/basic-shape": {
+      "offset": 6420949,
+      "length": 31047,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 347843,
+      "hash": "5ac8124ca4d6d4ef"
+    },
+    "/en-US/docs/Web/CSS/Reference/Values/basic-shape/shapes-reference-box.png": {
+      "offset": 6451996,
+      "length": 102740,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 102740,
+      "hash": "04d84be2c5884116"
+    },
+    "/en-US/docs/Web/CSS/Reference/Values/color_value": {
+      "offset": 6554736,
+      "length": 33707,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 492234,
+      "hash": "c54ecc22ec951016"
+    },
+    "/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix": {
+      "offset": 6588443,
+      "length": 31336,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 356249,
+      "hash": "27cebcaa1937acf6"
+    },
+    "/favicon.ico": {
+      "offset": 6619779,
+      "length": 763,
+      "mime": "image/x-icon",
+      "gzipped": false,
+      "raw_length": 763,
+      "hash": "5a777406a4082a0a"
+    },
+    "/favicon.svg": {
+      "offset": 6620542,
+      "length": 243,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 536,
+      "hash": "6e37bc7a075b9a0f"
+    },
+    "/shared-assets/images/diagrams/css/anchor-positioning/position-area.svg": {
+      "offset": 6620785,
+      "length": 2605,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 36723,
+      "hash": "aaac5953f131e952"
+    },
+    "/static/client/270.c4deb27edf934078.css": {
+      "offset": 6623390,
+      "length": 564,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 3201,
+      "hash": "16ee651394a6a071"
+    },
+    "/static/client/9228.c46ef79d5582674d.css": {
+      "offset": 6623954,
+      "length": 354,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 1697,
+      "hash": "a80798abe3f00cdb"
+    },
+    "/static/client/BarlowCondensed-SemiBold.199288b668a15dc1.woff2": {
+      "offset": 6624308,
+      "length": 60508,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 60508,
+      "hash": "16a2eff3f132e6f6"
+    },
+    "/static/client/arrow-left.29a44bc5a550fe38.svg": {
+      "offset": 6684816,
+      "length": 164,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 219,
+      "hash": "5050e1a8792f25f8"
+    },
+    "/static/client/arrow-right.648145f00e77b7f0.svg": {
+      "offset": 6684980,
+      "length": 142,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 220,
+      "hash": "128a7bcad244648f"
+    },
+    "/static/client/bluesky.a9421882d093c829.svg": {
+      "offset": 6685122,
+      "length": 273,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 478,
+      "hash": "c483866380464521"
+    },
+    "/static/client/browser-check-obsolete.adc8b778f055490d.svg": {
+      "offset": 6685395,
+      "length": 489,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 1231,
+      "hash": "4983cf00b0a08e27"
+    },
+    "/static/client/browser-check.20ed6fe43e745587.svg": {
+      "offset": 6685884,
+      "length": 295,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 503,
+      "hash": "b31708f646c82823"
+    },
+    "/static/client/browser-cross-obsolete.1965543c5f4ff9dd.svg": {
+      "offset": 6686179,
+      "length": 508,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 1303,
+      "hash": "dc52ea6c02c3fbfa"
+    },
+    "/static/client/browser-cross.196cc93721b774d9.svg": {
+      "offset": 6686687,
+      "length": 299,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 546,
+      "hash": "4ea4b79528957f9f"
+    },
+    "/static/client/cancel.7362f2cdf3515e0d.svg": {
+      "offset": 6686986,
+      "length": 142,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 219,
+      "hash": "c8b8c5cdbd6d96f5"
+    },
+    "/static/client/chart-no-axes-combined.aee09a7064cb8b35.svg": {
+      "offset": 6687128,
+      "length": 195,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 303,
+      "hash": "17b9137a7fd82a37"
+    },
+    "/static/client/chevron-down.7c923b7054da305b.svg": {
+      "offset": 6687323,
+      "length": 128,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 211,
+      "hash": "8529565e25b7fe6d"
+    },
+    "/static/client/chevron-right.a81fc439dd5e4839.svg": {
+      "offset": 6687451,
+      "length": 135,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 212,
+      "hash": "f5857fc9b6860d5e"
+    },
+    "/static/client/chrome.5978d1a2dbdc06cc.svg": {
+      "offset": 6687586,
+      "length": 468,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 1056,
+      "hash": "4cb83de26908f138"
+    },
+    "/static/client/circle-check.205f48f66c3c9d17.svg": {
+      "offset": 6688054,
+      "length": 147,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 244,
+      "hash": "38c1e70a729ee266"
+    },
+    "/static/client/circle-play.6ed4ac1fb3c93a04.svg": {
+      "offset": 6688201,
+      "length": 148,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 245,
+      "hash": "3c2fac5a713d0217"
+    },
+    "/static/client/circle-x.4b1c3fa0511867e7.svg": {
+      "offset": 6688349,
+      "length": 154,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 248,
+      "hash": "ccca09e2b400965e"
+    },
+    "/static/client/cog.f23af856fab34421.svg": {
+      "offset": 6688503,
+      "length": 236,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 431,
+      "hash": "a7c5beea6049c4fe"
+    },
+    "/static/client/edge.8646730d02c8a77d.svg": {
+      "offset": 6688739,
+      "length": 1067,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 4240,
+      "hash": "dd58d8042a12e70a"
+    },
+    "/static/client/external-link.4f3a2dc8e402cae5.svg": {
+      "offset": 6689806,
+      "length": 188,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 275,
+      "hash": "f170f78dedc0e9c8"
+    },
+    "/static/client/firefox.56f320db61f46184.svg": {
+      "offset": 6689994,
+      "length": 2664,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 11783,
+      "hash": "62936e66ad138191"
+    },
+    "/static/client/flask-conical.c16b3d71f14f31d1.svg": {
+      "offset": 6692658,
+      "length": 202,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 326,
+      "hash": "365840de778e619c"
+    },
+    "/static/client/github.4d94e1bf436aa7ed.svg": {
+      "offset": 6692860,
+      "length": 317,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 581,
+      "hash": "94b646722e63eb3f"
+    },
+    "/static/client/graduation-cap.c7aa0f3430c53718.svg": {
+      "offset": 6693177,
+      "length": 215,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 367,
+      "hash": "6ccf8139b616ddcf"
+    },
+    "/static/client/high-dark.a3f9e002a70b98e8.svg": {
+      "offset": 6693392,
+      "length": 167,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 265,
+      "hash": "3dead5b88775c285"
+    },
+    "/static/client/high.712917a113e51658.svg": {
+      "offset": 6693559,
+      "length": 187,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 265,
+      "hash": "0dc12d8e32bfa0a9"
+    },
+    "/static/client/info.d40b80f84482feba.svg": {
+      "offset": 6693746,
+      "length": 162,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 248,
+      "hash": "5174299614210b93"
+    },
+    "/static/client/inter-cyrillic.eecfbd79d522303a.woff2": {
+      "offset": 6693908,
+      "length": 29904,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 29904,
+      "hash": "ee85ee224f36bcff"
+    },
+    "/static/client/inter-italic-cyrillic.d153dcd2916c4842.woff2": {
+      "offset": 6723812,
+      "length": 31700,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 31700,
+      "hash": "52175747308097fa"
+    },
+    "/static/client/inter-italic-latin-extended.0a7409875db33654.woff2": {
+      "offset": 6755512,
+      "length": 155320,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 155320,
+      "hash": "17c7d389bfc70abc"
+    },
+    "/static/client/inter-italic-latin.fd2627ec16333c05.woff2": {
+      "offset": 6910832,
+      "length": 115932,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 115932,
+      "hash": "984357868e1c3028"
+    },
+    "/static/client/inter-latin-extended.02dc98170ff37b88.woff2": {
+      "offset": 7026764,
+      "length": 140872,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 140872,
+      "hash": "f2b8b5ac31023eb2"
+    },
+    "/static/client/inter-latin.9a3b1bc220d426ef.woff2": {
+      "offset": 7167636,
+      "length": 105484,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 105484,
+      "hash": "2c0a6f55ecf3fe1b"
+    },
+    "/static/client/jetbrains-mono-cyrillic.577e793cdf179ae1.woff2": {
+      "offset": 7273120,
+      "length": 12892,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 12892,
+      "hash": "fb8d0f67c68a9048"
+    },
+    "/static/client/jetbrains-mono-italic-cyrillic.8d00711fdb1702e0.woff2": {
+      "offset": 7286012,
+      "length": 14252,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 14252,
+      "hash": "59440aaa699c22f3"
+    },
+    "/static/client/jetbrains-mono-italic-latin-extended.c25d5e1f309ed948.woff2": {
+      "offset": 7300264,
+      "length": 20324,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 20324,
+      "hash": "0ce6e272fe4d24de"
+    },
+    "/static/client/jetbrains-mono-italic-latin.55b330522e5e3ed9.woff2": {
+      "offset": 7320588,
+      "length": 30860,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 30860,
+      "hash": "c969d36b5d6d9783"
+    },
+    "/static/client/jetbrains-mono-latin-extended.01c891f9c832ce28.woff2": {
+      "offset": 7351448,
+      "length": 18308,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 18308,
+      "hash": "16b4915dfb37874a"
+    },
+    "/static/client/jetbrains-mono-latin.119994ed445212c7.woff2": {
+      "offset": 7369756,
+      "length": 28416,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 28416,
+      "hash": "ef10b443983cbd93"
+    },
+    "/static/client/lightbulb.f54f9e803373ffd2.svg": {
+      "offset": 7398172,
+      "length": 211,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 312,
+      "hash": "0b62c63bfa5856ac"
+    },
+    "/static/client/limited-dark.38d6262bb2a277a0.svg": {
+      "offset": 7398383,
+      "length": 182,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 293,
+      "hash": "85fcd4e98595f700"
+    },
+    "/static/client/limited.d8a397eda98d282d.svg": {
+      "offset": 7398565,
+      "length": 181,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 293,
+      "hash": "119012256852c600"
+    },
+    "/static/client/lock.4befe79c52ccec2a.svg": {
+      "offset": 7398746,
+      "length": 170,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 280,
+      "hash": "c3558145e2f83efe"
+    },
+    "/static/client/low-dark.f897f69b7465d5a8.svg": {
+      "offset": 7398916,
+      "length": 160,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 378,
+      "hash": "b83fab8eab09a861"
+    },
+    "/static/client/low.02894ed3d7bccc6d.svg": {
+      "offset": 7399076,
+      "length": 161,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 378,
+      "hash": "eaf6b4c5236e96fd"
+    },
+    "/static/client/mastodon.1a5c0fde8353f680.svg": {
+      "offset": 7399237,
+      "length": 449,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 888,
+      "hash": "b18e6e6e5a9597c7"
+    },
+    "/static/client/mdn-m.70aac857e4a908d0.svg": {
+      "offset": 7399686,
+      "length": 209,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 321,
+      "hash": "9770bb12f012d178"
+    },
+    "/static/client/menu.74ccd9bb64dbf543.svg": {
+      "offset": 7399895,
+      "length": 141,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 222,
+      "hash": "97954de4d283a311"
+    },
+    "/static/client/obsolete-dark.97bd602b44120cb3.svg": {
+      "offset": 7400036,
+      "length": 161,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 489,
+      "hash": "af58ab510ba6ea4a"
+    },
+    "/static/client/obsolete.103e80a32b90e7f1.svg": {
+      "offset": 7400197,
+      "length": 160,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 489,
+      "hash": "abd19146d75465db"
+    },
+    "/static/client/pending-removal-dark.7a08806b42144903.svg": {
+      "offset": 7400357,
+      "length": 186,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 366,
+      "hash": "7257dec2fa744258"
+    },
+    "/static/client/pending-removal.7300f68a9465c1b9.svg": {
+      "offset": 7400543,
+      "length": 185,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 393,
+      "hash": "2323e5a470c710e6"
+    },
+    "/static/client/rss.37214526d7308d0c.svg": {
+      "offset": 7400728,
+      "length": 171,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 270,
+      "hash": "962d556577189983"
+    },
+    "/static/client/safari.7843065f2edf13d1.svg": {
+      "offset": 7400899,
+      "length": 2682,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 10150,
+      "hash": "6e933963de8a0966"
+    },
+    "/static/client/shield-check.07bdc37f20ac5cc6.svg": {
+      "offset": 7403581,
+      "length": 225,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 386,
+      "hash": "df80a0584693baf0"
+    },
+    "/static/client/styles-a11y-menu.5796ee87cb69f93f.css": {
+      "offset": 7403806,
+      "length": 255,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 548,
+      "hash": "7bca10442fce596b"
+    },
+    "/static/client/styles-article-footer.81ae18c89fc527dc.css": {
+      "offset": 7404061,
+      "length": 296,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 849,
+      "hash": "2de9f22e2b1ae8f1"
+    },
+    "/static/client/styles-baseline-indicator.dcd17e42ea043f53.css": {
+      "offset": 7404357,
+      "length": 2117,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 17983,
+      "hash": "1b1deaf184ef3c5f"
+    },
+    "/static/client/styles-breadcrumbs-bar.2d1bed1ab424b6b3.css": {
+      "offset": 7406474,
+      "length": 427,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 1325,
+      "hash": "fe80f3cb0402cbff"
+    },
+    "/static/client/styles-breadcrumbs.87eb742f4e711dc3.css": {
+      "offset": 7406901,
+      "length": 372,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 861,
+      "hash": "3ad5edd7ba190394"
+    },
+    "/static/client/styles-content-section.ee79aa021892f35a.css": {
+      "offset": 7407273,
+      "length": 2762,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 15182,
+      "hash": "c2e16729e92e3eb8"
+    },
+    "/static/client/styles-footer.66072dd619a4ef50.css": {
+      "offset": 7410035,
+      "length": 787,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 3126,
+      "hash": "16114a7fb4c796af"
+    },
+    "/static/client/styles-global.13616ebb1fc8ee2f.css": {
+      "offset": 7410822,
+      "length": 3802,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 25163,
+      "hash": "cbaec1a4c84090e0"
+    },
+    "/static/client/styles-heading-anchor.0eec5185ab9425b7.css": {
+      "offset": 7414624,
+      "length": 264,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 694,
+      "hash": "6b500c4ab8f676e1"
+    },
+    "/static/client/styles-left-sidebar.46e37af4d0b5c883.css": {
+      "offset": 7414888,
+      "length": 824,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 3090,
+      "hash": "6299b838046bd5c4"
+    },
+    "/static/client/styles-logo.aea5ff6edf1b9cfb.css": {
+      "offset": 7415712,
+      "length": 218,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 478,
+      "hash": "47fb2d9263611791"
+    },
+    "/static/client/styles-menu.e2c5c8a53a8854c2.css": {
+      "offset": 7415930,
+      "length": 1161,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 5031,
+      "hash": "f07639f717fbc4d0"
+    },
+    "/static/client/styles-navigation.c3ebf384e65df345.css": {
+      "offset": 7417091,
+      "length": 610,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 1991,
+      "hash": "4407c5912f6fae86"
+    },
+    "/static/client/styles-page-layout.5a4354f33e894319.css": {
+      "offset": 7417701,
+      "length": 314,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 718,
+      "hash": "8df64294c8e76f85"
+    },
+    "/static/client/styles-reference-layout.632d2f3884f10ca3.css": {
+      "offset": 7418015,
+      "length": 322,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 891,
+      "hash": "61e446613c87524a"
+    },
+    "/static/client/styles-reference-toc.9b9bd019efd16b86.css": {
+      "offset": 7418337,
+      "length": 287,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 743,
+      "hash": "f5845d629045e07b"
+    },
+    "/static/client/trash-2.73b28bc66fb8543c.svg": {
+      "offset": 7418624,
+      "length": 194,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 290,
+      "hash": "5496e1031e93d604"
+    },
+    "/static/client/triangle-alert.cff4c57ccef57da3.svg": {
+      "offset": 7418818,
+      "length": 181,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 286,
+      "hash": "f26ad438bca95b9b"
+    },
+    "/static/client/users.f7e6f1f213744762.svg": {
+      "offset": 7418999,
+      "length": 196,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 322,
+      "hash": "5f68e28196a4930a"
+    },
+    "/static/client/wrench.a3caa7312a364b47.svg": {
+      "offset": 7419195,
+      "length": 205,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 351,
+      "hash": "b01586ce0ad485f1"
+    },
+    "/static/client/x.4c7e68bf52af030a.svg": {
+      "offset": 7419400,
+      "length": 183,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 247,
+      "hash": "c68293742d18b561"
     }
   }
 }

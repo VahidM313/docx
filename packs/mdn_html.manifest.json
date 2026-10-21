@@ -2,1909 +2,2427 @@
   "id": "mdn_html",
   "name": "MDN HTML",
   "version": "HTML5",
-  "commit": "ea7a1ef1",
+  "commit": "7d0d8ae4",
+  "compression": "brotli",
   "origin": "https://developer.mozilla.org",
   "entryPath": "/en-US/docs/Web/HTML",
-  "updatedAt": "2026-10-17T00:42:48.092Z",
-  "totalBytes": 5675661,
+  "updatedAt": "2026-10-21T04:26:39.940Z",
+  "totalBytes": 4534381,
   "chunkCount": 269,
   "routes": {
-    "/en-US/docs/Web/HTML": {
+    "/": {
       "offset": 0,
-      "length": 25491,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "0c91d491d8b4bc9d"
-    },
-    "/en-US/docs/Web/HTML/Guides/Cheatsheet": {
-      "offset": 25491,
-      "length": 25038,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "a6eb05f7456d32aa"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes": {
-      "offset": 50529,
-      "length": 32367,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "ceb6254cce4f59bc"
-    },
-    "/en-US/docs/Web/HTML/Guides/Responsive_images": {
-      "offset": 82896,
-      "length": 29931,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "28243ecd586da496"
-    },
-    "/en-US/docs/Web/HTML/Reference/Global_attributes": {
-      "offset": 112827,
-      "length": 29500,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "fb0b3fcfaa4d4656"
-    },
-    "/en-US/docs/Web/HTML/Reference": {
-      "offset": 142327,
-      "length": 20830,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "408f0e66ec4dce9f"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements": {
-      "offset": 163157,
-      "length": 34525,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "7c48a6f5a73d7e7c"
-    },
-    "/en-US/docs/Web/HTML/Guides": {
-      "offset": 197682,
-      "length": 22311,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "49e5f6e0636ef93a"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/header": {
-      "offset": 219993,
-      "length": 25268,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "fba2bdbc6dfc3aa2"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/body": {
-      "offset": 245261,
-      "length": 25431,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "93dfe36dd95f7259"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/head": {
-      "offset": 270692,
-      "length": 22990,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "8da69266005bb7a5"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/title": {
-      "offset": 293682,
-      "length": 25005,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "6c732bce53d2b689"
-    },
-    "/en-US/docs/Web/HTML/Guides/Date_and_time_formats": {
-      "offset": 318687,
-      "length": 29257,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "ef66c04ed70e9f32"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/article": {
-      "offset": 347944,
-      "length": 24882,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "8bdb0c06211f5448"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/section": {
-      "offset": 372826,
-      "length": 25616,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "e0a0943128a30e43"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/p": {
-      "offset": 398442,
-      "length": 25683,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "7e70546f290637b8"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/span": {
-      "offset": 424125,
-      "length": 23101,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "aee68546d9772015"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/footer": {
-      "offset": 447226,
-      "length": 24757,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "d90f8386ef0d0ce9"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/div": {
-      "offset": 471983,
-      "length": 25058,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "363e3c83d67b329b"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/aside": {
-      "offset": 497041,
-      "length": 24376,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "479103124894c130"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/details": {
-      "offset": 521417,
-      "length": 26574,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "1a9576a0009135de"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/canvas": {
-      "offset": 547991,
-      "length": 25945,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "ceb6192100381e5c"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/img": {
-      "offset": 573936,
-      "length": 36419,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "458437d60dbeeec1"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/audio": {
-      "offset": 610355,
-      "length": 32695,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "5ee1aa519317a678"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/datalist": {
-      "offset": 643050,
-      "length": 25826,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "55b67eb31e5965c5"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/search": {
-      "offset": 668876,
-      "length": 24684,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "fdcf532b3b2656bb"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/embed": {
-      "offset": 693560,
-      "length": 24362,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "0049d354b8aec9ba"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/nav": {
-      "offset": 717922,
-      "length": 24742,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "ec040bd235d1948e"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/video": {
-      "offset": 742664,
-      "length": 33499,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "9c0c0f1319dd4673"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/output": {
-      "offset": 776163,
-      "length": 23174,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "a42052d604feeb8a"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/progress": {
-      "offset": 799337,
-      "length": 24888,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "73f67d1c2b867d72"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/ul": {
-      "offset": 824225,
-      "length": 25384,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "d650a5e59cc655f8"
-    },
-    "/en-US/docs/Web/HTML/Guides/Comments": {
-      "offset": 849609,
-      "length": 21820,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "33b134bc7590c50a"
-    },
-    "/en-US/docs/Web/HTML/Guides/Constraint_validation": {
-      "offset": 871429,
-      "length": 28289,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "19d5329c0e3a77b2"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/ol": {
-      "offset": 899718,
-      "length": 25800,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "0bbf0caa6a624660"
-    },
-    "/en-US/docs/Web/HTML/Guides/Content_categories": {
-      "offset": 925518,
-      "length": 27486,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "ffcb2f2c31aa2470"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/li": {
-      "offset": 953004,
-      "length": 24750,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "8d43e957d2be9008"
-    },
-    "/en-US/docs/Web/HTML/Guides/Microdata": {
-      "offset": 977754,
-      "length": 24859,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "8ff88b681e7995b4"
-    },
-    "/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode": {
-      "offset": 1002613,
-      "length": 22489,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "89ccee01ee29b945"
-    },
-    "/en-US/docs/Web/HTML/How_to/CORS_enabled_image": {
-      "offset": 1025102,
-      "length": 24356,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "3b19a5eb5709adab"
-    },
-    "/en-US/docs/Web/HTML/How_to/Use_data_attributes": {
-      "offset": 1049458,
-      "length": 23905,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "c500ff7349541810"
-    },
-    "/en-US/docs/Web/HTML/Guides/Microformats": {
-      "offset": 1073363,
-      "length": 28064,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "4d163251e987ab32"
-    },
-    "/en-US/docs/Web/HTML/How_to/Define_terms_with_HTML": {
-      "offset": 1101427,
-      "length": 23632,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "5d0084f82dd14f00"
-    },
-    "/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image": {
-      "offset": 1125059,
-      "length": 23819,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "735cc0f79b45f596"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/script/type": {
-      "offset": 1148878,
-      "length": 22157,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "067c193ca6a3e16e"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/meta/name": {
-      "offset": 1171035,
-      "length": 23738,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "38878e5ada2251b8"
-    },
-    "/en-US/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page": {
-      "offset": 1194773,
-      "length": 23497,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "53bd05bfbb438798"
-    },
-    "/en-US/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages": {
-      "offset": 1218270,
-      "length": 28161,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "cc59d012232e41e3"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/input": {
-      "offset": 1246431,
-      "length": 48448,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "b02f895a87558d16"
-    },
-    "/en-US/docs/Web/HTML/How_to": {
-      "offset": 1294879,
-      "length": 21082,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "bbbe71591dcbc0ca"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/acronym": {
-      "offset": 1315961,
-      "length": 22209,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "e0036b535fa89080"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/rel": {
-      "offset": 1338170,
-      "length": 29170,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "2f43bcc9443b2f68"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/a": {
-      "offset": 1367340,
-      "length": 33452,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "d634602917df8b44"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/abbr": {
-      "offset": 1400792,
-      "length": 26215,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "b6b44e1ebda9ac7d"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/b": {
-      "offset": 1427007,
-      "length": 24885,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "d22022454bbe598d"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/area": {
-      "offset": 1451892,
-      "length": 26454,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "67338aca6b282ae3"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/base": {
-      "offset": 1478346,
-      "length": 23638,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "e3ec55b4fa584523"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/address": {
-      "offset": 1501984,
-      "length": 24735,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "6c8002345862ae70"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/bdi": {
-      "offset": 1526719,
-      "length": 25651,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "87815d6792db97b3"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/bdo": {
-      "offset": 1552370,
-      "length": 23198,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "b119e97cd686cddc"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/blockquote": {
-      "offset": 1575568,
-      "length": 23803,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "fe476caba69d6bb3"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/br": {
-      "offset": 1599371,
-      "length": 24611,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "a777349821548293"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/button": {
-      "offset": 1623982,
-      "length": 32964,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "c2f53ea224becbab"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/big": {
-      "offset": 1656946,
-      "length": 22376,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "80ad983cac3fe897"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/center": {
-      "offset": 1679322,
-      "length": 22426,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "1d886f7dff5b7ee7"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/caption": {
-      "offset": 1701748,
-      "length": 25384,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "40da1e27be0b545f"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/cite": {
-      "offset": 1727132,
-      "length": 23285,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "46cc8b7a5a80f741"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/dd": {
-      "offset": 1750417,
-      "length": 22606,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "6d79d4014768b9e0"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/code": {
-      "offset": 1773023,
-      "length": 23145,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "30a59f66ec11e79d"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/colgroup": {
-      "offset": 1796168,
-      "length": 27020,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "0b03fbd72ba330de"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/data": {
-      "offset": 1823188,
-      "length": 22532,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "cc775bfb290c1b95"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/col": {
-      "offset": 1845720,
-      "length": 27036,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "32dc384d263ccac2"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/del": {
-      "offset": 1872756,
-      "length": 23749,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "1b2c89543366e5e7"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/dfn": {
-      "offset": 1896505,
-      "length": 25615,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "832a2a5f8842c60d"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/dialog": {
-      "offset": 1922120,
-      "length": 34821,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "60c99620e45a56c8"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/dir": {
-      "offset": 1956941,
-      "length": 22224,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "b960804e7f7747d0"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/dt": {
-      "offset": 1979165,
-      "length": 23023,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "22659cdecfe41879"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/dl": {
-      "offset": 2002188,
-      "length": 26041,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "8d8acac2c835f64e"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/font": {
-      "offset": 2028229,
-      "length": 21802,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "f0e66d45052c8c0e"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/fieldset": {
-      "offset": 2050031,
-      "length": 25322,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "7e2e44f23cf29289"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/figcaption": {
-      "offset": 2075353,
-      "length": 22615,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "60695eb8e8676255"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/fencedframe": {
-      "offset": 2097968,
-      "length": 25954,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "b63cc888ced7a5d5"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/figure": {
-      "offset": 2123922,
-      "length": 25108,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "27840d37ce12e55f"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/em": {
-      "offset": 2149030,
-      "length": 24810,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "05eb3226f469e61e"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/frame": {
-      "offset": 2173840,
-      "length": 22299,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "afacbaa680849054"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/frameset": {
-      "offset": 2196139,
-      "length": 21821,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "b456f82036b8d5cf"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/form": {
-      "offset": 2217960,
-      "length": 26664,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "f6b27e2e633e9d58"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements": {
-      "offset": 2244624,
-      "length": 27437,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "a921cd679e50065b"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/geolocation": {
-      "offset": 2272061,
-      "length": 29197,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "2a9fcb8959bf3a6a"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/hgroup": {
-      "offset": 2301258,
-      "length": 23209,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "f963626ca985af0c"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/i": {
-      "offset": 2324467,
-      "length": 23751,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "dc9b74c8f505dc3c"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/iframe": {
-      "offset": 2348218,
-      "length": 32922,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "8039560dc0abf7b8"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/html": {
-      "offset": 2381140,
-      "length": 23350,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "45357619913fed62"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/ins": {
-      "offset": 2404490,
-      "length": 23515,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "f23251830479847f"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/hr": {
-      "offset": 2428005,
-      "length": 25013,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "74eb108b63d9cd07"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/kbd": {
-      "offset": 2453018,
-      "length": 25561,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "321e29bb05567214"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/mark": {
-      "offset": 2478579,
-      "length": 25251,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "44bef79d72132194"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/link": {
-      "offset": 2503830,
-      "length": 31777,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "3406c49376994dfe"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/label": {
-      "offset": 2535607,
-      "length": 26335,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "a6bf523e0a080562"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/map": {
-      "offset": 2561942,
-      "length": 22968,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "823019e9f3dbf98a"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/main": {
-      "offset": 2584910,
-      "length": 25022,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "6f06f16961ac9184"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/legend": {
-      "offset": 2609932,
-      "length": 22585,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "7965298f14c8c7bc"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/marquee": {
-      "offset": 2632517,
-      "length": 22954,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "0a572531f1d2e025"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/menu": {
-      "offset": 2655471,
-      "length": 24417,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "9d566429aa213ae2"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/meta": {
-      "offset": 2679888,
-      "length": 24684,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "057c58e379081937"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/meter": {
-      "offset": 2704572,
-      "length": 24325,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "2a646aca14f21f9f"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/noembed": {
-      "offset": 2728897,
-      "length": 21686,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "cbd61e562f8b4d76"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/nobr": {
-      "offset": 2750583,
-      "length": 21470,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "ab92a18f0ac99a94"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/option": {
-      "offset": 2772053,
-      "length": 24419,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "619abd8f6f242da4"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/optgroup": {
-      "offset": 2796472,
-      "length": 23126,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "73a170b0e32b6021"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/object": {
-      "offset": 2819598,
-      "length": 25031,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "6c88e2da9325428c"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/noscript": {
-      "offset": 2844629,
-      "length": 22681,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "5167c1087e73164f"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/noframes": {
-      "offset": 2867310,
-      "length": 22083,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "57cdadd3e16bdb49"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/param": {
-      "offset": 2889393,
-      "length": 22077,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "db70bc7c25f03c6f"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/plaintext": {
-      "offset": 2911470,
-      "length": 21906,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "d4402e39446c4c9e"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/rb": {
-      "offset": 2933376,
-      "length": 22790,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "1331518daa300f61"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/rp": {
-      "offset": 2956166,
-      "length": 23156,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "278a42c02a04bc0c"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/pre": {
-      "offset": 2979322,
-      "length": 26367,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "701a68f7e3c80cb2"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/picture": {
-      "offset": 3005689,
-      "length": 26177,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "597c63274c015983"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/q": {
-      "offset": 3031866,
-      "length": 22873,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "e0518d94aaa40019"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/ruby": {
-      "offset": 3054739,
-      "length": 23076,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "7f8b579466b01168"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/rt": {
-      "offset": 3077815,
-      "length": 22656,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "c09efb3b366d2056"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/script": {
-      "offset": 3100471,
-      "length": 31455,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "395ff447a21ca226"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/s": {
-      "offset": 3131926,
-      "length": 23312,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "9163b1d279e517b6"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/samp": {
-      "offset": 3155238,
-      "length": 24499,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "458d275d3f20c89c"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/rtc": {
-      "offset": 3179737,
-      "length": 22516,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "11649be3b301863d"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/slot": {
-      "offset": 3202253,
-      "length": 23478,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "e6699e6b5d862707"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/selectedcontent": {
-      "offset": 3225731,
-      "length": 23302,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "9dded93cc0e5a578"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/small": {
-      "offset": 3249033,
-      "length": 22987,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "cfbf95c4feb8f0d2"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/select": {
-      "offset": 3272020,
-      "length": 29431,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "50305cdb83f97a1c"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/source": {
-      "offset": 3301451,
-      "length": 26815,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "497563224c6a8b72"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/strike": {
-      "offset": 3328266,
-      "length": 21831,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "8f4ca3c58eda69b8"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/strong": {
-      "offset": 3350097,
-      "length": 24877,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "db755f68c28432e0"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/sup": {
-      "offset": 3374974,
-      "length": 24571,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "faa1871a115d25db"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/summary": {
-      "offset": 3399545,
-      "length": 26596,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "2526175418654b51"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/table": {
-      "offset": 3426141,
-      "length": 34805,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "c6ed011f80fda9ca"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/sub": {
-      "offset": 3460946,
-      "length": 24666,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "1f7ec8bcde333088"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/style": {
-      "offset": 3485612,
-      "length": 25855,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "5b1226e609560680"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/textarea": {
-      "offset": 3511467,
-      "length": 28550,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "8cc8712cb16ac961"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/td": {
-      "offset": 3540017,
-      "length": 27975,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "0f0a6cdd0030ca53"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/th": {
-      "offset": 3567992,
-      "length": 28408,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "10c3bac1329b6320"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/tfoot": {
-      "offset": 3596400,
-      "length": 26336,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "2a41aa2393ea1856"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/template": {
-      "offset": 3622736,
-      "length": 32975,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "73db833f099b4445"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/tbody": {
-      "offset": 3655711,
-      "length": 27818,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "7d8079b8b7b7d80f"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/u": {
-      "offset": 3683529,
-      "length": 25622,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "9b1e009049e71849"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/thead": {
-      "offset": 3709151,
-      "length": 26522,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "bec879a4b386b381"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/track": {
-      "offset": 3735673,
-      "length": 26093,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "01788fde0f387b19"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/tr": {
-      "offset": 3761766,
-      "length": 28147,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "e3d1505b88fe5152"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/time": {
-      "offset": 3789913,
-      "length": 25116,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "51423602f6c95c9c"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/tt": {
-      "offset": 3815029,
-      "length": 23198,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "f2b288a7f9031193"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/var": {
-      "offset": 3838227,
-      "length": 24215,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "36c596b69dcb39ca"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/wbr": {
-      "offset": 3862442,
-      "length": 23317,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "60a99547dce1ccab"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/capture": {
-      "offset": 3885759,
-      "length": 22488,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "cb525ed331aa78ed"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/autocomplete": {
-      "offset": 3908247,
-      "length": 31219,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "6c89a29f993fdeb7"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/accept": {
-      "offset": 3939466,
-      "length": 25041,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "c3a60836bed37b94"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/xmp": {
-      "offset": 3964507,
-      "length": 21963,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "4c2543ad999f99bf"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/dirname": {
-      "offset": 3986470,
-      "length": 22892,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "baa2c297de67ffe8"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/disabled": {
-      "offset": 4009362,
-      "length": 24379,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "65803f5a252438b9"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/crossorigin": {
-      "offset": 4033741,
-      "length": 22602,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "75076a46c5551b6f"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/elementtiming": {
-      "offset": 4056343,
-      "length": 21040,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "bf7a448599007423"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/content": {
-      "offset": 4077383,
-      "length": 21632,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "25c62514e9ef852b"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority": {
-      "offset": 4099015,
-      "length": 22257,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "95d41a79c980d729"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/for": {
-      "offset": 4121272,
-      "length": 21644,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "d93379cea3981892"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/maxlength": {
-      "offset": 4142916,
-      "length": 21901,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "adf7918c7becafb8"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/max": {
-      "offset": 4164817,
-      "length": 22602,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "92d987d3acca96c2"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/min": {
-      "offset": 4187419,
-      "length": 22870,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "b2655667d544369e"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/integrity": {
-      "offset": 4210289,
-      "length": 23468,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "ea774d15f6ebd7c1"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/form": {
-      "offset": 4233757,
-      "length": 24189,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "10f69931b709a60b"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/multiple": {
-      "offset": 4257946,
-      "length": 25252,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "eac205faa1aef703"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/placeholder": {
-      "offset": 4283198,
-      "length": 22305,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "a066289ac769f710"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/minlength": {
-      "offset": 4305503,
-      "length": 22162,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "a9010c66d2bf55e8"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/pattern": {
-      "offset": 4327665,
-      "length": 25801,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "ec4a5224cd6458e3"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/readonly": {
-      "offset": 4353466,
-      "length": 22494,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "884ec1f2c3a602fb"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/required": {
-      "offset": 4375960,
-      "length": 22886,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "81c603b5746a39e5"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/step": {
-      "offset": 4398846,
-      "length": 24318,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "c6f92eef682c19fd"
-    },
-    "/en-US/docs/Web/HTML/Reference/Attributes/size": {
-      "offset": 4423164,
-      "length": 21822,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "bec0f7eb875e21d5"
-    },
-    "/en-US/docs/Web/HTML/Reference/Global_attributes/accesskey": {
-      "offset": 4444986,
-      "length": 22671,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "b511865245538ecf"
-    },
-    "/en-US/docs/Web/HTML/Reference/Global_attributes/anchor": {
-      "offset": 4467657,
-      "length": 22807,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "a2f7441214e8c148"
-    },
-    "/en-US/docs/Web/HTML/Reference/Global_attributes/autocapitalize": {
-      "offset": 4490464,
-      "length": 22853,
-      "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "62ba952ca76b2be7"
-    },
-    "/static/client/styles-reference-layout.632d2f3884f10ca3.css": {
-      "offset": 4513317,
-      "length": 418,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "b5573751648cc426"
-    },
-    "/static/client/styles-global.13616ebb1fc8ee2f.css": {
-      "offset": 4513735,
-      "length": 4509,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "766581abbf6f4999"
-    },
-    "/static/client/270.c4deb27edf934078.css": {
-      "offset": 4518244,
-      "length": 665,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "38d563402611fddd"
-    },
-    "/static/client/9228.c46ef79d5582674d.css": {
-      "offset": 4518909,
-      "length": 451,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "3c33f72c0520c661"
-    },
-    "/static/client/styles-content-section.ee79aa021892f35a.css": {
-      "offset": 4519360,
-      "length": 3213,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "89b7222e752453ce"
-    },
-    "/static/client/styles-heading-anchor.0eec5185ab9425b7.css": {
-      "offset": 4522573,
-      "length": 350,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "117085aec5dbffa8"
-    },
-    "/static/client/styles-reference-toc.9b9bd019efd16b86.css": {
-      "offset": 4522923,
-      "length": 384,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "b095020c994ce628"
-    },
-    "/static/client/styles-article-footer.81ae18c89fc527dc.css": {
-      "offset": 4523307,
-      "length": 401,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "45e040a09542f082"
-    },
-    "/static/client/styles-left-sidebar.46e37af4d0b5c883.css": {
-      "offset": 4523708,
-      "length": 1011,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "ea7cf4836665ee70"
-    },
-    "/static/client/styles-page-layout.5a4354f33e894319.css": {
-      "offset": 4524719,
-      "length": 401,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "b92717c6ebe929ea"
-    },
-    "/static/client/styles-a11y-menu.5796ee87cb69f93f.css": {
-      "offset": 4525120,
-      "length": 321,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "5a24312fea8426ad"
-    },
-    "/static/client/styles-navigation.c3ebf384e65df345.css": {
-      "offset": 4525441,
-      "length": 756,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "793feacbd1ba994b"
-    },
-    "/static/client/styles-logo.aea5ff6edf1b9cfb.css": {
-      "offset": 4526197,
-      "length": 270,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "c535fed3a478fe66"
-    },
-    "/static/client/styles-menu.e2c5c8a53a8854c2.css": {
-      "offset": 4526467,
-      "length": 1382,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "c448a565e7a68361"
-    },
-    "/static/client/styles-breadcrumbs-bar.2d1bed1ab424b6b3.css": {
-      "offset": 4527849,
-      "length": 523,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "61b38b0e7aa8a2a6"
-    },
-    "/static/client/styles-breadcrumbs.87eb742f4e711dc3.css": {
-      "offset": 4528372,
-      "length": 478,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "41ade526a09eb014"
-    },
-    "/static/client/styles-footer.66072dd619a4ef50.css": {
-      "offset": 4528850,
-      "length": 923,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "4020c3d41c9c4786"
-    },
-    "/favicon.svg": {
-      "offset": 4529773,
-      "length": 275,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "7216a77ed472a8b3"
+      "length": 18346,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 186045,
+      "hash": "4eae5554057b1fc1"
     },
     "/apple-touch-icon.png": {
-      "offset": 4530048,
-      "length": 2133,
+      "offset": 18346,
+      "length": 2171,
       "mime": "image/png",
-      "gzipped": true,
-      "hash": "7b88cb09d333e171"
-    },
-    "/favicon.ico": {
-      "offset": 4532181,
-      "length": 786,
-      "mime": "image/x-icon",
-      "gzipped": true,
-      "hash": "7db03220256db785"
-    },
-    "/en-US/docs/Web/HTML/Guides/Responsive_images/non-responsive-narrow.png": {
-      "offset": 4532967,
-      "length": 63616,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "7732846d8e7b6616"
-    },
-    "/en-US/docs/Web/HTML/Guides/Responsive_images/resolution-example.png": {
-      "offset": 4596583,
-      "length": 38460,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "07953f31ab741cfa"
-    },
-    "/en-US/docs/Web/HTML/Guides/Responsive_images/picture-element-wide.png": {
-      "offset": 4635043,
-      "length": 119979,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "ce4585aff4ecfc97"
-    },
-    "/en-US/docs/Web/HTML/Guides/Responsive_images/picture-element-narrow.png": {
-      "offset": 4755022,
-      "length": 62316,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "8c72a3d734f84392"
-    },
-    "/static/client/styles-baseline-indicator.dcd17e42ea043f53.css": {
-      "offset": 4817338,
-      "length": 2460,
-      "mime": "text/css; charset=utf-8",
-      "gzipped": true,
-      "hash": "5f61318e1eebf2be"
-    },
-    "/shared-assets/images/diagrams/html/table/column-row-span.png": {
-      "offset": 4819798,
-      "length": 5296,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "c71748e9a48f1719"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/template/template_with_no_focus.png": {
-      "offset": 4825094,
-      "length": 2626,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "0975616dd99d62d6"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/template/template_with_focus.png": {
-      "offset": 4827720,
-      "length": 2245,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "cbb352b3ccda39fa"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/table/table_element_layers.png": {
-      "offset": 4829965,
-      "length": 9886,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "91d412b700dcf6ad"
-    },
-    "/en-US/docs/Web/HTML/Reference/Elements/script/async-defer.jpg": {
-      "offset": 4839851,
-      "length": 25475,
-      "mime": "image/jpeg",
-      "gzipped": true,
-      "hash": "aaa1f34956fa20b3"
-    },
-    "/en-US/docs/Web/HTML/Guides/Content_categories/content_categories_venn.png": {
-      "offset": 4865326,
-      "length": 27349,
-      "mime": "image/png",
-      "gzipped": true,
-      "hash": "1e47effed2bb0e7d"
-    },
-    "/static/client/external-link.4f3a2dc8e402cae5.svg": {
-      "offset": 4892675,
-      "length": 202,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "b38eb77257c17b65"
-    },
-    "/static/client/jetbrains-mono-latin.119994ed445212c7.woff2": {
-      "offset": 4892877,
-      "length": 28444,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "424cc1da26c4152a"
-    },
-    "/static/client/inter-cyrillic.eecfbd79d522303a.woff2": {
-      "offset": 4921321,
-      "length": 29932,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "b887b4325735b5bd"
-    },
-    "/static/client/inter-italic-cyrillic.d153dcd2916c4842.woff2": {
-      "offset": 4951253,
-      "length": 31728,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "4ae31863ed2df2da"
-    },
-    "/static/client/inter-latin.9a3b1bc220d426ef.woff2": {
-      "offset": 4982981,
-      "length": 105537,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "04cbcf1d5c8e7a37"
-    },
-    "/static/client/inter-latin-extended.02dc98170ff37b88.woff2": {
-      "offset": 5088518,
-      "length": 140879,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "0e386516317f0372"
-    },
-    "/static/client/inter-italic-latin.fd2627ec16333c05.woff2": {
-      "offset": 5229397,
-      "length": 115990,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "7c6014ade2bc7d53"
-    },
-    "/static/client/inter-italic-latin-extended.0a7409875db33654.woff2": {
-      "offset": 5345387,
-      "length": 155367,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "2f6f5156c9f379bb"
-    },
-    "/static/client/trash-2.73b28bc66fb8543c.svg": {
-      "offset": 5500754,
-      "length": 222,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "2ddd2c89561c9b1e"
-    },
-    "/static/client/flask-conical.c16b3d71f14f31d1.svg": {
-      "offset": 5500976,
-      "length": 231,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "4d01c5a789597d61"
-    },
-    "/static/client/triangle-alert.cff4c57ccef57da3.svg": {
-      "offset": 5501207,
-      "length": 209,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "5092e3bee80ce040"
-    },
-    "/static/client/jetbrains-mono-latin-extended.01c891f9c832ce28.woff2": {
-      "offset": 5501416,
-      "length": 18336,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "35a53a2da72935ed"
-    },
-    "/static/client/jetbrains-mono-italic-cyrillic.8d00711fdb1702e0.woff2": {
-      "offset": 5519752,
-      "length": 14275,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "8efc3044254be7cb"
-    },
-    "/static/client/jetbrains-mono-cyrillic.577e793cdf179ae1.woff2": {
-      "offset": 5534027,
-      "length": 12915,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "9b1f9c68102b03d3"
-    },
-    "/static/client/jetbrains-mono-italic-latin-extended.c25d5e1f309ed948.woff2": {
-      "offset": 5546942,
-      "length": 20352,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "8803ab0f4d563963"
-    },
-    "/static/client/jetbrains-mono-italic-latin.55b330522e5e3ed9.woff2": {
-      "offset": 5567294,
-      "length": 30888,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "0bb99444b007292b"
-    },
-    "/static/client/obsolete.103e80a32b90e7f1.svg": {
-      "offset": 5598182,
-      "length": 173,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "81f1209b92086c84"
-    },
-    "/static/client/pending-removal.7300f68a9465c1b9.svg": {
-      "offset": 5598355,
-      "length": 206,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "f42a51394935b22c"
-    },
-    "/static/client/obsolete-dark.97bd602b44120cb3.svg": {
-      "offset": 5598561,
-      "length": 173,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "6b6153eb170903de"
-    },
-    "/static/client/BarlowCondensed-SemiBold.199288b668a15dc1.woff2": {
-      "offset": 5598734,
-      "length": 60276,
-      "mime": "font/woff2",
-      "gzipped": true,
-      "hash": "a7b01d2562d6decd"
-    },
-    "/static/client/pending-removal-dark.7a08806b42144903.svg": {
-      "offset": 5659010,
-      "length": 204,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "4136230236b1ce02"
-    },
-    "/static/client/circle-check.205f48f66c3c9d17.svg": {
-      "offset": 5659214,
-      "length": 182,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "83d42dce79755d9d"
-    },
-    "/static/client/arrow-left.29a44bc5a550fe38.svg": {
-      "offset": 5659396,
-      "length": 173,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "35fe648b0b43c0c1"
-    },
-    "/static/client/circle-x.4b1c3fa0511867e7.svg": {
-      "offset": 5659569,
-      "length": 186,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "c53e7faf3f6098fa"
-    },
-    "/static/client/arrow-right.648145f00e77b7f0.svg": {
-      "offset": 5659755,
-      "length": 173,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "c99e8f87aa5881cc"
-    },
-    "/static/client/info.d40b80f84482feba.svg": {
-      "offset": 5659928,
-      "length": 189,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "a2a3b568ca25e61c"
-    },
-    "/static/client/lightbulb.f54f9e803373ffd2.svg": {
-      "offset": 5660117,
-      "length": 224,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "998ac17d0184d8be"
-    },
-    "/static/client/lock.4befe79c52ccec2a.svg": {
-      "offset": 5660341,
-      "length": 200,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "fc672f6bccbcb47b"
-    },
-    "/static/client/cog.f23af856fab34421.svg": {
-      "offset": 5660541,
-      "length": 275,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "d8b0fbf1b09f1d4e"
-    },
-    "/static/client/chevron-right.a81fc439dd5e4839.svg": {
-      "offset": 5660816,
-      "length": 166,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "8f711adf3f6e8f26"
-    },
-    "/static/client/menu.74ccd9bb64dbf543.svg": {
-      "offset": 5660982,
-      "length": 171,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "7993999bcc6dbb19"
-    },
-    "/static/client/cancel.7362f2cdf3515e0d.svg": {
-      "offset": 5661153,
-      "length": 173,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "ec9c27236ea137ac"
-    },
-    "/static/client/graduation-cap.c7aa0f3430c53718.svg": {
-      "offset": 5661326,
-      "length": 250,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "2ac4806c29fc8391"
-    },
-    "/static/client/wrench.a3caa7312a364b47.svg": {
-      "offset": 5661576,
-      "length": 232,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "385696fec3b7503e"
-    },
-    "/static/client/chevron-down.7c923b7054da305b.svg": {
-      "offset": 5661808,
-      "length": 165,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "af69d22b3644766f"
-    },
-    "/static/client/circle-play.6ed4ac1fb3c93a04.svg": {
-      "offset": 5661973,
-      "length": 185,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "83d0c7092bddb6cd"
-    },
-    "/static/client/shield-check.07bdc37f20ac5cc6.svg": {
-      "offset": 5662158,
-      "length": 264,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "556fcb69fc51bda7"
-    },
-    "/static/client/mdn-m.70aac857e4a908d0.svg": {
-      "offset": 5662422,
-      "length": 244,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "7818b0cbe4009341"
-    },
-    "/static/client/chart-no-axes-combined.aee09a7064cb8b35.svg": {
-      "offset": 5662666,
-      "length": 223,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "d34c5968db81f3d3"
-    },
-    "/static/client/users.f7e6f1f213744762.svg": {
-      "offset": 5662889,
-      "length": 227,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "60fdb36f1a4096f7"
-    },
-    "/static/client/github.4d94e1bf436aa7ed.svg": {
-      "offset": 5663116,
-      "length": 340,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "1d6effbf2047a7ae"
-    },
-    "/static/client/x.4c7e68bf52af030a.svg": {
-      "offset": 5663456,
-      "length": 208,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "2652feb5e28e1a3e"
-    },
-    "/static/client/bluesky.a9421882d093c829.svg": {
-      "offset": 5663664,
-      "length": 311,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "ecae0efedcc6ef12"
-    },
-    "/static/client/mastodon.1a5c0fde8353f680.svg": {
-      "offset": 5663975,
-      "length": 498,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "b65ca9049cb08698"
-    },
-    "/static/client/rss.37214526d7308d0c.svg": {
-      "offset": 5664473,
-      "length": 199,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "9b5b5b4fd2caa9f4"
-    },
-    "/static/client/limited-dark.38d6262bb2a277a0.svg": {
-      "offset": 5664672,
-      "length": 193,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "a633613e28698e52"
-    },
-    "/static/client/limited.d8a397eda98d282d.svg": {
-      "offset": 5664865,
-      "length": 193,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "dea548b9a43f48d1"
-    },
-    "/static/client/browser-check.20ed6fe43e745587.svg": {
-      "offset": 5665058,
-      "length": 317,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "c1ab7ecf99dc978a"
-    },
-    "/static/client/high.712917a113e51658.svg": {
-      "offset": 5665375,
-      "length": 183,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "01d41ce9ed579591"
-    },
-    "/static/client/browser-cross.196cc93721b774d9.svg": {
-      "offset": 5665558,
-      "length": 320,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "f452b88bcfc20c96"
-    },
-    "/static/client/low-dark.f897f69b7465d5a8.svg": {
-      "offset": 5665878,
-      "length": 181,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "c3d16bd684e4123c"
-    },
-    "/static/client/high-dark.a3f9e002a70b98e8.svg": {
-      "offset": 5666059,
-      "length": 183,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "35539338f4e9312a"
-    },
-    "/static/client/low.02894ed3d7bccc6d.svg": {
-      "offset": 5666242,
-      "length": 183,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "de982178f06c6c4b"
-    },
-    "/static/client/browser-cross-obsolete.1965543c5f4ff9dd.svg": {
-      "offset": 5666425,
-      "length": 571,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "08c470c9dc80d958"
-    },
-    "/static/client/chrome.5978d1a2dbdc06cc.svg": {
-      "offset": 5666996,
-      "length": 504,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "ac2a1d9fa14b1ea8"
-    },
-    "/static/client/browser-check-obsolete.adc8b778f055490d.svg": {
-      "offset": 5667500,
-      "length": 552,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "27ac1742e71294dc"
-    },
-    "/static/client/edge.8646730d02c8a77d.svg": {
-      "offset": 5668052,
-      "length": 1210,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "143e9072299a763c"
-    },
-    "/static/client/firefox.56f320db61f46184.svg": {
-      "offset": 5669262,
-      "length": 3195,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "ddca254c2e3d418d"
-    },
-    "/static/client/safari.7843065f2edf13d1.svg": {
-      "offset": 5672457,
-      "length": 3204,
-      "mime": "image/svg+xml",
-      "gzipped": true,
-      "hash": "6ff4433de5ed88d1"
+      "gzipped": false,
+      "raw_length": 2171,
+      "hash": "b9bbd8ac23a561e1"
     },
     "/docs": {
       "offset": 0,
-      "length": 25491,
+      "length": 18346,
       "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "0c91d491d8b4bc9d"
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 186045,
+      "hash": "4eae5554057b1fc1"
     },
-    "/": {
+    "/en-US/docs/Web/HTML": {
       "offset": 0,
-      "length": 25491,
+      "length": 18346,
       "mime": "text/html; charset=utf-8",
-      "gzipped": true,
-      "hash": "0c91d491d8b4bc9d"
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 186045,
+      "hash": "4eae5554057b1fc1"
+    },
+    "/en-US/docs/Web/HTML/Guides": {
+      "offset": 20517,
+      "length": 16768,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 174626,
+      "hash": "1abc0829f897a4cb"
+    },
+    "/en-US/docs/Web/HTML/Guides/Cheatsheet": {
+      "offset": 37285,
+      "length": 18026,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 196703,
+      "hash": "46250d5ec4aa7be2"
+    },
+    "/en-US/docs/Web/HTML/Guides/Comments": {
+      "offset": 55311,
+      "length": 16524,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 175129,
+      "hash": "dde013b4923a73fe"
+    },
+    "/en-US/docs/Web/HTML/Guides/Constraint_validation": {
+      "offset": 71835,
+      "length": 20672,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 199879,
+      "hash": "f996ba6bd11ad578"
+    },
+    "/en-US/docs/Web/HTML/Guides/Content_categories": {
+      "offset": 92507,
+      "length": 19569,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 221547,
+      "hash": "3b4c7587abb778d2"
+    },
+    "/en-US/docs/Web/HTML/Guides/Content_categories/content_categories_venn.png": {
+      "offset": 112076,
+      "length": 27321,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 27321,
+      "hash": "e622a574ebeb2f4e"
+    },
+    "/en-US/docs/Web/HTML/Guides/Date_and_time_formats": {
+      "offset": 139397,
+      "length": 21726,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 200787,
+      "hash": "80dc283f6270228c"
+    },
+    "/en-US/docs/Web/HTML/Guides/Microdata": {
+      "offset": 161123,
+      "length": 17991,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 186251,
+      "hash": "51dab09eeb1abe42"
+    },
+    "/en-US/docs/Web/HTML/Guides/Microformats": {
+      "offset": 179114,
+      "length": 20605,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 200099,
+      "hash": "4c5ddb67f4b3124f"
+    },
+    "/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode": {
+      "offset": 199719,
+      "length": 16815,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 177759,
+      "hash": "6f2ccf0a7e529477"
+    },
+    "/en-US/docs/Web/HTML/Guides/Responsive_images": {
+      "offset": 216534,
+      "length": 22181,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 201364,
+      "hash": "87dafd7ea54964b8"
+    },
+    "/en-US/docs/Web/HTML/Guides/Responsive_images/non-responsive-narrow.png": {
+      "offset": 238715,
+      "length": 63578,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 63578,
+      "hash": "543b822229eb6e6a"
+    },
+    "/en-US/docs/Web/HTML/Guides/Responsive_images/picture-element-narrow.png": {
+      "offset": 302293,
+      "length": 62284,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 62284,
+      "hash": "d69206acf55a4d58"
+    },
+    "/en-US/docs/Web/HTML/Guides/Responsive_images/picture-element-wide.png": {
+      "offset": 364577,
+      "length": 119921,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 119921,
+      "hash": "cc9035e4c9d32c1d"
+    },
+    "/en-US/docs/Web/HTML/Guides/Responsive_images/resolution-example.png": {
+      "offset": 484498,
+      "length": 38427,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 38427,
+      "hash": "65b40f48f53aad42"
+    },
+    "/en-US/docs/Web/HTML/How_to": {
+      "offset": 522925,
+      "length": 15767,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 170842,
+      "hash": "a056d4a066841f70"
+    },
+    "/en-US/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page": {
+      "offset": 538692,
+      "length": 17745,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 180532,
+      "hash": "cbc15fa3471d731b"
+    },
+    "/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image": {
+      "offset": 556437,
+      "length": 18065,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 181159,
+      "hash": "ecb1513204f5617a"
+    },
+    "/en-US/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages": {
+      "offset": 574502,
+      "length": 20449,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 194211,
+      "hash": "154eb3950d22dde9"
+    },
+    "/en-US/docs/Web/HTML/How_to/CORS_enabled_image": {
+      "offset": 594951,
+      "length": 18420,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 183854,
+      "hash": "8cd223c90e2195bf"
+    },
+    "/en-US/docs/Web/HTML/How_to/Define_terms_with_HTML": {
+      "offset": 613371,
+      "length": 17885,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 181759,
+      "hash": "b0def49112f65038"
+    },
+    "/en-US/docs/Web/HTML/How_to/Use_data_attributes": {
+      "offset": 631256,
+      "length": 18078,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 184315,
+      "hash": "5d569ea7183522cc"
+    },
+    "/en-US/docs/Web/HTML/Reference": {
+      "offset": 649334,
+      "length": 15662,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 172384,
+      "hash": "f1e3f9021e2c0079"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes": {
+      "offset": 664996,
+      "length": 23571,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 250463,
+      "hash": "07d713dc24a6b98b"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/accept": {
+      "offset": 688567,
+      "length": 18505,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 187440,
+      "hash": "b9947f6cce6d2bf7"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/autocomplete": {
+      "offset": 707072,
+      "length": 23232,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 210332,
+      "hash": "5e77bd56c6def35d"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/capture": {
+      "offset": 730304,
+      "length": 17195,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 179166,
+      "hash": "d21a00c47fe369bd"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/content": {
+      "offset": 747499,
+      "length": 16497,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 176931,
+      "hash": "ff80a82e7d472699"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/crossorigin": {
+      "offset": 763996,
+      "length": 17184,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 184332,
+      "hash": "a313c855819bd11f"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/dirname": {
+      "offset": 781180,
+      "length": 17387,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 184587,
+      "hash": "8d24152676e2ee9b"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/disabled": {
+      "offset": 798567,
+      "length": 17971,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 191153,
+      "hash": "a50b6ebae527459c"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/elementtiming": {
+      "offset": 816538,
+      "length": 15914,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 173778,
+      "hash": "3888b87b61de4c03"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority": {
+      "offset": 832452,
+      "length": 16861,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 180899,
+      "hash": "7d3459ff362f4703"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/for": {
+      "offset": 849313,
+      "length": 16472,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 178056,
+      "hash": "02345080af751f52"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/form": {
+      "offset": 865785,
+      "length": 17947,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 190730,
+      "hash": "f71e4456569d8927"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/integrity": {
+      "offset": 883732,
+      "length": 17878,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 184668,
+      "hash": "7dc57265bfeb1f39"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/max": {
+      "offset": 901610,
+      "length": 17238,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 184770,
+      "hash": "7f518b3ea0c2bd27"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/maxlength": {
+      "offset": 918848,
+      "length": 16707,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 179026,
+      "hash": "1b6dc6d153ef6b0a"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/min": {
+      "offset": 935555,
+      "length": 17512,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 184338,
+      "hash": "ec002b83270dfad1"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/minlength": {
+      "offset": 953067,
+      "length": 17012,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 179314,
+      "hash": "a4960426cfde3d94"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/multiple": {
+      "offset": 970079,
+      "length": 18606,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 190742,
+      "hash": "0612e2f6125ff740"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/pattern": {
+      "offset": 988685,
+      "length": 19010,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 189214,
+      "hash": "ca13c9b467a93c1b"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/placeholder": {
+      "offset": 1007695,
+      "length": 17008,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 180139,
+      "hash": "7edaf7fc92669e31"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/readonly": {
+      "offset": 1024703,
+      "length": 17276,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 183470,
+      "hash": "952a0f3185edf82a"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/rel": {
+      "offset": 1041979,
+      "length": 21290,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 214763,
+      "hash": "9ae81722a851b00f"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/required": {
+      "offset": 1063269,
+      "length": 17511,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 184839,
+      "hash": "63ae6435095520c8"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/size": {
+      "offset": 1080780,
+      "length": 16698,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 178509,
+      "hash": "b491df34f2364803"
+    },
+    "/en-US/docs/Web/HTML/Reference/Attributes/step": {
+      "offset": 1097478,
+      "length": 18060,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 185148,
+      "hash": "953a61b596054f4c"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements": {
+      "offset": 1115538,
+      "length": 25470,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 231783,
+      "hash": "9bddb13bb197b235"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements": {
+      "offset": 1141008,
+      "length": 20069,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 203637,
+      "hash": "8758a9fb89a60f7a"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/a": {
+      "offset": 1161077,
+      "length": 25010,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 225029,
+      "hash": "df5a920699c37493"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/abbr": {
+      "offset": 1186087,
+      "length": 19246,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 193877,
+      "hash": "f6ae6bd4c61e5e69"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/acronym": {
+      "offset": 1205333,
+      "length": 16887,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 179595,
+      "hash": "6c2ad3d7c452db5e"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/address": {
+      "offset": 1222220,
+      "length": 18092,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 188120,
+      "hash": "7115eed17a12eac7"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/area": {
+      "offset": 1240312,
+      "length": 19452,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 191310,
+      "hash": "653cd5d248733301"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/article": {
+      "offset": 1259764,
+      "length": 18149,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 188856,
+      "hash": "84799392dfe48dbb"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/aside": {
+      "offset": 1277913,
+      "length": 18005,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 186838,
+      "hash": "3bdcd95c4fe3ef4e"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/audio": {
+      "offset": 1295918,
+      "length": 24412,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 216853,
+      "hash": "1c3bd71309bcab83"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/b": {
+      "offset": 1320330,
+      "length": 18221,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 188683,
+      "hash": "2e4413289adac5a5"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/base": {
+      "offset": 1338551,
+      "length": 18017,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 185820,
+      "hash": "7ddb7e6e2ad9faac"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/bdi": {
+      "offset": 1356568,
+      "length": 18814,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 191516,
+      "hash": "43fa5cc1937ea2b7"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/bdo": {
+      "offset": 1375382,
+      "length": 17684,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 183804,
+      "hash": "bf61d0449431962d"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/big": {
+      "offset": 1393066,
+      "length": 17040,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 180425,
+      "hash": "1645fe112d96dfe5"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/blockquote": {
+      "offset": 1410106,
+      "length": 18133,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 186099,
+      "hash": "6a73720154f04b65"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/body": {
+      "offset": 1428239,
+      "length": 18575,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 193340,
+      "hash": "ea9b01bf28e5dfcf"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/br": {
+      "offset": 1446814,
+      "length": 18154,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 186319,
+      "hash": "13791d880fa1df3e"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/button": {
+      "offset": 1464968,
+      "length": 24760,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 222651,
+      "hash": "1e7ea69f0c4b04a0"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/canvas": {
+      "offset": 1489728,
+      "length": 18990,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 191664,
+      "hash": "d4f1fc89d3cfd3d8"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/caption": {
+      "offset": 1508718,
+      "length": 18635,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 190061,
+      "hash": "c94319d187e0604c"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/center": {
+      "offset": 1527353,
+      "length": 17085,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 182862,
+      "hash": "e771bc7e80ad6127"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/cite": {
+      "offset": 1544438,
+      "length": 17742,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 184800,
+      "hash": "5aecd6482304bdf3"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/code": {
+      "offset": 1562180,
+      "length": 17609,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 184043,
+      "hash": "8971bab529d9cad6"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/col": {
+      "offset": 1579789,
+      "length": 19828,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 198821,
+      "hash": "3ead6ddd2d3a7e14"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/colgroup": {
+      "offset": 1599617,
+      "length": 19862,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 199321,
+      "hash": "e83a79c9e016620a"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/data": {
+      "offset": 1619479,
+      "length": 17172,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 182212,
+      "hash": "6fa442f878da871d"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/datalist": {
+      "offset": 1636651,
+      "length": 18948,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 192780,
+      "hash": "13fbe45a50711317"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/dd": {
+      "offset": 1655599,
+      "length": 17234,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 182302,
+      "hash": "774baabf71c8a287"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/del": {
+      "offset": 1672833,
+      "length": 18039,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 185901,
+      "hash": "4441ae5fb508ea92"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/details": {
+      "offset": 1690872,
+      "length": 19448,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 195198,
+      "hash": "3d279620610d5b9c"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/dfn": {
+      "offset": 1710320,
+      "length": 18817,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 191558,
+      "hash": "d1cb49cbb6c44fd8"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/dialog": {
+      "offset": 1729137,
+      "length": 26379,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 239103,
+      "hash": "483512f6acf20e7f"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/dir": {
+      "offset": 1755516,
+      "length": 16809,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 178742,
+      "hash": "294b5b8f3fa100c5"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/div": {
+      "offset": 1772325,
+      "length": 18348,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 188533,
+      "hash": "300d834bef0e11da"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/dl": {
+      "offset": 1790673,
+      "length": 18996,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 194247,
+      "hash": "7ccd2f5526a86130"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/dt": {
+      "offset": 1809669,
+      "length": 17521,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 183831,
+      "hash": "ea5fe234f7a9f4f4"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/em": {
+      "offset": 1827190,
+      "length": 18211,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 186965,
+      "hash": "ac818c6fc9cb8c25"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/embed": {
+      "offset": 1845401,
+      "length": 17986,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 186505,
+      "hash": "7fae2edc5d17d8a7"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/fencedframe": {
+      "offset": 1863387,
+      "length": 19012,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 191113,
+      "hash": "ad8498c45ddd103c"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/fieldset": {
+      "offset": 1882399,
+      "length": 18620,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 190502,
+      "hash": "8f195ab2251862ee"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/figcaption": {
+      "offset": 1901019,
+      "length": 17230,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 182502,
+      "hash": "f4af0d4dd8f4a981"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/figure": {
+      "offset": 1918249,
+      "length": 18427,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 188930,
+      "hash": "ad0fc014a376bd60"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/font": {
+      "offset": 1936676,
+      "length": 16500,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 177574,
+      "hash": "a0e0872d73d12fb8"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/footer": {
+      "offset": 1953176,
+      "length": 18164,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 188555,
+      "hash": "cd0347991f42695d"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/form": {
+      "offset": 1971340,
+      "length": 19492,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 195739,
+      "hash": "0d6fceeb458a8ec9"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/frame": {
+      "offset": 1990832,
+      "length": 16863,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 180974,
+      "hash": "d481f64f0ae54024"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/frameset": {
+      "offset": 2007695,
+      "length": 16604,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 178786,
+      "hash": "762ebd6aa241563d"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/geolocation": {
+      "offset": 2024299,
+      "length": 21612,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 209092,
+      "hash": "153c26e6072316e5"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/head": {
+      "offset": 2045911,
+      "length": 17445,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 183380,
+      "hash": "fbeb13c458051286"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/header": {
+      "offset": 2063356,
+      "length": 18536,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 191159,
+      "hash": "cb10af41d100548e"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/hgroup": {
+      "offset": 2081892,
+      "length": 17757,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 185716,
+      "hash": "e5b49f421b3d548b"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/hr": {
+      "offset": 2099649,
+      "length": 18323,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 190067,
+      "hash": "c6b740f73cbbfaeb"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/html": {
+      "offset": 2117972,
+      "length": 17626,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 184272,
+      "hash": "57b113caba16fdfd"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/i": {
+      "offset": 2135598,
+      "length": 18068,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 185662,
+      "hash": "d208a98cac95ff47"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/iframe": {
+      "offset": 2153666,
+      "length": 24662,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 218591,
+      "hash": "8a7b30e2b1652f53"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/img": {
+      "offset": 2178328,
+      "length": 27550,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 235334,
+      "hash": "5de29597e6d4854b"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/input": {
+      "offset": 2205878,
+      "length": 36617,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 308339,
+      "hash": "40a808bfeb494212"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/ins": {
+      "offset": 2242495,
+      "length": 17946,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 184976,
+      "hash": "01c1e43e6042d544"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/kbd": {
+      "offset": 2260441,
+      "length": 18868,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 190686,
+      "hash": "00d108e0d82c3afe"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/label": {
+      "offset": 2279309,
+      "length": 19353,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 194882,
+      "hash": "76d48c99783383f4"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/legend": {
+      "offset": 2298662,
+      "length": 17286,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 181953,
+      "hash": "b10f2f09b87fa294"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/li": {
+      "offset": 2315948,
+      "length": 18078,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 188847,
+      "hash": "40d09740e15477f5"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/link": {
+      "offset": 2334026,
+      "length": 23595,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 215181,
+      "hash": "47faf765e39c4104"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/main": {
+      "offset": 2357621,
+      "length": 18336,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 188406,
+      "hash": "71bc79181d8de3ad"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/map": {
+      "offset": 2375957,
+      "length": 17577,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 183761,
+      "hash": "89bffaa0c178dec4"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/mark": {
+      "offset": 2393534,
+      "length": 18611,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 187627,
+      "hash": "7e3b0f5e5d765aae"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/marquee": {
+      "offset": 2412145,
+      "length": 17358,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 184538,
+      "hash": "c9d20028d3ffc303"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/menu": {
+      "offset": 2429503,
+      "length": 17993,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 186514,
+      "hash": "b2db564441b86b6b"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/meta": {
+      "offset": 2447496,
+      "length": 18103,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 187432,
+      "hash": "18da9e8fafc77e50"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/meta/name": {
+      "offset": 2465599,
+      "length": 17994,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 185560,
+      "hash": "a10079d9f57cceb5"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/meter": {
+      "offset": 2483593,
+      "length": 17959,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 186180,
+      "hash": "451eb90ed9e25f84"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/nav": {
+      "offset": 2501552,
+      "length": 18259,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 187617,
+      "hash": "3c10f3431680763f"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/nobr": {
+      "offset": 2519811,
+      "length": 16276,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 175667,
+      "hash": "b5a6f09540df7c20"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/noembed": {
+      "offset": 2536087,
+      "length": 16469,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 175755,
+      "hash": "4950af966889cac1"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/noframes": {
+      "offset": 2552556,
+      "length": 16770,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 178054,
+      "hash": "d936ccdda082edec"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/noscript": {
+      "offset": 2569326,
+      "length": 17224,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 183416,
+      "hash": "ce7332130b0da667"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/object": {
+      "offset": 2586550,
+      "length": 18368,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 188110,
+      "hash": "a42bfc58d8138667"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/ol": {
+      "offset": 2604918,
+      "length": 18916,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 193367,
+      "hash": "54dec7985e0f4391"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/optgroup": {
+      "offset": 2623834,
+      "length": 17746,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 184879,
+      "hash": "782e06df9c9f1d0f"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/option": {
+      "offset": 2641580,
+      "length": 17983,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 187391,
+      "hash": "37008ff2cae55e25"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/output": {
+      "offset": 2659563,
+      "length": 17649,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 183564,
+      "hash": "c10b97daf45a1fac"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/p": {
+      "offset": 2677212,
+      "length": 18750,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 192355,
+      "hash": "922c7a9b131b467a"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/param": {
+      "offset": 2695962,
+      "length": 16778,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 178893,
+      "hash": "8dbe30ca6a3ac0a7"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/picture": {
+      "offset": 2712740,
+      "length": 19210,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 192851,
+      "hash": "6fa22435251f3774"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/plaintext": {
+      "offset": 2731950,
+      "length": 16700,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 176938,
+      "hash": "f199b1672ecc1455"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/pre": {
+      "offset": 2748650,
+      "length": 19351,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 191660,
+      "hash": "41a167e35f5eb960"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/progress": {
+      "offset": 2768001,
+      "length": 18293,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 189129,
+      "hash": "c3855fd145349efe"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/q": {
+      "offset": 2786294,
+      "length": 17414,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 182663,
+      "hash": "faa0af4a845ee244"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/rb": {
+      "offset": 2803708,
+      "length": 17330,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 182024,
+      "hash": "c914944c3021ad0e"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/rp": {
+      "offset": 2821038,
+      "length": 17684,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 184443,
+      "hash": "dd368ea2b05782ba"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/rt": {
+      "offset": 2838722,
+      "length": 17254,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 181994,
+      "hash": "411dc1668589791a"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/rtc": {
+      "offset": 2855976,
+      "length": 17202,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 180549,
+      "hash": "0b12b6ce2a0a264a"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/ruby": {
+      "offset": 2873178,
+      "length": 17470,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 184824,
+      "hash": "3e5c87bee73cff9b"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/s": {
+      "offset": 2890648,
+      "length": 17819,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 184190,
+      "hash": "9b66b242224ea08a"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/samp": {
+      "offset": 2908467,
+      "length": 18108,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 185865,
+      "hash": "50d36094b78eec6b"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/script": {
+      "offset": 2926575,
+      "length": 23316,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 212956,
+      "hash": "969699a463076106"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/script/async-defer.jpg": {
+      "offset": 2949891,
+      "length": 35949,
+      "mime": "image/jpeg",
+      "gzipped": false,
+      "raw_length": 35949,
+      "hash": "9935239d1d95d0d7"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/script/type": {
+      "offset": 2985840,
+      "length": 16840,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 177856,
+      "hash": "e67c19846433578f"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/search": {
+      "offset": 3002680,
+      "length": 18011,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 187318,
+      "hash": "fae4d5d434216a22"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/section": {
+      "offset": 3020691,
+      "length": 18761,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 192384,
+      "hash": "e83ff1af6349ad0b"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/select": {
+      "offset": 3039452,
+      "length": 21855,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 207977,
+      "hash": "7ee175f9205a29b0"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/selectedcontent": {
+      "offset": 3061307,
+      "length": 17844,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 184718,
+      "hash": "440b5907bc998bbb"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/slot": {
+      "offset": 3079151,
+      "length": 17927,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 184536,
+      "hash": "7396f4ee375349b1"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/small": {
+      "offset": 3097078,
+      "length": 17465,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 184031,
+      "hash": "623521100a62c3f2"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/source": {
+      "offset": 3114543,
+      "length": 19533,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 196157,
+      "hash": "3066b1b3a556e154"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/span": {
+      "offset": 3134076,
+      "length": 17551,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 185188,
+      "hash": "372dbb72bc1dadeb"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/strike": {
+      "offset": 3151627,
+      "length": 16714,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 177440,
+      "hash": "2250734956e3aa4b"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/strong": {
+      "offset": 3168341,
+      "length": 18300,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 187402,
+      "hash": "890bc700eb619040"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/style": {
+      "offset": 3186641,
+      "length": 18971,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 191561,
+      "hash": "e69f5c0ed1b0e88a"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/sub": {
+      "offset": 3205612,
+      "length": 18168,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 186454,
+      "hash": "3943eb1656c868fc"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/summary": {
+      "offset": 3223780,
+      "length": 19663,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 193926,
+      "hash": "9e22cbfbbccc2f63"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/sup": {
+      "offset": 3243443,
+      "length": 18127,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 185947,
+      "hash": "82f712a0594160ca"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/table": {
+      "offset": 3261570,
+      "length": 25724,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 246997,
+      "hash": "26e8c70958b00db9"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/table/table_element_layers.png": {
+      "offset": 3287294,
+      "length": 9979,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 9979,
+      "hash": "5490b80a019b87c7"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/tbody": {
+      "offset": 3297273,
+      "length": 20364,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 202660,
+      "hash": "b85ec18a722f1d24"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/td": {
+      "offset": 3317637,
+      "length": 20555,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 203794,
+      "hash": "5e655f5a6ae6cb82"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/template": {
+      "offset": 3338192,
+      "length": 24731,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 229321,
+      "hash": "90b3bfee9d69ff3f"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/template/template_with_focus.png": {
+      "offset": 3362923,
+      "length": 2299,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 2299,
+      "hash": "d5e0a8dd55b06b03"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/template/template_with_no_focus.png": {
+      "offset": 3365222,
+      "length": 2688,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 2688,
+      "hash": "6f2383d808c52703"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/textarea": {
+      "offset": 3367910,
+      "length": 20999,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 203649,
+      "hash": "f7221481b3a5b54e"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/tfoot": {
+      "offset": 3388909,
+      "length": 19177,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 194392,
+      "hash": "ff03e0d9c61322d3"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/th": {
+      "offset": 3408086,
+      "length": 20877,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 205859,
+      "hash": "3bc176287357af00"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/thead": {
+      "offset": 3428963,
+      "length": 19426,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 196249,
+      "hash": "ebe336dc4f504316"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/time": {
+      "offset": 3448389,
+      "length": 18501,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 190354,
+      "hash": "7a21f7896cc557e6"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/title": {
+      "offset": 3466890,
+      "length": 18396,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 186842,
+      "hash": "77ca71afc444b35b"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/tr": {
+      "offset": 3485286,
+      "length": 20736,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 206031,
+      "hash": "6abe94683e8007a3"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/track": {
+      "offset": 3506022,
+      "length": 19101,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 190993,
+      "hash": "2209d4f2d60b9290"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/tt": {
+      "offset": 3525123,
+      "length": 17696,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 183447,
+      "hash": "e8d578a69266784f"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/u": {
+      "offset": 3542819,
+      "length": 18887,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 190664,
+      "hash": "26bef2cbd9539b64"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/ul": {
+      "offset": 3561706,
+      "length": 18610,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 191639,
+      "hash": "60081594ae64f4c6"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/var": {
+      "offset": 3580316,
+      "length": 17853,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 185915,
+      "hash": "d145f45a671d2f49"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/video": {
+      "offset": 3598169,
+      "length": 25157,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 220609,
+      "hash": "b62ad7ec08775c82"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/wbr": {
+      "offset": 3623326,
+      "length": 17784,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 184761,
+      "hash": "ba87a2c7f3083b78"
+    },
+    "/en-US/docs/Web/HTML/Reference/Elements/xmp": {
+      "offset": 3641110,
+      "length": 16692,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 177746,
+      "hash": "37a4ff04e29ac2d3"
+    },
+    "/en-US/docs/Web/HTML/Reference/Global_attributes": {
+      "offset": 3657802,
+      "length": 21636,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 216780,
+      "hash": "049cdad4766a375a"
+    },
+    "/en-US/docs/Web/HTML/Reference/Global_attributes/accesskey": {
+      "offset": 3679438,
+      "length": 17222,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 181950,
+      "hash": "e6ce2fa2d72afe7e"
+    },
+    "/en-US/docs/Web/HTML/Reference/Global_attributes/anchor": {
+      "offset": 3696660,
+      "length": 17530,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 179844,
+      "hash": "b3e91796e995446a"
+    },
+    "/en-US/docs/Web/HTML/Reference/Global_attributes/autocapitalize": {
+      "offset": 3714190,
+      "length": 17425,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 183324,
+      "hash": "f9695448c57cce0d"
+    },
+    "/favicon.ico": {
+      "offset": 3731615,
+      "length": 763,
+      "mime": "image/x-icon",
+      "gzipped": false,
+      "raw_length": 763,
+      "hash": "5a777406a4082a0a"
+    },
+    "/favicon.svg": {
+      "offset": 3732378,
+      "length": 243,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 536,
+      "hash": "6e37bc7a075b9a0f"
+    },
+    "/shared-assets/images/diagrams/html/table/column-row-span.png": {
+      "offset": 3732621,
+      "length": 5567,
+      "mime": "image/png",
+      "gzipped": false,
+      "raw_length": 5567,
+      "hash": "438e73bd83a124d0"
+    },
+    "/static/client/270.c4deb27edf934078.css": {
+      "offset": 3738188,
+      "length": 564,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 3201,
+      "hash": "16ee651394a6a071"
+    },
+    "/static/client/9228.c46ef79d5582674d.css": {
+      "offset": 3738752,
+      "length": 354,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 1697,
+      "hash": "a80798abe3f00cdb"
+    },
+    "/static/client/BarlowCondensed-SemiBold.199288b668a15dc1.woff2": {
+      "offset": 3739106,
+      "length": 60508,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 60508,
+      "hash": "16a2eff3f132e6f6"
+    },
+    "/static/client/arrow-left.29a44bc5a550fe38.svg": {
+      "offset": 3799614,
+      "length": 164,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 219,
+      "hash": "5050e1a8792f25f8"
+    },
+    "/static/client/arrow-right.648145f00e77b7f0.svg": {
+      "offset": 3799778,
+      "length": 142,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 220,
+      "hash": "128a7bcad244648f"
+    },
+    "/static/client/bluesky.a9421882d093c829.svg": {
+      "offset": 3799920,
+      "length": 273,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 478,
+      "hash": "c483866380464521"
+    },
+    "/static/client/browser-check-obsolete.adc8b778f055490d.svg": {
+      "offset": 3800193,
+      "length": 489,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 1231,
+      "hash": "4983cf00b0a08e27"
+    },
+    "/static/client/browser-check.20ed6fe43e745587.svg": {
+      "offset": 3800682,
+      "length": 295,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 503,
+      "hash": "b31708f646c82823"
+    },
+    "/static/client/browser-cross-obsolete.1965543c5f4ff9dd.svg": {
+      "offset": 3800977,
+      "length": 508,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 1303,
+      "hash": "dc52ea6c02c3fbfa"
+    },
+    "/static/client/browser-cross.196cc93721b774d9.svg": {
+      "offset": 3801485,
+      "length": 299,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 546,
+      "hash": "4ea4b79528957f9f"
+    },
+    "/static/client/cancel.7362f2cdf3515e0d.svg": {
+      "offset": 3801784,
+      "length": 142,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 219,
+      "hash": "c8b8c5cdbd6d96f5"
+    },
+    "/static/client/chart-no-axes-combined.aee09a7064cb8b35.svg": {
+      "offset": 3801926,
+      "length": 195,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 303,
+      "hash": "17b9137a7fd82a37"
+    },
+    "/static/client/chevron-down.7c923b7054da305b.svg": {
+      "offset": 3802121,
+      "length": 128,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 211,
+      "hash": "8529565e25b7fe6d"
+    },
+    "/static/client/chevron-right.a81fc439dd5e4839.svg": {
+      "offset": 3802249,
+      "length": 135,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 212,
+      "hash": "f5857fc9b6860d5e"
+    },
+    "/static/client/chrome.5978d1a2dbdc06cc.svg": {
+      "offset": 3802384,
+      "length": 468,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 1056,
+      "hash": "4cb83de26908f138"
+    },
+    "/static/client/circle-check.205f48f66c3c9d17.svg": {
+      "offset": 3802852,
+      "length": 147,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 244,
+      "hash": "38c1e70a729ee266"
+    },
+    "/static/client/circle-play.6ed4ac1fb3c93a04.svg": {
+      "offset": 3802999,
+      "length": 148,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 245,
+      "hash": "3c2fac5a713d0217"
+    },
+    "/static/client/circle-x.4b1c3fa0511867e7.svg": {
+      "offset": 3803147,
+      "length": 154,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 248,
+      "hash": "ccca09e2b400965e"
+    },
+    "/static/client/cog.f23af856fab34421.svg": {
+      "offset": 3803301,
+      "length": 236,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 431,
+      "hash": "a7c5beea6049c4fe"
+    },
+    "/static/client/edge.8646730d02c8a77d.svg": {
+      "offset": 3803537,
+      "length": 1067,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 4240,
+      "hash": "dd58d8042a12e70a"
+    },
+    "/static/client/external-link.4f3a2dc8e402cae5.svg": {
+      "offset": 3804604,
+      "length": 188,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 275,
+      "hash": "f170f78dedc0e9c8"
+    },
+    "/static/client/firefox.56f320db61f46184.svg": {
+      "offset": 3804792,
+      "length": 2664,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 11783,
+      "hash": "62936e66ad138191"
+    },
+    "/static/client/flask-conical.c16b3d71f14f31d1.svg": {
+      "offset": 3807456,
+      "length": 202,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 326,
+      "hash": "365840de778e619c"
+    },
+    "/static/client/github.4d94e1bf436aa7ed.svg": {
+      "offset": 3807658,
+      "length": 317,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 581,
+      "hash": "94b646722e63eb3f"
+    },
+    "/static/client/graduation-cap.c7aa0f3430c53718.svg": {
+      "offset": 3807975,
+      "length": 215,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 367,
+      "hash": "6ccf8139b616ddcf"
+    },
+    "/static/client/high-dark.a3f9e002a70b98e8.svg": {
+      "offset": 3808190,
+      "length": 167,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 265,
+      "hash": "3dead5b88775c285"
+    },
+    "/static/client/high.712917a113e51658.svg": {
+      "offset": 3808357,
+      "length": 187,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 265,
+      "hash": "0dc12d8e32bfa0a9"
+    },
+    "/static/client/info.d40b80f84482feba.svg": {
+      "offset": 3808544,
+      "length": 162,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 248,
+      "hash": "5174299614210b93"
+    },
+    "/static/client/inter-cyrillic.eecfbd79d522303a.woff2": {
+      "offset": 3808706,
+      "length": 29904,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 29904,
+      "hash": "ee85ee224f36bcff"
+    },
+    "/static/client/inter-italic-cyrillic.d153dcd2916c4842.woff2": {
+      "offset": 3838610,
+      "length": 31700,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 31700,
+      "hash": "52175747308097fa"
+    },
+    "/static/client/inter-italic-latin-extended.0a7409875db33654.woff2": {
+      "offset": 3870310,
+      "length": 155320,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 155320,
+      "hash": "17c7d389bfc70abc"
+    },
+    "/static/client/inter-italic-latin.fd2627ec16333c05.woff2": {
+      "offset": 4025630,
+      "length": 115932,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 115932,
+      "hash": "984357868e1c3028"
+    },
+    "/static/client/inter-latin-extended.02dc98170ff37b88.woff2": {
+      "offset": 4141562,
+      "length": 140872,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 140872,
+      "hash": "f2b8b5ac31023eb2"
+    },
+    "/static/client/inter-latin.9a3b1bc220d426ef.woff2": {
+      "offset": 4282434,
+      "length": 105484,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 105484,
+      "hash": "2c0a6f55ecf3fe1b"
+    },
+    "/static/client/jetbrains-mono-cyrillic.577e793cdf179ae1.woff2": {
+      "offset": 4387918,
+      "length": 12892,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 12892,
+      "hash": "fb8d0f67c68a9048"
+    },
+    "/static/client/jetbrains-mono-italic-cyrillic.8d00711fdb1702e0.woff2": {
+      "offset": 4400810,
+      "length": 14252,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 14252,
+      "hash": "59440aaa699c22f3"
+    },
+    "/static/client/jetbrains-mono-italic-latin-extended.c25d5e1f309ed948.woff2": {
+      "offset": 4415062,
+      "length": 20324,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 20324,
+      "hash": "0ce6e272fe4d24de"
+    },
+    "/static/client/jetbrains-mono-italic-latin.55b330522e5e3ed9.woff2": {
+      "offset": 4435386,
+      "length": 30860,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 30860,
+      "hash": "c969d36b5d6d9783"
+    },
+    "/static/client/jetbrains-mono-latin-extended.01c891f9c832ce28.woff2": {
+      "offset": 4466246,
+      "length": 18308,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 18308,
+      "hash": "16b4915dfb37874a"
+    },
+    "/static/client/jetbrains-mono-latin.119994ed445212c7.woff2": {
+      "offset": 4484554,
+      "length": 28416,
+      "mime": "font/woff2",
+      "gzipped": false,
+      "raw_length": 28416,
+      "hash": "ef10b443983cbd93"
+    },
+    "/static/client/lightbulb.f54f9e803373ffd2.svg": {
+      "offset": 4512970,
+      "length": 211,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 312,
+      "hash": "0b62c63bfa5856ac"
+    },
+    "/static/client/limited-dark.38d6262bb2a277a0.svg": {
+      "offset": 4513181,
+      "length": 182,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 293,
+      "hash": "85fcd4e98595f700"
+    },
+    "/static/client/limited.d8a397eda98d282d.svg": {
+      "offset": 4513363,
+      "length": 181,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 293,
+      "hash": "119012256852c600"
+    },
+    "/static/client/lock.4befe79c52ccec2a.svg": {
+      "offset": 4513544,
+      "length": 170,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 280,
+      "hash": "c3558145e2f83efe"
+    },
+    "/static/client/low-dark.f897f69b7465d5a8.svg": {
+      "offset": 4513714,
+      "length": 160,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 378,
+      "hash": "b83fab8eab09a861"
+    },
+    "/static/client/low.02894ed3d7bccc6d.svg": {
+      "offset": 4513874,
+      "length": 161,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 378,
+      "hash": "eaf6b4c5236e96fd"
+    },
+    "/static/client/mastodon.1a5c0fde8353f680.svg": {
+      "offset": 4514035,
+      "length": 449,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 888,
+      "hash": "b18e6e6e5a9597c7"
+    },
+    "/static/client/mdn-m.70aac857e4a908d0.svg": {
+      "offset": 4514484,
+      "length": 209,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 321,
+      "hash": "9770bb12f012d178"
+    },
+    "/static/client/menu.74ccd9bb64dbf543.svg": {
+      "offset": 4514693,
+      "length": 141,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 222,
+      "hash": "97954de4d283a311"
+    },
+    "/static/client/obsolete-dark.97bd602b44120cb3.svg": {
+      "offset": 4514834,
+      "length": 161,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 489,
+      "hash": "af58ab510ba6ea4a"
+    },
+    "/static/client/obsolete.103e80a32b90e7f1.svg": {
+      "offset": 4514995,
+      "length": 160,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 489,
+      "hash": "abd19146d75465db"
+    },
+    "/static/client/pending-removal-dark.7a08806b42144903.svg": {
+      "offset": 4515155,
+      "length": 186,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 366,
+      "hash": "7257dec2fa744258"
+    },
+    "/static/client/pending-removal.7300f68a9465c1b9.svg": {
+      "offset": 4515341,
+      "length": 185,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 393,
+      "hash": "2323e5a470c710e6"
+    },
+    "/static/client/rss.37214526d7308d0c.svg": {
+      "offset": 4515526,
+      "length": 171,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 270,
+      "hash": "962d556577189983"
+    },
+    "/static/client/safari.7843065f2edf13d1.svg": {
+      "offset": 4515697,
+      "length": 2682,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 10150,
+      "hash": "6e933963de8a0966"
+    },
+    "/static/client/shield-check.07bdc37f20ac5cc6.svg": {
+      "offset": 4518379,
+      "length": 225,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 386,
+      "hash": "df80a0584693baf0"
+    },
+    "/static/client/styles-a11y-menu.5796ee87cb69f93f.css": {
+      "offset": 4518604,
+      "length": 255,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 548,
+      "hash": "7bca10442fce596b"
+    },
+    "/static/client/styles-article-footer.81ae18c89fc527dc.css": {
+      "offset": 4518859,
+      "length": 296,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 849,
+      "hash": "2de9f22e2b1ae8f1"
+    },
+    "/static/client/styles-baseline-indicator.dcd17e42ea043f53.css": {
+      "offset": 4519155,
+      "length": 2117,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 17983,
+      "hash": "1b1deaf184ef3c5f"
+    },
+    "/static/client/styles-breadcrumbs-bar.2d1bed1ab424b6b3.css": {
+      "offset": 4521272,
+      "length": 427,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 1325,
+      "hash": "fe80f3cb0402cbff"
+    },
+    "/static/client/styles-breadcrumbs.87eb742f4e711dc3.css": {
+      "offset": 4521699,
+      "length": 372,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 861,
+      "hash": "3ad5edd7ba190394"
+    },
+    "/static/client/styles-content-section.ee79aa021892f35a.css": {
+      "offset": 4522071,
+      "length": 2762,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 15182,
+      "hash": "c2e16729e92e3eb8"
+    },
+    "/static/client/styles-footer.66072dd619a4ef50.css": {
+      "offset": 4524833,
+      "length": 787,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 3126,
+      "hash": "16114a7fb4c796af"
+    },
+    "/static/client/styles-global.13616ebb1fc8ee2f.css": {
+      "offset": 4525620,
+      "length": 3802,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 25163,
+      "hash": "cbaec1a4c84090e0"
+    },
+    "/static/client/styles-heading-anchor.0eec5185ab9425b7.css": {
+      "offset": 4529422,
+      "length": 264,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 694,
+      "hash": "6b500c4ab8f676e1"
+    },
+    "/static/client/styles-left-sidebar.46e37af4d0b5c883.css": {
+      "offset": 4529686,
+      "length": 824,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 3090,
+      "hash": "6299b838046bd5c4"
+    },
+    "/static/client/styles-logo.aea5ff6edf1b9cfb.css": {
+      "offset": 4530510,
+      "length": 218,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 478,
+      "hash": "47fb2d9263611791"
+    },
+    "/static/client/styles-menu.e2c5c8a53a8854c2.css": {
+      "offset": 4530728,
+      "length": 1161,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 5031,
+      "hash": "f07639f717fbc4d0"
+    },
+    "/static/client/styles-navigation.c3ebf384e65df345.css": {
+      "offset": 4531889,
+      "length": 610,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 1991,
+      "hash": "4407c5912f6fae86"
+    },
+    "/static/client/styles-page-layout.5a4354f33e894319.css": {
+      "offset": 4532499,
+      "length": 314,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 718,
+      "hash": "8df64294c8e76f85"
+    },
+    "/static/client/styles-reference-layout.632d2f3884f10ca3.css": {
+      "offset": 4532813,
+      "length": 322,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 891,
+      "hash": "61e446613c87524a"
+    },
+    "/static/client/styles-reference-toc.9b9bd019efd16b86.css": {
+      "offset": 4533135,
+      "length": 287,
+      "mime": "text/css; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 743,
+      "hash": "f5845d629045e07b"
+    },
+    "/static/client/trash-2.73b28bc66fb8543c.svg": {
+      "offset": 4533422,
+      "length": 194,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 290,
+      "hash": "5496e1031e93d604"
+    },
+    "/static/client/triangle-alert.cff4c57ccef57da3.svg": {
+      "offset": 4533616,
+      "length": 181,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 286,
+      "hash": "f26ad438bca95b9b"
+    },
+    "/static/client/users.f7e6f1f213744762.svg": {
+      "offset": 4533797,
+      "length": 196,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 322,
+      "hash": "5f68e28196a4930a"
+    },
+    "/static/client/wrench.a3caa7312a364b47.svg": {
+      "offset": 4533993,
+      "length": 205,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 351,
+      "hash": "b01586ce0ad485f1"
+    },
+    "/static/client/x.4c7e68bf52af030a.svg": {
+      "offset": 4534198,
+      "length": 183,
+      "mime": "image/svg+xml",
+      "gzipped": false,
+      "encoding": "br",
+      "raw_length": 247,
+      "hash": "c68293742d18b561"
     }
   }
 }
