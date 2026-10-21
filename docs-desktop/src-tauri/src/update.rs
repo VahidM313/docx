@@ -113,6 +113,103 @@ pub(crate) fn curl_download_with_progress(
     fs::read(dest_path).map_err(|e| DocxError::io_path(dest_path, &e))
 }
 
+pub(crate) const DPTC_MAGIC: &[u8; 4] = b"DPTC";
+
+pub fn apply_binary_delta_to_pack(
+    local_chunks: &HashMap<String, Vec<u8>>,
+    delta_bytes: &[u8],
+) -> crate::error::Result<(SiteManifest, Vec<u8>)> {
+    if delta_bytes.len() < 28 {
+        return Err(DocxError::invalid_pack("Delta patch buffer too short"));
+    }
+    if &delta_bytes[0..4] != DPTC_MAGIC {
+        return Err(DocxError::invalid_pack("Invalid delta patch magic"));
+    }
+    let manifest_len = u32::from_le_bytes([
+        delta_bytes[20],
+        delta_bytes[21],
+        delta_bytes[22],
+        delta_bytes[23],
+    ]) as usize;
+
+    let manifest_start = 24;
+    let manifest_end = manifest_start + manifest_len;
+    if delta_bytes.len() < manifest_end + 4 {
+        return Err(DocxError::invalid_pack("Truncated delta patch manifest"));
+    }
+
+    let target_manifest: SiteManifest = serde_json::from_slice(&delta_bytes[manifest_start..manifest_end])
+        .map_err(|e| DocxError::invalid_pack(format!("Corrupt manifest in delta: {e}")))?;
+
+    let chunk_count = u32::from_le_bytes([
+        delta_bytes[manifest_end],
+        delta_bytes[manifest_end + 1],
+        delta_bytes[manifest_end + 2],
+        delta_bytes[manifest_end + 3],
+    ]) as usize;
+
+    let mut delta_chunks = HashMap::new();
+    let mut offset = manifest_end + 4;
+    for _ in 0..chunk_count {
+        if offset + 20 > delta_bytes.len() {
+            return Err(DocxError::invalid_pack("Truncated chunk header in delta"));
+        }
+        let hash = String::from_utf8_lossy(&delta_bytes[offset..offset + 16]).trim().to_string();
+        let len = u32::from_le_bytes([
+            delta_bytes[offset + 16],
+            delta_bytes[offset + 17],
+            delta_bytes[offset + 18],
+            delta_bytes[offset + 19],
+        ]) as usize;
+        offset += 20;
+
+        if offset + len > delta_bytes.len() {
+            return Err(DocxError::invalid_pack("Truncated chunk data in delta"));
+        }
+        delta_chunks.insert(hash, &delta_bytes[offset..offset + len]);
+        offset += len;
+    }
+
+    let mut new_pack_data = Vec::new();
+    let mut new_routes = HashMap::new();
+    let mut placed_hashes: HashMap<String, (usize, usize)> = HashMap::new();
+
+    for (route, entry) in &target_manifest.routes {
+        let (final_offset, final_length) = if let Some(&(off, len)) = placed_hashes.get(&entry.hash) {
+            (off, len)
+        } else if let Some(d_slice) = delta_chunks.get(&entry.hash) {
+            let off = new_pack_data.len();
+            let len = d_slice.len();
+            new_pack_data.extend_from_slice(d_slice);
+            placed_hashes.insert(entry.hash.clone(), (off, len));
+            (off, len)
+        } else if let Some(local_chunk) = local_chunks.get(&entry.hash) {
+            let off = new_pack_data.len();
+            let len = local_chunk.len();
+            new_pack_data.extend_from_slice(local_chunk);
+            placed_hashes.insert(entry.hash.clone(), (off, len));
+            (off, len)
+        } else {
+            return Err(DocxError::invalid_pack(format!(
+                "Missing chunk hash {} for route {}",
+                entry.hash, route
+            )));
+        };
+
+        let mut reconstructed_entry = entry.clone();
+        reconstructed_entry.offset = final_offset;
+        reconstructed_entry.length = final_length;
+        new_routes.insert(route.clone(), reconstructed_entry);
+    }
+
+    let mut reconciled_manifest = target_manifest.clone();
+    reconciled_manifest.totalBytes = new_pack_data.len();
+    reconciled_manifest.chunkCount = placed_hashes.len();
+    reconciled_manifest.routes = new_routes;
+
+    Ok((reconciled_manifest, new_pack_data))
+}
+
 pub(crate) fn run_install_or_update_sync(
     site_id: String,
     store: Arc<AssetStore>,
@@ -302,6 +399,109 @@ pub(crate) fn run_install_or_update_sync(
         });
     }
 
+    // Fast path: Check for Single-Stream .delta patch
+    if let Some(ref delta_meta) = remote_manifest.delta
+        && !old_commit.is_empty()
+        && (delta_meta.fromCommit == old_commit
+            || old_commit.starts_with(&delta_meta.fromCommit)
+            || delta_meta.fromCommit.starts_with(&old_commit))
+        && !local_chunks_by_hash.is_empty()
+    {
+        let delta_url = format!("{}/{}.delta", RELEASE_BASE_URL, site_id);
+        let _ = window.emit(
+            "docpack-progress",
+            DownloadProgressPayload {
+                site_id: site_id.clone(),
+                phase: "Downloading Delta".to_string(),
+                downloaded_bytes: 0,
+                total_bytes: delta_meta.sizeBytes,
+                percent: 10,
+                detail: format!(
+                    "Fetching single-stream patch ({:.1} KB)...",
+                    delta_meta.sizeBytes as f64 / 1024.0
+                ),
+            },
+        );
+
+        if let Ok(delta_bytes) = curl_get_bytes(&delta_url, None)
+            && delta_bytes.starts_with(b"DPTC")
+        {
+            if let Ok((final_manifest, new_pack_data)) =
+                apply_binary_delta_to_pack(&local_chunks_by_hash, &delta_bytes)
+            {
+                let manifest_json = serde_json::to_vec(&final_manifest)?;
+                let mut full_docpack =
+                    Vec::with_capacity(16 + manifest_json.len() + new_pack_data.len());
+                full_docpack.extend_from_slice(b"DOCP");
+                full_docpack.extend_from_slice(&2u16.to_le_bytes()); // version 2
+                full_docpack.extend_from_slice(&2u16.to_le_bytes()); // Brotli flag
+                full_docpack.extend_from_slice(&(manifest_json.len() as u32).to_le_bytes());
+                full_docpack.extend_from_slice(&0u32.to_le_bytes()); // reserved
+                full_docpack.extend_from_slice(&manifest_json);
+                full_docpack.extend_from_slice(&new_pack_data);
+
+                let docpack_path = packs_dir.join(format!("{}.docpack", site_id));
+                let full_len = full_docpack.len();
+                let _ = fs::write(&docpack_path, &full_docpack);
+                let _ = fs::write(
+                    packs_dir.join(format!("{}.manifest.json", site_id)),
+                    &manifest_json,
+                );
+
+                if let Some(parsed) =
+                    parse_docpack_on_disk(docpack_path, 0, full_len, "GitHub Delta .docpack")
+                {
+                    write_guard(&store.overrides)?.insert(site_id.clone(), parsed);
+                }
+
+                let dl_bytes = delta_bytes.len();
+                let reused_bytes = final_manifest.totalBytes.saturating_sub(dl_bytes);
+                let saved_percent = if final_manifest.totalBytes > 0 {
+                    ((reused_bytes as f64 / final_manifest.totalBytes as f64) * 100.0)
+                        .clamp(0.0, 99.9)
+                } else {
+                    0.0
+                };
+
+                let port = ensure_site_server(&site_id, Arc::clone(&store));
+                let _ = window.emit(
+                    "docpack-progress",
+                    DownloadProgressPayload {
+                        site_id: site_id.clone(),
+                        phase: "Complete".to_string(),
+                        downloaded_bytes: dl_bytes,
+                        total_bytes: final_manifest.totalBytes,
+                        percent: 100,
+                        detail: format!(
+                            "Delta update applied ({:.1} KB patch, {:.1}% saved)",
+                            dl_bytes as f64 / 1024.0,
+                            saved_percent
+                        ),
+                    },
+                );
+
+                return Ok(DeltaUpdateResult {
+                    site_id: site_id.clone(),
+                    old_commit,
+                    new_commit: final_manifest.commit.clone(),
+                    total_chunks: final_manifest.chunkCount,
+                    reused_chunks: final_manifest.chunkCount.saturating_sub(1),
+                    downloaded_chunks: 1,
+                    reused_bytes,
+                    downloaded_bytes: dl_bytes,
+                    saved_percent,
+                    port,
+                    message: format!(
+                        "Single-stream delta update complete! Downloaded {:.1} KB patch ({:.1}% bandwidth saved) on port :{}!",
+                        dl_bytes as f64 / 1024.0,
+                        saved_percent,
+                        port
+                    ),
+                });
+            }
+        }
+    }
+
     let missing_bytes: usize = remote_manifest
         .routes
         .values()
@@ -310,13 +510,12 @@ pub(crate) fn run_install_or_update_sync(
         .collect::<HashMap<String, usize>>()
         .values()
         .sum();
-    let missing_chunks_count = missing_unique_hashes.len();
+    let _missing_chunks_count = missing_unique_hashes.len();
     let max_delta_bytes = (remote_manifest.totalBytes * 65) / 100;
 
     // Use single-stream full .docpack download ONLY if not installed locally,
-    // or if the delta exceeds 65% of total pack size or > 250 chunks.
+    // or if the delta exceeds 65% of total pack size.
     let should_full_download = local_chunks_by_hash.is_empty()
-        || missing_chunks_count > 250
         || (remote_manifest.totalBytes > 0 && missing_bytes > max_delta_bytes);
 
     if should_full_download {
@@ -502,8 +701,12 @@ pub(crate) fn run_install_or_update_sync(
     };
 
     let manifest_json = serde_json::to_vec(&final_manifest)?;
-    let mut full_docpack = Vec::with_capacity(4 + manifest_json.len() + new_pack_data.len());
+    let mut full_docpack = Vec::with_capacity(16 + manifest_json.len() + new_pack_data.len());
+    full_docpack.extend_from_slice(b"DOCP");
+    full_docpack.extend_from_slice(&2u16.to_le_bytes()); // version 2
+    full_docpack.extend_from_slice(&2u16.to_le_bytes()); // Brotli flag
     full_docpack.extend_from_slice(&(manifest_json.len() as u32).to_le_bytes());
+    full_docpack.extend_from_slice(&0u32.to_le_bytes()); // reserved
     full_docpack.extend_from_slice(&manifest_json);
     full_docpack.extend_from_slice(&new_pack_data);
 
@@ -573,6 +776,38 @@ pub(crate) async fn install_or_update_from_github(
         .await
         .map_err(|e| format!("Task join error: {}", e))?
         .map_err(|e| e.to_string())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_apply_binary_delta_patch() {
+        let mut local_chunks = HashMap::new();
+        local_chunks.insert("aaaa111122223333".to_string(), b"chunkA".to_vec());
+
+        let manifest_json = r#"{"id":"tailwind","name":"Tailwind CSS","version":"1.1","commit":"22222222","compression":"brotli","routes":{"/a":{"offset":0,"length":6,"mime":"text/plain","gzipped":false,"hash":"aaaa111122223333"},"/b":{"offset":6,"length":6,"mime":"text/plain","gzipped":false,"hash":"bbbb111122223333"}}}"#;
+        let mut delta_bytes = Vec::new();
+        delta_bytes.extend_from_slice(b"DPTC");
+        delta_bytes.extend_from_slice(b"11111111");
+        delta_bytes.extend_from_slice(b"22222222");
+        delta_bytes.extend_from_slice(&(manifest_json.len() as u32).to_le_bytes());
+        delta_bytes.extend_from_slice(manifest_json.as_bytes());
+        delta_bytes.extend_from_slice(&1u32.to_le_bytes());
+        delta_bytes.extend_from_slice(b"bbbb111122223333");
+        delta_bytes.extend_from_slice(&6u32.to_le_bytes());
+        delta_bytes.extend_from_slice(b"chunkB");
+
+        let (new_manifest, pack_data) = apply_binary_delta_to_pack(&local_chunks, &delta_bytes).expect("Failed to apply delta");
+        assert_eq!(new_manifest.commit, "22222222");
+        assert_eq!(new_manifest.routes.len(), 2);
+        assert_eq!(pack_data.len(), 12);
+        let route_a = new_manifest.routes.get("/a").unwrap();
+        let route_b = new_manifest.routes.get("/b").unwrap();
+        assert_eq!(&pack_data[route_a.offset..route_a.offset + route_a.length], b"chunkA");
+        assert_eq!(&pack_data[route_b.offset..route_b.offset + route_b.length], b"chunkB");
+    }
 }
 
 
