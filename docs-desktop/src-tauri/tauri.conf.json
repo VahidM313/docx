@@ -21,7 +21,9 @@
         "fullscreen": false,
         "decorations": false,
         "visible": false,
-        "backgroundColor": "#000000"
+        "backgroundColor": "#313338",
+        "additionalBrowserArgs": "--renderer-process-limit=2 --disable-features=msWebOOUI,msPdfOOUI",
+        "dragDropEnabled": false
       }
     ],
     "security": {

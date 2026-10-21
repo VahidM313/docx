@@ -21,8 +21,30 @@ import {
 export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
   const app = useApp();
   const [hoveredItem, setHoveredItem] = React.useState<string | null>(null);
-  const [draggingId, setDraggingId] = React.useState<string | null>(null);
-  const [dragOverId, setDragOverId] = React.useState<string | null>(null);
+
+  // Drag-and-drop state via pointer events (works universally across WebView2, desktop & touch)
+  const [dragState, setDragState] = React.useState<{
+    docId: string;
+    isPinned: boolean;
+    x: number;
+    y: number;
+    targetPinnedIndex: number | null;
+    isUnpinnedTarget: boolean;
+  } | null>(null);
+
+  const dragRef = React.useRef<{
+    docId: string;
+    isPinned: boolean;
+    startX: number;
+    startY: number;
+    moved: boolean;
+    pointerId: number;
+    targetEl: HTMLElement | null;
+  } | null>(null);
+
+  const pinnedListRef = React.useRef<HTMLDivElement>(null);
+  const dividerRef = React.useRef<HTMLDivElement>(null);
+
   const [contextMenu, setContextMenu] = React.useState<{
     x: number;
     y: number;
@@ -30,22 +52,31 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
     isPinned: boolean;
   } | null>(null);
 
-  // Close context menu on outside click or escape
+  // Close context menu & abort drag on outside click or escape
   React.useEffect(() => {
-    if (!contextMenu) return;
-    const handleClose = () => setContextMenu(null);
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setContextMenu(null);
+      if (e.key === "Escape") {
+        if (dragRef.current?.targetEl) {
+          try {
+            dragRef.current.targetEl.releasePointerCapture(dragRef.current.pointerId);
+          } catch {}
+        }
+        dragRef.current = null;
+        setDragState(null);
+        setContextMenu(null);
+      }
     };
-    window.addEventListener("click", handleClose);
-    window.addEventListener("contextmenu", handleClose);
+    const handleCloseMenu = () => setContextMenu(null);
+
+    window.addEventListener("click", handleCloseMenu);
+    window.addEventListener("contextmenu", handleCloseMenu);
     window.addEventListener("keydown", handleKeyDown);
     return () => {
-      window.removeEventListener("click", handleClose);
-      window.removeEventListener("contextmenu", handleClose);
+      window.removeEventListener("click", handleCloseMenu);
+      window.removeEventListener("contextmenu", handleCloseMenu);
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [contextMenu]);
+  }, []);
 
   // All installed docs
   const allInstalledBrands = React.useMemo(() => {
@@ -57,18 +88,12 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
     return list;
   }, [app.entries]);
 
-  const installedMap = React.useMemo(() => {
-    const map = new Map<string, SiteBrand>();
-    allInstalledBrands.forEach((b) => map.set(b.id, b));
-    return map;
-  }, [allInstalledBrands]);
-
   // 1. Pinned Docs (Top) - in the exact order of app.pinned
   const pinnedDocs = React.useMemo(() => {
     return app.pinned
-      .map((id) => installedMap.get(id))
+      .map((id) => SITE_MAP[id])
       .filter((b): b is SiteBrand => !!b);
-  }, [app.pinned, installedMap]);
+  }, [app.pinned]);
 
   // 2. Other installed unpinned docs (Underneath) - sorted alphabetically by name
   const unpinnedDocs = React.useMemo(() => {
@@ -77,65 +102,163 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
     return unpinned.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: "base" }));
   }, [allInstalledBrands, app.pinned]);
 
-  // Drag and drop reordering for pinned docs
-  const handleDropPinned = (draggedId: string, targetId: string) => {
-    if (draggedId === targetId) return;
-    const currentPinned = [...app.pinned];
-    const fromIdx = currentPinned.indexOf(draggedId);
-    const toIdx = currentPinned.indexOf(targetId);
+  // Pointer drag handlers
+  const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>, docId: string, isPinned: boolean) => {
+    if (e.button !== 0) return; // Only primary button
+    dragRef.current = {
+      docId,
+      isPinned,
+      startX: e.clientX,
+      startY: e.clientY,
+      moved: false,
+      pointerId: e.pointerId,
+      targetEl: e.currentTarget,
+    };
+  };
 
-    if (fromIdx !== -1 && toIdx !== -1) {
-      const [moved] = currentPinned.splice(fromIdx, 1);
-      currentPinned.splice(toIdx, 0, moved);
-      app.setPinned(currentPinned);
-    } else if (fromIdx === -1 && toIdx !== -1) {
-      // Dropped an unpinned doc onto a pinned doc slot -> pin it at that position!
-      currentPinned.splice(toIdx, 0, draggedId);
-      app.setPinned(currentPinned);
+  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    const current = dragRef.current;
+    if (!current) return;
+
+    const dist = Math.hypot(e.clientX - current.startX, e.clientY - current.startY);
+    if (!current.moved) {
+      if (dist >= 6) {
+        current.moved = true;
+        try {
+          current.targetEl?.setPointerCapture(current.pointerId);
+        } catch {}
+      } else {
+        return;
+      }
+    }
+
+    const clientY = e.clientY;
+    const dividerEl = dividerRef.current;
+    const dividerRect = dividerEl?.getBoundingClientRect();
+    const isUnpinnedTarget = dividerRect ? clientY > dividerRect.bottom : false;
+
+    let targetPinnedIndex: number | null = null;
+    if (!isUnpinnedTarget) {
+      const pinnedContainer = pinnedListRef.current;
+      if (pinnedContainer) {
+        const itemEls = Array.from(pinnedContainer.querySelectorAll<HTMLElement>("[data-doc-item]"));
+        targetPinnedIndex = itemEls.length;
+        for (let i = 0; i < itemEls.length; i++) {
+          const rect = itemEls[i].getBoundingClientRect();
+          if (clientY < rect.top + rect.height / 2) {
+            targetPinnedIndex = i;
+            break;
+          }
+        }
+      } else {
+        targetPinnedIndex = 0;
+      }
+    }
+
+    setDragState({
+      docId: current.docId,
+      isPinned: current.isPinned,
+      x: e.clientX,
+      y: e.clientY,
+      targetPinnedIndex,
+      isUnpinnedTarget,
+    });
+  };
+
+  const handlePointerUp = (e: React.PointerEvent<HTMLDivElement>, doc: SiteBrand) => {
+    const current = dragRef.current;
+    dragRef.current = null;
+
+    if (!current) return;
+
+    if (current.moved && dragState) {
+      try {
+        current.targetEl?.releasePointerCapture(current.pointerId);
+      } catch {}
+
+      const draggedId = current.docId;
+      const targetIdx = dragState.targetPinnedIndex;
+      const isUnpinned = dragState.isUnpinnedTarget;
+
+      if (current.isPinned) {
+        if (isUnpinned) {
+          // Dragged pinned doc down below divider into unpinned section -> unpin it
+          app.togglePin(draggedId);
+        } else if (targetIdx !== null) {
+          // Reorder within pinned docs
+          const fromIdx = app.pinned.indexOf(draggedId);
+          if (fromIdx !== -1) {
+            let toIdx = targetIdx;
+            if (toIdx > fromIdx) toIdx = Math.max(0, toIdx - 1);
+            if (fromIdx !== toIdx) {
+              app.reorderPinned(fromIdx, toIdx);
+            }
+          }
+        }
+      } else {
+        // Dragged unpinned doc
+        if (!isUnpinned && targetIdx !== null) {
+          // Pin it at targetIdx
+          const nextPinned = [...app.pinned.filter((id) => id !== draggedId)];
+          const insertIdx = Math.min(targetIdx, nextPinned.length);
+          nextPinned.splice(insertIdx, 0, draggedId);
+          app.setPinned(nextPinned);
+        }
+      }
+
+      setDragState(null);
+    } else {
+      // Normal click without drag movement!
+      setDragState(null);
+      app.openSite(doc.id);
+      app.setSelectedCategory(doc.category);
+      onNavigate?.();
     }
   };
 
-  const isHomeActive = app.activeTabId === "home" && app.selectedCategory === "home";
+  const handlePointerCancel = () => {
+    if (dragRef.current?.targetEl) {
+      try {
+        dragRef.current.targetEl.releasePointerCapture(dragRef.current.pointerId);
+      } catch {}
+    }
+    dragRef.current = null;
+    setDragState(null);
+  };
 
-  const renderDocButton = (doc: SiteBrand, isPinned: boolean) => {
+  const isHomeActive = app.activeTabId === "home" && app.selectedCategory === "home";
+  const draggedBrand = dragState ? SITE_MAP[dragState.docId] : null;
+
+  const renderDocButton = (doc: SiteBrand, isPinned: boolean, index: number) => {
     const isDocActive = app.activeTab?.siteId === doc.id;
     const hasOpenTab = app.tabs.some((t) => t.siteId === doc.id);
     const isHovered = hoveredItem === doc.id;
-    const isDragging = draggingId === doc.id;
-    const isDragOver = dragOverId === doc.id;
+    const isDragging = dragState?.docId === doc.id;
+
+    // Drop insertion line indicator above or below this pinned item
+    const showIndicatorAbove =
+      isPinned &&
+      dragState &&
+      !dragState.isUnpinnedTarget &&
+      dragState.targetPinnedIndex === index &&
+      dragState.docId !== doc.id;
+
+    const showIndicatorBelow =
+      isPinned &&
+      dragState &&
+      !dragState.isUnpinnedTarget &&
+      index === pinnedDocs.length - 1 &&
+      dragState.targetPinnedIndex === pinnedDocs.length &&
+      dragState.docId !== doc.id;
 
     return (
       <div
         key={doc.id}
-        draggable
-        onDragStart={(e) => {
-          e.dataTransfer.setData("text/plain", doc.id);
-          e.dataTransfer.effectAllowed = "move";
-          setDraggingId(doc.id);
-        }}
-        onDragOver={(e) => {
-          if (isPinned) {
-            e.preventDefault();
-            e.dataTransfer.dropEffect = "move";
-            if (dragOverId !== doc.id) setDragOverId(doc.id);
-          }
-        }}
-        onDragLeave={() => {
-          if (dragOverId === doc.id) setDragOverId(null);
-        }}
-        onDrop={(e) => {
-          e.preventDefault();
-          const droppedId = e.dataTransfer.getData("text/plain") || draggingId;
-          if (droppedId && droppedId !== doc.id && isPinned) {
-            handleDropPinned(droppedId, doc.id);
-          }
-          setDraggingId(null);
-          setDragOverId(null);
-        }}
-        onDragEnd={() => {
-          setDraggingId(null);
-          setDragOverId(null);
-        }}
+        data-doc-item={doc.id}
+        onPointerDown={(e) => handlePointerDown(e, doc.id, isPinned)}
+        onPointerMove={handlePointerMove}
+        onPointerUp={(e) => handlePointerUp(e, doc)}
+        onPointerCancel={handlePointerCancel}
         onContextMenu={(e) => {
           e.preventDefault();
           e.stopPropagation();
@@ -147,16 +270,20 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
           });
         }}
         className={
-          "relative flex items-center justify-center w-full transition-all duration-150 " +
-          (isDragging ? "opacity-30 scale-90" : "") +
-          (isDragOver ? "scale-105" : "")
+          "relative flex items-center justify-center w-full transition-all duration-150 touch-none select-none " +
+          (isDragging ? "opacity-30 scale-90" : "")
         }
         onMouseEnter={() => setHoveredItem(doc.id)}
         onMouseLeave={() => setHoveredItem(null)}
       >
-        {/* Drop target indicator bar above item */}
-        {isDragOver && !isDragging && (
-          <span className="absolute -top-1 inset-x-2 h-0.5 rounded-full bg-brand shadow-sm shadow-brand animate-pulse pointer-events-none z-30" />
+        {/* Drop insertion line indicator above item */}
+        {showIndicatorAbove && (
+          <span className="absolute -top-1.5 inset-x-2 h-1 rounded-full bg-brand shadow-md shadow-brand animate-pulse pointer-events-none z-30" />
+        )}
+
+        {/* Drop insertion line indicator below last pinned item */}
+        {showIndicatorBelow && (
+          <span className="absolute -bottom-1.5 inset-x-2 h-1 rounded-full bg-brand shadow-md shadow-brand animate-pulse pointer-events-none z-30" />
         )}
 
         <span
@@ -174,19 +301,16 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
 
         <Tooltip
           label={
-            isPinned
+            dragState
+              ? ""
+              : isPinned
               ? `${doc.name}${doc.version ? ` (${doc.version})` : ""} • Pinned (Drag to reorder)`
-              : `${doc.name}${doc.version ? ` (${doc.version})` : ""} • Installed`
+              : `${doc.name}${doc.version ? ` (${doc.version})` : ""} • Installed (Drag up to pin)`
           }
           side="right"
         >
           <button
             type="button"
-            onClick={() => {
-              app.openSite(doc.id);
-              app.setSelectedCategory(doc.category);
-              onNavigate?.();
-            }}
             className={
               "discord-server-btn group relative bg-surface hover:bg-surface-deep text-foreground shadow-sm " +
               (isPinned ? "cursor-grab active:cursor-grabbing" : "cursor-pointer")
@@ -194,7 +318,7 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
             aria-label={doc.name}
           >
             <div
-              className="w-6 h-6 transition-transform duration-150 group-hover:scale-110 flex items-center justify-center [&_svg]:w-6 [&_svg]:h-6"
+              className="w-6 h-6 transition-transform duration-150 group-hover:scale-110 flex items-center justify-center pointer-events-none [&_svg]:w-6 [&_svg]:h-6"
               style={{ color: getAdaptiveBrandColor(doc.color, app.isDark) }}
               dangerouslySetInnerHTML={{ __html: getAdaptiveSiteSvg(doc, app.isDark) }}
             />
@@ -207,9 +331,7 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
   return (
     <aside
       className="relative flex h-full w-[72px] shrink-0 flex-col items-center border-r border-border bg-rail py-3 select-none z-20"
-      onMouseLeave={() => {
-        setHoveredItem(null);
-      }}
+      onMouseLeave={() => setHoveredItem(null)}
     >
       {/* 1. App Logo Button - Transparent background, pure white rosette logo */}
       <div
@@ -241,7 +363,7 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
             <img
               src="/logo.png"
               alt="Docx Logo"
-              className="h-9 w-9 object-contain logo-glyph transition-transform group-hover:scale-105"
+              className="h-9 w-9 object-contain logo-glyph transition-transform group-hover:scale-105 pointer-events-none"
               draggable={false}
             />
           </button>
@@ -253,19 +375,42 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
 
       {/* 3. Installed Docs List on Domain Rail */}
       <div className="flex-1 w-full overflow-y-auto no-scrollbar flex flex-col items-center gap-2 py-1">
-        {/* Top: Pinned Docs (Drag & Drop Reorderable) */}
-        {pinnedDocs.map((doc) => renderDocButton(doc, true))}
+        {/* Pinned Docs Section (Top) */}
+        <div ref={pinnedListRef} className="w-full flex flex-col items-center gap-2">
+          {pinnedDocs.map((doc, idx) => renderDocButton(doc, true, idx))}
 
-        {/* Divider between Pinned Docs and Unpinned Docs (if both exist) */}
-        {pinnedDocs.length > 0 && unpinnedDocs.length > 0 && (
-          <div
-            className="my-1.5 h-[1.5px] w-6 rounded-full bg-border-strong/50 shrink-0"
-            title="Other Installed Docs"
-          />
-        )}
+          {/* Empty pinned drop target when 0 docs are pinned */}
+          {pinnedDocs.length === 0 && (
+            <div
+              className={
+                "w-11 h-11 rounded-2xl border-2 border-dashed flex items-center justify-center transition-all " +
+                (dragState && !dragState.isUnpinnedTarget
+                  ? "border-brand bg-brand/10 scale-105"
+                  : "border-border-strong/40 bg-surface/30")
+              }
+              title="Drag doc here to pin"
+            >
+              <Pin
+                className={
+                  "w-4 h-4 " +
+                  (dragState && !dragState.isUnpinnedTarget ? "text-brand" : "text-muted-foreground/40")
+                }
+              />
+            </div>
+          )}
+        </div>
 
-        {/* Bottom: Unpinned Docs (Sorted by name) */}
-        {unpinnedDocs.map((doc) => renderDocButton(doc, false))}
+        {/* Divider between Pinned Docs and Unpinned Docs */}
+        <div
+          ref={dividerRef}
+          className="my-1.5 h-[1.5px] w-6 rounded-full bg-border-strong/50 shrink-0"
+          title="Other Installed Docs"
+        />
+
+        {/* Unpinned Docs Section (Underneath, sorted alphabetically by name) */}
+        <div className="w-full flex flex-col items-center gap-2">
+          {unpinnedDocs.map((doc, idx) => renderDocButton(doc, false, idx))}
+        </div>
 
         {/* Explore & Install More Docs Button */}
         <div
@@ -289,6 +434,25 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
           </Tooltip>
         </div>
       </div>
+
+      {/* Floating Drag Avatar Ghost Following Pointer */}
+      {dragState && draggedBrand && (
+        <div
+          className="fixed pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-surface p-2 shadow-2xl border-2 border-brand scale-110 opacity-90 flex items-center justify-center pointer-events-none"
+          style={{
+            left: dragState.x,
+            top: dragState.y,
+            width: 48,
+            height: 48,
+          }}
+        >
+          <div
+            className="w-6 h-6 flex items-center justify-center [&_svg]:w-6 [&_svg]:h-6"
+            style={{ color: getAdaptiveBrandColor(draggedBrand.color, app.isDark) }}
+            dangerouslySetInnerHTML={{ __html: getAdaptiveSiteSvg(draggedBrand, app.isDark) }}
+          />
+        </div>
+      )}
 
       {/* 4. Bottom Divider */}
       <div className="my-2 h-[2px] w-8 rounded bg-border-strong/60" />

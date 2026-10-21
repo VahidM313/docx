@@ -258,7 +258,10 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       bookmarks: load<DocBookmark[]>("docx_bookmarks_v1", []).filter(
         (b) => b && typeof b.siteId === "string" && typeof b.pathOrUrl === "string",
       ),
-      pinned: load<string[]>("docx_pinned_sites_v1", []),
+      pinned: (() => {
+        const stored = load<string[]>("docx_pinned_sites_v1", ["tailwind", "shadcn"]);
+        return Array.isArray(stored) && stored.length > 0 ? stored : ["tailwind", "shadcn"];
+      })(),
 
       tabs: [{ id: "home", siteId: "home" }],
       activeTabId: "home",
