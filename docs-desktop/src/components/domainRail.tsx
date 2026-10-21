@@ -13,14 +13,42 @@ import {
   PanelLeftOpen,
   Plus,
   Settings,
+  Pin,
+  PinOff,
+  ExternalLink,
 } from "lucide-react";
 
 export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
   const app = useApp();
   const [hoveredItem, setHoveredItem] = React.useState<string | null>(null);
+  const [draggingId, setDraggingId] = React.useState<string | null>(null);
+  const [dragOverId, setDragOverId] = React.useState<string | null>(null);
+  const [contextMenu, setContextMenu] = React.useState<{
+    x: number;
+    y: number;
+    doc: SiteBrand;
+    isPinned: boolean;
+  } | null>(null);
 
-  // Only show installed documentation packs on the domain rail
-  const installedDocs = React.useMemo(() => {
+  // Close context menu on outside click or escape
+  React.useEffect(() => {
+    if (!contextMenu) return;
+    const handleClose = () => setContextMenu(null);
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setContextMenu(null);
+    };
+    window.addEventListener("click", handleClose);
+    window.addEventListener("contextmenu", handleClose);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("click", handleClose);
+      window.removeEventListener("contextmenu", handleClose);
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [contextMenu]);
+
+  // All installed docs
+  const allInstalledBrands = React.useMemo(() => {
     const list = app.entries.filter((e) => e.installed).map((e) => e.brand);
     // If no packs are marked installed yet, fall back to embedded packs as default starting icons
     if (list.length === 0) {
@@ -29,12 +57,159 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
     return list;
   }, [app.entries]);
 
+  const installedMap = React.useMemo(() => {
+    const map = new Map<string, SiteBrand>();
+    allInstalledBrands.forEach((b) => map.set(b.id, b));
+    return map;
+  }, [allInstalledBrands]);
+
+  // 1. Pinned Docs (Top) - in the exact order of app.pinned
+  const pinnedDocs = React.useMemo(() => {
+    return app.pinned
+      .map((id) => installedMap.get(id))
+      .filter((b): b is SiteBrand => !!b);
+  }, [app.pinned, installedMap]);
+
+  // 2. Other installed unpinned docs (Underneath) - sorted alphabetically by name
+  const unpinnedDocs = React.useMemo(() => {
+    const pinnedSet = new Set(app.pinned);
+    const unpinned = allInstalledBrands.filter((b) => !pinnedSet.has(b.id));
+    return unpinned.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: "base" }));
+  }, [allInstalledBrands, app.pinned]);
+
+  // Drag and drop reordering for pinned docs
+  const handleDropPinned = (draggedId: string, targetId: string) => {
+    if (draggedId === targetId) return;
+    const currentPinned = [...app.pinned];
+    const fromIdx = currentPinned.indexOf(draggedId);
+    const toIdx = currentPinned.indexOf(targetId);
+
+    if (fromIdx !== -1 && toIdx !== -1) {
+      const [moved] = currentPinned.splice(fromIdx, 1);
+      currentPinned.splice(toIdx, 0, moved);
+      app.setPinned(currentPinned);
+    } else if (fromIdx === -1 && toIdx !== -1) {
+      // Dropped an unpinned doc onto a pinned doc slot -> pin it at that position!
+      currentPinned.splice(toIdx, 0, draggedId);
+      app.setPinned(currentPinned);
+    }
+  };
+
   const isHomeActive = app.activeTabId === "home" && app.selectedCategory === "home";
+
+  const renderDocButton = (doc: SiteBrand, isPinned: boolean) => {
+    const isDocActive = app.activeTab?.siteId === doc.id;
+    const hasOpenTab = app.tabs.some((t) => t.siteId === doc.id);
+    const isHovered = hoveredItem === doc.id;
+    const isDragging = draggingId === doc.id;
+    const isDragOver = dragOverId === doc.id;
+
+    return (
+      <div
+        key={doc.id}
+        draggable
+        onDragStart={(e) => {
+          e.dataTransfer.setData("text/plain", doc.id);
+          e.dataTransfer.effectAllowed = "move";
+          setDraggingId(doc.id);
+        }}
+        onDragOver={(e) => {
+          if (isPinned) {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = "move";
+            if (dragOverId !== doc.id) setDragOverId(doc.id);
+          }
+        }}
+        onDragLeave={() => {
+          if (dragOverId === doc.id) setDragOverId(null);
+        }}
+        onDrop={(e) => {
+          e.preventDefault();
+          const droppedId = e.dataTransfer.getData("text/plain") || draggingId;
+          if (droppedId && droppedId !== doc.id && isPinned) {
+            handleDropPinned(droppedId, doc.id);
+          }
+          setDraggingId(null);
+          setDragOverId(null);
+        }}
+        onDragEnd={() => {
+          setDraggingId(null);
+          setDragOverId(null);
+        }}
+        onContextMenu={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          setContextMenu({
+            x: Math.min(e.clientX, window.innerWidth - 180),
+            y: Math.min(e.clientY, window.innerHeight - 150),
+            doc,
+            isPinned,
+          });
+        }}
+        className={
+          "relative flex items-center justify-center w-full transition-all duration-150 " +
+          (isDragging ? "opacity-30 scale-90" : "") +
+          (isDragOver ? "scale-105" : "")
+        }
+        onMouseEnter={() => setHoveredItem(doc.id)}
+        onMouseLeave={() => setHoveredItem(null)}
+      >
+        {/* Drop target indicator bar above item */}
+        {isDragOver && !isDragging && (
+          <span className="absolute -top-1 inset-x-2 h-0.5 rounded-full bg-brand shadow-sm shadow-brand animate-pulse pointer-events-none z-30" />
+        )}
+
+        <span
+          className={
+            "discord-pill " +
+            (isDocActive
+              ? "discord-pill-active"
+              : isHovered
+              ? "discord-pill-hover"
+              : hasOpenTab
+              ? "discord-pill-open"
+              : "discord-pill-unread")
+          }
+        />
+
+        <Tooltip
+          label={
+            isPinned
+              ? `${doc.name}${doc.version ? ` (${doc.version})` : ""} • Pinned (Drag to reorder)`
+              : `${doc.name}${doc.version ? ` (${doc.version})` : ""} • Installed`
+          }
+          side="right"
+        >
+          <button
+            type="button"
+            onClick={() => {
+              app.openSite(doc.id);
+              app.setSelectedCategory(doc.category);
+              onNavigate?.();
+            }}
+            className={
+              "discord-server-btn group relative bg-surface hover:bg-surface-deep text-foreground shadow-sm " +
+              (isPinned ? "cursor-grab active:cursor-grabbing" : "cursor-pointer")
+            }
+            aria-label={doc.name}
+          >
+            <div
+              className="w-6 h-6 transition-transform duration-150 group-hover:scale-110 flex items-center justify-center [&_svg]:w-6 [&_svg]:h-6"
+              style={{ color: getAdaptiveBrandColor(doc.color, app.isDark) }}
+              dangerouslySetInnerHTML={{ __html: getAdaptiveSiteSvg(doc, app.isDark) }}
+            />
+          </button>
+        </Tooltip>
+      </div>
+    );
+  };
 
   return (
     <aside
       className="relative flex h-full w-[72px] shrink-0 flex-col items-center border-r border-border bg-rail py-3 select-none z-20"
-      onMouseLeave={() => setHoveredItem(null)}
+      onMouseLeave={() => {
+        setHoveredItem(null);
+      }}
     >
       {/* 1. App Logo Button - Transparent background, pure white rosette logo */}
       <div
@@ -73,60 +248,24 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
         </Tooltip>
       </div>
 
-      {/* 2. Server Divider */}
+      {/* 2. Top Server Divider */}
       <div className="my-2 h-[2px] w-8 rounded bg-border-strong/60" />
 
-      {/* 3. Installed Docs List on Domain Rail (Only installed docs) */}
+      {/* 3. Installed Docs List on Domain Rail */}
       <div className="flex-1 w-full overflow-y-auto no-scrollbar flex flex-col items-center gap-2 py-1">
-        {installedDocs.map((doc) => {
-          const isDocActive = app.activeTab?.siteId === doc.id;
-          const hasOpenTab = app.tabs.some((t) => t.siteId === doc.id);
-          const isHovered = hoveredItem === doc.id;
+        {/* Top: Pinned Docs (Drag & Drop Reorderable) */}
+        {pinnedDocs.map((doc) => renderDocButton(doc, true))}
 
-          return (
-            <div
-              key={doc.id}
-              className="relative flex items-center justify-center w-full"
-              onMouseEnter={() => setHoveredItem(doc.id)}
-              onMouseLeave={() => setHoveredItem(null)}
-            >
-              <span
-                className={
-                  "discord-pill " +
-                  (isDocActive
-                    ? "discord-pill-active"
-                    : isHovered
-                    ? "discord-pill-hover"
-                    : hasOpenTab
-                    ? "discord-pill-open"
-                    : "discord-pill-unread")
-                }
-              />
+        {/* Divider between Pinned Docs and Unpinned Docs (if both exist) */}
+        {pinnedDocs.length > 0 && unpinnedDocs.length > 0 && (
+          <div
+            className="my-1.5 h-[1.5px] w-6 rounded-full bg-border-strong/50 shrink-0"
+            title="Other Installed Docs"
+          />
+        )}
 
-              <Tooltip
-                label={`${doc.name}${doc.version ? ` (${doc.version})` : ""} • Installed`}
-                side="right"
-              >
-                <button
-                  type="button"
-                  onClick={() => {
-                    app.openSite(doc.id);
-                    app.setSelectedCategory(doc.category);
-                    onNavigate?.();
-                  }}
-                  className="discord-server-btn group relative bg-surface hover:bg-surface-deep text-foreground shadow-sm"
-                  aria-label={doc.name}
-                >
-                  <div
-                    className="w-6 h-6 transition-transform duration-150 group-hover:scale-110 flex items-center justify-center [&_svg]:w-6 [&_svg]:h-6"
-                    style={{ color: getAdaptiveBrandColor(doc.color, app.isDark) }}
-                    dangerouslySetInnerHTML={{ __html: getAdaptiveSiteSvg(doc, app.isDark) }}
-                  />
-                </button>
-              </Tooltip>
-            </div>
-          );
-        })}
+        {/* Bottom: Unpinned Docs (Sorted by name) */}
+        {unpinnedDocs.map((doc) => renderDocButton(doc, false))}
 
         {/* Explore & Install More Docs Button */}
         <div
@@ -142,7 +281,7 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
                 app.goHome();
                 onNavigate?.();
               }}
-              className="discord-server-btn group relative border-2 border-dashed border-border-strong/70 hover:border-brand bg-transparent hover:bg-surface text-muted-foreground hover:text-brand transition-all"
+              className="discord-server-btn group relative border-2 border-dashed border-border-strong/70 hover:border-brand bg-transparent hover:bg-surface text-muted-foreground hover:text-brand transition-all cursor-pointer"
               aria-label="Explore and Install Docs"
             >
               <Plus className="w-5 h-5 transition-transform duration-150 group-hover:scale-110" />
@@ -234,6 +373,52 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
           </Tooltip>
         </div>
       </div>
+
+      {/* Context Menu on Right Click */}
+      {contextMenu && (
+        <div
+          className="fixed z-50 min-w-[170px] rounded-xl border border-border bg-surface p-1 shadow-lift text-xs font-medium text-foreground backdrop-blur-md animate-in fade-in zoom-in-95 duration-100"
+          style={{ left: contextMenu.x, top: contextMenu.y }}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="px-2.5 py-1.5 text-[11px] font-semibold text-muted-foreground border-b border-border/60 truncate">
+            {contextMenu.doc.name}
+          </div>
+          <button
+            type="button"
+            className="flex items-center gap-2 w-full px-2.5 py-1.5 rounded-lg hover:bg-surface-deep hover:text-foreground text-left cursor-pointer transition-colors"
+            onClick={() => {
+              app.togglePin(contextMenu.doc.id);
+              setContextMenu(null);
+            }}
+          >
+            {contextMenu.isPinned ? (
+              <>
+                <PinOff className="w-3.5 h-3.5 text-brand" />
+                <span>Unpin from rail</span>
+              </>
+            ) : (
+              <>
+                <Pin className="w-3.5 h-3.5 text-brand" />
+                <span>Pin to top</span>
+              </>
+            )}
+          </button>
+          <button
+            type="button"
+            className="flex items-center gap-2 w-full px-2.5 py-1.5 rounded-lg hover:bg-surface-deep hover:text-foreground text-left cursor-pointer transition-colors"
+            onClick={() => {
+              app.openSite(contextMenu.doc.id);
+              app.setSelectedCategory(contextMenu.doc.category);
+              onNavigate?.();
+              setContextMenu(null);
+            }}
+          >
+            <ExternalLink className="w-3.5 h-3.5" />
+            <span>Open in Tab</span>
+          </button>
+        </div>
+      )}
     </aside>
   );
 }

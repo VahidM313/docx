@@ -7,7 +7,6 @@ import {
   type ServerStatus,
 } from "./tauri";
 import { SITES, SITE_MAP, getEntryPath, getSiteOrigin, EMBEDDED_SITE_IDS, type SiteBrand } from "./catalog";
-import { preloadInstalledSites } from "./search";
 
 /* ------------------------------------------------------------------ */
 /* Persistence helpers                                                 */
@@ -47,6 +46,18 @@ export interface DocBookmark {
 
 export type ThemeMode = "light" | "dark" | "system";
 
+export interface DocPreferences {
+  theme: "dark" | "light" | "system";
+  fontSize: number; // default 16
+  fontFamily: string; // default "default"
+}
+
+export const DEFAULT_DOC_PREFS: DocPreferences = {
+  theme: "system",
+  fontSize: 16,
+  fontFamily: "default",
+};
+
 /** Force mode overrides every site's dark setting when not "off". */
 export type ForceTheme = "off" | "dark" | "light";
 
@@ -58,9 +69,7 @@ export interface FeatureFlags {
 
 /** Which chrome surfaces are pinned fixed-open (vs hover-reveal transient). */
 export interface UiPins {
-  topbar: boolean;
   sidebar: boolean;
-  tabs: boolean;
 }
 
 /** Defaults merged over whatever the user has persisted (flag migrations). */
@@ -70,8 +79,8 @@ export const DEFAULT_FLAGS: FeatureFlags = {
   customFont: true,
 };
 
-/** Everything starts transient: hover the edges to reveal. */
-export const DEFAULT_PINS: UiPins = { topbar: false, sidebar: false, tabs: false };
+/** Sidebar starts as an icon rail; hover reveals labels, pinning keeps it open. */
+export const DEFAULT_PINS: UiPins = { sidebar: false };
 
 export interface Toast {
   id: number;
@@ -106,6 +115,7 @@ interface AppState {
   themeMode: ThemeMode;
   forceTheme: ForceTheme;
   siteDark: Record<string, boolean>;
+  docPrefs: Record<string, DocPreferences>;
   flags: FeatureFlags;
   readerZoom: number;
   pins: UiPins;
@@ -129,6 +139,18 @@ interface AppState {
   drawerOpen: boolean;
   bookmarksOpen: boolean;
   settingsOpen: boolean;
+
+  selectedCategory: string;
+  mobileNavOpen: boolean;
+  memberOutlineOpen: boolean;
+  channelSearchQuery: string;
+  quickFilter: "all" | "installed" | "bookmarks";
+
+  sidebarPinned: boolean;
+  sidebarHovered: boolean;
+  sidebarOpen: boolean;
+  zenMode: boolean;
+  openedDocs: string[];
 }
 
 interface AppApi extends AppState {
@@ -143,14 +165,16 @@ interface AppApi extends AppState {
   dismissSplash: () => void;
 
   setThemeMode: (m: ThemeMode) => void;
+  setSystemDark: (v: boolean) => void;
   setForceTheme: (f: ForceTheme) => void;
   cycleForceTheme: () => void;
-  setTopbarPin: (v?: boolean) => void;
   setSidebarPin: (v?: boolean) => void;
-  setTabsPin: (v?: boolean) => void;
-  togglePinSurface: (k: keyof UiPins) => void;
+  toggleSidebarPin: () => void;
   effectiveSiteDark: (siteId: string) => boolean;
   toggleSiteDark: (siteId: string) => void;
+  getDocPrefs: (siteId: string) => DocPreferences;
+  setDocPrefs: (siteId: string, patch: Partial<DocPreferences>) => void;
+  stepDocFontSize: (siteId: string, delta: number) => void;
   setFlag: (k: keyof FeatureFlags, v: boolean) => void;
   setReaderZoom: (z: number) => void;
 
@@ -173,6 +197,8 @@ interface AppApi extends AppState {
   goHome: () => void;
 
   togglePin: (siteId: string) => void;
+  setPinned: (pinned: string[]) => void;
+  reorderPinned: (fromIndex: number, toIndex: number) => void;
 
   toggleBookmark: (b: { siteId: string; title: string; pathOrUrl: string }) => void;
   removeBookmark: (id: string) => void;
@@ -181,6 +207,21 @@ interface AppApi extends AppState {
   setDrawerOpen: (v: boolean) => void;
   setBookmarksOpen: (v: boolean) => void;
   setSettingsOpen: (v: boolean) => void;
+
+  setSelectedCategory: (cat: string) => void;
+  setMobileNavOpen: (v: boolean) => void;
+  setMemberOutlineOpen: (v: boolean | ((prev: boolean) => boolean)) => void;
+  setChannelSearchQuery: (q: string) => void;
+  setQuickFilter: (f: "all" | "installed" | "bookmarks") => void;
+
+  setSidebarPinned: (v: boolean | ((prev: boolean) => boolean)) => void;
+  toggleSidebarPinned: () => void;
+  setSidebarHovered: (v: boolean) => void;
+  setSidebarOpen: (v: boolean | ((prev: boolean) => boolean)) => void;
+  toggleSidebarOpen: () => void;
+  markDocOpened: (id: string) => void;
+  setZenMode: (v: boolean | ((prev: boolean) => boolean)) => void;
+  toggleZenMode: () => void;
 
   toast: (t: Omit<Toast, "id">) => void;
   dropToast: (id: number) => void;
@@ -201,13 +242,13 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       phase: "splash",
       splash: { percent: 8, text: "Initializing offline engine…" },
       systemDark: true,
-      themeMode: load<ThemeMode>("docx_theme_mode", "system"),
+      themeMode: load<ThemeMode>("docx_theme_mode", "dark"),
       forceTheme: load<ForceTheme>("docx_force_theme", "off"),
       siteDark: load<Record<string, boolean>>("docx_site_dark", {}),
-      flags: { ...DEFAULT_FLAGS, ...load< Partial<FeatureFlags>>("docx_feature_flags_v1", {}) },
+      docPrefs: load<Record<string, DocPreferences>>("docx_doc_prefs_v1", {}),
+      flags: { ...DEFAULT_FLAGS, ...load<Partial<FeatureFlags>>("docx_feature_flags_v1", {}) },
       readerZoom: load<number>("docx_reader_zoom", 100),
       pins: { ...DEFAULT_PINS, ...load<Partial<UiPins>>("docx_ui_pins_v1", {}) },
-
       packs: [],
       registry: [],
       servers: null,
@@ -229,10 +270,45 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       drawerOpen: false,
       bookmarksOpen: false,
       settingsOpen: false,
+
+      selectedCategory: load<string>("docx_selected_category", "Frontend & UI"),
+      mobileNavOpen: false,
+      memberOutlineOpen: load<boolean>("docx_member_outline_open", true),
+      channelSearchQuery: "",
+      quickFilter: "all",
+
+      sidebarPinned: load<boolean>("docx_sidebar_pinned", true),
+      sidebarHovered: false,
+      sidebarOpen: load<boolean>("docx_sidebar_open", true),
+      zenMode: false,
+      openedDocs: load<string[]>("docx_opened_docs_v2", []),
     },
   );
 
   const toastId = React.useRef(1);
+
+  /* Derived collections are memoized so unrelated state changes (toasts,
+     hover chrome, palette) never rebuild 123 site entries or re-render the
+     whole library grid. */
+  const entries = React.useMemo(
+    () => SITES.map((brand) => buildEntry(brand, state.packs, state.registry, state.downloads)),
+    [state.packs, state.registry, state.downloads],
+  );
+  const activeTab = React.useMemo(
+    () => state.tabs.find((t) => t.id === state.activeTabId) ?? null,
+    [state.tabs, state.activeTabId],
+  );
+  const outdatedCount = React.useMemo(
+    () =>
+      SITES.filter((brand) => {
+        const local = state.packs.find((p) => p.id === brand.id);
+        const remote = state.registry.find((r) => r.id === brand.id);
+        return !!local && !!remote && remote.commit !== local.commit;
+      }).length,
+    [state.packs, state.registry],
+  );
+  const isDark =
+    state.themeMode === "dark" || (state.themeMode === "system" && state.systemDark);
 
   /* ------- actions ------- */
   const api = React.useMemo<AppApi>(() => {
@@ -243,8 +319,10 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       setState({ themeMode: m });
     };
 
-    const setForceTheme = (f: ForceTheme) => {
-      save("docx_force_theme", f);
+    const setSystemDark = (v: boolean) =>
+      setState((s) => (s.systemDark === v ? {} : { systemDark: v }));
+
+    const setForceTheme = (f: ForceTheme) => {      save("docx_force_theme", f);
       setState({ forceTheme: f });
     };
 
@@ -263,38 +341,68 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       });
     };
 
-    const setPinSurface = (k: keyof UiPins, v: boolean) =>
+    const setSidebarPin = (v?: boolean) =>
       setState((s) => {
-        const next = { ...s.pins, [k]: v };
+        const next = { sidebar: v ?? !s.pins.sidebar };
         save("docx_ui_pins_v1", next);
         return { pins: next };
       });
-    const togglePinSurface = (k: keyof UiPins) =>
-      setState((s) => {
-        const next = { ...s.pins, [k]: !s.pins[k] };
-        save("docx_ui_pins_v1", next);
-        return { pins: next };
-      });
-    const setTopbarPin = (v?: boolean) => setPinSurface("topbar", v ?? !state.pins.topbar);
-    const setSidebarPin = (v?: boolean) => setPinSurface("sidebar", v ?? !state.pins.sidebar);
-    const setTabsPin = (v?: boolean) => setPinSurface("tabs", v ?? !state.pins.tabs);
+    const toggleSidebarPin = () => setSidebarPin();
 
     /** Is the app chrome dark right now (no force involvement). */
     const appDark = (s: AppState) => s.themeMode === "dark" || (s.themeMode === "system" && s.systemDark);
 
-    /** Effective per-site dark, honoring the force override. */
+    /** Effective per-site dark, honoring the force override and per-doc preferences. */
     const effectiveSiteDark = (siteId: string) => {
       if (state.forceTheme === "dark") return true;
       if (state.forceTheme === "light") return false;
+      const pref = state.docPrefs[siteId]?.theme;
+      if (pref === "dark") return true;
+      if (pref === "light") return false;
+      if (pref === "system") return appDark(state);
       return state.siteDark[siteId] ?? appDark(state);
     };
 
-    const toggleSiteDark = (siteId: string) =>
+    const getDocPrefs = (siteId: string): DocPreferences => {
+      const p = state.docPrefs[siteId];
+      const legacyDark = state.siteDark[siteId];
+      const fallbackTheme: "dark" | "light" | "system" =
+        legacyDark !== undefined ? (legacyDark ? "dark" : "light") : "system";
+      return {
+        theme: p?.theme ?? fallbackTheme,
+        fontSize: p?.fontSize ?? 16,
+        fontFamily: p?.fontFamily ?? "default",
+      };
+    };
+
+    const setDocPrefs = (siteId: string, patch: Partial<DocPreferences>) => {
       setState((s) => {
-        const next = { ...s.siteDark, [siteId]: !(s.siteDark[siteId] ?? appDark(s)) };
-        save("docx_site_dark", next);
-        return { siteDark: next };
+        const cur = s.docPrefs[siteId] ?? {
+          theme: s.siteDark[siteId] !== undefined ? (s.siteDark[siteId] ? "dark" : "light") : "system",
+          fontSize: 16,
+          fontFamily: "default",
+        };
+        const updated: DocPreferences = { ...cur, ...patch };
+        const next = { ...s.docPrefs, [siteId]: updated };
+        save("docx_doc_prefs_v1", next);
+        const isNowDark =
+          updated.theme === "dark" ? true : updated.theme === "light" ? false : appDark(s);
+        const nextSiteDark = { ...s.siteDark, [siteId]: isNowDark };
+        save("docx_site_dark", nextSiteDark);
+        return { docPrefs: next, siteDark: nextSiteDark };
       });
+    };
+
+    const stepDocFontSize = (siteId: string, delta: number) => {
+      const cur = getDocPrefs(siteId);
+      const nextSize = Math.max(12, Math.min(26, (cur.fontSize || 16) + delta));
+      setDocPrefs(siteId, { fontSize: nextSize });
+    };
+
+    const toggleSiteDark = (siteId: string) => {
+      const isCurrentlyDark = effectiveSiteDark(siteId);
+      setDocPrefs(siteId, { theme: isCurrentlyDark ? "light" : "dark" });
+    };
 
     const setFlag = (k: keyof FeatureFlags, v: boolean) =>
       setState((s) => {
@@ -313,7 +421,6 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       try {
         const packs = await Tauri.getInstalledPacks();
         setState({ packs });
-        if (packs.length) void preloadInstalledSites(packs);
       } catch {}
       if (opts?.withRegistry !== false) {
         try {
@@ -441,15 +548,20 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     const openSite = (siteId: string, path?: string) => {
       if (!SITE_MAP[siteId]) return;
       setState((s) => {
+        const nextOpened = s.openedDocs.includes(siteId) ? s.openedDocs : [...s.openedDocs, siteId];
+        if (nextOpened !== s.openedDocs) {
+          save("docx_opened_docs_v2", nextOpened);
+        }
         const existing = s.tabs.find((t) => t.siteId === siteId);
         if (existing && !path) {
-          return { activeTabId: existing.id, drawerOpen: false };
+          return { activeTabId: existing.id, drawerOpen: false, openedDocs: nextOpened };
         }
         if (existing && path) {
           return {
             tabs: s.tabs.map((t) => (t.id === existing.id ? { ...t, pathOrUrl: path } : t)),
             activeTabId: existing.id,
             drawerOpen: false,
+            openedDocs: nextOpened,
           };
         }
         const title = SITE_MAP[siteId]?.name ?? siteId;
@@ -460,6 +572,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
             tabs: s.tabs.map((t) => (t.id === active.id ? { ...t, siteId, pathOrUrl: path, title } : t)),
             activeTabId: active.id,
             drawerOpen: false,
+            openedDocs: nextOpened,
           };
         }
         const id = `tab-${siteId}-${Date.now()}`;
@@ -468,6 +581,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
           activeTabId: id,
           drawerOpen: false,
           bookmarksOpen: false,
+          openedDocs: nextOpened,
         };
       });
     };
@@ -527,6 +641,24 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         return { pinned: next };
       });
 
+    const setPinned = (pinned: string[]) =>
+      setState(() => {
+        save("docx_pinned_sites_v1", pinned);
+        return { pinned };
+      });
+
+    const reorderPinned = (fromIndex: number, toIndex: number) =>
+      setState((s) => {
+        const next = [...s.pinned];
+        if (fromIndex < 0 || fromIndex >= next.length || toIndex < 0 || toIndex >= next.length) {
+          return s;
+        }
+        const [moved] = next.splice(fromIndex, 1);
+        next.splice(toIndex, 0, moved);
+        save("docx_pinned_sites_v1", next);
+        return { pinned: next };
+      });
+
     const toggleBookmark = (b: { siteId: string; title: string; pathOrUrl: string }) =>
       setState((s) => {
         const key = `${b.siteId}|${b.pathOrUrl}`;
@@ -553,35 +685,25 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
     return {
       ...state,
-      get isDark() {
-        return state.themeMode === "dark" || (state.themeMode === "system" && state.systemDark);
-      },
-      get entries(): SiteEntry[] {
-        return SITES.map((brand) => buildEntry(brand, state.packs, state.registry, state.downloads));
-      },
-      get activeTab() {
-        return state.tabs.find((t) => t.id === state.activeTabId) ?? null;
-      },
-      get outdatedCount() {
-        return SITES.filter((brand) => {
-          const local = state.packs.find((p) => p.id === brand.id);
-          const remote = state.registry.find((r) => r.id === brand.id);
-          return !!local && !!remote && remote.commit !== local.commit;
-        }).length;
-      },
+      isDark,
+      entries,
+      activeTab,
+      outdatedCount,
       toast,
       dropToast,
       setSplash: (percent: number, text: string) => setState({ splash: { percent, text } }),
       dismissSplash: () => setState({ phase: "ready" }),
       setThemeMode,
+      setSystemDark,
       setForceTheme,
       cycleForceTheme,
-      setTopbarPin,
       setSidebarPin,
-      setTabsPin,
-      togglePinSurface,
+      toggleSidebarPin,
       effectiveSiteDark,
       toggleSiteDark,
+      getDocPrefs,
+      setDocPrefs,
+      stepDocFontSize,
       setFlag,
       setReaderZoom,
       refreshPacks,
@@ -601,15 +723,75 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       duplicateTab,
       setTabMeta,
       togglePin,
+      setPinned,
+      reorderPinned,
       toggleBookmark,
       removeBookmark,
       setPaletteOpen: (v) => setState({ paletteOpen: v }),
       setDrawerOpen: (v) => setState({ drawerOpen: v }),
       setBookmarksOpen: (v) => setState({ bookmarksOpen: v }),
       setSettingsOpen: (v) => setState({ settingsOpen: v }),
+      setSelectedCategory: (cat: string) => {
+        save("docx_selected_category", cat);
+        setState({ selectedCategory: cat });
+      },
+      setMobileNavOpen: (v: boolean) => setState({ mobileNavOpen: v }),
+      setMemberOutlineOpen: (val: boolean | ((prev: boolean) => boolean)) => {
+        setState((s) => {
+          const next = typeof val === "function" ? val(s.memberOutlineOpen) : val;
+          save("docx_member_outline_open", next);
+          return { memberOutlineOpen: next };
+        });
+      },
+      setChannelSearchQuery: (q: string) => setState({ channelSearchQuery: q }),
+      setQuickFilter: (f: "all" | "installed" | "bookmarks") => setState({ quickFilter: f }),
+      setSidebarPinned: (val: boolean | ((prev: boolean) => boolean)) => {
+        setState((s) => {
+          const next = typeof val === "function" ? val(s.sidebarPinned) : val;
+          save("docx_sidebar_pinned", next);
+          return { sidebarPinned: next };
+        });
+      },
+      toggleSidebarPinned: () => {
+        setState((s) => {
+          const next = !s.sidebarPinned;
+          save("docx_sidebar_pinned", next);
+          return { sidebarPinned: next };
+        });
+      },
+      setSidebarHovered: (v: boolean) => setState({ sidebarHovered: v }),
+      setSidebarOpen: (val: boolean | ((prev: boolean) => boolean)) => {
+        setState((s) => {
+          const next = typeof val === "function" ? val(s.sidebarOpen) : val;
+          save("docx_sidebar_open", next);
+          return { sidebarOpen: next };
+        });
+      },
+      toggleSidebarOpen: () => {
+        setState((s) => {
+          const next = !s.sidebarOpen;
+          save("docx_sidebar_open", next);
+          return { sidebarOpen: next };
+        });
+      },
+      markDocOpened: (id: string) => {
+        setState((s) => {
+          if (s.openedDocs.includes(id)) return s;
+          const next = [...s.openedDocs, id];
+          save("docx_opened_docs_v2", next);
+          return { openedDocs: next };
+        });
+      },
+      setZenMode: (val: boolean | ((prev: boolean) => boolean)) => {
+        setState((s) => {
+          const next = typeof val === "function" ? val(s.zenMode) : val;
+          return { zenMode: next };
+        });
+      },
+      toggleZenMode: () => setState((s) => ({ zenMode: !s.zenMode })),
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state]);
+  }, [state, entries, activeTab, outdatedCount, isDark]);
 
   return <Ctx.Provider value={api}>{children}</Ctx.Provider>;
 }

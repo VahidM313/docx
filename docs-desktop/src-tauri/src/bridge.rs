@@ -92,7 +92,9 @@ pub(crate) fn inject_reader_bridge(site_key: &str, mut html: String) -> Vec<u8> 
         html = html.replace("href=\"/qt/", "href=\"/qt-6/");
     }
 
-    // Ensure all documentation pages are responsive on mobile screens
+    // Ensure all documentation pages are responsive on mobile and desktop screens
+    html = html.replace("content=\"width=1120\"", "content=\"width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover\"");
+    html = html.replace("content='width=1120'", "content=\"width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover\"");
     if !html.contains("name=\"viewport\"") && !html.contains("name='viewport'")
         && let Some(pos) = html.find("<head>").or_else(|| html.find("<HEAD>")) {
             html.insert_str(pos + 6, "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover\" />");
