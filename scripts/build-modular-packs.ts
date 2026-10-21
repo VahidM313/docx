@@ -104,8 +104,12 @@ function buildSitePack(
   };
 
   const manifestBytes = Buffer.from(JSON.stringify(siteManifest), "utf-8");
-  const header = Buffer.alloc(4);
-  header.writeUInt32LE(manifestBytes.byteLength, 0);
+  const header = Buffer.alloc(16);
+  header.write("DOCP", 0, 4, "ascii");
+  header.writeUInt16LE(2, 4); // version 2
+  header.writeUInt16LE(2, 6); // Brotli/mixed flag
+  header.writeUInt32LE(manifestBytes.byteLength, 8);
+  header.writeUInt32LE(0, 12); // reserved
 
   const docpackPath = path.join(packsDir, `${id}.docpack`);
   const manifestPath = path.join(packsDir, `${id}.manifest.json`);

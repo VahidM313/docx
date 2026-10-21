@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import crypto from "crypto";
+import zlib from "zlib";
 
 import siteCatalog from "../docs-desktop/sites.json";
 
@@ -400,6 +401,11 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
           html += snippet;
         }
 
+        // Minify & normalize HTML: strip comments, transient nonces, and collapse whitespace
+        html = html.replace(/<!--(?!\[if)[\s\S]*?-->/g, "");
+        html = html.replace(/\snonce=["'][^"']*["']/gi, "");
+        html = html.replace(/>\s{2,}</g, "><");
+
         const htmlBytes = Buffer.from(html, "utf-8");
         rawAssets.set(routeKey, { bytes: htmlBytes, mime: "text/html; charset=utf-8" });
         if (pageUrl.pathname !== routeKey) {
@@ -469,6 +475,10 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
           cssText = cssText.replace(/url\(\s*(['"]?)([^'")]+)\1\s*\)/gi, (fullCssUrl, quote, rawTarget) => {
             const cleanTarget = rawTarget.trim();
             if (cleanTarget.startsWith("data:") || cleanTarget.startsWith("#")) return fullCssUrl;
+            // Filter non-Latin font subsets (arabic, hebrew, cyrillic, asian) for English docpacks
+            if (/(arabic|hebrew|cyrillic|vietnamese|korean|japanese|chinese|thai|devanagari|bengali|tamil)/i.test(cleanTarget)) {
+              return fullCssUrl;
+            }
             try {
               const resolved = new URL(cleanTarget, fullUrl);
               const subLocal = assetUrlToLocalRoute(resolved.href, site.origin);
@@ -522,27 +532,50 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
     }
   }
 
-  // 4. Pack all HTML + CSS + Fonts + Images into Max-Gzip content-hashed chunks
+  // 4. Pack all HTML + CSS + Fonts + Images into Brotli Q11 content-hashed chunks
   const routes: Record<string, any> = {};
   const chunks: Buffer[] = [];
   let currentOffset = 0;
   const hashToChunk = new Map<string, { offset: number; length: number; hash: string }>();
 
   for (const [routeKey, asset] of rawAssets.entries()) {
-    const gz = Buffer.from(Bun.gzipSync(asset.bytes, { level: 9 }));
-    const hash = crypto.createHash("sha256").update(gz).digest("hex").slice(0, 16);
+    const isText =
+      asset.mime.startsWith("text/") ||
+      asset.mime.includes("javascript") ||
+      asset.mime.includes("json") ||
+      asset.mime.includes("svg+xml");
+
+    let chunkBytes: Buffer;
+    let encoding: string = "identity";
+
+    if (isText) {
+      chunkBytes = zlib.brotliCompressSync(asset.bytes, {
+        params: {
+          [zlib.constants.BROTLI_PARAM_QUALITY]: 11,
+          [zlib.constants.BROTLI_PARAM_LGWIN]: 24,
+        },
+      });
+      encoding = "br";
+    } else {
+      chunkBytes = asset.bytes;
+      encoding = "identity";
+    }
+
+    const hash = crypto.createHash("sha256").update(chunkBytes).digest("hex").slice(0, 16);
     let stored = hashToChunk.get(hash);
     if (!stored) {
-      stored = { offset: currentOffset, length: gz.byteLength, hash };
+      stored = { offset: currentOffset, length: chunkBytes.byteLength, hash };
       hashToChunk.set(hash, stored);
-      chunks.push(gz);
-      currentOffset += gz.byteLength;
+      chunks.push(chunkBytes);
+      currentOffset += chunkBytes.byteLength;
     }
     routes[routeKey] = {
       offset: stored.offset,
       length: stored.length,
+      rawLength: asset.bytes.byteLength,
       mime: asset.mime,
-      gzipped: true,
+      gzipped: false,
+      encoding,
       hash: stored.hash,
     };
   }
@@ -579,6 +612,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
     name: site.name,
     version: site.version,
     commit: commitHash,
+    compression: "brotli",
     origin: site.origin,
     entryPath: site.entryPath,
     updatedAt: new Date().toISOString(),
@@ -588,8 +622,13 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
   };
 
   const manifestBytes = Buffer.from(JSON.stringify(manifest), "utf-8");
-  const header = Buffer.alloc(4);
-  header.writeUInt32LE(manifestBytes.byteLength, 0);
+  // Docpack v2 header: DOCP (4) + version 2 (2) + flags (2) + manifest_len (4) + reserved (4) = 16 bytes
+  const header = Buffer.alloc(16);
+  header.write("DOCP", 0, 4, "ascii");
+  header.writeUInt16LE(2, 4); // version 2
+  header.writeUInt16LE(2, 6); // Brotli flag
+  header.writeUInt32LE(manifestBytes.byteLength, 8);
+  header.writeUInt32LE(0, 12); // reserved
 
   const docpackPath = path.join(outDir, `${site.id}.docpack`);
   const manifestPath = path.join(outDir, `${site.id}.manifest.json`);
