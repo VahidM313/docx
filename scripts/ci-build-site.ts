@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import crypto from "crypto";
 import zlib from "zlib";
+import { generateDeltaPatch } from "./generate-delta";
 
 import siteCatalog from "../docs-desktop/sites.json";
 
@@ -537,6 +538,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
   const chunks: Buffer[] = [];
   let currentOffset = 0;
   const hashToChunk = new Map<string, { offset: number; length: number; hash: string }>();
+  const chunksByHash = new Map<string, Buffer>();
 
   for (const [routeKey, asset] of rawAssets.entries()) {
     const isText =
@@ -566,6 +568,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
     if (!stored) {
       stored = { offset: currentOffset, length: chunkBytes.byteLength, hash };
       hashToChunk.set(hash, stored);
+      chunksByHash.set(hash, chunkBytes);
       chunks.push(chunkBytes);
       currentOffset += chunkBytes.byteLength;
     }
@@ -621,6 +624,35 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
     routes,
   };
 
+  const docpackPath = path.join(outDir, `${site.id}.docpack`);
+  const manifestPath = path.join(outDir, `${site.id}.manifest.json`);
+  const searchPath = path.join(outDir, `${site.id}.search.json`);
+
+  // Generate single-stream .delta patch if a previous manifest exists
+  let previousManifest: any = null;
+  if (fs.existsSync(manifestPath)) {
+    try {
+      previousManifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
+    } catch {}
+  }
+
+  if (previousManifest && previousManifest.commit && previousManifest.commit !== commitHash) {
+    try {
+      const deltaBuf = generateDeltaPatch(previousManifest, manifest, chunksByHash);
+      const deltaPath = path.join(outDir, `${site.id}.delta`);
+      fs.writeFileSync(deltaPath, deltaBuf);
+      (manifest as any).delta = {
+        fromCommit: previousManifest.commit,
+        toCommit: commitHash,
+        sizeBytes: deltaBuf.byteLength,
+        hash: crypto.createHash("sha256").update(deltaBuf).digest("hex").slice(0, 16),
+      };
+      console.log(`  ✓ Generated ${site.id}.delta: ${(deltaBuf.byteLength / 1024).toFixed(1)} KB (patch from ${previousManifest.commit})`);
+    } catch (e: any) {
+      console.warn(`  Warning: Failed to generate .delta: ${e?.message}`);
+    }
+  }
+
   const manifestBytes = Buffer.from(JSON.stringify(manifest), "utf-8");
   // Docpack v2 header: DOCP (4) + version 2 (2) + flags (2) + manifest_len (4) + reserved (4) = 16 bytes
   const header = Buffer.alloc(16);
@@ -629,10 +661,6 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
   header.writeUInt16LE(2, 6); // Brotli flag
   header.writeUInt32LE(manifestBytes.byteLength, 8);
   header.writeUInt32LE(0, 12); // reserved
-
-  const docpackPath = path.join(outDir, `${site.id}.docpack`);
-  const manifestPath = path.join(outDir, `${site.id}.manifest.json`);
-  const searchPath = path.join(outDir, `${site.id}.search.json`);
 
   fs.writeFileSync(docpackPath, Buffer.concat([header, manifestBytes, ...chunks]));
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), "utf-8");
