@@ -30,17 +30,37 @@ pub struct ServerStatus {
 }
 
 
+pub fn decompress_html_body_if_needed(
+    body: &[u8],
+    encoding: Option<&str>,
+    gzipped: bool,
+) -> String {
+    if encoding == Some("br") {
+        let mut decompressor = brotli::Decompressor::new(body, 4096);
+        let mut decompressed = String::new();
+        if decompressor.read_to_string(&mut decompressed).is_ok() {
+            return decompressed;
+        }
+    } else if gzipped {
+        let mut decoder = flate2::read::GzDecoder::new(body);
+        let mut decompressed = String::new();
+        if decoder.read_to_string(&mut decompressed).is_ok() {
+            return decompressed;
+        }
+    }
+    String::from_utf8_lossy(body).into_owned()
+}
+
 fn fetch_live_fallback(
     site_key: &str,
     raw_target: &str,
     decoded_path: &str,
     store: &AssetStore,
-) -> Option<(String, bool, Vec<u8>)> {
+) -> Option<(String, bool, Option<String>, Vec<u8>)> {
     let cache_key = format!("{}:{}", site_key, raw_target);
-    if let Ok(guard) = store.fallback_cache.read()
-        && let Some((mime, bytes)) = guard.get(&cache_key) {
-            return Some((mime.clone(), false, bytes.clone()));
-        }
+    if let Some((mime, bytes)) = store.fallback_cache.get(&cache_key) {
+        return Some((mime, false, None, bytes));
+    }
 
     let (origin, entry_path) = get_site_origin_and_entry(site_key)?;
     let target_url = if decoded_path == "/" || decoded_path == "/docs" {
@@ -69,18 +89,18 @@ fn fetch_live_fallback(
         bytes = inject_reader_bridge(site_key, html);
     }
 
-    if let Ok(mut guard) = store.fallback_cache.write() {
-        guard.insert(cache_key, (mime.clone(), bytes.clone()));
-    }
+    store
+        .fallback_cache
+        .insert(cache_key, mime.clone(), bytes.clone());
 
-    Some((mime, false, bytes))
+    Some((mime, false, None, bytes))
 }
 
 fn resolve_from_store(
     site_key: &str,
     decoded_path: &str,
     store: &AssetStore,
-) -> Option<(String, bool, Vec<u8>)> {
+) -> Option<(String, bool, Option<String>, Vec<u8>)> {
     let (site_id, base_prefix) = match site_key {
         "tw" | "tailwind" => ("tailwind", "tw"),
         "sh" | "shadcn" => ("shadcn", "sh"),
@@ -164,6 +184,7 @@ fn resolve_from_store(
         return Some((
             "application/javascript; charset=utf-8".to_string(),
             false,
+            None,
             LUCIDE_BUNDLE.as_bytes().to_vec(),
         ));
     }
@@ -193,7 +214,12 @@ fn resolve_from_store(
             }
             if let Some(entry) = entry_opt
                 && let Some(chunk_bytes) = pack.read_chunk(entry.offset, entry.length) {
-                    return Some((entry.mime.clone(), entry.gzipped, chunk_bytes));
+                    return Some((
+                        entry.mime.clone(),
+                        entry.gzipped,
+                        entry.encoding.clone(),
+                        chunk_bytes,
+                    ));
                 }
         }
 
@@ -214,6 +240,7 @@ fn resolve_from_store(
         return Some((
             entry.mime.clone(),
             entry.gzipped,
+            entry.encoding.clone(),
             ASSETS_PACK[start..end].to_vec(),
         ));
     }
@@ -277,23 +304,25 @@ fn handle_client(mut stream: TcpStream, site_key: String, store: Arc<AssetStore>
             }
         });
 
-    if let Some((mime, mut gzipped, mut body)) = resolved {
+    if let Some((mime, gzipped, encoding, mut body)) = resolved {
         let is_html = mime.starts_with("text/html");
+        let mut out_gzipped = gzipped;
+        let mut out_encoding = encoding;
+
         if is_html {
-            if gzipped {
-                let mut decoder = flate2::read::GzDecoder::new(&body[..]);
-                let mut decompressed = String::new();
-                if decoder.read_to_string(&mut decompressed).is_ok() {
-                    body = inject_reader_bridge(&site_key, decompressed);
-                    gzipped = false;
-                }
-            } else {
-                let html = String::from_utf8_lossy(&body).into_owned();
-                body = inject_reader_bridge(&site_key, html);
-            }
+            let decompressed = decompress_html_body_if_needed(&body, out_encoding.as_deref(), out_gzipped);
+            body = inject_reader_bridge(&site_key, decompressed);
+            out_gzipped = false;
+            out_encoding = None;
         }
 
-        let encoding_header = if gzipped {
+        let encoding_header = if let Some(ref enc) = out_encoding {
+            match enc.as_str() {
+                "br" => "Content-Encoding: br\r\n",
+                "gzip" => "Content-Encoding: gzip\r\n",
+                _ => "",
+            }
+        } else if out_gzipped {
             "Content-Encoding: gzip\r\n"
         } else {
             ""
@@ -369,5 +398,23 @@ pub(crate) fn ensure_site_server(site_id: &str, store: Arc<AssetStore>) -> u16 {
     });
 
     port
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_brotli_html_and_asset_serving() {
+        let raw_html = "<html><head></head><body><h1>Hello</h1></body></html>";
+        let mut br_html = Vec::new();
+        {
+            let mut writer = brotli::CompressorWriter::new(&mut br_html, 4096, 11, 24);
+            std::io::Write::write_all(&mut writer, raw_html.as_bytes()).unwrap();
+        }
+
+        let decompressed = decompress_html_body_if_needed(&br_html, Some("br"), false);
+        assert!(decompressed.contains("<h1>Hello</h1>"));
+    }
 }
 
