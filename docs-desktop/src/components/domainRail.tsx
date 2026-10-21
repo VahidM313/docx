@@ -1,6 +1,14 @@
 import * as React from "react";
 import { useApp } from "../lib/store";
-import { SITE_MAP, EMBEDDED_SITE_IDS, getAdaptiveBrandColor, getAdaptiveSiteSvg, type SiteBrand } from "../lib/catalog";
+import {
+  SITE_MAP,
+  SITE_CATEGORIES,
+  CAT_LABEL,
+  EMBEDDED_SITE_IDS,
+  getAdaptiveBrandColor,
+  getAdaptiveSiteSvg,
+  type SiteBrand,
+} from "../lib/catalog";
 import { Tooltip } from "../ui";
 import {
   Sun,
@@ -16,6 +24,7 @@ import {
   Pin,
   PinOff,
   ExternalLink,
+  FolderOpen,
 } from "lucide-react";
 
 export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
@@ -95,12 +104,57 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
       .filter((b): b is SiteBrand => !!b);
   }, [app.pinned]);
 
-  // 2. Other installed unpinned docs (Underneath) - sorted alphabetically by name
-  const unpinnedDocs = React.useMemo(() => {
+  // 2. Unpinned installed docs grouped into category folders
+  const unpinnedFolders = React.useMemo(() => {
     const pinnedSet = new Set(app.pinned);
     const unpinned = allInstalledBrands.filter((b) => !pinnedSet.has(b.id));
-    return unpinned.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: "base" }));
+
+    const groups: { category: string; shortName: string; docs: SiteBrand[] }[] = [];
+    for (const cat of SITE_CATEGORIES) {
+      const docs = unpinned
+        .filter((b) => b.category === cat)
+        .sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: "base" }));
+      if (docs.length > 0) {
+        groups.push({
+          category: cat,
+          shortName: CAT_LABEL[cat] ?? cat,
+          docs,
+        });
+      }
+    }
+
+    const knownCategories = new Set(SITE_CATEGORIES);
+    const others = unpinned.filter((b) => !knownCategories.has(b.category));
+    if (others.length > 0) {
+      groups.push({
+        category: "Other",
+        shortName: "Other",
+        docs: others.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: "base" })),
+      });
+    }
+
+    return groups;
   }, [allInstalledBrands, app.pinned]);
+
+  // Persist expanded category folders in localStorage
+  const [expandedFolders, setExpandedFolders] = React.useState<Record<string, boolean>>(() => {
+    try {
+      const saved = localStorage.getItem("docx_rail_expanded_folders");
+      return saved ? JSON.parse(saved) : {};
+    } catch {
+      return {};
+    }
+  });
+
+  const toggleFolder = React.useCallback((category: string) => {
+    setExpandedFolders((prev) => {
+      const next = { ...prev, [category]: !prev[category] };
+      try {
+        localStorage.setItem("docx_rail_expanded_folders", JSON.stringify(next));
+      } catch {}
+      return next;
+    });
+  }, []);
 
   // Pointer drag handlers
   const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>, docId: string, isPinned: boolean) => {
@@ -229,7 +283,7 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
   const isHomeActive = app.activeTabId === "home" && app.selectedCategory === "home";
   const draggedBrand = dragState ? SITE_MAP[dragState.docId] : null;
 
-  const renderDocButton = (doc: SiteBrand, isPinned: boolean, index: number) => {
+  const renderDocButton = (doc: SiteBrand, isPinned: boolean, index: number, isInFolder = false) => {
     const isDocActive = app.activeTab?.siteId === doc.id;
     const hasOpenTab = app.tabs.some((t) => t.siteId === doc.id);
     const isHovered = hoveredItem === doc.id;
@@ -297,6 +351,7 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
               ? "discord-pill-open"
               : "discord-pill-unread")
           }
+          style={isInFolder ? { left: "-8px" } : undefined}
         />
 
         <Tooltip
@@ -407,9 +462,85 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
           title="Other Installed Docs"
         />
 
-        {/* Unpinned Docs Section (Underneath, sorted alphabetically by name) */}
+        {/* Unpinned Docs Section (Grouped into Discord-style Category Folders) */}
         <div className="w-full flex flex-col items-center gap-2">
-          {unpinnedDocs.map((doc, idx) => renderDocButton(doc, false, idx))}
+          {unpinnedFolders.map((group) => {
+            const hasActiveDoc = group.docs.some((d) => d.id === app.activeTab?.siteId);
+            const hasOpenDoc = group.docs.some((d) => app.tabs.some((t) => t.siteId === d.id));
+            const isFolderExpanded = !!expandedFolders[group.category] || hasActiveDoc;
+            const isHovered = hoveredItem === `folder-${group.category}`;
+
+            if (isFolderExpanded) {
+              return (
+                <div
+                  key={`folder-${group.category}`}
+                  className="discord-folder-expanded my-0.5 animate-in fade-in zoom-in-95 duration-150"
+                >
+                  {/* Folder collapse header button */}
+                  <Tooltip label={`${group.category} • Click to collapse folder`} side="right">
+                    <button
+                      type="button"
+                      onClick={() => toggleFolder(group.category)}
+                      className="w-10 h-6 rounded-xl flex items-center justify-center bg-surface-deep/80 hover:bg-surface-deep text-muted-foreground hover:text-brand transition-colors cursor-pointer"
+                      aria-label={`Collapse ${group.category}`}
+                    >
+                      <FolderOpen className="w-3.5 h-3.5 text-brand" />
+                    </button>
+                  </Tooltip>
+
+                  {/* Docs inside this folder */}
+                  {group.docs.map((doc, docIdx) => renderDocButton(doc, false, docIdx, true))}
+                </div>
+              );
+            }
+
+            // Collapsed folder button with 2x2 preview
+            return (
+              <div
+                key={`folder-${group.category}`}
+                className="relative flex items-center justify-center w-full"
+                onMouseEnter={() => setHoveredItem(`folder-${group.category}`)}
+                onMouseLeave={() => setHoveredItem(null)}
+              >
+                <span
+                  className={
+                    "discord-pill " +
+                    (hasActiveDoc
+                      ? "discord-pill-active"
+                      : isHovered
+                      ? "discord-pill-hover"
+                      : hasOpenDoc
+                      ? "discord-pill-open"
+                      : "discord-pill-idle")
+                  }
+                />
+
+                <Tooltip
+                  label={`${group.category} (${group.docs.length} doc${group.docs.length > 1 ? "s" : ""}) • Click to expand`}
+                  side="right"
+                >
+                  <button
+                    type="button"
+                    onClick={() => toggleFolder(group.category)}
+                    className="discord-server-btn group relative bg-surface/90 hover:bg-surface-deep text-foreground shadow-sm border border-border/50 hover:border-brand/40 transition-all cursor-pointer p-1.5 flex flex-col items-center justify-center"
+                    aria-label={`Expand ${group.category}`}
+                  >
+                    {/* Mini 2x2 grid preview of up to 4 doc logos */}
+                    <div className="w-7 h-7 grid grid-cols-2 gap-0.5 items-center justify-center pointer-events-none">
+                      {group.docs.slice(0, 4).map((d) => (
+                        <div
+                          key={d.id}
+                          className="w-3 h-3 flex items-center justify-center overflow-hidden [&_svg]:w-3 [&_svg]:h-3"
+                          style={{ color: getAdaptiveBrandColor(d.color, app.isDark) }}
+                          dangerouslySetInnerHTML={{ __html: getAdaptiveSiteSvg(d, app.isDark) }}
+                        />
+                      ))}
+                    </div>
+                  </button>
+                </Tooltip>
+              </div>
+            );
+          })}
         </div>
 
         {/* Explore & Install More Docs Button */}

@@ -21,6 +21,26 @@ export interface SiteBrand {
 
 export const SITE_CATEGORIES = catalog.categories as string[];
 
+export const CAT_LABEL: Record<string, string> = {
+  "Frontend & UI": "Frontend",
+  "React Ecosystem": "React",
+  "Vue Ecosystem": "Vue",
+  "Web Frameworks & Tools": "Frameworks",
+  "TanStack Suite": "TanStack",
+  "Backend, Auth & APIs": "Backend",
+  "Databases & SQL": "Databases",
+  "AI & Machine Learning": "AI/ML",
+  "Python Ecosystem": "Python",
+  "Rust Ecosystem": "Rust",
+  "Go (Golang)": "Go",
+  "C & C++ Ecosystem": "C/C++",
+  "Languages & Compilers": "Languages",
+  "Graphics & Game APIs": "Graphics",
+  "GUI": "GUI",
+  "DevOps & Cloud": "DevOps",
+  "Architecture & Design": "Design",
+};
+
 export const SITES = (catalog.sites as unknown as SiteBrand[]).sort(
   (a, b) =>
     (catalog.categories as string[]).indexOf(a.category) -

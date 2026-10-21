@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useApp, type SiteEntry } from "../lib/store";
-import { SITE_CATEGORIES, getSiteIconHtml } from "../lib/catalog";
+import { Tauri } from "../lib/tauri";
+import { SITE_CATEGORIES, CAT_LABEL, getSiteIconHtml } from "../lib/catalog";
 import { Button, Badge, Input } from "../ui";
 import {
   ArrowDownToLine,
@@ -9,6 +10,7 @@ import {
   HardDriveDownload,
   Pin,
   PinOff,
+  RefreshCw,
   Search as SearchIcon,
   Trash2,
   Zap,
@@ -18,7 +20,23 @@ import {
 export default function HomeHub() {
   const app = useApp();
   const [q, setQ] = React.useState("");
-  const [cat, setCat] = React.useState<string>("all");
+  const [checkingUpdates, setCheckingUpdates] = React.useState(false);
+
+  // Remember active category tab across document switches and returns to Home
+  const [cat, setCatState] = React.useState<string>(() => {
+    try {
+      return localStorage.getItem("docx_hub_selected_category") || "all";
+    } catch {
+      return "all";
+    }
+  });
+
+  const setCat = React.useCallback((nextCat: string) => {
+    try {
+      localStorage.setItem("docx_hub_selected_category", nextCat);
+    } catch {}
+    setCatState(nextCat);
+  }, []);
 
   const entries = app.entries;
   const installed = React.useMemo(() => entries.filter((e) => e.installed), [entries]);
@@ -45,6 +63,110 @@ export default function HomeHub() {
     );
   }, [entries, q, cat]);
 
+  // Current category stats & actions
+  const categoryEntries = React.useMemo(() => {
+    return cat === "all" ? entries : entries.filter((e) => e.brand.category === cat);
+  }, [entries, cat]);
+
+  const categoryInstalled = React.useMemo(() => {
+    return categoryEntries.filter((e) => e.installed);
+  }, [categoryEntries]);
+
+  const categoryMissing = React.useMemo(() => {
+    return categoryEntries.filter((e) => !e.installed && !e.activeDownload);
+  }, [categoryEntries]);
+
+  // 1. Check for app & docpack updates
+  const handleCheckForUpdates = async () => {
+    setCheckingUpdates(true);
+    app.toast({ kind: "progress", message: "Checking for updates…", percent: 0 });
+    try {
+      await app.refreshPacks({ withRegistry: true });
+      let appUpdated = false;
+      try {
+        const res = await Tauri.checkAppUpdate();
+        if (res && res.update_available) {
+          appUpdated = true;
+          app.toast({
+            kind: "info",
+            message: `New Docx version available: v${res.target_version} (current: v${res.current_version})`,
+          });
+        }
+      } catch {}
+
+      const freshRegistry = await Tauri.getRemoteRegistry().catch(() => []);
+      const freshInstalled = await Tauri.getInstalledPacks().catch(() => []);
+      const installedIds = freshInstalled.map((p) => p.id);
+      const availableUpdates = freshRegistry.filter(
+        (r) => installedIds.includes(r.id) && r.update_available
+      );
+
+      if (availableUpdates.length > 0) {
+        app.toast({
+          kind: "info",
+          message: `Found ${availableUpdates.length} docpack update${availableUpdates.length > 1 ? "s" : ""}!`,
+        });
+      } else if (!appUpdated) {
+        app.toast({
+          kind: "success",
+          message: "Docx and all installed documentation packs are up to date! ✨",
+        });
+      }
+    } catch (e) {
+      app.toast({ kind: "error", message: `Update check failed: ${String(e).slice(0, 100)}` });
+    } finally {
+      setCheckingUpdates(false);
+    }
+  };
+
+  // 2. Global Delete All Docs
+  const handleDeleteAllDocs = async () => {
+    if (installed.length === 0) {
+      return app.toast({ kind: "info", message: "No documentation packs are currently installed." });
+    }
+    const confirmed = window.confirm(
+      `Are you sure you want to delete all ${installed.length} installed documentation packs? This will delete local files and free up disk space.`
+    );
+    if (!confirmed) return;
+
+    app.toast({ kind: "progress", message: `Deleting all ${installed.length} documentation packs…`, percent: 0 });
+    const results = await Promise.allSettled(installed.map((e) => app.deleteSite(e.id)));
+    const failed = results.filter((r) => r.status === "rejected").length;
+    if (failed > 0) {
+      app.toast({ kind: "error", message: `Deleted ${installed.length - failed} packs (${failed} failed)` });
+    } else {
+      app.toast({ kind: "success", message: `All ${installed.length} documentation packs deleted successfully.` });
+    }
+  };
+
+  // 3. Category Download All
+  const handleDownloadCategory = async (categoryName: string) => {
+    const missing = entries.filter(
+      (e) => e.brand.category === categoryName && !e.installed && !e.activeDownload
+    );
+    if (missing.length === 0) {
+      return app.toast({ kind: "info", message: `All packs in ${categoryName} are already installed.` });
+    }
+    app.toast({ kind: "progress", message: `Downloading ${missing.length} packs in ${categoryName}…`, percent: 0 });
+    Promise.allSettled(missing.map((e) => app.installSite(e.id)));
+  };
+
+  // 4. Category Delete All
+  const handleDeleteCategory = async (categoryName: string) => {
+    const toDelete = entries.filter((e) => e.brand.category === categoryName && e.installed);
+    if (toDelete.length === 0) {
+      return app.toast({ kind: "info", message: `No installed packs in ${categoryName}.` });
+    }
+    const confirmed = window.confirm(
+      `Delete all ${toDelete.length} installed packs in "${categoryName}"?`
+    );
+    if (!confirmed) return;
+
+    app.toast({ kind: "progress", message: `Deleting ${toDelete.length} packs in ${categoryName}…`, percent: 0 });
+    await Promise.allSettled(toDelete.map((e) => app.deleteSite(e.id)));
+    app.toast({ kind: "success", message: `Deleted ${toDelete.length} packs in ${categoryName}.` });
+  };
+
   return (
     <div className="h-full overflow-y-auto">
       {/* header */}
@@ -61,7 +183,7 @@ export default function HomeHub() {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             {outdated.length > 0 && (
               <Button
                 variant="gradient"
@@ -72,18 +194,59 @@ export default function HomeHub() {
                 <ArrowUpCircle size={14} /> Update all · {outdated.length}
               </Button>
             )}
+
+            <Button
+              variant="outline"
+              size="sm"
+              className="gap-1.5"
+              disabled={checkingUpdates}
+              onClick={handleCheckForUpdates}
+              title="Check for desktop updates and docpack releases"
+            >
+              <RefreshCw size={13} className={checkingUpdates ? "animate-spin text-brand" : ""} /> Check for updates
+            </Button>
+
             <Button
               variant="outline"
               size="sm"
               className="gap-1.5"
               onClick={() => {
-                const missing = entries.filter((e) => !e.installed && !e.activeDownload).map((e) => e.id);
-                if (!missing.length) return app.toast({ kind: "info", message: "Every pack is already installed." });
-                Promise.allSettled(missing.map((id) => app.installSite(id)));
+                if (cat === "all") {
+                  const missing = entries.filter((e) => !e.installed && !e.activeDownload).map((e) => e.id);
+                  if (!missing.length) return app.toast({ kind: "info", message: "Every pack is already installed." });
+                  Promise.allSettled(missing.map((id) => app.installSite(id)));
+                } else {
+                  handleDownloadCategory(cat);
+                }
               }}
+              title={cat === "all" ? "Download all missing packs" : `Download all missing packs in ${cat}`}
             >
-              <ArrowDownToLine size={14} /> Get missing
+              <ArrowDownToLine size={14} /> {cat === "all" ? "Get missing" : `Download all (${categoryMissing.length})`}
             </Button>
+
+            {cat !== "all" && categoryInstalled.length > 0 && (
+              <Button
+                variant="outline"
+                size="sm"
+                className="gap-1.5 text-danger hover:bg-danger/10 hover:text-danger hover:border-danger/40"
+                onClick={() => handleDeleteCategory(cat)}
+                title={`Delete installed packs in ${cat}`}
+              >
+                <Trash2 size={13} /> Delete category ({categoryInstalled.length})
+              </Button>
+            )}
+
+            {installed.length > 0 && (
+              <Button
+                variant="outline"
+                size="sm"
+                className="gap-1.5 text-danger hover:bg-danger/10 hover:text-danger hover:border-danger/40"
+                onClick={handleDeleteAllDocs}
+                title="Delete all installed offline packs across all categories"
+              >
+                <Trash2 size={13} /> Delete all docs
+              </Button>
+            )}
           </div>
         </div>
 
@@ -112,6 +275,41 @@ export default function HomeHub() {
         </div>
       </div>
 
+      {/* Category Action Strip (when viewing a specific category) */}
+      {cat !== "all" && (
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border bg-card/60 px-4 py-2.5 md:px-8">
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Category:</span>
+            <span className="text-xs font-bold text-foreground">{cat}</span>
+            <Badge className="text-[10.5px]">
+              {categoryInstalled.length}/{categoryEntries.length} installed
+            </Badge>
+          </div>
+          <div className="flex items-center gap-2">
+            {categoryMissing.length > 0 && (
+              <Button
+                variant="outline"
+                size="sm"
+                className="h-7 text-xs gap-1.5"
+                onClick={() => handleDownloadCategory(cat)}
+              >
+                <ArrowDownToLine size={12} /> Download all in category ({categoryMissing.length})
+              </Button>
+            )}
+            {categoryInstalled.length > 0 && (
+              <Button
+                variant="outline"
+                size="sm"
+                className="h-7 text-xs gap-1.5 text-danger hover:bg-danger/10 hover:text-danger hover:border-danger/40"
+                onClick={() => handleDeleteCategory(cat)}
+              >
+                <Trash2 size={12} /> Delete all in category ({categoryInstalled.length})
+              </Button>
+            )}
+          </div>
+        </div>
+      )}
+
       {/* grid */}
       <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-3 px-4 py-4 pb-16 md:px-8">
         {filtered.map((e) => (
@@ -121,23 +319,6 @@ export default function HomeHub() {
     </div>
   );
 }
-
-const CAT_LABEL: Record<string, string> = {
-  "Frontend & UI": "Frontend",
-  "React Ecosystem": "React",
-  "Vue Ecosystem": "Vue",
-  "Web Frameworks & Tools": "Frameworks",
-  "TanStack Suite": "TanStack",
-  "Backend, Auth & APIs": "Backend",
-  "Databases & SQL": "Databases",
-  "AI & Machine Learning": "AI/ML",
-  "Python Ecosystem": "Python",
-  "Rust Ecosystem": "Rust",
-  "Go (Golang)": "Go",
-  "C & C++ Ecosystem": "C/C++",
-  "DevOps & Cloud": "DevOps",
-  "Architecture & Design": "Design",
-};
 
 function CatChip({
   label,
