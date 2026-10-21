@@ -26,6 +26,13 @@ function save(key: string, value: unknown) {
   } catch {}
 }
 
+function formatBytesHelper(b?: number): string {
+  if (!b || b <= 0) return "";
+  if (b < 1024 * 1024) return `${Math.round(b / 1024)} KB`;
+  const mb = b / (1024 * 1024);
+  return mb < 10 ? `${mb.toFixed(1)} MB` : `${Math.round(mb)} MB`;
+}
+
 /* ------------------------------------------------------------------ */
 /* Types                                                               */
 /* ------------------------------------------------------------------ */
@@ -457,7 +464,16 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       setState((s) => ({ toasts: s.toasts.filter((t) => t.id !== id) }));
 
     const installSite = async (siteId: string) => {
-      const tid = toast({ kind: "progress", message: `Installing ${SITE_MAP[siteId]?.name ?? siteId}…`, percent: 0 });
+      const regItem = state.registry.find((r) => r.id === siteId);
+      const isUpdate = state.packs.some((p) => p.id === siteId);
+      const sizeStr = formatBytesHelper(regItem?.size_bytes);
+      const sizeInfo = sizeStr ? ` (${sizeStr})` : "";
+      const action = isUpdate ? "Updating" : "Installing";
+      const tid = toast({
+        kind: "progress",
+        message: `${action} ${SITE_MAP[siteId]?.name ?? siteId}${sizeInfo}…`,
+        percent: 0,
+      });
       try {
         await Tauri.installOrUpdate({ siteId });
         await refreshPacks({ withRegistry: false });
@@ -488,7 +504,12 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         toast({ kind: "info", message: "Everything is already up to date ✨" });
         return;
       }
-      toast({ kind: "progress", message: `Updating ${targets.length} packs…`, percent: 0 });
+      const totalBytes = state.registry
+        .filter((r) => targets.includes(r.id))
+        .reduce((sum, r) => sum + (r.size_bytes ?? 0), 0);
+      const sizeStr = formatBytesHelper(totalBytes);
+      const sizeInfo = sizeStr ? ` (${sizeStr})` : "";
+      toast({ kind: "progress", message: `Updating ${targets.length} packs${sizeInfo}…`, percent: 0 });
       const results = await Promise.allSettled(targets.map((id) => Tauri.installOrUpdate({ siteId: id })));
       await refreshPacks({ withRegistry: false });
       const ok = results.filter((r) => r.status === "fulfilled").length;

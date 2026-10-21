@@ -102,9 +102,11 @@ export default function HomeHub() {
       );
 
       if (availableUpdates.length > 0) {
+        const totalUpdateBytes = availableUpdates.reduce((a, r) => a + (r.size_bytes ?? 0), 0);
+        const sizeStr = formatDocBytes(totalUpdateBytes);
         app.toast({
           kind: "info",
-          message: `Found ${availableUpdates.length} docpack update${availableUpdates.length > 1 ? "s" : ""}!`,
+          message: `Found ${availableUpdates.length} docpack update${availableUpdates.length > 1 ? "s" : ""} (${sizeStr})!`,
         });
       } else if (!appUpdated) {
         app.toast({
@@ -190,8 +192,9 @@ export default function HomeHub() {
                 size="sm"
                 className="gap-1.5"
                 onClick={() => app.batchUpdateOutdated()}
+                title={`Update all ${outdated.length} packs (${formatDocBytes(undefined, outdatedSizeMb)})`}
               >
-                <ArrowUpCircle size={14} /> Update all · {outdated.length}
+                <ArrowUpCircle size={14} /> Update all · {outdated.length} ({formatDocBytes(undefined, outdatedSizeMb)})
               </Button>
             )}
 
@@ -415,11 +418,13 @@ const SiteCard = React.memo(function SiteCard({ entry }: { entry: SiteEntry }) {
             <span>
               {entry.activeDownload
                 ? "downloading…"
-                : entry.installed
-                  ? formatDocBytes(undefined, entry.local!.size_mb)
-                  : entry.remote
-                    ? formatDocBytes(entry.remote.sizeBytes)
-                    : "not available"}
+                : entry.updateAvailable && entry.remote
+                  ? `${formatDocBytes(undefined, entry.local?.size_mb)} (update: ${formatDocBytes(entry.remote.sizeBytes)})`
+                  : entry.installed
+                    ? formatDocBytes(undefined, entry.local!.size_mb)
+                    : entry.remote
+                      ? formatDocBytes(entry.remote.sizeBytes)
+                      : "not available"}
             </span>
           </div>
         </div>
@@ -446,9 +451,15 @@ const SiteCard = React.memo(function SiteCard({ entry }: { entry: SiteEntry }) {
                 ev.stopPropagation();
                 app.installSite(entry.id);
               }}
+              title={`Download update (${entry.remote ? formatDocBytes(entry.remote.sizeBytes) : ""})`}
             >
               <ArrowUpCircle size={12} /> Update
             </Button>
+            {entry.remote && (
+              <Badge className="text-[10px] text-brand border-brand/30 bg-brand/10 font-semibold">
+                {formatDocBytes(entry.remote.sizeBytes)}
+              </Badge>
+            )}
             <OpenChip />
           </>
         ) : entry.installed ? (

@@ -687,17 +687,22 @@ export function SettingsModal() {
                       {outdated.length} packs have newer updates available
                     </div>
                   </div>
-                  {outdated.length > 0 && (
-                    <Button
-                      variant="gradient"
-                      size="sm"
-                      onClick={() => app.batchUpdateOutdated()}
-                      className="gap-1.5"
-                    >
-                      <RefreshCw className="h-3.5 w-3.5" />
-                      <span>Update All ({outdated.length})</span>
-                    </Button>
-                  )}
+                  {outdated.length > 0 && (() => {
+                    const outdatedSizeMb = outdated.reduce((a, e) => a + (e.remote?.sizeBytes ?? 0) / (1024 * 1024), 0);
+                    const outdatedSizeStr = outdatedSizeMb < 1 ? `${Math.round(outdatedSizeMb * 1024)} KB` : `${outdatedSizeMb.toFixed(1)} MB`;
+                    return (
+                      <Button
+                        variant="gradient"
+                        size="sm"
+                        onClick={() => app.batchUpdateOutdated()}
+                        className="gap-1.5"
+                        title={`Update all ${outdated.length} packs (${outdatedSizeStr})`}
+                      >
+                        <RefreshCw className="h-3.5 w-3.5" />
+                        <span>Update All ({outdated.length} · {outdatedSizeStr})</span>
+                      </Button>
+                    );
+                  })()}
                 </div>
               </div>
             </div>
