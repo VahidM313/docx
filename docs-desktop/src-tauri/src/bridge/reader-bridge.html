@@ -1,4 +1,12 @@
 <style id="docx-styled-scroll">
+/* Remove redundant top empty space, padding, and banners from MDN and doc frameworks */
+body, #root, .main-wrapper, .page-header, .page-header-main,
+header.top-navigation, [class*="top-navigation"], [class*="top-banner"],
+.document-page {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
 /* Hide empty Carbon ad floating banner in Lucide Icons */
 .floating-ad, .VPDocAsideCarbonAds, .VPCarbonAds {
   display: none !important;
@@ -111,11 +119,287 @@ html.light #mdbook-body-container .hljs-title, html.light #mdbook-body-container
 html.rust #mdbook-body-container .hljs-title, html.rust #mdbook-body-container .hljs-section { color: #0030f2 !important; }
 html.light #mdbook-body-container .hljs-keyword, html.light #mdbook-body-container .hljs-selector-tag,
 html.rust #mdbook-body-container .hljs-keyword, html.rust #mdbook-body-container .hljs-selector-tag { color: #9d00ec !important; }
+
+/* LearnCpp dark mode header & navigation styling */
+html.docx-smart-dark #masthead,
+html.docx-smart-dark #site-header-main,
+html.docx-smart-dark #site-header-main-inside,
+html.docx-smart-dark #branding,
+html.docx-smart-dark #site-text,
+html.docx-smart-dark #access,
+html.docx-smart-dark #access > div,
+html.docx-smart-dark #prime_nav {
+  background-color: #18181b !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html.docx-smart-dark #site-header-main {
+  background: #18181b !important;
+  background-image: none !important;
+  border-bottom: 1px solid #27272a !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Eliminate the bright decorative turquoise stripe and header images under the navbar */
+html.docx-smart-dark #header-image-main,
+html.docx-smart-dark #header-image-main-inside,
+html.docx-smart-dark #header-image-main::before,
+html.docx-smart-dark #masthead .header-image {
+  display: none !important;
+  height: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+}
+
+/* Pseudo elements in header */
+html.docx-smart-dark #access::after,
+html.docx-smart-dark #site-title a::before {
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+/* LearnCpp branding title & description */
+html.docx-smart-dark #site-title,
+html.docx-smart-dark #site-title a,
+html.docx-smart-dark #site-title a span {
+  color: #f4f4f5 !important;
+  text-decoration: none !important;
+}
+
+html.docx-smart-dark #site-description {
+  color: #a1a1aa !important;
+}
+
+/* Navigation items and icons */
+html.docx-smart-dark #access > div > ul > li,
+html.docx-smart-dark #access > div > ul > li > a,
+html.docx-smart-dark #access a,
+html.docx-smart-dark #mobile-menu a {
+  color: #e4e4e7 !important;
+}
+
+html.docx-smart-dark #access a i,
+html.docx-smart-dark #access a span,
+html.docx-smart-dark #access i.icon-search {
+  color: #a1a1aa !important;
+}
+
+/* Nav hover state */
+html.docx-smart-dark #access > div > ul > li > a:hover,
+html.docx-smart-dark #access a:hover,
+html.docx-smart-dark #access li:hover > a {
+  color: #38bdf8 !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+html.docx-smart-dark #access a:hover i,
+html.docx-smart-dark #access a:hover span {
+  color: #38bdf8 !important;
+}
+
+/* Active menu item */
+html.docx-smart-dark #access > div > ul > li.current_page_item > a,
+html.docx-smart-dark #access > div > ul > li.current-menu-item > a,
+html.docx-smart-dark #access > div > ul > li.current_page_ancestor > a,
+html.docx-smart-dark #access > div > ul > li.current-menu-ancestor > a {
+  color: #38bdf8 !important;
+}
+
+/* Dropdown menus */
+html.docx-smart-dark #access ul.sub-menu,
+html.docx-smart-dark #access ul.children,
+html.docx-smart-dark #access ul ul {
+  background-color: #1e1e22 !important;
+  border: 1px solid #27272a !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+  border-radius: 6px !important;
+}
+
+html.docx-smart-dark #access ul.sub-menu li a,
+html.docx-smart-dark #access ul.children li a {
+  background-color: #1e1e22 !important;
+  color: #d4d4d8 !important;
+  border-bottom: 1px solid #27272a !important;
+}
+
+html.docx-smart-dark #access ul.sub-menu li a:hover,
+html.docx-smart-dark #access ul.children li a:hover {
+  background-color: #27272a !important;
+  color: #38bdf8 !important;
+}
+
+/* Search popup & input */
+html.docx-smart-dark #access .menu-search-animated .searchform {
+  background-color: #1e1e22 !important;
+  border: 1px solid #3f3f46 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+  border-radius: 6px !important;
+}
+
+html.docx-smart-dark #access .menu-search-animated .searchform input[type="search"] {
+  background-color: #18181b !important;
+  color: #f4f4f5 !important;
+  border: 1px solid #27272a !important;
+}
+
+/* Mobile menu */
+html.docx-smart-dark nav#mobile-menu {
+  background-color: #18181b !important;
+  border-right: 1px solid #27272a !important;
+}
+
+html.docx-smart-dark #mobile-menu .mobile-arrow {
+  color: #a1a1aa !important;
+}
+
+/* Hide external dark reader plugin link in Docx */
+#access li#menu-item-12082,
+#mobile-menu li#menu-item-12082 {
+  display: none !important;
+}
+
+/* Cppreference dark mode header & navigation */
+html.docx-smart-dark div#mw-head,
+html.docx-smart-dark div#cpp-head-first-base,
+html.docx-smart-dark div#cpp-head-second-base,
+html.docx-smart-dark div#cpp-head-first,
+html.docx-smart-dark div#cpp-head-second {
+  background-color: #18181b !important;
+  background-image: none !important;
+  border-color: #27272a !important;
+}
+
+html.docx-smart-dark div#cpp-head-first-base {
+  border-bottom: 1px solid #27272a !important;
+}
+
+html.docx-smart-dark div#cpp-head-second-base {
+  border-bottom: 1px solid #27272a !important;
+}
+
+html.docx-smart-dark div#cpp-head-first > h5 a {
+  color: #38bdf8 !important;
+  text-decoration: none !important;
+}
+
+html.docx-smart-dark div#cpp-head-personal,
+html.docx-smart-dark div#cpp-head-personal a,
+html.docx-smart-dark div#cpp-head-personal span {
+  color: #a1a1aa !important;
+}
+
+html.docx-smart-dark div#cpp-head-personal a:hover {
+  color: #38bdf8 !important;
+}
+
+html.docx-smart-dark div#cpp-head-personal ul {
+  background-color: #1e1e22 !important;
+  border: 1px solid #27272a !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+}
+
+html.docx-smart-dark div.vectorTabs,
+html.docx-smart-dark div.vectorTabs ul,
+html.docx-smart-dark div.vectorTabs ul li,
+html.docx-smart-dark div.vectorTabs span,
+html.docx-smart-dark div.vectorMenu {
+  background-image: none !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+html.docx-smart-dark div.vectorTabs ul li a {
+  color: #a1a1aa !important;
+  background: transparent !important;
+  background-image: none !important;
+}
+
+html.docx-smart-dark div.vectorTabs ul li a:hover {
+  color: #38bdf8 !important;
+}
+
+html.docx-smart-dark div.vectorTabs li.selected a,
+html.docx-smart-dark div.vectorTabs li.selected a:visited {
+  color: #38bdf8 !important;
+  font-weight: 600 !important;
+  border-bottom: 2px solid #38bdf8 !important;
+}
+
+html.docx-smart-dark div#simpleSearch {
+  background-color: #1e1e22 !important;
+  background-image: none !important;
+  border: 1px solid #27272a !important;
+}
+
+html.docx-smart-dark div#simpleSearch input#searchInput {
+  background-color: transparent !important;
+  color: #f4f4f5 !important;
+}
+
+html.docx-smart-dark div#simpleSearch button#searchButton {
+  background-color: transparent !important;
+  color: #a1a1aa !important;
+}
+
+html.docx-smart-dark div#cpp-footer-base {
+  background-color: #18181b !important;
+  border-top: 1px solid #27272a !important;
+}
+
+html.docx-smart-dark div#footer ul li {
+  color: #a1a1aa !important;
+}
+
+html.docx-smart-dark div#footer a {
+  color: #38bdf8 !important;
+}
+
 </style>
 <script id="docx-reader-bridge">
 (function(){
   var SITE_ID = "__DOCX_SITE_ID__";
   var SITE_ORIGIN = "__DOCX_SITE_ORIGIN__";
+
+  function applyDocTypography(fontSize, fontFamily) {
+    try {
+      var fs = (typeof fontSize === 'number') ? fontSize : parseInt(localStorage.getItem('docx_doc_font_size_' + SITE_ID), 10) || null;
+      var ff = fontFamily || localStorage.getItem('docx_doc_font_family_' + SITE_ID) || null;
+      if (typeof fontSize === 'number') {
+        try { localStorage.setItem('docx_doc_font_size_' + SITE_ID, String(fontSize)); } catch (e) {}
+      }
+      if (fontFamily) {
+        try { localStorage.setItem('docx_doc_font_family_' + SITE_ID, fontFamily); } catch (e) {}
+      }
+
+      var styleEl = document.getElementById("docx-doc-typography");
+      if (!styleEl) {
+        styleEl = document.createElement("style");
+        styleEl.id = "docx-doc-typography";
+        (document.head || document.documentElement).appendChild(styleEl);
+      }
+      var css = "";
+      if (fs && typeof fs === 'number') {
+        css += "html, body { font-size: " + fs + "px !important; }\n";
+        css += "p, li, td, th, dt, dd, blockquote { font-size: " + fs + "px !important; }\n";
+        css += "pre, code, kbd, samp { font-size: " + Math.max(11, fs - 2) + "px !important; }\n";
+      }
+      if (ff && ff !== "default") {
+        var fam = "";
+        if (ff === "inter") fam = "'Inter', -apple-system, BlinkMacSystemFont, sans-serif";
+        else if (ff === "jetbrains-mono") fam = "'JetBrains Mono', Consolas, monospace";
+        else if (ff === "fira-code") fam = "'Fira Code', Consolas, monospace";
+        else if (ff === "serif") fam = "Georgia, Cambria, 'Times New Roman', serif";
+        else if (ff === "system") fam = "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+        else if (ff === "dyslexic") fam = "'OpenDyslexic', 'Comic Sans MS', sans-serif";
+
+        if (fam) {
+          css += "html, body, p, div, span, a, li, td, th, dt, dd, h1, h2, h3, h4, h5, h6 { font-family: " + fam + " !important; }\n";
+        }
+      }
+      styleEl.textContent = css;
+    } catch (e) {}
+  }
 
   function applyCustomFont(fontEnabled) {
     try {
@@ -291,6 +575,8 @@ html.rust #mdbook-body-container .hljs-keyword, html.rust #mdbook-body-container
       for (var i = 0; i < len; i++) {
         var el = all[i];
         if (skipTags[el.tagName]) continue;
+        if (SITE_ID === 'learncpp' && el.closest && el.closest('#masthead')) continue;
+        if (SITE_ID === 'cppreference' && el.closest && el.closest('#mw-head, #cpp-footer-base')) continue;
         if (el.hasAttribute('data-docx-smart-mode') && el.getAttribute('data-docx-smart-mode') === targetMode) {
           continue;
         }
@@ -373,7 +659,12 @@ html.rust #mdbook-body-container .hljs-keyword, html.rust #mdbook-body-container
           if (!el.hasAttribute('data-docx-orig-style')) {
             el.setAttribute('data-docx-orig-style', el.getAttribute('style') || '');
           }
-          if (newBg) el.style.setProperty('background-color', newBg, 'important');
+          if (newBg) {
+            el.style.setProperty('background-color', newBg, 'important');
+            if (targetMode === 'dark' && cs.backgroundImage && cs.backgroundImage !== 'none' && cs.backgroundImage.indexOf('gradient') !== -1) {
+              el.style.setProperty('background-image', 'none', 'important');
+            }
+          }
           if (newFg) el.style.setProperty('color', newFg, 'important');
           if (newBd) el.style.setProperty('border-color', newBd, 'important');
         }
@@ -527,7 +818,7 @@ html.rust #mdbook-body-container .hljs-keyword, html.rust #mdbook-body-container
     }
   }
 
-  function applyReaderSettings(zoomPct, darkEnabled, themeEnabledOpt, fontEnabledOpt) {
+  function applyReaderSettings(zoomPct, darkEnabled, themeEnabledOpt, fontEnabledOpt, fontSizeOpt, fontFamilyOpt) {
     isApplyingTheme = true;
     try {
       var z = Math.max(60, Math.min(220, Number(zoomPct) || 100));
@@ -542,6 +833,7 @@ html.rust #mdbook-body-container .hljs-keyword, html.rust #mdbook-body-container
       localStorage.setItem('docx_dark_v3_' + SITE_ID, darkEnabled ? '1' : '0');
 
       applyCustomFont(fontEnabled);
+      applyDocTypography(fontSizeOpt, fontFamilyOpt);
 
       var root = document.documentElement;
       if (!themeEnabled) {
@@ -1824,7 +2116,9 @@ html.rust #mdbook-body-container .hljs-keyword, html.rust #mdbook-body-container
         e.data.zoom,
         getSavedSiteDark(),
         e.data.themeEnabled,
-        fontOpt
+        fontOpt,
+        e.data.fontSize,
+        e.data.fontFamily
       );
       return;
     }
@@ -1832,7 +2126,9 @@ html.rust #mdbook-body-container .hljs-keyword, html.rust #mdbook-body-container
       e.data.zoom,
       e.data.darkMode,
       e.data.themeEnabled,
-      fontOpt
+      fontOpt,
+      e.data.fontSize,
+      e.data.fontFamily
     );
   });
 
