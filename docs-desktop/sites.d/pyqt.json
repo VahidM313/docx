@@ -1,0 +1,27 @@
+{
+  "id": "pyqt",
+  "order": 107,
+  "name": "PyQt & PySide",
+  "version": "v6.8",
+  "category": "GUI",
+  "color": "#41cd52",
+  "bgTint": "rgba(65, 205, 82, 0.16)",
+  "description": "Python bindings for the Qt application framework: Qt Widgets, Qt Quick, QML, and native desktop app creation.",
+  "origin": "https://doc.qt.io",
+  "entryPath": "/qtforpython-6/",
+  "allowedPrefixes": [
+    "/qtforpython-6/"
+  ],
+  "maxPages": 120,
+  "defaultRoutes": [
+    {
+      "label": "Qt for Python Guide",
+      "path": "/qtforpython-6/"
+    },
+    {
+      "label": "PySide6 Modules",
+      "path": "/qtforpython-6/modules.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"4\" stroke=\"#41cd52\" stroke-width=\"1.8\" fill=\"rgba(65, 205, 82, 0.12)\"/><path d=\"M12 7c-2.2 0-4 1.8-4 4v1h4v1H8c0 2.2 1.8 4 4 4s4-1.8 4-4v-1h-4v-1h4c0-2.2-1.8-4-4-4z\" stroke=\"#38bdf8\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><circle cx=\"10\" cy=\"9.2\" r=\"0.8\" fill=\"#38bdf8\"/><circle cx=\"14\" cy=\"14.8\" r=\"0.8\" fill=\"#41cd52\"/></svg>"
+}

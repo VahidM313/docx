@@ -1,0 +1,24 @@
+{
+  "id": "webgpu",
+  "order": 110,
+  "name": "WebGPU",
+  "version": "W3C Spec",
+  "category": "Graphics & Game APIs",
+  "color": "#005a9c",
+  "bgTint": "rgba(0, 90, 156, 0.16)",
+  "description": "Modern graphics and compute API for the Web: high performance 3D rendering and general GPU compute using WGSL.",
+  "origin": "https://developer.mozilla.org",
+  "entryPath": "/en-US/docs/Web/API/WebGPU_API",
+  "allowedPrefixes": [
+    "/en-US/docs/Web/API/WebGPU_API",
+    "/en-US/docs/Web/API/GPU"
+  ],
+  "maxPages": 100,
+  "defaultRoutes": [
+    {
+      "label": "WebGPU Overview",
+      "path": "/en-US/docs/Web/API/WebGPU_API"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 2.5L20.5 7.5V16.5L12 21.5L3.5 16.5V7.5L12 2.5Z\" stroke=\"#005a9c\" stroke-width=\"1.8\" stroke-linejoin=\"round\" fill=\"rgba(0, 90, 156, 0.12)\"/><path d=\"M3.5 7.5L12 12.5L20.5 7.5\" stroke=\"#38bdf8\" stroke-width=\"1.6\"/><path d=\"M12 12.5V21.5\" stroke=\"#38bdf8\" stroke-width=\"1.6\"/><path d=\"M7 9.5L12 15.5L17 9.5\" stroke=\"#005a9c\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+}

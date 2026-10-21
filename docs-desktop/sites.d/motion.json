@@ -4,7 +4,7 @@
   "name": "Motion",
   "version": "v12",
   "category": "Frontend & UI",
-  "color": "#ff0088",
+  "color": "#0055ff",
   "bgTint": "rgba(255, 0, 136, 0.15)",
   "description": "Production-ready animation and gesture library for React, Vue, and vanilla JavaScript (formerly Framer Motion).",
   "origin": "https://motion.dev",
@@ -13,5 +13,5 @@
     "/docs"
   ],
   "maxPages": 140,
-  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M4 4H20V12H12L4 4Z\" fill=\"#ff0088\"/><path d=\"M4 12H12L20 20H4V12Z\" fill=\"#ff0088\" fill-opacity=\"0.6\"/></svg>"
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M4 0h16v8h-8zM4 8h8l8 8H4zM4 16h8v8z\" fill=\"#0055ff\"/></svg>"
 }

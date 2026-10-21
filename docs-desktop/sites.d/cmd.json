@@ -13,5 +13,31 @@
     "/en-us/windows-server/administration/windows-commands/"
   ],
   "maxPages": 160,
-  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><rect x=\"2.5\" y=\"4\" width=\"19\" height=\"16\" rx=\"3\" stroke=\"#a1a1aa\" stroke-width=\"1.8\"/><path d=\"M6 9L9.5 12L6 15M11 15H15\" stroke=\"#ffffff\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+  "defaultRoutes": [
+    {
+      "label": "All Commands (A-Z)",
+      "path": "/en-us/windows-server/administration/windows-commands/windows-commands"
+    },
+    {
+      "label": "robocopy",
+      "path": "/en-us/windows-server/administration/windows-commands/robocopy"
+    },
+    {
+      "label": "diskpart",
+      "path": "/en-us/windows-server/administration/windows-commands/diskpart"
+    },
+    {
+      "label": "netstat",
+      "path": "/en-us/windows-server/administration/windows-commands/netstat"
+    },
+    {
+      "label": "systeminfo",
+      "path": "/en-us/windows-server/administration/windows-commands/systeminfo"
+    },
+    {
+      "label": "Batch Scripting (if)",
+      "path": "/en-us/windows-server/administration/windows-commands/if"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><rect x=\"2.5\" y=\"4\" width=\"19\" height=\"16\" rx=\"3\" stroke=\"#a1a1aa\" stroke-width=\"1.8\" fill=\"rgba(0,0,0,0.4)\"/><path d=\"M5.5 10L8.5 12.5L5.5 15M10.5 15.5H15.5\" stroke=\"#ffffff\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
 }

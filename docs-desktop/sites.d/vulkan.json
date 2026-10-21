@@ -1,0 +1,27 @@
+{
+  "id": "vulkan",
+  "order": 109,
+  "name": "Vulkan",
+  "version": "v1.3",
+  "category": "Graphics & Game APIs",
+  "color": "#bd002c",
+  "bgTint": "rgba(189, 0, 44, 0.16)",
+  "description": "Low-overhead cross-platform 3D graphics and compute API by Khronos: explicit GPU control, command buffers, and pipeline states.",
+  "origin": "https://docs.vulkan.org",
+  "entryPath": "/tutorial/latest/00_Introduction.html",
+  "allowedPrefixes": [
+    "/tutorial/"
+  ],
+  "maxPages": 100,
+  "defaultRoutes": [
+    {
+      "label": "Introduction",
+      "path": "/tutorial/latest/00_Introduction.html"
+    },
+    {
+      "label": "Development Environment",
+      "path": "/tutorial/latest/01_Development_environment.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M3.5 4L12 19.5L20.5 4H15.5L12 11.5L8.5 4H3.5Z\" stroke=\"#bd002c\" stroke-width=\"1.8\" fill=\"rgba(189, 0, 44, 0.2)\" stroke-linejoin=\"round\"/><path d=\"M12 11.5V19.5\" stroke=\"#ff3366\" stroke-width=\"1.8\"/><path d=\"M8.5 4L12 11.5L15.5 4\" stroke=\"#ff3366\" stroke-width=\"1.5\"/></svg>"
+}

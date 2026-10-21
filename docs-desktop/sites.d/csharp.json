@@ -1,0 +1,31 @@
+{
+  "id": "csharp",
+  "order": 117,
+  "name": "C# (.NET)",
+  "version": "C# 13",
+  "category": "Languages & Compilers",
+  "color": "#9333ea",
+  "bgTint": "rgba(104, 33, 122, 0.16)",
+  "description": "Modern, type-safe, object-oriented language for building enterprise applications, cloud microservices, and games on .NET.",
+  "origin": "https://learn.microsoft.com",
+  "entryPath": "/en-us/dotnet/csharp/",
+  "allowedPrefixes": [
+    "/en-us/dotnet/csharp/"
+  ],
+  "maxPages": 160,
+  "defaultRoutes": [
+    {
+      "label": "C# Documentation",
+      "path": "/en-us/dotnet/csharp/"
+    },
+    {
+      "label": "Tour of C#",
+      "path": "/en-us/dotnet/csharp/tour-of-csharp/"
+    },
+    {
+      "label": "Language Reference",
+      "path": "/en-us/dotnet/csharp/language-reference/"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><polygon points=\"12 2.5 20.5 7.4 20.5 17.1 12 22 3.5 17.1 3.5 7.4 12 2.5\" stroke=\"#9333ea\" stroke-width=\"1.8\" stroke-linejoin=\"round\" fill=\"rgba(147, 51, 234, 0.15)\"/><path d=\"M11 8.5C8.5 8.5 7 10 7 12.2C7 14.5 8.5 16 11 16\" stroke=\"#ffffff\" stroke-width=\"1.9\" stroke-linecap=\"round\"/><path d=\"M14 10.5V14.5M16.5 10.5V14.5M13 11.5H17.5M13 13.5H17.5\" stroke=\"#c084fc\" stroke-width=\"1.5\" stroke-linecap=\"round\"/></svg>"
+}

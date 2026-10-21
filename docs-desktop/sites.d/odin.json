@@ -1,0 +1,27 @@
+{
+  "id": "odin",
+  "order": 121,
+  "name": "Odin",
+  "version": "Dev",
+  "category": "Languages & Compilers",
+  "color": "#1c698c",
+  "bgTint": "rgba(28, 105, 140, 0.16)",
+  "description": "Data-oriented, modern systems programming language designed for high performance, modern architectures, and joy of coding.",
+  "origin": "https://odin-lang.org",
+  "entryPath": "/docs/overview/",
+  "allowedPrefixes": [
+    "/docs/"
+  ],
+  "maxPages": 80,
+  "defaultRoutes": [
+    {
+      "label": "Overview",
+      "path": "/docs/overview/"
+    },
+    {
+      "label": "Packages",
+      "path": "/docs/packages/"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M5 13C5 8.5 8 5 12 5C16 5 19 8.5 19 13V18H5V13Z\" stroke=\"#1c698c\" stroke-width=\"1.8\" stroke-linejoin=\"round\" fill=\"rgba(28, 105, 140, 0.15)\"/><path d=\"M5 9C3 7 3 4 5 3C7 5 6 8 5 9ZM19 9C21 7 21 4 19 3C17 5 18 8 19 9Z\" stroke=\"#38bdf8\" stroke-width=\"1.6\" stroke-linejoin=\"round\"/><path d=\"M12 5V18M8 12H10M14 12H16\" stroke=\"#38bdf8\" stroke-width=\"1.6\" stroke-linecap=\"round\"/></svg>"
+}

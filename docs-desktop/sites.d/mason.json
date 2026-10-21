@@ -1,0 +1,27 @@
+{
+  "id": "mason",
+  "order": 125,
+  "name": "Mason CLI",
+  "version": "v0.1",
+  "category": "DevOps & Cloud",
+  "color": "#4479a1",
+  "bgTint": "rgba(2, 86, 155, 0.16)",
+  "description": "Template generator and brick scaffolding CLI: generate code from reusable bricks and automate project templates.",
+  "origin": "https://docs.brickhub.dev",
+  "entryPath": "/",
+  "allowedPrefixes": [
+    "/"
+  ],
+  "maxPages": 60,
+  "defaultRoutes": [
+    {
+      "label": "Overview",
+      "path": "/"
+    },
+    {
+      "label": "Bricks",
+      "path": "/bricks"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 3L20 9L12 15L4 9L12 3Z\" stroke=\"#4479a1\" stroke-width=\"1.8\" stroke-linejoin=\"round\" fill=\"rgba(68, 121, 161, 0.2)\"/><path d=\"M12 15V21M12 21L15 19M12 21L9 19\" stroke=\"#38bdf8\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><circle cx=\"12\" cy=\"9\" r=\"1.5\" fill=\"#38bdf8\"/></svg>"
+}

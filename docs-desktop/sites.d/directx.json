@@ -1,0 +1,27 @@
+{
+  "id": "directx",
+  "order": 111,
+  "name": "DirectX 12",
+  "version": "D3D12",
+  "category": "Graphics & Game APIs",
+  "color": "#0078d4",
+  "bgTint": "rgba(0, 120, 212, 0.16)",
+  "description": "Microsoft Direct3D 12 graphics API: bare-metal GPU control, multi-adapter architectures, and low driver overhead on Windows & Xbox.",
+  "origin": "https://learn.microsoft.com",
+  "entryPath": "/en-us/windows/win32/direct3d12/direct3d-12-graphics",
+  "allowedPrefixes": [
+    "/en-us/windows/win32/direct3d12/"
+  ],
+  "maxPages": 120,
+  "defaultRoutes": [
+    {
+      "label": "Direct3D 12 Graphics",
+      "path": "/en-us/windows/win32/direct3d12/direct3d-12-graphics"
+    },
+    {
+      "label": "Getting Started",
+      "path": "/en-us/windows/win32/direct3d12/getting-started"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M4 4L10 12L4 20H8L12 14.5L16 20H20L14 12L20 4H16L12 9.5L8 4H4Z\" stroke=\"#0078d4\" stroke-width=\"1.8\" fill=\"rgba(0, 120, 212, 0.2)\" stroke-linejoin=\"round\"/><path d=\"M10 12L12 9.5L14 12L12 14.5L10 12Z\" fill=\"#38bdf8\"/></svg>"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "kotlin",
+  "order": 119,
+  "name": "Kotlin",
+  "version": "v2.1",
+  "category": "Languages & Compilers",
+  "color": "#7f52ff",
+  "bgTint": "rgba(127, 82, 255, 0.16)",
+  "description": "Modern concise multiplatform language by JetBrains for Android, server-side, web, and native desktop programming.",
+  "origin": "https://kotlinlang.org",
+  "entryPath": "/docs/home.html",
+  "allowedPrefixes": [
+    "/docs/"
+  ],
+  "maxPages": 140,
+  "defaultRoutes": [
+    {
+      "label": "Overview",
+      "path": "/docs/home.html"
+    },
+    {
+      "label": "Basics",
+      "path": "/docs/basic-syntax.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><polygon points=\"21.5 2.5 2.5 21.5 2.5 2.5 21.5 2.5\" fill=\"#7f52ff\" stroke=\"#7f52ff\" stroke-width=\"1\"/><polygon points=\"21.5 2.5 12 12 21.5 21.5 21.5 2.5\" fill=\"#c757bc\" stroke=\"#c757bc\" stroke-width=\"1\"/><polygon points=\"2.5 21.5 12 12 2.5 2.5 2.5 21.5\" fill=\"#e16024\" opacity=\"0.3\"/></svg>"
+}

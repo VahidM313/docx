@@ -4,7 +4,7 @@
   "name": "Radix Primitives",
   "version": "v1.1",
   "category": "React Ecosystem",
-  "color": "#15b886",
+  "color": "#ffffff",
   "bgTint": "rgba(21, 184, 134, 0.15)",
   "description": "Unstyled, accessible UI components for building high-quality design systems and web apps.",
   "origin": "https://www.radix-ui.com",
@@ -31,5 +31,5 @@
       "path": "/primitives/docs/components/tooltip"
     }
   ],
-  "svg": "<svg viewBox=\"0 0 25 25\" fill=\"none\"><path d=\"M12 25C18.6274 25 24 19.6274 24 13C24 6.37258 18.6274 1 12 1C5.37258 1 0 6.37258 0 13C0 19.6274 5.37258 25 12 25Z\" fill=\"#15b886\" fill-opacity=\"0.2\"/><path d=\"M12 6V18M6 12H18\" stroke=\"#15b886\" stroke-width=\"2.5\" stroke-linecap=\"round\"/></svg>"
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M11.52 24a7.68 7.68 0 0 1-7.68-7.68 7.68 7.68 0 0 1 7.68-7.68V24Zm0-24v7.68H3.84V0h7.68Zm4.8 7.68a3.84 3.84 0 1 1 0-7.68 3.84 3.84 0 0 1 0 7.68Z\" fill=\"#ffffff\"/></svg>"
 }

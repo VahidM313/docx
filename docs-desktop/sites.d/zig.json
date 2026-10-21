@@ -1,0 +1,23 @@
+{
+  "id": "zig",
+  "order": 120,
+  "name": "Zig",
+  "version": "v0.14",
+  "category": "Languages & Compilers",
+  "color": "#f7a41d",
+  "bgTint": "rgba(247, 164, 29, 0.16)",
+  "description": "General-purpose systems programming language maintaining robust, optimal and reusable software without hidden control flow.",
+  "origin": "https://ziglang.org",
+  "entryPath": "/documentation/master/",
+  "allowedPrefixes": [
+    "/documentation/master/"
+  ],
+  "maxPages": 100,
+  "defaultRoutes": [
+    {
+      "label": "Language Reference",
+      "path": "/documentation/master/"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M4 5.5H19.5L14 12H20L5 20L9.5 13.5H4L4 5.5Z\" stroke=\"#f7a41d\" stroke-width=\"1.8\" stroke-linejoin=\"round\" fill=\"rgba(247, 164, 29, 0.2)\"/><circle cx=\"17\" cy=\"8.5\" r=\"1.2\" fill=\"#f7a41d\"/></svg>"
+}

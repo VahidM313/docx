@@ -429,6 +429,175 @@ html.docx-smart-dark div#footer a {
   color: #38bdf8 !important;
 }
 
+/* Microsoft Learn (PowerShell & CMD) Offline Layout & Sidebar */
+html.layout-holy-grail,
+html.layout-holy-grail body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+html.layout-holy-grail .layout-body {
+  display: grid !important;
+  grid-template-columns: 280px minmax(0, 1fr) !important;
+  grid-template-rows: auto 1fr auto !important;
+  grid-template-areas:
+    "header header"
+    "menu   main"
+    "footer footer" !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  column-gap: 0 !important;
+}
+html.layout-holy-grail .layout-body-menu,
+html.layout-holy-grail #left-container {
+  display: block !important;
+  width: 280px !important;
+  min-width: 280px !important;
+  max-width: 280px !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: var(--docx-bg, rgba(20, 20, 25, 0.6)) !important;
+}
+html.layout-holy-grail .layout-body-main,
+html.layout-holy-grail #main,
+html.layout-holy-grail .primary-holder,
+html.layout-holy-grail .content-container {
+  max-width: 100% !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+html.layout-holy-grail .reading-width {
+  max-inline-size: 100% !important;
+  max-width: 100% !important;
+  margin-inline: 0 !important;
+  padding: 20px 36px !important;
+  box-sizing: border-box !important;
+}
+html.layout-holy-grail .layout-body-aside,
+html.layout-holy-grail #right-container,
+html.layout-holy-grail .feedback-section {
+  display: none !important;
+  width: 0 !important;
+  min-width: 0 !important;
+}
+html.layout-holy-grail .display-none-until-layout-restored {
+  display: block !important;
+}
+.docx-ms-toc-tree {
+  padding: 8px 6px;
+  font-family: inherit;
+}
+.docx-ms-filter-input {
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.25);
+  color: inherit;
+  font-size: 12px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  outline: none;
+}
+.docx-ms-filter-input:focus {
+  border-color: #38bdf8;
+}
+.docx-ms-toc-list {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+.docx-ms-toc-item {
+  margin: 1px 0 !important;
+}
+.docx-ms-toc-item a {
+  display: block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: inherit;
+  text-decoration: none !important;
+  font-size: 12px;
+  opacity: 0.85;
+  transition: all 0.15s ease;
+}
+.docx-ms-toc-item a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  opacity: 1;
+}
+.docx-ms-toc-item a.active {
+  background: rgba(56, 189, 248, 0.18) !important;
+  color: #38bdf8 !important;
+  font-weight: 600;
+  opacity: 1;
+}
+
+/* Google DevSite (TensorFlow) Offline Sidebar & Navigation */
+.devsite-expandable-nav > .devsite-nav-toggle,
+.devsite-nav-toggle {
+  font-family: system-ui, -apple-system, sans-serif !important;
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  max-width: 20px !important;
+  line-height: 20px !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  text-decoration: none !important;
+  letter-spacing: normal !important;
+  word-break: normal !important;
+  white-space: nowrap !important;
+}
+.devsite-expandable-nav > .devsite-nav-toggle:before,
+.devsite-nav-toggle:before,
+.devsite-icon-arrow-drop-down:before {
+  content: "▾" !important;
+  font-family: system-ui, -apple-system, sans-serif !important;
+  font-size: 11px !important;
+  display: inline-block !important;
+  width: 20px !important;
+  height: 20px !important;
+  line-height: 20px !important;
+  text-align: center !important;
+}
+.devsite-expandable-nav:not(.expanded) > .devsite-nav-toggle:before,
+.devsite-nav-toggle-collapsed:before,
+.devsite-nav-toggle[aria-expanded="false"]:before {
+  content: "▸" !important;
+}
+devsite-book-nav {
+  display: block !important;
+  width: 270px !important;
+  min-width: 270px !important;
+  max-width: 270px !important;
+  position: fixed !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  overflow-y: auto !important;
+  z-index: 20 !important;
+  background: var(--devsite-body-background, #18181b) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+devsite-header {
+  margin-left: 270px !important;
+}
+#gc-wrapper {
+  margin-left: 270px !important;
+  width: calc(100% - 270px) !important;
+  min-width: 0 !important;
+  display: block !important;
+}
+.devsite-main-content {
+  max-width: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 24px 36px !important;
+}
 </style>
 <script id="docx-reader-bridge">
 (function(){
@@ -2037,18 +2206,162 @@ html.docx-smart-dark div#footer a {
   function initMsLearnDocsUI() {
     if (SITE_ID !== 'powershell' && SITE_ID !== 'cmd') return;
     try {
+      var leftContainer = document.getElementById('left-container');
+      if (leftContainer) {
+        leftContainer.classList.remove('display-none-until-layout-restored');
+        leftContainer.classList.remove('display-none');
+      }
+
+      var tocNav = document.getElementById('affixed-left-container') || document.getElementById('ms--toc-content');
+      if (tocNav) {
+        var existingTree = tocNav.querySelector('.docx-ms-toc-tree');
+        if (!existingTree) {
+          var links = [];
+          var allLinks = document.querySelectorAll('main a[href], .layout-body-main a[href], table a[href], .reading-width a[href]');
+          var seenHref = {};
+          for (var i = 0; i < allLinks.length; i++) {
+            var href = allLinks[i].getAttribute('href');
+            if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('javascript:')) continue;
+            try {
+              var resolved = new URL(href, window.location.href).pathname.split('?')[0].split('#')[0];
+              if ((SITE_ID === 'cmd' && resolved.indexOf('/windows-commands/') !== -1 && !resolved.endsWith('/windows-commands')) ||
+                  (SITE_ID === 'powershell' && resolved.indexOf('/powershell/') !== -1)) {
+                if (!seenHref[resolved]) {
+                  seenHref[resolved] = true;
+                  var label = (allLinks[i].textContent || '').trim();
+                  if (label && label.length > 0 && label.length < 60 && !label.startsWith('http')) {
+                    links.push({ label: label, href: resolved });
+                  }
+                }
+              }
+            } catch (err) {}
+          }
+
+          if (links.length > 5) {
+            try { sessionStorage.setItem('docx_ms_toc_' + SITE_ID, JSON.stringify(links)); } catch (e) {}
+          } else {
+            try {
+              var cached = sessionStorage.getItem('docx_ms_toc_' + SITE_ID);
+              if (cached) {
+                var parsed = JSON.parse(cached);
+                if (Array.isArray(parsed) && parsed.length > 5) links = parsed;
+              }
+            } catch (e) {}
+          }
+
+          if (links.length > 0) {
+            links.sort(function(a, b) { return a.label.localeCompare(b.label); });
+            var wrapper = document.createElement('div');
+            wrapper.className = 'docx-ms-toc-tree';
+            wrapper.innerHTML = 
+              '<div class="docx-ms-toc-header">' +
+                '<input type="search" class="docx-ms-filter-input" placeholder="Filter ' + (SITE_ID === 'cmd' ? 'commands' : 'topics') + ' (' + links.length + ')..." />' +
+              '</div>' +
+              '<ul class="docx-ms-toc-list"></ul>';
+
+            var ul = wrapper.querySelector('ul');
+            for (var j = 0; j < links.length; j++) {
+              var li = document.createElement('li');
+              li.className = 'docx-ms-toc-item';
+              var a = document.createElement('a');
+              a.href = links[j].href;
+              a.textContent = links[j].label;
+              li.appendChild(a);
+              ul.appendChild(li);
+            }
+
+            var filterInput = wrapper.querySelector('.docx-ms-filter-input');
+            if (filterInput && ul) {
+              filterInput.addEventListener('input', function(e) {
+                var q = (e.target.value || '').toLowerCase().trim();
+                var items = ul.querySelectorAll('.docx-ms-toc-item');
+                for (var k = 0; k < items.length; k++) {
+                  var txt = items[k].textContent.toLowerCase();
+                  items[k].style.display = (!q || txt.indexOf(q) !== -1) ? '' : 'none';
+                }
+              });
+            }
+
+            tocNav.appendChild(wrapper);
+          }
+        }
+      }
+
       var curPath = window.location.pathname.replace(/\/$/, '');
-      var links = document.querySelectorAll('.docx-ms-toc-item a[href]');
-      for (var i = 0; i < links.length; i++) {
-        var a = links[i];
-        var h = (a.getAttribute('href') || '').replace(/\/$/, '');
-        if (h === curPath) {
-          a.classList.add('active');
-          var p = a.parentElement;
+      var links2 = document.querySelectorAll('.docx-ms-toc-item a[href]');
+      for (var m = 0; m < links2.length; m++) {
+        var al = links2[m];
+        var hl = (al.getAttribute('href') || '').replace(/\/$/, '');
+        if (hl === curPath) {
+          al.classList.add('active');
+          var p = al.parentElement;
           while (p) {
             if (p.tagName === 'DETAILS') p.open = true;
             p = p.parentElement;
           }
+        }
+      }
+    } catch (e) {}
+  }
+
+  function initDevSiteDocsUI() {
+    if (SITE_ID !== 'tensorflow' && !document.querySelector('devsite-book-nav')) return;
+    try {
+      var curPath = window.location.pathname.replace(/\/$/, '');
+      var navLinks = document.querySelectorAll('devsite-book-nav a[href]');
+      for (var i = 0; i < navLinks.length; i++) {
+        var a = navLinks[i];
+        var hl = (a.getAttribute('href') || '').replace(/\/$/, '');
+        if (hl === curPath) {
+          a.classList.add('devsite-nav-active');
+          var p = a.parentElement;
+          while (p && p.tagName !== 'DEVSITE-BOOK-NAV') {
+            if (p.classList && p.classList.contains('devsite-expandable-nav')) {
+              p.classList.add('expanded');
+            }
+            p = p.parentElement;
+          }
+        }
+      }
+
+      if (!window.__docxDevsiteBound) {
+        window.__docxDevsiteBound = true;
+        document.addEventListener('click', function(e) {
+          var toggle = e.target && e.target.closest ? e.target.closest('.devsite-nav-toggle, .devsite-nav-title-no-path') : null;
+          if (toggle) {
+            var exp = toggle.closest('.devsite-expandable-nav');
+            if (exp) {
+              e.preventDefault();
+              e.stopPropagation();
+              exp.classList.toggle('expanded');
+            }
+          }
+        });
+
+        var filterInput = document.querySelector('.devsite-book-nav-filter input');
+        if (filterInput) {
+          filterInput.addEventListener('input', function(e) {
+            var q = (e.target.value || '').toLowerCase().trim();
+            var items = document.querySelectorAll('.devsite-nav-item');
+            for (var j = 0; j < items.length; j++) {
+              var it = items[j];
+              if (!q) {
+                it.style.display = '';
+              } else {
+                var match = it.textContent.toLowerCase().indexOf(q) !== -1;
+                it.style.display = match ? '' : 'none';
+                if (match) {
+                  var parentNode = it.parentElement;
+                  while (parentNode && parentNode.tagName !== 'DEVSITE-BOOK-NAV') {
+                    if (parentNode.classList && parentNode.classList.contains('devsite-expandable-nav')) {
+                      parentNode.classList.add('expanded');
+                    }
+                    parentNode = parentNode.parentElement;
+                  }
+                }
+              }
+            }
+          });
         }
       }
     } catch (e) {}
@@ -2110,6 +2423,7 @@ html.docx-smart-dark div#footer a {
     initGoDocsUI();
     initRustDocsUI();
     initMsLearnDocsUI();
+    initDevSiteDocsUI();
     initShadcnDocsUI();
     setupNativeThemeSync();
     if (getSavedThemeEnabled()) {

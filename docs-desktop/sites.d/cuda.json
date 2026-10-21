@@ -1,0 +1,27 @@
+{
+  "id": "cuda",
+  "order": 113,
+  "name": "NVIDIA CUDA",
+  "version": "v12.8",
+  "category": "Graphics & Game APIs",
+  "color": "#76b900",
+  "bgTint": "rgba(118, 185, 0, 0.16)",
+  "description": "NVIDIA parallel computing platform and programming model for general-purpose GPU computing in C and C++.",
+  "origin": "https://docs.nvidia.com",
+  "entryPath": "/cuda/cuda-c-programming-guide/index.html",
+  "allowedPrefixes": [
+    "/cuda/cuda-c-programming-guide/"
+  ],
+  "maxPages": 120,
+  "defaultRoutes": [
+    {
+      "label": "Programming Guide",
+      "path": "/cuda/cuda-c-programming-guide/index.html"
+    },
+    {
+      "label": "Introduction",
+      "path": "/cuda/cuda-c-programming-guide/index.html#introduction"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M11.996 4.098c-4.48 0-8.113 3.633-8.113 8.113 0 4.48 3.633 8.113 8.113 8.113 4.48 0 8.113-3.633 8.113-8.113 0-4.48-3.633-8.113-8.113-8.113zm0 14.288c-3.41 0-6.175-2.765-6.175-6.175 0-3.41 2.765-6.175 6.175-6.175 3.41 0 6.175 2.765 6.175 6.175 0 3.41-2.765 6.175-6.175 6.175z\" fill=\"#76b900\"/><path d=\"M12 8.7a3.51 3.51 0 100 7.02 3.51 3.51 0 000-7.02zm0 5.4a1.89 1.89 0 110-3.78 1.89 1.89 0 010 3.78z\" fill=\"#76b900\"/><circle cx=\"12\" cy=\"12.2\" r=\"0.9\" fill=\"#76b900\"/></svg>"
+}

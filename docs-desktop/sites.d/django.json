@@ -4,7 +4,7 @@
   "name": "Django",
   "version": "v6.1",
   "category": "Python Ecosystem",
-  "color": "#44b78b",
+  "color": "#092e20",
   "bgTint": "rgba(68, 183, 139, 0.15)",
   "description": "The web framework for perfectionists with deadlines: ORM Models, Views, Templates, Admin, Auth, and Migrations.",
   "origin": "https://docs.djangoproject.com",
@@ -14,5 +14,5 @@
     "/en/"
   ],
   "maxPages": 150,
-  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#44b78b\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M12 4V16C12 17.7 10.5 19 8.5 19C6.5 19 5 17.7 5 16C5 14.3 6.5 13 8.5 13C9.8 13 11 13.5 12 14.2\"/><path d=\"M16 9V17.5C16 19.5 15 20.8 13.2 21.3\"/><circle cx=\"16\" cy=\"5.5\" r=\"1\" fill=\"#44b78b\"/></svg>"
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M11.146 0h3.924v18.166c-2.013.382-3.491.535-5.096.535-4.791 0-7.288-2.166-7.288-6.32 0-4.002 2.65-6.6 6.753-6.6.637 0 1.121.05 1.707.203zm0 9.143a3.894 3.894 0 00-1.325-.204c-1.988 0-3.134 1.223-3.134 3.365 0 2.09 1.096 3.236 3.109 3.236.433 0 .79-.025 1.35-.102V9.142zM21.314 6.06v9.098c0 3.134-.229 4.638-.917 5.937-.637 1.249-1.478 2.039-3.211 2.905l-3.644-1.733c1.733-.815 2.574-1.53 3.109-2.625.561-1.121.739-2.421.739-5.835V6.059h3.924zM17.39.021h3.924v4.026H17.39z\" fill=\"#092e20\"/></svg>"
 }

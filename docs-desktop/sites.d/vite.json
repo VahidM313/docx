@@ -4,7 +4,7 @@
   "name": "Vite",
   "version": "v6.3",
   "category": "Web Frameworks & Tools",
-  "color": "#bd34fe",
+  "color": "#646cff",
   "bgTint": "rgba(189, 52, 254, 0.15)",
   "description": "Next generation frontend tooling with instant HMR, Rollup/Rolldown bundling, and plugin API.",
   "origin": "https://vite.dev",
@@ -15,5 +15,5 @@
     "/changes"
   ],
   "maxPages": 120,
-  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M21 4L12 21L3 4L12 7.5L21 4Z\" stroke=\"#bd34fe\" stroke-width=\"1.8\" stroke-linejoin=\"round\"/><path d=\"M13.5 3L10 11.5H14L11 18\" stroke=\"#ffd62e\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M13.056 23.238a.57.57 0 0 1-1.02-.355v-5.202c0-.63-.512-1.143-1.144-1.143H5.148a.57.57 0 0 1-.464-.903l3.777-5.29c.54-.753 0-1.804-.93-1.804H.57a.574.574 0 0 1-.543-.746.6.6 0 0 1 .08-.157L5.008.78a.57.57 0 0 1 .467-.24h14.589a.57.57 0 0 1 .466.903l-3.778 5.29c-.54.755 0 1.806.93 1.806h5.745c.238 0 .424.138.513.322a.56.56 0 0 1-.063.603z\" fill=\"#646cff\"/></svg>"
 }

@@ -33,5 +33,5 @@
       "path": "/guide/advanced/navigation-guards.html"
     }
   ],
-  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#42b883\" stroke-width=\"1.8\"><circle cx=\"6\" cy=\"18\" r=\"3\"/><circle cx=\"18\" cy=\"6\" r=\"3\"/><circle cx=\"6\" cy=\"6\" r=\"3\"/><path d=\"M6 9v6M9 6h6\"/></svg>"
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M24,1.61H14.06L12,5.16,9.94,1.61H0L12,22.39ZM12,14.08,5.16,2.23H9.59L12,6.41l2.41-4.18h4.43Z\" fill=\"#42b883\"/></svg>"
 }

@@ -1,0 +1,28 @@
+{
+  "id": "sdl",
+  "order": 115,
+  "name": "SDL (SDL2 / SDL3)",
+  "version": "v3.2",
+  "category": "Graphics & Game APIs",
+  "color": "#1778b5",
+  "bgTint": "rgba(23, 114, 180, 0.16)",
+  "description": "Simple DirectMedia Layer: cross-platform C development library providing low-level access to audio, keyboard, mouse, joystick, and graphics hardware.",
+  "origin": "https://wiki.libsdl.org",
+  "entryPath": "/SDL2/FrontPage",
+  "allowedPrefixes": [
+    "/SDL2/",
+    "/SDL3/"
+  ],
+  "maxPages": 160,
+  "defaultRoutes": [
+    {
+      "label": "SDL2 FrontPage",
+      "path": "/SDL2/FrontPage"
+    },
+    {
+      "label": "API by Category",
+      "path": "/SDL2/APIByCategory"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><rect x=\"2.5\" y=\"3.5\" width=\"19\" height=\"17\" rx=\"3\" stroke=\"#1778b5\" stroke-width=\"1.8\" fill=\"rgba(23, 120, 181, 0.15)\"/><path d=\"M6 12H9L11 8L13 16L15 12H18\" stroke=\"#38bdf8\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+}

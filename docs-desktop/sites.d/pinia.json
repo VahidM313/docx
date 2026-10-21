@@ -39,5 +39,5 @@
       "path": "/core-concepts/actions.html"
     }
   ],
-  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 2L4 7v6c0 5.5 3.8 10 8 11 4.2-1 8-5.5 8-11V7l-8-5z\" stroke=\"#ffd859\" stroke-width=\"1.8\"/><circle cx=\"12\" cy=\"11\" r=\"3\" fill=\"#ffd859\"/></svg>"
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M24,1.61H14.06L12,5.16,9.94,1.61H0L12,22.39ZM12,14.08,5.16,2.23H9.59L12,6.41l2.41-4.18h4.43Z\" fill=\"#ffd859\"/></svg>"
 }

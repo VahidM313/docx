@@ -1,0 +1,37 @@
+{
+  "id": "css_tricks",
+  "order": 3,
+  "name": "CSS-Tricks Guides",
+  "version": "2026 Edition",
+  "category": "Frontend & UI",
+  "color": "#ff7a18",
+  "bgTint": "rgba(255, 122, 24, 0.16)",
+  "description": "In-depth web design and CSS guides: Complete Guide to Flexbox, CSS Grid, Almanac, and Modern Animations.",
+  "origin": "https://css-tricks.com",
+  "entryPath": "/guides/",
+  "allowedPrefixes": [
+    "/guides/",
+    "/snippets/",
+    "/almanac/"
+  ],
+  "maxPages": 120,
+  "defaultRoutes": [
+    {
+      "label": "Guides Directory",
+      "path": "/guides/"
+    },
+    {
+      "label": "A Complete Guide to Flexbox",
+      "path": "/snippets/css/a-guide-to-flexbox/"
+    },
+    {
+      "label": "A Complete Guide to CSS Grid",
+      "path": "/snippets/css/complete-guide-grid/"
+    },
+    {
+      "label": "CSS Almanac",
+      "path": "/almanac/"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><polygon points=\"12 2.5 14.8 8.2 21 9.1 16.5 13.5 17.6 19.7 12 16.8 6.4 19.7 7.5 13.5 3 9.1 9.2 8.2 12 2.5\" stroke=\"#ff7a18\" stroke-width=\"1.8\" fill=\"rgba(255, 122, 24, 0.2)\" stroke-linejoin=\"round\"/><rect x=\"7\" y=\"10\" width=\"4\" height=\"2.8\" rx=\"0.8\" fill=\"#18181b\" stroke=\"#ff7a18\" stroke-width=\"1.2\"/><rect x=\"13\" y=\"10\" width=\"4\" height=\"2.8\" rx=\"0.8\" fill=\"#18181b\" stroke=\"#ff7a18\" stroke-width=\"1.2\"/><line x1=\"11\" y1=\"11.2\" x2=\"13\" y2=\"11.2\" stroke=\"#ff7a18\" stroke-width=\"1.2\"/></svg>"
+}

@@ -3,7 +3,7 @@
   "order": 102,
   "name": "Dear ImGui",
   "version": "v1.91",
-  "category": "C & C++ Ecosystem",
+  "category": "GUI",
   "color": "#9b51e0",
   "bgTint": "rgba(155, 81, 224, 0.15)",
   "description": "Bloat-free Immediate Mode Graphical User Interface for C++: game tooling, debug overlays, renderer-agnostic backends.",

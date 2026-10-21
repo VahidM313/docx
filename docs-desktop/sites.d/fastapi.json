@@ -4,7 +4,7 @@
   "name": "FastAPI",
   "version": "v0.115",
   "category": "Python Ecosystem",
-  "color": "#05998b",
+  "color": "#009688",
   "bgTint": "rgba(5, 153, 139, 0.15)",
   "description": "High-performance Python web framework for building APIs with automatic OpenAPI docs, Pydantic v2, and async/await.",
   "origin": "https://fastapi.tiangolo.com",
@@ -19,5 +19,5 @@
     "/"
   ],
   "maxPages": 150,
-  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><circle cx=\"12\" cy=\"12\" r=\"9.5\" stroke=\"#05998b\" stroke-width=\"1.9\"/><path d=\"M13 5.5L7.5 13H12L11 18.5L16.5 11H12L13 5.5Z\" fill=\"#05998b\"/></svg>"
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 .0387C5.3729.0384.0003 5.3931 0 11.9988c-.001 6.6066 5.372 11.9628 12 11.9625 6.628.0003 12.001-5.3559 12-11.9625-.0003-6.6057-5.3729-11.9604-12-11.96m-.829 5.4153h7.55l-7.5805 5.3284h5.1828L5.279 18.5436q2.9466-6.5444 5.892-13.0896\" fill=\"#009688\"/></svg>"
 }

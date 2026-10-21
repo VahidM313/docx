@@ -1,0 +1,27 @@
+{
+  "id": "glfw",
+  "order": 116,
+  "name": "GLFW",
+  "version": "v3.4",
+  "category": "Graphics & Game APIs",
+  "color": "#ff4b4b",
+  "bgTint": "rgba(230, 81, 0, 0.16)",
+  "description": "Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan development: window creation, input handling, and event loops.",
+  "origin": "https://www.glfw.org",
+  "entryPath": "/docs/latest/",
+  "allowedPrefixes": [
+    "/docs/latest/"
+  ],
+  "maxPages": 120,
+  "defaultRoutes": [
+    {
+      "label": "Documentation Overview",
+      "path": "/docs/latest/"
+    },
+    {
+      "label": "Quick Tutorial",
+      "path": "/docs/latest/quick.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><rect x=\"3\" y=\"3.5\" width=\"18\" height=\"17\" rx=\"3\" stroke=\"#ffffff\" stroke-width=\"1.8\" fill=\"rgba(255, 255, 255, 0.05)\"/><path d=\"M3 8.5H21\" stroke=\"#ffffff\" stroke-width=\"1.5\"/><polygon points=\"12 10 17 17.5 7 17.5 12 10\" fill=\"#ff4b4b\" stroke=\"#ff4b4b\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/></svg>"
+}

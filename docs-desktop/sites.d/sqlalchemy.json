@@ -31,5 +31,5 @@
       "path": "/en/20/core/index.html"
     }
   ],
-  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><circle cx=\"12\" cy=\"12\" r=\"9\" stroke=\"#d71f00\" stroke-width=\"1.8\"/><path d=\"M8 12h8M12 8v8\" stroke=\"#d71f00\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>"
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><ellipse cx=\"12\" cy=\"6\" rx=\"8\" ry=\"3\" stroke=\"#d71f00\" stroke-width=\"1.8\" fill=\"rgba(215, 31, 0, 0.15)\"/><path d=\"M4 6v6c0 1.66 3.58 3 8 3s8-1.34 8-3V6\" stroke=\"#d71f00\" stroke-width=\"1.8\"/><path d=\"M4 12v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6\" stroke=\"#d71f00\" stroke-width=\"1.8\"/></svg>"
 }

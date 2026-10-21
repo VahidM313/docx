@@ -131,4 +131,34 @@ export const CATEGORY_ICONS: Record<string, { color: string; bg: string; svg: st
       <rect width="8" height="8" x="13" y="13" rx="2"/>
     </svg>`,
   },
+  "GUI": {
+    color: "#a855f7",
+    bg: "rgba(168, 85, 247, 0.15)",
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect width="20" height="16" x="2" y="4" rx="2"/>
+      <path d="M6 8h.01"/>
+      <path d="M10 8h.01"/>
+      <path d="M14 8h.01"/>
+      <path d="M2 12h20"/>
+      <path d="M7 16h10"/>
+    </svg>`,
+  },
+  "Graphics & Game APIs": {
+    color: "#06b6d4",
+    bg: "rgba(6, 182, 212, 0.15)",
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m21 16-9 5-9-5V8l9-5 9 5v8Z"/>
+      <path d="m3.3 7 8.7 5 8.7-5"/>
+      <path d="M12 12v9"/>
+    </svg>`,
+  },
+  "Languages & Compilers": {
+    color: "#f59e0b",
+    bg: "rgba(245, 158, 11, 0.15)",
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="16 18 22 12 16 6"/>
+      <polyline points="8 6 2 12 8 18"/>
+      <line x1="14" x2="10" y1="4" y2="20"/>
+    </svg>`,
+  },
 };

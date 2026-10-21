@@ -1,0 +1,27 @@
+{
+  "id": "gpui",
+  "order": 106,
+  "name": "GPUI",
+  "version": "v0.1",
+  "category": "GUI",
+  "color": "#10b981",
+  "bgTint": "rgba(245, 158, 11, 0.16)",
+  "description": "Fast, GPU-accelerated desktop UI framework for Rust powering Zed: immediate-mode ergonomics with retained performance.",
+  "origin": "https://gpui.rs",
+  "entryPath": "/",
+  "allowedPrefixes": [
+    "/"
+  ],
+  "maxPages": 60,
+  "defaultRoutes": [
+    {
+      "label": "Overview",
+      "path": "/"
+    },
+    {
+      "label": "Getting Started",
+      "path": "/docs"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><rect x=\"3\" y=\"3.5\" width=\"18\" height=\"17\" rx=\"3\" stroke=\"#10b981\" stroke-width=\"1.8\" fill=\"rgba(16, 185, 129, 0.12)\"/><path d=\"M3 8.5H21M7 6H7.01M10 6H10.01\" stroke=\"#10b981\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><path d=\"M12 11L9.5 15H13L11.5 18L15 14H12.5L14 11H12Z\" fill=\"#34d399\"/></svg>"
+}

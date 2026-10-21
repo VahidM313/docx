@@ -1,0 +1,210 @@
+{
+  "id": "raylib",
+  "name": "Raylib Cheatsheet & API",
+  "version": "v5.5",
+  "commit": "c422683c",
+  "updatedAt": "2026-10-21T20:53:14.251Z",
+  "totalBytes": 97670,
+  "chunkCount": 22,
+  "compression": "brotli",
+  "routes": {
+    "/": {
+      "offset": 0,
+      "length": 17695,
+      "rawLength": 102282,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "ffb33fbbb4582704"
+    },
+    "/docs": {
+      "offset": 17695,
+      "length": 17695,
+      "rawLength": 102282,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "ffb33fbbb4582704"
+    },
+    "/cheatsheet/cheatsheet.html": {
+      "offset": 35390,
+      "length": 17695,
+      "rawLength": 102282,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "ffb33fbbb4582704"
+    },
+    "/cheatsheet/raymath_cheatsheet.html": {
+      "offset": 53085,
+      "length": 4667,
+      "rawLength": 26444,
+      "mime": "text/html; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "452d2f4d1ecb4c4a"
+    },
+    "/cheatsheet/en/raylib_core.c": {
+      "offset": 57752,
+      "length": 5232,
+      "rawLength": 27257,
+      "mime": "text/plain; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "10c1e9e467a30023"
+    },
+    "/en/raylib_core.c": {
+      "offset": 62984,
+      "length": 5232,
+      "rawLength": 27257,
+      "mime": "text/plain; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "10c1e9e467a30023"
+    },
+    "/cheatsheet/en/raylib_shapes.c": {
+      "offset": 68216,
+      "length": 1777,
+      "rawLength": 11832,
+      "mime": "text/plain; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "2ca2ca0d8730413b"
+    },
+    "/en/raylib_shapes.c": {
+      "offset": 69993,
+      "length": 1777,
+      "rawLength": 11832,
+      "mime": "text/plain; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "2ca2ca0d8730413b"
+    },
+    "/cheatsheet/en/raylib_textures.c": {
+      "offset": 71770,
+      "length": 3333,
+      "rawLength": 19319,
+      "mime": "text/plain; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "f80e75241b83d610"
+    },
+    "/en/raylib_textures.c": {
+      "offset": 75103,
+      "length": 3333,
+      "rawLength": 19319,
+      "mime": "text/plain; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "f80e75241b83d610"
+    },
+    "/cheatsheet/en/raylib_text.c": {
+      "offset": 78436,
+      "length": 1879,
+      "rawLength": 9452,
+      "mime": "text/plain; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "603f0033dd9cf70f"
+    },
+    "/en/raylib_text.c": {
+      "offset": 80315,
+      "length": 1879,
+      "rawLength": 9452,
+      "mime": "text/plain; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "603f0033dd9cf70f"
+    },
+    "/cheatsheet/en/raylib_models.c": {
+      "offset": 82194,
+      "length": 2090,
+      "rawLength": 10957,
+      "mime": "text/plain; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "cbfa4ab99246b979"
+    },
+    "/en/raylib_models.c": {
+      "offset": 84284,
+      "length": 2090,
+      "rawLength": 10957,
+      "mime": "text/plain; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "cbfa4ab99246b979"
+    },
+    "/cheatsheet/en/raylib_audio.c": {
+      "offset": 86374,
+      "length": 1429,
+      "rawLength": 7726,
+      "mime": "text/plain; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "ef7e98d5adfef483"
+    },
+    "/en/raylib_audio.c": {
+      "offset": 87803,
+      "length": 1429,
+      "rawLength": 7726,
+      "mime": "text/plain; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "ef7e98d5adfef483"
+    },
+    "/cheatsheet/en/raylib_structs.c": {
+      "offset": 89232,
+      "length": 692,
+      "rawLength": 2534,
+      "mime": "text/plain; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "e2d63afe811006e9"
+    },
+    "/en/raylib_structs.c": {
+      "offset": 89924,
+      "length": 692,
+      "rawLength": 2534,
+      "mime": "text/plain; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "e2d63afe811006e9"
+    },
+    "/cheatsheet/en/raylib_colors.c": {
+      "offset": 90616,
+      "length": 508,
+      "rawLength": 1807,
+      "mime": "text/plain; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "c4a04968f129b6e4"
+    },
+    "/en/raylib_colors.c": {
+      "offset": 91124,
+      "length": 508,
+      "rawLength": 1807,
+      "mime": "text/plain; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "c4a04968f129b6e4"
+    },
+    "/cheatsheet/en/raylib_raymath.c": {
+      "offset": 91632,
+      "length": 3019,
+      "rawLength": 20039,
+      "mime": "text/plain; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "b558b03b3a292307"
+    },
+    "/en/raylib_raymath.c": {
+      "offset": 94651,
+      "length": 3019,
+      "rawLength": 20039,
+      "mime": "text/plain; charset=utf-8",
+      "gzipped": false,
+      "encoding": "br",
+      "hash": "b558b03b3a292307"
+    }
+  }
+}

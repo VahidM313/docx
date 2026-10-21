@@ -1,0 +1,27 @@
+{
+  "id": "wxwidgets",
+  "order": 104,
+  "name": "wxWidgets",
+  "version": "v3.2",
+  "category": "GUI",
+  "color": "#2888cf",
+  "bgTint": "rgba(42, 117, 211, 0.16)",
+  "description": "Cross-platform C++ GUI library that gives native look and feel on Windows, macOS, and Linux using platform controls.",
+  "origin": "https://docs.wxwidgets.org",
+  "entryPath": "/3.2/",
+  "allowedPrefixes": [
+    "/3.2/"
+  ],
+  "maxPages": 160,
+  "defaultRoutes": [
+    {
+      "label": "Reference Manual",
+      "path": "/3.2/"
+    },
+    {
+      "label": "Classes by Category",
+      "path": "/3.2/page_classesbycat.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><rect x=\"3\" y=\"3\" width=\"8.5\" height=\"8.5\" rx=\"1.8\" fill=\"#dc2626\" stroke=\"#ef4444\" stroke-width=\"1.2\"/><rect x=\"12.5\" y=\"3\" width=\"8.5\" height=\"8.5\" rx=\"1.8\" fill=\"#16a34a\" stroke=\"#22c55e\" stroke-width=\"1.2\"/><rect x=\"3\" y=\"12.5\" width=\"8.5\" height=\"8.5\" rx=\"1.8\" fill=\"#2563eb\" stroke=\"#3b82f6\" stroke-width=\"1.2\"/><rect x=\"12.5\" y=\"12.5\" width=\"8.5\" height=\"8.5\" rx=\"1.8\" fill=\"#ca8a04\" stroke=\"#eab308\" stroke-width=\"1.2\"/></svg>"
+}

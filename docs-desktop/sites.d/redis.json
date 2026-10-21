@@ -31,5 +31,5 @@
       "path": "/docs/latest/develop/interact/pubsub/"
     }
   ],
-  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 2L3 6.5l9 4.5 9-4.5L12 2zM3 11l9 4.5 9-4.5M3 15.5l9 4.5 9-4.5\" stroke=\"#dc382d\" stroke-width=\"1.8\" stroke-linejoin=\"round\"/></svg>"
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 3L21 8.2V15.8L12 21L3 15.8V8.2L12 3Z\" stroke=\"#dc382d\" stroke-width=\"1.8\" fill=\"rgba(220, 56, 45, 0.18)\"/><path d=\"M3 8.2L12 13.4L21 8.2\" stroke=\"#dc382d\" stroke-width=\"1.5\"/><line x1=\"12\" y1=\"13.4\" x2=\"12\" y2=\"21\" stroke=\"#dc382d\" stroke-width=\"1.5\"/><circle cx=\"12\" cy=\"7.5\" r=\"1.5\" fill=\"#ffffff\"/></svg>"
 }

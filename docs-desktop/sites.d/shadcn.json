@@ -3,7 +3,7 @@
   "order": 1,
   "name": "shadcn/ui",
   "version": "v4.0",
-  "category": "Frontend & UI",
+  "category": "React Ecosystem",
   "color": "#ffffff",
   "bgTint": "rgba(255, 255, 255, 0.14)",
   "description": "Beautifully designed accessible UI components built with Radix UI, Base UI, and Tailwind CSS.",
@@ -31,6 +31,6 @@
       "path": "/docs/components/radix/data-table"
     }
   ],
-  "svg": "<svg viewBox=\"0 0 256 256\" fill=\"none\"><line x1=\"208\" y1=\"128\" x2=\"128\" y2=\"208\" stroke=\"currentColor\" stroke-width=\"28\" stroke-linecap=\"round\"/><line x1=\"192\" y1=\"40\" x2=\"40\" y2=\"192\" stroke=\"currentColor\" stroke-width=\"28\" stroke-linecap=\"round\"/></svg>",
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M22.219 11.784 11.784 22.219c-.407.407-.407 1.068 0 1.476.407.407 1.068.407 1.476 0L23.695 13.26c.407-.408.407-1.069 0-1.476-.408-.407-1.069-.407-1.476 0ZM20.132.305.305 20.132c-.407.407-.407 1.068 0 1.476.408.407 1.069.407 1.476 0L21.608 1.781c.407-.407.407-1.068 0-1.476-.408-.407-1.069-.407-1.476 0Z\" fill=\"#ffffff\"/></svg>",
   "origin": "https://ui.shadcn.com"
 }

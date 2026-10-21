@@ -11,9 +11,9 @@ on:
   workflow_dispatch:
     inputs:
       sites:
-        description: "Site IDs to build: 'missing' (only unbuilt packs, recommended), 'all' (all 123), 'none' (only Docx.exe & Android APK), or comma-separated IDs (e.g. redis,duckdb)"
+        description: "Site IDs to build: 'all' (all 145 packs, forced rebuild), 'missing' (only unbuilt packs), 'none' (only Docx.exe & Android APK), or comma-separated IDs (e.g. redis,duckdb)"
         required: false
-        default: "missing"
+        default: "all"
   schedule:
     - cron: "0 4 * * *"
 
@@ -188,8 +188,8 @@ jobs:
             const { SITE_CATALOG } = require("./scripts/ci-build-site.ts");
             const allIds = SITE_CATALOG.map(s => s.id);
             let mode = process.env.INPUT_SITES;
-            if (!mode || mode === "") {
-              mode = process.env.EVENT_NAME === "schedule" ? "all" : "missing";
+            if (!mode || mode === "" || mode === "missing") {
+              mode = "all";
             }
 
             let resolved = [];

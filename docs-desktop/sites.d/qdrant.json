@@ -31,5 +31,5 @@
       "path": "/documentation/concepts/collections/"
     }
   ],
-  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><polygon points=\"12 2 21 7.5 21 16.5 12 22 3 16.5 3 7.5 12 2\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><circle cx=\"12\" cy=\"12\" r=\"3.5\" fill=\"#dc2626\"/></svg>"
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"m12 16.5 3.897-2.25v-4.5L12 7.5 8.103 9.75v4.5zM1.607 18 12 24l3.897-2.25v-4.5L12 19.5l-6.495-3.75v-7.5L12 4.5l6.495 3.75v15L22.393 21V6L12 0 1.607 6Z\" fill=\"#dc2626\"/></svg>"
 }
