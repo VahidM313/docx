@@ -17,6 +17,7 @@ import { ToastHost, DownloadHud } from "./components/toasts";
 import { Splash } from "./components/splash";
 import { TooltipProvider } from "./ui";
 import { Minimize2 } from "lucide-react";
+import { subscribeModelStatus } from "./lib/translator/engine";
 
 function Shell() {
   const app = useApp();
@@ -35,6 +36,13 @@ function Shell() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Global subscription to offline translation model status
+  React.useEffect(() => {
+    return subscribeModelStatus((p) => {
+      app.setModelStatus(p.status, p.percent);
+    });
+  }, [app.setModelStatus]);
 
   // When active tab changes to a doc on mobile, switch to reader view automatically
   const activeSiteId = app.activeTab?.siteId;

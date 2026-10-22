@@ -163,15 +163,25 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
     const handleMessage = async (e: MessageEvent) => {
       if (e.data?.type === "DOCX_REQUEST_TRANSLATION" && Array.isArray(e.data.items)) {
         const results = await translateTasks(e.data.items);
-        const activeIframe = activeWebId ? iframeRefs.current[activeWebId] : null;
-        if (activeIframe?.contentWindow) {
-          activeIframe.contentWindow.postMessage(
+        if (e.source && typeof (e.source as Window).postMessage === "function") {
+          (e.source as Window).postMessage(
             {
               type: "DOCX_TRANSLATIONS_READY",
               translations: results,
             },
             "*",
           );
+        } else {
+          const activeIframe = activeWebId ? iframeRefs.current[activeWebId] : null;
+          if (activeIframe?.contentWindow) {
+            activeIframe.contentWindow.postMessage(
+              {
+                type: "DOCX_TRANSLATIONS_READY",
+                translations: results,
+              },
+              "*",
+            );
+          }
         }
       }
     };
@@ -243,6 +253,9 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
             onLoad={() => {
               window.setTimeout(() => setLoading((l) => ({ ...l, [t.id]: false })), 250);
               broadcast();
+              if (app.activeDocFa || app.translationPrefs.autoTranslate) {
+                iframeRefs.current[t.id]?.contentWindow?.postMessage({ type: "DOCX_TRANSLATE_FA" }, "*");
+              }
             }}
           />
         );

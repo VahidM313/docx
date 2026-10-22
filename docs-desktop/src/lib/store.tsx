@@ -923,7 +923,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       setModelStatus: (status: TranslationModelStatus, percent = 0) => {
         if (status === "ready") {
           save("docx_model_ready_v1", true);
-        } else if (status === "not-downloaded") {
+        } else if (status === "not-downloaded" || status === "error") {
           save("docx_model_ready_v1", false);
         }
         setState({ modelStatus: status, modelPercent: percent });

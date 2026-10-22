@@ -23,7 +23,7 @@ import {
   Trash2,
   AlertCircle,
 } from "lucide-react";
-import { initTranslationModel, subscribeModelStatus } from "../lib/translator/engine";
+import { initTranslationModel, subscribeModelStatus, deleteTranslationModel } from "../lib/translator/engine";
 import { getTranslationCacheStats, clearTranslationCache } from "../lib/translator/cache";
 import type { TranslationModelProgress } from "../lib/translator/types";
 
@@ -806,25 +806,58 @@ export function SettingsModal() {
                     </p>
                   </div>
                   {modelProgress.status === "ready" ? (
-                    <div className="flex items-center gap-1.5 shrink-0 rounded-lg bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 text-xs font-semibold text-emerald-400">
-                      <CheckCircle2 className="h-3.5 w-3.5" />
-                      <span>Ready (Offline)</span>
+                    <div className="flex items-center gap-2 shrink-0">
+                      <div className="flex items-center gap-1.5 rounded-lg bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 text-xs font-semibold text-emerald-400">
+                        <CheckCircle2 className="h-3.5 w-3.5" />
+                        <span>Ready (Offline)</span>
+                      </div>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={async () => {
+                          await deleteTranslationModel();
+                          app.setModelStatus("not-downloaded", 0);
+                          app.toast({ kind: "info", message: "Translation model deleted." });
+                        }}
+                        className="gap-1.5 text-danger hover:bg-danger/10 hover:text-danger hover:border-danger/40 h-7 text-xs"
+                        title="Delete offline translation model from storage to re-download or free space"
+                      >
+                        <Trash2 className="h-3.5 w-3.5" />
+                        <span>Delete Model</span>
+                      </Button>
                     </div>
                   ) : modelProgress.status === "downloading" ? (
-                    <div className="flex items-center gap-1.5 shrink-0 rounded-lg bg-brand/15 border border-brand/30 px-2.5 py-1 text-xs font-semibold text-brand animate-pulse">
-                      <RefreshCw className="h-3.5 w-3.5 animate-spin" />
-                      <span>Downloading {modelProgress.percent}%</span>
+                    <div className="flex items-center gap-2 shrink-0">
+                      <div className="flex items-center gap-1.5 rounded-lg bg-brand/15 border border-brand/30 px-2.5 py-1 text-xs font-semibold text-brand animate-pulse">
+                        <RefreshCw className="h-3.5 w-3.5 animate-spin" />
+                        <span>Downloading {modelProgress.percent}%</span>
+                      </div>
                     </div>
                   ) : modelProgress.status === "error" ? (
-                    <Button
-                      variant="destructive"
-                      size="sm"
-                      onClick={() => initTranslationModel()}
-                      className="gap-1.5 shrink-0"
-                    >
-                      <DownloadCloud className="h-3.5 w-3.5" />
-                      <span>Retry Download</span>
-                    </Button>
+                    <div className="flex items-center gap-2 shrink-0">
+                      <Button
+                        variant="destructive"
+                        size="sm"
+                        onClick={() => initTranslationModel()}
+                        className="gap-1.5 shrink-0"
+                      >
+                        <DownloadCloud className="h-3.5 w-3.5" />
+                        <span>Retry Download</span>
+                      </Button>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={async () => {
+                          await deleteTranslationModel();
+                          app.setModelStatus("not-downloaded", 0);
+                        }}
+                        className="gap-1.5 text-muted-foreground hover:text-foreground h-8 text-xs shrink-0"
+                        title="Reset model state"
+                      >
+                        <Trash2 className="h-3.5 w-3.5" />
+                        <span>Reset</span>
+                      </Button>
+                    </div>
                   ) : (
                     <Button
                       variant="gradient"

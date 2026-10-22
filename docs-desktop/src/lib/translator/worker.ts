@@ -73,14 +73,9 @@ async function createPipelineWithFallback() {
                 totalBytes,
                 downloadedBytes: loadedBytes,
               });
-            } else if (progress.status === "ready") {
-              self.postMessage({
-                type: "MODEL_STATUS",
-                status: "ready",
-                percent: 100,
-                message: "Meta NLLB-200 translation model ready (offline)",
-              });
             }
+            // Do NOT emit status: "ready" here. transformers.js emits progress.status === "ready"
+            // for EACH individual asset file. The pipeline is only ready once pipeline(...) resolves.
           },
         },
       );
@@ -135,6 +130,29 @@ self.onmessage = async (e: MessageEvent) => {
         message: errMsg,
       });
     }
+  } else if (type === "DELETE_MODEL") {
+    translatorInstance = null;
+    isInitializing = false;
+    maxReportedPercent = 0;
+    fileProgressMap.clear();
+
+    try {
+      if (typeof caches !== "undefined") {
+        const cacheKeys = await caches.keys();
+        for (const key of cacheKeys) {
+          await caches.delete(key);
+        }
+      }
+    } catch (err) {
+      console.warn("Failed to delete caches in worker:", err);
+    }
+
+    self.postMessage({
+      type: "MODEL_STATUS",
+      status: "not-downloaded",
+      percent: 0,
+      message: "Model deleted",
+    });
   } else if (type === "TRANSLATE_BATCH") {
     const { items } = payload as { items: { id: string; text: string; hash: string }[] };
     if (!items || !items.length) {
@@ -143,11 +161,51 @@ self.onmessage = async (e: MessageEvent) => {
     }
 
     if (!translatorInstance) {
-      self.postMessage({
-        type: "TRANSLATE_BATCH_ERROR",
-        message: "Model not loaded",
-      });
-      return;
+      if (!isInitializing) {
+        isInitializing = true;
+        try {
+          self.postMessage({
+            type: "MODEL_STATUS",
+            status: "downloading",
+            percent: 0,
+            message: "Loading translation model…",
+          });
+          translatorInstance = await createPipelineWithFallback();
+          isInitializing = false;
+          self.postMessage({
+            type: "MODEL_STATUS",
+            status: "ready",
+            percent: 100,
+            message: "Meta NLLB-200 offline translation model ready",
+          });
+        } catch (err: any) {
+          isInitializing = false;
+          const errMsg = err?.message || String(err);
+          self.postMessage({
+            type: "MODEL_STATUS",
+            status: "error",
+            percent: 0,
+            message: errMsg,
+          });
+          self.postMessage({
+            type: "TRANSLATE_BATCH_ERROR",
+            message: "Model not loaded: " + errMsg,
+          });
+          return;
+        }
+      } else {
+        const start = Date.now();
+        while (isInitializing && !translatorInstance && Date.now() - start < 45000) {
+          await new Promise((r) => setTimeout(r, 250));
+        }
+        if (!translatorInstance) {
+          self.postMessage({
+            type: "TRANSLATE_BATCH_ERROR",
+            message: "Model initialization timed out",
+          });
+          return;
+        }
+      }
     }
 
     const results: Record<string, { translated: string; hash: string }> = {};

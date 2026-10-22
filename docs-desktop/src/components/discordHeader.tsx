@@ -22,6 +22,7 @@ import {
   Languages,
 } from "lucide-react";
 import { type ReaderPanelsApi } from "./readerPanels";
+import { initTranslationModel } from "../lib/translator/engine";
 
 export function DiscordHeader({
   readerApi,
@@ -297,10 +298,30 @@ export function DiscordHeader({
               onClick={() => {
                 const next = !app.activeDocFa;
                 app.toggleActiveDocFa(next);
-                app.toast({
-                  kind: "info",
-                  message: next ? "در حال ترجمه به فارسی… (کدها دست‌نخورده می‌مانند)" : "Restored original English text",
-                });
+                if (next) {
+                  if (app.modelStatus === "ready") {
+                    app.toast({
+                      kind: "info",
+                      message: "در حال ترجمه به فارسی… • Translating page to Persian (code blocks preserved)",
+                    });
+                  } else if (app.modelStatus === "downloading") {
+                    app.toast({
+                      kind: "info",
+                      message: `مدل ترجمه در حال دریافت است (${app.modelPercent}%) • Translation model is downloading (${app.modelPercent}%)`,
+                    });
+                  } else {
+                    app.toast({
+                      kind: "info",
+                      message: "در حال آماده‌سازی مدل ترجمه آفلاین NLLB-200… • Preparing Meta NLLB-200 offline model…",
+                    });
+                    initTranslationModel();
+                  }
+                } else {
+                  app.toast({
+                    kind: "info",
+                    message: "بازگشت به متن اصلی انگلیسی • Restored original English text",
+                  });
+                }
               }}
               className={
                 "no-drag flex items-center gap-1.5 px-2 h-7 rounded-lg border text-xs font-semibold transition-all cursor-pointer shadow-xs mr-1 " +

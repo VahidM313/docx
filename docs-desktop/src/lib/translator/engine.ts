@@ -69,8 +69,14 @@ const DEV_DOCS_DICTIONARY: Record<string, string> = {
 
 let worker: Worker | null = null;
 let currentStatus: TranslationModelProgress = {
-  status: "not-downloaded",
-  percent: 0,
+  status:
+    typeof window !== "undefined" && localStorage.getItem("docx_model_ready_v1") === "true"
+      ? "ready"
+      : "not-downloaded",
+  percent:
+    typeof window !== "undefined" && localStorage.getItem("docx_model_ready_v1") === "true"
+      ? 100
+      : 0,
 };
 
 const statusListeners = new Set<(progress: TranslationModelProgress) => void>();
@@ -134,6 +140,48 @@ export function initTranslationModel(): void {
   w.postMessage({ type: "INIT_MODEL" });
 }
 
+export async function deleteTranslationModel(): Promise<void> {
+  // 1. Delete browser caches (transformers.js stores weights in CacheStorage)
+  try {
+    if (typeof window !== "undefined" && "caches" in window) {
+      const keys = await window.caches.keys();
+      for (const k of keys) {
+        if (k.includes("transformers") || k.includes("nllb") || k.includes("onnx") || k.includes("xenova")) {
+          await window.caches.delete(k);
+        }
+      }
+      await window.caches.delete("transformers-cache");
+    }
+  } catch (err) {
+    console.warn("Failed to delete CacheStorage:", err);
+  }
+
+  // 2. Clear persisted ready flag in localStorage
+  try {
+    if (typeof localStorage !== "undefined") {
+      localStorage.removeItem("docx_model_ready_v1");
+    }
+  } catch {}
+
+  // 3. Terminate active worker
+  if (worker) {
+    try {
+      worker.postMessage({ type: "DELETE_MODEL" });
+      worker.terminate();
+    } catch {}
+    worker = null;
+  }
+
+  // 4. Reset engine state and notify subscribers
+  updateStatus({
+    status: "not-downloaded",
+    percent: 0,
+    message: undefined,
+    downloadedBytes: 0,
+    totalBytes: 0,
+  });
+}
+
 export async function translateTasks(
   items: TranslationTask[],
 ): Promise<Record<string, { translated: string; hash: string }>> {
@@ -167,10 +215,10 @@ export async function translateTasks(
     }
   }
 
-  // 3. Translate uncached items using background worker if model is ready
+  // 3. Translate uncached items using background worker
   if (uncachedItems.length > 0) {
     const w = getWorker();
-    if (w && currentStatus.status === "ready") {
+    if (w) {
       const workerResults = await new Promise<Record<string, { translated: string; hash: string }>>(
         (resolve) => {
           const handler = (e: MessageEvent) => {
@@ -188,11 +236,11 @@ export async function translateTasks(
             payload: { items: uncachedItems },
           });
 
-          // 30s timeout fallback
+          // 120s timeout fallback for large neural batches
           setTimeout(() => {
             w.removeEventListener("message", handler);
             resolve({});
-          }, 30000);
+          }, 120000);
         },
       );
 

@@ -2721,14 +2721,32 @@ devsite-header {
   }
 
   function getTranslatableElements() {
-    var selectors = 'article p, article li, article h1, article h2, article h3, article h4, article h5, article h6, article blockquote, article td, article th, main p, main li, main h1, main h2, main h3, main h4, main blockquote, main td, main th, .markdown p, .markdown li, .markdown h1, .markdown h2, .markdown h3, .content p, .content li, .content h1, .content h2, .content h3, #content p, #content li, body p, body li';
+    var selectors = [
+      'h1, h2, h3, h4, h5, h6',
+      'p, li, blockquote, dt, dd, summary',
+      'td, th',
+      '.lesson-item a, .lessontable a, [class*="chapter"] a, [class*="lesson"] a',
+      '[class*="lesson-description"], [class*="chapter-description"]',
+      '.entry-title, .post-title, .page-title, a.toc-link',
+      'article p, main p, .content p, .markdown p, #content p'
+    ].join(', ');
+
     var candidateNodes = document.querySelectorAll(selectors);
     var validNodes = [];
     for (var i = 0; i < candidateNodes.length; i++) {
       var node = candidateNodes[i];
-      if (node.closest('pre, code, svg, math, script, style, noscript, .katex, .docx-no-translate')) continue;
+      if (node.closest('pre, code, svg, math, script, style, noscript, .katex, .docx-no-translate, [class*="highlight"], [class*="syntax"]')) continue;
+
+      // If container has child block elements, translate children instead
+      if (node.querySelector('p, h1, h2, h3, h4, h5, h6, li, blockquote, dt, dd')) continue;
+
+      // If wrapper only encloses a single <a> link (like <td><a ...>title</a></td>), translate the <a> instead to preserve links
+      if (node.tagName !== 'A' && node.querySelector('a') && node.querySelectorAll('a').length === 1 && (node.textContent || '').trim() === (node.querySelector('a').textContent || '').trim()) {
+        continue;
+      }
+
       var text = (node.textContent || '').trim();
-      if (text.length < 3 || /^[\d\s.,:;!?(){}\[\]\-_/\\+=<>*&^%$#@~`|]+$/.test(text)) continue;
+      if (text.length < 2 || /^[\d\s.,:;!?(){}\[\]\-_/\\+=<>*&^%$#@~`|]+$/.test(text)) continue;
       validNodes.push(node);
     }
     return validNodes;
@@ -2737,17 +2755,37 @@ devsite-header {
   function tokenizeNode(element) {
     var codeTokens = [];
     var clone = element.cloneNode(true);
-    var codeElements = clone.querySelectorAll('code, kbd, .hljs, [class*="language-"]');
+
+    // 1. Preserve code and math blocks
+    var codeElements = clone.querySelectorAll('code, kbd, .hljs, [class*="language-"], svg, math, .katex');
     for (var i = 0; i < codeElements.length; i++) {
       var ce = codeElements[i];
       var placeholder = '⟦CODE_' + i + '⟧';
       codeTokens.push({
         token: placeholder,
-        html: ce.outerHTML
+        html: ce.outerHTML,
+        isCode: true
       });
       var placeholderNode = document.createTextNode(placeholder);
       ce.parentNode.replaceChild(placeholderNode, ce);
     }
+
+    // 2. Preserve child links if element itself is not an anchor
+    if (element.tagName !== 'A') {
+      var anchorElements = clone.querySelectorAll('a');
+      for (var j = 0; j < anchorElements.length; j++) {
+        var ae = anchorElements[j];
+        var linkPlaceholder = '⟦LINK_' + j + '⟧';
+        codeTokens.push({
+          token: linkPlaceholder,
+          html: ae.outerHTML,
+          isCode: false
+        });
+        var aPlaceholderNode = document.createTextNode(linkPlaceholder);
+        ae.parentNode.replaceChild(aPlaceholderNode, ae);
+      }
+    }
+
     var text = (clone.textContent || '').trim().replace(/\s+/g, ' ');
     return {
       text: text,
@@ -2759,8 +2797,10 @@ devsite-header {
     var result = translatedText;
     for (var i = 0; i < codeTokens.length; i++) {
       var ct = codeTokens[i];
-      var safeCodeHtml = '<bdi dir="ltr" class="docx-fa-inline-code">' + ct.html + '</bdi>';
-      result = result.split(ct.token).join(safeCodeHtml);
+      var safeHtml = ct.isCode
+        ? '<bdi dir="ltr" class="docx-fa-inline-code">' + ct.html + '</bdi>'
+        : ct.html;
+      result = result.split(ct.token).join(safeHtml);
     }
     return result;
   }
@@ -2834,6 +2874,7 @@ devsite-header {
     } else if (e.data.type === 'DOCX_RESTORE_EN') {
       restoreEnglish();
     } else if (e.data.type === 'DOCX_TRANSLATIONS_READY' && e.data.translations) {
+      if (!isPersianMode) return;
       var trs = e.data.translations;
       for (var reqId in trs) {
         var entry = pendingTranslationMap[reqId];
