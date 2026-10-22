@@ -324,7 +324,7 @@ pub(crate) fn run_install_or_update_sync(
                 && local_updated_at >= remote_manifest.updatedAt
                 && local_route_count >= remote_manifest.routes.len()))
     {
-        if old_commit != remote_manifest.commit {
+        {
             let mut guard = write_guard(&store.overrides)?;
             if let Some(existing) = guard.get(&site_id).cloned() {
                 let mut reconciled = existing.manifest.clone();

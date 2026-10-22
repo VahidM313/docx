@@ -350,13 +350,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     [state.tabs, state.activeTabId],
   );
   const outdatedCount = React.useMemo(
-    () =>
-      SITES.filter((brand) => {
-        const local = state.packs.find((p) => p.id === brand.id);
-        const remote = state.registry.find((r) => r.id === brand.id);
-        return !!local && !!remote && remote.commit !== local.commit;
-      }).length,
-    [state.packs, state.registry],
+    () => entries.filter((e) => e.updateAvailable && e.installed).length,
+    [entries],
   );
   const isDark =
     state.themeMode === "dark" || (state.themeMode === "system" && state.systemDark);
