@@ -140,6 +140,8 @@ pub struct RemoteRegistryEntryRaw {
     pub routeCount: usize,
     #[serde(default)]
     pub chunkCount: usize,
+    #[serde(default)]
+    pub delta: Option<crate::pack::DeltaMetadata>,
 }
 
 #[derive(serde::Deserialize)]
@@ -163,6 +165,7 @@ pub struct RemoteRegistryItem {
     pub commit: String,
     pub updatedAt: String,
     pub sizeBytes: usize,
+    pub deltaSizeBytes: Option<usize>,
     pub routeCount: usize,
     pub chunkCount: usize,
     pub installed: bool,
@@ -230,6 +233,15 @@ pub(crate) fn fetch_remote_registry(state: tauri::State<'_, AppState>) -> Result
             && remote_is_valid
             && local_commit != item.commit
             && remote_is_newer;
+        let delta_size_bytes = if let Some(ref d) = item.delta {
+            if d.sizeBytes > 0 {
+                Some(d.sizeBytes)
+            } else {
+                None
+            }
+        } else {
+            None
+        };
         out.push(RemoteRegistryItem {
             id: item.id,
             name: item.name,
@@ -245,6 +257,7 @@ pub(crate) fn fetch_remote_registry(state: tauri::State<'_, AppState>) -> Result
             },
             updatedAt: item.updatedAt,
             sizeBytes: effective_bytes,
+            deltaSizeBytes: delta_size_bytes,
             routeCount: item.routeCount,
             chunkCount: item.chunkCount,
             installed,

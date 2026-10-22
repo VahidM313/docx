@@ -454,9 +454,27 @@ pub(crate) fn load_disk_overrides(overrides: &mut HashMap<String, Arc<SiteOverri
             if path.extension().and_then(|e| e.to_str()) == Some("docpack")
                 && let Ok(meta) = fs::metadata(&path) {
                     let pack_len = meta.len() as usize;
-                    if let Some(pack) =
+                    if let Some(mut pack) =
                         parse_docpack_on_disk(path.clone(), 0, pack_len, "Modular .docpack")
                     {
+                        let manifest_path = path.with_extension("manifest.json");
+                        if let Ok(m_bytes) = fs::read(&manifest_path)
+                            && let Ok(external_manifest) = serde_json::from_slice::<SiteManifest>(&m_bytes) {
+                                if external_manifest.commit != pack.manifest.commit
+                                    || external_manifest.updatedAt > pack.manifest.updatedAt {
+                                        let mut reconciled = external_manifest;
+                                        if reconciled.routes.is_empty() {
+                                            reconciled.routes = pack.manifest.routes.clone();
+                                        }
+                                        pack = Arc::new(SiteOverridePack {
+                                            manifest: reconciled,
+                                            data_start: pack.data_start,
+                                            backing: pack.backing.clone(),
+                                            source: pack.source.clone(),
+                                        });
+                                }
+                        }
+
                         let should_use_disk = match overrides.get(&pack.manifest.id) {
                             Some(existing) => {
                                 pack.manifest.updatedAt >= existing.manifest.updatedAt

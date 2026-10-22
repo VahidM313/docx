@@ -38,6 +38,21 @@ function formatBytesHelper(b?: number): string {
   return mb < 10 ? `${mb.toFixed(1)} MB` : `${Math.round(mb)} MB`;
 }
 
+export function getUpdateSizeBytes(entry: {
+  installed?: boolean;
+  updateAvailable?: boolean;
+  remote?: { sizeBytes?: number; deltaSizeBytes?: number } | null;
+}): number {
+  if (!entry.updateAvailable || !entry.installed || !entry.remote) {
+    return entry.remote?.sizeBytes ?? 0;
+  }
+  if (entry.remote.deltaSizeBytes && entry.remote.deltaSizeBytes > 0) {
+    return entry.remote.deltaSizeBytes;
+  }
+  // Estimated compact delta patch size (~10% of full pack size)
+  return Math.round((entry.remote.sizeBytes ?? 0) * 0.10);
+}
+
 /* ------------------------------------------------------------------ */
 /* Types                                                               */
 /* ------------------------------------------------------------------ */
@@ -526,23 +541,66 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         toast({ kind: "info", message: "Everything is already up to date ✨" });
         return;
       }
-      const totalBytes = state.registry
-        .filter((r) => targets.includes(r.id))
-        .reduce((sum, r) => sum + (r.size_bytes ?? 0), 0);
-      const sizeStr = formatBytesHelper(totalBytes);
-      const sizeInfo = sizeStr ? ` (${sizeStr})` : "";
-      toast({ kind: "progress", message: `Updating ${targets.length} packs${sizeInfo}…`, percent: 0 });
-      const results = await Promise.allSettled(targets.map((id) => Tauri.installOrUpdate({ siteId: id })));
-      await refreshPacks({ withRegistry: false });
-      const ok = results.filter((r) => r.status === "fulfilled").length;
+      const totalDeltaBytes = targets.reduce((sum, tid) => {
+        const reg = state.registry.find((r) => r.id === tid);
+        const deltaBytes = reg?.deltaSizeBytes && reg.deltaSizeBytes > 0
+          ? reg.deltaSizeBytes
+          : Math.round((reg?.sizeBytes ?? 0) * 0.10);
+        return sum + deltaBytes;
+      }, 0);
+      const sizeStr = formatBytesHelper(totalDeltaBytes);
+      const sizeInfo = sizeStr ? ` (~${sizeStr} delta)` : "";
+      const toastIdRef = toast({
+        kind: "progress",
+        message: `Updating ${targets.length} packs${sizeInfo}…`,
+        percent: 0,
+      });
+
+      const totalCount = targets.length;
+      let completed = 0;
+      let ok = 0;
+      const queue = [...targets];
+      const CONCURRENCY = 3;
+
+      // Pool with bounded concurrency (3 simultaneous updates at a time)
+      const workers = Array.from({ length: Math.min(CONCURRENCY, queue.length) }, async () => {
+        while (queue.length > 0) {
+          const siteId = queue.shift();
+          if (!siteId) break;
+          const siteName = SITE_MAP[siteId]?.name ?? siteId;
+          try {
+            await Tauri.installOrUpdate({ siteId });
+            ok++;
+          } catch (e) {
+            console.warn(`Update failed for ${siteId}:`, e);
+          }
+          completed++;
+          const pct = Math.round((completed / totalCount) * 100);
+          setState((s) => ({
+            toasts: s.toasts.map((t) =>
+              t.id === toastIdRef
+                ? {
+                    ...t,
+                    message: `Updating (${completed}/${totalCount}): ${siteName}…`,
+                    percent: pct,
+                  }
+                : t,
+            ),
+          }));
+        }
+      });
+
+      await Promise.all(workers);
+      dropToast(toastIdRef);
+      // Re-fetch registry and packs so update status updates accurately
+      await refreshPacks({ withRegistry: true });
+
       toast({
-        kind: ok === targets.length ? "success" : "error",
-        message: `Updated ${ok}/${targets.length} packs`,
+        kind: ok === totalCount ? "success" : "error",
+        message: `Updated ${ok}/${totalCount} packs successfully`,
       });
       setState((s) => ({
-        downloads: Object.fromEntries(
-          Object.entries(s.downloads).filter(([k]) => !targets.includes(k)),
-        ),
+        downloads: {},
       }));
     };
 
@@ -904,7 +962,12 @@ function buildEntry(
     null;
   const remote = registry.find((r) => lowerId(r.id) === lowerId(brand.id)) ?? null;
   const installed = !!local;
-  const updateAvailable = !!(remote && installed && remote.commit !== local!.commit);
+  const updateAvailable = !!(
+    remote &&
+    installed &&
+    remote.commit !== local!.commit &&
+    (remote.update_available ?? (remote.updatedAt && local!.updatedAt ? remote.updatedAt > local!.updatedAt : true))
+  );
   return {
     id: brand.id,
     brand,

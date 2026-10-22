@@ -28,7 +28,7 @@ for (const d of scanDirs) {
     if (f.startsWith("system_design")) continue;
     const m = JSON.parse(fs.readFileSync(path.join(d, f), "utf8"));
     if (!m.commit || m.commit === "e3b0c442" || !m.totalBytes) continue;
-    packs[m.id] = {
+    const entry: Record<string, any> = {
       id: m.id,
       name: m.name,
       version: m.version,
@@ -43,6 +43,10 @@ for (const d of scanDirs) {
       searchFile: `${m.id}.search.json`,
       ...iconMeta(m.id),
     };
+    if (m.delta && m.delta.sizeBytes) {
+      entry.delta = m.delta;
+    }
+    packs[m.id] = entry;
   }
 }
 

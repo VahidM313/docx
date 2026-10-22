@@ -29,6 +29,7 @@ export interface RemoteRegistryItem {
   commit: string;
   updatedAt?: string;
   sizeBytes: number;
+  deltaSizeBytes?: number;
   routeCount: number;
   chunkCount: number;
   installed: boolean;

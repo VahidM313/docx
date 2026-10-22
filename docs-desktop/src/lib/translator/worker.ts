@@ -7,6 +7,94 @@ env.useBrowserCache = true;
 let translatorInstance: any = null;
 let isInitializing = false;
 
+// Per-file progress tracker to prevent erratic percentage jumps
+const fileProgressMap = new Map<string, { loaded: number; total: number }>();
+let maxReportedPercent = 0;
+
+function computeOverallProgress(file: string, loaded: number, total: number) {
+  fileProgressMap.set(file, { loaded, total });
+  let sumLoaded = 0;
+  let sumTotal = 0;
+  for (const f of fileProgressMap.values()) {
+    sumLoaded += f.loaded;
+    sumTotal += f.total;
+  }
+  // Calculate percentage across all known files
+  let pct = sumTotal > 0 ? Math.round((sumLoaded / sumTotal) * 100) : 0;
+  // Monotonic clamp: never jump backwards (e.g. 40 -> 30)
+  pct = Math.min(99, Math.max(maxReportedPercent, pct));
+  maxReportedPercent = pct;
+
+  const currentFileMb = (loaded / (1024 * 1024)).toFixed(1);
+  const totalFileMb = (total / (1024 * 1024)).toFixed(1);
+  const fileName = file.split("/").pop() || file;
+
+  return {
+    percent: pct,
+    message: `Downloading ${fileName} (${currentFileMb} MB / ${totalFileMb} MB · ${pct}%)`,
+    loadedBytes: sumLoaded,
+    totalBytes: sumTotal,
+  };
+}
+
+async function createPipelineWithFallback() {
+  const hosts = ["https://huggingface.co/", "https://hf-mirror.com/"];
+  let lastErr: any = null;
+
+  for (const host of hosts) {
+    try {
+      env.remoteHost = host;
+      const hostLabel = host.includes("mirror") ? "Fast Mirror (hf-mirror.com)" : "HuggingFace";
+      self.postMessage({
+        type: "MODEL_STATUS",
+        status: "downloading",
+        percent: maxReportedPercent,
+        message: `Connecting to ${hostLabel}…`,
+      });
+
+      const instance = await pipeline(
+        "translation",
+        "Xenova/nllb-200-distilled-600M",
+        {
+          quantized: true,
+          progress_callback: (progress: any) => {
+            if (progress.status === "progress" && progress.total) {
+              const file = progress.file || progress.name || "model weights";
+              const { percent, message, loadedBytes, totalBytes } = computeOverallProgress(
+                file,
+                progress.loaded,
+                progress.total,
+              );
+              self.postMessage({
+                type: "MODEL_STATUS",
+                status: "downloading",
+                percent,
+                message,
+                totalBytes,
+                downloadedBytes: loadedBytes,
+              });
+            } else if (progress.status === "ready") {
+              self.postMessage({
+                type: "MODEL_STATUS",
+                status: "ready",
+                percent: 100,
+                message: "Meta NLLB-200 translation model ready (offline)",
+              });
+            }
+          },
+        },
+      );
+
+      return instance;
+    } catch (err: any) {
+      lastErr = err;
+      console.warn(`Failed loading model from ${host}:`, err);
+    }
+  }
+
+  throw lastErr || new Error("Failed to download model from all mirrors");
+}
+
 self.onmessage = async (e: MessageEvent) => {
   const { type, payload } = e.data || {};
 
@@ -18,6 +106,9 @@ self.onmessage = async (e: MessageEvent) => {
     if (isInitializing) return;
 
     isInitializing = true;
+    maxReportedPercent = 0;
+    fileProgressMap.clear();
+
     self.postMessage({
       type: "MODEL_STATUS",
       status: "downloading",
@@ -26,43 +117,22 @@ self.onmessage = async (e: MessageEvent) => {
     });
 
     try {
-      translatorInstance = await pipeline(
-        "translation",
-        "Xenova/nllb-200-distilled-600M",
-        {
-          quantized: true,
-          progress_callback: (progress: any) => {
-            if (progress.status === "progress" && progress.total) {
-              const pct = Math.min(99, Math.round((progress.loaded / progress.total) * 100));
-              self.postMessage({
-                type: "MODEL_STATUS",
-                status: "downloading",
-                percent: pct,
-                message: `Downloading model weights: ${pct}%`,
-                totalBytes: progress.total,
-                downloadedBytes: progress.loaded,
-              });
-            } else if (progress.status === "ready") {
-              self.postMessage({
-                type: "MODEL_STATUS",
-                status: "ready",
-                percent: 100,
-                message: "Meta NLLB-200 translation model ready",
-              });
-            }
-          },
-        },
-      );
-
+      translatorInstance = await createPipelineWithFallback();
       isInitializing = false;
-      self.postMessage({ type: "MODEL_STATUS", status: "ready", percent: 100 });
+      self.postMessage({
+        type: "MODEL_STATUS",
+        status: "ready",
+        percent: 100,
+        message: "Meta NLLB-200 offline translation model ready",
+      });
     } catch (err: any) {
       isInitializing = false;
+      const errMsg = err?.message || String(err);
       self.postMessage({
         type: "MODEL_STATUS",
         status: "error",
         percent: 0,
-        message: String(err?.message || err),
+        message: errMsg,
       });
     }
   } else if (type === "TRANSLATE_BATCH") {

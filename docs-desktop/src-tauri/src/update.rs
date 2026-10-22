@@ -577,10 +577,7 @@ pub(crate) fn run_install_or_update_sync(
 
     // Use single-stream full .docpack download ONLY if not installed locally,
     // or if the delta exceeds 65% of total pack size.
-    let should_full_download = local_chunks_by_hash.is_empty()
-        || (remote_manifest.totalBytes > 0 && missing_bytes > max_delta_bytes);
-
-    if should_full_download {
+    let perform_full_download = |msg_prefix: &str| -> crate::error::Result<DeltaUpdateResult> {
         let expected_total = 4 + remote_manifest_bytes.len() + remote_manifest.totalBytes;
         let docpack_path = packs_dir.join(format!("{}.docpack", site_id));
         let full_pack_bytes = curl_download_with_progress(
@@ -654,9 +651,9 @@ pub(crate) fn run_install_or_update_sync(
             },
         );
 
-        return Ok(DeltaUpdateResult {
+        Ok(DeltaUpdateResult {
             site_id: site_id.clone(),
-            old_commit,
+            old_commit: old_commit.clone(),
             new_commit: final_commit,
             total_chunks: final_chunks,
             reused_chunks: 0,
@@ -666,223 +663,231 @@ pub(crate) fn run_install_or_update_sync(
             saved_percent: 0.0,
             port,
             message: format!(
-                "Synced {} ({}) from GitHub Releases ({:.2} MB, {} routes) on port :{}!",
+                "{}Synced {} ({}) from GitHub Releases ({:.2} MB, {} routes) on port :{}!",
+                msg_prefix,
                 remote_manifest.name,
                 remote_manifest.version,
                 dl_bytes as f64 / (1024.0 * 1024.0),
                 final_routes,
                 port
             ),
-        });
+        })
+    };
+
+    let should_full_download = local_chunks_by_hash.is_empty()
+        || (remote_manifest.totalBytes > 0 && missing_bytes > max_delta_bytes);
+
+    if should_full_download {
+        return perform_full_download("");
     }
 
-    // Already installed and delta is within budget: perform HTTP 206 Partial Content Range Delta Update!
-    let hdr_bytes = curl_get_bytes(&pack_url, Some((0, 15)))?;
-    let remote_data_start = parse_remote_data_start(&hdr_bytes, remote_manifest_bytes.len());
+    let range_result: crate::error::Result<DeltaUpdateResult> = (|| -> crate::error::Result<DeltaUpdateResult> {
+        let hdr_bytes = curl_get_bytes(&pack_url, Some((0, 15)))?;
+        let remote_data_start = parse_remote_data_start(&hdr_bytes, remote_manifest_bytes.len());
 
-    let client = reqwest::blocking::Client::builder()
-        .user_agent("Docx/1.0")
-        .pool_max_idle_per_host(8)
-        .tcp_keepalive(Duration::from_secs(30))
-        .timeout(Duration::from_secs(60))
-        .build()?;
+        let client = reqwest::blocking::Client::builder()
+            .user_agent("Docx/1.0")
+            .pool_max_idle_per_host(8)
+            .tcp_keepalive(Duration::from_secs(30))
+            .timeout(Duration::from_secs(60))
+            .build()?;
 
-    let mut missing_chunks_by_offset: Vec<(usize, usize, String)> = Vec::new();
-    for rem_entry in remote_manifest.routes.values() {
-        if !local_chunks_by_hash.contains_key(&rem_entry.hash) {
-            missing_chunks_by_offset.push((rem_entry.offset, rem_entry.length, rem_entry.hash.clone()));
+        let mut missing_chunks_by_offset: Vec<(usize, usize, String)> = Vec::new();
+        for rem_entry in remote_manifest.routes.values() {
+            if !local_chunks_by_hash.contains_key(&rem_entry.hash) {
+                missing_chunks_by_offset.push((rem_entry.offset, rem_entry.length, rem_entry.hash.clone()));
+            }
         }
-    }
-    missing_chunks_by_offset.sort_by_key(|c| c.0);
-    missing_chunks_by_offset.dedup_by(|a, b| a.2 == b.2);
+        missing_chunks_by_offset.sort_by_key(|c| c.0);
+        missing_chunks_by_offset.dedup_by(|a, b| a.2 == b.2);
 
-    let raw_ranges: Vec<(usize, usize)> = missing_chunks_by_offset
-        .iter()
-        .map(|c| (c.0, c.0 + c.1))
-        .collect();
-    let coalesced_ranges = coalesce_byte_ranges(&raw_ranges, 65536);
+        let raw_ranges: Vec<(usize, usize)> = missing_chunks_by_offset
+            .iter()
+            .map(|c| (c.0, c.0 + c.1))
+            .collect();
+        let coalesced_ranges = coalesce_byte_ranges(&raw_ranges, 65536);
 
-    let mut fetched_chunks_by_hash: HashMap<String, Vec<u8>> = HashMap::new();
-    let mut downloaded_bytes = 0usize;
-    let total_ranges = coalesced_ranges.len().max(1);
+        let mut fetched_chunks_by_hash: HashMap<String, Vec<u8>> = HashMap::new();
+        let mut downloaded_bytes = 0usize;
+        let total_ranges = coalesced_ranges.len().max(1);
 
-    for (range_idx, (r_start, r_end)) in coalesced_ranges.iter().enumerate() {
-        let abs_start = remote_data_start + r_start;
-        let abs_end = remote_data_start + r_end - 1;
+        for (range_idx, (r_start, r_end)) in coalesced_ranges.iter().enumerate() {
+            let abs_start = remote_data_start + r_start;
+            let abs_end = remote_data_start + r_end - 1;
 
-        let pct = 10 + ((range_idx * 85) / total_ranges) as u8;
+            let pct = 10 + ((range_idx * 85) / total_ranges) as u8;
+            let _ = window.emit(
+                "docpack-progress",
+                DownloadProgressPayload {
+                    site_id: site_id.clone(),
+                    phase: "HTTP 206 Delta Sync".to_string(),
+                    downloaded_bytes,
+                    total_bytes: remote_manifest.totalBytes.max(1),
+                    percent: pct,
+                    detail: format!(
+                        "Fetching coalesced range {}/{} ({:.1} KB)...",
+                        range_idx + 1,
+                        total_ranges,
+                        (r_end - r_start) as f64 / 1024.0
+                    ),
+                },
+            );
+
+            let mut req = client.get(&pack_url);
+            req = req.header("Range", format!("bytes={}-{}", abs_start, abs_end));
+            let resp = req.send()?;
+            let status = resp.status();
+            if !status.is_success() && status != reqwest::StatusCode::PARTIAL_CONTENT {
+                return Err(DocxError::HttpStatus {
+                    status: status.as_u16(),
+                    url: pack_url.clone(),
+                });
+            }
+            let range_data = resp.bytes()?.to_vec();
+            downloaded_bytes += range_data.len();
+
+            for &(chunk_offset, chunk_len, ref chunk_hash) in &missing_chunks_by_offset {
+                if chunk_offset >= *r_start && chunk_offset + chunk_len <= *r_end {
+                    let slice_start = chunk_offset - *r_start;
+                    let slice_end = slice_start + chunk_len;
+                    if slice_end <= range_data.len() {
+                        fetched_chunks_by_hash.insert(
+                            chunk_hash.clone(),
+                            range_data[slice_start..slice_end].to_vec(),
+                        );
+                    }
+                }
+            }
+        }
+
+        let mut new_pack_data: Vec<u8> = Vec::new();
+        let mut new_routes: HashMap<String, ManifestEntry> = HashMap::new();
+        let mut placed_hashes: HashMap<String, (usize, usize)> = HashMap::new();
+        let mut reused_chunks = 0usize;
+        let mut downloaded_chunks = 0usize;
+        let mut reused_bytes = 0usize;
+
+        let mut sorted_routes: Vec<_> = remote_manifest.routes.iter().collect();
+        sorted_routes.sort_by_key(|(route, _)| *route);
+
+        for (route, rem_entry) in sorted_routes {
+            let (final_offset, final_length) = if let Some(&already) = placed_hashes.get(&rem_entry.hash) {
+                already
+            } else if let Some(local_bytes) = local_chunks_by_hash.get(&rem_entry.hash) {
+                let off = new_pack_data.len();
+                let len = local_bytes.len();
+                new_pack_data.extend_from_slice(local_bytes);
+                placed_hashes.insert(rem_entry.hash.clone(), (off, len));
+                reused_chunks += 1;
+                reused_bytes += len;
+                (off, len)
+            } else if let Some(fetched_bytes) = fetched_chunks_by_hash.get(&rem_entry.hash) {
+                let off = new_pack_data.len();
+                let len = fetched_bytes.len();
+                new_pack_data.extend_from_slice(fetched_bytes);
+                placed_hashes.insert(rem_entry.hash.clone(), (off, len));
+                downloaded_chunks += 1;
+                (off, len)
+            } else {
+                return Err(DocxError::invalid_pack(format!(
+                    "Failed to locate chunk hash {} for route {}",
+                    rem_entry.hash, route
+                )));
+            };
+
+            new_routes.insert(
+                route.clone(),
+                ManifestEntry {
+                    offset: final_offset,
+                    length: final_length,
+                    mime: rem_entry.mime.clone(),
+                    gzipped: rem_entry.gzipped,
+                    hash: rem_entry.hash.clone(),
+                    encoding: rem_entry.encoding.clone(),
+                    raw_length: rem_entry.raw_length,
+                },
+            );
+        }
+
+        let mut final_manifest = remote_manifest.clone();
+        final_manifest.routes = new_routes;
+        let manifest_json = serde_json::to_vec(&final_manifest)?;
+
+        let mut full_docpack = Vec::with_capacity(16 + manifest_json.len() + new_pack_data.len());
+        full_docpack.extend_from_slice(b"DOCP");
+        full_docpack.extend_from_slice(&2u16.to_le_bytes()); // version 2
+        full_docpack.extend_from_slice(&2u16.to_le_bytes()); // Brotli flag
+        full_docpack.extend_from_slice(&(manifest_json.len() as u32).to_le_bytes());
+        full_docpack.extend_from_slice(&0u32.to_le_bytes()); // reserved
+        full_docpack.extend_from_slice(&manifest_json);
+        full_docpack.extend_from_slice(&new_pack_data);
+
+        let docpack_path = packs_dir.join(format!("{}.docpack", site_id));
+        let tmp_docpack = packs_dir.join(format!("{}.docpack.tmp", site_id));
+        let full_len = full_docpack.len();
+        fs::write(&tmp_docpack, &full_docpack).map_err(|e| DocxError::io_path(&tmp_docpack, &e))?;
+        fs::rename(&tmp_docpack, &docpack_path).map_err(|e| DocxError::io_path(&docpack_path, &e))?;
+        let _ = fs::write(packs_dir.join(format!("{}.manifest.json", site_id)), &manifest_json);
+        drop(full_docpack);
+
+        if let Some(parsed) =
+            parse_docpack_on_disk(docpack_path, 0, full_len, "GitHub Delta .docpack")
+        {
+            write_guard(&store.overrides)?.insert(site_id.clone(), parsed);
+        }
+        let port = ensure_site_server(&site_id, Arc::clone(&store));
+
+        let total_bytes = reused_bytes + downloaded_bytes;
+        let saved_percent = if total_bytes > 0 {
+            ((reused_bytes as f64 / total_bytes as f64) * 1000.0).round() / 10.0
+        } else {
+            100.0
+        };
+
         let _ = window.emit(
             "docpack-progress",
             DownloadProgressPayload {
                 site_id: site_id.clone(),
-                phase: "HTTP 206 Delta Sync".to_string(),
+                phase: "Complete".to_string(),
                 downloaded_bytes,
-                total_bytes: remote_manifest.totalBytes.max(1),
-                percent: pct,
-                detail: format!(
-                    "Fetching coalesced range {}/{} ({:.1} KB)...",
-                    range_idx + 1,
-                    total_ranges,
-                    (r_end - r_start) as f64 / 1024.0
-                ),
+                total_bytes,
+                percent: 100,
+                detail: format!("{}% bandwidth saved", saved_percent),
             },
         );
 
-        let mut req = client.get(&pack_url);
-        req = req.header("Range", format!("bytes={}-{}", abs_start, abs_end));
-        let resp = req.send()?;
-        let status = resp.status();
-        if !status.is_success() && status != reqwest::StatusCode::PARTIAL_CONTENT {
-            return Err(DocxError::HttpStatus {
-                status: status.as_u16(),
-                url: pack_url.clone(),
-            });
-        }
-        let range_data = resp.bytes()?.to_vec();
-        downloaded_bytes += range_data.len();
-
-        for &(chunk_offset, chunk_len, ref chunk_hash) in &missing_chunks_by_offset {
-            if chunk_offset >= *r_start && chunk_offset + chunk_len <= *r_end {
-                let slice_start = chunk_offset - *r_start;
-                let slice_end = slice_start + chunk_len;
-                if slice_end <= range_data.len() {
-                    fetched_chunks_by_hash.insert(
-                        chunk_hash.clone(),
-                        range_data[slice_start..slice_end].to_vec(),
-                    );
-                }
-            }
-        }
-    }
-
-    let mut new_pack_data: Vec<u8> = Vec::new();
-    let mut new_routes: HashMap<String, ManifestEntry> = HashMap::new();
-    let mut placed_hashes: HashMap<String, (usize, usize)> = HashMap::new();
-    let mut reused_chunks = 0usize;
-    let mut downloaded_chunks = 0usize;
-    let mut reused_bytes = 0usize;
-
-    let mut sorted_routes: Vec<_> = remote_manifest.routes.iter().collect();
-    sorted_routes.sort_by_key(|(route, _)| *route);
-
-    for (route, rem_entry) in sorted_routes {
-        let (final_offset, final_length) = if let Some(&already) = placed_hashes.get(&rem_entry.hash) {
-            already
-        } else if let Some(local_bytes) = local_chunks_by_hash.get(&rem_entry.hash) {
-            let off = new_pack_data.len();
-            let len = local_bytes.len();
-            new_pack_data.extend_from_slice(local_bytes);
-            placed_hashes.insert(rem_entry.hash.clone(), (off, len));
-            reused_chunks += 1;
-            reused_bytes += len;
-            (off, len)
-        } else if let Some(fetched_bytes) = fetched_chunks_by_hash.get(&rem_entry.hash) {
-            let off = new_pack_data.len();
-            let len = fetched_bytes.len();
-            new_pack_data.extend_from_slice(fetched_bytes);
-            placed_hashes.insert(rem_entry.hash.clone(), (off, len));
-            downloaded_chunks += 1;
-            (off, len)
-        } else {
-            return Err(DocxError::invalid_pack(format!(
-                "Failed to locate chunk hash {} for route {}",
-                rem_entry.hash, route
-            )));
-        };
-
-        new_routes.insert(
-            route.clone(),
-            ManifestEntry {
-                offset: final_offset,
-                length: final_length,
-                mime: rem_entry.mime.clone(),
-                gzipped: rem_entry.gzipped,
-                hash: rem_entry.hash.clone(),
-                encoding: rem_entry.encoding.clone(),
-                raw_length: rem_entry.raw_length,
-            },
-        );
-    }
-
-    let final_manifest = SiteManifest {
-        id: site_id.clone(),
-        name: remote_manifest.name.clone(),
-        version: remote_manifest.version.clone(),
-        commit: remote_manifest.commit.clone(),
-        updatedAt: remote_manifest.updatedAt.clone(),
-        totalBytes: new_pack_data.len(),
-        chunkCount: placed_hashes.len(),
-        compression: remote_manifest.compression.clone(),
-        delta: remote_manifest.delta.clone(),
-        routes: new_routes,
-    };
-
-    let manifest_json = serde_json::to_vec(&final_manifest)?;
-    let mut full_docpack = Vec::with_capacity(16 + manifest_json.len() + new_pack_data.len());
-    full_docpack.extend_from_slice(b"DOCP");
-    full_docpack.extend_from_slice(&2u16.to_le_bytes()); // version 2
-    full_docpack.extend_from_slice(&2u16.to_le_bytes()); // Brotli flag
-    full_docpack.extend_from_slice(&(manifest_json.len() as u32).to_le_bytes());
-    full_docpack.extend_from_slice(&0u32.to_le_bytes()); // reserved
-    full_docpack.extend_from_slice(&manifest_json);
-    full_docpack.extend_from_slice(&new_pack_data);
-
-    let docpack_path = packs_dir.join(format!("{}.docpack", site_id));
-    let tmp_docpack = packs_dir.join(format!("{}.docpack.tmp", site_id));
-    let full_len = full_docpack.len();
-    fs::write(&tmp_docpack, &full_docpack).map_err(|e| DocxError::io_path(&tmp_docpack, &e))?;
-    fs::rename(&tmp_docpack, &docpack_path).map_err(|e| DocxError::io_path(&docpack_path, &e))?;
-    let _ = fs::write(packs_dir.join(format!("{}.manifest.json", site_id)), &manifest_json);
-    drop(full_docpack);
-
-    if let Some(parsed) =
-        parse_docpack_on_disk(docpack_path, 0, full_len, "GitHub Delta .docpack")
-    {
-        write_guard(&store.overrides)?.insert(site_id.clone(), parsed);
-    }
-    let port = ensure_site_server(&site_id, Arc::clone(&store));
-
-    let total_bytes = reused_bytes + downloaded_bytes;
-    let saved_percent = if total_bytes > 0 {
-        ((reused_bytes as f64 / total_bytes as f64) * 1000.0).round() / 10.0
-    } else {
-        100.0
-    };
-
-    let _ = window.emit(
-        "docpack-progress",
-        DownloadProgressPayload {
+        Ok(DeltaUpdateResult {
             site_id: site_id.clone(),
-            phase: "Complete".to_string(),
-            downloaded_bytes,
-            total_bytes,
-            percent: 100,
-            detail: format!("{}% bandwidth saved", saved_percent),
-        },
-    );
-
-    Ok(DeltaUpdateResult {
-        site_id: site_id.clone(),
-        old_commit,
-        new_commit: remote_manifest.commit,
-        total_chunks: reused_chunks + downloaded_chunks,
-        reused_chunks,
-        downloaded_chunks,
-        reused_bytes,
-        downloaded_bytes,
-        saved_percent,
-        port,
-        message: format!(
-            "GitHub Partial Update complete! Reused {}/{} chunks locally ({:.2} MB), downloaded {} changed chunks ({:.1} KB via HTTP 206 Range) — {}% bandwidth saved!",
+            old_commit: old_commit.clone(),
+            new_commit: remote_manifest.commit.clone(),
+            total_chunks: reused_chunks + downloaded_chunks,
             reused_chunks,
-            reused_chunks + downloaded_chunks,
-            reused_bytes as f64 / (1024.0 * 1024.0),
             downloaded_chunks,
-            downloaded_bytes as f64 / 1024.0,
-            saved_percent
-        ),
-    })
+            reused_bytes,
+            downloaded_bytes,
+            saved_percent,
+            port,
+            message: format!(
+                "GitHub Partial Update complete! Reused {}/{} chunks locally ({:.2} MB), downloaded {} changed chunks ({:.1} KB via HTTP 206 Range) — {}% bandwidth saved!",
+                reused_chunks,
+                reused_chunks + downloaded_chunks,
+                reused_bytes as f64 / (1024.0 * 1024.0),
+                downloaded_chunks,
+                downloaded_bytes as f64 / 1024.0,
+                saved_percent
+            ),
+        })
+    })();
+
+    match range_result {
+        Ok(res) => Ok(res),
+        Err(e) => {
+            log::warn!("Range delta failed for {} (error: {}); falling back to full download", site_id, e);
+            perform_full_download("(Range fallback) ")
+        }
+    }
 }
+
 
 /// Downloads a brand-new .docpack OR performs an HTTP 206 Partial Range Delta Update from GitHub Releases!
 #[tauri::command]

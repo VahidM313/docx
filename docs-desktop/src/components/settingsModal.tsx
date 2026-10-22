@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useApp } from "../lib/store";
+import { useApp, getUpdateSizeBytes } from "../lib/store";
 import { SITES, SITE_MAP, getAdaptiveBrandColor, getAdaptiveSiteSvg } from "../lib/catalog";
 import { Switch, Button } from "../ui";
 import {
@@ -21,6 +21,7 @@ import {
   DownloadCloud,
   CheckCircle2,
   Trash2,
+  AlertCircle,
 } from "lucide-react";
 import { initTranslationModel, subscribeModelStatus } from "../lib/translator/engine";
 import { getTranslationCacheStats, clearTranslationCache } from "../lib/translator/cache";
@@ -730,7 +731,7 @@ export function SettingsModal() {
                     </div>
                   </div>
                   {outdated.length > 0 && (() => {
-                    const outdatedSizeMb = outdated.reduce((a, e) => a + (e.remote?.sizeBytes ?? 0) / (1024 * 1024), 0);
+                    const outdatedSizeMb = outdated.reduce((a, e) => a + (getUpdateSizeBytes(e)) / (1024 * 1024), 0);
                     const outdatedSizeStr = outdatedSizeMb < 1 ? `${Math.round(outdatedSizeMb * 1024)} KB` : `${outdatedSizeMb.toFixed(1)} MB`;
                     return (
                       <Button
@@ -741,7 +742,7 @@ export function SettingsModal() {
                         title={`Update all ${outdated.length} packs (${outdatedSizeStr})`}
                       >
                         <RefreshCw className="h-3.5 w-3.5" />
-                        <span>Update All ({outdated.length} · {outdatedSizeStr})</span>
+                        <span>Update All ({outdated.length} · ~{outdatedSizeStr} delta)</span>
                       </Button>
                     );
                   })()}
@@ -814,6 +815,16 @@ export function SettingsModal() {
                       <RefreshCw className="h-3.5 w-3.5 animate-spin" />
                       <span>Downloading {modelProgress.percent}%</span>
                     </div>
+                  ) : modelProgress.status === "error" ? (
+                    <Button
+                      variant="destructive"
+                      size="sm"
+                      onClick={() => initTranslationModel()}
+                      className="gap-1.5 shrink-0"
+                    >
+                      <DownloadCloud className="h-3.5 w-3.5" />
+                      <span>Retry Download</span>
+                    </Button>
                   ) : (
                     <Button
                       variant="gradient"
@@ -822,7 +833,7 @@ export function SettingsModal() {
                       className="gap-1.5 shrink-0"
                     >
                       <DownloadCloud className="h-3.5 w-3.5" />
-                      <span>Download Model (~300 MB)</span>
+                      <span>Download Model</span>
                     </Button>
                   )}
                 </div>
@@ -831,14 +842,29 @@ export function SettingsModal() {
                   <div className="space-y-1 pt-1">
                     <div className="flex justify-between text-[11px] text-muted-foreground">
                       <span>{modelProgress.message || "Downloading model weights…"}</span>
-                      <span className="font-semibold">{modelProgress.percent}%</span>
+                      <span className="font-semibold tabular-nums">{modelProgress.percent}%</span>
                     </div>
                     <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
                       <div
-                        className="h-full bg-brand transition-all duration-300"
-                        style={{ width: `${Math.max(5, modelProgress.percent)}%` }}
+                        className="h-full bg-brand transition-[width] duration-300"
+                        style={{ width: `${Math.max(4, modelProgress.percent)}%` }}
                       />
                     </div>
+                  </div>
+                )}
+
+                {modelProgress.status === "error" && (
+                  <div className="rounded-lg border border-red-500/30 bg-red-500/10 p-3 text-xs text-red-400 space-y-1">
+                    <div className="font-semibold flex items-center gap-1.5">
+                      <AlertCircle className="h-4 w-4 shrink-0 text-red-400" />
+                      <span>Download interrupted</span>
+                    </div>
+                    <p className="text-[11px] text-red-300 leading-relaxed font-mono">
+                      {modelProgress.message || "Network connection interrupted."}
+                    </p>
+                    <p className="text-[11px] text-muted-foreground mt-1">
+                      Click "Retry Download" to resume via mirror connection.
+                    </p>
                   </div>
                 )}
               </div>

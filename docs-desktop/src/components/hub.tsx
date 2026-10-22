@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useApp, type SiteEntry } from "../lib/store";
+import { useApp, type SiteEntry, getUpdateSizeBytes } from "../lib/store";
 import { Tauri } from "../lib/tauri";
 import { SITE_CATEGORIES, CAT_LABEL, getSiteIconHtml } from "../lib/catalog";
 import { Button, Badge, Input } from "../ui";
@@ -50,7 +50,7 @@ export default function HomeHub() {
     [installed],
   );
   const outdatedSizeMb = React.useMemo(
-    () => outdated.reduce((a, e) => a + (e.remote?.sizeBytes ?? 0) / (1024 * 1024), 0),
+    () => outdated.reduce((a, e) => a + getUpdateSizeBytes(e) / (1024 * 1024), 0),
     [outdated],
   );
 
@@ -192,9 +192,9 @@ export default function HomeHub() {
                 size="sm"
                 className="gap-1.5"
                 onClick={() => app.batchUpdateOutdated()}
-                title={`Update all ${outdated.length} packs (${formatDocBytes(undefined, outdatedSizeMb)})`}
+                title={`Update all ${outdated.length} packs (~${formatDocBytes(undefined, outdatedSizeMb)} delta)`}
               >
-                <ArrowUpCircle size={14} /> Update all · {outdated.length} ({formatDocBytes(undefined, outdatedSizeMb)})
+                <ArrowUpCircle size={14} /> Update all · {outdated.length} (~{formatDocBytes(undefined, outdatedSizeMb)} delta)
               </Button>
             )}
 
@@ -456,8 +456,8 @@ const SiteCard = React.memo(function SiteCard({ entry }: { entry: SiteEntry }) {
               <ArrowUpCircle size={12} /> Update
             </Button>
             {entry.remote && (
-              <Badge className="text-[10px] text-brand border-brand/30 bg-brand/10 font-semibold">
-                {formatDocBytes(entry.remote.sizeBytes)}
+              <Badge className="text-[10px] text-brand border-brand/30 bg-brand/10 font-semibold" title="Incremental delta patch size">
+                {formatDocBytes(getUpdateSizeBytes(entry))} delta
               </Badge>
             )}
             <OpenChip />

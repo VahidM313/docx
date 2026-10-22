@@ -30,6 +30,8 @@ jobs:
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Rust Toolchain
         uses: dtolnay/rust-toolchain@stable
@@ -188,8 +190,8 @@ jobs:
             const { SITE_CATALOG } = require("./scripts/ci-build-site.ts");
             const allIds = SITE_CATALOG.map(s => s.id);
             let mode = process.env.INPUT_SITES;
-            if (!mode || mode === "" || mode === "missing") {
-              mode = "all";
+            if (!mode || mode === "") {
+              mode = "missing";
             }
 
             let resolved = [];
@@ -336,6 +338,9 @@ jobs:
                 packFile: `${m.id}.docpack`,
                 searchFile: `${m.id}.search.json`
               };
+              if (m.delta && m.delta.sizeBytes) {
+                entry.delta = m.delta;
+              }
               const iconPath = path.join(iconsDir, `${m.id}.icon.png`);
               if (fs.existsSync(iconPath)) {
                 entry.iconFile = `${m.id}.icon.png`;
