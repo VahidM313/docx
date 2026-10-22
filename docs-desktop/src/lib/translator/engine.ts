@@ -90,6 +90,37 @@ function updateStatus(progress: TranslationModelProgress) {
   });
 }
 
+export async function checkCachedModelOnDisk(): Promise<boolean> {
+  if (typeof window === "undefined" || !("caches" in window)) return false;
+  try {
+    const hasCache = await window.caches.has("transformers-cache");
+    if (!hasCache) return false;
+    const cache = await window.caches.open("transformers-cache");
+    const requests = await cache.keys();
+    const urls = requests.map((r) => r.url);
+    const hasEncoder = urls.some((u) => u.includes("encoder_model"));
+    const hasDecoder = urls.some((u) => u.includes("decoder_model"));
+    if (hasEncoder && hasDecoder) {
+      if (typeof localStorage !== "undefined") {
+        localStorage.setItem("docx_model_ready_v1", "true");
+      }
+      updateStatus({
+        status: "ready",
+        percent: 100,
+        message: "Meta NLLB-200 offline translation model ready",
+      });
+      return true;
+    }
+  } catch (err) {
+    console.warn("Could not inspect CacheStorage:", err);
+  }
+  return false;
+}
+
+if (typeof window !== "undefined") {
+  void checkCachedModelOnDisk();
+}
+
 function getWorker(): Worker | null {
   if (typeof window === "undefined") return null;
   if (!worker) {
@@ -182,8 +213,14 @@ export async function deleteTranslationModel(): Promise<void> {
   });
 }
 
+export type TranslationProgressCallback = (
+  chunk: Record<string, { translated: string; hash: string }>,
+  progress: { completed: number; total: number; percent: number },
+) => void;
+
 export async function translateTasks(
   items: TranslationTask[],
+  onProgress?: TranslationProgressCallback,
 ): Promise<Record<string, { translated: string; hash: string }>> {
   if (!items.length) return {};
 
@@ -215,14 +252,39 @@ export async function translateTasks(
     }
   }
 
+  // If we already have instant translations (from cache or dictionary), flush them immediately!
+  if (onProgress && Object.keys(results).length > 0) {
+    const instantCompleted = Object.keys(results).length;
+    onProgress(results, {
+      completed: instantCompleted,
+      total: items.length,
+      percent: Math.round((instantCompleted / items.length) * 100),
+    });
+  }
+
   // 3. Translate uncached items using background worker
   if (uncachedItems.length > 0) {
     const w = getWorker();
     if (w) {
+      const initialDone = items.length - uncachedItems.length;
       const workerResults = await new Promise<Record<string, { translated: string; hash: string }>>(
         (resolve) => {
           const handler = (e: MessageEvent) => {
-            if (e.data?.type === "TRANSLATE_BATCH_DONE") {
+            if (e.data?.type === "TRANSLATE_ITEM_PROGRESS" && e.data.payload) {
+              const { id, translated, hash, completed } = e.data.payload;
+              results[id] = { translated, hash };
+              if (onProgress) {
+                const totalCompleted = initialDone + completed;
+                onProgress(
+                  { [id]: { translated, hash } },
+                  {
+                    completed: totalCompleted,
+                    total: items.length,
+                    percent: Math.round((totalCompleted / items.length) * 100),
+                  },
+                );
+              }
+            } else if (e.data?.type === "TRANSLATE_BATCH_DONE") {
               w.removeEventListener("message", handler);
               resolve(e.data.results || {});
             } else if (e.data?.type === "TRANSLATE_BATCH_ERROR") {

@@ -184,6 +184,8 @@ interface AppState {
   modelStatus: TranslationModelStatus;
   modelPercent: number;
   activeDocFa: boolean;
+  translatingActive: boolean;
+  translatingProgress: { completed: number; total: number; percent: number } | null;
 }
 
 interface AppApi extends AppState {
@@ -261,6 +263,10 @@ interface AppApi extends AppState {
   setTranslationPrefs: (patch: Partial<TranslationPreferences>) => void;
   setModelStatus: (status: TranslationModelStatus, percent?: number) => void;
   toggleActiveDocFa: (v?: boolean) => void;
+  setTranslatingState: (
+    active: boolean,
+    progress?: { completed: number; total: number; percent: number } | null,
+  ) => void;
 
   toast: (t: Omit<Toast, "id">) => void;
   dropToast: (id: number) => void;
@@ -333,6 +339,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       modelStatus: load<boolean>("docx_model_ready_v1", false) ? "ready" : "not-downloaded",
       modelPercent: load<boolean>("docx_model_ready_v1", false) ? 100 : 0,
       activeDocFa: false,
+      translatingActive: false,
+      translatingProgress: null,
     },
   );
 
@@ -906,6 +914,9 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       },
       toggleActiveDocFa: (v?: boolean) => {
         setState((s) => ({ activeDocFa: typeof v === "boolean" ? v : !s.activeDocFa }));
+      },
+      setTranslatingState: (active: boolean, progress = null) => {
+        setState({ translatingActive: active, translatingProgress: progress });
       },
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps

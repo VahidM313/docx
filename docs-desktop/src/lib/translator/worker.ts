@@ -4,18 +4,23 @@ import { pipeline, env } from "@xenova/transformers";
 env.allowLocalModels = false;
 env.useBrowserCache = true;
 
+// Point ONNX Runtime Web to local WASM binaries so it NEVER fetches from external jsdelivr CDN
+if (env?.backends?.onnx?.wasm) {
+  const baseWasm =
+    typeof self !== "undefined" && self.location?.origin
+      ? `${self.location.origin}/wasm/`
+      : "/wasm/";
+  env.backends.onnx.wasm.wasmPaths = baseWasm;
+  env.backends.onnx.wasm.numThreads = 1;
+}
+
 type TranslationPipeline = (
   text: string,
   options?: Record<string, unknown>,
 ) => Promise<Array<{ translation_text?: string }>>;
 
 let translatorInstance: TranslationPipeline | null = null;
-let isInitializing = false;
-
-const sleep = (ms: number) =>
-  new Promise<void>((resolve) => {
-    setTimeout(resolve, ms);
-  });
+let initPromise: Promise<TranslationPipeline> | null = null;
 
 // Per-file progress tracker to prevent erratic percentage jumps
 const fileProgressMap = new Map<string, { loaded: number; total: number }>();
@@ -67,7 +72,13 @@ async function createPipelineWithFallback(): Promise<TranslationPipeline> {
         "Xenova/nllb-200-distilled-600M",
         {
           quantized: true,
-          progress_callback: (progress: { status?: string; total?: number; loaded?: number; file?: string; name?: string }) => {
+          progress_callback: (progress: {
+            status?: string;
+            total?: number;
+            loaded?: number;
+            file?: string;
+            name?: string;
+          }) => {
             if (progress.status === "progress" && progress.total && progress.loaded !== undefined) {
               const file = progress.file || progress.name || "model weights";
               const { percent, message, loadedBytes, totalBytes } = computeOverallProgress(
@@ -84,8 +95,6 @@ async function createPipelineWithFallback(): Promise<TranslationPipeline> {
                 downloadedBytes: loadedBytes,
               });
             }
-            // Do NOT emit status: "ready" here. transformers.js emits progress.status === "ready"
-            // for EACH individual asset file. The pipeline is only ready once pipeline(...) resolves.
           },
         },
       )) as unknown as TranslationPipeline;
@@ -103,17 +112,9 @@ async function createPipelineWithFallback(): Promise<TranslationPipeline> {
   throw new Error(typeof lastErr === "string" ? lastErr : "Failed to download model from all mirrors");
 }
 
-self.onmessage = async (e: MessageEvent) => {
-  const { type, payload } = e.data || {};
-
-  if (type === "INIT_MODEL") {
-    if (translatorInstance) {
-      self.postMessage({ type: "MODEL_STATUS", status: "ready", percent: 100 });
-      return;
-    }
-    if (isInitializing) return;
-
-    isInitializing = true;
+async function getOrInitPipeline(): Promise<TranslationPipeline> {
+  if (translatorInstance) return translatorInstance;
+  if (!initPromise) {
     maxReportedPercent = 0;
     fileProgressMap.clear();
 
@@ -124,28 +125,49 @@ self.onmessage = async (e: MessageEvent) => {
       message: "Initializing Meta NLLB-200 offline translation model…",
     });
 
+    initPromise = (async () => {
+      try {
+        const instance = await createPipelineWithFallback();
+        translatorInstance = instance;
+        self.postMessage({
+          type: "MODEL_STATUS",
+          status: "ready",
+          percent: 100,
+          message: "Meta NLLB-200 offline translation model ready",
+        });
+        return instance;
+      } catch (err: unknown) {
+        initPromise = null;
+        const errMsg = err instanceof Error ? err.message : String(err);
+        self.postMessage({
+          type: "MODEL_STATUS",
+          status: "error",
+          percent: 0,
+          message: errMsg,
+        });
+        throw err;
+      }
+    })();
+  }
+  return initPromise;
+}
+
+self.onmessage = async (e: MessageEvent) => {
+  const { type, payload } = e.data || {};
+
+  if (type === "INIT_MODEL") {
+    if (translatorInstance) {
+      self.postMessage({ type: "MODEL_STATUS", status: "ready", percent: 100 });
+      return;
+    }
     try {
-      translatorInstance = await createPipelineWithFallback();
-      isInitializing = false;
-      self.postMessage({
-        type: "MODEL_STATUS",
-        status: "ready",
-        percent: 100,
-        message: "Meta NLLB-200 offline translation model ready",
-      });
-    } catch (err: unknown) {
-      isInitializing = false;
-      const errMsg = err instanceof Error ? err.message : String(err);
-      self.postMessage({
-        type: "MODEL_STATUS",
-        status: "error",
-        percent: 0,
-        message: errMsg,
-      });
+      await getOrInitPipeline();
+    } catch {
+      // Status already posted in getOrInitPipeline
     }
   } else if (type === "DELETE_MODEL") {
     translatorInstance = null;
-    isInitializing = false;
+    initPromise = null;
     maxReportedPercent = 0;
     fileProgressMap.clear();
 
@@ -173,60 +195,25 @@ self.onmessage = async (e: MessageEvent) => {
       return;
     }
 
-    if (!translatorInstance) {
-      if (!isInitializing) {
-        isInitializing = true;
-        try {
-          self.postMessage({
-            type: "MODEL_STATUS",
-            status: "downloading",
-            percent: 0,
-            message: "Loading translation model…",
-          });
-          translatorInstance = await createPipelineWithFallback();
-          isInitializing = false;
-          self.postMessage({
-            type: "MODEL_STATUS",
-            status: "ready",
-            percent: 100,
-            message: "Meta NLLB-200 offline translation model ready",
-          });
-        } catch (err: unknown) {
-          isInitializing = false;
-          const errMsg = err instanceof Error ? err.message : String(err);
-          self.postMessage({
-            type: "MODEL_STATUS",
-            status: "error",
-            percent: 0,
-            message: errMsg,
-          });
-          self.postMessage({
-            type: "TRANSLATE_BATCH_ERROR",
-            message: "Model not loaded: " + errMsg,
-          });
-          return;
-        }
-      } else {
-        const start = Date.now();
-        for (let i = 0; i < 180; i++) {
-          if (!isInitializing || translatorInstance || Date.now() - start >= 45000) break;
-          await sleep(250);
-        }
-        if (!translatorInstance) {
-          self.postMessage({
-            type: "TRANSLATE_BATCH_ERROR",
-            message: "Model initialization timed out",
-          });
-          return;
-        }
-      }
+    let pipe: TranslationPipeline;
+    try {
+      pipe = await getOrInitPipeline();
+    } catch (err: unknown) {
+      const errMsg = err instanceof Error ? err.message : String(err);
+      self.postMessage({
+        type: "TRANSLATE_BATCH_ERROR",
+        message: "Model not loaded: " + errMsg,
+      });
+      return;
     }
 
     const results: Record<string, { translated: string; hash: string }> = {};
+    const total = items.length;
+    let completed = 0;
 
     for (const item of items) {
       try {
-        const out = await translatorInstance(item.text, {
+        const out = await pipe(item.text, {
           src_lang: "eng_Latn",
           tgt_lang: "pes_Arab",
           max_new_tokens: 256,
@@ -237,11 +224,33 @@ self.onmessage = async (e: MessageEvent) => {
           translated: translatedText,
           hash: item.hash,
         };
+        completed++;
+        self.postMessage({
+          type: "TRANSLATE_ITEM_PROGRESS",
+          payload: {
+            id: item.id,
+            translated: translatedText,
+            hash: item.hash,
+            completed,
+            total,
+          },
+        });
       } catch {
+        completed++;
         results[item.id] = {
           translated: item.text,
           hash: item.hash,
         };
+        self.postMessage({
+          type: "TRANSLATE_ITEM_PROGRESS",
+          payload: {
+            id: item.id,
+            translated: item.text,
+            hash: item.hash,
+            completed,
+            total,
+          },
+        });
       }
     }
 

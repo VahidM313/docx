@@ -161,35 +161,61 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
     );
   }, [app.activeDocFa, activeWebId]);
 
+  const { setTranslatingState, toast } = app;
   React.useEffect(() => {
     const handleMessage = async (e: MessageEvent) => {
       if (e.data?.type === "DOCX_REQUEST_TRANSLATION" && Array.isArray(e.data.items)) {
-        const results = await translateTasks(e.data.items);
-        if (e.source && typeof (e.source as Window).postMessage === "function") {
-          (e.source as Window).postMessage(
-            {
-              type: "DOCX_TRANSLATIONS_READY",
-              translations: results,
-            },
-            "*",
-          );
-        } else {
-          const activeIframe = activeWebId ? iframeRefs.current[activeWebId] : null;
-          if (activeIframe?.contentWindow) {
-            activeIframe.contentWindow.postMessage(
-              {
-                type: "DOCX_TRANSLATIONS_READY",
-                translations: results,
-              },
-              "*",
-            );
+        const sendToDoc = (payload: unknown) => {
+          if (e.source && typeof (e.source as Window).postMessage === "function") {
+            (e.source as Window).postMessage(payload, "*");
           }
+          const activeIframe = activeWebId ? iframeRefs.current[activeWebId] : null;
+          if (activeIframe?.contentWindow && activeIframe.contentWindow !== e.source) {
+            activeIframe.contentWindow.postMessage(payload, "*");
+          }
+        };
+
+        const totalItems = e.data.items.length;
+        setTranslatingState(true, {
+          completed: 0,
+          total: totalItems,
+          percent: 0,
+        });
+
+        try {
+          const results = await translateTasks(e.data.items, (chunk, progress) => {
+            setTranslatingState(true, progress);
+            sendToDoc({
+              type: "DOCX_TRANSLATIONS_READY",
+              translations: chunk,
+            });
+          });
+
+          sendToDoc({
+            type: "DOCX_TRANSLATIONS_READY",
+            translations: results,
+          });
+
+          if (Object.keys(results).length > 0) {
+            toast({
+              kind: "success",
+              message: "ترجمه صفحه انجام شد • Page translated to Persian",
+            });
+          }
+        } catch (err) {
+          console.error("Translation failed:", err);
+          toast({
+            kind: "danger",
+            message: "خطا در پردازش ترجمه صفحه • Translation error",
+          });
+        } finally {
+          setTranslatingState(false, null);
         }
       }
     };
     window.addEventListener("message", handleMessage);
     return () => window.removeEventListener("message", handleMessage);
-  }, [activeWebId]);
+  }, [activeWebId, setTranslatingState, toast]);
 
   /* ---- imperative api ---- */
   React.useImperativeHandle(props.apiRef, () => ({
@@ -268,6 +294,24 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
           <Loader2 className="animate-spin text-brand" size={13} />
           Loading {getBrand(activeWeb.siteId).name}…
         </div>
+      )}
+      {app.translatingActive && (
+        <output
+          aria-live="polite"
+          className="pointer-events-none absolute left-1/2 top-3 z-50 flex -translate-x-1/2 items-center gap-2.5 rounded-full border border-emerald-500/40 bg-popover/95 backdrop-blur-md px-4 py-1.5 text-xs font-medium text-emerald-400 shadow-lift animate-in fade-in slide-in-from-top-2"
+        >
+          <Loader2 className="h-3.5 w-3.5 animate-spin text-emerald-400 shrink-0" />
+          <span>
+            در حال ترجمه متن به فارسی… ({app.translatingProgress?.completed ?? 0} /{" "}
+            {app.translatingProgress?.total ?? 0})
+          </span>
+          <div className="w-16 h-1.5 bg-muted rounded-full overflow-hidden">
+            <div
+              className="h-full bg-emerald-500 transition-all duration-300"
+              style={{ width: `${app.translatingProgress?.percent ?? 0}%` }}
+            />
+          </div>
+        </output>
       )}
     </div>
   );

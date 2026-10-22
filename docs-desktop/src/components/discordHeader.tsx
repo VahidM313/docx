@@ -19,6 +19,8 @@ import {
   Moon,
   Sparkles,
   Languages,
+  Loader2,
+  RefreshCw,
 } from "lucide-react";
 import { type ReaderPanelsApi } from "./readerPanels";
 import { initTranslationModel } from "../lib/translator/engine";
@@ -286,9 +288,13 @@ export function DiscordHeader({
         {isReader && active?.siteId && app.translationPrefs.showToggleInHeader && (
           <Tooltip
             label={
-              app.activeDocFa
-                ? "ترجمه فارسی فعال است (کلیک برای زبان انگلیسی) • Persian Translation Active (Click to switch to English)"
-                : "ترجمه صفحه به فارسی (آفلاین) • Translate page to Persian (Offline)"
+              app.translatingActive
+                ? `در حال ترجمه متن به فارسی (${app.translatingProgress?.percent ?? 0}%) • Translating (${app.translatingProgress?.completed ?? 0}/${app.translatingProgress?.total ?? 0})`
+                : app.modelStatus === "downloading"
+                  ? `مدل ترجمه در حال دریافت است (${app.modelPercent}%) • Translation model is downloading`
+                  : app.activeDocFa
+                    ? "ترجمه فارسی فعال است (کلیک برای بازگشت به انگلیسی) • Persian active (Click to restore English)"
+                    : "ترجمه صفحه به فارسی (آفلاین) • Translate page to Persian (Offline)"
             }
             side="bottom"
           >
@@ -330,10 +336,28 @@ export function DiscordHeader({
               }
               aria-label="Toggle Persian Translation"
             >
-              <Languages className={"h-3.5 w-3.5 " + (app.activeDocFa ? "text-emerald-400" : "text-muted-foreground")} />
-              <span className="text-[11px] font-bold">
-                {app.activeDocFa ? "فارسی" : "FA"}
-              </span>
+              {app.translatingActive ? (
+                <>
+                  <Loader2 className="h-3.5 w-3.5 animate-spin text-emerald-400" />
+                  <span className="text-[11px] font-bold tabular-nums">
+                    فارسی {app.translatingProgress?.percent ?? 0}%
+                  </span>
+                </>
+              ) : app.modelStatus === "downloading" ? (
+                <>
+                  <RefreshCw className="h-3.5 w-3.5 animate-spin text-brand" />
+                  <span className="text-[11px] font-bold tabular-nums">
+                    {app.modelPercent}%
+                  </span>
+                </>
+              ) : (
+                <>
+                  <Languages className={"h-3.5 w-3.5 " + (app.activeDocFa ? "text-emerald-400" : "text-muted-foreground")} />
+                  <span className="text-[11px] font-bold">
+                    {app.activeDocFa ? "فارسی" : "FA"}
+                  </span>
+                </>
+              )}
             </button>
           </Tooltip>
         )}
