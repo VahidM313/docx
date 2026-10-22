@@ -15,7 +15,6 @@ import {
   PanelLeftOpen,
   PanelRight,
   Plus,
-  Type,
   Sun,
   Moon,
   Sparkles,

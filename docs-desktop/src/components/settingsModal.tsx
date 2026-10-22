@@ -14,7 +14,6 @@ import {
   Moon,
   Laptop,
   BookOpen,
-  Type,
   RotateCcw,
   Sparkles,
   Languages,
@@ -69,13 +68,12 @@ export function SettingsModal() {
     : (app.entries.find((e) => e.installed)?.id || "tailwind");
 
   const [selectedSiteId, setSelectedSiteId] = React.useState<string>(activeSiteId);
+  const [prevActiveSiteId, setPrevActiveSiteId] = React.useState<string>(activeSiteId);
 
-  // Sync selected site if activeTab changes and user opens modal
-  React.useEffect(() => {
-    if (app.activeTab?.siteId && app.activeTab.siteId !== "home") {
-      setSelectedSiteId(app.activeTab.siteId);
-    }
-  }, [app.activeTab?.siteId, app.settingsOpen]);
+  if (activeSiteId !== prevActiveSiteId) {
+    setPrevActiveSiteId(activeSiteId);
+    setSelectedSiteId(activeSiteId);
+  }
 
   // Global ESC key listener for modal
   React.useEffect(() => {
@@ -249,11 +247,12 @@ export function SettingsModal() {
 
               {/* Doc Picker */}
               <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                <label htmlFor="select-doc-configure" className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                   Select Document to Configure
                 </label>
                 <div className="flex items-center gap-2">
                   <select
+                    id="select-doc-configure"
                     value={selectedSiteId}
                     onChange={(e) => setSelectedSiteId(e.target.value)}
                     className="flex-1 rounded-lg border border-border bg-card px-3 py-2 text-sm font-semibold text-foreground shadow-xs focus:border-brand focus:outline-hidden cursor-pointer"
@@ -321,9 +320,9 @@ export function SettingsModal() {
 
               {/* Feature 1: Doc Themes Preference */}
               <div className="space-y-3">
-                <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                   Document Theme Preference
-                </label>
+                </div>
 
                 <div className="grid grid-cols-3 gap-2.5">
                   {/* Dark Option */}
@@ -406,7 +405,7 @@ export function SettingsModal() {
               {/* Feature 2: Doc Font Size Preference */}
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                  <label htmlFor="doc-font-size-slider" className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                     Document Font Size ({currentDocPrefs.fontSize}px)
                   </label>
                   <div className="flex items-center gap-1">
@@ -435,6 +434,7 @@ export function SettingsModal() {
                 </div>
 
                 <input
+                  id="doc-font-size-slider"
                   type="range"
                   min="12"
                   max="24"
@@ -456,9 +456,9 @@ export function SettingsModal() {
 
               {/* Feature 3: Doc Font Family Preference */}
               <div className="space-y-3">
-                <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                   Document Font Family Preference
-                </label>
+                </div>
 
                 <div className="grid grid-cols-2 gap-2.5">
                   {FONT_FAMILIES.map((font) => (
@@ -506,9 +506,9 @@ export function SettingsModal() {
 
               {/* Live Typography Preview Box */}
               <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                   Live Typography Preview for {currentBrand?.name}
-                </label>
+                </div>
                 <div
                   className="rounded-lg border border-border bg-card p-4 space-y-2 shadow-xs"
                   style={{
@@ -547,9 +547,9 @@ export function SettingsModal() {
 
               {/* Theme Selector */}
               <div className="space-y-3">
-                <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                   Application Theme
-                </label>
+                </div>
 
                 <div className="grid grid-cols-2 gap-3">
                   {/* Onyx Dark Card */}
@@ -665,7 +665,7 @@ export function SettingsModal() {
 
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                  <label htmlFor="global-reader-zoom" className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                     Global Reader Zoom ({app.readerZoom}%)
                   </label>
                   <Button
@@ -678,6 +678,7 @@ export function SettingsModal() {
                   </Button>
                 </div>
                 <input
+                  id="global-reader-zoom"
                   type="range"
                   min="75"
                   max="150"
@@ -689,9 +690,9 @@ export function SettingsModal() {
               </div>
 
               <div className="space-y-3 pt-2">
-                <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                   UI Features
-                </label>
+                </div>
                 <div className="flex items-center justify-between rounded-lg border border-border bg-card p-3.5">
                   <div className="space-y-0.5">
                     <div className="text-xs font-semibold text-foreground">Theme Sync with Embedded Docs</div>

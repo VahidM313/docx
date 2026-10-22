@@ -8,6 +8,7 @@
     "build": "vite build",
     "tauri": "tauri",
     "start": "tauri dev",
+    "lint": "oxlint src",
     "test:playwright": "bun run verify-discord-ui.ts"
   },
   "dependencies": {

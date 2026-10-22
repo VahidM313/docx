@@ -1,0 +1,93 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "typescript",
+    "unicorn",
+    "import",
+    "react",
+    "react-perf",
+    "jsx-a11y",
+    "promise"
+  ],
+  "categories": {
+    "correctness": "error"
+  },
+  "rules": {
+    "eslint/no-unused-vars": "error",
+    "eslint/no-async-promise-executor": "error",
+    "eslint/no-promise-executor-return": "error",
+    "eslint/no-control-regex": "error",
+    "eslint/no-constant-condition": "error",
+    "eslint/no-unreachable": "error",
+    "eslint/no-unreachable-loop": "error",
+    "eslint/no-self-assign": "error",
+    "eslint/no-self-compare": "error",
+    "eslint/no-constant-binary-expression": "error",
+    "eslint/no-duplicate-case": "error",
+    "eslint/no-duplicate-imports": "error",
+    "eslint/no-func-assign": "error",
+    "eslint/no-obj-calls": "error",
+    "eslint/no-redeclare": "error",
+    "eslint/no-return-assign": "error",
+    "eslint/no-setter-return": "error",
+    "eslint/no-shadow": "error",
+    "eslint/no-sparse-arrays": "error",
+    "eslint/no-this-before-super": "error",
+    "eslint/no-throw-literal": "error",
+    "eslint/no-unmodified-loop-condition": "error",
+    "promise/no-return-in-finally": "error",
+    "promise/no-nesting": "error",
+    "promise/no-new-statics": "error",
+    "promise/no-return-wrap": "error",
+    "promise/param-names": "error",
+    "typescript/no-explicit-any": "error",
+    "typescript/no-empty-object-type": "error",
+    "typescript/no-unsafe-function-type": "error",
+    "typescript/no-wrapper-object-types": "error",
+    "import/no-cycle": "error",
+    "import/no-duplicates": "error",
+    "import/no-self-import": "error",
+    "jsx-a11y/alt-text": "error",
+    "jsx-a11y/anchor-ambiguous-text": "error",
+    "jsx-a11y/anchor-has-content": "error",
+    "jsx-a11y/anchor-is-valid": "error",
+    "jsx-a11y/aria-props": "error",
+    "jsx-a11y/aria-proptypes": "error",
+    "jsx-a11y/aria-role": "error",
+    "jsx-a11y/aria-unsupported-elements": "error",
+    "jsx-a11y/heading-has-content": "error",
+    "jsx-a11y/html-has-lang": "error",
+    "jsx-a11y/iframe-has-title": "error",
+    "jsx-a11y/img-redundant-alt": "error",
+    "jsx-a11y/no-access-key": "error",
+    "jsx-a11y/no-autofocus": "error",
+    "jsx-a11y/no-distracting-elements": "error",
+    "jsx-a11y/no-redundant-roles": "error",
+    "jsx-a11y/scope": "error",
+    "jsx-a11y/tabindex-no-positive": "error",
+    "react/no-array-index-key": "error",
+    "react/no-direct-mutation-state": "error",
+    "react/no-unstable-nested-components": "error",
+    "react/jsx-no-constructed-context-values": "error",
+    "react/no-render-return-value": "error",
+    "react/set-state-in-effect": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["docs-desktop/src/components/**", "docs-desktop/src/ui.tsx"],
+      "rules": {
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-noninteractive-element-interactions": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "react/no-danger": "off"
+      }
+    }
+  ],
+  "ignorePatterns": [
+    "**/dist/**",
+    "**/target/**",
+    "**/node_modules/**",
+    "**/.git/**",
+    "**/src-tauri/gen/**"
+  ]
+}

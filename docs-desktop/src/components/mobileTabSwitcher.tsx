@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useApp } from "../lib/store";
 import { getBrand, getAdaptiveBrandColor, getAdaptiveSiteSvg } from "../lib/catalog";
-import { Plus, X, ArrowLeft, CheckCircle2, DownloadCloud, Moon, Sun, Layers, BookOpen } from "lucide-react";
+import { Plus, X, CheckCircle2, DownloadCloud, Moon, Sun, Layers, BookOpen } from "lucide-react";
 
 export function MobileTabSwitcher({
   onSelectTab,

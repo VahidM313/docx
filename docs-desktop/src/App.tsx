@@ -38,11 +38,12 @@ function Shell() {
   }, []);
 
   // Global subscription to offline translation model status
+  const { setModelStatus } = app;
   React.useEffect(() => {
     return subscribeModelStatus((p) => {
-      app.setModelStatus(p.status, p.percent);
+      setModelStatus(p.status, p.percent);
     });
-  }, [app.setModelStatus]);
+  }, [setModelStatus]);
 
   // When active tab changes to a doc on mobile, switch to reader view automatically
   const activeSiteId = app.activeTab?.siteId;

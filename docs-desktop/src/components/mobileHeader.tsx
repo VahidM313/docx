@@ -1,14 +1,11 @@
 import * as React from "react";
 import { useApp } from "../lib/store";
 import { getBrand } from "../lib/catalog";
-import { Tooltip } from "../ui";
 import {
-  Menu,
   ChevronLeft,
   RotateCw,
   Sun,
   Moon,
-  Layers,
   Search,
   Settings,
 } from "lucide-react";

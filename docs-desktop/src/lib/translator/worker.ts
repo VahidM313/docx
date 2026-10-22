@@ -4,8 +4,18 @@ import { pipeline, env } from "@xenova/transformers";
 env.allowLocalModels = false;
 env.useBrowserCache = true;
 
-let translatorInstance: any = null;
+type TranslationPipeline = (
+  text: string,
+  options?: Record<string, unknown>,
+) => Promise<Array<{ translation_text?: string }>>;
+
+let translatorInstance: TranslationPipeline | null = null;
 let isInitializing = false;
+
+const sleep = (ms: number) =>
+  new Promise<void>((resolve) => {
+    setTimeout(resolve, ms);
+  });
 
 // Per-file progress tracker to prevent erratic percentage jumps
 const fileProgressMap = new Map<string, { loaded: number; total: number }>();
@@ -37,9 +47,9 @@ function computeOverallProgress(file: string, loaded: number, total: number) {
   };
 }
 
-async function createPipelineWithFallback() {
+async function createPipelineWithFallback(): Promise<TranslationPipeline> {
   const hosts = ["https://huggingface.co/", "https://hf-mirror.com/"];
-  let lastErr: any = null;
+  let lastErr: unknown = null;
 
   for (const host of hosts) {
     try {
@@ -52,13 +62,13 @@ async function createPipelineWithFallback() {
         message: `Connecting to ${hostLabel}…`,
       });
 
-      const instance = await pipeline(
+      const instance = (await pipeline(
         "translation",
         "Xenova/nllb-200-distilled-600M",
         {
           quantized: true,
-          progress_callback: (progress: any) => {
-            if (progress.status === "progress" && progress.total) {
+          progress_callback: (progress: { status?: string; total?: number; loaded?: number; file?: string; name?: string }) => {
+            if (progress.status === "progress" && progress.total && progress.loaded !== undefined) {
               const file = progress.file || progress.name || "model weights";
               const { percent, message, loadedBytes, totalBytes } = computeOverallProgress(
                 file,
@@ -78,16 +88,19 @@ async function createPipelineWithFallback() {
             // for EACH individual asset file. The pipeline is only ready once pipeline(...) resolves.
           },
         },
-      );
+      )) as unknown as TranslationPipeline;
 
       return instance;
-    } catch (err: any) {
+    } catch (err: unknown) {
       lastErr = err;
       console.warn(`Failed loading model from ${host}:`, err);
     }
   }
 
-  throw lastErr || new Error("Failed to download model from all mirrors");
+  if (lastErr instanceof Error) {
+    throw lastErr;
+  }
+  throw new Error(typeof lastErr === "string" ? lastErr : "Failed to download model from all mirrors");
 }
 
 self.onmessage = async (e: MessageEvent) => {
@@ -120,9 +133,9 @@ self.onmessage = async (e: MessageEvent) => {
         percent: 100,
         message: "Meta NLLB-200 offline translation model ready",
       });
-    } catch (err: any) {
+    } catch (err: unknown) {
       isInitializing = false;
-      const errMsg = err?.message || String(err);
+      const errMsg = err instanceof Error ? err.message : String(err);
       self.postMessage({
         type: "MODEL_STATUS",
         status: "error",
@@ -178,9 +191,9 @@ self.onmessage = async (e: MessageEvent) => {
             percent: 100,
             message: "Meta NLLB-200 offline translation model ready",
           });
-        } catch (err: any) {
+        } catch (err: unknown) {
           isInitializing = false;
-          const errMsg = err?.message || String(err);
+          const errMsg = err instanceof Error ? err.message : String(err);
           self.postMessage({
             type: "MODEL_STATUS",
             status: "error",
@@ -195,8 +208,9 @@ self.onmessage = async (e: MessageEvent) => {
         }
       } else {
         const start = Date.now();
-        while (isInitializing && !translatorInstance && Date.now() - start < 45000) {
-          await new Promise((r) => setTimeout(r, 250));
+        for (let i = 0; i < 180; i++) {
+          if (!isInitializing || translatorInstance || Date.now() - start >= 45000) break;
+          await sleep(250);
         }
         if (!translatorInstance) {
           self.postMessage({
@@ -223,7 +237,7 @@ self.onmessage = async (e: MessageEvent) => {
           translated: translatedText,
           hash: item.hash,
         };
-      } catch (err) {
+      } catch {
         results[item.id] = {
           translated: item.text,
           hash: item.hash,

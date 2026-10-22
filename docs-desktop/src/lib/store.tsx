@@ -6,7 +6,7 @@ import {
   type DownloadProgressPayload,
   type ServerStatus,
 } from "./tauri";
-import { SITES, SITE_MAP, getEntryPath, getSiteOrigin, EMBEDDED_SITE_IDS, type SiteBrand } from "./catalog";
+import { SITES, SITE_MAP, getEntryPath, getSiteOrigin, type SiteBrand } from "./catalog";
 import {
   DEFAULT_TRANSLATION_PREFS,
   type TranslationPreferences,
@@ -358,7 +358,6 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   /* ------- actions ------- */
   const api = React.useMemo<AppApi>(() => {
-    const persist = { ...state } as AppState;
 
     const setThemeMode = (m: ThemeMode) => {
       save("docx_theme_mode", m);
@@ -594,9 +593,9 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         kind: ok === totalCount ? "success" : "error",
         message: `Updated ${ok}/${totalCount} packs successfully`,
       });
-      setState((s) => ({
+      setState({
         downloads: {},
-      }));
+      });
     };
 
     const deleteSite = async (siteId: string) => {
@@ -626,29 +625,6 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     };
 
     /* ---------- tabs ---------- */
-    let portCache: Record<string, number> = { ...state.servers?.site_ports };
-
-    const resolveTabUrl = async (siteId: string, path?: string): Promise<string> => {
-      if (EMBEDDED_SITE_IDS.includes(siteId)) {
-        let st = state.servers;
-        if (!st) {
-          try {
-            st = await Tauri.checkServers();
-            setState({ servers: st });
-            portCache = { ...portCache, ...st.site_ports };
-          } catch {}
-        }
-        const p = siteId === "tailwind" ? st?.tailwind_port : st?.shadcn_port;
-        return `http://localhost:${p ?? 3001}${path ?? getEntryPath(siteId)}`;
-      }
-      try {
-        if (!portCache[siteId]) portCache[siteId] = await Tauri.ensureSiteServer(siteId);
-        return `http://localhost:${portCache[siteId]}${path ?? getEntryPath(siteId)}`;
-      } catch {
-        return "about:blank";
-      }
-    };
-
     const openSite = (siteId: string, path?: string) => {
       if (!SITE_MAP[siteId]) return;
       setState((s) => {

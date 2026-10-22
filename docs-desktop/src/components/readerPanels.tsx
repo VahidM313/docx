@@ -110,7 +110,9 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
       if (!app.servers) {
         try {
           const st = await Tauri.checkServers();
-          !cancelled && window.document.dispatchEvent(new CustomEvent("docx:servers", { detail: st }));
+          if (!cancelled) {
+            window.document.dispatchEvent(new CustomEvent("docx:servers", { detail: st }));
+          }
         } catch {}
       }
     })();
@@ -220,7 +222,8 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
         try {
           activeIframe.contentWindow?.location.reload();
         } catch {
-          activeIframe.src = activeIframe.src;
+          const currentSrc = activeIframe.src;
+          activeIframe.src = currentSrc;
         }
       }
     },

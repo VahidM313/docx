@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useApp } from "../lib/store";
-import { getBrand, getAdaptiveBrandColor, getAdaptiveSiteSvg, type SiteBrand } from "../lib/catalog";
+import { getBrand, getAdaptiveBrandColor, getAdaptiveSiteSvg } from "../lib/catalog";
 import { Tooltip } from "../ui";
 import {
   Hash,
@@ -27,10 +27,11 @@ export function MemberOutline() {
   const entry = active?.siteId ? app.entries.find((e) => e.id === active.siteId) : null;
   const webTabs = app.tabs.filter((t) => t.siteId !== "home");
 
+  const activeSiteId = active?.siteId;
   const docBookmarks = React.useMemo(() => {
-    if (!active?.siteId) return [];
-    return app.bookmarks.filter((b) => b.siteId === active.siteId);
-  }, [app.bookmarks, active?.siteId]);
+    if (!activeSiteId) return [];
+    return app.bookmarks.filter((b) => b.siteId === activeSiteId);
+  }, [app.bookmarks, activeSiteId]);
 
   const handleMouseEnter = () => {
     if (leaveTimer.current) {

@@ -146,6 +146,7 @@ function IconPinRail({ app }: { app: ReturnType<typeof useApp> }) {
             key={id}
             onClick={() => app.openSite(id)}
             title={b.name}
+            aria-label={b.name}
             className={
               "relative grid h-10 w-10 shrink-0 place-items-center rounded-full bg-muted text-[var(--c)] transition-colors hover:bg-accent " +
               (active ? "ring-2 ring-brand" : "")
@@ -347,7 +348,6 @@ export function ChannelDrawer() {
             <div className="relative">
               <SearchIcon size={14} className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-muted-foreground" />
               <Input
-                autoFocus
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
                 placeholder="Find a documentation site"

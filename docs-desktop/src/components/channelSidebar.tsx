@@ -11,7 +11,6 @@ import {
   Bookmark,
   PanelLeftClose,
   BookOpen,
-  X,
 } from "lucide-react";
 
 export function ChannelSidebar({ onNavigate }: { onNavigate?: () => void }) {

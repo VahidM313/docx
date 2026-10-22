@@ -6,8 +6,6 @@ import {
   Compass,
   Search,
   Settings,
-  MessageSquare,
-  BookOpen,
   Layers,
 } from "lucide-react";
 

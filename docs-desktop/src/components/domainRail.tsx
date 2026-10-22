@@ -253,7 +253,7 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
         // Dragged unpinned doc
         if (!isUnpinned && targetIdx !== null) {
           // Pin it at targetIdx
-          const nextPinned = [...app.pinned.filter((id) => id !== draggedId)];
+          const nextPinned = app.pinned.filter((id) => id !== draggedId);
           const insertIdx = Math.min(targetIdx, nextPinned.length);
           nextPinned.splice(insertIdx, 0, draggedId);
           app.setPinned(nextPinned);
