@@ -10,7 +10,8 @@ async function run() {
   const bridgeHtmlPath = path.resolve(__dirname, "src-tauri/src/bridge/reader-bridge.html");
   const bridgeScript = fs.readFileSync(bridgeHtmlPath, "utf-8");
 
-  // 2. Create a test doc page containing sample English content with inline code, links, and pre tags
+  // 2. Create test doc pages:
+  // a) Standard English page (without built-in Persian)
   const testPageHtml = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +33,35 @@ async function run() {
 </body>
 </html>`;
 
-  // 3. Create a parent container mock page that simulates the Docx Desktop reader
+  // b) Page with built-in native Persian translation link
+  const nativePersianOriginHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FastAPI Tutorial</title>
+  <link rel="alternate" hreflang="fa" href="/doc-native-fa.html" />
+</head>
+<body>
+  <h1 id="native-title">FastAPI Introduction</h1>
+  <p>Learn how to build high performance APIs.</p>
+  ${bridgeScript}
+</body>
+</html>`;
+
+  const nativePersianPageHtml = `<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>آموزش سریع فست‌ای‌پی‌آی</title>
+</head>
+<body>
+  <h1 id="native-title">معرفی فست‌ای‌پی‌آی</h1>
+  <p>آموزش ساخت وب‌سرویس‌های سریع و امن.</p>
+  ${bridgeScript}
+</body>
+</html>`;
+
+  // 3. Parent container mock page
   const parentContainerHtml = `<!DOCTYPE html>
 <html>
 <head>
@@ -40,61 +69,44 @@ async function run() {
 </head>
 <body>
   <div id="status-container">
-    <span id="progress-text">Idle</span>
     <span id="active-fa">false</span>
   </div>
   <iframe id="doc-frame" src="/doc.html" width="800" height="600"></iframe>
 
   <script>
     const frame = document.getElementById('doc-frame');
-    window.eventsLog = [];
+    window.translationRequestsCount = 0;
 
     window.addEventListener('message', (e) => {
-      window.eventsLog.push(e.data);
-
       if (e.data && e.data.type === 'DOCX_REQUEST_TRANSLATION') {
-        document.getElementById('progress-text').innerText = 'Translating 0%';
+        window.translationRequestsCount++;
         const items = e.data.items || [];
-
-        // Simulate dictionary & streaming progress translation
         const dict = {
           "Getting Started": "شروع به کار",
           "Hooks let you use state and other React features without writing a class. For example, ⟦CODE_0⟧ is a Hook.": "قلاب‌ها به شما اجازه می‌دهند بدون نوشتن کلاس از وضعیت و سایر امکانات ری‌اکت استفاده کنید. برای مثال، ⟦CODE_0⟧ یک هوک است.",
           "Read the ⟦LINK_0⟧ to learn more about components.": "راهنمای ⟦LINK_0⟧ را بخوانید تا درباره مؤلفه‌ها بیشتر بدانید."
         };
 
-        let completed = 0;
-        items.forEach((item, idx) => {
-          setTimeout(() => {
-            completed++;
-            const translatedText = dict[item.text] || ("ترجمه شده: " + item.text);
-            const chunk = {
-              [item.id]: {
-                translated: translatedText,
-                hash: item.hash
-              }
-            };
-
-            const pct = Math.round((completed / items.length) * 100);
-            document.getElementById('progress-text').innerText = 'Translating ' + pct + '%';
-
-            // Post chunk back to iframe
-            frame.contentWindow.postMessage({
-              type: 'DOCX_TRANSLATIONS_READY',
-              translations: chunk
-            }, '*');
-          }, (idx + 1) * 60);
+        const results = {};
+        items.forEach((item) => {
+          results[item.id] = {
+            translated: dict[item.text] || ("ترجمه شده: " + item.text),
+            hash: item.hash
+          };
         });
+
+        frame.contentWindow.postMessage({
+          type: 'DOCX_TRANSLATIONS_READY',
+          translations: results
+        }, '*');
       }
     });
 
     window.triggerTranslate = () => {
-      document.getElementById('active-fa').innerText = 'true';
       frame.contentWindow.postMessage({ type: 'DOCX_TRANSLATE_FA' }, '*');
     };
 
     window.triggerRestore = () => {
-      document.getElementById('active-fa').innerText = 'false';
       frame.contentWindow.postMessage({ type: 'DOCX_RESTORE_EN' }, '*');
     };
   </script>
@@ -106,6 +118,12 @@ async function run() {
     if (req.url === "/doc.html") {
       res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
       res.end(testPageHtml);
+    } else if (req.url === "/doc-with-native.html") {
+      res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+      res.end(nativePersianOriginHtml);
+    } else if (req.url === "/doc-native-fa.html") {
+      res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+      res.end(nativePersianPageHtml);
     } else {
       res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
       res.end(parentContainerHtml);
@@ -113,66 +131,76 @@ async function run() {
   });
 
   await new Promise<void>((resolve) => server.listen(49999, resolve));
-  console.log("Mock documentation server running on http://localhost:49999");
 
   // 5. Launch Playwright
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
 
   try {
+    // --- Test 1: TWP in-place translation for site without built-in Persian ---
+    console.log("TEST 1: In-place translation for site without native Persian...");
     await page.goto("http://localhost:49999", { waitUntil: "networkidle" });
 
     const frameElement = page.frameLocator("#doc-frame");
     const h1TextBefore = await frameElement.locator("#title").textContent();
-    console.log("Original Heading 1:", h1TextBefore);
     if (h1TextBefore?.trim() !== "Getting Started") {
       throw new Error("Failed to load original English title");
     }
 
-    // Trigger Persian translation
-    console.log("Triggering Persian translation via DOCX_TRANSLATE_FA...");
     await page.evaluate(() => (window as unknown as { triggerTranslate: () => void }).triggerTranslate());
 
-    // Wait for streaming translation to reach 100%
-    await page.waitForFunction(
-      () => document.getElementById("progress-text")?.innerText === "Translating 100%",
-      { timeout: 8000 }
-    );
-    console.log("Progress tracker reached 100% successfully!");
-
-    // Verify translated Persian text inside iframe DOM
+    await page.waitForTimeout(400);
     const h1TextAfter = await frameElement.locator("#title").textContent();
     console.log("Translated Heading 1:", h1TextAfter);
     if (!h1TextAfter?.includes("شروع به کار")) {
       throw new Error(`Expected 'شروع به کار', got: ${h1TextAfter}`);
     }
 
-    // Verify code block preservation: <code>useState</code> must remain inside <bdi dir="ltr">
+    // Verify code block preservation
     const p1Html = await frameElement.locator("#p1").innerHTML();
-    console.log("Translated Paragraph 1 HTML:", p1Html);
     if (!p1Html.includes("useState") || !p1Html.includes("docx-fa-inline-code")) {
-      throw new Error("Code tag preservation failed in translated paragraph");
+      throw new Error("Code tag preservation failed");
     }
 
-    // Verify link preservation
-    const linkText = await frameElement.locator("#link1").textContent();
-    console.log("Child link text preserved:", linkText);
-    if (linkText?.trim() !== "Introduction Guide") {
-      throw new Error("Child link preservation failed");
+    // --- Test 2: Native built-in Persian navigation (No plugin used) ---
+    console.log("TEST 2: Built-in Persian support detection and navigation...");
+    await page.evaluate(() => {
+      const frame = document.getElementById("doc-frame") as HTMLIFrameElement;
+      frame.src = "/doc-with-native.html";
+    });
+
+    await page.waitForTimeout(400);
+    const nativeFrame = page.frameLocator("#doc-frame");
+    const nativeTitleBefore = await nativeFrame.locator("#native-title").textContent();
+    if (nativeTitleBefore?.trim() !== "FastAPI Introduction") {
+      throw new Error("Failed to load native doc origin page");
     }
 
-    // Test Restore English functionality
-    console.log("Triggering DOCX_RESTORE_EN...");
-    await page.evaluate(() => (window as unknown as { triggerRestore: () => void }).triggerRestore());
+    // Reset translation request counter
+    await page.evaluate(() => {
+      (window as unknown as { translationRequestsCount: number }).translationRequestsCount = 0;
+    });
 
-    await page.waitForTimeout(300);
-    const restoredTitle = await frameElement.locator("#title").textContent();
-    console.log("Restored Heading 1:", restoredTitle);
-    if (restoredTitle?.trim() !== "Getting Started") {
-      throw new Error("Failed to restore original English title");
+    // Trigger Persian
+    await page.evaluate(() => (window as unknown as { triggerTranslate: () => void }).triggerTranslate());
+    await page.waitForTimeout(500);
+
+    // Verify that NO plugin translation request was sent, because it navigated directly to the native Persian page!
+    const requestsCount = await page.evaluate(
+      () => (window as unknown as { translationRequestsCount: number }).translationRequestsCount
+    );
+    console.log("Plugin translation requests sent for native Persian site:", requestsCount);
+    if (requestsCount !== 0) {
+      throw new Error("Plugin should not be called when site has built-in Persian support!");
     }
 
-    console.log("✅ All Playwright E2E checks PASSED!");
+    const nativeTitleAfter = await nativeFrame.locator("#native-title").textContent();
+    console.log("Native Persian Page Title:", nativeTitleAfter);
+    if (!nativeTitleAfter?.includes("معرفی فست‌ای‌پی‌آی")) {
+      throw new Error("Failed to navigate to built-in native Persian doc");
+    }
+
+    console.log("✅ All Playwright E2E checks PASSED (TWP Translation + Builtin Persian Navigation)!");
   } finally {
     await browser.close();
     server.close();

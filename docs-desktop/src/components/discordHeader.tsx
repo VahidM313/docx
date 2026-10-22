@@ -20,7 +20,6 @@ import {
   Sparkles,
   Languages,
   Loader2,
-  RefreshCw,
 } from "lucide-react";
 import { type ReaderPanelsApi } from "./readerPanels";
 
@@ -283,17 +282,15 @@ export function DiscordHeader({
           </Tooltip>
         )}
 
-        {/* Persian (Farsi) Offline Translation Toggle */}
+        {/* Persian (Farsi) Translation Toggle */}
         {isReader && active?.siteId && app.translationPrefs.showToggleInHeader && (
           <Tooltip
             label={
               app.translatingActive
-                ? `در حال ترجمه متن به فارسی (${app.translatingProgress?.percent ?? 0}%) • Translating (${app.translatingProgress?.completed ?? 0}/${app.translatingProgress?.total ?? 0})`
-                : app.modelStatus === "downloading"
-                  ? `مدل ترجمه در حال دریافت است (${app.modelPercent}%) • Translation model is downloading`
-                  : app.activeDocFa
-                    ? "ترجمه فارسی فعال است (کلیک برای بازگشت به انگلیسی) • Persian active (Click to restore English)"
-                    : "ترجمه صفحه به فارسی (آفلاین) • Translate page to Persian (Offline)"
+                ? "در حال ترجمه به فارسی… • Translating page to Persian…"
+                : app.activeDocFa
+                  ? "زبان فارسی فعال است (کلیک برای زبان انگلیسی) • Persian active (Click to restore English)"
+                  : "نمایش / ترجمه به فارسی • Switch / Translate to Persian"
             }
             side="bottom"
           >
@@ -305,17 +302,17 @@ export function DiscordHeader({
                 if (next) {
                   app.toast({
                     kind: "info",
-                    message: "در حال ترجمه متن به فارسی… • Translating page to Persian (code blocks preserved)",
+                    message: "در حال تغییر زبان / ترجمه به فارسی… • Switching / Translating to Persian",
                   });
                 } else {
                   app.toast({
                     kind: "info",
-                    message: "بازگشت به متن اصلی انگلیسی • Restored original English text",
+                    message: "بازگشت به متن اصلی انگلیسی • Restored original English",
                   });
                 }
               }}
               className={
-                "no-drag flex items-center gap-1.5 px-2 h-7 rounded-lg border text-xs font-semibold transition-all cursor-pointer shadow-xs mr-1 " +
+                "no-drag flex items-center gap-1.5 px-2.5 h-7 rounded-lg border text-xs font-semibold transition-all cursor-pointer shadow-xs mr-1 " +
                 (app.activeDocFa
                   ? "border-emerald-500/70 bg-emerald-500/15 text-emerald-400 hover:bg-emerald-500/25"
                   : "border-border bg-surface/90 hover:bg-accent text-muted-foreground hover:text-foreground")
@@ -325,16 +322,7 @@ export function DiscordHeader({
               {app.translatingActive ? (
                 <>
                   <Loader2 className="h-3.5 w-3.5 animate-spin text-emerald-400" />
-                  <span className="text-[11px] font-bold tabular-nums">
-                    فارسی {app.translatingProgress?.percent ?? 0}%
-                  </span>
-                </>
-              ) : app.modelStatus === "downloading" ? (
-                <>
-                  <RefreshCw className="h-3.5 w-3.5 animate-spin text-brand" />
-                  <span className="text-[11px] font-bold tabular-nums">
-                    {app.modelPercent}%
-                  </span>
+                  <span className="text-[11px] font-bold">ترجمه…</span>
                 </>
               ) : (
                 <>

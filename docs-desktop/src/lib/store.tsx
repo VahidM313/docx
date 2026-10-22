@@ -915,8 +915,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       toggleActiveDocFa: (v?: boolean) => {
         setState((s) => ({ activeDocFa: typeof v === "boolean" ? v : !s.activeDocFa }));
       },
-      setTranslatingState: (active: boolean, progress = null) => {
-        setState({ translatingActive: active, translatingProgress: progress });
+      setTranslatingState: (active: boolean) => {
+        setState({ translatingActive: active });
       },
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps

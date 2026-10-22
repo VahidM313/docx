@@ -175,16 +175,10 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
           }
         };
 
-        const totalItems = e.data.items.length;
-        setTranslatingState(true, {
-          completed: 0,
-          total: totalItems,
-          percent: 0,
-        });
+        setTranslatingState(true);
 
         try {
-          const results = await translateTasks(e.data.items, (chunk, progress) => {
-            setTranslatingState(true, progress);
+          const results = await translateTasks(e.data.items, (chunk) => {
             sendToDoc({
               type: "DOCX_TRANSLATIONS_READY",
               translations: chunk,
@@ -199,17 +193,17 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
           if (Object.keys(results).length > 0) {
             toast({
               kind: "success",
-              message: "ترجمه صفحه انجام شد • Page translated to Persian",
+              message: "صفحه به فارسی ترجمه شد • Page translated to Persian",
             });
           }
         } catch (err) {
           console.error("Translation failed:", err);
           toast({
             kind: "danger",
-            message: "خطا در پردازش ترجمه صفحه • Translation error",
+            message: "خطا در ترجمه صفحه • Translation error",
           });
         } finally {
-          setTranslatingState(false, null);
+          setTranslatingState(false);
         }
       }
     };
@@ -294,24 +288,6 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
           <Loader2 className="animate-spin text-brand" size={13} />
           Loading {getBrand(activeWeb.siteId).name}…
         </div>
-      )}
-      {app.translatingActive && (
-        <output
-          aria-live="polite"
-          className="pointer-events-none absolute left-1/2 top-3 z-50 flex -translate-x-1/2 items-center gap-2.5 rounded-full border border-emerald-500/40 bg-popover/95 backdrop-blur-md px-4 py-1.5 text-xs font-medium text-emerald-400 shadow-lift animate-in fade-in slide-in-from-top-2"
-        >
-          <Loader2 className="h-3.5 w-3.5 animate-spin text-emerald-400 shrink-0" />
-          <span>
-            در حال ترجمه متن به فارسی… ({app.translatingProgress?.completed ?? 0} /{" "}
-            {app.translatingProgress?.total ?? 0})
-          </span>
-          <div className="w-16 h-1.5 bg-muted rounded-full overflow-hidden">
-            <div
-              className="h-full bg-emerald-500 transition-all duration-300"
-              style={{ width: `${app.translatingProgress?.percent ?? 0}%` }}
-            />
-          </div>
-        </output>
       )}
     </div>
   );

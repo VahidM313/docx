@@ -2805,7 +2805,60 @@ devsite-header {
     return result;
   }
 
+  function findBuiltinPersianUrl() {
+    var path = window.location.pathname.toLowerCase();
+    if (path.indexOf('/fa/') !== -1 || path.indexOf('/fa') === 0 || path.indexOf('_(فارسی)') !== -1) {
+      return null;
+    }
+
+    var alt = document.querySelector('link[rel="alternate"][hreflang^="fa"], link[rel="alternate"][hreflang^="per"]');
+    if (alt && alt.getAttribute('href')) {
+      return alt.getAttribute('href');
+    }
+
+    var langLinks = document.querySelectorAll('a[href*="/fa/"], a[lang="fa"], [data-language="fa"], [data-lang="fa"]');
+    for (var i = 0; i < langLinks.length; i++) {
+      var href = langLinks[i].getAttribute('href');
+      if (href && href !== '#' && href !== window.location.pathname && href !== window.location.href) {
+        return href;
+      }
+    }
+
+    var options = document.querySelectorAll('option[value*="/fa/"], option[value*="/fa"], option[lang="fa"]');
+    for (var j = 0; j < options.length; j++) {
+      var val = options[j].value;
+      if (val && val !== '#' && val !== window.location.pathname && val !== window.location.href) {
+        return val;
+      }
+    }
+
+    var siteMeta = document.querySelector('meta[name="docx-site-id"]');
+    var siteId = siteMeta ? siteMeta.getAttribute('content') : '__DOCX_SITE_ID__';
+    if (siteId === 'fastapi') {
+      return '/fa' + (path.startsWith('/') ? path : '/' + path);
+    }
+
+    return null;
+  }
+
   function applyPersianTranslation() {
+    // 1. If site has built-in Persian documentation, navigate directly to it
+    var builtinUrl = findBuiltinPersianUrl();
+    if (builtinUrl) {
+      try {
+        sessionStorage.setItem('docx_en_origin_url', window.location.href);
+      } catch(e) {}
+      window.location.href = builtinUrl;
+      return;
+    }
+
+    // 2. If page is already native Persian, avoid machine translation
+    var pageLang = (document.documentElement.lang || '').toLowerCase();
+    if (pageLang.startsWith('fa') || pageLang === 'per' || pageLang === 'pes' || window.location.pathname.indexOf('/fa/') !== -1) {
+      return;
+    }
+
+    // 3. Otherwise, use in-place DOM translation with permanent offline cache
     isPersianMode = true;
     document.documentElement.classList.add('docx-fa-active');
     var elements = getTranslatableElements();
@@ -2855,6 +2908,22 @@ devsite-header {
   }
 
   function restoreEnglish() {
+    // 1. If we switched to built-in Persian, restore the original English page
+    try {
+      var savedEn = sessionStorage.getItem('docx_en_origin_url');
+      if (savedEn && window.location.href !== savedEn) {
+        sessionStorage.removeItem('docx_en_origin_url');
+        window.location.href = savedEn;
+        return;
+      }
+      if (window.location.pathname.indexOf('/fa/') !== -1) {
+        var enPath = window.location.pathname.replace(/\/fa\//, '/');
+        window.location.pathname = enPath;
+        return;
+      }
+    } catch(e) {}
+
+    // 2. In-place DOM restoration
     isPersianMode = false;
     document.documentElement.classList.remove('docx-fa-active');
     var elements = document.querySelectorAll('[data-docx-original]');
