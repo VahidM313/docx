@@ -156,10 +156,25 @@ async function run() {
       throw new Error(`Expected 'شروع به کار', got: ${h1TextAfter}`);
     }
 
-    // Verify code block preservation
+    // Verify RTL for site layout
+    const isDocRtl = await frameElement.locator("html").getAttribute("dir");
+    console.log("Document dir attribute:", isDocRtl);
+    if (isDocRtl !== "rtl") {
+      throw new Error(`Expected html dir='rtl', got: ${isDocRtl}`);
+    }
+
+    // Verify code block preservation and LTR direction
     const p1Html = await frameElement.locator("#p1").innerHTML();
     if (!p1Html.includes("useState") || !p1Html.includes("docx-fa-inline-code")) {
       throw new Error("Code tag preservation failed");
+    }
+
+    const codeDir = await frameElement.locator("code.language-jsx").evaluate((el) => {
+      return window.getComputedStyle(el).direction;
+    });
+    console.log("Code block computed direction:", codeDir);
+    if (codeDir !== "ltr") {
+      throw new Error(`Expected code block to be 'ltr', got: ${codeDir}`);
     }
 
     // --- Test 2: Native built-in Persian navigation (No plugin used) ---

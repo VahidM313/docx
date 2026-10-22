@@ -32,19 +32,83 @@ html.docx-smart-light body {
 }
 
 /* Persian typography & RTL layout */
-html.docx-fa-active body,
+html.docx-fa-active {
+  direction: rtl !important;
+}
+html.docx-fa-active body {
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: 'Vazirmatn', 'Sahel', 'Segoe UI', Tahoma, -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
 html.docx-fa-active article,
 html.docx-fa-active main,
 html.docx-fa-active .markdown,
 html.docx-fa-active .content,
-html.docx-fa-active #content {
-  font-family: 'Vazirmatn', 'Sahel', 'Segoe UI', Tahoma, -apple-system, sans-serif !important;
+html.docx-fa-active #content,
+html.docx-fa-active [class*="content"],
+html.docx-fa-active [class*="article"],
+html.docx-fa-active [class*="markdown"],
+html.docx-fa-active p,
+html.docx-fa-active h1,
+html.docx-fa-active h2,
+html.docx-fa-active h3,
+html.docx-fa-active h4,
+html.docx-fa-active h5,
+html.docx-fa-active h6,
+html.docx-fa-active li,
+html.docx-fa-active dd,
+html.docx-fa-active dt {
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: 'Vazirmatn', 'Sahel', 'Segoe UI', Tahoma, -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
+
 .docx-fa-block {
   direction: rtl !important;
   text-align: right !important;
   line-height: 1.85 !important;
 }
+
+/* Quotes and lists properly styled in RTL */
+html.docx-fa-active blockquote {
+  border-left: none !important;
+  border-right: 4px solid var(--docx-border, #6366f1) !important;
+  padding-left: 0 !important;
+  padding-right: 1rem !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+html.docx-fa-active ul,
+html.docx-fa-active ol {
+  padding-left: 0 !important;
+  padding-right: 1.5rem !important;
+}
+
+/* ========================================================= */
+/* STRICT CODE & TECHNICAL PRESERVATION IN LTR               */
+/* All code blocks, inline code, pre, terminal prompts, etc. */
+/* ========================================================= */
+html.docx-fa-active pre,
+html.docx-fa-active code,
+html.docx-fa-active kbd,
+html.docx-fa-active samp,
+html.docx-fa-active tt,
+html.docx-fa-active .hljs,
+html.docx-fa-active [class*="language-"],
+html.docx-fa-active [class*="highlight"],
+html.docx-fa-active [class*="syntax"],
+html.docx-fa-active [class*="code-block"],
+html.docx-fa-active [class*="codeblock"],
+html.docx-fa-active [data-rehype-pretty-code-fragment],
+html.docx-fa-active .vp-code-block,
+html.docx-fa-active .line-numbers-wrapper,
+html.docx-fa-active .token,
+html.docx-fa-active table.highlight,
+html.docx-fa-active svg:not([class*="lucide"]):not([class*="icon"]),
+html.docx-fa-active .katex,
+html.docx-fa-active math,
+html.docx-fa-active .docx-fa-inline-code,
 .docx-fa-block pre,
 .docx-fa-block code,
 .docx-fa-block kbd,
@@ -60,10 +124,23 @@ html.docx-fa-active #content {
   unicode-bidi: isolate !important;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
 }
-.docx-fa-inline-code {
+
+/* Inline code in Persian text blocks */
+html.docx-fa-active :not(pre) > code,
+html.docx-fa-active .docx-fa-inline-code,
+html.docx-fa-active kbd {
   direction: ltr !important;
   display: inline-block !important;
   unicode-bidi: isolate !important;
+  vertical-align: baseline !important;
+}
+
+/* Code block containers must stay left-aligned and scrollable left-to-right */
+html.docx-fa-active pre {
+  direction: ltr !important;
+  text-align: left !important;
+  unicode-bidi: isolate !important;
+  overflow-x: auto !important;
 }
 
 /* Responsive media containment (prevents Pandas & scientific SVGs and wide images from overflowing) */
@@ -2860,7 +2937,11 @@ devsite-header {
 
     // 3. Otherwise, use in-place DOM translation with permanent offline cache
     isPersianMode = true;
+    document.documentElement.dir = 'rtl';
     document.documentElement.classList.add('docx-fa-active');
+    if (document.body) {
+      document.body.dir = 'rtl';
+    }
     var elements = getTranslatableElements();
     var batchToRequest = [];
 
@@ -2925,7 +3006,11 @@ devsite-header {
 
     // 2. In-place DOM restoration
     isPersianMode = false;
+    document.documentElement.dir = 'ltr';
     document.documentElement.classList.remove('docx-fa-active');
+    if (document.body) {
+      document.body.dir = 'ltr';
+    }
     var elements = document.querySelectorAll('[data-docx-original]');
     for (var i = 0; i < elements.length; i++) {
       var el = elements[i];
