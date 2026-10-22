@@ -1,7 +1,7 @@
 name: Build & Publish Docx App (Windows + Android) + 123 Docpacks
 
 on:
-  push:
+  pull_request:
     branches:
       - main
     paths:
@@ -13,9 +13,7 @@ on:
       sites:
         description: "Site IDs to build: 'all' (all 145 packs, forced rebuild), 'missing' (only unbuilt packs), 'none' (only Docx.exe & Android APK), or comma-separated IDs (e.g. redis,duckdb)"
         required: false
-        default: "all"
-  schedule:
-    - cron: "0 4 * * *"
+        default: "missing"
 
 permissions:
   contents: write
@@ -161,7 +159,7 @@ jobs:
 
   prepare-matrix:
     name: Prepare Docpack Matrix
-    if: github.event_name == 'push' || github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && github.event.inputs.sites != 'none')
+    if: github.event_name == 'pull_request' || (github.event_name == 'workflow_dispatch' && github.event.inputs.sites != 'none')
     runs-on: ubuntu-latest
     outputs:
       sites: ${{ steps.list.outputs.sites }}
