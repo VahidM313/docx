@@ -143,6 +143,18 @@ html.docx-fa-active pre {
   overflow-x: auto !important;
 }
 
+/* Ensure screen reader utility text never surfaces visually on screen */
+.screen-reader-text,
+.sr-only,
+.visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden !important;
+}
+
 /* Responsive media containment (prevents Pandas & scientific SVGs and wide images from overflowing) */
 .bd-content svg, .bd-content img, .figure svg, .figure img, svg.output_svg, .jp-RenderedSVG,
 article img, article svg:not([class*="icon"]):not([class*="lucide"]),
@@ -2812,7 +2824,11 @@ devsite-header {
     var validNodes = [];
     for (var i = 0; i < candidateNodes.length; i++) {
       var node = candidateNodes[i];
-      if (node.closest('pre, code, svg, math, script, style, noscript, .katex, .docx-no-translate, [class*="highlight"], [class*="syntax"]')) continue;
+      // Skip code, math, syntax, forms, search controls, and screen-reader accessibility tags
+      if (node.closest('pre, code, svg, math, script, style, noscript, .katex, .docx-no-translate, [class*="highlight"], [class*="syntax"], form, [role="search"], .searchform, .search-form, .search-box, .search-bar, .search-container, .menu-main-search, .menu-search-animated, .screen-reader-text, .sr-only, .visually-hidden, button, input, select, textarea')) continue;
+
+      // Skip containers with interactive form controls or search widgets
+      if (node.querySelector('form, input, textarea, select, button, [role="search"], .searchform, .menu-main-search')) continue;
 
       // If container has child block elements, translate children instead
       if (node.querySelector('p, h1, h2, h3, h4, h5, h6, li, blockquote, dt, dd')) continue;
@@ -2822,7 +2838,16 @@ devsite-header {
         continue;
       }
 
-      var text = (node.textContent || '').trim();
+      // Check visible text content excluding hidden screen-reader elements
+      var cloneCheck = node.cloneNode(true);
+      var hidden = cloneCheck.querySelectorAll('.screen-reader-text, .sr-only, .visually-hidden');
+      for (var h = 0; h < hidden.length; h++) {
+        if (hidden[h].parentNode) {
+          hidden[h].parentNode.removeChild(hidden[h]);
+        }
+      }
+
+      var text = (cloneCheck.textContent || '').trim();
       if (text.length < 2 || /^[\d\s.,:;!?(){}\[\]\-_/\\+=<>*&^%$#@~`|]+$/.test(text)) continue;
       validNodes.push(node);
     }
@@ -2833,7 +2858,21 @@ devsite-header {
     var codeTokens = [];
     var clone = element.cloneNode(true);
 
-    // 1. Preserve code and math blocks
+    // 1. Preserve hidden screen-reader elements so their markup and hidden styling remain intact
+    var hiddenElements = clone.querySelectorAll('.screen-reader-text, .sr-only, .visually-hidden');
+    for (var h = 0; h < hiddenElements.length; h++) {
+      var he = hiddenElements[h];
+      var hPlaceholder = '⟦HIDDEN_' + h + '⟧';
+      codeTokens.push({
+        token: hPlaceholder,
+        html: he.outerHTML,
+        isCode: false
+      });
+      var hNode = document.createTextNode(hPlaceholder);
+      he.parentNode.replaceChild(hNode, he);
+    }
+
+    // 2. Preserve code and math blocks
     var codeElements = clone.querySelectorAll('code, kbd, .hljs, [class*="language-"], svg, math, .katex');
     for (var i = 0; i < codeElements.length; i++) {
       var ce = codeElements[i];
@@ -2847,7 +2886,7 @@ devsite-header {
       ce.parentNode.replaceChild(placeholderNode, ce);
     }
 
-    // 2. Preserve child links if element itself is not an anchor
+    // 3. Preserve child links if element itself is not an anchor
     if (element.tagName !== 'A') {
       var anchorElements = clone.querySelectorAll('a');
       for (var j = 0; j < anchorElements.length; j++) {

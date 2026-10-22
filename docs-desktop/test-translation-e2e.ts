@@ -23,6 +23,16 @@ async function run() {
   </style>
 </head>
 <body>
+  <!-- LearnCpp-style navbar search item with screen-reader text & form controls -->
+  <ul id="navbar">
+    <li class="menu-main-search menu-search-animated" id="search-nav-item">
+      <a href="#"><span class="screen-reader-text">Search</span></a>
+      <form class="searchform">
+        <label><span class="screen-reader-text">Search for:</span><input class="s" placeholder="Search"></label>
+        <button class="searchsubmit"><span class="screen-reader-text">Search</span><i class="icon-search"></i></button>
+      </form>
+    </li>
+  </ul>
   <div id="content">
     <h1 id="title">Getting Started</h1>
     <p id="p1">Hooks let you use state and other React features without writing a class. For example, <code>useState</code> is a Hook.</p>
@@ -175,6 +185,30 @@ async function run() {
     console.log("Code block computed direction:", codeDir);
     if (codeDir !== "ltr") {
       throw new Error(`Expected code block to be 'ltr', got: ${codeDir}`);
+    }
+
+    // Verify search container and form preservation (LearnCpp fix)
+    const searchItemHtml = await frameElement.locator("#search-nav-item").innerHTML();
+    const hasSearchForm = searchItemHtml.includes('class="searchform"') && searchItemHtml.includes('class="s"');
+    console.log("Search navigation form preserved:", hasSearchForm);
+    if (!hasSearchForm) {
+      throw new Error("Search form inside <li> was wiped out or replaced by translation text!");
+    }
+    const isSearchTranslatedBlock = await frameElement.locator("#search-nav-item").evaluate((el) => {
+      return el.classList.contains("docx-fa-block") || el.hasAttribute("data-docx-original");
+    });
+    console.log("Search item marked as translated block:", isSearchTranslatedBlock);
+    if (isSearchTranslatedBlock) {
+      throw new Error("Search navigation <li> should not be marked or replaced by translation walker!");
+    }
+
+    // Verify screen-reader-text is completely hidden visually
+    const srTextClips = await frameElement.locator(".screen-reader-text").evaluateAll((elements) => {
+      return elements.map((el) => window.getComputedStyle(el).position);
+    });
+    console.log("Screen reader text position styles:", srTextClips);
+    if (srTextClips.length === 0 || !srTextClips.every((pos) => pos === "absolute")) {
+      throw new Error("Screen reader utility text was not properly hidden!");
     }
 
     // --- Test 2: Native built-in Persian navigation (No plugin used) ---
