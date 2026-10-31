@@ -38,19 +38,16 @@ function formatBytesHelper(b?: number): string {
   return mb < 10 ? `${mb.toFixed(1)} MB` : `${Math.round(mb)} MB`;
 }
 
+/** What a download will fetch: the registry's figure for the installed build when it
+ *  tracks that build, otherwise the whole pack. */
 export function getUpdateSizeBytes(entry: {
   installed?: boolean;
   updateAvailable?: boolean;
-  remote?: { sizeBytes?: number; deltaSizeBytes?: number } | null;
+  remote?: { sizeBytes?: number; updateBytes?: number | null } | null;
 }): number {
-  if (!entry.updateAvailable || !entry.installed || !entry.remote) {
-    return entry.remote?.sizeBytes ?? 0;
-  }
-  if (entry.remote.deltaSizeBytes && entry.remote.deltaSizeBytes > 0) {
-    return entry.remote.deltaSizeBytes;
-  }
-  // Estimated compact delta patch size (~10% of full pack size)
-  return Math.round((entry.remote.sizeBytes ?? 0) * 0.10);
+  const full = entry.remote?.sizeBytes ?? 0;
+  if (!entry.updateAvailable || !entry.installed) return full;
+  return entry.remote?.updateBytes ?? full;
 }
 
 /* ------------------------------------------------------------------ */
@@ -213,12 +210,15 @@ interface AppApi extends AppState {
   setFlag: (k: keyof FeatureFlags, v: boolean) => void;
   setReaderZoom: (z: number) => void;
 
-  refreshPacks: (opts?: { withRegistry?: boolean }) => Promise<void>;
+  refreshPacks: (opts?: { withRegistry?: boolean }) => Promise<RemoteRegistryItem[]>;
   applyDownload: (p: DownloadProgressPayload) => void;
   installSite: (siteId: string) => Promise<boolean>;
+  installMany: (ids: string[]) => Promise<void>;
+  /** Opens a doc, downloading it first if needed. Returns whether it opened right away. */
+  openDoc: (siteId: string, path?: string) => boolean;
   batchUpdateOutdated: (ids?: string[]) => Promise<void>;
-  deleteSite: (siteId: string) => Promise<void>;
-  checkAppUpdate: () => Promise<void>;
+  deleteSite: (siteId: string, opts?: { quiet?: boolean }) => Promise<boolean>;
+  checkAppUpdate: () => Promise<AppUpdateStatus | null>;
   selfUpdateApp: () => Promise<void>;
   dismissBanner: () => void;
 
@@ -268,7 +268,7 @@ interface AppApi extends AppState {
     progress?: { completed: number; total: number; percent: number } | null,
   ) => void;
 
-  toast: (t: Omit<Toast, "id">) => void;
+  toast: (t: Omit<Toast, "id">) => number;
   dropToast: (id: number) => void;
 }
 
@@ -279,10 +279,12 @@ const Ctx = React.createContext<AppApi | null>(null);
 /* ------------------------------------------------------------------ */
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [state, setState] = React.useReducer(
-    (s: AppState, patch: Partial<AppState> | ((prev: AppState) => Partial<AppState>)): AppState => ({
-      ...s,
-      ...(typeof patch === "function" ? patch(s) : patch),
-    }),
+    (s: AppState, patch: Partial<AppState> | ((prev: AppState) => Partial<AppState>)): AppState => {
+      const next = typeof patch === "function" ? patch(s) : patch;
+      // Returning the same state skips the render of every context consumer
+      const changed = (Object.keys(next) as (keyof AppState)[]).some((k) => !Object.is(s[k], next[k]));
+      return changed ? { ...s, ...next } : s;
+    },
     {
       phase: "splash",
       splash: { percent: 8, text: "Initializing offline engine…" },
@@ -345,14 +347,27 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   );
 
   const toastId = React.useRef(1);
+  /* A site's running sync, so repeated taps and batches join it instead of colliding. */
+  const syncing = React.useRef(new Map<string, ReturnType<typeof Tauri.installOrUpdate>>());
+  /* Progress is coalesced: every update re-renders all context consumers. */
+  const pendingDownloads = React.useRef<Record<string, DownloadProgressPayload>>({});
+  const downloadFlush = React.useRef<number | null>(null);
 
   /* Derived collections are memoized so unrelated state changes (toasts,
      hover chrome, palette) never rebuild 123 site entries or re-render the
      whole library grid. */
-  const entries = React.useMemo(
-    () => SITES.map((brand) => buildEntry(brand, state.packs, state.registry, state.downloads)),
-    [state.packs, state.registry, state.downloads],
-  );
+  const entries = React.useMemo(() => {
+    const packsById = new Map<string, PackStatusInfo>();
+    // installed packs come keyed by id (mdn names may carry legacy prefixes "tw:"/"js:")
+    for (const p of state.packs) {
+      const id = p.id.toLowerCase();
+      const base = id.split(":")[0];
+      if (!packsById.has(base)) packsById.set(base, p);
+    }
+    for (const p of state.packs) packsById.set(p.id.toLowerCase(), p);
+    const registryById = new Map(state.registry.map((r) => [r.id.toLowerCase(), r]));
+    return SITES.map((brand) => buildEntry(brand, packsById, registryById, state.downloads));
+  }, [state.packs, state.registry, state.downloads]);
   const activeTab = React.useMemo(
     () => state.tabs.find((t) => t.id === state.activeTabId) ?? null,
     [state.tabs, state.activeTabId],
@@ -472,22 +487,30 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     };
 
     const refreshPacks = async (opts?: { withRegistry?: boolean }) => {
+      let registry: RemoteRegistryItem[] = [];
       try {
         const packs = await Tauri.getInstalledPacks();
         setState({ packs });
       } catch {}
       if (opts?.withRegistry !== false) {
         try {
-          const registry = await Tauri.getRemoteRegistry();
+          registry = await Tauri.getRemoteRegistry();
           setState({ registry });
         } catch {}
       }
+      return registry;
     };
 
-    const applyDownload = (p: DownloadProgressPayload) =>
-      setState((s) => ({
-        downloads: { ...s.downloads, [p.site_id]: p },
-      }));
+    const applyDownload = (p: DownloadProgressPayload) => {
+      pendingDownloads.current[p.site_id] = p;
+      if (downloadFlush.current !== null) return;
+      downloadFlush.current = window.setTimeout(() => {
+        downloadFlush.current = null;
+        const batch = pendingDownloads.current;
+        pendingDownloads.current = {};
+        setState((s) => ({ downloads: { ...s.downloads, ...batch } }));
+      }, 250);
+    };
 
     const toast = (t: Omit<Toast, "id">) => {
       const id = toastId.current++;
@@ -502,10 +525,21 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     const dropToast = (id: number) =>
       setState((s) => ({ toasts: s.toasts.filter((t) => t.id !== id) }));
 
+    const syncSite = (siteId: string) => {
+      const running = syncing.current.get(siteId);
+      if (running) return running;
+      const job = Tauri.installOrUpdate({ siteId }).finally(() => syncing.current.delete(siteId));
+      syncing.current.set(siteId, job);
+      return job;
+    };
+
     const installSite = async (siteId: string) => {
+      const running = syncing.current.get(siteId);
+      if (running) return running.then(() => true, () => false);
+
       const regItem = state.registry.find((r) => r.id === siteId);
       const isUpdate = state.packs.some((p) => p.id === siteId);
-      const sizeStr = formatBytesHelper(regItem?.size_bytes);
+      const sizeStr = formatBytesHelper(isUpdate ? (regItem?.updateBytes ?? regItem?.sizeBytes) : regItem?.sizeBytes);
       const sizeInfo = sizeStr ? ` (${sizeStr})` : "";
       const action = isUpdate ? "Updating" : "Installing";
       const tid = toast({
@@ -514,16 +548,16 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         percent: 0,
       });
       try {
-        await Tauri.installOrUpdate({ siteId });
+        const result = await syncSite(siteId);
         await refreshPacks({ withRegistry: false });
-        const name = SITE_MAP[siteId]?.name ?? siteId;
-        toast({ kind: "success", message: `${name} ready — packed & indexed` });
+        toast({ kind: "success", message: result.message });
         return true;
       } catch (e) {
         toast({ kind: "error", message: `${siteId}: ${String(e).slice(0, 160)}` });
         return false;
       } finally {
         dropToast(tid);
+        delete pendingDownloads.current[siteId];
         setState((s) => {
           const next = { ...s.downloads };
           delete next[siteId];
@@ -532,29 +566,13 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       }
     };
 
-    const batchUpdateOutdated = async (ids?: string[]) => {
-      const entriesList = state.packs.map((p) => p.id);
-      const targets =
-        ids ??
-        state.registry
-          .filter((r) => entriesList.includes(r.id) && r.update_available)
-          .map((r) => r.id);
-      if (!targets.length) {
-        toast({ kind: "info", message: "Everything is already up to date ✨" });
-        return;
-      }
-      const totalDeltaBytes = targets.reduce((sum, tid) => {
-        const reg = state.registry.find((r) => r.id === tid);
-        const deltaBytes = reg?.deltaSizeBytes && reg.deltaSizeBytes > 0
-          ? reg.deltaSizeBytes
-          : Math.round((reg?.sizeBytes ?? 0) * 0.10);
-        return sum + deltaBytes;
-      }, 0);
-      const sizeStr = formatBytesHelper(totalDeltaBytes);
-      const sizeInfo = sizeStr ? ` (~${sizeStr} delta)` : "";
+    /** Syncs many sites a few at a time under a single progress toast. */
+    const runBatch = async (targets: string[], action: string, done: string, sizeBytes: number) => {
+      const sizeStr = formatBytesHelper(sizeBytes);
+      const sizeInfo = sizeStr ? ` (${sizeStr})` : "";
       const toastIdRef = toast({
         kind: "progress",
-        message: `Updating ${targets.length} packs${sizeInfo}…`,
+        message: `${action} ${targets.length} packs${sizeInfo}…`,
         percent: 0,
       });
 
@@ -564,17 +582,16 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       const queue = [...targets];
       const CONCURRENCY = 3;
 
-      // Pool with bounded concurrency (3 simultaneous updates at a time)
       const workers = Array.from({ length: Math.min(CONCURRENCY, queue.length) }, async () => {
         while (queue.length > 0) {
           const siteId = queue.shift();
           if (!siteId) break;
           const siteName = SITE_MAP[siteId]?.name ?? siteId;
           try {
-            await Tauri.installOrUpdate({ siteId });
+            await syncSite(siteId);
             ok++;
           } catch (e) {
-            console.warn(`Update failed for ${siteId}:`, e);
+            console.warn(`Sync failed for ${siteId}:`, e);
           }
           completed++;
           const pct = Math.round((completed / totalCount) * 100);
@@ -583,7 +600,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
               t.id === toastIdRef
                 ? {
                     ...t,
-                    message: `Updating (${completed}/${totalCount}): ${siteName}…`,
+                    message: `${action} (${completed}/${totalCount}): ${siteName}…`,
                     percent: pct,
                   }
                 : t,
@@ -599,35 +616,79 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
       toast({
         kind: ok === totalCount ? "success" : "error",
-        message: `Updated ${ok}/${totalCount} packs successfully`,
+        message: `${done} ${ok}/${totalCount} packs`,
       });
+      pendingDownloads.current = {};
       setState({
         downloads: {},
       });
     };
 
-    const deleteSite = async (siteId: string) => {
+    const installMany = async (ids: string[]) => {
+      const bytes = ids.reduce((sum, id) => sum + (state.registry.find((r) => r.id === id)?.sizeBytes ?? 0), 0);
+      await runBatch(ids, "Downloading", "Downloaded", bytes);
+    };
+
+    const openDoc = (siteId: string, path?: string) => {
+      if (entries.find((e) => e.id === siteId)?.installed) {
+        openSite(siteId, path);
+        return true;
+      }
+      // Without a pack the reader still works online, so a failed download is no dead end.
+      void installSite(siteId).then((ok) => {
+        if (ok || navigator.onLine) openSite(siteId, path);
+      });
+      return false;
+    };
+
+    const batchUpdateOutdated = async (ids?: string[]) => {
+      const entriesList = state.packs.map((p) => p.id);
+      const targets =
+        ids ??
+        state.registry
+          .filter((r) => entriesList.includes(r.id) && r.update_available)
+          .map((r) => r.id);
+      if (!targets.length) {
+        toast({ kind: "info", message: "Everything is already up to date ✨" });
+        return;
+      }
+      const updateBytes = targets.reduce((sum, tid) => {
+        const reg = state.registry.find((r) => r.id === tid);
+        return sum + (reg?.updateBytes ?? reg?.sizeBytes ?? 0);
+      }, 0);
+      await runBatch(targets, "Updating", "Updated", updateBytes);
+    };
+
+    const deleteSite = async (siteId: string, opts?: { quiet?: boolean }) => {
       try {
         await Tauri.deleteDocpack(siteId);
         await refreshPacks({ withRegistry: false });
-        toast({ kind: "success", message: `${SITE_MAP[siteId]?.name ?? siteId} removed` });
+        if (!opts?.quiet) {
+          toast({ kind: "success", message: `${SITE_MAP[siteId]?.name ?? siteId} removed` });
+        }
+        return true;
       } catch (e) {
         toast({ kind: "error", message: `Delete failed: ${String(e).slice(0, 120)}` });
+        return false;
       }
     };
 
     const checkAppUpdate = async () => {
       try {
         const res = await Tauri.checkAppUpdate();
-        if (res && res.update_available) setState({ appUpdate: res });
-      } catch {}
+        if (res?.update_available) setState({ appUpdate: res });
+        return res;
+      } catch {
+        return null;
+      }
     };
 
     const selfUpdateApp = async () => {
+      const tid = toast({ kind: "progress", message: "Downloading app update…", percent: 0 });
       try {
-        toast({ kind: "progress", message: "Downloading app update…", percent: 0 });
         await Tauri.selfUpdateApp();
       } catch (e) {
+        dropToast(tid);
         toast({ kind: "info", message: `Self-update: ${String(e).slice(0, 140)}` });
       }
     };
@@ -797,6 +858,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       refreshPacks,
       applyDownload,
       installSite,
+      installMany,
+      openDoc,
       batchUpdateOutdated,
       deleteSite,
       checkAppUpdate,
@@ -932,24 +995,15 @@ function activeWebTab(tabs: BrowserTab[], activeTabId: string | null) {
 
 function buildEntry(
   brand: SiteBrand,
-  packs: PackStatusInfo[],
-  registry: RemoteRegistryItem[],
+  packs: Map<string, PackStatusInfo>,
+  registry: Map<string, RemoteRegistryItem>,
   downloads: Record<string, DownloadProgressPayload>,
 ): SiteEntry {
-  // installed packs come keyed by id (mdn names may carry legacy prefixes "tw:"/"js:")
-  const lowerId = (s: string) => s.toLowerCase();
-  const local =
-    packs.find((p) => lowerId(p.id) === lowerId(`${brand.id}`)) ??
-    packs.find((p) => lowerId(p.id).startsWith(`${lowerId(brand.id)}:`)) ??
-    null;
-  const remote = registry.find((r) => lowerId(r.id) === lowerId(brand.id)) ?? null;
+  const id = brand.id.toLowerCase();
+  const local = packs.get(id) ?? null;
+  const remote = registry.get(id) ?? null;
   const installed = !!local;
-  const updateAvailable = !!(
-    remote &&
-    installed &&
-    remote.commit !== local!.commit &&
-    (remote.update_available ?? (remote.updatedAt && local!.updatedAt ? remote.updatedAt > local!.updatedAt : true))
-  );
+  const updateAvailable = !!(remote && local && remote.commit !== local.commit && remote.update_available);
   return {
     id: brand.id,
     brand,

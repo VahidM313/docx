@@ -368,4 +368,9 @@ html:not(.dark) .discord-folder-expanded {
   background-color: var(--accent);
   color: var(--foreground);
 }
+@media (pointer: coarse) {
+  .discord-channel-item {
+    min-height: 44px;
+  }
+}
 

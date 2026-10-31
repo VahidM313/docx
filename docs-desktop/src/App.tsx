@@ -7,7 +7,7 @@ import { DiscordHeader } from "./components/discordHeader";
 import { MemberOutline } from "./components/memberOutline";
 import { MobileDiscordDrawer, MobileDiscordBottomBar } from "./components/mobileDiscordNav";
 import { MobileTabSwitcher } from "./components/mobileTabSwitcher";
-import { MobileReaderHeader, MobileNavBottomBar } from "./components/mobileHeader";
+import { MobileReaderHeader, MobileNavBottomBar, type MobileRootScreen } from "./components/mobileHeader";
 import { SettingsModal } from "./components/settingsModal";
 import HomeHub from "./components/hub";
 import { ReaderPanels, type ReaderPanelsApi } from "./components/readerPanels";
@@ -19,6 +19,64 @@ import { TooltipProvider } from "./ui";
 import { Minimize2 } from "lucide-react";
 import { subscribeModelStatus } from "./lib/translator/engine";
 
+type MobileScreen = MobileRootScreen | "reader" | "tabs";
+
+/** Phone screens as history entries. Android's back button walks WebView history, so
+ *  this makes it step back through screens and, inside the reader, through visited pages
+ *  (iframe navigation adds to the same history), instead of closing the app. */
+function useMobileScreens(isMobile: boolean) {
+  const app = useApp();
+  const [screen, setScreen] = React.useState<MobileScreen>("nav");
+  const current = React.useRef<MobileScreen>("nav");
+
+  const show = React.useCallback((next: MobileScreen) => {
+    if (current.current === next) return;
+    current.current = next;
+    setScreen(next);
+    window.history.pushState({ screen: next }, "");
+  }, []);
+
+  const overlayOpen = isMobile && (app.paletteOpen || app.settingsOpen || app.bookmarksOpen);
+  const overlays = React.useRef({ open: false, close: () => {} });
+  React.useEffect(() => {
+    overlays.current = {
+      open: overlayOpen,
+      close: () => {
+        app.setPaletteOpen(false);
+        app.setSettingsOpen(false);
+        app.setBookmarksOpen(false);
+      },
+    };
+  });
+
+  React.useEffect(() => {
+    if (!isMobile) return;
+    window.history.replaceState({ screen: current.current }, "");
+    const onPop = (e: PopStateEvent) => {
+      const next: MobileScreen = e.state?.screen ?? "nav";
+      const changed = next !== current.current;
+      current.current = next;
+      setScreen(next);
+      if (overlays.current.open) overlays.current.close();
+      // An overlay closed from its own UI leaves an entry that looks like the current screen.
+      else if (!changed) window.history.back();
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, [isMobile]);
+
+  React.useEffect(() => {
+    if (overlayOpen) {
+      window.history.pushState({ screen: current.current, overlay: true }, "");
+    } else if (window.history.state?.overlay) {
+      // Not history.back(): it is asynchronous and would race a push from the same render.
+      window.history.replaceState({ screen: current.current }, "");
+    }
+  }, [overlayOpen]);
+
+  return { screen, show, current };
+}
+
 function Shell() {
   const app = useApp();
   const readerApi = React.useRef<ReaderPanelsApi | null>(null);
@@ -28,8 +86,7 @@ function Shell() {
   const [isMobile, setIsMobile] = React.useState(
     () => typeof window !== "undefined" && window.innerWidth < 768
   );
-  // "nav" (side-by-side domain rail + channel sidebar) | "reader" (full-screen doc) | "tabs" (Chrome-style tab switcher)
-  const [mobileView, setMobileView] = React.useState<"nav" | "reader" | "tabs">("nav");
+  const { screen, show: showScreen, current: currentScreen } = useMobileScreens(isMobile);
 
   React.useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -38,20 +95,21 @@ function Shell() {
   }, []);
 
   // Global subscription to offline translation model status
-  const { setModelStatus } = app;
+  // Subscribing reports the status at once, so re-subscribing per render would loop forever.
+  const setModelStatus = React.useRef(app.setModelStatus);
   React.useEffect(() => {
-    return subscribeModelStatus((p) => {
-      setModelStatus(p.status, p.percent);
-    });
-  }, [setModelStatus]);
+    setModelStatus.current = app.setModelStatus;
+  });
+  React.useEffect(() => subscribeModelStatus((p) => setModelStatus.current(p.status, p.percent)), []);
 
-  // When active tab changes to a doc on mobile, switch to reader view automatically
+  // When active tab changes to a doc on mobile, switch to reader view automatically,
+  // except while managing tabs: closing one there must not leave the switcher.
   const activeSiteId = app.activeTab?.siteId;
   React.useEffect(() => {
-    if (isMobile && activeSiteId && activeSiteId !== "home") {
-      setMobileView("reader");
+    if (isMobile && activeSiteId && activeSiteId !== "home" && currentScreen.current !== "tabs") {
+      showScreen("reader");
     }
-  }, [isMobile, activeSiteId]);
+  }, [isMobile, activeSiteId, currentScreen, showScreen]);
 
   // Zen / Fullscreen edge-hover tracking
   const [zenTopHovered, setZenTopHovered] = React.useState(false);
@@ -68,11 +126,11 @@ function Shell() {
       const mq = window.matchMedia("(prefers-color-scheme: dark)");
       app.setSystemDark(mq.matches);
 
+      // Only local work happens before the UI appears: an offline or slow network
+      // must never delay reading what is already on the device.
       app.setSplash(24, "Reading local packs");
-      try {
-        await app.refreshPacks();
-      } catch {}
-      app.setSplash(58, "Syncing with releases");
+      await app.refreshPacks({ withRegistry: false });
+      app.setSplash(58, "Connecting");
       try {
         await Tauri.themeChanged((t) => app.setSystemDark(t === "dark"));
         await Tauri.downloadProgress((p) => {
@@ -85,13 +143,12 @@ function Shell() {
         window.document.dispatchEvent(new CustomEvent("docx:servers", { detail: st }));
       } catch {}
       app.setSplash(100, "Ready");
-      try {
-        await app.checkAppUpdate();
-      } catch {}
       app.dismissSplash();
       try {
         Tauri.windowShowReady();
       } catch {}
+      void app.refreshPacks();
+      void app.checkAppUpdate();
 
       /* keep system theme in sync without polling the backend */
       const onScheme = () => app.setSystemDark(mq.matches);
@@ -135,57 +192,74 @@ function Shell() {
   // DEDICATED MOBILE VIEWPORT EXPERIENCE (< 768px)
   // =========================================================
   if (isMobile) {
+    const hasOpenDoc = !!app.activeTabId && app.activeTabId !== "home";
+    const view = screen === "reader" && !hasOpenDoc ? "nav" : screen;
+    const bottomBar = (active: MobileRootScreen) => (
+      <MobileNavBottomBar
+        active={active}
+        onShowDocs={() => showScreen("nav")}
+        onShowLibrary={() => showScreen("library")}
+        onOpenTabs={() => showScreen("tabs")}
+      />
+    );
+
     return (
       <TooltipProvider>
         <div className="relative flex h-full w-full overflow-hidden bg-background text-foreground font-sans select-none">
-          {/* Mobile View: 1. Chrome-Style Tabs Switcher */}
-          {mobileView === "tabs" && (
+          {/* The reader stays mounted under every other screen: remounting would reload
+              each document and lose its scroll position. */}
+          <div
+            className={
+              "absolute inset-0 flex flex-col overflow-hidden bg-background " +
+              (view === "reader" ? "" : "invisible pointer-events-none")
+            }
+          >
+            {hasOpenDoc && (
+              <MobileReaderHeader
+                readerApi={readerApi}
+                onOpenNav={() => showScreen("nav")}
+                onOpenTabs={() => showScreen("tabs")}
+              />
+            )}
+            <main className="relative flex-1 min-w-0 min-h-0 overflow-hidden bg-background">
+              <ReaderPanels apiRef={readerApi} />
+            </main>
+          </div>
+
+          {/* Domain rail and channel list side by side */}
+          {view === "nav" && (
+            <div className="relative flex flex-col flex-1 h-full w-full overflow-hidden bg-background pt-[env(safe-area-inset-top,0px)]">
+              <div className="flex flex-1 min-h-0 w-full overflow-hidden">
+                <div className="w-[72px] shrink-0 h-full border-r border-border bg-rail z-20">
+                  <DomainRail onNavigate={() => showScreen("reader")} />
+                </div>
+                <div className="flex-1 min-w-0 h-full overflow-hidden bg-surface z-10">
+                  <ChannelSidebar onNavigate={() => showScreen("reader")} />
+                </div>
+              </div>
+              {bottomBar("nav")}
+            </div>
+          )}
+
+          {/* Library: installing, updating and removing packs */}
+          {view === "library" && (
+            <div className="relative flex flex-col flex-1 h-full w-full overflow-hidden bg-background pt-[env(safe-area-inset-top,0px)]">
+              <div className="flex-1 min-h-0">
+                <HomeHub />
+              </div>
+              {bottomBar("library")}
+            </div>
+          )}
+
+          {view === "tabs" && (
             <MobileTabSwitcher
               onSelectTab={(id) => {
                 app.activateTab(id);
-                setMobileView("reader");
+                showScreen("reader");
               }}
-              onNewTab={() => setMobileView("nav")}
-              onClose={() => setMobileView(app.activeTabId && app.activeTabId !== "home" ? "reader" : "nav")}
+              onNewTab={() => showScreen("nav")}
+              onClose={() => showScreen(hasOpenDoc ? "reader" : "nav")}
             />
-          )}
-
-          {/* Mobile View: 2. Full-Screen Document Reader (Distraction-free, zero sidebars) */}
-          {mobileView === "reader" && app.activeTabId && app.activeTabId !== "home" && (
-            <div className="flex flex-col flex-1 h-full w-full overflow-hidden bg-background">
-              {/* Pure Mobile Header */}
-              <MobileReaderHeader
-                readerApi={readerApi}
-                onOpenNav={() => setMobileView("nav")}
-                onOpenTabs={() => setMobileView("tabs")}
-              />
-
-              {/* Document Reader Area */}
-              <main className="relative flex-1 min-w-0 h-full overflow-hidden bg-background">
-                <ReaderPanels apiRef={readerApi} />
-              </main>
-            </div>
-          )}
-
-          {/* Mobile View: 3. Domain Rail + Channel Sidebar Side-by-Side in ONE View! */}
-          {(mobileView === "nav" || (!app.activeTabId || app.activeTabId === "home")) && (
-            <div className="flex flex-col flex-1 h-full w-full overflow-hidden bg-background">
-              {/* Main side-by-side view */}
-              <div className="flex flex-1 min-h-0 w-full overflow-hidden">
-                {/* Left: Domain Rail (Compact 72px) */}
-                <div className="w-[72px] shrink-0 h-full border-r border-border bg-rail z-20">
-                  <DomainRail onNavigate={() => setMobileView("reader")} />
-                </div>
-
-                {/* Right: Channel Sidebar (Fills remaining width of the screen) */}
-                <div className="flex-1 min-w-0 h-full overflow-hidden bg-surface z-10">
-                  <ChannelSidebar onNavigate={() => setMobileView("reader")} />
-                </div>
-              </div>
-
-              {/* Bottom Dock: Search, Settings, Chrome Tabs Switcher */}
-              <MobileNavBottomBar onOpenTabs={() => setMobileView("tabs")} />
-            </div>
           )}
 
           {/* Modals & Overlays */}

@@ -1,6 +1,5 @@
 import * as React from "react";
 import { useApp, type SiteEntry, getUpdateSizeBytes } from "../lib/store";
-import { Tauri } from "../lib/tauri";
 import { SITE_CATEGORIES, CAT_LABEL, getSiteIconHtml } from "../lib/catalog";
 import { Button, Badge, Input } from "../ui";
 import {
@@ -78,31 +77,23 @@ export default function HomeHub() {
 
   // 1. Check for app & docpack updates
   const handleCheckForUpdates = async () => {
+    if (!navigator.onLine) {
+      return app.toast({ kind: "info", message: "You're offline. Connect to check for updates." });
+    }
     setCheckingUpdates(true);
-    app.toast({ kind: "progress", message: "Checking for updates…", percent: 0 });
+    const tid = app.toast({ kind: "progress", message: "Checking for updates…", percent: 0 });
     try {
-      await app.refreshPacks({ withRegistry: true });
-      let appUpdated = false;
-      try {
-        const res = await Tauri.checkAppUpdate();
-        if (res && res.update_available) {
-          appUpdated = true;
-          app.toast({
-            kind: "info",
-            message: `New Docx version available: v${res.target_version} (current: v${res.current_version})`,
-          });
-        }
-      } catch {}
+      const registry = await app.refreshPacks({ withRegistry: true });
+      const appStatus = await app.checkAppUpdate();
+      const appUpdated = !!appStatus?.update_available;
+      if (appUpdated) {
+        app.toast({ kind: "info", message: `New Docx version available: ${appStatus?.target_version}` });
+      }
 
-      const freshRegistry = await Tauri.getRemoteRegistry().catch(() => []);
-      const freshInstalled = await Tauri.getInstalledPacks().catch(() => []);
-      const installedIds = freshInstalled.map((p) => p.id);
-      const availableUpdates = freshRegistry.filter(
-        (r) => installedIds.includes(r.id) && r.update_available
-      );
+      const availableUpdates = registry.filter((r) => r.installed && r.update_available);
 
       if (availableUpdates.length > 0) {
-        const totalUpdateBytes = availableUpdates.reduce((a, r) => a + (r.size_bytes ?? 0), 0);
+        const totalUpdateBytes = availableUpdates.reduce((a, r) => a + (r.updateBytes ?? r.sizeBytes), 0);
         const sizeStr = formatDocBytes(totalUpdateBytes);
         app.toast({
           kind: "info",
@@ -117,6 +108,7 @@ export default function HomeHub() {
     } catch (e) {
       app.toast({ kind: "error", message: `Update check failed: ${String(e).slice(0, 100)}` });
     } finally {
+      app.dropToast(tid);
       setCheckingUpdates(false);
     }
   };
@@ -131,9 +123,10 @@ export default function HomeHub() {
     );
     if (!confirmed) return;
 
-    app.toast({ kind: "progress", message: `Deleting all ${installed.length} documentation packs…`, percent: 0 });
-    const results = await Promise.allSettled(installed.map((e) => app.deleteSite(e.id)));
-    const failed = results.filter((r) => r.status === "rejected").length;
+    const tid = app.toast({ kind: "progress", message: `Deleting all ${installed.length} documentation packs…`, percent: 0 });
+    const results = await Promise.all(installed.map((e) => app.deleteSite(e.id, { quiet: true })));
+    app.dropToast(tid);
+    const failed = results.filter((ok) => !ok).length;
     if (failed > 0) {
       app.toast({ kind: "error", message: `Deleted ${installed.length - failed} packs (${failed} failed)` });
     } else {
@@ -149,8 +142,16 @@ export default function HomeHub() {
     if (missing.length === 0) {
       return app.toast({ kind: "info", message: `All packs in ${categoryName} are already installed.` });
     }
-    app.toast({ kind: "progress", message: `Downloading ${missing.length} packs in ${categoryName}…`, percent: 0 });
-    Promise.allSettled(missing.map((e) => app.installSite(e.id)));
+    app.installMany(missing.map((e) => e.id));
+  };
+
+  const handleDownloadMissing = () => {
+    const missing = entries.filter((e) => !e.installed && !e.activeDownload);
+    if (!missing.length) return app.toast({ kind: "info", message: "Every pack is already installed." });
+    const size = formatDocBytes(missing.reduce((a, e) => a + (e.remote?.sizeBytes ?? 0), 0));
+    if (window.confirm(`Download ${missing.length} documentation packs (${size})?`)) {
+      app.installMany(missing.map((e) => e.id));
+    }
   };
 
   // 4. Category Delete All
@@ -164,8 +165,9 @@ export default function HomeHub() {
     );
     if (!confirmed) return;
 
-    app.toast({ kind: "progress", message: `Deleting ${toDelete.length} packs in ${categoryName}…`, percent: 0 });
-    await Promise.allSettled(toDelete.map((e) => app.deleteSite(e.id)));
+    const tid = app.toast({ kind: "progress", message: `Deleting ${toDelete.length} packs in ${categoryName}…`, percent: 0 });
+    await Promise.all(toDelete.map((e) => app.deleteSite(e.id, { quiet: true })));
+    app.dropToast(tid);
     app.toast({ kind: "success", message: `Deleted ${toDelete.length} packs in ${categoryName}.` });
   };
 
@@ -192,9 +194,9 @@ export default function HomeHub() {
                 size="sm"
                 className="gap-1.5"
                 onClick={() => app.batchUpdateOutdated()}
-                title={`Update all ${outdated.length} packs (~${formatDocBytes(undefined, outdatedSizeMb)} delta)`}
+                title={`Update all ${outdated.length} packs (${formatDocBytes(undefined, outdatedSizeMb)} to download)`}
               >
-                <ArrowUpCircle size={14} /> Update all · {outdated.length} (~{formatDocBytes(undefined, outdatedSizeMb)} delta)
+                <ArrowUpCircle size={14} /> Update all · {outdated.length} ({formatDocBytes(undefined, outdatedSizeMb)})
               </Button>
             )}
 
@@ -213,11 +215,7 @@ export default function HomeHub() {
               variant="outline"
               size="sm"
               className="gap-1.5"
-              onClick={() => {
-                const missing = entries.filter((e) => !e.installed && !e.activeDownload).map((e) => e.id);
-                if (!missing.length) return app.toast({ kind: "info", message: "Every pack is already installed." });
-                Promise.allSettled(missing.map((id) => app.installSite(id)));
-              }}
+              onClick={handleDownloadMissing}
               title="Download all missing offline documentation packs across the library"
             >
               <ArrowDownToLine size={14} /> Get missing
@@ -242,7 +240,7 @@ export default function HomeHub() {
           <StatChip
             icon={<ArrowUpCircle size={13} />}
             label="Updates"
-            value={outdated.length ? `${outdated.length} · ${outdatedSizeMb.toFixed(0)} MB` : "none"}
+            value={outdated.length ? `${outdated.length} · ${formatDocBytes(undefined, outdatedSizeMb)}` : "none"}
             highlight={outdated.length > 0}
           />
           <StatChip icon={<HardDrive size={13} />} label="On disk" value={`${Math.round(installedSizeMb)} MB`} />
@@ -251,14 +249,16 @@ export default function HomeHub() {
       </div>
 
       {/* filter bar */}
-      <div className="sticky top-0 z-20 flex items-center gap-1.5 overflow-x-auto border-b border-border bg-background px-4 py-2 md:px-8 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        <CatChip label="All" value="all" active={cat} setActive={setCat} />
-        {SITE_CATEGORIES.map((c) => (
-          <CatChip key={c} label={CAT_LABEL[c] ?? c} value={c} active={cat} setActive={setCat} />
-        ))}
-        <div className="relative ml-auto w-44 shrink-0 md:w-56">
+      <div className="sticky top-0 z-20 flex flex-col-reverse gap-2 border-b border-border bg-background px-4 py-2 md:flex-row md:items-center md:px-8">
+        <div className="flex min-w-0 flex-1 items-center gap-1.5 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <CatChip label="All" value="all" active={cat} setActive={setCat} />
+          {SITE_CATEGORIES.map((c) => (
+            <CatChip key={c} label={CAT_LABEL[c] ?? c} value={c} active={cat} setActive={setCat} />
+          ))}
+        </div>
+        <div className="relative w-full shrink-0 md:w-56">
           <SearchIcon size={13} className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-muted-foreground" />
-          <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Filter sites" className="h-8 pl-8 text-[13px]" />
+          <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Filter sites" className="h-8 pl-8 text-[13px] pointer-coarse:h-10" />
         </div>
       </div>
 
@@ -323,7 +323,7 @@ function CatChip({
     <button
       onClick={() => setActive(isActive ? "all" : value)}
       className={
-        "shrink-0 rounded px-2.5 py-1 text-[12px] font-medium transition-colors " +
+        "shrink-0 rounded px-2.5 py-1 text-[12px] font-medium transition-colors pointer-coarse:py-2 " +
         (isActive ? "bg-brand text-white" : "text-muted-foreground hover:bg-accent hover:text-foreground")
       }
     >
@@ -379,8 +379,7 @@ const SiteCard = React.memo(function SiteCard({ entry }: { entry: SiteEntry }) {
     <div
       className="group relative flex min-h-[158px] cursor-pointer flex-col rounded-lg border border-border bg-card p-3.5 transition-colors hover:border-border-strong hover:bg-accent/30"
       onClick={() => {
-        if (entry.installed) app.openSite(entry.id);
-        else app.installSite(entry.id);
+        app.openDoc(entry.id);
       }}
       onContextMenu={(e) => {
         e.preventDefault();
@@ -393,10 +392,10 @@ const SiteCard = React.memo(function SiteCard({ entry }: { entry: SiteEntry }) {
           app.togglePin(entry.id);
         }}
         className={
-          "absolute right-2.5 top-2.5 grid h-6 w-6 place-items-center rounded transition-colors " +
+          "absolute right-2.5 top-2.5 grid h-6 w-6 place-items-center rounded transition-colors pointer-coarse:h-9 pointer-coarse:w-9 " +
           (pinned
             ? "bg-brand text-white"
-            : "bg-muted text-muted-foreground opacity-0 group-hover:opacity-100 hover:bg-accent hover:text-foreground")
+            : "bg-muted text-muted-foreground opacity-0 group-hover:opacity-100 pointer-coarse:opacity-100 hover:bg-accent hover:text-foreground")
         }
         title={pinned ? "Unpin from sidebar" : "Pin to sidebar"}
       >
@@ -419,7 +418,7 @@ const SiteCard = React.memo(function SiteCard({ entry }: { entry: SiteEntry }) {
               {entry.activeDownload
                 ? "downloading…"
                 : entry.updateAvailable && entry.remote
-                  ? `${formatDocBytes(undefined, entry.local?.size_mb)} (update: ${formatDocBytes(entry.remote.sizeBytes)})`
+                  ? `${formatDocBytes(undefined, entry.local?.size_mb)} (update: ${formatDocBytes(getUpdateSizeBytes(entry))})`
                   : entry.installed
                     ? formatDocBytes(undefined, entry.local!.size_mb)
                     : entry.remote
@@ -446,18 +445,18 @@ const SiteCard = React.memo(function SiteCard({ entry }: { entry: SiteEntry }) {
             <Button
               variant="gradient"
               size="sm"
-              className="h-7 flex-1 gap-1.5 text-[11.5px]"
+              className="h-7 flex-1 gap-1.5 text-[11.5px] pointer-coarse:h-10"
               onClick={(ev) => {
                 ev.stopPropagation();
                 app.installSite(entry.id);
               }}
-              title={`Download update (${entry.remote ? formatDocBytes(entry.remote.sizeBytes) : ""})`}
+              title={`Download update (${formatDocBytes(getUpdateSizeBytes(entry))})`}
             >
               <ArrowUpCircle size={12} /> Update
             </Button>
             {entry.remote && (
-              <Badge className="text-[10px] text-brand border-brand/30 bg-brand/10 font-semibold" title="Incremental delta patch size">
-                {formatDocBytes(getUpdateSizeBytes(entry))} delta
+              <Badge className="text-[10px] text-brand border-brand/30 bg-brand/10 font-semibold" title="Only the changed parts are downloaded">
+                {formatDocBytes(getUpdateSizeBytes(entry))}
               </Badge>
             )}
             <OpenChip />
@@ -468,7 +467,7 @@ const SiteCard = React.memo(function SiteCard({ entry }: { entry: SiteEntry }) {
             <Button
               variant="ghost"
               size="iconSm"
-              className="ml-auto shrink-0 hover:bg-danger/10 hover:text-danger"
+              className="ml-auto shrink-0 hover:bg-danger/10 hover:text-danger pointer-coarse:h-10 pointer-coarse:w-10"
               title="Delete pack"
               onClick={(ev) => {
                 ev.stopPropagation();
@@ -483,7 +482,7 @@ const SiteCard = React.memo(function SiteCard({ entry }: { entry: SiteEntry }) {
             <Button
               variant="outline"
               size="sm"
-              className="h-7 flex-1 gap-1.5 text-[11.5px]"
+              className="h-7 flex-1 gap-1.5 text-[11.5px] pointer-coarse:h-10"
               onClick={(ev) => {
                 ev.stopPropagation();
                 app.installSite(entry.id);
@@ -515,7 +514,7 @@ const SiteCard = React.memo(function SiteCard({ entry }: { entry: SiteEntry }) {
 
 function OpenChip() {
   return (
-    <Button variant="soft" size="sm" className="h-7 flex-1 gap-1.5 text-[11.5px]">
+    <Button variant="soft" size="sm" className="h-7 flex-1 gap-1.5 text-[11.5px] pointer-coarse:h-10">
       Open
     </Button>
   );

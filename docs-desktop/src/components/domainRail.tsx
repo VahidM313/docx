@@ -41,6 +41,8 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
     isUnpinnedTarget: boolean;
   } | null>(null);
 
+  const touchStartRef = React.useRef<{ x: number; y: number } | null>(null);
+
   const dragRef = React.useRef<{
     docId: string;
     isPinned: boolean;
@@ -159,6 +161,11 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
   // Pointer drag handlers
   const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>, docId: string, isPinned: boolean) => {
     if (e.button !== 0) return; // Only primary button
+    // On touch a moving finger scrolls the rail; pinning goes through the long-press menu.
+    if (e.pointerType === "touch") {
+      touchStartRef.current = { x: e.clientX, y: e.clientY };
+      return;
+    }
     dragRef.current = {
       docId,
       isPinned,
@@ -219,7 +226,20 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
     });
   };
 
+  const openFromRail = (doc: SiteBrand) => {
+    const opened = app.openDoc(doc.id);
+    app.setSelectedCategory(doc.category);
+    if (opened) onNavigate?.();
+  };
+
   const handlePointerUp = (e: React.PointerEvent<HTMLDivElement>, doc: SiteBrand) => {
+    const touchStart = touchStartRef.current;
+    touchStartRef.current = null;
+    if (touchStart) {
+      if (Math.hypot(e.clientX - touchStart.x, e.clientY - touchStart.y) < 10) openFromRail(doc);
+      return;
+    }
+
     const current = dragRef.current;
     dragRef.current = null;
 
@@ -264,13 +284,12 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
     } else {
       // Normal click without drag movement!
       setDragState(null);
-      app.openSite(doc.id);
-      app.setSelectedCategory(doc.category);
-      onNavigate?.();
+      openFromRail(doc);
     }
   };
 
   const handlePointerCancel = () => {
+    touchStartRef.current = null;
     if (dragRef.current?.targetEl) {
       try {
         dragRef.current.targetEl.releasePointerCapture(dragRef.current.pointerId);
@@ -324,7 +343,7 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
           });
         }}
         className={
-          "relative flex items-center justify-center w-full transition-all duration-150 touch-none select-none " +
+          "relative flex items-center justify-center w-full transition-all duration-150 touch-pan-y select-none " +
           (isDragging ? "opacity-30 scale-90" : "")
         }
         onMouseEnter={() => setHoveredItem(doc.id)}
@@ -590,7 +609,7 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
 
       {/* 5. Compact Control Buttons at the Bottom (All global tools in one place, zero duplication) */}
       <div className="flex flex-col items-center gap-1.5 w-full px-2">
-        <div className="grid grid-cols-2 gap-1 p-1 rounded-xl bg-surface/70 border border-border/60 shadow-xs">
+        <div className="hidden md:grid grid-cols-2 gap-1 p-1 rounded-xl bg-surface/70 border border-border/60 shadow-xs">
           {/* 1. Sidebar Toggle */}
           <Tooltip label={app.sidebarOpen ? "Hide Docs Sidebar" : "Show Docs Sidebar"} side="right">
             <button
@@ -703,9 +722,7 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
             type="button"
             className="flex items-center gap-2 w-full px-2.5 py-1.5 rounded-lg hover:bg-surface-deep hover:text-foreground text-left cursor-pointer transition-colors"
             onClick={() => {
-              app.openSite(contextMenu.doc.id);
-              app.setSelectedCategory(contextMenu.doc.category);
-              onNavigate?.();
+              openFromRail(contextMenu.doc);
               setContextMenu(null);
             }}
           >

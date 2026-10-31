@@ -730,7 +730,7 @@ export function SettingsModal() {
                         title={`Update all ${outdated.length} packs (${outdatedSizeStr})`}
                       >
                         <RefreshCw className="h-3.5 w-3.5" />
-                        <span>Update All ({outdated.length} · ~{outdatedSizeStr} delta)</span>
+                        <span>Update All ({outdated.length} · {outdatedSizeStr})</span>
                       </Button>
                     );
                   })()}

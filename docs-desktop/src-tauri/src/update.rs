@@ -1,17 +1,44 @@
-//! Pack install & HTTP 206 partial-range delta update pipeline (GitHub Releases).
+//! Pack install and incremental update over HTTP range requests.
+//!
+//! A release holds one `.docpack` per site and no patch files. The client reads the
+//! head of the published pack, works out which chunks it lacks, fetches only those,
+//! and rebuilds a byte-identical copy of the published pack from local and fetched
+//! chunks. That works from any older build, not just the previous one.
+//!
+//! Every fetched chunk is verified against its id and the assembled data against
+//! the pack's hash, and the installed pack is only replaced by an atomic rename, so
+//! an interrupted or corrupted update leaves the working pack in place.
 
-use std::collections::HashMap;
-use std::fs::{self, File};
-use std::io::{Read, Write};
-use std::path::PathBuf;
-use std::sync::Arc;
-use std::time::Duration;
+use std::collections::{HashMap, HashSet};
+use std::fs::{self, File, OpenOptions};
+use std::io::{BufReader, BufWriter, Read, Seek, SeekFrom, Write};
+use std::path::{Path, PathBuf};
+use std::sync::{Arc, LazyLock, Mutex};
+use std::time::{Duration, Instant};
 
-use crate::config::RELEASE_BASE_URL;
-use crate::error::{read_guard, write_guard, DocxError};
-use crate::pack::{get_packs_dir, parse_docpack_on_disk, AssetStore, ManifestEntry, SiteManifest, SiteOverridePack};
+use crate::config::PACKS_BASE_URL;
+use crate::error::{read_guard, write_guard, DocxError, Result};
+use crate::pack::{
+    get_packs_dir, parse_docpack_on_disk, parse_v3_header, AssetStore, PackMeta, SiteOverridePack,
+    V3Index, V3_HEADER_BYTES,
+};
 use crate::server::{ensure_site_server, AppState};
-use crate::util::curl_get_bytes;
+use crate::util::{http_client, sha256_hex_16, to_hex};
+
+/// Enough for the header, metadata and index of most packs in one request.
+const HEAD_PROBE_BYTES: u64 = 64 * 1024;
+/// Fetching a small gap is cheaper than another request.
+const MAX_RANGE_GAP: u64 = 32 * 1024;
+/// Above this share of missing data, one streamed download beats many ranges.
+const FULL_DOWNLOAD_PERCENT: u64 = 85;
+const MAX_ATTEMPTS: u32 = 4;
+/// Slowest rate at which a transfer is still worth waiting for. Past that, the attempt
+/// is abandoned and retried, which keeps a stalled socket from hanging an update
+/// forever; both transfer paths continue from what already arrived.
+const MIN_TRANSFER_BYTES_PER_SEC: u64 = 16 * 1024;
+const BASE_TRANSFER_BUDGET: Duration = Duration::from_secs(120);
+const PROGRESS_INTERVAL: Duration = Duration::from_millis(150);
+const COPY_BUFFER_BYTES: usize = 256 * 1024;
 
 #[derive(serde::Serialize, Clone)]
 pub struct DeltaUpdateResult {
@@ -28,7 +55,6 @@ pub struct DeltaUpdateResult {
     pub message: String,
 }
 
-
 #[derive(serde::Serialize, Clone)]
 #[allow(non_snake_case)]
 pub struct DownloadProgressPayload {
@@ -40,856 +66,734 @@ pub struct DownloadProgressPayload {
     pub detail: String,
 }
 
-pub(crate) fn curl_download_with_progress(
-    url: &str,
-    dest_path: &PathBuf,
-    expected_total: usize,
-    site_id: &str,
-    window: &tauri::Window,
-) -> crate::error::Result<Vec<u8>> {
-    use tauri::Emitter;
-    let tmp_dest = dest_path.with_extension("tmp");
+/// Rate-limited progress events: the UI re-renders on each one.
+pub(crate) struct Progress<'a> {
+    site_id: &'a str,
+    sink: &'a mut dyn FnMut(DownloadProgressPayload),
+    last: Option<Instant>,
+}
 
-    let client = reqwest::blocking::Client::builder()
-        .user_agent("Docx/1.0")
-        .timeout(Duration::from_secs(300))
-        .build()?;
+impl<'a> Progress<'a> {
+    pub(crate) fn new(site_id: &'a str, sink: &'a mut dyn FnMut(DownloadProgressPayload)) -> Self {
+        Self { site_id, sink, last: None }
+    }
 
-    let mut resp = client.get(url).send()?;
-
-    let status = resp.status();
-    if !status.is_success() {
-        return Err(DocxError::HttpStatus {
-            status: status.as_u16(),
-            url: url.to_string(),
+    fn emit(&mut self, phase: &str, done: u64, total: u64, percent: u8, detail: String) {
+        self.last = Some(Instant::now());
+        (self.sink)(DownloadProgressPayload {
+            site_id: self.site_id.to_string(),
+            phase: phase.to_string(),
+            downloaded_bytes: done as usize,
+            total_bytes: total as usize,
+            percent,
+            detail,
         });
     }
 
-    let total = resp.content_length().map(|l| l as usize).unwrap_or(expected_total).max(1);
-    let mut file =
-        File::create(&tmp_dest).map_err(|e| DocxError::io_path(&tmp_dest, &e))?;
-    let mut buffer = [0u8; 65536];
-    let mut cur_bytes = 0usize;
-    let mut last_emit = std::time::Instant::now();
+    /// Reports transfer progress mapped onto the 8-95% part of the bar.
+    fn transfer(&mut self, phase: &str, done: u64, total: u64) {
+        if self.last.is_some_and(|t| t.elapsed() < PROGRESS_INTERVAL) {
+            return;
+        }
+        let total = total.max(1);
+        let percent = (8.0 + (done as f64 / total as f64) * 87.0).clamp(8.0, 95.0) as u8;
+        let detail = format!("{} / {}", format_mb(done), format_mb(total));
+        self.emit(phase, done, total, percent, detail);
+    }
+}
+
+fn format_mb(bytes: u64) -> String {
+    format!("{:.2} MB", bytes as f64 / (1024.0 * 1024.0))
+}
+
+fn backoff(attempt: u32) {
+    std::thread::sleep(Duration::from_millis(500 * (1 << attempt.min(4))));
+}
+
+fn transfer_budget(bytes: u64) -> Duration {
+    BASE_TRANSFER_BUDGET + Duration::from_secs(bytes / MIN_TRANSFER_BYTES_PER_SEC)
+}
+
+/// Whether trying again can help. Client errors such as 404 will not change.
+fn is_transient(error: &DocxError) -> bool {
+    match error {
+        DocxError::HttpStatus { status, .. } => *status >= 500 || *status == 429,
+        DocxError::Http { .. } => true,
+        _ => false,
+    }
+}
+
+/// Replaces `to` with `from`, retrying briefly because Windows refuses while a
+/// scanner or indexer still has the file open.
+fn replace_file(from: &Path, to: &Path) -> Result<()> {
+    let mut last = None;
+    for _ in 0..6 {
+        match fs::rename(from, to) {
+            Ok(()) => return Ok(()),
+            Err(e) => last = Some(e),
+        }
+        std::thread::sleep(Duration::from_millis(150));
+    }
+    Err(DocxError::io_path(to, &last.expect("rename attempted")))
+}
+
+/// Downloads `url` into `part`, continuing an earlier attempt when the server still
+/// has the same file. `part` is complete when this returns.
+pub(crate) fn download_resumable(
+    url: &str,
+    part: &Path,
+    expected_total: u64,
+    phase: &str,
+    progress: &mut Progress<'_>,
+) -> Result<u64> {
+    let etag_path = part.with_extension("etag");
+    let mut failures = 0u32;
+    let mut buffer = vec![0u8; 64 * 1024];
 
     loop {
-        let bytes_read = resp
-            .read(&mut buffer)
-            .map_err(|e| DocxError::http(url, format!("download stream read error: {e}")))?;
-        if bytes_read == 0 {
+        let mut have = fs::metadata(part).map(|m| m.len()).unwrap_or(0);
+        let etag = fs::read_to_string(&etag_path).ok().filter(|_| have > 0);
+        if etag.is_none() {
+            have = 0;
+        }
+
+        let attempt_start = have;
+        let mut request = http_client().get(url).timeout(transfer_budget(expected_total));
+        if let (true, Some(tag)) = (have > 0, &etag) {
+            request = request
+                .header(reqwest::header::RANGE, format!("bytes={have}-"))
+                .header(reqwest::header::IF_RANGE, tag.as_str());
+        }
+
+        let attempt = (|| -> Result<u64> {
+            let mut resp = request.send()?;
+            let status = resp.status();
+            if status == reqwest::StatusCode::RANGE_NOT_SATISFIABLE {
+                // The partial file is not a prefix of what the server has now.
+                let _ = fs::remove_file(part);
+                let _ = fs::remove_file(&etag_path);
+                return Err(DocxError::http(url, "stale partial download"));
+            }
+            if !status.is_success() {
+                return Err(DocxError::HttpStatus { status: status.as_u16(), url: url.to_string() });
+            }
+
+            let resuming = status == reqwest::StatusCode::PARTIAL_CONTENT;
+            if !resuming {
+                have = 0;
+                match resp.headers().get(reqwest::header::ETAG).and_then(|v| v.to_str().ok()) {
+                    Some(tag) => fs::write(&etag_path, tag).map_err(|e| DocxError::io_path(&etag_path, &e))?,
+                    None => {
+                        let _ = fs::remove_file(&etag_path);
+                    }
+                }
+            }
+            let total = resp.content_length().map(|n| n + have).unwrap_or(expected_total).max(1);
+
+            let mut file = OpenOptions::new()
+                .create(true)
+                .write(true)
+                .append(resuming)
+                .truncate(!resuming)
+                .open(part)
+                .map_err(|e| DocxError::io_path(part, &e))?;
+            loop {
+                let n = resp
+                    .read(&mut buffer)
+                    .map_err(|e| DocxError::http(url, format!("download interrupted: {e}")))?;
+                if n == 0 {
+                    break;
+                }
+                file.write_all(&buffer[..n]).map_err(|e| DocxError::io_path(part, &e))?;
+                have += n as u64;
+                progress.transfer(phase, have, total);
+            }
+            file.sync_all().map_err(|e| DocxError::io_path(part, &e))?;
+            if have != total {
+                return Err(DocxError::http(url, format!("connection closed at {have} of {total} bytes")));
+            }
+            Ok(total)
+        })();
+
+        match attempt {
+            Ok(total) => {
+                let _ = fs::remove_file(&etag_path);
+                return Ok(total);
+            }
+            Err(e) if !is_transient(&e) => return Err(e),
+            Err(e) => {
+                // A slow link may need many attempts; only a dead one should give up.
+                let now = fs::metadata(part).map(|m| m.len()).unwrap_or(0);
+                failures = if now > attempt_start { 0 } else { failures + 1 };
+                if failures >= MAX_ATTEMPTS {
+                    return Err(e);
+                }
+                log::warn!("download retry {failures} for {url}: {e}");
+                backoff(failures);
+            }
+        }
+    }
+}
+
+struct RemoteHead {
+    /// Header, metadata and index, exactly as published.
+    bytes: Vec<u8>,
+    meta: PackMeta,
+    index: V3Index,
+}
+
+fn fetch_remote_head(url: &str) -> Result<Option<RemoteHead>> {
+    let mut failures = 0;
+    loop {
+        match read_remote_head(url) {
+            Err(e) if is_transient(&e) && failures + 1 < MAX_ATTEMPTS => {
+                failures += 1;
+                log::warn!("head retry {failures} for {url}: {e}");
+                backoff(failures);
+            }
+            result => return result,
+        }
+    }
+}
+
+/// Reads the head of a published pack. `None` means the server ignored the range
+/// request, so the only option is a plain download.
+fn read_remote_head(url: &str) -> Result<Option<RemoteHead>> {
+    let Some(mut bytes) = fetch_range(url, 0, HEAD_PROBE_BYTES)? else {
+        return Ok(None);
+    };
+    let (meta_len, index_len, data_len) =
+        parse_v3_header(&bytes).ok_or_else(|| DocxError::invalid_pack("published pack is not format v3"))?;
+    let meta_end = V3_HEADER_BYTES + meta_len;
+    let head_len = meta_end + index_len;
+
+    if (bytes.len() as u64) < head_len as u64 {
+        match fetch_range(url, bytes.len() as u64, head_len as u64)? {
+            Some(rest) => bytes.extend_from_slice(&rest),
+            None => return Ok(None),
+        }
+    }
+    if bytes.len() < head_len {
+        return Err(DocxError::invalid_pack("published pack is shorter than its header says"));
+    }
+    bytes.truncate(head_len);
+
+    let meta: PackMeta = serde_json::from_slice(&bytes[V3_HEADER_BYTES..meta_end])?;
+    let index_bytes = &bytes[meta_end..head_len];
+    if sha256_hex_16(index_bytes) != meta.index_hash {
+        return Err(DocxError::invalid_pack("index hash mismatch; the pack may be mid-publish"));
+    }
+    let index = V3Index::parse(index_bytes)?;
+    if index.data_len != data_len {
+        return Err(DocxError::invalid_pack("index does not match the data section"));
+    }
+    Ok(Some(RemoteHead { bytes, meta, index }))
+}
+
+/// `Ok(None)` when the server answered with something other than the requested range.
+fn fetch_range(url: &str, start: u64, end: u64) -> Result<Option<Vec<u8>>> {
+    let Some(resp) = open_range(url, start, end)? else {
+        return Ok(None);
+    };
+    let mut out = Vec::with_capacity((end - start) as usize);
+    resp.take(end - start)
+        .read_to_end(&mut out)
+        .map_err(|e| DocxError::http(url, format!("range read failed: {e}")))?;
+    Ok(Some(out))
+}
+
+fn open_range(url: &str, start: u64, end: u64) -> Result<Option<reqwest::blocking::Response>> {
+    let resp = http_client()
+        .get(url)
+        .header(reqwest::header::RANGE, format!("bytes={}-{}", start, end - 1))
+        .timeout(transfer_budget(end - start))
+        .send()?;
+    let status = resp.status();
+    if status == reqwest::StatusCode::OK {
+        return Ok(None);
+    }
+    if status != reqwest::StatusCode::PARTIAL_CONTENT {
+        return Err(DocxError::HttpStatus { status: status.as_u16(), url: url.to_string() });
+    }
+    let served_start = resp
+        .headers()
+        .get(reqwest::header::CONTENT_RANGE)
+        .and_then(|v| v.to_str().ok())
+        .and_then(|v| v.strip_prefix("bytes "))
+        .and_then(|v| v.split('-').next())
+        .and_then(|v| v.parse::<u64>().ok());
+    if served_start != Some(start) {
+        return Ok(None);
+    }
+    Ok(Some(resp))
+}
+
+fn verify_chunk(stored: &[u8], index: &V3Index, i: usize) -> Result<()> {
+    let id = &index.ids[i];
+    let raw_len = index.raw_lengths[i];
+    let digest = if index.brotli[i] {
+        let mut raw = Vec::with_capacity(raw_len as usize);
+        brotli::Decompressor::new(stored, 4096)
+            .take(raw_len + 1)
+            .read_to_end(&mut raw)
+            .map_err(|e| DocxError::invalid_pack(format!("chunk {id} does not decompress: {e}")))?;
+        if raw.len() as u64 != raw_len {
+            return Err(DocxError::invalid_pack(format!("chunk {id} has the wrong size")));
+        }
+        sha256_hex_16(&raw)
+    } else {
+        sha256_hex_16(stored)
+    };
+    if &digest != id {
+        return Err(DocxError::invalid_pack(format!("chunk {id} failed verification")));
+    }
+    Ok(())
+}
+
+/// Fetched chunks, kept in a spool file: chunk index -> offset in the spool.
+struct Spool {
+    file: File,
+    written: u64,
+    placed: HashMap<usize, u64>,
+    received_bytes: u64,
+}
+
+/// Fetches `group`, a run of chunks close enough for one request. Returns how many
+/// arrived, which also holds on error so a retry can continue after them.
+fn fetch_chunk_group(
+    url: &str,
+    head: &RemoteHead,
+    group: &[usize],
+    spool: &mut Spool,
+    total: u64,
+    progress: &mut Progress<'_>,
+) -> (usize, Result<()>) {
+    let index = &head.index;
+    let data_start = head.bytes.len() as u64;
+    let first = group[0];
+    let last = group[group.len() - 1];
+    let range_start = data_start + index.offsets[first];
+    let range_end = data_start + index.offsets[last] + index.lengths[last];
+
+    let resp = match open_range(url, range_start, range_end) {
+        Ok(Some(resp)) => resp,
+        Ok(None) => return (0, Err(DocxError::invalid_pack("server stopped honouring range requests"))),
+        Err(e) => return (0, Err(e)),
+    };
+    let mut reader = BufReader::with_capacity(COPY_BUFFER_BYTES, resp);
+    let mut position = index.offsets[first];
+    let mut chunk = Vec::new();
+
+    for (done, &i) in group.iter().enumerate() {
+        let gap = index.offsets[i] - position;
+        if gap > 0 {
+            let skipped = std::io::copy(&mut reader.by_ref().take(gap), &mut std::io::sink());
+            if !matches!(skipped, Ok(n) if n == gap) {
+                return (done, Err(DocxError::http(url, "connection closed inside a range")));
+            }
+            spool.received_bytes += gap;
+        }
+        chunk.resize(index.lengths[i] as usize, 0);
+        if let Err(e) = reader.read_exact(&mut chunk) {
+            return (done, Err(DocxError::http(url, format!("range read failed: {e}"))));
+        }
+        if let Err(e) = verify_chunk(&chunk, index, i) {
+            return (done, Err(e));
+        }
+        // A failed write may have moved the cursor, so never rely on its position.
+        let written = spool
+            .file
+            .seek(SeekFrom::Start(spool.written))
+            .and_then(|_| spool.file.write_all(&chunk));
+        if let Err(e) = written {
+            return (done, Err(e.into()));
+        }
+        spool.placed.insert(i, spool.written);
+        spool.written += chunk.len() as u64;
+        spool.received_bytes += chunk.len() as u64;
+        position = index.offsets[i] + index.lengths[i];
+        progress.transfer("Downloading changes", spool.received_bytes, total);
+    }
+    (group.len(), Ok(()))
+}
+
+/// Downloads `missing` (in data order) into the spool, retrying only what has not arrived.
+fn fetch_missing(
+    url: &str,
+    head: &RemoteHead,
+    missing: &[usize],
+    spool: &mut Spool,
+    total: u64,
+    progress: &mut Progress<'_>,
+) -> Result<()> {
+    let index = &head.index;
+    let mut next = 0;
+    let mut failures = 0u32;
+    while next < missing.len() {
+        let mut end = next + 1;
+        while end < missing.len() {
+            let previous = missing[end - 1];
+            let gap = index.offsets[missing[end]] - (index.offsets[previous] + index.lengths[previous]);
+            if gap > MAX_RANGE_GAP {
+                break;
+            }
+            end += 1;
+        }
+        let (arrived, result) = fetch_chunk_group(url, head, &missing[next..end], spool, total, progress);
+        next += arrived;
+        match result {
+            Ok(()) => failures = 0,
+            // Wrong bytes will not fix themselves: the pack changed or is corrupt.
+            Err(e) if !is_transient(&e) => return Err(e),
+            Err(e) => {
+                failures = if arrived > 0 { 0 } else { failures + 1 };
+                if failures >= MAX_ATTEMPTS {
+                    return Err(e);
+                }
+                log::warn!("range retry {failures} for {url}: {e}");
+                backoff(failures);
+            }
+        }
+    }
+    Ok(())
+}
+
+/// Writes the published pack to `dest` from the local pack and the spool, verifying
+/// the result against the published data hash.
+fn assemble_pack(
+    dest: &Path,
+    head: &RemoteHead,
+    local: &SiteOverridePack,
+    local_index: &V3Index,
+    local_lookup: &HashMap<&str, usize>,
+    spool: &mut Spool,
+) -> Result<()> {
+    let index = &head.index;
+    let mut out = BufWriter::with_capacity(
+        COPY_BUFFER_BYTES,
+        File::create(dest).map_err(|e| DocxError::io_path(dest, &e))?,
+    );
+    out.write_all(&head.bytes).map_err(|e| DocxError::io_path(dest, &e))?;
+
+    let local_data_start = local.data_start().ok_or_else(|| DocxError::invalid_pack("local pack is not v3"))?;
+    let local_file = local.open().ok_or_else(|| DocxError::PackMissing(local.meta.id.clone()))?;
+    let mut local_reader = BufReader::with_capacity(COPY_BUFFER_BYTES, local_file);
+    local_reader.seek(SeekFrom::Start(local_data_start))?;
+    let mut local_position = local_data_start;
+
+    let mut hasher = ring::digest::Context::new(&ring::digest::SHA256);
+    let mut chunk = Vec::new();
+    for i in 0..index.ids.len() {
+        chunk.resize(index.lengths[i] as usize, 0);
+        if let Some(&at) = spool.placed.get(&i) {
+            spool.file.seek(SeekFrom::Start(at))?;
+            spool.file.read_exact(&mut chunk)?;
+        } else {
+            let j = *local_lookup
+                .get(index.ids[i].as_str())
+                .ok_or_else(|| DocxError::invalid_pack(format!("no source for chunk {}", index.ids[i])))?;
+            let at = local_data_start + local_index.offsets[j];
+            if at != local_position {
+                // Survivors mostly stay in order, so this keeps the read buffer useful.
+                local_reader.seek_relative(at as i64 - local_position as i64)?;
+            }
+            local_reader.read_exact(&mut chunk)?;
+            local_position = at + chunk.len() as u64;
+        }
+        hasher.update(&chunk);
+        out.write_all(&chunk).map_err(|e| DocxError::io_path(dest, &e))?;
+    }
+
+    check_data_hash(hasher, &head.meta)?;
+    let file = out.into_inner().map_err(|e| DocxError::io_path(dest, e.error()))?;
+    file.sync_all().map_err(|e| DocxError::io_path(dest, &e))?;
+    Ok(())
+}
+
+fn check_data_hash(hasher: ring::digest::Context, meta: &PackMeta) -> Result<()> {
+    let digest = hasher.finish();
+    if to_hex(&digest.as_ref()[..16]) != meta.data_hash {
+        return Err(DocxError::invalid_pack("pack data does not match its hash"));
+    }
+    Ok(())
+}
+
+/// Checks a fully downloaded pack before it may replace anything.
+fn verify_downloaded_pack(path: &Path) -> Result<PackMeta> {
+    let mut file = File::open(path).map_err(|e| DocxError::io_path(path, &e))?;
+    let mut header = [0u8; V3_HEADER_BYTES];
+    file.read_exact(&mut header)?;
+    let (meta_len, index_len, data_len) =
+        parse_v3_header(&header).ok_or_else(|| DocxError::invalid_pack("download is not a format v3 pack"))?;
+    let data_start = (V3_HEADER_BYTES + meta_len + index_len) as u64;
+    if file.metadata()?.len() != data_start + data_len {
+        return Err(DocxError::invalid_pack("download has the wrong length"));
+    }
+    let mut meta_bytes = vec![0u8; meta_len];
+    file.read_exact(&mut meta_bytes)?;
+    let meta: PackMeta = serde_json::from_slice(&meta_bytes)?;
+
+    file.seek(SeekFrom::Start(data_start))?;
+    let mut hasher = ring::digest::Context::new(&ring::digest::SHA256);
+    let mut buffer = vec![0u8; COPY_BUFFER_BYTES];
+    loop {
+        let n = file.read(&mut buffer)?;
+        if n == 0 {
             break;
         }
-        file.write_all(&buffer[..bytes_read])
-            .map_err(|e| DocxError::io_path(dest_path, &e))?;
-        cur_bytes += bytes_read;
-
-        if last_emit.elapsed() >= Duration::from_millis(65) || cur_bytes == total {
-            last_emit = std::time::Instant::now();
-            let pct = ((cur_bytes as f64 / total as f64) * 92.0)
-                .round()
-                .clamp(8.0, 95.0) as u8;
-            let _ = window.emit(
-                "docpack-progress",
-                DownloadProgressPayload {
-                    site_id: site_id.to_string(),
-                    phase: "Downloading .docpack".to_string(),
-                    downloaded_bytes: cur_bytes,
-                    total_bytes: total,
-                    percent: pct,
-                    detail: format!(
-                        "{:.2} MB / {:.2} MB ({}%)",
-                        cur_bytes as f64 / (1024.0 * 1024.0),
-                        total as f64 / (1024.0 * 1024.0),
-                        pct
-                    ),
-                },
-            );
-        }
+        hasher.update(&buffer[..n]);
     }
-
-    file.flush().map_err(|e| DocxError::io_path(&tmp_dest, &e))?;
-    drop(file);
-
-    let bytes = fs::read(&tmp_dest).map_err(|e| DocxError::io_path(&tmp_dest, &e))?;
-    let _ = fs::rename(&tmp_dest, dest_path);
-    Ok(bytes)
+    check_data_hash(hasher, &meta)?;
+    Ok(meta)
 }
 
-pub(crate) const DPTC_MAGIC: &[u8; 4] = b"DPTC";
+#[derive(Debug)]
+pub(crate) struct SyncReport {
+    pub meta: PackMeta,
+    pub changed: bool,
+    pub total_chunks: usize,
+    pub reused_chunks: usize,
+    pub downloaded_chunks: usize,
+    pub reused_bytes: u64,
+    pub downloaded_bytes: u64,
+}
 
-pub fn parse_remote_data_start(hdr_bytes: &[u8], fallback_len: usize) -> usize {
-    if hdr_bytes.starts_with(crate::pack::DOCP_MAGIC) {
-        if hdr_bytes.len() >= 12 {
-            let m_len = u32::from_le_bytes([hdr_bytes[8], hdr_bytes[9], hdr_bytes[10], hdr_bytes[11]]) as usize;
-            16 + m_len
-        } else {
-            16 + fallback_len
+/// Fetches only what `local` lacks. Falls through with an error when the pack cannot
+/// be patched, and the caller then downloads it whole.
+fn sync_by_ranges(
+    url: &str,
+    dest: &Path,
+    head: &RemoteHead,
+    local: &SiteOverridePack,
+    local_index: &V3Index,
+    missing: &[usize],
+    missing_bytes: u64,
+    progress: &mut Progress<'_>,
+) -> Result<SyncReport> {
+    let tmp = dest.with_extension("docpack.tmp");
+    let spool_path = dest.with_extension("docpack.spool");
+    let mut spool = Spool {
+        file: OpenOptions::new()
+            .create(true)
+            .read(true)
+            .write(true)
+            .truncate(true)
+            .open(&spool_path)
+            .map_err(|e| DocxError::io_path(&spool_path, &e))?,
+        written: 0,
+        placed: HashMap::new(),
+        received_bytes: 0,
+    };
+
+    let result = (|| -> Result<u64> {
+        fetch_missing(url, head, missing, &mut spool, missing_bytes, progress)?;
+        progress.emit(
+            "Assembling pack",
+            spool.received_bytes,
+            missing_bytes,
+            96,
+            "Combining local and downloaded content...".to_string(),
+        );
+        let local_lookup: HashMap<&str, usize> =
+            local_index.ids.iter().enumerate().map(|(i, id)| (id.as_str(), i)).collect();
+        assemble_pack(&tmp, head, local, local_index, &local_lookup, &mut spool)?;
+        replace_file(&tmp, dest)?;
+        Ok(spool.received_bytes)
+    })();
+
+    drop(spool);
+    let _ = fs::remove_file(&spool_path);
+    let _ = fs::remove_file(&tmp);
+
+    let received = result? + head.bytes.len() as u64;
+    let total_chunks = head.index.ids.len();
+    Ok(SyncReport {
+        meta: head.meta.clone(),
+        changed: true,
+        total_chunks,
+        reused_chunks: total_chunks - missing.len(),
+        downloaded_chunks: missing.len(),
+        reused_bytes: head.index.data_len - missing_bytes,
+        downloaded_bytes: received,
+    })
+}
+
+fn sync_by_download(url: &str, dest: &Path, expected: u64, progress: &mut Progress<'_>) -> Result<SyncReport> {
+    let part = dest.with_extension("docpack.part");
+    let received = download_resumable(url, &part, expected, "Downloading", progress)?;
+    let meta = match verify_downloaded_pack(&part) {
+        Ok(meta) => meta,
+        Err(e) => {
+            let _ = fs::remove_file(&part);
+            return Err(e);
         }
-    } else if hdr_bytes.len() >= 4 {
-        let m_len = u32::from_le_bytes([hdr_bytes[0], hdr_bytes[1], hdr_bytes[2], hdr_bytes[3]]) as usize;
-        4 + m_len
-    } else {
-        4 + fallback_len
+    };
+    replace_file(&part, dest)?;
+    Ok(SyncReport {
+        total_chunks: meta.chunk_count,
+        reused_chunks: 0,
+        downloaded_chunks: meta.chunk_count,
+        reused_bytes: 0,
+        downloaded_bytes: received,
+        changed: true,
+        meta,
+    })
+}
+
+/// Brings `dest` up to the pack published at `url`, starting from `local`.
+pub(crate) fn sync_pack(
+    url: &str,
+    dest: &Path,
+    local: Option<&SiteOverridePack>,
+    progress: &mut Progress<'_>,
+) -> Result<SyncReport> {
+    progress.emit("Checking for updates", 0, 0, 4, "Connecting to GitHub Releases...".to_string());
+
+    let expected = local.map(SiteOverridePack::pack_len).unwrap_or(0);
+    let Some(head) = fetch_remote_head(url)? else {
+        return sync_by_download(url, dest, expected, progress);
+    };
+
+    if let Some(local) = local
+        && local.meta.commit == head.meta.commit
+    {
+        return Ok(SyncReport {
+            meta: local.meta.clone(),
+            changed: false,
+            total_chunks: local.meta.chunk_count,
+            reused_chunks: local.meta.chunk_count,
+            downloaded_chunks: 0,
+            reused_bytes: local.meta.total_bytes,
+            downloaded_bytes: head.bytes.len() as u64,
+        });
+    }
+
+    let pack_len = head.bytes.len() as u64 + head.index.data_len;
+    if let Some(local) = local
+        && let Some(local_index) = local.v3_index()
+    {
+        let known: HashSet<&str> = local_index.ids.iter().map(String::as_str).collect();
+        let missing: Vec<usize> =
+            (0..head.index.ids.len()).filter(|&i| !known.contains(head.index.ids[i].as_str())).collect();
+        let missing_bytes: u64 = missing.iter().map(|&i| head.index.lengths[i]).sum();
+
+        if missing_bytes * 100 < head.index.data_len * FULL_DOWNLOAD_PERCENT {
+            match sync_by_ranges(url, dest, &head, local, &local_index, &missing, missing_bytes, progress) {
+                Ok(report) => return Ok(report),
+                // Anything from a re-published pack to a corrupt local chunk ends here,
+                // and a clean download recovers from all of them.
+                Err(e) => log::warn!("incremental update of {url} failed: {e}"),
+            }
+        }
+    }
+
+    sync_by_download(url, dest, pack_len, progress)
+}
+
+/// Sites being synced right now; a second request for one must not touch its temp files.
+static IN_PROGRESS: LazyLock<Mutex<HashSet<String>>> = LazyLock::new(|| Mutex::new(HashSet::new()));
+
+struct SyncGuard(String);
+
+impl SyncGuard {
+    fn acquire(site_id: &str) -> Result<Self> {
+        let mut active = IN_PROGRESS.lock().map_err(|_| DocxError::LockPoisoned)?;
+        if !active.insert(site_id.to_string()) {
+            return Err(DocxError::Other(format!("'{site_id}' is already being updated")));
+        }
+        Ok(Self(site_id.to_string()))
     }
 }
 
-pub fn coalesce_byte_ranges(ranges: &[(usize, usize)], max_gap: usize) -> Vec<(usize, usize)> {
-    if ranges.is_empty() {
-        return Vec::new();
-    }
-    let mut sorted = ranges.to_vec();
-    sorted.sort_by_key(|r| r.0);
-
-    let mut coalesced: Vec<(usize, usize)> = Vec::new();
-    let mut cur = sorted[0];
-
-    for next in sorted.into_iter().skip(1) {
-        if next.0 <= cur.1.saturating_add(max_gap) {
-            cur.1 = cur.1.max(next.1);
-        } else {
-            coalesced.push(cur);
-            cur = next;
+impl Drop for SyncGuard {
+    fn drop(&mut self) {
+        if let Ok(mut active) = IN_PROGRESS.lock() {
+            active.remove(&self.0);
         }
     }
-    coalesced.push(cur);
-    coalesced
 }
 
-pub fn apply_binary_delta_to_pack(
-    local_chunks: &HashMap<String, Vec<u8>>,
-    delta_bytes: &[u8],
-) -> crate::error::Result<(SiteManifest, Vec<u8>)> {
-    if delta_bytes.len() < 28 {
-        return Err(DocxError::invalid_pack("Delta patch buffer too short"));
+fn remove_legacy_sidecars(packs_dir: &Path, site_id: &str) {
+    for suffix in ["manifest.json", "search.json", "delta"] {
+        let _ = fs::remove_file(packs_dir.join(format!("{site_id}.{suffix}")));
     }
-    if &delta_bytes[0..4] != DPTC_MAGIC {
-        return Err(DocxError::invalid_pack("Invalid delta patch magic"));
-    }
-    let manifest_len = u32::from_le_bytes([
-        delta_bytes[20],
-        delta_bytes[21],
-        delta_bytes[22],
-        delta_bytes[23],
-    ]) as usize;
-
-    let manifest_start: usize = 24;
-    let manifest_end = manifest_start.checked_add(manifest_len)
-        .ok_or_else(|| DocxError::invalid_pack("Manifest length overflow"))?;
-    if delta_bytes.len() < manifest_end + 4 {
-        return Err(DocxError::invalid_pack("Truncated delta patch manifest"));
-    }
-
-    let target_manifest: SiteManifest = serde_json::from_slice(&delta_bytes[manifest_start..manifest_end])
-        .map_err(|e| DocxError::invalid_pack(format!("Corrupt manifest in delta: {e}")))?;
-
-    let chunk_count = u32::from_le_bytes([
-        delta_bytes[manifest_end],
-        delta_bytes[manifest_end + 1],
-        delta_bytes[manifest_end + 2],
-        delta_bytes[manifest_end + 3],
-    ]) as usize;
-
-    let mut delta_chunks = HashMap::new();
-    let mut offset = manifest_end + 4;
-    for _ in 0..chunk_count {
-        if offset + 20 > delta_bytes.len() {
-            return Err(DocxError::invalid_pack("Truncated chunk header in delta"));
-        }
-        let hash = String::from_utf8_lossy(&delta_bytes[offset..offset + 16]).trim().to_string();
-        let len = u32::from_le_bytes([
-            delta_bytes[offset + 16],
-            delta_bytes[offset + 17],
-            delta_bytes[offset + 18],
-            delta_bytes[offset + 19],
-        ]) as usize;
-        offset += 20;
-
-        let chunk_end = offset.checked_add(len)
-            .ok_or_else(|| DocxError::invalid_pack("Chunk length overflow"))?;
-        if chunk_end > delta_bytes.len() {
-            return Err(DocxError::invalid_pack("Truncated chunk data in delta"));
-        }
-        let chunk_slice = &delta_bytes[offset..chunk_end];
-        let computed = crate::util::sha256_hex_16(chunk_slice);
-        if computed != hash {
-            return Err(DocxError::invalid_pack(format!(
-                "Checksum mismatch for delta chunk: expected {}, got {}",
-                hash, computed
-            )));
-        }
-        delta_chunks.insert(hash, chunk_slice);
-        offset = chunk_end;
-    }
-
-    let mut new_pack_data = Vec::new();
-    let mut new_routes = HashMap::new();
-    let mut placed_hashes: HashMap<String, (usize, usize)> = HashMap::new();
-
-    // Deterministic route ordering by route key
-    let mut sorted_routes: Vec<_> = target_manifest.routes.iter().collect();
-    sorted_routes.sort_by_key(|(route, _)| *route);
-
-    for (route, entry) in sorted_routes {
-        let (final_offset, final_length) = if let Some(&(off, len)) = placed_hashes.get(&entry.hash) {
-            (off, len)
-        } else if let Some(d_slice) = delta_chunks.get(&entry.hash) {
-            let off = new_pack_data.len();
-            let len = d_slice.len();
-            new_pack_data.extend_from_slice(d_slice);
-            placed_hashes.insert(entry.hash.clone(), (off, len));
-            (off, len)
-        } else if let Some(local_chunk) = local_chunks.get(&entry.hash) {
-            let off = new_pack_data.len();
-            let len = local_chunk.len();
-            new_pack_data.extend_from_slice(local_chunk);
-            placed_hashes.insert(entry.hash.clone(), (off, len));
-            (off, len)
-        } else {
-            return Err(DocxError::invalid_pack(format!(
-                "Missing chunk hash {} for route {}",
-                entry.hash, route
-            )));
-        };
-
-        let mut reconstructed_entry = entry.clone();
-        reconstructed_entry.offset = final_offset;
-        reconstructed_entry.length = final_length;
-        new_routes.insert(route.clone(), reconstructed_entry);
-    }
-
-    let mut reconciled_manifest = target_manifest.clone();
-    reconciled_manifest.totalBytes = new_pack_data.len();
-    reconciled_manifest.chunkCount = placed_hashes.len();
-    reconciled_manifest.routes = new_routes;
-
-    Ok((reconciled_manifest, new_pack_data))
 }
 
 pub(crate) fn run_install_or_update_sync(
     site_id: String,
     store: Arc<AssetStore>,
     window: tauri::Window,
-) -> crate::error::Result<DeltaUpdateResult> {
+) -> Result<DeltaUpdateResult> {
     use tauri::Emitter;
 
-    let manifest_url = format!("{}/{}.manifest.json", RELEASE_BASE_URL, site_id);
-    let pack_url = format!("{}/{}.docpack", RELEASE_BASE_URL, site_id);
-    let search_url = format!("{}/{}.search.json", RELEASE_BASE_URL, site_id);
+    let _guard = SyncGuard::acquire(&site_id)?;
+    let packs_dir: PathBuf = get_packs_dir();
+    fs::create_dir_all(&packs_dir).map_err(|e| DocxError::io_path(&packs_dir, &e))?;
+    let dest = packs_dir.join(format!("{site_id}.docpack"));
+    let url = format!("{PACKS_BASE_URL}/{site_id}.docpack");
 
-    let _ = window.emit(
-        "docpack-progress",
-        DownloadProgressPayload {
-            site_id: site_id.clone(),
-            phase: "Fetching manifest...".to_string(),
-            downloaded_bytes: 0,
-            total_bytes: 0,
-            percent: 4,
-            detail: "Connecting to GitHub Releases CDN...".to_string(),
-        },
-    );
+    let local = read_guard(&store.overrides)?.get(&site_id).cloned();
+    let old_commit = local.as_ref().map_or_else(|| "not-installed".to_string(), |p| p.meta.commit.clone());
 
-    let remote_manifest_bytes = curl_get_bytes(&manifest_url, None)?;
-    let remote_manifest: SiteManifest = serde_json::from_slice(&remote_manifest_bytes)?;
-    if remote_manifest.routes.is_empty() || remote_manifest.commit == "e3b0c442" {
-        return Err(DocxError::invalid_pack(format!(
-            "Remote manifest for '{site_id}' has 0 routes"
-        )));
+    let mut emit = |payload: DownloadProgressPayload| {
+        let _ = window.emit("docpack-progress", payload);
+    };
+    let mut progress = Progress::new(&site_id, &mut emit);
+    let report = sync_pack(&url, &dest, local.as_deref(), &mut progress)?;
+
+    if report.changed {
+        let pack_len = fs::metadata(&dest).map_err(|e| DocxError::io_path(&dest, &e))?.len();
+        let parsed = parse_docpack_on_disk(dest.clone(), 0, pack_len, "GitHub Release .docpack")
+            .ok_or_else(|| DocxError::invalid_pack(format!("{site_id}.docpack cannot be opened")))?;
+        write_guard(&store.overrides)?.insert(site_id.clone(), parsed);
+        remove_legacy_sidecars(&packs_dir, &site_id);
     }
+    let port = ensure_site_server(&site_id, Arc::clone(&store));
 
-    let packs_dir = get_packs_dir();
-    let _ = fs::create_dir_all(&packs_dir);
-
-    let mut local_chunks_by_hash: HashMap<String, Vec<u8>> = HashMap::new();
-    let mut old_commit = String::from("not-installed");
-    let mut local_updated_at = String::new();
-    let mut local_route_count = 0usize;
-    let mut local_total_bytes = 0usize;
-    let mut local_chunk_count = 0usize;
-
-    {
-        let guard = read_guard(&store.overrides)?;
-        if let Some(pack) = guard.get(&site_id) {
-            old_commit = pack.manifest.commit.clone();
-            local_updated_at = pack.manifest.updatedAt.clone();
-            local_route_count = pack.manifest.routes.len();
-            local_total_bytes = pack.manifest.totalBytes;
-            local_chunk_count = pack.manifest.chunkCount;
-        }
-    }
-
-    // Fast path: if local pack already matches remote commit (or is newer than remote manifest), download 0 bytes!
-    if local_route_count > 0
-        && (old_commit == remote_manifest.commit
-            || (!local_updated_at.is_empty()
-                && local_updated_at >= remote_manifest.updatedAt
-                && local_route_count >= remote_manifest.routes.len()))
-    {
-        {
-            let mut guard = write_guard(&store.overrides)?;
-            if let Some(existing) = guard.get(&site_id).cloned() {
-                let mut reconciled = existing.manifest.clone();
-                reconciled.commit = remote_manifest.commit.clone();
-                if remote_manifest.updatedAt > reconciled.updatedAt {
-                    reconciled.updatedAt = remote_manifest.updatedAt.clone();
-                }
-                if let Ok(json_bytes) = serde_json::to_vec_pretty(&reconciled) {
-                    let _ = fs::write(packs_dir.join(format!("{}.manifest.json", site_id)), json_bytes);
-                }
-                guard.insert(
-                    site_id.clone(),
-                    Arc::new(SiteOverridePack {
-                        manifest: reconciled,
-                        data_start: existing.data_start,
-                        backing: existing.backing.clone(),
-                        source: existing.source.clone(),
-                    }),
-                );
-            }
-        }
-        let port = ensure_site_server(&site_id, Arc::clone(&store));
-        let _ = window.emit(
-            "docpack-progress",
-            DownloadProgressPayload {
-                site_id: site_id.clone(),
-                phase: "Up to Date".to_string(),
-                downloaded_bytes: 0,
-                total_bytes: local_total_bytes,
-                percent: 100,
-                detail: "Already up to date (0.00 MB downloaded)".to_string(),
-            },
-        );
-        return Ok(DeltaUpdateResult {
-            site_id: site_id.clone(),
-            old_commit,
-            new_commit: remote_manifest.commit.clone(),
-            total_chunks: local_chunk_count,
-            reused_chunks: local_chunk_count,
-            downloaded_chunks: 0,
-            reused_bytes: local_total_bytes,
-            downloaded_bytes: 0,
-            saved_percent: 100.0,
-            port,
-            message: format!(
-                "{} ({}) is already up to date (0.00 MB downloaded, 100% local chunks verified) on port :{}!",
-                remote_manifest.name, remote_manifest.version, port
-            ),
-        });
-    }
-
-    if let Ok(search_bytes) = curl_get_bytes(&search_url, None)
-        && search_bytes.len() > 4 {
-            let _ = fs::write(packs_dir.join(format!("{}.search.json", site_id)), search_bytes);
-        }
-
-    {
-        let guard = read_guard(&store.overrides)?;
-        if let Some(pack) = guard.get(&site_id) {
-            for entry in pack.manifest.routes.values() {
-                if !entry.hash.is_empty()
-                    && let Some(chunk) = pack.read_chunk(entry.offset, entry.length) {
-                        local_chunks_by_hash.insert(entry.hash.clone(), chunk);
-                    }
-            }
-        }
-    }
-
-    let mut missing_unique_hashes = std::collections::HashSet::new();
-    for rem_entry in remote_manifest.routes.values() {
-        if !local_chunks_by_hash.contains_key(&rem_entry.hash) {
-            missing_unique_hashes.insert(rem_entry.hash.clone());
-        }
-    }
-
-    if !local_chunks_by_hash.is_empty() && missing_unique_hashes.is_empty() {
-        {
-            let mut guard = write_guard(&store.overrides)?;
-            if let Some(existing) = guard.get(&site_id).cloned() {
-                let mut reconciled = existing.manifest.clone();
-                reconciled.commit = remote_manifest.commit.clone();
-                if remote_manifest.updatedAt > reconciled.updatedAt {
-                    reconciled.updatedAt = remote_manifest.updatedAt.clone();
-                }
-                guard.insert(
-                    site_id.clone(),
-                    Arc::new(SiteOverridePack {
-                        manifest: reconciled,
-                        data_start: existing.data_start,
-                        backing: existing.backing.clone(),
-                        source: existing.source.clone(),
-                    }),
-                );
-            }
-        }
-        let _ = fs::write(
-            packs_dir.join(format!("{}.manifest.json", site_id)),
-            &remote_manifest_bytes,
-        );
-        let port = ensure_site_server(&site_id, Arc::clone(&store));
-        let _ = window.emit(
-            "docpack-progress",
-            DownloadProgressPayload {
-                site_id: site_id.clone(),
-                phase: "Up to Date".to_string(),
-                downloaded_bytes: 0,
-                total_bytes: remote_manifest.totalBytes,
-                percent: 100,
-                detail: "100% chunks verified locally (0.00 MB downloaded)".to_string(),
-            },
-        );
-        return Ok(DeltaUpdateResult {
-            site_id: site_id.clone(),
-            old_commit,
-            new_commit: remote_manifest.commit.clone(),
-            total_chunks: remote_manifest.chunkCount,
-            reused_chunks: remote_manifest.chunkCount,
-            downloaded_chunks: 0,
-            reused_bytes: remote_manifest.totalBytes,
-            downloaded_bytes: 0,
-            saved_percent: 100.0,
-            port,
-            message: format!(
-                "{} ({}) is already up to date (0.00 MB downloaded, 100% chunks reused) on port :{}!",
-                remote_manifest.name, remote_manifest.version, port
-            ),
-        });
-    }
-
-    // Fast path: Check for Single-Stream .delta patch
-    if let Some(ref delta_meta) = remote_manifest.delta
-        && !old_commit.is_empty()
-        && (delta_meta.fromCommit == old_commit
-            || old_commit.starts_with(&delta_meta.fromCommit)
-            || delta_meta.fromCommit.starts_with(&old_commit))
-        && !local_chunks_by_hash.is_empty()
-    {
-        let delta_url = format!("{}/{}.delta", RELEASE_BASE_URL, site_id);
-        let _ = window.emit(
-            "docpack-progress",
-            DownloadProgressPayload {
-                site_id: site_id.clone(),
-                phase: "Downloading Delta".to_string(),
-                downloaded_bytes: 0,
-                total_bytes: delta_meta.sizeBytes,
-                percent: 10,
-                detail: format!(
-                    "Fetching single-stream patch ({:.1} KB)...",
-                    delta_meta.sizeBytes as f64 / 1024.0
-                ),
-            },
-        );
-
-        if let Ok(delta_bytes) = curl_get_bytes(&delta_url, None)
-            && delta_bytes.starts_with(b"DPTC")
-        {
-            let hash_ok = delta_meta.hash.is_empty()
-                || crate::util::sha256_hex_16(&delta_bytes) == delta_meta.hash;
-            if hash_ok
-                && let Ok((final_manifest, new_pack_data)) =
-                    apply_binary_delta_to_pack(&local_chunks_by_hash, &delta_bytes)
-            {
-                let manifest_json = serde_json::to_vec(&final_manifest)?;
-                let mut full_docpack =
-                    Vec::with_capacity(16 + manifest_json.len() + new_pack_data.len());
-                full_docpack.extend_from_slice(b"DOCP");
-                full_docpack.extend_from_slice(&2u16.to_le_bytes()); // version 2
-                full_docpack.extend_from_slice(&2u16.to_le_bytes()); // Brotli flag
-                full_docpack.extend_from_slice(&(manifest_json.len() as u32).to_le_bytes());
-                full_docpack.extend_from_slice(&0u32.to_le_bytes()); // reserved
-                full_docpack.extend_from_slice(&manifest_json);
-                full_docpack.extend_from_slice(&new_pack_data);
-
-                let docpack_path = packs_dir.join(format!("{}.docpack", site_id));
-                let tmp_docpack = packs_dir.join(format!("{}.docpack.tmp", site_id));
-                let full_len = full_docpack.len();
-                fs::write(&tmp_docpack, &full_docpack)
-                    .map_err(|e| DocxError::io_path(&tmp_docpack, &e))?;
-                fs::rename(&tmp_docpack, &docpack_path)
-                    .map_err(|e| DocxError::io_path(&docpack_path, &e))?;
-                let _ = fs::write(
-                    packs_dir.join(format!("{}.manifest.json", site_id)),
-                    &manifest_json,
-                );
-
-                if let Some(parsed) =
-                    parse_docpack_on_disk(docpack_path, 0, full_len, "GitHub Delta .docpack")
-                {
-                    write_guard(&store.overrides)?.insert(site_id.clone(), parsed);
-                }
-
-                let dl_bytes = delta_bytes.len();
-                let reused_bytes = final_manifest.totalBytes.saturating_sub(dl_bytes);
-                let saved_percent = if final_manifest.totalBytes > 0 {
-                    ((reused_bytes as f64 / final_manifest.totalBytes as f64) * 100.0)
-                        .clamp(0.0, 99.9)
-                } else {
-                    0.0
-                };
-
-                let port = ensure_site_server(&site_id, Arc::clone(&store));
-                let _ = window.emit(
-                    "docpack-progress",
-                    DownloadProgressPayload {
-                        site_id: site_id.clone(),
-                        phase: "Complete".to_string(),
-                        downloaded_bytes: dl_bytes,
-                        total_bytes: final_manifest.totalBytes,
-                        percent: 100,
-                        detail: format!(
-                            "Delta update applied ({:.1} KB patch, {:.1}% saved)",
-                            dl_bytes as f64 / 1024.0,
-                            saved_percent
-                        ),
-                    },
-                );
-
-                return Ok(DeltaUpdateResult {
-                    site_id: site_id.clone(),
-                    old_commit,
-                    new_commit: final_manifest.commit.clone(),
-                    total_chunks: final_manifest.chunkCount,
-                    reused_chunks: final_manifest.chunkCount.saturating_sub(1),
-                    downloaded_chunks: 1,
-                    reused_bytes,
-                    downloaded_bytes: dl_bytes,
-                    saved_percent,
-                    port,
-                    message: format!(
-                        "Single-stream delta update complete! Downloaded {:.1} KB patch ({:.1}% bandwidth saved) on port :{}!",
-                        dl_bytes as f64 / 1024.0,
-                        saved_percent,
-                        port
-                    ),
-                });
-            }
-        }
-    }
-
-    let missing_bytes: usize = remote_manifest
-        .routes
-        .values()
-        .filter(|entry| missing_unique_hashes.contains(&entry.hash))
-        .map(|entry| (entry.hash.clone(), entry.length))
-        .collect::<HashMap<String, usize>>()
-        .values()
-        .sum();
-    let _missing_chunks_count = missing_unique_hashes.len();
-    let max_delta_bytes = (remote_manifest.totalBytes * 65) / 100;
-
-    // Use single-stream full .docpack download ONLY if not installed locally,
-    // or if the delta exceeds 65% of total pack size.
-    let perform_full_download = |msg_prefix: &str| -> crate::error::Result<DeltaUpdateResult> {
-        let expected_total = 4 + remote_manifest_bytes.len() + remote_manifest.totalBytes;
-        let docpack_path = packs_dir.join(format!("{}.docpack", site_id));
-        let full_pack_bytes = curl_download_with_progress(
-            &pack_url,
-            &docpack_path,
-            expected_total,
-            &site_id,
-            &window,
-        )?;
-        let dl_bytes = full_pack_bytes.len();
-        drop(full_pack_bytes);
-
-        let _ = window.emit(
-            "docpack-progress",
-            DownloadProgressPayload {
-                site_id: site_id.clone(),
-                phase: "Mounting pack...".to_string(),
-                downloaded_bytes: dl_bytes,
-                total_bytes: dl_bytes,
-                percent: 98,
-                detail: "Indexing routes & starting local server...".to_string(),
-            },
-        );
-
-        let parsed = match parse_docpack_on_disk(docpack_path.clone(), 0, dl_bytes, "GitHub Release .docpack")
-        {
-            Some(p) => p,
-            None => {
-                let _ = fs::remove_file(&docpack_path);
-                return Err(DocxError::invalid_pack(format!(
-                    "Downloaded {site_id}.docpack ({dl_bytes} bytes) is empty or invalid — please retry after release sync."
-                )));
-            }
-        };
-
-        let mut final_manifest = parsed.manifest.clone();
-        if !remote_manifest.commit.is_empty() && remote_manifest.commit != "e3b0c442" {
-            final_manifest.commit = remote_manifest.commit.clone();
-        }
-        if remote_manifest.updatedAt > final_manifest.updatedAt {
-            final_manifest.updatedAt = remote_manifest.updatedAt.clone();
-        }
-        if let Ok(json_bytes) = serde_json::to_vec_pretty(&final_manifest) {
-            let _ = fs::write(packs_dir.join(format!("{}.manifest.json", site_id)), json_bytes);
-        }
-
-        let final_commit = final_manifest.commit.clone();
-        let final_routes = final_manifest.routes.len();
-        let final_chunks = final_manifest.chunkCount;
-
-        write_guard(&store.overrides)?.insert(
-            site_id.clone(),
-            Arc::new(SiteOverridePack {
-                manifest: final_manifest,
-                data_start: parsed.data_start,
-                backing: parsed.backing.clone(),
-                source: parsed.source.clone(),
-            }),
-        );
-        let port = ensure_site_server(&site_id, Arc::clone(&store));
-
-        let _ = window.emit(
-            "docpack-progress",
-            DownloadProgressPayload {
-                site_id: site_id.clone(),
-                phase: "Complete".to_string(),
-                downloaded_bytes: dl_bytes,
-                total_bytes: dl_bytes,
-                percent: 100,
-                detail: format!("Installed ({:.2} MB)", dl_bytes as f64 / (1024.0 * 1024.0)),
-            },
-        );
-
-        Ok(DeltaUpdateResult {
-            site_id: site_id.clone(),
-            old_commit: old_commit.clone(),
-            new_commit: final_commit,
-            total_chunks: final_chunks,
-            reused_chunks: 0,
-            downloaded_chunks: final_chunks,
-            reused_bytes: 0,
-            downloaded_bytes: dl_bytes,
-            saved_percent: 0.0,
-            port,
-            message: format!(
-                "{}Synced {} ({}) from GitHub Releases ({:.2} MB, {} routes) on port :{}!",
-                msg_prefix,
-                remote_manifest.name,
-                remote_manifest.version,
-                dl_bytes as f64 / (1024.0 * 1024.0),
-                final_routes,
-                port
-            ),
-        })
+    let saved_percent = if report.reused_bytes + report.downloaded_bytes > 0 {
+        ((report.reused_bytes as f64 / (report.reused_bytes + report.downloaded_bytes) as f64) * 1000.0).round()
+            / 10.0
+    } else {
+        100.0
+    };
+    let message = if !report.changed {
+        format!("{} ({}) is already up to date.", report.meta.name, report.meta.version)
+    } else if report.reused_bytes > 0 {
+        format!(
+            "Updated {} ({}): downloaded {}, reused {} already on this device.",
+            report.meta.name,
+            report.meta.version,
+            format_mb(report.downloaded_bytes),
+            format_mb(report.reused_bytes),
+        )
+    } else {
+        format!("Installed {} ({}), {}.", report.meta.name, report.meta.version, format_mb(report.downloaded_bytes))
     };
 
-    let should_full_download = local_chunks_by_hash.is_empty()
-        || (remote_manifest.totalBytes > 0 && missing_bytes > max_delta_bytes);
+    progress.emit(
+        if report.changed { "Complete" } else { "Up to Date" },
+        report.downloaded_bytes,
+        report.downloaded_bytes,
+        100,
+        message.clone(),
+    );
 
-    if should_full_download {
-        return perform_full_download("");
-    }
-
-    let range_result: crate::error::Result<DeltaUpdateResult> = (|| -> crate::error::Result<DeltaUpdateResult> {
-        let hdr_bytes = curl_get_bytes(&pack_url, Some((0, 15)))?;
-        let remote_data_start = parse_remote_data_start(&hdr_bytes, remote_manifest_bytes.len());
-
-        let client = reqwest::blocking::Client::builder()
-            .user_agent("Docx/1.0")
-            .pool_max_idle_per_host(8)
-            .tcp_keepalive(Duration::from_secs(30))
-            .timeout(Duration::from_secs(60))
-            .build()?;
-
-        let mut missing_chunks_by_offset: Vec<(usize, usize, String)> = Vec::new();
-        for rem_entry in remote_manifest.routes.values() {
-            if !local_chunks_by_hash.contains_key(&rem_entry.hash) {
-                missing_chunks_by_offset.push((rem_entry.offset, rem_entry.length, rem_entry.hash.clone()));
-            }
-        }
-        missing_chunks_by_offset.sort_by_key(|c| c.0);
-        missing_chunks_by_offset.dedup_by(|a, b| a.2 == b.2);
-
-        let raw_ranges: Vec<(usize, usize)> = missing_chunks_by_offset
-            .iter()
-            .map(|c| (c.0, c.0 + c.1))
-            .collect();
-        let coalesced_ranges = coalesce_byte_ranges(&raw_ranges, 65536);
-
-        let mut fetched_chunks_by_hash: HashMap<String, Vec<u8>> = HashMap::new();
-        let mut downloaded_bytes = 0usize;
-        let total_ranges = coalesced_ranges.len().max(1);
-
-        for (range_idx, (r_start, r_end)) in coalesced_ranges.iter().enumerate() {
-            let abs_start = remote_data_start + r_start;
-            let abs_end = remote_data_start + r_end - 1;
-
-            let pct = 10 + ((range_idx * 85) / total_ranges) as u8;
-            let _ = window.emit(
-                "docpack-progress",
-                DownloadProgressPayload {
-                    site_id: site_id.clone(),
-                    phase: "HTTP 206 Delta Sync".to_string(),
-                    downloaded_bytes,
-                    total_bytes: remote_manifest.totalBytes.max(1),
-                    percent: pct,
-                    detail: format!(
-                        "Fetching coalesced range {}/{} ({:.1} KB)...",
-                        range_idx + 1,
-                        total_ranges,
-                        (r_end - r_start) as f64 / 1024.0
-                    ),
-                },
-            );
-
-            let mut req = client.get(&pack_url);
-            req = req.header("Range", format!("bytes={}-{}", abs_start, abs_end));
-            let resp = req.send()?;
-            let status = resp.status();
-            if !status.is_success() && status != reqwest::StatusCode::PARTIAL_CONTENT {
-                return Err(DocxError::HttpStatus {
-                    status: status.as_u16(),
-                    url: pack_url.clone(),
-                });
-            }
-            let range_data = resp.bytes()?.to_vec();
-            downloaded_bytes += range_data.len();
-
-            for &(chunk_offset, chunk_len, ref chunk_hash) in &missing_chunks_by_offset {
-                if chunk_offset >= *r_start && chunk_offset + chunk_len <= *r_end {
-                    let slice_start = chunk_offset - *r_start;
-                    let slice_end = slice_start + chunk_len;
-                    if slice_end <= range_data.len() {
-                        fetched_chunks_by_hash.insert(
-                            chunk_hash.clone(),
-                            range_data[slice_start..slice_end].to_vec(),
-                        );
-                    }
-                }
-            }
-        }
-
-        let mut new_pack_data: Vec<u8> = Vec::new();
-        let mut new_routes: HashMap<String, ManifestEntry> = HashMap::new();
-        let mut placed_hashes: HashMap<String, (usize, usize)> = HashMap::new();
-        let mut reused_chunks = 0usize;
-        let mut downloaded_chunks = 0usize;
-        let mut reused_bytes = 0usize;
-
-        let mut sorted_routes: Vec<_> = remote_manifest.routes.iter().collect();
-        sorted_routes.sort_by_key(|(route, _)| *route);
-
-        for (route, rem_entry) in sorted_routes {
-            let (final_offset, final_length) = if let Some(&already) = placed_hashes.get(&rem_entry.hash) {
-                already
-            } else if let Some(local_bytes) = local_chunks_by_hash.get(&rem_entry.hash) {
-                let off = new_pack_data.len();
-                let len = local_bytes.len();
-                new_pack_data.extend_from_slice(local_bytes);
-                placed_hashes.insert(rem_entry.hash.clone(), (off, len));
-                reused_chunks += 1;
-                reused_bytes += len;
-                (off, len)
-            } else if let Some(fetched_bytes) = fetched_chunks_by_hash.get(&rem_entry.hash) {
-                let off = new_pack_data.len();
-                let len = fetched_bytes.len();
-                new_pack_data.extend_from_slice(fetched_bytes);
-                placed_hashes.insert(rem_entry.hash.clone(), (off, len));
-                downloaded_chunks += 1;
-                (off, len)
-            } else {
-                return Err(DocxError::invalid_pack(format!(
-                    "Failed to locate chunk hash {} for route {}",
-                    rem_entry.hash, route
-                )));
-            };
-
-            new_routes.insert(
-                route.clone(),
-                ManifestEntry {
-                    offset: final_offset,
-                    length: final_length,
-                    mime: rem_entry.mime.clone(),
-                    gzipped: rem_entry.gzipped,
-                    hash: rem_entry.hash.clone(),
-                    encoding: rem_entry.encoding.clone(),
-                    raw_length: rem_entry.raw_length,
-                },
-            );
-        }
-
-        let mut final_manifest = remote_manifest.clone();
-        final_manifest.routes = new_routes;
-        let manifest_json = serde_json::to_vec(&final_manifest)?;
-
-        let mut full_docpack = Vec::with_capacity(16 + manifest_json.len() + new_pack_data.len());
-        full_docpack.extend_from_slice(b"DOCP");
-        full_docpack.extend_from_slice(&2u16.to_le_bytes()); // version 2
-        full_docpack.extend_from_slice(&2u16.to_le_bytes()); // Brotli flag
-        full_docpack.extend_from_slice(&(manifest_json.len() as u32).to_le_bytes());
-        full_docpack.extend_from_slice(&0u32.to_le_bytes()); // reserved
-        full_docpack.extend_from_slice(&manifest_json);
-        full_docpack.extend_from_slice(&new_pack_data);
-
-        let docpack_path = packs_dir.join(format!("{}.docpack", site_id));
-        let tmp_docpack = packs_dir.join(format!("{}.docpack.tmp", site_id));
-        let full_len = full_docpack.len();
-        fs::write(&tmp_docpack, &full_docpack).map_err(|e| DocxError::io_path(&tmp_docpack, &e))?;
-        fs::rename(&tmp_docpack, &docpack_path).map_err(|e| DocxError::io_path(&docpack_path, &e))?;
-        let _ = fs::write(packs_dir.join(format!("{}.manifest.json", site_id)), &manifest_json);
-        drop(full_docpack);
-
-        if let Some(parsed) =
-            parse_docpack_on_disk(docpack_path, 0, full_len, "GitHub Delta .docpack")
-        {
-            write_guard(&store.overrides)?.insert(site_id.clone(), parsed);
-        }
-        let port = ensure_site_server(&site_id, Arc::clone(&store));
-
-        let total_bytes = reused_bytes + downloaded_bytes;
-        let saved_percent = if total_bytes > 0 {
-            ((reused_bytes as f64 / total_bytes as f64) * 1000.0).round() / 10.0
-        } else {
-            100.0
-        };
-
-        let _ = window.emit(
-            "docpack-progress",
-            DownloadProgressPayload {
-                site_id: site_id.clone(),
-                phase: "Complete".to_string(),
-                downloaded_bytes,
-                total_bytes,
-                percent: 100,
-                detail: format!("{}% bandwidth saved", saved_percent),
-            },
-        );
-
-        Ok(DeltaUpdateResult {
-            site_id: site_id.clone(),
-            old_commit: old_commit.clone(),
-            new_commit: remote_manifest.commit.clone(),
-            total_chunks: reused_chunks + downloaded_chunks,
-            reused_chunks,
-            downloaded_chunks,
-            reused_bytes,
-            downloaded_bytes,
-            saved_percent,
-            port,
-            message: format!(
-                "GitHub Partial Update complete! Reused {}/{} chunks locally ({:.2} MB), downloaded {} changed chunks ({:.1} KB via HTTP 206 Range) — {}% bandwidth saved!",
-                reused_chunks,
-                reused_chunks + downloaded_chunks,
-                reused_bytes as f64 / (1024.0 * 1024.0),
-                downloaded_chunks,
-                downloaded_bytes as f64 / 1024.0,
-                saved_percent
-            ),
-        })
-    })();
-
-    match range_result {
-        Ok(res) => Ok(res),
-        Err(e) => {
-            log::warn!("Range delta failed for {} (error: {}); falling back to full download", site_id, e);
-            perform_full_download("(Range fallback) ")
-        }
-    }
+    Ok(DeltaUpdateResult {
+        site_id: site_id.clone(),
+        old_commit,
+        new_commit: report.meta.commit,
+        total_chunks: report.total_chunks,
+        reused_chunks: report.reused_chunks,
+        downloaded_chunks: report.downloaded_chunks,
+        reused_bytes: report.reused_bytes as usize,
+        downloaded_bytes: report.downloaded_bytes as usize,
+        saved_percent,
+        port,
+        message,
+    })
 }
 
-
-/// Downloads a brand-new .docpack OR performs an HTTP 206 Partial Range Delta Update from GitHub Releases!
+/// Installs a pack, or brings an installed one up to date by fetching only what changed.
 #[tauri::command]
 pub(crate) async fn install_or_update_from_github(
     site_id: String,
@@ -906,86 +810,603 @@ pub(crate) async fn install_or_update_from_github(
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::server::decompress_html_body_if_needed;
+    use std::io::BufRead;
+    use std::net::TcpListener;
+    use std::sync::atomic::{AtomicU64, AtomicUsize, Ordering};
 
-    #[test]
-    fn test_apply_binary_delta_patch() {
-        let mut local_chunks = HashMap::new();
-        local_chunks.insert("aaaa111122223333".to_string(), b"chunkA".to_vec());
+    const SITE: &str = "tailwind";
 
-        let manifest_json = r#"{"id":"tailwind","name":"Tailwind CSS","version":"1.1","commit":"22222222","compression":"brotli","routes":{"/a":{"offset":0,"length":6,"mime":"text/plain","gzipped":false,"hash":"aaaa111122223333"},"/b":{"offset":6,"length":6,"mime":"text/plain","gzipped":false,"hash":"1a1ac5ba1c6da240"}}}"#;
-        let mut delta_bytes = Vec::new();
-        delta_bytes.extend_from_slice(b"DPTC");
-        delta_bytes.extend_from_slice(b"11111111");
-        delta_bytes.extend_from_slice(b"22222222");
-        delta_bytes.extend_from_slice(&(manifest_json.len() as u32).to_le_bytes());
-        delta_bytes.extend_from_slice(manifest_json.as_bytes());
-        delta_bytes.extend_from_slice(&1u32.to_le_bytes());
-        delta_bytes.extend_from_slice(b"1a1ac5ba1c6da240");
-        delta_bytes.extend_from_slice(&6u32.to_le_bytes());
-        delta_bytes.extend_from_slice(b"chunkB");
+    /// One pack file, built the way the release pipeline lays it out.
+    struct TestPack {
+        bytes: Vec<u8>,
+        chunks: Vec<(String, Vec<u8>)>,
+    }
 
-        let (new_manifest, pack_data) = apply_binary_delta_to_pack(&local_chunks, &delta_bytes).expect("Failed to apply delta");
-        assert_eq!(new_manifest.commit, "22222222");
-        assert_eq!(new_manifest.routes.len(), 2);
-        assert_eq!(pack_data.len(), 12);
-        let route_a = new_manifest.routes.get("/a").unwrap();
-        let route_b = new_manifest.routes.get("/b").unwrap();
-        assert_eq!(&pack_data[route_a.offset..route_a.offset + route_a.length], b"chunkA");
-        assert_eq!(&pack_data[route_b.offset..route_b.offset + route_b.length], b"chunkB");
+    fn brotli_bytes(raw: &[u8]) -> Vec<u8> {
+        let mut out = Vec::new();
+        {
+            let mut writer = brotli::CompressorWriter::new(&mut out, 4096, 5, 22);
+            writer.write_all(raw).unwrap();
+        }
+        out
+    }
+
+    /// Chunks are `(id-source, stored-compressed)`; each becomes its own route.
+    fn build_pack(commit: &str, raw_chunks: &[Vec<u8>]) -> TestPack {
+        let mut ids = Vec::new();
+        let mut lengths = Vec::new();
+        let mut raw_lengths = Vec::new();
+        let mut encodings = String::new();
+        let mut routes = serde_json::Map::new();
+        let mut data = Vec::new();
+        let mut chunks = Vec::new();
+        for (i, raw) in raw_chunks.iter().enumerate() {
+            let id = sha256_hex_16(raw);
+            let compress = i % 2 == 0;
+            let stored = if compress { brotli_bytes(raw) } else { raw.clone() };
+            lengths.push(stored.len());
+            raw_lengths.push(raw.len());
+            encodings.push(if compress { '1' } else { '0' });
+            routes.insert(format!("/page{i}"), serde_json::json!([0, i]));
+            data.extend_from_slice(&stored);
+            ids.push(id.clone());
+            chunks.push((id, raw.clone()));
+        }
+        // Real pages span several chunks, which the server must join and decode.
+        routes.insert("/joined".to_string(), serde_json::json!([1, 0, 1]));
+        let index_json = serde_json::json!({
+            "c": ids, "l": lengths, "r": raw_lengths, "e": encodings,
+            "m": ["text/plain", "text/html; charset=utf-8"], "p": routes,
+        });
+        let index_bytes = brotli_bytes(index_json.to_string().as_bytes());
+        let data_hash = to_hex(&ring::digest::digest(&ring::digest::SHA256, &data).as_ref()[..16]);
+        let meta = serde_json::json!({
+            "id": SITE, "name": "Tailwind", "version": "v1", "commit": commit,
+            "updatedAt": "2026-10-31T00:00:00Z", "totalBytes": data.len(),
+            "chunkCount": raw_chunks.len(), "routeCount": raw_chunks.len(),
+            "dataHash": data_hash, "indexHash": sha256_hex_16(&index_bytes),
+        })
+        .to_string();
+
+        let mut bytes = vec![0u8; V3_HEADER_BYTES];
+        bytes[..4].copy_from_slice(b"DOCP");
+        bytes[4..6].copy_from_slice(&3u16.to_le_bytes());
+        bytes[6..8].copy_from_slice(&2u16.to_le_bytes());
+        bytes[8..12].copy_from_slice(&(meta.len() as u32).to_le_bytes());
+        bytes[12..16].copy_from_slice(&(index_bytes.len() as u32).to_le_bytes());
+        bytes[16..24].copy_from_slice(&(data.len() as u64).to_le_bytes());
+        bytes.extend_from_slice(meta.as_bytes());
+        bytes.extend_from_slice(&index_bytes);
+        bytes.extend_from_slice(&data);
+        TestPack { bytes, chunks }
+    }
+
+    fn body(seed: u64, len: usize) -> Vec<u8> {
+        let mut x = seed.wrapping_mul(0x9e3779b97f4a7c15) | 1;
+        (0..len)
+            .map(|_| {
+                x ^= x << 13;
+                x ^= x >> 7;
+                x ^= x << 17;
+                (x & 0xff) as u8
+            })
+            .collect()
+    }
+
+    #[derive(Clone, Copy, PartialEq)]
+    enum Mode {
+        Normal,
+        /// Answers every range request with the whole file, like a server without range support.
+        IgnoreRanges,
+        /// Closes the connection after `bytes` of the body of the `request`-th request.
+        DropAfter { request: usize, bytes: usize },
+        /// Flips a byte in everything past the head.
+        Corrupt(u64),
+    }
+
+    struct TestServer {
+        url: String,
+        served: Arc<AtomicU64>,
+        requests: Arc<AtomicUsize>,
+    }
+
+    /// A small file server with range, ETag and fault-injection support.
+    fn serve(file: Vec<u8>, mode: Mode) -> TestServer {
+        let listener = TcpListener::bind("127.0.0.1:0").unwrap();
+        let port = listener.local_addr().unwrap().port();
+        let served = Arc::new(AtomicU64::new(0));
+        let requests = Arc::new(AtomicUsize::new(0));
+        let (served_ref, requests_ref) = (Arc::clone(&served), Arc::clone(&requests));
+
+        std::thread::spawn(move || {
+            for stream in listener.incoming().flatten() {
+                let mut reader = std::io::BufReader::new(stream);
+                let (mut range, mut if_range) = (None, None);
+                loop {
+                    let mut line = String::new();
+                    if reader.read_line(&mut line).unwrap_or(0) == 0 || line == "\r\n" {
+                        break;
+                    }
+                    let lower = line.to_ascii_lowercase();
+                    if let Some(v) = lower.strip_prefix("range: bytes=") {
+                        let mut parts = v.trim().split('-');
+                        let start: u64 = parts.next().unwrap().parse().unwrap();
+                        let end = parts.next().and_then(|s| s.parse::<u64>().ok());
+                        range = Some((start, end));
+                    }
+                    if let Some(v) = lower.strip_prefix("if-range: ") {
+                        if_range = Some(v.trim().to_string());
+                    }
+                }
+                let request = requests_ref.fetch_add(1, Ordering::SeqCst);
+
+                let len = file.len() as u64;
+                let etag = "\"test-etag\"";
+                let honoured = range.filter(|_| {
+                    mode != Mode::IgnoreRanges && if_range.as_deref().is_none_or(|t| t == etag)
+                });
+                let (status, start, end) = match honoured {
+                    Some((s, e)) => ("206 Partial Content", s, e.map_or(len, |e| (e + 1).min(len))),
+                    None => ("200 OK", 0, len),
+                };
+                let mut payload = file[start as usize..end as usize].to_vec();
+                if let Mode::Corrupt(from) = mode
+                    && end > from
+                {
+                    let at = from.saturating_sub(start) as usize;
+                    payload[at] ^= 0xff;
+                }
+                let header = format!(
+                    "HTTP/1.1 {status}\r\nContent-Length: {}\r\nContent-Range: bytes {start}-{}/{len}\r\nETag: {etag}\r\nConnection: close\r\n\r\n",
+                    payload.len(),
+                    end.saturating_sub(1),
+                );
+                let mut stream = reader.into_inner();
+                let _ = stream.write_all(header.as_bytes());
+                let cut = match mode {
+                    Mode::DropAfter { request: at, bytes } if at == request => bytes.min(payload.len()),
+                    _ => payload.len(),
+                };
+                let _ = stream.write_all(&payload[..cut]);
+                served_ref.fetch_add(cut as u64, Ordering::SeqCst);
+            }
+        });
+
+        TestServer { url: format!("http://127.0.0.1:{port}/{SITE}.docpack"), served, requests }
+    }
+
+    fn temp_dir(name: &str) -> PathBuf {
+        static NEXT: AtomicUsize = AtomicUsize::new(0);
+        let dir = std::env::temp_dir().join(format!(
+            "docx-sync-{}-{}-{name}",
+            std::process::id(),
+            NEXT.fetch_add(1, Ordering::SeqCst)
+        ));
+        fs::create_dir_all(&dir).unwrap();
+        dir
+    }
+
+    fn install(dir: &Path, pack: &TestPack) -> (PathBuf, Arc<SiteOverridePack>) {
+        let dest = dir.join(format!("{SITE}.docpack"));
+        fs::write(&dest, &pack.bytes).unwrap();
+        let parsed = parse_docpack_on_disk(dest.clone(), 0, pack.bytes.len() as u64, "test").unwrap();
+        (dest, parsed)
+    }
+
+    fn run(url: &str, dest: &Path, local: Option<&SiteOverridePack>) -> Result<SyncReport> {
+        let mut sink = |_: DownloadProgressPayload| {};
+        let mut progress = Progress::new(SITE, &mut sink);
+        sync_pack(url, dest, local, &mut progress)
+    }
+
+    fn generations() -> (TestPack, TestPack) {
+        let chunks: Vec<Vec<u8>> = (0..40).map(|i| body(i, 6000)).collect();
+        let mut edited = chunks.clone();
+        edited[3] = body(1003, 6000);
+        edited[4] = body(1004, 6000);
+        (build_pack("aaaa", &chunks), build_pack("bbbb", &edited))
     }
 
     #[test]
-    fn test_v2_remote_data_start_detection() {
-        // v2 header: DOCP (4) + version 2 (2) + flags 2 (2) + manifest_len 500 (4) + reserved 0 (4)
-        let mut v2_hdr = Vec::new();
-        v2_hdr.extend_from_slice(b"DOCP");
-        v2_hdr.extend_from_slice(&2u16.to_le_bytes());
-        v2_hdr.extend_from_slice(&2u16.to_le_bytes());
-        v2_hdr.extend_from_slice(&500u32.to_le_bytes());
-        v2_hdr.extend_from_slice(&0u32.to_le_bytes());
+    fn update_fetches_only_changed_chunks_and_matches_the_published_pack() {
+        let (old, new) = generations();
+        let dir = temp_dir("incremental");
+        let (dest, local) = install(&dir, &old);
+        let server = serve(new.bytes.clone(), Mode::Normal);
 
-        let start = parse_remote_data_start(&v2_hdr, 100);
-        assert_eq!(start, 16 + 500);
+        let report = run(&server.url, &dest, Some(&local)).unwrap();
 
-        // v1 header: manifest_len 250 (4)
-        let mut v1_hdr = Vec::new();
-        v1_hdr.extend_from_slice(&250u32.to_le_bytes());
-        let start_v1 = parse_remote_data_start(&v1_hdr, 100);
-        assert_eq!(start_v1, 4 + 250);
+        assert!(report.changed);
+        assert_eq!(report.downloaded_chunks, 2);
+        assert_eq!(report.reused_chunks, 38);
+        assert_eq!(fs::read(&dest).unwrap(), new.bytes, "must be byte-identical to the release");
+        // The fixed-size head probe plus the two adjacent changed chunks.
+        let served = server.served.load(Ordering::SeqCst);
+        assert!(served < HEAD_PROBE_BYTES + 14_000, "served {served} bytes");
     }
 
     #[test]
-    fn test_delta_patch_corrupt_hash_rejected() {
-        let mut local_chunks = HashMap::new();
-        local_chunks.insert("aaaa111122223333".to_string(), b"chunkA".to_vec());
+    fn updated_pack_serves_every_route() {
+        let (old, new) = generations();
+        let dir = temp_dir("routes");
+        let (dest, local) = install(&dir, &old);
+        let server = serve(new.bytes.clone(), Mode::Normal);
+        run(&server.url, &dest, Some(&local)).unwrap();
 
-        // Delta says chunk hash is "cccc111122223333" but data is "bad_data" which hashes to something else
-        let manifest_json = r#"{"id":"tailwind","name":"Tailwind CSS","version":"1.1","commit":"22222222","compression":"brotli","routes":{"/b":{"offset":0,"length":8,"mime":"text/plain","gzipped":false,"hash":"cccc111122223333"}}}"#;
-        let mut delta_bytes = Vec::new();
-        delta_bytes.extend_from_slice(b"DPTC");
-        delta_bytes.extend_from_slice(b"11111111");
-        delta_bytes.extend_from_slice(b"22222222");
-        delta_bytes.extend_from_slice(&(manifest_json.len() as u32).to_le_bytes());
-        delta_bytes.extend_from_slice(manifest_json.as_bytes());
-        delta_bytes.extend_from_slice(&1u32.to_le_bytes());
-        delta_bytes.extend_from_slice(b"cccc111122223333");
-        delta_bytes.extend_from_slice(&8u32.to_le_bytes());
-        delta_bytes.extend_from_slice(b"bad_data");
-
-        let result = apply_binary_delta_to_pack(&local_chunks, &delta_bytes);
-        assert!(result.is_err(), "Should reject corrupt chunk hash in delta");
+        let parsed = parse_docpack_on_disk(dest, 0, new.bytes.len() as u64, "test").unwrap();
+        assert_eq!(parsed.meta.commit, "bbbb");
+        for (i, (_, raw)) in new.chunks.iter().enumerate() {
+            let route = parsed.read_route(&format!("/page{i}")).unwrap();
+            if route.encoding.as_deref() == Some("br") {
+                let mut decoded = Vec::new();
+                brotli::Decompressor::new(&route.bytes[..], 4096).read_to_end(&mut decoded).unwrap();
+                assert_eq!(&decoded, raw);
+            } else {
+                assert_eq!(&route.bytes, raw);
+            }
+        }
     }
 
     #[test]
-    fn test_coalesce_byte_ranges() {
-        // [100..200], [210..300] with gap 10 <= 64KB should coalesce to [100..300]
-        // [500000..600000] gap is huge, should remain separate
-        let ranges = vec![(100, 200), (210, 300), (500000, 600000)];
-        let coalesced = coalesce_byte_ranges(&ranges, 65536);
-        assert_eq!(coalesced.len(), 2);
-        assert_eq!(coalesced[0], (100, 300));
-        assert_eq!(coalesced[1], (500000, 600000));
+    fn same_commit_downloads_nothing_but_the_head() {
+        let (old, _) = generations();
+        let dir = temp_dir("same");
+        let (dest, local) = install(&dir, &old);
+        let server = serve(old.bytes.clone(), Mode::Normal);
+
+        let report = run(&server.url, &dest, Some(&local)).unwrap();
+
+        assert!(!report.changed);
+        assert_eq!(server.requests.load(Ordering::SeqCst), 1);
+    }
+
+    #[test]
+    fn fresh_install_downloads_and_verifies_the_pack() {
+        let (_, new) = generations();
+        let dir = temp_dir("fresh");
+        let dest = dir.join(format!("{SITE}.docpack"));
+        let server = serve(new.bytes.clone(), Mode::Normal);
+
+        let report = run(&server.url, &dest, None).unwrap();
+
+        assert_eq!(report.meta.commit, "bbbb");
+        assert_eq!(fs::read(&dest).unwrap(), new.bytes);
+        assert!(!dir.join(format!("{SITE}.docpack.part")).exists());
+    }
+
+    #[test]
+    fn server_without_range_support_falls_back_to_a_full_download() {
+        let (old, new) = generations();
+        let dir = temp_dir("norange");
+        let (dest, local) = install(&dir, &old);
+        let server = serve(new.bytes.clone(), Mode::IgnoreRanges);
+
+        run(&server.url, &dest, Some(&local)).unwrap();
+
+        assert_eq!(fs::read(&dest).unwrap(), new.bytes);
+    }
+
+    #[test]
+    fn dropped_head_request_is_retried() {
+        let (old, new) = generations();
+        let dir = temp_dir("head-drop");
+        let (dest, local) = install(&dir, &old);
+        let server = serve(new.bytes.clone(), Mode::DropAfter { request: 0, bytes: 100 });
+
+        let report = run(&server.url, &dest, Some(&local)).unwrap();
+
+        assert_eq!(report.downloaded_chunks, 2);
+        assert_eq!(fs::read(&dest).unwrap(), new.bytes);
+    }
+
+    #[test]
+    fn dropped_range_continues_after_the_chunks_that_arrived() {
+        let (old, new) = generations();
+        let dir = temp_dir("drops");
+        let (dest, local) = install(&dir, &old);
+        // Request 0 is the head probe; this cuts the range between the two changed chunks.
+        let server = serve(new.bytes.clone(), Mode::DropAfter { request: 1, bytes: 7000 });
+
+        let report = run(&server.url, &dest, Some(&local)).unwrap();
+
+        assert_eq!(fs::read(&dest).unwrap(), new.bytes);
+        assert_eq!(report.downloaded_chunks, 2);
+        assert_eq!(server.requests.load(Ordering::SeqCst), 3);
+        let served = server.served.load(Ordering::SeqCst);
+        assert!(served < HEAD_PROBE_BYTES + 14_000, "chunk 3 was fetched twice: {served} bytes");
+    }
+
+    #[test]
+    fn interrupted_full_download_resumes_from_the_partial_file() {
+        let (_, new) = generations();
+        let dir = temp_dir("resume");
+        let dest = dir.join(format!("{SITE}.docpack"));
+        let server = serve(new.bytes.clone(), Mode::DropAfter { request: 1, bytes: 150_000 });
+
+        run(&server.url, &dest, None).unwrap();
+
+        assert_eq!(fs::read(&dest).unwrap(), new.bytes);
+        let served = server.served.load(Ordering::SeqCst);
+        let expected = HEAD_PROBE_BYTES + new.bytes.len() as u64;
+        assert_eq!(served, expected, "the retry must not repeat the first 150 KB");
+    }
+
+    #[test]
+    fn missing_pack_fails_without_retrying() {
+        let listener = TcpListener::bind("127.0.0.1:0").unwrap();
+        let port = listener.local_addr().unwrap().port();
+        let requests = Arc::new(AtomicUsize::new(0));
+        let counter = Arc::clone(&requests);
+        std::thread::spawn(move || {
+            for mut stream in listener.incoming().flatten() {
+                counter.fetch_add(1, Ordering::SeqCst);
+                let mut buffer = [0u8; 2048];
+                let _ = stream.read(&mut buffer);
+                let _ = stream.write_all(b"HTTP/1.1 404 Not Found\r\nContent-Length: 0\r\nConnection: close\r\n\r\n");
+            }
+        });
+        let dir = temp_dir("missing");
+        let dest = dir.join(format!("{SITE}.docpack"));
+
+        let error = run(&format!("http://127.0.0.1:{port}/x.docpack"), &dest, None).unwrap_err();
+
+        assert!(matches!(error, DocxError::HttpStatus { status: 404, .. }));
+        assert_eq!(requests.load(Ordering::SeqCst), 1);
+    }
+
+    #[test]
+    fn corrupt_chunks_never_replace_a_working_pack() {
+        let (old, new) = generations();
+        let dir = temp_dir("corrupt");
+        let (dest, local) = install(&dir, &old);
+        // Past the head and the first chunks, inside what the client fetches.
+        let head_len = new.bytes.len() as u64 - local.meta.total_bytes;
+        let server = serve(new.bytes.clone(), Mode::Corrupt(head_len + 20_000));
+
+        let result = run(&server.url, &dest, Some(&local));
+
+        assert!(result.is_err(), "both the patch and the full download are corrupt");
+        assert_eq!(fs::read(&dest).unwrap(), old.bytes, "the installed pack must survive");
+        assert!(!dir.join(format!("{SITE}.docpack.tmp")).exists());
+        assert!(!dir.join(format!("{SITE}.docpack.spool")).exists());
+    }
+
+    #[test]
+    fn corrupt_local_pack_heals_through_a_full_download() {
+        let (old, new) = generations();
+        let dir = temp_dir("heal");
+        let (dest, local) = install(&dir, &old);
+        let mut damaged = old.bytes.clone();
+        let at = damaged.len() - 100;
+        damaged[at] ^= 0xff;
+        fs::write(&dest, &damaged).unwrap();
+        let server = serve(new.bytes.clone(), Mode::Normal);
+
+        run(&server.url, &dest, Some(&local)).unwrap();
+
+        assert_eq!(fs::read(&dest).unwrap(), new.bytes);
+    }
+
+    #[test]
+    fn replaced_file_is_not_read_through_a_stale_view() {
+        let (old, new) = generations();
+        let dir = temp_dir("stale");
+        let (dest, local) = install(&dir, &old);
+        fs::write(&dest, &new.bytes).unwrap();
+        assert!(local.read_route("/page1").is_none());
+    }
+
+    fn http_get(port: u16, path: &str, extra_headers: &str) -> (String, Vec<u8>) {
+        let mut stream = std::net::TcpStream::connect(("127.0.0.1", port)).unwrap();
+        write!(stream, "GET {path} HTTP/1.1\r\nHost: localhost\r\n{extra_headers}\r\n").unwrap();
+        let mut response = Vec::new();
+        stream.read_to_end(&mut response).unwrap();
+        let split = response.windows(4).position(|w| w == b"\r\n\r\n").unwrap();
+        let head = String::from_utf8_lossy(&response[..split]).into_owned();
+        (head, response[split + 4..].to_vec())
+    }
+
+    #[test]
+    fn server_handles_chunked_pages_and_revalidates_assets() {
+        let page_start = b"<html><head></head><body><h1>Joined page</h1>".repeat(20);
+        let page_end = b"<p>Second chunk</p></body></html>".to_vec();
+        let plain = body(7, 3000);
+        let pack = build_pack("cccc", &[page_start, page_end, body(8, 3000), plain.clone()]);
+        let dir = temp_dir("server");
+        let (_, parsed) = install(&dir, &pack);
+
+        let store = Arc::new(AssetStore {
+            overrides: std::sync::RwLock::new(HashMap::from([(SITE.to_string(), parsed)])),
+            site_ports: std::sync::RwLock::new(HashMap::new()),
+            fallback_cache: crate::pack::FallbackCache::new(),
+        });
+        let port = ensure_site_server(SITE, Arc::clone(&store));
+
+        // A page spanning two chunks is decoded, joined and given the reader bridge.
+        let (head, page) = http_get(port, "/joined", "");
+        let page = String::from_utf8_lossy(&page);
+        assert!(head.starts_with("HTTP/1.1 200"), "{head}");
+        assert!(!head.to_lowercase().contains("content-encoding"), "{head}");
+        assert!(page.contains("<h1>Joined page</h1>") && page.contains("<p>Second chunk</p>"));
+        assert!(page.len() > 10_000, "the reader bridge must be injected");
+
+        // A single compressed chunk goes out as stored for the browser to decode.
+        let (head, _) = http_get(port, "/page0", "");
+        assert!(head.contains("Content-Encoding: br"), "{head}");
+
+        // Assets keep their names across updates, so the browser must revalidate them.
+        let (head, asset) = http_get(port, "/page3", "");
+        assert_eq!(asset, plain);
+        assert!(head.contains("Cache-Control: no-cache"), "{head}");
+        let etag = head.lines().find_map(|l| l.strip_prefix("ETag: ")).expect("ETag").to_string();
+
+        let (head, revalidated) = http_get(port, "/page3", &format!("If-None-Match: {etag}\r\n"));
+        assert!(head.starts_with("HTTP/1.1 304"), "{head}");
+        assert!(revalidated.is_empty());
+
+        let (head, _) = http_get(port, "/page3", "If-None-Match: \"stale\"\r\n");
+        assert!(head.starts_with("HTTP/1.1 200"), "{head}");
+    }
+
+    #[test]
+    fn a_site_cannot_be_synced_twice_at_once() {
+        let first = SyncGuard::acquire("guard-test").unwrap();
+        assert!(SyncGuard::acquire("guard-test").is_err());
+        drop(first);
+        assert!(SyncGuard::acquire("guard-test").is_ok());
+    }
+
+    /// Runs the real client against real pack generations:
+    /// `DOCX_E2E_PACKS=<dir with old/ and new/> cargo test --lib real_packs -- --ignored --nocapture`
+    #[test]
+    #[ignore]
+    fn real_packs_update_end_to_end() {
+        let root = PathBuf::from(std::env::var("DOCX_E2E_PACKS").expect("DOCX_E2E_PACKS"));
+        let mut names: Vec<String> = fs::read_dir(root.join("new"))
+            .unwrap()
+            .flatten()
+            .map(|e| e.file_name().to_string_lossy().into_owned())
+            .filter(|n| n.ends_with(".docpack"))
+            .collect();
+        names.sort();
+
+        let (mut total_new, mut total_served, mut total_pages) = (0u64, 0u64, 0usize);
+        println!("{:<14}{:>10}{:>11}{:>8}{:>9}{:>7}", "site", "pack MB", "fetched MB", "pct", "chunks", "ms");
+        for name in names {
+            let old = fs::read(root.join("old").join(&name)).unwrap();
+            let new = fs::read(root.join("new").join(&name)).unwrap();
+            let dir = temp_dir("real");
+            let dest = dir.join(&name);
+            fs::write(&dest, &old).unwrap();
+
+            let header = parse_v3_header(&old).unwrap();
+            let meta: PackMeta =
+                serde_json::from_slice(&old[V3_HEADER_BYTES..V3_HEADER_BYTES + header.0]).unwrap();
+            let local = parse_real(&dest, old.len() as u64, meta.id.clone());
+            let server = serve(new.clone(), Mode::Normal);
+            let started = Instant::now();
+            let report = run(&server.url, &dest, Some(&local)).unwrap();
+            let elapsed = started.elapsed().as_millis();
+
+            assert_eq!(fs::read(&dest).unwrap(), new, "{name} must match the release byte for byte");
+            let served = server.served.load(Ordering::SeqCst);
+
+            // Every page of the updated pack must be readable, across all its chunks.
+            let updated = parse_real(&dest, new.len() as u64, meta.id.clone());
+            let pages = updated.html_routes();
+            assert!(!pages.is_empty(), "{name} has no pages");
+            for route in &pages {
+                let page = updated.read_route(route).unwrap_or_else(|| panic!("{name}: {route} is unreadable"));
+                let html = decompress_html_body_if_needed(&page.bytes, page.encoding.as_deref(), page.gzipped);
+                assert!(html.contains('<'), "{name}: {route} did not decode");
+            }
+            total_pages += pages.len();
+            if let Some(search) = updated.read_route(crate::pack::SEARCH_ROUTE) {
+                let json = decompress_html_body_if_needed(&search.bytes, search.encoding.as_deref(), search.gzipped);
+                serde_json::from_str::<Vec<serde_json::Value>>(&json).expect("search index must parse");
+            }
+            println!(
+                "{:<14}{:>10.2}{:>11.2}{:>7.1}%{:>9}{:>7}",
+                meta.id,
+                new.len() as f64 / 1048576.0,
+                served as f64 / 1048576.0,
+                served as f64 / new.len() as f64 * 100.0,
+                report.downloaded_chunks,
+                elapsed,
+            );
+            total_new += new.len() as u64;
+            total_served += served;
+            let _ = fs::remove_dir_all(dir);
+        }
+        println!(
+            "TOTAL fetched {:.2} MB of {:.2} MB ({:.1}%), {} pages read back",
+            total_served as f64 / 1048576.0,
+            total_new as f64 / 1048576.0,
+            total_served as f64 / total_new as f64 * 100.0,
+            total_pages,
+        );
+    }
+
+    /// Reads every pack in a folder the way startup does, then one page from each:
+    /// `DOCX_E2E_LIBRARY=<dir> cargo test --release --lib library_loads -- --ignored --nocapture`
+    #[test]
+    #[ignore]
+    fn library_loads_and_reads() {
+        let dir = PathBuf::from(std::env::var("DOCX_E2E_LIBRARY").expect("DOCX_E2E_LIBRARY"));
+        let files: Vec<PathBuf> = fs::read_dir(dir)
+            .unwrap()
+            .flatten()
+            .map(|e| e.path())
+            .filter(|p| p.extension().is_some_and(|e| e == "docpack"))
+            .collect();
+
+        let started = Instant::now();
+        let packs: Vec<_> = files
+            .iter()
+            .filter_map(|p| parse_docpack_on_disk(p.clone(), 0, fs::metadata(p).unwrap().len(), "test"))
+            .collect();
+        let load_ms = started.elapsed().as_secs_f64() * 1000.0;
+
+        let mut pages = 0;
+        for pack in &packs {
+            let routes = pack.html_routes();
+            let Some(route) = routes.first() else { continue };
+            let page = pack.read_route(route).unwrap_or_else(|| panic!("{}: {route}", pack.meta.id));
+            let html = decompress_html_body_if_needed(&page.bytes, page.encoding.as_deref(), page.gzipped);
+            assert!(html.contains('<'), "{}: {route} did not decode", pack.meta.id);
+            pages += 1;
+        }
+        println!(
+            "{} files, {} packs parsed in {load_ms:.1} ms, {pages} sample pages read",
+            files.len(),
+            packs.len()
+        );
+    }
+
+    /// Range requests and resume against a published file on the real host and its CDN:
+    /// `DOCX_E2E_URL=<release asset url> cargo test --lib published_file -- --ignored --nocapture`
+    #[test]
+    #[ignore]
+    fn published_file_serves_ranges_and_resumes() {
+        let url = std::env::var("DOCX_E2E_URL").expect("DOCX_E2E_URL");
+        let dir = temp_dir("published");
+        let whole_path = dir.join("whole.bin");
+        let mut sink = |_: DownloadProgressPayload| {};
+        let mut progress = Progress::new(SITE, &mut sink);
+        let total = download_resumable(&url, &whole_path, 0, "Downloading", &mut progress).unwrap();
+        let whole = fs::read(&whole_path).unwrap();
+        assert_eq!(whole.len() as u64, total);
+
+        for (start, end) in [(0u64, 64u64), (total / 2, total / 2 + 4096), (total - 100, total)] {
+            let bytes = fetch_range(&url, start, end).unwrap().expect("server must honour the range");
+            assert_eq!(bytes, whole[start as usize..end as usize], "range {start}-{end}");
+        }
+
+        let probe = http_client().get(&url).header(reqwest::header::RANGE, "bytes=0-0").send().unwrap();
+        let etag = probe.headers().get(reqwest::header::ETAG).expect("ETag").to_str().unwrap().to_string();
+        drop(probe);
+        let half = total / 2;
+        let conditional = http_client()
+            .get(&url)
+            .header(reqwest::header::RANGE, format!("bytes={half}-"))
+            .header(reqwest::header::IF_RANGE, etag.as_str())
+            .send()
+            .unwrap();
+        println!("etag {etag}: If-Range answered {}", conditional.status());
+        assert_eq!(conditional.status(), reqwest::StatusCode::PARTIAL_CONTENT);
+        drop(conditional);
+
+        let part = dir.join("resumed.docpack.part");
+        fs::write(&part, &whole[..half as usize]).unwrap();
+        fs::write(part.with_extension("etag"), &etag).unwrap();
+        download_resumable(&url, &part, total, "Downloading", &mut progress).unwrap();
+        assert_eq!(fs::read(&part).unwrap(), whole, "resumed file must equal the original");
+        println!("{total} bytes: ranges match, resume from {half} matches");
+    }
+
+    fn parse_real(path: &Path, len: u64, id: String) -> Arc<SiteOverridePack> {
+        parse_docpack_on_disk(path.to_path_buf(), 0, len, "test")
+            .unwrap_or_else(|| panic!("{id} did not parse; is it in the catalog?"))
     }
 }
-
-

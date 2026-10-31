@@ -290,7 +290,9 @@ export function DiscordHeader({
                 ? "در حال ترجمه به فارسی… • Translating page to Persian…"
                 : app.activeDocFa
                   ? "زبان فارسی فعال است (کلیک برای زبان انگلیسی) • Persian active (Click to restore English)"
-                  : "نمایش / ترجمه به فارسی • Switch / Translate to Persian"
+                  : getBrand(active.siteId).hasBuiltinPersian
+                    ? "نمایش مستندات رسمی فارسی • Switch to official Persian docs"
+                    : "نمایش / ترجمه به فارسی • Switch / Translate to Persian"
             }
             side="bottom"
           >
@@ -299,10 +301,13 @@ export function DiscordHeader({
               onClick={() => {
                 const next = !app.activeDocFa;
                 app.toggleActiveDocFa(next);
+                const isNative = getBrand(active.siteId).hasBuiltinPersian;
                 if (next) {
                   app.toast({
                     kind: "info",
-                    message: "در حال تغییر زبان / ترجمه به فارسی… • Switching / Translating to Persian",
+                    message: isNative
+                      ? "در حال بارگذاری مستندات رسمی فارسی… • Loading official Persian docs…"
+                      : "در حال تغییر زبان / ترجمه به فارسی… • Switching / Translating to Persian",
                   });
                 } else {
                   app.toast({

@@ -3,7 +3,7 @@
 
   # Docx — 123-Site Offline Documentation Engine
 
-  **Ultra-fast, 100% offline desktop documentation hub for 123 developer ecosystems — powered by Tauri v2 (Rust), Max-Gzip Level 9 `.docpack` archives, and HTTP 206 Partial Range delta updates.**
+  **Ultra-fast, 100% offline desktop documentation hub for 123 developer ecosystems — powered by Tauri v2 (Rust), chunked `.docpack` archives, and updates that download only what changed.**
 
   <p align="center">
     <a href="https://github.com/VahidM313/docx/releases/download/packs-latest/Docx.exe">
@@ -12,7 +12,7 @@
     <a href="https://github.com/VahidM313/docx/releases/download/packs-latest/Docx-arm64-v8a-release.apk">
       <img src="https://img.shields.io/badge/%E2%AC%87_Download_Docx.apk-Android_ARMv8_(arm64)-3ddc84?style=for-the-badge&logo=android&logoColor=white" alt="Download Docx.apk for Android" />
     </a>
-    <a href="https://github.com/VahidM313/docx/releases/tag/packs-latest">
+    <a href="https://github.com/VahidM313/docx/releases/tag/docpacks-v3">
       <img src="https://img.shields.io/badge/Docpack_Registry-123_Offline_Sites-22c55e?style=for-the-badge&logo=github&logoColor=white" alt="123 Offline Docpacks" />
     </a>
   </p>
@@ -26,7 +26,7 @@ No installer or external runtime required — download and run directly:
 
 - 💻 **[Download `Docx.exe` (Latest Standalone Windows x64 Binary)](https://github.com/VahidM313/docx/releases/download/packs-latest/Docx.exe)**
 - 📱 **[Download `Docx.apk` (Latest Android ARMv8 `arm64-v8a` Release APK)](https://github.com/VahidM313/docx/releases/download/packs-latest/Docx-arm64-v8a-release.apk)**
-- 📦 **[Browse All `.docpack` Archives on GitHub Releases (`packs-latest`)](https://github.com/VahidM313/docx/releases/tag/packs-latest)**
+- 📦 **[Browse All `.docpack` Archives on GitHub Releases (`docpacks-v3`)](https://github.com/VahidM313/docx/releases/tag/docpacks-v3)**
 
 ---
 
@@ -34,7 +34,8 @@ No installer or external runtime required — download and run directly:
 
 - **123 Documentation Ecosystems**: Instant offline access across 14 specialized developer categories: Frontend & UI, React, Vue, Web Frameworks, TanStack, Backend & Auth, Databases & SQL (including Vector DBs), AI & Machine Learning, Python, Rust, Go, C/C++, DevOps, and Architecture.
 - **Original Website Fidelity**: Renders the authentic documentation pages, styles, syntax highlighting, and interactive layouts locally via embedded Rust HTTP servers (`127.0.0.1`).
-- **HTTP 206 Partial Range Delta Updates**: Compares local SHA-256 chunk hashes against [`registry.json`](https://github.com/VahidM313/docx/releases/download/packs-latest/registry.json) on GitHub Releases and downloads only modified chunks.
+- **Updates Fetch Only What Changed**: Reads the head of the published pack, works out which content-addressed chunks are missing, and downloads just those with HTTP range requests. It works from any older build, every chunk is verified, and an interrupted update leaves the installed pack untouched.
+- **Android and Desktop**: The same app and packs on phones and Windows, with a touch-first layout, hardware back navigation, and a reader that stays loaded between screens.
 - **Universal Spotlight Search (`Ctrl + K`)**: Instant search across all installed documentation packs with keyboard navigation and category filtering.
 - **Reader Typography & Dark Mode**:
   - **Font Size / Zoom Controls**: Adjust scale anytime via `A−` / `100%` / `A+` in the top bar or `Ctrl + +`, `Ctrl + -`, `Ctrl + 0`.
@@ -220,4 +221,26 @@ bun x tauri build --no-bundle
 To crawl and build `.docpack` archives locally:
 ```bash
 bun run scripts/ci-build-site.ts <site_id> ./packs
+```
+
+---
+
+## 📦 How Docpacks and Updates Work
+
+Each site is one `.docpack` file on the [`docpacks-v3`](https://github.com/VahidM313/docx/releases/tag/docpacks-v3) release, next to a `registry.json` that lists them. There are no patch files.
+
+**Building.** `scripts/ci-build-site.ts` crawls a site, normalizes away per-build noise such as hashed asset names, analytics, and random ids, and splits each page into chunks at content-defined boundaries (`scripts/lib/chunker.ts`). A chunk's id is the hash of its content, so a page edit only disturbs the chunks around it and identical blocks such as sidebars are stored once. A rebuild starts from the previous pack (`scripts/lib/docpack-v3.ts`): surviving chunks keep their order and new ones go on the end, so the release changes as little as possible. If nothing changed, nothing is uploaded.
+
+**Layout.** A 32-byte header, then a small JSON metadata block, a Brotli-compressed index (chunk table plus each route's list of chunks), and the chunk data. The app only needs the metadata at startup and loads the index when a site is first read.
+
+**Updating.** The client (`docs-desktop/src-tauri/src/update.rs`) makes a range request for the head of the published pack and compares chunk ids with the installed pack. It fetches the missing chunks in as few requests as it can, verifies each against its id, and assembles a byte-identical copy of the published pack, checked against the pack's hash before an atomic swap. Dropped connections resume where they stopped. Anything unexpected, including a damaged local pack or a server that ignores ranges, falls back to a full verified download. The registry records what an update costs from each recent build, so the app can show the real size up front.
+
+**Testing.**
+```bash
+bun test scripts/lib                 # chunking, pack building, normalization
+cd docs-desktop/src-tauri
+cargo test --lib                     # updater against a local range server with injected faults
+
+# The real client against real pack generations (a folder with old/ and new/ packs)
+DOCX_E2E_PACKS=<dir> cargo test --release --lib real_packs -- --ignored --nocapture
 ```

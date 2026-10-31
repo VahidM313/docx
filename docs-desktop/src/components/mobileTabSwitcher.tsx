@@ -16,14 +16,14 @@ export function MobileTabSwitcher({
   const webTabs = app.tabs.filter((t) => t.siteId !== "home");
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col bg-background text-foreground select-none safe-bottom">
+    <div className="absolute inset-0 z-40 flex flex-col bg-background text-foreground select-none safe-bottom">
       {/* 1. Chrome-Style Mobile Top Bar */}
-      <header className="flex h-14 shrink-0 items-center justify-between border-b border-border bg-surface px-4 pt-[env(safe-area-inset-top,0px)] shadow-xs">
+      <header className="box-content flex h-14 shrink-0 items-center justify-between border-b border-border bg-surface px-4 pt-[env(safe-area-inset-top,0px)] shadow-xs">
         {/* New Tab Button (+) */}
         <button
           type="button"
           onClick={onNewTab}
-          className="flex items-center gap-1.5 rounded-lg bg-accent px-3 py-1.5 text-xs font-semibold text-foreground hover:bg-surface-deep transition-colors cursor-pointer"
+          className="flex items-center gap-1.5 rounded-lg bg-accent px-3 h-10 text-xs font-semibold text-foreground hover:bg-surface-deep transition-colors cursor-pointer"
           aria-label="New Tab"
         >
           <Plus className="h-4 w-4 text-brand" />
@@ -42,7 +42,7 @@ export function MobileTabSwitcher({
         <button
           type="button"
           onClick={onClose}
-          className="rounded-lg bg-brand px-3 py-1.5 text-xs font-bold text-white hover:bg-brand-hover transition-colors cursor-pointer shadow-xs"
+          className="rounded-lg bg-brand px-3 h-10 text-xs font-bold text-white hover:bg-brand-hover transition-colors cursor-pointer shadow-xs"
         >
           Done
         </button>
@@ -58,7 +58,7 @@ export function MobileTabSwitcher({
             <div className="space-y-1">
               <h3 className="text-base font-bold text-foreground">No open documents</h3>
               <p className="text-xs text-muted-foreground max-w-[260px]">
-                Browse the Discord channels and select a document to read offline.
+                Pick a document from the list to read it offline.
               </p>
             </div>
             <button
@@ -111,8 +111,9 @@ export function MobileTabSwitcher({
                         e.stopPropagation();
                         app.closeTab(tab.id);
                       }}
-                      className="h-6 w-6 rounded-md flex items-center justify-center text-muted-foreground hover:bg-accent hover:text-foreground transition-colors shrink-0 cursor-pointer"
+                      className="-mr-1.5 -mt-1.5 h-9 w-9 rounded-md flex items-center justify-center text-muted-foreground hover:bg-accent hover:text-foreground transition-colors shrink-0 cursor-pointer"
                       title="Close tab"
+                      aria-label="Close tab"
                     >
                       <X className="h-3.5 w-3.5" />
                     </button>
@@ -174,7 +175,7 @@ export function MobileTabSwitcher({
           className="flex items-center gap-2 rounded-xl bg-accent px-3.5 py-2 text-xs font-semibold text-foreground hover:bg-surface-deep transition-colors cursor-pointer"
         >
           <Layers className="h-4 w-4 text-brand" />
-          <span>All Channels & Categories</span>
+          <span>Browse docs</span>
         </button>
 
         {webTabs.length > 1 && (

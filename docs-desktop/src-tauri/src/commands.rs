@@ -2,14 +2,19 @@
 
 use std::collections::HashMap;
 use std::fs;
+#[cfg(desktop)]
 use std::path::PathBuf;
 use std::sync::Arc;
 
 use crate::catalog::get_site_origin_and_entry;
-use crate::config::{RELEASE_BASE_URL, TRAILER_MAGIC};
-use crate::pack::get_packs_dir;
+#[cfg(desktop)]
+use crate::config::TRAILER_MAGIC;
+use crate::config::PACKS_BASE_URL;
+#[cfg(desktop)]
+use crate::pack::SiteOverridePack;
+use crate::pack::{get_packs_dir, AssetStore};
 use crate::server::{ensure_site_server, AppState, ServerStatus};
-use crate::util::curl_get_bytes;
+use crate::util::get_metadata;
 
 #[derive(serde::Serialize, Clone)]
 pub struct PackStatusInfo {
@@ -53,67 +58,17 @@ pub(crate) fn get_installed_packs(state: tauri::State<'_, AppState>) -> Vec<Pack
         return list;
     };
 
-    for (site_id, prefix, default_name, default_ver) in [
-        ("tailwind", "tw:", "Tailwind CSS", "v4.3.0"),
-        ("shadcn", "sh:", "shadcn/ui", "v4.0.0"),
-    ] {
-        let port = ports.get(site_id).copied().unwrap_or(0);
-        if let Some(pack) = guard.get(site_id) {
-            list.push(PackStatusInfo {
-                id: site_id.to_string(),
-                name: pack.manifest.name.clone(),
-                version: pack.manifest.version.clone(),
-                commit: pack.manifest.commit.clone(),
-                route_count: pack.manifest.routes.len(),
-                chunk_count: pack.manifest.chunkCount,
-                size_mb: (pack.manifest.totalBytes as f64 / (1024.0 * 1024.0) * 100.0).round()
-                    / 100.0,
-                source: pack.source.clone(),
-                port,
-            });
-        } else {
-            let mut offsets = std::collections::HashSet::new();
-            let mut total_bytes = 0usize;
-            let mut route_count = 0usize;
-            for (k, v) in &state.store.base_manifest {
-                if k.starts_with(prefix) {
-                    route_count += 1;
-                    if offsets.insert(v.offset) {
-                        total_bytes += v.length;
-                    }
-                }
-            }
-            if route_count > 0 {
-                list.push(PackStatusInfo {
-                    id: site_id.to_string(),
-                    name: default_name.to_string(),
-                    version: default_ver.to_string(),
-                    commit: "embedded-base".to_string(),
-                    route_count,
-                    chunk_count: offsets.len(),
-                    size_mb: (total_bytes as f64 / (1024.0 * 1024.0) * 100.0).round() / 100.0,
-                    source: "Embedded in .exe".to_string(),
-                    port,
-                });
-            }
-        }
-    }
-
     for (site_id, pack) in guard.iter() {
-        if site_id == "tailwind" || site_id == "shadcn" {
-            continue;
-        }
-        let port = ports.get(site_id).copied().unwrap_or(0);
         list.push(PackStatusInfo {
             id: site_id.clone(),
-            name: pack.manifest.name.clone(),
-            version: pack.manifest.version.clone(),
-            commit: pack.manifest.commit.clone(),
-            route_count: pack.manifest.routes.len(),
-            chunk_count: pack.manifest.chunkCount,
-            size_mb: (pack.manifest.totalBytes as f64 / (1024.0 * 1024.0) * 100.0).round() / 100.0,
+            name: pack.meta.name.clone(),
+            version: pack.meta.version.clone(),
+            commit: pack.meta.commit.clone(),
+            route_count: pack.meta.route_count,
+            chunk_count: pack.meta.chunk_count,
+            size_mb: (pack.pack_len() as f64 / (1024.0 * 1024.0) * 100.0).round() / 100.0,
             source: pack.source.clone(),
-            port,
+            port: ports.get(site_id).copied().unwrap_or(0),
         });
     }
 
@@ -140,8 +95,11 @@ pub struct RemoteRegistryEntryRaw {
     pub routeCount: usize,
     #[serde(default)]
     pub chunkCount: usize,
+    /// Older commit -> bytes a client on it must fetch.
     #[serde(default)]
-    pub delta: Option<crate::pack::DeltaMetadata>,
+    pub gens: HashMap<String, usize>,
+    #[serde(default)]
+    pub truncated: bool,
 }
 
 #[derive(serde::Deserialize)]
@@ -165,35 +123,58 @@ pub struct RemoteRegistryItem {
     pub commit: String,
     pub updatedAt: String,
     pub sizeBytes: usize,
-    pub deltaSizeBytes: Option<usize>,
+    /// What updating costs from the installed build, when the registry still tracks it.
+    pub updateBytes: Option<usize>,
     pub routeCount: usize,
     pub chunkCount: usize,
     pub installed: bool,
     pub local_commit: String,
     pub update_available: bool,
+    pub truncated: bool,
+}
+
+fn parse_registry(bytes: &[u8]) -> Result<Vec<RemoteRegistryEntryRaw>, String> {
+    if let Ok(wrapper_map) = serde_json::from_slice::<RemoteRegistryFileMap>(bytes) {
+        Ok(wrapper_map.packs.into_values().collect())
+    } else if let Ok(wrapper_vec) = serde_json::from_slice::<RemoteRegistryFileVec>(bytes) {
+        Ok(wrapper_vec.packs)
+    } else {
+        serde_json::from_slice::<Vec<RemoteRegistryEntryRaw>>(bytes).map_err(|e| e.to_string())
+    }
+}
+
+/// Fresh registry when online, the last good copy otherwise, so offline starts still
+/// know what can be installed and how big it is.
+fn load_registry() -> Result<Vec<RemoteRegistryEntryRaw>, String> {
+    let cached = get_packs_dir().join("registry.json");
+    let url = format!("{}/registry.json", PACKS_BASE_URL);
+    let error = match get_metadata(&url).map_err(|e| e.to_string()).and_then(|b| Ok((parse_registry(&b)?, b))) {
+        Ok((entries, bytes)) => {
+            let tmp = cached.with_extension("json.tmp");
+            if fs::write(&tmp, &bytes).is_ok() {
+                let _ = fs::rename(&tmp, &cached);
+            }
+            return Ok(entries);
+        }
+        Err(e) => e,
+    };
+    let bytes = fs::read(&cached).map_err(|_| error)?;
+    parse_registry(&bytes)
 }
 
 #[tauri::command]
-pub(crate) fn fetch_remote_registry(state: tauri::State<'_, AppState>) -> Result<Vec<RemoteRegistryItem>, String> {
-    let url = format!("{}/registry.json", RELEASE_BASE_URL);
-    let bytes = match curl_get_bytes(&url, None) {
-        Ok(b) => b,
-        Err(e) => {
-            let local_reg = get_packs_dir().join("registry.json");
-            fs::read(&local_reg).map_err(|_| e.to_string())?
-        }
-    };
-    let parsed_raw: Vec<RemoteRegistryEntryRaw> =
-        if let Ok(wrapper_map) = serde_json::from_slice::<RemoteRegistryFileMap>(&bytes) {
-            wrapper_map.packs.into_values().collect()
-        } else if let Ok(wrapper_vec) = serde_json::from_slice::<RemoteRegistryFileVec>(&bytes) {
-            wrapper_vec.packs
-        } else {
-            serde_json::from_slice::<Vec<RemoteRegistryEntryRaw>>(&bytes)
-                .map_err(|e| e.to_string())?
-        };
+pub(crate) async fn fetch_remote_registry(
+    state: tauri::State<'_, AppState>,
+) -> Result<Vec<RemoteRegistryItem>, String> {
+    let store = Arc::clone(&state.store);
+    tauri::async_runtime::spawn_blocking(move || registry_items(&store))
+        .await
+        .map_err(|e| format!("Task join error: {e}"))?
+}
 
-    let guard = crate::error::read_guard(&state.store.overrides).map_err(|e| e.to_string())?;
+fn registry_items(store: &AssetStore) -> Result<Vec<RemoteRegistryItem>, String> {
+    let parsed_raw = load_registry()?;
+    let guard = crate::error::read_guard(&store.overrides).map_err(|e| e.to_string())?;
     let mut out = Vec::with_capacity(parsed_raw.len());
     for item in parsed_raw {
         if get_site_origin_and_entry(&item.id).is_none() {
@@ -203,9 +184,9 @@ pub(crate) fn fetch_remote_registry(state: tauri::State<'_, AppState>) -> Result
             if let Some(pack) = guard.get(&item.id) {
                 (
                     true,
-                    pack.manifest.commit.clone(),
-                    pack.manifest.routes.len(),
-                    pack.manifest.updatedAt.clone(),
+                    pack.meta.commit.clone(),
+                    pack.meta.route_count,
+                    pack.meta.updated_at.clone(),
                 )
             } else {
                 (false, String::new(), 0, String::new())
@@ -233,15 +214,7 @@ pub(crate) fn fetch_remote_registry(state: tauri::State<'_, AppState>) -> Result
             && remote_is_valid
             && local_commit != item.commit
             && remote_is_newer;
-        let delta_size_bytes = if let Some(ref d) = item.delta {
-            if d.sizeBytes > 0 {
-                Some(d.sizeBytes)
-            } else {
-                None
-            }
-        } else {
-            None
-        };
+        let update_bytes = item.gens.get(&local_commit).copied();
         out.push(RemoteRegistryItem {
             id: item.id,
             name: item.name,
@@ -257,12 +230,13 @@ pub(crate) fn fetch_remote_registry(state: tauri::State<'_, AppState>) -> Result
             },
             updatedAt: item.updatedAt,
             sizeBytes: effective_bytes,
-            deltaSizeBytes: delta_size_bytes,
+            updateBytes: update_bytes,
             routeCount: item.routeCount,
             chunkCount: item.chunkCount,
             installed,
             local_commit,
             update_available,
+            truncated: item.truncated,
         });
     }
     Ok(out)
@@ -279,12 +253,10 @@ pub(crate) fn ensure_site_server_cmd(site_id: String, state: tauri::State<'_, Ap
 pub(crate) fn delete_docpack(site_id: String, state: tauri::State<'_, AppState>) -> Result<String, String> {
     let packs_dir = get_packs_dir();
     let docpack_path = packs_dir.join(format!("{}.docpack", site_id));
-    let manifest_path = packs_dir.join(format!("{}.manifest.json", site_id));
-    let search_path = packs_dir.join(format!("{}.search.json", site_id));
-
     let _ = fs::remove_file(&docpack_path);
-    let _ = fs::remove_file(&manifest_path);
-    let _ = fs::remove_file(&search_path);
+    for suffix in ["manifest.json", "search.json", "docpack.part", "docpack.etag"] {
+        let _ = fs::remove_file(packs_dir.join(format!("{site_id}.{suffix}")));
+    }
 
     {
         match crate::error::write_guard(&state.store.overrides) {
@@ -298,47 +270,75 @@ pub(crate) fn delete_docpack(site_id: String, state: tauri::State<'_, AppState>)
     Ok(format!("Deleted documentation pack for '{}'", site_id))
 }
 
-#[tauri::command]
-pub(crate) fn bundle_into_single_exe(state: tauri::State<'_, AppState>) -> Result<String, String> {
-    #[cfg(not(desktop))]
-    {
-        let _ = state;
-        return Err("Standalone single-binary bundling is only supported on desktop platforms.".to_string());
+/// Writes `exe_core` plus `packs` as a DOCXPACK trailer to `out`, streaming every
+/// pack from disk. The result holds whole libraries, so it must not pass through memory.
+#[cfg(desktop)]
+pub(crate) fn write_exe_with_trailer(
+    out: &mut impl std::io::Write,
+    packs: &[Arc<SiteOverridePack>],
+) -> std::io::Result<u64> {
+    let mut trailer_len = 0u64;
+    for pack in packs {
+        out.write_all(&(pack.pack_len() as u32).to_le_bytes())?;
+        trailer_len += 4 + pack.copy_pack_to(out)?;
     }
-    #[cfg(desktop)]
-    {
+    if trailer_len > 0 {
+        out.write_all(&trailer_len.to_le_bytes())?;
+        out.write_all(TRAILER_MAGIC)?;
+    }
+    Ok(trailer_len)
+}
+
+/// Length of the executable without any DOCXPACK trailer.
+#[cfg(desktop)]
+fn exe_core_len(path: &std::path::Path) -> std::io::Result<u64> {
+    use std::io::{Read, Seek, SeekFrom};
+    let mut file = fs::File::open(path)?;
+    let len = file.metadata()?.len();
+    if len < 16 {
+        return Ok(len);
+    }
+    file.seek(SeekFrom::End(-16))?;
+    let mut footer = [0u8; 16];
+    file.read_exact(&mut footer)?;
+    if &footer[8..16] != TRAILER_MAGIC {
+        return Ok(len);
+    }
+    let trailer_len = u64::from_le_bytes(footer[..8].try_into().unwrap_or([0u8; 8]));
+    Ok(len.saturating_sub(16 + trailer_len))
+}
+
+#[cfg(desktop)]
+fn bundle_library(store: &AssetStore) -> Result<String, String> {
+    use std::io::{Read, Write};
+
     let exe_path = std::env::current_exe().map_err(|e| e.to_string())?;
-    let mut exe_bytes = fs::read(&exe_path).map_err(|e| e.to_string())?;
-
-    if exe_bytes.len() >= 20 && &exe_bytes[exe_bytes.len() - 8..] == TRAILER_MAGIC {
-        let old_trailer_len = u64::from_le_bytes(
-            exe_bytes[exe_bytes.len() - 16..exe_bytes.len() - 8]
-                .try_into()
-                .unwrap_or([0u8; 8]),
-        ) as usize;
-        if exe_bytes.len() >= 16 + old_trailer_len {
-            exe_bytes.truncate(exe_bytes.len() - 16 - old_trailer_len);
-        }
-    }
-
-    let mut trailer_payload: Vec<u8> = Vec::new();
-    let guard = crate::error::read_guard(&state.store.overrides).map_err(|e| e.to_string())?;
-    for pack in guard.values() {
-        if let Some(bytes) = pack.read_full_pack_bytes() {
-            let len = bytes.len() as u32;
-            trailer_payload.extend_from_slice(&len.to_le_bytes());
-            trailer_payload.extend_from_slice(&bytes);
-        }
-    }
-
-    let trailer_len = trailer_payload.len() as u64;
-    exe_bytes.extend_from_slice(&trailer_payload);
-    exe_bytes.extend_from_slice(&trailer_len.to_le_bytes());
-    exe_bytes.extend_from_slice(TRAILER_MAGIC);
-
     let temp_dir = std::env::temp_dir();
     let tmp_path = temp_dir.join("Docx_bundle_staged.exe");
-    fs::write(&tmp_path, &exe_bytes).map_err(|e| e.to_string())?;
+
+    let packs: Vec<Arc<SiteOverridePack>> = crate::error::read_guard(&store.overrides)
+        .map_err(|e| e.to_string())?
+        .values()
+        .cloned()
+        .collect();
+
+    let core_len = exe_core_len(&exe_path).map_err(|e| e.to_string())?;
+    let total = {
+        let mut out = std::io::BufWriter::new(fs::File::create(&tmp_path).map_err(|e| e.to_string())?);
+        let exe = fs::File::open(&exe_path).map_err(|e| e.to_string())?;
+        std::io::copy(&mut exe.take(core_len), &mut out).map_err(|e| e.to_string())?;
+        let trailer = write_exe_with_trailer(&mut out, &packs).map_err(|e| e.to_string())?;
+        out.flush().map_err(|e| e.to_string())?;
+        core_len + trailer + 16
+    };
+
+    let done = || {
+        format!(
+            "Updated standalone Desktop\\Docx.exe in-place with {} embedded packs ({:.2} MB total)!",
+            packs.len(),
+            total as f64 / (1024.0 * 1024.0)
+        )
+    };
 
     let out_path = std::env::var_os("USERPROFILE")
         .map(|home| PathBuf::from(home).join("Desktop").join("Docx.exe"))
@@ -353,11 +353,7 @@ pub(crate) fn bundle_into_single_exe(state: tauri::State<'_, AppState>) -> Resul
 
     if fs::copy(&tmp_path, &out_path).is_ok() {
         let _ = fs::remove_file(&tmp_path);
-        return Ok(format!(
-            "Updated standalone Desktop\\Docx.exe in-place with {} embedded packs ({:.2} MB total)!",
-            guard.len(),
-            exe_bytes.len() as f64 / (1024.0 * 1024.0)
-        ));
+        return Ok(done());
     }
 
     let temp_old = temp_dir.join(format!("Docx_prev_{}.tmp", std::process::id()));
@@ -366,17 +362,27 @@ pub(crate) fn bundle_into_single_exe(state: tauri::State<'_, AppState>) -> Resul
         if fs::copy(&tmp_path, &out_path).is_ok() {
             let _ = fs::remove_file(&tmp_path);
             let _ = fs::remove_file(&temp_old);
-            return Ok(format!(
-                "Updated standalone Desktop\\Docx.exe in-place with {} embedded packs ({:.2} MB total)!",
-                guard.len(),
-                exe_bytes.len() as f64 / (1024.0 * 1024.0)
-            ));
-        } else {
-            let _ = fs::rename(&temp_old, &out_path);
+            return Ok(done());
         }
+        let _ = fs::rename(&temp_old, &out_path);
     }
 
     Err("Could not overwrite Desktop\\Docx.exe while locked.".to_string())
+}
+
+#[tauri::command]
+pub(crate) async fn bundle_into_single_exe(state: tauri::State<'_, AppState>) -> Result<String, String> {
+    #[cfg(not(desktop))]
+    {
+        let _ = state;
+        Err("Standalone single-binary bundling is only supported on desktop platforms.".to_string())
+    }
+    #[cfg(desktop)]
+    {
+        let store = Arc::clone(&state.store);
+        tauri::async_runtime::spawn_blocking(move || bundle_library(&store))
+            .await
+            .map_err(|e| format!("Task join error: {e}"))?
     }
 }
 

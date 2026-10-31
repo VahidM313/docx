@@ -3,10 +3,12 @@ import { useApp } from "../lib/store";
 import { getBrand } from "../lib/catalog";
 import { CheckCircle2, AlertTriangle, Info, X, Loader2 } from "lucide-react";
 
+const MAX_VISIBLE_DOWNLOADS = 3;
+
 export function ToastHost() {
   const app = useApp();
   return (
-    <div className="pointer-events-none fixed bottom-3 right-3 z-[120] flex w-[min(320px,calc(100vw-24px))] flex-col gap-2">
+    <div className="pointer-events-none fixed bottom-[calc(env(safe-area-inset-bottom,0px)+4.25rem)] right-3 z-[120] flex w-[min(320px,calc(100vw-24px))] flex-col gap-2 md:bottom-3">
       {app.toasts.map((t) => {
         const Icon =
           t.kind === "success" ? CheckCircle2 : t.kind === "error" ? AlertTriangle : t.kind === "progress" ? Loader2 : Info;
@@ -28,11 +30,12 @@ export function ToastHost() {
                       : "text-muted-foreground")
               }
             />
-            <span className="min-w-0 flex-1 truncate text-[12.5px] font-medium">{t.message}</span>
+            <span className="min-w-0 flex-1 line-clamp-3 text-[12.5px] font-medium">{t.message}</span>
             {t.kind !== "progress" && (
               <button
                 onClick={() => app.dropToast(t.id)}
-                className="grid h-5 w-5 place-items-center rounded text-muted-foreground transition-colors hover:text-foreground"
+                aria-label="Dismiss"
+                className="grid h-5 w-5 place-items-center rounded text-muted-foreground transition-colors hover:text-foreground pointer-coarse:h-9 pointer-coarse:w-9"
               >
                 <X size={11} />
               </button>
@@ -44,13 +47,14 @@ export function ToastHost() {
   );
 }
 
-/** Floating HUD while packs download (bottom-left). */
+/** Floating HUD while packs download: bottom-left, or under the header on phones,
+ *  where the bottom of the screen belongs to navigation. */
 export function DownloadHud() {
   const app = useApp();
   const active = Object.entries(app.downloads);
   if (!active.length) return null;
   return (
-    <div className="safe-bottom fixed bottom-3 left-3 z-[110] w-[min(280px,calc(100vw-24px))] rounded-md border border-border bg-popover p-3 shadow-lift">
+    <div className="pointer-events-none fixed left-3 top-[calc(env(safe-area-inset-top,0px)+3.5rem)] z-[110] w-[calc(100vw-24px)] rounded-md border border-border bg-popover p-3 shadow-lift md:pointer-events-auto md:safe-bottom md:top-auto md:bottom-3 md:w-[280px]">
       <div className="mb-2 flex items-center justify-between text-[10.5px] font-bold uppercase tracking-wider text-muted-foreground">
         <span className="text-brand">Downloads</span>
         <span className="tabular-nums">
@@ -58,7 +62,7 @@ export function DownloadHud() {
         </span>
       </div>
       <div className="space-y-2">
-        {active.slice(0, 5).map(([id, p]) => (
+        {active.slice(0, MAX_VISIBLE_DOWNLOADS).map(([id, p]) => (
           <div key={id}>
             <div className="flex items-center gap-1.5 text-[11.5px]">
               <span className="truncate font-medium">{getBrand(id).name}</span>
@@ -72,6 +76,9 @@ export function DownloadHud() {
             </div>
           </div>
         ))}
+        {active.length > MAX_VISIBLE_DOWNLOADS && (
+          <div className="text-[11px] text-muted-foreground">+{active.length - MAX_VISIBLE_DOWNLOADS} more</div>
+        )}
       </div>
     </div>
   );

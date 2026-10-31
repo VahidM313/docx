@@ -1,6 +1,9 @@
+#[cfg(desktop)]
 use std::fs;
 use std::sync::Arc;
+#[cfg(desktop)]
 use std::thread;
+#[cfg(desktop)]
 use std::time::Duration;
 
 #[cfg(target_os = "windows")]
@@ -20,6 +23,9 @@ mod server;
 mod update;
 mod util;
 
+#[cfg(target_os = "windows")]
+use std::sync::atomic::{AtomicBool, Ordering};
+
 use app_update::{check_app_update, self_update_app};
 use commands::{
     bundle_into_single_exe, check_servers, cursor_in_window, delete_docpack,
@@ -28,12 +34,46 @@ use commands::{
     window_show_ready, window_start_dragging, window_toggle_fullscreen,
     window_toggle_maximize,
 };
-use pack::{load_asset_store, load_disk_overrides};
+use pack::load_asset_store;
 #[cfg(mobile)]
-use pack::set_packs_dir;
+use pack::{load_disk_overrides, set_packs_dir};
 use search::get_extra_search_entries;
 use server::{ensure_site_server, AppState};
 use update::install_or_update_from_github;
+
+#[cfg(target_os = "windows")]
+static WEBVIEW_MEMORY_LOW: AtomicBool = AtomicBool::new(false);
+
+/// Asks WebView2 to give back what it can while nobody is looking at the window.
+#[cfg(target_os = "windows")]
+fn set_webview_memory_low(window: &tauri::Window, low: bool) {
+    use tauri::Manager;
+    use webview2_com::Microsoft::Web::WebView2::Win32::{
+        ICoreWebView2_19, COREWEBVIEW2_MEMORY_USAGE_TARGET_LEVEL_LOW,
+        COREWEBVIEW2_MEMORY_USAGE_TARGET_LEVEL_NORMAL,
+    };
+    use windows_core::Interface;
+
+    let Some(webview) = window.get_webview_window("main") else {
+        return;
+    };
+    let _ = webview.with_webview(move |webview| unsafe {
+        let Ok(core) = webview.controller().CoreWebView2() else {
+            return;
+        };
+        let Ok(core) = core.cast::<ICoreWebView2_19>() else {
+            return;
+        };
+        let level = if low {
+            COREWEBVIEW2_MEMORY_USAGE_TARGET_LEVEL_LOW
+        } else {
+            COREWEBVIEW2_MEMORY_USAGE_TARGET_LEVEL_NORMAL
+        };
+        if let Err(e) = core.SetMemoryUsageTargetLevel(level) {
+            log::warn!("WebView2 memory target not set: {e}");
+        }
+    });
+}
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
@@ -67,6 +107,7 @@ pub fn run() {
     // document is opened. Starting one thread/socket per installed pack during
     // boot wasted memory and file descriptors for packs the user never reads.
 
+    #[cfg(mobile)]
     let store_clone = Arc::clone(&store);
     tauri::Builder::default()
         .manage(AppState {
@@ -74,22 +115,29 @@ pub fn run() {
             shadcn_port,
             store,
         })
-        .on_window_event(|_win, event| {
-            if let tauri::WindowEvent::CloseRequested { .. } | tauri::WindowEvent::Destroyed = event
-            {
+        .on_window_event(|win, event| match event {
+            tauri::WindowEvent::CloseRequested { .. } | tauri::WindowEvent::Destroyed => {
                 std::process::exit(0);
+            }
+            #[cfg(target_os = "windows")]
+            tauri::WindowEvent::Resized(_) => {
+                let low = win.is_minimized().unwrap_or(false);
+                if WEBVIEW_MEMORY_LOW.swap(low, Ordering::Relaxed) != low {
+                    set_webview_memory_low(win, low);
+                }
+            }
+            _ => {
+                let _ = win;
             }
         })
         .setup(move |app| {
+            // The app data dir is only known here on mobile, so its packs load now.
             #[cfg(mobile)]
             {
                 use tauri::Manager;
                 if let Ok(app_dir) = app.path().app_data_dir() {
                     set_packs_dir(app_dir.join("docx"));
                 }
-            }
-            // Re-scan verified packs_dir to ensure any previously downloaded packs are fully loaded
-            {
                 match error::write_guard(&store_clone.overrides) {
                     Ok(mut guard) => load_disk_overrides(&mut guard),
                     Err(e) => log::error!("overrides lock poisoned during setup: {}", e),

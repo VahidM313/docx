@@ -29,12 +29,15 @@ export interface RemoteRegistryItem {
   commit: string;
   updatedAt?: string;
   sizeBytes: number;
-  deltaSizeBytes?: number;
+  /** What updating costs from the installed build; absent if that build is too old to be tracked. */
+  updateBytes?: number | null;
   routeCount: number;
   chunkCount: number;
   installed: boolean;
   local_commit: string;
   update_available: boolean;
+  /** The crawl hit its time budget, so some pages may be older than the rest. */
+  truncated?: boolean;
   iconFile?: string;
   iconETag?: string;
 }
@@ -79,19 +82,26 @@ export const Tauri = {
       { siteId },
     ),
   installOrUpdate: (args: { siteId: string }) =>
-    invoke<{ status: string; site_id: string; commit?: string; message?: string }>(
+    invoke<{ site_id: string; new_commit: string; downloaded_bytes: number; message: string }>(
       "install_or_update_from_github",
       { siteId: args.siteId },
     ),
   deleteDocpack: (siteId: string) => invoke<string>("delete_docpack", { siteId }),
-  checkAppUpdate: () =>
-    invoke<{
-      current_version?: string;
-      target_version?: string;
-      update_available?: boolean;
-      notes?: string;
-      asset?: string;
-    } | null>("check_app_update"),
+  checkAppUpdate: async () => {
+    const status = await invoke<{
+      localCommit: string;
+      remoteCommit: string;
+      version: string;
+      updateAvailable: boolean;
+    } | null>("check_app_update");
+    return (
+      status && {
+        update_available: status.updateAvailable,
+        current_version: status.localCommit.slice(0, 7),
+        target_version: status.version || status.remoteCommit.slice(0, 7),
+      }
+    );
+  },
   selfUpdateApp: () => invoke<string>("self_update_app"),
   getSystemTheme: () => invoke<"light" | "dark">("get_system_theme"),
   downloadProgress: (handler: (p: DownloadProgressPayload) => void) =>

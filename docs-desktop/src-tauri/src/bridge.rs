@@ -72,6 +72,17 @@ pub(crate) fn inject_reader_bridge(site_key: &str, mut html: String) -> Vec<u8> 
         html = html.replace(&format!("src=\"{}/", origin), "src=\"/");
     }
 
+    if site_id == "react" {
+        html = html.replace("href=\"https://fa.react.dev/", "href=\"/fa/");
+        html = html.replace("src=\"https://fa.react.dev/", "src=\"/fa/");
+        html = html.replace("href=\"https://fa.react.dev\"", "href=\"/fa/learn\"");
+    }
+    if site_id == "vue" {
+        html = html.replace("href=\"https://fa.vuejs.org/", "href=\"/fa/");
+        html = html.replace("src=\"https://fa.vuejs.org/", "src=\"/fa/");
+        html = html.replace("href=\"https://fa.vuejs.org\"", "href=\"/fa/guide/introduction.html\"");
+    }
+
     // Strip SRI integrity and crossorigin hashes to prevent browsers blocking rewritten local stylesheets (Git, Cobra)
     strip_html_attribute(&mut html, "integrity");
     strip_html_attribute(&mut html, "crossorigin");

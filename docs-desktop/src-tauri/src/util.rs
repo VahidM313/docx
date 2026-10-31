@@ -1,46 +1,68 @@
 //! Small internal utilities: hashing, URL decoding, MIME guessing, HTTP helpers.
 
+use std::sync::LazyLock;
 use std::time::Duration;
 
 use crate::error::{DocxError, Result};
 
-pub(crate) fn fnv1a_hash_hex(bytes: &[u8]) -> String {
-    let mut hash: u64 = 0xcbf29ce484222325;
-    for &b in bytes {
-        hash ^= b as u64;
-        hash = hash.wrapping_mul(0x100000001b3);
-    }
-    format!("{:016x}", hash)
-}
-
-pub(crate) fn sha256_hex_16(bytes: &[u8]) -> String {
-    let d = ring::digest::digest(&ring::digest::SHA256, bytes);
-    let slice = d.as_ref();
-    let mut out = String::with_capacity(16);
-    for b in &slice[..8] {
-        use std::fmt::Write;
+pub(crate) fn to_hex(bytes: &[u8]) -> String {
+    use std::fmt::Write;
+    let mut out = String::with_capacity(bytes.len() * 2);
+    for b in bytes {
         let _ = write!(&mut out, "{:02x}", b);
     }
     out
 }
 
-/// Plain GET returning the full body. Ranges map onto the HTTP `Range` header
-/// so callers can express both full fetches and partial-content (delta) fetches
-/// with one helper.
-pub(crate) fn curl_get_bytes(url: &str, range: Option<(usize, usize)>) -> Result<Vec<u8>> {
-    let client = reqwest::blocking::Client::builder()
+pub(crate) fn sha256_hex_16(bytes: &[u8]) -> String {
+    to_hex(&ring::digest::digest(&ring::digest::SHA256, bytes).as_ref()[..8])
+}
+
+fn build_client(total: Option<Duration>) -> reqwest::blocking::Client {
+    reqwest::blocking::Client::builder()
         .user_agent("Docx/1.0")
-        .timeout(Duration::from_secs(60))
-        .build()?;
+        .connect_timeout(Duration::from_secs(15))
+        .timeout(total)
+        .pool_max_idle_per_host(4)
+        .tcp_keepalive(Duration::from_secs(30))
+        .build()
+        .expect("HTTP client with static settings")
+}
 
-    let mut req = client.get(url);
-    if let Some((start, end)) = range {
-        req = req.header("Range", format!("bytes={}-{}", start, end));
-    }
+/// Shared client for transfers. Reqwest's blocking client has no read timeout, and the
+/// time a transfer may take depends on its size, so each request sets its own budget.
+pub(crate) fn http_client() -> &'static reqwest::blocking::Client {
+    static CLIENT: LazyLock<reqwest::blocking::Client> = LazyLock::new(|| build_client(None));
+    &CLIENT
+}
 
-    let resp = req.send()?;
+/// Client for requests a reader is waiting on, where a quick failure beats a late answer.
+fn interactive_client() -> &'static reqwest::blocking::Client {
+    static CLIENT: LazyLock<reqwest::blocking::Client> =
+        LazyLock::new(|| build_client(Some(Duration::from_secs(6))));
+    &CLIENT
+}
+
+/// Small metadata fetches: registry and app manifest.
+fn metadata_client() -> &'static reqwest::blocking::Client {
+    static CLIENT: LazyLock<reqwest::blocking::Client> =
+        LazyLock::new(|| build_client(Some(Duration::from_secs(30))));
+    &CLIENT
+}
+
+pub(crate) fn get_metadata(url: &str) -> Result<Vec<u8>> {
+    get_bytes(metadata_client(), url)
+}
+
+/// Fetch made while a page waits for it.
+pub(crate) fn get_interactive(url: &str) -> Result<Vec<u8>> {
+    get_bytes(interactive_client(), url)
+}
+
+fn get_bytes(client: &reqwest::blocking::Client, url: &str) -> Result<Vec<u8>> {
+    let resp = client.get(url).send()?;
     let status = resp.status();
-    if !status.is_success() && status != reqwest::StatusCode::PARTIAL_CONTENT {
+    if !status.is_success() {
         return Err(DocxError::HttpStatus {
             status: status.as_u16(),
             url: url.to_string(),

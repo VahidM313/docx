@@ -48,7 +48,9 @@ IframePanel.displayName = "IframePanel";
 
 /** Keep at most this many document renderers alive. Each one is a full
  *  cross-origin web renderer, so unbounded tab counts are a memory leak. */
-const MAX_LIVE_IFRAMES = 3;
+const MAX_LIVE_IFRAMES = 2;
+/** Hidden pages only exist for quick switching; after this long their memory matters more. */
+const HIDDEN_TAB_TTL_MS = 120_000;
 
 export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | null> }) {
   const app = useApp();
@@ -57,6 +59,9 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
   const [loading, setLoading] = React.useState<Record<string, boolean>>({});
   const [, force] = React.useState(0);
   const [mounted, setMounted] = React.useState<string[]>([]);
+  const scrollByTab = React.useRef<Record<string, { path: string; y: number }>>({});
+  /* Applying settings restyles the whole page, so a frame only hears about real changes. */
+  const sentSettings = React.useRef<Record<string, string>>({});
 
   const webTabs = app.tabs.filter((t) => t.siteId !== "home");
   const activeWeb = webTabs.find((t) => t.id === app.activeTabId) ?? null;
@@ -71,6 +76,15 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
       return next.length > MAX_LIVE_IFRAMES ? next.slice(next.length - MAX_LIVE_IFRAMES) : next;
     });
   }, [activeWebId]);
+
+  React.useEffect(() => {
+    if (mounted.length === 0 || (activeWebId && mounted.length === 1)) return;
+    const timer = window.setTimeout(
+      () => setMounted((prev) => (activeWebId ? prev.slice(-1) : [])),
+      HIDDEN_TAB_TTL_MS,
+    );
+    return () => window.clearTimeout(timer);
+  }, [mounted, activeWebId]);
 
   const liveTabs = React.useMemo(
     () => webTabs.filter((t) => mounted.includes(t.id)),
@@ -128,25 +142,31 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
     for (const t of liveTabs) {
       try {
         const prefs = app.getDocPrefs(t.siteId);
-        iframeRefs.current[t.id]?.contentWindow?.postMessage(
-          {
-            type: "DOCX_READER_SETTINGS",
-            siteId: t.siteId,
-            zoom: app.readerZoom,
-            darkMode: app.effectiveSiteDark(t.siteId),
-            systemDark: app.isDark,
-            themeEnabled: app.flags.themeSync,
-            fontEnabled: app.flags.customFont,
-            customFontEnabled: app.flags.customFont,
-            fontSize: prefs.fontSize,
-            fontFamily: prefs.fontFamily,
-          },
-          "*",
-        );
+        const settings = {
+          type: "DOCX_READER_SETTINGS",
+          siteId: t.siteId,
+          zoom: app.readerZoom,
+          darkMode: app.effectiveSiteDark(t.siteId),
+          systemDark: app.isDark,
+          themeEnabled: app.flags.themeSync,
+          fontEnabled: app.flags.customFont,
+          customFontEnabled: app.flags.customFont,
+          fontSize: prefs.fontSize,
+          fontFamily: prefs.fontFamily,
+        };
+        const key = JSON.stringify(settings);
+        if (sentSettings.current[t.id] === key) continue;
+        sentSettings.current[t.id] = key;
+        iframeRefs.current[t.id]?.contentWindow?.postMessage(settings, "*");
       } catch {}
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [app.readerZoom, app.effectiveSiteDark, app.flags, app.isDark, app.overrideDocTheme, app.docPrefs, liveTabs]);
+
+  const broadcastRef = React.useRef(broadcast);
+  React.useEffect(() => {
+    broadcastRef.current = broadcast;
+  });
 
   React.useEffect(broadcast, [app.readerZoom, app.effectiveSiteDark, app.flags.themeSync, app.flags.customFont, app.docPrefs, app.overrideDocTheme, app.isDark, liveTabs, broadcast]);
 
@@ -161,9 +181,28 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
     );
   }, [app.activeDocFa, activeWebId]);
 
-  const { setTranslatingState, toast } = app;
+  const { setTranslatingState, toast, activeDocFa, toggleActiveDocFa } = app;
   React.useEffect(() => {
     const handleMessage = async (e: MessageEvent) => {
+      const tabId = Object.keys(iframeRefs.current).find(
+        (id) => iframeRefs.current[id]?.contentWindow === e.source,
+      );
+      if (e.data?.type === "DOCX_SCROLL") {
+        if (tabId) scrollByTab.current[tabId] = { path: e.data.path, y: e.data.y };
+        return;
+      }
+      if (e.data?.type === "DOCX_IFRAME_READY") {
+        // A soft navigation replaced the content, which has not seen the settings yet
+        if (tabId) delete sentSettings.current[tabId];
+        broadcastRef.current();
+        return;
+      }
+      if (e.data?.type === "DOCX_NATIVE_FA_ACTIVE") {
+        if (!activeDocFa) {
+          toggleActiveDocFa(true);
+        }
+        return;
+      }
       if (e.data?.type === "DOCX_REQUEST_TRANSLATION" && Array.isArray(e.data.items)) {
         const sendToDoc = (payload: unknown) => {
           if (e.source && typeof (e.source as Window).postMessage === "function") {
@@ -199,7 +238,7 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
         } catch (err) {
           console.error("Translation failed:", err);
           toast({
-            kind: "danger",
+            kind: "error",
             message: "خطا در ترجمه صفحه • Translation error",
           });
         } finally {
@@ -209,7 +248,7 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
     };
     window.addEventListener("message", handleMessage);
     return () => window.removeEventListener("message", handleMessage);
-  }, [activeWebId, setTranslatingState, toast]);
+  }, [activeWebId, setTranslatingState, toast, activeDocFa, toggleActiveDocFa]);
 
   /* ---- imperative api ---- */
   React.useImperativeHandle(props.apiRef, () => ({
@@ -275,7 +314,12 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
             active={t.id === app.activeTabId}
             onLoad={() => {
               window.setTimeout(() => setLoading((l) => ({ ...l, [t.id]: false })), 250);
+              delete sentSettings.current[t.id];
               broadcast();
+              const scroll = scrollByTab.current[t.id];
+              if (scroll) {
+                iframeRefs.current[t.id]?.contentWindow?.postMessage({ type: "DOCX_RESTORE_SCROLL", ...scroll }, "*");
+              }
               if (app.activeDocFa || app.translationPrefs.autoTranslate) {
                 iframeRefs.current[t.id]?.contentWindow?.postMessage({ type: "DOCX_TRANSLATE_FA" }, "*");
               }

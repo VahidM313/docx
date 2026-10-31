@@ -2617,6 +2617,22 @@ devsite-header {
     }
   } catch (e) {}
 
+  // The app unloads hidden tabs to save memory; this puts them back where they were.
+  var scrollReport = null;
+  window.addEventListener('scroll', function() {
+    if (scrollReport) return;
+    scrollReport = setTimeout(function() {
+      scrollReport = null;
+      window.parent.postMessage({ type: 'DOCX_SCROLL', path: location.pathname + location.search, y: Math.round(window.scrollY) }, '*');
+    }, 250);
+  }, { passive: true });
+  window.addEventListener('message', function(e) {
+    if (e.data && e.data.type === 'DOCX_RESTORE_SCROLL' && e.data.path === location.pathname + location.search) {
+      window.scrollTo(0, e.data.y);
+      // Late images and fonts can still move the page right after load
+      setTimeout(function() { window.scrollTo(0, e.data.y); }, 300);
+    }
+  });
   window.addEventListener('message', function(e) {
     if (!e.data || e.data.type !== 'DOCX_READER_SETTINGS') return;
     if (typeof e.data.systemDark === 'boolean') {
@@ -2921,12 +2937,73 @@ devsite-header {
     return result;
   }
 
-  function findBuiltinPersianUrl() {
+  function isNativePersianPage() {
     var path = window.location.pathname.toLowerCase();
-    if (path.indexOf('/fa/') !== -1 || path.indexOf('/fa') === 0 || path.indexOf('_(فارسی)') !== -1) {
+    var pageLang = (document.documentElement.lang || (document.body && document.body.getAttribute('lang')) || '').toLowerCase();
+    if (pageLang.startsWith('fa') || pageLang === 'per' || pageLang === 'pes') {
+      return true;
+    }
+    if (path.indexOf('/fa/') !== -1 || path.indexOf('/fa') === 0 || path.indexOf('_(فارسی)') !== -1 || path.indexOf('/book/fa/') !== -1) {
+      return true;
+    }
+    if (SITE_ID === 'react' && path.startsWith('/fa')) return true;
+    if (SITE_ID === 'vue' && path.startsWith('/fa')) return true;
+    if (SITE_ID === 'kubernetes' && path.indexOf('/fa/') !== -1) return true;
+    if (SITE_ID === 'gin' && path.indexOf('/fa/') !== -1) return true;
+    if (SITE_ID === 'python' && path.indexOf('/fa/') !== -1) return true;
+    if (SITE_ID === 'flask' && path.indexOf('/fa') !== -1) return true;
+    if (SITE_ID === 'git' && path.indexOf('/book/fa/') !== -1) return true;
+
+    return false;
+  }
+
+  function findBuiltinPersianUrl() {
+    if (isNativePersianPage()) {
       return null;
     }
 
+    var path = window.location.pathname;
+
+    // 1. Explicit verified mappings for documentation ecosystems with built-in Persian support
+    if (SITE_ID === 'react') {
+      var p = path || '/learn';
+      if (!p.startsWith('/')) p = '/' + p;
+      return '/fa' + p;
+    }
+    if (SITE_ID === 'vue') {
+      var vp = path || '/guide/introduction.html';
+      if (!vp.startsWith('/')) vp = '/' + vp;
+      return '/fa' + vp;
+    }
+    if (SITE_ID === 'kubernetes') {
+      if (path.indexOf('/docs/') !== -1) {
+        return path.replace(/\/docs\//, '/fa/docs/');
+      }
+      return '/fa/docs/home/';
+    }
+    if (SITE_ID === 'gin') {
+      if (path.indexOf('/en/docs/') !== -1) {
+        return path.replace(/\/en\/docs\//, '/fa/docs/');
+      }
+      if (path.indexOf('/docs/') !== -1) {
+        return path.replace(/\/docs\//, '/fa/docs/');
+      }
+      return '/fa/docs/';
+    }
+    if (SITE_ID === 'python') {
+      if (path.indexOf('/3/') !== -1) {
+        return path.replace(/\/3\//, '/fa/3.13/');
+      }
+      return '/fa/3.13/';
+    }
+    if (SITE_ID === 'flask') {
+      return '/fa/';
+    }
+    if (SITE_ID === 'git') {
+      return '/book/fa/v2';
+    }
+
+    // 2. Generic HTML alternate link tags
     var alt = document.querySelector('link[rel="alternate"][hreflang^="fa"], link[rel="alternate"][hreflang^="per"]');
     if (alt && alt.getAttribute('href')) {
       return alt.getAttribute('href');
@@ -2948,17 +3025,17 @@ devsite-header {
       }
     }
 
-    var siteMeta = document.querySelector('meta[name="docx-site-id"]');
-    var siteId = siteMeta ? siteMeta.getAttribute('content') : '__DOCX_SITE_ID__';
-    if (siteId === 'fastapi') {
-      return '/fa' + (path.startsWith('/') ? path : '/' + path);
-    }
-
     return null;
   }
 
   function applyPersianTranslation() {
-    // 1. If site has built-in Persian documentation, navigate directly to it
+    // 1. If page is ALREADY native Persian:
+    // DO NOT translate with plugin! DO NOT force synthetic RTL!
+    if (isNativePersianPage()) {
+      return;
+    }
+
+    // 2. If site has built-in Persian documentation, navigate directly to it
     var builtinUrl = findBuiltinPersianUrl();
     if (builtinUrl) {
       try {
@@ -2968,13 +3045,7 @@ devsite-header {
       return;
     }
 
-    // 2. If page is already native Persian, avoid machine translation
-    var pageLang = (document.documentElement.lang || '').toLowerCase();
-    if (pageLang.startsWith('fa') || pageLang === 'per' || pageLang === 'pes' || window.location.pathname.indexOf('/fa/') !== -1) {
-      return;
-    }
-
-    // 3. Otherwise, use in-place DOM translation with permanent offline cache
+    // 3. Otherwise (site has NO built-in Persian), use in-place DOM translation plugin + clean RTL
     isPersianMode = true;
     document.documentElement.dir = 'rtl';
     document.documentElement.classList.add('docx-fa-active');
@@ -3036,12 +3107,43 @@ devsite-header {
         window.location.href = savedEn;
         return;
       }
-      if (window.location.pathname.indexOf('/fa/') !== -1) {
-        var enPath = window.location.pathname.replace(/\/fa\//, '/');
-        window.location.pathname = enPath;
+    } catch(e) {}
+
+    var path = window.location.pathname;
+    if (isNativePersianPage()) {
+      if (SITE_ID === 'react' && path.startsWith('/fa')) {
+        window.location.pathname = path.replace(/^\/fa/, '') || '/learn';
         return;
       }
-    } catch(e) {}
+      if (SITE_ID === 'vue' && path.startsWith('/fa')) {
+        window.location.pathname = path.replace(/^\/fa/, '') || '/guide/introduction.html';
+        return;
+      }
+      if (SITE_ID === 'kubernetes' && path.indexOf('/fa/docs/') !== -1) {
+        window.location.pathname = path.replace(/\/fa\/docs\//, '/docs/');
+        return;
+      }
+      if (SITE_ID === 'gin' && path.indexOf('/fa/docs/') !== -1) {
+        window.location.pathname = path.replace(/\/fa\/docs\//, '/en/docs/');
+        return;
+      }
+      if (SITE_ID === 'python' && path.indexOf('/fa/') !== -1) {
+        window.location.pathname = path.replace(/\/fa\/(3(?:\.\d+)?\/)?/, '/3/');
+        return;
+      }
+      if (SITE_ID === 'flask' && path.indexOf('/fa') !== -1) {
+        window.location.pathname = '/';
+        return;
+      }
+      if (SITE_ID === 'git' && path.indexOf('/book/fa/') !== -1) {
+        window.location.pathname = '/docs/git';
+        return;
+      }
+      if (path.indexOf('/fa/') !== -1) {
+        window.location.pathname = path.replace(/\/fa\//, '/');
+        return;
+      }
+    }
 
     // 2. In-place DOM restoration
     isPersianMode = false;
@@ -3058,6 +3160,16 @@ devsite-header {
       delete el.dataset.docxOriginal;
       delete el.dataset.docxHash;
     }
+  }
+
+  // If this page is natively Persian, notify parent host to illuminate Persian toggle
+  if (isNativePersianPage()) {
+    try {
+      window.parent.postMessage({
+        type: 'DOCX_NATIVE_FA_ACTIVE',
+        siteId: SITE_ID
+      }, '*');
+    } catch(e) {}
   }
 
   window.addEventListener('message', function(e) {

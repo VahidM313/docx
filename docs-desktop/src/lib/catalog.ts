@@ -16,6 +16,7 @@ export interface SiteBrand {
   origin?: string;
   entryPath: string;
   embedded?: boolean;
+  hasBuiltinPersian?: boolean;
   defaultRoutes?: { label: string; path: string }[];
 }
 

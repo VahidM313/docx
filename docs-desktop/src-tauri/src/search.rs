@@ -6,7 +6,9 @@
 
 use std::fs;
 
-use crate::pack::get_packs_dir;
+use std::sync::Arc;
+
+use crate::pack::{get_packs_dir, AssetStore, SEARCH_ROUTE};
 use crate::server::AppState;
 
 fn normalize_site_id(id: &str) -> &str {
@@ -63,57 +65,60 @@ fn humanize_route_title(route: &str, site_name: &str) -> (String, String) {
 }
 
 #[tauri::command]
-pub(crate) fn get_extra_search_entries(
+pub(crate) async fn get_extra_search_entries(
     site_id: String,
     state: tauri::State<'_, AppState>,
-) -> Vec<serde_json::Value> {
-    let site = normalize_site_id(&site_id).to_string();
-    let packs_dir = get_packs_dir();
-    let index_path = packs_dir.join(format!("{}.search.json", site));
+) -> Result<Vec<serde_json::Value>, String> {
+    let store = Arc::clone(&state.store);
+    tauri::async_runtime::spawn_blocking(move || read_search_entries(&site_id, &store))
+        .await
+        .map_err(|e| format!("Task join error: {e}"))
+}
+
+fn read_search_entries(site_id: &str, store: &AssetStore) -> Vec<serde_json::Value> {
+    let site = normalize_site_id(site_id).to_string();
+    let index_path = get_packs_dir().join(format!("{}.search.json", site));
+
+    let pack = store.overrides.read().ok().and_then(|guard| guard.get(&site).cloned());
 
     // Fast path: the crawler already produced a per-site deep index.
+    if let Some(data) = pack.as_ref().and_then(|p| p.read_route(SEARCH_ROUTE)) {
+        let json = crate::server::decompress_html_body_if_needed(&data.bytes, data.encoding.as_deref(), data.gzipped);
+        if let Ok(items) = serde_json::from_str::<Vec<serde_json::Value>>(&json) {
+            return items;
+        }
+    }
     if let Ok(bytes) = fs::read(&index_path)
         && let Ok(items) = serde_json::from_slice::<Vec<serde_json::Value>>(&bytes) {
             return items;
         }
 
     // Fallback: synthesize titles/headings from this one pack's HTML chunks.
-    let pack = state
-        .store
-        .overrides
-        .read()
-        .ok()
-        .and_then(|guard| guard.get(&site).cloned());
     let Some(pack) = pack else {
         return Vec::new();
     };
 
-    let mut routes: Vec<&String> = pack
-        .manifest
-        .routes
-        .iter()
-        .filter(|(r, e)| {
-            e.mime.contains("text/html")
-                && !r.contains("_static/")
+    let routes: Vec<String> = pack
+        .html_routes()
+        .into_iter()
+        .filter(|r| {
+            !r.contains("_static/")
                 && !r.contains("_assets/")
                 && !r.ends_with(".js")
                 && !r.ends_with(".css")
         })
-        .map(|(r, _)| r)
         .collect();
-    routes.sort();
 
     let mut site_entries = Vec::new();
-    for route in routes {
-        let (mut title, category) = humanize_route_title(route, &pack.manifest.name);
+    for route in &routes {
+        let (mut title, category) = humanize_route_title(route, &pack.meta.name);
         let mut headings: Vec<String> = Vec::new();
         let mut keywords: Vec<String> = Vec::new();
-        if let Some(entry) = pack.manifest.routes.get(route)
-            && let Some(raw) = pack.read_chunk(entry.offset, entry.length) {
+        if let Some(data) = pack.read_route(route) {
                 let html = crate::server::decompress_html_body_if_needed(
-                    &raw,
-                    entry.encoding.as_deref(),
-                    entry.gzipped,
+                    &data.bytes,
+                    data.encoding.as_deref(),
+                    data.gzipped,
                 );
                 if let Some(ts) = html.find("<title")
                     && let Some(gt) = html[ts..].find('>') {
@@ -158,7 +163,7 @@ pub(crate) fn get_extra_search_entries(
             "site": site,
             "headings": headings,
             "keywords": keywords,
-            "preview": format!("{} — {} offline documentation ({})", title, pack.manifest.name, route),
+            "preview": format!("{} — {} offline documentation ({})", title, pack.meta.name, route),
         });
         site_entries.push(item);
     }

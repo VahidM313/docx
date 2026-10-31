@@ -2,16 +2,25 @@
 //! with embedded docs back on, and restart in-place.
 
 use std::fs;
+#[cfg(all(desktop, target_os = "windows"))]
 use std::sync::Arc;
+#[cfg(all(desktop, target_os = "windows"))]
 use std::thread;
+#[cfg(all(desktop, target_os = "windows"))]
 use std::time::Duration;
 
-use crate::config::{APP_BUILD_COMMIT, RELEASE_BASE_URL, TRAILER_MAGIC};
-use crate::error::{read_guard, DocxError};
+use crate::config::{APP_BUILD_COMMIT, RELEASE_BASE_URL};
 use crate::pack::get_packs_dir;
 use crate::server::AppState;
-use crate::update::{curl_download_with_progress, DownloadProgressPayload};
-use crate::util::curl_get_bytes;
+use crate::util::get_metadata;
+#[cfg(all(desktop, target_os = "windows"))]
+use crate::commands::write_exe_with_trailer;
+#[cfg(all(desktop, target_os = "windows"))]
+use crate::error::{read_guard, DocxError};
+#[cfg(all(desktop, target_os = "windows"))]
+use crate::pack::{SiteOverridePack, EMBEDDED_SOURCE};
+#[cfg(all(desktop, target_os = "windows"))]
+use crate::update::{download_resumable, DownloadProgressPayload, Progress};
 
 #[derive(serde::Deserialize, serde::Serialize, Clone)]
 #[allow(non_snake_case)]
@@ -54,9 +63,15 @@ fn read_saved_local_app_commit() -> Option<String> {
 }
 
 #[tauri::command]
-pub(crate) fn check_app_update() -> Result<AppUpdateStatus, String> {
+pub(crate) async fn check_app_update() -> Result<AppUpdateStatus, String> {
+    tauri::async_runtime::spawn_blocking(read_app_update_status)
+        .await
+        .map_err(|e| format!("Task join error: {e}"))?
+}
+
+fn read_app_update_status() -> Result<AppUpdateStatus, String> {
     let url = format!("{}/app-manifest.json", RELEASE_BASE_URL);
-    let bytes = curl_get_bytes(&url, None)?;
+    let bytes = get_metadata(&url)?;
     let rem: AppManifestRemote = serde_json::from_slice(&bytes).map_err(|e| e.to_string())?;
     let compiled_commit = APP_BUILD_COMMIT.to_string();
     let saved_commit = read_saved_local_app_commit().unwrap_or_default();
@@ -115,55 +130,56 @@ pub(crate) async fn self_update_app(
 
         // Fetch and persist remote app-manifest.json so check_app_update knows we are up to date after restart
         let manifest_url = format!("{}/app-manifest.json", RELEASE_BASE_URL);
-        if let Ok(manifest_bytes) = curl_get_bytes(&manifest_url, None) {
+        if let Ok(manifest_bytes) = get_metadata(&manifest_url) {
             let packs_dir = get_packs_dir();
             let _ = fs::create_dir_all(&packs_dir);
             let _ = fs::write(packs_dir.join("app-manifest.local.json"), &manifest_bytes);
         }
 
         let core_url = format!("{}/Docx-core.exe", RELEASE_BASE_URL);
-        let mut new_exe_bytes = curl_download_with_progress(
+        let mut sink = |payload: DownloadProgressPayload| {
+            let _ = window.emit("docpack-progress", payload);
+        };
+        let mut progress = Progress::new("docx_app_core", &mut sink);
+        let core_bytes = download_resumable(
             &core_url,
             &tmp_core_path,
             4 * 1024 * 1024,
-            "docx_app_core",
-            &window,
+            "Downloading app",
+            &mut progress,
         )?;
-        let _ = fs::remove_file(&tmp_core_path);
-        let core_dl_mb = new_exe_bytes.len() as f64 / (1024.0 * 1024.0);
+        let core_dl_mb = core_bytes as f64 / (1024.0 * 1024.0);
 
         let _ = window.emit(
             "docpack-progress",
             DownloadProgressPayload {
                 site_id: "docx_app_core".to_string(),
                 phase: "Preserving Embedded Docs...".to_string(),
-                downloaded_bytes: new_exe_bytes.len(),
-                total_bytes: new_exe_bytes.len(),
+                downloaded_bytes: core_bytes as usize,
+                total_bytes: core_bytes as usize,
                 percent: 96,
                 detail: "Splicing local DOCXPACK trailer onto new app core...".to_string(),
             },
         );
 
-        let mut trailer_payload: Vec<u8> = Vec::new();
-        let guard = read_guard(&store.overrides)?;
-        for pack in guard.values() {
-            if let Some(bytes) = pack.read_full_pack_bytes() {
-                let len = bytes.len() as u32;
-                trailer_payload.extend_from_slice(&len.to_le_bytes());
-                trailer_payload.extend_from_slice(&bytes);
-            }
-        }
-        drop(guard);
+        // Only what the exe already carried: every other pack is a file of its own,
+        // and copying those in would grow the exe by the whole library.
+        let embedded: Vec<Arc<SiteOverridePack>> = read_guard(&store.overrides)?
+            .values()
+            .filter(|pack| pack.source == EMBEDDED_SOURCE)
+            .cloned()
+            .collect();
 
-        if !trailer_payload.is_empty() {
-            let trailer_len = trailer_payload.len() as u64;
-            new_exe_bytes.extend_from_slice(&trailer_payload);
-            new_exe_bytes.extend_from_slice(&trailer_len.to_le_bytes());
-            new_exe_bytes.extend_from_slice(TRAILER_MAGIC);
-        }
-
-        fs::write(&staged_exe_path, &new_exe_bytes)
+        fs::copy(&tmp_core_path, &staged_exe_path)
             .map_err(|e| DocxError::io_path(&staged_exe_path, &e))?;
+        let _ = fs::remove_file(&tmp_core_path);
+        let mut staged = fs::OpenOptions::new()
+            .append(true)
+            .open(&staged_exe_path)
+            .map_err(|e| DocxError::io_path(&staged_exe_path, &e))?;
+        let trailer_len = write_exe_with_trailer(&mut staged, &embedded)
+            .map_err(|e| DocxError::io_path(&staged_exe_path, &e))?;
+        drop(staged);
 
         // Write a hidden background updater script in %TEMP% that waits for process exit,
         // overwrites Docx.exe in-place (zero .old.exe files!), and immediately relaunches Docx.exe
@@ -193,13 +209,13 @@ pub(crate) async fn self_update_app(
             DownloadProgressPayload {
                 site_id: "docx_app_core".to_string(),
                 phase: "Restarting...".to_string(),
-                downloaded_bytes: new_exe_bytes.len(),
-                total_bytes: new_exe_bytes.len(),
+                downloaded_bytes: core_bytes as usize,
+                total_bytes: core_bytes as usize,
                 percent: 100,
                 detail: format!(
                     "Updated ({:.2} MB core + {:.2} MB docs). Restarting Docx automatically...",
                     core_dl_mb,
-                    trailer_payload.len() as f64 / (1024.0 * 1024.0)
+                    trailer_len as f64 / (1024.0 * 1024.0)
                 ),
             },
         );

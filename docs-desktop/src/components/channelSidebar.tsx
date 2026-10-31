@@ -17,6 +17,7 @@ export function ChannelSidebar({ onNavigate }: { onNavigate?: () => void }) {
   const app = useApp();
   const [categoryMenuOpen, setCategoryMenuOpen] = React.useState(false);
   const [collapsedGroups, setCollapsedGroups] = React.useState<Record<string, boolean>>({});
+  const entryById = React.useMemo(() => new Map(app.entries.map((e) => [e.id, e])), [app.entries]);
 
   // Filter docs for the selected category
   const categoryDocs = React.useMemo(() => {
@@ -39,7 +40,7 @@ export function ChannelSidebar({ onNavigate }: { onNavigate?: () => void }) {
         return false;
       }
       // Quick filter
-      const entry = app.entries.find((e) => e.id === doc.id);
+      const entry = entryById.get(doc.id);
       if (app.quickFilter === "installed") {
         return entry?.installed;
       }
@@ -48,7 +49,7 @@ export function ChannelSidebar({ onNavigate }: { onNavigate?: () => void }) {
       }
       return true;
     });
-  }, [categoryDocs, app.channelSearchQuery, app.quickFilter, app.entries, app.bookmarks]);
+  }, [categoryDocs, app.channelSearchQuery, app.quickFilter, entryById, app.bookmarks]);
 
   // Discord Channel Groups (Collapsible category sections)
   const channelGroups = React.useMemo(() => {
@@ -63,8 +64,8 @@ export function ChannelSidebar({ onNavigate }: { onNavigate?: () => void }) {
       return groups;
     }
 
-    const installed = filteredDocs.filter((d) => app.entries.find((e) => e.id === d.id)?.installed);
-    const available = filteredDocs.filter((d) => !app.entries.find((e) => e.id === d.id)?.installed);
+    const installed = filteredDocs.filter((d) => entryById.get(d.id)?.installed);
+    const available = filteredDocs.filter((d) => !entryById.get(d.id)?.installed);
 
     const groups: { name: string; docs: SiteBrand[] }[] = [];
     if (installed.length > 0) {
@@ -80,7 +81,7 @@ export function ChannelSidebar({ onNavigate }: { onNavigate?: () => void }) {
       groups.push({ name: "Documentation", docs: filteredDocs });
     }
     return groups;
-  }, [app.selectedCategory, filteredDocs, app.entries]);
+  }, [app.selectedCategory, filteredDocs, entryById]);
 
   const toggleGroup = (groupName: string) => {
     setCollapsedGroups((prev) => ({
@@ -90,6 +91,7 @@ export function ChannelSidebar({ onNavigate }: { onNavigate?: () => void }) {
   };
 
   const activeDocId = app.activeTab?.siteId;
+  const savedCount = categoryDocs.filter((d) => entryById.get(d.id)?.installed).length;
 
   return (
     <aside
@@ -173,13 +175,13 @@ export function ChannelSidebar({ onNavigate }: { onNavigate?: () => void }) {
         <button
           type="button"
           onClick={() => app.setPaletteOpen(true)}
-          className="flex h-7 w-full items-center justify-between rounded bg-background-deep px-2 text-xs text-muted-foreground hover:bg-accent/60 transition-colors"
+          className="flex h-7 w-full items-center justify-between rounded bg-background-deep px-2 text-xs text-muted-foreground hover:bg-accent/60 transition-colors pointer-coarse:h-10"
         >
           <span className="flex items-center gap-1.5 truncate">
             <Search className="h-3.5 w-3.5" />
             <span>Search docs...</span>
           </span>
-          <kbd className="rounded bg-background px-1.5 py-0.5 text-[10px] font-mono text-muted-foreground border border-border">
+          <kbd className="rounded bg-background px-1.5 py-0.5 text-[10px] font-mono text-muted-foreground border border-border pointer-coarse:hidden">
             Ctrl K
           </kbd>
         </button>
@@ -191,7 +193,7 @@ export function ChannelSidebar({ onNavigate }: { onNavigate?: () => void }) {
           type="button"
           onClick={() => app.setQuickFilter("all")}
           className={
-            "rounded px-2 py-0.5 transition-colors " +
+            "rounded px-2 py-0.5 transition-colors pointer-coarse:py-2 " +
             (app.quickFilter === "all"
               ? "bg-accent text-foreground font-semibold"
               : "hover:bg-accent/50")
@@ -203,7 +205,7 @@ export function ChannelSidebar({ onNavigate }: { onNavigate?: () => void }) {
           type="button"
           onClick={() => app.setQuickFilter("installed")}
           className={
-            "rounded px-2 py-0.5 transition-colors " +
+            "rounded px-2 py-0.5 transition-colors pointer-coarse:py-2 " +
             (app.quickFilter === "installed"
               ? "bg-accent text-foreground font-semibold"
               : "hover:bg-accent/50")
@@ -215,7 +217,7 @@ export function ChannelSidebar({ onNavigate }: { onNavigate?: () => void }) {
           type="button"
           onClick={() => app.setQuickFilter("bookmarks")}
           className={
-            "rounded px-2 py-0.5 transition-colors " +
+            "rounded px-2 py-0.5 transition-colors pointer-coarse:py-2 " +
             (app.quickFilter === "bookmarks"
               ? "bg-accent text-foreground font-semibold"
               : "hover:bg-accent/50")
@@ -241,7 +243,7 @@ export function ChannelSidebar({ onNavigate }: { onNavigate?: () => void }) {
                 <button
                   type="button"
                   onClick={() => toggleGroup(group.name)}
-                  className="flex w-full items-center gap-1.5 px-2 pt-2 pb-1 text-[11px] font-bold uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors group cursor-pointer"
+                  className="flex w-full items-center gap-1.5 px-2 pt-2 pb-1 text-[11px] font-bold uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors group cursor-pointer pointer-coarse:pb-2"
                   aria-expanded={!isCollapsed}
                 >
                   <ChevronDown
@@ -261,7 +263,7 @@ export function ChannelSidebar({ onNavigate }: { onNavigate?: () => void }) {
                   group.docs.map((doc) => {
                     const isActive = activeDocId === doc.id;
                     const isOpened = app.openedDocs.includes(doc.id);
-                    const entry = app.entries.find((e) => e.id === doc.id);
+                    const entry = entryById.get(doc.id);
                     const isInstalled = !!entry?.installed;
 
                     return (
@@ -278,9 +280,9 @@ export function ChannelSidebar({ onNavigate }: { onNavigate?: () => void }) {
                         <button
                           type="button"
                           onClick={() => {
-                            app.openSite(doc.id);
+                            const opened = app.openDoc(doc.id);
                             app.markDocOpened(doc.id);
-                            onNavigate?.();
+                            if (opened) onNavigate?.();
                           }}
                           className={
                             "discord-channel-item w-full text-left relative pl-3 " +
@@ -325,11 +327,10 @@ export function ChannelSidebar({ onNavigate }: { onNavigate?: () => void }) {
                                   key={route.path}
                                   type="button"
                                   onClick={() => {
-                                    app.openSite(doc.id, route.path);
-                                    onNavigate?.();
+                                    if (app.openDoc(doc.id, route.path)) onNavigate?.();
                                   }}
                                   className={
-                                    "flex w-full items-center gap-1.5 rounded px-2 py-1 text-xs transition-colors " +
+                                    "flex w-full items-center gap-1.5 rounded px-2 py-1 text-xs transition-colors pointer-coarse:py-2.5 " +
                                     (isRouteActive
                                       ? "bg-accent text-foreground font-medium"
                                       : "text-muted-foreground hover:bg-accent/40 hover:text-foreground")
@@ -351,12 +352,17 @@ export function ChannelSidebar({ onNavigate }: { onNavigate?: () => void }) {
         )}
       </div>
 
-      {/* 5. Clean Offline Status Dock (No profile bar, pure black) */}
-      <div className="h-11 bg-background-deep border-t border-border px-3 flex items-center justify-between shrink-0">
+      {/* 5. Clean Offline Status Dock (No profile bar, pure black). Phones have a bottom bar instead. */}
+      <div className="hidden h-11 bg-background-deep border-t border-border px-3 md:flex items-center justify-between shrink-0">
         <div className="flex items-center gap-2 min-w-0">
-          <span className="h-2 w-2 rounded-full bg-success ring-2 ring-background-deep shrink-0" />
+          <span
+            className={
+              "h-2 w-2 rounded-full ring-2 ring-background-deep shrink-0 " +
+              (savedCount > 0 ? "bg-success" : "bg-muted-foreground")
+            }
+          />
           <span className="text-[11px] font-medium text-muted-foreground truncate">
-            Offline Ready • {categoryDocs.length} Docs
+            {savedCount} of {categoryDocs.length} saved offline
           </span>
         </div>
 

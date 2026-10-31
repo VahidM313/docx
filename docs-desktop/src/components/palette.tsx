@@ -87,13 +87,7 @@ export default function CommandPalette() {
 
   function choose(entry: SearchEntry) {
     app.setPaletteOpen(false);
-    const installed = app.entries.find((e) => e.id === entry.site)?.installed;
-    if (!installed) {
-      app.toast({ kind: "info", message: `Installing ${getBrand(entry.site).name} first…` });
-      app.installSite(entry.site).then((ok) => ok && app.openSite(entry.site, entry.path));
-    } else {
-      app.openSite(entry.site, entry.path);
-    }
+    app.openDoc(entry.site, entry.path);
   }
 
   const grouped = React.useMemo(() => {
