@@ -61,7 +61,8 @@ function hostOf(origin: string): string {
 
 async function fetchWithMeta(url: string): Promise<{ ok: true; buf: Buffer; etag?: string; lastModified?: string; mime: string } | { ok: false; status?: number }> {
   try {
-    const res = await fetch(url, { headers: { "User-Agent": UA }, redirect: "follow" });
+    // One stalled site must not hold up every site after it, or the registry that waits on them
+    const res = await fetch(url, { headers: { "User-Agent": UA }, redirect: "follow", signal: AbortSignal.timeout(20_000) });
     if (!res.ok) return { ok: false, status: res.status };
     const buf = Buffer.from(await res.arrayBuffer());
     if (buf.length < 100) return { ok: false };

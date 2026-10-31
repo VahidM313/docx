@@ -325,6 +325,8 @@ jobs:
           gh release download packs-latest --pattern "*.icon.png" --pattern "*.meta.json" --dir ./docs-desktop/catalog/icons --clobber || true
 
       - name: Capture missing / stale icons (cached by source ETag + content hash)
+        timeout-minutes: 20
+        continue-on-error: true
         run: bun scripts/capture-icons.ts
 
       - name: Upload icon assets to packs-latest
