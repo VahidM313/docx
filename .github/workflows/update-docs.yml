@@ -205,7 +205,7 @@ jobs:
           EVENT_NAME: ${{ github.event_name }}
         run: |
           gh release view packs-latest >/dev/null 2>&1 || gh release create packs-latest --title "Docx 123-Site Offline Documentation Hub & Packs (Latest)" --notes "Docx binaries and site icons."
-          gh release view "$PACKS_TAG" >/dev/null 2>&1 || gh release create "$PACKS_TAG" --title "Docx Docpacks (v3)" --notes "Content-defined .docpack archives. The app updates them with HTTP range requests, fetching only the chunks it lacks."
+          gh release view "$PACKS_TAG" >/dev/null 2>&1 || gh release create "$PACKS_TAG" --latest=false --title "Docx Docpacks (v3)" --notes "Content-defined .docpack archives. The app updates them with HTTP range requests, fetching only the chunks it lacks."
           bun -e '
             const fs = require("fs");
             const { execSync } = require("child_process");
