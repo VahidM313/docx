@@ -1,6 +1,17 @@
 name: Build & Publish Docx App (Windows + Android) + 123 Docpacks
 
 on:
+  schedule:
+    # Hourly batches between 12 AM and 6 AM UTC (00:20, 01:20, 02:20, 03:20, 04:20, 05:20)
+    # Partitions the 145 docpacks into 6 balanced batches (~24 packs each) so doc sites are never spammed at once.
+    - cron: "20 0,1,2,3,4,5 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "docs-desktop/**"
+      - "scripts/**"
+      - ".github/workflows/update-docs.yml"
   pull_request:
     branches:
       - main
@@ -11,16 +22,22 @@ on:
   workflow_dispatch:
     inputs:
       sites:
-        description: "Site IDs to build: 'all' (all 145 packs, forced rebuild), 'missing' (only unbuilt packs), 'none' (only Docx.exe & Android APK), or comma-separated IDs (e.g. redis,duckdb)"
+        description: "Site IDs to build: 'missing' (only unbuilt packs), 'all' (all 145 packs), 'batch:0'..'batch:5' (specific batch), 'none' (only Docx.exe & Android APK), or comma-separated IDs (e.g. redis,duckdb)"
         required: false
         default: "missing"
 
 permissions:
   contents: write
 
+env:
+  # v3 packs and registry.json. App binaries and icons stay on packs-latest, whose
+  # v2 packs keep already-installed apps working until they self-update.
+  PACKS_TAG: docpacks-v3
+
 jobs:
   build-desktop-app:
     name: Build Docx.exe & Docx-core.exe (Windows x64)
+    if: github.event_name == 'push' || github.event_name == 'pull_request' || (github.event_name == 'workflow_dispatch' && (github.event.inputs.sites == 'none' || github.event.inputs.sites == 'all'))
     runs-on: windows-latest
     steps:
       - name: Checkout repository
@@ -51,6 +68,7 @@ jobs:
           cargo build --release --manifest-path src-tauri/Cargo.toml
 
       - name: Package Docx-core.exe + Standalone Docx.exe (with DOCXPACK trailer) & Upload to Release
+        if: github.event_name != 'pull_request'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SHORT_SHA: ${{ github.sha }}
@@ -65,8 +83,12 @@ jobs:
           New-Item -ItemType Directory -Force -Path "./ci-dist" | Out-Null
           Copy-Item "docs-desktop/src-tauri/target/release/app.exe" "./ci-dist/Docx-core.exe" -Force
 
-          # Download tailwind.docpack and shadcn.docpack from packs-latest to embed in standalone Docx.exe trailer
-          gh release download packs-latest --pattern "tailwind.docpack" --pattern "shadcn.docpack" --dir "./ci-dist" --clobber
+          # Embed tailwind.docpack and shadcn.docpack in the standalone Docx.exe trailer.
+          # packs-latest is the fallback for the first build, before any v3 pack exists.
+          gh release download $env:PACKS_TAG --pattern "tailwind.docpack" --pattern "shadcn.docpack" --dir "./ci-dist" --clobber
+          if ($LASTEXITCODE -ne 0) {
+            gh release download packs-latest --pattern "tailwind.docpack" --pattern "shadcn.docpack" --dir "./ci-dist" --clobber
+          }
 
           bun -e '
             const fs = require("fs");
@@ -102,6 +124,7 @@ jobs:
 
   build-android-app:
     name: Build Docx Android Release APK (ARMv8 / aarch64)
+    if: github.event_name == 'push' || github.event_name == 'pull_request' || (github.event_name == 'workflow_dispatch' && (github.event.inputs.sites == 'none' || github.event.inputs.sites == 'all'))
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -149,17 +172,17 @@ jobs:
           bun run tauri android build -t aarch64 --apk --ci
 
       - name: Upload Android Release APK to Release
+        if: github.event_name != 'pull_request'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release view packs-latest >/dev/null 2>&1 || gh release create packs-latest --title "Docx 123-Site Offline Documentation Hub & Packs (Latest)" --notes "Docx standalone binaries and 123 .docpack archives."
           cp docs-desktop/src-tauri/gen/android/app/build/outputs/apk/universal/release/app-universal-release.apk ./Docx-arm64-v8a-release.apk
-          cp ./Docx-arm64-v8a-release.apk ./Docx.apk
-          gh release upload packs-latest "./Docx-arm64-v8a-release.apk" "./Docx.apk" --clobber
+          gh release upload packs-latest "./Docx-arm64-v8a-release.apk" --clobber
 
   prepare-matrix:
     name: Prepare Docpack Matrix
-    if: github.event_name == 'pull_request' || (github.event_name == 'workflow_dispatch' && github.event.inputs.sites != 'none')
+    if: github.event_name == 'schedule' || github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.event.inputs.sites != 'none')
     runs-on: ubuntu-latest
     outputs:
       sites: ${{ steps.list.outputs.sites }}
@@ -174,44 +197,62 @@ jobs:
       - name: Catalog consistency gate (sites.d ↔ sites.json)
         run: bun scripts/gen-catalog.ts --check
 
-      - name: Ensure packs-latest release exists & resolve matrix
+      - name: Ensure releases exist & resolve matrix
         id: list
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           INPUT_SITES: ${{ github.event.inputs.sites || '' }}
           EVENT_NAME: ${{ github.event_name }}
         run: |
-          gh release view packs-latest >/dev/null 2>&1 || gh release create packs-latest --title "Docx 123-Site Offline Documentation Hub & Packs (Latest)" --notes "Content-hashed Max-Gzip .docpack archives supporting HTTP 206 Partial Range delta updates."
+          gh release view packs-latest >/dev/null 2>&1 || gh release create packs-latest --title "Docx 123-Site Offline Documentation Hub & Packs (Latest)" --notes "Docx binaries and site icons."
+          gh release view "$PACKS_TAG" >/dev/null 2>&1 || gh release create "$PACKS_TAG" --title "Docx Docpacks (v3)" --notes "Content-defined .docpack archives. The app updates them with HTTP range requests, fetching only the chunks it lacks."
           bun -e '
             const fs = require("fs");
             const { execSync } = require("child_process");
             const { SITE_CATALOG } = require("./scripts/ci-build-site.ts");
             const allIds = SITE_CATALOG.map(s => s.id);
-            let mode = process.env.INPUT_SITES;
-            if (!mode || mode === "") {
-              mode = "missing";
+            let mode = process.env.INPUT_SITES || "";
+            const eventName = process.env.EVENT_NAME;
+
+            let existingPacks = new Set();
+            try {
+              const out = execSync(`gh release view ${process.env.PACKS_TAG} --json assets`, { encoding: "utf8" });
+              const json = JSON.parse(out);
+              existingPacks = new Set(
+                (json.assets || [])
+                  .map(a => a.name)
+                  .filter(n => n.endsWith(".docpack"))
+                  .map(n => n.replace(".docpack", ""))
+              );
+            } catch (e) {
+              console.warn("Could not query release assets:", e);
             }
 
+            const missingIds = allIds.filter(id => !existingPacks.has(id));
             let resolved = [];
-            if (mode === "all") {
+
+            if (eventName === "schedule") {
+              // Between 12 AM and 6 AM UTC (hours 0..5), run one shard (1/6th of sites) per hour
+              const hour = new Date().getUTCHours();
+              const shard = hour % 6;
+              const batchSites = allIds.filter((_, idx) => idx % 6 === shard);
+              // Include the scheduled hourly shard + up to 5 missing packs (capped at 30 to prevent network spam)
+              const combined = Array.from(new Set([...batchSites, ...missingIds])).slice(0, 30);
+              resolved = combined;
+              console.log(`[Scheduled Update: Hour ${hour} UTC -> Batch ${shard}/6] Selected ${resolved.length} sites (${batchSites.length} in batch, ${missingIds.length} missing):`, resolved);
+            } else if (mode.startsWith("batch:")) {
+              const shard = parseInt(mode.replace("batch:", ""), 10) % 6;
+              resolved = allIds.filter((_, idx) => idx % 6 === shard);
+            } else if (mode === "all") {
               resolved = allIds;
-            } else if (mode === "missing") {
-              let existingPacks = new Set();
-              try {
-                const out = execSync("gh release view packs-latest --json assets", { encoding: "utf8" });
-                const json = JSON.parse(out);
-                existingPacks = new Set(
-                  (json.assets || [])
-                    .map(a => a.name)
-                    .filter(n => n.endsWith(".docpack"))
-                    .map(n => n.replace(".docpack", ""))
-                );
-              } catch (e) {
-                console.warn("Could not query packs-latest assets:", e);
-              }
-              resolved = allIds.filter(id => !existingPacks.has(id));
-            } else {
+            } else if (mode === "missing" || (!mode && eventName === "push")) {
+              resolved = missingIds;
+            } else if (mode === "none") {
+              resolved = [];
+            } else if (mode) {
               resolved = mode.split(",").map(s => s.trim()).filter(s => allIds.includes(s));
+            } else {
+              resolved = missingIds;
             }
 
             console.log(`Resolved ${resolved.length} sites to build:`, resolved);
@@ -225,9 +266,10 @@ jobs:
     needs: prepare-matrix
     if: needs.prepare-matrix.outputs.count != '0'
     runs-on: ubuntu-latest
+    continue-on-error: true
     strategy:
       fail-fast: false
-      max-parallel: 6
+      max-parallel: 4
       matrix:
         site: ${{ fromJson(needs.prepare-matrix.outputs.sites) }}
     steps:
@@ -237,32 +279,33 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
 
-      - name: Build .docpack, .manifest.json & .search.json (with regression guard)
+      - name: Build .docpack from the previous pack (with regression guard)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p ./dist-packs
-          gh release download packs-latest --pattern "${{ matrix.site }}.manifest.json" --dir ./dist-packs --clobber || true
+          gh release download "$PACKS_TAG" --pattern "${{ matrix.site }}.docpack" --dir ./dist-packs --clobber || true
+          # First v3 build of a site: its v2 pack still guards against a short crawl
+          if [ ! -f "./dist-packs/${{ matrix.site }}.docpack" ]; then
+            gh release download packs-latest --pattern "${{ matrix.site }}.docpack" --pattern "${{ matrix.site }}.search.json" --dir ./dist-packs --clobber || true
+          fi
           bun run scripts/ci-build-site.ts "${{ matrix.site }}" ./dist-packs
 
-      - name: Upload Pack to GitHub Release (packs-latest)
+      - name: Upload Pack to GitHub Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          upload_args=(
-            "./dist-packs/${{ matrix.site }}.docpack"
-            "./dist-packs/${{ matrix.site }}.manifest.json"
-            "./dist-packs/${{ matrix.site }}.search.json"
-          )
-          if [ -f "./dist-packs/${{ matrix.site }}.delta" ]; then
-            upload_args+=("./dist-packs/${{ matrix.site }}.delta")
+          if [ -f "./dist-packs/${{ matrix.site }}.changed" ]; then
+            gh release upload "$PACKS_TAG" "./dist-packs/${{ matrix.site }}.docpack" --clobber
+            echo "Successfully uploaded ${{ matrix.site }} docpack."
+          else
+            echo "Pack ${{ matrix.site }} has no new content (existing release preserved)."
           fi
-          gh release upload packs-latest "${upload_args[@]}" --clobber
 
   refresh-icons:
     name: Capture Site Icons (hybrid favicon strategy)
     needs: [prepare-matrix, build-pack]
-    if: always() && needs.prepare-matrix.result == 'success' && needs.prepare-matrix.outputs.count != '0'
+    if: always() && needs.prepare-matrix.result == 'success' && needs.prepare-matrix.outputs.count != '0' && github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -294,7 +337,7 @@ jobs:
   update-registry:
     name: Update Master registry.json
     needs: [prepare-matrix, build-pack, refresh-icons]
-    if: always() && needs.prepare-matrix.result == 'success' && needs.prepare-matrix.outputs.count != '0'
+    if: always() && needs.prepare-matrix.result == 'success' && needs.prepare-matrix.outputs.count != '0' && github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -303,55 +346,12 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
 
-      - name: Rebuild & upload master registry.json from all release manifests
+      - name: Rebuild & upload master registry.json from the pack headers
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mkdir -p ./rel-manifests/icons
-          gh release download packs-latest --pattern "*.manifest.json" --dir ./rel-manifests --clobber
+          mkdir -p ./rel-icons
           # Icon assets feed the iconETag freshness anchors in the registry
-          gh release download packs-latest --pattern "*.icon.png" --dir ./rel-manifests/icons --clobber
-          bun -e '
-            const fs = require("fs");
-            const path = require("path");
-            const crypto = require("crypto");
-            const dir = "./rel-manifests";
-            const iconsDir = "./rel-manifests/icons";
-            const packs = {};
-            for (const f of fs.readdirSync(dir)) {
-              if (!f.endsWith(".manifest.json")) continue;
-              const m = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
-              if (!m.commit || m.commit === "e3b0c442" || !m.totalBytes) continue;
-              const entry = {
-                id: m.id,
-                name: m.name,
-                version: m.version,
-                commit: m.commit,
-                updatedAt: m.updatedAt,
-                sizeMB: Number((m.totalBytes / (1024 * 1024)).toFixed(2)),
-                totalBytes: m.totalBytes,
-                chunkCount: m.chunkCount,
-                routeCount: Object.keys(m.routes || {}).length,
-                manifestFile: `${m.id}.manifest.json`,
-                packFile: `${m.id}.docpack`,
-                searchFile: `${m.id}.search.json`
-              };
-              if (m.delta && m.delta.sizeBytes) {
-                entry.delta = m.delta;
-              }
-              const iconPath = path.join(iconsDir, `${m.id}.icon.png`);
-              if (fs.existsSync(iconPath)) {
-                entry.iconFile = `${m.id}.icon.png`;
-                entry.iconETag = crypto.createHash("sha256").update(fs.readFileSync(iconPath)).digest("hex").slice(0, 16);
-              }
-              packs[m.id] = entry;
-            }
-            const registry = {
-              version: 2,
-              updatedAt: new Date().toISOString(),
-              packs
-            };
-            fs.writeFileSync("./rel-manifests/registry.json", JSON.stringify(registry, null, 2));
-            console.log("Updated registry.json with", Object.keys(packs).length, "packs!");
-          '
-          gh release upload packs-latest ./rel-manifests/registry.json --clobber
+          gh release download packs-latest --pattern "*.icon.png" --dir ./rel-icons --clobber || true
+          bun scripts/build-registry.ts "$PACKS_TAG" ./rel-icons ./registry.json
+          gh release upload "$PACKS_TAG" ./registry.json --clobber

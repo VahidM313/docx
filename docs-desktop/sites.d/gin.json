@@ -9,9 +9,11 @@
   "description": "The fastest full-featured web framework for Go featuring martini-like API with custom radix tree routing.",
   "origin": "https://gin-gonic.com",
   "entryPath": "/en/docs/",
+  "hasBuiltinPersian": true,
   "allowedPrefixes": [
     "/docs/",
-    "/en/docs/"
+    "/en/docs/",
+    "/fa/docs/"
   ],
   "maxPages": 100,
   "defaultRoutes": [

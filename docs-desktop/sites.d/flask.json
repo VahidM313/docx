@@ -9,9 +9,11 @@
   "description": "Lightweight WSGI Python web framework: flexible routing, Jinja templating, blueprints, signals, and request handling.",
   "origin": "https://flask.palletsprojects.com",
   "entryPath": "/",
+  "hasBuiltinPersian": true,
   "allowedPrefixes": [
     "/en/stable",
     "/en/latest",
+    "/fa/",
     "/"
   ],
   "maxPages": 100,

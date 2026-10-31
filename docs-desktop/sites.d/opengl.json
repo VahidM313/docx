@@ -8,7 +8,7 @@
   "bgTint": "rgba(85, 134, 164, 0.16)",
   "description": "Khronos OpenGL Reference Pages: core 2D/3D graphics rendering pipeline, GLSL shaders, textures, and framebuffers.",
   "origin": "https://registry.khronos.org",
-  "entryPath": "/OpenGL-Refpages/gl4/",
+  "entryPath": "/OpenGL-Refpages/gl4/html/indexflat.php",
   "allowedPrefixes": [
     "/OpenGL-Refpages/gl4/"
   ],

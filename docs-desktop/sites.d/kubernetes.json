@@ -9,8 +9,10 @@
   "description": "Automated container orchestration: deployment, scaling, pods, services, ingress, and cluster management.",
   "origin": "https://kubernetes.io",
   "entryPath": "/docs/home/",
+  "hasBuiltinPersian": true,
   "allowedPrefixes": [
-    "/docs/"
+    "/docs/",
+    "/fa/docs/"
   ],
   "maxPages": 160,
   "defaultRoutes": [

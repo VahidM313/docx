@@ -1,8 +1,9 @@
 import fs from "fs";
 import path from "path";
 import crypto from "crypto";
-import zlib from "zlib";
-import { generateDeltaPatch } from "./generate-delta";
+import { readLegacyPack } from "./lib/docpack-legacy";
+import { buildPack, DOCPACK_V3_VERSION, parsePack, SEARCH_ROUTE, type PackAsset, type ParsedPack } from "./lib/docpack-v3";
+import { looksFingerprinted, normalizeHtml, stableAssetKey } from "./lib/normalize-html";
 
 import siteCatalog from "../docs-desktop/sites.json";
 
@@ -36,6 +37,16 @@ export const SITE_CATALOG: SiteConfig[] = siteCatalog.sites
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 
+/** Sites whose pages only work with their own JavaScript bundles and data. */
+const SCRIPTED_SITES = new Set(["angular", "nestjs", "threejs", "rust", "lucide"]);
+
+/** A site's `maxPages` is a floor on how much we want, not a reason to ship a partial copy. */
+const PAGE_CAP_FLOOR = Number(process.env.DOCX_PAGE_CAP_FLOOR || 1500);
+const CRAWL_BUDGET_MS = Number(process.env.DOCX_CRAWL_BUDGET_MINUTES || 20) * 60_000;
+const MAX_SITEMAPS = 24;
+
+const ASSET_PLACEHOLDER = /\/__docx_assets\/[0-9a-f]{14}\.[a-z0-9]+/g;
+
 function getInjectedSnippet(_origin: string): string {
   // Runtime scrollbar, interactive UI controllers, and per-site dark/light sync
   // are injected dynamically by inject_reader_bridge in lib.rs.
@@ -68,10 +79,10 @@ function normalizeRouteKey(pathname: string): string {
   return p;
 }
 
-function assetUrlToLocalRoute(fullUrl: string, siteOrigin: string): string {
+function assetUrlToLocalRoute(fullUrl: string, siteOrigin: string, keepFingerprintedPaths: boolean): string {
   try {
     const u = new URL(fullUrl, siteOrigin);
-    if (u.origin === siteOrigin && !u.search) {
+    if (u.origin === siteOrigin && !u.search && (keepFingerprintedPaths || !looksFingerprinted(u.pathname))) {
       return u.pathname;
     }
     const extMatch = u.pathname.match(/\.(css|js|woff2|woff|ttf|svg|png|jpg|jpeg|webp|ico|gif)$/i);
@@ -193,29 +204,177 @@ async function fetchWithTimeout(
   return null;
 }
 
-export async function buildDocpackForSite(siteId: string, outDir: string) {
+function isTransientFailure(res: Response | null): boolean {
+  return !res || res.status === 403 || res.status === 429 || res.status >= 500;
+}
+
+/** Page paths listed in robots.txt sitemaps; finds pages that only JavaScript navigation links to. */
+async function discoverSitemapPages(site: SiteConfig, accept: (u: URL) => boolean): Promise<string[]> {
+  const queue = new Set<string>();
+  const robots = await fetchWithTimeout(`${site.origin}/robots.txt`, 8000, 2, undefined, site);
+  if (robots?.ok) {
+    for (const m of (await robots.text()).matchAll(/^\s*sitemap:\s*(\S+)/gim)) queue.add(m[1]);
+  }
+  queue.add(`${site.origin}/sitemap.xml`);
+  queue.add(`${site.origin}/sitemap_index.xml`);
+  const prefix = site.allowedPrefixes.find((p) => p.length > 1)?.replace(/\/?$/, "/");
+  if (prefix) queue.add(`${site.origin}${prefix}sitemap.xml`);
+
+  const pages = new Set<string>();
+  let fetched = 0;
+  for (const url of queue) {
+    if (fetched++ >= MAX_SITEMAPS) break;
+    const res = await fetchWithTimeout(url, 10000, 2, undefined, site);
+    if (!res?.ok) continue;
+    const xml = await res.text();
+    const isIndex = /<sitemapindex\b/i.test(xml);
+    for (const m of xml.matchAll(/<loc>\s*(?:<!\[CDATA\[)?\s*([^<\]\s]+)/gi)) {
+      if (isIndex) {
+        if (!m[1].endsWith(".gz")) queue.add(m[1]);
+        continue;
+      }
+      try {
+        const u = new URL(m[1].replace(/&amp;/g, "&"));
+        if (accept(u)) pages.add(u.pathname);
+      } catch {}
+    }
+  }
+  return [...pages].sort();
+}
+
+/**
+ * Gives fetched assets names that survive redeploys. During the crawl each URL has
+ * a unique placeholder route; afterwards URLs are named by their fingerprint-free
+ * key. URLs that collapse to the same key are different files, so they get ordinals.
+ */
+function applyStableAssetRoutes(rawAssets: Map<string, PackAsset>, assetUrls: Map<string, string>): Map<string, string> {
+  const groups = new Map<string, string[]>();
+  for (const [url, route] of assetUrls) {
+    if (!route.startsWith("/__docx_assets/")) continue;
+    const key = stableAssetKey(url);
+    groups.set(key, [...(groups.get(key) ?? []), url]);
+  }
+
+  const renamed = new Map<string, string>();
+  for (const [key, urls] of groups) {
+    const stem = crypto.createHash("sha256").update(key).digest("hex").slice(0, 14);
+    urls.sort().forEach((url, i) => {
+      const route = assetUrls.get(url)!;
+      renamed.set(route, `/__docx_assets/${stem}${i ? `-${i}` : ""}${path.extname(route)}`);
+    });
+  }
+
+  for (const [route, asset] of [...rawAssets]) {
+    let next = asset;
+    if (asset.mime.startsWith("text/html") || asset.mime.startsWith("text/css")) {
+      const text = asset.bytes.toString("utf-8");
+      const rewritten = text.replace(ASSET_PLACEHOLDER, (m) => renamed.get(m) ?? m);
+      if (rewritten !== text) next = { bytes: Buffer.from(rewritten, "utf-8"), mime: asset.mime };
+    }
+    const nextRoute = renamed.get(route) ?? route;
+    if (nextRoute !== route) rawAssets.delete(route);
+    rawAssets.set(nextRoute, next);
+  }
+  return renamed;
+}
+
+/** `routes` plus every route of `pack` they reference, so carried pages keep their styles and images. */
+function withReferencedRoutes(pack: ParsedPack, routes: Set<string>): Set<string> {
+  const closure = new Set<string>();
+  const pending = [...routes];
+  while (pending.length) {
+    const route = pending.pop()!;
+    if (closure.has(route) || !pack.index.p[route]) continue;
+    closure.add(route);
+    const mime = pack.mimeOf(route) ?? "";
+    if (!mime.startsWith("text/html") && !mime.startsWith("text/css")) continue;
+    const text = pack.readRoute(route)!.toString("utf-8");
+    for (const m of text.matchAll(/(?:href|src)=["'](\/[^"'#?]+)|url\(["']?(\/[^"')#?]+)/gi)) {
+      const target = m[1] || m[2];
+      if (!pack.mimeOf(target)?.startsWith("text/html")) pending.push(target);
+    }
+  }
+  return closure;
+}
+
+/** A v1/v2 pack as a v3 one, with the search index it kept in a sidecar. */
+function migrateLegacyPack(bytes: Buffer, docpackPath: string, site: SiteConfig, keepScripts: boolean): Buffer {
+  const assets = readLegacyPack(bytes);
+  for (const [route, asset] of assets) {
+    if (!asset.mime.startsWith("text/html")) continue;
+    assets.set(route, { ...asset, bytes: Buffer.from(normalizeHtml(asset.bytes.toString("utf-8"), { keepScripts }), "utf-8") });
+  }
+  const searchPath = docpackPath.replace(/\.docpack$/, ".search.json");
+  if (fs.existsSync(searchPath)) {
+    const entries: { id: string }[] = JSON.parse(fs.readFileSync(searchPath, "utf-8"));
+    entries.sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
+    assets.set(SEARCH_ROUTE, { bytes: Buffer.from(JSON.stringify(entries), "utf-8"), mime: "application/json; charset=utf-8" });
+  }
+  const { id, name, version, origin, entryPath } = site;
+  return buildPack({ id, name, version, origin, entryPath, assets }).bytes;
+}
+
+/** The pack to build on. `migrated` holds its bytes when it only exists in an older format so far. */
+function loadPreviousPack(docpackPath: string, site: SiteConfig, keepScripts: boolean) {
+  if (!fs.existsSync(docpackPath)) return { pack: null, migrated: null };
+  const bytes = fs.readFileSync(docpackPath);
+  const isV3 = bytes.subarray(0, 4).toString("latin1") === "DOCP" && bytes.readUInt16LE(4) === DOCPACK_V3_VERSION;
+  try {
+    if (isV3) return { pack: parsePack(bytes), migrated: null };
+    const migrated = migrateLegacyPack(bytes, docpackPath, site, keepScripts);
+    console.log(`  Starting from the v2 release pack of ${site.id}`);
+    return { pack: parsePack(migrated), migrated };
+  } catch (e: any) {
+    console.warn(`  Ignoring previous pack ${path.basename(docpackPath)}: ${e?.message}`);
+    return { pack: null, migrated: null };
+  }
+}
+
+function writePack(docpackPath: string, bytes: Uint8Array) {
+  // Write beside the target first: a killed job must not leave a half-written pack to reuse
+  fs.writeFileSync(`${docpackPath}.tmp`, bytes);
+  fs.renameSync(`${docpackPath}.tmp`, docpackPath);
+}
+
+export type BuildResult = "built" | "unchanged" | "kept";
+
+export async function buildDocpackForSite(siteId: string, outDir: string): Promise<BuildResult> {
   const site = SITE_CATALOG.find((s) => s.id === siteId);
   if (!site) throw new Error(`Unknown site id: ${siteId}`);
 
   fs.mkdirSync(outDir, { recursive: true });
   console.log(`\n=== Crawling Real Website for [${site.id}] (${site.origin}${site.entryPath}) ===`);
 
-  // Check if a previous manifest exists so we never overwrite a healthy pack with a partial/rate-limited crawl
-  let previousRouteCount = 0;
-  const existingManifestPath = path.join(outDir, `${site.id}.manifest.json`);
-  if (fs.existsSync(existingManifestPath)) {
-    try {
-      const prev = JSON.parse(fs.readFileSync(existingManifestPath, "utf-8"));
-      previousRouteCount = Object.keys(prev.routes || {}).length;
-    } catch {}
-  }
+  const docpackPath = path.join(outDir, `${site.id}.docpack`);
+  // Chunks are reused from this pack, and it guards against a partial/rate-limited crawl replacing a healthy one
+  const keepScripts = SCRIPTED_SITES.has(site.id);
+  const { pack: previous, migrated } = loadPreviousPack(docpackPath, site, keepScripts);
+  const previousRouteCount = previous?.meta.routeCount ?? 0;
+  // A kept v2 pack still has to reach the v3 release, or its pages would be lost there
+  const keepPrevious = (): BuildResult => {
+    if (!migrated) return "kept";
+    writePack(docpackPath, migrated);
+    console.log(`✓ Published the v2 pack of ${site.id} as v3 (${previousRouteCount} routes)`);
+    return "built";
+  };
 
-  const maxPages = site.maxPages || 150;
+  const crawlDeadline = Date.now() + CRAWL_BUDGET_MS;
+  const maxPages = Math.max(site.maxPages || 150, PAGE_CAP_FLOOR);
   const visitedPages = new Set<string>();
   const pageQueue: string[] = [site.entryPath];
+  const queuedPages = new Set<string>([normalizeRouteKey(site.entryPath)]);
+  const enqueuePage = (pagePath: string) => {
+    const norm = normalizeRouteKey(pagePath);
+    if (visitedPages.has(norm) || queuedPages.has(norm)) return;
+    queuedPages.add(norm);
+    pageQueue.push(pagePath);
+  };
+  // Routes a refetch could not confirm; their previous bytes are kept instead of losing them
+  const unconfirmedRoutes = new Set<string>();
+  const unconfirmedAssets = new Set<string>();
 
   // Map of localRouteKey -> { bytes: Buffer, mime: string }
-  const rawAssets = new Map<string, { bytes: Buffer; mime: string }>();
+  const rawAssets = new Map<string, PackAsset>();
   const pendingAssetUrls = new Map<string, string>(); // fullUrl -> localRoute
   const searchEntries: any[] = [];
 
@@ -235,8 +394,12 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
     batchDelayMs = 450;
   };
 
+  const sitemapPages = await discoverSitemapPages(site, isAllowedPageUrl);
+  if (sitemapPages.length) console.log(`  Sitemaps list ${sitemapPages.length} pages`);
+  sitemapPages.forEach(enqueuePage);
+
   // 1. Crawl HTML pages concurrently in polite batches
-  while (pageQueue.length > 0 && visitedPages.size < maxPages) {
+  while (pageQueue.length > 0 && visitedPages.size < maxPages && Date.now() < crawlDeadline) {
     const batch: string[] = [];
     while (pageQueue.length > 0 && batch.length < batchConcurrency && visitedPages.size + batch.length < maxPages) {
       const nextPath = pageQueue.shift()!;
@@ -257,12 +420,19 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
       batch.map(async (relPath) => {
         const fullUrl = new URL(relPath, site.origin).href;
         const res = await fetchWithTimeout(fullUrl, 12000, 4, handleRateLimitSignal, site);
-        if (!res || !res.ok) return;
+        const requestedRoute = normalizeRouteKey(relPath.split("?")[0].split("#")[0]);
+        if (!res || !res.ok) {
+          if (isTransientFailure(res)) unconfirmedRoutes.add(requestedRoute);
+          return;
+        }
         const ct = res.headers.get("content-type") || "";
         if (!ct.includes("html")) return;
 
         let html = await res.text();
-        if (isChallengeOrBlockHtml(html)) return;
+        if (isChallengeOrBlockHtml(html)) {
+          unconfirmedRoutes.add(requestedRoute);
+          return;
+        }
         const pageUrl = new URL(res.url || fullUrl);
         const routeKey = normalizeRouteKey(pageUrl.pathname);
 
@@ -286,8 +456,8 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
           keywords: [site.id, ...rawTitle.toLowerCase().split(/\W+/).filter(Boolean)].slice(0, 12),
         });
 
-        // Discover same-origin page links <a href="..."> (supporting both quoted and unquoted attributes)
-        const hrefRegex = /<a\b[^>]*?\bhref=(?:"([^"'#]+)"|'([^"'#]+)'|([^\s>"'#]+))/gi;
+        // Discover same-origin page links <a href="..."> and frames <frame src="...">
+        const hrefRegex = /<(?:a\b[^>]*?\bhref|frame\b[^>]*?\bsrc|iframe\b[^>]*?\bsrc)=(?:"([^"'#]+)"|'([^"'#]+)'|([^\s>"'#]+))/gi;
         let m: RegExpExecArray | null;
         while ((m = hrefRegex.exec(html)) !== null) {
           const rawHref = (m[1] || m[2] || m[3] || "").trim();
@@ -298,11 +468,8 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
               effectiveHref = `/docs/pages/${rawHref}`;
             }
             const resolved = new URL(effectiveHref, pageUrl.href);
-            if (isAllowedPageUrl(resolved)) {
-              const normTarget = normalizeRouteKey(resolved.pathname);
-              if (!visitedPages.has(normTarget) && pageQueue.length < maxPages * 2) {
-                pageQueue.push(resolved.pathname);
-              }
+            if (isAllowedPageUrl(resolved) && pageQueue.length < maxPages * 2) {
+              enqueuePage(resolved.pathname);
             }
           } catch {}
         }
@@ -322,7 +489,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
           const rawHref = (hrefMatch[1] || hrefMatch[2] || hrefMatch[3] || "").trim();
           try {
             const resolved = new URL(rawHref.replace(/&amp;/g, "&"), pageUrl.href);
-            const localRoute = assetUrlToLocalRoute(resolved.href, site.origin);
+            const localRoute = assetUrlToLocalRoute(resolved.href, site.origin, keepScripts);
             pendingAssetUrls.set(resolved.href, localRoute);
             let cleanedAttrs = attrs
               .replace(/\bintegrity=(?:"[^"]*"|'[^']*'|[^\s>]+)/gi, "")
@@ -345,7 +512,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
             if (rawSrc.startsWith("data:")) return fullMatch;
             try {
               const resolved = new URL(rawSrc.replace(/&amp;/g, "&"), pageUrl.href);
-              const localRoute = assetUrlToLocalRoute(resolved.href, site.origin);
+              const localRoute = assetUrlToLocalRoute(resolved.href, site.origin, keepScripts);
               pendingAssetUrls.set(resolved.href, localRoute);
               const cleanedAttrs = attrs.replace(/\bsrc=(?:"[^"]*"|'[^']*'|[^\s>]+)/i, `src="${localRoute}"`);
               return `<img ${cleanedAttrs.trim()}>`;
@@ -354,7 +521,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
             }
           });
 
-        if (site.id === "angular" || site.id === "nestjs" || site.id === "threejs" || site.id === "rust" || site.id === "lucide") {
+        if (keepScripts) {
           // Keep same-origin JS bundles for SPA sites, Lucide icon search/filtering, Three.js page scripts & Rust mdBook highlight/book scripts
           html = html.replace(
             /<script\b([^>]*?)>\s*<\/script>/gi,
@@ -365,7 +532,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
               try {
                 const resolved = new URL(rawSrc.replace(/&amp;/g, "&"), pageUrl.href);
                 if (resolved.origin !== site.origin) return "";
-                const localRoute = assetUrlToLocalRoute(resolved.href, site.origin);
+                const localRoute = assetUrlToLocalRoute(resolved.href, site.origin, keepScripts);
                 pendingAssetUrls.set(resolved.href, localRoute);
                 const cleanedAttrs = attrs.replace(/\bsrc=(?:"[^"]*"|'[^']*'|[^\s>]+)/i, `src="${localRoute}"`);
                 return `<script ${cleanedAttrs.trim()}></script>`;
@@ -402,12 +569,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
           html += snippet;
         }
 
-        // Minify & normalize HTML: strip comments, transient nonces, and collapse repeated whitespace safely
-        html = html.replace(/<!--(?!\[if)[\s\S]*?-->/g, "");
-        html = html.replace(/\snonce=["'][^"']*["']/gi, "");
-        html = html.replace(/>\s{2,}</g, "> <");
-
-        const htmlBytes = Buffer.from(html, "utf-8");
+        const htmlBytes = Buffer.from(normalizeHtml(html, { keepScripts }), "utf-8");
         rawAssets.set(routeKey, { bytes: htmlBytes, mime: "text/html; charset=utf-8" });
         if (pageUrl.pathname !== routeKey) {
           rawAssets.set(pageUrl.pathname, { bytes: htmlBytes, mime: "text/html; charset=utf-8" });
@@ -450,8 +612,9 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
     }
   }
 
+  const truncated = pageQueue.length > 0;
   console.log(
-    `  Crawled ${visitedPages.size} HTML pages for ${site.id}, now fetching ${pendingAssetUrls.size} CSS/JS/JSON/image assets...`
+    `  Crawled ${visitedPages.size} HTML pages for ${site.id}${truncated ? ` (${pageQueue.length} left unvisited)` : ""}, now fetching ${pendingAssetUrls.size} CSS/JS/JSON/image assets...`
   );
 
   // 2. Download all discovered CSS and image assets + fonts referenced inside CSS (polite batches of 8)
@@ -466,7 +629,10 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
         const normKey = normalizeRouteKey(localRoute);
         if (rawAssets.has(normKey)) return;
         const res = await fetchWithTimeout(fullUrl, 10000, 3, handleRateLimitSignal, site);
-        if (!res || !res.ok) return;
+        if (!res || !res.ok) {
+          if (isTransientFailure(res)) unconfirmedAssets.add(localRoute);
+          return;
+        }
         const ct = res.headers.get("content-type") || "";
         const mime = guessMime(localRoute, ct);
 
@@ -482,7 +648,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
             }
             try {
               const resolved = new URL(cleanTarget, fullUrl);
-              const subLocal = assetUrlToLocalRoute(resolved.href, site.origin);
+              const subLocal = assetUrlToLocalRoute(resolved.href, site.origin, keepScripts);
               fontAndSubAssets.set(resolved.href, subLocal);
               return `url("${subLocal}")`;
             } catch {
@@ -505,7 +671,9 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
   }
 
   // 3. Download fonts & SVGs discovered inside CSS files (polite batches of 8)
-  const subEntries = Array.from(fontAndSubAssets.entries()).slice(0, 80);
+  const subEntries = Array.from(fontAndSubAssets.entries())
+    .sort(([a], [b]) => a.localeCompare(b))
+    .slice(0, 80);
   for (let i = 0; i < subEntries.length; i += 8) {
     if (i > 0) await new Promise((r) => setTimeout(r, 60));
     const slice = subEntries.slice(i, i + 8);
@@ -514,7 +682,10 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
         const normKey = normalizeRouteKey(localRoute);
         if (rawAssets.has(normKey)) return;
         const res = await fetchWithTimeout(fullUrl, 8000, 3, handleRateLimitSignal, site);
-        if (!res || !res.ok) return;
+        if (!res || !res.ok) {
+          if (isTransientFailure(res)) unconfirmedAssets.add(localRoute);
+          return;
+        }
         const arr = await res.arrayBuffer();
         if (arr.byteLength > 300 * 1024) return;
         const mime = guessMime(localRoute, res.headers.get("content-type"));
@@ -533,144 +704,87 @@ export async function buildDocpackForSite(siteId: string, outDir: string) {
     }
   }
 
-  // 4. Pack all HTML + CSS + Fonts + Images into Brotli Q11 content-hashed chunks
-  const routes: Record<string, any> = {};
-  const chunks: Buffer[] = [];
-  let currentOffset = 0;
-  const hashToChunk = new Map<string, { offset: number; length: number; hash: string }>();
-  const chunksByHash = new Map<string, Buffer>();
+  // 4. Name assets, add the search index, and pack everything as content-defined chunks
+  const assetUrls = new Map([...pendingAssetUrls, ...fontAndSubAssets]);
+  const renamedAssets = applyStableAssetRoutes(rawAssets, assetUrls);
 
-  for (const [routeKey, asset] of rawAssets.entries()) {
-    const isText =
-      asset.mime.startsWith("text/") ||
-      asset.mime.includes("javascript") ||
-      asset.mime.includes("json") ||
-      asset.mime.includes("svg+xml");
-
-    let chunkBytes: Buffer;
-    let encoding: string = "identity";
-
-    if (isText) {
-      chunkBytes = zlib.brotliCompressSync(asset.bytes, {
-        params: {
-          [zlib.constants.BROTLI_PARAM_QUALITY]: 11,
-          [zlib.constants.BROTLI_PARAM_LGWIN]: 24,
-        },
-      });
-      encoding = "br";
-    } else {
-      chunkBytes = asset.bytes;
-      encoding = "identity";
+  const pageCount = [...rawAssets.values()].filter((a) => a.mime.startsWith("text/html")).length;
+  if (pageCount === 0 || searchEntries.length === 0) {
+    if (previousRouteCount > 0) {
+      console.warn(`⚠️ [${site.id}] Crawl produced 0 valid HTML pages — keeping existing healthy release .docpack.`);
+      return keepPrevious();
     }
-
-    const hash = crypto.createHash("sha256").update(chunkBytes).digest("hex").slice(0, 16);
-    let stored = hashToChunk.get(hash);
-    if (!stored) {
-      stored = { offset: currentOffset, length: chunkBytes.byteLength, hash };
-      hashToChunk.set(hash, stored);
-      chunksByHash.set(hash, chunkBytes);
-      chunks.push(chunkBytes);
-      currentOffset += chunkBytes.byteLength;
-    }
-    routes[routeKey] = {
-      offset: stored.offset,
-      length: stored.length,
-      rawLength: asset.bytes.byteLength,
-      mime: asset.mime,
-      gzipped: false,
-      encoding,
-      hash: stored.hash,
-    };
+    throw new Error(`Crawl for ${site.id} produced 0 valid HTML pages and no previous release pack exists!`);
   }
 
   const entryNorm = normalizeRouteKey(site.entryPath);
-  const firstHtmlRoute =
-    routes[entryNorm] ||
-    routes[site.entryPath] ||
-    Object.values(routes).find((r: any) => r.mime.includes("text/html"));
-
-  if (firstHtmlRoute) {
-    if (!routes["/docs"]) routes["/docs"] = firstHtmlRoute;
-    if (!routes["/"]) routes["/"] = firstHtmlRoute;
+  const entryPage =
+    rawAssets.get(entryNorm) ||
+    rawAssets.get(site.entryPath) ||
+    [...rawAssets.values()].find((a) => a.mime.startsWith("text/html"));
+  if (entryPage) {
+    if (!rawAssets.has("/docs")) rawAssets.set("/docs", entryPage);
+    if (!rawAssets.has("/")) rawAssets.set("/", entryPage);
   }
 
-  const newRouteCount = Object.keys(routes).length;
-  if (newRouteCount === 0 || chunks.length === 0 || searchEntries.length === 0) {
-    throw new Error(`Crawl for ${site.id} produced 0 valid HTML pages — refusing to overwrite existing .docpack!`);
-  }
-  if (previousRouteCount > 10 && newRouteCount < Math.floor(previousRouteCount * 0.5)) {
-    throw new Error(
-      `Crawl for ${site.id} only captured ${newRouteCount} routes vs ${previousRouteCount} previously — refusing to overwrite healthy .docpack!`
+  const forceRebuild = process.env.DOCX_FORCE_REBUILD === "true";
+  if (!forceRebuild && previousRouteCount > 10 && rawAssets.size < Math.floor(previousRouteCount * 0.5)) {
+    console.warn(
+      `⚠️ [${site.id}] Crawl only captured ${rawAssets.size} routes vs ${previousRouteCount} previously — keeping existing healthy .docpack.`
     );
+    return keepPrevious();
   }
 
-  const commitHash = crypto
-    .createHash("sha256")
-    .update(Array.from(hashToChunk.keys()).sort().join(","))
-    .digest("hex")
-    .slice(0, 8);
+  const seenSearchIds = new Set<string>();
+  const uniqueSearchEntries = searchEntries
+    .filter((e) => !seenSearchIds.has(e.id) && seenSearchIds.add(e.id))
+    .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
+  rawAssets.set(SEARCH_ROUTE, {
+    bytes: Buffer.from(JSON.stringify(uniqueSearchEntries), "utf-8"),
+    mime: "application/json; charset=utf-8",
+  });
 
-  const manifest = {
+  // A partial crawl must not delete pages: only a clean run or a 404/410 can do that
+  const carried = new Set<string>();
+  if (previous) {
+    if (truncated) {
+      for (const route of Object.keys(previous.index.p)) {
+        if (previous.mimeOf(route)?.startsWith("text/html")) carried.add(route);
+      }
+    }
+    for (const route of unconfirmedRoutes) carried.add(route);
+    for (const route of unconfirmedAssets) carried.add(renamedAssets.get(route) ?? normalizeRouteKey(route));
+    for (const route of rawAssets.keys()) carried.delete(route);
+  }
+  const carriedRoutes = previous ? withReferencedRoutes(previous, carried) : carried;
+
+  const built = buildPack({
     id: site.id,
     name: site.name,
     version: site.version,
-    commit: commitHash,
-    compression: "brotli",
     origin: site.origin,
     entryPath: site.entryPath,
-    updatedAt: new Date().toISOString(),
-    totalBytes: currentOffset,
-    chunkCount: chunks.length,
-    routes,
-  };
+    assets: rawAssets,
+    carriedRoutes,
+    previous,
+    truncated,
+  });
 
-  const docpackPath = path.join(outDir, `${site.id}.docpack`);
-  const manifestPath = path.join(outDir, `${site.id}.manifest.json`);
-  const searchPath = path.join(outDir, `${site.id}.search.json`);
-
-  // Generate single-stream .delta patch if a previous manifest exists
-  let previousManifest: any = null;
-  if (fs.existsSync(manifestPath)) {
-    try {
-      previousManifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
-    } catch {}
+  const mb = (n: number) => (n / (1024 * 1024)).toFixed(2);
+  if (built.unchanged && !migrated && previous?.meta.version === site.version) {
+    console.log(`✓ ${site.id} is unchanged at ${built.meta.commit} (${built.stats.routes} routes) — nothing to publish`);
+    return "unchanged";
   }
 
-  if (previousManifest && previousManifest.commit && previousManifest.commit !== commitHash) {
-    try {
-      const deltaBuf = generateDeltaPatch(previousManifest, manifest, chunksByHash);
-      const deltaPath = path.join(outDir, `${site.id}.delta`);
-      fs.writeFileSync(deltaPath, deltaBuf);
-      (manifest as any).delta = {
-        fromCommit: previousManifest.commit,
-        toCommit: commitHash,
-        sizeBytes: deltaBuf.byteLength,
-        hash: crypto.createHash("sha256").update(deltaBuf).digest("hex").slice(0, 16),
-      };
-      console.log(`  ✓ Generated ${site.id}.delta: ${(deltaBuf.byteLength / 1024).toFixed(1)} KB (patch from ${previousManifest.commit})`);
-    } catch (e: any) {
-      console.warn(`  Warning: Failed to generate .delta: ${e?.message}`);
-    }
-  }
-
-  const manifestBytes = Buffer.from(JSON.stringify(manifest), "utf-8");
-  // Docpack v2 header: DOCP (4) + version 2 (2) + flags (2) + manifest_len (4) + reserved (4) = 16 bytes
-  const header = Buffer.alloc(16);
-  header.write("DOCP", 0, 4, "ascii");
-  header.writeUInt16LE(2, 4); // version 2
-  header.writeUInt16LE(2, 6); // Brotli flag
-  header.writeUInt32LE(manifestBytes.byteLength, 8);
-  header.writeUInt32LE(0, 12); // reserved
-
-  fs.writeFileSync(docpackPath, Buffer.concat([header, manifestBytes, ...chunks]));
-  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), "utf-8");
-  fs.writeFileSync(searchPath, JSON.stringify(searchEntries, null, 2), "utf-8");
+  writePack(docpackPath, built.bytes);
 
   console.log(
-    `✓ Built real-website ${site.id}.docpack: ${(currentOffset / (1024 * 1024)).toFixed(2)} MB (${
-      chunks.length
-    } unique chunks, ${Object.keys(routes).length} routes, commit ${commitHash})`
+    `✓ Built ${site.id}.docpack: ${mb(built.bytes.byteLength)} MB, ${built.stats.routes} routes, ${built.stats.totalChunks} chunks, generation ${built.meta.generation}, commit ${built.meta.commit}`
   );
+  console.log(
+    `  ${built.stats.newChunks} new chunks (${mb(built.stats.newBytes)} MB); update from previous build: ${mb(built.stats.updateBytes)} MB; carried ${carriedRoutes.size} routes`
+  );
+  return "built";
 }
 
 // CLI Entrypoint
@@ -684,7 +798,15 @@ if (import.meta.main) {
     console.log(JSON.stringify(SITE_CATALOG.map((s) => s.id)));
   } else if (argSite) {
     for (const id of argSite.split(",").map((s) => s.trim()).filter(Boolean)) {
-      await buildDocpackForSite(id, outDir);
+      try {
+        const result = await buildDocpackForSite(id, outDir);
+        if (result === "built") fs.writeFileSync(path.join(outDir, `${id}.changed`), "");
+      } catch (e: any) {
+        console.error(`❌ Build error for ${id}:`, e?.message || e);
+        if (!fs.existsSync(path.join(outDir, `${id}.docpack`))) {
+          process.exitCode = 1;
+        }
+      }
     }
   }
 }
