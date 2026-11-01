@@ -19,6 +19,12 @@ use crate::util::sha256_hex_16;
 /// Route of the page search index inside a v3 pack.
 pub(crate) const SEARCH_ROUTE: &str = "/__docx/search.json";
 pub(crate) const V3_HEADER_BYTES: usize = 32;
+const ENCODING_IDENTITY: u8 = b'0';
+const ENCODING_BROTLI: u8 = b'1';
+const ENCODING_ZSTD_DICT: u8 = b'2';
+
+/// The zstd dictionary a pack's text chunks were compressed against.
+pub(crate) type ChunkDictionary = zstd::dict::DecoderDictionary<'static>;
 
 #[derive(serde::Deserialize, Clone, Debug)]
 pub struct ManifestEntry {
@@ -68,6 +74,9 @@ pub struct PackMeta {
     pub data_hash: String,
     #[serde(default)]
     pub index_hash: String,
+    /// Id of the chunk holding the zstd dictionary, when the pack has one.
+    #[serde(default)]
+    pub dict: Option<String>,
 }
 
 #[derive(serde::Deserialize)]
@@ -86,7 +95,7 @@ pub struct V3Index {
     pub offsets: Vec<u64>,
     pub lengths: Vec<u64>,
     pub raw_lengths: Vec<u64>,
-    pub brotli: Vec<bool>,
+    pub encodings: Vec<u8>,
     pub mimes: Vec<String>,
     /// route -> [mime index, ...chunk indices]
     pub routes: HashMap<String, Vec<u32>>,
@@ -105,6 +114,9 @@ impl V3Index {
         let n = raw.c.len();
         if raw.l.len() != n || raw.r.len() != n || raw.e.len() != n {
             return Err(DocxError::invalid_pack("index tables have different lengths"));
+        }
+        if raw.e.bytes().any(|e| !matches!(e, ENCODING_IDENTITY | ENCODING_BROTLI | ENCODING_ZSTD_DICT)) {
+            return Err(DocxError::invalid_pack("index names an unknown chunk encoding"));
         }
         for recipe in raw.p.values() {
             let Some((mime, chunks)) = recipe.split_first() else {
@@ -125,7 +137,7 @@ impl V3Index {
         }
 
         Ok(Self {
-            brotli: raw.e.bytes().map(|b| b == b'1').collect(),
+            encodings: raw.e.into_bytes(),
             ids: raw.c,
             offsets,
             lengths: raw.l,
@@ -137,6 +149,54 @@ impl V3Index {
     }
 
     /// Stable id for a route's content, usable as an HTTP validator.
+    /// Raw bytes of chunk `i`, or an error when its stored bytes do not decode to its size.
+    pub(crate) fn decode_chunk(&self, stored: &[u8], i: usize, dictionary: Option<&ChunkDictionary>) -> Result<Vec<u8>> {
+        let raw_len = self.raw_lengths[i];
+        let id = &self.ids[i];
+        let raw = match self.encodings[i] {
+            ENCODING_BROTLI => {
+                let mut raw = Vec::with_capacity(raw_len as usize);
+                brotli::Decompressor::new(stored, 4096)
+                    .take(raw_len + 1)
+                    .read_to_end(&mut raw)
+                    .map_err(|e| DocxError::invalid_pack(format!("chunk {id} does not decompress: {e}")))?;
+                raw
+            }
+            ENCODING_ZSTD_DICT => {
+                let dictionary = dictionary
+                    .ok_or_else(|| DocxError::invalid_pack(format!("chunk {id} needs a dictionary the pack lacks")))?;
+                zstd::bulk::Decompressor::with_prepared_dictionary(dictionary)
+                    .and_then(|mut z| z.decompress(stored, raw_len as usize))
+                    .map_err(|e| DocxError::invalid_pack(format!("chunk {id} does not decompress: {e}")))?
+            }
+            _ => stored.to_vec(),
+        };
+        if raw.len() as u64 != raw_len {
+            return Err(DocxError::invalid_pack(format!("chunk {id} has the wrong size")));
+        }
+        Ok(raw)
+    }
+
+    /// Where the dictionary chunk sits, for a pack whose `meta` names one.
+    pub(crate) fn dictionary_chunk(&self, meta: &PackMeta) -> Result<Option<usize>> {
+        let Some(id) = &meta.dict else {
+            return Ok(None);
+        };
+        match self.ids.iter().position(|chunk| chunk == id) {
+            Some(i) => Ok(Some(i)),
+            None => Err(DocxError::invalid_pack("the pack's dictionary chunk is missing")),
+        }
+    }
+
+    /// Builds the dictionary from its stored chunk.
+    pub(crate) fn parse_dictionary(&self, stored: &[u8], i: usize) -> Result<ChunkDictionary> {
+        let raw = self.decode_chunk(stored, i, None)?;
+        if sha256_hex_16(&raw) != self.ids[i] {
+            return Err(DocxError::invalid_pack("the pack's dictionary failed verification"));
+        }
+        Ok(ChunkDictionary::copy(&raw))
+    }
+
     fn route_tag(&self, recipe: &[u32]) -> String {
         let mut joined = String::with_capacity(recipe.len() * 16);
         for &c in &recipe[1..] {
@@ -175,6 +235,7 @@ enum PackLayout {
         index_len: usize,
         data_start: u64,
         index: OnceLock<Option<Arc<V3Index>>>,
+        dictionary: OnceLock<Option<Arc<ChunkDictionary>>>,
     },
 }
 
@@ -289,17 +350,24 @@ impl SiteOverridePack {
                 let tag = index.route_tag(recipe);
                 let mut file = self.open()?;
                 let mut stored = |c: usize| self.read_at(&mut file, data_start + index.offsets[c], index.lengths[c]);
+                // Packs without a dictionary never reach for one
+                let dictionary = match &self.layout {
+                    PackLayout::V3 { dictionary, .. } => dictionary
+                        .get_or_init(|| {
+                            let i = index.dictionary_chunk(&self.meta).ok()??;
+                            index.parse_dictionary(&stored(i)?, i).ok().map(Arc::new)
+                        })
+                        .clone(),
+                    PackLayout::Legacy { .. } => None,
+                };
 
-                // A single chunk goes out as stored: the browser decodes brotli itself.
+                // A single brotli chunk goes out as stored: the browser decodes it itself.
                 if let [only] = chunks {
                     let only = *only as usize;
-                    return Some(RouteData {
-                        mime,
-                        gzipped: false,
-                        encoding: index.brotli[only].then(|| "br".to_string()),
-                        bytes: stored(only)?,
-                        tag,
-                    });
+                    if index.encodings[only] == ENCODING_BROTLI {
+                        let bytes = stored(only)?;
+                        return Some(RouteData { mime, gzipped: false, encoding: Some("br".to_string()), bytes, tag });
+                    }
                 }
 
                 let raw_len: u64 = chunks.iter().map(|&c| index.raw_lengths[c as usize]).sum();
@@ -307,10 +375,10 @@ impl SiteOverridePack {
                 for &c in chunks {
                     let c = c as usize;
                     let data = stored(c)?;
-                    if index.brotli[c] {
-                        brotli::Decompressor::new(&data[..], 4096).read_to_end(&mut bytes).ok()?;
-                    } else {
+                    if index.encodings[c] == ENCODING_IDENTITY {
                         bytes.extend_from_slice(&data);
+                    } else {
+                        bytes.extend_from_slice(&index.decode_chunk(&data, c, dictionary.as_deref()).ok()?);
                     }
                 }
                 Some(RouteData { mime, gzipped: false, encoding: None, bytes, tag })
@@ -592,6 +660,7 @@ fn parse_v3_on_disk(
             index_len,
             data_start,
             index: OnceLock::new(),
+            dictionary: OnceLock::new(),
         },
     }))
 }
@@ -657,6 +726,7 @@ pub(crate) fn parse_docpack_on_disk(
             route_count: manifest.routes.len(),
             data_hash: String::new(),
             index_hash: String::new(),
+        dict: None,
         },
         source: source.to_string(),
         backing: PackBacking::OnDisk { path, file_offset, pack_len },

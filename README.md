@@ -192,7 +192,6 @@ No installer or external runtime required — download and run directly:
 | **Nginx v1.26** | `nginx` | `https://nginx.org/en/docs/` |
 | **Caddy Server v2.9** | `caddy` | `https://caddyserver.com/docs/` |
 | **OpenTofu / Terraform v1.9** | `opentofu` | `https://opentofu.org/docs/intro/` |
-| **Ansible v11** | `ansible` | `https://docs.ansible.com/ansible/latest/` |
 | **Git Reference Manual** | `git` | `https://git-scm.com/docs/git` |
 | **curl & libcurl v8.13** | `curl` | `https://curl.se/docs/` |
 | **CMake v4.0** | `cmake` | `https://cmake.org/cmake/help/latest/` |
@@ -229,6 +228,8 @@ bun run scripts/ci-build-site.ts <site_id> ./packs
 Every doc lives in one file, `Docx-library.bin`, on the [`packs-latest`](https://github.com/VahidM313/docx/releases/tag/packs-latest) release, next to the app binaries. There is no registry, no per-site file, and there are no patch files. The app never downloads the whole library: it reads the directory at the start of the file, then only the byte ranges it needs.
 
 **Building.** `scripts/ci-build-site.ts` crawls a site, normalizes away per-build noise such as hashed asset names, analytics, and random ids, and splits each page into chunks at content-defined boundaries (`scripts/lib/chunker.ts`). A chunk's id is the hash of its content, so a page edit only disturbs the chunks around it and identical blocks such as sidebars are stored once. A rebuild starts from the previous pack (`scripts/lib/docpack-v3.ts`): surviving chunks keep their order and new ones go on the end, so the release changes as little as possible. If nothing changed, nothing is uploaded.
+
+**Text.** Pages are split into chunks of about 4 KB, and text chunks are compressed with zstd against a dictionary trained on that site (`scripts/lib/zstd-dict.ts`), so each one can share the markup its pages repeat. The dictionary is stored as an ordinary chunk and never changes once a pack has one, because every stored chunk depends on it. Bundles over 64 KB and very small sites use brotli.
 
 **Images.** PNG and JPEG are re-encoded as WebP during the build (`scripts/lib/compress-images.ts`): near-lossless for PNG, so small text in screenshots stays sharp, and quality 80 for JPEG. Routes keep their names because the app serves each route with the type stored in the pack. Animated PNGs, and images WebP cannot make smaller, stay as they are.
 

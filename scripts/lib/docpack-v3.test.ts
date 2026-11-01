@@ -224,3 +224,72 @@ describe("docpack v3", () => {
     expect(() => parsePack(Buffer.from("not a pack at all, definitely not a docpack header"))).toThrow();
   });
 });
+
+describe("zstd dictionary", () => {
+  const page = (i: number, body = "") =>
+    `<html><head><title>Page ${i}</title></head><body><nav class="site-nav"><a href="/a">Guide</a><a href="/b">Reference</a><a href="/c">Community</a></nav>` +
+    `<main>${sampleText(i, 18000)}${body}</main><footer class="site-footer">Copyright the authors. All rights reserved.</footer></body></html>`;
+  const site = (count: number, body = "") =>
+    new Map<string, PackAsset>(Array.from({ length: count }, (_, i) => [`/p/${i}`, { bytes: Buffer.from(page(i, body)), mime: HTML }]));
+  const base = { id: "demo", name: "Demo", version: "1", origin: "https://x.dev", entryPath: "/" };
+
+  test("reads every route back from a pack with a dictionary", () => {
+    const assets = site(40);
+    const pack = parsePack(buildPack({ ...base, assets }).bytes);
+    expect(pack.meta.dict).toBeDefined();
+    expect(pack.index.e).toContain("2");
+    for (const [route, asset] of assets) expect(pack.readRoute(route)!.equals(asset.bytes)).toBe(true);
+  });
+
+  test("the dictionary is not a route and changes nothing about the commit", () => {
+    const assets = site(40);
+    const pack = parsePack(buildPack({ ...base, assets }).bytes);
+    expect(Object.values(pack.index.p).flatMap((r) => r.slice(1))).not.toContain(pack.chunkIndex.get(pack.meta.dict!)!);
+    const small = buildPack({ ...base, assets: new Map([["/x", { bytes: Buffer.from("<p>hello</p>"), mime: HTML }]]) });
+    expect(small.meta.dict).toBeUndefined();
+  });
+
+  test("a later build keeps the dictionary and the bytes of unchanged chunks", () => {
+    const first = parsePack(buildPack({ ...base, assets: site(40) }).bytes);
+    const assets = site(40);
+    assets.set("/p/3", { bytes: Buffer.from(page(3, "<p>a new paragraph</p>")), mime: HTML });
+    const built = buildPack({ ...base, assets, previous: first });
+    const second = parsePack(built.bytes);
+
+    expect(second.meta.dict).toBe(first.meta.dict);
+    expect(built.stats.newChunks).toBeLessThan(5);
+    first.index.c.forEach((id, i) => {
+      const at = second.chunkIndex.get(id);
+      if (at !== undefined) expect(second.storedChunk(at).equals(first.storedChunk(i))).toBe(true);
+    });
+    for (const [route, asset] of assets) expect(second.readRoute(route)!.equals(asset.bytes)).toBe(true);
+  });
+
+  test("an identical rebuild publishes nothing", () => {
+    const first = parsePack(buildPack({ ...base, assets: site(40) }).bytes);
+    expect(buildPack({ ...base, assets: site(40), previous: first }).unchanged).toBe(true);
+  });
+
+  test("a brotli pack moves over whole, losing no route", () => {
+    const small = site(4);
+    const old = parsePack(buildPack({ ...base, assets: small }).bytes);
+    expect(old.meta.dict).toBeUndefined();
+
+    const grown = site(40);
+    const built = buildPack({ ...base, assets: grown, previous: old });
+    const pack = parsePack(built.bytes);
+    expect(built.unchanged).toBe(false);
+    expect(pack.index.e).not.toContain("1".repeat(50));
+    expect(pack.meta.gens.every((g) => g.tail === 0)).toBe(true);
+    for (const [route, asset] of grown) expect(pack.readRoute(route)!.equals(asset.bytes)).toBe(true);
+  });
+
+  test("carried routes survive the move, as a kept site needs", () => {
+    const assets = site(40);
+    const old = parsePack(buildPack({ ...base, assets }).bytes);
+    const again = parsePack(
+      buildPack({ ...base, assets: new Map(), carriedRoutes: Object.keys(old.index.p), previous: old }).bytes,
+    );
+    for (const [route, asset] of assets) expect(again.readRoute(route)!.equals(asset.bytes)).toBe(true);
+  });
+});

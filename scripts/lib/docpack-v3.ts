@@ -24,10 +24,17 @@
  * Chunks are identified by the hash of their raw bytes, and the builder reuses
  * the stored bytes of known chunks. Compressor upgrades therefore never make
  * unchanged content look new.
+ *
+ * Text chunks are compressed with zstd against a dictionary trained on the site, which
+ * lets each small chunk share the markup its pages repeat. The dictionary is itself a
+ * chunk, named by `meta.dict` and used by no route, so it travels with the pack and
+ * updates fetch it like any other. It never changes once a pack has one, because
+ * every stored chunk depends on it.
  */
 import crypto from "crypto";
 import zlib from "zlib";
 import { splitIntoChunks } from "./chunker";
+import { trainDictionary } from "./zstd-dict";
 
 export const DOCPACK_V3_VERSION = 3;
 export const HEADER_BYTES = 32;
@@ -35,6 +42,16 @@ export const HEADER_BYTES = 32;
 export const MAX_TRACKED_GENERATIONS = 16;
 /** In-pack route holding the page search index. */
 export const SEARCH_ROUTE = "/__docx/search.json";
+/** Chunk encodings in the index. */
+const IDENTITY = "0";
+const BROTLI = "1";
+const ZSTD_DICT = "2";
+/** Past this a file is a bundle, not a page, and brotli's larger window wins. */
+const MAX_DICT_CHUNK_BYTES = 64 * 1024;
+/** Below this a dictionary costs more than it saves. */
+const MIN_DICT_TEXT_BYTES = 256 * 1024;
+/** Level 19 takes ten times as long here for about 7% less. */
+const ZSTD_LEVEL = 12;
 
 export interface PackGeneration {
   commit: string;
@@ -61,6 +78,8 @@ export interface PackMeta {
   gens: PackGeneration[];
   /** The crawl stopped at its page or time budget, so the site is partial. */
   truncated?: boolean;
+  /** Id of the chunk holding the zstd dictionary, when the pack has one. */
+  dict?: string;
 }
 
 export interface PackIndex {
@@ -70,7 +89,7 @@ export interface PackIndex {
   l: number[];
   /** Raw length per chunk. */
   r: number[];
-  /** Encoding per chunk: "1" brotli, "0" identity. */
+  /** Encoding per chunk: "2" zstd with the pack's dictionary, "1" brotli, "0" identity. */
   e: string;
   /** Distinct mime types. */
   m: string[];
@@ -86,7 +105,10 @@ export interface ParsedPack {
   offsets: number[];
   chunkIndex: Map<string, number>;
   bytes: Buffer;
+  dictionary: Buffer | null;
   storedChunk(i: number): Buffer;
+  /** Raw bytes of a chunk. */
+  rawChunk(i: number): Buffer;
   /** Raw bytes of a route; undefined when the route does not exist. */
   readRoute(route: string): Buffer | undefined;
   mimeOf(route: string): string | undefined;
@@ -112,6 +134,7 @@ export interface BuildInput {
 }
 
 export interface BuildOutput {
+  /** Same content in the same stored form: there is nothing to publish. */
   unchanged: boolean;
   meta: PackMeta;
   bytes: Buffer;
@@ -138,15 +161,24 @@ const brotli = (raw: Buffer, lgwin: number) =>
   });
 
 const isHtml = (mime: string) => mime.startsWith("text/html");
+/** The dictionary compresses like text, but not against itself. */
+const DICTIONARY_MIME = "text/x-zstd-dictionary";
+/** A chunk that was brotli once is compressible, whatever route it came from. */
+const BROTLI_CHUNK_MIME = "text/plain";
 const isCompressible = (mime: string) =>
   mime.startsWith("text/") || mime.includes("javascript") || mime.includes("json") || mime.includes("svg+xml");
 
-function storedForm(raw: Buffer, mime: string): { stored: Buffer; encoding: "0" | "1" } {
+function storedForm(raw: Buffer, mime: string, dictionary: Buffer | null): { stored: Buffer; encoding: string } {
   if (isCompressible(mime)) {
-    const compressed = brotli(raw, raw.byteLength > 1 << 20 ? 24 : 22);
-    if (compressed.byteLength < raw.byteLength) return { stored: compressed, encoding: "1" };
+    const compressed =
+      dictionary && raw.byteLength <= MAX_DICT_CHUNK_BYTES
+        ? zlib.zstdCompressSync(raw, { dictionary, params: { [zlib.constants.ZSTD_c_compressionLevel]: ZSTD_LEVEL } })
+        : brotli(raw, raw.byteLength > 1 << 20 ? 24 : 22);
+    if (compressed.byteLength < raw.byteLength) {
+      return { stored: compressed, encoding: dictionary && raw.byteLength <= MAX_DICT_CHUNK_BYTES ? ZSTD_DICT : BROTLI };
+    }
   }
-  return { stored: raw, encoding: "0" };
+  return { stored: raw, encoding: IDENTITY };
 }
 
 export function parsePack(bytes: Buffer): ParsedPack {
@@ -174,6 +206,18 @@ export function parsePack(bytes: Buffer): ParsedPack {
   const chunkIndex = new Map(index.c.map((id, i) => [id, i]));
   const storedChunk = (i: number) =>
     bytes.subarray(indexEnd + offsets[i], indexEnd + offsets[i] + index.l[i]);
+  let dictionary: Buffer | null = null;
+  const rawChunk = (i: number) => {
+    const stored = storedChunk(i);
+    if (index.e[i] === BROTLI) return zlib.brotliDecompressSync(stored);
+    if (index.e[i] === ZSTD_DICT) return zlib.zstdDecompressSync(stored, { dictionary: dictionary! });
+    return stored;
+  };
+  if (meta.dict) {
+    const at = chunkIndex.get(meta.dict);
+    if (at === undefined) throw new Error("the pack's dictionary chunk is missing");
+    dictionary = rawChunk(at);
+  }
 
   return {
     meta,
@@ -182,7 +226,9 @@ export function parsePack(bytes: Buffer): ParsedPack {
     offsets,
     chunkIndex,
     bytes,
+    dictionary,
     storedChunk,
+    rawChunk,
     mimeOf: (route) => {
       const recipe = index.p[route];
       return recipe ? index.m[recipe[0]] : undefined;
@@ -190,12 +236,7 @@ export function parsePack(bytes: Buffer): ParsedPack {
     readRoute: (route) => {
       const recipe = index.p[route];
       if (!recipe) return undefined;
-      return Buffer.concat(
-        recipe.slice(1).map((i) => {
-          const stored = storedChunk(i);
-          return index.e[i] === "1" ? zlib.brotliDecompressSync(stored) : stored;
-        }),
-      );
+      return Buffer.concat(recipe.slice(1).map(rawChunk));
     },
   };
 }
@@ -252,19 +293,41 @@ export function buildPack(input: BuildInput): BuildOutput {
   const used = new Set<string>();
   for (const r of recipes.values()) for (const id of r.ids) used.add(id);
 
-  // 3. Lay chunks out by generation: survivors in their old order, then new ones.
+  // 3. A pack keeps its dictionary for life. One without is trained now, and its old
+  // chunks are stored afresh, which is the only build that moves every chunk.
+  let dictionary = prev?.dictionary ?? null;
+  let reencoded = false;
+  if (!dictionary) {
+    const text: Buffer[] = [];
+    prev?.index.c.forEach((id, i) => {
+      if (used.has(id) && prev.index.e[i] === BROTLI && prev.index.r[i] <= MAX_DICT_CHUNK_BYTES) text.push(prev.rawChunk(i));
+    });
+    for (const id of used) {
+      const source = incoming.get(id);
+      if (source && isCompressible(source.mime) && source.raw.byteLength <= MAX_DICT_CHUNK_BYTES) text.push(source.raw);
+    }
+    if (text.reduce((sum, chunk) => sum + chunk.byteLength, 0) >= MIN_DICT_TEXT_BYTES) {
+      dictionary = trainDictionary(text);
+      reencoded = !!prev;
+    }
+  }
+  const dictionaryId = dictionary ? chunkId(dictionary) : undefined;
+  if (dictionary) {
+    used.add(dictionaryId!);
+    if (!prev?.chunkIndex.has(dictionaryId!)) incoming.set(dictionaryId!, { raw: dictionary, mime: DICTIONARY_MIME });
+  }
+  const compress = (raw: Buffer, mime: string) => storedForm(raw, mime, mime === DICTIONARY_MIME ? null : dictionary);
+
+  // 4. Lay chunks out by generation: survivors in their old order, then new ones.
   type Placed = { id: string; stored: Buffer; rawLength: number; encoding: string; prevOffset: number };
   const placed: Placed[] = [];
   if (prev) {
     prev.index.c.forEach((id, i) => {
       if (!used.has(id)) return;
-      placed.push({
-        id,
-        stored: prev.storedChunk(i),
-        rawLength: prev.index.r[i],
-        encoding: prev.index.e[i],
-        prevOffset: prev.offsets[i],
-      });
+      const survivor = reencoded
+        ? { ...(prev.index.e[i] === BROTLI ? compress(prev.rawChunk(i), BROTLI_CHUNK_MIME) : { stored: prev.storedChunk(i), encoding: prev.index.e[i] }), prevOffset: -1 }
+        : { stored: prev.storedChunk(i), encoding: prev.index.e[i], prevOffset: prev.offsets[i] };
+      placed.push({ id, rawLength: prev.index.r[i], ...survivor });
     });
   }
   const carriedOver = new Set(placed.map((p) => p.id));
@@ -276,13 +339,13 @@ export function buildPack(input: BuildInput): BuildOutput {
     if (carriedOver.has(id)) continue;
     const source = incoming.get(id);
     if (!source) throw new Error(`no source bytes for chunk ${id}`);
-    const { stored, encoding } = storedForm(source.raw, source.mime);
+    const { stored, encoding } = compress(source.raw, source.mime);
     placed.push({ id, stored, rawLength: source.raw.byteLength, encoding, prevOffset: -1 });
     newChunks++;
     newBytes += stored.byteLength;
   }
 
-  // 4. Write the sections.
+  // 5. Write the sections.
   const offsets = new Map<string, number>();
   let dataLen = 0;
   const data = sha256(new Uint8Array(0));
@@ -309,7 +372,7 @@ export function buildPack(input: BuildInput): BuildOutput {
   };
   const indexBytes = brotli(Buffer.from(JSON.stringify(index), "utf8"), 22);
 
-  // 5. Remap generation tails onto the new layout.
+  // 6. Remap generation tails onto the new layout.
   const remapTail = (oldTail: number) =>
     placed.reduce((sum, c) => (c.prevOffset >= 0 && c.prevOffset < oldTail ? sum + c.stored.byteLength : sum), 0);
   const gens: PackGeneration[] = prev
@@ -336,6 +399,7 @@ export function buildPack(input: BuildInput): BuildOutput {
     indexHash: sha256(indexBytes).digest("hex").slice(0, 16),
     gens,
     ...(input.truncated ? { truncated: true } : {}),
+    ...(dictionaryId ? { dict: dictionaryId } : {}),
   };
   const metaBytes = Buffer.from(JSON.stringify(meta), "utf8");
 
@@ -352,7 +416,7 @@ export function buildPack(input: BuildInput): BuildOutput {
   const lastGen = gens[gens.length - 1];
 
   return {
-    unchanged: prev?.meta.commit === fingerprint,
+    unchanged: prev?.meta.commit === fingerprint && !reencoded,
     meta,
     bytes,
     stats: {

@@ -5,7 +5,7 @@
  *
  *   offset  size  field
  *        0     4  magic "DOCL"
- *        4     2  version (1), little endian
+ *        4     2  version (2), little endian
  *        6     2  reserved
  *        8     4  directory length
  *       12     4  reserved
@@ -23,7 +23,8 @@ import path from "path";
 import zlib from "zlib";
 import { DOCPACK_V3_VERSION, HEADER_BYTES as PACK_HEADER_BYTES, updateBytesFrom, type PackMeta } from "./docpack-v3";
 
-export const LIBRARY_VERSION = 1;
+/** 2: packs may hold dictionary zstd chunks, which apps before that cannot read. */
+export const LIBRARY_VERSION = 2;
 export const LIBRARY_HEADER_BYTES = 32;
 export const LIBRARY_ASSET = "Docx-library.bin";
 export const LIBRARY_URL = `https://github.com/VahidM313/docx/releases/download/packs-latest/${LIBRARY_ASSET}`;
@@ -92,7 +93,7 @@ export async function readLibrary(read: ReadRange): Promise<Library> {
     throw new Error("not a docx library");
   }
   const version = head.readUInt16LE(4);
-  if (version !== LIBRARY_VERSION) throw new Error(`unsupported library version ${version}`);
+  if (version < 1 || version > LIBRARY_VERSION) throw new Error(`unsupported library version ${version}`);
   const directoryLength = head.readUInt32LE(8);
   const dataStart = LIBRARY_HEADER_BYTES + directoryLength;
   if (head.length < dataStart) head = Buffer.concat([head, await read(head.length, dataStart)]);

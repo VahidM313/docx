@@ -21,6 +21,7 @@ use crate::commands::parse_registry;
 use crate::config::LIBRARY_URL;
 use crate::error::{read_guard, write_guard, DocxError, Result};
 use crate::pack::{
+    ChunkDictionary,
     get_packs_dir, parse_docpack_on_disk, parse_v3_header, AssetStore, PackMeta, SiteOverridePack,
     V3Index, V3_HEADER_BYTES,
 };
@@ -32,7 +33,8 @@ const HEAD_PROBE_BYTES: u64 = 64 * 1024;
 /// Enough for the library's directory. It is read on every update check, so this stays small.
 const DIRECTORY_PROBE_BYTES: u64 = 32 * 1024;
 const LIBRARY_HEADER_BYTES: usize = 32;
-const LIBRARY_VERSION: u16 = 1;
+/// 2 added dictionary zstd chunks; the layout of the library itself is the same.
+const LIBRARY_VERSION: u16 = 2;
 /// Fetching a small gap is cheaper than another request.
 const MAX_RANGE_GAP: u64 = 32 * 1024;
 /// Above this share of missing data, one streamed download beats many ranges.
@@ -284,7 +286,7 @@ fn read_library_head(url: &str) -> Result<LibraryHead> {
         return Err(DocxError::invalid_pack("published file is not a library"));
     }
     let version = u16::from_le_bytes([bytes[4], bytes[5]]);
-    if version != LIBRARY_VERSION {
+    if !(1..=LIBRARY_VERSION).contains(&version) {
         return Err(DocxError::invalid_pack(format!("library version {version} needs a newer app")));
     }
     let directory_len = u32::from_le_bytes([bytes[8], bytes[9], bytes[10], bytes[11]]) as usize;
@@ -345,6 +347,7 @@ struct RemoteHead {
     bytes: Vec<u8>,
     meta: PackMeta,
     index: V3Index,
+    dictionary: Option<ChunkDictionary>,
 }
 
 fn fetch_remote_head(slice: &PackSlice) -> Result<RemoteHead> {
@@ -381,7 +384,15 @@ fn read_remote_head(slice: &PackSlice) -> Result<RemoteHead> {
     if index.data_len != data_len {
         return Err(DocxError::invalid_pack("index does not match the data section"));
     }
-    Ok(RemoteHead { bytes, meta, index })
+    let dictionary = match index.dictionary_chunk(&meta)? {
+        Some(i) => {
+            let start = slice.start + head_len as u64 + index.offsets[i];
+            let stored = fetch_range(url, start, start + index.lengths[i])?;
+            Some(index.parse_dictionary(&stored, i)?)
+        }
+        None => None,
+    };
+    Ok(RemoteHead { bytes, meta, index, dictionary })
 }
 
 fn fetch_range(url: &str, start: u64, end: u64) -> Result<Vec<u8>> {
@@ -421,26 +432,18 @@ fn open_range(url: &str, start: u64, end: u64) -> Result<reqwest::blocking::Resp
     Ok(resp)
 }
 
-fn verify_chunk(stored: &[u8], index: &V3Index, i: usize) -> Result<()> {
+fn verify_chunk(stored: &[u8], index: &V3Index, i: usize, dictionary: Option<&ChunkDictionary>) -> Result<()> {
     let id = &index.ids[i];
-    let raw_len = index.raw_lengths[i];
-    let digest = if index.brotli[i] {
-        let mut raw = Vec::with_capacity(raw_len as usize);
-        brotli::Decompressor::new(stored, 4096)
-            .take(raw_len + 1)
-            .read_to_end(&mut raw)
-            .map_err(|e| DocxError::invalid_pack(format!("chunk {id} does not decompress: {e}")))?;
-        if raw.len() as u64 != raw_len {
-            return Err(DocxError::invalid_pack(format!("chunk {id} has the wrong size")));
-        }
-        sha256_hex_16(&raw)
-    } else {
-        sha256_hex_16(stored)
-    };
-    if &digest != id {
+    if sha256_hex_16(&index.decode_chunk(stored, i, dictionary)?) != *id {
         return Err(DocxError::invalid_pack(format!("chunk {id} failed verification")));
     }
     Ok(())
+}
+
+/// What makes a local chunk usable: the published pack must come out byte-identical, so
+/// the same content in another encoding has to be fetched.
+fn chunk_key(index: &V3Index, i: usize) -> (&str, u8, u64) {
+    (index.ids[i].as_str(), index.encodings[i], index.lengths[i])
 }
 
 /// Fetched chunks, kept in a spool file: chunk index -> offset in the spool.
@@ -490,7 +493,7 @@ fn fetch_chunk_group(
         if let Err(e) = reader.read_exact(&mut chunk) {
             return (done, Err(DocxError::http(url, format!("range read failed: {e}"))));
         }
-        if let Err(e) = verify_chunk(&chunk, index, i) {
+        if let Err(e) = verify_chunk(&chunk, index, i, head.dictionary.as_ref()) {
             return (done, Err(e));
         }
         // A failed write may have moved the cursor, so never rely on its position.
@@ -558,7 +561,7 @@ fn assemble_pack(
     head: &RemoteHead,
     local: &SiteOverridePack,
     local_index: &V3Index,
-    local_lookup: &HashMap<&str, usize>,
+    local_lookup: &HashMap<(&str, u8, u64), usize>,
     spool: &mut Spool,
 ) -> Result<()> {
     let index = &head.index;
@@ -583,7 +586,7 @@ fn assemble_pack(
             spool.file.read_exact(&mut chunk)?;
         } else {
             let j = *local_lookup
-                .get(index.ids[i].as_str())
+                .get(&chunk_key(index, i))
                 .ok_or_else(|| DocxError::invalid_pack(format!("no source for chunk {}", index.ids[i])))?;
             let at = local_data_start + local_index.offsets[j];
             if at != local_position {
@@ -687,8 +690,8 @@ fn sync_by_ranges(
             96,
             "Combining local and downloaded content...".to_string(),
         );
-        let local_lookup: HashMap<&str, usize> =
-            local_index.ids.iter().enumerate().map(|(i, id)| (id.as_str(), i)).collect();
+        let local_lookup: HashMap<(&str, u8, u64), usize> =
+            (0..local_index.ids.len()).map(|i| (chunk_key(local_index, i), i)).collect();
         assemble_pack(&tmp, head, local, local_index, &local_lookup, &mut spool)?;
         replace_file(&tmp, dest)?;
         Ok(spool.received_bytes)
@@ -762,9 +765,9 @@ pub(crate) fn sync_pack(
     if let Some(local) = local
         && let Some(local_index) = local.v3_index()
     {
-        let known: HashSet<&str> = local_index.ids.iter().map(String::as_str).collect();
+        let known: HashSet<(&str, u8, u64)> = (0..local_index.ids.len()).map(|i| chunk_key(&local_index, i)).collect();
         let missing: Vec<usize> =
-            (0..head.index.ids.len()).filter(|&i| !known.contains(head.index.ids[i].as_str())).collect();
+            (0..head.index.ids.len()).filter(|&i| !known.contains(&chunk_key(&head.index, i))).collect();
         let missing_bytes: u64 = missing.iter().map(|&i| head.index.lengths[i]).sum();
 
         if missing_bytes * 100 < head.index.data_len * FULL_DOWNLOAD_PERCENT {

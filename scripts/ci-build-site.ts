@@ -406,6 +406,22 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
   const previousPageCount = previous
     ? Object.keys(previous.index.p).filter((route) => previous.mimeOf(route)?.startsWith("text/html")).length
     : 0;
+  // Keeping the old content must not keep the old compression
+  const keepPrevious = (): BuildResult => {
+    if (!previous || previous.meta.dict) return "kept";
+    const { id, name, version, origin, entryPath } = site;
+    const rebuilt = buildPack({
+      id, name, version, origin, entryPath,
+      assets: new Map(),
+      carriedRoutes: Object.keys(previous.index.p),
+      previous,
+      truncated: previous.meta.truncated,
+    });
+    if (rebuilt.unchanged) return "kept";
+    writePack(docpackPath, rebuilt.bytes);
+    return "built";
+  };
+
   const crawlDeadline = Date.now() + CRAWL_BUDGET_MS;
   const maxPages = Math.max(site.maxPages || 150, PAGE_CAP_FLOOR);
   const visitedPages = new Set<string>();
@@ -775,7 +791,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
   if (pageCount === 0 || searchEntries.length === 0) {
     if (previousRouteCount > 0) {
       console.warn(`⚠️ [${site.id}] Crawl produced 0 valid HTML pages — keeping existing healthy release .docpack.`);
-      return "kept";
+      return keepPrevious();
     }
     throw new Error(`Crawl for ${site.id} produced 0 valid HTML pages and no previous release pack exists!`);
   }
@@ -796,7 +812,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
     console.warn(
       `⚠️ [${site.id}] Crawl only captured ${pageCount} pages vs ${previousPageCount} previously — keeping existing healthy .docpack.`
     );
-    return "kept";
+    return keepPrevious();
   }
 
   // After the guard: a site redirecting everything to a maintenance page has no pages to show for it
