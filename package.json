@@ -11,6 +11,7 @@
     "build:all": "bun run scripts/build-all.ts",
     "build:desktop": "bun run scripts/build-desktop.ts",
     "build:android": "bun run scripts/build-android.ts",
+    "docs:local": "bun run scripts/build-local.ts",
     "lint": "oxlint docs-desktop/src"
   },
   "devDependencies": {

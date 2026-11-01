@@ -3,10 +3,6 @@ import { invoke } from "@tauri-apps/api/core";
 import { listen } from "@tauri-apps/api/event";
 
 export interface ServerStatus {
-  tailwind: boolean;
-  shadcn: boolean;
-  tailwind_port: number;
-  shadcn_port: number;
   site_ports?: Record<string, number>;
 }
 

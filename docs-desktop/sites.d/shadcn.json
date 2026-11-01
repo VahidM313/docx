@@ -7,7 +7,6 @@
   "color": "#ffffff",
   "bgTint": "rgba(255, 255, 255, 0.14)",
   "description": "Beautifully designed accessible UI components built with Radix UI, Base UI, and Tailwind CSS.",
-  "kind": "embedded",
   "allowedPrefixes": ["/docs", "/blocks", "/colors"],
   "maxPages": 500,
   "entryPath": "/docs",

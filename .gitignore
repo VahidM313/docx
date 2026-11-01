@@ -8,6 +8,7 @@ shadcn-site/
 *.apk
 *.pack
 *.docpack
+.local-packs/
 .DS_Store
 .gradle/
 .kotlin/

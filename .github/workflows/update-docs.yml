@@ -21,7 +21,7 @@ on:
   workflow_dispatch:
     inputs:
       sites:
-        description: "Site IDs to build: 'missing' (only unbuilt packs), 'all' (all packs and both apps), 'none' (only Docx.exe & Android APK), or comma-separated IDs (e.g. redis,duckdb)"
+        description: "Site IDs to build: 'missing' (only unbuilt packs), 'all' (all packs and both apps), 'none' (only Docx.exe & Android APK), 'local:<ids>' (publish hand-built packs, see scripts/build-local.ts), or comma-separated IDs (e.g. redis,duckdb)"
         required: false
         default: "missing"
 
@@ -32,10 +32,12 @@ env:
   RELEASE_TAG: packs-latest
   # Every docpack in one file. Clients read byte ranges of it, never the whole file.
   LIBRARY: Docx-library.bin
+  # Packs built on a laptop for sites that refuse GitHub's runners wait here.
+  LOCAL_PACKS_TAG: docpacks-v3
 
 jobs:
   build-desktop-app:
-    name: Build Docx.exe & Docx-core.exe (Windows x64)
+    name: Build Docx.exe (Windows x64)
     if: github.event_name == 'push' || github.event_name == 'pull_request' || (github.event_name == 'workflow_dispatch' && (github.event.inputs.sites == 'none' || github.event.inputs.sites == 'all'))
     runs-on: windows-latest
     steps:
@@ -66,7 +68,7 @@ jobs:
           bun run build
           cargo build --release --manifest-path src-tauri/Cargo.toml
 
-      - name: Package Docx-core.exe + Standalone Docx.exe (with DOCXPACK trailer) & Upload to Release
+      - name: Package Docx.exe & Upload to Release
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -80,43 +82,21 @@ jobs:
           }
 
           New-Item -ItemType Directory -Force -Path "./ci-dist" | Out-Null
-          Copy-Item "docs-desktop/src-tauri/target/release/app.exe" "./ci-dist/Docx-core.exe" -Force
-
-          # Embed tailwind.docpack and shadcn.docpack in the standalone Docx.exe trailer.
-          # The release's own packs are the fallback until the library holds them.
-          bun scripts/library.ts extract tailwind,shadcn ./ci-dist
-          if (-not ((Test-Path ./ci-dist/tailwind.docpack) -and (Test-Path ./ci-dist/shadcn.docpack))) {
-            gh release download packs-latest --pattern "tailwind.docpack" --pattern "shadcn.docpack" --dir "./ci-dist" --clobber
-          }
+          # Docx.exe is the download; apps that update themselves fetch Docx-core.exe.
+          Copy-Item "docs-desktop/src-tauri/target/release/app.exe" "./ci-dist/Docx.exe" -Force
+          Copy-Item "./ci-dist/Docx.exe" "./ci-dist/Docx-core.exe" -Force
 
           bun -e '
             const fs = require("fs");
-            const coreBytes = fs.readFileSync("./ci-dist/Docx-core.exe");
-            const trailerChunks = [];
-            for (const f of ["./ci-dist/tailwind.docpack", "./ci-dist/shadcn.docpack"]) {
-              if (fs.existsSync(f)) {
-                const b = fs.readFileSync(f);
-                const lenBuf = Buffer.alloc(4);
-                lenBuf.writeUInt32LE(b.length, 0);
-                trailerChunks.push(lenBuf, b);
-              }
-            }
-            const trailerPayload = Buffer.concat(trailerChunks);
-            const footer = Buffer.alloc(16);
-            footer.writeBigUInt64LE(BigInt(trailerPayload.length), 0);
-            footer.write("DOCXPACK", 8, "ascii");
-            const fullExe = Buffer.concat([coreBytes, trailerPayload, footer]);
-            fs.writeFileSync("./ci-dist/Docx.exe", fullExe);
-
+            const size = fs.statSync("./ci-dist/Docx.exe").size;
             const appManifest = {
               commit: process.env.SHORT_SHA.slice(0, 8),
               version: "v1.1.0",
               updatedAt: new Date().toISOString(),
-              coreSizeBytes: coreBytes.length,
-              fullSizeBytes: fullExe.length
+              coreSizeBytes: size,
+              fullSizeBytes: size
             };
             fs.writeFileSync("./ci-dist/app-manifest.json", JSON.stringify(appManifest, null, 2));
-            console.log("Built Docx-core.exe:", (coreBytes.length / 1048576).toFixed(2), "MB, Standalone Docx.exe:", (fullExe.length / 1048576).toFixed(2), "MB");
           '
 
           gh release upload packs-latest "./ci-dist/Docx.exe" "./ci-dist/Docx-core.exe" "./ci-dist/app-manifest.json" --clobber
@@ -209,16 +189,18 @@ jobs:
             const fs = require("fs");
             const { SITE_CATALOG } = require("./scripts/ci-build-site.ts");
             const allIds = SITE_CATALOG.map(s => s.id);
+            // These refuse the runners, so only an explicit request crawls them here
+            const crawlable = SITE_CATALOG.filter(s => !s.localBuild).map(s => s.id);
             const mode = process.env.INPUT_SITES || "";
             const eventName = process.env.EVENT_NAME;
 
             const published = new Set(JSON.parse(process.env.PUBLISHED_IDS));
-            const missingIds = allIds.filter(id => !published.has(id));
+            const missingIds = crawlable.filter(id => !published.has(id));
             let resolved = [];
 
             if (eventName === "schedule" || mode === "all") {
-              resolved = allIds;
-            } else if (mode === "none") {
+              resolved = crawlable;
+            } else if (mode === "none" || mode.startsWith("local:")) {
               resolved = [];
             } else if (mode && mode !== "missing") {
               resolved = mode.split(",").map(s => s.trim()).filter(s => allIds.includes(s));
@@ -255,10 +237,6 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           bun scripts/library.ts extract "${{ matrix.site }}" ./dist-packs
-          # First build of a site: its v2 pack still guards against a short crawl
-          if [ ! -f "./dist-packs/${{ matrix.site }}.docpack" ]; then
-            gh release download "$RELEASE_TAG" --pattern "${{ matrix.site }}.docpack" --pattern "${{ matrix.site }}.search.json" --dir ./dist-packs --clobber || true
-          fi
 
       - name: Install a browser for sites that only render in one
         if: matrix.site == 'nestjs'
@@ -281,7 +259,7 @@ jobs:
   publish-library:
     name: Publish the docs library
     needs: [prepare-matrix, build-pack]
-    if: always() && needs.prepare-matrix.result == 'success' && needs.prepare-matrix.outputs.count != '0' && github.event_name != 'pull_request'
+    if: always() && needs.prepare-matrix.result == 'success' && (needs.prepare-matrix.outputs.count != '0' || startsWith(github.event.inputs.sites, 'local:')) && github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     concurrency:
       group: publish-library
@@ -294,11 +272,24 @@ jobs:
         uses: oven-sh/setup-bun@v2
 
       - name: Collect the changed packs
+        if: ${{ !startsWith(github.event.inputs.sites, 'local:') }}
         uses: actions/download-artifact@v4
         with:
           pattern: pack-*
           path: ./changed-packs
           merge-multiple: true
+
+      - name: Collect hand-built packs
+        if: startsWith(github.event.inputs.sites, 'local:')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INPUT_SITES: ${{ github.event.inputs.sites }}
+        run: |
+          mkdir -p ./changed-packs
+          ids="${INPUT_SITES#local:}"
+          for id in ${ids//,/ }; do
+            gh release download "$LOCAL_PACKS_TAG" --pattern "$id.docpack" --dir ./changed-packs --clobber
+          done
 
       - name: Compose, upload and swap in the new library
         env:

@@ -102,6 +102,21 @@ export async function readLibrary(read: ReadRange): Promise<Library> {
   return { directory: JSON.parse(zlib.brotliDecompressSync(compressed).toString("utf8")), dataStart };
 }
 
+/** Writes those packs to `dir` with range requests, without fetching the rest. */
+export async function extractPacks(library: Library | null, read: ReadRange, ids: string[], dir: string) {
+  fs.mkdirSync(dir, { recursive: true });
+  for (const id of ids) {
+    const entry = library?.directory.packs[id];
+    if (!entry) {
+      console.log(`${id}: not in the library yet`);
+      continue;
+    }
+    const start = library!.dataStart + entry.offset;
+    fs.writeFileSync(path.join(dir, `${id}.docpack`), await read(start, start + entry.sizeBytes));
+    console.log(`${id}: ${entry.sizeBytes} bytes, commit ${entry.commit}`);
+  }
+}
+
 /** Everything the directory says about a pack, read from the pack itself. */
 function describePack(filePath: string, start: number, length: number): { entry: Omit<LibraryEntry, "offset">; meta: PackMeta } {
   const fd = fs.openSync(filePath, "r");

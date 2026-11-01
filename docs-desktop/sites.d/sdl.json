@@ -1,6 +1,7 @@
 {
   "id": "sdl",
   "order": 115,
+  "localBuild": true,
   "name": "SDL (SDL2 / SDL3)",
   "version": "v3.2",
   "category": "Graphics & Game APIs",

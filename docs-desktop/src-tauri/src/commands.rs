@@ -1,16 +1,10 @@
-//! Tauri IPC commands: pack listing/registry, install/delete/bundle, window controls.
+//! Tauri IPC commands: pack listing/registry, install/delete, window controls.
 
 use std::collections::HashMap;
 use std::fs;
-#[cfg(desktop)]
-use std::path::PathBuf;
 use std::sync::Arc;
 
 use crate::catalog::get_site_origin_and_entry;
-#[cfg(desktop)]
-use crate::config::TRAILER_MAGIC;
-#[cfg(desktop)]
-use crate::pack::SiteOverridePack;
 use crate::pack::{get_packs_dir, AssetStore};
 use crate::server::{ensure_site_server, AppState, ServerStatus};
 use crate::update::fetch_library_directory;
@@ -35,10 +29,6 @@ pub(crate) fn check_servers(state: tauri::State<'_, AppState>) -> ServerStatus {
         .map(|g| g.clone())
         .unwrap_or_default();
     ServerStatus {
-        tailwind: true,
-        shadcn: true,
-        tailwind_port: state.tailwind_port,
-        shadcn_port: state.shadcn_port,
         site_ports: ports,
     }
 }
@@ -270,123 +260,6 @@ pub(crate) fn delete_docpack(site_id: String, state: tauri::State<'_, AppState>)
 
     Ok(format!("Deleted documentation pack for '{}'", site_id))
 }
-
-/// Writes `exe_core` plus `packs` as a DOCXPACK trailer to `out`, streaming every
-/// pack from disk. The result holds whole libraries, so it must not pass through memory.
-#[cfg(desktop)]
-pub(crate) fn write_exe_with_trailer(
-    out: &mut impl std::io::Write,
-    packs: &[Arc<SiteOverridePack>],
-) -> std::io::Result<u64> {
-    let mut trailer_len = 0u64;
-    for pack in packs {
-        out.write_all(&(pack.pack_len() as u32).to_le_bytes())?;
-        trailer_len += 4 + pack.copy_pack_to(out)?;
-    }
-    if trailer_len > 0 {
-        out.write_all(&trailer_len.to_le_bytes())?;
-        out.write_all(TRAILER_MAGIC)?;
-    }
-    Ok(trailer_len)
-}
-
-/// Length of the executable without any DOCXPACK trailer.
-#[cfg(desktop)]
-fn exe_core_len(path: &std::path::Path) -> std::io::Result<u64> {
-    use std::io::{Read, Seek, SeekFrom};
-    let mut file = fs::File::open(path)?;
-    let len = file.metadata()?.len();
-    if len < 16 {
-        return Ok(len);
-    }
-    file.seek(SeekFrom::End(-16))?;
-    let mut footer = [0u8; 16];
-    file.read_exact(&mut footer)?;
-    if &footer[8..16] != TRAILER_MAGIC {
-        return Ok(len);
-    }
-    let trailer_len = u64::from_le_bytes(footer[..8].try_into().unwrap_or([0u8; 8]));
-    Ok(len.saturating_sub(16 + trailer_len))
-}
-
-#[cfg(desktop)]
-fn bundle_library(store: &AssetStore) -> Result<String, String> {
-    use std::io::{Read, Write};
-
-    let exe_path = std::env::current_exe().map_err(|e| e.to_string())?;
-    let temp_dir = std::env::temp_dir();
-    let tmp_path = temp_dir.join("Docx_bundle_staged.exe");
-
-    let packs: Vec<Arc<SiteOverridePack>> = crate::error::read_guard(&store.overrides)
-        .map_err(|e| e.to_string())?
-        .values()
-        .cloned()
-        .collect();
-
-    let core_len = exe_core_len(&exe_path).map_err(|e| e.to_string())?;
-    let total = {
-        let mut out = std::io::BufWriter::new(fs::File::create(&tmp_path).map_err(|e| e.to_string())?);
-        let exe = fs::File::open(&exe_path).map_err(|e| e.to_string())?;
-        std::io::copy(&mut exe.take(core_len), &mut out).map_err(|e| e.to_string())?;
-        let trailer = write_exe_with_trailer(&mut out, &packs).map_err(|e| e.to_string())?;
-        out.flush().map_err(|e| e.to_string())?;
-        core_len + trailer + 16
-    };
-
-    let done = || {
-        format!(
-            "Updated standalone Desktop\\Docx.exe in-place with {} embedded packs ({:.2} MB total)!",
-            packs.len(),
-            total as f64 / (1024.0 * 1024.0)
-        )
-    };
-
-    let out_path = std::env::var_os("USERPROFILE")
-        .map(|home| PathBuf::from(home).join("Desktop").join("Docx.exe"))
-        .or_else(|| std::env::var_os("DESKTOP").map(PathBuf::from).map(|p| p.join("Docx.exe")))
-        .unwrap_or_else(|| temp_dir.join("Docx.exe"));
-    let out_parent_stem = out_path
-        .parent()
-        .map(|p| p.to_path_buf())
-        .unwrap_or_else(|| temp_dir.clone());
-    let _ = fs::remove_file(out_parent_stem.join("Docx.old.exe"));
-    let _ = fs::remove_file(out_parent_stem.join("Docx.new.exe"));
-
-    if fs::copy(&tmp_path, &out_path).is_ok() {
-        let _ = fs::remove_file(&tmp_path);
-        return Ok(done());
-    }
-
-    let temp_old = temp_dir.join(format!("Docx_prev_{}.tmp", std::process::id()));
-    let _ = fs::remove_file(&temp_old);
-    if fs::rename(&out_path, &temp_old).is_ok() {
-        if fs::copy(&tmp_path, &out_path).is_ok() {
-            let _ = fs::remove_file(&tmp_path);
-            let _ = fs::remove_file(&temp_old);
-            return Ok(done());
-        }
-        let _ = fs::rename(&temp_old, &out_path);
-    }
-
-    Err("Could not overwrite Desktop\\Docx.exe while locked.".to_string())
-}
-
-#[tauri::command]
-pub(crate) async fn bundle_into_single_exe(state: tauri::State<'_, AppState>) -> Result<String, String> {
-    #[cfg(not(desktop))]
-    {
-        let _ = state;
-        Err("Standalone single-binary bundling is only supported on desktop platforms.".to_string())
-    }
-    #[cfg(desktop)]
-    {
-        let store = Arc::clone(&state.store);
-        tauri::async_runtime::spawn_blocking(move || bundle_library(&store))
-            .await
-            .map_err(|e| format!("Task join error: {e}"))?
-    }
-}
-
 
 #[tauri::command]
 pub(crate) fn get_system_theme(window: tauri::Window) -> String {

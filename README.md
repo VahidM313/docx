@@ -40,7 +40,6 @@ No installer or external runtime required — download and run directly:
 - **Reader Typography & Dark Mode**:
   - **Font Size / Zoom Controls**: Adjust scale anytime via `A−` / `100%` / `A+` in the top bar or `Ctrl + +`, `Ctrl + -`, `Ctrl + 0`.
   - **Smart Dark Mode (`🌙 Dark` / `☀️ Light`)**: Automatically converts light-only documentation sites into a clean dark theme while preserving images and diagrams.
-- **Single-File Portable Bundler**: Click **Bundle Into Single `Docx.exe`** to embed all your downloaded `.docpack` archives directly into the executable trailer (`DOCXPACK`).
 
 ---
 
@@ -234,6 +233,16 @@ Every doc lives in one file, `Docx-library.bin`, on the [`packs-latest`](https:/
 **Layout.** A pack is a 32-byte header, then a small JSON metadata block, a Brotli-compressed index (chunk table plus each route's list of chunks), and the chunk data. The app only needs the metadata at startup and loads the index when a site is first read. The library (`scripts/lib/library.ts`) is a 32-byte header and a Brotli-compressed directory followed by the packs, each byte-identical to a standalone `.docpack`.
 
 **Publishing.** Changed packs go to one publish job, which verifies every pack and writes a new library around them. The new file is uploaded under a temporary name and swapped in by renaming, so the download URL never changes. GitHub keeps resolving a renamed asset's old name for about two minutes, so the previous file is deleted only after that. A site that cannot be crawled from GitHub's runners can read an official copy instead, through `mirror` in its `sites.d` file. A site that serves an empty shell to everything but a browser sets `rendered`, which reads its pages and code through headless Chromium.
+
+**Sites that refuse GitHub's runners.** A site marked `"localBuild": true` in `docs-desktop/sites.d/` is skipped by CI and built on your own machine:
+
+```bash
+bun run docs:local                # every localBuild site
+bun run docs:local cppreference   # only these (comma separated)
+bun run docs:local --no-publish   # build into .local-packs/ and stop
+```
+
+It starts from the published pack, crawls with higher limits than CI (`--pages`, `--minutes`), uploads only the changed packs to the `docpacks-v3` release, and starts a workflow run that writes them into the library. It needs `gh auth login`. A crawl that comes back short or empty keeps the published copy and exits with an error.
 
 **Updating.** The client (`docs-desktop/src-tauri/src/update.rs`) finds the pack in the library's directory, makes a range request for the pack's head, and compares chunk ids with the installed pack. It fetches the missing chunks in as few requests as it can, verifies each against its id, and assembles a byte-identical copy of the published pack, checked against the pack's hash before an atomic swap. Dropped connections resume where they stopped. Anything unexpected, including a damaged local pack or a server that ignores ranges, falls back to a full verified download. The registry records what an update costs from each recent build, so the app can show the real size up front.
 

@@ -1,6 +1,7 @@
 {
   "id": "cppreference",
   "order": 94,
+  "localBuild": true,
   "name": "C++ Reference (cppreference)",
   "version": "C++23/26",
   "category": "C & C++ Ecosystem",

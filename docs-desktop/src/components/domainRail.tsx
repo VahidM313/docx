@@ -4,7 +4,6 @@ import {
   SITE_MAP,
   SITE_CATEGORIES,
   CAT_LABEL,
-  EMBEDDED_SITE_IDS,
   getAdaptiveBrandColor,
   getAdaptiveSiteSvg,
   type SiteBrand,
@@ -91,12 +90,7 @@ export function DomainRail({ onNavigate }: { onNavigate?: () => void }) {
 
   // All installed docs
   const allInstalledBrands = React.useMemo(() => {
-    const list = app.entries.filter((e) => e.installed).map((e) => e.brand);
-    // If no packs are marked installed yet, fall back to embedded packs as default starting icons
-    if (list.length === 0) {
-      return EMBEDDED_SITE_IDS.map((id) => SITE_MAP[id]).filter(Boolean);
-    }
-    return list;
+    return app.entries.filter((e) => e.installed).map((e) => e.brand);
   }, [app.entries]);
 
   // 1. Pinned Docs (Top) - in the exact order of app.pinned

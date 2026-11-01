@@ -306,8 +306,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         (b) => b && typeof b.siteId === "string" && typeof b.pathOrUrl === "string",
       ),
       pinned: (() => {
-        const stored = load<string[]>("docx_pinned_sites_v1", ["tailwind", "shadcn"]);
-        return Array.isArray(stored) && stored.length > 0 ? stored : ["tailwind", "shadcn"];
+        const stored = load<string[]>("docx_pinned_sites_v1", []);
+        return Array.isArray(stored) ? stored : [];
       })(),
 
       tabs: [{ id: "home", siteId: "home" }],

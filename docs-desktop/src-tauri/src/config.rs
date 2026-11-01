@@ -1,6 +1,5 @@
 //! Central configuration constants shared across modules.
 
-pub(crate) static TRAILER_MAGIC: &[u8; 8] = b"DOCXPACK";
 /// App binaries.
 pub(crate) const RELEASE_BASE_URL: &str = "https://github.com/VahidM313/docx/releases/download/packs-latest";
 /// Every docpack in one file, read by byte range. `DOCX_LIBRARY_URL` points a test

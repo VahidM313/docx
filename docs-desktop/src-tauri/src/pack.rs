@@ -1,4 +1,4 @@
-//! `.docpack` storage: format parsing, embedded-trailer + on-disk pack discovery,
+//! `.docpack` storage: format parsing, on-disk pack discovery,
 //! and the shared `AssetStore` used by servers, commands and the updater.
 //!
 //! Format v3 keeps its small metadata block in front and only loads the route
@@ -13,14 +13,12 @@ use std::sync::{Arc, OnceLock, RwLock};
 use std::time::{Duration, Instant};
 
 use crate::catalog::get_site_origin_and_entry;
-use crate::config::TRAILER_MAGIC;
 use crate::error::{DocxError, Result};
 use crate::util::sha256_hex_16;
 
 /// Route of the page search index inside a v3 pack.
 pub(crate) const SEARCH_ROUTE: &str = "/__docx/search.json";
 pub(crate) const V3_HEADER_BYTES: usize = 32;
-pub(crate) const EMBEDDED_SOURCE: &str = "Embedded DOCXPACK Trailer";
 
 #[derive(serde::Deserialize, Clone, Debug)]
 pub struct ManifestEntry {
@@ -330,13 +328,6 @@ impl SiteOverridePack {
 
     /// Streams the whole pack, so that bundling never holds packs in memory.
     #[cfg(desktop)]
-    pub fn copy_pack_to(&self, out: &mut impl std::io::Write) -> std::io::Result<u64> {
-        let PackBacking::OnDisk { path, file_offset, pack_len } = &self.backing;
-        let mut file = File::open(path)?;
-        file.seek(SeekFrom::Start(*file_offset))?;
-        std::io::copy(&mut file.take(*pack_len), out)
-    }
-
     pub fn pack_len(&self) -> u64 {
         let PackBacking::OnDisk { pack_len, .. } = &self.backing;
         *pack_len
@@ -678,65 +669,6 @@ pub(crate) fn parse_docpack_on_disk(
     }))
 }
 
-fn load_exe_trailer_overrides(overrides: &mut HashMap<String, Arc<SiteOverridePack>>) {
-    let exe_path = match std::env::current_exe() {
-        Ok(p) => p,
-        Err(_) => return,
-    };
-    let mut file = match File::open(&exe_path) {
-        Ok(f) => f,
-        Err(_) => return,
-    };
-    let file_len = match file.metadata() {
-        Ok(m) => m.len(),
-        Err(_) => return,
-    };
-    if file_len < 20 {
-        return;
-    }
-    if file.seek(SeekFrom::End(-16)).is_err() {
-        return;
-    }
-    let mut footer = [0u8; 16];
-    if file.read_exact(&mut footer).is_err() {
-        return;
-    }
-    if &footer[8..16] != TRAILER_MAGIC {
-        return;
-    }
-    let trailer_len = u64::from_le_bytes(footer[0..8].try_into().expect("footer is always 16 bytes"));
-    if file_len < 16 + trailer_len {
-        return;
-    }
-    let trailer_start = file_len - 16 - trailer_len;
-    let trailer_end = file_len - 16;
-
-    let mut cur_offset = trailer_start;
-    while cur_offset + 4 <= trailer_end {
-        if file.seek(SeekFrom::Start(cur_offset)).is_err() {
-            break;
-        }
-        let mut len_buf = [0u8; 4];
-        if file.read_exact(&mut len_buf).is_err() {
-            break;
-        }
-        let pack_len = u32::from_le_bytes(len_buf) as u64;
-        cur_offset += 4;
-        if cur_offset + pack_len > trailer_end {
-            break;
-        }
-        if let Some(pack) = parse_docpack_on_disk(
-            exe_path.clone(),
-            cur_offset,
-            pack_len,
-            EMBEDDED_SOURCE,
-        ) {
-            overrides.insert(pack.meta.id.clone(), pack);
-        }
-        cur_offset += pack_len;
-    }
-}
-
 pub(crate) fn load_disk_overrides(overrides: &mut HashMap<String, Arc<SiteOverridePack>>) {
     let Ok(entries) = fs::read_dir(get_packs_dir()) else {
         return;
@@ -768,7 +700,6 @@ pub(crate) fn load_disk_overrides(overrides: &mut HashMap<String, Arc<SiteOverri
 pub(crate) fn load_asset_store() -> Arc<AssetStore> {
     migrate_legacy_packs_to_appdata();
     let mut overrides = HashMap::new();
-    load_exe_trailer_overrides(&mut overrides);
     load_disk_overrides(&mut overrides);
 
     Arc::new(AssetStore {

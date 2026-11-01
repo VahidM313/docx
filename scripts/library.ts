@@ -10,9 +10,8 @@
  *       Builds a new library from changed packs plus the previous library.
  */
 import fs from "fs";
-import path from "path";
 import { SITE_CATALOG } from "./ci-build-site";
-import { composeLibrary, LIBRARY_URL, readLibrary, urlReader, type Library } from "./lib/library";
+import { composeLibrary, extractPacks, LIBRARY_URL, readLibrary, urlReader, type Library } from "./lib/library";
 
 async function publishedLibrary(): Promise<Library | null> {
   try {
@@ -31,19 +30,7 @@ if (command === "ids") {
 } else if (command === "extract") {
   const [ids, dir] = args;
   if (!ids || !dir) throw new Error("usage: library.ts extract <id,id,...> <dir>");
-  fs.mkdirSync(dir, { recursive: true });
-  const library = await publishedLibrary();
-  const read = urlReader(LIBRARY_URL);
-  for (const id of ids.split(",")) {
-    const entry = library?.directory.packs[id];
-    if (!entry) {
-      console.log(`${id}: not in the library yet`);
-      continue;
-    }
-    const start = library!.dataStart + entry.offset;
-    fs.writeFileSync(path.join(dir, `${id}.docpack`), await read(start, start + entry.sizeBytes));
-    console.log(`${id}: ${entry.sizeBytes} bytes, commit ${entry.commit}`);
-  }
+  await extractPacks(await publishedLibrary(), urlReader(LIBRARY_URL), ids.split(","), dir);
 } else if (command === "compose") {
   const [packsDir, outPath, previousPath] = args;
   if (!packsDir || !outPath) throw new Error("usage: library.ts compose <packs-dir> <out> [previous-library]");

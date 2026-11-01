@@ -15,7 +15,6 @@ export interface SiteBrand {
   svg: string;
   origin?: string;
   entryPath: string;
-  embedded?: boolean;
   hasBuiltinPersian?: boolean;
   defaultRoutes?: { label: string; path: string }[];
 }
@@ -49,9 +48,6 @@ export const SITES = (catalog.sites as unknown as SiteBrand[]).sort(
 );
 
 export const SITE_MAP: Record<string, SiteBrand> = Object.fromEntries(SITES.map((s) => [s.id, s]));
-
-/** Embedded packs (built from local source workspaces, not crawled). */
-export const EMBEDDED_SITE_IDS = ["tailwind", "shadcn"];
 
 const LETTER_TILE_SVG = (letter: string, color: string) =>
   `<svg viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="7" fill="${color}"/><text x="12" y="17" font-family="Segoe UI, sans-serif" font-size="12.5" font-weight="700" fill="#fff" text-anchor="middle">${letter.toUpperCase()}</text></svg>`;

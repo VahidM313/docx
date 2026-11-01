@@ -1,5 +1,6 @@
 #[cfg(desktop)]
 use std::fs;
+#[cfg(mobile)]
 use std::sync::Arc;
 #[cfg(desktop)]
 use std::thread;
@@ -28,7 +29,7 @@ use std::sync::atomic::{AtomicBool, Ordering};
 
 use app_update::{check_app_update, self_update_app};
 use commands::{
-    bundle_into_single_exe, check_servers, cursor_in_window, delete_docpack,
+    check_servers, cursor_in_window, delete_docpack,
     ensure_site_server_cmd, fetch_remote_registry, get_installed_packs,
     get_system_theme, open_in_browser, window_close, window_minimize,
     window_show_ready, window_start_dragging, window_toggle_fullscreen,
@@ -38,7 +39,7 @@ use pack::load_asset_store;
 #[cfg(mobile)]
 use pack::{load_disk_overrides, set_packs_dir};
 use search::get_extra_search_entries;
-use server::{ensure_site_server, AppState};
+use server::AppState;
 use update::install_or_update_from_github;
 
 #[cfg(target_os = "windows")]
@@ -100,19 +101,14 @@ pub fn run() {
     }
 
     let store = load_asset_store();
-    let tailwind_port = ensure_site_server("tailwind", Arc::clone(&store));
-    let shadcn_port = ensure_site_server("shadcn", Arc::clone(&store));
-
-    // Other packs are served by an embedded listener created on demand when a
-    // document is opened. Starting one thread/socket per installed pack during
-    // boot wasted memory and file descriptors for packs the user never reads.
+    // Packs are served by a listener created on demand when a document is opened.
+    // Starting one thread/socket per installed pack during boot wasted memory and
+    // file descriptors for packs the user never reads.
 
     #[cfg(mobile)]
     let store_clone = Arc::clone(&store);
     tauri::Builder::default()
         .manage(AppState {
-            tailwind_port,
-            shadcn_port,
             store,
         })
         .on_window_event(|win, event| match event {
@@ -182,7 +178,6 @@ pub fn run() {
             ensure_site_server_cmd,
             get_extra_search_entries,
             install_or_update_from_github,
-            bundle_into_single_exe,
             delete_docpack,
             check_app_update,
             self_update_app,

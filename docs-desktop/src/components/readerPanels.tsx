@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useApp, type BrowserTab } from "../lib/store";
 import { Tauri } from "../lib/tauri";
-import { getBrand, getEntryPath, EMBEDDED_SITE_IDS } from "../lib/catalog";
+import { getBrand, getEntryPath } from "../lib/catalog";
 import { translateTasks } from "../lib/translator/engine";
 import { Loader2 } from "lucide-react";
 
@@ -98,13 +98,7 @@ export function ReaderPanels(props: { apiRef: React.RefObject<ReaderPanelsApi | 
       for (const t of webTabs) {
         if (urlsRef.current[`${t.id}|${t.pathOrUrl ?? ""}`]) continue;
         try {
-          let port: number;
-          if (EMBEDDED_SITE_IDS.includes(t.siteId)) {
-            const st = app.servers ?? (await Tauri.checkServers());
-            port = t.siteId === "tailwind" ? st.tailwind_port : st.shadcn_port;
-          } else {
-            port = await Tauri.ensureSiteServer(t.siteId);
-          }
+          const port = await Tauri.ensureSiteServer(t.siteId);
           if (cancelled) return;
           const url = `http://localhost:${port}${t.pathOrUrl ?? getEntryPath(t.siteId)}`;
           const prev = Object.keys(urlsRef.current).find((k) => k.startsWith(`${t.id}|`));

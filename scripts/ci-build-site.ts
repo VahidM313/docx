@@ -1,9 +1,8 @@
 import fs from "fs";
 import path from "path";
 import crypto from "crypto";
-import { readLegacyPack } from "./lib/docpack-legacy";
 import type { Browser } from "playwright";
-import { buildPack, DOCPACK_V3_VERSION, parsePack, SEARCH_ROUTE, type PackAsset, type ParsedPack } from "./lib/docpack-v3";
+import { buildPack, parsePack, SEARCH_ROUTE, type PackAsset, type ParsedPack } from "./lib/docpack-v3";
 import { looksFingerprinted, normalizeHtml, stableAssetKey } from "./lib/normalize-html";
 
 import siteCatalog from "../docs-desktop/sites.json";
@@ -26,6 +25,8 @@ export interface SiteConfig {
   excludePattern?: string;
   /** Every address serves an empty shell, so pages are read from a real browser. */
   rendered?: boolean;
+  /** Refuses GitHub's runners: scripts/build-local.ts builds it, and CI leaves it alone. */
+  localBuild?: boolean;
 }
 /**
  * Crawl/pack configuration, sourced from `docs-desktop/sites.json`
@@ -43,6 +44,7 @@ export const SITE_CATALOG: SiteConfig[] = siteCatalog.sites.map((s: any) => ({
   singlePage: s.singlePage,
   excludePattern: s.excludePattern,
   rendered: s.rendered,
+  localBuild: s.localBuild,
 }));
 
 const USER_AGENT =
@@ -369,36 +371,14 @@ function withReferencedRoutes(pack: ParsedPack, routes: Set<string>): Set<string
   return closure;
 }
 
-/** A v1/v2 pack as a v3 one, with the search index it kept in a sidecar. */
-function migrateLegacyPack(bytes: Buffer, docpackPath: string, site: SiteConfig, keepScripts: boolean): Buffer {
-  const assets = readLegacyPack(bytes);
-  for (const [route, asset] of assets) {
-    if (!asset.mime.startsWith("text/html")) continue;
-    assets.set(route, { ...asset, bytes: Buffer.from(normalizeHtml(asset.bytes.toString("utf-8"), { keepScripts }), "utf-8") });
-  }
-  const searchPath = docpackPath.replace(/\.docpack$/, ".search.json");
-  if (fs.existsSync(searchPath)) {
-    const entries: { id: string }[] = JSON.parse(fs.readFileSync(searchPath, "utf-8"));
-    entries.sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
-    assets.set(SEARCH_ROUTE, { bytes: Buffer.from(JSON.stringify(entries), "utf-8"), mime: "application/json; charset=utf-8" });
-  }
-  const { id, name, version, origin, entryPath } = site;
-  return buildPack({ id, name, version, origin, entryPath, assets }).bytes;
-}
-
-/** The pack to build on. `migrated` holds its bytes when it only exists in an older format so far. */
-function loadPreviousPack(docpackPath: string, site: SiteConfig, keepScripts: boolean) {
-  if (!fs.existsSync(docpackPath)) return { pack: null, migrated: null };
-  const bytes = fs.readFileSync(docpackPath);
-  const isV3 = bytes.subarray(0, 4).toString("latin1") === "DOCP" && bytes.readUInt16LE(4) === DOCPACK_V3_VERSION;
+/** The pack to build on, from the library. */
+function loadPreviousPack(docpackPath: string) {
+  if (!fs.existsSync(docpackPath)) return null;
   try {
-    if (isV3) return { pack: parsePack(bytes), migrated: null };
-    const migrated = migrateLegacyPack(bytes, docpackPath, site, keepScripts);
-    console.log(`  Starting from the v2 release pack of ${site.id}`);
-    return { pack: parsePack(migrated), migrated };
+    return parsePack(fs.readFileSync(docpackPath));
   } catch (e: any) {
     console.warn(`  Ignoring previous pack ${path.basename(docpackPath)}: ${e?.message}`);
-    return { pack: null, migrated: null };
+    return null;
   }
 }
 
@@ -420,19 +400,11 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
   const docpackPath = path.join(outDir, `${site.id}.docpack`);
   // Chunks are reused from this pack, and it guards against a partial/rate-limited crawl replacing a healthy one
   const keepScripts = SCRIPTED_SITES.has(site.id);
-  const { pack: previous, migrated } = loadPreviousPack(docpackPath, site, keepScripts);
+  const previous = loadPreviousPack(docpackPath);
   const previousRouteCount = previous?.meta.routeCount ?? 0;
   const previousPageCount = previous
     ? Object.keys(previous.index.p).filter((route) => previous.mimeOf(route)?.startsWith("text/html")).length
     : 0;
-  // A kept v2 pack still has to reach the v3 release, or its pages would be lost there
-  const keepPrevious = (): BuildResult => {
-    if (!migrated) return "kept";
-    writePack(docpackPath, migrated);
-    console.log(`✓ Published the v2 pack of ${site.id} as v3 (${previousRouteCount} routes)`);
-    return "built";
-  };
-
   const crawlDeadline = Date.now() + CRAWL_BUDGET_MS;
   const maxPages = Math.max(site.maxPages || 150, PAGE_CAP_FLOOR);
   const visitedPages = new Set<string>();
@@ -802,7 +774,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
   if (pageCount === 0 || searchEntries.length === 0) {
     if (previousRouteCount > 0) {
       console.warn(`⚠️ [${site.id}] Crawl produced 0 valid HTML pages — keeping existing healthy release .docpack.`);
-      return keepPrevious();
+      return "kept";
     }
     throw new Error(`Crawl for ${site.id} produced 0 valid HTML pages and no previous release pack exists!`);
   }
@@ -823,7 +795,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
     console.warn(
       `⚠️ [${site.id}] Crawl only captured ${pageCount} pages vs ${previousPageCount} previously — keeping existing healthy .docpack.`
     );
-    return keepPrevious();
+    return "kept";
   }
 
   // After the guard: a site redirecting everything to a maintenance page has no pages to show for it
@@ -867,7 +839,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
   });
 
   const mb = (n: number) => (n / (1024 * 1024)).toFixed(2);
-  if (built.unchanged && !migrated && previous?.meta.version === site.version) {
+  if (built.unchanged && previous?.meta.version === site.version) {
     console.log(`✓ ${site.id} is unchanged at ${built.meta.commit} (${built.stats.routes} routes) — nothing to publish`);
     return "unchanged";
   }
@@ -881,6 +853,10 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
     `  ${built.stats.newChunks} new chunks (${mb(built.stats.newBytes)} MB); update from previous build: ${mb(built.stats.updateBytes)} MB; carried ${carriedRoutes.size} routes`
   );
   return "built";
+}
+
+export async function closeBrowser() {
+  await (await browser)?.close();
 }
 
 // CLI Entrypoint
@@ -904,6 +880,6 @@ if (import.meta.main) {
         }
       }
     }
-    await (await browser)?.close();
+    await closeBrowser();
   }
 }

@@ -1,6 +1,4 @@
 import { describe, expect, test } from "bun:test";
-import zlib from "zlib";
-import { readLegacyPack } from "./docpack-legacy";
 import { buildPack, parsePack, SEARCH_ROUTE, updateBytesFrom, type PackAsset } from "./docpack-v3";
 import { chunkBoundaries, splitIntoChunks, CHUNK_MAX_BYTES } from "./chunker";
 import { looksFingerprinted, normalizeHtml, stableAssetKey } from "./normalize-html";
@@ -224,41 +222,5 @@ describe("docpack v3", () => {
     const { bytes } = buildPack({ ...base, assets: site(2, 18) });
     expect(() => parsePack(bytes.subarray(0, bytes.length - 10))).toThrow();
     expect(() => parsePack(Buffer.from("not a pack at all, definitely not a docpack header"))).toThrow();
-  });
-});
-
-describe("readLegacyPack", () => {
-  const stored = [
-    { route: "/plain", mime: "text/plain", bytes: Buffer.from("plain text"), encoding: undefined, gzipped: false },
-    { route: "/gz", mime: "text/css", bytes: zlib.gzipSync("body{}"), encoding: undefined, gzipped: true },
-    { route: "/br", mime: HTML, bytes: zlib.brotliCompressSync("<p>brotli</p>"), encoding: "br", gzipped: false },
-  ];
-  function legacyPack(versioned: boolean): Buffer {
-    let offset = 0;
-    const routes: Record<string, object> = {};
-    for (const { route, mime, bytes, encoding, gzipped } of stored) {
-      routes[route] = { mime, offset, length: bytes.length, encoding, gzipped };
-      offset += bytes.length;
-    }
-    const manifest = Buffer.from(JSON.stringify({ id: "demo", routes }));
-    const header = Buffer.alloc(versioned ? 16 : 4);
-    if (versioned) header.write("DOCP", 0, "latin1");
-    header.writeUInt32LE(manifest.length, versioned ? 8 : 0);
-    return Buffer.concat([header, manifest, ...stored.map((s) => s.bytes)]);
-  }
-
-  for (const versioned of [true, false]) {
-    test(`decodes every encoding of a ${versioned ? "v2" : "v1"} pack`, () => {
-      const assets = readLegacyPack(legacyPack(versioned));
-      expect(assets.get("/plain")!.bytes.toString()).toBe("plain text");
-      expect(assets.get("/gz")!.bytes.toString()).toBe("body{}");
-      expect(assets.get("/br")!.bytes.toString()).toBe("<p>brotli</p>");
-      expect(assets.get("/br")!.mime).toBe(HTML);
-    });
-  }
-
-  test("rejects a route past the end of the pack", () => {
-    const pack = legacyPack(true);
-    expect(() => readLegacyPack(pack.subarray(0, pack.length - 4))).toThrow("past the end");
   });
 });

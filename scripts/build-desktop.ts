@@ -74,23 +74,8 @@ if (cargo.status !== 0) process.exit(cargo.status ?? 1);
 spawnSync("taskkill", ["/F", "/IM", "Docx.exe"], { stdio: "ignore" });
 spawnSync("taskkill", ["/F", "/IM", "app.exe"], { stdio: "ignore" });
 
-// 5. Preserve any existing DOCXPACK trailer on Desktop\Docx.exe and write updated binary to Desktop
-const coreBytes = fs.readFileSync(RELEASE_EXE);
-let trailerAndFooter = Buffer.alloc(0);
-
-if (fs.existsSync(DESKTOP_OUT_EXE)) {
-  try {
-    const prevBytes = fs.readFileSync(DESKTOP_OUT_EXE);
-    if (prevBytes.length >= 20 && prevBytes.subarray(prevBytes.length - 8).toString("ascii") === "DOCXPACK") {
-      const tLen = Number(prevBytes.readBigUInt64LE(prevBytes.length - 16));
-      if (prevBytes.length >= 16 + tLen) {
-        trailerAndFooter = prevBytes.subarray(prevBytes.length - 16 - tLen);
-      }
-    }
-  } catch {}
-}
-
-const finalBytes = trailerAndFooter.length > 0 ? Buffer.concat([coreBytes, trailerAndFooter]) : coreBytes;
+// 5. Write the binary to the Desktop
+const finalBytes = fs.readFileSync(RELEASE_EXE);
 
 const desktopDirs = [
   getDesktopDir(),

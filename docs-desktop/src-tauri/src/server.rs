@@ -15,17 +15,11 @@ use crate::pack::{AssetStore, RouteData};
 use crate::util::{get_interactive, guess_mime_from_path, url_decode};
 
 pub struct AppState {
-    pub tailwind_port: u16,
-    pub shadcn_port: u16,
     pub store: Arc<AssetStore>,
 }
 
 #[derive(serde::Serialize, Clone)]
 pub struct ServerStatus {
-    pub tailwind: bool,
-    pub shadcn: bool,
-    pub tailwind_port: u16,
-    pub shadcn_port: u16,
     pub site_ports: HashMap<String, u16>,
 }
 

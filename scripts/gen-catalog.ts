@@ -61,11 +61,8 @@ for (const file of files) {
     errors.push(`${file}: unknown category "${s.category}" (add it to _catalog.json)`);
   }
 
-  const embedded = (s as unknown as { kind?: string }).kind === "embedded";
-  if (!embedded) {
-    if (!s.origin) errors.push(`${file}: non-embedded site requires "origin"`);
-    if (!s.allowedPrefixes?.length) errors.push(`${file}: crawlable site requires "allowedPrefixes"`);
-  }
+  if (!s.origin) errors.push(`${file}: missing field "origin"`);
+  if (!s.allowedPrefixes?.length) errors.push(`${file}: missing field "allowedPrefixes"`);
 
   if (typeof s.order !== "number" || s.order < 0) errors.push(`${file}: missing numeric "order"`);
   if (!s.svg.startsWith("<svg")) errors.push(`${file}: "svg" must be an inline <svg> string`);
@@ -74,10 +71,7 @@ for (const file of files) {
 }
 
 if (sites.length === 0) errors.push("no site files found");
-const embeddedCount = sites.filter((s) => (s as unknown as { kind?: string }).kind === "embedded").length;
-console.log(
-  `sites: ${sites.length} (${embeddedCount} embedded, ${sites.length - embeddedCount} crawlable) in ${categories.length} categories`,
-);
+console.log(`sites: ${sites.length} in ${categories.length} categories`);
 
 if (errors.length) {
   console.error("Validation failed:");

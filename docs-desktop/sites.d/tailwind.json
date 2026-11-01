@@ -7,7 +7,6 @@
   "color": "#06b6d4",
   "bgTint": "rgba(56, 189, 248, 0.15)",
   "description": "Utility-first CSS framework with layout, flexbox, grid, typography, and modern responsive design.",
-  "kind": "embedded",
   "allowedPrefixes": ["/docs"],
   "maxPages": 300,
   "entryPath": "/docs/installation/using-vite",

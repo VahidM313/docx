@@ -1,9 +1,6 @@
-//! App-core self-update: download the fresh core, splice the DOCXPACK trailer
-//! with embedded docs back on, and restart in-place.
+//! App self-update: download the fresh binary and restart in-place.
 
 use std::fs;
-#[cfg(all(desktop, target_os = "windows"))]
-use std::sync::Arc;
 #[cfg(all(desktop, target_os = "windows"))]
 use std::thread;
 #[cfg(all(desktop, target_os = "windows"))]
@@ -11,14 +8,9 @@ use std::time::Duration;
 
 use crate::config::{APP_BUILD_COMMIT, RELEASE_BASE_URL};
 use crate::pack::get_packs_dir;
-use crate::server::AppState;
 use crate::util::get_metadata;
 #[cfg(all(desktop, target_os = "windows"))]
-use crate::commands::write_exe_with_trailer;
-#[cfg(all(desktop, target_os = "windows"))]
-use crate::error::{read_guard, DocxError};
-#[cfg(all(desktop, target_os = "windows"))]
-use crate::pack::{SiteOverridePack, EMBEDDED_SOURCE};
+use crate::error::DocxError;
 #[cfg(all(desktop, target_os = "windows"))]
 use crate::update::{download_resumable, DownloadProgressPayload, Progress};
 
@@ -99,23 +91,17 @@ fn read_app_update_status() -> Result<AppUpdateStatus, String> {
     })
 }
 
-/// Downloads ONLY Docx-core.exe (~4 MB) from GitHub Releases into %TEMP%, splices the existing
-/// DOCXPACK documentation trailer from the current executable onto it (so zero documentation bytes
-/// are re-downloaded!), replaces Docx.exe in-place without creating Docx.old.exe on Desktop,
-/// and automatically restarts Docx.exe!
+/// Downloads Docx-core.exe from GitHub Releases into %TEMP%, replaces Docx.exe in-place without
+/// creating Docx.old.exe on Desktop, and restarts it.
 #[tauri::command]
-pub(crate) async fn self_update_app(
-    window: tauri::Window,
-    state: tauri::State<'_, AppState>,
-) -> Result<String, String> {
+pub(crate) async fn self_update_app(window: tauri::Window) -> Result<String, String> {
     #[cfg(not(all(desktop, target_os = "windows")))]
     {
-        let _ = (window, state);
+        let _ = window;
         return Err("App core self-update is only supported on Windows desktop.".to_string());
     }
     #[cfg(all(desktop, target_os = "windows"))]
     {
-    let store = Arc::clone(&state.store);
     tauri::async_runtime::spawn_blocking(move || -> crate::error::Result<String> {
         use std::os::windows::process::CommandExt;
         use tauri::Emitter;
@@ -151,37 +137,9 @@ pub(crate) async fn self_update_app(
         )?;
         let core_dl_mb = core_bytes as f64 / (1024.0 * 1024.0);
 
-        let _ = window.emit(
-            "docpack-progress",
-            DownloadProgressPayload {
-                site_id: "docx_app_core".to_string(),
-                phase: "Preserving Embedded Docs...".to_string(),
-                downloaded_bytes: core_bytes as usize,
-                total_bytes: core_bytes as usize,
-                percent: 96,
-                detail: "Splicing local DOCXPACK trailer onto new app core...".to_string(),
-            },
-        );
-
-        // Only what the exe already carried: every other pack is a file of its own,
-        // and copying those in would grow the exe by the whole library.
-        let embedded: Vec<Arc<SiteOverridePack>> = read_guard(&store.overrides)?
-            .values()
-            .filter(|pack| pack.source == EMBEDDED_SOURCE)
-            .cloned()
-            .collect();
-
         fs::copy(&tmp_core_path, &staged_exe_path)
             .map_err(|e| DocxError::io_path(&staged_exe_path, &e))?;
         let _ = fs::remove_file(&tmp_core_path);
-        let mut staged = fs::OpenOptions::new()
-            .append(true)
-            .open(&staged_exe_path)
-            .map_err(|e| DocxError::io_path(&staged_exe_path, &e))?;
-        let trailer_len = write_exe_with_trailer(&mut staged, &embedded)
-            .map_err(|e| DocxError::io_path(&staged_exe_path, &e))?;
-        drop(staged);
-
         // Write a hidden background updater script in %TEMP% that waits for process exit,
         // overwrites Docx.exe in-place (zero .old.exe files!), and immediately relaunches Docx.exe
         let updater_cmd_path = temp_dir.join("docx_apply_update.cmd");
@@ -213,11 +171,7 @@ pub(crate) async fn self_update_app(
                 downloaded_bytes: core_bytes as usize,
                 total_bytes: core_bytes as usize,
                 percent: 100,
-                detail: format!(
-                    "Updated ({:.2} MB core + {:.2} MB docs). Restarting Docx automatically...",
-                    core_dl_mb,
-                    trailer_len as f64 / (1024.0 * 1024.0)
-                ),
+                detail: format!("Updated ({core_dl_mb:.2} MB). Restarting Docx automatically..."),
             },
         );
 

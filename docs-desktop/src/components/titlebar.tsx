@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useApp } from "../lib/store";
 import { Tauri } from "../lib/tauri";
-import { getBrand, EMBEDDED_SITE_IDS } from "../lib/catalog";
+import { getBrand } from "../lib/catalog";
 import {
   Button,
   Switch,
@@ -167,7 +167,7 @@ export default function Titlebar(props: {
                 if (forcedOn) {
                   app.setForceTheme("off");
                   app.toast({ kind: "info", message: "Back to per-site themes" });
-                } else if (EMBEDDED_SITE_IDS.includes(active!.siteId) || !props.readerApi.current) {
+                } else if (!props.readerApi.current) {
                   app.toggleSiteDark(active!.siteId);
                 } else {
                   props.readerApi.current.toggleDark(active!.siteId);
