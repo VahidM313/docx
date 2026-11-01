@@ -1,6 +1,7 @@
 {
   "id": "ansible",
   "order": 113,
+  "localBuild": true,
   "name": "Ansible",
   "version": "v11",
   "category": "DevOps & Cloud",
