@@ -232,6 +232,9 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
 
+      - name: Install the image encoder
+        run: bun install --frozen-lockfile
+
       - name: Fetch the site's previous pack
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

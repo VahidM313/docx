@@ -3,6 +3,7 @@ import path from "path";
 import crypto from "crypto";
 import type { Browser } from "playwright";
 import { buildPack, parsePack, SEARCH_ROUTE, type PackAsset, type ParsedPack } from "./lib/docpack-v3";
+import { compressImages } from "./lib/compress-images";
 import { looksFingerprinted, normalizeHtml, stableAssetKey } from "./lib/normalize-html";
 
 import siteCatalog from "../docs-desktop/sites.json";
@@ -801,6 +802,12 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
   // After the guard: a site redirecting everything to a maintenance page has no pages to show for it
   for (const [from, to] of redirects) {
     if (!rawAssets.has(from)) rawAssets.set(from, redirectPage(to));
+  }
+
+  const images = await compressImages(rawAssets);
+  if (images.converted) {
+    const mb = (n: number) => (n / (1024 * 1024)).toFixed(1);
+    console.log(`  ${images.converted} images as WebP: ${mb(images.bytesBefore)} MB -> ${mb(images.bytesAfter)} MB`);
   }
 
   const seenSearchIds = new Set<string>();
