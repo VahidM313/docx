@@ -1,4 +1,16 @@
 <style id="docx-styled-scroll">
+/* Wide code and tables scroll inside their block rather than widening the whole page on a phone */
+@media (max-width: 767px) {
+  pre {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
 /* Remove redundant top empty space, padding, and banners from MDN and doc frameworks */
 body, #root, .main-wrapper, .page-header, .page-header-main,
 header.top-navigation, [class*="top-navigation"], [class*="top-banner"],

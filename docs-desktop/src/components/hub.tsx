@@ -137,7 +137,7 @@ export default function HomeHub() {
   // 3. Category Download All
   const handleDownloadCategory = async (categoryName: string) => {
     const missing = entries.filter(
-      (e) => e.brand.category === categoryName && !e.installed && !e.activeDownload
+      (e) => e.brand.category === categoryName && e.remote && !e.installed && !e.activeDownload
     );
     if (missing.length === 0) {
       return app.toast({ kind: "info", message: `All packs in ${categoryName} are already installed.` });
@@ -146,8 +146,8 @@ export default function HomeHub() {
   };
 
   const handleDownloadMissing = () => {
-    const missing = entries.filter((e) => !e.installed && !e.activeDownload);
-    if (!missing.length) return app.toast({ kind: "info", message: "Every pack is already installed." });
+    const missing = entries.filter((e) => e.remote && !e.installed && !e.activeDownload);
+    if (!missing.length) return app.toast({ kind: "info", message: "Every available pack is already installed." });
     const size = formatDocBytes(missing.reduce((a, e) => a + (e.remote?.sizeBytes ?? 0), 0));
     if (window.confirm(`Download ${missing.length} documentation packs (${size})?`)) {
       app.installMany(missing.map((e) => e.id));
@@ -176,7 +176,7 @@ export default function HomeHub() {
       {/* header */}
       <div className="border-b border-border px-4 py-5 md:px-8 md:py-6">
         <div className="flex flex-wrap items-start gap-4">
-          <div className="min-w-0 flex-1">
+          <div className="min-w-0 flex-1 basis-full md:basis-0">
             <div className="mb-1 flex items-center gap-2 text-[10.5px] font-bold uppercase tracking-[0.14em] text-muted-foreground">
               <Compass size={13} className="text-brand" />
               Offline documentation
@@ -405,7 +405,7 @@ const SiteCard = React.memo(function SiteCard({ entry }: { entry: SiteEntry }) {
       <div className="flex items-start gap-2.5">
         <span
           className="grid h-10 w-10 shrink-0 place-items-center rounded-md bg-muted"
-          dangerouslySetInnerHTML={{ __html: getSiteIconHtml(entry.id, entry.remote?.iconFile, entry.remote?.iconETag) }}
+          dangerouslySetInnerHTML={{ __html: getSiteIconHtml(entry.id) }}
         />
         <div className="min-w-0 flex-1 pr-6">
           <div className="truncate text-[13.5px] font-semibold leading-tight">{b.name}</div>

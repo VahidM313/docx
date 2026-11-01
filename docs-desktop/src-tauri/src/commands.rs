@@ -9,12 +9,11 @@ use std::sync::Arc;
 use crate::catalog::get_site_origin_and_entry;
 #[cfg(desktop)]
 use crate::config::TRAILER_MAGIC;
-use crate::config::PACKS_BASE_URL;
 #[cfg(desktop)]
 use crate::pack::SiteOverridePack;
 use crate::pack::{get_packs_dir, AssetStore};
 use crate::server::{ensure_site_server, AppState, ServerStatus};
-use crate::util::get_metadata;
+use crate::update::fetch_library_directory;
 
 #[derive(serde::Serialize, Clone)]
 pub struct PackStatusInfo {
@@ -100,6 +99,9 @@ pub struct RemoteRegistryEntryRaw {
     pub gens: HashMap<String, usize>,
     #[serde(default)]
     pub truncated: bool,
+    /// Where the pack starts, counted from the end of the library directory.
+    #[serde(default)]
+    pub offset: u64,
 }
 
 #[derive(serde::Deserialize)]
@@ -133,7 +135,7 @@ pub struct RemoteRegistryItem {
     pub truncated: bool,
 }
 
-fn parse_registry(bytes: &[u8]) -> Result<Vec<RemoteRegistryEntryRaw>, String> {
+pub(crate) fn parse_registry(bytes: &[u8]) -> Result<Vec<RemoteRegistryEntryRaw>, String> {
     if let Ok(wrapper_map) = serde_json::from_slice::<RemoteRegistryFileMap>(bytes) {
         Ok(wrapper_map.packs.into_values().collect())
     } else if let Ok(wrapper_vec) = serde_json::from_slice::<RemoteRegistryFileVec>(bytes) {
@@ -147,8 +149,7 @@ fn parse_registry(bytes: &[u8]) -> Result<Vec<RemoteRegistryEntryRaw>, String> {
 /// know what can be installed and how big it is.
 fn load_registry() -> Result<Vec<RemoteRegistryEntryRaw>, String> {
     let cached = get_packs_dir().join("registry.json");
-    let url = format!("{}/registry.json", PACKS_BASE_URL);
-    let error = match get_metadata(&url).map_err(|e| e.to_string()).and_then(|b| Ok((parse_registry(&b)?, b))) {
+    let error = match fetch_library_directory().map_err(|e| e.to_string()).and_then(|b| Ok((parse_registry(&b)?, b))) {
         Ok((entries, bytes)) => {
             let tmp = cached.with_extension("json.tmp");
             if fs::write(&tmp, &bytes).is_ok() {

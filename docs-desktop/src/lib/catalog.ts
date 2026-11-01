@@ -56,25 +56,20 @@ export const EMBEDDED_SITE_IDS = ["tailwind", "shadcn"];
 const LETTER_TILE_SVG = (letter: string, color: string) =>
   `<svg viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="7" fill="${color}"/><text x="12" y="17" font-family="Segoe UI, sans-serif" font-size="12.5" font-weight="700" fill="#fff" text-anchor="middle">${letter.toUpperCase()}</text></svg>`;
 
-/** Release CDN base for registry-linked assets (icons, packs). */
-export const RELEASE_BASE_URL = "https://github.com/VahidM313/docx/releases/download/packs-latest";
+/** Sites with no captured icon in `public/icons`. */
+const SITES_WITHOUT_PNG = new Set(["cobra", "matplotlib", "ninja", "odin"]);
 
 /**
- * Full icon chain (hybrid favicon strategy):
- *   curated catalog SVG  →  build-time captured PNG (release CDN), if any  →  letter tile.
+ * Icon chain: PNG captured by `scripts/capture-icons.ts` and shipped with the app,
+ * then the curated catalog SVG, then a letter tile. The catalog is compiled in too,
+ * so a new site brings its icon in the same app update, and icons work offline.
  */
-export const SITE_ICON_URL = (siteId: string, remoteIconFile?: string, remoteIconEtag?: string) =>
-  remoteIconFile ? `${RELEASE_BASE_URL}/${remoteIconFile}${remoteIconEtag ? `?v=${remoteIconEtag}` : ""}` : null;
-
-let iconFailures = new Set<string>();
-
-/** Fallback-aware icon: PNG from CDN, catalog SVG, letter tile — all inside one <span>. */
-export function getSiteIconHtml(siteId: string, remoteIconFile?: string, remoteIconEtag?: string): string {
-  const png = SITE_ICON_URL(siteId, remoteIconFile, remoteIconEtag);
+export function getSiteIconHtml(siteId: string): string {
   const s = SITE_MAP[siteId];
-  const svg = s?.svg ?? LETTER_TILE_SVG((s?.name ?? siteId).charAt(0), s?.color ?? "#6366f1");
-  if (!png || iconFailures.has(siteId)) return svg;
-  return `<img src="${png}" loading="lazy" onerror="this.remove()" style="width:100%;height:100%;object-fit:contain" alt="${siteId}">`;
+  if (s && !SITES_WITHOUT_PNG.has(siteId)) {
+    return `<img src="/icons/${siteId}.png" loading="lazy" style="width:100%;height:100%;object-fit:contain" alt="${siteId}">`;
+  }
+  return s?.svg ?? LETTER_TILE_SVG((s?.name ?? siteId).charAt(0), s?.color ?? "#6366f1");
 }
 
 export function getBrand(siteId: string): SiteBrand {

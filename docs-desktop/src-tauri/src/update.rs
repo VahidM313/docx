@@ -1,9 +1,10 @@
 //! Pack install and incremental update over HTTP range requests.
 //!
-//! A release holds one `.docpack` per site and no patch files. The client reads the
-//! head of the published pack, works out which chunks it lacks, fetches only those,
-//! and rebuilds a byte-identical copy of the published pack from local and fetched
-//! chunks. That works from any older build, not just the previous one.
+//! A release holds one library file with every pack in it, and no patch files. The
+//! client reads the library's directory, then the head of its pack, works out which
+//! chunks it lacks, fetches only those, and rebuilds a byte-identical copy of the
+//! published pack from local and fetched chunks. That works from any older build,
+//! not just the previous one.
 //!
 //! Every fetched chunk is verified against its id and the assembled data against
 //! the pack's hash, and the installed pack is only replaced by an atomic rename, so
@@ -16,7 +17,8 @@ use std::path::{Path, PathBuf};
 use std::sync::{Arc, LazyLock, Mutex};
 use std::time::{Duration, Instant};
 
-use crate::config::PACKS_BASE_URL;
+use crate::commands::parse_registry;
+use crate::config::LIBRARY_URL;
 use crate::error::{read_guard, write_guard, DocxError, Result};
 use crate::pack::{
     get_packs_dir, parse_docpack_on_disk, parse_v3_header, AssetStore, PackMeta, SiteOverridePack,
@@ -27,6 +29,10 @@ use crate::util::{http_client, sha256_hex_16, to_hex};
 
 /// Enough for the header, metadata and index of most packs in one request.
 const HEAD_PROBE_BYTES: u64 = 64 * 1024;
+/// Enough for the library's directory. It is read on every update check, so this stays small.
+const DIRECTORY_PROBE_BYTES: u64 = 32 * 1024;
+const LIBRARY_HEADER_BYTES: usize = 32;
+const LIBRARY_VERSION: u16 = 1;
 /// Fetching a small gap is cheaper than another request.
 const MAX_RANGE_GAP: u64 = 32 * 1024;
 /// Above this share of missing data, one streamed download beats many ranges.
@@ -137,10 +143,12 @@ fn replace_file(from: &Path, to: &Path) -> Result<()> {
     Err(DocxError::io_path(to, &last.expect("rename attempted")))
 }
 
-/// Downloads `url` into `part`, continuing an earlier attempt when the server still
-/// has the same file. `part` is complete when this returns.
+/// Downloads `url`, or just the `(start, length)` window of it, into `part`, continuing
+/// an earlier attempt when the server still has the same file. `part` is complete when
+/// this returns.
 pub(crate) fn download_resumable(
     url: &str,
+    window: Option<(u64, u64)>,
     part: &Path,
     expected_total: u64,
     phase: &str,
@@ -156,13 +164,24 @@ pub(crate) fn download_resumable(
         if etag.is_none() {
             have = 0;
         }
+        if let Some((_, len)) = window
+            && have >= len
+        {
+            let _ = fs::remove_file(&etag_path);
+            return Ok(len);
+        }
 
         let attempt_start = have;
         let mut request = http_client().get(url).timeout(transfer_budget(expected_total));
+        match window {
+            Some((start, len)) => {
+                request = request.header(reqwest::header::RANGE, format!("bytes={}-{}", start + have, start + len - 1));
+            }
+            None if have > 0 => request = request.header(reqwest::header::RANGE, format!("bytes={have}-")),
+            None => {}
+        }
         if let (true, Some(tag)) = (have > 0, &etag) {
-            request = request
-                .header(reqwest::header::RANGE, format!("bytes={have}-"))
-                .header(reqwest::header::IF_RANGE, tag.as_str());
+            request = request.header(reqwest::header::IF_RANGE, tag.as_str());
         }
 
         let attempt = (|| -> Result<u64> {
@@ -177,8 +196,16 @@ pub(crate) fn download_resumable(
             if !status.is_success() {
                 return Err(DocxError::HttpStatus { status: status.as_u16(), url: url.to_string() });
             }
+            let partial = status == reqwest::StatusCode::PARTIAL_CONTENT;
+            if window.is_some() && !partial {
+                // A whole body here means the file changed, and it would be the entire
+                // library. The window is stale too, so the caller has to look it up again.
+                let _ = fs::remove_file(part);
+                let _ = fs::remove_file(&etag_path);
+                return Err(DocxError::invalid_pack("the library changed during the download"));
+            }
 
-            let resuming = status == reqwest::StatusCode::PARTIAL_CONTENT;
+            let resuming = partial && have > 0;
             if !resuming {
                 have = 0;
                 match resp.headers().get(reqwest::header::ETAG).and_then(|v| v.to_str().ok()) {
@@ -235,20 +262,63 @@ pub(crate) fn download_resumable(
     }
 }
 
-struct RemoteHead {
-    /// Header, metadata and index, exactly as published.
-    bytes: Vec<u8>,
-    meta: PackMeta,
-    index: V3Index,
+/// One pack inside the library file.
+#[derive(Clone, Debug)]
+pub(crate) struct PackSlice {
+    pub url: String,
+    pub start: u64,
+    pub len: u64,
 }
 
-fn fetch_remote_head(url: &str) -> Result<Option<RemoteHead>> {
+struct LibraryHead {
+    /// The directory as JSON, in the shape of a registry.
+    json: Vec<u8>,
+    data_start: u64,
+}
+
+/// The library's directory, so a client knows what exists and where. It is the first
+/// thing in the file, which makes reading it as cheap as fetching a small file.
+fn read_library_head(url: &str) -> Result<LibraryHead> {
+    let mut bytes = fetch_range(url, 0, DIRECTORY_PROBE_BYTES)?;
+    if bytes.len() < LIBRARY_HEADER_BYTES || &bytes[..4] != b"DOCL" {
+        return Err(DocxError::invalid_pack("published file is not a library"));
+    }
+    let version = u16::from_le_bytes([bytes[4], bytes[5]]);
+    if version != LIBRARY_VERSION {
+        return Err(DocxError::invalid_pack(format!("library version {version} needs a newer app")));
+    }
+    let directory_len = u32::from_le_bytes([bytes[8], bytes[9], bytes[10], bytes[11]]) as usize;
+    let data_start = LIBRARY_HEADER_BYTES + directory_len;
+    if bytes.len() < data_start {
+        let rest = fetch_range(url, bytes.len() as u64, data_start as u64)?;
+        bytes.extend_from_slice(&rest);
+    }
+    if bytes.len() < data_start {
+        return Err(DocxError::invalid_pack("library is shorter than its header says"));
+    }
+    let compressed = &bytes[LIBRARY_HEADER_BYTES..data_start];
+    if sha256_hex_16(compressed).as_bytes() != &bytes[16..32] {
+        return Err(DocxError::invalid_pack("library directory hash mismatch"));
+    }
+    let mut json = Vec::new();
+    brotli::Decompressor::new(compressed, 4096)
+        .read_to_end(&mut json)
+        .map_err(|e| DocxError::invalid_pack(format!("library directory does not decompress: {e}")))?;
+    Ok(LibraryHead { json, data_start: data_start as u64 })
+}
+
+/// The published directory as registry JSON.
+pub(crate) fn fetch_library_directory() -> Result<Vec<u8>> {
+    Ok(read_library_head(LIBRARY_URL)?.json)
+}
+
+fn retry_transient<T>(url: &str, mut attempt: impl FnMut() -> Result<T>) -> Result<T> {
     let mut failures = 0;
     loop {
-        match read_remote_head(url) {
+        match attempt() {
             Err(e) if is_transient(&e) && failures + 1 < MAX_ATTEMPTS => {
                 failures += 1;
-                log::warn!("head retry {failures} for {url}: {e}");
+                log::warn!("retry {failures} for {url}: {e}");
                 backoff(failures);
             }
             result => return result,
@@ -256,22 +326,46 @@ fn fetch_remote_head(url: &str) -> Result<Option<RemoteHead>> {
     }
 }
 
-/// Reads the head of a published pack. `None` means the server ignored the range
-/// request, so the only option is a plain download.
-fn read_remote_head(url: &str) -> Result<Option<RemoteHead>> {
-    let Some(mut bytes) = fetch_range(url, 0, HEAD_PROBE_BYTES)? else {
-        return Ok(None);
-    };
+fn locate_pack(library_url: &str, site_id: &str) -> Result<PackSlice> {
+    let head = retry_transient(library_url, || read_library_head(library_url))?;
+    let entries = parse_registry(&head.json).map_err(DocxError::invalid_pack)?;
+    let entry = entries
+        .into_iter()
+        .find(|e| e.id == site_id)
+        .ok_or_else(|| DocxError::Other(format!("'{site_id}' is not in the library")))?;
+    Ok(PackSlice {
+        url: library_url.to_string(),
+        start: head.data_start + entry.offset,
+        len: entry.sizeBytes as u64,
+    })
+}
+
+struct RemoteHead {
+    /// Header, metadata and index, exactly as published.
+    bytes: Vec<u8>,
+    meta: PackMeta,
+    index: V3Index,
+}
+
+fn fetch_remote_head(slice: &PackSlice) -> Result<RemoteHead> {
+    retry_transient(&slice.url, || read_remote_head(slice))
+}
+
+/// Reads the head of a published pack.
+fn read_remote_head(slice: &PackSlice) -> Result<RemoteHead> {
+    let url = slice.url.as_str();
+    let mut bytes = fetch_range(url, slice.start, slice.start + HEAD_PROBE_BYTES.min(slice.len))?;
     let (meta_len, index_len, data_len) =
         parse_v3_header(&bytes).ok_or_else(|| DocxError::invalid_pack("published pack is not format v3"))?;
     let meta_end = V3_HEADER_BYTES + meta_len;
     let head_len = meta_end + index_len;
+    if head_len as u64 + data_len != slice.len {
+        return Err(DocxError::invalid_pack("pack does not fill its place in the library"));
+    }
 
-    if (bytes.len() as u64) < head_len as u64 {
-        match fetch_range(url, bytes.len() as u64, head_len as u64)? {
-            Some(rest) => bytes.extend_from_slice(&rest),
-            None => return Ok(None),
-        }
+    if bytes.len() < head_len {
+        let rest = fetch_range(url, slice.start + bytes.len() as u64, slice.start + head_len as u64)?;
+        bytes.extend_from_slice(&rest);
     }
     if bytes.len() < head_len {
         return Err(DocxError::invalid_pack("published pack is shorter than its header says"));
@@ -287,22 +381,21 @@ fn read_remote_head(url: &str) -> Result<Option<RemoteHead>> {
     if index.data_len != data_len {
         return Err(DocxError::invalid_pack("index does not match the data section"));
     }
-    Ok(Some(RemoteHead { bytes, meta, index }))
+    Ok(RemoteHead { bytes, meta, index })
 }
 
-/// `Ok(None)` when the server answered with something other than the requested range.
-fn fetch_range(url: &str, start: u64, end: u64) -> Result<Option<Vec<u8>>> {
-    let Some(resp) = open_range(url, start, end)? else {
-        return Ok(None);
-    };
+fn fetch_range(url: &str, start: u64, end: u64) -> Result<Vec<u8>> {
+    let resp = open_range(url, start, end)?;
     let mut out = Vec::with_capacity((end - start) as usize);
     resp.take(end - start)
         .read_to_end(&mut out)
         .map_err(|e| DocxError::http(url, format!("range read failed: {e}")))?;
-    Ok(Some(out))
+    Ok(out)
 }
 
-fn open_range(url: &str, start: u64, end: u64) -> Result<Option<reqwest::blocking::Response>> {
+/// Anything but the requested range is an error: ignoring it would start a download
+/// of the whole library.
+fn open_range(url: &str, start: u64, end: u64) -> Result<reqwest::blocking::Response> {
     let resp = http_client()
         .get(url)
         .header(reqwest::header::RANGE, format!("bytes={}-{}", start, end - 1))
@@ -310,7 +403,7 @@ fn open_range(url: &str, start: u64, end: u64) -> Result<Option<reqwest::blockin
         .send()?;
     let status = resp.status();
     if status == reqwest::StatusCode::OK {
-        return Ok(None);
+        return Err(DocxError::invalid_pack("server ignored a range request"));
     }
     if status != reqwest::StatusCode::PARTIAL_CONTENT {
         return Err(DocxError::HttpStatus { status: status.as_u16(), url: url.to_string() });
@@ -323,9 +416,9 @@ fn open_range(url: &str, start: u64, end: u64) -> Result<Option<reqwest::blockin
         .and_then(|v| v.split('-').next())
         .and_then(|v| v.parse::<u64>().ok());
     if served_start != Some(start) {
-        return Ok(None);
+        return Err(DocxError::invalid_pack("server answered with another range"));
     }
-    Ok(Some(resp))
+    Ok(resp)
 }
 
 fn verify_chunk(stored: &[u8], index: &V3Index, i: usize) -> Result<()> {
@@ -361,23 +454,23 @@ struct Spool {
 /// Fetches `group`, a run of chunks close enough for one request. Returns how many
 /// arrived, which also holds on error so a retry can continue after them.
 fn fetch_chunk_group(
-    url: &str,
+    slice: &PackSlice,
     head: &RemoteHead,
     group: &[usize],
     spool: &mut Spool,
     total: u64,
     progress: &mut Progress<'_>,
 ) -> (usize, Result<()>) {
+    let url = slice.url.as_str();
     let index = &head.index;
-    let data_start = head.bytes.len() as u64;
+    let data_start = slice.start + head.bytes.len() as u64;
     let first = group[0];
     let last = group[group.len() - 1];
     let range_start = data_start + index.offsets[first];
     let range_end = data_start + index.offsets[last] + index.lengths[last];
 
     let resp = match open_range(url, range_start, range_end) {
-        Ok(Some(resp)) => resp,
-        Ok(None) => return (0, Err(DocxError::invalid_pack("server stopped honouring range requests"))),
+        Ok(resp) => resp,
         Err(e) => return (0, Err(e)),
     };
     let mut reader = BufReader::with_capacity(COPY_BUFFER_BYTES, resp);
@@ -419,7 +512,7 @@ fn fetch_chunk_group(
 
 /// Downloads `missing` (in data order) into the spool, retrying only what has not arrived.
 fn fetch_missing(
-    url: &str,
+    slice: &PackSlice,
     head: &RemoteHead,
     missing: &[usize],
     spool: &mut Spool,
@@ -439,7 +532,7 @@ fn fetch_missing(
             }
             end += 1;
         }
-        let (arrived, result) = fetch_chunk_group(url, head, &missing[next..end], spool, total, progress);
+        let (arrived, result) = fetch_chunk_group(slice, head, &missing[next..end], spool, total, progress);
         next += arrived;
         match result {
             Ok(()) => failures = 0,
@@ -450,7 +543,7 @@ fn fetch_missing(
                 if failures >= MAX_ATTEMPTS {
                     return Err(e);
                 }
-                log::warn!("range retry {failures} for {url}: {e}");
+                log::warn!("range retry {failures} for {}: {e}", slice.url);
                 backoff(failures);
             }
         }
@@ -561,7 +654,7 @@ pub(crate) struct SyncReport {
 /// Fetches only what `local` lacks. Falls through with an error when the pack cannot
 /// be patched, and the caller then downloads it whole.
 fn sync_by_ranges(
-    url: &str,
+    slice: &PackSlice,
     dest: &Path,
     head: &RemoteHead,
     local: &SiteOverridePack,
@@ -586,7 +679,7 @@ fn sync_by_ranges(
     };
 
     let result = (|| -> Result<u64> {
-        fetch_missing(url, head, missing, &mut spool, missing_bytes, progress)?;
+        fetch_missing(slice, head, missing, &mut spool, missing_bytes, progress)?;
         progress.emit(
             "Assembling pack",
             spool.received_bytes,
@@ -618,9 +711,10 @@ fn sync_by_ranges(
     })
 }
 
-fn sync_by_download(url: &str, dest: &Path, expected: u64, progress: &mut Progress<'_>) -> Result<SyncReport> {
+fn sync_by_download(slice: &PackSlice, dest: &Path, progress: &mut Progress<'_>) -> Result<SyncReport> {
     let part = dest.with_extension("docpack.part");
-    let received = download_resumable(url, &part, expected, "Downloading", progress)?;
+    let window = Some((slice.start, slice.len));
+    let received = download_resumable(&slice.url, window, &part, slice.len, "Downloading", progress)?;
     let meta = match verify_downloaded_pack(&part) {
         Ok(meta) => meta,
         Err(e) => {
@@ -640,19 +734,16 @@ fn sync_by_download(url: &str, dest: &Path, expected: u64, progress: &mut Progre
     })
 }
 
-/// Brings `dest` up to the pack published at `url`, starting from `local`.
+/// Brings `dest` up to the pack published at `slice`, starting from `local`.
 pub(crate) fn sync_pack(
-    url: &str,
+    slice: &PackSlice,
     dest: &Path,
     local: Option<&SiteOverridePack>,
     progress: &mut Progress<'_>,
 ) -> Result<SyncReport> {
     progress.emit("Checking for updates", 0, 0, 4, "Connecting to GitHub Releases...".to_string());
 
-    let expected = local.map(SiteOverridePack::pack_len).unwrap_or(0);
-    let Some(head) = fetch_remote_head(url)? else {
-        return sync_by_download(url, dest, expected, progress);
-    };
+    let head = fetch_remote_head(slice)?;
 
     if let Some(local) = local
         && local.meta.commit == head.meta.commit
@@ -668,7 +759,6 @@ pub(crate) fn sync_pack(
         });
     }
 
-    let pack_len = head.bytes.len() as u64 + head.index.data_len;
     if let Some(local) = local
         && let Some(local_index) = local.v3_index()
     {
@@ -678,16 +768,35 @@ pub(crate) fn sync_pack(
         let missing_bytes: u64 = missing.iter().map(|&i| head.index.lengths[i]).sum();
 
         if missing_bytes * 100 < head.index.data_len * FULL_DOWNLOAD_PERCENT {
-            match sync_by_ranges(url, dest, &head, local, &local_index, &missing, missing_bytes, progress) {
+            match sync_by_ranges(slice, dest, &head, local, &local_index, &missing, missing_bytes, progress) {
                 Ok(report) => return Ok(report),
                 // Anything from a re-published pack to a corrupt local chunk ends here,
                 // and a clean download recovers from all of them.
-                Err(e) => log::warn!("incremental update of {url} failed: {e}"),
+                Err(e) => log::warn!("incremental update of {} failed: {e}", slice.url),
             }
         }
     }
 
-    sync_by_download(url, dest, pack_len, progress)
+    sync_by_download(slice, dest, progress)
+}
+
+/// Finds the pack in the library and syncs it. A republished library moves packs, so
+/// offsets read before the swap fail verification; the directory then has the new ones.
+fn sync_from_library(
+    library_url: &str,
+    site_id: &str,
+    dest: &Path,
+    local: Option<&SiteOverridePack>,
+    progress: &mut Progress<'_>,
+) -> Result<SyncReport> {
+    let slice = locate_pack(library_url, site_id)?;
+    match sync_pack(&slice, dest, local, progress) {
+        Err(DocxError::InvalidPack(why)) => {
+            log::warn!("re-reading the library after: {why}");
+            sync_pack(&locate_pack(library_url, site_id)?, dest, local, progress)
+        }
+        result => result,
+    }
 }
 
 /// Sites being synced right now; a second request for one must not touch its temp files.
@@ -730,7 +839,6 @@ pub(crate) fn run_install_or_update_sync(
     let packs_dir: PathBuf = get_packs_dir();
     fs::create_dir_all(&packs_dir).map_err(|e| DocxError::io_path(&packs_dir, &e))?;
     let dest = packs_dir.join(format!("{site_id}.docpack"));
-    let url = format!("{PACKS_BASE_URL}/{site_id}.docpack");
 
     let local = read_guard(&store.overrides)?.get(&site_id).cloned();
     let old_commit = local.as_ref().map_or_else(|| "not-installed".to_string(), |p| p.meta.commit.clone());
@@ -739,7 +847,7 @@ pub(crate) fn run_install_or_update_sync(
         let _ = window.emit("docpack-progress", payload);
     };
     let mut progress = Progress::new(&site_id, &mut emit);
-    let report = sync_pack(&url, &dest, local.as_deref(), &mut progress)?;
+    let report = sync_from_library(LIBRARY_URL, &site_id, &dest, local.as_deref(), &mut progress)?;
 
     if report.changed {
         let pack_len = fs::metadata(&dest).map_err(|e| DocxError::io_path(&dest, &e))?.len();
@@ -901,18 +1009,38 @@ mod tests {
         IgnoreRanges,
         /// Closes the connection after `bytes` of the body of the `request`-th request.
         DropAfter { request: usize, bytes: usize },
-        /// Flips a byte in everything past the head.
+        /// Flips the byte at this offset of the pack.
         Corrupt(u64),
     }
 
+    /// Bytes around the pack, so no code path can get away with assuming it starts at 0.
+    const PADDING: usize = 4096;
+
     struct TestServer {
-        url: String,
+        slice: PackSlice,
         served: Arc<AtomicU64>,
         requests: Arc<AtomicUsize>,
     }
 
-    /// A small file server with range, ETag and fault-injection support.
-    fn serve(file: Vec<u8>, mode: Mode) -> TestServer {
+    /// Serves `pack` inside a larger file, the way the library holds it.
+    fn serve(pack: Vec<u8>, mode: Mode) -> TestServer {
+        let len = pack.len() as u64;
+        let mut file = vec![0x5a; PADDING];
+        file.extend_from_slice(&pack);
+        file.extend_from_slice(&[0x5a; PADDING]);
+        let mode = match mode {
+            Mode::Corrupt(at) => Mode::Corrupt(at + PADDING as u64),
+            other => other,
+        };
+        let mut server = serve_file(file, mode, None);
+        server.slice.start = PADDING as u64;
+        server.slice.len = len;
+        server
+    }
+
+    /// A small file server with range, ETag and fault-injection support. `swap` replaces
+    /// the file from a given request on, like a republished library.
+    fn serve_file(file: Vec<u8>, mode: Mode, swap: Option<(usize, Vec<u8>)>) -> TestServer {
         let listener = TcpListener::bind("127.0.0.1:0").unwrap();
         let port = listener.local_addr().unwrap().port();
         let served = Arc::new(AtomicU64::new(0));
@@ -941,8 +1069,11 @@ mod tests {
                 }
                 let request = requests_ref.fetch_add(1, Ordering::SeqCst);
 
+                let (file, etag) = match &swap {
+                    Some((from, next)) if request >= *from => (next, "\"test-etag-2\""),
+                    _ => (&file, "\"test-etag\""),
+                };
                 let len = file.len() as u64;
-                let etag = "\"test-etag\"";
                 let honoured = range.filter(|_| {
                     mode != Mode::IgnoreRanges && if_range.as_deref().is_none_or(|t| t == etag)
                 });
@@ -973,7 +1104,8 @@ mod tests {
             }
         });
 
-        TestServer { url: format!("http://127.0.0.1:{port}/{SITE}.docpack"), served, requests }
+        let slice = PackSlice { url: format!("http://127.0.0.1:{port}/library.bin"), start: 0, len: 0 };
+        TestServer { slice, served, requests }
     }
 
     fn temp_dir(name: &str) -> PathBuf {
@@ -994,10 +1126,37 @@ mod tests {
         (dest, parsed)
     }
 
-    fn run(url: &str, dest: &Path, local: Option<&SiteOverridePack>) -> Result<SyncReport> {
+    fn run(slice: &PackSlice, dest: &Path, local: Option<&SiteOverridePack>) -> Result<SyncReport> {
         let mut sink = |_: DownloadProgressPayload| {};
         let mut progress = Progress::new(SITE, &mut sink);
-        sync_pack(url, dest, local, &mut progress)
+        sync_pack(slice, dest, local, &mut progress)
+    }
+
+    /// A library holding `filler` bytes and then `pack`, laid out by the release pipeline's rules.
+    fn library_of(pack: &[u8], filler: usize) -> Vec<u8> {
+        let directory = serde_json::json!({
+            "version": 1,
+            "packs": { SITE: {
+                "id": SITE, "name": "Tailwind", "version": "v1", "commit": "x",
+                "sizeBytes": pack.len(), "offset": filler,
+            }},
+        });
+        let compressed = brotli_bytes(directory.to_string().as_bytes());
+        let mut bytes = vec![0u8; LIBRARY_HEADER_BYTES];
+        bytes[..4].copy_from_slice(b"DOCL");
+        bytes[4..6].copy_from_slice(&LIBRARY_VERSION.to_le_bytes());
+        bytes[8..12].copy_from_slice(&(compressed.len() as u32).to_le_bytes());
+        bytes[16..32].copy_from_slice(sha256_hex_16(&compressed).as_bytes());
+        bytes.extend_from_slice(&compressed);
+        bytes.resize(bytes.len() + filler, 0x5a);
+        bytes.extend_from_slice(pack);
+        bytes
+    }
+
+    fn run_from_library(url: &str, dest: &Path, local: Option<&SiteOverridePack>) -> Result<SyncReport> {
+        let mut sink = |_: DownloadProgressPayload| {};
+        let mut progress = Progress::new(SITE, &mut sink);
+        sync_from_library(url, SITE, dest, local, &mut progress)
     }
 
     fn generations() -> (TestPack, TestPack) {
@@ -1015,7 +1174,7 @@ mod tests {
         let (dest, local) = install(&dir, &old);
         let server = serve(new.bytes.clone(), Mode::Normal);
 
-        let report = run(&server.url, &dest, Some(&local)).unwrap();
+        let report = run(&server.slice, &dest, Some(&local)).unwrap();
 
         assert!(report.changed);
         assert_eq!(report.downloaded_chunks, 2);
@@ -1032,7 +1191,7 @@ mod tests {
         let dir = temp_dir("routes");
         let (dest, local) = install(&dir, &old);
         let server = serve(new.bytes.clone(), Mode::Normal);
-        run(&server.url, &dest, Some(&local)).unwrap();
+        run(&server.slice, &dest, Some(&local)).unwrap();
 
         let parsed = parse_docpack_on_disk(dest, 0, new.bytes.len() as u64, "test").unwrap();
         assert_eq!(parsed.meta.commit, "bbbb");
@@ -1055,7 +1214,7 @@ mod tests {
         let (dest, local) = install(&dir, &old);
         let server = serve(old.bytes.clone(), Mode::Normal);
 
-        let report = run(&server.url, &dest, Some(&local)).unwrap();
+        let report = run(&server.slice, &dest, Some(&local)).unwrap();
 
         assert!(!report.changed);
         assert_eq!(server.requests.load(Ordering::SeqCst), 1);
@@ -1068,7 +1227,7 @@ mod tests {
         let dest = dir.join(format!("{SITE}.docpack"));
         let server = serve(new.bytes.clone(), Mode::Normal);
 
-        let report = run(&server.url, &dest, None).unwrap();
+        let report = run(&server.slice, &dest, None).unwrap();
 
         assert_eq!(report.meta.commit, "bbbb");
         assert_eq!(fs::read(&dest).unwrap(), new.bytes);
@@ -1076,15 +1235,86 @@ mod tests {
     }
 
     #[test]
-    fn server_without_range_support_falls_back_to_a_full_download() {
+    fn server_ignoring_ranges_is_refused_instead_of_downloading_the_library() {
         let (old, new) = generations();
         let dir = temp_dir("norange");
         let (dest, local) = install(&dir, &old);
         let server = serve(new.bytes.clone(), Mode::IgnoreRanges);
 
-        run(&server.url, &dest, Some(&local)).unwrap();
+        let error = run(&server.slice, &dest, Some(&local)).unwrap_err();
 
+        assert!(matches!(error, DocxError::InvalidPack(_)), "{error}");
+        assert_eq!(fs::read(&dest).unwrap(), old.bytes);
+        assert_eq!(server.requests.load(Ordering::SeqCst), 1, "must stop at the first answer");
+    }
+
+    #[test]
+    fn library_directory_finds_a_pack_past_the_head_probe() {
+        let (_, new) = generations();
+        let dir = temp_dir("library");
+        let dest = dir.join(format!("{SITE}.docpack"));
+        let filler = (2 * DIRECTORY_PROBE_BYTES) as usize;
+        let server = serve_file(library_of(&new.bytes, filler), Mode::Normal, None);
+
+        let report = run_from_library(&server.slice.url, &dest, None).unwrap();
+
+        assert_eq!(report.meta.commit, "bbbb");
         assert_eq!(fs::read(&dest).unwrap(), new.bytes);
+        // The directory probe, the pack's head probe, and the pack: not a byte beyond it.
+        let served = server.served.load(Ordering::SeqCst);
+        assert_eq!(served, DIRECTORY_PROBE_BYTES + HEAD_PROBE_BYTES + new.bytes.len() as u64);
+    }
+
+    #[test]
+    fn update_survives_a_library_republished_mid_sync() {
+        let (old, new) = generations();
+        let dir = temp_dir("swap");
+        let (dest, local) = install(&dir, &old);
+        let before = library_of(&new.bytes, 0);
+        // Everything moves: the sync starts from the old offsets and lands on other bytes.
+        let after = library_of(&new.bytes, 7000);
+        let server = serve_file(before, Mode::Normal, Some((1, after)));
+
+        let report = run_from_library(&server.slice.url, &dest, Some(&local)).unwrap();
+
+        assert_eq!(report.meta.commit, "bbbb");
+        assert_eq!(fs::read(&dest).unwrap(), new.bytes);
+    }
+
+    #[test]
+    fn resuming_after_a_republish_drops_the_partial_file() {
+        let (_, new) = generations();
+        let dir = temp_dir("stale-part");
+        let dest = dir.join(format!("{SITE}.docpack"));
+        let part = dest.with_extension("docpack.part");
+        fs::write(&part, &new.bytes[..100]).unwrap();
+        fs::write(part.with_extension("etag"), "\"from-an-older-library\"").unwrap();
+        let server = serve(new.bytes.clone(), Mode::Normal);
+        let mut sink = |_: DownloadProgressPayload| {};
+        let mut progress = Progress::new(SITE, &mut sink);
+
+        let slice = &server.slice;
+        let result = download_resumable(&slice.url, Some((slice.start, slice.len)), &part, slice.len, "t", &mut progress);
+
+        assert!(matches!(result, Err(DocxError::InvalidPack(_))));
+        assert!(!part.exists());
+    }
+
+    #[test]
+    fn partial_file_of_a_whole_pack_is_not_requested_again() {
+        let (_, new) = generations();
+        let dir = temp_dir("complete-part");
+        let dest = dir.join(format!("{SITE}.docpack"));
+        let part = dest.with_extension("docpack.part");
+        fs::write(&part, &new.bytes).unwrap();
+        fs::write(part.with_extension("etag"), "\"test-etag\"").unwrap();
+        let server = serve(new.bytes.clone(), Mode::Normal);
+
+        let report = run(&server.slice, &dest, None).unwrap();
+
+        assert_eq!(report.meta.commit, "bbbb");
+        assert_eq!(fs::read(&dest).unwrap(), new.bytes);
+        assert_eq!(server.requests.load(Ordering::SeqCst), 1, "only the head is read");
     }
 
     #[test]
@@ -1094,7 +1324,7 @@ mod tests {
         let (dest, local) = install(&dir, &old);
         let server = serve(new.bytes.clone(), Mode::DropAfter { request: 0, bytes: 100 });
 
-        let report = run(&server.url, &dest, Some(&local)).unwrap();
+        let report = run(&server.slice, &dest, Some(&local)).unwrap();
 
         assert_eq!(report.downloaded_chunks, 2);
         assert_eq!(fs::read(&dest).unwrap(), new.bytes);
@@ -1108,7 +1338,7 @@ mod tests {
         // Request 0 is the head probe; this cuts the range between the two changed chunks.
         let server = serve(new.bytes.clone(), Mode::DropAfter { request: 1, bytes: 7000 });
 
-        let report = run(&server.url, &dest, Some(&local)).unwrap();
+        let report = run(&server.slice, &dest, Some(&local)).unwrap();
 
         assert_eq!(fs::read(&dest).unwrap(), new.bytes);
         assert_eq!(report.downloaded_chunks, 2);
@@ -1124,7 +1354,7 @@ mod tests {
         let dest = dir.join(format!("{SITE}.docpack"));
         let server = serve(new.bytes.clone(), Mode::DropAfter { request: 1, bytes: 150_000 });
 
-        run(&server.url, &dest, None).unwrap();
+        run(&server.slice, &dest, None).unwrap();
 
         assert_eq!(fs::read(&dest).unwrap(), new.bytes);
         let served = server.served.load(Ordering::SeqCst);
@@ -1149,7 +1379,8 @@ mod tests {
         let dir = temp_dir("missing");
         let dest = dir.join(format!("{SITE}.docpack"));
 
-        let error = run(&format!("http://127.0.0.1:{port}/x.docpack"), &dest, None).unwrap_err();
+        let slice = PackSlice { url: format!("http://127.0.0.1:{port}/x.bin"), start: 0, len: 1000 };
+        let error = run(&slice, &dest, None).unwrap_err();
 
         assert!(matches!(error, DocxError::HttpStatus { status: 404, .. }));
         assert_eq!(requests.load(Ordering::SeqCst), 1);
@@ -1164,7 +1395,7 @@ mod tests {
         let head_len = new.bytes.len() as u64 - local.meta.total_bytes;
         let server = serve(new.bytes.clone(), Mode::Corrupt(head_len + 20_000));
 
-        let result = run(&server.url, &dest, Some(&local));
+        let result = run(&server.slice, &dest, Some(&local));
 
         assert!(result.is_err(), "both the patch and the full download are corrupt");
         assert_eq!(fs::read(&dest).unwrap(), old.bytes, "the installed pack must survive");
@@ -1183,7 +1414,7 @@ mod tests {
         fs::write(&dest, &damaged).unwrap();
         let server = serve(new.bytes.clone(), Mode::Normal);
 
-        run(&server.url, &dest, Some(&local)).unwrap();
+        run(&server.slice, &dest, Some(&local)).unwrap();
 
         assert_eq!(fs::read(&dest).unwrap(), new.bytes);
     }
@@ -1286,7 +1517,7 @@ mod tests {
             let local = parse_real(&dest, old.len() as u64, meta.id.clone());
             let server = serve(new.clone(), Mode::Normal);
             let started = Instant::now();
-            let report = run(&server.url, &dest, Some(&local)).unwrap();
+            let report = run(&server.slice, &dest, Some(&local)).unwrap();
             let elapsed = started.elapsed().as_millis();
 
             assert_eq!(fs::read(&dest).unwrap(), new, "{name} must match the release byte for byte");
@@ -1374,12 +1605,12 @@ mod tests {
         let whole_path = dir.join("whole.bin");
         let mut sink = |_: DownloadProgressPayload| {};
         let mut progress = Progress::new(SITE, &mut sink);
-        let total = download_resumable(&url, &whole_path, 0, "Downloading", &mut progress).unwrap();
+        let total = download_resumable(&url, None, &whole_path, 0, "Downloading", &mut progress).unwrap();
         let whole = fs::read(&whole_path).unwrap();
         assert_eq!(whole.len() as u64, total);
 
         for (start, end) in [(0u64, 64u64), (total / 2, total / 2 + 4096), (total - 100, total)] {
-            let bytes = fetch_range(&url, start, end).unwrap().expect("server must honour the range");
+            let bytes = fetch_range(&url, start, end).unwrap();
             assert_eq!(bytes, whole[start as usize..end as usize], "range {start}-{end}");
         }
 
@@ -1400,7 +1631,7 @@ mod tests {
         let part = dir.join("resumed.docpack.part");
         fs::write(&part, &whole[..half as usize]).unwrap();
         fs::write(part.with_extension("etag"), &etag).unwrap();
-        download_resumable(&url, &part, total, "Downloading", &mut progress).unwrap();
+        download_resumable(&url, None, &part, total, "Downloading", &mut progress).unwrap();
         assert_eq!(fs::read(&part).unwrap(), whole, "resumed file must equal the original");
         println!("{total} bytes: ranges match, resume from {half} matches");
     }

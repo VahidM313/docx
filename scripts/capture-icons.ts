@@ -10,24 +10,20 @@
  *   4. Google favicon service backstop (always PNG)
  *
  * The captured image is decoded, made square, normalized to 112x112 and saved
- * as `docs-desktop/catalog/icons/<id>.icon.png`. Sites with a curated SVG
- * override in their site file keep it — the PNG is a backstop for rendering
- * paths that need a raster image.
- *
- * Capture results are cached in `docs-desktop/catalog/icons/<id>.meta.json`
- * (source URL + ETag/Last-Modified); unchanged sources are skipped on re-run.
+ * as `docs-desktop/public/icons/<id>.png`, which ships inside the app. Run this
+ * when adding a site and commit the result; a site listed in `SITES_WITHOUT_PNG`
+ * (`docs-desktop/src/lib/catalog.ts`) keeps its curated SVG instead.
  *
  * Usage: bun scripts/capture-icons.ts [--only id1,id2] [--force]
  */
 import fs from "fs";
 import path from "path";
-import crypto from "crypto";
 import sharp from "sharp";
 
 import siteCatalog from "../docs-desktop/sites.json";
 
 const root = path.resolve(import.meta.dir, "..");
-const iconsDir = path.join(root, "docs-desktop", "catalog", "icons");
+const iconsDir = path.join(root, "docs-desktop", "public", "icons");
 fs.mkdirSync(iconsDir, { recursive: true });
 
 const args = process.argv.slice(2);
@@ -42,14 +38,6 @@ const force = args.includes("--force");
 const ICON_SIZE = 112;
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
-
-type Meta = {
-  source: string;
-  etag?: string;
-  lastModified?: string;
-  contentHash: string;
-  capturedAt: string;
-};
 
 function hostOf(origin: string): string {
   try {
@@ -195,8 +183,7 @@ const actionable = siteCatalog.sites.filter((s: any) =>
 for (const site of actionable) {
   const origin: string | undefined = site.origin;
   if (!origin) continue;
-  const pngPath = path.join(iconsDir, `${site.id}.icon.png`);
-  const metaPath = path.join(iconsDir, `${site.id}.meta.json`);
+  const pngPath = path.join(iconsDir, `${site.id}.png`);
 
   try {
     const found = await tryCandidates(origin);
@@ -206,21 +193,6 @@ for (const site of actionable) {
       continue;
     }
 
-    const contentHash = crypto.createHash("sha256").update(found.buf).digest("hex");
-
-    // Skip when the source is unchanged
-    if (!force && fs.existsSync(metaPath)) {
-      const prev: Meta = JSON.parse(fs.readFileSync(metaPath, "utf8"));
-      if (
-        prev.source === found.source &&
-        prev.contentHash === contentHash &&
-        fs.existsSync(pngPath)
-      ) {
-        results.push(`· ${site.id}: unchanged (${path.basename(found.source)})`);
-        continue;
-      }
-    }
-
     // Normalize: square, cover the canvas, 112x112 PNG
     const png = await sharp(found.buf)
       .resize(ICON_SIZE, ICON_SIZE, { fit: "cover", withoutEnlargement: false, background: { r: 250, g: 250, b: 250, alpha: 1 } })
@@ -228,13 +200,12 @@ for (const site of actionable) {
       .png({ compressionLevel: 9 })
       .toBuffer();
 
+    if (!force && fs.existsSync(pngPath) && fs.readFileSync(pngPath).equals(png)) {
+      results.push(`· ${site.id}: unchanged (${path.basename(found.source)})`);
+      continue;
+    }
+
     fs.writeFileSync(pngPath, png);
-    const meta: Meta = {
-      source: found.source,
-      contentHash,
-      capturedAt: new Date().toISOString(),
-    };
-    fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2));
     results.push(
       `✓ ${site.id}: ${Math.round(png.length / 1024)}KB from ${path.basename(found.source)}`,
     );

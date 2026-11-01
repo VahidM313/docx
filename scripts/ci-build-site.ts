@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import crypto from "crypto";
 import { readLegacyPack } from "./lib/docpack-legacy";
+import type { Browser } from "playwright";
 import { buildPack, DOCPACK_V3_VERSION, parsePack, SEARCH_ROUTE, type PackAsset, type ParsedPack } from "./lib/docpack-v3";
 import { looksFingerprinted, normalizeHtml, stableAssetKey } from "./lib/normalize-html";
 
@@ -17,22 +18,32 @@ export interface SiteConfig {
   maxPages?: number;
   userAgent?: string;
   customHeaders?: Record<string, string>;
+  /** An official copy of a site that refuses CI runners, read in its place. */
+  mirror?: { url: string; path: string };
+  /** The whole site is a page or two, so a small crawl is not a failed one. */
+  singlePage?: boolean;
+  /** Paths to leave out, as a regular expression: old-version archives repeat the docs. */
+  excludePattern?: string;
+  /** Every address serves an empty shell, so pages are read from a real browser. */
+  rendered?: boolean;
 }
 /**
  * Crawl/pack configuration, sourced from `docs-desktop/sites.json`
  * (generated from the atomic per-site sources in `docs-desktop/sites.d/*.json`).
  */
-export const SITE_CATALOG: SiteConfig[] = siteCatalog.sites
-  .filter((s: any) => s.kind !== "embedded")
-  .map((s: any) => ({
-    id: s.id,
-    name: s.name,
-    version: s.version,
-    origin: s.origin,
-    entryPath: s.entryPath,
-    allowedPrefixes: s.allowedPrefixes ?? [],
-    maxPages: s.maxPages,
-  }));
+export const SITE_CATALOG: SiteConfig[] = siteCatalog.sites.map((s: any) => ({
+  id: s.id,
+  name: s.name,
+  version: s.version,
+  origin: s.origin ?? "",
+  entryPath: s.entryPath,
+  allowedPrefixes: s.allowedPrefixes ?? [],
+  maxPages: s.maxPages,
+  mirror: s.mirror,
+  singlePage: s.singlePage,
+  excludePattern: s.excludePattern,
+  rendered: s.rendered,
+}));
 
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
@@ -67,6 +78,7 @@ function guessMime(urlPath: string, contentTypeHeader?: string | null): string {
   if (clean.endsWith(".png")) return "image/png";
   if (clean.endsWith(".jpg") || clean.endsWith(".jpeg")) return "image/jpeg";
   if (clean.endsWith(".webp")) return "image/webp";
+  if (clean.endsWith(".gif")) return "image/gif";
   if (clean.endsWith(".ico")) return "image/x-icon";
   if (clean.endsWith(".json")) return "application/json; charset=utf-8";
   return "text/html; charset=utf-8";
@@ -94,6 +106,45 @@ function assetUrlToLocalRoute(fullUrl: string, siteOrigin: string, keepFingerpri
   }
 }
 
+let browser: Promise<Browser> | null = null;
+/** Code the rendered pages loaded. The app needs it all offline, and only a browser sees lazy chunks. */
+const renderedCode = new Set<string>();
+
+/** The page as a browser sees it once its scripts have run, or null to retry on a later crawl. */
+async function fetchRendered(url: string): Promise<Response | null> {
+  browser ??= import("playwright").then(({ chromium }) => chromium.launch());
+  const page = await (await browser).newPage({ userAgent: USER_AGENT });
+  // Only the site's own code shapes the page; ads and analytics would just hold up "networkidle"
+  const { origin } = new URL(url);
+  await page.route("**/*", (route) => {
+    const request = route.request();
+    const own = new URL(request.url()).origin === origin && !["image", "font", "media"].includes(request.resourceType());
+    return own ? route.continue() : route.abort();
+  });
+  page.on("response", (response) => {
+    const type = response.request().resourceType();
+    if (response.ok() && new URL(response.url()).origin === origin && ["script", "fetch", "xhr"].includes(type)) {
+      renderedCode.add(response.url());
+    }
+  });
+  try {
+    await page.goto(url, { waitUntil: "networkidle", timeout: 30_000 });
+    const res = new Response(await page.content(), { headers: { "content-type": "text/html; charset=utf-8" } });
+    Object.defineProperty(res, "url", { value: page.url() });
+    return res;
+  } catch {
+    return null;
+  } finally {
+    await page.close();
+  }
+}
+
+/** Keeps a renamed page's old address working offline, at the cost of a few bytes. */
+function redirectPage(to: string): PackAsset {
+  const html = `<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=${to}"><a href="${to}">${to}</a>`;
+  return { bytes: Buffer.from(html, "utf-8"), mime: "text/html; charset=utf-8" };
+}
+
 function isChallengeOrBlockHtml(html: string): boolean {
   if (!html || html.length < 120) return true;
   const sample = html.slice(0, 4096).toLowerCase();
@@ -111,6 +162,24 @@ function isChallengeOrBlockHtml(html: string): boolean {
 const FIREFOX_UA = "Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0";
 const BOT_UA = "DocxCrawler/1.0";
 
+function mirrorUrl(url: string, site?: SiteConfig): string | null {
+  if (!site?.mirror) return null;
+  const u = new URL(url);
+  if (u.origin !== site.origin || !u.pathname.startsWith(site.mirror.path)) return null;
+  return site.mirror.url + u.pathname.slice(site.mirror.path.length);
+}
+
+/** Git hosts serve everything as text/plain, so the file name decides the type here. */
+async function fetchFromMirror(mirrored: string, url: string, timeoutMs: number): Promise<Response | null> {
+  try {
+    const res = await fetch(mirrored, { signal: AbortSignal.timeout(timeoutMs) });
+    if (!res.ok) return res;
+    return new Response(await res.arrayBuffer(), { headers: { "content-type": guessMime(new URL(url).pathname) } });
+  } catch {
+    return null;
+  }
+}
+
 async function fetchWithTimeout(
   url: string,
   timeoutMs = 12000,
@@ -118,6 +187,9 @@ async function fetchWithTimeout(
   onRateLimited?: () => void,
   siteConfig?: SiteConfig
 ): Promise<Response | null> {
+  const mirrored = mirrorUrl(url, siteConfig);
+  if (mirrored) return fetchFromMirror(mirrored, url, timeoutMs);
+
   let originReferer = "";
   try {
     originReferer = new URL(url).origin + "/";
@@ -350,6 +422,9 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
   const keepScripts = SCRIPTED_SITES.has(site.id);
   const { pack: previous, migrated } = loadPreviousPack(docpackPath, site, keepScripts);
   const previousRouteCount = previous?.meta.routeCount ?? 0;
+  const previousPageCount = previous
+    ? Object.keys(previous.index.p).filter((route) => previous.mimeOf(route)?.startsWith("text/html")).length
+    : 0;
   // A kept v2 pack still has to reach the v3 release, or its pages would be lost there
   const keepPrevious = (): BuildResult => {
     if (!migrated) return "kept";
@@ -383,6 +458,9 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
     if (/\.(png|jpg|jpeg|gif|webp|svg|ico|css|js|mjs|woff2?|ttf|pdf|zip|gz|xml|json)$/i.test(u.pathname)) {
       return false;
     }
+    // An escaped "#" is a broken in-page link, and shells answer those with a 200
+    if (u.pathname.includes("%23")) return false;
+    if (site.excludePattern && new RegExp(site.excludePattern).test(u.pathname)) return false;
     return site.allowedPrefixes.some((pref) => u.pathname.startsWith(pref));
   }
 
@@ -397,6 +475,8 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
   const sitemapPages = await discoverSitemapPages(site, isAllowedPageUrl);
   if (sitemapPages.length) console.log(`  Sitemaps list ${sitemapPages.length} pages`);
   sitemapPages.forEach(enqueuePage);
+
+  const redirects = new Map<string, string>();
 
   // 1. Crawl HTML pages concurrently in polite batches
   while (pageQueue.length > 0 && visitedPages.size < maxPages && Date.now() < crawlDeadline) {
@@ -419,7 +499,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
     await Promise.all(
       batch.map(async (relPath) => {
         const fullUrl = new URL(relPath, site.origin).href;
-        const res = await fetchWithTimeout(fullUrl, 12000, 4, handleRateLimitSignal, site);
+        const res = site.rendered ? await fetchRendered(fullUrl) : await fetchWithTimeout(fullUrl, 12000, 4, handleRateLimitSignal, site);
         const requestedRoute = normalizeRouteKey(relPath.split("?")[0].split("#")[0]);
         if (!res || !res.ok) {
           if (isTransientFailure(res)) unconfirmedRoutes.add(requestedRoute);
@@ -435,6 +515,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
         }
         const pageUrl = new URL(res.url || fullUrl);
         const routeKey = normalizeRouteKey(pageUrl.pathname);
+        if (routeKey !== requestedRoute && pageUrl.origin === site.origin) redirects.set(requestedRoute, pageUrl.pathname);
 
         // Extract title & description for Universal Search (Ctrl+K)
         const titleMatch = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
@@ -457,7 +538,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
         });
 
         // Discover same-origin page links <a href="..."> and frames <frame src="...">
-        const hrefRegex = /<(?:a\b[^>]*?\bhref|frame\b[^>]*?\bsrc|iframe\b[^>]*?\bsrc)=(?:"([^"'#]+)"|'([^"'#]+)'|([^\s>"'#]+))/gi;
+        const hrefRegex = /<(?:a\b[^>]*?\bhref|frame\b[^>]*?\bsrc|iframe\b[^>]*?\bsrc)=(?:"([^"'#]+)[^"']*"|'([^"'#]+)[^"']*'|([^\s>"'#]+))/gi;
         let m: RegExpExecArray | null;
         while ((m = hrefRegex.exec(html)) !== null) {
           const rawHref = (m[1] || m[2] || m[3] || "").trim();
@@ -512,6 +593,11 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
             if (rawSrc.startsWith("data:")) return fullMatch;
             try {
               const resolved = new URL(rawSrc.replace(/&amp;/g, "&"), pageUrl.href);
+              // Sample photos are requested far larger than a doc shows them
+              if (resolved.hostname === "images.unsplash.com") {
+                resolved.searchParams.set("w", "800");
+                resolved.searchParams.set("q", "70");
+              }
               const localRoute = assetUrlToLocalRoute(resolved.href, site.origin, keepScripts);
               pendingAssetUrls.set(resolved.href, localRoute);
               const cleanedAttrs = attrs.replace(/\bsrc=(?:"[^"]*"|'[^']*'|[^\s>]+)/i, `src="${localRoute}"`);
@@ -578,14 +664,14 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
     );
   }
 
+  for (const url of renderedCode) pendingAssetUrls.set(url, new URL(url).pathname);
+
   // Extra SPA / Viewer assets for Three.js, NestJS, and Angular
   if (site.id === "threejs") {
     pendingAssetUrls.set("https://threejs.org/files/main.css", "/files/main.css");
     pendingAssetUrls.set("https://threejs.org/files/page.css", "/files/page.css");
     pendingAssetUrls.set("https://threejs.org/files/page.js", "/files/page.js");
     pendingAssetUrls.set("https://threejs.org/docs/search.json", "/docs/search.json");
-  } else if (site.id === "nestjs") {
-    pendingAssetUrls.set("https://docs.nestjs.com/chunk-BYCV1OW9.js", "/chunk-BYCV1OW9.js");
   } else if (site.id === "angular") {
     pendingAssetUrls.set("https://v17.angular.io/light-theme.css", "/light-theme.css");
     pendingAssetUrls.set("https://v17.angular.io/dark-theme.css", "/dark-theme.css");
@@ -635,6 +721,8 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
         }
         const ct = res.headers.get("content-type") || "";
         const mime = guessMime(localRoute, ct);
+        // A missing asset on a single-page site comes back as its shell
+        if (mime.startsWith("text/html")) return;
 
         if (mime.includes("text/css") || localRoute.endsWith(".css")) {
           let cssText = await res.text();
@@ -689,6 +777,8 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
         const arr = await res.arrayBuffer();
         if (arr.byteLength > 300 * 1024) return;
         const mime = guessMime(localRoute, res.headers.get("content-type"));
+        // A missing asset on a single-page site comes back as its shell
+        if (mime.startsWith("text/html")) return;
         const buf = Buffer.from(arr);
         rawAssets.set(normKey, { bytes: buf, mime });
         rawAssets.set(localRoute, { bytes: buf, mime });
@@ -728,11 +818,17 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
   }
 
   const forceRebuild = process.env.DOCX_FORCE_REBUILD === "true";
-  if (!forceRebuild && previousRouteCount > 10 && rawAssets.size < Math.floor(previousRouteCount * 0.5)) {
+  // Pages, not routes: a site that stops shipping its bundles has lost assets, not documentation
+  if (!forceRebuild && !site.singlePage && previousPageCount > 10 && pageCount < Math.floor(previousPageCount * 0.5)) {
     console.warn(
-      `⚠️ [${site.id}] Crawl only captured ${rawAssets.size} routes vs ${previousRouteCount} previously — keeping existing healthy .docpack.`
+      `⚠️ [${site.id}] Crawl only captured ${pageCount} pages vs ${previousPageCount} previously — keeping existing healthy .docpack.`
     );
     return keepPrevious();
+  }
+
+  // After the guard: a site redirecting everything to a maintenance page has no pages to show for it
+  for (const [from, to] of redirects) {
+    if (!rawAssets.has(from)) rawAssets.set(from, redirectPage(to));
   }
 
   const seenSearchIds = new Set<string>();
@@ -808,5 +904,6 @@ if (import.meta.main) {
         }
       }
     }
+    await (await browser)?.close();
   }
 }

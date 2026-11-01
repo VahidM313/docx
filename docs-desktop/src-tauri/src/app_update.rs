@@ -143,6 +143,7 @@ pub(crate) async fn self_update_app(
         let mut progress = Progress::new("docx_app_core", &mut sink);
         let core_bytes = download_resumable(
             &core_url,
+            None,
             &tmp_core_path,
             4 * 1024 * 1024,
             "Downloading app",

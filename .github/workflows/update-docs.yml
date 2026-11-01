@@ -1,10 +1,9 @@
-name: Build & Publish Docx App (Windows + Android) + 123 Docpacks
+name: Build & Publish Docx App (Windows + Android) + Docs Library
 
 on:
   schedule:
-    # Hourly batches between 12 AM and 6 AM UTC (00:20, 01:20, 02:20, 03:20, 04:20, 05:20)
-    # Partitions the 145 docpacks into 6 balanced batches (~24 packs each) so doc sites are never spammed at once.
-    - cron: "20 0,1,2,3,4,5 * * *"
+    # Once a day: each run re-uploads the library, so all sites share one run and one upload.
+    - cron: "20 0 * * *"
   push:
     branches:
       - main
@@ -22,7 +21,7 @@ on:
   workflow_dispatch:
     inputs:
       sites:
-        description: "Site IDs to build: 'missing' (only unbuilt packs), 'all' (all 145 packs), 'batch:0'..'batch:5' (specific batch), 'none' (only Docx.exe & Android APK), or comma-separated IDs (e.g. redis,duckdb)"
+        description: "Site IDs to build: 'missing' (only unbuilt packs), 'all' (all packs and both apps), 'none' (only Docx.exe & Android APK), or comma-separated IDs (e.g. redis,duckdb)"
         required: false
         default: "missing"
 
@@ -30,9 +29,9 @@ permissions:
   contents: write
 
 env:
-  # v3 packs and registry.json. App binaries and icons stay on packs-latest, whose
-  # v2 packs keep already-installed apps working until they self-update.
-  PACKS_TAG: docpacks-v3
+  RELEASE_TAG: packs-latest
+  # Every docpack in one file. Clients read byte ranges of it, never the whole file.
+  LIBRARY: Docx-library.bin
 
 jobs:
   build-desktop-app:
@@ -68,7 +67,7 @@ jobs:
           cargo build --release --manifest-path src-tauri/Cargo.toml
 
       - name: Package Docx-core.exe + Standalone Docx.exe (with DOCXPACK trailer) & Upload to Release
-        if: github.event_name != 'pull_request'
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SHORT_SHA: ${{ github.sha }}
@@ -84,9 +83,9 @@ jobs:
           Copy-Item "docs-desktop/src-tauri/target/release/app.exe" "./ci-dist/Docx-core.exe" -Force
 
           # Embed tailwind.docpack and shadcn.docpack in the standalone Docx.exe trailer.
-          # packs-latest is the fallback for the first build, before any v3 pack exists.
-          gh release download $env:PACKS_TAG --pattern "tailwind.docpack" --pattern "shadcn.docpack" --dir "./ci-dist" --clobber
-          if ($LASTEXITCODE -ne 0) {
+          # The release's own packs are the fallback until the library holds them.
+          bun scripts/library.ts extract tailwind,shadcn ./ci-dist
+          if (-not ((Test-Path ./ci-dist/tailwind.docpack) -and (Test-Path ./ci-dist/shadcn.docpack))) {
             gh release download packs-latest --pattern "tailwind.docpack" --pattern "shadcn.docpack" --dir "./ci-dist" --clobber
           }
 
@@ -172,7 +171,7 @@ jobs:
           bun run tauri android build -t aarch64 --apk --ci
 
       - name: Upload Android Release APK to Release
-        if: github.event_name != 'pull_request'
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -197,59 +196,31 @@ jobs:
       - name: Catalog consistency gate (sites.d ↔ sites.json)
         run: bun scripts/gen-catalog.ts --check
 
-      - name: Ensure releases exist & resolve matrix
+      - name: Ensure the release exists & resolve matrix
         id: list
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           INPUT_SITES: ${{ github.event.inputs.sites || '' }}
           EVENT_NAME: ${{ github.event_name }}
         run: |
-          gh release view packs-latest >/dev/null 2>&1 || gh release create packs-latest --title "Docx 123-Site Offline Documentation Hub & Packs (Latest)" --notes "Docx binaries and site icons."
-          gh release view "$PACKS_TAG" >/dev/null 2>&1 || gh release create "$PACKS_TAG" --latest=false --title "Docx Docpacks (v3)" --notes "Content-defined .docpack archives. The app updates them with HTTP range requests, fetching only the chunks it lacks."
+          gh release view "$RELEASE_TAG" >/dev/null 2>&1 || gh release create "$RELEASE_TAG" --title "Docx Offline Documentation Hub (Latest)" --notes "Docx binaries and the docs library. The app reads only the byte ranges it needs from the library."
+          export PUBLISHED_IDS="$(bun scripts/library.ts ids)"
           bun -e '
             const fs = require("fs");
-            const { execSync } = require("child_process");
             const { SITE_CATALOG } = require("./scripts/ci-build-site.ts");
             const allIds = SITE_CATALOG.map(s => s.id);
-            let mode = process.env.INPUT_SITES || "";
+            const mode = process.env.INPUT_SITES || "";
             const eventName = process.env.EVENT_NAME;
 
-            let existingPacks = new Set();
-            try {
-              const out = execSync(`gh release view ${process.env.PACKS_TAG} --json assets`, { encoding: "utf8" });
-              const json = JSON.parse(out);
-              existingPacks = new Set(
-                (json.assets || [])
-                  .map(a => a.name)
-                  .filter(n => n.endsWith(".docpack"))
-                  .map(n => n.replace(".docpack", ""))
-              );
-            } catch (e) {
-              console.warn("Could not query release assets:", e);
-            }
-
-            const missingIds = allIds.filter(id => !existingPacks.has(id));
+            const published = new Set(JSON.parse(process.env.PUBLISHED_IDS));
+            const missingIds = allIds.filter(id => !published.has(id));
             let resolved = [];
 
-            if (eventName === "schedule") {
-              // Between 12 AM and 6 AM UTC (hours 0..5), run one shard (1/6th of sites) per hour
-              const hour = new Date().getUTCHours();
-              const shard = hour % 6;
-              const batchSites = allIds.filter((_, idx) => idx % 6 === shard);
-              // Include the scheduled hourly shard + up to 5 missing packs (capped at 30 to prevent network spam)
-              const combined = Array.from(new Set([...batchSites, ...missingIds])).slice(0, 30);
-              resolved = combined;
-              console.log(`[Scheduled Update: Hour ${hour} UTC -> Batch ${shard}/6] Selected ${resolved.length} sites (${batchSites.length} in batch, ${missingIds.length} missing):`, resolved);
-            } else if (mode.startsWith("batch:")) {
-              const shard = parseInt(mode.replace("batch:", ""), 10) % 6;
-              resolved = allIds.filter((_, idx) => idx % 6 === shard);
-            } else if (mode === "all") {
+            if (eventName === "schedule" || mode === "all") {
               resolved = allIds;
-            } else if (mode === "missing" || (!mode && eventName === "push")) {
-              resolved = missingIds;
             } else if (mode === "none") {
               resolved = [];
-            } else if (mode) {
+            } else if (mode && mode !== "missing") {
               resolved = mode.split(",").map(s => s.trim()).filter(s => allIds.includes(s));
             } else {
               resolved = missingIds;
@@ -269,7 +240,7 @@ jobs:
     continue-on-error: true
     strategy:
       fail-fast: false
-      max-parallel: 4
+      max-parallel: 6
       matrix:
         site: ${{ fromJson(needs.prepare-matrix.outputs.sites) }}
     steps:
@@ -279,34 +250,42 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
 
-      - name: Build .docpack from the previous pack (with regression guard)
+      - name: Fetch the site's previous pack
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mkdir -p ./dist-packs
-          gh release download "$PACKS_TAG" --pattern "${{ matrix.site }}.docpack" --dir ./dist-packs --clobber || true
-          # First v3 build of a site: its v2 pack still guards against a short crawl
+          bun scripts/library.ts extract "${{ matrix.site }}" ./dist-packs
+          # First build of a site: its v2 pack still guards against a short crawl
           if [ ! -f "./dist-packs/${{ matrix.site }}.docpack" ]; then
-            gh release download packs-latest --pattern "${{ matrix.site }}.docpack" --pattern "${{ matrix.site }}.search.json" --dir ./dist-packs --clobber || true
+            gh release download "$RELEASE_TAG" --pattern "${{ matrix.site }}.docpack" --pattern "${{ matrix.site }}.search.json" --dir ./dist-packs --clobber || true
           fi
-          bun run scripts/ci-build-site.ts "${{ matrix.site }}" ./dist-packs
 
-      - name: Upload Pack to GitHub Release
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install a browser for sites that only render in one
+        if: matrix.site == 'nestjs'
         run: |
-          if [ -f "./dist-packs/${{ matrix.site }}.changed" ]; then
-            gh release upload "$PACKS_TAG" "./dist-packs/${{ matrix.site }}.docpack" --clobber
-            echo "Successfully uploaded ${{ matrix.site }} docpack."
-          else
-            echo "Pack ${{ matrix.site }} has no new content (existing release preserved)."
-          fi
+          bun add --no-save playwright
+          bunx playwright install --with-deps chromium
 
-  refresh-icons:
-    name: Capture Site Icons (hybrid favicon strategy)
+      - name: Build .docpack from the previous pack (with regression guard)
+        run: bun run scripts/ci-build-site.ts "${{ matrix.site }}" ./dist-packs
+
+      - name: Hand a changed pack to the publish job
+        if: hashFiles(format('dist-packs/{0}.changed', matrix.site)) != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: pack-${{ matrix.site }}
+          path: dist-packs/${{ matrix.site }}.docpack
+          retention-days: 1
+          compression-level: 0
+
+  publish-library:
+    name: Publish the docs library
     needs: [prepare-matrix, build-pack]
     if: always() && needs.prepare-matrix.result == 'success' && needs.prepare-matrix.outputs.count != '0' && github.event_name != 'pull_request'
     runs-on: ubuntu-latest
+    concurrency:
+      group: publish-library
+      cancel-in-progress: false
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -314,46 +293,53 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
 
-      - name: Install dependencies
-        run: bun install
+      - name: Collect the changed packs
+        uses: actions/download-artifact@v4
+        with:
+          pattern: pack-*
+          path: ./changed-packs
+          merge-multiple: true
 
-      - name: Download previously cached icons from packs-latest
+      - name: Compose, upload and swap in the new library
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mkdir -p ./docs-desktop/catalog/icons
-          gh release download packs-latest --pattern "*.icon.png" --pattern "*.meta.json" --dir ./docs-desktop/catalog/icons --clobber || true
+          if [ -z "$(ls -A ./changed-packs 2>/dev/null)" ]; then
+            echo "No pack changed, so the published library stays as it is."
+            exit 0
+          fi
 
-      - name: Capture missing / stale icons (cached by source ETag + content hash)
-        timeout-minutes: 20
-        continue-on-error: true
-        run: bun scripts/capture-icons.ts
+          assets="repos/$GITHUB_REPOSITORY/releases/assets"
+          asset_id() {
+            gh api "repos/$GITHUB_REPOSITORY/releases/tags/$RELEASE_TAG" --jq ".assets[] | select(.name == \"$1\") | .id"
+          }
 
-      - name: Upload icon assets to packs-latest
-        if: always() && hashFiles('docs-desktop/catalog/icons/*.icon.png') != ''
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh release upload packs-latest ./docs-desktop/catalog/icons/*.icon.png ./docs-desktop/catalog/icons/*.meta.json --clobber
+          # A job killed mid-publish leaves these behind; the library must be back in place first.
+          stale_next=$(asset_id "$LIBRARY.next")
+          if [ -n "$stale_next" ]; then gh api -X DELETE "$assets/$stale_next"; fi
+          stale_previous=$(asset_id "$LIBRARY.previous")
+          if [ -n "$stale_previous" ]; then
+            if [ -n "$(asset_id "$LIBRARY")" ]; then
+              gh api -X DELETE "$assets/$stale_previous"
+            else
+              gh api -X PATCH "$assets/$stale_previous" -f name="$LIBRARY" --silent
+            fi
+          fi
 
-  update-registry:
-    name: Update Master registry.json
-    needs: [prepare-matrix, build-pack, refresh-icons]
-    if: always() && needs.prepare-matrix.result == 'success' && needs.prepare-matrix.outputs.count != '0' && github.event_name != 'pull_request'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+          gh release download "$RELEASE_TAG" --pattern "$LIBRARY" --output ./previous-library.bin || true
+          mkdir -p ./upload
+          bun scripts/library.ts compose ./changed-packs "./upload/$LIBRARY.next" ./previous-library.bin
+          gh release upload "$RELEASE_TAG" "./upload/$LIBRARY.next"
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+          # Renaming keeps one stable URL for clients, and the swap takes a second.
+          next=$(asset_id "$LIBRARY.next")
+          current=$(asset_id "$LIBRARY")
+          if [ -n "$current" ]; then gh api -X PATCH "$assets/$current" -f name="$LIBRARY.previous" --silent; fi
+          gh api -X PATCH "$assets/$next" -f name="$LIBRARY" --silent
 
-      - name: Rebuild & upload master registry.json from the pack headers
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          mkdir -p ./rel-icons
-          # Icon assets feed the iconETag freshness anchors in the registry
-          gh release download packs-latest --pattern "*.icon.png" --dir ./rel-icons --clobber || true
-          bun scripts/build-registry.ts "$PACKS_TAG" ./rel-icons ./registry.json
-          gh release upload "$PACKS_TAG" ./registry.json --clobber
+          # GitHub keeps resolving the name to the old asset for about two minutes after a
+          # rename, so that asset has to outlive the swap or clients would get a 404.
+          if [ -n "$current" ]; then
+            sleep 240
+            gh api -X DELETE "$assets/$current"
+          fi

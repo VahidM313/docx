@@ -405,7 +405,7 @@ function DrawerGroup({
           >
             <span
               className="grid h-7 w-7 shrink-0 place-items-center rounded-md bg-muted"
-              dangerouslySetInnerHTML={{ __html: getSiteIconHtml(e.id, e.remote?.iconFile, e.remote?.iconETag) }}
+              dangerouslySetInnerHTML={{ __html: getSiteIconHtml(e.id) }}
             />
             <span className="flex min-w-0 flex-1 items-center gap-2">
               <span className="truncate text-[13px] font-medium">{e.brand.name}</span>

@@ -38,8 +38,6 @@ export interface RemoteRegistryItem {
   update_available: boolean;
   /** The crawl hit its time budget, so some pages may be older than the rest. */
   truncated?: boolean;
-  iconFile?: string;
-  iconETag?: string;
 }
 
 export interface DownloadProgressPayload {
