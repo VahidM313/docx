@@ -24,6 +24,16 @@ type MobileScreen = MobileRootScreen | "reader" | "tabs";
 /** Phone screens as history entries. Android's back button walks WebView history, so
  *  this makes it step back through screens and, inside the reader, through visited pages
  *  (iframe navigation adds to the same history), instead of closing the app. */
+/**
+ * Narrow windows, and phones on their side: the two layouts are different trees, so
+ * switching on rotation would rebuild the reader. Screen size rather than window size
+ * keeps the on-screen keyboard from changing the answer.
+ */
+function usesMobileLayout() {
+  if (window.innerWidth < 768) return true;
+  return window.matchMedia("(pointer: coarse)").matches && Math.min(screen.width, screen.height) < 600;
+}
+
 function useMobileScreens(isMobile: boolean) {
   const app = useApp();
   const [screen, setScreen] = React.useState<MobileScreen>("nav");
@@ -83,13 +93,11 @@ function Shell() {
   const [mobileDrawerOpen, setMobileDrawerOpen] = React.useState(false);
 
   // Responsive mobile state and mobile view mode
-  const [isMobile, setIsMobile] = React.useState(
-    () => typeof window !== "undefined" && window.innerWidth < 768
-  );
+  const [isMobile, setIsMobile] = React.useState(() => typeof window !== "undefined" && usesMobileLayout());
   const { screen, show: showScreen, current: currentScreen } = useMobileScreens(isMobile);
 
   React.useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleResize = () => setIsMobile(usesMobileLayout());
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);

@@ -372,5 +372,10 @@ html:not(.dark) .discord-folder-expanded {
   .discord-channel-item {
     min-height: 44px;
   }
+  /* Compact controls suit a mouse, but a finger needs about this much to land on. */
+  :where(button:not([role="switch"]), [role="button"], [role="tab"], select) {
+    min-height: 40px;
+    min-width: 40px;
+  }
 }
 

@@ -228,7 +228,7 @@ export function ChannelSidebar({ onNavigate }: { onNavigate?: () => void }) {
       </div>
 
       {/* 4. Discord Channel Groups with Unopened Indicators */}
-      <div className="flex-1 overflow-y-auto px-1.5 py-2 no-scrollbar space-y-2">
+      <div className="flex-1 overflow-y-auto overflow-x-hidden px-1.5 py-2 no-scrollbar space-y-2">
         {channelGroups.length === 0 ? (
           <div className="px-3 py-6 text-center text-xs text-muted-foreground">
             No matching docs found.

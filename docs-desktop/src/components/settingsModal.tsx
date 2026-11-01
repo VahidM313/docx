@@ -102,9 +102,9 @@ export function SettingsModal() {
         if (e.target === e.currentTarget) app.setSettingsOpen(false);
       }}
     >
-      <div className="relative flex h-full w-full max-w-5xl mx-auto bg-background text-foreground shadow-lift overflow-hidden md:my-auto md:h-[86vh] md:rounded-xl md:border md:border-border">
+      <div className="relative flex flex-col md:flex-row h-full w-full max-w-5xl mx-auto bg-background text-foreground shadow-lift overflow-hidden md:my-auto md:h-[86vh] md:rounded-xl md:border md:border-border">
         {/* Discord-style ESC close button - Fixed & Highly Visible */}
-        <div className="absolute top-4 right-4 md:top-5 md:right-7 z-40 flex flex-col items-center">
+        <div className="absolute top-2 right-2 md:top-5 md:right-7 z-40 flex flex-col items-center">
           <button
             type="button"
             onClick={() => app.setSettingsOpen(false)}
@@ -114,24 +114,24 @@ export function SettingsModal() {
           >
             <X className="h-4.5 w-4.5 transition-transform duration-150 group-hover:rotate-90" />
           </button>
-          <span className="text-[10px] font-bold tracking-wider text-zinc-600 dark:text-zinc-400 mt-1 uppercase">
+          <span className="hidden md:block text-[10px] font-bold tracking-wider text-zinc-600 dark:text-zinc-400 mt-1 uppercase">
             ESC
           </span>
         </div>
 
         {/* Left Sidebar Menu */}
-        <aside className="w-60 bg-surface border-r border-border p-4 flex flex-col justify-between shrink-0">
+        <aside className="md:w-60 min-w-0 bg-surface border-b md:border-b-0 md:border-r border-border py-2 pl-2 pr-14 md:p-4 flex flex-col justify-between shrink-0">
           <div className="space-y-4">
-            <div className="px-2 text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+            <div className="hidden md:block px-2 text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
               User Settings
             </div>
 
-            <nav className="space-y-1">
+            <nav className="flex gap-1 overflow-x-auto no-scrollbar md:block md:space-y-1 md:overflow-visible">
               <button
                 type="button"
                 onClick={() => setActiveTab("doc-prefs")}
                 className={
-                  "flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs font-medium transition-colors cursor-pointer " +
+                  "flex shrink-0 md:w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs font-medium whitespace-nowrap transition-colors cursor-pointer " +
                   (activeTab === "doc-prefs"
                     ? "bg-accent text-foreground font-semibold"
                     : "text-muted-foreground hover:bg-accent/50 hover:text-foreground")
@@ -145,7 +145,7 @@ export function SettingsModal() {
                 type="button"
                 onClick={() => setActiveTab("appearance")}
                 className={
-                  "flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs font-medium transition-colors cursor-pointer " +
+                  "flex shrink-0 md:w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs font-medium whitespace-nowrap transition-colors cursor-pointer " +
                   (activeTab === "appearance"
                     ? "bg-accent text-foreground font-semibold"
                     : "text-muted-foreground hover:bg-accent/50 hover:text-foreground")
@@ -159,7 +159,7 @@ export function SettingsModal() {
                 type="button"
                 onClick={() => setActiveTab("display")}
                 className={
-                  "flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs font-medium transition-colors cursor-pointer " +
+                  "flex shrink-0 md:w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs font-medium whitespace-nowrap transition-colors cursor-pointer " +
                   (activeTab === "display"
                     ? "bg-accent text-foreground font-semibold"
                     : "text-muted-foreground hover:bg-accent/50 hover:text-foreground")
@@ -173,7 +173,7 @@ export function SettingsModal() {
                 type="button"
                 onClick={() => setActiveTab("packs")}
                 className={
-                  "flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs font-medium transition-colors cursor-pointer " +
+                  "flex shrink-0 md:w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs font-medium whitespace-nowrap transition-colors cursor-pointer " +
                   (activeTab === "packs"
                     ? "bg-accent text-foreground font-semibold"
                     : "text-muted-foreground hover:bg-accent/50 hover:text-foreground")
@@ -187,7 +187,7 @@ export function SettingsModal() {
                 type="button"
                 onClick={() => setActiveTab("translation")}
                 className={
-                  "flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs font-medium transition-colors cursor-pointer " +
+                  "flex shrink-0 md:w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs font-medium whitespace-nowrap transition-colors cursor-pointer " +
                   (activeTab === "translation"
                     ? "bg-accent text-foreground font-semibold"
                     : "text-muted-foreground hover:bg-accent/50 hover:text-foreground")
@@ -201,7 +201,7 @@ export function SettingsModal() {
                 type="button"
                 onClick={() => setActiveTab("about")}
                 className={
-                  "flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs font-medium transition-colors cursor-pointer " +
+                  "flex shrink-0 md:w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs font-medium whitespace-nowrap transition-colors cursor-pointer " +
                   (activeTab === "about"
                     ? "bg-accent text-foreground font-semibold"
                     : "text-muted-foreground hover:bg-accent/50 hover:text-foreground")
@@ -213,18 +213,18 @@ export function SettingsModal() {
             </nav>
           </div>
 
-          <div className="px-2 text-[11px] text-muted-foreground">
+          <div className="hidden md:block px-2 text-[11px] text-muted-foreground">
             Docx v1.0 • Discord Onyx UI
           </div>
         </aside>
 
         {/* Right Content Area */}
-        <main className="relative flex-1 overflow-y-auto p-6 md:p-8 space-y-6">
+        <main className="relative flex-1 min-w-0 overflow-y-auto p-4 md:p-8 space-y-6">
           {/* ========================================================= */}
           {/* TAB 1: DOCUMENT PREFERENCES (Saved separately for each doc) */}
           {/* ========================================================= */}
           {activeTab === "doc-prefs" && (
-            <div className="space-y-6 max-w-2xl pr-12">
+            <div className="space-y-6 max-w-2xl md:pr-12">
               <div>
                 <h2 className="text-lg font-bold text-foreground">Document Preferences</h2>
                 <p className="text-xs text-muted-foreground mt-1">
@@ -242,7 +242,7 @@ export function SettingsModal() {
                     id="select-doc-configure"
                     value={selectedSiteId}
                     onChange={(e) => setSelectedSiteId(e.target.value)}
-                    className="flex-1 rounded-lg border border-border bg-card px-3 py-2 text-sm font-semibold text-foreground shadow-xs focus:border-brand focus:outline-hidden cursor-pointer"
+                    className="flex-1 min-w-0 rounded-lg border border-border bg-card px-3 py-2 text-sm font-semibold text-foreground shadow-xs focus:border-brand focus:outline-hidden cursor-pointer"
                   >
                     {SITES.map((brand) => (
                       <option key={brand.id} value={brand.id}>
@@ -524,7 +524,7 @@ export function SettingsModal() {
           {/* TAB 2: APP APPEARANCE                                     */}
           {/* ========================================================= */}
           {activeTab === "appearance" && (
-            <div className="space-y-6 max-w-xl pr-12">
+            <div className="space-y-6 max-w-xl md:pr-12">
               <div>
                 <h2 className="text-lg font-bold text-foreground">App Appearance</h2>
                 <p className="text-xs text-muted-foreground mt-1">
@@ -642,7 +642,7 @@ export function SettingsModal() {
           {/* TAB 3: DISPLAY & ZOOM                                     */}
           {/* ========================================================= */}
           {activeTab === "display" && (
-            <div className="space-y-6 max-w-xl pr-12">
+            <div className="space-y-6 max-w-xl md:pr-12">
               <div>
                 <h2 className="text-lg font-bold text-foreground">Display & Zoom</h2>
                 <p className="text-xs text-muted-foreground mt-1">
@@ -700,7 +700,7 @@ export function SettingsModal() {
           {/* TAB 4: PACKS & STORAGE                                    */}
           {/* ========================================================= */}
           {activeTab === "packs" && (
-            <div className="space-y-6 max-w-xl pr-12">
+            <div className="space-y-6 max-w-xl md:pr-12">
               <div>
                 <h2 className="text-lg font-bold text-foreground">Packs & Storage</h2>
                 <p className="text-xs text-muted-foreground mt-1">
@@ -743,7 +743,7 @@ export function SettingsModal() {
           {/* TAB: LANGUAGE & TRANSLATION                               */}
           {/* ========================================================= */}
           {activeTab === "translation" && (
-            <div className="space-y-6 max-w-xl pr-6">
+            <div className="space-y-6 max-w-xl md:pr-6">
               <div>
                 <h2 className="text-lg font-bold text-foreground">Language & Offline Translation</h2>
                 <p className="text-xs text-muted-foreground mt-1">
@@ -844,7 +844,7 @@ export function SettingsModal() {
           {/* TAB 5: ABOUT DOCX                                         */}
           {/* ========================================================= */}
           {activeTab === "about" && (
-            <div className="space-y-6 max-w-xl pr-12">
+            <div className="space-y-6 max-w-xl md:pr-12">
               <div>
                 <h2 className="text-lg font-bold text-foreground">About Docx</h2>
                 <p className="text-xs text-muted-foreground mt-1">

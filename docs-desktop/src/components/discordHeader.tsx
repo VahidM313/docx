@@ -34,7 +34,8 @@ export function DiscordHeader({
   const active = app.activeTab;
   const isReader = active != null && active.siteId !== "home";
   const brand = active?.siteId ? getBrand(active.siteId) : null;
-  const isTauri = typeof window !== "undefined" && "__TAURI_INTERNALS__" in window;
+  const hasWindow =
+    typeof window !== "undefined" && "__TAURI_INTERNALS__" in window && !/Android/i.test(navigator.userAgent);
 
   const title = isReader ? brand!.name : "Home Hub";
   const channelName = isReader ? title.toLowerCase().replace(/\s+/g, "-") : "welcome";
@@ -404,7 +405,7 @@ export function DiscordHeader({
         )}
 
         {/* Native Tauri Window Controls */}
-        {isTauri && (
+        {hasWindow && (
           <div className="no-drag flex items-center h-full ml-1 border-l border-border pl-1">
             <button
               type="button"
