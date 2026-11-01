@@ -326,8 +326,6 @@ impl SiteOverridePack {
         }
     }
 
-    /// Streams the whole pack, so that bundling never holds packs in memory.
-    #[cfg(desktop)]
     pub fn pack_len(&self) -> u64 {
         let PackBacking::OnDisk { pack_len, .. } = &self.backing;
         *pack_len
