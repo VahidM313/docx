@@ -57,6 +57,8 @@ const SCRIPTED_SITES = new Set(["angular", "nestjs", "threejs", "rust", "lucide"
 /** A site's `maxPages` is a floor on how much we want, not a reason to ship a partial copy. */
 const PAGE_CAP_FLOOR = Number(process.env.DOCX_PAGE_CAP_FLOOR || 1500);
 const CRAWL_BUDGET_MS = Number(process.env.DOCX_CRAWL_BUDGET_MINUTES || 20) * 60_000;
+/** How often a crawl reports how far it has got. */
+const PROGRESS_INTERVAL_MS = 30_000;
 const MAX_SITEMAPS = 24;
 
 const ASSET_PLACEHOLDER = /\/__docx_assets\/[0-9a-f]{14}\.[a-z0-9]+/g;
@@ -468,6 +470,8 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
   const redirects = new Map<string, string>();
 
   // 1. Crawl HTML pages concurrently in polite batches
+  const crawlStartedAt = Date.now();
+  let lastProgressAt = crawlStartedAt;
   while (pageQueue.length > 0 && visitedPages.size < maxPages && Date.now() < crawlDeadline) {
     const batch: string[] = [];
     while (pageQueue.length > 0 && batch.length < batchConcurrency && visitedPages.size + batch.length < maxPages) {
@@ -651,6 +655,15 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
         }
       })
     );
+
+    if (Date.now() - lastProgressAt >= PROGRESS_INTERVAL_MS) {
+      lastProgressAt = Date.now();
+      const minutes = ((lastProgressAt - crawlStartedAt) / 60_000).toFixed(1);
+      const slowed = batchConcurrency < 6 ? ", slowed by rate limiting" : "";
+      console.log(
+        `  [${site.id}] ${minutes} min: ${visitedPages.size}/${maxPages} pages visited, ${searchEntries.length} saved, ${pageQueue.length} queued, ${unconfirmedRoutes.size} unconfirmed${slowed}`
+      );
+    }
   }
 
   for (const url of renderedCode) pendingAssetUrls.set(url, new URL(url).pathname);
