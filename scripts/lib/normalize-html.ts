@@ -15,9 +15,11 @@
 // Matches analytics APIs and hosts rather than bare product names: "amplitude" is
 // also an ordinary variable in a graphics demo.
 const NOISE_SCRIPT =
-  /googletagmanager|google-analytics|gtag\(|dataLayer|ezstandalone|ezoic|__ez|\bapbct|ctPublic|hotjar|clarity\.ms|plausible(?:\.io|\()|usefathom|fathom\.track|mixpanel\.(?:init|track)|cdn\.amplitude|amplitude\.(?:init|track|getInstance)|OneTrust|cookielaw|_gaq|cloudflareinsights|__cfBeacon|wpdiscuzAjaxObj|GoogleDevelopersObject/;
+  /googletagmanager|google-analytics|gtag\(|dataLayer|ezstandalone|ezoic|__ez|\bapbct|ctPublic|hotjar|clarity\.ms|plausible(?:\.io|\()|usefathom|fathom\.track|mixpanel\.(?:init|track)|cdn\.amplitude|amplitude\.(?:init|track|getInstance)|OneTrust|cookielaw|_gaq|cloudflareinsights|__cfBeacon|wpdiscuzAjaxObj|GoogleDevelopersObject|NREUM|nr-data\.net/;
 
-const HYDRATION_SCRIPT = /__next_f|__NEXT_DATA__|TURBOPACK|__NUXT|__remixContext|__sveltekit/;
+// MediaWiki's page config and its loader queue: without the loader script, which
+// the crawler removes, nothing reads them. On cppreference they were 13% of a pack.
+const HYDRATION_SCRIPT = /__next_f|__NEXT_DATA__|TURBOPACK|__NUXT|__remixContext|__sveltekit|\bRLCONF\b|\bRLQ\b/;
 
 export interface NormalizeOptions {
   keepScripts?: boolean;
