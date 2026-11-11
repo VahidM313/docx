@@ -23,8 +23,8 @@ import path from "path";
 import zlib from "zlib";
 import { DOCPACK_V3_VERSION, HEADER_BYTES as PACK_HEADER_BYTES, updateBytesFrom, type PackMeta } from "./docpack-v3";
 
-/** 2: packs may hold dictionary zstd chunks, which apps before that cannot read. */
-export const LIBRARY_VERSION = 2;
+/** 2: packs may hold dictionary zstd chunks. 3: packs may hold frames. Older apps cannot read either. */
+export const LIBRARY_VERSION = 3;
 export const LIBRARY_HEADER_BYTES = 32;
 export const LIBRARY_ASSET = "Docx-library.bin";
 export const LIBRARY_URL = `https://github.com/VahidM313/docx/releases/download/packs-latest/${LIBRARY_ASSET}`;

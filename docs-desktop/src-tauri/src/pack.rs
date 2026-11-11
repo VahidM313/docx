@@ -9,7 +9,7 @@ use std::collections::{HashMap, VecDeque};
 use std::fs::{self, File};
 use std::io::{Read, Seek, SeekFrom};
 use std::path::PathBuf;
-use std::sync::{Arc, OnceLock, RwLock};
+use std::sync::{Arc, Mutex, OnceLock, RwLock};
 use std::time::{Duration, Instant};
 
 use crate::catalog::get_site_origin_and_entry;
@@ -22,6 +22,14 @@ pub(crate) const V3_HEADER_BYTES: usize = 32;
 const ENCODING_IDENTITY: u8 = b'0';
 const ENCODING_BROTLI: u8 = b'1';
 const ENCODING_ZSTD_DICT: u8 = b'2';
+/// A chunk stored inside a frame: it has no bytes of its own.
+pub(crate) const ENCODING_FRAMED: u8 = b'3';
+/// Several chunks compressed together with the pack's dictionary.
+const ENCODING_FRAME: u8 = b'4';
+/// Builders write frames of about 1 MB; anything far larger is a corrupt index.
+const MAX_FRAME_BYTES: u64 = 64 << 20;
+/// Decoded frames kept per pack: a page spans one to three of them.
+const FRAME_CACHE: usize = 3;
 
 /// The zstd dictionary a pack's text chunks were compressed against.
 pub(crate) type ChunkDictionary = zstd::dict::DecoderDictionary<'static>;
@@ -87,6 +95,10 @@ struct RawV3Index {
     e: String,
     m: Vec<String>,
     p: HashMap<String, Vec<u32>>,
+    #[serde(default)]
+    f: Vec<u32>,
+    #[serde(default)]
+    o: Vec<u64>,
 }
 
 /// Chunk table and route recipes of a v3 pack.
@@ -100,6 +112,8 @@ pub struct V3Index {
     /// route -> [mime index, ...chunk indices]
     pub routes: HashMap<String, Vec<u32>>,
     pub data_len: u64,
+    /// Per framed chunk: its frame and where its raw bytes start in the frame.
+    frames: HashMap<u32, (u32, u64)>,
 }
 
 impl V3Index {
@@ -115,8 +129,34 @@ impl V3Index {
         if raw.l.len() != n || raw.r.len() != n || raw.e.len() != n {
             return Err(DocxError::invalid_pack("index tables have different lengths"));
         }
-        if raw.e.bytes().any(|e| !matches!(e, ENCODING_IDENTITY | ENCODING_BROTLI | ENCODING_ZSTD_DICT)) {
+        if raw.e.bytes().any(|e| {
+            !matches!(e, ENCODING_IDENTITY | ENCODING_BROTLI | ENCODING_ZSTD_DICT | ENCODING_FRAMED | ENCODING_FRAME)
+        }) {
             return Err(DocxError::invalid_pack("index names an unknown chunk encoding"));
+        }
+        let encodings = raw.e.as_bytes();
+        let mut frames = HashMap::new();
+        if encodings.contains(&ENCODING_FRAMED) && (raw.f.len() != n || raw.o.len() != n) {
+            return Err(DocxError::invalid_pack("index lacks the frame tables"));
+        }
+        for i in 0..n {
+            match encodings[i] {
+                ENCODING_FRAME if raw.r[i] > MAX_FRAME_BYTES => {
+                    return Err(DocxError::invalid_pack("frame is too large"));
+                }
+                ENCODING_FRAMED => {
+                    let frame = (raw.f[i] as usize).wrapping_sub(1);
+                    let fits = frame < n
+                        && encodings[frame] == ENCODING_FRAME
+                        && raw.l[i] == 0
+                        && raw.o[i].checked_add(raw.r[i]).is_some_and(|end| end <= raw.r[frame]);
+                    if !fits {
+                        return Err(DocxError::invalid_pack("framed chunk points outside its frame"));
+                    }
+                    frames.insert(i as u32, (frame as u32, raw.o[i]));
+                }
+                _ => {}
+            }
         }
         for recipe in raw.p.values() {
             let Some((mime, chunks)) = recipe.split_first() else {
@@ -145,7 +185,13 @@ impl V3Index {
             mimes: raw.m,
             routes: raw.p,
             data_len: at,
+            frames,
         })
+    }
+
+    /// The frame holding chunk `i` and where it starts there, for a framed chunk.
+    pub(crate) fn frame_of(&self, i: usize) -> Option<(usize, u64)> {
+        self.frames.get(&(i as u32)).map(|&(frame, at)| (frame as usize, at))
     }
 
     /// Stable id for a route's content, usable as an HTTP validator.
@@ -162,7 +208,10 @@ impl V3Index {
                     .map_err(|e| DocxError::invalid_pack(format!("chunk {id} does not decompress: {e}")))?;
                 raw
             }
-            ENCODING_ZSTD_DICT => {
+            ENCODING_FRAMED => {
+                return Err(DocxError::invalid_pack(format!("chunk {id} is read through its frame")));
+            }
+            ENCODING_ZSTD_DICT | ENCODING_FRAME => {
                 let dictionary = dictionary
                     .ok_or_else(|| DocxError::invalid_pack(format!("chunk {id} needs a dictionary the pack lacks")))?;
                 zstd::bulk::Decompressor::with_prepared_dictionary(dictionary)
@@ -236,6 +285,8 @@ enum PackLayout {
         data_start: u64,
         index: OnceLock<Option<Arc<V3Index>>>,
         dictionary: OnceLock<Option<Arc<ChunkDictionary>>>,
+        /// Recently decoded frames, most recent last.
+        frames: Mutex<VecDeque<(usize, Arc<Vec<u8>>)>>,
     },
 }
 
@@ -342,7 +393,7 @@ impl SiteOverridePack {
                     tag: entry.hash.clone(),
                 })
             }
-            PackLayout::V3 { data_start, .. } => {
+            PackLayout::V3 { data_start, frames, .. } => {
                 let index = self.v3_index()?;
                 let recipe = index.routes.get(route)?;
                 let chunks = &recipe[1..];
@@ -374,6 +425,11 @@ impl SiteOverridePack {
                 let mut bytes = Vec::with_capacity(raw_len as usize);
                 for &c in chunks {
                     let c = c as usize;
+                    if let Some((frame, at)) = index.frame_of(c) {
+                        let raw = self.frame(frames, &index, frame, dictionary.as_deref(), &mut stored)?;
+                        bytes.extend_from_slice(&raw[at as usize..(at + index.raw_lengths[c]) as usize]);
+                        continue;
+                    }
                     let data = stored(c)?;
                     if index.encodings[c] == ENCODING_IDENTITY {
                         bytes.extend_from_slice(&data);
@@ -384,6 +440,31 @@ impl SiteOverridePack {
                 Some(RouteData { mime, gzipped: false, encoding: None, bytes, tag })
             }
         }
+    }
+
+    /// Raw bytes of a frame, decoded once and kept while pages around it are read.
+    fn frame(
+        &self,
+        cache: &Mutex<VecDeque<(usize, Arc<Vec<u8>>)>>,
+        index: &V3Index,
+        frame: usize,
+        dictionary: Option<&ChunkDictionary>,
+        stored: &mut impl FnMut(usize) -> Option<Vec<u8>>,
+    ) -> Option<Arc<Vec<u8>>> {
+        let hit = {
+            let cache = cache.lock().ok()?;
+            cache.iter().find(|(i, _)| *i == frame).map(|(_, raw)| raw.clone())
+        };
+        if let Some(raw) = hit {
+            return Some(raw);
+        }
+        let raw = Arc::new(index.decode_chunk(&stored(frame)?, frame, dictionary).ok()?);
+        let mut cache = cache.lock().ok()?;
+        if cache.len() >= FRAME_CACHE {
+            cache.pop_front();
+        }
+        cache.push_back((frame, raw.clone()));
+        Some(raw)
     }
 
     /// Start of the data section within the pack, for v3 packs.
@@ -661,6 +742,7 @@ fn parse_v3_on_disk(
             data_start,
             index: OnceLock::new(),
             dictionary: OnceLock::new(),
+            frames: Mutex::new(VecDeque::new()),
         },
     }))
 }

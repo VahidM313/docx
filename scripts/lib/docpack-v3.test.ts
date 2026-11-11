@@ -192,13 +192,14 @@ describe("docpack v3", () => {
     expect(updateBytesFrom(pack.meta, pack.dataStart, "unknown")).toBeUndefined();
   });
 
-  test("dropped routes shrink the pack and survivors stay readable", () => {
+  test("dropped routes never grow the pack and survivors stay readable", () => {
     const first = buildPack({ ...base, assets: site(20, 16) });
     const assets = site(20, 16);
     assets.delete("/docs/p3");
     const second = buildPack({ ...base, assets, previous: parsePack(first.bytes) });
     const pack = parsePack(second.bytes);
-    expect(second.meta.totalBytes).toBeLessThan(first.meta.totalBytes);
+    // A page inside a frame that is still mostly used stays there until the frame is repacked.
+    expect(second.meta.totalBytes).toBeLessThanOrEqual(first.meta.totalBytes);
     expect(pack.readRoute("/docs/p3")).toBeUndefined();
     expect(pack.readRoute("/docs/p4")!.equals(assets.get("/docs/p4")!.bytes)).toBe(true);
   });
@@ -237,8 +238,53 @@ describe("zstd dictionary", () => {
     const assets = site(40);
     const pack = parsePack(buildPack({ ...base, assets }).bytes);
     expect(pack.meta.dict).toBeDefined();
-    expect(pack.index.e).toContain("2");
+    expect(pack.index.e).toContain("4");
     for (const [route, asset] of assets) expect(pack.readRoute(route)!.equals(asset.bytes)).toBe(true);
+  });
+
+  test("small text is stored in frames that are smaller than its chunks alone", () => {
+    const assets = site(120);
+    const pack = parsePack(buildPack({ ...base, assets }).bytes);
+    const frames = [...pack.index.e].flatMap((e, i) => (e === "4" ? [i] : []));
+    expect(frames.length).toBeGreaterThan(1);
+    expect(pack.meta.frame).toBeDefined();
+    let members = 0;
+    pack.index.c.forEach((id, i) => {
+      if (pack.index.e[i] !== "3") return;
+      members++;
+      expect(pack.index.l[i]).toBe(0);
+      const frame = pack.index.f![i] - 1;
+      expect(pack.index.e[frame]).toBe("4");
+      expect(pack.index.o![i] + pack.index.r[i]).toBeLessThanOrEqual(pack.index.r[frame]);
+    });
+    expect(members).toBeGreaterThan(frames.length);
+    // A frame's id is the hash of its raw bytes, so an updater verifies it like any chunk.
+    for (const f of frames) {
+      const raw = pack.rawChunk(f);
+      expect(raw.byteLength).toBe(pack.index.r[f]);
+      expect(require("crypto").createHash("sha256").update(raw).digest("hex").slice(0, 16)).toBe(pack.index.c[f]);
+    }
+  });
+
+  test("frames that lost most of their chunks are repacked", () => {
+    const first = buildPack({ ...base, assets: site(120) });
+    const kept = new Map([...site(120)].filter(([route]) => Number(route.split("/").pop()) % 4 === 0));
+    const built = buildPack({ ...base, assets: kept, previous: parsePack(first.bytes) });
+    const pack = parsePack(built.bytes);
+    expect(built.unchanged).toBe(false);
+    expect(built.meta.totalBytes).toBeLessThan(first.meta.totalBytes / 2);
+    for (const [route, asset] of kept) expect(pack.readRoute(route)!.equals(asset.bytes)).toBe(true);
+    // Repacked chunks are new bytes on the tail; nothing the client has is listed as missing twice.
+    const old = new Set(parsePack(first.bytes).index.c);
+    const missing = pack.index.c.reduce((sum, id, i) => (old.has(id) ? sum : sum + pack.index.l[i]), 0);
+    expect(updateBytesFrom(pack.meta, pack.dataStart, first.meta.commit)).toBeGreaterThanOrEqual(pack.dataStart + missing);
+  });
+
+  test("a frame is never a single chunk", () => {
+    const pack = parsePack(buildPack({ ...base, assets: site(40) }).bytes);
+    const perFrame = new Map<number, number>();
+    pack.index.f!.forEach((f) => f && perFrame.set(f, (perFrame.get(f) ?? 0) + 1));
+    for (const n of perFrame.values()) expect(n).toBeGreaterThan(1);
   });
 
   test("the dictionary is not a route and changes nothing about the commit", () => {

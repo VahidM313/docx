@@ -34,7 +34,7 @@ const HEAD_PROBE_BYTES: u64 = 64 * 1024;
 const DIRECTORY_PROBE_BYTES: u64 = 32 * 1024;
 const LIBRARY_HEADER_BYTES: usize = 32;
 /// 2 added dictionary zstd chunks; the layout of the library itself is the same.
-const LIBRARY_VERSION: u16 = 2;
+const LIBRARY_VERSION: u16 = 3;
 /// Fetching a small gap is cheaper than another request.
 const MAX_RANGE_GAP: u64 = 32 * 1024;
 /// Above this share of missing data, one streamed download beats many ranges.
@@ -580,6 +580,9 @@ fn assemble_pack(
     let mut hasher = ring::digest::Context::new(&ring::digest::SHA256);
     let mut chunk = Vec::new();
     for i in 0..index.ids.len() {
+        if index.lengths[i] == 0 {
+            continue;
+        }
         chunk.resize(index.lengths[i] as usize, 0);
         if let Some(&at) = spool.placed.get(&i) {
             spool.file.seek(SeekFrom::Start(at))?;
@@ -766,8 +769,10 @@ pub(crate) fn sync_pack(
         && let Some(local_index) = local.v3_index()
     {
         let known: HashSet<(&str, u8, u64)> = (0..local_index.ids.len()).map(|i| chunk_key(&local_index, i)).collect();
-        let missing: Vec<usize> =
-            (0..head.index.ids.len()).filter(|&i| !known.contains(&chunk_key(&head.index, i))).collect();
+        // A chunk inside a frame has no bytes of its own: it arrives with its frame.
+        let missing: Vec<usize> = (0..head.index.ids.len())
+            .filter(|&i| head.index.lengths[i] > 0 && !known.contains(&chunk_key(&head.index, i)))
+            .collect();
         let missing_bytes: u64 = missing.iter().map(|&i| head.index.lengths[i]).sum();
 
         if missing_bytes * 100 < head.index.data_len * FULL_DOWNLOAD_PERCENT {
