@@ -115,7 +115,7 @@ const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 
 /** Sites whose pages only work with their own JavaScript bundles and data. */
-const SCRIPTED_SITES = new Set(["angular", "nestjs", "threejs", "rust", "lucide"]);
+const SCRIPTED_SITES = new Set(["nestjs", "threejs", "rust", "lucide"]);
 
 /** A site's `maxPages` is a floor on how much we want, not a reason to ship a partial copy. */
 const PAGE_CAP_FLOOR = Number(process.env.DOCX_PAGE_CAP_FLOOR || 1500);
@@ -198,7 +198,9 @@ async function fetchRendered(url: string): Promise<Response | null> {
     }
   });
   try {
-    await page.goto(url, { waitUntil: "networkidle", timeout: 30_000 });
+    await page.goto(url, { waitUntil: "load", timeout: 30_000 });
+    // Some sites (developer.apple.com) never go quiet; by now they have rendered
+    await page.waitForLoadState("networkidle", { timeout: 10_000 }).catch(() => {});
     const res = new Response(await page.content(), { headers: { "content-type": "text/html; charset=utf-8" } });
     Object.defineProperty(res, "url", { value: page.url() });
     return res;
@@ -763,36 +765,12 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
 
   for (const url of renderedCode) pendingAssetUrls.set(url, new URL(url).pathname);
 
-  // Extra SPA / Viewer assets for Three.js, NestJS, and Angular
+  // Extra viewer assets for Three.js
   if (site.id === "threejs") {
     pendingAssetUrls.set("https://threejs.org/files/main.css", "/files/main.css");
     pendingAssetUrls.set("https://threejs.org/files/page.css", "/files/page.css");
     pendingAssetUrls.set("https://threejs.org/files/page.js", "/files/page.js");
     pendingAssetUrls.set("https://threejs.org/docs/search.json", "/docs/search.json");
-  } else if (site.id === "angular") {
-    pendingAssetUrls.set("https://v17.angular.io/light-theme.css", "/light-theme.css");
-    pendingAssetUrls.set("https://v17.angular.io/dark-theme.css", "/dark-theme.css");
-    pendingAssetUrls.set("https://v17.angular.io/generated/navigation.json", "/generated/navigation.json");
-    pendingAssetUrls.set("https://v17.angular.io/generated/docs/docs.json", "/generated/docs/docs.json");
-    const navRes = await fetchWithTimeout("https://v17.angular.io/generated/navigation.json", 10000, 4, handleRateLimitSignal);
-    if (navRes && navRes.ok) {
-      const navText = await navRes.text();
-      rawAssets.set("/generated/navigation.json", {
-        bytes: Buffer.from(navText, "utf-8"),
-        mime: "application/json; charset=utf-8",
-      });
-      const urlMatches = [...navText.matchAll(/"url"\s*:\s*"([^"]+)"/g)]
-        .map((m) => m[1])
-        .filter((u) => !u.startsWith("http") && !u.includes("#"))
-        .slice(0, 140);
-      for (const u of urlMatches) {
-        const cleanU = u.replace(/^\/+/, "");
-        pendingAssetUrls.set(
-          `https://v17.angular.io/generated/docs/${cleanU}.json`,
-          `/generated/docs/${cleanU}.json`
-        );
-      }
-    }
   }
 
   const truncated = pageQueue.length > 0;

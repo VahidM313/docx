@@ -2,17 +2,16 @@
   "id": "better_auth",
   "order": 45,
   "name": "Better Auth",
-  "version": "v1.1",
+  "version": "Latest",
   "category": "Backend, Auth & APIs",
   "color": "#f59e0b",
   "bgTint": "rgba(245, 158, 11, 0.15)",
   "description": "The comprehensive authentication framework for TypeScript: email/password, social OAuth, 2FA, passkeys, sessions, and plugins.",
-  "origin": "https://www.better-auth.com",
+  "origin": "https://better-auth.com",
   "entryPath": "/docs/introduction",
   "allowedPrefixes": [
     "/docs"
   ],
-  "maxPages": 120,
   "defaultRoutes": [
     {
       "label": "Introduction",

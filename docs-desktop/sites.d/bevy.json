@@ -2,17 +2,16 @@
   "id": "bevy",
   "order": 86,
   "name": "Bevy Engine",
-  "version": "v0.15",
+  "version": "Latest",
   "category": "Rust Ecosystem",
   "color": "#ffffff",
   "bgTint": "rgba(255, 255, 255, 0.15)",
   "description": "Refreshingly simple data-driven game engine built in Rust: ECS (Entity Component System), render graph, UI, and audio.",
-  "origin": "https://bevyengine.org",
+  "origin": "https://bevy.org",
   "entryPath": "/learn/quick-start/introduction/",
   "allowedPrefixes": [
     "/learn"
   ],
-  "maxPages": 120,
   "defaultRoutes": [
     {
       "label": "Quick Start",

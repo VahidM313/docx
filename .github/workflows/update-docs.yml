@@ -242,7 +242,7 @@ jobs:
           bun scripts/library.ts extract "${{ matrix.site }}" ./dist-packs
 
       - name: Install a browser for sites that only render in one
-        if: matrix.site == 'nestjs'
+        if: matrix.site == 'nestjs' || matrix.site == 'metal'
         run: |
           bun add --no-save playwright
           bunx playwright install --with-deps chromium
