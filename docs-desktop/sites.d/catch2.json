@@ -10,7 +10,7 @@
   "origin": "https://github.com",
   "entryPath": "/catchorg/Catch2/blob/devel/docs/Readme.md",
   "allowedPrefixes": [
-    "/catchorg/Catch2"
+    "/catchorg/Catch2/blob/devel/docs/"
   ],
   "maxPages": 80,
   "defaultRoutes": [

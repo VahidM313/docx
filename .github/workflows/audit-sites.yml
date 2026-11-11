@@ -1,0 +1,77 @@
+name: Audit Every Site (full crawl, no publish)
+
+# Crawls each site's pages with no page cap and lists them, so the version and
+# language rules in sites.d can be checked against the whole site. Publishes nothing.
+on:
+  workflow_dispatch:
+    inputs:
+      sites:
+        description: "'all' or comma-separated site IDs"
+        required: false
+        default: "all"
+      minutes:
+        description: "Crawl time budget per site, in minutes"
+        required: false
+        default: "330"
+
+permissions:
+  contents: read
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      sites: ${{ steps.list.outputs.sites }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - id: list
+        env:
+          INPUT_SITES: ${{ github.event.inputs.sites }}
+        run: |
+          bun -e '
+            const { SITE_CATALOG } = require("./scripts/ci-build-site.ts");
+            const mode = process.env.INPUT_SITES || "all";
+            // These refuse the runners
+            const ids = SITE_CATALOG.filter((s) => !s.localBuild).map((s) => s.id);
+            const picked = mode === "all" ? ids : mode.split(",").map((s) => s.trim()).filter((s) => ids.includes(s));
+            console.log(`${picked.length} sites`);
+            require("fs").appendFileSync(process.env.GITHUB_OUTPUT, `sites=${JSON.stringify(picked)}\n`);
+          '
+
+  crawl:
+    name: Crawl (${{ matrix.site }})
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        site: ${{ fromJson(needs.prepare.outputs.sites) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+
+      - name: Install a browser for sites that only render in one
+        if: matrix.site == 'nestjs'
+        run: |
+          bun add --no-save playwright
+          bunx playwright install --with-deps chromium
+
+      - name: List every page
+        env:
+          DOCX_DISCOVER_ONLY: "1"
+          DOCX_PAGE_CAP_FLOOR: "10000000"
+          DOCX_CRAWL_BUDGET_MINUTES: ${{ github.event.inputs.minutes }}
+        run: bun run scripts/ci-build-site.ts "${{ matrix.site }}" ./urls
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: urls-${{ matrix.site }}
+          path: urls/${{ matrix.site }}.urls.txt
+          retention-days: 14
+          if-no-files-found: warn

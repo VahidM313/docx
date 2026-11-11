@@ -2,26 +2,32 @@
   "id": "sfml",
   "order": 114,
   "name": "SFML",
-  "version": "v2.6",
+  "version": "Latest",
   "category": "Graphics & Game APIs",
   "color": "#8ec342",
   "bgTint": "rgba(131, 192, 36, 0.16)",
   "description": "Simple and Fast Multimedia Library: portable C++ API for windowing, 2D graphics, audio, and network game development.",
   "origin": "https://www.sfml-dev.org",
-  "entryPath": "/documentation/2.6.1/",
+  "entryPath": "/documentation/",
   "allowedPrefixes": [
-    "/documentation/2.6.1/"
+    "/documentation/{version}/"
   ],
   "maxPages": 120,
   "defaultRoutes": [
     {
       "label": "API Documentation",
-      "path": "/documentation/2.6.1/"
+      "path": "/documentation/"
     },
     {
       "label": "Modules",
-      "path": "/documentation/2.6.1/modules.php"
+      "path": "/documentation/modules.php"
     }
   ],
-  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"3.5\" stroke=\"#8ec342\" stroke-width=\"1.8\" fill=\"rgba(142, 195, 66, 0.12)\"/><polygon points=\"9.5 7.5 16.5 12 9.5 16.5 9.5 7.5\" fill=\"#8ec342\"/><circle cx=\"12\" cy=\"4\" r=\"1.5\" fill=\"#8ec342\"/></svg>"
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"3.5\" stroke=\"#8ec342\" stroke-width=\"1.8\" fill=\"rgba(142, 195, 66, 0.12)\"/><polygon points=\"9.5 7.5 16.5 12 9.5 16.5 9.5 7.5\" fill=\"#8ec342\"/><circle cx=\"12\" cy=\"4\" r=\"1.5\" fill=\"#8ec342\"/></svg>",
+  "latest": {
+    "from": "https://www.sfml-dev.org/documentation/",
+    "match": "^https://www\\.sfml-dev\\.org/documentation/(\\d+\\.\\d+\\.\\d+)/",
+    "alias": "/documentation/",
+    "path": "/documentation/{version}/"
+  }
 }

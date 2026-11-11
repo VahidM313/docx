@@ -10,8 +10,7 @@
   "origin": "https://www.boost.org",
   "entryPath": "/doc/libs/latest/index.html",
   "allowedPrefixes": [
-    "/doc/libs/latest/",
-    "/doc/"
+    "/doc/libs/latest/"
   ],
   "maxPages": 140,
   "defaultRoutes": [

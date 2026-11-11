@@ -8,9 +8,9 @@
   "bgTint": "rgba(95, 160, 78, 0.15)",
   "description": "Official Node.js JavaScript runtime API: fs, path, http, crypto, streams, worker_threads, buffer, and child_process.",
   "origin": "https://nodejs.org",
-  "entryPath": "/docs/latest-v22.x/api/",
+  "entryPath": "/docs/latest/api/",
   "allowedPrefixes": [
-    "/docs/latest-v22.x/api/"
+    "/docs/latest/api/"
   ],
   "maxPages": 180,
   "defaultRoutes": [

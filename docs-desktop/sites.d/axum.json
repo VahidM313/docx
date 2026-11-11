@@ -10,7 +10,7 @@
   "origin": "https://docs.rs",
   "entryPath": "/axum/latest/axum/",
   "allowedPrefixes": [
-    "/axum/"
+    "/axum/latest/"
   ],
   "maxPages": 120,
   "defaultRoutes": [

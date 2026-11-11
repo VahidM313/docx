@@ -10,7 +10,7 @@
   "origin": "https://docs.rs",
   "entryPath": "/clap/latest/clap/",
   "allowedPrefixes": [
-    "/clap"
+    "/clap/latest/"
   ],
   "maxPages": 90,
   "defaultRoutes": [

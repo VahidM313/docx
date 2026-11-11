@@ -8,10 +8,9 @@
   "bgTint": "rgba(55, 129, 74, 0.15)",
   "description": "Distributed task queue: real-time asynchronous job worker, scheduling (beat), retries, and broker integration.",
   "origin": "https://docs.celeryq.dev",
-  "entryPath": "/",
+  "entryPath": "/en/stable/",
   "allowedPrefixes": [
-    "/en/stable",
-    "/"
+    "/en/stable/"
   ],
   "maxPages": 110,
   "defaultRoutes": [

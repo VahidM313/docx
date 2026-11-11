@@ -10,8 +10,7 @@
   "origin": "https://pytorch.org",
   "entryPath": "/docs/stable/index.html",
   "allowedPrefixes": [
-    "/docs/stable/",
-    "/docs/2."
+    "/docs/stable/"
   ],
   "maxPages": 160,
   "defaultRoutes": [

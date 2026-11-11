@@ -28,6 +28,16 @@ export interface SiteConfig {
   rendered?: boolean;
   /** Refuses GitHub's runners: scripts/build-local.ts builds it, and CI leaves it alone. */
   localBuild?: boolean;
+  /** Pages the app links to by name; kept version-free, like `entryPath`. */
+  defaultRoutes?: { label: string; path: string }[];
+  /**
+   * Follows the site's newest release, so nobody edits a version number by hand.
+   * `from` is a page whose final address or text names the releases, and the highest
+   * first capture of `match` wins. `{version}` in `path`, `allowedPrefixes` and
+   * `excludePattern` becomes that release. The app only knows `alias`, a version-free
+   * path: `entryPath` and `defaultRoutes` start with it, and the pack redirects them.
+   */
+  latest?: { from: string; match: string; alias: string; path: string };
 }
 /**
  * Crawl/pack configuration, sourced from `docs-desktop/sites.json`
@@ -46,7 +56,60 @@ export const SITE_CATALOG: SiteConfig[] = siteCatalog.sites.map((s: any) => ({
   excludePattern: s.excludePattern,
   rendered: s.rendered,
   localBuild: s.localBuild,
+  defaultRoutes: s.defaultRoutes,
+  latest: s.latest,
 }));
+
+/** Orders release names by their numbers: 6.10 after 6.9, 4.x after 4. */
+export function compareVersions(a: string, b: string): number {
+  const pa = a.match(/\d+/g)?.map(Number) ?? [];
+  const pb = b.match(/\d+/g)?.map(Number) ?? [];
+  for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
+    const d = (pa[i] ?? -1) - (pb[i] ?? -1);
+    if (d) return d;
+  }
+  return 0;
+}
+
+/** The newest release `latest.from` names, or null when the page cannot be read. */
+export async function findLatestVersion(site: SiteConfig): Promise<string | null> {
+  const latest = site.latest!;
+  try {
+    // The crawler's own fetch: some sites answer only its browser headers
+    const res = await fetchWithTimeout(latest.from, 20_000, 3, undefined, site);
+    if (!res?.ok) return null;
+    const text = `${res.url}\n${await res.text()}`;
+    const found = [...text.matchAll(new RegExp(latest.match, "g"))].map((m) => m[1]).filter(Boolean);
+    return found.sort(compareVersions).at(-1) ?? null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * The site as this crawl sees it: `{version}` filled in, and the version-free paths
+ * the app opens mapped to the real ones.
+ */
+export function pinVersion(site: SiteConfig, version: string): { site: SiteConfig; aliases: Map<string, string> } {
+  const latest = site.latest!;
+  const fill = (s: string) => s.replaceAll("{version}", version);
+  const real = (p: string) => (p.startsWith(latest.alias) ? fill(latest.path) + p.slice(latest.alias.length) : p);
+  const aliases = new Map<string, string>();
+  for (const p of [site.entryPath, ...(site.defaultRoutes ?? []).map((r) => r.path)]) {
+    const bare = p.split("#")[0];
+    if (bare.startsWith(latest.alias) && real(bare) !== bare) aliases.set(bare, real(bare));
+  }
+  return {
+    site: {
+      ...site,
+      version,
+      entryPath: real(site.entryPath),
+      allowedPrefixes: site.allowedPrefixes.map(fill),
+      excludePattern: site.excludePattern && fill(site.excludePattern),
+    },
+    aliases,
+  };
+}
 
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
@@ -57,6 +120,8 @@ const SCRIPTED_SITES = new Set(["angular", "nestjs", "threejs", "rust", "lucide"
 /** A site's `maxPages` is a floor on how much we want, not a reason to ship a partial copy. */
 const PAGE_CAP_FLOOR = Number(process.env.DOCX_PAGE_CAP_FLOOR || 1500);
 const CRAWL_BUDGET_MS = Number(process.env.DOCX_CRAWL_BUDGET_MINUTES || 20) * 60_000;
+/** Crawl pages only and list them in <id>.urls.txt; no assets, no pack. */
+const DISCOVER_ONLY = process.env.DOCX_DISCOVER_ONLY === "1";
 /** How often a crawl reports how far it has got. */
 const PROGRESS_INTERVAL_MS = 30_000;
 const MAX_SITEMAPS = 24;
@@ -394,10 +459,28 @@ function writePack(docpackPath: string, bytes: Uint8Array) {
 export type BuildResult = "built" | "unchanged" | "kept";
 
 export async function buildDocpackForSite(siteId: string, outDir: string): Promise<BuildResult> {
-  const site = SITE_CATALOG.find((s) => s.id === siteId);
-  if (!site) throw new Error(`Unknown site id: ${siteId}`);
+  const configured = SITE_CATALOG.find((s) => s.id === siteId);
+  if (!configured) throw new Error(`Unknown site id: ${siteId}`);
+  let site = configured;
 
   fs.mkdirSync(outDir, { recursive: true });
+
+  // Version-free paths the app opens -> this release's paths
+  let aliases = new Map<string, string>();
+  if (configured.latest) {
+    const found = await findLatestVersion(configured);
+    // A release page that is down must not stop the build: stay on the last good release.
+    // Only a pack built under this rule names one; an older pack's version is just a label.
+    const previousMeta = loadPreviousPack(path.join(outDir, `${siteId}.docpack`))?.meta;
+    const fallback =
+      previousMeta && pinVersion(configured, previousMeta.version).site.entryPath === previousMeta.entryPath
+        ? previousMeta.version
+        : null;
+    const version = found ?? fallback;
+    if (!version) throw new Error(`${siteId}: could not find its latest release at ${configured.latest.from}`);
+    console.log(`  Latest release: ${version}${found ? "" : ` (${configured.latest.from} did not answer; kept from the previous pack)`}`);
+    ({ site, aliases } = pinVersion(configured, version));
+  }
   console.log(`\n=== Crawling Real Website for [${site.id}] (${site.origin}${site.entryPath}) ===`);
 
   const docpackPath = path.join(outDir, `${site.id}.docpack`);
@@ -666,6 +749,18 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
     }
   }
 
+  if (DISCOVER_ONLY) {
+    // Every page the site has under its rules: the crawl ran without a page cap, and nothing is packed
+    const lines = [...visitedPages].sort().map((p) => `visited ${p}`);
+    for (const p of pageQueue) lines.push(`queued ${p}`);
+    fs.writeFileSync(path.join(outDir, `${site.id}.urls.txt`), lines.join("\n") + "\n");
+    console.log(
+      `  Discovered ${visitedPages.size} pages for ${site.id} (${searchEntries.length} HTML), ${pageQueue.length} still queued` +
+        `${Date.now() >= crawlDeadline ? " — stopped by the time budget" : ""}`
+    );
+    return "kept";
+  }
+
   for (const url of renderedCode) pendingAssetUrls.set(url, new URL(url).pathname);
 
   // Extra SPA / Viewer assets for Three.js, NestJS, and Angular
@@ -820,17 +915,29 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
   }
 
   const forceRebuild = process.env.DOCX_FORCE_REBUILD === "true";
-  // Pages, not routes: a site that stops shipping its bundles has lost assets, not documentation
-  if (!forceRebuild && !site.singlePage && previousPageCount > 10 && pageCount < Math.floor(previousPageCount * 0.5)) {
+  // Pages, not routes: a site that stops shipping its bundles has lost assets, not documentation.
+  // Only the old pages today's rules still want count, so dropping old versions,
+  // other languages or a superseded release is not mistaken for a failed crawl.
+  const stillWanted = previous
+    ? Object.keys(previous.index.p).filter((route) => previous.mimeOf(route)?.startsWith("text/html") && isAllowedPageUrl(new URL(route, site.origin))).length
+    : 0;
+  if (!forceRebuild && !site.singlePage && stillWanted > 10 && pageCount < Math.floor(stillWanted * 0.5)) {
     console.warn(
-      `⚠️ [${site.id}] Crawl only captured ${pageCount} pages vs ${previousPageCount} previously — keeping existing healthy .docpack.`
+      `⚠️ [${site.id}] Crawl only captured ${pageCount} pages vs ${stillWanted} previously — keeping existing healthy .docpack.`
     );
     return keepPrevious();
+  }
+  if (previousPageCount > stillWanted) {
+    console.log(`  ${previousPageCount - stillWanted} old pages fall outside the site's rules and are dropped`);
   }
 
   // After the guard: a site redirecting everything to a maintenance page has no pages to show for it
   for (const [from, to] of redirects) {
     if (!rawAssets.has(from)) rawAssets.set(from, redirectPage(to));
+  }
+  for (const [from, to] of aliases) {
+    const key = normalizeRouteKey(from);
+    if (!rawAssets.has(key)) rawAssets.set(key, redirectPage(to));
   }
 
   const images = await compressImages(rawAssets);
@@ -853,7 +960,8 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
   if (previous) {
     if (truncated) {
       for (const route of Object.keys(previous.index.p)) {
-        if (previous.mimeOf(route)?.startsWith("text/html")) carried.add(route);
+        // Pages from an old version or another language stay out even when the crawl is partial
+        if (previous.mimeOf(route)?.startsWith("text/html") && isAllowedPageUrl(new URL(route, site.origin))) carried.add(route);
       }
     }
     for (const route of unconfirmedRoutes) carried.add(route);

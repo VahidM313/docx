@@ -8,9 +8,9 @@
   "bgTint": "rgba(255, 240, 0, 0.15)",
   "description": "Fast in-process analytical SQL database engine: columnar vectorized execution, zero dependencies, and Parquet/Arrow support.",
   "origin": "https://duckdb.org",
-  "entryPath": "/docs/",
+  "entryPath": "/docs/stable/",
   "allowedPrefixes": [
-    "/docs"
+    "/docs/stable/"
   ],
   "maxPages": 150,
   "defaultRoutes": [

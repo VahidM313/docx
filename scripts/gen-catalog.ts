@@ -29,8 +29,10 @@ interface CatalogSite {
   origin?: string;
   entryPath: string;
   allowedPrefixes?: string[];
+  excludePattern?: string;
   maxPages?: number;
   defaultRoutes?: { label: string; path: string }[];
+  latest?: { from: string; match: string; alias: string; path: string };
   svg: string;
 }
 
@@ -63,6 +65,20 @@ for (const file of files) {
 
   if (!s.origin) errors.push(`${file}: missing field "origin"`);
   if (!s.allowedPrefixes?.length) errors.push(`${file}: missing field "allowedPrefixes"`);
+
+  if (s.latest) {
+    const l = s.latest;
+    for (const f of ["from", "match", "alias", "path"] as const) if (!l[f]) errors.push(`${file}: latest.${f} is missing`);
+    if (l.path && !l.path.includes("{version}")) errors.push(`${file}: latest.path must contain {version}`);
+    if (l.match && !/\((?!\?)/.test(l.match)) errors.push(`${file}: latest.match needs a capture group`);
+    // The app opens these paths as they are, so they must not name a release
+    for (const p of [s.entryPath, ...(s.defaultRoutes ?? []).map((r) => r.path)]) {
+      if (p.includes("{version}")) errors.push(`${file}: "${p}" is opened by the app and must use latest.alias, not {version}`);
+    }
+    if (l.alias && !s.entryPath.startsWith(l.alias)) errors.push(`${file}: entryPath must start with latest.alias`);
+  } else if (JSON.stringify(s.allowedPrefixes ?? []).includes("{version}") || s.excludePattern?.includes("{version}")) {
+    errors.push(`${file}: {version} needs a "latest" rule`);
+  }
 
   if (typeof s.order !== "number" || s.order < 0) errors.push(`${file}: missing numeric "order"`);
   if (!s.svg.startsWith("<svg")) errors.push(`${file}: "svg" must be an inline <svg> string`);

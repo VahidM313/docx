@@ -8,10 +8,9 @@
   "bgTint": "rgba(43, 91, 132, 0.18)",
   "description": "HTTP for Humans: simple, elegant Python HTTP client library supporting keep-alive, connection pooling, and SSL.",
   "origin": "https://requests.readthedocs.io",
-  "entryPath": "/",
+  "entryPath": "/en/latest/",
   "allowedPrefixes": [
-    "/en/latest",
-    "/"
+    "/en/latest/"
   ],
   "maxPages": 80,
   "defaultRoutes": [
