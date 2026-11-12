@@ -451,6 +451,29 @@ function withReferencedRoutes(pack: ParsedPack, routes: Set<string>): Set<string
   return closure;
 }
 
+/** In-pack route holding where a crawl cut short by time goes on next run. */
+const CRAWL_STATE_ROUTE = "/__docx/crawl.json";
+
+function readJsonRoute<T>(pack: ParsedPack | null, route: string): T | undefined {
+  const bytes = pack?.readRoute(route);
+  if (!bytes) return undefined;
+  try {
+    return JSON.parse(bytes.toString("utf8"));
+  } catch {
+    return undefined;
+  }
+}
+
+function readCrawlState(pack: ParsedPack | null): string[] {
+  const pending = readJsonRoute<{ pending?: unknown }>(pack, CRAWL_STATE_ROUTE)?.pending;
+  return Array.isArray(pending) ? pending.filter((p): p is string => typeof p === "string") : [];
+}
+
+function previousSearchEntries(pack: ParsedPack | null): any[] {
+  const entries = readJsonRoute<unknown>(pack, SEARCH_ROUTE);
+  return Array.isArray(entries) ? entries : [];
+}
+
 /** The pack to build on, from the library. */
 function loadPreviousPack(docpackPath: string) {
   if (!fs.existsSync(docpackPath)) return null;
@@ -588,6 +611,24 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
   if (sitemapPages.length) console.log(`  Sitemaps list ${sitemapPages.length} pages`);
   sitemapPages.forEach(enqueuePage);
 
+  // A crawl the time budget cut short goes on where it stopped: first the pages it never
+  // reached, then the ones it refreshed least recently. Otherwise a slow site (Qt, about
+  // 20 pages a minute) re-read the same first pages every night and never got further.
+  const resume = readCrawlState(previous)
+    .filter((p) => {
+      try {
+        return isAllowedPageUrl(new URL(p, site.origin)) && !queuedPages.has(normalizeRouteKey(p));
+      } catch {
+        return false;
+      }
+    })
+    .slice(0, maxPages * 2);
+  if (resume.length) {
+    resume.forEach((p) => queuedPages.add(normalizeRouteKey(p)));
+    pageQueue.splice(0, 0, ...resume);
+    console.log(`  Resuming the last crawl: ${resume.length} pages first`);
+  }
+
   const redirects = new Map<string, string>();
 
   // 1. Crawl HTML pages concurrently in polite batches
@@ -629,6 +670,9 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
         }
         const pageUrl = new URL(res.url || fullUrl);
         const routeKey = normalizeRouteKey(pageUrl.pathname);
+        // Redirected off the site (Boost's examples go to GitHub): saved under its own path,
+        // the page would pose as part of these docs and pull in that site's stylesheets
+        if (pageUrl.origin !== site.origin) return;
         if (softNotFoundTitle && routeKey !== normalizeRouteKey(site.entryPath) && htmlTitle(html) === softNotFoundTitle) return;
         if (routeKey !== requestedRoute && pageUrl.origin === site.origin) redirects.set(requestedRoute, pageUrl.pathname);
 
@@ -936,7 +980,8 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
   const stillWanted = previous
     ? Object.keys(previous.index.p).filter((route) => previous.mimeOf(route)?.startsWith("text/html") && isAllowedPageUrl(new URL(route, site.origin))).length
     : 0;
-  if (!forceRebuild && !site.singlePage && stillWanted > 10 && pageCount < Math.floor(stillWanted * 0.5)) {
+  // A crawl cut short by time carries every page it did not reach, so it loses nothing
+  if (!forceRebuild && !site.singlePage && !truncated && stillWanted > 10 && pageCount < Math.floor(stillWanted * 0.5)) {
     console.warn(
       `⚠️ [${site.id}] Crawl only captured ${pageCount} pages vs ${stillWanted} previously — keeping existing healthy .docpack.`
     );
@@ -961,15 +1006,6 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
     console.log(`  ${images.converted} images as WebP: ${mb(images.bytesBefore)} MB -> ${mb(images.bytesAfter)} MB`);
   }
 
-  const seenSearchIds = new Set<string>();
-  const uniqueSearchEntries = searchEntries
-    .filter((e) => !seenSearchIds.has(e.id) && seenSearchIds.add(e.id))
-    .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
-  rawAssets.set(SEARCH_ROUTE, {
-    bytes: Buffer.from(JSON.stringify(uniqueSearchEntries), "utf-8"),
-    mime: "application/json; charset=utf-8",
-  });
-
   // A partial crawl must not delete pages: only a clean run or a 404/410 can do that
   const carried = new Set<string>();
   if (previous) {
@@ -984,6 +1020,28 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
     for (const route of rawAssets.keys()) carried.delete(route);
   }
   const carriedRoutes = previous ? withReferencedRoutes(previous, carried) : carried;
+
+  // Carried pages keep their search entries; this crawl only saw the pages it fetched
+  const seenSearchIds = new Set<string>();
+  const uniqueSearchEntries = [...searchEntries, ...previousSearchEntries(previous).filter((e) => carried.has(normalizeRouteKey(e.path ?? "")))]
+    .filter((e) => !seenSearchIds.has(e.id) && seenSearchIds.add(e.id))
+    .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
+  rawAssets.set(SEARCH_ROUTE, {
+    bytes: Buffer.from(JSON.stringify(uniqueSearchEntries), "utf-8"),
+    mime: "application/json; charset=utf-8",
+  });
+
+  // Where the next run starts: pages never reached, then known pages this run did not refresh
+  if (truncated) {
+    const pending = new Set<string>();
+    for (const p of pageQueue) if (!visitedPages.has(normalizeRouteKey(p.split("?")[0].split("#")[0]))) pending.add(p);
+    for (const route of carried) if (previous?.mimeOf(route)?.startsWith("text/html")) pending.add(route);
+    rawAssets.set(CRAWL_STATE_ROUTE, {
+      bytes: Buffer.from(JSON.stringify({ pending: [...pending] }), "utf-8"),
+      mime: "application/json; charset=utf-8",
+    });
+    console.log(`  The next run starts with ${pending.size} pages this one did not reach`);
+  }
 
   const built = buildPack({
     id: site.id,
