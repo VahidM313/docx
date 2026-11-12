@@ -252,6 +252,9 @@ async function fetchFromMirror(mirrored: string, url: string, timeoutMs: number)
   }
 }
 
+/** Statuses whose responses carry no body; a Response cannot be built with one. */
+const NULL_BODY_STATUS = new Set([101, 204, 205, 304]);
+
 async function fetchWithTimeout(
   url: string,
   timeoutMs = 12000,
@@ -317,12 +320,19 @@ async function fetchWithTimeout(
     }
 
     try {
-      const res = await fetch(url, {
+      const fetched = await fetch(url, {
         headers,
         redirect: "follow",
         signal: ctrl.signal,
       });
       clearTimeout(timer);
+      // The body is read here, under retries and a deadline: read later, one reset
+      // connection threw out of the crawl and failed the whole site (learncpp).
+      const bodyTimer = setTimeout(() => ctrl.abort(), Math.max(timeoutMs, 30_000));
+      const body = NULL_BODY_STATUS.has(fetched.status) ? null : await fetched.arrayBuffer().finally(() => clearTimeout(bodyTimer));
+      clearTimeout(bodyTimer);
+      const res = new Response(body, { status: fetched.status, statusText: fetched.statusText, headers: fetched.headers });
+      Object.defineProperty(res, "url", { value: fetched.url });
       if (res.status === 429 || res.status === 503 || res.status === 502 || res.status === 403) {
         onRateLimited?.();
         if (attempt + 1 < maxRetries) {
@@ -548,6 +558,22 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
     batchDelayMs = 450;
   };
 
+  // Some sites answer any path with a page, and that page's relative links make new
+  // paths without end: angular.dev queued /guide/di/events/events/.../v22 past 50,000
+  // pages. A path that cannot exist shows what such a page looks like.
+  const htmlTitle = (html: string) => html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1].replace(/\s+/g, " ").trim();
+  let softNotFoundTitle: string | undefined;
+  if (!site.rendered) {
+    const probe = await fetchWithTimeout(new URL("docx-no-such-page-4c1e9b", new URL(site.entryPath, site.origin)).href, 12000, 2, undefined, site);
+    if (probe?.ok && (probe.headers.get("content-type") || "").includes("html")) {
+      softNotFoundTitle = htmlTitle(await probe.text());
+      // A site whose pages all share one title cannot be told apart this way
+      const entry = await fetchWithTimeout(new URL(site.entryPath, site.origin).href, 12000, 2, undefined, site);
+      if (!entry?.ok || htmlTitle(await entry.text()) === softNotFoundTitle) softNotFoundTitle = undefined;
+      if (softNotFoundTitle) console.log(`  Unknown paths answer with "${softNotFoundTitle}"; such pages are skipped`);
+    }
+  }
+
   const sitemapPages = await discoverSitemapPages(site, isAllowedPageUrl);
   if (sitemapPages.length) console.log(`  Sitemaps list ${sitemapPages.length} pages`);
   sitemapPages.forEach(enqueuePage);
@@ -593,6 +619,7 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
         }
         const pageUrl = new URL(res.url || fullUrl);
         const routeKey = normalizeRouteKey(pageUrl.pathname);
+        if (softNotFoundTitle && routeKey !== normalizeRouteKey(site.entryPath) && htmlTitle(html) === softNotFoundTitle) return;
         if (routeKey !== requestedRoute && pageUrl.origin === site.origin) redirects.set(requestedRoute, pageUrl.pathname);
 
         // Extract title & description for Universal Search (Ctrl+K)

@@ -59,7 +59,8 @@ jobs:
         if: matrix.site == 'nestjs' || matrix.site == 'metal'
         run: |
           bun add --no-save playwright
-          bunx playwright install --with-deps chromium
+          # The Ubuntu mirror sometimes fails to resolve for a minute
+          for attempt in 1 2 3 4; do bunx playwright install --with-deps chromium && break; [ $attempt = 4 ] && exit 1; sleep 60; done
 
       - name: List every page
         env:
