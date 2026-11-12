@@ -118,7 +118,7 @@ const USER_AGENT =
 const SCRIPTED_SITES = new Set(["nestjs", "threejs", "rust", "lucide"]);
 
 /** A site's `maxPages` is a floor on how much we want, not a reason to ship a partial copy. */
-const PAGE_CAP_FLOOR = Number(process.env.DOCX_PAGE_CAP_FLOOR || 1500);
+const PAGE_CAP_FLOOR = Number(process.env.DOCX_PAGE_CAP_FLOOR || 6000);
 const CRAWL_BUDGET_MS = Number(process.env.DOCX_CRAWL_BUDGET_MINUTES || 20) * 60_000;
 /** Crawl pages only and list them in <id>.urls.txt; no assets, no pack. */
 const DISCOVER_ONLY = process.env.DOCX_DISCOVER_ONLY === "1";
@@ -548,6 +548,14 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
     if (u.pathname.includes("%23")) return false;
     // "page.html/" serves page.html again, and its relative links nest without end (sqlite, qt)
     if (/\.html?\//i.test(u.pathname)) return false;
+    // Copies and non-docs, measured by the uncapped audit of 2026-11-11 at about 30,000
+    // pages: Markdown and text twins of HTML pages, Sphinx sources, header files, Doxygen
+    // file and member lists that repeat the class pages, and generated index pages.
+    // GitHub renders its .md files as the docs themselves (catch2, spdlog).
+    if (u.hostname !== "github.com" && /\.(?:md|txt|rst|[ch](?:pp|xx)?|ipp)$/i.test(u.pathname)) return false;
+    if (/\/_(?:sources|modules|downloads)\//.test(u.pathname)) return false;
+    if (/_8h(?:pp)?(?:_source)?\.html$|-members\.html$|\/(?:files|globals(?:_[a-z_]*)?|dir_[0-9a-f]+)\.html$/.test(u.pathname)) return false;
+    if (/\/(?:genindex(?:-[A-Za-z_]+)?|py-modindex|search)(?:\.html)?$/.test(u.pathname)) return false;
     if (site.excludePattern && new RegExp(site.excludePattern).test(u.pathname)) return false;
     return site.allowedPrefixes.some((pref) => u.pathname.startsWith(pref));
   }

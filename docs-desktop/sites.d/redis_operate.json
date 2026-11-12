@@ -1,0 +1,24 @@
+{
+  "id": "redis_operate",
+  "order": 56.1,
+  "name": "Redis Operate",
+  "version": "v7.4",
+  "category": "Databases & SQL",
+  "color": "#dc382d",
+  "bgTint": "rgba(220, 56, 45, 0.15)",
+  "description": "Running Redis: Redis Software, Redis Cloud, Kubernetes, and Redis Open Source operations.",
+  "origin": "https://redis.io",
+  "entryPath": "/docs/latest/operate/",
+  "allowedPrefixes": [
+    "/docs/latest/operate/"
+  ],
+  "excludePattern": "/(\\d+\\.\\d+(\\.\\d+)*)(/|$)",
+  "maxPages": 160,
+  "defaultRoutes": [
+    {
+      "label": "Operate",
+      "path": "/docs/latest/operate/"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 3L21 8.2V15.8L12 21L3 15.8V8.2L12 3Z\" stroke=\"#dc382d\" stroke-width=\"1.8\" fill=\"rgba(220, 56, 45, 0.18)\"/><path d=\"M3 8.2L12 13.4L21 8.2\" stroke=\"#dc382d\" stroke-width=\"1.5\"/><line x1=\"12\" y1=\"13.4\" x2=\"12\" y2=\"21\" stroke=\"#dc382d\" stroke-width=\"1.5\"/><circle cx=\"12\" cy=\"7.5\" r=\"1.5\" fill=\"#ffffff\"/></svg>"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "boost_beast",
+  "order": 97.2,
+  "name": "Boost.Beast",
+  "version": "v1.87",
+  "category": "C & C++ Ecosystem",
+  "color": "#f7901e",
+  "bgTint": "rgba(247, 144, 30, 0.15)",
+  "description": "HTTP and WebSocket for C++ on top of Boost.Asio: messages, parsers, streams and the full reference.",
+  "origin": "https://www.boost.org",
+  "entryPath": "/doc/libs/latest/libs/beast/doc/html/index.html",
+  "allowedPrefixes": [
+    "/doc/libs/latest/libs/beast/"
+  ],
+  "maxPages": 140,
+  "defaultRoutes": [
+    {
+      "label": "Overview",
+      "path": "/doc/libs/latest/libs/beast/doc/html/index.html"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\" fill=\"#f7901e\"/><path d=\"M5.8 14.6 10.4 10l3.1 3.1 4.3-4.5\" stroke=\"#fff\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M14.3 8.6h3.7v3.7\" stroke=\"#fff\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+}

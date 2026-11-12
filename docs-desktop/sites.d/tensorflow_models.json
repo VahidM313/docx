@@ -1,0 +1,23 @@
+{
+  "id": "tensorflow_models",
+  "order": 64.1,
+  "name": "TensorFlow Model Garden",
+  "version": "v2.18",
+  "category": "AI & Machine Learning",
+  "color": "#ff6f00",
+  "bgTint": "rgba(255, 111, 0, 0.15)",
+  "description": "The tfm package: official vision and NLP models, layers, optimizers and training utilities for TensorFlow.",
+  "origin": "https://www.tensorflow.org",
+  "entryPath": "/api_docs/python/tfm",
+  "allowedPrefixes": [
+    "/api_docs/python/tfm"
+  ],
+  "maxPages": 180,
+  "defaultRoutes": [
+    {
+      "label": "API Reference",
+      "path": "/api_docs/python/tfm"
+    }
+  ],
+  "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M1.292 5.856L11.54 0v24l-4.095-2.378V7.603l-6.168 3.564.015-5.31zm21.43 5.311l-.014-5.31L12.46 0v24l4.095-2.378V14.87l3.092 1.788-.018-4.618-3.074-1.756V7.603l6.168 3.564z\" fill=\"#ff6f00\"/></svg>"
+}

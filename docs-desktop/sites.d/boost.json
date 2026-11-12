@@ -12,19 +12,12 @@
   "allowedPrefixes": [
     "/doc/libs/latest/"
   ],
+  "excludePattern": "(?:^/doc/libs/latest/(?:doc/html/boost_asio|libs/asio/))|(?:^/doc/libs/latest/libs/beast/)",
   "maxPages": 140,
   "defaultRoutes": [
     {
       "label": "All Libraries",
       "path": "/doc/libs/latest/libs/libraries.htm"
-    },
-    {
-      "label": "Boost.Asio",
-      "path": "/doc/libs/latest/doc/html/boost_asio.html"
-    },
-    {
-      "label": "Boost.Beast",
-      "path": "/doc/libs/latest/libs/beast/doc/html/index.html"
     },
     {
       "label": "Getting Started",
