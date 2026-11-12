@@ -87,7 +87,12 @@ export default function HomeHub() {
       const appStatus = await app.checkAppUpdate();
       const appUpdated = !!appStatus?.update_available;
       if (appUpdated) {
-        app.toast({ kind: "info", message: `New Docx version available: ${appStatus?.target_version}` });
+        app.toast({
+          kind: "info",
+          message: `New Docx version available: ${appStatus?.target_version}. Use "Update app" at the top right.`,
+        });
+      } else if (!appStatus) {
+        app.toast({ kind: "error", message: "Could not check for a new Docx version." });
       }
 
       const availableUpdates = registry.filter((r) => r.installed && r.update_available);
@@ -102,7 +107,9 @@ export default function HomeHub() {
       } else if (!appUpdated) {
         app.toast({
           kind: "success",
-          message: "Docx and all installed documentation packs are up to date! ✨",
+          message: appStatus
+            ? "Docx and all installed documentation packs are up to date! ✨"
+            : "All installed documentation packs are up to date.",
         });
       }
     } catch (e) {

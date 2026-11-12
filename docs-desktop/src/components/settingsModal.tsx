@@ -18,6 +18,7 @@ import {
   Sparkles,
   Languages,
   Trash2,
+  Download,
 } from "lucide-react";
 import { deleteTranslationModel } from "../lib/translator/engine";
 import { getTranslationCacheStats, clearTranslationCache } from "../lib/translator/cache";
@@ -38,6 +39,10 @@ export function SettingsModal() {
   );
 
   const [cacheStats, setCacheStats] = React.useState<{ count: number; estimatedBytes: number }>({ count: 0, estimatedBytes: 0 });
+  const [checkingApp, setCheckingApp] = React.useState(false);
+  // The app replaces its own .exe; Android updates come through the APK instead
+  const canSelfUpdate =
+    typeof window !== "undefined" && "__TAURI_INTERNALS__" in window && !/Android/i.test(navigator.userAgent);
 
   React.useEffect(() => {
     getTranslationCacheStats().then(setCacheStats).catch(() => {});
@@ -707,6 +712,43 @@ export function SettingsModal() {
                   Manage offline docpacks and updates.
                 </p>
               </div>
+
+              {canSelfUpdate && (
+                <div className="rounded-lg border border-border bg-card p-4 flex items-center justify-between gap-3">
+                  <div>
+                    <div className="text-sm font-semibold text-foreground">Docx app</div>
+                    <div className="text-xs text-muted-foreground mt-0.5">
+                      {app.appUpdate?.update_available
+                        ? `Version ${app.appUpdate.target_version} is available (you have ${app.appUpdate.current_version}).`
+                        : app.appUpdate
+                          ? "You have the latest version."
+                          : "Not checked yet."}
+                    </div>
+                  </div>
+                  {app.appUpdate?.update_available ? (
+                    <Button variant="gradient" size="sm" onClick={() => app.selfUpdateApp()} className="gap-1.5">
+                      <Download className="h-3.5 w-3.5" />
+                      <span>Update and restart</span>
+                    </Button>
+                  ) : (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      disabled={checkingApp}
+                      onClick={async () => {
+                        setCheckingApp(true);
+                        const res = await app.checkAppUpdate();
+                        setCheckingApp(false);
+                        if (!res) app.toast({ kind: "error", message: "Could not reach GitHub to check for a new Docx version." });
+                      }}
+                      className="gap-1.5"
+                    >
+                      <RefreshCw className={"h-3.5 w-3.5" + (checkingApp ? " animate-spin" : "")} />
+                      <span>Check now</span>
+                    </Button>
+                  )}
+                </div>
+              )}
 
               <div className="rounded-lg border border-border bg-card p-4 space-y-3">
                 <div className="flex items-center justify-between">

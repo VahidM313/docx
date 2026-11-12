@@ -20,6 +20,7 @@ import {
   Sparkles,
   Languages,
   Loader2,
+  Download,
 } from "lucide-react";
 import { type ReaderPanelsApi } from "./readerPanels";
 
@@ -400,6 +401,21 @@ export function DiscordHeader({
               aria-label="Reload Doc"
             >
               <RotateCw className="h-4 w-4" />
+            </button>
+          </Tooltip>
+        )}
+
+        {/* A new Docx build: the startup check finds it, this is where it shows */}
+        {hasWindow && app.appUpdate?.update_available && (
+          <Tooltip label={`Docx ${app.appUpdate.target_version} is available: download it and restart`} side="bottom">
+            <button
+              type="button"
+              onClick={() => app.selfUpdateApp()}
+              className="no-drag ml-1 flex items-center gap-1.5 rounded bg-brand px-2.5 py-1 text-xs font-semibold text-white hover:bg-brand-hover transition-colors cursor-pointer"
+              aria-label="Update Docx"
+            >
+              <Download className="h-3.5 w-3.5" />
+              Update app
             </button>
           </Tooltip>
         )}

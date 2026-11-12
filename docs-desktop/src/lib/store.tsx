@@ -676,7 +676,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     const checkAppUpdate = async () => {
       try {
         const res = await Tauri.checkAppUpdate();
-        if (res?.update_available) setState({ appUpdate: res });
+        if (res) setState({ appUpdate: res });
         return res;
       } catch {
         return null;
