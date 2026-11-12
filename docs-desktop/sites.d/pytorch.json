@@ -12,6 +12,7 @@
   "allowedPrefixes": [
     "/docs/{version}/"
   ],
+  "excludePattern": "/_(?:sources|downloads)/",
   "defaultRoutes": [
     {
       "label": "Docs Home",

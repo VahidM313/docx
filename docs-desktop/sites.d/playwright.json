@@ -12,6 +12,7 @@
   "allowedPrefixes": [
     "/docs/"
   ],
+  "excludePattern": "^/docs/next(?:/|$)",
   "maxPages": 140,
   "defaultRoutes": [
     {

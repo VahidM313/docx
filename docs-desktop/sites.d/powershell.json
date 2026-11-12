@@ -12,6 +12,7 @@
   "allowedPrefixes": [
     "/en-us/powershell/"
   ],
+  "excludePattern": "^/en-us/powershell/module/(?:[Mm]icrosoft\\.[Gg]raph|[Ee]xchange|[Aa]z\\.|[Mm]icrosoft\\.[Oo]nline\\.[Ss]hare[Pp]oint)",
   "maxPages": 140,
   "defaultRoutes": [
     {

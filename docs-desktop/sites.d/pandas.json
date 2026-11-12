@@ -12,6 +12,7 @@
   "allowedPrefixes": [
     "/docs/"
   ],
+  "excludePattern": "^/docs/dev(?:/|$)",
   "maxPages": 160,
   "defaultRoutes": [
     {

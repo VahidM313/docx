@@ -546,6 +546,8 @@ export async function buildDocpackForSite(siteId: string, outDir: string): Promi
     }
     // An escaped "#" is a broken in-page link, and shells answer those with a 200
     if (u.pathname.includes("%23")) return false;
+    // "page.html/" serves page.html again, and its relative links nest without end (sqlite, qt)
+    if (/\.html?\//i.test(u.pathname)) return false;
     if (site.excludePattern && new RegExp(site.excludePattern).test(u.pathname)) return false;
     return site.allowedPrefixes.some((pref) => u.pathname.startsWith(pref));
   }

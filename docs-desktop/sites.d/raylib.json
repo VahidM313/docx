@@ -12,6 +12,7 @@
   "allowedPrefixes": [
     "/cheatsheet/"
   ],
+  "excludePattern": "_(?:ja|ru|zh|es|fr|de|ko|pt|it|tr|uk)\\.html$",
   "maxPages": 40,
   "defaultRoutes": [
     {
